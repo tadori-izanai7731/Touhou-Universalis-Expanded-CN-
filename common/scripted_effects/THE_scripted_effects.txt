@@ -1,0 +1,454 @@
+# 比较通用的脚本
+
+#不用管
+THE_increase_ruler_adm_stat = {
+	if = {
+		limit = {
+			OR = {
+				NOT = { adm = 6 }
+				NOT = {
+					check_variable = {
+						which = th_ruler_adm_stat
+						which = th_ruler_max_adm_stat
+					}
+				}
+			}
+		}
+		change_adm = $adm$
+		custom_tooltip = th_stat_remains_after_respawn_ruler_tt
+		hidden_effect = {
+			change_variable = {
+				which = th_ruler_adm_stat
+				value = $adm$
+			}
+			change_variable = {
+				which = th_ruler_total_power
+				value = $adm$
+			}
+		}
+	}
+	else = {
+		custom_tooltip = th_increase_ruler_adm_stat_tt
+		add_adm_power = 100
+	}
+}
+
+#不用管
+THE_increase_ruler_dip_stat = {
+	if = {
+		limit = {
+			OR = {
+				NOT = { dip = 6 }
+				NOT = {
+					check_variable = {
+						which = th_ruler_dip_stat
+						which = th_ruler_max_dip_stat
+					}
+				}
+			}
+		}
+		change_dip = $dip$
+		custom_tooltip = th_stat_remains_after_respawn_ruler_tt
+		hidden_effect = {
+			change_variable = {
+				which = th_ruler_dip_stat
+				value = $dip$
+			}
+			change_variable = {
+				which = th_ruler_total_power
+				value = $dip$
+			}
+		}
+	}
+	else = {
+		custom_tooltip = th_increase_ruler_dip_stat_tt
+		add_dip_power = 100
+	}
+}
+
+#不用管
+THE_increase_ruler_mil_stat = {
+	if = {
+		limit = {
+			OR = {
+				NOT = { mil = 6 }
+				NOT = {
+					check_variable = {
+						which = th_ruler_mil_stat
+						which = th_ruler_max_mil_stat
+					}
+				}
+			}
+		}
+		change_mil = $mil$
+		custom_tooltip = th_stat_remains_after_respawn_ruler_tt
+		hidden_effect = {
+			change_variable = {
+				which = th_ruler_mil_stat
+				value = 1
+			}
+			change_variable = {
+				which = th_ruler_total_power
+				value = 1
+			}
+		}
+	}
+	else = {
+		custom_tooltip = th_increase_ruler_mil_stat_tt
+		add_mil_power = 100
+	}
+}
+
+#增加统治者能力
+#使用方法：THE_add_ruler_stat = { stat = <stat> value = <value> }
+#stat支持adm、dip、mil；value为增加的数值
+THE_add_ruler_stat = {
+	THE_increase_ruler_$stat$_stat = {
+		$stat$ = $value$
+	}
+}
+
+#带有事件前瞻的事件
+#使用方法：THE_country_event_with_insight = { id = <id> [days = <days>] [random = <random>] [tooltip = <tooltip>] [insight_tooltip = <insight_tooltip>] [effect_tooltip = <effect_tooltip>] }
+#带[]为可选参数；insight_tooltip为需要显示的事件前瞻本地化键值；effect_tooltip为需要显示的事件前瞻效果工具提示
+THE_country_event_with_insight = {
+	country_event = {
+		id = $id$
+		[[days] days = $days$]
+		[[random] random = $random$]
+		[[tooltip] tooltip = $tooltip$]
+	}
+	[[only_insight]
+		custom_tooltip = EVENT_INSIGHT_INTRO
+	]
+	[[insight_tooltip]
+		custom_tooltip = EVENT_INSIGHT_INTRO
+		custom_tooltip = $insight_tooltip$
+	]
+	[[effect_tooltip]
+		custom_tooltip = EVENT_INSIGHT_INTRO
+		tooltip = { $effect_tooltip$ }
+	]
+	[[option_1]
+		custom_tooltip = EVENT_INSIGHT_INTRO
+		custom_tooltip = EVENT_INSIGHT_OPT_1
+		tooltip = {
+			$option_1$
+		}
+	]
+	[[option_2]
+		custom_tooltip = EVENT_INSIGHT_OPT_2
+		tooltip = {
+			$option_2$
+		}
+	]
+	[[option_3]
+		custom_tooltip = EVENT_INSIGHT_OPT_3
+		tooltip = {
+			$option_3$
+		}
+	]
+	[[option_4]
+		custom_tooltip = EVENT_INSIGHT_OPT_4
+		tooltip = {
+			$option_4$
+		}
+	]
+	[[option_5]
+		custom_tooltip = EVENT_INSIGHT_OPT_5
+		tooltip = {
+			$option_5$
+		}
+	]
+}
+
+#修复bug的外交弹幕战指令，进行外交弹幕战并显示胜率
+#使用方法：THE_danmaku_diplo_fight_ruler_and_opponent = { win_event = <win_event> draw_event = <draw_event> defeat_event = <defeat_event> days = <days> }
+#win_event为胜利事件；draw_event为平局事件；defeat_event为失败事件；days为延迟时间
+THE_danmaku_diplo_fight_ruler_and_opponent = {
+	custom_tooltip = th_danmaku_diplo_fight_ruler_and_opponent_tt
+	#Player is waaaay stronger
+	if = {
+		limit = {
+			check_variable = {
+				which = th_current_diplo_skills
+				which = th_enemy_border_great_victory_diplomatic
+			}
+			NOT = {
+				check_variable = {
+					which = th_enemy_upper_border_draw_diplomatic
+					which = th_current_diplo_skills
+				}
+			}
+		}
+		random_list = {
+			60 = {
+				country_event = {
+					id = th_danmaku_event.22
+					days = 1
+				}
+			}
+			40 = {
+				country_event = {
+					id = th_danmaku_event.21
+					days = 1
+				}	
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = $win_event$
+				days = $days$
+			}
+		}
+	}
+	#Player is stronger
+	if = {
+		limit = {
+			check_variable = {
+				which = th_current_diplo_skills
+				which = th_enemy_upper_border_draw_diplomatic
+			}
+			NOT = {
+				check_variable = {
+					which = th_current_diplo_skills
+					which = th_enemy_border_great_victory_diplomatic
+				}
+			}
+		}
+		random_list = {
+			75 = {
+				country_event = {
+					id = th_danmaku_event.22
+					days = 1
+				}
+				hidden_effect = {
+					country_event = {
+						id = $win_event$
+						days = $days$
+					}
+				}
+			}
+			15 = {
+				country_event = {
+					id = th_danmaku_event.21
+					days = 1
+				}			
+				hidden_effect = {
+					country_event = {
+						id = $win_event$
+						days = $days$
+					}
+				}
+			}
+			10 = {
+				country_event = {
+					id = th_danmaku_event.23
+					days = 1
+				}
+				hidden_effect = {
+					country_event = {
+						id = $draw_event$
+						days = $days$
+					}
+				}
+			}
+		}
+	}
+	#Opponent and Player are equal strong
+	if = {
+		limit = {
+			check_variable = {
+				which = th_current_diplo_skills
+				which = th_enemy_lower_border_draw_diplomatic
+			}
+			NOT = {
+				check_variable = {
+					which = th_current_diplo_skills
+					which = th_enemy_upper_border_draw_diplomatic
+				}
+			}
+		}
+		random_list = {
+			65 = {
+				country_event = {
+					id = th_danmaku_event.23
+					days = 1
+				}
+				hidden_effect = {
+					country_event = {
+						id = $draw_event$
+						days = $days$
+					}
+				}
+			}
+			25 = {
+				country_event = {
+					id = th_danmaku_event.22
+					days = 1
+				}			
+				hidden_effect = {
+					country_event = {
+						id = $win_event$
+						days = $days$
+					}
+				}
+			}
+			10 = {
+				country_event = {
+					id = th_danmaku_event.24
+					days = 1
+				}
+				hidden_effect = {
+					country_event = {
+						id = $defeat_event$
+						days = $days$
+					}
+				}
+			}
+		}
+	}
+	#Opponent is stronger
+	if = {
+		limit = {
+			check_variable = {
+				which = th_current_diplo_skills
+				which = th_enemy_border_great_defeat_diplomatic
+			}
+			NOT = {
+				check_variable = {
+					which = th_enemy_lower_border_draw_diplomatic
+					which = th_enemy_border_great_defeat_diplomatic
+				}
+			}
+		}
+		random_list = {
+			20 = {
+				country_event = {
+					id = th_danmaku_event.25
+					days = 1
+				}
+				hidden_effect = {
+					country_event = {
+						id = $defeat_event$
+						days = $days$
+					}
+				}
+			}
+			60 = {
+				country_event = {
+					id = th_danmaku_event.24
+					days = 1
+				}		
+				hidden_effect = {
+					country_event = {
+						id = $defeat_event$
+						days = $days$
+					}
+				}	
+			}
+			20 = {
+				country_event = {
+					id = th_danmaku_event.23
+					days = 1
+				}
+				hidden_effect = {
+					country_event = {
+						id = $draw_event$
+						days = $days$
+					}
+				}
+			}
+		}
+	}
+	#Opponent is waaaay stronger
+	if = {
+		limit = {
+			check_variable = {
+				which = th_enemy_border_great_defeat_diplomatic
+				which = th_current_diplo_skills
+			}
+		}
+		random_list = {
+			50 = {
+				country_event = {
+					id = th_danmaku_event.25
+					days = 1
+				}
+				hidden_effect = {
+					country_event = {
+						id = $defeat_event$
+						days = $days$
+					}
+				}
+			}
+			40 = {
+				country_event = {
+					id = th_danmaku_event.24
+					days = 1
+				}	
+				hidden_effect = {
+					country_event = {
+						id = $defeat_event$
+						days = $days$
+					}
+				}		
+			}
+			10 = {
+				country_event = {
+					id = th_danmaku_event.23
+					days = 1
+				}
+				hidden_effect = {
+					country_event = {
+						id = $draw_event$
+						days = $days$
+					}
+				}
+			}
+		}
+	}
+}
+
+#将自身或非朝贡属国的特定省份割让给特定tag，并移除自身的核心和宣称
+#使用方法：THE_cede_scope_to_tag_scripted_effect = { scope = <scope> tag = <TAG> }
+#scope为特定省份，支持<province_id>、<area>、<region>、<superregion>、<provincegroup>、<continent>、<colonial_region>;tag为目标国家,支持ROOT、FROM、PREV等作用域
+THE_cede_scope_to_tag_scripted_effect = {
+	$scope$ = {
+		if = {
+			limit = { country_or_non_sovereign_subject_holds = ROOT }
+			cede_province = $tag$
+			add_core = $tag$
+			remove_core = ROOT
+			remove_claim = ROOT
+		}
+	}
+}
+
+#如果有剩余的可接纳文化上限且未接纳<culture>文化，接纳<culture>文化；否则增加100外交点
+#使用方法：THE_accept_culture_or_add_dip_scripted_effect = { culture = <culture> }
+# THE_accept_culture_or_add_dip_scripted_effect = {
+# 	tooltip = {
+# 		add_accepted_culture = $culture$
+# 	}
+# 	custom_tooltip = THE_accept_culture_or_add_dip_power_tt
+# 	hidden_effect = {
+# 		if = {
+# 			limit = {
+# 				NOT = { accepted_culture = $culture$ }
+# 				THE_check_culture_slot_scripted_trigger = { value = 1 }
+# 			}
+# 			add_accepted_culture = $culture$
+# 		}
+# 		else = {
+# 			add_dip_power = 100
+# 		}
+# 	}
+# }
+
+THE_clear_deity_event_flag_effect = {
+	clr_country_flag = THE_had_deity_event_$deity$_flag
+}
+THE_set_deity_event_flag_effect = {
+	set_country_flag = THE_had_deity_event_$deity$_flag
+}

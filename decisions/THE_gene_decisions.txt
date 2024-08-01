@@ -1,0 +1,52 @@
+country_decisions = {
+	th_gen_gensokyo_warlord_cirno_come = {
+		potential = {
+			has_country_modifier = th_gen_gensokyo_warlord_cirno
+			NOT = { has_country_modifier = th_gensokyo_danmaku_new_rule }
+			owns_core_province = 5080
+			THE_generic_has_not_any_cirno_general = yes
+		}
+		allow = {
+			mil_power = 5
+			owns_core_province = 5080
+			THE_generic_has_not_any_cirno_general = yes
+		}
+		effect = {
+			add_mil_power = -5
+			THE_common_define_general_cirno = yes
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_at_war = no
+			}
+		}
+		ai_importance = 50
+	}
+	th_gen_gensokyo_warlord_bigcirno_come = {
+		potential = {
+			has_country_modifier = th_gen_gensokyo_warlord_cirno
+			has_country_modifier = th_gensokyo_danmaku_new_rule
+			owns_core_province = 5080
+			THE_generic_has_not_any_cirno_general = yes
+		}
+		allow = {
+			mil_power = 5
+			owns_core_province = 5080
+			THE_generic_has_not_any_cirno_general = yes
+		}
+		effect = {
+			add_mil_power = -5
+			THE_common_define_general_bigcirno = yes
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_at_war = no
+			}
+		}
+		ai_importance = 50
+	}
+}

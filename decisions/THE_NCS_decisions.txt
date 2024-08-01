@@ -1,0 +1,344 @@
+country_decisions = {
+	#起飞（集中发展度）
+	THE_NCS_take_off = {
+		color = {
+			231
+			113
+			46
+		}
+		major = yes
+		potential = {
+			NOT = {
+				has_country_modifier = THE_NCS_take_off_modifier
+			}
+			OR = {
+				tag = NCS
+				was_tag = NCS
+			}
+			ai = no
+		}
+		allow = {
+			any_owned_province = {
+				is_state_core = ROOT
+				is_capital = no
+				# has_owner_religion = yes
+				OR = {
+					base_tax = 2
+					base_production = 2
+					base_manpower = 2
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = THE_NCS_take_off_desc
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					mission_completed = THE_NCS_3_5
+				}
+				custom_tooltip = THE_NCS_take_off_decision_by_3_years_tt
+			}
+			else = {
+				custom_tooltip = THE_NCS_take_off_decision_by_8_years_tt
+			}
+			hidden_effect = {
+				country_event = {
+					id = THE_NCS_events.102
+				}
+				if = {
+					limit = {
+						mission_completed = THE_NCS_3_5
+					}
+					add_country_modifier = {
+						name = THE_NCS_take_off_modifier
+						duration = 1095
+						hidden = yes
+					}
+				}
+				else = {
+					add_country_modifier = {
+						name = THE_NCS_take_off_modifier
+						duration = 2920
+						hidden = yes
+					}
+				}
+			}
+		}
+	}
+	#将万宝槌用于招募部队
+	THE_NCS_uchidenokozuchi_recruit = {
+		potential = {
+			mission_completed = THE_NCS_2_9
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = THE_NCS_uchidenokozuchi_recover_modifier
+			}
+		}
+		effect = {
+			custom_tooltip = THE_NCS_uchidenokozuchi_cool_down_tt
+			hidden_effect = {
+				add_country_modifier = {
+					name = THE_NCS_uchidenokozuchi_recover_modifier
+					duration = 1825
+					hidden = yes
+				}
+			}
+			if = {
+				limit = {
+					has_country_modifier = THE_NCS_absolute_uchidenokozuchi_master_modifier
+				}
+				add_country_modifier = {
+					name = THE_NCS_uchidenokozuchi_recruit_modifier
+					duration = 1825
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = THE_NCS_uchidenokozuchi_recruit_modifier
+					duration = 1095
+				}
+			}
+			add_country_modifier = {
+				name = THE_NCS_uchidenokozuchi_recruit_2_modifier
+				duration = 1825
+			}
+			hidden_effect = {
+				country_event = {
+					id = THE_NCS_events.100
+				}
+			}
+		}
+	}
+	#万宝槌用于财政
+	THE_NCS_uchidenokozuchi_cash = {
+		potential = {
+			mission_completed = THE_NCS_2_9
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = THE_NCS_uchidenokozuchi_recover_modifier
+			}
+		}
+		effect = {
+			custom_tooltip = THE_NCS_uchidenokozuchi_cool_down_tt
+			hidden_effect = {
+				add_country_modifier = {
+					name = THE_NCS_uchidenokozuchi_recover_modifier
+					duration = 1825
+					hidden = yes
+				}
+			}
+			if = {
+				limit = {
+					has_country_modifier = THE_NCS_absolute_uchidenokozuchi_master_modifier
+				}
+				add_country_modifier = {
+					name = THE_NCS_uchidenokozuchi_cash_modifier
+					duration = 1825
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = THE_NCS_uchidenokozuchi_cash_modifier
+					duration = 1095
+				}
+			}
+			add_country_modifier = {
+				name = THE_NCS_uchidenokozuchi_cash_2_modifier
+				duration = 1825
+			}
+			hidden_effect = {
+				country_event = {
+					id = THE_NCS_events.100
+				}
+			}
+		}
+	}
+	#将万宝槌用于传教
+	THE_NCS_uchidenokozuchi_missionary = {
+		potential = {
+			mission_completed = THE_NCS_5_7
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = THE_NCS_uchidenokozuchi_recover_modifier
+			}
+		}
+		effect = {
+			custom_tooltip = THE_NCS_uchidenokozuchi_cool_down_tt
+			hidden_effect = {
+				add_country_modifier = {
+					name = THE_NCS_uchidenokozuchi_recover_modifier
+					duration = 1825
+					hidden = yes
+				}
+			}
+			if = {
+				limit = {
+					has_country_modifier = THE_NCS_absolute_uchidenokozuchi_master_modifier
+				}
+				add_country_modifier = {
+					name = THE_NCS_uchidenokozuchi_missionary_modifier
+					duration = 1825
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = THE_NCS_uchidenokozuchi_missionary_modifier
+					duration = 1095
+				}
+			}
+			add_country_modifier = {
+				name = THE_NCS_uchidenokozuchi_missionary_2_modifier
+				duration = 1825
+			}
+			hidden_effect = {
+				country_event = {
+					id = THE_NCS_events.100
+				}
+			}
+		}
+	}
+	#万宝槌用于训练
+	THE_NCS_uchidenokozuchi_train = {
+		potential = {
+			mission_completed = THE_NCS_3_7
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = THE_NCS_uchidenokozuchi_recover_modifier
+			}
+		}
+		effect = {
+			custom_tooltip = THE_NCS_uchidenokozuchi_cool_down_tt
+			hidden_effect = {
+				add_country_modifier = {
+					name = THE_NCS_uchidenokozuchi_recover_modifier
+					duration = 1825
+					hidden = yes
+				}
+			}
+			if = {
+				limit = {
+					has_country_modifier = THE_NCS_absolute_uchidenokozuchi_master_modifier
+				}
+				add_country_modifier = {
+					name = THE_NCS_uchidenokozuchi_train_modifier
+					duration = 1825
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = THE_NCS_uchidenokozuchi_train_modifier
+					duration = 1095
+				}
+			}
+			add_country_modifier = {
+				name = THE_NCS_uchidenokozuchi_train_2_modifier
+				duration = 1825
+			}
+			hidden_effect = {
+				country_event = {
+					id = THE_NCS_events.100
+				}
+			}
+		}
+	}
+	#将万宝槌用于间谍
+	THE_NCS_uchidenokozuchi_spy = {
+		potential = {
+			mission_completed = THE_NCS_2_7
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = THE_NCS_uchidenokozuchi_recover_modifier
+			}
+		}
+		effect = {
+			custom_tooltip = THE_NCS_uchidenokozuchi_cool_down_tt
+			hidden_effect = {
+				add_country_modifier = {
+					name = THE_NCS_uchidenokozuchi_recover_modifier
+					duration = 1825
+					hidden = yes
+				}
+			}
+			if = {
+				limit = {
+					has_country_modifier = THE_NCS_absolute_uchidenokozuchi_master_modifier
+				}
+				add_country_modifier = {
+					name = THE_NCS_uchidenokozuchi_spy_modifier
+					duration = 1825
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = THE_NCS_uchidenokozuchi_spy_modifier
+					duration = 1095
+				}
+			}
+			add_country_modifier = {
+				name = THE_NCS_uchidenokozuchi_spy_2_modifier
+				duration = 1825
+			}
+			hidden_effect = {
+				country_event = {
+					id = THE_NCS_events.100
+				}
+			}
+		}
+	}
+	#将万宝槌用于开设酒宴
+	THE_NCS_uchidenokozuchi_party = {
+		potential = {
+			mission_completed = THE_NCS_3_5
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = THE_NCS_uchidenokozuchi_recover_modifier
+			}
+		}
+		effect = {
+			custom_tooltip = THE_NCS_uchidenokozuchi_cool_down_tt
+			hidden_effect = {
+				add_country_modifier = {
+					name = THE_NCS_uchidenokozuchi_recover_modifier
+					duration = 1825
+					hidden = yes
+				}
+			}
+			every_neighbor_country = {
+				reverse_add_opinion = {
+					who = ROOT
+					modifier = THE_NCS_party_opinion
+				}
+			}
+			if = {
+				limit = {
+					has_country_modifier = THE_NCS_absolute_uchidenokozuchi_master_modifier
+				}
+				add_country_modifier = {
+					name = THE_NCS_uchidenokozuchi_party_modifier
+					duration = 1825
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = THE_NCS_uchidenokozuchi_party_modifier
+					duration = 1095
+				}
+			}
+			add_country_modifier = {
+				name = THE_NCS_uchidenokozuchi_party_2_modifier
+				duration = 1825
+			}
+			hidden_effect = {
+				country_event = {
+					id = THE_NCS_events.100
+				}
+			}
+		}
+	}
+}

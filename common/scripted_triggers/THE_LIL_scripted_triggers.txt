@@ -1,0 +1,29 @@
+#已完成晚春灾难
+#have no disater code now
+THE_LIL_finish_late_spring_disater_scripted_trigger = {
+	has_country_flag = THE_LIL_finish_late_spring_disaster_flag
+}
+
+#$type$
+THE_LIL_tech_not_backward_scripted_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = THE_LIL_$type$_tech_not_backward_tt
+		all_country = {
+			OR = {
+				NOT = { $type$_tech = ROOT }
+				AND = {
+					$type$_tech = ROOT
+					ROOT = { $type$_tech = FROM }
+				}
+			}
+		}
+	}
+}
+
+#$area$
+THE_LIL_special_spring_territory_scripted_trigger = {
+	$area$ = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+}

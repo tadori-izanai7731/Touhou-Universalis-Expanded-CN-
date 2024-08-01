@@ -1,0 +1,40 @@
+on_annexed = {
+	FROM = {
+		if = {
+			limit = { has_country_flag = THE_YOF_gather_doom_target_flag }
+			random_country = {
+				limit = {
+					check_variable = {
+						which = yof_doom_gather_on_or_off_num
+						value = 1
+					}
+				}
+				subtract_variable = {
+					which = yof_doom_gather_on_or_off_num
+					value = 1
+				}
+				if = {
+					limit = {
+						NOT = {
+							check_variable = {
+								which = yof_doom_gather_on_or_off_num
+								value = 0
+							}
+						}
+					}
+					set_variable = {
+						which = yof_doom_gather_on_or_off_num
+						value = 0
+					}
+				}
+				THE_YOF_refresh_doom_gather_modifier = yes
+			}
+		}
+	}
+}
+
+on_startup = {
+	events = {
+		THE_YOF_events.0
+	}
+}

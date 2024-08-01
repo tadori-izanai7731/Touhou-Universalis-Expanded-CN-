@@ -1,0 +1,147 @@
+THE_HMC_human_capital_four_name_reform = {
+	# Call four name!
+	# icon= 
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	has_term_election = yes
+	valid_for_nation_designer = no
+	duration = 5
+	potential = {
+		OR = {
+			has_reform = THE_HMC_human_capital_four_name_reform
+			have_had_reform = THE_HMC_human_capital_four_name_reform
+		}
+	}
+	modifiers = {
+		merchants = 1
+		trade_efficiency = 0.2
+		trade_steering = 0.1
+		mercenary_discipline = 0.05
+		governing_capacity = 200
+		# state_governing_cost = -0.25
+	}
+	conditional = {
+		allow = {
+			always = yes
+		}
+		can_change_primary_culture = no
+		boost_income = yes
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+		custom_attributes = {
+			enables_plutocratic_idea_group = yes
+			enables_aristocratic_idea_group = no
+			THE_HMC_use_human_capital_election = yes
+		}
+	}
+	# effect = {
+	# 	hidden_effect = {
+	# 		if = {
+	# 			limit = {
+	# 				NOT = { has_ruler_flag = THE_HMC_now_ruler_is_akyuu_flag }
+	# 				NOT = { has_ruler_flag = THE_HMC_now_ruler_is_kosuzu_flag }
+	# 				NOT = { has_ruler_flag = THE_HMC_now_ruler_is_rinnosuke_flag }
+	# 				NOT = { has_ruler_flag = THE_HMC_now_ruler_is_keine_flag }
+	# 			}
+	# 			country_event = {
+	# 				id = THE_HMC_events.2
+	# 			}
+	# 		}
+	# 		else = {
+	# 			country_event = {
+	# 				id = THE_HMC_events.2
+	# 				days = 1825
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# removed_effect = {
+	# 	clr_country_flag = THE_HMC_election_timer_flag
+	# }
+}
+
+THE_HMC_wealth_password_reform = {
+	# icon = 
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_reform = THE_HMC_wealth_password_reform
+			have_had_reform = THE_HMC_wealth_password_reform
+			has_country_flag = THE_HMC_unlock_wealth_password_reform_flag
+		}
+	}
+	modifiers = {
+		merchants = 1
+		trade_efficiency = 0.1
+		trade_steering = 0.1
+	}
+	custom_attributes = {
+		THE_HMC_can_establish_human_trade_league = yes
+		THE_HMC_unlock_cb_forced_buy_and_sell = yes
+	}
+}
+
+THE_HMC_history_reform = {
+	# icon = 
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_reform = THE_HMC_history_reform
+			have_had_reform = THE_HMC_history_reform
+			has_country_flag = THE_HMC_unlock_other_unique_reform_flag
+		}
+	}
+	modifiers = {
+		ae_impact = 0.15
+		improve_relation_modifier = 0.5
+		tolerance_own = 2
+	}
+}
+
+THE_HMC_method_reform = {
+	# icon = 
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_reform = THE_HMC_method_reform
+			have_had_reform = THE_HMC_method_reform
+			has_country_flag = THE_HMC_unlock_other_unique_reform_flag
+		}
+	}
+	modifiers = {
+		global_trade_goods_size_modifier = 0.1
+		trade_steering = 0.2
+	}
+}
+
+THE_HMC_guide_reform = {
+	# icon = 
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_reform = THE_HMC_guide_reform
+			have_had_reform = THE_HMC_guide_reform
+			has_country_flag = THE_HMC_unlock_other_unique_reform_flag
+		}
+	}
+	modifiers = {
+		min_autonomy_in_territories = -0.1
+	}
+}
+
+THE_HMC_insight_reform = {
+	# icon = 
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_reform = THE_HMC_insight_reform
+			have_had_reform = THE_HMC_insight_reform
+			has_country_flag = THE_HMC_unlock_other_unique_reform_flag
+		}
+	}
+	modifiers = {
+		republican_tradition = 2
+		advisor_cost = -0.2
+	}
+}

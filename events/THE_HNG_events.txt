@@ -1,0 +1,4027 @@
+namespace = flavor_THE_HNG_events
+
+# Something Not Effect
+# THE_HNG_define_ruler_death_meirin = yes
+
+country_event = {
+	id = flavor_THE_HNG_events.1
+	title = "flavor_THE_HNG_events.1.t"
+	desc = "flavor_THE_HNG_events.1.desc"
+	picture = DRAGON_eventPicture
+	fire_only_once = yes
+	
+	trigger = {
+		tag = HNG
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.1.a
+		change_unit_type = chinese
+		set_country_flag = hng_do_the_change1_flag 
+		country_event = {
+			id = flavor_THE_HNG_events.2
+		}
+		add_country_modifier = {
+			name = hng_come_from_gensokyo
+			duration = -1
+		}
+		add_country_modifier = {
+			name = hng_Mercenaries_not_care
+			duration = -1
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.1.b
+		set_country_flag = hng_do_the_change2_flag 
+		set_estate_privilege = THE_HNG_not_believe
+		add_country_modifier = {
+			name = hng_army_come_from_gensokyo
+			duration = 36500
+		}
+		add_country_modifier = {
+			name = hng_Mercenaries_not_care
+			duration = -1
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.1.c
+		highlight = yes
+		custom_tooltip = THE_HNG_you_are_zako_tt
+		inherit = MMA
+		add_country_modifier = {
+			name = hng_army_come_from_gensokyo
+			duration = -1
+		}
+		add_country_modifier = {
+			name = hng_Mercenaries_not_care
+			duration = -1
+		}
+		set_country_flag = hng_do_the_change3_flag 
+		set_country_flag = th_had_gensokyan_celestial_trial
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_events.2
+	title = "flavor_THE_HNG_events.2.t"
+	desc = "flavor_THE_HNG_events.2.desc"
+	picture = DRAGON_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_events.2.a
+		2165 = {
+			add_permanent_province_modifier = {
+				name = HTE_HNG_samurai_home
+				duration = -1
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+		add_country_modifier = {
+			name = hng_come_from_gensokyo
+			duration = -1
+		}
+		add_country_modifier = {
+			name = hng_samurai_come_from_gensokyo
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_events.3
+	title = "flavor_THE_HNG_events.3.t"
+	desc = "flavor_THE_HNG_events.3.desc"
+	picture = THE_HNG_help_from_Scarlet_new_home_picture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_events.3.a
+		add_country_modifier = {
+			name = THE_HNG_help_from_Remilia_Scarlet 
+			duration = 3650
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.3.b
+		add_country_modifier = {
+			name = THE_HNG_help_from_Flandre_Scarlet
+			duration = 3650
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.3.c
+		add_adm_power = 50
+		add_dip_power = 50
+		add_mil_power = 50
+		add_country_modifier = {
+			name = THE_HNG_help_from_Patchouli_Knowledge
+			duration = 3650
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.3.d
+		add_country_modifier = {
+			name = THE_HNG_help_from_Sakuya_Izayoi
+			duration = 3650
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.3.e
+		add_country_modifier = {
+			name = THE_HNG_help_from_Koakuma
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_events.4
+	title = "flavor_THE_HNG_events.4.t"
+	desc = "flavor_THE_HNG_events.4.desc"
+	picture = THE_HNG_help_from_Scarlet_new_home_picture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_events.4.a
+		add_country_modifier = {
+			name = THE_HNG_help_from_Scarlet_new_home
+			duration = -1
+		}
+	}
+}
+
+#人妖隔阂灾难开始
+country_event = {
+	id = flavor_THE_HNG_events.5
+	title = "flavor_THE_HNG_events.5.t"
+	desc = "flavor_THE_HNG_events.5.desc"
+	picture = MINISTRY_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			change_unit_type = tech_gensokyan
+			kill_leader = { type = general }
+			kill_leader = { type = conquistador }
+			every_province= {
+				kill_units = {
+					who = ROOT
+				}
+			}
+			add_stability = -2
+			add_mandate = -30
+			add_corruption = 5
+			set_estate_privilege = THE_HNG_not_believe
+			every_country = {
+				limit = {
+					has_casus_belli_against = ROOT
+				}
+				add_truce_with = ROOT
+			}
+			THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 5 type = nationalist_rebels size = 4 }
+			set_country_flag = THE_HNG_disasters_lose_prepare1
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.5.a
+		tooltip = {
+			custom_tooltip = THE_HNG_disasters1_tt
+			change_unit_type = tech_gensokyan
+			add_stability = -2
+			add_mandate = -30
+			add_corruption = 5
+			set_estate_privilege = THE_HNG_not_believe
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			country_event = {
+				id = THE_HNG_power_var_events.6
+			}
+		}
+	}
+}
+
+#妖怪武士集结
+country_event = {
+	id = flavor_THE_HNG_events.6
+	title = "flavor_THE_HNG_events.6.t"
+	desc = "flavor_THE_HNG_events.6.desc"
+	picture = THE_HNG_mission2
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						culture = togoku
+						culture_group = Gensokyan_culture
+					} 
+				}
+				add_permanent_province_modifier = {
+					name = THE_hng_mission_modifier43
+					duration = 10950
+				}
+			}
+			for = {
+				amount = 75
+				effect = "
+					random_owned_province = {
+						limit = {
+							OR = {
+								culture = togoku
+								culture_group = Gensokyan_culture
+							} 
+							OR = {
+								superregion = china_superregion
+								area = liaoning_area
+							}
+						}
+						samurai_infantry = ROOT
+					}
+				"
+			}
+		}
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.6.a
+		custom_tooltip = flavor_THE_HNG_events6_tt
+		add_treasury = 2000
+		add_manpower = 50
+		random_owned_province = {
+			limit = {
+				OR = {
+					culture = togoku
+					culture_group = Gensokyan_culture
+				} 
+			}
+			capital_scope = {
+				infantry = HNG
+			}
+		}
+	}
+}
+
+#人妖隔阂灾难失败
+country_event = {
+	id = flavor_THE_HNG_events.7
+	title = "flavor_THE_HNG_events.7.t"
+	desc = "flavor_THE_HNG_events.7.desc"
+	picture = HIGAN_eventPicture
+	fire_only_once = yes
+	
+	trigger = {
+		has_disaster = the_hng_disasters_one
+		NOT = { has_country_modifier = THE_HNG_believe_your_country }
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		OR = {
+			AND = {
+				OR = {
+					had_country_flag = {
+						flag = THE_HNG_disasters_lose_prepare1
+						days = 10950
+					}	
+					NOT = { total_development = 1000 }	
+				}
+			}
+			has_country_flag = THE_HNG_disasters_lose1	
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = THE_HNG_disasters_lose1
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.7.a
+	}
+}
+
+#人妖隔阂灾难结束
+country_event = {
+	id = flavor_THE_HNG_events.8
+	title = "flavor_THE_HNG_events.8.t"
+	desc = "flavor_THE_HNG_events.8.desc"
+	picture = DRAGON_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_events.8.a
+		add_stability = 2
+		add_mandate = 100
+		every_owned_province = {
+			add_devastation = -100
+		}
+		remove_estate_privilege = THE_HNG_not_believe
+		end_disaster = the_hng_disasters_one
+	}
+}
+
+#人妖隔阂灾难和兼并度灾难失败事件
+country_event = {
+	id = flavor_THE_HNG_events.9
+	title = "flavor_THE_HNG_events.9.t"
+	desc = "flavor_THE_HNG_events.9.desc"
+	picture = HIGAN_eventPicture
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			has_country_flag = THE_HNG_disasters_lose1
+			has_country_flag = THE_HNG_disasters_lose2
+		}
+		OR = {
+			tag = HNG	
+			was_tag = HNG	
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			2436 = {
+				add_core = ROOT
+				cede_province = ROOT
+			}
+			RUS = {
+				add_truce_with = ROOT	
+			}
+			MKN = {
+				add_truce_with = ROOT	
+			}
+			MKI = {
+				add_truce_with = ROOT	
+			}
+			every_known_country = {
+				add_truce_with = ROOT	
+			}
+			set_country_flag = THE_HNG_HNG_is_death
+			set_country_flag = THE_HNG_finish_red_dragon_celestial_empire
+			remove_country_modifier = THE_hng_mission_modifier115
+			remove_country_modifier = THE_hng_mission_modifier121
+			release_all_possible_countries = yes
+			release_all_subjects = yes
+		}
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.9.a
+		add_stability = -6
+		add_loan = {
+			fixed_interest = 1
+			duration = 60
+			estate_loan = yes
+		}
+		random_country = {
+			limit = {
+				is_neighbor_of = ROOT
+			}
+			set_emperor_of_china = THIS
+		}
+		kill_ruler = yes
+		add_adm_power = -999
+		add_dip_power = -999
+		add_mil_power = -999
+		# THE_HNG_define_ruler_death_meirin = yes
+		add_ruler_personality = immortal_personality
+	}
+	
+	after = {
+		hidden_effect = {
+			country_event = {
+				id = flavor_THE_HNG_events.60
+				days = 365
+			}
+			country_event = {
+				id = flavor_THE_HNG_events.61
+				days = 1095
+			}
+			country_event = {
+				id = flavor_THE_HNG_events.62
+				days = 1820
+			}
+		}
+	}
+}
+
+
+#人妖隔阂灾难事件1：忠诚者
+country_event = {
+	id = flavor_THE_HNG_events.10
+	title = "flavor_THE_HNG_events.10.t"
+	desc = "flavor_THE_HNG_events.10.desc"
+	picture = DRAGON_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_disaster = the_hng_disasters_one
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.10.a
+		add_years_of_income = 2
+		add_yearly_manpower = 5
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+}
+
+#人妖隔阂灾难事件2：大举反旗
+country_event = {
+	id = flavor_THE_HNG_events.11
+	title = "flavor_THE_HNG_events.11.t"
+	desc = "flavor_THE_HNG_events.11.desc"
+	picture = DRAGONDARK_eventPicture
+	fire_only_once = yes
+	
+	trigger = {
+		had_country_flag = {
+			flag = THE_HNG_disasters_lose_prepare1
+			days = 730
+		}	
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_disaster = the_hng_disasters_one
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.11.a
+		add_mandate = 10
+		THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 5 type = nationalist_rebels size = 5 }
+	}
+	option = {
+		name = flavor_THE_HNG_events.11.b
+		add_years_of_income = -0.5
+		THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 3 type = nationalist_rebels size = 5 }
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters1_reform1_had_completed
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters1_reform2_had_completed
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters1_reform3_had_completed
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters1_reform4_had_completed
+		}
+	}
+}
+
+#人妖隔阂灾难事件4：大规模起义
+country_event = {
+	id = flavor_THE_HNG_events.12
+	title = "flavor_THE_HNG_events.12.t"
+	desc = "flavor_THE_HNG_events.12.desc"
+	picture = DRAGONDARK_eventPicture
+	
+	trigger = {
+		had_country_flag = {
+			flag = THE_HNG_disasters_lose_prepare1
+			days = 730
+		}	
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_disaster = the_hng_disasters_one
+		NOT = { has_country_flag = THE_HNG_disasters1_reform3_had_completed  }
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.12.a
+		add_mandate = 5
+		THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 3 type = nationalist_rebels size = 5 }
+	}
+	
+	mean_time_to_happen = {
+		months = 48
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters1_reform1_had_completed
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters1_reform2_had_completed
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters1_reform3_had_completed
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters1_reform4_had_completed
+		}
+	}
+}
+
+#人妖隔阂灾难事件5：起义
+country_event = {
+	id = flavor_THE_HNG_events.13
+	title = "flavor_THE_HNG_events.13.t"
+	desc = "flavor_THE_HNG_events.13.desc"
+	picture = DRAGONDARK_eventPicture
+	
+	trigger = {
+		had_country_flag = {
+			flag = THE_HNG_disasters_lose_prepare1
+			days = 730
+		}	
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_disaster = the_hng_disasters_one
+		NOT = { has_country_flag = THE_HNG_disasters1_reform2_had_completed  }
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.13.a
+		add_mandate = 2.5
+		THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 3 type = nationalist_rebels size = 5 }
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters1_reform1_had_completed
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters1_reform2_had_completed
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters1_reform3_had_completed
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters1_reform4_had_completed
+		}
+	}
+}
+
+#人妖隔阂灾难事件6：反贼
+country_event = {
+	id = flavor_THE_HNG_events.14
+	title = "flavor_THE_HNG_events.14.t"
+	desc = "flavor_THE_HNG_events.14.desc"
+	picture = DRAGONDARK_eventPicture
+	
+	trigger = {
+		had_country_flag = {
+			flag = THE_HNG_disasters_lose_prepare1
+			days = 730
+		}	
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_disaster = the_hng_disasters_one
+		NOT = { has_country_flag = THE_HNG_disasters1_reform1_had_completed  }
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.14.a
+		add_mandate = -5
+		THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 3 type = nationalist_rebels size = 5 }
+	}
+	option = {
+		name = flavor_THE_HNG_events.14.b
+		add_mandate = -10
+		THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 1 type = nationalist_rebels size = 5 }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters1_reform1_had_completed
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters1_reform2_had_completed
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters1_reform3_had_completed
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters1_reform4_had_completed
+		}
+	}
+}
+
+#人妖隔阂灾难事件7：第一次改革的反扑
+country_event = {
+	id = flavor_THE_HNG_events.15
+	title = "flavor_THE_HNG_events.15.t"
+	desc = "flavor_THE_HNG_events.15.desc"
+	picture = DRAGONDARK_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_events.15.a
+		trigger = {
+			NOT ={ has_country_flag = hng_do_the_change2_flag }
+		}
+		add_estate_loyalty = {
+			estate = all
+			loyalty = -5
+		}
+		THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 3 type = nationalist_rebels size = 5 }
+	}
+	option = {
+		name = flavor_THE_HNG_events.15.b
+		trigger = {
+			has_country_flag = hng_do_the_change2_flag 
+		}
+		add_estate_loyalty = {
+			estate = all
+			loyalty = -5
+		}
+		THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 1 type = nationalist_rebels size = 5 }
+	}
+	
+}
+
+#人妖隔阂灾难事件8：第二次改革的反扑
+country_event = {
+	id = flavor_THE_HNG_events.16
+	title = "flavor_THE_HNG_events.16.t"
+	desc = "flavor_THE_HNG_events.16.desc"
+	picture = DRAGONDARK_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_events.16.a
+		trigger = {
+			NOT ={ has_country_flag = hng_do_the_change2_flag }
+		}
+		add_mandate = -5
+		THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 3 type = nationalist_rebels size = 5 }
+	}
+	option = {
+		name = flavor_THE_HNG_events.16.b
+		trigger = {
+			has_country_flag = hng_do_the_change2_flag 
+		}
+		THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 1 type = nationalist_rebels size = 2 }
+	}
+}
+
+#人妖隔阂灾难事件9：第三次改革的反扑
+country_event = {
+	id = flavor_THE_HNG_events.17
+	title = "flavor_THE_HNG_events.17.t"
+	desc = "flavor_THE_HNG_events.17.desc"
+	picture = DRAGONDARK_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_events.17.a
+		trigger = {
+			NOT ={ has_country_flag = hng_do_the_change2_flag }
+		}
+		THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 1 type = nationalist_rebels size = 5 }
+	}
+	option = {
+		name = flavor_THE_HNG_events.17.b
+		trigger = {
+			has_country_flag = hng_do_the_change2_flag 
+		}
+		random_owned_province = {
+			limit = {
+				is_state = yes
+				superregion = china_superregion
+			}
+		}
+	}
+}
+
+#人妖隔阂灾难事件10：第四次改革的反扑
+country_event = {
+	id = flavor_THE_HNG_events.18
+	title = "flavor_THE_HNG_events.18.t"
+	desc = "flavor_THE_HNG_events.18.desc"
+	picture = DRAGON_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_events.18.a
+		trigger = {
+			NOT ={ has_country_flag = hng_do_the_change2_flag }
+		}
+		add_mandate = 20
+		add_years_of_income = 2
+		add_yearly_manpower = 4
+		THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 7 type = nationalist_rebels size = 5 }
+	}
+	option = {
+		name = flavor_THE_HNG_events.18.b
+		add_years_of_income = 2
+		add_yearly_manpower = 4
+		trigger = {
+			has_country_flag = hng_do_the_change2_flag 
+		}
+		THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 1 type = nationalist_rebels size = 5 }
+	}
+}
+
+#蕾米讲授自己的威严
+country_event = {
+	id = flavor_THE_HNG_events.19
+	title = "flavor_THE_HNG_events.19.t"
+	desc = "flavor_THE_HNG_events.19.desc"
+	picture = REMILIA_eventPicture
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_country_modifier = THE_HNG_help_from_Scarlet_new_home
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.19.a
+		add_adm_power = 50
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+	}
+}
+
+#芙兰要求出去玩
+country_event = {
+	id = flavor_THE_HNG_events.20
+	title = "flavor_THE_HNG_events.20.t"
+	desc = "flavor_THE_HNG_events.20.desc"
+	picture = FLANDRE_eventPicture
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_country_modifier = THE_HNG_help_from_Scarlet_new_home
+		THE_generic_has_not_any_flandre_general = yes
+		THE_generic_has_not_any_flandre_admiral = yes
+		NOT = {
+			has_advisor_type_in_pool = th_advisor_flandre
+		}
+		NOT = {
+			advisor = th_advisor_flandre
+		}
+		NOT = { exists = FLR }
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.20.a
+		THE_HNG_define_general_flandre = yes
+	}
+	option = {
+		name = flavor_THE_HNG_events.20.b
+		THE_HNG_define_admiral_flandre = yes
+	}
+	option = {
+		name = flavor_THE_HNG_events.20.c
+		THE_HNG_define_advisor_flandre = yes
+	}
+	mean_time_to_happen = {
+		months = 240
+	}
+}
+
+#咲夜帮助美铃整顿经济
+country_event = {
+	id = flavor_THE_HNG_events.21
+	title = "flavor_THE_HNG_events.21.t"
+	desc = "flavor_THE_HNG_events.21.desc"
+	picture = SAKUDIO_eventPicture
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_country_modifier = THE_HNG_help_from_Scarlet_new_home
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.21.a
+		add_years_of_income = 0.75
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.21.b
+		add_stability = 1
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+	}
+}
+
+
+#帕秋莉的藏书
+country_event = {
+	id = flavor_THE_HNG_events.22
+	title = "flavor_THE_HNG_events.22.t"
+	desc = "flavor_THE_HNG_events.22.desc"
+	picture = PATCHOULI_eventPicture
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_country_modifier = THE_HNG_help_from_Scarlet_new_home
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.22.a
+		change_government_reform_progress = 25
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+	}
+}
+
+#小恶魔的秘密教学~
+country_event = {
+	id = flavor_THE_HNG_events.23
+	title = "flavor_THE_HNG_events.23.t"
+	desc = "flavor_THE_HNG_events.23.desc"
+	picture = THE_HNG_mission7
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_country_modifier = THE_HNG_help_from_Scarlet_new_home
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.23.a
+		every_known_country = {
+			add_aggressive_expansion = {
+				who = ROOT
+				value = -5
+			}			
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+	}
+}
+
+#土地兼并过于严重
+country_event = {
+	id = flavor_THE_HNG_events.24
+	title = "flavor_THE_HNG_events.24.t"
+	desc = "flavor_THE_HNG_events.24.desc"
+	picture = DRAGONDARK_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_casus_belli_against = ROOT
+				}
+				add_truce_with = ROOT
+			}
+			THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 5 type = nationalist_rebels size = 5 }
+			THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 1 type = pretender_rebels size = 5 }
+			set_country_flag = THE_HNG_disasters_lose_prepare2
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.24.a
+		add_stability = -2
+		add_mandate = -30
+		add_corruption = 5
+	}
+}
+
+#土地兼并灾难失败
+country_event = {
+	id = flavor_THE_HNG_events.25
+	title = "flavor_THE_HNG_events.25.t"
+	desc = "flavor_THE_HNG_events.25.desc"
+	picture = HIGAN_eventPicture
+	fire_only_once = yes
+	
+	trigger = {
+		has_disaster = the_hng_disasters_two
+		NOT = { has_country_modifier = THE_HNG_more_efficient_land_system }
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		OR = {
+			AND = {
+				OR = {
+					tag = HNG
+					was_tag = HNG
+				}
+				OR = {
+					NOT = { total_development = 1000 }
+					had_country_flag = {
+						flag = THE_HNG_disasters_lose_prepare2
+						days = 10950
+					}	
+				}		
+			}
+			has_country_flag = THE_HNG_disasters_lose2
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = THE_HNG_disasters_lose2
+			THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 2 type = nationalist_rebels size = 5 }
+			THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 1 type = pretender_rebels size = 5 }
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.25.a
+		add_stability = -1
+	}
+}
+
+#土地兼并灾难结束
+country_event = {
+	id = flavor_THE_HNG_events.26
+	title = "flavor_THE_HNG_events.26.t"
+	desc = "flavor_THE_HNG_events.26.desc"
+	picture = DRAGON_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_events.26.a
+		add_stability = 2
+		add_mandate = 100
+		every_owned_province = {
+			add_devastation = -100
+		}	
+		end_disaster = the_hng_disasters_two
+	}
+}
+
+#土地兼并事件1：大饥荒
+country_event = {
+	id = flavor_THE_HNG_events.27
+	title = "flavor_THE_HNG_events.27.t"
+	desc = "flavor_THE_HNG_events.27.desc"
+	picture = DRAGONDARK_eventPicture
+	fire_only_once = yes
+	trigger = {
+		had_country_flag = {
+			flag = THE_HNG_disasters_lose_prepare2
+			days = 730
+		}	
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_disaster = the_hng_disasters_two
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.27.a
+		add_years_of_income = -2
+		add_country_modifier = {
+			name = THE_hng_mission_modifier110
+			duration = 730
+		}
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.27.b
+		add_country_modifier = {
+			name = THE_hng_mission_modifier111
+			duration = 730
+		}
+		add_mandate = -10
+	}
+	
+	mean_time_to_happen = {
+		months = 480
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters2_reform1_had_completed
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters2_reform2_had_completed
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters2_reform3_had_completed
+		}
+	}
+}
+
+#土地兼并事件2：商人赈灾
+country_event = {
+	id = flavor_THE_HNG_events.28
+	title = "flavor_THE_HNG_events.28.t"
+	desc = "flavor_THE_HNG_events.28.desc"
+	picture = DRAGON_eventPicture
+	
+	trigger = {
+		had_country_flag = {
+			flag = THE_HNG_disasters_lose_prepare2
+			days = 730
+		}	
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_disaster = the_hng_disasters_two
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.28.a
+		add_mandate = 5
+		add_years_of_income = 1
+		add_meritocracy = 10
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.28.b
+		add_mandate = 5
+		add_years_of_income = 0.5
+		define_advisor = {
+			type = trader
+			skill = 3
+			cost_multiplier = 0.1
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+}
+
+#土地兼并事件3：士绅起义
+country_event = {
+	id = flavor_THE_HNG_events.29
+	title = "flavor_THE_HNG_events.29.t"
+	desc = "flavor_THE_HNG_events.29.desc"
+	picture = DRAGONDARK_eventPicture
+	fire_only_once = yes
+	trigger = {
+		had_country_flag = {
+			flag = THE_HNG_disasters_lose_prepare2
+			days = 730
+		}	
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_disaster = the_hng_disasters_two
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.29.a
+		THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 3 type = nationalist_rebels size = 5 }
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters2_reform1_had_completed
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters2_reform2_had_completed
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters2_reform3_had_completed
+		}
+	}
+}
+
+#土地兼并事件4：士绅反对土地改革
+country_event = {
+	id = flavor_THE_HNG_events.30
+	title = "flavor_THE_HNG_events.30.t"
+	desc = "flavor_THE_HNG_events.30.desc"
+	picture = DRAGONDARK_eventPicture
+	
+	trigger = {
+		had_country_flag = {
+			flag = THE_HNG_disasters_lose_prepare2
+			days = 730
+		}	
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_disaster = the_hng_disasters_two
+		NOT = { has_country_flag = THE_HNG_disasters2_reform2_had_completed }
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.30.a
+		add_corruption = 1
+		add_country_modifier = {
+			name = THE_hng_mission_modifier112
+			duration = 365
+		}
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.30.b
+		add_dip_power = -50
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters2_reform1_had_completed
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters2_reform2_had_completed
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters2_reform3_had_completed
+		}
+	}
+}
+
+
+#土地兼并事件5：改良主义士绅
+country_event = {
+	id = flavor_THE_HNG_events.31
+	title = "flavor_THE_HNG_events.31.t"
+	desc = "flavor_THE_HNG_events.31.desc"
+	picture = DRAGON_eventPicture
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_disaster = the_hng_disasters_two
+		is_year = 1540
+		NOT = { is_year = 1586 }
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.31.a
+		THE_HNG_define_advisor_zhangjuzheng = yes
+		add_country_modifier = {
+			name = THE_hng_mission_modifier113
+			duration = 3650
+		}
+		add_government_power = {
+			mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+			power_type = THE_HNG_Merger_degree_dip_power
+			value = -20
+		}
+		remove_country_modifier = THE_HNG_disasters_reform1_completed1_to_confusion
+		set_country_flag = flavor_THE_HNG_events31
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.31.b
+		add_mandate = 10
+		add_country_modifier = {
+			name = THE_hng_mission_modifier113
+			duration = 3650
+		}
+		add_government_power = {
+			mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+			power_type = THE_HNG_Merger_degree_dip_power
+			value = -10
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			country_event = {
+				id = flavor_THE_HNG_events.36
+				days = 120
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+}
+
+
+#土地兼并事件6：饿殍遍地
+country_event = {
+	id = flavor_THE_HNG_events.32
+	title = "flavor_THE_HNG_events.32.t"
+	desc = "flavor_THE_HNG_events.32.desc"
+	picture = DRAGONDARK_eventPicture
+	trigger = {
+		had_country_flag = {
+			flag = THE_HNG_disasters_lose_prepare2
+			days = 730
+		}	
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_disaster = the_hng_disasters_two
+		NOT = { has_country_flag = THE_HNG_disasters2_reform2_had_completed }
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.32.a
+		add_years_of_income = -0.25
+		add_mandate = 5
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.32.b
+		add_mandate = -5
+		THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 3 type = nationalist_rebels size = 5 }
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.32.c
+		add_mandate = 5
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = -20
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters2_reform1_had_completed
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters2_reform2_had_completed
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters2_reform3_had_completed
+		}
+	}
+}
+
+
+#土地兼并事件7：农民暴动
+country_event = {
+	id = flavor_THE_HNG_events.33
+	title = "flavor_THE_HNG_events.33.t"
+	desc = "flavor_THE_HNG_events.33.desc"
+	picture = DRAGONDARK_eventPicture
+	trigger = {
+		had_country_flag = {
+			flag = THE_HNG_disasters_lose_prepare2
+			days = 730
+		}	
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_disaster = the_hng_disasters_two
+		NOT = { has_country_flag = THE_HNG_disasters2_reform1_had_completed }
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.33.a
+		add_mandate = -5
+		THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 2 type = nationalist_rebels size = 5 }
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.33.b
+		add_years_of_income = -0.25
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters2_reform1_had_completed
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters2_reform2_had_completed
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters2_reform3_had_completed
+		}
+	}
+}
+
+
+#士绅的要求
+country_event = {
+	id = flavor_THE_HNG_events.34
+	title = "flavor_THE_HNG_events.34.t"
+	desc = "flavor_THE_HNG_events.34.desc"
+	picture = MEILING_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_events.34.a
+		add_corruption = 2
+	}
+}
+
+#度田政策
+country_event = {
+	id = flavor_THE_HNG_events.35
+	title = "flavor_THE_HNG_events.35.t"
+	desc = "flavor_THE_HNG_events.35.desc"
+	picture = MEILING_eventPicture
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 2 type = nationalist_rebels size = 5 }
+			THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 2 type = pretender_rebels size = 5 }
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.35.a
+		add_stability = -1
+		add_estate_loyalty = {
+			estate = all
+			loyalty = 10
+		}
+		add_years_of_income = -0.25
+	}
+}
+
+
+#一条鞭法
+country_event = {
+	id = flavor_THE_HNG_events.36
+	title = "flavor_THE_HNG_events.36.t"
+	desc = "flavor_THE_HNG_events.36.desc"
+	picture = REFORM_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_events.36.a
+		add_corruption = -2
+		add_splendor = 100
+		add_adm_power = 50
+		add_dip_power = 100
+		add_mil_power = 50
+		add_country_modifier = {
+			name = THE_hng_mission_modifier114
+			duration = -1
+		}	
+	}
+}
+
+
+#通胀过于严重
+country_event = {
+	id = flavor_THE_HNG_events.37
+	title = "flavor_THE_HNG_events.37.t"
+	desc = "flavor_THE_HNG_events.37.desc"
+	picture = OVEREXTENSION_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = THE_HNG_disasters_lose_prepare3
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.37.a
+		add_inflation = 10
+		add_stability = -1
+	}
+}
+
+#通胀崩溃灾难失败
+country_event = {
+	id = flavor_THE_HNG_events.38
+	title = "flavor_THE_HNG_events.38.t"
+	desc = "flavor_THE_HNG_events.38.desc"
+	picture = HIGAN_eventPicture
+	fire_only_once = yes
+	
+	trigger = {
+		has_disaster = the_hng_disasters_three
+		NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic }
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		OR = {
+			AND = {
+				had_country_flag = {
+					flag = THE_HNG_disasters_lose_prepare3
+					days = 7300
+				}
+			}
+			has_country_flag = THE_HNG_disasters_lose3
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = THE_HNG_disasters_lose3
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.38.a
+		add_stability = -1
+		add_years_of_income = -0.5
+		add_country_modifier = {
+			name = THE_hng_mission_modifier115
+			duration = -1
+		}	
+	}
+}
+
+#通胀崩溃灾难结束
+country_event = {
+	id = flavor_THE_HNG_events.39
+	title = "flavor_THE_HNG_events.39.t"
+	desc = "flavor_THE_HNG_events.39.desc"
+	picture = DRAGON_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_events.39.a
+		add_stability = 1
+		add_years_of_income = 10
+		end_disaster = the_hng_disasters_three
+	}
+}
+
+
+#通胀崩溃事件1：张居正的建议
+country_event = {
+	id = flavor_THE_HNG_events.40
+	title = "flavor_THE_HNG_events.40.t"
+	desc = "flavor_THE_HNG_events.40.desc"
+	picture = BIG_BOOK_eventPicture
+	fire_only_once = yes
+	trigger = {
+		has_disaster = the_hng_disasters_three
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_country_flag = flavor_THE_HNG_events31
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.40.a
+		add_inflation = -2
+		add_government_power = {
+			mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+			power_type = THE_HNG_Inflation_rate_adm_power
+			value = -10
+		}
+		add_adm_power = 200
+	}
+	mean_time_to_happen = {
+		months = 64
+	}
+}
+
+#通胀崩溃事件2：过于昂贵的物价
+country_event = {
+	id = flavor_THE_HNG_events.41
+	title = "flavor_THE_HNG_events.41.t"
+	desc = "flavor_THE_HNG_events.41.desc"
+	picture = OVERWORKEDYAMA_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		NOT = { has_country_flag = THE_HNG_disasters3_reform1_had_completed }
+		has_disaster = the_hng_disasters_three
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.41.a
+		random_owned_area = {
+			limit = {
+				is_state = yes
+				superregion = china_superregion
+			}
+			add_permanent_province_modifier = {
+				name = THE_hng_mission_modifier116
+				duration = 730
+			}
+		}
+		random_owned_area = {
+			limit = {
+				is_state = yes
+				superregion = china_superregion
+			}
+			add_permanent_province_modifier = {
+				name = THE_hng_mission_modifier116
+				duration = 730
+			}
+		}
+		random_owned_area = {
+			limit = {
+				is_state = yes
+				superregion = china_superregion
+			}
+			add_permanent_province_modifier = {
+				name = THE_hng_mission_modifier116
+				duration = 730
+			}
+		}
+		add_government_power = {
+			mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+			power_type = THE_HNG_Inflation_rate_adm_power
+			value = 10
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.41.b
+		add_adm_power = -100
+		add_government_power = {
+			mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+			power_type = THE_HNG_Inflation_rate_adm_power
+			value = -15
+		}
+	}
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters3_reform1_had_completed
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters3_reform2_had_completed
+		}
+		modifier = {
+			factor = 1.5
+			has_country_flag = THE_HNG_disasters3_reform3_had_completed
+		}
+	}
+}
+
+#通胀崩溃事件3：外国商人
+country_event = {
+	id = flavor_THE_HNG_events.42
+	title = "flavor_THE_HNG_events.42.t"
+	desc = "flavor_THE_HNG_events.42.desc"
+	picture = TOUHOUMAPS_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_disaster = the_hng_disasters_three
+		any_country = {
+			OR = {
+				capital_scope = { superregion = europe_superregion }
+				capital_scope = { continent = gensokyo_continent }
+			}
+			colony = 1
+		}
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.42.a
+		add_inflation = 4
+		add_years_of_income = 2
+		random_country = {
+			limit = {
+				OR = {
+					capital_scope = { superregion = europe_superregion }
+					capital_scope = { continent = gensokyo_continent }
+				}
+				colony = 1
+			}
+			add_years_of_income = 2
+			add_country_modifier = {
+				name = THE_hng_mission_modifier133
+				duration = 3650
+			}
+		}
+		add_government_power = {
+			mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+			power_type = THE_HNG_Inflation_rate_adm_power
+			value = 10
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.42.b
+		add_mandate = 10
+		add_meritocracy = -10
+		add_government_power = {
+			mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+			power_type = THE_HNG_Inflation_rate_adm_power
+			value = -5
+		}
+	}
+	mean_time_to_happen = {
+		months = 72
+	}
+}
+
+#通胀崩溃事件4：囤货居奇的商人
+country_event = {
+	id = flavor_THE_HNG_events.43
+	title = "flavor_THE_HNG_events.43.t"
+	desc = "flavor_THE_HNG_events.43.desc"
+	picture =  BUCCANEERS_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_disaster = the_hng_disasters_three
+		NOT = { has_country_flag = THE_HNG_disasters3_reform2_had_completed }
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.43.a
+		add_inflation = 4
+		add_years_of_income = 3
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 15
+		}
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = -20
+		}
+		add_government_power = {
+			mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+			power_type = THE_HNG_Inflation_rate_adm_power
+			value = -10
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.43.b
+		add_years_of_income = 1
+		add_mandate = 5
+		add_adm_power = -50
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = 10
+		}
+		add_government_power = {
+			mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+			power_type = THE_HNG_Inflation_rate_adm_power
+			value = -5
+		}
+	}
+	mean_time_to_happen = {
+		months = 120
+	}
+}
+
+
+#通胀崩溃事件5：来自幻想乡的提议
+country_event = {
+	id = flavor_THE_HNG_events.44
+	title = "flavor_THE_HNG_events.44.t"
+	desc = "flavor_THE_HNG_events.44.desc"
+	picture =  YUKARI2_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_disaster = the_hng_disasters_three
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.44.a
+		add_years_of_income = -0.25
+		add_inflation = -4
+		every_country = {
+			limit = {
+				capital_scope = { continent = gensokyo_continent }
+				NOT = {
+					OR = {
+						tag = HNG
+						was_tag = HNG
+					}
+				}
+			}
+			add_years_of_income = 2
+		}
+		add_government_power = {
+			mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+			power_type = THE_HNG_Inflation_rate_adm_power
+			value = -25
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.44.b
+		add_inflation = 2
+		add_years_of_income = 1
+	}
+	mean_time_to_happen = {
+		months = 60
+	}
+}
+
+#通胀崩溃事件6：求助山童/河童
+country_event = {
+	id = flavor_THE_HNG_events.45
+	title = "flavor_THE_HNG_events.45.t"
+	desc = "flavor_THE_HNG_events.45.desc"
+	picture =  THE_HNG_mission4
+	
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_disaster = the_hng_disasters_three
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.45.a
+		add_treasury = -200
+		4965 = {
+			owner = {
+				add_treasury = 200
+			}
+		}
+		define_advisor = {
+			type = master_of_mint
+			skill = 3
+			culture = Kappa
+			cost_multiplier = 0.25
+			female = yes
+		}
+		add_adm_power = 50
+		add_inflation = -2
+		add_government_power = {
+			mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+			power_type = THE_HNG_Inflation_rate_adm_power
+			value = -10
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.45.b
+		add_treasury = -200
+		5219 = {
+			owner = {
+				add_treasury = 200
+			}
+		}
+		define_advisor = {
+			type = master_of_mint
+			skill = 3
+			culture = Kappa
+			cost_multiplier = 0.25
+			female = yes
+		}
+		add_adm_power = 50
+		add_inflation = -2
+		add_government_power = {
+			mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+			power_type = THE_HNG_Inflation_rate_adm_power
+			value = -10
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.45.c
+		trigger = {
+			inflation = 10
+		}
+		add_treasury = -400
+		5219 = {
+			owner = {
+				add_treasury = 200
+			}
+		}
+		4965 = {
+			owner = {
+				add_treasury = 200
+			}
+		}
+		define_advisor = {
+			type = master_of_mint
+			skill = 3
+			culture = Kappa
+			cost_multiplier = 0.25
+			female = yes
+		}
+		define_advisor = {
+			type = master_of_mint
+			skill = 3
+			culture = Kappa
+			cost_multiplier = 0.25
+			female = yes
+		}
+		add_adm_power = 100
+		add_inflation = -5
+		add_government_power = {
+			mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+			power_type = THE_HNG_Inflation_rate_adm_power
+			value = -25
+		}
+	}
+	mean_time_to_happen = {
+		months = 120
+	}
+}
+
+
+#通胀崩溃任务事件：东方大通胀
+country_event = {
+	id = flavor_THE_HNG_events.46
+	title = "flavor_THE_HNG_events.46.t"
+	desc = "flavor_THE_HNG_events.46.desc"
+	picture =  THE_HNG_sleeping_hong
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_events.46.a
+		add_inflation = -4
+		add_stability = 1
+		add_splendor = 400
+	}
+}
+
+#通胀崩溃任务事件：重建交子系统
+country_event = {
+	id = flavor_THE_HNG_events.47
+	title = "flavor_THE_HNG_events.47.t"
+	desc = "flavor_THE_HNG_events.47.desc"
+	picture =  DRAGON_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_events.47.a
+		add_stability = 1
+		add_inflation = -3
+		random_owned_province = {
+			limit = {
+				trade_goods = paper
+				has_production_building_trigger = yes	
+				has_tax_building_trigger = yes	
+				has_production_building_trigger = yes
+			}
+			add_permanent_province_modifier = {
+				name = THE_hng_mission_modifier120
+				duration = -1
+			}
+		}
+	}
+}
+
+
+#军队腐化
+country_event = {
+	id = flavor_THE_HNG_events.48
+	title = "flavor_THE_HNG_events.48.t"
+	desc = "flavor_THE_HNG_events.48.desc"
+	picture = THE_HNG_sleeping_hong
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_disaster = the_hng_disasters_four
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = THE_HNG_disasters_lose_prepare4
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.48.a
+		add_army_professionalism = -0.05
+	}
+}
+
+#军队腐化灾难失败
+country_event = {
+	id = flavor_THE_HNG_events.49
+	title = "flavor_THE_HNG_events.49.t"
+	desc = "flavor_THE_HNG_events.49.desc"
+	picture = HIGAN_eventPicture
+	fire_only_once = yes
+	
+	trigger = {
+		has_disaster = the_hng_disasters_four
+		NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army }
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		OR = {
+			AND ={
+				OR = {
+					tag = HNG
+					was_tag = HNG
+				}
+				had_country_flag = {
+					flag = THE_HNG_disasters_lose_prepare4
+					days = 7300
+				}
+			}
+			has_country_flag = THE_HNG_disasters_lose4
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = THE_HNG_disasters_lose4
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.49.a
+		add_stability = -1
+		add_country_modifier = {
+			name = THE_hng_mission_modifier121
+			duration = -1
+		}	
+	}
+}
+
+#军队腐化灾难结束
+country_event = {
+	id = flavor_THE_HNG_events.50
+	title = "flavor_THE_HNG_events.50.t"
+	desc = "flavor_THE_HNG_events.50.desc"
+	picture = DRAGON_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_events.50.a
+		add_stability = 1
+		add_army_professionalism = 0.1
+		end_disaster = the_hng_disasters_four
+		set_country_flag = THE_HNG_disasters_end4
+	}
+}
+
+
+#军队腐化事件1：清查空饷
+country_event = {
+	id = flavor_THE_HNG_events.51
+	title = "flavor_THE_HNG_events.51.t"
+	desc = "flavor_THE_HNG_events.51.desc"
+	picture =  THE_HNG_sleeping_hong
+	
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_disaster = the_hng_disasters_four
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.51.a
+		add_years_of_income = 0.25
+		add_corruption = -1
+		add_government_power = {
+			mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+			power_type = THE_HNG_Army_corruption_mil_power
+			value = -10
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 72
+	}
+}
+
+
+#军队腐化事件2：军队哗变
+province_event = {
+	id = flavor_THE_HNG_events.52
+	title = "flavor_THE_HNG_events.52.t"
+	desc = "flavor_THE_HNG_events.52.desc"
+	picture =  THE_HNG_sleeping_hong
+	
+	trigger = {
+		owner = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+			has_disaster = the_hng_disasters_four
+			NOT = { has_country_flag = THE_HNG_disasters4_reform1_had_completed }
+		}
+		superregion = china_superregion
+		fort_level = 1
+	}
+
+	immediate = {
+		ROOT = {
+			save_event_target_as = the_hng_event_52_target
+		}
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.52.a
+		goto = the_hng_event_52_target
+		spawn_rebels = {
+			type = nationalist_rebels
+			size = 5
+		}
+	}
+	is_mtth_scaled_to_size = 1
+	
+	mean_time_to_happen = {
+		months = 48
+		modifier = {
+			factor = 1.5
+			owner = {
+				has_country_flag = THE_HNG_disasters4_reform1_had_completed
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				has_country_flag = THE_HNG_disasters4_reform2_had_completed
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				has_country_flag = THE_HNG_disasters4_reform3_had_completed
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				has_country_flag = THE_HNG_disasters4_reform4_had_completed
+			}
+		}
+	}
+}
+
+#军队腐化事件3：挪用军饷
+country_event = {
+	id = flavor_THE_HNG_events.53
+	title = "flavor_THE_HNG_events.53.t"
+	desc = "flavor_THE_HNG_events.53.desc"
+	picture =  THE_HNG_sleeping_hong
+	
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_disaster = the_hng_disasters_four
+		NOT = { has_country_flag = THE_HNG_disasters4_reform2_had_completed }
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.53.a
+		add_corruption = -2
+		add_years_of_income = 0.25
+		add_government_power = {
+			mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+			power_type = THE_HNG_Army_corruption_mil_power
+			value = -10
+		}
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.53.b
+		add_years_of_income = 2
+		add_corruption = 2
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+}
+
+#军队腐化事件4：更新军备
+country_event = {
+	id = flavor_THE_HNG_events.54
+	title = "flavor_THE_HNG_events.54.t"
+	desc = "flavor_THE_HNG_events.54.desc"
+	picture =  THE_HNG_sleeping_hong
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_disaster = the_hng_disasters_four
+		any_neighbor_country = {
+			tech_difference = 1
+		} 
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.54.a
+		add_years_of_income = -1
+		add_government_power = {
+			mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+			power_type = THE_HNG_Army_corruption_mil_power
+			value = -10
+		}
+		add_mil_tech = 1
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.54.b
+		add_army_professionalism = 0.05
+		add_corruption = -2
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+	}
+}
+
+
+#军队腐化事件5：重整军队
+country_event = {
+	id = flavor_THE_HNG_events.55
+	title = "flavor_THE_HNG_events.55.t"
+	desc = "flavor_THE_HNG_events.55.desc"
+	picture =  THE_HNG_sleeping_hong
+	
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_disaster = the_hng_disasters_four
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.55.a
+		add_years_of_income = -0.1
+		add_army_professionalism = 0.05
+		add_army_tradition = 20
+		add_government_power = {
+			mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+			power_type = THE_HNG_Army_corruption_mil_power
+			value = -10
+		}
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.55.b
+		add_government_power = {
+			mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+			power_type = THE_HNG_Army_corruption_mil_power
+			value = 5
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+}
+
+
+#军队腐化事件6：戚继光
+country_event = {
+	id = flavor_THE_HNG_events.56
+	title = "flavor_THE_HNG_events.56.t"
+	desc = "flavor_THE_HNG_events.56.desc"
+	picture =  REFORM_eventPicture
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_disaster = the_hng_disasters_four
+		is_year = 1555
+		NOT = { is_year = 1588 }
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.56.a
+		THE_HNG_define_general_qijiguang = yes
+		set_country_flag = THE_HNG_can_zheng_zhao_qijiguang
+		remove_country_modifier = THE_HNG_disasters4_reform_to_confusion
+		add_mil_power = 100
+		add_army_professionalism = 0.025
+		add_government_power = {
+			mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+			power_type = THE_HNG_Army_corruption_mil_power
+			value = -20
+		}
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.56.b
+		THE_HNG_define_advisor_qijiguang = yes
+		set_country_flag = THE_HNG_can_zheng_zhao_qijiguang
+		add_mil_power = 200
+		remove_country_modifier = THE_HNG_disasters4_reform_to_confusion
+		add_army_professionalism = 0.05
+		add_government_power = {
+			mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+			power_type = THE_HNG_Army_corruption_mil_power
+			value = -20
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+	}
+}
+
+
+#沉默的追随者
+country_event = {
+	id = flavor_THE_HNG_events.57
+	title = "flavor_THE_HNG_events.57.t"
+	desc = "flavor_THE_HNG_events.57.desc"
+	picture =  THE_HNG_mission3
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_disaster = th_gensokyan_celestial_trial
+		OR = {
+			has_reform = THE_HNG_red_dragon_celestial_empire
+			has_disaster = the_hng_disasters_one
+			has_disaster = the_hng_disasters_two
+			has_disaster = the_hng_disasters_three
+			has_disaster = the_hng_disasters_four		
+		}
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.57.a
+		add_country_modifier = {
+			name = THE_hng_mission_modifier124
+			duration = 7300
+		}
+	}
+}
+
+#红龙天朝解释
+country_event = {
+	id = flavor_THE_HNG_events.58
+	title = "flavor_THE_HNG_events.58.t"
+	desc = "flavor_THE_HNG_events.58.desc"
+	picture =  THE_HNG_mission1
+	fire_only_once = yes
+	
+	trigger = {
+		has_reform = THE_HNG_red_dragon_celestial_empire
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.58.a
+	}
+}
+
+#灾难降临
+country_event = {
+	id = flavor_THE_HNG_events.59
+	title = "flavor_THE_HNG_events.59.t"
+	desc = "flavor_THE_HNG_events.59.desc"
+	picture =  THE_HNG_mission1
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			has_disaster = the_hng_disasters_one
+			has_disaster = the_hng_disasters_two
+			has_disaster = the_hng_disasters_three
+			has_disaster = the_hng_disasters_four		
+		}
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		NOT = { has_country_flag = flavor_THE_HNG_mission_events59 }
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.59.a
+		swap_non_generic_missions = yes
+		set_country_flag = flavor_THE_HNG_events59
+	}
+}
+
+#过去的美铃
+country_event = {
+	id = flavor_THE_HNG_events.60
+	title = "flavor_THE_HNG_events.60.t"
+	desc = "flavor_THE_HNG_events.60.desc"
+	picture =  THE_HNG_mission10
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_events.60.a
+		set_country_flag = THE_HNG_china_haihuang
+	}
+	option = {
+		name = flavor_THE_HNG_events.60.b
+		set_country_flag = THE_HNG_zujie_wuzhe
+	}
+	option = {
+		name = flavor_THE_HNG_events.60.c
+		set_country_flag = THE_HNG_chinese_red_dragon
+	}
+}
+
+#黑暗/光明
+country_event = {
+	id = flavor_THE_HNG_events.61
+	title = "flavor_THE_HNG_events.61.t"
+	desc = "flavor_THE_HNG_events.61.desc"
+	picture =  DRAGONDARK_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_events.61.a
+		trigger = {
+			OR = {
+				SCR = {
+					has_opinion = {
+						who = ROOT
+						value = 200
+					}
+				}
+				AND = {
+					NOT = { exists = SCR }
+					has_country_modifier = THE_HNG_help_from_Scarlet_new_home
+				}
+			}
+		}
+		set_country_flag = THE_HNG_choose_light
+	}
+	option = {
+		name = flavor_THE_HNG_events.61.b
+		set_country_flag = THE_HNG_choose_dark
+	}
+}
+
+#黑暗中的呼唤
+country_event = {
+	id = flavor_THE_HNG_events.62
+	title = "flavor_THE_HNG_events.62.t"
+	desc = "flavor_THE_HNG_events.62.desc"
+	picture =  THE_HNG_mission11
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_events.62.a
+		trigger = {
+			has_country_flag = THE_HNG_zujie_wuzhe
+		}
+		country_event = {
+			id = flavor_THE_HNG_events.63
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.62.b
+		trigger = {
+			has_country_flag = THE_HNG_china_haihuang
+		}
+		country_event = {
+			id = flavor_THE_HNG_events.64
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.62.c
+		trigger = {
+			has_country_flag = THE_HNG_choose_light
+		}
+		country_event = {
+			id = flavor_THE_HNG_events.65
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.62.d
+		trigger = {
+			has_country_flag = THE_HNG_chinese_red_dragon
+		}
+		country_event = {
+			id = flavor_THE_HNG_events.66
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.62.e
+		trigger = {
+			has_country_flag = THE_HNG_choose_dark
+		}
+		country_event = {
+			id = flavor_THE_HNG_events.69
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.62.f
+		trigger = {
+			has_country_flag = THE_HNG_choose_dark
+			has_country_flag = THE_HNG_chinese_red_dragon
+		}
+		country_event = {
+			id = flavor_THE_HNG_events.70
+		}
+	}
+}
+
+#大小姐的呼唤
+country_event = {
+	id = flavor_THE_HNG_events.63
+	title = "flavor_THE_HNG_events.63.t"
+	desc = "flavor_THE_HNG_events.63.desc"
+	picture =  REMILIAVICTORY_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_events.63.a
+		clr_country_flag = THE_HNG_red_dragon_celestial_empire_can_use
+		add_adm_power = 1998
+		add_dip_power = 1998
+		add_mil_power = 1998
+		add_treasury = 5000
+		add_manpower = 100
+		remove_country_modifier = THE_hng_mission_modifier115
+		remove_country_modifier = THE_hng_mission_modifier121
+		remove_country_modifier = lost_mandate_of_heaven
+		th_respawn_ruler_with_new_stats_effect = yes
+	}
+}
+
+#红魔馆的呼唤
+country_event = {
+	id = flavor_THE_HNG_events.64
+	title = "flavor_THE_HNG_events.64.t"
+	desc = "flavor_THE_HNG_events.64.desc"
+	picture =  THE_HNG_help_from_Scarlet_new_home_picture
+	is_triggered_only = yes
+	option = {
+		name = flavor_THE_HNG_events.64.a
+		clr_country_flag = THE_HNG_red_dragon_celestial_empire_can_use
+		add_adm_power = 1998
+		add_dip_power = 1998
+		add_mil_power = 1998
+		add_adm_tech = 1
+		add_dip_tech = 1
+		add_mil_tech = 1
+		add_treasury = 5000
+		add_manpower = 100
+		remove_country_modifier = THE_hng_mission_modifier115
+		remove_country_modifier = THE_hng_mission_modifier121
+		remove_country_modifier = lost_mandate_of_heaven
+		th_respawn_ruler_with_new_stats_effect = yes
+	}
+}
+
+
+#烈海王的话语
+country_event = {
+	id = flavor_THE_HNG_events.65
+	title = "flavor_THE_HNG_events.65.t"
+	desc = "flavor_THE_HNG_events.65.desc"
+	picture =  THE_HNG_mission9
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_events.65.a
+		add_adm_power = 1998
+		add_dip_power = 1998
+		add_mil_power = 1998
+		add_treasury = 5000
+		add_manpower = 100
+		remove_country_modifier = THE_hng_mission_modifier115
+		remove_country_modifier = THE_hng_mission_modifier121
+		remove_country_modifier = lost_mandate_of_heaven
+		clr_country_flag = THE_HNG_finish_red_dragon_celestial_empire
+		set_emperor_of_china = ROOT
+		th_respawn_ruler_with_new_stats_effect = yes
+	}
+}
+
+#牧民
+country_event = {
+	id = flavor_THE_HNG_events.66
+	title = "flavor_THE_HNG_events.66.t"
+	desc = "flavor_THE_HNG_events.66.desc"
+	picture =  THE_HNG_mission12
+	is_triggered_only = yes
+	
+	option = { 
+		name = flavor_THE_HNG_events.66.a
+		add_adm_power = 1998
+		add_dip_power = 1998
+		add_mil_power = 1998
+		add_treasury = 5000
+		add_manpower = 100
+		remove_country_modifier = THE_hng_mission_modifier115
+		remove_country_modifier = THE_hng_mission_modifier121
+		remove_country_modifier = lost_mandate_of_heaven
+		set_emperor_of_china = ROOT
+		th_respawn_ruler_with_new_stats_effect = yes
+		set_country_flag = flavor_THE_HNG_events66
+	}
+}
+
+#统一游牧
+country_event = {
+	id = flavor_THE_HNG_events.67
+	title = "flavor_THE_HNG_events.67.t"
+	desc = "flavor_THE_HNG_events.67.desc"
+	picture =  THE_HNG_mission12
+	fire_only_once = yes
+	
+	trigger = {
+		had_country_flag = {
+			flag = flavor_THE_HNG_events66
+			days = 1
+		}
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.67.a
+		clr_country_flag = THE_HNG_red_dragon_celestial_empire_can_use
+		set_country_flag = flavor_THE_HNG_events67
+		add_government_reform = THE_HNG_red_dragon_steppe_celestial_empire
+		every_country = {
+			limit = {
+				has_reform = steppe_horde
+			}
+			country_event = {
+				id = flavor_THE_HNG_events.68
+			}
+		}
+		hidden_effect = {
+			add_accepted_culture_or_dip_power = { culture = mongol free = yes }
+			add_accepted_culture_or_dip_power = { culture = chahar free = yes }
+			add_accepted_culture_or_dip_power = { culture = khalkha free = yes }
+			add_accepted_culture_or_dip_power = { culture = oirats free = yes }
+			add_accepted_culture_or_dip_power = { culture = uzbehk free = yes }
+			add_accepted_culture_or_dip_power = { culture = turkmeni free = yes }
+			add_accepted_culture_or_dip_power = { culture = uyghur free = yes }
+			add_accepted_culture_or_dip_power = { culture = khazak free = yes }
+			add_accepted_culture_or_dip_power = { culture = kirgiz free = yes }
+			add_accepted_culture_or_dip_power = { culture = manchu free = yes }
+			add_accepted_culture_or_dip_power = { culture = manchu_new free = yes }
+			add_accepted_culture_or_dip_power = { culture = astrakhani free = yes }
+			add_accepted_culture_or_dip_power = { culture = bashkir free = yes }
+			add_accepted_culture_or_dip_power = { culture = crimean free = yes }
+			add_accepted_culture_or_dip_power = { culture = kazani free = yes }
+			add_accepted_culture_or_dip_power = { culture = mishary free = yes }
+			add_accepted_culture_or_dip_power = { culture = nogaybak free = yes }
+			add_accepted_culture_or_dip_power = { culture = siberian free = yes }
+		}
+	}
+}
+
+#新的天可汗
+country_event = {
+	id = flavor_THE_HNG_events.68
+	title = "flavor_THE_HNG_events.68.t"
+	desc = "flavor_THE_HNG_events.68.desc"
+	picture =  THE_HNG_mission12
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_events.68.a
+		HNG = {
+			inherit = ROOT
+		}
+	}
+}
+
+#世界之喰煞
+country_event = {
+	id = flavor_THE_HNG_events.69
+	title = "flavor_THE_HNG_events.69.t"
+	desc = "flavor_THE_HNG_events.69.desc"
+	picture =  THE_HNG_mission13
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_events.69.a
+		add_adm_power = 1998
+		add_dip_power = 1998
+		add_mil_power = 1998
+		add_treasury = 5000
+		add_manpower = 100
+		remove_country_modifier = THE_hng_mission_modifier115
+		remove_country_modifier = THE_hng_mission_modifier121
+		remove_country_modifier = lost_mandate_of_heaven
+		set_emperor_of_china = ROOT
+		th_respawn_ruler_with_new_stats_effect = yes
+		hidden_effect = {
+			add_country_modifier = {
+				name = THE_hng_mission_modifier125
+				duration = -1
+			}
+		}
+		
+	}
+	option = {
+		name = flavor_THE_HNG_events.69.b
+		add_adm_power = 1998
+		add_dip_power = 1998
+		add_mil_power = 1998
+		add_treasury = 5000
+		add_manpower = 100
+		remove_country_modifier = THE_hng_mission_modifier115
+		remove_country_modifier = THE_hng_mission_modifier121
+		remove_country_modifier = lost_mandate_of_heaven
+		set_emperor_of_china = ROOT
+		th_respawn_ruler_with_new_stats_effect = yes
+	}
+}
+
+#轮回之终末
+country_event = {
+	id = flavor_THE_HNG_events.70
+	title = "flavor_THE_HNG_events.70.t"
+	desc = "flavor_THE_HNG_events.70.desc"
+	picture =  THE_HNG_mission14
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_events.70.a
+		add_adm_power = 1998
+		add_dip_power = 1998
+		add_mil_power = 1998
+		add_treasury = 5000
+		add_manpower = 100
+		remove_country_modifier = THE_hng_mission_modifier115
+		remove_country_modifier = THE_hng_mission_modifier121
+		remove_country_modifier = lost_mandate_of_heaven
+		inherit = event_target:EmperorOfChina 
+		set_emperor_of_china = ROOT
+		th_respawn_ruler_with_new_stats_effect = yes
+		hidden_effect = {
+			set_country_flag = flavor_THE_HNG_events70
+			add_country_modifier = {
+				name = THE_hng_mission_modifier126
+				duration = -1
+			}
+		}
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.70.b
+		add_adm_power = 1998
+		add_dip_power = 1998
+		add_mil_power = 1998
+		add_treasury = 5000
+		add_manpower = 100
+		remove_country_modifier = THE_hng_mission_modifier115
+		remove_country_modifier = THE_hng_mission_modifier121
+		remove_country_modifier = lost_mandate_of_heaven
+		inherit = event_target:EmperorOfChina 
+		set_emperor_of_china = ROOT
+		th_respawn_ruler_with_new_stats_effect = yes
+	}
+	
+	after = {
+		hidden_effect = {
+			country_event = {
+				id = flavor_THE_HNG_events.71
+				days = 18250
+			}
+		}
+	}
+}
+
+#轮回之终末
+country_event = {
+	id = flavor_THE_HNG_events.71
+	title = "flavor_THE_HNG_events.71.t"
+	desc = "flavor_THE_HNG_events.71.desc"
+	picture =  THE_HNG_mission14
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		any_province = {
+			is_empty = no
+			is_wasteland = no
+			is_sea = no
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}	
+	}
+	
+	option = {
+		name = flavor_THE_HNG_events.71.a
+		every_owned_province = {
+			cede_province = ZZZZ
+		}
+	}
+}
+
+#美铃睡觉事件
+country_event = {
+	id = flavor_THE_HNG_events.72
+	title = "flavor_THE_HNG_events.72.t"
+	desc = "flavor_THE_HNG_events.72.desc"
+	picture =  THE_HNG_sleeping_hong
+	
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		NOT = { has_estate_privilege = THE_HNG_nobles_privileges3 }
+	}
+	option = {
+		name = flavor_THE_HNG_events.72.a
+		add_stability = -1
+	}
+	option = {
+		name = flavor_THE_HNG_events.72.b
+		add_dip_power = -100
+	}
+	option = {
+		name = flavor_THE_HNG_events.72.c
+		trigger = {
+			has_country_modifier = THE_HNG_help_from_Sakuya_Izayoi
+			has_country_modifier = THE_HNG_help_from_Scarlet_new_home
+		}
+		add_adm_power = 25
+	}
+	
+	mean_time_to_happen = {
+		months = 600
+	}
+}
+
+#妖怪武士出征
+country_event = {
+	id = flavor_THE_HNG_events.73
+	title = "flavor_THE_HNG_events.73.t"
+	desc = "flavor_THE_HNG_events.73.desc"
+	picture =  THE_HNG_sleeping_hong
+	
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		is_at_war = yes
+	}
+	option = {
+		name = flavor_THE_HNG_events.73.a
+		add_army_professionalism = 0.03
+		add_country_modifier = {
+			name = THE_hng_mission_modifier127
+			duration = 3650
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 600
+	}
+}
+
+#妖怪武士横冲直撞
+country_event = {
+	id = flavor_THE_HNG_events.74
+	title = "flavor_THE_HNG_events.74.t"
+	desc = "flavor_THE_HNG_events.74.desc"
+	picture =  THE_HNG_sleeping_hong
+	
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		NOT = { has_estate_privilege = THE_HNG_nobles_privileges4 }
+	}
+	option = {
+		name = flavor_THE_HNG_events.74.a
+		add_stability = -1
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 20
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.74.b
+		add_dip_power = -100
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 20
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.74.c
+		trigger = {
+			ruler_has_personality = strict
+		}
+		add_mil_power = 100
+	}
+	mean_time_to_happen = {
+		months = 600
+	}
+}
+
+# #杂鱼失去佣兵debuff
+# country_event = {
+# 	id = flavor_THE_HNG_events.75
+# 	title = "flavor_THE_HNG_events.75.t"
+# 	desc = "flavor_THE_HNG_events.75.desc"
+# 	picture =  YUKARI2_eventPicture
+# 	fire_only_once = yes
+# 	trigger = {
+# 		OR = {
+# 			tag = HNG
+# 			was_tag = HNG
+# 		}
+# 		has_country_flag = hng_do_the_change3_flag
+# 		has_country_modifier = THE_hng_mission_modifier3
+# 	}
+# 	option = {
+# 		name = flavor_THE_HNG_events.75.a
+# 		remove_country_modifier = THE_hng_mission_modifier3
+# 		add_treasury = 200
+# 	}
+# }
+
+#汉化？
+country_event = {
+	id = flavor_THE_HNG_events.76
+	title = "flavor_THE_HNG_events.76.t"
+	desc = "flavor_THE_HNG_events.76.desc"
+	picture =  THE_HNG_mission2
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = flavor_THE_HNG_events.76.a
+		add_stability = 1
+		set_country_flag = flavor_THE_HNG_help_chinese_culture
+	}
+	option = {
+		name = flavor_THE_HNG_events.76.b
+		add_stability = -1
+		trigger = {
+			OR = {
+				has_country_flag = hng_do_the_change3_flag
+				AND = {
+					has_country_modifier = THE_HNG_more_efficient_land_system
+					has_country_modifier = THE_HNG_believe_your_country
+				}
+			}
+		}
+		tooltip = {
+			custom_tooltip = flavor_THE_HNG_events76_tt
+		}
+		add_country_modifier = {
+			name = THE_hng_mission_modifier131
+			duration = 14600
+		}
+		set_country_flag = flavor_THE_HNG_help_gensokyo_culture
+		hidden_effect = {
+			every_province = {
+				limit = {
+					culture_group = east_asian
+				}
+				change_culture = Gensokyo_chinese
+			}
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.76.c
+		trigger = {
+			NOT = { has_country_flag = hng_do_the_change3_flag	 }
+		}
+		set_country_flag = THE_HNG_flavor_THE_HNG_events76
+	}
+}
+
+# #做出决断
+# country_event = {
+# 	id = flavor_THE_HNG_events.77
+# 	title = "flavor_THE_HNG_events.77.t"
+# 	desc = "flavor_THE_HNG_events.77.desc"
+# 	picture =  THE_HNG_mission2
+# 	fire_only_once = yes
+# 	trigger = {
+# 		OR = {
+# 			tag = HNG
+# 			was_tag = HNG
+# 		}
+# 		had_country_flag = {
+# 			flag = THE_HNG_flavor_THE_HNG_events76
+# 			days = 7300
+# 		}
+# 		has_country_modifier = THE_HNG_believe_your_country
+# 		has_country_modifier = THE_HNG_more_efficient_land_system
+# 	}
+# 	option = {
+# 		name = flavor_THE_HNG_events.77.a
+# 		add_stability = 1
+# 		set_country_flag = flavor_THE_HNG_help_chinese_culture
+# 	}
+# 	option = {
+# 		name = flavor_THE_HNG_events.77.b
+# 		add_stability = -1
+# 		tooltip = {
+# 			custom_tooltip = flavor_THE_HNG_events76_tt
+# 		}
+# 		add_country_modifier = {
+# 			name = THE_hng_mission_modifier131
+# 			duration = 14600
+# 		}
+# 		set_country_flag = flavor_THE_HNG_help_gensokyo_culture
+# 		hidden_effect = {
+# 			every_province = {
+# 				limit = {
+# 					culture_group = east_asian
+# 				}
+# 				change_culture = Gensokyo_chinese
+# 			}
+# 		}
+# 	}
+# }
+
+#汉化朝鲜
+country_event = {
+	id = flavor_THE_HNG_events.78
+	title = "flavor_THE_HNG_events.78.t"
+	desc = "flavor_THE_HNG_events.78.desc"
+	picture =  THE_HNG_mission2
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		OR = {
+			has_country_flag = flavor_THE_HNG_help_chinese_culture
+			has_country_flag = flavor_THE_HNG_help_gensokyo_culture
+		}
+		mission_completed = THE_HNG_2_1_48
+	}
+	option = {
+		name = flavor_THE_HNG_events.78.a
+		trigger = {
+			has_country_flag = flavor_THE_HNG_help_chinese_culture
+		}
+		hidden_effect = {
+			every_province = {
+				limit = {
+					culture_group = korean_g
+				}
+				change_culture = korean_new
+			}		
+		}
+		
+	}
+	option = {
+		name = flavor_THE_HNG_events.78.b
+		trigger = {
+			has_country_flag = flavor_THE_HNG_help_gensokyo_culture
+		}
+		hidden_effect = {
+			every_province = {
+				limit = {
+					culture_group = korean_g
+				}
+				change_culture = Gensokyo_chinese
+			}
+		}
+	}
+}
+
+#汉化安南
+country_event = {
+	id = flavor_THE_HNG_events.79
+	title = "flavor_THE_HNG_events.79.t"
+	desc = "flavor_THE_HNG_events.79.desc"
+	picture =  THE_HNG_mission2
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		OR = {
+			has_country_flag = flavor_THE_HNG_help_chinese_culture
+			has_country_flag = flavor_THE_HNG_help_gensokyo_culture
+		}
+		mission_completed = THE_HNG_1_1_11
+	}
+	option = {
+		name = flavor_THE_HNG_events.79.a
+		trigger = {
+			has_country_flag = flavor_THE_HNG_help_chinese_culture
+		}
+		hidden_effect = {
+			every_province = {
+				limit = {
+					culture = vietnamese
+				}
+				change_culture = vietnamese_new
+			}		
+		}
+		
+	}
+	option = {
+		name = flavor_THE_HNG_events.79.b
+		trigger = {
+			has_country_flag = flavor_THE_HNG_help_gensokyo_culture
+		}
+		hidden_effect = {
+			every_province = {
+				limit = {
+					culture = vietnamese
+				}
+				change_culture = Gensokyo_chinese
+			}
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.79.c
+		trigger = {
+			has_country_flag = hng_do_the_change3_flag
+			has_country_flag = flavor_THE_HNG_help_chinese_culture
+		}
+		hidden_effect = {
+			every_province = {
+				limit = {
+					culture_group = southeastasian_group
+				}
+				change_culture = vietnamese_new
+			}
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.79.d
+		trigger = {
+			has_country_flag = hng_do_the_change3_flag
+			has_country_flag = flavor_THE_HNG_help_gensokyo_culture
+		}
+		hidden_effect = {
+			every_province = {
+				limit = {
+					culture_group = southeastasian_group
+				}
+				change_culture = Gensokyo_chinese
+			}
+		}
+	}
+}
+
+#汉化西藏
+country_event = {
+	id = flavor_THE_HNG_events.80
+	title = "flavor_THE_HNG_events.80.t"
+	desc = "flavor_THE_HNG_events.80.desc"
+	picture =  THE_HNG_mission2
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		OR = {
+			has_country_flag = flavor_THE_HNG_help_chinese_culture
+			has_country_flag = flavor_THE_HNG_help_gensokyo_culture
+		}
+		mission_completed = THE_HNG_1_4_5
+	}
+	option = {
+		name = flavor_THE_HNG_events.80.a
+		trigger = {
+			has_country_flag = flavor_THE_HNG_help_chinese_culture
+		}
+		hidden_effect = {
+			every_province = {
+				limit = {
+					culture_group =  tibetan_group
+				}
+				change_culture = tibetan_new
+			}		
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.80.b
+		trigger = {
+			has_country_flag = flavor_THE_HNG_help_gensokyo_culture
+		}
+		hidden_effect = {
+			every_province = {
+				limit = {
+					culture_group =  tibetan_group
+				}
+				change_culture = Gensokyo_chinese
+			}
+		}
+	}
+}
+
+#汉化壮族
+country_event = {
+	id = flavor_THE_HNG_events.81
+	title = "flavor_THE_HNG_events.81.t"
+	desc = "flavor_THE_HNG_events.81.desc"
+	picture =  THE_HNG_mission2
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		OR = {
+			has_country_flag = flavor_THE_HNG_help_chinese_culture
+			has_country_flag = flavor_THE_HNG_help_gensokyo_culture
+		}
+		mission_completed = THE_HNG_2_3_44
+	}
+	option = {
+		name = flavor_THE_HNG_events.81.a
+		trigger = {
+			has_country_flag = flavor_THE_HNG_help_chinese_culture
+		}
+		hidden_effect = {
+			every_province = {
+				limit = {
+					culture = zhuang
+				}
+				change_culture = zhuang_new
+			}		
+		}
+		
+	}
+	option = {
+		name = flavor_THE_HNG_events.81.b
+		trigger = {
+			has_country_flag = flavor_THE_HNG_help_gensokyo_culture
+		}
+		hidden_effect = {
+			every_province = {
+				limit = {
+					culture = zhuang
+				}
+				change_culture = Gensokyo_chinese
+			}
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.81.c
+		trigger = {
+			has_country_flag = hng_do_the_change3_flag
+			has_country_flag = flavor_THE_HNG_help_chinese_culture
+		}
+		hidden_effect = {
+			every_province = {
+				limit = {
+					culture_group = thai_group
+				}
+				change_culture = zhuang_new
+			}
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.81.d
+		trigger = {
+			has_country_flag = hng_do_the_change3_flag
+			has_country_flag = flavor_THE_HNG_help_gensokyo_culture
+		}
+		hidden_effect = {
+			every_province = {
+				limit = {
+					culture_group = thai_group
+				}
+				change_culture = Gensokyo_chinese
+			}
+		}
+	}
+}
+
+#汉化日本
+country_event = {
+	id = flavor_THE_HNG_events.82
+	title = "flavor_THE_HNG_events.82.t"
+	desc = "flavor_THE_HNG_events.82.desc"
+	picture =  THE_HNG_mission2
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_country_flag = flavor_THE_HNG_help_gensokyo_culture
+		mission_completed = THE_HNG_2_1_49
+	}
+	option = {
+		name = flavor_THE_HNG_events.82.a
+		hidden_effect = {
+			every_province = {
+				limit = {
+					culture_group = japanese_g
+				}
+				change_culture = Gensokyo_human
+			}
+		}
+	}
+}
+
+#汉化满洲
+country_event = {
+	id = flavor_THE_HNG_events.83
+	title = "flavor_THE_HNG_events.83.t"
+	desc = "flavor_THE_HNG_events.83.desc"
+	picture =  THE_HNG_mission2
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		OR = {
+			has_country_flag = flavor_THE_HNG_help_chinese_culture
+			has_country_flag = flavor_THE_HNG_help_gensokyo_culture
+		}
+		OR = {
+			AND = {
+				NOT = { has_country_flag = hng_do_the_change3_flag }
+				mission_completed = THE_HNG_2_2_47		
+			}
+			AND = {
+				has_country_flag = hng_do_the_change3_flag
+				mission_completed = THE_HNG_2_2_47	
+				mission_completed = THE_HNG_2_2_48
+			}
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.83.a
+		trigger = {
+			has_country_flag = flavor_THE_HNG_help_chinese_culture
+		}
+		hidden_effect = {
+			every_province = {
+				limit = {
+					culture = manchu
+				}
+				change_culture = manchu_new
+			}		
+		}
+		
+	}
+	option = {
+		name = flavor_THE_HNG_events.83.b
+		trigger = {
+			has_country_flag = flavor_THE_HNG_help_gensokyo_culture
+		}
+		hidden_effect = {
+			every_province = {
+				limit = {
+					culture = manchu
+				}
+				change_culture = Gensokyo_chinese
+			}
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.83.c
+		trigger = {
+			has_country_flag = hng_do_the_change3_flag
+			has_country_flag = flavor_THE_HNG_help_chinese_culture
+		}
+		hidden_effect = {
+			every_province = {
+				limit = {
+					OR = {
+						culture_group = evenks
+						culture_group = kamchatkan_g
+					}
+				}
+				change_culture = manchu_new
+			}
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.83.d
+		trigger = {
+			has_country_flag = hng_do_the_change3_flag
+			has_country_flag = flavor_THE_HNG_help_gensokyo_culture
+		}
+		hidden_effect = {
+			every_province = {
+				limit = {
+					OR = {
+						culture_group = evenks
+						culture_group = kamchatkan_g
+					}
+				}
+				change_culture = Gensokyo_chinese
+			}
+		}
+	}
+}
+
+#汉化蒙古
+country_event = {
+	id = flavor_THE_HNG_events.84
+	title = "flavor_THE_HNG_events.84.t"
+	desc = "flavor_THE_HNG_events.84.desc"
+	picture =  THE_HNG_mission2
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		OR = {
+			has_country_flag = flavor_THE_HNG_help_chinese_culture
+			has_country_flag = flavor_THE_HNG_help_gensokyo_culture
+		}
+		OR = {
+			AND = {
+				NOT = { has_country_flag = hng_do_the_change3_flag }
+				mission_completed = THE_HNG_2_3_49		
+			}
+			AND = {
+				has_country_flag = hng_do_the_change3_flag
+				mission_completed = THE_HNG_2_3_50
+			}
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.84.a
+		trigger = {
+			has_country_flag = flavor_THE_HNG_help_chinese_culture
+		}
+		hidden_effect = {
+			every_province = {
+				limit = {
+					OR = {
+						culture = mongol
+						culture = oirats
+						culture = khalkha
+						culture = chahar
+						culture = uyghur					
+					}
+				}
+				change_culture = altaic_new
+			}		
+		}
+		
+	}
+	option = {
+		name = flavor_THE_HNG_events.84.b
+		trigger = {
+			has_country_flag = flavor_THE_HNG_help_gensokyo_culture
+		}
+		hidden_effect = {
+			every_province = {
+				limit = {
+					OR = {
+						culture = mongol
+						culture = oirats
+						culture = khalkha
+						culture = chahar
+						culture = uyghur					
+					}
+				}
+				change_culture = Gensokyo_chinese
+			}
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.84.c
+		trigger = {
+			has_country_flag = hng_do_the_change3_flag
+			has_country_flag = flavor_THE_HNG_help_chinese_culture
+		}
+		hidden_effect = {
+			every_province = {
+				limit = {
+					culture_group = altaic
+				}
+				change_culture = altaic_new
+			}
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.84.d
+		trigger = {
+			has_country_flag = hng_do_the_change3_flag
+			has_country_flag = flavor_THE_HNG_help_gensokyo_culture
+		}
+		hidden_effect = {
+			every_province = {
+				limit = {
+					culture_group = altaic
+				}
+				change_culture = Gensokyo_chinese
+			}
+		}
+	}
+}
+
+#美铃下令暂时压制通胀
+country_event = {
+	id = flavor_THE_HNG_events.85
+	title = "flavor_THE_HNG_events.85.t"
+	desc = "flavor_THE_HNG_events.85.desc"
+	picture =  THE_HNG_mission3
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_country_flag = THE_HNG_disasters3_reform2_had_completed
+	}
+	option = {
+		name = flavor_THE_HNG_events.85.a
+		add_country_modifier = {
+			name = THE_hng_mission_modifier132
+			duration = 2555
+		}
+	}
+}
+
+# #外国军队腐化事件1：指挥混乱
+# country_event = {
+# 	id = flavor_THE_HNG_events.86
+# 	title = "flavor_THE_HNG_events.86.t"
+# 	desc = "flavor_THE_HNG_events.86.desc"
+# 	picture =  THE_HNG_sleeping_hong
+
+# 	trigger = {
+# 		NOT = {
+# 			OR = {
+# 				tag = HNG
+# 				was_tag = HNG
+# 			}		
+# 		}
+# 		has_disaster = the_hng_disasters_four
+# 	}
+
+# 	option = {
+# 		name = flavor_THE_HNG_events.86.a
+# 		add_yearly_manpower = -1
+# 	}
+
+# 	option = {
+# 		name = flavor_THE_HNG_events.86.b
+# 		add_army_professionalism = -0.01
+# 	}
+
+# 	mean_time_to_happen = {
+# 		months = 120
+
+# 	}
+# }
+
+# #外国军队腐化事件2：军队腐败
+# country_event = {
+# 	id = flavor_THE_HNG_events.87
+# 	title = "flavor_THE_HNG_events.87.t"
+# 	desc = "flavor_THE_HNG_events.87.desc"
+# 	picture =  THE_HNG_sleeping_hong
+
+# 	trigger = {
+# 		NOT = {
+# 			OR = {
+# 				tag = HNG
+# 				was_tag = HNG
+# 			}		
+# 		}
+# 		has_disaster = the_hng_disasters_four
+# 	}
+
+# 	option = {
+# 		name = flavor_THE_HNG_events.87.a
+# 		add_corruption = 1
+# 	}
+
+# 	option = {
+# 		name = flavor_THE_HNG_events.87.b
+# 		add_years_of_income = -0.2
+# 	}
+
+# 	mean_time_to_happen = {
+# 		months = 180
+# 	}
+# }
+
+
+# #外国军队腐化事件3：操练部队
+# country_event = {
+# 	id = flavor_THE_HNG_events.88
+# 	title = "flavor_THE_HNG_events.88.t"
+# 	desc = "flavor_THE_HNG_events.88.desc"
+# 	picture =  THE_HNG_sleeping_hong
+
+# 	trigger = {
+# 		NOT = {
+# 			OR = {
+# 				tag = HNG
+# 				was_tag = HNG
+# 			}		
+# 		}
+# 		has_disaster = the_hng_disasters_four
+# 	}
+
+# 	option = {
+# 		name = flavor_THE_HNG_events.88.a
+# 		add_army_tradition = 10
+# 	}
+
+# 	option = {
+# 		name = flavor_THE_HNG_events.88.b
+# 		add_army_professionalism = 0.02
+# 	}
+
+# 	mean_time_to_happen = {
+# 		months = 120
+# 	}
+# }
+
+# #外国军队腐化事件4：挪用军饷
+# country_event = {
+# 	id = flavor_THE_HNG_events.89
+# 	title = "flavor_THE_HNG_events.89.t"
+# 	desc = "flavor_THE_HNG_events.89.desc"
+# 	picture =  THE_HNG_sleeping_hong
+
+# 	trigger = {
+# 		NOT = {
+# 			OR = {
+# 				tag = HNG
+# 				was_tag = HNG
+# 			}		
+# 		}
+# 		has_disaster = the_hng_disasters_four
+# 	}
+
+# 	option = {
+# 		name = flavor_THE_HNG_events.89.a
+# 		add_treasury = -100
+# 	}
+
+# 	option = {
+# 		name = flavor_THE_HNG_events.89.b
+# 		random_owned_province = {
+# 			spawn_rebels = {
+# 				type = noble_rebels
+# 				size = 3
+# 			}
+# 		}
+# 	}
+
+# 	mean_time_to_happen = {
+# 		months = 240
+# 	}
+# }
+
+#军队腐化开始事件
+country_event = {
+	id = flavor_THE_HNG_events.90
+	title = "flavor_THE_HNG_events.90.t"
+	desc = "flavor_THE_HNG_events.90.desc"
+	picture =  THE_HNG_sleeping_hong
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = flavor_THE_HNG_events.90.a
+		add_war_exhaustion = 2
+		add_army_tradition = -100
+	}
+}
+
+#琉球发现新大陆！
+country_event = {
+	id = flavor_THE_HNG_events.91
+	title = "flavor_THE_HNG_events.91.t"
+	desc = "flavor_THE_HNG_events.91.desc"
+	picture = SNOWSPRINGADVANCED_eventPicture
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		RYU = {
+			cascadia_region = {
+				has_discovered = RYU
+			}
+			has_country_modifier = THE_hng_mission_modifier34
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			cascadia_region = {
+				discover_country = ROOT
+			}
+			north_east_pacific_region = {
+				discover_country = ROOT
+			}
+			north_west_pacific_region = {
+				discover_country = ROOT
+			}
+			cascadia_region = {
+				discover_country = RYU
+			}
+			north_east_pacific_region = {
+				discover_country = RYU
+			}
+			north_west_pacific_region = {
+				discover_country = RYU
+			}	
+		}
+	}
+	
+	option = {
+		add_treasury = -100
+		name = flavor_THE_HNG_events.91.a
+		random_province = {
+			limit = {
+				NOT = { is_city = yes }
+				NOT = { is_wasteland = yes }
+				region = cascadia_region
+				has_port = yes
+			}
+			cede_province = RYU
+			add_core = RYU
+			change_culture = kyushuan
+			change_religion = ROOT
+		}
+		random_province = {
+			limit = {
+				NOT = { is_city = yes }
+				NOT = { is_wasteland = yes }
+				region = cascadia_region
+				has_port = yes
+			}
+			cede_province = RYU
+			add_core = RYU
+			change_culture = kyushuan
+			change_religion = ROOT
+		}
+		capital_scope = {
+			add_institution_embracement = {
+				which = new_world_i
+				value = 50
+			}
+		}
+		RYU = {
+			capital_scope = {
+				add_institution_embracement = {
+					which = new_world_i
+					value = 75
+				}
+			}
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.91.b
+		add_treasury = -150
+		random_province = {
+			limit = {
+				NOT = { is_city = yes }
+				NOT = { is_wasteland = yes }
+				region = cascadia_region
+				has_port = yes
+			}
+			cede_province = ROOT
+			add_core = ROOT
+			change_culture = ROOT
+			change_religion = ROOT
+		}
+		random_province = {
+			limit = {
+				NOT = { is_city = yes }
+				NOT = { is_wasteland = yes }
+				region = cascadia_region
+				has_port = yes
+			}
+			cede_province = ROOT
+			add_core = ROOT
+			change_culture = ROOT
+			change_religion = ROOT
+		}
+		capital_scope = {
+			add_institution_embracement = {
+				which = new_world_i
+				value = 75
+			}
+		}
+		RYU = {
+			capital_scope = {
+				add_institution_embracement = {
+					which = new_world_i
+					value = 50
+				}
+			}
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.91.c
+		add_treasury = -300
+		random_province = {
+			limit = {
+				NOT = { is_city = yes }
+				NOT = { is_wasteland = yes }
+				region = cascadia_region
+				has_port = yes
+			}
+			cede_province = RYU
+			add_core = RYU
+			change_culture = kyushuan
+			change_religion = ROOT
+		}
+		random_province = {
+			limit = {
+				NOT = { is_city = yes }
+				NOT = { is_wasteland = yes }
+				region = cascadia_region
+				has_port = yes
+			}
+			cede_province = RYU
+			add_core = RYU
+			change_culture = kyushuan
+			change_religion = ROOT
+		}
+		random_province = {
+			limit = {
+				NOT = { is_city = yes }
+				NOT = { is_wasteland = yes }
+				region = cascadia_region
+				has_port = yes
+			}
+			cede_province = RYU
+			add_core = RYU
+			change_culture = kyushuan
+			change_religion = ROOT
+		}
+		random_province = {
+			limit = {
+				NOT = { is_city = yes }
+				NOT = { is_wasteland = yes }
+				region = cascadia_region
+				has_port = yes
+			}
+			cede_province = RYU
+			add_core = RYU
+			change_culture = kyushuan
+			change_religion = ROOT
+		}
+		random_province = {
+			limit = {
+				NOT = { is_city = yes }
+				NOT = { is_wasteland = yes }
+				region = cascadia_region
+				has_port = yes
+			}
+			cede_province = RYU
+			add_core = RYU
+			change_culture = kyushuan
+			change_religion = ROOT
+		}
+		capital_scope = {
+			add_institution_embracement = {
+				which = new_world_i
+				value = 75
+			}
+		}
+		RYU = {
+			capital_scope = {
+				add_institution_embracement = {
+					which = new_world_i
+					value = 100
+				}
+			}
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.91.d
+		add_treasury = -350
+		random_province = {
+			limit = {
+				NOT = { is_city = yes }
+				NOT = { is_wasteland = yes }
+				region = cascadia_region
+				has_port = yes
+			}
+			cede_province = ROOT
+			add_core = ROOT
+			change_culture = ROOT
+			change_religion = ROOT
+		}
+		random_province = {
+			limit = {
+				NOT = { is_city = yes }
+				NOT = { is_wasteland = yes }
+				region = cascadia_region
+				has_port = yes
+			}
+			cede_province = ROOT
+			add_core = ROOT
+			change_culture = ROOT
+			change_religion = ROOT
+		}
+		random_province = {
+			limit = {
+				NOT = { is_city = yes }
+				NOT = { is_wasteland = yes }
+				region = cascadia_region
+				has_port = yes
+			}
+			cede_province = ROOT
+			add_core = ROOT
+			change_culture = ROOT
+			change_religion = ROOT
+		}
+		random_province = {
+			limit = {
+				NOT = { is_city = yes }
+				NOT = { is_wasteland = yes }
+				region = cascadia_region
+				has_port = yes
+			}
+			cede_province = ROOT
+			add_core = ROOT
+			change_culture = ROOT
+			change_religion = ROOT
+		}
+		random_province = {
+			limit = {
+				NOT = { is_city = yes }
+				NOT = { is_wasteland = yes }
+				region = cascadia_region
+				has_port = yes
+			}
+			cede_province = ROOT
+			add_core = ROOT
+			change_culture = ROOT
+			change_religion = ROOT
+		}
+		capital_scope = {
+			add_institution_embracement = {
+				which = new_world_i
+				value = 100
+			}
+		}
+		RYU = {
+			capital_scope = {
+				add_institution_embracement = {
+					which = new_world_i
+					value = 75
+				}
+			}
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_events.91.e
+		add_adm_power = 250
+	}
+}
+
+#加速改革选择
+country_event = {
+	id = flavor_THE_HNG_events.92
+	title = "flavor_THE_HNG_events.92.t"
+	desc = "flavor_THE_HNG_events.92.desc"
+	picture = THE_HNG_mission9
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_events.92.a
+		trigger = {
+			has_country_modifier = THE_HNG_disasters_reform1_completed1_to_confusion
+		}
+		add_adm_power = -50
+		add_dip_power = -50
+		add_mil_power = -50
+		add_estate_loyalty = {
+			estate = all
+			loyalty = -15
+		}
+		remove_country_modifier = THE_HNG_disasters_reform1_completed1_to_confusion
+		THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 4 type = pretender_rebels size = 4 }
+	}
+	option = {
+		name = flavor_THE_HNG_events.92.b
+		trigger = {
+			has_country_modifier = THE_HNG_disasters3_reform_to_confusion
+		}
+		add_adm_power = -100
+		add_years_of_income = -1
+		add_inflation = 4
+		add_government_power = {
+			mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+			power_type = THE_HNG_Merger_degree_dip_power
+			value = 15
+		}
+		add_estate_loyalty = {
+			estate = all
+			loyalty = -10
+		}
+		remove_country_modifier = THE_HNG_disasters3_reform_to_confusion
+	}
+	option = {
+		name = flavor_THE_HNG_events.92.c
+		trigger = {
+			has_country_modifier = THE_HNG_disasters4_reform_to_confusion
+		}
+		add_mil_power = -100
+		add_army_tradition = -25
+		add_army_professionalism = -0.02
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+		random_owned_province = {
+			limit = {
+				is_state = yes
+				superregion = china_superregion
+				OR = {
+					NOT = { culture = Scarlett }
+				}
+			}
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 3
+			}
+		}
+		remove_country_modifier = THE_HNG_disasters4_reform_to_confusion
+	}
+	option = {
+		name = flavor_THE_HNG_events.92.d
+	}
+}

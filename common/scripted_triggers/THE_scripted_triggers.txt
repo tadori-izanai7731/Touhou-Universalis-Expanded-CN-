@@ -1,0 +1,63 @@
+#比较通用的脚本触发器
+
+#没有国家在某一科技上超过ROOT
+#使用方法：THE_tech_not_backward_scripted_trigger = { type = <type> }
+#type为特定科技种类，支持adm、dip、mil
+THE_tech_not_backward_scripted_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = THE_LIL_$type$_tech_not_backward_tt
+		all_country = {
+			OR = {
+				NOT = { $type$_tech = ROOT }
+				AND = {
+					$type$_tech = ROOT
+					ROOT = { $type$_tech = FROM }
+				}
+			}
+		}
+	}
+}
+
+#检测剩余的可接纳文化是否大于<value>
+#使用方法：THE_check_culture_slot_scripted_trigger = { value = <value> }
+#value只接受整型作为参数
+THE_check_culture_slot_scripted_trigger = {
+	variable_arithmetic_trigger = {
+		export_to_variable = {
+			which = the_accepted_cultures_max_var
+			value = modifier:num_accepted_cultures
+		}
+		export_to_variable = {
+			which = the_accepted_cultures_now_var
+			value = trigger_value:num_accepted_cultures
+		}
+		subtract_variable = {
+			which = the_accepted_cultures_max_var
+			which = the_accepted_cultures_now_var
+		}
+		
+		check_variable = { which = the_accepted_cultures_max_var value = $value$ }
+	}
+}
+
+#$deity$
+#$days$
+# 1460
+# 2190
+# 1825
+THE_can_trigger_deity_event_scripted_trigger = {
+	OR = {
+		has_personal_deity = $deity$
+		has_country_flag = THE_can_trigger_$deity$_deity_event_flag
+		has_country_modifier = THE_ROD_extra_hakurei_modifier_$deity$
+	}
+	[[days]
+	OR = {
+		NOT = { has_country_flag = THE_had_deity_event_$deity$_flag }
+		had_country_flag = {
+			flag = THE_had_deity_event_$deity$_flag
+			days = $days$
+		}
+	}
+	]
+}

@@ -1,0 +1,162 @@
+THE_HNG_red_dragon_celestial_empire = {
+	lock_level_when_selected = yes
+	icon = "the_red_dragon_celestial_empire_reform"
+	potential = {
+		has_country_flag = THE_HNG_red_dragon_celestial_empire_can_use
+		OR ={
+			tag = HNG
+			was_tag = HNG
+		}
+	}
+	
+	allow_force_tributary = no
+	valid_for_new_country = no
+	valid_for_nation_designer = no
+	allow_convert = no
+	can_change_primary_culture = no
+	
+	modifiers = {
+		global_unrest = -1
+		num_accepted_cultures = 9
+		global_autonomy = -0.05
+		governing_capacity = 800
+		administrative_efficiency = 0.05
+		years_of_nationalism = -5
+		global_monthly_devastation = -0.5
+	}
+	
+	fixed_rank = 3
+	maintain_dynasty = yes
+	
+	custom_attributes = {
+		locked_government_type = yes
+		has_tributaries = yes
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		custom_attributes = {
+			has_unify_china_cb = yes
+			th_can_claim_mandate = yes
+		}
+	}
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		has_meritocracy = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Rights of Man"
+		}
+		government_abilities = {
+			THE_HNG_celestial_empire_Third_degree_mechanic
+		}
+	}
+}
+
+THE_HNG_red_dragon_steppe_celestial_empire = {
+	lock_level_when_selected = yes
+	icon = "horde_riding"
+	potential = {
+		has_country_flag = flavor_THE_HNG_events67
+		OR ={
+			tag = HNG
+			was_tag = HNG
+		}
+	}
+
+	raze_province = yes
+	allow_force_tributary = no
+	valid_for_new_country = no
+	valid_for_nation_designer = no
+	allow_convert = no
+	can_change_primary_culture = no
+	
+	modifiers = {
+		num_accepted_cultures = 18
+		global_unrest = -2
+		governing_capacity = 800
+		administrative_efficiency = 0.05
+		years_of_nationalism = -5
+		global_monthly_devastation = -0.5
+		loot_amount = 0.50
+		global_institution_spread = -0.15
+		cav_to_inf_ratio = 0.25
+		movement_speed = 0.2
+		global_manpower_modifier = 0.2
+		land_forcelimit_modifier = 0.2
+		reinforce_cost_modifier = -0.5
+	}
+	
+	fixed_rank = 3
+	maintain_dynasty = yes
+	
+	custom_attributes = {
+		locked_government_type = yes
+		has_tributaries = yes
+		enables_horde_idea_group = yes
+		enables_aristocratic_idea_group = yes
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		custom_attributes = {
+			has_unify_china_cb = yes
+			th_can_claim_mandate = yes
+		}
+	}
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		has_meritocracy = yes
+	}
+}
+
+THE_HNG_searching_for_dragon_points	= {
+	lock_level_when_selected = yes
+	icon = "the_searching_for_dragon_points_reform"
+	
+	potential = {
+		has_country_flag = THE_HNG_searching_for_dragon_points_can_use
+		OR ={
+			tag = HNG
+			was_tag = HNG
+		}
+	}
+	
+	modifiers = {
+		monthly_reform_progress = 0.5
+		imperial_mandate = 0.02
+		min_autonomy_in_territories = -0.1
+		num_accepted_cultures = 2
+	}
+	
+	custom_attributes = {
+		HNG_searching_for_dragon_points	= yes	
+	}
+}
+
+THE_HNG_use_qiwa_army = {
+	icon = "line_infantry"
+	potential = {
+		has_country_flag = flavor_THE_HNG_mission_events46
+	}
+	
+	modifiers = {
+		num_accepted_cultures = 1
+		free_leader_pool = 1
+		land_attrition = -0.1
+		global_supply_limit_modifier = 0.33
+	}
+	
+	conditional = {
+		allow = {
+			has_dlc = "Origins"
+		}
+		allow_cawa = yes
+	}
+}
+
+
+
+
+

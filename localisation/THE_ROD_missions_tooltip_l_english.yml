@@ -1,0 +1,450 @@
+﻿l_english:
+###TOOLTIP
+ THE_ROD_else_tt_yes: "£yes£&TR:"
+ THE_ROD_else_tt_no: "£no£&TR:"
+ THE_ROD_burghers_influence_yes_tt: "£yes£‚YœgŒRbûN¡Röe§Y[Root.Get^lName]§!6–BSóS	g§Y30§!qVÍT›Rÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_burghers_influence_no_tt: "£no£‚YœgŒRbûN¡Röe§Y[Root.Get^lName]§!6–BSóS	g§Y30§!qVÍT›Rÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_create_fort_yes_tt: "£yes£‚Yœg§Y[43.GetName]§!¡l	gûNUO!X’Wú^Qrÿ"
+ THE_ROD_create_fort_no_tt: "£no£‚Yœg§Y[43.GetName]§!¡l	gûNUO!X’Wú^Qrÿ"
+ THE_ROD_gain_point_base_on_emperor_opinion_tt: "@[Emperor.GetTag]§Y[Emperor.GetName]§!ùR@[Root.GetTag]§Y[Root.GetName]§!Ïk	g§G1§!¹p‹Ya¦^,·ƒ—V§G1§!¹p–:gTIN¹ppe"
+ THE_ROD_alliance_hsa_yes_tt: "£yes£‚Yœg@HSA§Y[HSA.GetName]§!ùRbìN„v‹Ya¦^¾0R§G50§!ÿ·ƒ—V‚YNHeœgÿ"
+ THE_ROD_alliance_hsa_no_tt: "£no£‚Yœg@HSA§Y[HSA.GetName]§!ùRbìN„v‹Ya¦^¾0R§G50§!ÿ·ƒ—V‚YNHeœgÿ"
+ THE_ROD_unlock_rug_pirate_tt: "ã‰•§JT9hwm×v§!cOuQâV\nå‹cOuQâVNˆmwF–›QLwN¦^NN`S(uF–›QNP–"
+ THE_ROD_gain_1000_manpower_from_hre_country_tt: "ÎNÏk*N‹Ya¦^¾0R§Y0§!„v^y1WWlš^ýVbXT·ƒ—V§G500§!TYuQXTŒT§G1§!Ñ‘^0"
+ THE_ROD_1_5_case1_tt_yes: "£yes£‚Yœg@POL§Y[POL.GetName]§!b@PLC§Y[PLC.GetName]§!N=fbìN„v¿RLebLeºNÿ·ƒ—V‚YNHeœgÿ"
+ THE_ROD_1_5_case1_tt_no: "£no£‚Yœg@POL§Y[POL.GetName]§!b@PLC§Y[PLC.GetName]§!N=fbìN„v¿RLebLeºNÿ·ƒ—V‚YNHeœgÿ"
+ THE_ROD_decrease_north_german_ae_30_tt: "Nb	g–™ýMOŽN§YS·Va×V§!0W:S„výV¶RùR@[Root.GetTag]§Y[Root.GetName]§!ÏQS§G30§!¹pµOeuib.V"
+ THE_ROD_1_7_case1_tt_yes: "£yes£‚Yœg@BRA§Y[BRA.GetName]§!=fbìN„v^—g!D–^SýVÿ·ƒ—V‚YNHeœgÿ"
+ THE_ROD_1_7_case1_tt_no: "£no£‚Yœg@BRA§Y[BRA.GetName]§!=fbìN„v^—g!D–^SýVÿ·ƒ—V‚YNHeœgÿ"
+ THE_ROD_1_7_case1_tt: "0§Y¹ƒXé…¯O§!0„vcíuöeô•9e:N§G8lEN§!"
+ THE_ROD_unlock_personal_union_bra_decision_tt: "ã‰•³Q®‹0§Yú^Ëz[BRA.GetName]qQINTw¦§!0\nAQ¸‹bìNS@BRA§Y[BRA.GetName]§!lS:N§YNSOS«ˆTwßuýV§!ÿv^ÏQS@[Root.GetTag]§Y[Root.GetName]§!.b„vµOeuib.V0"
+ THE_ROD_unlock_personal_union_boh_sax_decision_tt: "ã‰•³Q®‹0§Yú^Ëz[BOH.GetName]qQINTw¦§!0\nã‰•³Q®‹0§Yú^Ëz[SAX.GetName]qQINTw¦§!0\nAQ¸‹bìNS@BOH§Y[BOH.GetName]§!ŒT@SAX§Y[SAX.GetName]§!lS:N§YNSOS«ˆTwßuýV§!ÿv^ÏQS@[Root.GetTag]§Y[Root.GetName]§!.b„vµOeuib.V0"
+ THE_ROD_hre_elector_modifier_extra_effect_tt: "°e‡v^‰vúWöeÿ§Y‡v^§!ùR@[Root.GetTag]§Y[Root.GetName]§!Ïk	g§G1§!¹p‹Ya¦^,·ƒ—V§G1§!¹p–:gTIN¹ppe"
+ THE_ROD_decrease_every_country_ae_50_tt: "Nb	gýV¶RùR@[Root.GetTag]§Y[Root.GetName]§!ÏQS§G50§!¹pµOeuib.V"
+ THE_ROD_change_color_to_colony_tt: "ýV¶Rœ˜r‚lØS:NN@[Root.GetTag]§Y[Root.GetName]§!øvÑ„vœ˜r‚"
+ THE_ROD_unlock_noble_privilege_knight_tradition_tt: "ã‰•§Y[Root.Get5ÏeName]§!6–BSyrCg0§Y‘šëXâV.Oßu§!0ÿˆcˆNå‹yrCgS·ƒ—V‚YNHeœg:"
+ THE_ROD_estate_nobles_knight_tradition_effect_tt: "§Y=T(uµR—f‘šëXâV‹NöNÄu§!"
+ THE_ROD_3_5_case1_tt_yes: "£yes£‚Yœg@GOT§Y[GOT.GetName]§!=fbìN„v^—g!D–^SýVÿ·ƒ—V‚YNHeœgÿ"
+ THE_ROD_3_5_case1_tt_no: "£no£‚Yœg@GOT§Y[GOT.GetName]§!=fbìN„v^—g!D–^SýVÿ·ƒ—V‚YNHeœgÿ"
+ THE_ROD_raid_add_ability_of_darkness_manipulation_tt: "«R cwm¸SS·ƒ—V§YÍdµcÑž—fz¦^„výw›R§!0"
+ THE_ROD_every_province_in_baltic_region_tt: "»lNÏk*NMOŽN§YâlW„v§!0W:S„vwýN:"
+ THE_ROD_3_7_case1_tt_yes: "£yes£‚YœgNb	g§YâlW„v§!‡eSÄu„vwýNGW^SŽN@[Root.GetTag]§Y[Root.GetName]§!bvQ§Y^—g!D–^SýV§!ÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_3_7_case1_tt_no: "£no£‚YœgNb	g§YâlW„v§!‡eSÄu„vwýNGW^SŽN@[Root.GetTag]§Y[Root.GetName]§!bvQ§Y^—g!D–^SýV§!ÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_2_4_case1_tt_yes: "£yes£‚Yœg£mil£§Y›Q‹NÑyŽb§!*g¾0R§Y4§!µu:"
+ THE_ROD_2_4_case1_tt_no: "£no£‚Yœg£mil£§Y›Q‹NÑyŽb§!*g¾0R§Y4§!µu:"
+ THE_ROD_army_limit_5_times_rig_ttt: "@[Root.GetTag]§Y[Root.GetName]§!„vF–›QÄ‰!jóS:N@RIG§Y[RIG.GetName]§!„v§Y5§!P"
+ THE_ROD_2_8_case1_tt_yes: "£yes£‚Yœg§Y)YINYe§!=f@[Root.GetTag]§Y[Root.GetName]§!„vckßuáOðN:"
+ THE_ROD_2_8_case1_tt_no: "£no£‚Yœg§Y)YINYe§!=f@[Root.GetTag]§Y[Root.GetName]§!„vckßuáOðN:"
+ THE_ROD_2_8_case1_tt: "8lENÐcGS@PAP§Y[PAP.GetName]§!§G50§!¹p‹Ya¦^0"
+ THE_ROD_2_8_case2_tt: "ŒRb.OYeöe,·ƒ—V§G10§!¤Ñ‘^0"
+ THE_ROD_decrease_christian_ae_30_tt: "Nb	g§YúWcw—RYeÄu§!„výV¶RùR@[Root.GetTag]§Y[Root.GetName]§!ÏQS§G30§!¹pµOeuib.V"
+ THE_ROD_unlock_rod_pru_decision_tt: "ã‰•³Q®‹0§YµR—f-nfœëX†˜ßW§!0\nAQ¸‹bìNSnfœëX ReQýV¶RTðy0"
+ THE_ROD_accepted_culture_decrease_autonomy_tt: "Vg§YòT¥c³u‡eS§!„vwýNSÏQSSV0W§G25%§!ê»l¦^0"
+ THE_ROD_5_4_case1_tt_yes: "£yes£‚YœgbìNckN@[Emperor.GetTag]§Y[Emperor.GetName]§!ÝOcTwûYÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_5_4_case1_tt_no: "£no£‚YœgbìNckN@[Emperor.GetTag]§Y[Emperor.GetName]§!ÝOcTwûYÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_5_4_case1_tt: "Nb	g§Y^y1WWlš^ýVbXT§!·ƒ—V§G10§!áOûN0"
+ THE_ROD_unlock_nightingale_reform_tt: "ã‰•TIN6R,r2µu?eœ^9ei—0§YÑžY„vYºƒ§!00"
+ THE_ROD_decision_every_10_years_ttt: "å‹³Q®‹Ïk§Y10§!t^ïSgbLˆN!k"
+ THE_ROD_decision_every_5_years_ttt: "å‹³Q®‹Ïk§Y5§!t^ïSgbLˆN!k"
+ THE_ROD_add_10_trust_all_ally_and_subject_tt: "Nb	g§YßvËS§!ŒT§YD–^SýV§!·ƒ—V§G10§!áOûN0"
+ THE_ROD_court_banquet_decision_extra_effect_tt: "9hncŒRb„v£dip£§YY²Nû|tõVÄu§!·ƒ—V˜YHeœg:"
+ THE_ROD_court_banquet_decision_extra_effect_tt_yes_spy_ideas: "£yes£§Mô•Œ§!:Nb	gýV¶RùR@[Root.GetTag]§Y[Root.GetName]§!ÏQS§G20§!¹pµOeuib.V"
+ THE_ROD_court_banquet_decision_extra_effect_tt_yes_diplomatic_ideas: "£yes£§MY²N§!:ÎNÏk*NßvËSbD–^SýV·ƒ—V§G10§!Zgÿ¢núQ„vZglSb§YTIN¹ppe§!"
+ THE_ROD_court_banquet_decision_extra_effect_tt_yes_trade_ideas: "£yes£§M8f§!:·ƒ—V8f,gàW§G5§!t^„v8f6eeQ"
+ THE_ROD_court_banquet_decision_extra_effect_tt_yes_exploration_ideas: "£yes£§M¢c0t§!:ÑS°sÏk*NßvËSbD–^SýV„v§YòT¢c0t§!wýN"
+ THE_ROD_court_banquet_decision_extra_effect_tt_yes_maritime_ideas: "£yes£§M*‚wm§!:ÎNÏk*N¿lwmwýN·ƒ—V§G1§!wm›Q.Oßu"
+ THE_ROD_court_banquet_decision_extra_effect_tt_yes_influence_ideas: "£yes£§MqVÍT§!:Nb	gD–^SýV1Y»S§G20%§!ìrËz>PTÿÎNÏk*ND–^SýV·ƒ—V§G10§!9ei—Û¦^"
+ THE_ROD_court_banquet_decision_extra_effect_tt_yes_court_ideas: "£yes£§M«R÷^§!:0§YZfô•«R÷^´RO§!0NQˆmw§YTIN¹ppe§!ÿÏk§Y5§!t^ïSgbLˆN!k"
+ THE_ROD_court_banquet_decision_extra_effect_tt_no_spy_ideas: "£no£§Mô•Œ§!:Nb	gýV¶RùR@[Root.GetTag]§Y[Root.GetName]§!ÏQS§G20§!¹pµOeuib.V"
+ THE_ROD_court_banquet_decision_extra_effect_tt_no_diplomatic_ideas: "£no£§MY²N§!:ÎNÏk*NßvËSbD–^SýV·ƒ—V§G10§!Zgÿ¢núQ„vZglSb§YTIN¹ppe§!"
+ THE_ROD_court_banquet_decision_extra_effect_tt_no_trade_ideas: "£no£§M8f§!:·ƒ—V8f,gàW§G5§!t^„v8f6eeQ"
+ THE_ROD_court_banquet_decision_extra_effect_tt_no_exploration_ideas: "£no£§M¢c0t§!:ÑS°sÏk*NßvËSbD–^SýV„v§YòT¢c0t§!wýN"
+ THE_ROD_court_banquet_decision_extra_effect_tt_no_maritime_ideas: "£no£§M*‚wm§!:ÎNÏk*N¿lwmwýN·ƒ—V§G1§!wm›Q.Oßu"
+ THE_ROD_court_banquet_decision_extra_effect_tt_no_influence_ideas: "£no£§MqVÍT§!:Nb	gD–^SýV1Y»S§G20%§!ìrËz>PTÿÎNÏk*ND–^SýV·ƒ—V§G10§!9ei—Û¦^"
+ THE_ROD_court_banquet_decision_extra_effect_tt_no_court_ideas: "£no£§M«R÷^§!:0§YZfô•«R÷^´RO§!0NQˆmw§YTIN¹ppe§!ÿÏk§Y5§!t^ïSgbLˆN!k"
+ THE_ROD_unlock_province_button_tt: "ã‰•wýNLˆ¨R0§YwV¨VŽNÑž—f§!0"
+ THE_ROD_interface2_extra_effect_tt: "§Mg&r0Moonlight Ray0§!˜Y·ƒ—VåNNHeœg: \nNb	gøv»wýNÿÅNP–^SŽN§YßvËS§!NáOûN¾0R§Y100§!	ÿûm R§Y[Root.GetName]§!„v8hÃV"
+ THE_ROD_mechanic_interface2_extra_effect_tt: "Nb	gøv»wýNÿÅNP–^SŽN§YßvËS§!NáOûN¾0R§Y100§!	ÿûm R§Y[Root.GetName]§!„v8hÃV0"
+ THE_ROD_1_17_case1_tt_yes: "£yes£‚Yœg§YZSKN^yS§!=f@[Root.GetTag]§Y[Root.GetName]§!„vckßuáOðNÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_1_17_case1_tt_no: "£no£‚Yœg§YZSKN^yS§!=f@[Root.GetTag]§Y[Root.GetName]§!„vckßuáOðNÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_1_17_case2_tt_yes: "£yes£‚Yœg§Y)YINYe§!=f@[Root.GetTag]§Y[Root.GetName]§!„vckßuáOðNÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_1_17_case2_tt_no: "£no£‚Yœg§Y)YINYe§!=f@[Root.GetTag]§Y[Root.GetName]§!„vckßuáOðNÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_modify_youkai_way_tt: "0§Y–Y*`„v¹eV§!0˜Y·ƒ—VåNNHeœg:\nhQýVÛSqN¦^: §G-1.00§!\n.OYe:V¦^: §R-1.5%§!\n"
+ THE_ROD_unlock_religion_tt: "§Mã‰•TíuûN¡R§!"
+ THE_ROD_branch_mission_ttt: "Ù=fN*N§YR=eûN¡R§!ÿŒRbûN¡R0§YµR—f†˜ßW„v—RYeî•˜˜§!0Tã‰•0"
+ THE_ROD_has_any_personal_deity_ttt: "òT	ébûNa^yGy"
+ THE_ROD_add_personal_deity_same_modifier_tt: "§Y·ƒ—VNSVMR^yGyøvTHeœg„vîOckcíu0R8nbÓumgÿSVMR^yGyÙuˆN‚YNHeœg§!:"
+ THE_ROD_1_19_hakurei_tt_yes: "£yes£‚YœgÍNåb	g0§Y°eKbëTsY§!0„vîOckÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_1_19_hakurei_tt_no: "£no£‚YœgÍNåb	g0§Y°eKbëTsY§!0„vîOckÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_1_19_hakurei_tt: "0§Y°eKbëTsY§!0„vcíuöeô•9e:N§G8lEN§!0"
+ THE_ROD_2_18_hakurei_tt_yes: "£yes£‚YœgòTŒRb§Y—RYetõVÄu§!ÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_2_18_hakurei_tt_no: "£no£‚YœgòTŒRb§Y—RYetõVÄu§!ÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_2_18_hakurei_tt: "§Y[Root.GetYeëXName]§!6–BSÏkåb	g§Y1§!*NyrCgÿ·ƒ—V§G100§!£adm£Lˆ?e¹ppe0"
+ THE_ROD_unlock_spread_hakurei_message_reform_tt: "ã‰•,r§Y4§!µu?eœ^9ei—0§Y.O­dZSKN^yèe§!0ÿžRLˆå‹9ei—S·ƒ—V‚YNHeœg:"
+ THE_ROD_no_effect_tt: "àeHeœg0"
+ THE_ROD_2_19_catholic_tt_yes: "£yes£‚Yœg»lNûNawýN	g0§YFOýlYe‡v«R§!0îOckÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_2_19_catholic_tt_no: "£no£‚Yœg»lNûNawýN	g0§YFOýlYe‡v«R§!0îOckÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_2_19_catholic_tt: "0§YFOýlYe‡v«R§!0„vcíuöeô•9e:N§G8lEN§Y0"
+ THE_ROD_unlock_darknedd_diocese_reform_tt: "ã‰•,r§Y4§!µu?eœ^9ei—0§YµR—fINYe:S§!0ÿžRLˆå‹9ei—S·ƒ—V‚YNHeœg:"
+ THE_ROD_change_religion_conversion_center_to_catholic_tt: "(Wå‹îOckcíuöeô•…Qÿ`S†˜bVg	gLea„v§Y9ei—-NÃV§!SlØS:N§Y)YINYe§!"
+ THE_ROD_rome_without_debuff_tt: "åb	g§Y[118.GetName]§!bD–¸^@PAP§Y[PAP.GetName]§!NOÛbôûNUO§Mb—qVÍT§!0"
+ THE_ROD_this_modifier_can_trigger_deity_event_tt: "å‹îOckmNýwæ‰ÑSùR”^^yGy„vN^S‹NöN0"
+ THE_ROD_every_farm_province_tt: "»lNÏk*NuµN§Y|œ‰|§!0§Y7Œir§!b§Yrrju§!„vwýN:"
+ THE_ROD_1_12_case1_tt_yes: "£yes£‚YœgŒRb§YtõVÄu§!„vøvsQagöNÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_1_12_case1_tt_no: "£no£‚YœgŒRb§YtõVÄu§!„vøvsQagöNÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_1_12_case2_tt_yes: "£yes£‚YœgŒRb§YŒ˜î•§!„vøvsQagöNÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_1_12_case2_tt_no: "£no£‚YœgŒRb§YŒ˜î•§!„vøvsQagöNÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_1_12_case3_tt_yes: "£yes£‚YœgŒRb§Y6–BS§!„vøvsQagöNÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_1_12_case3_tt_no: "£no£‚YœgŒRb§Y6–BS§!„vøvsQagöNÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_1_12_case1_tt: "0§YuµNú^¾‹§!0„vcíuöeô•9e:N§G8lEN§!0"
+ THE_ROD_1_12_case3_tt: "yrCgùRg'YN6R¦^„vb—qVÍTÏQS§G20%§!0"
+ THE_ROD_unlock_coal_in_manufactories_institution_tt: "AQ¸‹bìN(W¥c³u§YåT‚SuµN§!`noTuµN§Ydq­p§!0"
+ THE_ROD_unlock_collect_black_gem_tt: "ã‰•³Q®‹0§Y6eÆ–Ñžr‚Rów§!0"
+ THE_ROD_every_coal_province_tt: "»lNÏk*NuµN§Ydq­p§!bjo(WuµN§Ydq­p§!„vwýN:"
+ THE_ROD_every_poland_or_ruthenia_province_tt: "»lNÏk*NMOŽN§YâlpQ§!b§Yœ^X<SšN§!0W:S„vwýN:"
+ THE_ROD_can_use_poland_crown_ab_tt: "AQ¸‹O(u0§YâlpQ‹s Q§!0öeãNýw›R0"
+ THE_ROD_2_13_case1_tt_yes: "£yes£‚YœgSVMRYŽN§Y0Wt'YÑS°s§!b§Y—RYe9ei—§!öeãNÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_unlock_darkness_trade_war_tt: "ã‰•±Rbt1u0§YµR¸Sb‰N§!0\nå‹±Rbt1uêSýwrR©‹§M¿lwmwýN§!ÿïSùRNb	g(W§YâlW„vwm§!0§YTKQ§!b§Yú‹+YåTW·V§!8f:Såb	g§Y1%§!8fÞz‰N›R„výV¶RO(u0"
+ THE_ROD_mixture_naval_doctrine_1_tt_yes: "£yes£‚YœgûN¡R0§YÎN[33.GetName]úQÑS§!0òTŒRbÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_mixture_naval_doctrine_1_tt_no: "£no£‚YœgûN¡R0§YÎN[33.GetName]úQÑS§!0òTŒRbÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_mixture_naval_doctrine_2_tt_yes: "£yes£‚YœgûN¡R0§YÖSãNIl(„Tßv§!0òTŒRbÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_mixture_naval_doctrine_2_tt_no: "£no£‚YœgûN¡R0§YÖSãNIl(„Tßv§!0òTŒRbÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_unlock_priority_supply_tt: "ã‰•³Q®‹0§YnxÝOOHQ›O”^§!0"
+ THE_ROD_33_owner_more_development_upgrade_modifier_tt: "‚Yœg@[33.Owner.GetTag]§Y[33.Owner.GetName]§!åb	gôfØš„vÑSUS¦^ÿå‹îOckS·ƒ—VGSµu0"
+ THE_ROD_2_14_case1_tt_yes: "£yes£‚YœgÇ§Y›Q‹N§!¹eVŒRbûN¡Rÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_2_14_case1_tt_no: "£no£‚YœgÇ§Y›Q‹N§!¹eVŒRbûN¡Rÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_2_14_case2_tt_yes: "£yes£‚YœgÇ§YY²N§!¹eVŒRbûN¡Rÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_2_14_case2_tt_no: "£no£‚YœgÇ§YY²N§!¹eVŒRbûN¡Rÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_unlock_darkness_trade_war_2_tt: "0§YµR¸Sb‰N§!0„vîvhƒôVib'Yó§Yñ‚	T)RwmáS§!0§YSwm§!ŒT§Y‹vwm§!8f:S0"
+ THE_ROD_unlock_personal_union_swe_nor_decision_tt: "ã‰•³Q®‹0§Yú^Ëz[SWE.GetName]qQINTw¦§!0\nã‰•³Q®‹0§Yú^Ëz[NOR.GetName]qQINTw¦§!0\nAQ¸‹bìNS@SWE§Y[SWE.GetName]§!ŒT@NOR§Y[NOR.GetName]§!lS:N§YNSOS«ˆTwßuýV§!ÿv^ÏQS@[Root.GetTag]§Y[Root.GetName]§!.b„vµOeuib.V0"
+ THE_ROD_unlock_rod_hsa_decision_tt: "ã‰•³Q®‹0§YµR—f-Il(„†˜ßW§!0\nAQ¸‹bìNSIl(„ ReQýV¶RTðy0"
+ THE_ROD_upgrade_trade_center_add_or_upgrade_trade_building_tt: "GSµu§M8f-NÃV§!S(WSV0WŒTøv»wýN§Yûm R§!b§YGSµu§!§M8fú^Qr§!0"
+ THE_ROD_unlock_fall_into_world_port_reform_tt: "ã‰•,r§Y8§!µu?eœ^9ei—0§Y`WeQNLu=n§!0ÿžRLˆå‹9ei—S·ƒ—V‚YNHeœg:"
+ THE_ROD_add_mil_and_manpower_from_noblle_influence_tt: "§Y[Root.Get5ÏeName]§!6–BSÏkåb	g§Y10%§!qVÍT›Rÿ·ƒ—V§G50§!£mil£›Q‹N¹ppeŒT§G5000§!TYuQXT0"
+ THE_ROD_modifier_from_mil_advisor_tt: "9hncSVMRÇ–cO„v£mil£§Y›Q‹NŒ˜î•§!‰|‹Wÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_every_has_coast_defense_building_tt: "»lNÏk*Nåb	g§Y¸S2–åT‹N§!b§Ywm2–®pðS§!„vwýN:"
+ THE_ROD_is_border_province_ttt: "=f¹ƒXwýN"
+ THE_ROD_obsidian_modifier: "ÑžÜfów"
+ THE_ROD_4_12_case1_tt_yes: "£yes£‚YœgòTŒRb§Y2–ˆRtõVÄu§!ÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_4_12_case1_tt_no: "£no£‚YœgòTŒRb§Y2–ˆRtõVÄu§!ÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_in_fort_zone_ttt: "MOŽN§Y‰^Xµc6R:S§!"
+ THE_ROD_enemy_barrage_add_war_exhaustion_tt: "Le¹eO(u§Y®puQ9VU^§!SžX R§R1§!ŒSb¦^0"
+ THE_ROD_4_13_case1_tt_yes: "£yes£‚YœgÍNåb	g0§Y=ecb‰N§!0„vîOckÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_4_13_case1_tt_no: "£no£‚YœgÍNåb	g0§Y=ecb‰N§!0„vîOckÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_unlock_rumia_become_general_tt: "ã‰•³Q®‹0§Y2—s|Zb:NF–›QS†˜§!0\n1u§Y2—s|Z§!†˜üR„vbyVÜw)RS·ƒ—V§YÍdµcÑž—fz¦^„výw›R§!0"
+ THE_ROD_rumia_become_general_tt: "§Y2—s|Z§!b:NF–›QS†˜\n\nSVMR§Y2—s|Z§!„výw›R<P:N:\n£icon_fire£§G[Root.the_rumia_fire_var.GetValue]§!   £icon_shock£§G[Root.the_rumia_shock_var.GetValue]§!   £icon_manuever£§G[Root.the_rumia_manuever_var.GetValue]§!   £icon_siege£§G[Root.the_rumia_siege_var.GetValue]§!\n\nSVMR§Y2—s|Z§!„výw›RNP–:N:\n£icon_fire£§G[Root.the_rumia_fire_max_var.GetValue]§!   £icon_shock£§G[Root.the_rumia_shock_max_var.GetValue]§!   £icon_manuever£§G[Root.the_rumia_manuever_max_var.GetValue]§!   £icon_siege£§G[Root.the_rumia_siege_max_var.GetValue]§!\n\n§MïSÇ§Y2—s|Z§!†˜üR„vbyVÜw)RžX R§Y2—s|Z§!„výw›R<P§!"
+ THE_ROD_events_2_a_tt: "§Y2—s|Z§!„v£icon_fire£kp›RÐcGS§G1§!ÿN!kb:NF–›QS†˜öeuHe0"
+ THE_ROD_events_2_b_tt: "§Y2—s|Z§!„v£icon_shock£²QûQÐcGS§G1§!ÿN!kb:NF–›QS†˜öeuHe0"
+ THE_ROD_events_2_c_tt: "§Y2—s|Z§!„v£icon_manuever£:g¨RÐcGS§G1§!ÿN!kb:NF–›QS†˜öeuHe0"
+ THE_ROD_events_2_d_tt: "§Y2—s|Z§!„v£icon_siege£ôVÎWÐcGS§G1§!ÿN!kb:NF–›QS†˜öeuHe0"
+ THE_ROD_has_general_rumia_ttt: "	g§Y2—s|Z§!F–›QS†˜"
+ THE_ROD_rumia_general_1_tt: "§Y2—s|Z§!†˜üR„vbyVÜw)R	g§G15%§!‚i‡s·ƒ—Výw›RÐcGS0"
+ THE_ROD_rumia_general_2_tt: "§Y2—s|Z§!†˜üR„vbyVÜw)R	g§G30%§!‚i‡s·ƒ—Výw›RÐcGS0"
+ THE_ROD_rumia_general_add_all_ability_tt: "§Y2—s|Z§!„vNb	gýw›RÐcGS§G1§!ÿ…ÇNP–lS:N§G100§!£mil£›Q‹N¹ppe0"
+ THE_ROD_more_darkness_manipulation_form_battle_tt: "ÎNbyVÜw)R·ƒ—V„v§YÍdµcÑž—fz¦^„výw›R§!žX R§G30%§!0"
+ THE_ROD_add_general_ability_max_tt: "§Y2—s|Z§!„vNb	gýw›RNP–ÐcGSó§G6§!0"
+ THE_ROD_4_15_case1_tt_yes: "£yes£‚Yœgåb	g§Y9‚wQ§!„v8fVY±Rÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_4_15_case1_tt_no: "£no£‚Yœgåb	g§Y9‚wQ§!„v8fVY±Rÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_4_15_case2_tt_yes: "£yes£‚Yœgåb	g§YÜ”ÿw§!„v8fVY±Rÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_4_15_case2_tt_no: "£no£‚Yœgåb	g§YÜ”ÿw§!„v8fVY±Rÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_4_15_case3_tt_yes: "£yes£‚YœgTöeåb	g§Y9‚wQ§!ŒT§YÜ”ÿw§!„v8fVY±Rÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_4_15_case3_tt_no: "£no£‚YœgTöeåb	g§Y9‚wQ§!ŒT§YÜ”ÿw§!„v8fVY±Rÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_decrease_navy_hegemony_requirements_tt: "M–NO±Rðy§Ywm›Q8—Cg§!„v‰Bl0"
+ THE_ROD_dark_moon_night_stage1_extra_tt: "0§M—fgY: ÄžfKNY§!0˜Y·ƒ—VåNNHeœg: "
+ THE_ROD_dark_moon_night_stage2_extra_tt: "0§M—fgY: àeIQKNY§!0˜Y·ƒ—VåNNHeœg: "
+ THE_ROD_dark_moon_night_stage3_extra_tt: "0§M—fgY: ÂRY—KNY§!0˜Y·ƒ—VåNNHeœg: "
+ THE_ROD_dark_moon_night_stage4_extra_tt: "0§M—fgY: —fgKNY§!0˜Y·ƒ—VåNNHeœg: "
+ THE_ROD_dark_moon_night_2_4_tt: "ôv^SÞTôu²b9: §G-20.0%§!"
+ THE_ROD_dark_moon_night_1_6_tt: "²‹T‡eS±‚9: §G-25.0%§!"
+ THE_ROD_dark_moon_night_1_8_tt: "Y²ND–¸^¥c×SàV.t: §G+25.00§!"
+ THE_ROD_dark_moon_night_3_9_tt: "Lˆ?eHe‡s: §G+5.0%§!"
+ THE_ROD_dark_moon_night_1_10_tt: "ÑSUSb,g: §G-10.0%§!"
+ THE_ROD_dark_moon_night_2_12_tt: "FUºNâV: §G+1§!"
+ THE_ROD_dark_moon_night_3_13_tt: "8flQøS•bDb,g: §G-25.0%§!"
+ THE_ROD_dark_moon_night_3_15_tt: "8fVüR: §G+33.0%§!"
+ THE_ROD_dark_moon_night_5_12_1_tt: "ßRuQöeô•: §G-10.0%§!"
+ THE_ROD_dark_moon_night_5_12_2_tt: "è–±‚9: §G-10.0%§!"
+ THE_ROD_dark_moon_night_4_14_1_tt: "­‹Ãu¦^: §G+5.0%§!"
+ THE_ROD_dark_moon_night_4_14_2_tt: "Nb×Skp›R2O³R: §G-20.0%§!"
+ THE_ROD_dark_moon_night_stage1_default_1_tt: "hQNS8fÞz‰N›R: §G+10.0%§!"
+ THE_ROD_dark_moon_night_stage1_default_2_tt: "9e„UsQû|: §G+10.0%§!"
+ THE_ROD_dark_moon_night_stage2_default_tt: "ô•ŒQú^¾‹: §G+15.0%§!"
+ THE_ROD_dark_moon_night_stage3_default_tt: "R»yININt^pe: §G-10§!"
+ THE_ROD_dark_moon_night_stage4_default_tt: "8hÃVS±‚9: §G-20.0%§!"
+ THE_ROD_dark_moon_night_debuff_default_tt: "hQNSÏkgRƒŸ^¦^: §R+0.20§!"
+ THE_ROD_dark_moon_night_debuff_decrease_tt: "hQNSÏkgRƒŸ^¦^: §R+0.15§!"
+ THE_ROD_transform_darkness_manipulation_to_mechanic_power_tt: "ˆmwNb	g§YÍdµcÑž—fz¦^„výw›R§!ÿÏk§Y1§!¹p§YÍdµcÑž—fz¦^„výw›R§!žX R§Y1§!¹p§OTlVYIQ§!0"
+ THE_ROD_display_darkness_manipulation_var_tt: "SVMRåb	g§Y[Root.the_rod_darkness_manipulation_var.GetValue]§!¹p§YÍdµcÑž—fz¦^„výw›R§!0"
+ THE_ROD_unlock_pax_youkai_in_german_reform_tt: "ã‰•,r§Y7§!µu?eœ^9ei—0§Y–Y*`»lN„v·Va×V§!0ÿžRLˆå‹9ei—S·ƒ—V‚YNHeœg:"
+ THE_ROD_german_culture_unity_extra_add_modifier_tt: "§M·Va×V‡eSßuN§!S9hncÛ¦^·ƒ—V˜YHeœgÿ¾0R§Y100§!öeÙuˆN‚YNHeœg:"
+ THE_ROD_german_culture_unity_extra_modifier_pommeranian_tt: "ZgpˆÏQ: §G-2.0%§!"
+ THE_ROD_german_culture_unity_extra_modifier_prussian_tt: "F–›QÍdÃu¦^·ƒÖSîOck: §G+50.0%§!"
+ THE_ROD_german_culture_unity_extra_modifier_baltic_german_tt: "3zšR¦^±‚9îOck: §G-20.0%§!"
+ THE_ROD_german_culture_unity_extra_modifier_lower_saxon_tt: "9e„UsQû|: §G+25.0%§!"
+ THE_ROD_german_culture_unity_extra_modifier_hannoverian_tt: "ºN›Rb`Y¦^: §G+15.0%§!"
+ THE_ROD_german_culture_unity_extra_modifier_hessian_tt: "uµNHe‡s: §G+10.0%§!"
+ THE_ROD_german_culture_unity_extra_modifier_saxon_tt: "µOeuib.VqVÍT: §G-10.0%§!"
+ THE_ROD_german_culture_unity_extra_modifier_franconian_tt: "Œ˜î•±‚9: §G-15.0%§!"
+ THE_ROD_german_culture_unity_extra_modifier_swabian_tt: "‘šuQ±‚9: §G-20.0%§!"
+ THE_ROD_german_culture_unity_extra_modifier_swiss_tt: "‰š›QÄ‰!j: §G+20.0%§!"
+ THE_ROD_german_culture_unity_extra_modifier_bavarian_tt: "ÑSUSb,g: §G-10.0%§!"
+ THE_ROD_german_culture_unity_extra_modifier_austrian_tt: "Y²NðX‰Š: §G+2.00§!"
+ THE_ROD_german_culture_unity_extra_modifier_dutch_tt: "Ïkt^'¨ÀwÏQÏ‘: §G+0.20§!"
+ THE_ROD_german_culture_unity_extra_modifier_flemish_tt: "Nb×SëXlSbûQ: §G-10.0%§!"
+ THE_ROD_german_culture_unity_extra_modifier_frisian_tt: "wm›QëXl: §G+10.0%§!"
+ THE_ROD_siege_won_add_core_in_german_tt: "(Wb‰N-N`S†˜§YS·Va×V§!ŒT§YWS·Va×V§!0W:S„vwýNSûm R§Y[Root.GetName]§!„v8hÃV"
+ THE_ROD_unlock_rod_ger_decision_tt: "y(u§YµR—f-nfœëX†˜ßW§!ŒT§YµR—f-Il(„†˜ßW§!„vîOp™'`ýVT0\n\nã‰•³Q®‹0§YµR—f-·Va×V†˜ßW§!0\nAQ¸‹bìNS·Va×V ReQýV¶RTðy0"
+ THE_ROD_remove_government_mechanic_trigger_tt: "§M—fgY§!„v?eœ^’N¨RNQ	gûNUOˆmw0\n§M—f&r0Demarcation0§!„vHeœg9e:NžX R§G25§!§OTlVYIQ§!0"
+ THE_ROD_disable_rod_ger_name_tt: "y(u§YµR—f-·Va×V†˜ßW§!„vîOp™'`ýVT0"
+ THE_ROD_4_16_case1_tt_yes: "£yes£‚YœgÍNåb	g0§YÑ‘^SN(gPg§!0„vûN¡RVY±Rÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_4_16_case1_tt_no: "£no£‚YœgÍNåb	g0§YÑ‘^SN(gPg§!0„vûN¡RVY±Rÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_4_16_case1_tt: "SòT·ƒ—V„v0§YÑ‘^SN(gPg§!0ûN¡RVY±R„vcíuöeô•9e:N§G8lEN§!0"
+ THE_ROD_unlock_netherland_governor_reform_tt: "ã‰•,r§Y3§!µu?eœ^9ei—0§Y<S·VpQI`cw§!0ÿžRLˆå‹9ei—S·ƒ—V‚YNHeœg:"
+ THE_ROD_5_17_case1_tt_yes: "£yes£‚Yœg§YâlpQ§!0W:SwýNGW^SŽN@[Root.GetTag]§Y[Root.GetName]§!bvQ§Y^—g!D–^SýV§!ÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_5_17_case1_tt_no: "£no£‚Yœg§YâlpQ§!0W:SwýNGW^SŽN@[Root.GetTag]§Y[Root.GetName]§!bvQ§Y^—g!D–^SýV§!ÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_5_17_case1_tt: "0§YÜtRâlpQ§!0„vcíuöeô•9e:N§G8lEN§!0"
+ THE_ROD_highlight_province_not_in_fort_zone_ttt: "¹pûQ£THE_LIL_info_decision_icon£Øš®N>f:yNb	gN(W§Y‰^Xµc6R:S§!„vwýN0"
+ THE_ROD_mole_tt: "N=fÍ‘‰…Q¹Rÿxd†N"
+###TOOLTIP_END
+
+###MODIFIER
+ THE_ROD_food_in_dark_province_modiffier: "Ñž—f-N„vß˜ir"
+ THE_ROD_empire_mercenary_modifier: "^ýVcOuQ"
+ THE_ROD_alliance_hsa_modifier: "NTKQÓußv"
+ THE_ROD_alliance_rod_modifier: "9‚NßvËS"
+ THE_ROD_expand_in_darkness_modifier: "(WÑž—f-Nib.V"
+ THE_ROD_pomeranian_royal_modifier: "âlŽÉb<SšN‹s²R"
+ THE_ROD_border_feudal_lord_modfier: "¹ƒXé…¯O"
+ THE_ROD_hre_elector_modifier: "^ýV	>NCg"
+ THE_ROD_rebuild_malbork_castle_province_modifier: "Í‘îOlšS!XÎW!X"
+ THE_ROD_darkness_knight_modifier: "µR—f‘šëXâV"
+ THE_ROD_rise_dark_flag_modifier: "GSwµR—f×e"
+ THE_ROD_unite_baltic_modifier: "ßuNâlW„v"
+ THE_ROD_unite_baltic_culture_modifier: "8T6eâlW„v‡eS"
+ THE_ROD_rig_church_treasury_modifier: "Ì‘ RYeOÑ‘“^"
+ THE_ROD_baltic_sea_port: "âlW„vwm=nãS"
+ THE_ROD_melt_gold_modifier: "”q¼pÄžÑ‘"
+ THE_ROD_prussian_rise_modifier: "nfœëXºNTw"
+ THE_ROD_rule_unowned_order: "ßu†˜àeINéy^"
+ THE_ROD_hre_diplomat_modifier: "^ýVY²N˜R"
+ THE_ROD_youkai_way_modifier_1: "–Y*`„v¹eV"
+ THE_ROD_youkai_way_modifier_2: "–Y*`„v¹eV"
+ THE_ROD_youkai_way_modifier_3: "–Y*`„v¹eV"
+ THE_ROD_youkai_way_modifier_4: "–Y*`„v¹eV"
+ THE_ROD_youkai_way_modifier_5: "–Y*`„v¹eV"
+ THE_ROD_youkai_way_modifier_6: "–Y*`„v¹eV"
+ THE_ROD_beginner_witch_modifier: "°eKbëTsY"
+ THE_ROD_hakureishinto_empire: "ZSKN^yS^ýV"
+ THE_ROD_extra_hakurei_modifier_Hakurei_God: "8lEN^yGy: ZSKN^y"
+ THE_ROD_extra_hakurei_modifier_Yukari: "8lEN^yGy: kQ‘N"
+ THE_ROD_extra_hakurei_modifier_Hecatia: "8lEN^yGy: kaSÐcšN"
+ THE_ROD_extra_hakurei_modifier_Okina: "8lEN^yGy: idYW"
+ THE_ROD_extra_hakurei_modifier_Larva: "8lEN^yGy: ÉbSæt"
+ THE_ROD_extra_hakurei_modifier_Aki_Sisters: "8lEN^yGy: ËyÐY¹Y"
+ THE_ROD_extra_hakurei_modifier_Junko: "8lEN^yGy: ¯uÐr"
+ THE_ROD_extra_hakurei_modifier_Kishin: "8lEN^yGy: z^y"
+ THE_ROD_extra_hakurei_modifier_Shinki: "8lEN^yGy: ^yîu"
+ THE_ROD_extra_hakurei_modifier_Keiki: "8lEN^yGy: ôW‰R^y"
+ THE_ROD_extra_hakurei_modifier_Hina: "8lEN^yGy: Ï–"
+ THE_ROD_extra_hakurei_modifier_Kutaka: "8lEN^yGy: EN˜OLk"
+ THE_ROD_christian_world_modifier: "‡eQúWcwNLu"
+ THE_ROD_danzig_papal_palace_province_modifier: "FOýlYe‡v«R"
+ THE_ROD_dark_executer_modifier: "Ñž—fãNLˆw"
+ THE_ROD_saint_rumia_modifier: "1W2—s|Z"
+ THE_ROD_farm_province_modifier: "œQNÑSUS"
+ THE_ROD_production_construction_modifier: "uµNú^¾‹"
+ THE_ROD_collectedu0021_modifier: "Æ–PŸ†Nÿ"
+ THE_ROD_polish_legitimacy_modifier: "âlpQ‹s Q"
+ THE_ROD_fishing_in_lake_modifier: "Vn¹‚W“”"
+ THE_ROD_hsa_legacy_modifier: "Il(„„vWµN"
+ THE_ROD_undercurrent_fleet_modifier: "—fAm0‚–"
+ THE_ROD_north_war_modifier: "S¹eb‰N"
+ THE_ROD_one_way_route_modifier: "UST*‚S"
+ THE_ROD_priority_supply_modifier_1: "ÄOW¯eFUÁT"
+ THE_ROD_priority_supply_modifier_2: "ÄOW¯eFUÁT"
+ THE_ROD_priority_supply_modifier_3: "ÄOW¯eFUÁT"
+ THE_ROD_priority_supply_modifier_4: "ÄOW¯eFUÁT"
+ THE_ROD_youkai_in_stream: "4lKN—f09‚KN–Y"
+ THE_ROD_absorb_every_modifier: "8T6eNR"
+ THE_ROD_euler_strait_tax_province_modifier: "V6eLˆz"
+ THE_ROD_summer_night_modifier: "‹vY<fY"
+ THE_ROD_free_sea_modifier: "ê1uwmßW"
+ THE_ROD_support_war_modifier: "=ecb‰N"
+ THE_ROD_coast_fort_province_modifier: "wm¸S‰^X"
+ THE_ROD_dark_curtain_modifier: "„s—f7^U^"
+ THE_ROD_militarization_society_modifier: "›Q‹NS>yO"
+ THE_ROD_yoiyami_modifier: "0T›KNöe"
+ THE_ROD_lumen_boundary: "IQ—fLuP–"
+ THE_ROD_ex_darkness_army_modifier: "EXµR—fKN›Q"
+ THE_ROD_danzig_navy_part: "wm›Qè"
+ THE_ROD_improved_body_modifier: "9eo‚9‚SO"
+ THE_ROD_improved_artillery_modifier: "9eo‚0‚®p"
+ THE_ROD_new_navy_modifier: "°eVwm›Q"
+ THE_ROD_moonlight_legend: "gIQ.Oô‹"
+ THE_ROD_seek_gansou_modifier: "ûRŒb‰^ó`"
+ THE_ROD_new_world_modifier: "ó°eNLu"
+ THE_ROD_dominate_scandinavian: "ßu»l¯e*X„v³uôušN"
+ THE_ROD_dark_erode_empire_modifier: "—fŽ†^ýV"
+ THE_ROD_eagle_up_modifier: "ÑžpžGSŒ"
+ THE_ROD_eternal_darkness: "—fKN8lR`"
+ THE_ROD_dusk_plan_modifier: "®fr‚¡‹R"
+ THE_ROD_partition_poland_modifier: "ÜtRâlpQ"
+ THE_ROD_gbr_realm_modifier: "NR ˜†˜ßW"
+ THE_ROD_fra_realm_modifier: "ÕlpQ‰†˜ßW"
+ THE_ROD_ita_realm_modifier: "a'Y)R†˜ßW"
+ THE_ROD_rus_realm_modifier: "ÄOW¯e†˜ßW"
+###MODIFIER_END
+
+###MERC
+ THE_ROD_rug_pirate_company: "§JT9hwm×v§!"
+###MERC_END
+
+###GOVERNMENT
+ THE_ROD_apparitions_stalk_the_night_monarchy: "0–YT›YLˆ0TIN6R"
+ THE_ROD_apparitions_stalk_the_night_monarchy_desc: ""
+ THE_ROD_nightingale_reform: "ÑžY„vYºƒ"
+ THE_ROD_nightingale_reform_desc: ""
+ THE_ROD_spread_hakurei_message_reform: ".O­dZSKN^yèe"
+ THE_ROD_spread_hakurei_message_reform_desc: ""
+ THE_ROD_darknedd_diocese_reform: "µR—fINYe:S"
+ THE_ROD_darknedd_diocese_reform_desc: ""
+ THE_ROD_fall_into_world_port_reform: "`WeQNLu=n"
+ THE_ROD_fall_into_world_port_reform_desc: ""
+ THE_ROD_pax_youkai_in_german_reform: "–Y*`»lN„v·Va×V"
+ THE_ROD_pax_youkai_in_german_reform_desc: ""
+ THE_ROD_netherland_governor_reform: "<S·VpQI`cw"
+ THE_ROD_netherland_governor_reform_desc: ""
+
+ ability_THE_ROD_dark_moon_night_mechanic: "§M—fgY§!"
+ THE_ROD_government_mechanic_power: "§OTlVYIQ§!"
+ THE_ROD_government_mechanic_power_desc: ""
+ THE_ROD_government_mechanic_power_desc_default: "§OTlVYIQ§!qQ	gÛV*NIrµuÿÏkµuøvƒŽNNNµu˜Y·ƒ—V‚YNHeœgÿ\n§YÄžfKNY(0-25)§!ÿ\nhQNS8fÞz‰N›R: §G+10.0%§!\n9e„UsQû|: §G+10.0%§!\n\n§YàeIQKNY(25-50)§!ÿ\nô•ŒQú^¾‹: §G+15.0%§!\nuµNHe‡s: §R-25.0%§!\n\n§YÂRY—KNY(50-75)§!ÿ\nR»yININt^pe: §G-10§!\nuµNHe‡s: §R-25.0%§!\n\n§Y—fgKNY(75-100)§!ÿ\n8hÃVS±‚9: §G-20.0%§!\nuµNHe‡s: §R-25.0%§!\n"
+ THE_ROD_government_mechanic_power_desc_title: "§OTlVYIQ§!qQ	gÛV*NIrµuÿSVMRIrµu:N§M[Root.THE_ROD_mechanic_stage]§!\nÏkµuøvƒŽNNNµu˜Y·ƒ—V‚YNHeœg:"
+ THE_ROD_government_mechanic_power_desc_title_1: "§MÄžfKNY(0-25)§!:"
+ THE_ROD_government_mechanic_power_desc_title_2: "§MàeIQKNY(25-50)§!:"
+ THE_ROD_government_mechanic_power_desc_title_3: "§MÂRY—KNY(50-75)§!:"
+ THE_ROD_government_mechanic_power_desc_title_4: "§M—fgKNY(75-100)§!:"
+ THE_ROD_government_mechanic_interaction_1: "—f&r0Demarcation0"
+ THE_ROD_government_mechanic_interaction_2: "g&r0Moonlight Ray0"
+ THE_ROD_government_mechanic_interaction_1_desc: ""
+ THE_ROD_government_mechanic_interaction_2_desc: ""
+ mechanic_THE_ROD_court_banquet_attribute_yes: "=T(u0§YZfô•«R÷^´RO§!0³Q®‹"
+ mechanic_THE_ROD_convert_religion_add_church_loyalty_or_adm_yes: "ŒRb.OYežX R§YYeëX§!6–BS§G1%§!àVÚ‹¦^v^·ƒ—V§G5§!£adm£Lˆ?e¹ppe"
+ mechanic_THE_ROD_become_papal_controller_attribute_yes: "=T(u0§YqVÍTYe÷^Ñv²b	>N§!0³Q®‹"
+ mechanic_THE_ROD_darkness_trade_war_without_trigger_yes: "ïSåNùRûNUOýV¶RO(u0§YµR¸Sb‰N§!0±Rbt1u"
+ ability_THE_ROD_german_culture_unity_mechanic: "§M·Va×V‡eSßuN§!"
+ THE_ROD_german_cultural_unity_power: "§M·Va×V‡eSßuNÛ¦^§!"
+ THE_ROD_german_cultural_unity_power_desc: "Ïk*NòT¥c³u„v§Yåe3wüf§!‡eSSÐc›O§G+0.05§!g¦^§M·Va×V‡eSßuNÛ¦^§!\n\nÇ?eœ^’N¨R‡T§Yåe3wüf§!‡eSSOvQNQ`S(uïS¥c×S‡eSNP–ÿv^O§M·Va×V‡eSßuNÛ¦^§!·ƒ—V˜YHeœg"
+ THE_ROD_THE_ROD_german_culture_unity_interaction: "‡Tåe3wüf‡eS"
+ THE_ROD_THE_ROD_german_culture_unity_interaction_desc: ""
+ monthly_THE_ROD_german_cultural_unity_power: "g¦^§M·Va×V‡eSßuNÛ¦^§!"
+###GOVERNMENT_END
+
+###DECISION
+ THE_ROD_form_bra_personal_union_decision_title: "@RODú^Ëz§Y[BRA.GetName]§!qQINTw¦"
+ THE_ROD_form_bra_personal_union_decision_desc: ""
+ THE_ROD_form_boh_personal_union_decision_title: "@RODú^Ëz§Y[BOH.GetName]§!qQINTw¦"
+ THE_ROD_form_boh_personal_union_decision_desc: ""
+ THE_ROD_form_sax_personal_union_decision_title: "@RODú^Ëz§Y[SAX.GetName]§!qQINTw¦"
+ THE_ROD_form_sax_personal_union_decision_desc: ""
+ THE_ROD_form_swe_personal_union_decision_title: "@RODú^Ëz§Y[SWE.GetName]§!qQINTw¦"
+ THE_ROD_form_swe_personal_union_decision_desc: ""
+ THE_ROD_form_nor_personal_union_decision_title: "@RODú^Ëz§Y[NOR.GetName]§!qQINTw¦"
+ THE_ROD_form_nor_personal_union_decision_desc: ""
+ THE_ROD_restore_country_name_decision_title: "@RODÍ‘nýV¶RTðy"
+ THE_ROD_restore_country_name_decision_desc: ""
+ THE_ROD_pru_country_name_decision_title: "@RODµR—f-nfœëX†˜ßW"
+ THE_ROD_pru_country_name_decision_desc: ""
+ THE_ROD_hsa_country_name_decision_title: "@RODµR—f-Il(„†˜ßW"
+ THE_ROD_hsa_country_name_decision_desc: ""
+ THE_ROD_ger_country_name_decision_title: "@RODµR—f-·Va×V†˜ßW"
+ THE_ROD_ger_country_name_decision_desc: ""
+ THE_ROD_court_banquet_decision_title: "@RODZfô•«R÷^´RO"
+ THE_ROD_court_banquet_decision_desc: "jO:NµR—f„v–Y*`ÿ2—s|ZôfœU0k(WYô•Im¨RÿfR`N†N^y1WWlš^ýV„v«R÷^‡eSTÿ2—s|Z³QšR>NLˆìryr„vZfô•«R÷^ZfO0"
+ THE_ROD_become_papal_controller_decision_title: "@RODqVÍTYe÷^Ñv²b	>N"
+ THE_ROD_become_papal_controller_decision_tdesc: "êÎNFOýlÎWGS<h:NINYe:STÿ[Root.GetName]„vYeëX(WYe÷^„vqVÍT›RŠegŠ'YÿbìNïSåN)R(uÙÍyqVÍT›Rr^‰mYe÷^Ñv²b„v	>N0"
+ THE_ROD_collect_black_gem_decision_title: "@ROD6eÆ–Ñžr‚Rów"
+ THE_ROD_collect_black_gem_decision_desc: "2—s|Zê6q0WœU0kN†NÙÍyÑžr‚„vów4YÿFOÏuÇ[Root.GetName]„vÑyfRžRŒšÿºNìNÑS°sÙÍyów4YÃqçpöewQ	ggØš„víp<Pÿ:N†N2—s|Z„v1r‹YŒT[Root.GetName]„vÑSUS6eÆ–Ñžr‚Rów'T0"
+ THE_ROD_priority_supply_decision_title: "@RODnxÝOOHQ›O”^"
+ THE_ROD_priority_supply_decision_desc: "êÎNW¯eºNS‘—|—ºNvúQÄOW¯e0W:SÿSV0W„vFUÁTuµNåenAuÛvÿyr+R=f‰=O)RšNÓbRƒ„vVËYÿjO:NIN‰8fÎW^„v[33.GetName]b:N†NâlW„vwmAuÙV„v=nãSÿ—VÊvŽNbìNN[33.Owner.GetName]„vËS‹YsQû|ÿïSåNnxÝOegêN'kFUÁT„vOHQ›O”^0"
+ THE_ROD_rumia_become_general_decision_title: "@ROD2—s|Zb:NF–›QS†˜"
+ THE_ROD_rumia_become_general_decision_desc: "‹†6q2—s|Zv^¡l	gÀNHN›Q‹Nc%cýw›RÿFO–Y*`uXRNb—„vP`ç`N­eÏQSÿwb‰N=fµNuP`ç`„vn4YKNN0"
+ THE_ROD_check_dark_moon_night_stage_and_modifier_decision_title: "@RODågw§OTlVYIQ§!„vIrµuŒTHeœg"
+ THE_ROD_check_dark_moon_night_stage_and_modifier_decision_desc: ""
+###DECISION_END
+
+###PRIVILEGE
+ THE_ROD_estate_nobles_knight_tradition: "‘šëXâV.Oßu"
+ THE_ROD_estate_nobles_knight_tradition_desc: "<yrCgÏcð>"
+###PRIVILEGE_END
+
+###OPINION_MODIFIER
+ THE_ROD_saint_cross_opinion_modifier: "1WºN„vASWR"
+###OPINION_MODIFIER_END
+
+###COUNTRY_NAME
+ ROD_PRU: "µR—f-nfœëX†˜ßW"
+ ROD_PRU_ADJ: "µR—f"
+ ROD_HSA: "µR—f-Il(„†˜ßW"
+ ROD_HSA_ADJ: "µR—f"
+ ROD_GER: "µR—f-·Va×V†˜ßW"
+ ROD_GER_ADJ: "µR—f"
+###COUNTRY_NAME_END
+
+###GUI
+ THE_ROD_province_button_gui_tt: "wV¨VŽNÑž—f"
+###GUI_END
+
+###PROVINCE_TRIGGERED_MODIFIER
+ THE_ROD_holy_city_danzig_province_triggered_modifier: "ZSKN^yS1WÎW"
+###PROVINCE_TRIGGERED_MODIFIER_END
+
+###CB
+ cb_THE_ROD_darkcoast_war: "µR¸Sb‰N"
+ cb_THE_ROD_darkcoast_war_desc: "§Yå‹±Rbt1uêSýwrR©‹îvh„v¿lwmwýN0§!"
+ THE_ROD_blockade_ports_desc: "b‰Nîvh: S•=nãS"
+###CB_END
+
+###EVENT
+ THE_ROD_events.1.title: "wmáS…QY"
+ THE_ROD_events.1.desc: "1u9N¦žµc6R„v„SÒRwmáSI–”–†NâlW„vwmNvQÖNwmßW„v*‚¿uÿŽVÔŽNâlW„vwm…QY„vFUºN:N†NÎN„SÒRwmáSÇN—VNT9N¦ž=eØNØšf„vLˆz0êÎN[Root.GetName]Vg[12.GetName]v^µc6R„SÒRwmáSÿ=f&TÝOYuwmáSLˆzb:N[Root.Monarch.GetName]—‰³QšR„vî•˜˜0"
+ THE_ROD_events.1.a: "n0R[Root.Monarch.GetName]6ez†N0"
+ THE_ROD_events.1.b: "FUºNSZwÆ–ŽNdk0"
+
+ THE_ROD_events.2.title: "2—s|Z„výw›R·ƒ—VÐcGS"
+ THE_ROD_events.2.desc: "ÏuÇY!kbyV„vÜw)Rÿ2—s|Z„v›Q‹Nc%cýw›R·ƒ—V†NNšR„vb•ÿ	ébNy˜ýw›RÛLˆÐcGS0"
+ THE_ROD_events.2.a: "ÐcGSkp›R"
+ THE_ROD_events.2.b: "ÐcGS²QûQ"
+ THE_ROD_events.2.c: "ÐcGS:g¨R"
+ THE_ROD_events.2.d: "ÐcGSôVÎW"
+ THE_ROD_events.2.error: "2—s|Z„výw›RòT¾0RNP–"
+
+ THE_ROD_events.3.title: "‡Tåe3wüf‡eS"
+ THE_ROD_events.3.desc: "·Va×V0W:SÏu†S†N•EN„v÷mqNßu»lwàeÕlŒRb‡eSN„vßuNÿ[Root.GetName]íQP·Va×V0W:S'YýV„v«ŽýNÿ	g:gOSåe3wüf‡eS‡eQêñT„vßu»lSOû|-N0"
+ THE_ROD_events.3.a: "âlŽÉb<SšN"
+ THE_ROD_events.3.b: "nfœëX"
+ THE_ROD_events.3.c: "âlW„v·Va×V"
+ THE_ROD_events.3.d: "N(„KQîh"
+ THE_ROD_events.3.e: "Z¯eyrO)RšN"
+ THE_ROD_events.3.f: "±ƒ5ƒ"
+ THE_ROD_events.3.g: "(„KQîh"
+ THE_ROD_events.3.h: "ÕlpQKQ<SšN"
+ THE_ROD_events.3.i: "Ëeæt,g"
+ THE_ROD_events.3.j: "^tëX"
+ THE_ROD_events.3.k: "ôTO)RšN"
+ THE_ROD_events.3.l: "eY0W)R"
+ THE_ROD_events.3.m: "wƒpQ"
+ THE_ROD_events.3.n: "iOpQ·V"
+ THE_ROD_events.3.o: "VÌ‘¯epQ"
+###EVENT_END
+
+###VARIABLE
+ the_rod_rumia_battle_win_var: "2—s|Z†˜üR„vbyVÜw)R"
+###VARIABLE_END
+
+###CUSTOM_LOCALISATION
+ THE_ROD_mechanic_stage_1: "ÄžfKNY"
+ THE_ROD_mechanic_stage_2: "àeIQKNY"
+ THE_ROD_mechanic_stage_3: "ÂRY—KNY"
+ THE_ROD_mechanic_stage_4: "—fgKNY"
+###CUSTOM_LOCALISATION_END

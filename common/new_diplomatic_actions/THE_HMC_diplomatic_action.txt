@@ -1,0 +1,20 @@
+THE_HMC_transform_to_human_trade_league = {
+	category = influence
+	require_acceptance = no
+	is_visible = {
+		has_government_attribute = THE_HMC_can_establish_human_trade_league
+		FROM = {
+			is_subject_of = ROOT
+			is_subject_of_type = vassal
+		}
+	}
+	is_allowed = {
+		always = yes
+	}
+	on_accept = {
+		create_subject = {
+			subject_type = THE_HMC_human_trade_league
+			who = FROM
+		}
+	}
+}

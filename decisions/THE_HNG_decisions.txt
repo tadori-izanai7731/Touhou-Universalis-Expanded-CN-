@@ -1,0 +1,1329 @@
+country_decisions = {
+	the_hng_gensokyo_scr_home_age_of_discovery = {
+		color = { 255 50 50 }
+		potential = {
+			tag = HNG
+			exists = SCR
+			current_age = age_of_discovery
+			NOT = { has_country_modifier = THE_HNG_The_Joy_of_Reunion }
+			NOT = { has_country_modifier = THE_HNG_help_from_Scarlet_new_home }
+		}
+		allow = {
+			treasury = 100
+		}
+		effect = {
+			add_treasury = -100
+			SCR = { add_treasury = 100 }
+			add_country_modifier = {
+				name = THE_HNG_The_Joy_of_Reunion
+				duration = 3650
+			}
+			country_event = {
+				id = flavor_THE_HNG_events.3
+			}	
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_at_war = no
+			}
+		}
+		ai_importance = 50
+	}
+	
+	the_hng_gensokyo_scr_home_not_age_of_discovery = {
+		color = { 255 50 50 }
+		potential = {
+			tag = HNG
+			exists = SCR
+			NOT = { current_age = age_of_discovery }
+			NOT = { has_country_modifier = THE_HNG_The_Joy_of_Reunion }
+			NOT = { has_country_modifier = THE_HNG_help_from_Scarlet_new_home }
+		}
+		allow = {
+			treasury = 500
+		}
+		effect = {
+			add_treasury = -500
+			SCR = { add_treasury = 500 }
+			add_country_modifier = {
+				name = THE_HNG_The_Joy_of_Reunion
+				duration = 3650
+			}
+			country_event = {
+				id = flavor_THE_HNG_events.3
+			}	
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_at_war = no
+			}
+		}
+		ai_importance = 50
+	}
+	
+	the_hng_new_gensokyo_scr_home = {
+		color = { 255 50 50 }
+		potential = {
+			tag = HNG
+			NOT = { has_country_modifier = THE_HNG_help_from_Scarlet_new_home }
+			NOT = { has_country_modifier = THE_HNG_The_Joy_of_Reunion }
+			OR = {
+				NOT = { exists = SCR }
+				owns_core_province = 4968
+			}
+		}
+		allow = {
+			treasury = 3000
+		}
+		effect = {
+			add_treasury = -3000
+			country_event = {
+				id = flavor_THE_HNG_events.4
+			}	
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_at_war = no
+			}
+		}
+		ai_importance = 50
+	}
+	
+	the_hng_Capable_of_using_qi = {
+		color = { 255 50 50 }
+		potential = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+			NOT = { has_country_modifier = THE_HNG_HNG_all_collapse }
+			has_country_flag = THE_HNG_can_caozong_qi
+		}
+		allow = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+		}
+		
+		effect = {
+			country_event = {
+				id = THE_HNG_power_var_events.11
+			}	
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_at_war = no
+			}
+		}
+		ai_importance = 0
+	}
+	
+	the_hng_searching_for_dragon_points = {
+		color = { 255 189 0 }
+		potential = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+			has_country_flag = THE_HNG_searching_for_dragon_points_can_use
+			has_reform = THE_HNG_searching_for_dragon_points
+		}
+		
+		allow = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+		}
+		
+		effect = {
+			country_event = {
+				id = flavor_THE_HNG_government_events.1
+			}	
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 1
+	}
+	
+	#人妖隔阂第一次改革
+	the_hng_disasters1_reform1 = {
+		color = { 255 50 50 }
+		potential = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+			mission_completed = THE_HNG_1_1_28
+			NOT = { has_country_flag = THE_HNG_disasters1_reform1_had_completed  }
+			NOT = { has_country_flag = THE_HNG_disasters_lose1  }
+		}
+		allow = {
+			adm_power = 100
+		}
+		effect = {
+			add_adm_power = -100
+			add_country_modifier = {
+				name = THE_HNG_disasters1_reform1_completed
+				duration = 1825
+			}	
+			add_country_modifier = {
+				name = THE_HNG_disasters_reform1_completed1_to_confusion
+				duration = 1825
+			}
+			country_event = {
+				id = flavor_THE_HNG_events.15
+			}	
+			set_country_flag = THE_HNG_disasters1_reform1_had_completed
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	#人妖隔阂第二次改革
+	the_hng_disasters1_reform2 = {
+		color = { 255 50 50 }
+		potential = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+			mission_completed = THE_HNG_1_3_28
+			NOT = { has_country_flag = THE_HNG_disasters1_reform2_had_completed  }
+			NOT = { has_country_flag = THE_HNG_disasters_lose1  }
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = the_hng_disasters1_reform2_tt
+				has_country_flag = THE_HNG_disasters1_reform1_had_completed
+			}
+			dip_power = 100
+			NOT = { has_country_modifier = THE_HNG_disasters_reform1_completed1_to_confusion }
+		}
+		effect = {
+			add_dip_power = -100
+			add_country_modifier = {
+				name = THE_HNG_disasters1_reform2_completed
+				duration = 1825
+			}	
+			add_country_modifier = {
+				name = THE_HNG_disasters_reform1_completed1_to_confusion
+				duration = 1825
+			}
+			country_event = {
+				id = flavor_THE_HNG_events.16
+			}	
+			set_country_flag = THE_HNG_disasters1_reform2_had_completed
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	#人妖隔阂第三次改革
+	the_hng_disasters1_reform3 = {
+		color = { 255 50 50 }
+		potential = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+			mission_completed = THE_HNG_1_2_29
+			NOT = { has_country_flag = THE_HNG_disasters1_reform3_had_completed  }
+			NOT = { has_country_flag = THE_HNG_disasters_lose1  }
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = the_hng_disasters1_reform3_tt
+				has_country_flag = THE_HNG_disasters1_reform2_had_completed
+			}
+			mil_power = 100
+			NOT = { has_country_modifier = THE_HNG_disasters_reform1_completed1_to_confusion }
+		}
+		effect = {
+			add_mil_power = -100
+			add_country_modifier = {
+				name = THE_HNG_disasters1_reform3_completed
+				duration = 1825
+			}	
+			add_country_modifier = {
+				name = THE_HNG_disasters_reform1_completed1_to_confusion
+				duration = 1825
+			}
+			country_event = {
+				id = flavor_THE_HNG_events.17
+			}	
+			set_country_flag = THE_HNG_disasters1_reform3_had_completed
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	#人妖隔阂第四次改革
+	the_hng_disasters1_reform4 = {
+		color = { 255 50 50 }
+		potential = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+			mission_completed = THE_HNG_1_4_29
+			NOT = { has_country_flag = THE_HNG_disasters1_reform4_had_completed  }
+			NOT = { has_country_flag = THE_HNG_disasters_lose1  }
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = the_hng_disasters1_reform4_tt
+				has_country_flag = THE_HNG_disasters1_reform3_had_completed
+			}
+			adm_power = 50
+			dip_power = 50
+			mil_power = 50
+			NOT = { has_country_modifier = THE_HNG_disasters_reform1_completed1_to_confusion }
+		}
+		effect = {
+			add_adm_power = -50
+			add_dip_power = -50
+			add_mil_power = -50
+			THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 1 type = nationalist_rebels size = 5 }
+			country_event = {
+				id = flavor_THE_HNG_events.18
+			}	
+			set_country_flag = THE_HNG_disasters1_reform4_had_completed
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	#大明，我要当你的狗啊！
+	the_hng_mng_dad_not_leave = {
+		color = { 255 189 0 }
+		potential = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+			MNG = {
+				is_emperor_of_china = yes
+			}
+			NOT = { is_subject_of_type = tributary_state }
+			NOT = { mission_completed = THE_HNG_1_3_32 }
+			NOT = { mission_completed = THE_HNG_1_3_12 }
+			is_at_war = no
+		}
+		allow = {
+			exists = MNG
+		}
+		effect = {
+			MNG = {
+				create_subject = {
+					subject_type = tributary_state
+					subject = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	#儒教bug问题
+	the_hng_confucianism_may_be_bug = {
+		color = { 255 189 0 }
+		potential = {
+			is_emperor_of_china = yes
+			religion = confucianism
+			NOT = {	has_harmonized_with = buddhism }
+			NOT = {	has_harmonized_with = vajrayana }
+			NOT = {	has_harmonized_with = mahayana }
+			NOT = {	has_harmonized_with = pagan }
+			NOT = {	has_harmonized_with = dharmic }
+		}
+		allow = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+		}
+		effect = {
+			add_harmonized_religion = buddhism
+			add_harmonized_religion = vajrayana
+			add_harmonized_religion = mahayana
+			add_harmonized_religion = hinduism
+			add_harmonized_religion = animism
+			add_harmonized_religion = th_hakureishinto
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	#合并澜沧
+	the_hng_inherit_LXA_once = {
+		color = { 255 50 50 }
+		potential = {
+			OR = {
+				tag = HNG
+				was_tag = HNG	
+			}
+			mission_completed = THE_HNG_1_3_12
+			senior_union_with = LXA
+			NOT = { has_country_flag = THE_HNG_had_inherit_LXA_once }
+		}
+		allow = {
+			LXA= {
+				has_opinion = {
+					who = ROOT
+					value = 200
+				}
+			}
+			is_at_war = no
+			OR = {
+				legitimacy = 100
+				imperial_mandate = 80
+			}
+		}
+		effect = {
+			inherit = LXA
+			set_country_flag = THE_HNG_had_inherit_LXA_once
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	#合并尼泊尔
+	the_hng_inherit_NPL_once = {
+		color = { 255 50 50 }
+		potential = {
+			had_country_flag = {
+				flag = THE_HNG_had_NPL_subject
+				days = 18250
+			}
+			OR = {
+				tag = HNG
+				was_tag = HNG	
+			}
+			NPL = {
+				is_subject_of = ROOT
+			}
+			NOT = { has_country_flag = THE_HNG_had_inherit_NPL_once }
+		}
+		allow = {
+			NPL= {
+				has_opinion = {
+					who = ROOT
+					value = 200
+				}
+			}
+			is_at_war = no
+			OR = {
+				legitimacy = 100
+				imperial_mandate = 80
+			}
+		}
+		effect = {
+			inherit = NPL
+			set_country_flag = THE_HNG_had_inherit_NPL_once
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	#合并琉球
+	the_hng_inherit_RYU_once = {
+		color = { 255 50 50 }
+		potential = {
+			had_country_flag = {
+				flag = THE_HNG_had_RYU_subject
+				days = 18250
+			}
+			OR = {
+				tag = HNG
+				was_tag = HNG	
+			}
+			RYU = {
+				is_subject_of = ROOT
+			}
+			NOT = { has_country_flag = THE_HNG_had_inherit_RYU_once }
+		}
+		allow = {
+			RYU = {
+				has_opinion = {
+					who = ROOT
+					value = 200
+				}
+			}
+			is_at_war = no
+			OR = {
+				legitimacy = 100
+				imperial_mandate = 80
+			}
+		}
+		effect = {
+			inherit = RYU
+			set_country_flag = THE_HNG_had_inherit_RYU_once
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	#合并红魔馆
+	the_hng_inherit_SCR_once = {
+		color = { 255 50 50 }
+		potential = {
+			had_country_flag = {
+				flag = THE_HNG_had_SCR_subject
+				days = 18250
+			}
+			OR = {
+				tag = HNG
+				was_tag = HNG	
+			}
+			senior_union_with = SCR
+			NOT = { has_country_flag = THE_HNG_had_inherit_SCR_once }
+		}
+		allow = {
+			SCR = {
+				has_opinion = {
+					who = ROOT
+					value = 200
+				}
+			}
+			OR = {
+				legitimacy = 100
+				imperial_mandate = 80
+			}
+			is_at_war = no
+		}
+		effect = {
+			inherit = SCR
+			set_country_flag = THE_HNG_had_inherit_SCR_once
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	#合并兰芳
+	the_hng_inherit_LFA_once = {
+		color = { 255 50 50 }
+		potential = {
+			had_country_flag = {
+				flag = THE_HNG_had_LFA_subject
+				days = 10950
+			}
+			OR = {
+				tag = HNG
+				was_tag = HNG	
+			}
+			LFA = {
+				is_subject_of = ROOT
+			}
+			NOT = { has_country_flag = THE_HNG_had_inherit_LFA_once }
+		}
+		allow = {
+			is_at_war = no
+			LFA = {
+				has_opinion = {
+					who = ROOT
+					value = 200
+				}
+			}
+			OR = {
+				legitimacy = 100
+				imperial_mandate = 80
+			}
+		}
+		effect = {
+			inherit = LFA
+			set_country_flag = THE_HNG_had_inherit_LFA_once
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	#合并星
+	the_hng_inherit_MMU_once = {
+		color = { 255 50 50 }
+		potential = {
+			had_country_flag = {
+				flag = THE_HNG_had_MMU_subject
+				days = 10950
+			}
+			OR = {
+				tag = HNG
+				was_tag = HNG	
+			}
+			MMU = {
+				is_subject_of = ROOT
+			}
+			NOT = { has_country_flag = THE_HNG_had_inherit_MMU_once }
+		}
+		allow = {
+			OR = {
+				legitimacy = 100
+				imperial_mandate = 80
+			}
+			MMU = {
+				has_opinion = {
+					who = ROOT
+					value = 200
+				}
+			}
+			is_at_war = no
+		}
+		effect = {
+			inherit = MMU
+			set_country_flag = THE_HNG_had_inherit_MMU_once
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	#合并波斯
+	the_hng_inherit_PER_once = {
+		color = { 255 50 50 }
+		potential = {
+			had_country_flag = {
+				flag = THE_HNG_had_PER_subject
+				days = 10950
+			}
+			OR = {
+				tag = HNG
+				was_tag = HNG	
+			}
+			PER = {
+				is_subject_of = ROOT
+			}
+			NOT = { has_country_flag = THE_HNG_had_inherit_PER_once }
+		}
+		allow = {
+			is_at_war = no
+			PER = {
+				has_opinion = {
+					who = ROOT
+					value = 200
+				}
+			}
+			OR = {
+				legitimacy = 100
+				imperial_mandate = 80
+			}
+		}
+		effect = {
+			inherit = PER
+			set_country_flag = THE_HNG_had_inherit_PER_once
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	#合并水桥
+	the_hng_inherit_PRS_once = {
+		color = { 255 50 50 }
+		potential = {
+			had_country_flag = {
+				flag = THE_HNG_had_PRS_subject
+				days = 10950
+			}
+			OR = {
+				tag = HNG
+				was_tag = HNG	
+			}
+			PRS = {
+				is_subject_of = ROOT
+			}
+			NOT = { has_country_flag = THE_HNG_had_inherit_PRS_once }
+		}
+		allow = {
+			is_at_war = no
+			PRS = {
+				has_opinion = {
+					who = ROOT
+					value = 200
+				}
+			}
+			OR = {
+				legitimacy = 100
+				imperial_mandate = 80
+			}
+		}
+		effect = {
+			inherit = PRS
+			set_country_flag = THE_HNG_had_inherit_PRS_once
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	#合并安南
+	the_hng_inherit_ANN_once = {
+		color = { 255 50 50 }
+		potential = {
+			OR = {
+				tag = HNG
+				was_tag = HNG	
+			}
+			ANN = {
+				march_of = ROOT
+			}
+			mission_completed = THE_HNG_2_3_44
+			NOT = { has_country_flag = THE_HNG_had_inherit_ANN_once }
+		}
+		allow = {
+			is_at_war = no
+			OR = {
+				legitimacy = 100
+				imperial_mandate = 80
+			}
+			ANN = {
+				has_opinion = {
+					who = ROOT
+					value = 200
+				}
+			}
+		}
+		effect = {
+			inherit = ANN
+			set_country_flag = THE_HNG_had_inherit_ANN_once
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	#合并朝鲜
+	the_hng_inherit_KOR_once = {
+		color = { 255 50 50 }
+		potential = {
+			had_country_flag = {
+				flag = THE_HNG_had_KOR_subject
+				days = 10950
+			}
+			OR = {
+				tag = HNG
+				was_tag = HNG	
+			}
+			KOR = {
+				march_of = ROOT
+			}
+			NOT = { has_country_flag = THE_HNG_had_inherit_KOR_once }
+		}
+		allow = {
+			is_at_war = no
+			OR = {
+				legitimacy = 100
+				imperial_mandate = 80
+			}
+			KOR = {
+				has_opinion = {
+					who = ROOT
+					value = 200
+				}
+			}
+		}
+		effect = {
+			inherit = KOR
+			set_country_flag = THE_HNG_had_inherit_KOR_once
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	#第一次土地改革
+	the_hng_disasters2_reform1 = {
+		color = { 255 50 50 }
+		potential = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+			mission_completed = THE_HNG_3_3_65
+			NOT = { has_country_flag = THE_HNG_disasters2_reform1_had_completed  }
+			NOT = { has_country_flag = THE_HNG_disasters_lose2  }
+		}
+		allow = {
+			dip_power = 50
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+		}
+		effect = {
+			add_dip_power = -50
+			add_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Merger_degree_dip_power
+				value = -20
+			}
+			add_country_modifier = {
+				name = THE_HNG_disasters2_reform1_completed
+				duration = 1825
+			}	
+			add_country_modifier = {
+				name = THE_HNG_disasters_reform1_completed1_to_confusion
+				duration = 1825
+			}
+			hidden_effect = {
+				THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 2 type = nationalist_rebels size = 5 }
+				THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 2 type = pretender_rebels size = 5 }
+			}
+			set_country_flag = THE_HNG_disasters2_reform1_had_completed
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	#第二次土地改革
+	the_hng_disasters2_reform2 = {
+		color = { 255 50 50 }
+		potential = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+			mission_completed = THE_HNG_3_1_66
+			NOT = { has_country_flag = THE_HNG_disasters2_reform2_had_completed  }
+			NOT = { has_country_flag = THE_HNG_disasters_lose2  }
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = the_hng_disasters2_reform2_tt
+				has_country_flag = THE_HNG_disasters2_reform1_had_completed
+			}
+			dip_power = 100
+			NOT = { has_country_modifier = THE_HNG_disasters_reform1_completed1_to_confusion }
+		}
+		effect = {
+			add_dip_power = -100
+			add_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Merger_degree_dip_power
+				value = -25
+			}
+			add_country_modifier = {
+				name = THE_HNG_disasters2_reform2_completed
+				duration = 1825
+			}	
+			add_country_modifier = {
+				name = THE_HNG_disasters_reform1_completed1_to_confusion
+				duration = 1825
+			}
+			hidden_effect = {
+				THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 1 type = nationalist_rebels size = 5 }
+				THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 3 type = pretender_rebels size = 5 }
+			}
+			set_country_flag = THE_HNG_disasters2_reform2_had_completed
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	#第三次土地改革
+	the_hng_disasters2_reform3 = {
+		color = { 255 50 50 }
+		potential = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+			mission_completed = THE_HNG_3_3_67
+			NOT = { has_country_flag = THE_HNG_disasters2_reform3_had_completed  }
+			NOT = { has_country_flag = THE_HNG_disasters_lose2  }
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = the_hng_disasters2_reform3_tt
+				has_country_flag = THE_HNG_disasters2_reform2_had_completed
+			}
+			dip_power = 150
+			NOT = { has_country_modifier = THE_HNG_disasters_reform1_completed1_to_confusion }
+		}
+		effect = {
+			add_dip_power = -150
+			add_years_of_income = -0.25
+			add_stability = 1
+			change_estate_land_share = {
+				estate = estate_burghers
+				share = 5
+			}
+			add_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Merger_degree_dip_power
+				value = -30
+			}
+			add_country_modifier = {
+				name = THE_HNG_disasters2_reform3_completed
+				duration = 1825
+			}	
+			add_country_modifier = {
+				name = THE_HNG_disasters_reform1_completed1_to_confusion
+				duration = 1825
+			}
+			hidden_effect = {
+				THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 1 type = nationalist_rebels size = 5 }
+				THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 2 type = pretender_rebels size = 5 }
+				THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 1 type = particularist_rebels size = 5 }
+			}
+			set_country_flag = THE_HNG_disasters2_reform3_had_completed
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	#第一次财政改革
+	the_hng_disasters3_reform1 = {
+		color = { 255 50 50 }
+		potential = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+			mission_completed = THE_HNG_3_3_69
+			NOT = { has_country_flag = THE_HNG_disasters3_reform1_had_completed  }
+			NOT = { has_country_flag = THE_HNG_disasters_lose3  }
+		}
+		allow = {
+			adm_power = 50
+		}
+		effect = {
+			add_adm_power = -50
+			add_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Inflation_rate_adm_power
+				value = -10
+			}
+			add_country_modifier = {
+				name = THE_HNG_disasters3_reform1_completed
+				duration = 1460
+			}	
+			add_country_modifier = {
+				name = THE_HNG_disasters3_reform_to_confusion
+				duration = 1460
+			}
+			set_country_flag = THE_HNG_disasters3_reform1_had_completed
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	#第二次财政改革
+	the_hng_disasters3_reform2 = {
+		color = { 255 50 50 }
+		potential = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+			mission_completed = THE_HNG_3_1_70
+			NOT = { has_country_flag = THE_HNG_disasters3_reform2_had_completed  }
+			NOT = { has_country_flag = THE_HNG_disasters_lose3  }
+		}
+		
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = the_hng_disasters3_reform2_tt
+				has_country_flag = THE_HNG_disasters3_reform1_had_completed
+			}
+			NOT = { has_country_modifier = THE_HNG_disasters3_reform_to_confusion }
+			adm_power = 100
+		}
+		effect = {
+			add_adm_power = -100
+			add_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Inflation_rate_adm_power
+				value = -15
+			}
+			add_country_modifier = {
+				name = THE_HNG_disasters3_reform2_completed
+				duration = 1460
+			}	
+			add_country_modifier = {
+				name = THE_HNG_disasters3_reform_to_confusion
+				duration = 1460
+			}
+			set_country_flag = THE_HNG_disasters3_reform2_had_completed
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	#第三次财政改革
+	the_hng_disasters3_reform3 = {
+		color = { 255 50 50 }
+		potential = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+			mission_completed = THE_HNG_3_1_70
+			NOT = { has_country_flag = THE_HNG_disasters3_reform3_had_completed  }
+			NOT = { has_country_flag = THE_HNG_disasters_lose3  }
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = the_hng_disasters3_reform3_tt
+				has_country_flag = THE_HNG_disasters3_reform2_had_completed
+			}
+			NOT = { has_country_modifier = THE_HNG_disasters3_reform_to_confusion }
+			adm_power = 150
+		}
+		effect = {
+			add_adm_power = -150
+			add_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Inflation_rate_adm_power
+				value = -25
+			}
+			add_country_modifier = {
+				name = THE_HNG_disasters3_reform3_completed
+				duration = 1460
+			}	
+			add_country_modifier = {
+				name = THE_HNG_disasters3_reform_to_confusion
+				duration = 1460
+			}
+			set_country_flag = THE_HNG_disasters3_reform3_had_completed
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	#第一次军事改革
+	the_hng_disasters4_reform1 = {
+		color = { 255 50 50 }
+		potential = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+			mission_completed = THE_HNG_3_3_73
+			NOT = { has_country_flag = THE_HNG_disasters4_reform1_had_completed  }
+			NOT = { has_country_flag = THE_HNG_disasters_lose4  }
+		}
+		allow = {
+			mil_power = 50
+		}
+		effect = {
+			add_mil_power = -50
+			add_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Army_corruption_mil_power
+				value = -10
+			}
+			# add_country_modifier = {
+			# 	name = THE_HNG_disasters4_reform1_completed
+			# 	duration = 1095
+			# }	
+			add_country_modifier = {
+				name = THE_HNG_disasters4_reform_to_confusion
+				duration = 1095
+			}
+			set_country_flag = THE_HNG_disasters4_reform1_had_completed
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	#第二次军事改革
+	the_hng_disasters4_reform2 = {
+		color = { 255 50 50 }
+		potential = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+			mission_completed = THE_HNG_3_1_74
+			NOT = { has_country_flag = THE_HNG_disasters4_reform2_had_completed  }
+			NOT = { has_country_flag = THE_HNG_disasters_lose4  }
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = the_hng_disasters4_reform2_tt
+				has_country_flag = THE_HNG_disasters4_reform1_had_completed
+			}
+			NOT = { has_country_modifier = THE_HNG_disasters4_reform_to_confusion }
+			mil_power = 75
+		}
+		effect = {
+			add_mil_power = -75
+			add_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Army_corruption_mil_power
+				value = -15
+			}
+			# add_country_modifier = {
+			# 	name = THE_HNG_disasters4_reform2_completed
+			# 	duration = 1095
+			# }	
+			add_country_modifier = {
+				name = THE_HNG_disasters4_reform_to_confusion
+				duration = 1095
+			}
+			set_country_flag = THE_HNG_disasters4_reform2_had_completed
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	#第三次军事改革
+	the_hng_disasters4_reform3 = {
+		color = { 255 50 50 }
+		potential = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+			mission_completed = THE_HNG_3_5_74
+			NOT = { has_country_flag = THE_HNG_disasters4_reform3_had_completed  }
+			NOT = { has_country_flag = THE_HNG_disasters_lose4  }
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = the_hng_disasters4_reform3_tt
+				has_country_flag = THE_HNG_disasters4_reform2_had_completed
+			}		
+			NOT = { has_country_modifier = THE_HNG_disasters4_reform_to_confusion }
+			mil_power = 100
+		}
+		effect = {
+			add_mil_power = -100
+			add_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Army_corruption_mil_power
+				value = -20
+			}
+			# add_country_modifier = {
+			# 	name = THE_HNG_disasters4_reform3_completed
+			# 	duration = 1095
+			# }	
+			add_country_modifier = {
+				name = THE_HNG_disasters4_reform_to_confusion
+				duration = 1095
+			}
+			set_country_flag = THE_HNG_disasters4_reform3_had_completed
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	#第四次军事改革
+	the_hng_disasters4_reform4 = {
+		color = { 255 50 50 }
+		potential = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+			mission_completed = THE_HNG_3_3_75
+			NOT = { has_country_flag = THE_HNG_disasters4_reform4_had_completed  }
+			NOT = { has_country_flag = THE_HNG_disasters_lose4  }
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = the_hng_disasters4_reform4_tt
+				has_country_flag = THE_HNG_disasters4_reform3_had_completed
+			}
+			NOT = { has_country_modifier = THE_HNG_disasters4_reform_to_confusion }
+			mil_power = 125
+		}
+		effect = {
+			add_mil_power = -125
+			add_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Army_corruption_mil_power
+				value = -25
+			}
+			# add_country_modifier = {
+			# 	name = THE_HNG_disasters4_reform4_completed
+			# 	duration = 1095
+			# }	
+			add_country_modifier = {
+				name = THE_HNG_disasters4_reform_to_confusion
+				duration = 1095
+			}
+			set_country_flag = THE_HNG_disasters4_reform4_had_completed
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	#投降决议
+	the_hng_wan_ge_chui_zi = {
+		color = { 255 50 50 }
+		potential = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+			OR = {
+				has_disaster = the_hng_disasters_one
+				has_disaster = the_hng_disasters_two
+			}
+		}
+		allow = {
+			OR = {
+				has_disaster = the_hng_disasters_one
+				has_disaster = the_hng_disasters_two
+			}
+		}
+		effect = {
+			set_country_flag = THE_HNG_disasters_lose1
+			set_country_flag = THE_HNG_disasters_lose2
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	#伟大工程师
+	the_hng_great_engineer = {
+		color = { 255 50 50 }
+		potential = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+			mission_completed = mng_jing_hang_grand_canal
+			NOT = { ruler_has_personality = great_engineer_personality }
+			NOT = { has_ruler_modifier = mng_great_engineer_modifier }
+		}
+		allow = {
+			NOT = { ruler_has_personality = great_engineer_personality }
+			NOT = { has_ruler_modifier = mng_great_engineer_modifier }
+			mission_completed = mng_jing_hang_grand_canal
+		}
+		effect = {
+			if = {
+				limit = { 
+					has_dlc = "Rights of Man" 
+					NOT = { num_of_ruler_traits = { amount = 3 } }
+				}
+				add_ruler_personality = great_engineer_personality
+			}
+			else = {
+				add_ruler_modifier = {
+					name = mng_great_engineer_modifier
+					duration = -1 
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	
+	#加速改革决议
+	the_hng_jia_su_gai_ge = {
+		color = { 255 50 50 }
+		potential = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+			OR = {
+				has_country_modifier = THE_HNG_disasters_reform1_completed1_to_confusion
+				has_country_modifier = THE_HNG_disasters3_reform_to_confusion
+				has_country_modifier = THE_HNG_disasters4_reform_to_confusion
+			}
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = the_hng_jia_su_gai_ge_tt
+				OR = {
+					had_country_flag = {
+						flag = the_hng_had_jia_su_gai_ge_four_year
+						days = 1460
+					}	
+					NOT = { has_country_flag = the_hng_had_jia_su_gai_ge_four_year }
+				}
+			}
+			OR = {
+				has_country_modifier = THE_HNG_disasters_reform1_completed1_to_confusion
+				has_country_modifier = THE_HNG_disasters3_reform_to_confusion
+				has_country_modifier = THE_HNG_disasters4_reform_to_confusion
+			}
+		}
+		effect = {
+			country_event = {
+				id = flavor_THE_HNG_events.92
+			}
+			clr_country_flag = the_hng_had_jia_su_gai_ge_four_year
+			set_country_flag = the_hng_had_jia_su_gai_ge_four_year
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	#提前灾难决议
+	the_hng_ti_qian_zai_nan = {
+		color = { 255 50 50 }
+		potential = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+	    mission_completed = THE_HNG_2_3_44
+		NOT = { has_country_flag = THE_HNG_can_disasters }
+		NOT = { has_country_flag = hng_do_the_change3_flag }
+		}
+		allow = {
+        	treasury = 1000
+			manpower = 50
+		}
+		effect = {
+			country_event = {
+				id = flavor_THE_HNG_mission_events.35
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

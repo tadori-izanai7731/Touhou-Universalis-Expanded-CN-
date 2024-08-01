@@ -1,0 +1,33 @@
+#博丽神道圣城
+THE_ROD_holy_city_danzig_province_triggered_modifier = {
+	trigger = {
+		religion = th_hakureishinto
+		owner = { religion = th_hakureishinto }
+	}
+	local_missionary_strength = -0.05
+	missionaries = 1
+	global_missionary_strength = 0.02
+	tolerance_own = 2
+}
+
+# THE_ROD_danzig_pernmanent_cardinal_province_triggered_modifier = {
+# 	potential = {
+# 		always = no
+# 	}
+# 	trigger = {
+# 		religion = catholic
+# 		owner = { religion = catholic }
+# 		has_cardinal = yes
+# 	}
+# 	on_activation = {
+# 	}
+# 	on_deactivation = {
+# 		if = {
+# 			limit = {
+# 				religion = catholic
+# 				owner = { religion = catholic }
+# 			}
+# 			add_cardinal = yes
+# 		}
+# 	} 
+# }

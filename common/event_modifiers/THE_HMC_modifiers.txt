@@ -1,0 +1,245 @@
+#大火
+THE_HMC_fire_province_modifier = {
+	local_monthly_devastation = 3
+}
+
+#动荡的人类
+THE_HMC_tumultuous_humanity_1_modifier = {
+	ae_impact = 0.1
+}
+
+#动荡的人类
+THE_HMC_tumultuous_humanity_2_modifier = {
+	ae_impact = 0.2
+}
+
+#动荡的人类
+THE_HMC_tumultuous_humanity_3_modifier = {
+	ae_impact = 0.3
+}
+
+#动荡的人类
+THE_HMC_tumultuous_humanity_4_modifier = {
+	ae_impact = 0.4
+}
+
+#贸易活化
+THE_HMC_trade_activation_modifier = {
+	trade_efficiency = 0.1
+	trade_steering = 0.1
+}
+
+#学习佛法
+THE_HMC_learn_buddhist_teachings_modifier = {
+	ae_impact = -0.1
+	improve_relation_modifier = 0.2
+}
+
+#拈花微笑
+THE_HMC_understanding_buddhist_teachings_modifier = {
+	diplomatic_upkeep = 1
+}
+
+#佛笑有三
+THE_HMC_buddha_laughs_modifier = {
+	fire_damage = 0.2
+	shock_damage = 0.2
+}
+
+#未来将来
+THE_HMC_future_come_modifier = {
+	innovativeness_gain = 0.2
+	global_institution_spread = 0.5
+}
+
+#金轮之墙
+THE_HMC_golden_wall_province_modifier = {
+	local_defensiveness = 0.25
+	local_hostile_attrition = 1
+	max_attrition = 1
+	local_garrison_size = 0.2
+}
+
+#最后之墙
+THE_HMC_last_wall_province_modifier = {
+	local_defensiveness = 0.5
+	local_garrison_size = 0.25
+	fort_level = 1
+	local_defender_dice_roll_bonus = 1
+}
+
+#人人饱暖
+THE_HMC_full_eat_and_wear_modifier = {
+	global_manpower_modifier = 0.15
+	trade_efficiency = 0.2
+}
+
+#工作的巫女与偷懒的贤者
+THE_HMC_witch_and_sage_modifier = {
+	stability_cost_modifier = -0.2
+	spy_offence = 0.15
+}
+
+#养生之道
+THE_HMC_regimen_modifier = {
+	ae_impact = -0.1
+	monarch_lifespan = 0.2
+	reelection_cost = -0.2
+}
+
+#实用炼丹术
+THE_HMC_alchemy_modifier = {
+	global_trade_goods_size_modifier = 0.1
+}
+
+#强身健体
+THE_HMC_fitness_modifier = {
+	fire_damage_received = -0.2
+	shock_damage_received = -0.2
+}
+
+#烈火雄心
+THE_HMC_fire_heart_modifier = {
+	leader_land_fire = 1
+	leader_naval_fire = 1
+	siege_ability = 0.2
+}
+
+#再无红雾
+THE_HMC_no_scarlet_mist_modifier = {
+	global_manpower_modifier = 0.15
+	manpower_recovery_speed = 0.15
+}
+
+#赏樱悦目
+THE_HMC_view_cherry_modifier = {
+	tolerance_own = 3
+	global_missionary_strength = 0.02
+}
+
+#兴办学堂
+THE_HMC_establish_school_0_modifier = {
+
+}
+
+#见微知著
+THE_HMC_establish_school_1_modifier = {
+	idea_cost = -0.05
+}
+
+#润物无声
+THE_HMC_establish_school_2_modifier = {
+	idea_cost = -0.05
+	technology_cost = -0.05
+}
+
+#基础教育
+THE_HMC_establish_school_3_modifier = {
+	idea_cost = -0.1
+	technology_cost = -0.05
+}
+
+#劳动教育
+THE_HMC_establish_school_4_modifier = {
+	idea_cost = -0.1
+	technology_cost = -0.1
+}
+
+#流浪之物
+THE_HMC_wondering_object_0_modifier = {
+
+}
+
+#发现宝藏
+THE_HMC_wondering_object_1_modifier = {
+	global_institution_spread = 0.2
+	innovativeness_gain = 0.25
+}
+
+#加固城墙
+THE_HMC_strengthen_wall_modifier = {
+	defensiveness = 0.15
+}
+
+#郊野宁静
+THE_HMC_quite_countryside_modifier = {
+	trade_efficiency = 0.15
+}
+
+#盟友支援
+THE_HMC_ally_support_modifier = {
+	global_tax_income = 24
+	technology_cost = -0.15
+}
+
+#黄金甲
+THE_HMC_gold_armour_modifier = {
+	discipline = 0.05
+	land_morale = 0.1
+	is_mercenary_modifier = yes
+}
+
+#黄金军
+THE_HMC_gold_army_modifier = {
+	merc_maintenance_modifier = -0.15
+	artillery_power = 0.1
+}
+
+#雾雨连锁
+THE_HMC_kirisame_chain_modifier = {
+	caravan_power = 0.2
+}
+
+#冰山一角
+THE_HMC_ice_mountain_part_modifier = {
+	global_manpower_modifier = 0.1
+}
+
+#不死鸟的加护
+THE_HMC_phoenix_protection_modifier = {
+	diplomatic_upkeep = 1
+}
+
+#河童的秘法
+THE_HMC_kappa_arcane_modifier = {
+	idea_cost = -0.05
+	production_efficiency = 0.1
+}
+
+#赤胆忠心
+THE_utter_devotion_modifier = {
+	leader_land_fire = 1
+	leader_naval_manuever = 1
+}
+
+#学习佛法
+THE_HMC_learn_buddhist_teachings_true_modifier = {
+	improve_relation_modifier = 0.1
+	ae_impact = -0.05
+}
+
+#拈花微笑
+THE_HMC_understanding_buddhist_teachings_true_modifier = {
+	reduced_liberty_desire = 20
+}
+
+#佛笑有三
+THE_HMC_buddha_laughs_true_modifier = {
+	shock_damage = 0.1
+}
+
+#金轮之墙
+THE_HMC_golden_wall_true_province_modifier = {
+	local_defensiveness = 0.2
+	local_hostile_attrition = 1
+	max_attrition = 1
+	local_garrison_size = 0.2
+}
+
+#最后之墙
+THE_HMC_last_wall_true_province_modifier = {
+	local_defensiveness = 0.3
+	local_garrison_size = 0.2
+	fort_level = 1
+	local_defender_dice_roll_bonus = 1
+}

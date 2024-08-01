@@ -1,0 +1,76 @@
+#?????
+THE_HNG_define_general_qijiguang = {
+	define_general = {
+		shock = 4
+		fire = 2
+		manuever = 3
+		siege = 1
+		name = "b çuIQ"
+	}
+}
+
+
+#?????
+THE_HNG_define_advisor_qijiguang = {
+	define_advisor = {
+		type = army_reformer
+		name = "b çuIQ"
+		skill = 3
+		cost_multiplier = 0.2
+	}
+}
+
+#?????
+THE_HNG_define_advisor_zhangjuzheng = {
+	define_advisor = { 
+		name = ".V ESck" 
+		type = treasurer 
+		skill = 2 
+		cost_multiplier = 0.1
+	}
+}
+
+#????
+THE_HNG_define_general_flandre = {
+	define_general = {
+		name = "™‚pQ5g2?S†˜"  # General Flandre
+		female = yes
+		shock = 5
+		fire = 5
+		manuever = 4
+		siege = 3
+	}
+}
+
+#????
+THE_HNG_define_admiral_flandre = {
+	define_admiral = {
+		name = "™‚pQ5g2?Ðccw"  # Admiral Flandre
+		female = yes
+		shock = 5
+		fire = 5
+		manuever = 4
+		siege = 3
+	}
+}
+
+#????
+THE_HNG_define_advisor_flandre = {
+	define_advisor = {
+		name = "™‚pQ5g2?¯eaS÷–yr"  # Advisor Flandre
+		type = th_advisor_flandre
+		female = yes
+		religion = root
+		culture = root
+		cost_multiplier = 0.75
+	}
+}
+
+
+
+
+
+
+
+
+

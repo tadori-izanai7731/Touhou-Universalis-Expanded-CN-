@@ -1,0 +1,79 @@
+spriteTypes = {	
+    spriteType = {
+		name = "government_reform_Kokoro_th_reform"
+		texturefile = "gfx//interface//government_reform_icons//Kokoro_th_reform.dds"
+	}
+	spriteType = {
+		name = "GFX_th_kokoro_you"
+		texturefile = "gfx//interface//government_mechanics//the_kokoro//th_kko_you.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_th_kokoro_nu"
+		texturefile = "gfx//interface//government_mechanics//the_kokoro//th_kko_nu.dds"
+	}
+	spriteType = {
+		name = "GFX_th_kokoro_xi"
+		texturefile = "gfx//interface//government_mechanics//the_kokoro//th_kko_xi.png"
+	}
+	spriteType = {
+		name = "event_qin_flavor_15"
+		texturefile = "gfx//event_pictures//KKO//qin_flavor_15.png"
+	}
+	spriteType = {
+		name = "kko_mission_1"
+		texturefile = "gfx//event_pictures//KKO//kko_mission_1.png"
+	}
+	spriteType = {
+		name = "kko_mission_2"
+		texturefile = "gfx//event_pictures//KKO//kko_mission_2.png"
+	}
+	spriteType = {
+		name = "kko_mission_3"
+		texturefile = "gfx//event_pictures//KKO//kko_mission_3.png"
+	}
+	spriteType = {
+		name = "kko_mission_4"
+		texturefile = "gfx//event_pictures//KKO//kko_mission_4.png"
+	}
+	spriteType = {
+		name = "kko_mission_5"
+		texturefile = "gfx//event_pictures//KKO//kko_mission_5.png"
+	}
+	spriteType = {
+		name = "kko_mission_6"
+		texturefile = "gfx//event_pictures//KKO//kko_mission_6.png"
+	}
+	spriteType = {
+		name = "kko_mission_7"
+		texturefile = "gfx//event_pictures//KKO//kko_mission_7.png"
+	}
+	spriteType = {
+		name = "kko_mission_8"
+		texturefile = "gfx//event_pictures//KKO//kko_mission_8.png"
+	}
+	spriteType = {
+		name = "kko_mission_9"
+		texturefile = "gfx//event_pictures//KKO//kko_mission_9.png"
+	}
+	spriteType = {
+		name = "kko_mission_10"
+		texturefile = "gfx//event_pictures//KKO//kko_mission_10.png"
+	}
+	spriteType = {
+		name = "kko_mission_11"
+		texturefile = "gfx//event_pictures//KKO//kko_mission_11.png"
+	}
+	spriteType = {
+		name = "kko_mission_12"
+		texturefile = "gfx//event_pictures//KKO//kko_mission_12.png"
+	}
+
+	spriteType = {
+		name = "GFX_disaster_qin_shihen"
+		texturefile = "gfx//interface//disasters//internal_conflicts.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+}

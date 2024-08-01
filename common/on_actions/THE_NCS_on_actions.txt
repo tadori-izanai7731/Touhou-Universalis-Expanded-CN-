@@ -1,0 +1,50 @@
+on_startup = {
+	if = {
+		limit = {
+			OR = {
+				tag = NCS
+				was_tag = NCS
+			}
+			NOT = {
+				has_country_flag = THE_NCS_uchidenokozuchi_flag
+			}
+		}
+		set_variable = {
+			which = the_ncs_uchidenokozuchi_var
+			value = 0
+		}
+		set_country_flag = THE_NCS_uchidenokozuchi_flag
+	}
+}
+
+on_country_released = {
+	THE_NCS_released = yes
+}
+
+on_capital_moved = {
+	if = {
+		limit = {
+			owner = {
+				OR = {
+					tag = NCS
+					was_tag = NCS
+				}
+				has_country_modifier = THE_NCS_magic_full_modifier
+			}
+		}
+		THE_NCS_on_capital_moved_effect = yes
+		THE_NCS_move_development_effect = yes
+		#添加cd修正
+		owner = {
+			remove_country_modifier = THE_NCS_magic_full_modifier
+			add_country_modifier = {
+				name = THE_NCS_magic_poor_modifier
+				duration = 1825
+			}
+			country_event = {
+				id = THE_NCS_events.101
+				days = 1825
+			}
+		}
+	}
+}

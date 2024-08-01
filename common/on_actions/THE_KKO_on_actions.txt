@@ -1,0 +1,10 @@
+on_startup = {
+	events = {
+		KKO_flavor.1
+		# flavor_mng.42
+	}
+}
+
+on_war_ended = {
+	THE_KKO_on_war_ended_scripted_effects = yes
+}

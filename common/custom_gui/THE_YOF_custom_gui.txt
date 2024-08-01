@@ -1,0 +1,143 @@
+custom_button = {
+	name = THE_YOF_distribute_hina_dolls_province_button
+	tooltip = THE_YOF_distribute_hina_dolls_province_button_tooltip
+	potential = {
+		owned_by = FROM
+		owner = {
+			OR = {
+				tag = YOF
+				was_tag = YOF
+			}
+		}
+		NOT = {
+			has_province_modifier = distribute_hina_dolls_province_buff
+		}
+		NOT = {
+			has_province_modifier = yof_hina_dolls_factory_buff
+		}
+	}
+	trigger = {
+		owner = {
+			if = {
+				limit = {
+					monthly_income = 12.5
+				}
+				treasury = 50
+			}
+			else = {
+				years_of_income = 0.25
+			}
+		}
+		owner = {
+			adm_power = 15
+		}
+		owner = {
+			dip_power = 15
+		}
+		owner = {
+			mil_power = 15
+		}
+		owner = {
+			has_government_power = {
+				mechanic_type = yokari_forest_mechanic
+				power_type = yokari_forest_doom_power
+				value = 25
+			}
+		}
+	}
+	effect = {
+		add_province_modifier = {
+			name = distribute_hina_dolls_province_buff
+			duration = -1
+		}
+		owner = {
+			if = {
+				limit = {
+					monthly_income = 12.5
+				}
+				add_treasury = -50
+			}
+			else = {
+				add_years_of_income = -0.25
+			}
+			add_adm_power = -15
+			add_dip_power = -15
+			add_mil_power = -15
+			add_government_power = {
+				mechanic_type = yokari_forest_mechanic
+				power_type = yokari_forest_doom_power
+				value = -20
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = THE_YOF_memorialize_of_hina_province_button
+	tooltip = THE_YOF_memorialize_of_hina_province_button_tooltip
+	potential = {
+		owned_by = FROM
+		owner = {
+			OR = {
+				tag = YOF
+				was_tag = YOF
+			}
+			has_country_flag = yof_hina_matsuri_factory_allow
+		}
+		has_province_modifier = distribute_hina_dolls_province_buff
+		NOT = {
+			has_province_modifier = yof_hina_dolls_factory_buff
+		}
+	}
+	trigger = {
+		owner = {
+			if = {
+				limit = {
+					monthly_income = 20.84
+				}
+				treasury = 500
+			}
+			else = {
+				years_of_income = 2
+			}
+		}
+		owner = {
+			adm_power = 50
+		}
+		owner = {
+			dip_power = 50
+		}
+		owner = {
+			mil_power = 50
+		}
+		development = 35
+		has_fort_building_trigger = yes
+	}
+	effect = {
+		remove_province_modifier = distribute_hina_dolls_province_buff
+		add_province_modifier = {
+			name = yof_hina_dolls_factory_buff
+			duration = -1
+		}
+		owner = {
+			hidden_effect = {
+				change_variable = {
+					which = yof_hina_matsuri_factory_num
+					value = 1
+				}
+			}
+			if = {
+				limit = {
+					monthly_income = 20.84
+				}
+				add_treasury = -500
+			}
+			else = {
+				add_years_of_income = -2
+			}
+			add_adm_power = -50
+			add_dip_power = -50
+			add_mil_power = -50
+		}
+	}
+}

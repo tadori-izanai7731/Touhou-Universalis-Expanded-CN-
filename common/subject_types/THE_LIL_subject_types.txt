@@ -1,0 +1,62 @@
+THE_LIL_spring_territory_vassal = {}	#春之领地
+
+THE_LIL_spring_territory_vassal = {
+	copy_from = vassal
+	count = vassal
+	
+	# Graphics:
+	sprite = GFX_THE_LIL_icon_spring_territory
+	diplomacy_overlord_sprite = GFX_THE_LIL_icon_diplomacy_leadspring_territory
+	diplomacy_subject_sprite = GFX_THE_LIL_icon_diplomacy_amspring_territory
+	
+	# Properties:
+	can_be_annexed = no
+	takes_diplo_slot = no
+	can_gain_favors = yes
+	max_government_rank = 2
+	relative_power_class = 1
+
+	liberty_desire_development_ratio = 0.10
+	pays_overlord = 0.5
+	forcelimit_to_overlord = 0.05
+	naval_forcelimit_to_overlord = 0.1
+	sailors_to_overlord = 0.1
+
+	send_officers = yes
+	divert_trade= yes
+
+	modifier_subject = {
+		modifier = THE_LIL_spring_territory_static_modifier
+		trigger = {
+			overlord = {
+				custom_trigger_tooltip = {
+					tooltip = THE_LIL_spring_territory_static_modifier_tt
+					AND = {
+						has_government_attribute = THE_LIL_strengthen_spring_territory
+						has_government_power = {
+							mechanic_type = THE_LIL_spring_power_mechanic
+							power_type = THE_LIL_spring_power
+							value = 80
+						}
+					}
+				}
+			}
+		}
+	}
+
+	modifier_overlord = {
+		modifier = THE_LIL_spring_power_from_spring_territory_static_modifier
+		trigger = {
+			overlord = {
+				custom_trigger_tooltip = {
+					tooltip = THE_LIL_has_spring_power_mechanic_tt
+					has_government_mechanic = THE_LIL_spring_power_mechanic
+				}
+			}
+		}
+	}
+
+	modifier_overlord = {
+		modifier = THE_LIL_spring_territory_overlord_static_modifier
+	}
+}

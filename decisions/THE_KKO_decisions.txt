@@ -1,0 +1,377 @@
+country_decisions = {
+	th_kko_resite_qin = {
+		color = {
+			269
+			76
+			168
+		}
+		potential = {
+			tag =  KKO
+			has_country_flag = th_qin_started_the_circle
+			NOT = {
+				has_country_flag = kko_xiwang_lose
+			}
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = th_qin_t_cd
+				OR = {
+					NOT = { has_country_flag = th_qin_cycle_cd }
+					had_country_flag = {
+						flag = th_qin_cycle_cd
+						days = 1825
+					}
+				}
+			}
+			is_at_war = no 
+		}
+		effect = {
+			add_country_modifier = {
+				name = change_of_government_you_buff
+				duration = 730
+			}
+			add_country_modifier = {
+				name = change_of_government_nu_buff
+				duration = 730
+			}
+			add_country_modifier = {
+				name = change_of_government_xi_buff
+				duration = 730
+			}
+			country_event = {
+				id = KKO_qin.1
+			}
+			clr_country_flag = th_qin_cycle_cd
+			set_country_flag = th_qin_cycle_cd
+		}
+	}
+}
+country_decisions = {
+	th_kko_resite_qin1 = {
+		color = {
+			269
+			76
+			168
+		}
+		potential = {
+			tag =  KKO
+			has_country_flag = th_qin_started_the_circle
+			has_country_flag = kko_xiwang_lose
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = th_qin_t_cd
+				OR = {
+					NOT = { has_country_flag = th_qin_cycle_cd }
+					had_country_flag = {
+						flag = th_qin_cycle_cd
+						days = 730
+					}
+				}
+			}
+			has_government_power = {
+				mechanic_type = th_kokoro_mechanic
+				power_type = kko_you_adm_power
+				value = 5
+			}
+			is_at_war = no 
+		}
+		effect = {
+			add_country_modifier = {
+				name = change_of_government_you_buff
+				duration = 730
+			}
+			add_country_modifier = {
+				name = change_of_government_nu_buff
+				duration = 730
+			}
+			add_country_modifier = {
+				name = change_of_government_xi_buff
+				duration = 730
+			}
+			add_fervor = -10
+			country_event = {
+				id = KKO_qin.11
+			}
+			clr_country_flag = th_qin_cycle_cd
+			set_country_flag = th_qin_cycle_cd
+		}
+	}
+}
+
+##收集希望
+country_decisions = {
+	the_kko_gather_mircle = {
+		color = {
+			269
+			76
+			168
+		}
+		potential = {
+			tag =  KKO
+			has_country_flag = kko_xiwang_reget_create
+			not = {
+				check_variable = {
+					which = kko_xiwang_create_num
+					value = 5
+				}
+			}
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = kko_xiwang_create_cd123
+				OR = {
+					NOT = { has_country_flag = kko_xiwang_create_cd }
+					had_country_flag = {
+						flag = kko_xiwang_create_cd
+						days = 730
+					}
+				}
+			}
+			is_at_war = no
+			any_country = {
+				root = {
+					has_won_war_against = {
+						who = prev
+						max_years_since = 10
+					}
+				}
+			}
+			calc_true_if = {
+				all_country = {
+					th_has_lost_danmaku_duel_against_root = yes
+				}
+				amount = 1
+			}
+		}
+		effect = {
+			change_variable = {
+				which = kko_xiwang_create_num
+				value = 1
+			}
+			clr_country_flag = kko_xiwang_create_cd
+			set_country_flag = kko_xiwang_create_cd
+		}
+	}
+}
+
+##重铸希望之面
+country_decisions = {
+	the_kko_recreate_mircle = {
+		color = {
+			269
+			76
+			168
+		}
+		potential = {
+			tag =  KKO
+			has_country_flag = kko_xiwang_reget_create
+			check_variable = {
+				which = kko_xiwang_create_num
+				value = 5
+			}
+		}
+		allow = {
+			tag = KKO
+		}
+		effect = {
+			clr_country_flag = kko_xiwang_reget_create
+			set_country_flag = kko_xiwang_reget
+			country_event = {
+				id = KKO_flavor.43
+			}
+		}
+	}
+}
+
+#平衡情感灾难
+country_decisions = {
+	the_kko_emotion_disaster_reget = {
+		color = {
+			269
+			76
+			168
+		}
+		potential = {
+			tag =  KKO
+			has_country_flag = kko_disaster_started
+			not = {
+				check_variable = {
+					which = kko_emotion_disaster_num
+					value = 5
+				}
+			}
+		}
+		allow = {
+			tag = KKO
+			treasury = 30
+			adm_power = 15
+			has_government_power = {
+				mechanic_type = th_kokoro_mechanic
+				power_type = kko_you_adm_power
+				value = 25
+			}
+			has_government_power = {
+				mechanic_type = th_kokoro_mechanic
+				power_type = kko_xi_dip_power
+				value = 25
+			}
+			has_government_power = {
+				mechanic_type = th_kokoro_mechanic
+				power_type = kko_nu_mil_power
+				value = 25
+			}
+			custom_trigger_tooltip = {
+				tooltip = kko_qinggan_pingheng_cd123
+				or = {
+					had_country_flag = {
+						flag = kko_qinggan_pingheng_cd
+						days = 730
+					}
+					not = {
+						has_country_flag = kko_qinggan_pingheng_cd
+					}
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				change_variable = {
+					which = kko_emotion_disaster_num
+					value = 1
+				}
+				clr_country_flag = kko_qinggan_pingheng_cd
+				set_country_flag = kko_qinggan_pingheng_cd
+			}
+			add_treasury = -30
+			add_adm_power = -15
+			add_government_power = {
+				mechanic_type = th_kokoro_mechanic
+				power_type = kko_you_adm_power
+				value = -5
+			}
+			add_government_power = {
+				mechanic_type = th_kokoro_mechanic
+				power_type = kko_xi_dip_power
+				value = -5
+			}
+			add_government_power = {
+				mechanic_type = th_kokoro_mechanic
+				power_type = kko_nu_mil_power
+				value = -5
+			}
+		}
+	}
+}
+##
+country_decisions = {
+	the_kko_crd_allience = {
+		color = {
+			254
+			76
+			156
+		}
+		potential = {
+			tag =  KKO
+			KKO = {
+				overlord_of = CRD
+			}
+			not = {
+				has_country_flag = kko_crd_allience_complete
+			}
+		}
+		allow = {
+			tag = KKO
+			prestige = 40
+			KKO = {
+				overlord_of = CRD
+			}
+		}
+		effect = {
+			add_prestige = -40
+			CRD = {
+				add_country_modifier = {
+					name = kko_crd_allience_buff1
+					duration = 18250
+				}
+			}
+			set_country_flag = kko_crd_allience_complete
+		}
+	}
+}
+##秦心日本巡演
+country_decisions = {
+	the_kko_tour_japan = {
+		color = {
+			269
+			76
+			168
+		}
+		potential = {
+			tag =  KKO
+			has_country_flag = kko_xiwang_reget_create
+			has_country_flag = kko_japan_tour_1
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = kko_japan_tour124
+				has_country_flag = kko_japan_tour_1
+			}
+			treasury = 2500
+			adm_power = 300
+			dip_power = 300
+			mil_power = 300
+		}
+		effect = {
+			hidden_effect = {
+				clr_country_flag = kko_japan_tour_1
+			}
+			country_event = {
+				id = KKO_flavor.45
+			}
+			add_treasury = -2500
+			add_adm_power = -300
+			add_dip_power = -300
+			add_mil_power = -300
+		}
+	}
+}
+##
+country_decisions = {
+	the_kko_xinqilou_rechange = {
+		color = {
+			269
+			76
+			168
+		}
+		potential = {
+			tag =  KKO
+			has_country_flag = xinqilou_ok
+			has_country_flag = kko_japan_tour_1
+		}
+		allow = {
+			tag = KKO
+			splendor = 50
+			prestige = 25
+			custom_trigger_tooltip = {
+				tooltip = the_kko_xinqilou_rechange_cd1243
+				had_country_flag = {
+					flag = the_kko_xinqilou_rechange_cd
+					days = 7300
+				}
+			}
+		}
+		effect = {
+			add_splendor = -50
+			add_prestige = -25
+			country_event = {
+				id = KKO_flavor.50
+			}
+			hidden_effect = {
+				clr_country_flag = the_kko_xinqilou_rechange_cd
+				set_country_flag = the_kko_xinqilou_rechange_cd
+				THE_KKO_genre_nengyue_clr = yes
+			}
+		}
+	}
+}

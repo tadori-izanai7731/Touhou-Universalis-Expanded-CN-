@@ -1,0 +1,10 @@
+Gensokyan_culture = {
+	Gensokyo_chinese = {
+		province = { local_has_samurai = yes }
+		primary = HNG
+		country = {
+			female_advisor_chance = 0.8
+			diplomatic_upkeep = -1
+		}
+	}
+}

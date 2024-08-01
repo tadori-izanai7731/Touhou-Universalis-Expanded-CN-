@@ -1,0 +1,1349 @@
+country_decisions = {
+	THE_NCS_restore_building_form_capital_decision = {
+		color = {
+			231
+			113
+			46
+		}
+		major = yes
+		potential = {
+			has_country_modifier = THE_NCS_sky_castle_modifier
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			custom_tooltip = THE_NCS_show_capital_building_list
+			THE_NCS_show_capital_building_script = {
+				building = marketplace
+			}
+			THE_NCS_show_capital_building_script = {
+				building = trade_depot
+			}
+			THE_NCS_show_capital_building_script = {
+				building = stock_exchange
+			}
+			THE_NCS_show_capital_building_script = {
+				building = workshop
+			}
+			THE_NCS_show_capital_building_script = {
+				building = counting_house
+			}
+			THE_NCS_show_capital_building_script = {
+				building = temple
+			}
+			THE_NCS_show_capital_building_script = {
+				building = cathedral
+			}
+			THE_NCS_show_capital_building_script = {
+				building = barracks
+			}
+			THE_NCS_show_capital_building_script = {
+				building = training_fields
+			}
+			THE_NCS_show_capital_building_script = {
+				building = shipyard
+			}
+			THE_NCS_show_capital_building_script = {
+				building = grand_shipyard
+			}
+			THE_NCS_show_capital_building_script = {
+				building = courthouse
+			}
+			THE_NCS_show_capital_building_script = {
+				building = town_hall
+			}
+			THE_NCS_show_capital_building_script = {
+				building = dock
+			}
+			THE_NCS_show_capital_building_script = {
+				building = drydock
+			}
+			THE_NCS_show_capital_building_script = {
+				building = regimental_camp
+			}
+			THE_NCS_show_capital_building_script = {
+				building = conscription_center
+			}
+			THE_NCS_show_capital_building_script = {
+				building = university
+			}
+			THE_NCS_show_capital_building_script = {
+				building = coastal_defence
+			}
+			THE_NCS_show_capital_building_script = {
+				building = naval_battery
+			}
+			THE_NCS_show_capital_building_script = {
+				building = fort_15th
+			}
+			THE_NCS_show_capital_building_script = {
+				building = fort_16th
+			}
+			THE_NCS_show_capital_building_script = {
+				building = fort_17th
+			}
+			THE_NCS_show_capital_building_script = {
+				building = fort_18th
+			}
+			THE_NCS_show_capital_building_script = {
+				building = wharf
+			}
+			THE_NCS_show_capital_building_script = {
+				building = weapons
+			}
+			THE_NCS_show_capital_building_script = {
+				building = textile
+			}
+			THE_NCS_show_capital_building_script = {
+				building = plantations
+			}
+			THE_NCS_show_capital_building_script = {
+				building = tradecompany
+			}
+			THE_NCS_show_capital_building_script = {
+				building = farm_estate
+			}
+			THE_NCS_show_capital_building_script = {
+				building = mills
+			}
+			THE_NCS_show_capital_building_script = {
+				building = soldier_households
+			}
+			THE_NCS_show_capital_building_script = {
+				building = impressment_offices
+			}
+			THE_NCS_show_capital_building_script = {
+				building = state_house
+			}
+			THE_NCS_show_capital_building_script = {
+				building = ramparts
+			}
+			THE_NCS_show_capital_building_script = {
+				building = furnace
+			}
+			hidden_effect = {
+				#储存贸易建筑
+				THE_NCS_set_capital_level_building_flag = {
+					building_1 = stock_exchange
+					building_2 = trade_depot
+					building_3 = marketplace
+				}
+				#储存生产建筑
+				THE_NCS_set_capital_level_building_flag = {
+					building_1 = counting_house
+					building_2 = workshop
+				}
+				#储存税收建筑
+				THE_NCS_set_capital_level_building_flag = {
+					building_1 = cathedral
+					building_2 = temple
+				}
+				#储存人力建筑
+				THE_NCS_set_capital_level_building_flag = {
+					building_1 = training_fields
+					building_2 = barracks
+				}
+				#储存海军建筑
+				THE_NCS_set_capital_level_building_flag = {
+					building_1 = grand_shipyard
+					building_2 = shipyard
+				}
+				#储存行政建筑
+				THE_NCS_set_capital_level_building_flag = {
+					building_1 = town_hall
+					building_2 = courthouse
+				}
+				#储存水手建筑
+				THE_NCS_set_capital_level_building_flag = {
+					building_1 = drydock
+					building_2 = dock
+				}
+				#储存陆军建筑
+				THE_NCS_set_capital_level_building_flag = {
+					building_1 = conscription_center
+					building_2 = regimental_camp
+				}
+				#储存沿海建筑
+				THE_NCS_set_capital_level_building_flag = {
+					building_1 = naval_battery
+					building_2 = coastal_defence
+				}
+				#储存堡垒建筑
+				THE_NCS_set_capital_level_building_flag = {
+					building_1 = fort_18th
+					building_2 = fort_17th
+					building_3 = fort_16th
+					building_4 = fort_15th
+				}
+				#其他
+				THE_NCS_set_capital_building_flag = {
+					building = university
+				}
+				THE_NCS_set_capital_building_flag = {
+					building = wharf
+				}
+				THE_NCS_set_capital_building_flag = {
+					building = weapons
+				}
+				THE_NCS_set_capital_building_flag = {
+					building = textile
+				}
+				THE_NCS_set_capital_building_flag = {
+					building = plantations
+				}
+				THE_NCS_set_capital_building_flag = {
+					building = tradecompany
+				}
+				THE_NCS_set_capital_building_flag = {
+					building = farm_estate
+				}
+				THE_NCS_set_capital_building_flag = {
+					building = mills
+				}
+				THE_NCS_set_capital_building_flag = {
+					building = soldier_households
+				}
+				THE_NCS_set_capital_building_flag = {
+					building = impressment_offices
+				}
+				THE_NCS_set_capital_building_flag = {
+					building = state_house
+				}
+				THE_NCS_set_capital_building_flag = {
+					building = ramparts
+				}
+				THE_NCS_set_capital_building_flag = {
+					building = furnace
+				}
+			}
+		}
+	}
+	THE_NCS_set_auto_release_building_decision = {
+		color = {
+			231
+			113
+			46
+		}
+		major = yes
+		potential = {
+			has_country_modifier = THE_NCS_sky_castle_modifier
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = THE_NCS_open_set_auto_release_building_decision_flag
+					}
+				}
+				custom_tooltip = THE_NCS_open_set_auto_release_building_decision_tt
+				hidden_effect = {
+					set_country_flag = THE_NCS_open_set_auto_release_building_decision_flag
+				}
+			}
+			else = {
+				custom_tooltip = THE_NCS_close_set_auto_release_building_decision_tt
+				hidden_effect = {
+					clr_country_flag = THE_NCS_open_set_auto_release_building_decision_flag
+				}
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_NCS_show_auto_release_building_list
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_trade_flag
+				}
+				THE_NCS_show_capital_building_script = {
+					building = marketplace
+				}
+				THE_NCS_show_capital_building_script = {
+					building = trade_depot
+				}
+				THE_NCS_show_capital_building_script = {
+					building = stock_exchange
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_product_flag
+				}
+				THE_NCS_show_capital_building_script = {
+					building = workshop
+				}
+				THE_NCS_show_capital_building_script = {
+					building = counting_house
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_tax_flag
+				}
+				THE_NCS_show_capital_building_script = {
+					building = temple
+				}
+				THE_NCS_show_capital_building_script = {
+					building = cathedral
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_manpower_flag
+				}
+				THE_NCS_show_capital_building_script = {
+					building = barracks
+				}
+				THE_NCS_show_capital_building_script = {
+					building = training_fields
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_shiplimit_flag
+				}
+				THE_NCS_show_capital_building_script = {
+					building = shipyard
+				}
+				THE_NCS_show_capital_building_script = {
+					building = grand_shipyard
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_government_flag
+				}
+				THE_NCS_show_capital_building_script = {
+					building = courthouse
+				}
+				THE_NCS_show_capital_building_script = {
+					building = town_hall
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_sailor_flag
+				}
+				THE_NCS_show_capital_building_script = {
+					building = dock
+				}
+				THE_NCS_show_capital_building_script = {
+					building = drydock
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_forcelimit_flag
+				}
+				THE_NCS_show_capital_building_script = {
+					building = regimental_camp
+				}
+				THE_NCS_show_capital_building_script = {
+					building = conscription_center
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_university_flag
+				}
+				THE_NCS_show_capital_building_script = {
+					building = university
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_defense_flag
+				}
+				THE_NCS_show_capital_building_script = {
+					building = coastal_defence
+				}
+				THE_NCS_show_capital_building_script = {
+					building = naval_battery
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_fort_flag
+				}
+				THE_NCS_show_capital_building_script = {
+					building = fort_15th
+				}
+				THE_NCS_show_capital_building_script = {
+					building = fort_16th
+				}
+				THE_NCS_show_capital_building_script = {
+					building = fort_17th
+				}
+				THE_NCS_show_capital_building_script = {
+					building = fort_18th
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_manufactory_flag
+				}
+				THE_NCS_show_capital_building_script = {
+					building = wharf
+				}
+				THE_NCS_show_capital_building_script = {
+					building = weapons
+				}
+				THE_NCS_show_capital_building_script = {
+					building = textile
+				}
+				THE_NCS_show_capital_building_script = {
+					building = plantations
+				}
+				THE_NCS_show_capital_building_script = {
+					building = tradecompany
+				}
+				THE_NCS_show_capital_building_script = {
+					building = farm_estate
+				}
+				THE_NCS_show_capital_building_script = {
+					building = mills
+				}
+				THE_NCS_show_capital_building_script = {
+					building = furnace
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_household_flag
+				}
+				THE_NCS_show_capital_building_script = {
+					building = soldier_households
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_office_flag
+				}
+				THE_NCS_show_capital_building_script = {
+					building = impressment_offices
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_state_flag
+				}
+				THE_NCS_show_capital_building_script = {
+					building = state_house
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_rampart_flag
+				}
+				THE_NCS_show_capital_building_script = {
+					building = ramparts
+				}
+			}
+		}
+	}
+	THE_NCS_set_auto_release_tax = {
+		potential = {
+			has_country_flag = THE_NCS_open_set_auto_release_building_decision_flag
+		}
+		allow = {
+			NOT = {
+				check_variable = {
+					which = the_ncs_had_auto_release_var
+					value = 10
+				}
+			}
+		}
+		effect = {
+			THE_NCS_set_auto_release_building_type = {
+				type = tax
+			}
+		}
+	}
+	THE_NCS_set_auto_release_trade = {
+		potential = {
+			has_country_flag = THE_NCS_open_set_auto_release_building_decision_flag
+		}
+		allow = {
+			NOT = {
+				check_variable = {
+					which = the_ncs_had_auto_release_var
+					value = 10
+				}
+			}
+		}
+		effect = {
+			THE_NCS_set_auto_release_building_type = {
+				type = trade
+			}
+		}
+	}
+	THE_NCS_set_auto_release_government = {
+		potential = {
+			has_country_flag = THE_NCS_open_set_auto_release_building_decision_flag
+		}
+		allow = {
+			NOT = {
+				check_variable = {
+					which = the_ncs_had_auto_release_var
+					value = 10
+				}
+			}
+		}
+		effect = {
+			THE_NCS_set_auto_release_building_type = {
+				type = government
+			}
+		}
+	}
+	THE_NCS_set_auto_release_university = {
+		potential = {
+			has_country_flag = THE_NCS_open_set_auto_release_building_decision_flag
+		}
+		allow = {
+			NOT = {
+				check_variable = {
+					which = the_ncs_had_auto_release_var
+					value = 10
+				}
+			}
+		}
+		effect = {
+			THE_NCS_set_auto_release_building_type = {
+				type = university
+			}
+		}
+	}
+	THE_NCS_set_auto_release_sailor = {
+		potential = {
+			has_country_flag = THE_NCS_open_set_auto_release_building_decision_flag
+		}
+		allow = {
+			NOT = {
+				check_variable = {
+					which = the_ncs_had_auto_release_var
+					value = 10
+				}
+			}
+		}
+		effect = {
+			THE_NCS_set_auto_release_building_type = {
+				type = sailor
+			}
+		}
+	}
+	THE_NCS_set_auto_release_shiplimit = {
+		potential = {
+			has_country_flag = THE_NCS_open_set_auto_release_building_decision_flag
+		}
+		allow = {
+			NOT = {
+				check_variable = {
+					which = the_ncs_had_auto_release_var
+					value = 10
+				}
+			}
+		}
+		effect = {
+			THE_NCS_set_auto_release_building_type = {
+				type = shiplimit
+			}
+		}
+	}
+	THE_NCS_set_auto_release_product = {
+		potential = {
+			has_country_flag = THE_NCS_open_set_auto_release_building_decision_flag
+		}
+		allow = {
+			NOT = {
+				check_variable = {
+					which = the_ncs_had_auto_release_var
+					value = 10
+				}
+			}
+		}
+		effect = {
+			THE_NCS_set_auto_release_building_type = {
+				type = product
+			}
+		}
+	}
+	THE_NCS_set_auto_release_manpower = {
+		potential = {
+			has_country_flag = THE_NCS_open_set_auto_release_building_decision_flag
+		}
+		allow = {
+			NOT = {
+				check_variable = {
+					which = the_ncs_had_auto_release_var
+					value = 10
+				}
+			}
+		}
+		effect = {
+			THE_NCS_set_auto_release_building_type = {
+				type = manpower
+			}
+		}
+	}
+	THE_NCS_set_auto_release_forcelimit = {
+		potential = {
+			has_country_flag = THE_NCS_open_set_auto_release_building_decision_flag
+		}
+		allow = {
+			NOT = {
+				check_variable = {
+					which = the_ncs_had_auto_release_var
+					value = 10
+				}
+			}
+		}
+		effect = {
+			THE_NCS_set_auto_release_building_type = {
+				type = forcelimit
+			}
+		}
+	}
+	THE_NCS_set_auto_release_fort = {
+		potential = {
+			has_country_flag = THE_NCS_open_set_auto_release_building_decision_flag
+		}
+		allow = {
+			NOT = {
+				check_variable = {
+					which = the_ncs_had_auto_release_var
+					value = 10
+				}
+			}
+		}
+		effect = {
+			THE_NCS_set_auto_release_building_type = {
+				type = fort
+			}
+		}
+	}
+	THE_NCS_set_auto_release_defense = {
+		potential = {
+			has_country_flag = THE_NCS_open_set_auto_release_building_decision_flag
+		}
+		allow = {
+			NOT = {
+				check_variable = {
+					which = the_ncs_had_auto_release_var
+					value = 10
+				}
+			}
+		}
+		effect = {
+			THE_NCS_set_auto_release_building_type = {
+				type = defense
+			}
+		}
+	}
+	THE_NCS_set_auto_release_manufactory = {
+		potential = {
+			has_country_flag = THE_NCS_open_set_auto_release_building_decision_flag
+		}
+		allow = {
+			NOT = {
+				check_variable = {
+					which = the_ncs_had_auto_release_var
+					value = 10
+				}
+			}
+		}
+		effect = {
+			THE_NCS_set_auto_release_building_type = {
+				type = manufactory
+			}
+		}
+	}
+	THE_NCS_set_auto_release_household = {
+		potential = {
+			has_country_flag = THE_NCS_open_set_auto_release_building_decision_flag
+		}
+		allow = {
+			NOT = {
+				check_variable = {
+					which = the_ncs_had_auto_release_var
+					value = 10
+				}
+			}
+		}
+		effect = {
+			THE_NCS_set_auto_release_building_type = {
+				type = household
+			}
+		}
+	}
+	THE_NCS_set_auto_release_office = {
+		potential = {
+			has_country_flag = THE_NCS_open_set_auto_release_building_decision_flag
+		}
+		allow = {
+			NOT = {
+				check_variable = {
+					which = the_ncs_had_auto_release_var
+					value = 10
+				}
+			}
+		}
+		effect = {
+			THE_NCS_set_auto_release_building_type = {
+				type = office
+			}
+		}
+	}
+	THE_NCS_set_auto_release_state = {
+		potential = {
+			has_country_flag = THE_NCS_open_set_auto_release_building_decision_flag
+		}
+		allow = {
+			NOT = {
+				check_variable = {
+					which = the_ncs_had_auto_release_var
+					value = 10
+				}
+			}
+		}
+		effect = {
+			THE_NCS_set_auto_release_building_type = {
+				type = state
+			}
+		}
+	}
+	THE_NCS_set_auto_release_rampart = {
+		potential = {
+			has_country_flag = THE_NCS_open_set_auto_release_building_decision_flag
+		}
+		allow = {
+			NOT = {
+				check_variable = {
+					which = the_ncs_had_auto_release_var
+					value = 10
+				}
+			}
+		}
+		effect = {
+			THE_NCS_set_auto_release_building_type = {
+				type = rampart
+			}
+		}
+	}
+	THE_NCS_release_building_decision = {
+		color = {
+			231
+			113
+			46
+		}
+		major = yes
+		potential = {
+			has_country_modifier = THE_NCS_sky_castle_modifier
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = THE_NCS_open_release_building_decision_flag
+					}
+				}
+				custom_tooltip = THE_NCS_open_release_building_decision_tt
+				hidden_effect = {
+					set_country_flag = THE_NCS_open_release_building_decision_flag
+				}
+			}
+			else = {
+				custom_tooltip = THE_NCS_close_release_building_decision_tt
+				hidden_effect = {
+					clr_country_flag = THE_NCS_open_release_building_decision_flag
+				}
+			}
+		}
+	}
+	THE_NCS_release_building_tax = {
+		potential = {
+			has_country_flag = THE_NCS_open_release_building_decision_flag
+			capital_scope = {
+				NOT = {
+					has_tax_building_trigger = yes
+				}
+			}
+			OR = {
+				has_country_flag = THE_NCS_restore_temple_flag
+				has_country_flag = THE_NCS_restore_cathedral_flag
+			}
+		}
+		allow = {
+			capital_scope = {
+				num_free_building_slots = 1
+			}
+		}
+		effect = {
+			THE_NCS_release_building_script = {
+				building = temple
+			}
+			THE_NCS_release_building_script = {
+				building = cathedral
+			}
+		}
+	}
+	THE_NCS_release_building_product = {
+		potential = {
+			has_country_flag = THE_NCS_open_release_building_decision_flag
+			capital_scope = {
+				NOT = {
+					has_production_building_trigger = yes
+				}
+			}
+			OR = {
+				has_country_flag = THE_NCS_restore_workshop_flag
+				has_country_flag = THE_NCS_restore_counting_house_flag
+			}
+		}
+		allow = {
+			capital_scope = {
+				num_free_building_slots = 1
+			}
+		}
+		effect = {
+			THE_NCS_release_building_script = {
+				building = workshop
+			}
+			THE_NCS_release_building_script = {
+				building = counting_house
+			}
+		}
+	}
+	THE_NCS_release_building_trade = {
+		potential = {
+			has_country_flag = THE_NCS_open_release_building_decision_flag
+			capital_scope = {
+				NOT = {
+					has_trade_building_trigger = yes
+				}
+			}
+			OR = {
+				has_country_flag = THE_NCS_restore_marketplace_flag
+				has_country_flag = THE_NCS_restore_trade_depot_flag
+				has_country_flag = THE_NCS_restore_stock_exchange_flag
+			}
+		}
+		allow = {
+			capital_scope = {
+				num_free_building_slots = 1
+			}
+		}
+		effect = {
+			THE_NCS_release_building_script = {
+				building = marketplace
+			}
+			THE_NCS_release_building_script = {
+				building = trade_depot
+			}
+			THE_NCS_release_building_script = {
+				building = stock_exchange
+			}
+		}
+	}
+	THE_NCS_release_building_manpower = {
+		potential = {
+			has_country_flag = THE_NCS_open_release_building_decision_flag
+			capital_scope = {
+				NOT = {
+					has_manpower_building_trigger = yes
+				}
+			}
+			OR = {
+				has_country_flag = THE_NCS_restore_barracks_flag
+				has_country_flag = THE_NCS_restore_training_fields_flag
+			}
+		}
+		allow = {
+			capital_scope = {
+				num_free_building_slots = 1
+			}
+		}
+		effect = {
+			THE_NCS_release_building_script = {
+				building = barracks
+			}
+			THE_NCS_release_building_script = {
+				building = training_fields
+			}
+		}
+	}
+	THE_NCS_release_building_forcelimit = {
+		potential = {
+			has_country_flag = THE_NCS_open_release_building_decision_flag
+			capital_scope = {
+				NOT = {
+					has_forcelimit_building_trigger = yes
+				}
+			}
+			OR = {
+				has_country_flag = THE_NCS_restore_regimental_camp_flag
+				has_country_flag = THE_NCS_restore_conscription_center_flag
+			}
+		}
+		allow = {
+			capital_scope = {
+				num_free_building_slots = 1
+			}
+		}
+		effect = {
+			THE_NCS_release_building_script = {
+				building = regimental_camp
+			}
+			THE_NCS_release_building_script = {
+				building = conscription_center
+			}
+		}
+	}
+	THE_NCS_release_building_sailor = {
+		potential = {
+			has_country_flag = THE_NCS_open_release_building_decision_flag
+			capital_scope = {
+				NOT = {
+					has_dock_building_trigger = yes
+				}
+			}
+			OR = {
+				has_country_flag = THE_NCS_restore_dock_flag
+				has_country_flag = THE_NCS_restore_drydock_flag
+			}
+		}
+		allow = {
+			capital_scope = {
+				num_free_building_slots = 1
+			}
+		}
+		effect = {
+			THE_NCS_release_building_script = {
+				building = dock
+			}
+			THE_NCS_release_building_script = {
+				building = drydock
+			}
+		}
+	}
+	THE_NCS_release_building_shiplimit = {
+		potential = {
+			has_country_flag = THE_NCS_open_release_building_decision_flag
+			capital_scope = {
+				NOT = {
+					has_shipyard_building_trigger = yes
+				}
+			}
+			OR = {
+				has_country_flag = THE_NCS_restore_shipyard_flag
+				has_country_flag = THE_NCS_restore_grand_shipyard_flag
+			}
+		}
+		allow = {
+			capital_scope = {
+				num_free_building_slots = 1
+			}
+		}
+		effect = {
+			THE_NCS_release_building_script = {
+				building = shipyard
+			}
+			THE_NCS_release_building_script = {
+				building = grand_shipyard
+			}
+		}
+	}
+	THE_NCS_release_building_government = {
+		potential = {
+			has_country_flag = THE_NCS_open_release_building_decision_flag
+			capital_scope = {
+				NOT = {
+					has_courthouse_building_trigger = yes
+				}
+			}
+			OR = {
+				has_country_flag = THE_NCS_restore_courthouse_flag
+				has_country_flag = THE_NCS_restore_town_hall_flag
+			}
+		}
+		allow = {
+			capital_scope = {
+				num_free_building_slots = 1
+			}
+		}
+		effect = {
+			THE_NCS_release_building_script = {
+				building = courthouse
+			}
+			THE_NCS_release_building_script = {
+				building = town_hall
+			}
+		}
+	}
+	THE_NCS_release_building_university = {
+		potential = {
+			has_country_flag = THE_NCS_open_release_building_decision_flag
+			capital_scope = {
+				NOT = {
+					has_building = university
+				}
+			}
+			has_country_flag = THE_NCS_restore_university_flag
+		}
+		allow = {
+			capital_scope = {
+				num_free_building_slots = 1
+			}
+		}
+		effect = {
+			THE_NCS_release_building_script = {
+				building = university
+			}
+		}
+	}
+	THE_NCS_release_building_fort = {
+		potential = {
+			has_country_flag = THE_NCS_open_release_building_decision_flag
+			capital_scope = {
+				NOT = {
+					has_fort_building_trigger = yes
+				}
+			}
+			OR = {
+				has_country_flag = THE_NCS_restore_fort_15th_flag
+				has_country_flag = THE_NCS_restore_fort_16th_flag
+				has_country_flag = THE_NCS_restore_fort_17th_flag
+				has_country_flag = THE_NCS_restore_fort_18th_flag
+			}
+		}
+		allow = {
+			capital_scope = {
+				num_free_building_slots = 1
+			}
+		}
+		effect = {
+			THE_NCS_release_building_script = {
+				building = fort_15th
+			}
+			THE_NCS_release_building_script = {
+				building = fort_16th
+			}
+			THE_NCS_release_building_script = {
+				building = fort_17th
+			}
+			THE_NCS_release_building_script = {
+				building = fort_18th
+			}
+		}
+	}
+	THE_NCS_release_building_defense = {
+		potential = {
+			has_country_flag = THE_NCS_open_release_building_decision_flag
+			capital_scope = {
+				NOT = {
+					has_coast_defense_building_trigger = yes
+				}
+			}
+			OR = {
+				has_country_flag = THE_NCS_restore_coastal_defence_flag
+				has_country_flag = THE_NCS_restore_naval_battery_flag
+			}
+		}
+		allow = {
+			capital_scope = {
+				num_free_building_slots = 1
+			}
+		}
+		effect = {
+			THE_NCS_release_building_script = {
+				building = coastal_defence
+			}
+			THE_NCS_release_building_script = {
+				building = naval_battery
+			}
+		}
+	}
+	THE_NCS_release_building_manufactory = {
+		potential = {
+			has_country_flag = THE_NCS_open_release_building_decision_flag
+			capital_scope = {
+				NOT = {
+					OR = {
+						has_building = wharf
+						has_building = weapons
+						has_building = textile
+						has_building = plantations
+						has_building = tradecompany
+						has_building = farm_estate
+						has_building = mills
+						has_building = furnace
+					}
+				}
+			}
+			OR = {
+				AND = {
+					capital_scope = {
+						OR = {
+							trade_goods = fish
+							trade_goods = naval_supplies
+							trade_goods = salt
+						}
+					}
+					has_country_flag = THE_NCS_restore_wharf_flag
+				}
+				AND = {
+					capital_scope = {
+						OR = {
+							trade_goods = copper
+							trade_goods = iron
+						}
+					}
+					has_country_flag = THE_NCS_restore_weapons_flag
+				}
+				AND = {
+					capital_scope = {
+						OR = {
+							trade_goods = wool
+							trade_goods = cloth
+							trade_goods = silk
+							trade_goods = dyes
+						}
+					}
+					has_country_flag = THE_NCS_restore_textile_flag
+				}
+				AND = {
+					capital_scope = {
+						OR = {
+							trade_goods = cocoa
+							trade_goods = coffee
+							trade_goods = cotton
+							trade_goods = sugar
+							trade_goods = tobacco
+						}
+					}
+					has_country_flag = THE_NCS_restore_plantations_flag
+				}
+				AND = {
+					capital_scope = {
+						OR = {
+							trade_goods = fur
+							trade_goods = incense
+							trade_goods = ivory
+							trade_goods = slaves
+							trade_goods = spices
+							trade_goods = cloves
+						}
+					}
+					has_country_flag = THE_NCS_restore_tradecompany_flag
+				}
+				AND = {
+					capital_scope = {
+						OR = {
+							trade_goods = grain
+							trade_goods = wine
+							trade_goods = livestock
+						}
+					}
+					has_country_flag = THE_NCS_restore_farm_estate_flag
+				}
+				AND = {
+					capital_scope = {
+						OR = {
+							trade_goods = tropical_wood
+							trade_goods = chinaware
+							trade_goods = gems
+							trade_goods = glass
+							trade_goods = paper
+						}
+					}
+					has_country_flag = THE_NCS_restore_mills_flag
+				}
+				AND = {
+					capital_scope = {
+						trade_goods = coal
+					}
+					has_country_flag = THE_NCS_restore_furnace_flag
+				}
+			}
+		}
+		allow = {
+			capital_scope = {
+				num_free_building_slots = 1
+			}
+		}
+		effect = {
+			capital_scope = {
+				if = {
+					limit = {
+						OR = {
+							trade_goods = fish
+							trade_goods = naval_supplies
+							trade_goods = salt
+						}
+					}
+					add_building = wharf
+				}
+				if = {
+					limit = {
+						OR = {
+							trade_goods = copper
+							trade_goods = iron
+						}
+					}
+					add_building = weapons
+				}
+				if = {
+					limit = {
+						OR = {
+							trade_goods = wool
+							trade_goods = cloth
+							trade_goods = silk
+							trade_goods = dyes
+						}
+					}
+					add_building = textile
+				}
+				if = {
+					limit = {
+						OR = {
+							trade_goods = cocoa
+							trade_goods = coffee
+							trade_goods = cotton
+							trade_goods = sugar
+							trade_goods = tobacco
+						}
+					}
+					add_building = plantations
+				}
+				if = {
+					limit = {
+						OR = {
+							trade_goods = fur
+							trade_goods = incense
+							trade_goods = ivory
+							trade_goods = slaves
+							trade_goods = spices
+							trade_goods = cloves
+						}
+					}
+					add_building = tradecompany
+				}
+				if = {
+					limit = {
+						OR = {
+							trade_goods = grain
+							trade_goods = wine
+							trade_goods = livestock
+						}
+					}
+					add_building = farm_estate
+				}
+				if = {
+					limit = {
+						OR = {
+							trade_goods = tropical_wood
+							trade_goods = chinaware
+							trade_goods = gems
+							trade_goods = glass
+							trade_goods = paper
+						}
+					}
+					add_building = mills
+				}
+				if = {
+					limit = {
+						trade_goods = coal
+					}
+					add_building = furnace
+				}
+			}
+		}
+	}
+	THE_NCS_release_building_household = {
+		potential = {
+			has_country_flag = THE_NCS_open_release_building_decision_flag
+			capital_scope = {
+				NOT = {
+					has_building = soldier_households
+				}
+			}
+			has_country_flag = THE_NCS_restore_soldier_households_flag
+		}
+		allow = {
+			capital_scope = {
+				num_free_building_slots = 1
+			}
+		}
+		effect = {
+			THE_NCS_release_building_script = {
+				building = soldier_households
+			}
+		}
+	}
+	THE_NCS_release_building_office = {
+		potential = {
+			has_country_flag = THE_NCS_open_release_building_decision_flag
+			capital_scope = {
+				NOT = {
+					has_building = impressment_offices
+				}
+			}
+			has_country_flag = THE_NCS_restore_impressment_offices_flag
+		}
+		allow = {
+			capital_scope = {
+				num_free_building_slots = 1
+			}
+		}
+		effect = {
+			THE_NCS_release_building_script = {
+				building = impressment_offices
+			}
+		}
+	}
+	THE_NCS_release_building_state = {
+		potential = {
+			has_country_flag = THE_NCS_open_release_building_decision_flag
+			capital_scope = {
+				NOT = {
+					has_building = state_house
+				}
+			}
+			has_country_flag = THE_NCS_restore_state_house_flag
+		}
+		allow = {
+			capital_scope = {
+				num_free_building_slots = 1
+			}
+		}
+		effect = {
+			THE_NCS_release_building_script = {
+				building = state_house
+			}
+		}
+	}
+	THE_NCS_release_building_rampart = {
+		potential = {
+			has_country_flag = THE_NCS_open_release_building_decision_flag
+			capital_scope = {
+				NOT = {
+					has_building = ramparts
+				}
+			}
+			has_country_flag = THE_NCS_restore_ramparts_flag
+		}
+		allow = {
+			capital_scope = {
+				num_free_building_slots = 1
+			}
+		}
+		effect = {
+			THE_NCS_release_building_script = {
+				building = ramparts
+			}
+		}
+	}
+}

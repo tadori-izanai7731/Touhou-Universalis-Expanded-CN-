@@ -1,0 +1,46 @@
+THE_LIL_create_daiyousei_advisor_scripted_effect = {
+	define_advisor = {
+		type = THE_advisor_daiyousei
+		name = "大妖精"
+		skill = 1
+		cost_multiplier = 0.5
+		culture = ROOT
+		religion = ROOT
+		female = no
+	}
+}
+
+THE_LIL_create_yousei_conquistador_scripted_effects = {
+	define_conquistador = {
+		shock = 4
+		fire = 4
+		manuever = 6
+		siege = 1
+		name = "征服者妖精"
+		female = yes
+	}
+}
+
+THE_LIL_create_yousei_explorer_scripted_effects = {
+	define_explorer = {
+		shock = 3
+		fire = 3
+		manuever = 5
+		siege = 1
+		name = "探险家妖精"
+		female = yes
+	}
+}
+
+THE_LIL_define_lily_black_consort_scripted_effect = {
+	define_consort = {
+		name = "莉莉"
+		dynasty = "布莱克"
+		religion = ROOT
+		culture = ROOT
+		adm = 2
+		dip = 3
+		mil = 4
+		female = yes
+	}
+}

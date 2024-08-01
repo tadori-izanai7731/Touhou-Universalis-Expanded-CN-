@@ -1,0 +1,403 @@
+## FROM is the nation being annexed
+THE_LIL_on_annexed_scripted_effect = {
+	FROM = {
+		if = {
+			limit = { has_country_flag = THE_LIL_spring_power_from_prank_count_flag }
+			random_country = {
+				limit = {
+					check_variable = {
+						which = the_lil_spring_power_var
+						value = 1
+					}
+				}
+				subtract_variable = {
+					which = the_lil_spring_power_var
+					value = 1
+				}
+				if = {
+					limit = {
+						NOT = {
+							check_variable = {
+								which = the_lil_spring_power_var
+								value = 0
+							}
+						}
+					}
+					set_variable = {
+						which = the_lil_spring_power_var
+						value = 0
+					}
+				}
+				THE_LIL_change_spring_power_from_prank_scripted_effect = yes
+			}
+		}
+	}
+}
+
+THE_LIL_change_spring_power_from_prank_scripted_effect = {
+	remove_country_modifier = THE_LIL_spring_power_from_prank_1
+	remove_country_modifier = THE_LIL_spring_power_from_prank_2
+	remove_country_modifier = THE_LIL_spring_power_from_prank_3
+	remove_country_modifier = THE_LIL_spring_power_from_prank_4
+	remove_country_modifier = THE_LIL_spring_power_from_prank_5
+	remove_country_modifier = THE_LIL_spring_power_from_prank_6
+	remove_country_modifier = THE_LIL_spring_power_from_prank_7
+	remove_country_modifier = THE_LIL_spring_power_from_prank_8
+	remove_country_modifier = THE_LIL_spring_power_from_prank_9
+	remove_country_modifier = THE_LIL_spring_power_from_prank_10
+	remove_country_modifier = THE_LIL_spring_power_from_prank_11
+	remove_country_modifier = THE_LIL_spring_power_from_prank_12
+	remove_country_modifier = THE_LIL_spring_power_from_prank_13
+	remove_country_modifier = THE_LIL_spring_power_from_prank_14
+	remove_country_modifier = THE_LIL_spring_power_from_prank_15
+	remove_country_modifier = THE_LIL_spring_power_from_prank_16
+	remove_country_modifier = THE_LIL_spring_power_from_prank_17
+	remove_country_modifier = THE_LIL_spring_power_from_prank_18
+	remove_country_modifier = THE_LIL_spring_power_from_prank_19
+	remove_country_modifier = THE_LIL_spring_power_from_prank_20
+	THE_LIL_calu_spring_power_var_add_monthly_spring_power_scripted_effect = { value_1 = 1 value_2 = 2 }
+	THE_LIL_calu_spring_power_var_add_monthly_spring_power_scripted_effect = { value_1 = 2 value_2 = 3 }
+	THE_LIL_calu_spring_power_var_add_monthly_spring_power_scripted_effect = { value_1 = 3 value_2 = 4 }
+	THE_LIL_calu_spring_power_var_add_monthly_spring_power_scripted_effect = { value_1 = 4 value_2 = 5 }
+	THE_LIL_calu_spring_power_var_add_monthly_spring_power_scripted_effect = { value_1 = 5 value_2 = 6 }
+	THE_LIL_calu_spring_power_var_add_monthly_spring_power_scripted_effect = { value_1 = 6 value_2 = 7 }
+	THE_LIL_calu_spring_power_var_add_monthly_spring_power_scripted_effect = { value_1 = 7 value_2 = 8 }
+	THE_LIL_calu_spring_power_var_add_monthly_spring_power_scripted_effect = { value_1 = 8 value_2 = 9 }
+	THE_LIL_calu_spring_power_var_add_monthly_spring_power_scripted_effect = { value_1 = 9 value_2 = 10 }
+	THE_LIL_calu_spring_power_var_add_monthly_spring_power_scripted_effect = { value_1 = 10 value_2 = 11 }
+	THE_LIL_calu_spring_power_var_add_monthly_spring_power_scripted_effect = { value_1 = 11 value_2 = 12 }
+	THE_LIL_calu_spring_power_var_add_monthly_spring_power_scripted_effect = { value_1 = 12 value_2 = 13 }
+	THE_LIL_calu_spring_power_var_add_monthly_spring_power_scripted_effect = { value_1 = 13 value_2 = 14 }
+	THE_LIL_calu_spring_power_var_add_monthly_spring_power_scripted_effect = { value_1 = 14 value_2 = 15 }
+	THE_LIL_calu_spring_power_var_add_monthly_spring_power_scripted_effect = { value_1 = 15 value_2 = 16 }
+	THE_LIL_calu_spring_power_var_add_monthly_spring_power_scripted_effect = { value_1 = 16 value_2 = 17 }
+	THE_LIL_calu_spring_power_var_add_monthly_spring_power_scripted_effect = { value_1 = 17 value_2 = 18 }
+	THE_LIL_calu_spring_power_var_add_monthly_spring_power_scripted_effect = { value_1 = 18 value_2 = 19 }
+	THE_LIL_calu_spring_power_var_add_monthly_spring_power_scripted_effect = { value_1 = 19 value_2 = 20 }
+	if = {
+		limit = {
+			check_variable = {
+				which = the_lil_spring_power_var
+				value = 20
+			}
+		}
+		add_country_modifier = {
+			name = THE_LIL_spring_power_from_prank_20
+			duration = -1
+			hidden = yes
+		}
+	}
+}
+
+THE_LIL_calu_spring_power_var_add_monthly_spring_power_scripted_effect = {
+	if = {
+		limit = {
+			check_variable = {
+				which = the_lil_spring_power_var
+				value = $value_1$
+			}
+			NOT = {
+				check_variable = {
+					which = the_lil_spring_power_var
+					value = $value_2$
+				}
+			}
+		}
+		add_country_modifier = {
+			name = THE_LIL_spring_power_from_prank_$value_1$
+			duration = -1
+			hidden = yes
+		}
+	}
+}
+
+## ROOT = New vassal, FROM = Overlord
+THE_LIL_on_create_vassal_scripted_effect = {
+	if = {
+		limit = {
+			NOT = { is_subject_of_type = tributary_state }
+		}
+		if = {
+			limit = { FROM = { mission_completed = THE_LIL_7_2 } }
+			add_country_modifier = {
+				name = THE_LIL_magician_flight_modifier
+				duration = -1
+			}
+		}
+		if = {
+			limit = { FROM = { mission_completed = THE_LIL_7_4 } }
+			add_country_modifier = {
+				name = THE_LIL_which_blessing_modifier
+				duration = -1
+			}
+		}
+		if = {
+			limit = { FROM = { mission_completed = THE_LIL_8_1 } }
+			add_country_modifier = {
+				name = THE_LIL_doll_remove_misfortune_modifier
+				duration = -1
+			}
+		}
+		if = {
+			limit = { FROM = { mission_completed = THE_LIL_8_5 } }
+			add_country_modifier = {
+				name = THE_LIL_sage_assistance_modifier
+				duration = -1
+			}
+		}
+		if = {
+			limit = { FROM = { mission_completed = THE_LIL_12_3 } }
+			add_country_modifier = {
+				name = THE_LIL_spring_of_gensokyo
+				duration = -1
+			}
+		}
+		if = {
+			limit = { FROM = { mission_completed = THE_LIL_23_3 } }
+			add_country_modifier = {
+				name = THE_LIL_fairy_agriculture_modifier
+				duration = -1
+			}
+		}
+		if = {
+			limit = { FROM = { mission_completed = THE_LIL_27_2 } }
+			add_country_modifier = {
+				name = THE_LIL_spring_full_blossom_modifier
+				duration = -1
+			}
+		}
+	}
+}
+
+##$colonial_region$
+THE_LIL_colonize_mission_scripted_effect = {
+	hidden_effect = {
+		$colonial_region$ = {
+			type = all
+			add_permanent_claim = ROOT
+		}
+		every_owned_province = {
+			limit = {
+				colonial_region = $colonial_region$
+				is_city = yes
+			}
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+		every_subject_country = {
+			limit = {
+				NOT = { is_subject_of_type = tributary_state }
+			}
+			every_owned_province = {
+				limit = {
+					colonial_region = $colonial_region$
+					is_city = yes
+				}
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+	}
+	custom_tooltip = THE_LIL_$colonial_region$_effect_tt
+}
+
+
+THE_LIL_on_circumnavigation_scripted_effect = {
+	if = {
+		limit = {
+			has_global_flag = circumnavigation_completed
+			NOT = { has_global_flag = THE_LIL_circumnavigation_completed_second_global_flag }
+		}
+		set_global_flag = THE_LIL_circumnavigation_completed_second_global_flag
+		set_country_flag = THE_LIL_circumnavigation_second_flag
+	}
+}
+
+THE_LIL_on_province_owner_change_scripted_effect = {
+	if = {
+		limit = {
+			owner = { has_country_modifier = THE_LIL_fairy_happiness_modifier }
+			NOT = { superregion = gensokyo_superregion }
+			NOT = { superregion = gensokyo_orbit_superregion }
+		}
+		province_event = {
+			id = THE_LIL_events.8
+			days = 36500
+		}
+	}
+}
+
+# root = winning country, from = loser country
+THE_LIL_on_war_won_scripted_effect = {
+	if = {
+		limit = {
+			ROOT = {
+				tag = LIL
+				has_country_flag = THE_LIL_scr_mission_war_start_flag
+			}
+			FROM = { tag = SCR }
+		}
+		clr_country_flag = THE_LIL_scr_mission_war_start_flag
+		if = {
+			limit = {
+				exists = CIN
+			}
+			create_subject = {
+				subject_type = vassal
+				who = CIN
+			}
+			5078 = {
+				if = {
+					limit = { owner = { tag = SCR } }
+					cede_province = CIN
+					add_core = CIN
+				}
+			}
+			5079 = {
+				if = {
+					limit = { owner = { tag = SCR } }
+					cede_province = CIN
+					add_core = CIN
+				}
+			}
+		}
+	}
+}
+
+#$tag$
+THE_LIL_special_spring_territory_inherit_scripted_effect = {
+	if = {
+		limit = {
+			$tag$ = {
+				is_subject_of = ROOT
+				NOT = { is_subject_of_type = tributary_state }
+			}
+		}
+		inherit = $tag$
+	}
+}
+
+#$area$
+#$tag$
+THE_LIL_special_spring_territory_cede_scripted_effect = {
+	$area$ = {
+		if = {
+			limit = { country_or_non_sovereign_subject_holds = ROOT }
+			cede_province = $tag$
+			add_core = $tag$
+			remove_core = ROOT
+			remove_claim = ROOT
+		}
+	}
+}
+
+#$tag$
+THE_LIL_special_spring_territory_create_scripted_effect = {
+	create_subject = {
+		subject_type = THE_LIL_spring_territory_vassal
+		who = $tag$
+	}
+	custom_tooltip = THE_LIL_special_spring_territory_tt
+	hidden_effect = {
+		create_subject = {
+			subject_type = crown_colony
+			subject = CLR
+		}
+	}
+	$tag$ = {
+		hidden_effect = {
+			change_country_color = {
+				country = overlord
+			}
+			change_government = monarchy
+			change_religion = capital
+			change_primary_culture = capital
+			change_technology_group = tech_gensokyan
+			change_unit_type = tech_gensokyan
+			change_country_color = {
+				country = CLR
+			}
+		}
+		set_country_flag = THE_LIL_special_spring_territory_flag
+	}
+	hidden_effect = {
+		CLR = { grant_independence = yes }
+	}
+}
+
+
+#$modifier$
+THE_LIL_subject_non_tributary_add_modifier = {
+	hidden_effect = {
+		every_subject_country = {
+			limit = {
+				NOT = { is_subject_of_type = tributary_state }
+			}
+			add_country_modifier = {
+				name = $modifier$
+				duration = -1
+			}
+		}
+	}
+	custom_tooltip = THE_LIL_after_vassal_will_gain_this_modifier_tt
+}
+
+#$type$
+#支持adm、dip、mil
+THE_LIL_spring_territory_transform_dev = {
+	[[adm]
+		random_owned_province = {
+			limit = { base_tax = 2 }
+			add_base_tax = -1
+		}
+		overlord = {
+			random_owned_province = {
+				limit = { is_state = yes }
+				add_base_tax = 1
+			}
+		}
+	]
+	[[dip]
+		random_owned_province = {
+			limit = { base_production = 2 }
+			add_base_production = -1
+		}
+		overlord = {
+			random_owned_province = {
+				limit = { is_state = yes }
+				add_base_production = 1
+			}
+		}
+	]
+	[[mil]
+		random_owned_province = {
+			limit = { base_manpower = 2 }
+			add_base_manpower = -1
+		}
+		overlord = {
+			random_owned_province = {
+				limit = { is_state = yes }
+				add_base_manpower = 1
+			}
+		}
+	]
+}
+
+THE_LIL_transform_spring_territory_color_to_colony = {
+	create_subject = {
+		subject_type = crown_colony
+		subject = CLR
+	}
+	every_subject_country = {
+		limit = {
+			is_subject_of_type = THE_LIL_spring_territory_vassal
+			NOT = { has_country_flag = THE_LIL_special_spring_territory_flag }
+		}
+		change_country_color = {
+			country = CLR
+		}
+	}
+	CLR = { grant_independence = yes }
+}

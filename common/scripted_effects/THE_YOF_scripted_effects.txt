@@ -1,0 +1,102 @@
+THE_YOF_refresh_doom_gather_modifier = {
+	hidden_effect = {
+		remove_country_modifier = yof_gather_doom_on_buffv1
+		remove_country_modifier = yof_gather_doom_on_buffv2
+		remove_country_modifier = yof_gather_doom_on_buffv3
+		remove_country_modifier = yof_gather_doom_on_buffv4
+		remove_country_modifier = yof_gather_doom_on_buffv5
+		remove_country_modifier = yof_gather_doom_on_buffv6
+		remove_country_modifier = yof_gather_doom_on_buffv7
+		remove_country_modifier = yof_gather_doom_on_buffv8
+		remove_country_modifier = yof_gather_doom_on_buffv9
+		remove_country_modifier = yof_gather_doom_on_buffv10
+		THE_YOF_calc_doom_gather_var_add_monthly_doom_power_scripted_effect = { value_1 = 1 value_2 = 2 }
+		THE_YOF_calc_doom_gather_var_add_monthly_doom_power_scripted_effect = { value_1 = 2 value_2 = 3 }
+		THE_YOF_calc_doom_gather_var_add_monthly_doom_power_scripted_effect = { value_1 = 3 value_2 = 4 }
+		THE_YOF_calc_doom_gather_var_add_monthly_doom_power_scripted_effect = { value_1 = 4 value_2 = 5 }
+		THE_YOF_calc_doom_gather_var_add_monthly_doom_power_scripted_effect = { value_1 = 5 value_2 = 6 }
+		THE_YOF_calc_doom_gather_var_add_monthly_doom_power_scripted_effect = { value_1 = 6 value_2 = 7 }
+		THE_YOF_calc_doom_gather_var_add_monthly_doom_power_scripted_effect = { value_1 = 7 value_2 = 8 }
+		THE_YOF_calc_doom_gather_var_add_monthly_doom_power_scripted_effect = { value_1 = 8 value_2 = 9 }
+		THE_YOF_calc_doom_gather_var_add_monthly_doom_power_scripted_effect = { value_1 = 9 value_2 = 10 }
+		if = {
+			limit = {
+				check_variable = {
+					which = yof_doom_gather_on_or_off_num
+					value = 10
+				}
+			}
+			add_country_modifier = {
+				name = yof_gather_doom_on_buffv10
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+}
+
+THE_YOF_calc_doom_gather_var_add_monthly_doom_power_scripted_effect = {
+	if = {
+		limit = {
+			check_variable = {
+				which = yof_doom_gather_on_or_off_num
+				value = $value_1$
+			}
+			NOT = {
+				check_variable = {
+					which = yof_doom_gather_on_or_off_num
+					value = $value_2$
+				}
+			}
+		}
+		add_country_modifier = {
+			name = yof_gather_doom_on_buffv$value_1$
+			duration = -1
+			hidden = yes
+		}
+	}
+}
+
+THE_YOF_switch_highlight_province_flag = {
+	if = {
+		limit = { has_country_flag = THE_YOF_highlight_province_no_modifier_flag }
+		custom_tooltip = THE_YOF_highlight_province_no_modifier_tt
+		hidden_effect = {
+			THE_YOF_clare_all_highlight_province_flag = yes
+			set_country_flag = THE_YOF_highlight_province_modifier_1_flag
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = THE_YOF_highlight_province_modifier_1_flag }
+		custom_tooltip = THE_YOF_highlight_province_modifier_1_tt
+		hidden_effect = {
+			THE_YOF_clare_all_highlight_province_flag = yes
+			set_country_flag = THE_YOF_highlight_province_modifier_2_flag
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = THE_YOF_highlight_province_modifier_2_flag }
+		custom_tooltip = THE_YOF_highlight_province_modifier_2_tt
+		hidden_effect = {
+			THE_YOF_clare_all_highlight_province_flag = yes
+			set_country_flag = THE_YOF_highlight_province_modifier_1_or_2_flag
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = THE_YOF_highlight_province_modifier_1_or_2_flag }
+		custom_tooltip = THE_YOF_highlight_province_modifier_1_or_2_tt
+		hidden_effect = {
+			THE_YOF_clare_all_highlight_province_flag = yes
+			set_country_flag = THE_YOF_highlight_province_no_modifier_flag
+		}
+	}
+	custom_tooltip = empty_line_tt
+	custom_tooltip = THE_YOF_clare_all_highlight_province_flag_tt
+}
+
+THE_YOF_clare_all_highlight_province_flag = {
+	clr_country_flag = THE_YOF_highlight_province_no_modifier_flag
+	clr_country_flag = THE_YOF_highlight_province_modifier_1_flag
+	clr_country_flag = THE_YOF_highlight_province_modifier_2_flag
+	clr_country_flag = THE_YOF_highlight_province_modifier_1_or_2_flag
+}

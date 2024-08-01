@@ -1,0 +1,46 @@
+THE_ROD_define_general_rumia_siege_script = {
+	if = {
+		limit = {
+			is_variable_equal = {
+				which = the_rumia_siege_var
+				value = $rumia_siege$
+			}
+		}
+		define_general = {
+			name = "露米娅"
+			female = yes
+			fire = $rumia_fire$
+			shock = $rumia_shock$
+			manuever = $rumia_manuever$
+			siege = $rumia_siege$
+		}
+	}
+}
+
+THE_ROD_on_battle_won_unit_scripted_effect = {
+	if = {
+		limit = {
+			general_with_name = "露米娅"
+			unit_owner = { has_country_flag = THE_ROD_unlock_rumia_become_general_flag }
+		}
+		unit_owner = {
+			change_variable = { which = the_rod_rumia_battle_win_var value = 1 }
+			THE_ROD_add_darkness_manipulation_var_from_battle = yes
+			# country_event = { id = THE_ROD_events.2 }
+			if = {
+				limit = { mission_completed = THE_ROD_5_13 }
+				random_list = {
+					30 = { country_event = { id = THE_ROD_events.2 } }
+					70 = { }
+				}
+			}
+			else_if = {
+				limit = { mission_completed = THE_ROD_5_12 }
+				random_list = {
+					15 = { country_event = { id = THE_ROD_events.2 } }
+					85 = { }
+				}
+			}
+		}
+	}
+}

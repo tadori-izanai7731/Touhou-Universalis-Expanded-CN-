@@ -1,0 +1,639 @@
+the_hng_disasters_one = {
+	potential = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_country_flag = THE_HNG_can_disasters
+		is_emperor_of_china = yes
+		has_reform = THE_HNG_red_dragon_celestial_empire
+		NOT = { has_country_modifier = THE_HNG_believe_your_country }
+		NOT = { has_country_flag = hng_do_the_change3_flag }
+		NOT = { has_country_flag = THE_HNG_disasters_lose1 }
+		NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+	}
+	can_start = {
+		total_development = 2750
+		OR = {
+			overextension_percentage = 0.75
+			is_year = 1550
+		}
+	}
+	can_stop = {
+		OR = {
+			has_country_modifier = THE_HNG_believe_your_country
+			AND = {
+				NOT = {  overextension_percentage = 0.01 }	
+				NOT = { is_year = 1550 }
+				NOT = { total_development = 2250 }
+				custom_trigger_tooltip = {
+					tooltip = the_hng_disasters_one_will_happened_tt
+					always = yes
+				}
+			}
+		}
+	}
+	progress = {
+		modifier = {
+			factor = -1
+			adm = 4
+		}
+		modifier = {
+			factor = -1
+			adm = 5
+		}
+		modifier = {
+			factor = -1
+			adm = 6
+		}
+		modifier = {
+			factor = -1
+			dip = 4
+		}
+		modifier = {
+			factor = -1
+			dip = 5
+		}
+		modifier = {
+			factor = -1
+			dip = 6
+		}
+		modifier = {
+			factor = 3
+			NOT ={ imperial_mandate = 50 }
+		}
+		modifier = {
+			factor = -2
+			imperial_mandate = 80
+		}
+		modifier = {
+			factor = 2
+			overextension_percentage = 0.75
+		}
+		modifier = {
+			factor = 2
+			overextension_percentage = 1.5
+		}
+		modifier = {
+			factor = 3
+			overextension_percentage = 3
+		}
+		modifier = {
+			factor = 30
+			is_bankrupt = yes
+		}
+		modifier = {
+			factor = 3
+			corruption = 3
+		}
+		modifier = {
+			factor = 3
+			corruption = 5
+		}
+		modifier = {
+			factor = 7
+			has_any_disaster = yes
+		}
+		modifier = {
+			factor = 5
+			is_year = 1550
+		}
+		modifier = {
+			factor = 8
+			is_year = 1600
+		}
+	}
+	can_end = {
+		OR = {
+			AND = {
+				has_country_modifier = THE_HNG_believe_your_country
+				NOT = { num_of_rebel_armies = 1 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = the_hng_disasters_one_lose_tt
+				OR = {
+					has_country_flag = THE_HNG_disasters_lose1	
+					NOT = { total_development = 1000 }	
+				}	
+			}
+		}
+	}
+	modifier = {
+		imperial_mandate = -0.1
+		all_estate_loyalty_equilibrium = -0.1
+		all_power_cost = 0.1
+		monthly_THE_HNG_Merger_degree_dip_power = 0.5
+		monthly_THE_HNG_Inflation_rate_adm_power = 0.5
+		land_morale = -0.2
+		defensiveness = -0.2
+		global_regiment_recruit_speed = 10
+		global_unrest = 5
+		movement_speed = 1
+		can_not_declare_war = no
+	}
+	on_start = flavor_THE_HNG_events.5 
+	on_end = flavor_THE_HNG_events.8                
+}
+
+
+the_hng_disasters_two = {
+	potential = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_country_flag = THE_HNG_can_disasters
+		is_emperor_of_china = yes
+		has_reform = THE_HNG_red_dragon_celestial_empire
+		NOT = { has_country_modifier = THE_HNG_more_efficient_land_system }
+		NOT = { has_country_flag = hng_do_the_change3_flag }
+		NOT = { has_country_flag = THE_HNG_disasters_lose2 }
+		NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+	}
+	can_start = {
+		total_development = 2500
+		average_autonomy = 20
+	}
+	can_stop = {
+		OR  = {
+			has_country_modifier = THE_HNG_more_efficient_land_system
+			NOT = { total_development = 2000 }	
+			NOT = {	average_autonomy = 10 }
+		}
+	}
+	progress = {
+		modifier = {
+			factor = 3
+			has_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Merger_degree_dip_power
+				value = 30
+			}
+		}
+		modifier = {
+			factor = 3
+			has_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Merger_degree_dip_power
+				value = 40
+			}
+		}
+		modifier = {
+			factor = 3
+			has_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Merger_degree_dip_power
+				value = 50
+			}
+		}
+		modifier = {
+			factor = -1
+			adm = 5
+		}
+		modifier = {
+			factor = -1
+			adm = 6
+		}
+		modifier = {
+			factor = -1
+			dip = 4
+		}
+		modifier = {
+			factor = -1
+			dip = 5
+		}
+		modifier = {
+			factor = -1
+			dip = 6
+		}
+		modifier = {
+			factor = -1
+			mil = 6
+		}
+		modifier = {
+			factor = 1
+			num_of_rebel_armies = 1
+		}
+		modifier = {
+			factor = 1
+			num_of_rebel_controlled_provinces = 1
+		}
+		modifier = {
+			factor = 3
+			NOT ={ imperial_mandate = 50 }
+		}
+		modifier = {
+			factor = 30
+			is_bankrupt = yes
+		}
+		modifier = {
+			factor = 3
+			corruption = 3
+		}
+		modifier = {
+			factor = 4
+			has_any_disaster = yes
+		}
+	}
+	can_end = {
+		OR = {
+			AND = {
+				has_country_modifier = THE_HNG_more_efficient_land_system
+				NOT = { num_of_rebel_armies = 1 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = the_hng_disasters_one_lose_tt
+				OR = {
+					NOT = {total_development = 1000}	
+					has_country_flag = THE_HNG_disasters_lose2			
+				}
+			}
+		}
+	}
+	modifier = {
+		imperial_mandate = -0.1
+		all_power_cost = 0.1
+		monthly_THE_HNG_Inflation_rate_adm_power = 0.5
+		monthly_THE_HNG_Merger_degree_dip_power = 0.5
+		can_not_declare_war = no
+		yearly_corruption = 0.3
+		min_autonomy = 30
+		global_trade_goods_size_modifier = -0.2
+	}
+	on_start = flavor_THE_HNG_events.24
+	on_end = flavor_THE_HNG_events.26              
+}
+
+the_hng_disasters_three = {
+	potential = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_country_flag = THE_HNG_can_disasters
+		is_emperor_of_china = yes
+		has_reform = THE_HNG_red_dragon_celestial_empire
+		NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic }
+		NOT = { has_country_flag = hng_do_the_change3_flag  }
+		NOT = {  has_country_flag = THE_HNG_disasters_lose3 }
+		NOT = {  has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+	}
+	
+	can_start = {
+		OR = {
+			inflation = 10
+			monthly_income = 300
+		}
+	}
+	
+	can_stop = {
+		OR = {
+			has_country_modifier = THE_HNG_strict_and_complete_economic
+			AND = {
+				NOT = { inflation = 1 }
+				NOT = { monthly_income = 300 }				
+			}
+		}
+	}
+	progress = {
+		modifier = {
+			factor = 2
+			has_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Inflation_rate_adm_power
+				value = 30
+			}
+		}
+		modifier = {
+			factor = 2
+			has_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Inflation_rate_adm_power
+				value = 40
+			}
+		}
+		modifier = {
+			factor = 2
+			has_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Inflation_rate_adm_power
+				value = 50
+			}
+		}
+		modifier = {
+			factor = -1
+			adm = 4
+		}
+		modifier = {
+			factor = -1
+			adm = 5
+		}
+		modifier = {
+			factor = -1
+			adm = 6
+		}
+		modifier = {
+			factor = -1
+			dip = 5
+		}
+		modifier = {
+			factor = -1
+			dip = 6
+		}
+		modifier = {
+			factor = 3
+			NOT ={ imperial_mandate = 50 }
+		}
+		modifier = {
+			factor = -1
+			imperial_mandate = 80
+		}
+		modifier = {
+			factor = 30
+			is_bankrupt = yes
+		}
+		modifier = {
+			factor = 2
+			corruption = 3
+		}
+		modifier = {
+			factor = 4
+			has_any_disaster = yes
+		}
+		modifier = {
+			factor = 1
+			inflation = 1
+		}
+		modifier = {
+			factor = 2
+			inflation = 3
+		}
+		modifier = {
+			factor = 5
+			inflation = 5
+		}
+		modifier = {
+			factor = 4
+			monthly_income = 300
+		}
+		modifier = {
+			factor = 3
+			monthly_income = 600
+		}
+	}
+	can_end = {
+		OR = {
+			AND = {
+				has_country_modifier = THE_HNG_strict_and_complete_economic
+				current_income_balance = 10
+				treasury = 500
+			}
+			custom_trigger_tooltip = {
+				tooltip = the_hng_disasters_two_lose_tt
+				has_country_flag = THE_HNG_disasters_lose3
+			}
+		}
+	}
+	modifier = {
+		all_power_cost = 0.1
+		monthly_THE_HNG_Inflation_rate_adm_power = 0.5
+		monthly_THE_HNG_Merger_degree_dip_power = 0.5
+		global_trade_goods_size_modifier = -0.2
+		build_cost = 1
+		build_time = 1
+		great_project_upgrade_cost = 1
+		monthly_gold_inflation_modifier = 2
+		inflation_reduction = -2
+		interest = 5
+	}
+	on_start = flavor_THE_HNG_events.37
+	on_end = flavor_THE_HNG_events.39            
+}
+
+the_hng_disasters_four = {
+	potential = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		OR = {
+			AND = {
+				has_country_flag = THE_HNG_can_disasters
+				is_emperor_of_china = yes
+				has_reform = THE_HNG_red_dragon_celestial_empire
+				NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army }
+				NOT = { has_country_flag = hng_do_the_change3_flag  }
+				NOT = { has_country_flag = THE_HNG_disasters_lose4 }
+				NOT = { has_country_flag = THE_HNG_disasters_end4 }
+				NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+				NOT = { army_professionalism = 1 }	
+				army_size = 150	
+			}
+			AND = {
+				has_country_flag = THE_HNG_let_other_country_army_death
+				NOT = { has_country_flag = THE_HNG_disasters_end4 }
+			}
+		}	
+	}
+	
+	can_start = {
+		OR = {
+			AND = {
+				army_size = 150
+				OR = {
+					tag = HNG
+					was_tag = HNG
+				}
+			}
+			AND = {
+				is_year = 1550
+				NOT = { army_professionalism = 0.6 }
+			}
+			AND = {
+				NOT = { is_year = 1550 }
+				NOT = { army_tradition = 85	 }
+				
+			}
+		}
+	}	
+	can_stop = {
+		OR = {
+			AND = {
+				NOT = { is_year = 1550 }
+				army_tradition = 85			
+			}
+			AND = {
+				NOT = { tag = HNG }
+				NOT = { was_tag  = HNG }		
+				army_professionalism = 0.5
+			}
+			AND = {
+				NOT = { army_size = 150	 }
+				OR = {
+					tag = HNG
+					was_tag = HNG
+				}
+			}
+			army_professionalism = 0.75
+		}
+	}
+	progress = {
+		modifier = {
+			factor = 2
+			has_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Army_corruption_mil_power
+				value = 30
+			}
+		}
+		modifier = {
+			factor = 2
+			has_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Army_corruption_mil_power
+				value = 40
+			}
+		}
+		modifier = {
+			factor = 3
+			has_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Army_corruption_mil_power
+				value = 50
+			}
+		}
+		modifier = {
+			factor = -1
+			adm = 5
+		}
+		modifier = {
+			factor = -1
+			adm = 6
+		}
+		modifier = {
+			factor = -1
+			mil = 4
+		}
+		modifier = {
+			factor = -1
+			mil = 5
+		}
+		modifier = {
+			factor = -1
+			mil = 6
+		}
+		modifier = {
+			factor = 30
+			is_bankrupt = yes
+		}
+		modifier = {
+			factor = 2
+			corruption = 3
+		}
+		modifier = {
+			factor = 2
+			corruption = 5
+		}
+		modifier = {
+			factor = 5
+			has_any_disaster = yes
+		}
+		modifier = {
+			factor = 1
+			inflation = 1
+		}
+		modifier = {
+			factor = 2
+			inflation = 3
+		}
+		modifier = {
+			factor = 2
+			inflation = 5
+		}
+		modifier = {
+			factor = 2
+			NOT ={ imperial_mandate = 50 }
+		}
+		modifier = {
+			factor = -1
+			imperial_mandate = 80
+		}
+		modifier = {
+			factor = -1
+			has_mil_advisor_3 = yes
+		}
+		modifier = {
+			factor = 100
+			custom_trigger_tooltip = {
+				tooltip = the_hng_disasters_four_zuzhou_tt
+				has_country_flag = THE_HNG_let_other_country_army_death
+			}
+		}
+	}
+	can_end = {
+		OR = {
+			has_country_modifier = THE_HNG_modernization_gensokyo_army
+			custom_trigger_tooltip = {
+				tooltip = the_hng_disasters_two_lose_tt
+				has_country_flag = THE_HNG_disasters_lose4
+			}
+			AND = {
+				NOT = { tag = HNG }
+				NOT = { was_tag  = HNG }
+				OR = {
+					army_professionalism = 0.5
+					army_tradition = 85
+				}
+			}
+		}
+	}
+	modifier = {
+		all_power_cost = 0.1
+		discipline = -0.05
+		land_morale = -0.1
+		land_maintenance_modifier = 0.4
+		monthly_THE_HNG_Army_corruption_mil_power = 0.5
+		yearly_army_professionalism = -0.01
+	}
+	on_start = flavor_THE_HNG_events.90
+	on_end = flavor_THE_HNG_events.50          
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,4850 @@
+THE_ROD_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = ROD } 
+
+	THE_ROD_1_2 = {
+		icon = mission_iroquois_food_surplus
+		position = 2
+		required_missions = { THE_ROD_2_1 } 
+		provinces_to_highlight = { province_id = 43 } 
+
+		trigger = {
+			43 = { owned_by = ROOT } 
+			is_at_war = no
+		}
+
+		effect = {
+			43 = {
+				every_neighbor_province = {
+					add_base_production = -1
+					PREV = { add_base_production = 1 } 
+				}
+			}
+		}
+	}
+
+	THE_ROD_1_5 = {
+		icon = mission_conquer_pomerania
+		position = 5
+		required_missions = { THE_ROD_2_4 } 
+		provinces_to_highlight = {
+			OR = {
+				area = vorpommern_area
+				area = hinter_pommern_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				OR = {
+					area = vorpommern_area
+					area = hinter_pommern_area
+				}
+			}
+		}
+
+		effect = {
+			mecklenburg_area = { add_permanent_claim = ROOT } 
+			holstein_area = { add_permanent_claim = ROOT } 
+			jutland_area = { add_permanent_claim = ROOT } 
+			denmark_area = { add_permanent_claim = ROOT } 
+			skaneland_area = { add_permanent_claim = ROOT } 
+			add_splendor = 100
+			if = {
+				limit = { exists = POL } 
+				custom_tooltip = empty_line_tt
+				if = {
+					limit = {
+						POL = {
+							NOT = { is_rival = ROOT } 
+							NOT = { is_enemy = ROOT } 
+						}
+					}
+					custom_tooltip = THE_ROD_1_5_case1_tt_yes
+				}
+				else = { custom_tooltip = THE_ROD_1_5_case1_tt_no } 
+				tooltip = {
+					add_country_modifier = {
+						name = "THE_ROD_pomeranian_royal_modifier"
+						duration = 10950
+					}
+				}
+			}
+			else_if = {
+				limit = { exists = PLC } 
+				custom_tooltip = empty_line_tt
+				if = {
+					limit = {
+						PLC = {
+							NOT = { is_rival = ROOT } 
+							NOT = { is_enemy = ROOT } 
+						}
+					}
+					custom_tooltip = THE_ROD_1_5_case1_tt_yes
+				}
+				else = { custom_tooltip = THE_ROD_1_5_case1_tt_no } 
+				tooltip = {
+					add_country_modifier = {
+						name = "THE_ROD_pomeranian_royal_modifier"
+						duration = 10950
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						exists = POL
+						POL = {
+							NOT = { is_rival = ROOT } 
+							NOT = { is_enemy = ROOT } 
+						}
+					}
+					add_country_modifier = {
+						name = "THE_ROD_pomeranian_royal_modifier"
+						duration = 10950
+					}
+				}
+				else_if = {
+					limit = {
+						exists = PLC
+						PLC = {
+							NOT = { is_rival = ROOT } 
+							NOT = { is_enemy = ROOT } 
+						}
+					}
+					add_country_modifier = {
+						name = "THE_ROD_pomeranian_royal_modifier"
+						duration = 10950
+					}
+				}
+			}
+		}
+	}
+
+	THE_ROD_1_6 = {
+		icon = mission_heart_of_the_hansa
+		position = 6
+		required_missions = { THE_ROD_1_5 } 
+		provinces_to_highlight = {
+			area = mecklenburg_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			owner = { NOT = { alliance_with = ROOT }  } 
+		}
+
+		trigger = {
+			mecklenburg_area = {
+				type = all
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					owner = { alliance_with = ROOT } 
+					owner = {
+						tag = BRA
+					}
+				}
+			}
+		}
+
+		effect = {
+			lower_saxony_area = { add_permanent_claim = ROOT } 
+			northern_saxony_area = { add_permanent_claim = ROOT } 
+			mittelmark_area = { add_permanent_claim = ROOT } 
+			neumark_area = { add_permanent_claim = ROOT } 
+			add_accepted_culture_or_dip_power = {
+				culture = pommeranian
+				dip_reward = yes
+				free = yes
+			}
+			add_splendor = 100
+			custom_tooltip = empty_line_tt
+			add_casus_belli = {
+				type = cb_vassalize_mission
+				target = BRA
+				months = 360
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_ROD_decrease_north_german_ae_30_tt
+			hidden_effect = {
+				every_country = {
+					limit = { capital_scope = { region = north_german_region }  } 
+					add_aggressive_expansion = {
+						who = ROOT
+						value = -30
+					}
+				}
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_ROD_dark_moon_night_stage2_extra_tt
+			custom_tooltip = THE_ROD_dark_moon_night_1_6_tt
+		}
+	}
+
+	THE_ROD_1_7 = {
+		icon = tame_brandenburg
+		position = 7
+		required_missions = { THE_ROD_1_6 } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					owned_by = BRA
+					NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+				}
+				AND = {
+					OR = {
+						area = mittelmark_area
+						area = neumark_area
+					}
+					NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+				}
+			}
+		}
+
+		trigger = {
+			OR = {
+				BRA = {
+					is_subject_of = ROOT
+					NOT = { is_subject_of_type = tributary_state } 
+				}
+				AND = {
+					mittelmark_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					neumark_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+		}
+
+		effect = {
+			north_german_region = { add_permanent_claim = ROOT } 
+			custom_tooltip = empty_line_tt
+			add_accepted_culture_or_dip_power = {
+				culture = saxon
+				dip_reward = yes
+				free = yes
+			}
+			add_splendor = 100
+			custom_tooltip = empty_line_tt
+			tooltip = {
+				add_country_modifier = {
+					name = "THE_ROD_border_feudal_lord_modfier"
+					duration = 10950
+				}
+			}
+			custom_tooltip = THE_ROD_unlock_personal_union_bra_decision_tt
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					BRA = {
+						is_subject_of = ROOT
+						NOT = { is_subject_of_type = tributary_state } 
+					}
+				}
+				custom_tooltip = THE_ROD_1_7_case1_tt_yes
+			}
+			else = { custom_tooltip = THE_ROD_1_7_case1_tt_no } 
+			custom_tooltip = THE_ROD_1_7_case1_tt
+			tooltip = {
+				if = {
+					limit = { has_estate = estate_nobles } 
+					unlock_estate_privilege = { estate_privilege = estate_nobles_consolidated_noble_contracts } 
+				}
+				else = {
+					change_estate_land_share = {
+						estate = all
+						share = -5
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						BRA = {
+							is_subject_of = ROOT
+							NOT = { is_subject_of_type = tributary_state } 
+						}
+					}
+					add_country_modifier = {
+						name = "THE_ROD_border_feudal_lord_modfier"
+						duration = -1
+					}
+					if = {
+						limit = { has_estate = estate_nobles } 
+						unlock_estate_privilege = { estate_privilege = estate_nobles_consolidated_noble_contracts } 
+					}
+					else = {
+						change_estate_land_share = {
+							estate = all
+							share = -5
+						}
+					}
+				}
+				else = {
+					add_country_modifier = {
+						name = "THE_ROD_border_feudal_lord_modfier"
+						duration = 10950
+					}
+				}
+			}
+		}
+	}
+
+	THE_ROD_1_8 = {
+		icon = mission_apostolic_kingdom
+		position = 8
+		required_missions = { THE_ROD_1_7 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				AND = {
+					is_part_of_hre = yes
+					any_subject_country = { is_elector = yes } 
+				}
+				is_elector = yes
+				NOT = { is_part_of_hre = yes } 
+			}
+		}
+
+		effect = {
+			add_splendor = 400
+			add_prestige_or_monarch_power = { amount = 50 } 
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					NOT = { is_elector = yes } 
+				}
+				hidden_effect = {
+					random_subject_country = {
+						limit = { is_elector = yes } 
+						elector = no
+					}
+				}
+				ROOT = { elector = yes } 
+			}
+			custom_tooltip = empty_line_tt
+			add_casus_belli = {
+				type = cb_vassalize_mission
+				target = BOH
+				months = 360
+			}
+			add_casus_belli = {
+				type = cb_vassalize_mission
+				target = SAX
+				months = 360
+			}
+			custom_tooltip = THE_ROD_unlock_personal_union_boh_sax_decision_tt
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "THE_ROD_hre_elector_modifier"
+				duration = -1
+			}
+			custom_tooltip = THE_ROD_hre_elector_modifier_extra_effect_tt
+			hidden_effect = { set_country_flag = THE_ROD_hre_elector_modifier_extra_effect_flag } 
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_ROD_dark_moon_night_stage3_extra_tt
+			custom_tooltip = THE_ROD_dark_moon_night_1_8_tt
+		}
+	}
+
+	THE_ROD_1_10 = {
+		icon = mission_maize
+		position = 10
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				num_of_owned_provinces_with = {
+					base_production = 5
+					OR = {
+						trade_goods = fish
+						trade_goods = grain
+						trade_goods = livestock
+					}
+					value = 3
+				}
+			}
+		}
+
+		effect = {
+			add_dip_power = 100
+			custom_tooltip = THE_ROD_every_farm_province_tt
+			tooltip = { add_base_production = 1 } 
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							trade_goods = fish
+							trade_goods = grain
+							trade_goods = livestock
+						}
+					}
+					add_base_production = 1
+				}
+				if = {
+					limit = { has_government_mechanic = THE_ROD_dark_moon_night_mechanic } 
+					random_owned_province = {
+						limit = { base_manpower = 2 } 
+						add_base_manpower = -1
+					}
+					change_variable = {
+						which = the_rod_darkness_manipulation_var
+						value = 25
+					}
+				}
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_ROD_dark_moon_night_stage1_extra_tt
+			custom_tooltip = THE_ROD_dark_moon_night_1_10_tt
+		}
+	}
+
+	THE_ROD_1_12 = {
+		icon = mission_se_along_the_river
+		position = 12
+		required_missions = { THE_ROD_1_10 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				trading_bonus = {
+					trade_goods = fish
+					value = yes
+				}
+				trading_bonus = {
+					trade_goods = grain
+					value = yes
+				}
+				trading_bonus = {
+					trade_goods = livestock
+					value = yes
+				}
+			}
+			manpower_percentage = 0.8
+			OR = {
+				full_idea_group = economic_ideas
+				full_idea_group = infrastructure_ideas
+				full_idea_group = plutocracy_ideas
+				natural_scientist = 3
+				AND = {
+					NOT = {
+						estate_influence = {
+							estate = estate_church
+							influence = 60
+						}
+					}
+					NOT = {
+						estate_influence = {
+							estate = estate_burghers
+							influence = 60
+						}
+					}
+					NOT = {
+						estate_influence = {
+							estate = estate_nobles
+							influence = 60
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_ROD_production_construction_modifier"
+				duration = 10950
+			}
+			custom_tooltip = THE_ROD_every_farm_province_tt
+			tooltip = {
+				add_province_modifier = {
+					name = "THE_ROD_farm_province_modifier"
+					duration = -1
+				}
+				add_or_upgrade_production_building = yes
+			}
+			hidden_effect = {
+				set_country_flag = THE_ROD_farm_province_add_modifier_flag
+				every_owned_province = {
+					limit = {
+						OR = {
+							trade_goods = fish
+							trade_goods = grain
+							trade_goods = livestock
+						}
+					}
+					add_or_upgrade_production_building = yes
+					add_province_modifier = {
+						name = "THE_ROD_farm_province_modifier"
+						duration = -1
+					}
+				}
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					OR = {
+						full_idea_group = economic_ideas
+						full_idea_group = infrastructure_ideas
+						full_idea_group = plutocracy_ideas
+					}
+				}
+				custom_tooltip = THE_ROD_1_12_case1_tt_yes
+			}
+			else = { custom_tooltip = THE_ROD_1_12_case1_tt_no } 
+			tooltip = {
+				custom_tooltip = THE_ROD_1_12_case1_tt
+				custom_tooltip = empty_line_tt
+			}
+			if = {
+				limit = { natural_scientist = 3 } 
+				custom_tooltip = THE_ROD_1_12_case2_tt_yes
+			}
+			else = { custom_tooltip = THE_ROD_1_12_case2_tt_no } 
+			tooltip = {
+				unlock_estate_privilege = { estate_privilege = estate_burghers_forest_expansion } 
+				unlock_estate_privilege = { estate_privilege = estate_burghers_mountain_expansion } 
+				custom_tooltip = empty_line_tt
+			}
+			if = {
+				limit = {
+					NOT = {
+						estate_influence = {
+							estate = estate_church
+							influence = 60
+						}
+					}
+					NOT = {
+						estate_influence = {
+							estate = estate_burghers
+							influence = 60
+						}
+					}
+					NOT = {
+						estate_influence = {
+							estate = estate_nobles
+							influence = 60
+						}
+					}
+				}
+				custom_tooltip = THE_ROD_1_12_case3_tt_yes
+			}
+			else = { custom_tooltip = THE_ROD_1_12_case3_tt_no } 
+			tooltip = {
+				custom_tooltip = THE_ROD_1_12_case3_tt
+				change_estate_land_share = {
+					estate = all
+					share = -15
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						OR = {
+							full_idea_group = economic_ideas
+							full_idea_group = infrastructure_ideas
+							full_idea_group = plutocracy_ideas
+						}
+					}
+					remove_country_modifier = THE_ROD_production_construction_modifier
+					add_country_modifier = {
+						name = "THE_ROD_production_construction_modifier"
+						duration = -1
+					}
+				}
+				if = {
+					limit = { natural_scientist = 3 } 
+					unlock_estate_privilege = { estate_privilege = estate_burghers_forest_expansion } 
+					unlock_estate_privilege = { estate_privilege = estate_burghers_mountain_expansion } 
+				}
+				if = {
+					limit = {
+						NOT = {
+							estate_influence = {
+								estate = estate_church
+								influence = 60
+							}
+						}
+						NOT = {
+							estate_influence = {
+								estate = estate_burghers
+								influence = 60
+							}
+						}
+						NOT = {
+							estate_influence = {
+								estate = estate_nobles
+								influence = 60
+							}
+						}
+					}
+					set_country_flag = has_halved_absolutism_reduction
+					change_estate_land_share = {
+						estate = all
+						share = -15
+					}
+				}
+			}
+		}
+	}
+
+	THE_ROD_1_13 = {
+		icon = mission_rb_prospect_for_coal
+		position = 13
+		required_missions = { THE_ROD_1_12 } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			OR = {
+				NOT = { development = 20 } 
+				NOT = { has_manufactory_trigger = yes } 
+			}
+		}
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				development = 20
+				has_manufactory_trigger = yes
+				value = 20
+			}
+			OR = {
+				monthly_income = 500
+				has_institution = manufactories
+			}
+		}
+
+		effect = {
+			custom_tooltip = THE_ROD_unlock_coal_in_manufactories_institution_tt
+			custom_tooltip = THE_ROD_unlock_collect_black_gem_tt
+			hidden_effect = {
+				set_country_flag = GER_specific_coal
+				set_country_flag = THE_ROD_unlock_collect_black_gem_flag
+			}
+		}
+	}
+
+	THE_ROD_1_14 = {
+		icon = mission_bane_of_the_hansa
+		position = 14
+		required_missions = { THE_ROD_3_13 } 
+		provinces_to_highlight = {
+			OR = {
+				owned_by = HSA
+				province_id = 45
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			OR = {
+				NOT = { exists = HSA } 
+				HSA = {
+					is_subject_of = ROOT
+					NOT = { is_subject_of_type = tributary_state } 
+				}
+			}
+			45 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				trade_share = {
+					country = ROOT
+					share = 25
+				}
+			}
+		}
+
+		effect = {
+			add_accepted_culture_or_dip_power = {
+				culture = lower_saxon
+				dip_reward = yes
+				free = yes
+			}
+			add_country_modifier = {
+				name = "THE_ROD_hsa_legacy_modifier"
+				duration = -1
+			}
+			45 = {
+				add_permanent_province_modifier = {
+					name = "THE_ROD_baltic_sea_port"
+					duration = -1
+				}
+			}
+			if = {
+				limit = { mission_completed = THE_ROD_2_14 } 
+				custom_tooltip = THE_ROD_mixture_naval_doctrine_1_tt_yes
+				hidden_effect = {
+					add_country_modifier = {
+						name = "THE_ROD_undercurrent_fleet_modifier"
+						duration = -1
+					}
+				}
+			}
+			else = { custom_tooltip = THE_ROD_mixture_naval_doctrine_1_tt_no } 
+			tooltip = {
+				add_country_modifier = {
+					name = "THE_ROD_undercurrent_fleet_modifier"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	THE_ROD_1_17 = {
+		icon = mission_THE_ROD_icon_10
+		position = 17
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			is_year = 1450
+			OR = {
+				religion = catholic
+				religion = th_hakureishinto
+			}
+			OR = {
+				advisor = theologian
+				advisor = inquisitor
+			}
+		}
+
+		effect = {
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 10
+			}
+			if = {
+				limit = { religion = th_hakureishinto } 
+				custom_tooltip = THE_ROD_1_17_case1_tt_yes
+			}
+			else = { custom_tooltip = THE_ROD_1_17_case1_tt_no } 
+			tooltip = {
+				add_country_modifier = {
+					name = "THE_ROD_youkai_way_modifier_1"
+					duration = -1
+				}
+			}
+			if = {
+				limit = { religion = catholic } 
+				custom_tooltip = THE_ROD_1_17_case2_tt_yes
+			}
+			else = { custom_tooltip = THE_ROD_1_17_case2_tt_no } 
+			tooltip = {
+				capital_scope = { change_religion = catholic } 
+				add_papal_influence = 100
+			}
+			hidden_effect = {
+				if = {
+					limit = { religion = th_hakureishinto } 
+					add_country_modifier = {
+						name = "THE_ROD_youkai_way_modifier_1"
+						duration = -1
+					}
+					set_country_flag = THE_ROD_unlock_hakurei_mission_flag
+				}
+				if = {
+					limit = { religion = catholic } 
+					capital_scope = { change_religion = catholic } 
+					add_papal_influence = 100
+					set_country_flag = THE_ROD_unlock_catholic_mission_flag
+				}
+				swap_non_generic_missions = yes
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_ROD_unlock_religion_tt
+		}
+	}
+}
+THE_ROD_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = ROD } 
+
+	THE_ROD_2_1 = {
+		icon = mission_touhou_rumia
+		position = 1
+		provinces_to_highlight = { province_id = 43 } 
+
+		trigger = { 43 = { owned_by = ROOT }  } 
+
+		effect = {
+			if = {
+				limit = { NOT = { prestige = -10 }  } 
+				set_prestige_to_zero = yes
+			}
+			else = { add_prestige = 10 } 
+			43 = { change_culture = prussian } 
+		}
+	}
+
+	THE_ROD_2_3 = {
+		icon = mission_THE_ROD_icon_1
+		position = 3
+		required_missions = {
+			THE_ROD_1_2
+			THE_ROD_3_2
+		}
+		provinces_to_highlight = { province_id = 43 } 
+
+		trigger = {
+			43 = {
+				owned_by = ROOT
+				development = 25
+			}
+			OR = {
+				num_of_estate_agendas_completed = {
+					estate = estate_church
+					value = 1
+				}
+				num_of_estate_agendas_completed = {
+					estate = estate_burghers
+					value = 1
+				}
+				num_of_estate_agendas_completed = {
+					estate = estate_nobles
+					value = 1
+				}
+			}
+		}
+
+		effect = {
+			change_estate_land_share = {
+				estate = all
+				share = -10
+			}
+			add_manpower = 10
+			add_treasury = 100
+			43 = {
+				add_permanent_province_modifier = {
+					name = "THE_ROD_baltic_sea_port"
+					duration = -1
+				}
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = { NOT = { government = monarchy }  } 
+				change_government = monarchy
+			}
+			add_government_reform = THE_ROD_apparitions_stalk_the_night_monarchy
+			hidden_effect = {
+				set_variable = {
+					which = the_rod_darkness_manipulation_var
+					value = 0
+				}
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = { 43 = { NOT = { has_fort_building_trigger = yes }  }  } 
+				custom_tooltip = THE_ROD_create_fort_yes_tt
+			}
+			else = { custom_tooltip = THE_ROD_create_fort_no_tt } 
+			tooltip = { 43 = { add_or_upgrade_fort_building = yes }  } 
+			hidden_effect = {
+				if = {
+					limit = { 43 = { NOT = { has_fort_building_trigger = yes }  }  } 
+					43 = { add_building = fort_15th } 
+				}
+			}
+		}
+	}
+
+	THE_ROD_2_4 = {
+		icon = mission_build_up_to_force_limit
+		position = 4
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			land_maintenance = 0.99
+		}
+
+		effect = {
+			east_prussia_area = { add_permanent_claim = ROOT } 
+			west_prussia_area = { add_permanent_claim = ROOT } 
+			hinter_pommern_area = { add_permanent_claim = ROOT } 
+			vorpommern_area = { add_permanent_claim = ROOT } 
+			25 = { add_permanent_claim = ROOT } 
+			custom_tooltip = empty_line_tt
+			add_splendor = 100
+			define_advisor = {
+				type = army_reformer
+				skill = 1
+				culture = ROOT
+				religion = ROOT
+				cost_multiplier = 0.25
+			}
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "THE_ROD_expand_in_darkness_modifier"
+				duration = 10950
+			}
+			custom_tooltip = THE_ROD_dark_moon_night_stage1_extra_tt
+			custom_tooltip = THE_ROD_dark_moon_night_2_4_tt
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = { NOT = { mil_tech = 4 }  } 
+				custom_tooltip = THE_ROD_2_4_case1_tt_yes
+				tooltip = { add_mil_tech = 1 } 
+				custom_tooltip = empty_line_tt
+				custom_tooltip = THE_ROD_else_tt_no
+				tooltip = { add_mil_power = 100 } 
+				hidden_effect = { add_mil_tech = 1 } 
+			}
+			else = {
+				custom_tooltip = THE_ROD_2_4_case1_tt_no
+				tooltip = { add_mil_tech = 1 } 
+				custom_tooltip = empty_line_tt
+				custom_tooltip = THE_ROD_else_tt_yes
+				tooltip = { add_mil_power = 100 } 
+				hidden_effect = { add_mil_power = 100 } 
+			}
+		}
+	}
+
+	THE_ROD_2_5 = {
+		icon = kingdom_of_cyprus
+		position = 5
+		required_missions = { THE_ROD_2_4 } 
+		provinces_to_highlight = {
+			OR = {
+				area = east_prussia_area
+				area = west_prussia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				OR = {
+					area = east_prussia_area
+					area = west_prussia_area
+				}
+			}
+			1841 = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		effect = {
+			1841 = {
+				add_permanent_province_modifier = {
+					name = "THE_ROD_rebuild_malbork_castle_province_modifier"
+					duration = 10950
+				}
+			}
+			east_prussia_area = { add_core = ROOT } 
+			west_prussia_area = { add_core = ROOT } 
+		}
+	}
+
+	THE_ROD_2_6 = {
+		icon = mission_united_knight_order
+		position = 6
+		required_missions = { THE_ROD_2_5 } 
+		provinces_to_highlight = {
+			OR = {
+				owned_by = TEU
+				area = east_prussia_area
+				area = west_prussia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			OR = {
+				NOT = { exists = TEU } 
+				TEU = {
+					is_subject_of = ROOT
+					NOT = { is_subject_of_type = tributary_state } 
+				}
+				AND = {
+					east_prussia_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					west_prussia_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+		}
+
+		effect = {
+			add_adm_power = 100
+			add_splendor = 200
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 25
+			}
+			poland_region = { add_permanent_claim = ROOT } 
+			baltic_region = { add_permanent_claim = ROOT } 
+			if = {
+				limit = { exists = LIV } 
+				add_casus_belli = {
+					type = cb_vassalize_mission
+					target = LIV
+					months = 360
+				}
+			}
+			if = {
+				limit = { exists = LVA } 
+				add_casus_belli = {
+					type = cb_vassalize_mission
+					target = LVA
+					months = 360
+				}
+			}
+			if = {
+				limit = { exists = KUR } 
+				add_casus_belli = {
+					type = cb_vassalize_mission
+					target = KUR
+					months = 360
+				}
+			}
+		}
+	}
+
+	THE_ROD_2_7 = {
+		icon = mission_sca_mission_lit_polish_union
+		position = 7
+		required_missions = { THE_ROD_2_6 } 
+		provinces_to_highlight = {
+			OR = {
+				area = wielkopolska_area
+				area = kuyavia_area
+				area = central_poland_area
+				area = mazovia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				OR = {
+					area = wielkopolska_area
+					area = kuyavia_area
+					area = central_poland_area
+					area = mazovia_area
+				}
+			}
+		}
+
+		effect = {
+			carpathia_region = { add_permanent_claim = ROOT } 
+			crimea_region = { add_permanent_claim = ROOT } 
+			add_accepted_culture_or_dip_power = {
+				culture = polish
+				dip_reward = yes
+				free = yes
+			}
+			capital_scope = {
+				hussars_cavalry = ROOT
+				hussars_cavalry = ROOT
+				hussars_cavalry = ROOT
+				hussars_cavalry = ROOT
+				hussars_cavalry = ROOT
+				hussars_cavalry = ROOT
+				hussars_cavalry = ROOT
+				hussars_cavalry = ROOT
+				hussars_cavalry = ROOT
+				hussars_cavalry = ROOT
+			}
+			add_adm_power = 100
+			add_country_modifier = {
+				name = "THE_ROD_melt_gold_modifier"
+				duration = -1
+			}
+		}
+	}
+
+	THE_ROD_2_8 = {
+		icon = mission_THE_ROD_icon_3
+		position = 8
+		required_missions = { THE_ROD_2_7 } 
+		provinces_to_highlight = {
+			province_id = 257
+			OR = {
+				NOT = { owned_by = ROOT } 
+				NOT = { is_core = ROOT } 
+			}
+		}
+
+		trigger = {
+			mission_completed = THE_ROD_1_17
+			257 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			OR = {
+				religion = catholic
+				has_global_modifier_value = {
+					which = tolerance_heathen
+					value = 0
+				}
+			}
+		}
+
+		effect = {
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 10
+			}
+			custom_tooltip = THE_ROD_decrease_christian_ae_30_tt
+			hidden_effect = {
+				every_country = {
+					limit = { religion_group = christian } 
+					add_aggressive_expansion = {
+						who = ROOT
+						value = -30
+					}
+				}
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = { religion = catholic } 
+				custom_tooltip = THE_ROD_2_8_case1_tt_yes
+				custom_tooltip = THE_ROD_2_8_case1_tt
+				custom_tooltip = empty_line_tt
+				custom_tooltip = THE_ROD_else_tt_no
+				custom_tooltip = THE_ROD_2_8_case2_tt
+				hidden_effect = {
+					PAP = {
+						add_opinion = {
+							who = ROOT
+							modifier = THE_ROD_saint_cross_opinion_modifier
+						}
+						set_country_flag = THE_ROD_saint_cross_opinion_available_flag
+					}
+					set_country_flag = THE_ROD_saint_cross_opinion_target_flag
+					set_global_flag = THE_ROD_saint_cross_opinion_available_global_flag
+				}
+			}
+			else = {
+				custom_tooltip = THE_ROD_2_8_case1_tt_no
+				custom_tooltip = THE_ROD_2_8_case1_tt
+				custom_tooltip = empty_line_tt
+				custom_tooltip = THE_ROD_else_tt_yes
+				custom_tooltip = THE_ROD_2_8_case2_tt
+				hidden_effect = { set_country_flag = THE_ROD_mission_religion_add_treasury_flag } 
+			}
+		}
+	}
+
+	THE_ROD_2_11 = {
+		icon = mission_dominate_persian_gulf
+		position = 11
+		required_missions = { THE_ROD_1_10 } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			province_has_center_of_trade_of_level = 1
+		}
+
+		trigger = {
+			1926 = {
+				trade_share = {
+					country = ROOT
+					share = 20
+				}
+				has_merchant = ROOT
+			}
+			OR = {
+				num_of_owned_provinces_with = {
+					value = 3
+					province_has_center_of_trade_of_level = 2
+				}
+				num_of_owned_provinces_with = {
+					value = 1
+					province_has_center_of_trade_of_level = 3
+				}
+			}
+		}
+
+		effect = {
+			add_dip_power = 100
+			add_estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 10
+			}
+			custom_tooltip = empty_line_tt
+			define_advisor = {
+				type = trader
+				skill = 3
+				culture = ROOT
+				religion = ROOT
+				cost_multiplier = 0.25
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = BYZ_buff_private_trade_fleet
+			set_country_flag = BYZ_private_trade_fleet_buff
+		}
+	}
+
+	THE_ROD_2_12 = {
+		icon = mission_african_gold
+		position = 12
+		required_missions = { THE_ROD_2_11 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			43 = {
+				owned_by = ROOT
+				has_trade_building_trigger = yes
+			}
+			num_of_light_ship = 10
+			OR = {
+				advisor = trader
+				trade_income_percentage = 0.3
+			}
+		}
+
+		effect = {
+			add_mercantilism = 10
+			43 = {
+				add_or_upgrade_trade_building = yes
+				add_unit_construction = {
+					type = light_ship
+					amount = 10
+					speed = 0.1
+					cost = 0
+				}
+			}
+			add_country_modifier = {
+				name = "THE_ROD_fishing_in_lake_modifier"
+				duration = 10950
+			}
+			custom_tooltip = THE_ROD_dark_moon_night_stage2_extra_tt
+			custom_tooltip = THE_ROD_dark_moon_night_2_12_tt
+		}
+	}
+
+	THE_ROD_2_13 = {
+		icon = mission_pol_breadbasket_europe
+		position = 13
+		required_missions = { THE_ROD_1_12 } 
+		provinces_to_highlight = {
+			OR = {
+				region = poland_region
+				region = ruthenia_region
+			}
+			OR = {
+				has_terrain = grasslands
+				has_terrain = farmlands
+			}
+			OR = {
+				NOT = { owned_by = ROOT } 
+				NOT = { has_production_building_trigger = yes } 
+				nationalism = 1
+			}
+		}
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 20
+				OR = {
+					region = poland_region
+					region = ruthenia_region
+				}
+				OR = {
+					has_terrain = grasslands
+					has_terrain = farmlands
+				}
+				has_production_building_trigger = yes
+				NOT = { nationalism = 1 } 
+			}
+		}
+
+		effect = {
+			add_accepted_culture_or_dip_power = {
+				culture = ruthenian
+				dip_reward = yes
+				free = yes
+			}
+			add_accepted_culture_or_dip_power = {
+				culture = byelorussian
+				dip_reward = yes
+				free = yes
+			}
+			add_accepted_culture_or_dip_power = {
+				culture = ryazanian
+				dip_reward = yes
+				free = yes
+			}
+			custom_tooltip = THE_ROD_every_poland_or_ruthenia_province_tt
+			tooltip = { add_or_upgrade_production_building = yes } 
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "THE_ROD_summer_night_modifier"
+				duration = -1
+			}
+			if = {
+				limit = {
+					NOT = { current_age = age_of_absolutism } 
+					NOT = { current_age = age_of_revolutions } 
+				}
+				custom_tooltip = THE_ROD_2_13_case1_tt_yes
+			}
+			else = { custom_tooltip = THE_ROD_2_13_case1_tt_no } 
+			tooltip = {
+				add_splendor = 800
+				custom_tooltip = THE_ROD_can_use_poland_crown_ab_tt
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					OR = {
+						current_age = age_of_absolutism
+						current_age = age_of_revolutions
+					}
+				}
+				custom_tooltip = THE_ROD_else_tt_yes
+			}
+			else = { custom_tooltip = THE_ROD_else_tt_no } 
+			tooltip = {
+				add_country_modifier = {
+					name = "THE_ROD_polish_legitimacy_modifier"
+					duration = 10950
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							region = poland_region
+							region = ruthenia_region
+						}
+					}
+					add_or_upgrade_production_building = yes
+				}
+				if = {
+					limit = {
+						NOT = { current_age = age_of_absolutism } 
+						NOT = { current_age = age_of_revolutions } 
+					}
+					add_splendor = 800
+					set_country_flag = unlock_polish_ability_flag
+				}
+				else = {
+					add_country_modifier = {
+						name = "THE_ROD_polish_legitimacy_modifier"
+						duration = 10950
+					}
+				}
+			}
+		}
+	}
+
+	THE_ROD_2_14 = {
+		icon = mission_novgorod_the_great
+		position = 14
+		required_missions = { THE_ROD_3_13 } 
+		provinces_to_highlight = {
+			province_id = 33
+			AND = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+				NOT = {
+					owner = {
+						has_opinion = {
+							who = ROOT
+							value = 180
+						}
+					}
+				}
+			}
+		}
+
+		trigger = {
+			33 = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					AND = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+						owner = {
+							has_opinion = {
+								who = ROOT
+								value = 180
+							}
+						}
+						25 = { country_or_non_sovereign_subject_holds = ROOT } 
+					}
+				}
+			}
+		}
+
+		effect = {
+			add_accepted_culture_or_dip_power = {
+				culture = novgorodian
+				dip_reward = yes
+				free = yes
+			}
+			add_accepted_culture_or_dip_power = {
+				culture = russian
+				dip_reward = yes
+				free = yes
+			}
+			if = {
+				limit = { 33 = { country_or_non_sovereign_subject_holds = ROOT }  } 
+				custom_tooltip = THE_ROD_2_14_case1_tt_yes
+				hidden_effect = {
+					33 = {
+						add_permanent_province_modifier = {
+							name = "THE_ROD_baltic_sea_port"
+							duration = -1
+						}
+					}
+					russia_region = { add_permanent_claim = ROOT } 
+					ural_region = { add_permanent_claim = ROOT } 
+					add_country_modifier = {
+						name = "THE_ROD_north_war_modifier"
+						duration = -1
+					}
+				}
+			}
+			else = { custom_tooltip = THE_ROD_2_14_case1_tt_no } 
+			tooltip = {
+				33 = {
+					add_permanent_province_modifier = {
+						name = "THE_ROD_baltic_sea_port"
+						duration = -1
+					}
+				}
+				russia_region = { add_permanent_claim = ROOT } 
+				ural_region = { add_permanent_claim = ROOT } 
+				add_country_modifier = {
+					name = "THE_ROD_north_war_modifier"
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					33 = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+						owner = {
+							has_opinion = {
+								who = ROOT
+								value = 180
+							}
+						}
+					}
+				}
+				custom_tooltip = THE_ROD_2_14_case2_tt_yes
+				hidden_effect = {
+					25 = {
+						add_permanent_province_modifier = {
+							name = "THE_ROD_baltic_sea_port"
+							duration = -1
+						}
+					}
+					set_country_flag = THE_ROD_unlock_priority_supply_flag
+					add_country_modifier = {
+						name = "THE_ROD_one_way_route_modifier"
+						duration = -1
+					}
+				}
+			}
+			else = { custom_tooltip = THE_ROD_2_14_case2_tt_no } 
+			tooltip = {
+				25 = {
+					add_permanent_province_modifier = {
+						name = "THE_ROD_baltic_sea_port"
+						duration = -1
+					}
+				}
+				custom_tooltip = THE_ROD_unlock_priority_supply_tt
+				add_country_modifier = {
+					name = "THE_ROD_one_way_route_modifier"
+					duration = -1
+				}
+			}
+			if = {
+				limit = { mission_completed = THE_ROD_1_14 } 
+				custom_tooltip = THE_ROD_mixture_naval_doctrine_2_tt_yes
+				hidden_effect = {
+					add_country_modifier = {
+						name = "THE_ROD_undercurrent_fleet_modifier"
+						duration = -1
+					}
+				}
+			}
+			else = { custom_tooltip = THE_ROD_mixture_naval_doctrine_2_tt_no } 
+			tooltip = {
+				add_country_modifier = {
+					name = "THE_ROD_undercurrent_fleet_modifier"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	THE_ROD_2_15 = {
+		icon = mission_rb_ascendant
+		position = 15
+		required_missions = {
+			THE_ROD_1_14
+			THE_ROD_2_14
+			THE_ROD_3_14
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = mecklenburg_area
+				area = lower_saxony_area
+				area = weser_area
+				area = holstein_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			45 = { country_or_non_sovereign_subject_holds = ROOT } 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 8
+				OR = {
+					area = mecklenburg_area
+					area = lower_saxony_area
+					area = weser_area
+					area = holstein_area
+				}
+			}
+			OR = {
+				trade_income_percentage = 0.5
+				full_idea_group = trade_ideas
+				AND = {
+					trader = 5
+					mercantilism = 75
+				}
+			}
+			45 = { is_strongest_trade_power = ROOT } 
+			1926 = { is_strongest_trade_power = ROOT } 
+		}
+
+		effect = {
+			custom_tooltip = THE_ROD_unlock_rod_hsa_decision_tt
+			set_country_flag = THE_ROD_unlock_rod_hsa_decision_flag
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					OR = {
+						NOT = { mission_completed = THE_ROD_1_14 } 
+						NOT = { mission_completed = THE_ROD_2_14 } 
+						NOT = { mission_completed = THE_ROD_3_14 } 
+					}
+				}
+				add_country_modifier = {
+					name = "THE_ROD_youkai_in_stream"
+					duration = -1
+				}
+			}
+			else = {
+				THE_add_ruler_stat = {
+					stat = dip
+					value = 1
+				}
+				add_country_modifier = {
+					name = "THE_ROD_absorb_every_modifier"
+					duration = -1
+				}
+				custom_tooltip = THE_ROD_upgrade_trade_center_add_or_upgrade_trade_building_tt
+				set_country_flag = THE_ROD_upgrade_trade_center_add_or_upgrade_trade_building_flag
+			}
+		}
+	}
+
+	THE_ROD_2_16 = {
+		icon = mission_danish_navy
+		position = 16
+		required_missions = {
+			THE_ROD_4_15
+			THE_ROD_2_15
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				navy_size = 250
+				all_country = { NOT = { navy_size = ROOT }  } 
+			}
+			OR = {
+				full_idea_group = naval_ideas
+				full_idea_group = maritime_ideas
+				dip_tech = 16
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						NOT = { mission_completed = THE_ROD_4_15 } 
+						NOT = { mission_completed = THE_ROD_2_15 } 
+					}
+				}
+				add_dip_tech = 1
+				add_navy_tradition = 100
+				add_country_modifier = {
+					name = "THE_ROD_moonlight_legend"
+					duration = -1
+				}
+			}
+			else = {
+				custom_tooltip = THE_ROD_decrease_navy_hegemony_requirements_tt
+				set_country_flag = halve_hegemony_requirements
+				add_country_modifier = {
+					name = "THE_ROD_seek_gansou_modifier"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+THE_ROD_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = ROD } 
+
+	THE_ROD_3_2 = {
+		icon = mission_divert_trade_from_bengal
+		position = 2
+		required_missions = { THE_ROD_2_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 50
+			}
+		}
+
+		effect = {
+			custom_tooltip = BYZ_buff_burgher_loans
+			hidden_effect = { set_country_flag = BYZ_buff_burgher_loans_flag } 
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					estate_influence = {
+						estate = estate_burghers
+						influence = 30
+					}
+				}
+				custom_tooltip = THE_ROD_burghers_influence_yes_tt
+			}
+			else = { custom_tooltip = THE_ROD_burghers_influence_no_tt } 
+			tooltip = {
+				define_advisor = {
+					type = statesman
+					skill = 1
+					culture = ROOT
+					religion = ROOT
+					cost_multiplier = 0.25
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						estate_influence = {
+							estate = estate_burghers
+							influence = 30
+						}
+					}
+					define_advisor = {
+						type = statesman
+						skill = 1
+						culture = ROOT
+						religion = ROOT
+						cost_multiplier = 0.25
+					}
+				}
+			}
+		}
+	}
+
+	THE_ROD_3_4 = {
+		icon = mission_THE_ROD_icon_2
+		position = 4
+		provinces_to_highlight = { province_id = 1841 } 
+
+		trigger = {
+			1841 = {
+				OR = {
+					owner = {
+						OR = {
+							has_spy_network_from = {
+								who = ROOT
+								value = 25
+							}
+							AND = {
+								OR = {
+									war_with = ROOT
+									is_enemy = ROOT
+									is_rival = ROOT
+								}
+								1841 = { NOT = { controlled_by = ROOT }  } 
+								has_spy_network_from = {
+									who = ROOT
+									value = 10
+								}
+							}
+						}
+					}
+					controlled_by = ROOT
+					owned_by = ROOT
+				}
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					1841 = {
+						OR = {
+							controlled_by = ROOT
+							owned_by = ROOT
+						}
+					}
+				}
+				add_prestige_or_monarch_power = { amount = 20 } 
+				add_mil_power = 100
+			}
+			else = {
+				1841 = {
+					add_great_project_tier = {
+						type = malbork_castle
+						tier = -2
+					}
+				}
+			}
+		}
+	}
+
+	THE_ROD_3_5 = {
+		icon = challenge_spanish_power
+		position = 5
+		required_missions = { THE_ROD_2_4 } 
+		provinces_to_highlight = {
+			province_id = 25
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = { 25 = { country_or_non_sovereign_subject_holds = ROOT }  } 
+
+		effect = {
+			25 = {
+				add_great_project_tier = {
+					type = visby_city
+					tier = 1
+				}
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			scandinavia_region = { add_permanent_claim = ROOT } 
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					GOT = {
+						is_subject_of = ROOT
+						NOT = { is_subject_of_type = tributary_state } 
+					}
+				}
+				custom_tooltip = THE_ROD_3_5_case1_tt_yes
+			}
+			else = { custom_tooltip = THE_ROD_3_5_case1_tt_no } 
+			tooltip = {
+				jutland_area = { add_core = GOT } 
+				denmark_area = { add_core = GOT } 
+				skaneland_area = { add_core = GOT } 
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						GOT = {
+							is_subject_of = ROOT
+							NOT = { is_subject_of_type = tributary_state } 
+						}
+					}
+					jutland_area = { add_core = GOT } 
+					denmark_area = { add_core = GOT } 
+					skaneland_area = { add_core = GOT } 
+				}
+			}
+		}
+	}
+
+	THE_ROD_3_6 = {
+		icon = mission_touhou_elite_knights
+		position = 6
+		required_missions = { THE_ROD_2_5 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_cavalry = 20
+			OR = {
+				army_tradition = 75
+				army_professionalism = 0.25
+			}
+		}
+
+		effect = {
+			add_army_tradition = 20
+			add_army_professionalism = 0.05
+			add_country_modifier = {
+				name = "THE_ROD_darkness_knight_modifier"
+				duration = -1
+			}
+			custom_tooltip = THE_ROD_unlock_noble_privilege_knight_tradition_tt
+			hidden_effect = { set_country_flag = THE_ROD_unlock_noble_privilege_knight_tradition_flag } 
+			tooltip = { set_estate_privilege = THE_ROD_estate_nobles_knight_tradition } 
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = { NOT = { religion_group = christian }  } 
+				country_event = { id = cultural_event.5 } 
+			}
+			else_if = {
+				limit = { has_country_flag = last_jousting_tournament_held } 
+				add_prestige_or_monarch_power = { amount = 25 } 
+			}
+			else = {
+				add_adm_power = 30
+				add_years_of_income = 0.2
+				add_splendor = 30
+			}
+		}
+	}
+
+	THE_ROD_3_7 = {
+		icon = mission_conquer_baltic_region
+		position = 7
+		required_missions = { THE_ROD_2_6 } 
+		provinces_to_highlight = {
+			OR = {
+				owned_by = LIV
+				owned_by = LVA
+				owned_by = KUR
+				area = curonia_area
+				area = livonia_area
+				area = estonia_ingria_area
+			}
+		}
+
+		trigger = {
+			OR = {
+				if = {
+					limit = { exists = LIV } 
+					LIV = {
+						is_subject_of = ROOT
+						NOT = { is_subject_of_type = tributary_state } 
+					}
+				}
+				else = { hidden_trigger = { always = no }  } 
+				if = {
+					limit = { exists = LVA } 
+					LVA = {
+						is_subject_of = ROOT
+						NOT = { is_subject_of_type = tributary_state } 
+					}
+				}
+				else = { hidden_trigger = { always = no }  } 
+				if = {
+					limit = { exists = KUR } 
+					KUR = {
+						is_subject_of = ROOT
+						NOT = { is_subject_of_type = tributary_state } 
+					}
+				}
+				else = { hidden_trigger = { always = no }  } 
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 6
+					OR = {
+						area = curonia_area
+						area = livonia_area
+						area = estonia_ingria_area
+					}
+				}
+			}
+		}
+
+		effect = {
+			ruthenia_region = { add_permanent_claim = ROOT } 
+			custom_tooltip = THE_ROD_every_province_in_baltic_region_tt
+			tooltip = {
+				add_nationalism = -30
+				add_local_autonomy = -100
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = { region = baltic_region } 
+					add_nationalism = -30
+					add_local_autonomy = -100
+				}
+			}
+			add_country_modifier = {
+				name = "THE_ROD_unite_baltic_modifier"
+				duration = 10950
+			}
+			if = {
+				limit = {
+					all_province = {
+						OR = {
+							NOT = { culture_group = baltic } 
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+					}
+				}
+				custom_tooltip = THE_ROD_3_7_case1_tt_yes
+				hidden_effect = {
+					add_accepted_culture_or_dip_power = {
+						culture = lithuanian
+						dip_reward = yes
+						free = yes
+					}
+					add_accepted_culture_or_dip_power = {
+						culture = latvian
+						dip_reward = yes
+						free = yes
+					}
+					add_accepted_culture_or_dip_power = {
+						culture = estonian
+						dip_reward = yes
+						free = yes
+					}
+					add_country_modifier = {
+						name = "THE_ROD_unite_baltic_culture_modifier"
+						duration = -1
+					}
+				}
+			}
+			else = { custom_tooltip = THE_ROD_3_7_case1_tt_no } 
+			tooltip = {
+				add_accepted_culture_or_dip_power = {
+					culture = lithuanian
+					dip_reward = yes
+					free = yes
+				}
+				add_accepted_culture_or_dip_power = {
+					culture = latvian
+					dip_reward = yes
+					free = yes
+				}
+				add_accepted_culture_or_dip_power = {
+					culture = estonian
+					dip_reward = yes
+					free = yes
+				}
+				add_country_modifier = {
+					name = "THE_ROD_unite_baltic_culture_modifier"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	THE_ROD_3_8 = {
+		icon = mission_conquer_prussia
+		position = 8
+		provinces_to_highlight = {
+			culture = prussian
+			continent = europe
+			OR = {
+				NOT = { owned_by = ROOT } 
+				NOT = { development = 20 } 
+			}
+		}
+
+		trigger = {
+			NOT = { exists = PRU } 
+			owns_all_provinces = {
+				culture = prussian
+				continent = europe
+			}
+			all_owned_province = {
+				OR = {
+					development = 20
+					NOT = { culture = prussian } 
+					NOT = { continent = europe } 
+				}
+			}
+			accepted_culture = prussian
+		}
+
+		effect = {
+			THE_add_ruler_stat = {
+				stat = adm
+				value = 1
+			}
+			add_accepted_culture_or_dip_power = {
+				culture = prussian
+				dip_reward = yes
+				free = yes
+			}
+			add_country_modifier = {
+				name = "THE_ROD_prussian_rise_modifier"
+				duration = -1
+			}
+		}
+	}
+
+	THE_ROD_3_9 = {
+		icon = mission_prussian_kaiserreich
+		position = 9
+		required_missions = {
+			THE_ROD_1_8
+			THE_ROD_3_8
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			NOT = { exists = BRA } 
+			NOT = { exists = TEU } 
+			NOT = { exists = PRU } 
+			employed_advisor = { culture = prussian } 
+			total_development = 300
+		}
+
+		effect = {
+			custom_tooltip = THE_ROD_unlock_rod_pru_decision_tt
+			hidden_effect = { set_country_flag = THE_ROD_unlock_rod_pru_decision_flag } 
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					OR = {
+						NOT = { mission_completed = THE_ROD_1_8 } 
+						NOT = { mission_completed = THE_ROD_3_8 } 
+					}
+				}
+				add_country_modifier = {
+					name = "THE_ROD_rule_unowned_order"
+					duration = -1
+				}
+			}
+			else = {
+				add_prestige_or_monarch_power = { amount = 50 } 
+				custom_tooltip = THE_ROD_accepted_culture_decrease_autonomy_tt
+				hidden_effect = { set_country_flag = THE_ROD_accepted_culture_decrease_autonomy_flag } 
+				custom_tooltip = empty_line_tt
+				custom_tooltip = THE_ROD_dark_moon_night_stage4_extra_tt
+				custom_tooltip = THE_ROD_dark_moon_night_3_9_tt
+			}
+		}
+	}
+
+	THE_ROD_3_12 = {
+		icon = mission_konkani_pirates
+		position = 12
+		required_missions = { THE_ROD_4_11 } 
+		provinces_to_highlight = {
+			province_id = 43
+			OR = {
+				NOT = { owned_by = ROOT } 
+				NOT = { has_coast_defense_building_trigger = yes } 
+			}
+		}
+
+		trigger = {
+			43 = {
+				owned_by = ROOT
+				has_coast_defense_building_trigger = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 3
+				has_coast_defense_building_trigger = yes
+			}
+		}
+
+		effect = {
+			custom_tooltip = THE_ROD_every_has_coast_defense_building_tt
+			tooltip = { upgrade_naval_defense_building = yes } 
+			every_owned_province = {
+				limit = { has_coast_defense_building_trigger = yes } 
+				upgrade_naval_defense_building = yes
+			}
+			43 = {
+				add_permanent_province_modifier = {
+					name = "THE_ROD_coast_fort_province_modifier"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	THE_ROD_3_13 = {
+		icon = mission_recover_konkan_ports
+		position = 13
+		required_missions = {
+			THE_ROD_2_12
+			THE_ROD_3_12
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			1926 = {
+				has_most_province_trade_power = ROOT
+				NOT = { has_privateer_share_in_trade_node = { share = 0.01 }  } 
+			}
+			OR = {
+				num_of_estate_agendas_completed = {
+					estate = estate_burghers
+					value = 3
+				}
+				mercantilism = 20
+			}
+		}
+
+		effect = {
+			THE_add_ruler_stat = {
+				stat = dip
+				value = 1
+			}
+			add_mercantilism = 10
+			custom_tooltip = THE_ROD_unlock_darkness_trade_war_tt
+			set_country_flag = THE_ROD_unlock_darkness_trade_war_flag
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_ROD_dark_moon_night_stage3_extra_tt
+			custom_tooltip = THE_ROD_dark_moon_night_3_13_tt
+		}
+	}
+
+	THE_ROD_3_14 = {
+		icon = mission_unite_scandinavia
+		position = 14
+		required_missions = { THE_ROD_3_13 } 
+		provinces_to_highlight = {
+			OR = {
+				area = jutland_area
+				area = denmark_area
+				area = skaneland_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			denmark_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			OR = {
+				NOT = { exists = DAN } 
+				naval_strength = {
+					who = DAN
+					value = 1.0
+				}
+			}
+		}
+
+		effect = {
+			add_accepted_culture_or_dip_power = {
+				culture = swedish
+				dip_reward = yes
+				free = yes
+			}
+			add_accepted_culture_or_dip_power = {
+				culture = danish
+				dip_reward = yes
+				free = yes
+			}
+			add_accepted_culture_or_dip_power = {
+				culture = norwegian
+				dip_reward = yes
+				free = yes
+			}
+			add_accepted_culture_or_dip_power = {
+				culture = finnish
+				dip_reward = yes
+				free = yes
+			}
+			add_accepted_culture_or_dip_power = {
+				culture = sapmi
+				dip_reward = yes
+				free = yes
+			}
+			add_accepted_culture_or_dip_power = {
+				culture = karelian
+				dip_reward = yes
+				free = yes
+			}
+			add_country_modifier = {
+				name = "THE_ROD_dominate_scandinavian"
+				duration = -1
+			}
+			custom_tooltip = THE_ROD_unlock_darkness_trade_war_2_tt
+			hidden_effect = { set_country_flag = THE_ROD_unlock_darkness_trade_war_2_flag } 
+			12 = {
+				add_permanent_province_modifier = {
+					name = "THE_ROD_baltic_sea_port"
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					jutland_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					skaneland_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				custom_tooltip = empty_line_tt
+				if = {
+					limit = { exists = SWE } 
+					add_casus_belli = {
+						type = cb_vassalize_mission
+						target = SWE
+						months = 360
+					}
+				}
+				if = {
+					limit = { exists = NOR } 
+					add_casus_belli = {
+						type = cb_vassalize_mission
+						target = NOR
+						months = 360
+					}
+				}
+				custom_tooltip = THE_ROD_unlock_personal_union_swe_nor_decision_tt
+				set_country_flag = THE_ROD_unlock_form_swe_nor_personal_union_flag
+			}
+			THE_country_event_with_insight = {
+				id = THE_ROD_events.1
+				option_1 = "
+					add_mercantilism = 10
+					12 = {
+						add_base_tax = 5
+						add_permanent_province_modifier = {
+							name = THE_ROD_euler_strait_tax_province_modifier
+							duration = -1
+						}
+					}
+				"
+				option_2 = "
+					add_country_modifier = {
+						name = THE_ROD_free_sea_modifier
+						duration = -1
+					}
+				"
+			}
+		}
+	}
+
+	THE_ROD_3_15 = {
+		icon = mission_touhou_twilight
+		position = 15
+		required_missions = { THE_ROD_3_14 } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			has_port = yes
+			NOT = { has_building = stock_exchange } 
+		}
+
+		trigger = {
+			has_idea = ROD_silk_road_to_gensokyo
+			monthly_income = 500
+			all_country = { NOT = { monthly_income = ROOT }  } 
+			num_of_owned_provinces_with = {
+				value = 50
+				has_port = yes
+				has_building = stock_exchange
+			}
+		}
+
+		effect = {
+			change_government_reform_progress = 300
+			custom_tooltip = THE_ROD_unlock_fall_into_world_port_reform_tt
+			set_country_flag = THE_ROD_unlock_fall_into_world_port_reform_flag
+			tooltip = { add_government_reform = THE_ROD_fall_into_world_port_reform } 
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_ROD_dark_moon_night_stage4_extra_tt
+			custom_tooltip = THE_ROD_dark_moon_night_3_15_tt
+		}
+	}
+
+	THE_ROD_3_17 = {
+		icon = ned_golden_age
+		position = 17
+		provinces_to_highlight = {
+			region = low_countries_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				region = low_countries_region
+			}
+		}
+
+		effect = {
+			france_region = { add_permanent_claim = ROOT } 
+			british_isles_region = { add_permanent_claim = ROOT } 
+			change_government_reform_progress = 300
+			custom_tooltip = THE_ROD_unlock_netherland_governor_reform_tt
+			tooltip = { add_government_reform = THE_ROD_netherland_governor_reform } 
+			hidden_effect = { set_country_flag = THE_ROD_unlock_netherland_governor_reform_flag } 
+		}
+	}
+
+	THE_ROD_3_18 = {
+		icon = fra_great_britain
+		position = 18
+		required_missions = {
+			THE_ROD_3_17
+			THE_ROD_4_17
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = british_isles_region
+				region = france_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				region = british_isles_region
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				region = france_region
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_ROD_gbr_realm_modifier"
+				duration = -1
+			}
+			add_country_modifier = {
+				name = "THE_ROD_fra_realm_modifier"
+				duration = -1
+			}
+		}
+	}
+
+	THE_ROD_3_19 = {
+		icon = mission_THE_ROD_icon_12
+		position = 19
+		required_missions = { THE_ROD_4_18 } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			OR = {
+				region = north_german_region
+				region = south_german_region
+			}
+			OR = {
+				local_autonomy = 1
+				nationalism = 1
+			}
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 80
+				OR = {
+					region = north_german_region
+					region = south_german_region
+				}
+			}
+			great_power_rank = 1
+			OR = {
+				absolutism = 100
+				all_owned_province = {
+					OR = {
+						AND = {
+							OR = {
+								region = north_german_region
+								region = south_german_region
+							}
+							NOT = { local_autonomy = 1 } 
+							NOT = { nationalism = 1 } 
+						}
+						AND = {
+							NOT = { region = north_german_region } 
+							NOT = { region = south_german_region } 
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_ROD_eagle_up_modifier"
+				duration = -1
+			}
+			restore_country_name = "yes"
+			custom_tooltip = THE_ROD_unlock_rod_ger_decision_tt
+			hidden_effect = {
+				set_country_flag = THE_ROD_unlock_rod_ger_decision_flag
+				set_country_flag = THE_ROD_disable_rod_pru_decision_flag
+				set_country_flag = THE_ROD_disable_rod_hsa_decision_flag
+			}
+		}
+	}
+}
+THE_ROD_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = ROD } 
+
+	THE_ROD_4_1 = {
+		icon = mng_jing_hang_grand_canal
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				province_id = 45
+				province_id = 1258
+			}
+		}
+
+		trigger = {
+			OR = {
+				AND = {
+					45 = { owned_by = HSA } 
+					1258 = { light_ships_in_province = ROOT } 
+					HSA = {
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = improved_relation
+						}
+					}
+				}
+				AND = {
+					NOT = { exists = HSA } 
+					45 = { owned_by = ROOT } 
+				}
+			}
+		}
+
+		effect = {
+			if = {
+				limit = { exists = HSA } 
+				HSA = { remove_rival = ROOT } 
+				remove_rival = HSA
+				HSA = { add_historical_friend = ROOT } 
+				add_historical_friend = HSA
+				custom_tooltip = empty_line_tt
+				if = {
+					limit = {
+						HSA = {
+							has_opinion = {
+								who = ROOT
+								value = 50
+							}
+						}
+					}
+					custom_tooltip = THE_ROD_alliance_hsa_yes_tt
+				}
+				else = { custom_tooltip = THE_ROD_alliance_hsa_no_tt } 
+				tooltip = {
+					create_alliance = HSA
+					add_country_modifier = {
+						name = "THE_ROD_alliance_hsa_modifier"
+						duration = -1
+					}
+					HSA = {
+						add_country_modifier = {
+							name = "THE_ROD_alliance_rod_modifier"
+							duration = -1
+						}
+					}
+				}
+				hidden_effect = {
+					if = {
+						limit = {
+							HSA = {
+								has_opinion = {
+									who = ROOT
+									value = 50
+								}
+							}
+						}
+						create_alliance = HSA
+						add_country_modifier = {
+							name = "THE_ROD_alliance_hsa_modifier"
+							duration = -1
+						}
+						HSA = {
+							add_country_modifier = {
+								name = "THE_ROD_alliance_rod_modifier"
+								duration = -1
+							}
+						}
+					}
+				}
+			}
+			else = { add_dip_power = 100 } 
+		}
+	}
+
+	THE_ROD_4_2 = {
+		icon = mission_teutonic_riders
+		position = 2
+		provinces_to_highlight = { owned_by = TEU } 
+
+		trigger = {
+			OR = {
+				AND = {
+					war_with = TEU
+					treasury = 25
+				}
+				NOT = { exists = TEU } 
+			}
+		}
+
+		effect = {
+			if = {
+				limit = { NOT = { exists = TEU }  } 
+				add_mil_power = 100
+			}
+			else = {
+				white_peace = TEU
+				add_treasury = -25
+				TEU = { add_treasury = 25 } 
+			}
+		}
+	}
+
+	THE_ROD_4_3 = {
+		icon = mission_touhou_pirate_ship
+		position = 3
+		provinces_to_highlight = { province_id = 4745 } 
+
+		trigger = {
+			OR = {
+				AND = {
+					NOT = { exists = RUG } 
+					4745 = {
+						NOT = { owned_by = ROOT } 
+						owner = {
+							has_spy_network_from = {
+								who = ROOT
+								value = 20
+							}
+						}
+					}
+				}
+				AND = {
+					exists = RUG
+					4745 = { owned_by = RUG } 
+					RUG = {
+						has_spy_network_from = {
+							who = ROOT
+							value = 20
+						}
+					}
+				}
+				AND = { 4745 = { owned_by = ROOT }  } 
+			}
+		}
+
+		effect = {
+			custom_tooltip = THE_ROD_unlock_rug_pirate_tt
+			hidden_effect = { set_country_flag = THE_ROD_unlock_rug_pirate_flag } 
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					NOT = { exists = RUG } 
+					4745 = { NOT = { owned_by = ROOT }  } 
+				}
+				4745 = {
+					cede_province = RUG
+					add_core = RUG
+				}
+				hidden_effect = {
+					RUG = {
+						change_religion = capital
+						change_primary_culture = capital
+					}
+				}
+				create_subject = {
+					subject_type = march
+					who = RUG
+				}
+			}
+			else_if = {
+				limit = {
+					exists = RUG
+					4745 = { owned_by = RUG } 
+				}
+				create_subject = {
+					subject_type = march
+					who = RUG
+				}
+			}
+			else = { add_adm_power = 100 } 
+		}
+	}
+
+	THE_ROD_4_6 = {
+		icon = mission_pirate_flag
+		position = 6
+		required_missions = {
+			THE_ROD_3_5
+			THE_ROD_4_3
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			has_port = yes
+			NOT = { has_shipyard_building_trigger = yes } 
+		}
+
+		trigger = {
+			num_of_light_ship = 25
+			num_of_owned_provinces_with = {
+				value = 3
+				has_shipyard_building_trigger = yes
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_ROD_rise_dark_flag_modifier"
+				duration = -1
+			}
+			custom_tooltip = THE_ROD_raid_add_ability_of_darkness_manipulation_tt
+			hidden_effect = { set_country_flag = THE_ROD_raid_add_ability_of_darkness_manipulation_flag } 
+		}
+	}
+
+	THE_ROD_4_7 = {
+		icon = mission_conquer_riga
+		position = 7
+		required_missions = { THE_ROD_2_6 } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1256
+				province_id = 38
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			OR = {
+				AND = {
+					38 = { owned_by = RIG } 
+					RIG = { NOT = { num_of_cities = 2 }  } 
+					variable_arithmetic_trigger = {
+						custom_tooltip = THE_ROD_army_limit_5_times_rig_ttt
+						export_to_variable = {
+							which = the_rod_num_of_army_var
+							value = army_size
+							who = ROOT
+						}
+						export_to_variable = {
+							which = the_rod_num_of_army_rig_var
+							value = army_size
+							who = RIG
+						}
+						multiply_variable = {
+							which = the_rod_num_of_army_rig_var
+							value = 5
+						}
+						check_variable = {
+							which = the_rod_num_of_army_var
+							which = the_rod_num_of_army_rig_var
+						}
+					}
+					1256 = { heavy_ships_in_province = 3 } 
+				}
+				38 = { country_or_non_sovereign_subject_holds = ROOT } 
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					38 = { owned_by = RIG } 
+					RIG = { NOT = { num_of_cities = 2 }  } 
+				}
+				create_subject = {
+					subject_type = march
+					who = RIG
+				}
+			}
+			add_country_modifier = {
+				name = "THE_ROD_rig_church_treasury_modifier"
+				duration = -1
+			}
+			38 = {
+				add_permanent_province_modifier = {
+					name = "THE_ROD_baltic_sea_port"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	THE_ROD_4_10 = {
+		icon = mission_conquer_maharashtra
+		position = 10
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				army_size = 30
+				army_size_percentage = 1.0
+			}
+		}
+
+		effect = {
+			custom_tooltip = THE_ROD_add_mil_and_manpower_from_noblle_influence_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						estate_influence = {
+							estate = estate_nobles
+							influence = 100
+						}
+					}
+					THE_ROD_mission_4_10_scripted_effect = { amount = 10 } 
+				}
+				else_if = {
+					limit = {
+						estate_influence = {
+							estate = estate_nobles
+							influence = 90
+						}
+					}
+					THE_ROD_mission_4_10_scripted_effect = { amount = 9 } 
+				}
+				else_if = {
+					limit = {
+						estate_influence = {
+							estate = estate_nobles
+							influence = 80
+						}
+					}
+					THE_ROD_mission_4_10_scripted_effect = { amount = 8 } 
+				}
+				else_if = {
+					limit = {
+						estate_influence = {
+							estate = estate_nobles
+							influence = 70
+						}
+					}
+					THE_ROD_mission_4_10_scripted_effect = { amount = 7 } 
+				}
+				else_if = {
+					limit = {
+						estate_influence = {
+							estate = estate_nobles
+							influence = 60
+						}
+					}
+					THE_ROD_mission_4_10_scripted_effect = { amount = 6 } 
+				}
+				else_if = {
+					limit = {
+						estate_influence = {
+							estate = estate_nobles
+							influence = 50
+						}
+					}
+					THE_ROD_mission_4_10_scripted_effect = { amount = 5 } 
+				}
+				else_if = {
+					limit = {
+						estate_influence = {
+							estate = estate_nobles
+							influence = 40
+						}
+					}
+					THE_ROD_mission_4_10_scripted_effect = { amount = 4 } 
+				}
+				else_if = {
+					limit = {
+						estate_influence = {
+							estate = estate_nobles
+							influence = 30
+						}
+					}
+					THE_ROD_mission_4_10_scripted_effect = { amount = 3 } 
+				}
+				else_if = {
+					limit = {
+						estate_influence = {
+							estate = estate_nobles
+							influence = 20
+						}
+					}
+					THE_ROD_mission_4_10_scripted_effect = { amount = 2 } 
+				}
+				else_if = {
+					limit = {
+						estate_influence = {
+							estate = estate_nobles
+							influence = 10
+						}
+					}
+					add_mil_power = 50
+					add_manpower = 5
+				}
+			}
+			add_country_modifier = {
+				name = "THE_ROD_support_war_modifier"
+				duration = 36500
+			}
+		}
+	}
+
+	THE_ROD_4_11 = {
+		icon = defend_the_city
+		position = 11
+		required_missions = { THE_ROD_4_10 } 
+		provinces_to_highlight = {
+			province_id = 43
+			OR = {
+				NOT = { owned_by = ROOT } 
+				NOT = { province_has_current_tech_fort_trigger = yes } 
+			}
+		}
+
+		trigger = {
+			has_mil_advisor = yes
+			43 = {
+				owned_by = ROOT
+				province_has_current_tech_fort_trigger = yes
+			}
+		}
+
+		effect = {
+			add_army_tradition = 30
+			43 = { add_or_upgrade_fort_building = yes } 
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_ROD_modifier_from_mil_advisor_tt
+			custom_tooltip = hsa_army_reformer_tt
+			tooltip = {
+				add_country_modifier = {
+					name = "hsa_general_army_reform_modifier"
+					duration = 10950
+				}
+			}
+			custom_tooltip = hsa_army_organiser_tt
+			tooltip = {
+				add_country_modifier = {
+					name = "hsa_general_army_organization_modifier"
+					duration = 10950
+				}
+			}
+			custom_tooltip = hsa_commandant_tt
+			tooltip = {
+				add_country_modifier = {
+					name = "hsa_military_excellence_modifier"
+					duration = 10950
+				}
+			}
+			custom_tooltip = hsa_quartermaster_tt
+			tooltip = {
+				add_country_modifier = {
+					name = "hsa_modernized_supply_lines_modifier"
+					duration = 10950
+				}
+			}
+			custom_tooltip = hsa_recruitmaster_tt
+			tooltip = {
+				add_country_modifier = {
+					name = "hsa_zealous_recruitment_modifier"
+					duration = 10950
+				}
+			}
+			custom_tooltip = hsa_grandcaptain_tt
+			tooltip = {
+				add_country_modifier = {
+					name = "hsa_improved_military_administration_modifier"
+					duration = 10950
+				}
+			}
+			custom_tooltip = hsa_fortification_expert_tt
+			tooltip = {
+				add_country_modifier = {
+					name = "hsa_fortification_efforts_modifier"
+					duration = 10950
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { army_reformer = 1 } 
+					add_country_modifier = {
+						name = "hsa_general_army_reform_modifier"
+						duration = 10950
+					}
+				}
+				else_if = {
+					limit = { army_organiser = 1 } 
+					add_country_modifier = {
+						name = "hsa_general_army_organization_modifier"
+						duration = 10950
+					}
+				}
+				else_if = {
+					limit = { commandant = 1 } 
+					add_country_modifier = {
+						name = "hsa_military_excellence_modifier"
+						duration = 10950
+					}
+				}
+				else_if = {
+					limit = { quartermaster = 1 } 
+					add_country_modifier = {
+						name = "hsa_modernized_supply_lines_modifier"
+						duration = 10950
+					}
+				}
+				else_if = {
+					limit = { recruitmaster = 1 } 
+					add_country_modifier = {
+						name = "hsa_zealous_recruitment_modifier"
+						duration = 10950
+					}
+				}
+				else_if = {
+					limit = { grand_captain = 1 } 
+					add_country_modifier = {
+						name = "hsa_improved_military_administration_modifier"
+						duration = 10950
+					}
+				}
+				else_if = {
+					limit = { fortification_expert = 1 } 
+					add_country_modifier = {
+						name = "hsa_fortification_efforts_modifier"
+						duration = 10950
+					}
+				}
+			}
+		}
+	}
+
+	THE_ROD_4_12 = {
+		icon = fortify_malta
+		position = 12
+		required_missions = { THE_ROD_4_11 } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			any_neighbor_province = { NOT = { owned_by = ROOT }  } 
+			OR = {
+				NOT = { province_has_current_tech_fort_trigger = yes } 
+				NOT = { has_state_edict = edict_defensive_edict } 
+			}
+		}
+
+		trigger = {
+			OR = {
+				fortification_expert = 3
+				full_idea_group = defensive_ideas
+			}
+			num_of_owned_provinces_with = {
+				value = 5
+				custom_trigger_tooltip = {
+					tooltip = THE_ROD_is_border_province_ttt
+					any_neighbor_province = { NOT = { owned_by = ROOT }  } 
+				}
+				province_has_current_tech_fort_trigger = yes
+				has_state_edict = edict_defensive_edict
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_ROD_obsidian_modifier"
+				duration = 10950
+			}
+			if = {
+				limit = { full_idea_group = defensive_ideas } 
+				custom_tooltip = THE_ROD_4_12_case1_tt_yes
+				hidden_effect = { add_mil_power = 500 } 
+			}
+			else = { custom_tooltip = THE_ROD_4_12_case1_tt_no } 
+			tooltip = { add_mil_power = 500 } 
+		}
+	}
+
+	THE_ROD_4_13 = {
+		icon = mission_THE_ROD_icon_6
+		position = 13
+		required_missions = {
+			THE_ROD_4_12
+			THE_ROD_5_12
+			THE_ROD_3_12
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					region = baltic_region
+					OR = {
+						NOT = { owned_by = ROOT } 
+						AND = {
+							NOT = { has_fort_building_trigger = yes } 
+							NOT = {
+								any_neighbor_province = {
+									country_or_non_sovereign_subject_holds = ROOT
+									has_fort_building_trigger = yes
+								}
+							}
+						}
+					}
+				}
+				AND = {
+					region = baltic_region
+					has_port = yes
+					OR = {
+						NOT = { owned_by = ROOT } 
+						NOT = { has_coast_defense_building_trigger = yes } 
+					}
+				}
+			}
+		}
+
+		trigger = {
+			baltic_region = {
+				type = all
+				owned_by = ROOT
+				custom_trigger_tooltip = {
+					tooltip = THE_ROD_in_fort_zone_ttt
+					OR = {
+						has_fort_building_trigger = yes
+						any_neighbor_province = {
+							owned_by = ROOT
+							has_fort_building_trigger = yes
+						}
+					}
+				}
+			}
+			baltic_region = {
+				type = all
+				OR = {
+					has_coast_defense_building_trigger = yes
+					has_port = no
+				}
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_ROD_dark_curtain_modifier"
+				duration = -1
+			}
+			custom_tooltip = THE_ROD_enemy_barrage_add_war_exhaustion_tt
+			hidden_effect = { set_country_flag = THE_ROD_enemy_barrage_add_war_exhaustion_flag } 
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = { has_country_modifier = THE_ROD_support_war_modifier } 
+				custom_tooltip = THE_ROD_4_13_case1_tt_yes
+				hidden_effect = {
+					remove_country_modifier = THE_ROD_support_war_modifier
+					add_country_modifier = {
+						name = "THE_ROD_militarization_society_modifier"
+						duration = -1
+					}
+				}
+			}
+			else = { custom_tooltip = THE_ROD_4_13_case1_tt_no } 
+			tooltip = {
+				remove_country_modifier = THE_ROD_support_war_modifier
+				add_country_modifier = {
+					name = "THE_ROD_militarization_society_modifier"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	THE_ROD_4_14 = {
+		icon = an_army_with_a_state
+		position = 14
+		required_missions = { THE_ROD_5_13 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_regiments_at_full_drill = 50
+			OR = {
+				mil_tech = 22
+				num_of_completed_idea_groups_mil = { amount = 2 } 
+			}
+			army_professionalism = 0.5
+			army_tradition = 80
+		}
+
+		effect = {
+			if = {
+				limit = { NOT = { mission_completed = THE_ROD_5_13 }  } 
+				add_army_professionalism = 1
+				add_army_tradition = 100
+				add_mil_tech = 1
+				add_country_modifier = {
+					name = "THE_ROD_lumen_boundary"
+					duration = -1
+				}
+			}
+			else = {
+				add_army_tradition = 20
+				custom_tooltip = THE_ROD_add_general_ability_max_tt
+				hidden_effect = {
+					set_variable = {
+						which = the_rumia_fire_max_var
+						value = 6
+					}
+					set_variable = {
+						which = the_rumia_shock_max_var
+						value = 6
+					}
+					set_variable = {
+						which = the_rumia_manuever_max_var
+						value = 6
+					}
+					set_variable = {
+						which = the_rumia_siege_max_var
+						value = 6
+					}
+				}
+				add_country_modifier = {
+					name = "THE_ROD_ex_darkness_army_modifier"
+					duration = -1
+				}
+				custom_tooltip = THE_ROD_dark_moon_night_stage3_extra_tt
+				custom_tooltip = THE_ROD_dark_moon_night_4_14_1_tt
+				custom_tooltip = THE_ROD_dark_moon_night_stage4_extra_tt
+				custom_tooltip = THE_ROD_dark_moon_night_4_14_2_tt
+			}
+		}
+	}
+
+	THE_ROD_4_15 = {
+		icon = mission_iron_and_copper
+		position = 15
+		required_missions = { THE_ROD_5_14 } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					trade_goods = naval_supplies
+					has_discovered = ROOT
+					ROOT = {
+						NOT = {
+							trading_bonus = {
+								trade_goods = naval_supplies
+								value = yes
+							}
+						}
+					}
+				}
+				AND = {
+					trade_goods = copper
+					has_discovered = ROOT
+					ROOT = {
+						NOT = {
+							trading_bonus = {
+								trade_goods = copper
+								value = yes
+							}
+						}
+					}
+				}
+			}
+		}
+
+		trigger = {
+			navy_size = 50
+			naval_reformer = 3
+			OR = {
+				trading_bonus = {
+					trade_goods = naval_supplies
+					value = yes
+				}
+				trading_bonus = {
+					trade_goods = copper
+					value = yes
+				}
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					trading_bonus = {
+						trade_goods = naval_supplies
+						value = yes
+					}
+				}
+				custom_tooltip = THE_ROD_4_15_case1_tt_yes
+				hidden_effect = {
+					add_country_modifier = {
+						name = "THE_ROD_improved_body_modifier"
+						duration = 10950
+					}
+				}
+			}
+			else = { custom_tooltip = THE_ROD_4_15_case1_tt_no } 
+			tooltip = {
+				add_country_modifier = {
+					name = "THE_ROD_improved_body_modifier"
+					duration = 10950
+				}
+			}
+			if = {
+				limit = {
+					trading_bonus = {
+						trade_goods = copper
+						value = yes
+					}
+				}
+				custom_tooltip = THE_ROD_4_15_case2_tt_yes
+				hidden_effect = {
+					add_country_modifier = {
+						name = "THE_ROD_improved_artillery_modifier"
+						duration = 10950
+					}
+				}
+			}
+			else = { custom_tooltip = THE_ROD_4_15_case2_tt_no } 
+			tooltip = {
+				add_country_modifier = {
+					name = "THE_ROD_improved_artillery_modifier"
+					duration = 10950
+				}
+			}
+			if = {
+				limit = {
+					trading_bonus = {
+						trade_goods = naval_supplies
+						value = yes
+					}
+					trading_bonus = {
+						trade_goods = copper
+						value = yes
+					}
+				}
+				custom_tooltip = THE_ROD_4_15_case3_tt_yes
+				hidden_effect = {
+					add_country_modifier = {
+						name = "THE_ROD_new_navy_modifier"
+						duration = 10950
+					}
+				}
+			}
+			else = { custom_tooltip = THE_ROD_4_15_case3_tt_no } 
+			tooltip = {
+				add_country_modifier = {
+					name = "THE_ROD_new_navy_modifier"
+					duration = 10950
+				}
+			}
+		}
+	}
+
+	THE_ROD_4_16 = {
+		icon = mission_weather_fog
+		position = 16
+		required_missions = { THE_ROD_4_15 } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			has_port = yes
+			NOT = { has_shipyard_building_trigger = yes } 
+		}
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 20
+				has_shipyard_building_trigger = yes
+				all_neighbor_province = {
+					owned_by = ROOT
+					OR = {
+						NOT = { has_port = yes } 
+						has_shipyard_building_trigger = yes
+					}
+				}
+			}
+		}
+
+		effect = {
+			add_navy_tradition = 30
+			add_army_professionalism = 0.1
+			add_country_modifier = {
+				name = "THE_ROD_dusk_plan_modifier"
+				duration = -1
+			}
+			if = {
+				limit = {
+					OR = {
+						has_country_modifier = THE_ROD_improved_body_modifier
+						has_country_modifier = THE_ROD_improved_artillery_modifier
+						has_country_modifier = THE_ROD_new_navy_modifier
+					}
+				}
+				custom_tooltip = THE_ROD_4_16_case1_tt_yes
+			}
+			else = { custom_tooltip = THE_ROD_4_16_case1_tt_no } 
+			custom_tooltip = THE_ROD_4_16_case1_tt
+			hidden_effect = {
+				if = {
+					limit = { has_country_modifier = THE_ROD_improved_body_modifier } 
+					remove_country_modifier = THE_ROD_improved_body_modifier
+					add_country_modifier = {
+						name = "THE_ROD_improved_body_modifier"
+						duration = -1
+					}
+				}
+				if = {
+					limit = { has_country_modifier = THE_ROD_improved_artillery_modifier } 
+					remove_country_modifier = THE_ROD_improved_artillery_modifier
+					add_country_modifier = {
+						name = "THE_ROD_improved_artillery_modifier"
+						duration = -1
+					}
+				}
+				if = {
+					limit = { has_country_modifier = THE_ROD_new_navy_modifier } 
+					remove_country_modifier = THE_ROD_new_navy_modifier
+					add_country_modifier = {
+						name = "THE_ROD_new_navy_modifier"
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+
+	THE_ROD_4_17 = {
+		icon = arm_proclaim_great_armenia
+		position = 17
+		provinces_to_highlight = {
+			region = north_german_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			stability = 3
+			prestige = 80
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 40
+				OR = { region = north_german_region } 
+			}
+			mission_completed = THE_ROD_3_9
+			mission_completed = THE_ROD_2_15
+		}
+
+		effect = {
+			add_prestige_or_monarch_power = { amount = 20 } 
+			add_legitimacy_equivalent = {
+				amount = 100
+				republican_tradition = 50
+			}
+			change_government_reform_progress = 300
+			custom_tooltip = THE_ROD_unlock_pax_youkai_in_german_reform_tt
+			tooltip = { add_government_reform = THE_ROD_pax_youkai_in_german_reform } 
+			hidden_effect = { set_country_flag = THE_ROD_unlock_pax_youkai_in_german_reform_flag } 
+			custom_tooltip = empty_line_tt
+			low_countries_region = { add_permanent_claim = ROOT } 
+			south_german_region = { add_permanent_claim = ROOT } 
+			every_country = {
+				limit = {
+					is_elector = yes
+					NOT = { is_subject_of = ROOT } 
+				}
+				ROOT = {
+					add_casus_belli = {
+						type = cb_vassalize_mission
+						target = PREV
+						months = 600
+					}
+				}
+			}
+		}
+	}
+
+	THE_ROD_4_18 = {
+		icon = mission_dismantle_hre
+		position = 18
+		required_missions = { THE_ROD_4_17 } 
+		provinces_to_highlight = {
+			owner = { is_part_of_hre = yes } 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = { NOT = { hre_size = 1 }  } 
+
+		effect = {
+			if = {
+				limit = { NOT = { government_rank = 3 }  } 
+				set_government_rank_force = 3
+			}
+			add_permanent_power_projection = {
+				amount = 25
+				type = 25_permanent_power_projection
+			}
+			italy_region = { add_permanent_claim = ROOT } 
+			carpathia_region = { add_permanent_claim = ROOT } 
+			balkan_region = { add_permanent_claim = ROOT } 
+			add_country_modifier = {
+				name = "THE_ROD_dark_erode_empire_modifier"
+				duration = -1
+			}
+			custom_tooltip = THE_ROD_siege_won_add_core_in_german_tt
+			hidden_effect = { set_country_flag = THE_ROD_siege_won_add_core_in_german_flag } 
+		}
+	}
+
+	THE_ROD_4_19 = {
+		icon = italian_riches
+		position = 19
+		required_missions = { THE_ROD_4_18 } 
+		provinces_to_highlight = {
+			region = italy_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				region = italy_region
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_ROD_ita_realm_modifier"
+				duration = -1
+			}
+		}
+	}
+
+	THE_ROD_4_20 = {
+		icon = mission_THE_ROD_icon_13
+		position = 20
+		required_missions = {
+			THE_ROD_3_19
+			THE_ROD_5_19
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			mission_completed = THE_ROD_4_14
+			mission_completed = THE_ROD_2_16
+			OR = {
+				mission_completed = THE_ROD_2_20_hakurei
+				mission_completed = THE_ROD_2_20_catholic
+			}
+			has_government_power = {
+				mechanic_type = THE_ROD_dark_moon_night_mechanic
+				power_type = THE_ROD_government_mechanic_power
+				value = 100
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_ROD_eternal_darkness"
+				duration = -1
+			}
+			custom_tooltip = THE_ROD_disable_rod_ger_name_tt
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_ROD_remove_government_mechanic_trigger_tt
+			hidden_effect = {
+				restore_country_name = "yes"
+				set_country_flag = THE_ROD_remove_government_mechanic_trigger_flag
+				set_country_flag = THE_ROD_disable_rod_ger_decision_flag
+			}
+		}
+	}
+}
+THE_ROD_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = ROD } 
+
+	THE_ROD_5_1 = {
+		icon = ansbach_succession
+		position = 1
+		provinces_to_highlight = { is_capital_of = emperor } 
+
+		trigger = {
+			OR = {
+				AND = {
+					NOT = { war_with = emperor } 
+					emperor = {
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = improved_relation
+						}
+					}
+				}
+				NOT = { hre_size = 1 } 
+			}
+		}
+
+		effect = {
+			emperor = {
+				add_opinion = {
+					who = ROOT
+					modifier = sent_gift
+				}
+			}
+			add_prestige = 10
+		}
+	}
+
+	THE_ROD_5_3 = {
+		icon = join_the_empire
+		position = 3
+		required_missions = { THE_ROD_5_1 } 
+		provinces_to_highlight = { is_capital_of = emperor } 
+
+		trigger = {
+			OR = {
+				AND = {
+					is_part_of_hre = yes
+					NOT = { war_with = emperor } 
+					emperor = {
+						has_opinion = {
+							who = ROOT
+							value = 50
+						}
+					}
+				}
+				NOT = { hre_size = 1 } 
+			}
+		}
+
+		effect = {
+			custom_tooltip = THE_ROD_gain_1000_manpower_from_hre_country_tt
+			hidden_effect = {
+				every_country = {
+					limit = {
+						is_part_of_hre = yes
+						has_opinion = {
+							who = ROOT
+							value = 0
+						}
+					}
+					ROOT = {
+						add_manpower = 0.5
+						add_treasury = 1
+					}
+				}
+			}
+			add_country_modifier = {
+				name = "THE_ROD_empire_mercenary_modifier"
+				duration = 10950
+			}
+			if = {
+				limit = { hre_size = 1 } 
+				custom_tooltip = THE_ROD_gain_point_base_on_emperor_opinion_tt
+				hidden_effect = {
+					export_to_variable = {
+						variable_name = "the_rod_emperor_opinion_var"
+						value = opinion
+						who = emperor
+					}
+					while = {
+						limit = {
+							check_variable = {
+								which = the_rod_emperor_opinion_var
+								value = 1
+							}
+						}
+						random_list = {
+							1 = { add_adm_power = 1 } 
+							1 = { add_dip_power = 1 } 
+							1 = { add_mil_power = 1 } 
+						}
+						subtract_variable = {
+							which = the_rod_emperor_opinion_var
+							value = 1
+						}
+					}
+				}
+			}
+		}
+	}
+
+	THE_ROD_5_4 = {
+		icon = mission_book_of_royal_degrees
+		position = 4
+		provinces_to_highlight = {
+			is_capital = yes
+			owner = {
+				OR = {
+					is_emperor = yes
+					is_elector = yes
+				}
+			}
+		}
+
+		trigger = {
+			OR = {
+				advisor = statesman
+				advisor = diplomat
+			}
+			if = {
+				limit = { hre_size = 1 } 
+				OR = {
+					alliance_with = emperor
+					calc_true_if = {
+						all_country = {
+							is_elector = yes
+							OR = {
+								is_subject_of = ROOT
+								alliance_with = ROOT
+							}
+						}
+						amount = 2
+					}
+				}
+			}
+			else = {
+				OR = {
+					calc_true_if = {
+						all_country = {
+							capital_scope = {
+								OR = {
+									region = north_german_region
+									region = south_german_region
+								}
+							}
+							marriage_with = ROOT
+						}
+						amount = 2
+					}
+					all_country = {
+						NOT = {
+							capital_scope = {
+								OR = {
+									region = north_german_region
+									region = south_german_region
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_ROD_hre_diplomat_modifier"
+				duration = -1
+			}
+			if = {
+				limit = { marriage_with = emperor } 
+				custom_tooltip = THE_ROD_5_4_case1_tt_yes
+				hidden_effect = {
+					every_country = {
+						limit = { is_part_of_hre = yes } 
+						add_trust = {
+							who = ROOT
+							value = 10
+							mutual = yes
+						}
+					}
+				}
+			}
+			else = { custom_tooltip = THE_ROD_5_4_case1_tt_no } 
+			custom_tooltip = THE_ROD_5_4_case1_tt
+		}
+	}
+
+	THE_ROD_5_6 = {
+		icon = mission_THE_ROD_icon_4
+		position = 6
+		required_missions = { THE_ROD_5_4 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			any_ally = {
+				trust = {
+					who = ROOT
+					value = 75
+				}
+			}
+			OR = {
+				num_of_subjects = 3
+				num_of_estate_agendas_completed = {
+					estate = estate_nobles
+					value = 3
+				}
+			}
+			reform_level = 2
+		}
+
+		effect = {
+			change_government_reform_progress = 300
+			hidden_effect = { set_country_flag = THE_ROD_unlock_nightingale_reform_flag } 
+			if = {
+				limit = { government = monarchy } 
+				add_government_reform = THE_ROD_nightingale_reform
+			}
+			else = { custom_tooltip = THE_ROD_unlock_nightingale_reform_tt } 
+		}
+	}
+
+	THE_ROD_5_8 = {
+		icon = mission_THE_ROD_icon_5
+		position = 8
+		required_missions = { THE_ROD_5_6 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			calc_true_if = {
+				all_ally = {
+					trust = {
+						who = ROOT
+						value = 100
+					}
+				}
+				amount = 3
+			}
+			has_reform = THE_ROD_apparitions_stalk_the_night_monarchy
+		}
+
+		effect = {
+			custom_tooltip = THE_ROD_unlock_province_button_tt
+			custom_tooltip = THE_ROD_interface2_extra_effect_tt
+			hidden_effect = {
+				set_country_flag = THE_ROD_unlock_province_button_flag
+				set_country_flag = THE_ROD_interface2_extra_effect_flag
+				set_variable = {
+					which = the_rod_moon_song_var
+					value = 0
+				}
+			}
+		}
+	}
+
+	THE_ROD_5_10 = {
+		icon = mission_THE_ROD_icon_7
+		position = 10
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			is_year = 1445
+			has_reform = THE_ROD_apparitions_stalk_the_night_monarchy
+		}
+
+		effect = {
+			custom_tooltip = THE_ROD_unlock_rumia_become_general_tt
+			set_country_flag = THE_ROD_unlock_rumia_become_general_flag
+			hidden_effect = {
+				set_variable = {
+					which = the_rod_rumia_battle_win_var
+					value = 0
+				}
+				set_variable = {
+					which = the_rumia_fire_var
+					value = 1
+				}
+				set_variable = {
+					which = the_rumia_shock_var
+					value = 1
+				}
+				set_variable = {
+					which = the_rumia_manuever_var
+					value = 1
+				}
+				set_variable = {
+					which = the_rumia_siege_var
+					value = 1
+				}
+				set_variable = {
+					which = the_rumia_fire_max_var
+					value = 4
+				}
+				set_variable = {
+					which = the_rumia_shock_max_var
+					value = 4
+				}
+				set_variable = {
+					which = the_rumia_manuever_max_var
+					value = 4
+				}
+				set_variable = {
+					which = the_rumia_siege_max_var
+					value = 4
+				}
+			}
+		}
+	}
+
+	THE_ROD_5_12 = {
+		icon = mission_THE_ROD_icon_8
+		position = 12
+		required_missions = { THE_ROD_5_10 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_ROD_has_general_rumia_ttt
+				THE_ROD_has_rumia_general = yes
+			}
+			monthly_mil = 12
+			OR = {
+				national_focus = MIL
+				has_mil_advisor_of_level = { level = 5 } 
+			}
+		}
+
+		effect = {
+			custom_tooltip = THE_ROD_rumia_general_1_tt
+			custom_tooltip = THE_ROD_rumia_general_add_all_ability_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							check_variable = {
+								which = the_rumia_fire_var
+								which = the_rumia_fire_max_var
+							}
+						}
+					}
+					change_variable = {
+						which = the_rumia_fire_var
+						value = 1
+					}
+				}
+				else = { add_mil_power = 100 } 
+				if = {
+					limit = {
+						NOT = {
+							check_variable = {
+								which = the_rumia_shock_var
+								which = the_rumia_shock_max_var
+							}
+						}
+					}
+					change_variable = {
+						which = the_rumia_shock_var
+						value = 1
+					}
+				}
+				else = { add_mil_power = 100 } 
+				if = {
+					limit = {
+						NOT = {
+							check_variable = {
+								which = the_rumia_manuever_var
+								which = the_rumia_manuever_max_var
+							}
+						}
+					}
+					change_variable = {
+						which = the_rumia_manuever_var
+						value = 1
+					}
+				}
+				else = { add_mil_power = 100 } 
+				if = {
+					limit = {
+						NOT = {
+							check_variable = {
+								which = the_rumia_siege_var
+								which = the_rumia_siege_max_var
+							}
+						}
+					}
+					change_variable = {
+						which = the_rumia_siege_var
+						value = 1
+					}
+				}
+				else = { add_mil_power = 100 } 
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_ROD_dark_moon_night_stage1_extra_tt
+			custom_tooltip = THE_ROD_dark_moon_night_5_12_1_tt
+			custom_tooltip = THE_ROD_dark_moon_night_stage2_extra_tt
+			custom_tooltip = THE_ROD_dark_moon_night_5_12_2_tt
+		}
+	}
+
+	THE_ROD_5_13 = {
+		icon = mission_THE_ROD_icon_9
+		position = 13
+		required_missions = { THE_ROD_5_12 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			check_variable = {
+				which = the_rod_rumia_battle_win_var
+				value = 20
+			}
+			has_global_modifier_value = {
+				which = discipline
+				value = 0.15
+			}
+		}
+
+		effect = {
+			custom_tooltip = THE_ROD_rumia_general_2_tt
+			custom_tooltip = THE_ROD_rumia_general_add_all_ability_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							check_variable = {
+								which = the_rumia_fire_var
+								which = the_rumia_fire_max_var
+							}
+						}
+					}
+					change_variable = {
+						which = the_rumia_fire_var
+						value = 1
+					}
+				}
+				else = { add_mil_power = 100 } 
+				if = {
+					limit = {
+						NOT = {
+							check_variable = {
+								which = the_rumia_shock_var
+								which = the_rumia_shock_max_var
+							}
+						}
+					}
+					change_variable = {
+						which = the_rumia_shock_var
+						value = 1
+					}
+				}
+				else = { add_mil_power = 100 } 
+				if = {
+					limit = {
+						NOT = {
+							check_variable = {
+								which = the_rumia_manuever_var
+								which = the_rumia_manuever_max_var
+							}
+						}
+					}
+					change_variable = {
+						which = the_rumia_manuever_var
+						value = 1
+					}
+				}
+				else = { add_mil_power = 100 } 
+				if = {
+					limit = {
+						NOT = {
+							check_variable = {
+								which = the_rumia_siege_var
+								which = the_rumia_siege_max_var
+							}
+						}
+					}
+					change_variable = {
+						which = the_rumia_siege_var
+						value = 1
+					}
+				}
+				else = { add_mil_power = 100 } 
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_ROD_more_darkness_manipulation_form_battle_tt
+			set_country_flag = THE_ROD_more_darkness_manipulation_form_battle_flag
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = "THE_ROD_yoiyami_modifier"
+				duration = -1
+			}
+		}
+	}
+
+	THE_ROD_5_14 = {
+		icon = mission_aragonese_navy
+		position = 14
+		provinces_to_highlight = {
+			province_id = 43
+			OR = {
+				NOT = { owned_by = ROOT } 
+				NOT = { has_dock_building_trigger = yes } 
+			}
+		}
+
+		trigger = {
+			OR = {
+				num_of_heavy_ship = 10
+				navy_size_percentage = 1.0
+			}
+			43 = {
+				owned_by = ROOT
+				has_dock_building_trigger = yes
+			}
+		}
+
+		effect = {
+			43 = {
+				add_or_upgrade_dock_building = yes
+				add_or_upgrade_shipyard_building = yes
+				add_permanent_province_modifier = {
+					name = "THE_ROD_danzig_navy_part"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	THE_ROD_5_16 = {
+		icon = mission_explore_the_world
+		position = 16
+		required_missions = { THE_ROD_5_14 } 
+		provinces_to_highlight = {  } 
+
+		trigger = { has_institution = new_world_i } 
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_ROD_new_world_modifier"
+				duration = 36500
+			}
+		}
+	}
+
+	THE_ROD_5_17 = {
+		icon = mission_plc_proclaim_polish_hegemony
+		position = 17
+		provinces_to_highlight = {
+			OR = {
+				owned_by = POL
+				owned_by = LIT
+				owned_by = PLC
+				AND = {
+					OR = {
+						region = poland_region
+						region = ruthenia_region
+					}
+					NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+				}
+			}
+		}
+
+		trigger = {
+			if = {
+				limit = { exists = POL } 
+				NOT = { exists = POL } 
+			}
+			if = {
+				limit = { exists = LIT } 
+				NOT = { exists = LIT } 
+			}
+			if = {
+				limit = { exists = PLC } 
+				NOT = { exists = PLC } 
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 40
+				OR = {
+					region = poland_region
+					region = ruthenia_region
+				}
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_ROD_partition_poland_modifier"
+				duration = 10950
+			}
+			if = {
+				limit = {
+					poland_region = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				custom_tooltip = THE_ROD_5_17_case1_tt_yes
+				hidden_effect = {
+					remove_country_modifier = THE_ROD_partition_poland_modifier
+					add_country_modifier = {
+						name = "THE_ROD_partition_poland_modifier"
+						duration = -1
+					}
+				}
+			}
+			else = { custom_tooltip = THE_ROD_5_17_case1_tt_no } 
+			custom_tooltip = THE_ROD_5_17_case1_tt
+		}
+	}
+
+	THE_ROD_5_18 = {
+		icon = mission_plc_break_the_rus
+		position = 18
+		required_missions = {
+			THE_ROD_4_17
+			THE_ROD_5_17
+		}
+		provinces_to_highlight = {
+			region = russia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				region = russia_region
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_ROD_rus_realm_modifier"
+				duration = -1
+			}
+		}
+	}
+
+	THE_ROD_5_19 = {
+		icon = mission_touhou_th_more_shrines
+		position = 19
+		required_missions = { THE_ROD_4_18 } 
+		provinces_to_highlight = {
+			OR = {
+				superregion = gensokyo_superregion
+				superregion = gensokyo_orbit_superregion
+			}
+			NOT = { owned_by = ROOT } 
+		}
+
+		trigger = {
+			any_owned_province = {
+				OR = {
+					superregion = gensokyo_superregion
+					superregion = gensokyo_orbit_superregion
+				}
+			}
+		}
+
+		effect = {
+			add_stability = 6
+			add_adm_power = 1000
+			add_dip_power = 1000
+			add_mil_power = 1000
+		}
+	}
+}
+THE_ROD_branch_lock_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = ROD
+		NOT = { has_country_flag = THE_ROD_unlock_catholic_mission_flag } 
+		NOT = { has_country_flag = THE_ROD_unlock_hakurei_mission_flag } 
+	}
+
+	THE_ROD_1_18_lock = {
+		icon = mission_unknown_mission
+		position = 18
+		required_missions = { THE_ROD_1_17 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_ROD_branch_mission_ttt
+				always = no
+			}
+		}
+
+		effect = { custom_tooltip = THE_ROD_branch_mission_ttt } 
+	}
+
+	THE_ROD_1_19_lock = {
+		icon = mission_unknown_mission
+		position = 19
+		required_missions = { THE_ROD_1_18_lock } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_ROD_branch_mission_ttt
+				always = no
+			}
+		}
+
+		effect = { custom_tooltip = THE_ROD_branch_mission_ttt } 
+	}
+}
+THE_ROD_branch_lock_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = ROD
+		NOT = { has_country_flag = THE_ROD_unlock_catholic_mission_flag } 
+		NOT = { has_country_flag = THE_ROD_unlock_hakurei_mission_flag } 
+	}
+
+	THE_ROD_2_18_lock = {
+		icon = mission_unknown_mission
+		position = 18
+		required_missions = { THE_ROD_1_17 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_ROD_branch_mission_ttt
+				always = no
+			}
+		}
+
+		effect = { custom_tooltip = THE_ROD_branch_mission_ttt } 
+	}
+
+	THE_ROD_2_19_lock = {
+		icon = mission_unknown_mission
+		position = 19
+		required_missions = { THE_ROD_2_18_lock } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_ROD_branch_mission_ttt
+				always = no
+			}
+		}
+
+		effect = { custom_tooltip = THE_ROD_branch_mission_ttt } 
+	}
+
+	THE_ROD_2_20_lock = {
+		icon = mission_unknown_mission
+		position = 20
+		required_missions = {
+			THE_ROD_1_19_lock
+			THE_ROD_2_19_lock
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_ROD_branch_mission_ttt
+				always = no
+			}
+		}
+
+		effect = { custom_tooltip = THE_ROD_branch_mission_ttt } 
+	}
+}
+THE_ROD_branch_catholic_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = ROD
+		has_country_flag = THE_ROD_unlock_catholic_mission_flag
+		NOT = { has_country_flag = THE_ROD_unlock_hakurei_mission_flag } 
+	}
+
+	THE_ROD_1_18_catholic = {
+		icon = chivalry_is_not_dead
+		position = 18
+		required_missions = { THE_ROD_1_17 } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					is_capital_of = PAP
+					exists = PAP
+				}
+				AND = {
+					owned_by = ROOT
+					NOT = { religion = catholic } 
+					NOT = { exists = PAP } 
+				}
+			}
+		}
+
+		trigger = {
+			religion = catholic
+			if = {
+				limit = { exists = PAP } 
+				PAP = {
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+				}
+			}
+			else = { religious_unity = 1.0 } 
+		}
+
+		effect = {
+			add_papal_influence = 100
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 10
+			}
+			add_country_modifier = {
+				name = "THE_ROD_christian_world_modifier"
+				duration = -1
+			}
+		}
+	}
+
+	THE_ROD_1_19_catholic = {
+		icon = mlo_renaissance_city
+		position = 19
+		required_missions = { THE_ROD_1_18_catholic } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			religion = catholic
+			NOT = { current_age = age_of_discovery } 
+			OR = {
+				full_idea_group = theocracy_gov_ideas
+				full_idea_group = religious_ideas
+				num_of_estate_agendas_completed = {
+					estate = estate_church
+					value = 5
+				}
+			}
+		}
+
+		effect = {
+			THE_add_ruler_stat = {
+				stat = adm
+				value = 1
+			}
+			add_historical_friend = PAP
+			PAP = { add_historical_friend = ROOT } 
+			if = {
+				limit = {
+					OR = {
+						current_age = age_of_discovery
+						current_age = age_of_reformation
+					}
+				}
+				add_country_modifier_for_age = {
+					name = "THE_ROD_dark_executer_modifier"
+					age = age_of_reformation
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = "THE_ROD_dark_executer_modifier"
+					duration = 7300
+				}
+			}
+			custom_tooltip = THE_ROD_change_religion_conversion_center_to_catholic_tt
+		}
+	}
+}
+THE_ROD_branch_catholic_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = ROD
+		has_country_flag = THE_ROD_unlock_catholic_mission_flag
+		NOT = { has_country_flag = THE_ROD_unlock_hakurei_mission_flag } 
+	}
+
+	THE_ROD_2_18_catholic = {
+		icon = hand-picked_bureaucrats
+		position = 18
+		required_missions = { THE_ROD_1_17 } 
+		provinces_to_highlight = {
+			province_id = 43
+			OR = {
+				NOT = { owned_by = ROOT } 
+				NOT = { has_tax_building_trigger = yes } 
+			}
+		}
+
+		trigger = {
+			religion = catholic
+			OR = {
+				is_papal_controller = yes
+				num_of_owned_provinces_with = {
+					has_cardinal = yes
+					value = 3
+				}
+			}
+			43 = {
+				owned_by = ROOT
+				has_tax_building_trigger = yes
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						num_of_owned_provinces_with = {
+							has_cardinal = yes
+							value = 7
+						}
+					}
+				}
+				if = {
+					limit = {
+						43 = {
+							religion = catholic
+							NOT = { has_cardinal = yes } 
+						}
+					}
+					43 = { add_cardinal = yes } 
+				}
+				else = {
+					random_owned_province = {
+						limit = {
+							religion = catholic
+							NOT = { has_cardinal = yes } 
+						}
+						add_cardinal = yes
+					}
+				}
+			}
+			43 = {
+				add_or_upgrade_tax_building = yes
+				add_permanent_province_modifier = {
+					name = "THE_ROD_danzig_papal_palace_province_modifier"
+					duration = 10950
+				}
+			}
+		}
+	}
+
+	THE_ROD_2_19_catholic = {
+		icon = show_piety
+		position = 19
+		required_missions = { THE_ROD_2_18_catholic } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			has_cardinal = yes
+		}
+
+		trigger = {
+			religion = catholic
+			num_of_owned_provinces_with = {
+				has_cardinal = yes
+				value = 5
+			}
+			OR = {
+				owns = 118
+				AND = {
+					alliance_with = PAP
+					PAP = {
+						trust = {
+							who = ROOT
+							value = 100
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			change_government_reform_progress = 300
+			custom_tooltip = THE_ROD_unlock_darknedd_diocese_reform_tt
+			tooltip = { add_government_reform = THE_ROD_darknedd_diocese_reform } 
+			hidden_effect = { set_country_flag = THE_ROD_unlock_darknedd_diocese_reform_flag } 
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = { any_owned_province = { has_province_modifier = THE_ROD_danzig_papal_palace_province_modifier }  } 
+				custom_tooltip = THE_ROD_2_19_catholic_tt_yes
+			}
+			else = { custom_tooltip = THE_ROD_2_19_catholic_tt_no } 
+			custom_tooltip = THE_ROD_2_19_catholic_tt
+			hidden_effect = {
+				random_owned_province = {
+					limit = { has_province_modifier = THE_ROD_danzig_papal_palace_province_modifier } 
+					remove_province_modifier = THE_ROD_danzig_papal_palace_province_modifier
+					add_permanent_province_modifier = {
+						name = "THE_ROD_danzig_papal_palace_province_modifier"
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+
+	THE_ROD_2_20_catholic = {
+		icon = mission_THE_ROD_icon_11
+		position = 20
+		required_missions = {
+			THE_ROD_1_19_catholic
+			THE_ROD_2_19_catholic
+		}
+		provinces_to_highlight = {
+			owner = {
+				religion_group = christian
+				total_development = ROOT
+			}
+		}
+
+		trigger = {
+			religion = catholic
+			all_country = {
+				OR = {
+					NOT = { religion_group = christian } 
+					NOT = { total_development = ROOT } 
+				}
+			}
+			has_global_modifier_value = {
+				which = tolerance_own
+				value = 10
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_ROD_saint_rumia_modifier"
+				duration = -1
+			}
+			custom_tooltip = THE_ROD_rome_without_debuff_tt
+			hidden_effect = { set_country_flag = general_flag_Rome_flag } 
+		}
+	}
+}
+THE_ROD_branch_hakurei_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = ROD
+		NOT = { has_country_flag = THE_ROD_unlock_catholic_mission_flag } 
+		has_country_flag = THE_ROD_unlock_hakurei_mission_flag
+	}
+
+	THE_ROD_1_18_hakurei = {
+		icon = mission_touhou_shrines
+		position = 18
+		required_missions = { THE_ROD_1_17 } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { religion = ROOT } 
+		}
+
+		trigger = {
+			religion = th_hakureishinto
+			religious_unity = 0.9
+			has_global_modifier_value = {
+				which = global_missionary_strength
+				value = 0.15
+			}
+		}
+
+		effect = {
+			THE_ROD_modify_youkai_way_scripted_effect = yes
+			if = {
+				limit = { NOT = { ruler_religion = th_hakureishinto }  } 
+				set_ruler_religion = th_hakureishinto
+			}
+			add_country_modifier = {
+				name = "THE_ROD_beginner_witch_modifier"
+				duration = 10950
+			}
+		}
+	}
+
+	THE_ROD_1_19_hakurei = {
+		icon = mission_touhou_shinki
+		position = 19
+		required_missions = { THE_ROD_1_18_hakurei } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			religion = th_hakureishinto
+			custom_trigger_tooltip = {
+				tooltip = THE_ROD_has_any_personal_deity_ttt
+				OR = {
+					has_personal_deity = Hakurei_God
+					has_personal_deity = Yukari
+					has_personal_deity = Hecatia
+					has_personal_deity = Okina
+					has_personal_deity = Larva
+					has_personal_deity = Aki_Sisters
+					has_personal_deity = Junko
+					has_personal_deity = Kishin
+					has_personal_deity = Shinki
+					has_personal_deity = Keiki
+					has_personal_deity = Hina
+					has_personal_deity = Kutaka
+				}
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				religion = th_hakureishinto
+			}
+		}
+
+		effect = {
+			THE_ROD_modify_youkai_way_scripted_effect = yes
+			custom_tooltip = THE_ROD_add_personal_deity_same_modifier_tt
+			THE_ROD_add_personal_deity_same_modifier_scripted_effect = yes
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = { has_country_modifier = THE_ROD_beginner_witch_modifier } 
+				custom_tooltip = THE_ROD_1_19_hakurei_tt_yes
+			}
+			else = { custom_tooltip = THE_ROD_1_19_hakurei_tt_no } 
+			tooltip = { custom_tooltip = THE_ROD_1_19_hakurei_tt } 
+			hidden_effect = {
+				if = {
+					limit = { has_country_modifier = THE_ROD_beginner_witch_modifier } 
+					remove_country_modifier = THE_ROD_beginner_witch_modifier
+					add_country_modifier = {
+						name = "THE_ROD_beginner_witch_modifier"
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+}
+THE_ROD_branch_hakurei_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = ROD
+		NOT = { has_country_flag = THE_ROD_unlock_catholic_mission_flag } 
+		has_country_flag = THE_ROD_unlock_hakurei_mission_flag
+	}
+
+	THE_ROD_2_18_hakurei = {
+		icon = mission_hanseatic_city
+		position = 18
+		required_missions = { THE_ROD_1_17 } 
+		provinces_to_highlight = {
+			province_id = 43
+			OR = {
+				NOT = { owned_by = ROOT } 
+				NOT = { has_tax_building_trigger = yes } 
+			}
+		}
+
+		trigger = {
+			religion = th_hakureishinto
+			if = {
+				limit = { has_estate = estate_church } 
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 60
+				}
+			}
+			if = {
+				limit = { has_estate = estate_burghers } 
+				estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 60
+				}
+			}
+			43 = {
+				owned_by = ROOT
+				has_tax_building_trigger = yes
+			}
+		}
+
+		effect = {
+			THE_ROD_modify_youkai_way_scripted_effect = yes
+			43 = {
+				add_or_upgrade_tax_building = yes
+				add_province_triggered_modifier = THE_ROD_holy_city_danzig_province_triggered_modifier
+			}
+			if = {
+				limit = { full_idea_group = religious_ideas } 
+				custom_tooltip = THE_ROD_2_18_hakurei_tt_yes
+			}
+			else = { custom_tooltip = THE_ROD_2_18_hakurei_tt_no } 
+			tooltip = {
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = 20
+				}
+				custom_tooltip = THE_ROD_2_18_hakurei_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = { full_idea_group = religious_ideas } 
+					add_estate_loyalty = {
+						estate = estate_church
+						loyalty = 20
+					}
+					if = {
+						limit = {
+							num_of_estate_privileges = {
+								estate = estate_church
+								value = 10
+							}
+						}
+						add_adm_power = 1000
+					}
+					else_if = {
+						limit = {
+							num_of_estate_privileges = {
+								estate = estate_church
+								value = 9
+							}
+						}
+						add_adm_power = 900
+					}
+					else_if = {
+						limit = {
+							num_of_estate_privileges = {
+								estate = estate_church
+								value = 8
+							}
+						}
+						add_adm_power = 800
+					}
+					else_if = {
+						limit = {
+							num_of_estate_privileges = {
+								estate = estate_church
+								value = 7
+							}
+						}
+						add_adm_power = 700
+					}
+					else_if = {
+						limit = {
+							num_of_estate_privileges = {
+								estate = estate_church
+								value = 6
+							}
+						}
+						add_adm_power = 600
+					}
+					else_if = {
+						limit = {
+							num_of_estate_privileges = {
+								estate = estate_church
+								value = 5
+							}
+						}
+						add_adm_power = 500
+					}
+					else_if = {
+						limit = {
+							num_of_estate_privileges = {
+								estate = estate_church
+								value = 4
+							}
+						}
+						add_adm_power = 400
+					}
+					else_if = {
+						limit = {
+							num_of_estate_privileges = {
+								estate = estate_church
+								value = 3
+							}
+						}
+						add_adm_power = 300
+					}
+					else_if = {
+						limit = {
+							num_of_estate_privileges = {
+								estate = estate_church
+								value = 2
+							}
+						}
+						add_adm_power = 200
+					}
+					else_if = {
+						limit = {
+							num_of_estate_privileges = {
+								estate = estate_church
+								value = 1
+							}
+						}
+						add_adm_power = 100
+					}
+				}
+			}
+		}
+	}
+
+	THE_ROD_2_19_hakurei = {
+		icon = mission_touhou_hkr_estate
+		position = 19
+		required_missions = { THE_ROD_1_18_hakurei } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { has_tax_building_trigger = yes } 
+		}
+
+		trigger = {
+			religion = th_hakureishinto
+			num_of_estate_agendas_completed = {
+				estate = estate_church
+				value = 5
+			}
+			num_of_owned_provinces_with = {
+				value = 50
+				has_tax_building_trigger = yes
+			}
+		}
+
+		effect = {
+			THE_ROD_modify_youkai_way_scripted_effect = yes
+			THE_add_ruler_stat = {
+				stat = adm
+				value = 1
+			}
+			change_government_reform_progress = 300
+			custom_tooltip = THE_ROD_unlock_spread_hakurei_message_reform_tt
+			tooltip = { add_government_reform = THE_ROD_spread_hakurei_message_reform } 
+			hidden_effect = { set_country_flag = THE_ROD_unlock_spread_hakurei_message_reform_flag } 
+		}
+	}
+
+	THE_ROD_2_20_hakurei = {
+		icon = mission_touhou_th_shintoism
+		position = 20
+		required_missions = {
+			THE_ROD_1_19_hakurei
+			THE_ROD_2_19_hakurei
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					owner = { is_part_of_hre = yes } 
+					NOT = { current_age = age_of_absolutism } 
+					NOT = { current_age = age_of_revolutions } 
+				}
+				AND = {
+					owned_by = ROOT
+					NOT = { religion = th_hakureishinto } 
+				}
+			}
+		}
+
+		trigger = {
+			religion = th_hakureishinto
+			num_of_owned_provinces_with = {
+				value = 100
+				religion = th_hakureishinto
+			}
+			government_rank = 3
+			OR = {
+				NOT = { hre_size = 1 } 
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
+
+		effect = {
+			THE_ROD_modify_youkai_way_scripted_effect = yes
+			add_country_modifier = {
+				name = "THE_ROD_hakureishinto_empire"
+				duration = -1
+			}
+		}
+	}
+}

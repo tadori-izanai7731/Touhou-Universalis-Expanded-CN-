@@ -1,0 +1,35 @@
+THE_common_define_general_cirno = {
+	define_general = {
+		name = "*t2—ú‹"
+		shock = 3
+		fire = 4
+		manuever = 6
+		siege = 1
+		female = yes
+	}
+}
+
+THE_common_define_general_bigcirno = {
+	define_general = {
+		name = "*t2—ú‹"
+		shock = 4
+		fire = 5
+		manuever = 6
+		siege = 2
+		female = yes
+	}
+}
+
+THE_generic_define_consort_akyuu = {
+	define_consort = {
+		name = "?–Bl"
+		dynasty = "z0u"
+		culture = "Gensokyo_human"
+		adm = 4
+		dip = 4
+		mil = 4
+		age = 29
+		female = yes
+		country_of_origin = HMC
+	}
+}

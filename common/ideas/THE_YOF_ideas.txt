@@ -1,0 +1,43 @@
+THE_YOF_ideas = {
+	start = {
+		defensiveness = 0.25
+		fort_maintenance_modifier = -0.35
+	}
+	
+	bonus = {
+		siege_blockade_progress = 2
+	}
+	
+	trigger = {
+		tag = YOF
+	}
+	free = yes
+	
+	THE_YOF_The_Youkai_forest = {
+		improve_relation_modifier = 0.35
+		diplomatic_reputation = 1
+	}
+	THE_YOF_Misfortune_collector = {
+		global_unrest = -1
+		global_manpower_modifier = 0.25
+	}	
+	THE_YOF_The_pestilence = {
+		development_cost = -0.15
+		trade_steering = 0.1
+	}
+	THE_YOF_Spin_around = {
+		global_defender_dice_roll_bonus = 1
+	}
+	THE_YOF_Akis_visit = {
+		global_missionary_strength = 0.02
+		tolerance_own = 2
+	}
+	THE_YOF_Happiness_through_misfortune = {
+		leader_naval_manuever = 1
+		galley_power = 0.33
+	}
+	THE_YOF_Darkest_forest = {
+		free_policy = 1
+		yearly_corruption = -0.1
+	}
+}

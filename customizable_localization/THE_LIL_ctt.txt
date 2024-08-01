@@ -1,0 +1,16 @@
+defined_text = {
+	name = spring_power_upgrade_text
+	random = no
+	text = {
+		localisation_key = THE_LIL_empty_text
+		trigger = {
+			NOT = { has_government_attribute = THE_LIL_strengthen_spring_territory }
+		}
+	}
+	text = {
+		localisation_key = THE_LIL_spring_power_upgrade_text
+		trigger = {
+			has_government_attribute = THE_LIL_strengthen_spring_territory
+		}
+	}
+}

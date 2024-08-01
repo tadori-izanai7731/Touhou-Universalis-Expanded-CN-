@@ -1,0 +1,130 @@
+#$which$|变量类型，支持adm、dip、mil
+#$value$|运算数值
+#$type$|运算类型，支持set、change、subtract、multiply、divide
+THE_HNG_change_power_variable = {
+	$type$_variable = {
+		which = the_hng_$which$_power_var
+		value = $value$
+	}
+	THE_HNG_change_power_variable_scripted_effects = yes
+}
+
+THE_HNG_change_power_variable_scripted_effects = {
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = the_hng_adm_power_var
+					value = -300
+				}
+			}
+		}
+		set_variable = {
+			which = the_hng_adm_power_var
+			value = 0
+		}
+		clr_country_flag = THE_HNG_adm_power_var_negative_flag
+		country_event = { id = THE_HNG_power_var_events.1 } #行政点讨债事件
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = the_hng_adm_power_var
+					value = 0
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = THE_HNG_adm_power_var_negative_flag }
+			}
+			hidden_effect = {
+				set_country_flag = THE_HNG_adm_power_var_negative_flag
+				#行政点债务翻倍事件
+				country_event = { id = THE_HNG_power_var_events.4 days = 7300 } 
+			}
+		}
+	}
+	else = {
+		clr_country_flag = THE_HNG_adm_power_var_negative_flag
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = the_hng_dip_power_var
+					value = -300
+				}
+			}
+		}
+		set_variable = {
+			which = the_hng_dip_power_var
+			value = 0
+		}
+		clr_country_flag = THE_HNG_dip_power_var_negative_flag
+		country_event = { id = THE_HNG_power_var_events.2 } #外交点讨债事件
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = the_hng_dip_power_var
+					value = 0
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = THE_HNG_dip_power_var_negative_flag }
+			}
+			hidden_effect = {
+				set_country_flag = THE_HNG_dip_power_var_negative_flag
+				#外交点债务翻倍事件
+				country_event = { id = THE_HNG_power_var_events.6 days = 7300 } 
+			}
+		}
+	}
+	else = {
+		clr_country_flag = THE_HNG_dip_power_var_negative_flag
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = the_hng_mil_power_var
+					value = -300
+				}
+			}
+		}
+		set_variable = {
+			which = the_hng_mil_power_var
+			value = 0
+		}
+		clr_country_flag = THE_HNG_mil_power_var_negative_flag
+		country_event = { id = THE_HNG_power_var_events.3 } #外交点讨债事件
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = the_hng_mil_power_var
+					value = 0
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = THE_HNG_mil_power_var_negative_flag }
+			}
+			hidden_effect = {
+				set_country_flag = THE_HNG_mil_power_var_negative_flag
+				#军事点债务翻倍事件
+				country_event = { id = THE_HNG_power_var_events.8 days = 7300 } 
+			}
+		}
+	}
+	else = {
+		clr_country_flag = THE_HNG_mil_power_var_negative_flag
+	}
+}

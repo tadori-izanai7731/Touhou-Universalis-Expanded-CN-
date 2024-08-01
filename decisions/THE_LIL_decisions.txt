@@ -1,0 +1,148 @@
+country_decisions = {
+	THE_LIL_create_daiyousei_advisor_decision = {
+		# color = { 255 255 255 }
+		potential = {
+			OR = {
+				th_is_or_was_tag = { tag = LIL }
+				th_has_copied_from_target = {
+					target = LIL
+				}
+			}
+			has_country_flag = THE_LIL_unlock_create_daiyousei_advisor_decision_flag
+		}
+		allow = {
+			NOT = { has_advisor_type_in_pool = THE_advisor_daiyousei }
+			NOT = { employed_advisor = { type = THE_advisor_daiyousei } }
+		}
+		effect = {
+			THE_LIL_create_daiyousei_advisor_scripted_effect = yes
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	THE_LIL_view_pranked_country_decision = {
+		color = { 255 255 255 }
+		potential = {
+			OR = {
+				th_is_or_was_tag = { tag = LIL }
+				th_has_copied_from_target = {
+					target = LIL
+				}
+			}
+			any_country = {
+				has_country_flag = THE_LIL_spring_power_from_prank_count_flag
+			}
+		}
+		provinces_to_highlight = {
+			owner = { has_country_flag = THE_LIL_spring_power_from_prank_count_flag }
+		}
+		allow = {
+			always = no
+		}	
+		effect = {
+			custom_tooltip = THE_LIL_show_prank_country_quantity_tt
+			every_country = {
+				limit = {
+					has_country_flag = THE_LIL_spring_power_from_prank_count_flag
+				}
+				ROOT = { custom_tooltip = THE_LIL_show_target_tt }
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	lil_fight_lily_black_diplomatic = {
+		potential = {
+			has_country_flag = lil_can_fight_lily_black_diplomatic
+		}
+		allow = {
+			dip_power = 100
+			custom_trigger_tooltip = {
+				tooltip = lil_lost_against_lily_black_diplomatic_tt
+				OR = {
+					NOT = { has_country_flag = lil_lost_against_lily_black_diplomatic }
+					had_country_flag = {
+						flag = lil_lost_against_lily_black_diplomatic
+						days = 1825
+					}
+				}
+			}
+		}	
+		major = yes
+		effect = {
+			custom_tooltip = lil_fight_lily_black_diplomatic_tt
+			add_dip_power = -100
+			hidden_effect = {	
+				country_event = {
+					id = THE_LIL_events.11
+				}
+				clr_country_flag = lil_lost_against_lily_black_diplomatic
+			}
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	# THE_LIL_form_empire = {
+	# 	major = yes
+	# 	potential = {
+	# 		th_is_or_was_tag = {
+	# 			tag = LIL
+	# 		}
+	# 		NOT = { has_country_flag = THE_LIL_unlock_colonial_empire_reform_flag }
+	# 		OR = {
+	# 			government = monarchy
+	# 			government = republic
+	# 			government = theocracy
+	# 		}
+	# 	}
+	# 	provinces_to_highlight = {
+	# 		OR = {
+	# 			province_id = 5083
+	# 			province_id = 5081
+	# 			province_id = 4996
+	# 			province_id = 4975
+	# 		}
+	# 		OR = {
+	# 			NOT = { owned_by = ROOT }
+	# 			NOT = { is_core = ROOT }
+	# 		}
+	# 	}
+
+	# 	allow = {
+	# 		is_free_or_tributary_trigger = yes
+	# 		is_at_war = no
+	# 		stability = 1
+	# 		owns_core_province = 5083 #Eternity Garden
+	# 		owns_core_province = 5081 #Fairy Coast
+	# 		owns_core_province = 4996 #Eastern Misty Shore
+	# 		owns_core_province = 4975 #Three Fairies's home
+	# 		th_num_of_colonies = {
+	# 			amount = 1
+	# 		}
+	# 	}
+
+	# 	effect = {
+	# 		add_prestige = 25
+	# 		add_mercantilism = 5
+	# 		custom_tooltip = THE_LIL_unlock_colonial_empire_reform_tt
+	# 		# tooltip = {
+	# 		# 	add_government_reform = THE_LIL_colonial_empire_reform
+	# 		# }
+	# 		hidden_effect = {
+	# 			set_country_flag = THE_LIL_unlock_colonial_empire_reform_flag
+	# 		}
+	# 	}
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	# 	ai_importance = 400
+	# }
+}

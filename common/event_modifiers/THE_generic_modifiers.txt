@@ -1,0 +1,304 @@
+th_mission_spread_beliefs = {
+	global_missionary_strength = 0.01
+}
+
+th_mission_religious_integration = {
+	harmonization_speed = 0.15
+}
+
+th_mission_religious_tolerance = {
+	tolerance_heretic = 1
+	tolerance_heathen = 1
+}
+
+th_mission_control_japan = {
+	has_samurai = yes
+	allowed_samurai_fraction = 0.1
+}
+
+cirno_home = {
+	trade_goods_size = 2
+}
+
+th_gensokyo_unite = {
+	min_autonomy_in_territories = -0.1
+}
+
+touhou_prepare_expanion = {
+   can_claim_states = yes
+   spy_action_cost_modifier = -0.2
+}
+
+touhou_prepare_build = {
+   build_time = -0.5
+   build_cost = -0.2
+}
+
+touhou_gensokyo_trade = {
+   trade_efficiency = 0.1
+}
+
+touhou_gensokyo_more_trade = {
+	global_trade_goods_size_modifier = 0.025
+	production_efficiency = 0.125
+}
+
+touhou_mission_religious_tax = {
+	global_tax_modifier = 0.1
+}
+
+touhou_mission_build_religious_communities = {
+	development_cost = -0.2
+}
+
+touhou_mission_Belief_first = {
+	missionary_maintenance_cost = -0.5
+}
+
+touhou_mission_Coexistence_first = {
+	tolerance_own = 0.5
+	harmonization_speed = 0.1
+}
+
+touhou_mission_Missionary_heresy = {
+	global_heretic_missionary_strength = 0.05
+}
+
+touhou_mission_reformation_forever= {
+	cb_on_religious_enemies = yes
+	missionaries = 2
+	global_heretic_missionary_strength = 0.02
+	tolerance_heretic = -2
+}
+
+touhou_mission_harmonious_world = {
+	tolerance_own = 2
+	harmonization_speed = 0.1
+	no_religion_penalty = yes
+}
+
+
+th_gensokyo_friend = {
+	diplomatic_reputation = 1
+}
+
+th_gensokyo_protect_friend = {
+	accept_vassalization_reasons = 20
+	diplomatic_annexation_cost = -0.2
+	ae_impact = -0.1
+}
+
+th_gen_gensokyo_war = {
+	warscore_cost_vs_other_religion = -0.1
+}
+
+th_gensokyo_army_power = {
+	land_maintenance_modifier = -0.2
+	land_morale = 0.1
+}
+
+th_gensokyo_army_power_prepare = {
+	danmaku_power_factor = 0.15
+}
+
+th_gensokyo_danmaku_exercise = {
+	fire_damage_received = -0.1
+}
+
+th_gensokyo_soical_order_army = {
+	discipline = 0.05
+}
+
+th_gensokyo_soical_order_danmaku = {
+	danmaku_power_factor = 0.35
+}
+
+th_gensokyo_danmaku_new_rule = {
+	land_morale = 0.1
+	fire_damage = 0.1
+	morale_damage = 0.1
+}
+
+th_gen_gensokyo_America_world = {
+	colonists = 1
+	global_colonial_growth = 20
+}
+
+
+touhou_gensokyo_an_own_empire = {
+	legitimacy = 0.5
+	republican_tradition = 0.25
+	devotion = 0.5
+	horde_unity = 0.5
+	meritocracy = 0.5
+	prestige = 1
+	governing_capacity_modifier = 0.1
+}
+
+touhou_gensokyo_yamas_palace  = {
+	yearly_corruption = -0.1
+}
+
+touhou_gensokyo_boundary_portal  = {
+	envoy_travel_time = -0.3
+	improve_relation_modifier = 0.1
+}
+
+touhou_gensokyo_sunflower_power  = {
+	army_tradition_decay = -0.005
+	army_tradition = 1
+}
+
+touhou_gensokyo_better_diplomacy  = {
+	diplomatic_annexation_cost = -0.1
+}
+
+touhou_gensokyo_hakurei_legacy  = {
+	tolerance_own = 1.5
+}
+
+touhou_gensokyo_pleased_ghosts  = {
+	global_monthly_devastation = -0.2
+}
+
+touhou_gensokyo_religious_fervor  = {
+	global_missionary_strength = 0.015
+	missionary_maintenance_cost = -0.1
+}
+
+touhou_gensokyo_pleased_kappa = {
+	idea_cost = -0.1
+}
+
+touhou_gensokyo_religious_harmony  = {
+	tolerance_heretic = 1
+	yearly_harmony = 1
+	monthly_fervor_increase = 1
+	church_power_modifier = 1
+}
+
+touhou_gensokyo_tengu_scouts  = {
+	spy_offence = 0.1
+	global_spy_defence = 0.1
+}
+
+touhou_gensokyo_celestial_navy  = {
+	navy_tradition_decay = -0.005
+	navy_tradition = 1
+}
+
+touhou_gensokyo_inflated_ambition = {
+	core_creation = -0.1
+}
+
+touhou_gensokyo_more_magical_materials  = {
+	technology_cost = -0.1
+}
+
+touhou_gensokyo_alchemist_support  = {
+	infantry_power = 0.1
+}
+
+touhou_gensokyo_medical_care = {
+	manpower_recovery_speed = 0.15
+}
+
+th_gen_gensokyo_warlord_cirno = {
+	free_land_leader_pool = 1
+}
+
+touhou_mission_change_on_offensive1 = {
+	siege_ability = 0.15
+	defensiveness = -0.1
+}
+
+touhou_mission_change_on_offensive2 = {
+	siege_ability = 0.15
+}
+
+touhou_mission_change_on_defensive1 = {
+	defensiveness = 0.15
+	siege_ability = -0.1
+}
+
+touhou_mission_change_on_defensive2 = {
+	defensiveness = 0.15
+}
+
+
+touhou_mission_change_on_humanist1 = {
+	tolerance_heretic = 1
+	tolerance_heathen = 1
+	global_missionary_strength = -0.01
+}
+
+touhou_mission_change_on_humanist2 = {
+	tolerance_heretic = 1
+	tolerance_heathen = 1
+	tolerance_of_heretics_capacity = 1
+}
+
+touhou_mission_change_on_religious1 = {
+	missionaries = 1
+	tolerance_heretic = -1
+	tolerance_heathen = -1
+}
+
+touhou_mission_change_on_religious2 = {
+	missionaries = 1
+}
+
+touhou_mission_change_on_quality1 = {
+	discipline = 0.05
+	global_manpower_modifier = -0.1
+}
+
+touhou_mission_change_on_quality2 = {
+	discipline = 0.05
+}
+
+touhou_mission_change_on_quantity1 = {
+	global_manpower_modifier = 0.2
+	discipline = -0.025
+}
+
+touhou_mission_change_on_quantity2 = {
+	global_manpower_modifier = 0.2
+	reinforce_speed = 0.1
+}
+
+touhou_mission_change_on_economic1 = {
+	development_cost_modifier = -0.1
+	global_trade_goods_size_modifier = -0.025
+}
+
+touhou_mission_change_on_economic2 = {
+	development_cost_modifier = -0.1
+}
+
+touhou_mission_change_on_trade1 = {
+	global_trade_goods_size_modifier = 0.075
+	development_cost_modifier = 0.05
+}
+
+touhou_mission_change_on_trade2 = {
+	global_trade_goods_size_modifier = 0.075
+}
+
+touhou_mission_change_on_diplomatic1 = {
+	diplomats = 1
+	improve_relation_modifier = -0.1
+}
+
+touhou_mission_change_on_diplomatic2 = {
+	diplomats = 1
+}
+
+touhou_mission_change_on_influence1 = {
+	diplomatic_annexation_cost = -0.1
+	diplomatic_reputation = -0.5
+}
+
+touhou_mission_change_on_influence2 = {
+	diplomatic_annexation_cost = -0.1
+}

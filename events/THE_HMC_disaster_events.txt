@@ -1,0 +1,268 @@
+namespace = THE_HMC_disaster_events
+#灾难开始事件
+country_event = {
+	id = THE_HMC_disaster_events.1
+	title = THE_HMC_disaster_events.1.title
+	desc = THE_HMC_disaster_events.1.desc
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	is_triggered_only = yes
+
+	major = yes
+	major_trigger = {
+		knows_country = ROOT
+	}
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					5122 = { owned_by = ROOT }
+				}
+				5122 = {
+					save_event_target_as = THE_HMC_disaster_province_target
+				}
+			}
+			else = {
+				capital_scope = {
+					save_event_target_as = THE_HMC_disaster_province_target
+				}
+			}
+		}
+	}
+
+	goto = THE_HMC_disaster_province_target
+
+	option = {
+		name = THE_HMC_disaster_events.1.a
+		event_target:THE_HMC_disaster_province_target = {
+			add_base_tax = -5
+			add_base_production = -5
+			add_base_manpower = -5
+			add_devastation = 100
+			add_province_modifier = {
+				name = THE_HMC_fire_province_modifier
+				duration = -1
+			}
+		}
+		add_stability = -6
+	}
+
+	after = {
+		hidden_effect = {
+			#稗田阿求
+			country_event = {
+				id = THE_HMC_disaster_events.4
+				days = 100
+			}
+			#本居小铃
+			country_event = {
+				id = THE_HMC_disaster_events.5
+				days = 200
+			}
+			#森近霖之助
+			country_event = {
+				id = THE_HMC_disaster_events.6
+				days = 300
+			}
+			#上白泽慧音
+			country_event = {
+				id = THE_HMC_disaster_events.7
+				days = 400
+			}
+		}
+	}
+}
+
+#月度事件：火灾的蔓延
+country_event = {
+	id = THE_HMC_disaster_events.2
+	title = THE_HMC_disaster_events.2.title
+	desc = THE_HMC_disaster_events.2.desc
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	is_triggered_only = yes
+
+	# too complex trigger and hidden event
+	# trigger = {
+	# 	has_country_flag = THE_HMC_fire_had_spread_last_month_flag
+	# }
+
+	trigger = {
+		any_owned_province = {
+			NOT = { has_province_modifier = THE_HMC_fire_province_modifier }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					any_neighbor_province = {
+						has_province_modifier = THE_HMC_fire_province_modifier
+					}
+					NOT = { has_province_modifier = THE_HMC_fire_province_modifier }
+				}
+				save_event_target_as = THE_HMC_disaster_province_target
+			}
+		}
+	}
+
+	goto = THE_HMC_disaster_province_target
+
+	option = {
+		name = THE_HMC_disaster_events.2.a
+		event_target:THE_HMC_disaster_province_target = {
+			add_base_tax = -1
+			add_base_production = -1
+			add_base_manpower = -1
+			add_devastation = 20
+			add_province_modifier = {
+				name = THE_HMC_fire_province_modifier
+				duration = -1
+			}
+		}
+		add_adm_power = 10
+		add_dip_power = 10
+		add_mil_power = 10
+	}
+}
+
+#月度事件：受灾
+country_event = {
+	id = THE_HMC_disaster_events.3
+	title = THE_HMC_disaster_events.3.title
+	desc = THE_HMC_disaster_events.3.desc
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = THE_HMC_disaster_events.3.a
+		add_manpower = -0.2
+	}
+}
+
+#稗田阿求
+country_event = {
+	id = THE_HMC_disaster_events.4
+	title = THE_HMC_disaster_events.4.title
+	desc = THE_HMC_disaster_events.4.desc
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = THE_HMC_disaster_events.4.a
+		custom_tooltip = THE_HMC_disaster_akyuu_tt
+		hidden_effect = {
+			set_country_flag = THE_HMC_disaster_akyuu_flag
+		}
+	}
+}
+
+#本居小铃
+country_event = {
+	id = THE_HMC_disaster_events.5
+	title = THE_HMC_disaster_events.5.title
+	desc = THE_HMC_disaster_events.5.desc
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = THE_HMC_disaster_events.5.a
+		custom_tooltip = THE_HMC_disaster_kosuzu_tt
+		hidden_effect = {
+			set_country_flag = THE_HMC_disaster_kosuzu_flag
+		}
+	}
+}
+
+#森近霖之助
+country_event = {
+	id = THE_HMC_disaster_events.6
+	title = THE_HMC_disaster_events.6.title
+	desc = THE_HMC_disaster_events.6.desc
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = THE_HMC_disaster_events.6.a
+		custom_tooltip = THE_HMC_disaster_rinnosuke_tt
+		hidden_effect = {
+			set_country_flag = THE_HMC_disaster_rinnosuke_flag
+		}
+	}
+}
+
+#上白泽慧音
+country_event = {
+	id = THE_HMC_disaster_events.7
+	title = THE_HMC_disaster_events.7.title
+	desc = THE_HMC_disaster_events.7.desc
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = THE_HMC_disaster_events.7.a
+		custom_tooltip = THE_HMC_disaster_keine_tt
+		hidden_effect = {
+			set_country_flag = THE_HMC_disaster_keine_flag
+		}
+	}
+}
+
+#灾难结束事件
+country_event = {
+	id = THE_HMC_disaster_events.8
+	title = THE_HMC_disaster_events.8.title
+	desc = THE_HMC_disaster_events.8.desc
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	is_triggered_only = yes
+	major = yes
+	major_trigger = {
+		knows_country = ROOT
+	}
+
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = THE_HMC_ramoant_rumor_flag
+			clr_country_flag = THE_HMC_disaster_akyuu_flag
+			clr_country_flag = THE_HMC_disaster_kosuzu_flag
+			clr_country_flag = THE_HMC_disaster_rinnosuke_flag
+			clr_country_flag = THE_HMC_disaster_keine_flag
+			set_country_flag = THE_HMC_use_true_missions_flag
+		}
+	}
+
+	option = {
+		name = THE_HMC_disaster_events.8.a
+		custom_tooltip = RUSABIL_SUDEBNIK_EFFECT_TT
+		tooltip = {
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+			remove_province_modifier = THE_HMC_fire_province_modifier
+		}
+		hidden_effect = {
+			every_owned_province = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+				remove_province_modifier = THE_HMC_fire_province_modifier
+			}
+		}
+		add_stability = 6
+		add_manpower = 10
+		add_treasury = -200
+		THE_HMC_define_election_ruler_scripted_effect = { akyuu = yes }
+		if = {
+			limit = {
+				NOT = { government = republic }
+			}
+			change_government = republic
+		}
+		add_government_reform = THE_HMC_human_capital_four_name_reform
+		swap_non_generic_missions = yes
+	}
+}

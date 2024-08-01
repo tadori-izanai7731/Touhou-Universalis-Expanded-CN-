@@ -1,0 +1,529 @@
+#展现善意
+#由THE_LIL_2_2添加
+THE_LIL_show_goodwill_modifier = {
+	diplomats = 1
+	diplomatic_reputation = 1
+	improve_relation_modifier = 0.2
+}
+
+#妖精的勇气
+#由THE_LIL_2_4添加
+THE_LIL_fairies_courage_modifier = {
+	land_morale = 0.1
+	global_manpower = 10
+	land_forcelimit = 6
+}
+
+#与拉尔瓦会谈
+#由THE_LIL_3_1添加
+THE_LIL_meeting_with_lrv_modifier = {
+	diplomatic_upkeep = 1
+}
+
+#与光之妖精会谈
+#由THE_LIL_3_2添加
+THE_LIL_meeting_with_tfr_modifier = {
+	diplomatic_upkeep = 1
+}
+
+#大妖精的密谋
+#由THE_LIL_3_3添加
+THE_LIL_dai_fairy_conspiracy_modifier = {
+	spy_offence = 0.2
+}
+
+#妖精的回归
+#由THE_LIL_4_3添加
+THE_LIL_fairy_regress_modifier = {
+	land_morale = 0.1
+	manpower_recovery_speed = 0.1
+	global_manpower_modifier = 0.1
+	land_maintenance_modifier = -0.25
+}
+
+#妖精大复仇
+#由THE_LIL_5_2添加
+THE_LIL_fairy_great_revenge_modifier = {
+	prestige = 2
+}
+
+#支援前线
+#由THE_LIL_5_4添加
+THE_LIL_support_front_modifier = {
+	global_tax_income = -12
+	land_morale = 0.05
+	manpower_recovery_speed = -0.05
+	global_manpower_modifier = -0.05
+	land_maintenance_modifier = -0.1
+	war_exhaustion = -0.05
+}
+
+#妖精支援
+#由THE_LIL_5_4添加
+THE_LIL_fairy_support_modifier = {
+	global_tax_income = 24
+	land_morale = 0.1
+	manpower_recovery_speed = 0.1
+	global_manpower_modifier = 0.1
+	land_maintenance_modifier = -0.2
+	war_exhaustion = -0.1
+}
+
+#魔法使的飞行
+#由THE_LIL_7_2添加
+THE_LIL_magician_flight_modifier = {
+	global_colonial_growth = 10
+	improve_relation_modifier = 0.1
+}
+
+#巫女的祝福
+#由THE_LIL_7_4添加
+THE_LIL_which_blessing_modifier = {
+	global_missionary_strength = 0.02
+	tolerance_own = 1
+	tolerance_of_heretics_capacity = 1
+	tolerance_of_heathens_capacity = 1
+}
+
+#人偶的除厄
+#由THE_LIL_8_1添加
+THE_LIL_doll_remove_misfortune_modifier = {
+	global_colonial_growth = 15
+	diplomatic_reputation = 1
+}
+
+#僵尸的复苏
+#由THE_LIL_8_4添加
+THE_LIL_zombie_resurrection_modifier = {
+	reduced_liberty_desire = 20
+}
+
+#贤者的助力
+#由THE_LIL_8_5添加
+THE_LIL_sage_assistance_modifier = {
+	spy_offence = 0.2
+	envoy_travel_time = -0.25
+}
+
+#百花齐放
+#由THE_LIL_10_2添加
+THE_LIL_hundred_flowers_bloom_modifier = {
+	tolerance_own = -1
+	tolerance_heathen = 2
+	tolerance_heretic = 2
+	tolerance_of_heathens_capacity = 2
+	tolerance_of_heretics_capacity = 2
+}
+
+#百花齐放
+#由THE_LIL_11_2添加
+THE_LIL_hundred_flowers_bloom_upgrade_modifier = {
+	# tolerance_own = -1
+	tolerance_heathen = 3
+	tolerance_heretic = 3
+	tolerance_of_heathens_capacity = 3
+	tolerance_of_heretics_capacity = 3
+}
+
+#春之力
+THE_LIL_power_of_spring_modifier = {
+
+}
+
+#全年无休的春之力
+#由THE_LIL_11_4添加
+THE_LIL_always_maintained_power_of_spring_modifier = {
+	development_cost = -0.1
+	movement_speed = 0.1
+	danmaku_power_constant = 150
+}
+
+#幻想乡之春
+#由THE_LIL_12_3添加
+THE_LIL_spring_of_gensokyo = {
+	all_power_cost = -0.05
+	administrative_efficiency = 0.05
+}
+
+#博丽子午线
+#由THE_LIL_13_3添加
+THE_LIL_hakurei_meridian_modifier = {
+	global_colonial_growth = 10
+}
+
+#红绿巫女出差
+#由THE_LIL_13_3添加
+THE_LIL_whichs_business_modifier = {
+	missionaries = 2
+	global_missionary_strength = 0.05
+	missionary_maintenance_cost = -0.2
+	tolerance_heretic = -2
+	tolerance_heathen = -2
+}
+
+#接纳阿兹特克文化
+#由THE_LIL_14_3添加
+THE_LIL_accept_aztek_culture_modifier = {
+	num_accepted_cultures = 1
+}
+
+#大丽花领地
+#由THE_LIL_13_3添加
+THE_LIL_dahlia_territory_modifier = {
+	global_unrest = -2
+	global_trade_goods_size = 0.5
+}
+
+#金合欢领地
+#由THE_LIL_15_1添加
+THE_LIL_wattle_territory_modifier = {
+	colonists = 1
+	global_colonial_growth = 20
+}
+
+#罂粟花领地
+#由THE_LIL_15_2添加
+THE_LIL_poppy_territory_modifier = {
+	colonists = 1
+	global_colonial_growth = 20
+}
+
+#坎涂花领地
+#由THE_LIL_15_3添加
+THE_LIL_cantua_territory_modifier = {
+	colonists = 1
+	global_colonial_growth = 20
+}
+
+#南方木兰花领地
+#由THE_LIL_15_4添加
+THE_LIL_southern_magnolia_territory_modifier = {
+	colonists = 1
+	global_colonial_growth = 20
+}
+
+#卡特里亚兰领地
+#由THE_LIL_15_5添加
+THE_LIL_catalan_territory_modifier = {
+	colonists = 1
+	global_colonial_growth = 20
+}
+
+#勿忘我领地
+#由THE_LIL_17_2添加
+THE_LIL_myosotis_territory_modifier = {
+	colonists = 1
+	global_colonial_growth = 20
+}
+
+#姜花领地
+#由THE_LIL_17_1添加
+THE_LIL_ginger_flower_territory_modifier = {
+	colonists = 1
+	global_colonial_growth = 20
+}
+
+#龙牙花领地
+#由THE_LIL_17_3添加
+THE_LIL_erythrina_corallodendron_territory_modifier = {
+	colonists = 1
+	global_colonial_growth = 20
+}
+
+#玫瑰领地
+#由THE_LIL_17_4添加
+THE_LIL_rose_territory_modifier = {
+	colonists = 1
+	global_colonial_growth = 20
+}
+
+#毛蟹爪兰领地
+#由THE_LIL_17_5添加
+THE_LIL_hairy_crabapple_territory_modifier = {
+	colonists = 1
+	global_colonial_growth = 20
+}
+
+#枫叶领地
+#由THE_LIL_19_4添加
+THE_LIL_maple_leaf_territory_modifier = {
+	colonists = 1
+	global_colonial_growth = 20
+}
+
+#两个世界的十字路口
+#由THE_LIL_18_1添加
+THE_LIL_world_crossing_modifier = {
+	trade_efficiency = 0.1
+	trade_steering = 0.1
+	merchants = 1
+}
+
+#球形春天
+#由THE_LIL_19_1添加
+THE_LIL_spherical_spring_modifier = {
+	max_admiral_shock = 2
+	max_admiral_fire = 2
+	max_admiral_maneuver = 2
+	max_admiral_siege = 2
+}
+
+#新大陆之春
+#由THE_LIL_19_3添加
+THE_LIL_new_world_spring_modifier = {
+	colony_development_boost = 1
+	trade_steering = 0.1
+	merchants = 1
+	treasure_fleet_income = 0.25
+	reduced_liberty_desire = 10
+}
+
+#画下春之圈
+THE_LIL_spring_circle_province_modifier = {
+	local_development_cost_modifier = -0.1
+	province_trade_power_modifier = 0.1
+}
+
+#雾之湖畔的宝石
+THE_LIL_misty_lake_gemstone_province_modifier = {
+	local_development_cost = -0.1
+	allowed_num_of_buildings = 1
+}
+
+#坚实经济基础
+#由THE_LIL_22_4添加
+THE_LIL_economic_base_modifier = {
+	global_tax_income = 24
+}
+
+#妖精农业
+#由THE_LIL_23_3添加
+THE_LIL_fairy_agriculture_modifier = {
+	production_efficiency = 0.1
+}
+
+#春之双子港
+#由THE_LIL_23_4添加
+THE_LIL_spring_port_province_modifier = {
+	local_ship_cost = -0.33
+	ship_recruit_speed = -0.25
+}
+
+#雾之湖的财富
+#由THE_LIL_23_4添加
+THE_LIL_misty_lake_treasure_modifier = {
+	trade_efficiency = 0.05
+	global_trade_power = 0.1
+	global_ship_trade_power = 0.1
+}
+
+#更多聪明妖精
+#由THE_LIL_24_2添加
+THE_LIL_fairy_cleverer_modifier = {
+	build_cost = -0.1
+	global_institution_spread = 0.1
+}
+
+#条条大路通我家
+#由THE_LIL_24_3添加
+THE_LIL_every_road_to_lil_modifier = {
+	trade_steering = 0.15
+}
+
+#妖精货币
+#由THE_LIL_24_4添加
+THE_LIL_fairy_currency_modifier = {
+	trade_efficiency = 0.1
+	inflation_reduction = 0.05
+}
+
+#好学的妖精
+#由THE_LIL_25_2添加
+THE_LIL_studious_fairy_modifier = {
+	innovativeness_gain = 0.1
+	global_institution_spread = 0.1
+}
+
+#春天商业银行
+#由THE_LIL_25_4添加
+THE_LIL_spring_bank_modifier = {
+	inflation_reduction = 0.1
+	trade_efficiency = 0.1
+	caravan_power = 0.1
+	global_trade_power = 0.2
+}
+
+#狠抓春季生产
+#由THE_LIL_25_3添加
+THE_LIL_spring_produce_modifier = {
+	global_trade_goods_size = 0.25
+}
+
+#妖精联邦会议地址
+#由THE_LIL_26_5添加
+THE_LIL_fairy_federal_conference_address_province_modifier = {
+	prestige = 1
+	manpower_in_own_culture_provinces = 0.25
+	local_development_cost = -0.1
+}
+
+#春满开
+#由THE_LIL_27_2添加
+THE_LIL_spring_full_blossom_modifier = {
+	development_cost = -0.1
+	global_tax_modifier = 0.2
+	production_efficiency = 0.1
+}
+
+#春常在
+#由THE_LIL_27_4添加
+THE_LIL_spring_always_on_modifier = {
+	reform_progress_growth = 0.2
+	colonists = 1
+}
+
+#春之缔造者
+#由THE_LIL_28_3添加
+THE_LIL_spring_builder_modifier = {
+	build_time = -0.2
+	build_cost = -0.1
+	great_project_upgrade_cost = -0.1
+	development_cost = -0.1
+}
+
+#安眠的桑尼
+#由THE_LIL_29_2添加
+THE_LIL_fairy_mission_sunny_modifier = {
+	global_tax_modifier = 0.1
+	production_efficiency = 0.1
+}
+
+#精神的露娜
+#由THE_LIL_29_3添加
+THE_LIL_fairy_mission_luna_modifier = {
+	country_diplomatic_power = 1
+}
+
+#忙碌的斯塔
+#由THE_LIL_29_4添加
+THE_LIL_fairy_mission_star_modifier = {
+	spy_offence = 0.2
+	global_spy_defence = 0.2
+}
+
+#自豪的琪露诺
+#由THE_LIL_30_2添加
+THE_LIL_fairy_mission_cirno_modifier = {
+	shock_damage_received = -0.1
+	fire_damage_received = -0.1
+}
+
+#温柔的大妖精
+#由THE_LIL_30_3添加
+THE_LIL_fairy_mission_daiyousei_modifier = {
+	global_manpower_modifier = 0.1
+	manpower_recovery_speed = 0.1
+}
+
+#华丽的拉尔瓦
+#由THE_LIL_30_4添加
+THE_LIL_fairy_mission_larva_modifier = {
+	prestige = 6
+}
+
+#幸福的妖精
+#由THE_LIL_31_3添加
+THE_LIL_fairy_happiness_modifier = {
+	manpower_in_own_culture_provinces = 0.5
+}
+
+THE_LIL_fairy_parliament_adm_modifier = {
+	missionaries = 1
+	core_creation = -0.2
+	global_autonomy = -0.1
+}
+
+THE_LIL_fairy_parliament_dip_modifier = {
+	development_cost = -0.2
+	interest = -1
+	build_time = -0.25
+}
+
+THE_LIL_fairy_parliament_mil_modifier = {
+	morale_damage_received = -0.15
+	yearly_army_professionalism = 0.005
+	disengagement_chance = 0.33
+}
+
+#破坏船只
+THE_LIL_destory_ship_modifier = {
+	ship_durability = -0.2
+	heavy_ship_power = -0.25
+	global_ship_recruit_speed = 0.5
+	global_ship_repair = -0.5
+}
+
+
+###春之力###
+THE_LIL_spring_power_from_prank_1 = {
+	monthly_THE_LIL_spring_power = 0.03
+}
+THE_LIL_spring_power_from_prank_2 = {
+	monthly_THE_LIL_spring_power = 0.06
+}
+THE_LIL_spring_power_from_prank_3 = {
+	monthly_THE_LIL_spring_power = 0.09
+}
+THE_LIL_spring_power_from_prank_4 = {
+	monthly_THE_LIL_spring_power = 0.12
+}
+THE_LIL_spring_power_from_prank_5 = {
+	monthly_THE_LIL_spring_power = 0.15
+}
+THE_LIL_spring_power_from_prank_6 = {
+	monthly_THE_LIL_spring_power = 0.18
+}
+THE_LIL_spring_power_from_prank_7 = {
+	monthly_THE_LIL_spring_power = 0.21
+}
+THE_LIL_spring_power_from_prank_8 = {
+	monthly_THE_LIL_spring_power = 0.24
+}
+THE_LIL_spring_power_from_prank_9 = {
+	monthly_THE_LIL_spring_power = 0.27
+}
+THE_LIL_spring_power_from_prank_10 = {
+	monthly_THE_LIL_spring_power = 0.30
+}
+THE_LIL_spring_power_from_prank_11 = {
+	monthly_THE_LIL_spring_power = 0.33
+}
+THE_LIL_spring_power_from_prank_12 = {
+	monthly_THE_LIL_spring_power = 0.36
+}
+THE_LIL_spring_power_from_prank_13 = {
+	monthly_THE_LIL_spring_power = 0.39
+}
+THE_LIL_spring_power_from_prank_14 = {
+	monthly_THE_LIL_spring_power = 0.42
+}
+THE_LIL_spring_power_from_prank_15 = {
+	monthly_THE_LIL_spring_power = 0.45
+}
+THE_LIL_spring_power_from_prank_16 = {
+	monthly_THE_LIL_spring_power = 0.48
+}
+THE_LIL_spring_power_from_prank_17 = {
+	monthly_THE_LIL_spring_power = 0.51
+}
+THE_LIL_spring_power_from_prank_18 = {
+	monthly_THE_LIL_spring_power = 0.54
+}
+THE_LIL_spring_power_from_prank_19 = {
+	monthly_THE_LIL_spring_power = 0.57
+}
+THE_LIL_spring_power_from_prank_20 = {
+	monthly_THE_LIL_spring_power = 0.60
+}
+###春之力###
+###END###

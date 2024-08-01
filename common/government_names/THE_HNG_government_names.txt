@@ -1,0 +1,54 @@
+gov_THE_HNG_red_dragon_celestial_empire = {
+	rank = {
+		3 = RED_DRAGON_CELESTIAL_EMPIRE
+	}
+	
+	ruler_male = {
+		3 = RED_DRAGON_EMPEROR
+	}
+	
+	ruler_female = {
+		3 = RED_DRAGON_EMPEROR
+	}
+	
+	heir_male = {
+		3 = RED_DRAGON_PRINCE
+	}
+
+	heir_female = {
+		3 = RED_DRAGON_PRINCESS
+	}
+
+	trigger = {
+		OR = {
+			has_reform = THE_HNG_red_dragon_celestial_empire
+		}
+	}
+}
+THE_HNG_red_dragon_steppe_celestial_empire = {
+	rank = {
+		3 = RED_DRAGON_steppe_CELESTIAL_EMPIRE
+	}
+	
+	ruler_male = {
+		3 = RED_DRAGON_steppe_EMPEROR
+	}
+	
+	ruler_female = {
+		3 = RED_DRAGON_steppe_EMPEROR
+	}
+	
+	heir_male = {
+		3 = RED_DRAGON_PRINCE
+	}
+
+	heir_female = {
+		3 = RED_DRAGON_PRINCESS
+	}
+
+	trigger = {
+		OR = {
+			has_reform = THE_HNG_red_dragon_steppe_celestial_empire
+		}
+	}
+}

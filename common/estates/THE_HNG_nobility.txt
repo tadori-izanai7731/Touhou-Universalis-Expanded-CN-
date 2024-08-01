@@ -1,0 +1,23 @@
+estate_nobles = {
+	
+	#Alternative naming of estates
+	custom_name = {
+		desc = THE_hng_estate_youkais_samurais
+		trigger = { 
+        tag = HNG
+		}
+	}		
+
+	privileges = {
+	#HNG
+	THE_HNG_not_believe
+	THE_HNG_yaokai_recover_manpower
+	THE_HNG_yaokai_fort_maintenance
+	THE_HNG_yaokai_not_care_imperial_mandate
+	THE_HNG_nobles_privileges1
+	THE_HNG_nobles_privileges2
+	THE_HNG_nobles_privileges3
+	THE_HNG_nobles_privileges4
+	THE_HNG_nobles_privileges5
+	}
+}

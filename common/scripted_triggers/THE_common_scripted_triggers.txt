@@ -1,0 +1,13 @@
+#不会减少陆军职业度的雇佣兵团
+#在OR中添加mercenary_company = <mercenary_company>
+THE_is_free_merc_company = {
+	ROOT = {
+		OR = {
+			mercenary_company = THE_ROD_rug_pirate_company
+		}
+	}
+}
+
+THE_not_use_common_election_scripted_trigger = {
+	NOT = { has_government_attribute = THE_HMC_use_human_capital_election }
+}

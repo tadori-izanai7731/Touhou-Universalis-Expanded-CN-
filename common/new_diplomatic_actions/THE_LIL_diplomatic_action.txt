@@ -1,0 +1,144 @@
+th_lil_prank = {	#replace touhou
+	category = th_diplo_action
+	require_acceptance = no
+
+	is_visible = {
+		OR = {
+			th_is_or_was_tag = { tag = LIL }
+			th_has_copied_from_target = {
+				target = LIL
+			}
+		}
+	}
+
+	is_allowed = {
+		dip_power = 50
+		custom_trigger_tooltip = {
+			tooltip = th_diplomacy_has_already_pranked
+			FROM = {				
+				OR = {
+					NOT = { has_country_flag = th_was_pranked_by_@ROOT }
+					had_country_flag = {
+						flag = th_was_pranked_by_@ROOT
+						days = 5475		#15 years
+					}
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = THE_LIL_prank_not_in_war_tt
+			NOT = { war_with = FROM }
+		}		
+	}
+
+	on_accept = {
+		#THE_LIL#
+		hidden_effect = {
+			if = {
+				limit = {
+					FROM = {
+						NOT = { has_country_flag = THE_LIL_spring_power_from_prank_count_flag }
+					}
+				}
+				change_variable = {
+					which = the_lil_spring_power_var
+					value = 1
+				}
+				if = {
+					limit = {
+						has_government_mechanic = THE_LIL_spring_power_mechanic
+					}
+					THE_LIL_change_spring_power_from_prank_scripted_effect = yes
+				}
+				FROM = {
+					set_country_flag = THE_LIL_spring_power_from_prank_count_flag
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = THE_LIL_upgrade_lil_prank_flag
+			}
+			add_dip_power = -25
+		}
+		else = {
+			add_dip_power = -50
+		}
+		#THE_LIL#
+		th_clear_copy_flag = yes
+		FROM = {
+			clr_country_flag = th_was_pranked_by_@ROOT
+			country_event = {
+				id = th_diplo_events.37
+			}
+		}
+		if = {
+			limit = {
+				has_estate = estate_fairy_pirates
+			}
+			add_estate_loyalty = {
+				estate = estate_fairy_pirates
+				loyalty = 10
+			}
+			th_pirate_add_prank_fame = yes
+		}
+	}
+
+	ai_will_do = {
+		dip_power = 700
+		FROM = { NOT = { has_country_flag = THE_LIL_spring_power_from_prank_count_flag } }
+	}
+}
+
+THE_LIL_transform_to_spring_territory = {	#设为春之领地
+	category = influence
+	require_acceptance = no
+	is_visible = {
+		has_government_attribute = THE_LIL_can_transform_vassal_to_spring_territory
+		FROM = {
+			is_subject_of = ROOT
+			is_subject_of_type = vassal
+		}
+	}
+	is_allowed = {
+		custom_trigger_tooltip = {
+			tooltip = THE_LIL_num_of_spring_territory_less_than_10_tt
+			NOT = {
+				calc_true_if = {
+					all_subject_country = {
+						is_subject_of_type = THE_LIL_spring_territory_vassal
+						has_country_flag = THE_LIL_special_spring_territory_flag
+					}
+					amount = 10
+				}
+			}
+		}
+	}
+	on_accept = {
+		create_subject = {
+			subject_type = THE_LIL_spring_territory_vassal
+			subject = FROM
+		}
+	}
+}
+
+THE_LIL_transform_to_vassal = {	#撤销春之领地
+	category = influence
+	require_acceptance = no
+	is_visible = {
+		FROM = {
+			is_subject_of = ROOT
+			is_subject_of_type = THE_LIL_spring_territory_vassal
+		}
+	}
+	is_allowed = {
+		stability = 0
+	}
+	on_accept = {
+		add_stability = -1
+		create_subject = {
+			subject_type = vassal
+			subject = FROM
+		}
+	}
+}

@@ -1,0 +1,202 @@
+THE_LIL_fairy_grand_federation_reform = {
+	icon = "fairy_government_reform"
+	allow_normal_conversion = yes
+	fixed_rank = 2
+	lock_level_when_selected = yes
+	royal_marriage = yes
+	queen = yes
+	modifiers = {
+		liberty_desire_from_subject_development = -0.33
+		diplomatic_upkeep = 2
+		improve_relation_modifier = 0.2
+		colonist_placement_chance = 0.05
+		# core_creation = 0.2
+		# THE_LIL_spring_territory_limit = 10
+	}
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = THE_LIL_fairy_grand_federation_reform
+			have_had_reform = THE_LIL_fairy_grand_federation_reform
+		}
+	}
+	conditional = {
+		allow = {
+			always = yes
+		}
+		custom_attributes = {
+			enables_plutocratic_idea_group = yes
+			enables_aristocratic_idea_group = no
+			lottery_election = yes
+			election_on_death = yes
+			THE_LIL_can_transform_vassal_to_spring_territory = yes
+		}
+	}
+	has_term_election = no
+	conditional = {
+		allow = {
+			always = yes
+		}
+		government_abilities = {
+			THE_LIL_spring_power_mechanic
+		}
+	}
+	effect = {
+		hidden_effect = {
+			THE_LIL_change_spring_power_from_prank_scripted_effect = yes
+		}
+	}
+
+	ai = {
+		factor = 1000
+	}
+}
+
+THE_LIL_fairy_great_federation_reform = {
+	icon = "fairy_government_reform"
+	allow_normal_conversion = yes
+	fixed_rank = 3
+	lock_level_when_selected = yes
+	royal_marriage = yes
+	queen = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = THE_LIL_fairy_great_federation_reform
+			have_had_reform = THE_LIL_fairy_great_federation_reform
+		}
+	}
+	modifiers = {
+		liberty_desire_from_subject_development = -0.33
+		diplomatic_upkeep = 3
+		improve_relation_modifier = 0.3
+		colonist_placement_chance = 0.1
+		range = 0.5
+		# core_creation = 0.2
+		# THE_LIL_spring_territory_limit = 10
+	}
+	conditional = {
+		allow = {
+			always = yes
+		}
+		custom_attributes = {
+			enables_plutocratic_idea_group = yes
+			enables_aristocratic_idea_group = no
+			lottery_election = yes
+			election_on_death = yes
+			THE_LIL_can_transform_vassal_to_spring_territory = yes
+		}
+	}
+	has_term_election = no
+	conditional = {
+		allow = {
+			always = yes
+		}
+		government_abilities = {
+			THE_LIL_spring_power_mechanic
+		}
+	}
+	effect = {
+		hidden_effect = {
+			THE_LIL_change_spring_power_from_prank_scripted_effect = yes
+		}
+	}
+
+	ai = {
+		factor = 1000
+	}
+}
+
+THE_LIL_colonial_empire_reform = {
+	icon = "compass"
+	allow_normal_conversion = yes
+	can_use_trade_post = yes
+	potential = {
+		NOT = { has_government_attribute = is_pirate_republic_reform }
+		capital_scope = {
+			NOT = { continent = north_america }
+			NOT = { continent = south_america }
+			NOT = { continent = new_world }
+			NOT = { colonial_region = colonial_australia }
+		}
+		has_country_flag = THE_LIL_unlock_colonial_empire_reform_flag
+	}
+	trigger = { }
+	modifiers = {
+		colonists = 1
+		auto_explore_adjacent_to_colony = yes
+	}
+	custom_attributes = {
+		extra_trade_goods_for_colonial_subjects = yes
+	}
+	ai = {
+		factor = 1000
+	}
+}
+
+THE_LIL_spring_territory_jurisdiction_reform = {
+	icon = "tribal_centralize_power"
+	allow_normal_conversion = yes
+	potential = {
+		has_country_flag = THE_LIL_unlock_spring_territory_jurisdiction_reform_flag
+	}
+
+	trigger = {
+		calc_true_if = {
+			all_country = {
+				AND = {
+					is_subject_of = ROOT
+					is_subject_of_type = THE_LIL_spring_territory_vassal
+				}
+			}
+			amount = 3
+		}
+	}
+
+	modifiers = {
+		core_creation = 0.1
+		diplomatic_annexation_cost = -0.2
+		vassal_forcelimit_bonus = 0.2
+		annexation_relations_impact = -0.25
+	}
+
+	custom_attributes = {
+		THE_LIL_strengthen_spring_territory = yes
+	}
+
+	ai = {
+		factor = 1000
+	}
+}
+
+THE_LIL_fairy_parliament_reform = {
+	icon = "united_cantons_reform"
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	potential = {
+		has_country_flag = THE_LIL_unlock_fairy_parliament_reform_flag
+	}
+
+	modifiers = {
+		republican_tradition = 1
+		global_unrest = -1
+		max_absolutism = 10
+	}
+
+	custom_attributes = {
+		THE_LIL_fairy_parliament = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			# clr_country_flag = THE_LIL_fairy_parliament_timer_flag
+			country_event = {
+				id = THE_LIL_events.14
+			}
+		}
+	}
+
+	ai = {
+		factor = 1000
+	}
+}

@@ -1,0 +1,1724 @@
+THE_NCS_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = NCS
+	}
+	#首善之都
+	THE_NCS_1_2 = {
+		icon = mission_touhou_shining_needle_castle
+		position = 2
+		provinces_to_highlight = {
+			province_id = 5035
+		}
+		trigger = {
+			mission_completed = THE_NCS_3_10
+			5035 = {
+				development = 1000
+				is_capital_of = ROOT
+				province_has_current_tech_fort_trigger = yes
+			}
+		}
+		effect = {
+			5035 = {
+				add_base_tax = 20
+				add_base_production = 20
+				add_base_manpower = 20
+				add_building = fort_18th
+				add_province_triggered_modifier = THE_NCS_kobito_castle_modifier
+			}
+		}
+	}
+	# 核热之眼
+	THE_NCS_1_3 = {
+		icon = mission_touhou_chireiden
+		position = 3
+		provinces_to_highlight = {
+			province_id = 5007
+		}
+		trigger = {
+			mission_completed = THE_NCS_3_10
+			5007 = {
+				is_capital_of = ROOT
+				has_trade_building_trigger = yes
+			}
+		}
+		effect = {
+			5007 = {
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+				add_province_triggered_modifier = THE_NCS_oni_castle_modifier
+				custom_tooltip = THE_NCS_1_3_tt
+				hidden_effect = {
+					if = {
+						limit = {
+							has_building = marketplace
+						}
+						add_or_upgrade_trade_building = yes
+						add_or_upgrade_trade_building = yes
+					}
+					else_if = {
+						limit = {
+							has_building = trade_depot
+						}
+						add_or_upgrade_trade_building = yes
+					}
+					else = {
+						add_base_production = 2
+					}
+				}
+			}
+		}
+	}
+	#清廉之法庭
+	THE_NCS_1_4 = {
+		icon = mission_touhou_hell
+		position = 4
+		provinces_to_highlight = {
+			province_id = 4983
+		}
+		trigger = {
+			mission_completed = THE_NCS_1_2
+			4983 = {
+				is_capital_of = ROOT
+				has_courthouse_building_trigger = yes
+			}
+		}
+		effect = {
+			4983 = {
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+				add_province_triggered_modifier = THE_NCS_enma_castle_modifier
+				custom_tooltip = THE_NCS_1_4_tt
+				hidden_effect = {
+					if = {
+						limit = {
+							has_building = courthouse
+						}
+						add_or_upgrade_courthouse_building = yes
+					}
+					else = {
+						add_base_tax = 1
+						add_base_manpower = 1
+					}
+				}
+			}
+		}
+	}
+	# 庄严之大社
+	THE_NCS_1_5 = {
+		icon = mission_touhou_moriya_shrine
+		position = 5
+		provinces_to_highlight = {
+			province_id = 4998
+		}
+		trigger = {
+			mission_completed = THE_NCS_3_10
+			4998 = {
+				is_capital_of = ROOT
+				has_tax_building_trigger = yes
+			}
+		}
+		effect = {
+			4998 = {
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+				add_province_triggered_modifier = THE_NCS_kami_castle_modifier
+				custom_tooltip = THE_NCS_1_5_tt
+				hidden_effect = {
+					if = {
+						limit = {
+							has_building = temple
+						}
+						add_or_upgrade_tax_building = yes
+					}
+					else = {
+						add_base_tax = 2
+					}
+				}
+			}
+		}
+	}
+	# 傲慢之山巅 
+	THE_NCS_1_6 = {
+		icon = mission_touhou_mountain_castle
+		position = 6
+		provinces_to_highlight = {
+			province_id = 4963
+		}
+		trigger = {
+			mission_completed = THE_NCS_3_10
+			4963 = {
+				is_capital_of = ROOT
+				has_manpower_building_trigger = yes
+			}
+		}
+		effect = {
+			4963 = {
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+				add_province_triggered_modifier = THE_NCS_tengu_castle_modifier
+				custom_tooltip = THE_NCS_2_6_tt
+				hidden_effect = {
+					if = {
+						limit = {
+							has_building = barracks
+						}
+						add_or_upgrade_manpower_building = yes
+					}
+					else = {
+						add_base_manpower = 2
+					}
+				}
+			}
+		}
+	}
+	# 河童之低地
+	THE_NCS_1_7 = {
+		icon = mission_touhou_kappa_swamp
+		position = 7
+		provinces_to_highlight = {
+			province_id = 4965
+		}
+		trigger = {
+			mission_completed = THE_NCS_3_10
+			4965 = {
+				is_capital_of = ROOT
+				has_production_building_trigger = yes
+			}
+		}
+		effect = {
+			4965 = {
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+				add_province_triggered_modifier = THE_NCS_kappa_castle_modifier
+				custom_tooltip = THE_NCS_1_7_tt
+				hidden_effect = {
+					if = {
+						limit = {
+							has_building = workshop
+						}
+						add_or_upgrade_production_building = yes
+					}
+					else = {
+						add_base_production = 2
+					}
+				}
+			}
+		}
+	}
+}
+
+THE_NCS_guide_mission_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = NCS
+	}
+}
+
+THE_NCS_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = NCS
+	}
+	#逆转裁判
+	THE_NCS_2_6 = {
+		icon = mission_touhou_judge_of_gensokyo
+		position = 6
+		provinces_to_highlight = {
+			region = hell_region
+		}
+		trigger = {
+			mission_completed = THE_NCS_5_6
+			mission_completed = THE_NCS_4_6
+			check_variable = {
+				which = the_ncs_uchidenokozuchi_var
+				value = 10
+			}
+			hell_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			owns_all_provinces = {
+				region = hell_region
+			}
+		}
+		effect = {
+			change_adm = 1
+		}
+	}
+	#诸灵的入眠
+	THE_NCS_2_7 = {
+		icon = mission_touhou_former_hell_castle
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				area = Great_border
+				area = Western_great_border
+				area = Keiki_state
+				area = Yachie_state
+				area = Saki_state
+				area = Sanzu_upstream
+				area = Sea_of_petroleum
+				area = Hifuu_club
+			}
+		}
+		trigger = {
+			mission_completed = THE_NCS_2_9
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				OR = {
+					area = Great_border
+					area = Western_great_border
+					area = Keiki_state
+					area = Yachie_state
+					area = Saki_state
+					area = Sanzu_upstream
+					area = Sea_of_petroleum
+					area = Hifuu_club
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = THE_NCS_2_7_tt
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = THE_NCS_chikushyoukai_modifier
+				duration = -1
+			}
+			former_hell_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	#再举万宝槌
+	THE_NCS_2_9 = {
+		icon = mission_touhou_miracle_mallet
+		position = 9
+		trigger = {
+			mission_completed = THE_NCS_3_10
+			employed_advisor = {
+				category = ADM
+			}
+			employed_advisor = {
+				category = DIP
+			}
+			employed_advisor = {
+				category = MIL
+			}
+		}
+		effect = {
+			custom_tooltip = THE_NCS_2_9_tt
+			custom_tooltip = THE_NCS_2_9_2_tt
+			custom_tooltip = empty_line_tt
+			Great_border = {
+				add_permanent_claim = ROOT
+			}
+			Western_great_border = {
+				add_permanent_claim = ROOT
+			}
+			Keiki_state = {
+				add_permanent_claim = ROOT
+			}
+			Yachie_state = {
+				add_permanent_claim = ROOT
+			}
+			Saki_state = {
+				add_permanent_claim = ROOT
+			}
+			Sanzu_upstream = {
+				add_permanent_claim = ROOT
+			}
+			Sea_of_petroleum = {
+				add_permanent_claim = ROOT
+			}
+			Hifuu_club = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+THE_NCS_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = NCS
+	}
+	#渴望世界之城
+	THE_NCS_3_1 = {
+		icon = mission_THE_NCS_icon_1
+		position = 1
+		trigger = {
+			mission_completed = THE_NCS_4_2
+			mission_completed = THE_NCS_1_2
+			mission_completed = THE_NCS_3_5
+			check_variable = {
+				which = the_ncs_uchidenokozuchi_var
+				value = 14
+			}
+			NOT = { great_power_rank = 2 }
+		}
+		effect = {
+			custom_tooltip = THE_NCS_3_1_tt
+			5035 = {
+				move_capital_effect = yes
+			}
+			add_prestige_or_monarch_power = {
+				amount = 100
+			}
+			country_event = {
+				id = THE_NCS_events.10
+			}
+		}
+	}
+	#御伽之鬼岛
+	THE_NCS_3_5 = {
+		icon = mission_touhou_satori2
+		position = 5
+		provinces_to_highlight = {
+			region = former_hell_region
+		}
+		trigger = {
+			mission_completed = THE_NCS_3_7
+			mission_completed = THE_NCS_4_6
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 25
+				region = former_hell_region
+			}
+		}
+		effect = {
+			hidden_effect = {
+				add_country_modifier = {
+					name = THE_NCS_absolute_uchidenokozuchi_master_modifier
+					duration = -1
+				}
+			}
+			custom_tooltip = THE_NCS_3_5_tt
+			custom_tooltip = empty_line_tt
+			change_mil = 1
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					mission_completed = THE_NCS_4_6
+				}
+				custom_tooltip = THE_NCS_3_5_tt_yes
+			}
+			else = {
+				custom_tooltip = THE_NCS_3_5_tt_no
+			}
+			tooltip = {
+				hell_region = {
+					add_permanent_claim = ROOT
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						mission_completed = THE_NCS_4_6
+					}
+					hell_region = {
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+	}
+	#因为山就在那里
+	THE_NCS_3_7 = {
+		icon = mission_touhou_aya
+		position = 7
+		provinces_to_highlight = {
+			region = youkai_mountain_region
+		}
+		trigger = {
+			mission_completed = THE_NCS_4_9
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				region = youkai_mountain_region
+			}
+		}
+		effect = {
+			custom_tooltip = THE_NCS_3_7_tt
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = THE_NCS_oni_power_reappearance_modifier
+				duration = -1
+			}
+		}
+	}
+	#欲望与愿望
+	THE_NCS_3_8 = {
+		icon = mission_touhou_senkai
+		position = 8
+		provinces_to_highlight = {
+			OR = {
+				area = Senkai_state
+				area = Eastern_senkai
+				area = Northern_senkai
+			}
+		}
+		trigger = {
+			mission_completed = THE_NCS_4_9
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				OR = {
+					area = Senkai_state
+					area = Eastern_senkai
+					area = Northern_senkai
+				}
+			}
+		}
+		effect = {
+			youkai_mountain_region = {
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = THE_NCS_descendant_and_descendant_modifier
+				duration = -1
+			}
+		}
+	}
+	#小人族的移动城堡
+	THE_NCS_3_10 = {
+		icon = mission_THE_NCS_icon_2
+		position = 10
+		trigger = {
+			army_size_percentage = 1
+			num_of_generals = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = THE_NCS_third_attack_modifier
+				duration = 3650
+			}
+			add_stability = 1
+			Kappa_delta = {
+				add_permanent_claim = ROOT
+			}
+			Kappa_state = {
+				add_permanent_claim = ROOT
+			}
+			Genbu_ravine_state = {
+				add_permanent_claim = ROOT
+			}
+			Mountain_kappa_land = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+THE_NCS_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = NCS
+	}
+	#一个请求
+	THE_NCS_4_1 = {
+		icon = mission_touhou_moon_land
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				owned_by = LCU
+				province_id = 5320
+			}
+		}
+		trigger = {
+			mission_completed = THE_NCS_4_2
+			custom_trigger_tooltip = {
+				tooltip = th_lunarian_are_attackable_now_ttp
+				has_global_flag = th_lunarian_are_attackable_now_flag
+			}
+			NOT = {
+				is_year = 1600
+			}
+			OR = {
+				AND = {
+					NOT = {
+						truce_with = LCU
+					}
+					NOT = {
+						5320 = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+					}
+				}
+				5320 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					5320 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				custom_tooltip = THE_NCS_4_1_case_1_yes_tt
+			}
+			else = {
+				custom_tooltip = THE_NCS_4_1_case_1_no_tt
+			}
+			tooltip = {
+				country_event = {
+					id = THE_NCS_events.8
+				}
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					NOT = {
+						truce_with = LCU
+					}
+					NOT = {
+						5320 = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+					}
+				}
+				custom_tooltip = THE_NCS_4_1_case_2_yes_tt
+			}
+			else = {
+				custom_tooltip = THE_NCS_4_1_case_2_no_tt
+			}
+			tooltip = {
+				country_event = {
+					id = THE_NCS_events.7
+				}
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_NCS_4_1_case_2_effect_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							5320 = {
+								country_or_non_sovereign_subject_holds = ROOT
+							}
+						}
+					}
+					country_event = {
+						id = THE_NCS_events.7
+					}
+				}
+				else = {
+					set_country_flag = THE_NCS_1600_flag
+					country_event = {
+						id = THE_NCS_events.8
+					}
+				}
+			}
+		}
+	}
+	#盛大的演出 
+	THE_NCS_4_2 = {
+		icon = mission_THE_NCS_icon_3
+		position = 2
+		trigger = {
+			mission_completed = THE_NCS_4_4
+			mission_completed = THE_NCS_4_3
+			check_variable = {
+				which = the_ncs_uchidenokozuchi_var
+				value = 7
+			}
+			prestige = 80
+		}
+		effect = {
+			country_event = {
+				id = THE_NCS_events.6
+			}
+		}
+	}
+	#新成员加入
+	THE_NCS_4_3 = {
+		icon = mission_touhou_kokoro
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				owned_by = KKO
+				province_id = 5136
+				province_id = 5137
+			}
+		}
+		trigger = {
+			mission_completed = THE_NCS_5_3
+			check_variable = {
+				which = the_ncs_uchidenokozuchi_var
+				value = 5
+			}
+			OR = {
+				AND = {
+					alliance_with = KKO
+					5136 = {
+						OR = {
+							country_or_non_sovereign_subject_holds = ROOT
+							owned_by = KKO
+						}
+					}
+					5137 = {
+						OR = {
+							country_or_non_sovereign_subject_holds = ROOT
+							owned_by = KKO
+						}
+					}
+					KKO = {
+						has_opinion = {
+							who = ROOT
+							value = 180
+						}
+						trust = {
+							who = ROOT
+							value = 80
+						}
+					}
+				}
+				KKO = {
+					AND = {
+						is_subject_of = ROOT
+						NOT = {
+							is_subject_of_type = tributary_state
+						}
+					}
+				}
+				NOT = {
+					exists = KKO
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					alliance_with = KKO
+					5136 = {
+						OR = {
+							country_or_non_sovereign_subject_holds = ROOT
+							owned_by = KKO
+						}
+					}
+					5137 = {
+						OR = {
+							country_or_non_sovereign_subject_holds = ROOT
+							owned_by = KKO
+						}
+					}
+					KKO = {
+						has_opinion = {
+							who = ROOT
+							value = 180
+						}
+						trust = {
+							who = ROOT
+							value = 80
+						}
+					}
+				}
+				custom_tooltip = THE_NCS_4_3_case_1_yes_tt
+			}
+			else = {
+				custom_tooltip = THE_NCS_4_3_case_1_no_tt
+			}
+			tooltip = {
+				KKO = {
+					country_event = {
+						id = THE_NCS_events.5
+					}
+				}
+				custom_tooltip = EVENT_INSIGHT_INTRO
+				custom_tooltip = THE_NCS_4_3_case_1_event_tt
+				custom_tooltip = empty_line_tt
+			}
+			if = {
+				limit = {
+					KKO = {
+						AND = {
+							is_subject_of = ROOT
+							NOT = {
+								is_subject_of_type = tributary_state
+							}
+						}
+					}
+				}
+				custom_tooltip = THE_NCS_4_3_case_2_yes_tt
+			}
+			else = {
+				custom_tooltip = THE_NCS_4_3_case_2_no_tt
+			}
+			tooltip = {
+				KKO = {
+					add_country_modifier = {
+						name = THE_NCS_follow_amanojaku_modifier
+						duration = -1
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						exists = KKO
+					}
+				}
+				custom_tooltip = THE_NCS_4_3_case_3_yes_tt
+			}
+			else = {
+				custom_tooltip = THE_NCS_4_3_case_3_no_tt
+			}
+			tooltip = {
+				custom_tooltip = THE_NCS_4_3_case_3_effect_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						alliance_with = KKO
+						5136 = {
+							OR = {
+								country_or_non_sovereign_subject_holds = ROOT
+								owned_by = KKO
+							}
+						}
+						5137 = {
+							OR = {
+								country_or_non_sovereign_subject_holds = ROOT
+								owned_by = KKO
+							}
+						}
+						KKO = {
+							has_opinion = {
+								who = ROOT
+								value = 180
+							}
+							trust = {
+								who = ROOT
+								value = 80
+							}
+						}
+					}
+					KKO = {
+						country_event = {
+							id = THE_NCS_events.5
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						KKO = {
+							AND = {
+								is_subject_of = ROOT
+								NOT = {
+									is_subject_of_type = tributary_state
+								}
+							}
+						}
+					}
+					KKO = {
+						add_country_modifier = {
+							name = THE_NCS_follow_amanojaku_modifier
+							duration = -1
+						}
+					}
+				}
+			}
+		}
+	}
+	#故事中的合作
+	THE_NCS_4_4 = {
+		icon = mission_THE_NCS_icon_4
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				owned_by = HMC
+				area = Kourindou_state
+				area = Human_state
+			}
+		}
+		trigger = {
+			mission_completed = THE_NCS_4_6
+			check_variable = {
+				which = the_ncs_uchidenokozuchi_var
+				value = 5
+			}
+			OR = {
+				AND = {
+					SEK = {
+						OR = {
+							alliance_with = ROOT
+							AND = {
+								is_subject_of = ROOT
+								NOT = {
+									is_subject_of_type = tributary_state
+								}
+							}
+						}
+					}
+					alliance_with = HMC
+					Kourindou_state = {
+						type = all
+						OR = {
+							country_or_non_sovereign_subject_holds = ROOT
+							owned_by = HMC
+						}
+					}
+					Human_state = {
+						type = all
+						OR = {
+							country_or_non_sovereign_subject_holds = ROOT
+							owned_by = HMC
+						}
+					}
+					HMC = {
+						has_opinion = {
+							who = ROOT
+							value = 180
+						}
+						trust = {
+							who = ROOT
+							value = 80
+						}
+						NOT = { development = 450 }
+					}
+				}
+				AND = {
+					SEK = {
+						OR = {
+							alliance_with = ROOT
+							AND = {
+								is_subject_of = ROOT
+								NOT = {
+									is_subject_of_type = tributary_state
+								}
+							}
+						}
+					}
+					HMC = {
+						AND = {
+							is_subject_of = ROOT
+							NOT = {
+								is_subject_of_type = tributary_state
+							}
+						}
+					}
+					Kourindou_state = {
+						type = all
+						OR = {
+							country_or_non_sovereign_subject_holds = ROOT
+							owned_by = SEK
+						}
+					}
+					Human_state = {
+						type = all
+						OR = {
+							country_or_non_sovereign_subject_holds = ROOT
+							owned_by = SEK
+						}
+					}
+				}
+				AND = {
+					NOT = {
+						exists = HMC
+					}
+					5119 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					5120 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					Kourindou_state = {
+						type = all
+						OR = {
+							country_or_non_sovereign_subject_holds = ROOT
+							owned_by = SEK
+						}
+					}
+					Human_state = {
+						type = all
+						OR = {
+							country_or_non_sovereign_subject_holds = ROOT
+							owned_by = SEK
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							alliance_with = HMC
+							Kourindou_state = {
+								type = all
+								OR = {
+									country_or_non_sovereign_subject_holds = ROOT
+									owned_by = HMC
+								}
+							}
+							Human_state = {
+								type = all
+								OR = {
+									country_or_non_sovereign_subject_holds = ROOT
+									owned_by = HMC
+								}
+							}
+							HMC = {
+								has_opinion = {
+									who = ROOT
+									value = 180
+								}
+								trust = {
+									who = ROOT
+									value = 80
+								}
+								NOT = { development = 450 }
+							}
+						}
+						HMC = {
+							AND = {
+								is_subject_of = ROOT
+								NOT = {
+									is_subject_of_type = tributary_state
+								}
+							}
+						}
+					}
+				}
+				custom_tooltip = THE_NCS_4_4_case_1_yes_tt
+			}
+			else = {
+				custom_tooltip = THE_NCS_4_4_case_1_no_tt
+			}
+			tooltip = {
+				Kourindou_state = {
+					remove_core = ROOT
+					cede_province = SEK
+				}
+				Human_state = {
+					remove_core = ROOT
+					cede_province = SEK
+				}
+				NCS = {
+					inherit = HMC
+				}
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					NOT = {
+						exists = HMC
+					}
+					Kourindou_state = {
+						type = all
+						OR = {
+							country_or_non_sovereign_subject_holds = ROOT
+							owned_by = SEK
+						}
+					}
+					Human_state = {
+						type = all
+						OR = {
+							country_or_non_sovereign_subject_holds = ROOT
+							owned_by = SEK
+						}
+					}
+				}
+				custom_tooltip = THE_NCS_4_4_case_2_yes_tt
+			}
+			else = {
+				custom_tooltip = THE_NCS_4_4_case_2_no_tt
+			}
+			tooltip = {
+				Kourindou_state = {
+					remove_core = ROOT
+					cede_province = SEK
+				}
+				Human_state = {
+					remove_core = ROOT
+					cede_province = SEK
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							exists = SEK
+						}
+					}
+					release = SEK
+					create_march = SEK
+				}
+				Kourindou_state = {
+					remove_core = ROOT
+					cede_province = SEK
+				}
+				Human_state = {
+					remove_core = ROOT
+					cede_province = SEK
+				}
+				inherit = HMC
+			}
+		}
+	}
+	#不再屈居人下
+	THE_NCS_4_6 = {
+		icon = mission_touhou_kanako_suwako
+		position = 6
+		provinces_to_highlight = {
+			owned_by = MRY
+		}
+		trigger = {
+			mission_completed = THE_NCS_5_7
+			mission_completed = THE_NCS_4_9
+			OR = {
+				NOT = {
+					exists = MRY
+				}
+				has_spy_network_in = {
+					who = MRY
+					value = 50
+				}
+			}
+		}
+		effect = {
+			foot_of_the_mountain_region = {
+				add_permanent_claim = ROOT
+			}
+			human_region = {
+				add_permanent_claim = ROOT
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = { mission_completed = THE_NCS_3_5 }
+				custom_tooltip = THE_NCS_4_6_case1_tt_yes
+			}
+			else = {
+				custom_tooltip = THE_NCS_4_6_case1_tt_no
+			}
+			tooltip = {
+				hell_region = {
+					add_permanent_claim = ROOT
+				}
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = { is_subject = yes }
+				custom_tooltip = THE_NCS_4_6_case_2_1_tt_yes
+			}
+			else = {
+				custom_tooltip = THE_NCS_4_6_case_2_1_tt_no
+			}
+			tooltip = {
+				if = {
+					limit = { is_subject = yes }
+					overlord = {
+						add_opinion = {
+							who = ROOT
+							modifier = THE_NCS_bereay_moriya
+						}
+					}
+				}
+				grant_independence = yes
+				remove_country_modifier = THE_NCS_temporary_patience_modifier
+			}
+			if = {
+				limit = { is_subject = yes }
+				custom_tooltip = THE_NCS_4_6_case_2_2_tt_no
+			}
+			else = {
+				custom_tooltip = THE_NCS_4_6_case_2_2_tt_yes
+			}
+			tooltip = {
+				add_stability = 1
+				add_prestige_or_monarch_power = {
+					amount = 20
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						mission_completed = THE_NCS_3_5
+					}
+					hell_region = {
+						add_permanent_claim = ROOT
+					}
+				}
+				if = {
+					limit = {
+						is_subject = yes
+					}
+					grant_independence = yes
+					remove_country_modifier = THE_NCS_temporary_patience_modifier
+					overlord = {
+						add_opinion = {
+							who = ROOT
+							modifier = THE_NCS_bereay_moriya
+						}
+					}
+				}
+				else = {
+					add_stability = 1
+					add_prestige_or_monarch_power = {
+						amount = 20
+					}
+				}
+			}
+		}
+	}
+	#介入纷争
+	THE_NCS_4_9 = {
+		icon = mission_touhou_kappa_competition
+		position = 9
+		provinces_to_highlight = {
+			OR = {
+				area = Kappa_delta
+				area = Kappa_state
+				area = Genbu_ravine_state
+				area = Mountain_kappa_land
+			}
+		}
+		trigger = {
+			mission_completed = THE_NCS_3_10
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 8
+				OR = {
+					area = Kappa_delta
+					area = Kappa_state
+					area = Genbu_ravine_state
+					area = Mountain_kappa_land
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = THE_NCS_4_9_tt
+			hidden_effect = {
+				every_known_country = {
+					add_aggressive_expansion = {
+						who = ROOT
+						value = -40
+						apply_calc = no
+					}
+				}
+			}
+			Senkai_state = {
+				add_permanent_claim = ROOT
+			}
+			Eastern_senkai = {
+				add_permanent_claim = ROOT
+			}
+			Northern_senkai = {
+				add_permanent_claim = ROOT
+			}
+			add_accepted_culture = Kappa
+			add_country_modifier = {
+				name = THE_NCS_ancient_relationship_modifier
+				duration = -1
+			}
+		}
+	}
+}
+
+THE_NCS_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = NCS
+	}
+	#确保乐队的活力
+	THE_NCS_5_3 = {
+		icon = mission_touhou_yuuka_ominous
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = Perfect_cut_coast
+				area = Sunny_plains
+				area = Gengetsu_state
+			}
+		}
+		trigger = {
+			mission_completed = THE_NCS_5_5
+			check_variable = {
+				which = the_ncs_uchidenokozuchi_var
+				value = 4
+			}
+			5128 = {
+				country_or_non_sovereign_subject_holds = root
+			}
+			5127 = {
+				country_or_non_sovereign_subject_holds = root
+			}
+			Perfect_cut_coast = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+			}
+			Sunny_plains = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+			}
+			Gengetsu_state = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+			}
+			RAI = {
+				OR = {
+					alliance_with = root
+					AND = {
+						is_subject_of = ROOT
+						NOT = {
+							is_subject_of_type = tributary_state
+						}
+					}
+					NOT = {
+						exists = this
+					}
+				}
+			}
+		}
+		effect = {
+			Rika_state = {
+				add_permanent_claim = ROOT
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					NOT = {
+						exists = RAI
+					}
+				}
+				custom_tooltip = THE_NCS_5_3_tt_yes
+			}
+			else = {
+				custom_tooltip = THE_NCS_5_3_tt_no
+			}
+			tooltip = {
+				release = RAI
+				custom_tooltip = THE_NCS_5_3_tt		
+				create_subject = {
+					subject_type = march
+					subject = RAI
+				}		
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							exists = RAI
+						}
+					}
+					every_province = {
+						limit = {
+							NOT = { province_id = 5127 }
+							NOT = { province_id = 5128 }
+						}
+						remove_core = RAI
+					}
+					Perfect_cut_coast = {
+						remove_core = ROOT
+						add_core = RAI
+					}
+					Sunny_plains = {
+						remove_core = ROOT
+						add_core = RAI
+					}
+					Gengetsu_state = {
+						remove_core = ROOT
+						add_core = RAI
+					}
+					release = RAI
+					RAI = { change_religion = capital }
+					Perfect_cut_coast = {
+						limit = { owner = { NOT = { tag = RAI } } }
+						cede_province = RAI
+					}
+					Sunny_plains = {
+						limit = { owner = { NOT = { tag = RAI } } }
+						cede_province = RAI
+					}
+					Gengetsu_state = {
+						limit = { owner = { NOT = { tag = RAI } } }
+						cede_province = RAI
+					}
+					create_subject = {
+						subject_type = march
+						subject = RAI
+					}
+				}
+			}
+		}
+	}
+	#草根的垂怜经
+	THE_NCS_5_5 = {
+		icon = mission_touhou_grasshoot_youkai
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				owned_by = RAI
+				owned_by = SEK
+			}
+		}
+		trigger = {
+			mission_completed = THE_NCS_5_6
+			check_variable = {
+				which = the_ncs_uchidenokozuchi_var
+				value = 3
+			}
+			RAI = {
+				OR = {
+					alliance_with = ROOT
+					AND = {
+						is_subject_of = ROOT
+						NOT = {
+							is_subject_of_type = tributary_state
+						}
+					}
+					NOT = {
+						exists = THIS
+					}
+				}
+			}
+			SEK = {
+				OR = {
+					alliance_with = ROOT
+					AND = {
+						is_subject_of = ROOT
+						NOT = {
+							is_subject_of_type = tributary_state
+						}
+					}
+					NOT = {
+						exists = THIS
+					}
+				}
+			}
+		}
+		effect = {
+			remove_country_modifier = THE_NCS_kijin_seija_modifier
+			add_country_modifier = {
+				name = THE_NCS_kijin_seija_2_modifier
+				duration = -1
+			}
+			Perfect_cut_coast = {
+				add_permanent_claim = ROOT
+			}
+			Sunny_plains = {
+				add_permanent_claim = ROOT
+			}
+			Gengetsu_state = {
+				add_permanent_claim = ROOT
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_NCS_5_5_rai_tt
+			if = {
+				limit = {
+					RAI = {
+						alliance_with = ROOT
+					}
+				}
+				custom_tooltip = THE_NCS_5_5_rai_case_1_yes_tt
+			}
+			else = {
+				custom_tooltip = THE_NCS_5_5_rai_case_1_no_tt
+			}
+			tooltip = {
+				RAI = {
+					country_event = {
+						id = THE_NCS_events.5
+					}
+				}
+				custom_tooltip = EVENT_INSIGHT_INTRO
+				custom_tooltip = THE_NCS_5_5_rai_case_1_event_tt
+				custom_tooltip = empty_line_tt
+			}
+			if = {
+				limit = {
+					RAI = {
+						is_subject_of = ROOT
+						NOT = {
+							is_subject_of_type = tributary_state
+						}
+					}
+				}
+				custom_tooltip = THE_NCS_5_5_rai_case_2_yes_tt
+			}
+			else = {
+				custom_tooltip = THE_NCS_5_5_rai_case_2_no_tt
+			}
+			tooltip = {
+				RAI = {
+					add_country_modifier = {
+						name = THE_NCS_follow_amanojaku_modifier
+						duration = -1
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						exists = RAI
+					}
+				}
+				custom_tooltip = THE_NCS_5_5_rai_case_3_yes_tt
+			}
+			else = {
+				custom_tooltip = THE_NCS_5_5_rai_case_3_no_tt
+			}
+			tooltip = {
+				custom_tooltip = THE_NCS_5_5_rai_case_3_effect_tt
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_NCS_5_5_sek_tt
+			if = {
+				limit = {
+					SEK = {
+						alliance_with = ROOT
+					}
+				}
+				custom_tooltip = THE_NCS_5_5_sek_case_1_yes_tt
+			}
+			else = {
+				custom_tooltip = THE_NCS_5_5_sek_case_1_no_tt
+			}
+			tooltip = {
+				SEK = {
+					country_event = {
+						id = THE_NCS_events.5
+					}
+				}
+				custom_tooltip = EVENT_INSIGHT_INTRO
+				custom_tooltip = THE_NCS_5_5_sek_case_1_event_tt
+				custom_tooltip = empty_line_tt
+			}
+			if = {
+				limit = {
+					SEK = {
+						is_subject_of = ROOT
+						NOT = {
+							is_subject_of_type = tributary_state
+						}
+					}
+				}
+				custom_tooltip = THE_NCS_5_5_sek_case_2_yes_tt
+			}
+			else = {
+				custom_tooltip = THE_NCS_5_5_sek_case_2_no_tt
+			}
+			tooltip = {
+				SEK = {
+					add_country_modifier = {
+						name = THE_NCS_follow_amanojaku_modifier
+						duration = -1
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						exists = SEK
+					}
+				}
+				custom_tooltip = THE_NCS_5_5_sek_case_3_yes_tt
+			}
+			else = {
+				custom_tooltip = THE_NCS_5_5_sek_case_3_no_tt
+			}
+			tooltip = {
+				custom_tooltip = THE_NCS_5_5_sek_case_3_effect_tt
+			}
+			hidden_effect = {
+				RAI = {
+					THE_NCS_rai_sek_mission = yes
+				}
+				SEK = {
+					THE_NCS_rai_sek_mission = yes
+				}
+			}
+		}
+	}
+	#正邪的旗帜
+	THE_NCS_5_6 = {
+		icon = mission_THE_NCS_icon_5
+		position = 6
+		trigger = {
+			mission_completed = THE_NCS_3_10
+			check_variable = {
+				which = the_ncs_uchidenokozuchi_var
+				value = 1
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = THE_NCS_kijin_seija_modifier
+				duration = -1
+			}
+		}
+	}
+	#借力于宗教家
+	THE_NCS_5_7 = {
+		icon = mission_touhou_moriya_temple
+		position = 7
+		provinces_to_highlight = {
+			owned_by = MRY
+		}
+		trigger = {
+			mission_completed = THE_NCS_5_9
+			religious_unity = 0.9
+			OR = {
+				AND = {
+					religion = th_moriyashinto
+					OR = {
+						AND = {
+							MRY = {
+								has_opinion = {
+									who = ROOT
+									value = 120
+								}
+							}
+							alliance_with = MRY
+						}
+						AND = {
+							is_subject_of = MRY
+							NOT = {
+								is_subject_of_type = tributary_state
+							}
+						}
+						NOT = {
+							exists = MRY
+						}
+					}
+				}
+				AND = {
+					religion = th_hakureishinto
+					OR = {
+						AND = {
+							HKR = {
+								has_opinion = {
+									who = ROOT
+									value = 120
+								}
+							}
+							alliance_with = HKR
+						}
+						AND = {
+							is_subject_of = HKR
+							NOT = {
+								is_subject_of_type = tributary_state
+							}
+						}
+						NOT = {
+							exists = HKR
+						}
+					}
+				}
+			}
+			manpower = 10
+			treasury = 200
+		}
+		effect = {
+			custom_tooltip = THE_NCS_5_7_tt
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					religion = th_moriyashinto
+				}
+				define_advisor = {
+					type = inquisitor
+					skill = 2
+					culture = Gensokyo_human
+					religion = th_moriyashinto
+					cost_multiplier = 0.5
+				}
+				add_country_modifier = {
+					name = THE_NCS_moriya_branch_modifier
+					duration = -1
+				}
+				if = {
+					limit = {
+						exists = MRY
+					}
+					add_trust = {
+						who = MRY
+						value = 10
+					}
+					add_favors = {
+						who = MRY
+						amount = 20
+					}
+					add_manpower = -5
+					add_treasury = -100
+					MRY = {
+						add_favors = {
+							who = ROOT
+							amount = 50
+						}
+						add_manpower = 10
+						add_treasury = 200
+					}
+				}
+			}
+			else = {
+				define_advisor = {
+					type = inquisitor
+					skill = 2
+					culture = Gensokyo_human
+					religion = th_hakureishinto
+					cost_multiplier = 0.5
+				}
+				add_country_modifier = {
+					name = THE_NCS_hakurei_branch_modifier
+					duration = -1
+				}
+				if = {
+					limit = {
+						exists = HKR
+					}
+					add_trust = {
+						who = HKR
+						value = 10
+					}
+					add_manpower = -2
+					add_treasury = -50
+					HKR = {
+						add_trust = {
+							who = ROOT
+							value = 10
+						}
+						add_manpower = 5
+						add_treasury = 100
+					}
+				}
+			}
+		}
+	}
+	#审时度势
+	THE_NCS_5_9 = {
+		icon = mission_THE_NCS_icon_6
+		position = 9
+		trigger = {
+			religion_group = Touhou
+			stability = 1
+		}
+		effect = {
+			country_event = {
+				id = THE_NCS_events.2
+			}
+		}
+	}
+}

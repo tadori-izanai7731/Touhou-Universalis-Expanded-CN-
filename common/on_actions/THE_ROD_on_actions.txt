@@ -1,0 +1,39 @@
+on_new_monarch = {
+	THE_ROD_on_new_monarch_scripted_effect = yes
+}
+
+on_raid_coast = {
+	THE_ROD_on_raid_coast_scripted_effect = yes
+}
+
+on_province_religion_changed = {
+	THE_ROD_on_province_religion_changed_scripted_effect = yes
+}
+
+on_province_owner_change = {
+	THE_ROD_on_province_owner_change_scripted_effect = yes
+}
+
+on_new_age = {
+	THE_ROD_on_new_age_sripted_effect = yes
+}
+
+on_siege_lost_province = {
+	THE_ROD_on_siege_lost_province_sripted_effect = yes
+}
+
+on_trade_good_changed = {
+	THE_ROD_on_trade_good_changed_scripted_effect = yes
+}
+
+on_center_of_trade_upgrade = {
+	THE_ROD_on_center_of_trade_upgrade_scripted_effect = yes
+}
+
+on_barrage = {
+	THE_ROD_on_barrage_scripted_effect = yes
+}
+
+on_battle_won_unit = {
+	THE_ROD_on_battle_won_unit_scripted_effect = yes
+}

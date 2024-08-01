@@ -1,0 +1,16 @@
+THE_HMC_cb_forced_buy_and_sell = {
+	valid_for_subject = no
+	prerequisites_self = {
+		has_government_attribute = THE_HMC_unlock_cb_forced_buy_and_sell
+		NOT = { num_of_loans = 1 }
+		NOT = { is_bankrupt = yes }
+	}
+
+	prerequisites = {
+		FROM = {
+			is_neighbor_of = ROOT
+		}
+	}
+
+	war_goal = THE_HMC_war_goal_forced_buy_and_sell
+}

@@ -1,0 +1,92 @@
+#迁移发展度
+THE_NCS_move_development_effect = {
+	while = {
+		limit = {
+			FROM = {
+				base_tax = 2
+			}
+		}
+		FROM = {
+			add_base_tax = -1
+		}
+		add_base_tax = 1
+	}
+	while = {
+		limit = {
+			FROM = {
+				base_production = 2
+			}
+		}
+		FROM = {
+			add_base_production = -1
+		}
+		add_base_production = 1
+	}
+	while = {
+		limit = {
+			FROM = {
+				base_manpower = 2
+			}
+		}
+		FROM = {
+			add_base_manpower = -1
+		}
+		add_base_manpower = 1
+	}
+}
+
+#处理任务“草根的垂怜经”
+THE_NCS_rai_sek_mission = {
+	if = {
+		limit = {
+			alliance_with = NCS
+		}
+		country_event = {
+			id = THE_NCS_events.5
+		}
+	}
+	else_if = {
+		limit = {
+			is_subject_of = NCS
+		}
+		add_country_modifier = {
+			name = THE_NCS_follow_amanojaku_modifier
+			duration = -1
+		}
+	}
+}
+
+THE_NCS_released = {
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					ROOT = {
+						OR = {
+							tag = RAI
+							tag = SEK
+						}
+					}
+					FROM = {
+						mission_completed = THE_NCS_5_5
+					}
+				}
+				AND = {
+					ROOT = {
+						tag = KKO
+					}
+					FROM = {
+						mission_completed = THE_NCS_4_3
+					}
+				}
+			}
+		}
+		FROM = {
+			create_march = ROOT
+		}
+		add_country_modifier = {
+			name = THE_NCS_follow_amanojaku_modifier
+			duration = -1
+		}
+	}
+}

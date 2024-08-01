@@ -1,0 +1,494 @@
+#$building_1$
+#$building_2$ <optional>
+#$building_3$ <optional>
+#$building_4$ <optional>
+THE_NCS_set_capital_level_building_flag = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = THE_NCS_restore_$building_1$_flag
+			}
+		}
+		if = {
+			limit = {
+				capital_scope = {
+					has_building = $building_1$
+				}
+			}
+			set_country_flag = THE_NCS_restore_$building_1$_flag
+			clr_country_flag = THE_NCS_restore_$building_2$_flag
+			clr_country_flag = THE_NCS_restore_$building_3$_flag
+			clr_country_flag = THE_NCS_restore_$building_4$_flag
+		}
+	}
+	[[building_2]
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = THE_NCS_restore_$building_1$_flag
+			}
+			NOT = {
+				has_country_flag = THE_NCS_restore_$building_2$_flag
+			}
+		}
+		if = {
+			limit = {
+				capital_scope = {
+					has_building = $building_2$
+				}
+			}
+			set_country_flag = THE_NCS_restore_$building_2$_flag
+			clr_country_flag = THE_NCS_restore_$building_3$_flag
+			clr_country_flag = THE_NCS_restore_$building_4$_flag
+		}
+	}
+	]
+	[[building_3]
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = THE_NCS_restore_$building_1$_flag
+			}
+			NOT = {
+				has_country_flag = THE_NCS_restore_$building_2$_flag
+			}
+			NOT = {
+				has_country_flag = THE_NCS_restore_$building_3$_flag
+			}
+		}
+		if = {
+			limit = {
+				capital_scope = {
+					has_building = $building_3$
+				}
+			}
+			set_country_flag = THE_NCS_restore_$building_3$_flag
+			clr_country_flag = THE_NCS_restore_$building_4$_flag
+		}
+	}
+	]
+	[[building_4]
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = THE_NCS_restore_$building_1$_flag
+			}
+			NOT = {
+				has_country_flag = THE_NCS_restore_$building_2$_flag
+			}
+			NOT = {
+				has_country_flag = THE_NCS_restore_$building_3$_flag
+			}
+			NOT = {
+				has_country_flag = THE_NCS_restore_$building_4$_flag
+			}
+		}
+		if = {
+			limit = {
+				capital_scope = {
+					has_building = $building_4$
+				}
+			}
+			set_country_flag = THE_NCS_restore_$building_4$_flag
+		}
+	}
+	]
+}
+
+#$building$
+THE_NCS_set_capital_building_flag = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = THE_NCS_restore_$building$_flag
+			}
+		}
+		if = {
+			limit = {
+				capital_scope = {
+					has_building = $building$
+				}
+			}
+			set_country_flag = THE_NCS_restore_$building$_flag
+		}
+	}
+}
+
+#$building$
+THE_NCS_show_capital_building_script = {
+	if = {
+		limit = {
+			has_country_flag = THE_NCS_restore_$building$_flag
+		}
+		custom_tooltip = THE_NCS_show_capital_building_tt_$building$
+	}
+}
+
+#$building$
+THE_NCS_release_building_script = {
+	if = {
+		limit = {
+			has_country_flag = THE_NCS_restore_$building$_flag
+		}
+		capital_scope = {
+			add_building = $building$
+		}
+	}
+}
+
+#$type$
+THE_NCS_set_auto_release_building_type = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = THE_NCS_auto_release_$type$_flag
+			}
+		}
+		custom_tooltip = THE_NCS_auto_release_tt_on_$type$
+		hidden_effect = {
+			set_country_flag = THE_NCS_auto_release_$type$_flag
+		}
+		change_variable = {
+			which = the_ncs_had_auto_release_var
+			value = 1
+		}
+	}
+	else = {
+		custom_tooltip = THE_NCS_auto_release_tt_off_$type$
+		hidden_effect = {
+			clr_country_flag = THE_NCS_auto_release_$type$_flag
+		}
+		subtract_variable = {
+			which = the_ncs_had_auto_release_var
+			value = 1
+		}
+	}
+}
+
+THE_NCS_remove_all_building = {
+	remove_building = marketplace
+	remove_building = trade_depot
+	remove_building = stock_exchange
+	remove_building = workshop
+	remove_building = counting_house
+	remove_building = temple
+	remove_building = cathedral
+	remove_building = barracks
+	remove_building = training_fields
+	remove_building = shipyard
+	remove_building = grand_shipyard
+	remove_building = courthouse
+	remove_building = town_hall
+	remove_building = dock
+	remove_building = drydock
+	remove_building = regimental_camp
+	remove_building = conscription_center
+	remove_building = university
+	remove_building = coastal_defence
+	remove_building = naval_battery
+	remove_building = fort_15th
+	remove_building = fort_16th
+	remove_building = fort_17th
+	remove_building = fort_18th
+	remove_building = wharf
+	remove_building = weapons
+	remove_building = textile
+	remove_building = plantations
+	remove_building = tradecompany
+	remove_building = farm_estate
+	remove_building = mills
+	remove_building = soldier_households
+	remove_building = impressment_offices
+	remove_building = state_house
+	remove_building = ramparts
+	remove_building = furnace
+}
+
+THE_NCS_on_capital_moved_effect = {
+	if = {
+		limit = {
+			owner = {
+				has_country_modifier = THE_NCS_magic_full_modifier
+			}
+		}
+		FROM = {
+			THE_NCS_remove_all_building = yes
+		}
+		THE_NCS_remove_all_building = yes
+		owner = {
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_trade_flag
+				}
+				THE_NCS_release_building_script = {
+					building = marketplace
+				}
+				THE_NCS_release_building_script = {
+					building = trade_depot
+				}
+				THE_NCS_release_building_script = {
+					building = stock_exchange
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_product_flag
+				}
+				THE_NCS_release_building_script = {
+					building = workshop
+				}
+				THE_NCS_release_building_script = {
+					building = counting_house
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_tax_flag
+				}
+				THE_NCS_release_building_script = {
+					building = temple
+				}
+				THE_NCS_release_building_script = {
+					building = cathedral
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_manpower_flag
+				}
+				THE_NCS_release_building_script = {
+					building = barracks
+				}
+				THE_NCS_release_building_script = {
+					building = training_fields
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_shiplimit_flag
+				}
+				THE_NCS_release_building_script = {
+					building = shipyard
+				}
+				THE_NCS_release_building_script = {
+					building = grand_shipyard
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_government_flag
+				}
+				THE_NCS_release_building_script = {
+					building = courthouse
+				}
+				THE_NCS_release_building_script = {
+					building = town_hall
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_sailor_flag
+				}
+				THE_NCS_release_building_script = {
+					building = dock
+				}
+				THE_NCS_release_building_script = {
+					building = drydock
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_forcelimit_flag
+				}
+				THE_NCS_release_building_script = {
+					building = regimental_camp
+				}
+				THE_NCS_release_building_script = {
+					building = conscription_center
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_university_flag
+				}
+				THE_NCS_release_building_script = {
+					building = university
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_defense_flag
+				}
+				THE_NCS_release_building_script = {
+					building = coastal_defence
+				}
+				THE_NCS_release_building_script = {
+					building = naval_battery
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_fort_flag
+				}
+				THE_NCS_release_building_script = {
+					building = fort_15th
+				}
+				THE_NCS_release_building_script = {
+					building = fort_16th
+				}
+				THE_NCS_release_building_script = {
+					building = fort_17th
+				}
+				THE_NCS_release_building_script = {
+					building = fort_18th
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_manufactory_flag
+				}
+				capital_scope = {
+					if = {
+						limit = {
+							OR = {
+								trade_goods = fish
+								trade_goods = naval_supplies
+								trade_goods = salt
+							}
+							owner = {
+								has_country_flag = THE_NCS_restore_wharf_flag
+							}
+						}
+						add_building = wharf
+					}
+					if = {
+						limit = {
+							OR = {
+								trade_goods = copper
+								trade_goods = iron
+							}
+							owner = {
+								has_country_flag = THE_NCS_restore_weapons_flag
+							}
+						}
+						add_building = weapons
+					}
+					if = {
+						limit = {
+							OR = {
+								trade_goods = wool
+								trade_goods = cloth
+								trade_goods = silk
+								trade_goods = dyes
+							}
+							owner = {
+								has_country_flag = THE_NCS_restore_textile_flag
+							}
+						}
+						add_building = textile
+					}
+					if = {
+						limit = {
+							OR = {
+								trade_goods = cocoa
+								trade_goods = coffee
+								trade_goods = cotton
+								trade_goods = sugar
+								trade_goods = tobacco
+							}
+							owner = {
+								has_country_flag = THE_NCS_restore_plantations_flag
+							}
+						}
+						add_building = plantations
+					}
+					if = {
+						limit = {
+							OR = {
+								trade_goods = fur
+								trade_goods = incense
+								trade_goods = ivory
+								trade_goods = slaves
+								trade_goods = spices
+								trade_goods = cloves
+							}
+							owner = {
+								has_country_flag = THE_NCS_restore_tradecompany_flag
+							}
+						}
+						add_building = tradecompany
+					}
+					if = {
+						limit = {
+							OR = {
+								trade_goods = grain
+								trade_goods = wine
+								trade_goods = livestock
+							}
+							owner = {
+								has_country_flag = THE_NCS_restore_$building$_flag
+							}
+						}
+						add_building = farm_estate
+					}
+					if = {
+						limit = {
+							OR = {
+								trade_goods = tropical_wood
+								trade_goods = chinaware
+								trade_goods = gems
+								trade_goods = glass
+								trade_goods = paper
+							}
+							owner = {
+								has_country_flag = THE_NCS_restore_mills_flag
+							}
+						}
+						add_building = mills
+					}
+					if = {
+						limit = {
+							trade_goods = coal
+							owner = {
+								has_country_flag = THE_NCS_restore_furnace_flag
+							}
+						}
+						add_building = furnace
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_household_flag
+				}
+				THE_NCS_release_building_script = {
+					building = soldier_households
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_office_flag
+				}
+				THE_NCS_release_building_script = {
+					building = impressment_offices
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_state_flag
+				}
+				THE_NCS_release_building_script = {
+					building = state_house
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_NCS_auto_release_rampart_flag
+				}
+				THE_NCS_release_building_script = {
+					building = ramparts
+				}
+			}
+		}
+	}
+}

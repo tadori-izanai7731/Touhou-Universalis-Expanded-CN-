@@ -1,0 +1,46 @@
+spriteTypes = {
+	progressbartype = {
+		name = "GFX_THE_ROD_government_power_bar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx\\interface\\government_mechanics\\THE_ROD_progressbar_full.dds"
+		textureFile2 = "gfx\\interface\\provinceView_progressbar_w92_h11_black.dds"
+		size = { x = 230 y = 17 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	spriteType = {
+		name = "GFX_THE_ROD_government_power_bar_frame"
+		texturefile = "gfx\\interface\\government_mechanics\\THE_ROD_progressbar_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_THE_ROD_government_interaction"
+		texturefile = "gfx\\interface\\government_mechanics\\THE_ROD_interface_1.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_THE_ROD_government_mechanic_interaction_1"
+		texturefile = "gfx\\interface\\government_mechanics\\THE_ROD_interface_1.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_THE_ROD_government_mechanic_interaction_2"
+		texturefile = "gfx\\interface\\government_mechanics\\THE_ROD_interface_2.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_THE_ROD_german_culture_unity_icon"
+		texturefile = "gfx/interface/government_mechanics/THE_ROD_german_culture_unity_icon.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+}

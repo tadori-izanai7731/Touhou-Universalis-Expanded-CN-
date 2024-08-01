@@ -1,0 +1,44 @@
+custom_button = {
+	name = THE_ROD_province_button_gui
+	tooltip = THE_ROD_province_button_gui_tt
+	potential = {
+		FROM = { has_country_flag = THE_ROD_unlock_province_button_flag }
+		NOT = { owned_by = FROM }
+	}
+	trigger = {
+		owner = {
+			alliance_with = FROM
+			owes_favors = { who = FROM value = 25 }
+		}
+		is_core = FROM
+	}
+	effect = {
+		owner = {
+			FROM = {
+				add_favors = {
+					who = PREV
+					amount = -25
+				}
+				hidden_effect = {
+					change_variable = {
+						which = the_rod_moon_song_var
+						value = 1
+					}
+					# if = {
+					# 	limit = {
+					# 		check_variable = {
+					# 			which = the_rod_moon_song_var
+					# 			value = 500
+					# 		}
+					# 	}
+					# 	country_event = {
+					# 		id = <id>
+					# 	}
+					# }
+				}
+			}
+		}
+		remove_core = owner
+		cede_province = FROM
+	}
+}

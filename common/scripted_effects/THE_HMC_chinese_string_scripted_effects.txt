@@ -1,0 +1,92 @@
+THE_HMC_define_election_ruler_scripted_effect = {
+	[[akyuu]
+		define_ruler = {
+			name = "?ñBl"
+			dynasty = "z0u"
+			adm = 5
+			dip = 5
+			mil = 3
+			age = 20
+			culture = ROOT
+			religion = ROOT
+			female = yes
+			fixed = yes
+		}
+		hidden_effect = {
+			THE_HMC_set_now_ruler_flag_scripted_effect = { ruler = akyuu }
+		}
+	]
+	[[kosuzu]
+		define_ruler = {
+			name = "S√î"
+			dynasty = ",gES"
+			adm = 3
+			dip = 4
+			mil = 4
+			age = 20
+			culture = ROOT
+			religion = ROOT
+			female = yes
+			fixed = yes
+		}
+		hidden_effect = {
+			THE_HMC_set_now_ruler_flag_scripted_effect = { ruler = kosuzu }
+		}
+	]
+	[[rinnosuke]
+		define_ruler = {
+			name = "óKN©R"
+			dynasty = "Óh—è"
+			adm = 4
+			dip = 6
+			mil = 3
+			age = 20
+			culture = ROOT
+			religion = ROOT
+			male = yes
+			fixed = yes
+		}
+		hidden_effect = {
+			THE_HMC_set_now_ruler_flag_scripted_effect = { ruler = rinnosuke }
+		}
+	]
+	[[keine]
+		define_ruler = {
+			name = "gaÛó"
+			dynasty = "Nãv˝l"
+			adm = 6
+			dip = 3
+			mil = 5
+			age = 20
+			culture = ROOT
+			religion = ROOT
+			female = yes
+			fixed = yes
+		}
+		hidden_effect = {
+			THE_HMC_set_now_ruler_flag_scripted_effect = { ruler = keine }
+		}
+	]
+}
+
+THE_HMC_define_general_rinnosuke_scripted_effect = {
+	define_general = {
+		name = "gaÛó Nãv˝l"
+		fire = 3
+		shock = 6
+		manuever = 4
+		siege = 2
+		female = yes
+	}
+}
+
+THE_HMC_define_general_keine_scripted_effect = {
+	define_general = {
+		name = "óKN©R Óh—è"
+		fire = 2
+		shock = 2
+		manuever = 6
+		siege = 6
+		male = yes
+	}
+}

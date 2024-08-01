@@ -1,0 +1,2490 @@
+THE_yof_slot_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = YOF } 
+	
+	yof_image_chu_fastbuild = {
+		icon = mission_touhou_kappa_tinkerers
+		position = 3
+		required_missions = {
+			yof_identity_from_people
+		}
+		provinces_to_highlight = {
+			OR = {
+				is_capital_of = KPP
+				AND = {
+					owned_by = ROOT
+					OR = {
+						NOT = { has_trade_building_trigger = yes }
+						NOT = { has_production_building_trigger = yes }
+					}
+				}
+			}
+		} 
+		
+		trigger = { 
+			OR = {
+				AND = {
+					alliance_with = KPP
+					KPP = {
+						has_opinion = {
+							who = ROOT
+							value = 200
+						}
+					}
+					num_of_owned_provinces_with = {
+						value = 6
+						has_trade_building_trigger = yes
+						has_production_building_trigger = yes
+					}
+				}
+				num_of_owned_provinces_with = {
+					value = 10
+					has_trade_building_trigger = yes
+					has_production_building_trigger = yes
+				}
+			}
+		} 
+		
+		effect = { 
+			add_years_of_income = 1
+			custom_tooltip = yof_hina_matsuri_factory_allow_t2
+			custom_tooltip = yof_hina_matsuri_factory_allow_tt
+			hidden_effect = {
+				set_variable = {
+					which = yof_hina_matsuri_factory_num
+				}
+				set_country_flag = yof_hina_matsuri_factory_allow
+				5189 = {
+					add_or_upgrade_production_building = yes
+				}
+				5190 = {
+					add_or_upgrade_production_building = yes
+				}
+				5017 = {
+					add_or_upgrade_production_building = yes
+				}
+				5188 = {
+					add_or_upgrade_production_building = yes
+				}
+				5015 = {
+					add_or_upgrade_production_building = yes
+				}
+				5187 = {
+					add_or_upgrade_production_building = yes
+				}
+			}
+		} 
+	}
+	yof_factory_of_image = {
+		icon = yof_mission_24
+		position = 7
+		required_missions = {
+			yof_image_chu_fastbuild
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { has_province_modifier = yof_hina_dolls_factory_buff }
+		} 
+		
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 3
+				has_province_modifier = yof_hina_dolls_factory_buff
+			}
+			# custom_trigger_tooltip = {
+			# 	tooltip = yof_hina_matsuri_factory_num_tt
+			# 	check_variable = {
+			# 		which = yof_hina_matsuri_factory_num
+			# 		value = 3
+			# 	}
+			# }
+		} 
+		
+		effect = { 
+			custom_tooltip = yof_kagiyama_hina_in_forest_allow_tt
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			hidden_effect = {
+				set_variable = {
+					which = yof_kagiyama_hina_in_forest_num
+				}
+				set_country_flag = yof_kagiyama_hina_in_forest_allow
+			}
+		} 
+	}
+	yof_Juvenile_in_forest = {
+		icon = yof_mission_25
+		position = 9
+		required_missions = {
+			yof_factory_of_image
+		}
+		provinces_to_highlight = {  } 
+		
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = yof_kagiyama_hina_in_forest_numtt
+				check_variable = {
+					which = yof_kagiyama_hina_in_forest_num
+					value = 1
+				}
+			}
+		} 
+		
+		effect = { 
+			add_adm_power = 200
+			##解锁开发山脉特权
+			unlock_estate_privilege = { estate_privilege = estate_burghers_forest_expansion } 
+			unlock_estate_privilege = { estate_privilege = estate_burghers_mountain_expansion } 
+		} 
+	}
+	yof_image_spin_river = {
+		icon = yof_mission_26
+		position = 10
+		required_missions = {
+			yof_Juvenile_in_forest
+		}
+		provinces_to_highlight = {
+			AND = {
+				OR = {
+					area = Youkai_Mountains
+					area = Southern_youkai_mountains
+				}
+				OR = {
+					NOT = { development = 23 }
+					AND = {
+						NOT = { has_production_building_trigger = yes }
+						NOT = { has_tax_building_trigger = yes }
+					}
+				}
+			}
+		} 
+		
+		trigger = { 
+			Youkai_Mountains = {
+				type = all
+				development = 23
+				OR = {
+					has_production_building_trigger = yes
+					has_tax_building_trigger = yes
+				}
+			}
+			Southern_youkai_mountains = {
+				type = all
+				development = 20
+				OR = {
+					has_production_building_trigger = yes
+					has_tax_building_trigger = yes
+				}
+			}
+			OR = {
+				num_of_owned_provinces_with = {
+					value = 8
+					has_province_modifier = distribute_hina_dolls_province_buff
+				}
+				has_country_modifier = distribute_hina_dolls_province_buffv2
+			}
+		} 
+		
+		effect = { 
+			4963 = {
+				add_province_modifier = {
+					name = yof_youkari_mountain_hina_dolls_buff
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = yof_yokari_mountain_hina_dolls_buff2
+				duration = -1
+			}
+		} 
+	}
+	yof_river_flowing_endless = {
+		icon = mission_touhou_crow_tengu
+		position = 12
+		required_missions = {
+			yof_yokari_mountain
+			yof_image_spin_river
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 4955
+					owner = {
+						NOT = { has_country_flag = yof_matsutri_hakurei_state_complete }
+					}
+				}
+				AND = {
+					province_id = 4998
+					owner = {
+						NOT = { has_country_flag = yof_matsutri_moriya_state_complete }
+					}
+				}
+				AND = {
+					province_id = 4963
+					owner = {
+						NOT = { has_country_flag = yof_matsutri_youkari_mountain_complete }
+					}
+				}
+				AND = {
+					province_id = 5187
+					owner = {
+						NOT = { has_country_flag = yof_matsutri_youkari_forest_complete }
+					}
+				}
+				AND = {
+					province_id = 5134
+					NOT = { owned_by = ROOT }
+				}
+			}
+		} 
+		
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = yof_all_matsutri_hina_complete_tt
+				has_country_flag = yof_matsutri_hakurei_state_complete
+				has_country_flag = yof_matsutri_moriya_state_complete
+				has_country_flag = yof_matsutri_youkari_forest_complete
+				has_country_flag = yof_matsutri_youkari_mountain_complete
+			}
+			4955 = {
+				owned_by = ROOT
+			}
+			4998 = {
+				owned_by = ROOT
+			}
+			4963 = {
+				owned_by = ROOT
+			}
+			5187 = {
+				owned_by = ROOT
+			}
+			5134 = {
+				owned_by = ROOT
+			}
+		} 
+		
+		effect = { 
+			add_country_modifier = {
+				name = yof_river_flowing_endless_buff
+				duration = -1
+			}
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+		} 
+	}
+	yof_river_of_dirt = {
+		icon = yof_mission_21
+		position = 13
+		required_missions = {
+			yof_river_flowing_endless
+		}
+		provinces_to_highlight = {  } 
+		
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = yof_distribute_kami_num
+							value = 1
+						}
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = yof_distribute_kami_num_tt_0
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = yof_distribute_kami_num_tt
+					check_variable = {
+						which = yof_distribute_kami_num
+						value = 2000
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = doom_power_yof_never_come_publishment_allow_complete_tt
+				has_country_flag = doom_power_yof_never_come_publishment_allow
+			}
+			custom_trigger_tooltip = {
+				tooltip = all_church_power_level_up_yof_tt
+				AND = {
+					has_country_flag = yof_chruch_1_level_up_flag
+					has_country_flag = yof_chruch_2_level_up_flag
+					has_country_flag = yof_chruch_3_level_up_flag
+					has_country_flag = yof_chruch_4_level_up_flag
+					has_country_flag = yof_chruch_5_level_up_flag
+					has_country_flag = yof_chruch_6_level_up_flag
+					has_country_flag = yof_chruch_7_level_up_flag
+				}
+			}
+		} 
+		effect = { 
+			hidden_effect = {
+				set_country_flag = yof_defend_siege_allow_flag
+			}
+			custom_tooltip = yof_siege_ability_expand_15_tt
+			# custom_tooltip = yof_siege_ability_expand_15_tt1
+		} 
+	}
+}
+THE_yof_slot_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = YOF } 
+	
+	yof_identity_from_people = {
+		icon = yof_mission_2
+		position = 2
+		required_missions = {
+			yof_doom_samsara
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5190
+				province_id = 5189
+				province_id = 5017
+				province_id = 5188
+				province_id = 5015
+				province_id = 5187
+			}
+			NOT = { has_province_modifier = distribute_hina_dolls_province_buff }
+		} 
+		
+		trigger = {
+			OR = {
+				has_country_modifier = distribute_hina_dolls_province_buffv2
+				AND = {
+					5190 = {
+						has_province_modifier = distribute_hina_dolls_province_buff
+					}
+					5189 = {
+						has_province_modifier = distribute_hina_dolls_province_buff
+					}
+					5017 = {
+						has_province_modifier = distribute_hina_dolls_province_buff
+					}
+					5188 = {
+						has_province_modifier = distribute_hina_dolls_province_buff
+					}
+					5015 = {
+						has_province_modifier = distribute_hina_dolls_province_buff
+					}
+					5187 = {
+						has_province_modifier = distribute_hina_dolls_province_buff
+					}
+				}
+			}
+		} 
+		
+		effect = {
+			add_adm_power = 20
+			add_dip_power = 20
+			add_mil_power = 20
+			add_country_modifier = {
+				name = yof_identity_from_people_buff
+				duration = -1
+			}
+			remove_country_modifier = yof_start_game_buff
+			if = {
+				limit = { ai = no }
+				custom_tooltip = THE_yof_not_river_flowed_own_either_tt
+				set_country_flag = yof_not_river_flowed_own_either_flag
+			}
+		} 
+	}
+	yof_rotate_of_doom = {
+		icon = yof_mission_22
+		position = 5
+		required_missions = {
+			yof_doom_saved
+		}
+		provinces_to_highlight = {
+			is_capital = yes
+			owner = {
+				has_country_modifier = yof_doom_river_flowed_neighbourhood_buff
+			}
+		} 
+		
+		trigger = {
+			OR = {
+				any_country = {
+					has_country_modifier = yof_doom_river_flowed_neighbourhood_buff
+					war_with = ROOT
+				}
+				check_variable = {
+					which = yof_dirt_river_action_num
+					value = 3
+				}
+				# custom_trigger_tooltip = {
+				# 	tooltip = yof_dirt_river_action_num3_tt
+				# 	check_variable = {
+				# 		which = yof_dirt_river_action_num
+				# 		value = 3
+				# 	}
+				# }
+			}
+		} 
+		
+		effect = { 
+			add_adm_power = 45
+			add_dip_power = 45
+			add_mil_power = 45
+			add_country_modifier = {
+				name = yof_rotate_of_doom_buff
+				duration = 10950
+			}
+			hidden_effect = {
+				set_country_flag = yof_rotate_of_dom_out_publishiment_flag
+			}
+			custom_tooltip = yof_doom_power_expand_15_aeimpact_tt
+		} 
+	}
+	yof_kami_repulation = {
+		icon = yof_mission_23
+		position = 7
+		required_missions = {
+			yof_rotate_of_doom
+		}
+		provinces_to_highlight = {  } 
+		
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = yof_distribute_kami_num
+							value = 1
+						}
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = yof_distribute_kami_num_tt_0
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = yof_distribute_kami_num_tt
+					check_variable = {
+						which = yof_distribute_kami_num
+						value = 1000
+					}
+				}
+			}
+			religion = th_kagiyama
+			check_variable = {
+				which = yof_doom_gather_on_or_off_num
+				value = 5
+			}
+		} 
+		
+		effect = { 
+			custom_tooltip = yof_kami_repulation_tt
+		} 
+	}
+	yof_spin_in_river = {
+		icon = mission_touhou_pirate_ship
+		position = 8
+		required_missions = {
+			yof_factory_of_image
+		}
+		provinces_to_highlight = {  } 
+		
+		trigger = { 
+			OR = {
+				navy_size_percentage = 1.0
+				navy_size = 50
+			}
+			num_of_admirals = 1
+		} 
+		
+		effect = { 
+			add_country_modifier = {
+				name = yof_port_of_mist_country_buff
+				duration = 10950
+			}
+			Scarlet_island = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Scarlett_domain = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Scarlet_mountain = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+	yof_port_of_mist = {
+		icon = yof_mission_19
+		position = 9
+		required_missions = {
+			yof_spin_in_river
+		}
+		provinces_to_highlight = {
+			province_id = 5038
+		} 
+		
+		trigger = { 
+			5038 = {
+				owned_by = ROOT
+			}
+			OR = {
+				has_won_war_against = {
+					who = SCR
+					max_years_since = 20
+				}
+				NOT = { exists = SCR }
+			}
+		} 
+		
+		effect = { 
+			5038 = {
+				center_of_trade = 1
+				add_province_modifier = {
+					name = yof_hina_dolls_downon_province_buff
+					duration = -1
+				}
+			}
+		} 
+	}
+	yof_one_with_own = {
+		icon = yof_mission_20
+		position = 10
+		required_missions = {
+			yof_port_of_mist
+		}
+		provinces_to_highlight = {
+			province_id = 5038
+		} 
+		
+		trigger = { 
+			5038 = {
+				province_has_center_of_trade_of_level = 2
+				development = 30
+				has_production_building_trigger = yes
+				has_tax_building_trigger = yes
+				has_manufactory_trigger = yes
+				has_shipyard_building_trigger = yes
+			}
+		} 
+		
+		effect = { 
+			add_country_modifier = {
+				name = 	yof_hina_dolls_downon_buff
+				duration = -1
+			}
+		} 
+	}
+	yof_yokari_mountain = {
+		icon = mission_touhou_youkai_mountain
+		position = 11
+		required_missions = {
+			yof_faith_doom_expand
+		}
+		provinces_to_highlight = {
+			OR = {
+				owned_by = TGU
+				area = Youkai_Mountains
+			}
+		} 
+		
+		trigger = { 
+			OR = {
+				TGU = {
+					is_subject_of = ROOT
+				}
+				AND = {
+					NOT = {
+						exists = TGU
+					}
+					Youkai_Mountains = {
+						type = all
+						owned_by = ROOT
+					}
+				}
+			}
+		} 
+		
+		effect = { 
+			Moriya_coast_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Moriya_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Southern_moriya = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = {
+					TGU = {
+						is_subject_of = ROOT
+					}
+				}
+				custom_tooltip = THE_YOF_yokari_mountain_case1_tt_yes
+			}
+			else = {
+				custom_tooltip = THE_YOF_yokari_mountain_case1_tt_no
+			}
+			tooltip = {
+				add_country_modifier = {
+					name = yof_youkari_mountain_buff
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						exists = TGU
+					}
+					Youkai_Mountains = {
+						type = all
+						owned_by = ROOT
+					}
+				}
+				custom_tooltip = THE_YOF_yokari_mountain_case2_tt_yes
+			}
+			else = {
+				custom_tooltip = THE_YOF_yokari_mountain_case2_tt_no
+			}
+			tooltip = {
+				add_mil_power = 200
+				add_stability = 1
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						TGU = {
+							is_subject_of = ROOT
+						}
+					}
+					add_country_modifier = {
+						name = yof_youkari_mountain_buff
+						duration = -1
+					}
+				}
+				else = {
+					add_mil_power = 200
+					add_stability = 1
+				}
+			}
+		} 
+	}
+	yof_wind_lank_of_mountain = {
+		icon = mission_touhou_mry_dof_lvl3
+		position = 13
+		required_missions = {
+			yof_yokari_mountain
+		}
+		provinces_to_highlight = {
+			province_id = 4998
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { religion = th_kagiyama }
+			}
+		} 
+		
+		trigger = {
+			OR = {
+				4998 = {
+					owned_by = ROOT
+					religion = th_kagiyama
+				}
+				AND = {
+					ROOT = {
+						overlord_of = MRY
+					}
+					MRY = {
+						religion = th_kagiyama
+					}
+				}
+			}
+		} 
+		
+		effect = { 
+			custom_tooltip = yof_mry_add_buff_tt
+			set_global_flag = yof_mry_add_to_kagiyama_buff_flag
+			add_adm_power = 200
+			add_country_modifier = {
+				name = yof_mya_land_buff
+				duration = -1
+			}
+		} 
+	}
+}
+THE_yof_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = YOF } 
+	
+	yof_doom_samsara = {
+		icon = yof_mission_1
+		position = 1
+		provinces_to_highlight = {  } 
+		
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = yof_religions_lose_with_change_t1
+				has_country_flag = yof_religions_lose_with_change
+			}
+		} 
+		
+		effect = {  
+			add_adm_power = 50
+			add_stability = 1
+			add_country_modifier = {
+				name = yof_doom_misforture_samsara_buff
+				duration = 3650
+			}
+			set_country_flag = gather_doom_on_allow_flag
+			hidden_effect = {
+				set_variable = {
+					which = yof_dirt_river_flowed
+				}
+				set_variable = {
+					which = yof_hina_distribute_provinces_num
+				}
+				set_variable = {
+					which = yof_distribute_kami_num
+				}
+				set_variable = {
+					which = yof_doom_gather_on_or_off_num
+				}
+				set_variable = {
+					which = yof_dirt_river_action_num
+				}
+			}
+		} 
+	}
+	yof_faith_of_sea = {
+		icon = yof_mission_3
+		position = 2
+		required_missions = { yof_doom_samsara } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5190
+				province_id = 5189
+				province_id = 5017
+				province_id = 5188
+				province_id = 5015
+				province_id = 5187
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { religion = ROOT }
+			}
+		} 
+		
+		trigger = { 
+			5190 = {
+				owned_by = ROOT
+				religion = ROOT
+			}
+			5189 = {
+				owned_by = ROOT
+				religion = ROOT
+			}
+			5017 = {
+				owned_by = ROOT
+				religion = ROOT
+			}
+			5188 = {
+				owned_by = ROOT
+				religion = ROOT
+			}
+			5015 = {
+				owned_by = ROOT
+				religion = ROOT
+			}
+			5187 = {
+				owned_by = ROOT
+				religion = ROOT
+			}
+		} 
+		
+		effect = {
+			add_country_modifier = {
+				name = yof_faith_of_sea_buff
+				duration = 10950
+			}
+			add_treasury = 100
+		} 
+	}
+	yof_doom_saved = {
+		icon = yof_mission_7
+		position = 4
+		required_missions = { yof_faith_of_sea } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { has_province_modifier = distribute_hina_dolls_province_buff }
+		} 
+		
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 10
+				has_province_modifier = distribute_hina_dolls_province_buff
+			}
+			if = {
+				limit = { 
+					check_variable = {
+						which = yof_dirt_river_flowed
+						value = 0
+					}
+					NOT = {
+						check_variable = {
+							which = yof_dirt_river_flowed
+							value = 1
+						}
+					}
+				}
+				has_government_power = {
+					mechanic_type = yokari_forest_mechanic
+					power_type = yokari_forest_doom_power
+					value = 200
+				}
+			}
+			else_if = {
+				limit = { 
+					check_variable = {
+						which = yof_dirt_river_flowed
+						value = 1
+					}
+					NOT = {
+						check_variable = {
+							which = yof_dirt_river_flowed
+							value = 2
+						}
+					}
+				}
+				has_government_power = {
+					mechanic_type = yokari_forest_mechanic
+					power_type = yokari_forest_doom_power
+					value = 180
+				}
+			}
+			else_if = {
+				limit = { 
+					check_variable = {
+						which = yof_dirt_river_flowed
+						value = 2
+					}
+					NOT = {
+						check_variable = {
+							which = yof_dirt_river_flowed
+							value = 3
+						}
+					}
+				}
+				has_government_power = {
+					mechanic_type = yokari_forest_mechanic
+					power_type = yokari_forest_doom_power
+					value = 160
+				}
+			}
+			else_if = {
+				limit = { 
+					check_variable = {
+						which = yof_dirt_river_flowed
+						value = 3
+					}
+					NOT = {
+						check_variable = {
+							which = yof_dirt_river_flowed
+							value = 4
+						}
+					}
+				}
+				has_government_power = {
+					mechanic_type = yokari_forest_mechanic
+					power_type = yokari_forest_doom_power
+					value = 140
+				}
+			}
+			else_if = {
+				limit = { 
+					check_variable = {
+						which = yof_dirt_river_flowed
+						value = 4
+					}
+					NOT = {
+						check_variable = {
+							which = yof_dirt_river_flowed
+							value = 5
+						}
+					}
+				}
+				has_government_power = {
+					mechanic_type = yokari_forest_mechanic
+					power_type = yokari_forest_doom_power
+					value = 120
+				}
+			}
+			else_if = {
+				limit = { 
+					check_variable = {
+						which = yof_dirt_river_flowed
+						value = 5
+					}
+					NOT = {
+						check_variable = {
+							which = yof_dirt_river_flowed
+							value = 6
+						}
+					}
+				}
+				has_government_power = {
+					mechanic_type = yokari_forest_mechanic
+					power_type = yokari_forest_doom_power
+					value = 100
+				}
+			}
+			else_if = {
+				limit = { 
+					check_variable = {
+						which = yof_dirt_river_flowed
+						value = 6
+					}
+					NOT = {
+						check_variable = {
+							which = yof_dirt_river_flowed
+							value = 7
+						}
+					}
+				}
+				has_government_power = {
+					mechanic_type = yokari_forest_mechanic
+					power_type = yokari_forest_doom_power
+					value = 80
+				}
+			}
+			else_if = {
+				limit = { 
+					check_variable = {
+						which = yof_dirt_river_flowed
+						value = 7
+					}
+					NOT = {
+						check_variable = {
+							which = yof_dirt_river_flowed
+							value = 8
+						}
+					}
+				}
+				has_government_power = {
+					mechanic_type = yokari_forest_mechanic
+					power_type = yokari_forest_doom_power
+					value = 60
+				}
+			}
+			else_if = {
+				limit = { 
+					check_variable = {
+						which = yof_dirt_river_flowed
+						value = 8
+					}
+				}
+				has_government_power = {
+					mechanic_type = yokari_forest_mechanic
+					power_type = yokari_forest_doom_power
+					value = 40
+				}
+			}
+		} 
+		
+		effect = {
+			add_country_modifier = {
+				name = distribute_hina_dolls_province_buffv2
+				duration = -1
+			}
+			add_stability = 1
+			custom_tooltip = yof_dom_saved_not_unrest_allow_flag_t1
+			set_country_flag = yof_dom_saved_not_unrest_allow_flag
+		} 
+	}
+	yof_establish_doom_faith = {
+		icon = yof_mission_8
+		position = 6
+		required_missions = {
+			yof_doom_saved
+			yof_wonderland_in_mountain
+		} 
+		provinces_to_highlight = {  } 
+		
+		trigger = { 
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = yof_distribute_kami_num
+							value = 1
+						}
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = yof_distribute_kami_num_less_less_tt_0
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = yof_distribute_kami_num_less_less_tt
+					check_variable = {
+						which = yof_distribute_kami_num
+						value = 500
+					}
+				}
+			}
+			check_variable = {
+				which = yof_doom_gather_on_or_off_num
+				value = 3
+			}
+		} 
+		
+		effect = { 
+			custom_tooltip = th_kagiyama_religions_unlock_tt
+			hidden_effect = {
+				set_country_flag = the_yof_change_religions_to_kagiyama_allow_flag
+			}
+		} 
+	}
+	yof_religious_subject = {
+		icon = yof_mission_4
+		position = 8
+		required_missions = { yof_establish_doom_faith } 
+		required_missions = {
+			yof_sages_in_wonderland
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = Great_youkai_forest
+				area = Eastern_youkai_forest
+			}
+			NOT = { religion = th_kagiyama }
+		} 
+		
+		trigger = { 
+			num_of_aspects = 2
+			Great_youkai_forest = {
+				type = all
+				religion = th_kagiyama
+			}
+			Eastern_youkai_forest = {
+				type = all
+				religion = th_kagiyama
+			}
+			religion = th_kagiyama
+		} 
+		
+		effect = {
+			custom_tooltip = change_to_kagiyama_religions_allow_flag_tt
+			add_adm_power = 75
+			hidden_effect = {
+				set_country_flag = change_to_kagiyama_religions_allow_flag
+			}
+		} 
+	}
+	yof_faith_doom_expand = {
+		icon = yof_mission_2
+		position = 10
+		required_missions = { yof_religious_subject } 
+		provinces_to_highlight = {  } 
+		
+		trigger = { 
+			calc_true_if = {
+				all_country = {
+					religion = ROOT
+				}
+				amount = 3
+			}
+			calc_true_if = {
+				all_province = {
+					religion = ROOT
+				}
+				amount = 20
+			}
+		} 
+		
+		effect = { 
+			add_casus_belli = {
+				type = cb_vassalize_mission
+				target = TGU
+				months = 600
+			}
+			add_country_modifier = {
+				name = yof_coerced_belief_buff
+				duration = 7300
+			}
+			Youkai_Mountains = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Southern_youkai_mountains = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Northern_youkai_mountains = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+	yof_smile_to_doom = {
+		icon = yof_mission_9
+		position = 12
+		required_missions = { yof_faith_doom_expand } 
+		required_missions = {
+			yof_doom_outlord_of_kagiyama
+		}
+		provinces_to_highlight = {  } 
+		
+		trigger = {  } 
+		
+		effect = { 
+			custom_tooltip = yof_change_religions_subject_to_vasstal_allow_tt
+			custom_tooltip = yof_change_religions_subject_to_vasstal_allow_t2
+			add_adm_power = 150
+			add_dip_power = 150
+			add_mil_power = 150
+			hidden_effect = {
+				set_country_flag = yof_change_religions_subject_to_vasstal_allow_flag
+				set_country_flag = yof_th_kagiyama_misforture_church_allow
+			}
+		} 
+	}
+	yof_crown_of_doom_goddness = {
+		icon = yof_mission_5
+		position = 13
+		required_missions = { yof_smile_to_doom } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { has_province_modifier = distribute_hina_dolls_province_buff }
+		} 
+		
+		trigger = { 
+			all_owned_province = {
+				OR = {
+					has_province_modifier = distribute_hina_dolls_province_buff
+					has_province_modifier = yof_hina_dolls_factory_buff
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				has_province_modifier = yof_hina_dolls_factory_buff
+			}
+			OR = {
+				calc_true_if = {
+					all_country = {
+						religion = th_kagiyama
+					}
+					amount = 5
+				}
+				calc_true_if = {
+					all_province = {
+						religion = th_kagiyama
+					}
+					amount = 40
+				}
+			}
+		} 
+		
+		effect = { 
+			add_country_modifier = {
+				name = yof_kagiyama_with_flower_crownd_buff
+				duration = -1
+			}
+			add_adm_power = 300
+			add_dip_power = 300
+			add_mil_power = 300
+		} 
+	}
+}
+THE_yof_slot_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = YOF } 
+	yof_eastern_neighbourhood = {
+		icon = yof_mission_12
+		position = 2
+		required_missions = {
+			yof_darkness_of_yokariforest
+		}
+		provinces_to_highlight = {
+			OR = {
+				is_capital_of = AKI
+				province_id = 5134
+				province_id = 5135
+			}
+		} 
+		
+		trigger = {  
+			OR = {
+				AND = {
+					alliance_with = AKI
+					AKI = {
+						has_opinion = {
+							who = root
+							value = 180
+						}
+					}
+				}
+				AND = {
+					5134 = {
+						owned_by = ROOT
+					}
+					5135 = {
+						owned_by = ROOT
+					}
+				}
+			}
+		} 
+		effect = {
+			if = {
+				limit = { 
+					alliance_with = AKI
+					AKI = {
+						has_opinion = {
+							who = ROOT
+							value = 180
+						}
+					}
+				}
+				custom_tooltip = THE_YOF_eastern_neighbourhood_case1_tt_yes
+			}
+			else = {
+				custom_tooltip = THE_YOF_eastern_neighbourhood_case1_tt_no
+			}
+			tooltip = {
+				add_adm_power = 20
+				add_dip_power = 20
+				add_mil_power = 20
+				custom_tooltip = THE_YOF_eastern_neighbourhood_case1_tt
+				add_country_modifier = {
+					name = yof_aki_alliance_buff
+					duration = 7300
+				}
+			}
+			if = {
+				limit = {
+					5134 = {
+						owned_by = ROOT
+					}
+					5135 = {
+						owned_by = ROOT
+					}
+				}
+				custom_tooltip = THE_YOF_eastern_neighbourhood_case2_tt_yes
+			}
+			else = {
+				custom_tooltip = THE_YOF_eastern_neighbourhood_case2_tt_no
+			}
+			tooltip = {
+				add_adm_power = 25
+				5187 = {
+					add_base_tax = 2
+					add_base_production = 3
+					add_base_manpower = 1
+				}
+				custom_tooltip = yof_neighbour_aeimpact_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = { 
+						alliance_with = AKI
+						AKI = {
+							has_opinion = {
+								who = ROOT
+								value = 180
+							}
+						}
+					}
+					set_country_flag = yof_aki_subject_temporaliy_flag
+					add_adm_power = 20
+					add_dip_power = 20
+					add_mil_power = 20
+					add_country_modifier = {
+						name = yof_aki_alliance_buff
+						duration = 7300
+					}
+				}
+				if = {
+					limit = {
+						5134 = {
+							owned_by = ROOT
+						}
+						5135 = {
+							owned_by = ROOT
+						}
+					}
+					add_adm_power = 25
+					5187 = {
+						add_base_tax = 2
+						add_base_production = 3
+						add_base_manpower = 1
+					}
+					every_neighbor_country = {
+						add_aggressive_expansion = {
+							who = ROOT
+							value = -50
+							apply_calc = yes
+						}
+					}
+				}
+			}
+		} 
+	}
+	yof_foothills_shrouded_doom = {
+		icon = mission_touhou_forest_of_magic
+		position = 4
+		required_missions = {
+			yof_eastern_neighbourhood
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5187
+				province_id = 5190
+			}
+			NOT = { has_fort_building_trigger = yes }
+		} 
+		
+		trigger = { 
+			OR = {
+				5187 = {
+					has_fort_building_trigger = yes
+				}
+				5190 = {
+					has_fort_building_trigger = yes
+				}
+			}
+		} 
+		
+		effect = { 
+			5191 = {
+				add_permanent_claim = ROOT
+			}  
+			add_adm_power = 50
+			if = {
+				limit = { 
+					5187 = {
+						has_fort_building_trigger = yes
+					}
+					5190 = {
+						not = {
+							has_fort_building_trigger = yes
+						}
+					}
+				}
+				5190 = {
+					add_or_upgrade_fort_building = yes
+				}
+				5187 = {
+					add_province_modifier = {
+						name = doom_shrouted_hillsfoot_buff
+						duration = -1
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					5190 = {
+						has_fort_building_trigger = yes
+					}
+					5187 = {
+						not = {
+							has_fort_building_trigger = yes
+						}
+					}
+				}
+				5187 = {
+					add_or_upgrade_fort_building = yes
+				}
+				5190 = {
+					add_province_modifier = {
+						name = doom_shrouted_hillsfoot_buff
+						duration = -1
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					not = {
+						5187 = {
+							has_fort_building_trigger = yes
+						}
+						5190 = {
+							has_fort_building_trigger = yes
+						}
+					}
+				}
+				tooltip = {
+					5187 = {
+						add_or_upgrade_fort_building = yes
+						add_province_modifier = {
+							name = doom_shrouted_hillsfoot_buff
+							duration = -1
+						}
+					}
+					5190 = {
+						add_or_upgrade_fort_building = yes
+						add_province_modifier = {
+							name = doom_shrouted_hillsfoot_buff
+							duration = -1
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					5187 = {
+						has_fort_building_trigger = yes
+					}
+					5190 = {
+						has_fort_building_trigger = yes
+					}
+				}
+				5187 = {
+					add_or_upgrade_fort_building = yes
+					add_province_modifier = {
+						name = doom_shrouted_hillsfoot_buff
+						duration = -1
+					}
+				}
+				5190 = {
+					add_or_upgrade_fort_building = yes
+					add_province_modifier = {
+						name = doom_shrouted_hillsfoot_buff
+						duration = -1
+					}
+				}
+			}
+		} 
+	}
+	yof_wonderland_in_mountain = {
+		icon = yof_mission_11
+		position = 5
+		required_missions = {
+			yof_foothills_shrouded_doom
+		}
+		required_missions = {
+			yof_wonderland_full
+		}
+		provinces_to_highlight = {
+			province_id = 5191
+		} 
+		
+		trigger = { 
+			5191 = {
+				owned_by = ROOT
+				num_of_times_improved = 3
+				OR = {
+					has_production_building_trigger = yes
+					has_tax_building_trigger = yes
+				}
+			}
+		} 
+		
+		effect = {
+			set_country_flag = yof_sages_trail_mountain_allow_flag
+			5191 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+				center_of_trade = 1
+			}
+			5187 = {
+				add_base_tax = 2
+				add_base_production = 1
+				add_base_manpower = 2
+			}	
+		} 
+	}
+	yof_sages_in_wonderland = {
+		icon = yof_mission_10
+		position = 7
+		required_missions = {
+			yof_wonderland_in_mountain
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						area = Eastern_youkai_forest
+						area = Great_youkai_forest
+					}
+					NOT = { is_prosperous = yes }
+				}
+				AND = {
+					province_id = 5191
+					NOT = { has_fort_building_trigger = yes }
+				}
+			}
+		} 
+		
+		trigger = { 
+			Eastern_youkai_forest = {
+				type = all
+				is_prosperous = yes
+			}
+			Great_youkai_forest = {
+				type = all
+				is_prosperous = yes
+			}
+			5191 = {
+				has_fort_building_trigger = yes
+			}
+		} 
+		
+		effect = { 
+			add_country_modifier = {
+				name = sages_in_wonderland_buff
+				duration = -1
+			}
+			5191 = {
+				if = {
+					limit = { has_province_modifier = distribute_hina_dolls_province_buff }
+					remove_province_modifier = distribute_hina_dolls_province_buff
+				}
+				add_province_modifier = {
+					name = yof_hina_dolls_factory_buff
+					duration = -1
+				}
+			}
+			Genbu_ravine_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Kappa_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Kappa_delta = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	yof_doom_outlord_of_kagiyama = {
+		icon = mission_touhou_hina
+		position = 11
+		required_missions = {
+			yof_sages_in_wonderland
+		}
+		required_missions = {
+			yof_starry_with_lucky
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						area = Great_youkai_forest
+						area = Eastern_youkai_forest
+					}
+					OR = {
+						NOT = { is_prosperous = yes }
+						NOT = { development = 25 }
+						devastation = 1
+					}
+				}
+				AND = {
+					OR = {
+						province_id = 4965
+						province_id = 5220
+					}
+					NOT = { owned_by = ROOT }
+				}
+				AND = {
+					OR = {
+						area = Kappa_state
+						area = Kappa_delta
+					}
+					OR = {
+						NOT = { development = 25 }
+						devastation = 1
+					}
+				}
+			}
+		} 
+		
+		trigger = { 
+			religion = th_kagiyama
+			Great_youkai_forest = {
+				type = all
+				is_prosperous = yes
+				development = 25
+				NOT = {
+					devastation = 1
+				}
+			}
+			Eastern_youkai_forest = {
+				type = all
+				is_prosperous = yes
+				development = 25
+				NOT = {
+					devastation = 1
+				}
+			}
+			OR = {
+				AND = {
+					KPP = {
+						OR = {
+							alliance_with = ROOT
+							is_subject_of = ROOT
+						}
+						has_opinion = {
+							who = ROOT
+							value = 180
+						}
+					}
+				}
+				AND = {
+					4965 = {
+						owned_by = ROOT
+					}
+					5220 = {
+						owned_by = ROOT
+					}
+					Kappa_state = {
+						type = all
+						development = 25
+						NOT = {
+							devastation = 1
+						}
+					}
+					Kappa_delta = {
+						type = all
+						development = 25
+						NOT = {
+							devastation = 1
+						}
+					}
+				}
+			}
+		} 
+		
+		effect = { 
+			custom_tooltip = yof_doom_power_without_siege_abblilty
+			add_adm_power = 300
+			add_dip_power = 300
+			add_mil_power = 300
+			remove_country_modifier = yof_kagiyama_religions_not_identified_buff
+			add_country_modifier = {
+				name = yof_kagiyama_be_identified_buff
+				duration = -1
+			}
+			country_event = {
+				id = flavor_yof.8
+			}
+			Hakurei_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Hakurei_western_coast = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Hakurei_peninsula_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+	yof_hakurei_overlorded_by_kagiyama = {
+		icon = mission_touhou_hakurei_shrine
+		position = 13
+		required_missions = {
+			yof_doom_outlord_of_kagiyama
+		}
+		provinces_to_highlight = {
+			OR = {
+				owned_by = HKR
+				AND = {
+					province_id = 4955
+					NOT = { owned_by = ROOT }
+				}
+			}
+		} 
+		
+		trigger = { 
+			NOT = {
+				exists = HKR
+			}
+			4955 = {
+				owned_by = ROOT
+				religion = th_kagiyama
+			}
+		} 
+		
+		effect = { 
+			custom_tooltip = th_hakurei_change_to_kagiyama_tt
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_church_power = 100
+			hidden_effect = {
+				every_country = {
+					limit = {
+						religion = th_hakureishinto
+					}
+					country_event = {
+						id = flavor_yof.9
+					}
+				}
+			}	
+		} 
+	}
+}
+
+THE_yof_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = YOF } 
+	yof_darkness_of_yokariforest = {
+		icon = mission_touhou_world_tree
+		position = 1
+		provinces_to_highlight = {  } 
+		
+		trigger = {
+			th_has_mil_advisor = yes
+			num_of_generals = 1
+			OR = {
+				army_size = 15
+				army_size_percentage = 1.0
+			}
+		} 
+		
+		effect = {  
+			5134 = {
+				add_permanent_claim = ROOT
+			}
+			5135 = {
+				add_permanent_claim = ROOT
+			}
+			add_adm_power = 50
+		} 
+	}
+	yof_fruits_of_autunm = {
+		icon = yof_mission_13
+		position = 3
+		required_missions = {
+			yof_eastern_neighbourhood
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 5134
+					NOT = { num_of_times_improved = 4 }
+				}
+				AND = {
+					province_id = 5135
+					NOT = { num_of_times_improved = 4 }
+				}
+				AND = {
+					province_id = 5187
+					NOT = { num_of_times_improved = 2 }
+				}
+			}
+		} 
+		
+		trigger = {
+			5134 = {
+				num_of_times_improved = 4
+			}
+			5135 = {
+				num_of_times_improved = 4
+			}
+			5187 = {
+				num_of_times_improved = 2
+			}
+		} 
+		
+		effect = { 
+			add_country_modifier = {
+				name = yof_aki_fruit_buff
+				duration = -1
+			}
+			add_years_of_income = 1
+			Foot_of_youkai_mountains = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			add_adm_power = 20
+			add_dip_power = 20
+			add_mil_power = 20
+		} 
+	}
+	yof_wonderland_full = {
+		icon = yof_mission_15
+		position = 4
+		required_missions = {
+			yof_fruits_of_autunm
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5139
+				province_id = 5138
+				province_id = 5359
+			}
+			NOT = { owned_by = ROOT }
+		} 
+		
+		trigger = { 
+			OR = {
+				AND = {
+					5139 = {
+						owned_by = ROOT
+					}
+					5138 = {
+						owned_by = ROOT
+					}
+					5359 = {
+						owned_by = ROOT
+					}
+				}
+				AND = {
+					alliance_with = SKT
+					SKT = {
+						has_opinion = {
+							who = ROOT
+							value = 180
+						}
+					}
+				}
+			}
+		} 
+		
+		effect = {
+			Shinkirou_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Land_of_the_black_doors = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = { 
+					alliance_with = SKT
+					SKT = {
+						has_opinion = {
+							who = ROOT
+							value = 180
+						}
+					}
+				}
+				custom_tooltip = THE_YOF_wonderland_full_case1_tt_yes
+			}
+			else = {
+				custom_tooltip = THE_YOF_wonderland_full_case1_tt_no
+			}
+			tooltip = {
+				add_country_modifier = {
+					name = yof_skt_dip_buff
+					duration = 18250
+				}
+			}
+			if = {
+				limit = { 
+					5139 = {
+						owned_by = ROOT
+					}
+					5138 = {
+						owned_by = ROOT
+					}
+					5359 = {
+						owned_by = ROOT
+					}
+				}
+				custom_tooltip = THE_YOF_wonderland_full_case2_tt_yes
+			}
+			else = {
+				custom_tooltip = THE_YOF_wonderland_full_case2_tt_no
+			}
+			tooltip = {
+				add_adm_power = 100
+				add_mil_power = 100
+				add_country_modifier = {
+					name = yof_skt_mil_buff
+					duration = 18250
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { 
+						alliance_with = SKT
+						SKT = {
+							has_opinion = {
+								who = ROOT
+								value = 180
+							}
+						}
+					}
+					add_country_modifier = {
+						name = yof_skt_dip_buff
+						duration = 18250
+					}
+				}
+				if = {
+					limit = { 
+						5139 = {
+							owned_by = ROOT
+						}
+						5138 = {
+							owned_by = ROOT
+						}
+						5359 = {
+							owned_by = ROOT
+						}
+					}
+					add_adm_power = 100
+					add_mil_power = 100
+					add_country_modifier = {
+						name = yof_skt_mil_buff
+						duration = 18250
+					}
+				}
+			}
+		} 
+	}
+	yof_god_of_starner = {
+		icon = yof_mission_14
+		position = 8
+		required_missions = {
+			yof_wonderland_full
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5016
+				province_id = 5131
+				province_id = 5132
+				province_id = 5133
+			}
+			NOT = { owned_by = ROOT }
+		} 
+		
+		trigger = {  
+			5016 = {
+				owned_by = ROOT
+			}
+			5131 = {
+				owned_by = ROOT
+			}
+			5132 = {
+				owned_by = ROOT
+			}
+			5133 = {
+				owned_by = ROOT
+			}
+		} 
+		
+		effect = { 
+			add_country_modifier = {
+				name = yof_back_door_buff_tt_1
+				duration = -1
+			}
+			Forest_of_magic = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Forest_edge_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Forest_coast_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			add_adm_power = 50
+			add_mil_power = 50
+			add_dip_power = 50
+		} 
+	}
+	yof_starry_with_lucky = {
+		icon = yof_mission_16
+		position = 10
+		required_missions = {
+			yof_god_of_starner
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 5131
+					OR = {
+						nationalism = 1
+						NOT = { num_of_times_improved = 3 }
+						NOT = { has_manpower_building_trigger = yes }
+					}
+				}
+				AND = {
+					province_id = 5132
+					OR = {
+						nationalism = 1
+						NOT = { num_of_times_improved = 4 }
+						NOT = { has_fort_building_trigger = yes }
+						NOT = { has_production_building_trigger = yes }
+					}
+				}
+				AND = {
+					province_id = 5133
+					OR = {
+						nationalism = 1
+						NOT = { num_of_times_improved = 3 }
+					}
+				}
+			}
+		} 
+		
+		trigger = { 
+			5131 = {
+				NOT = {
+					nationalism = 1
+				}
+				num_of_times_improved = 3
+				has_manpower_building_trigger = yes
+			}
+			5132 = {
+				NOT = {
+					nationalism = 1
+				}
+				num_of_times_improved = 4
+				has_fort_building_trigger = yes
+				has_production_building_trigger = yes
+			}
+			5133 = {
+				NOT = {
+					nationalism = 1
+				}
+				num_of_times_improved = 3
+			}
+		} 
+		
+		effect = {
+			5131 = {
+				add_province_modifier = {
+					name = yof_back_door_wood_buff
+					duration = -1
+				}
+			}
+			5132 = {
+				add_province_modifier = {
+					name = yof_back_door_wood_buff
+					duration = -1
+				}
+			}
+			5133 = {
+				add_province_modifier = {
+					name = yof_back_door_wood_buff
+					duration = -1
+				}
+			}
+		} 
+	}
+	yof_marisa_doom_items = {
+		icon = yof_mission_18
+		position = 11
+		required_missions = {
+			yof_starry_with_lucky
+		}
+		provinces_to_highlight = {
+			OR = {
+				owned_by = FOM
+				AND = {
+					OR = {
+						province_id = 5094
+						province_id = 5090
+						province_id = 5089
+					}
+					NOT = { owned_by = ROOT }
+				}
+			}
+		} 
+		
+		trigger = { 
+			5094 = {
+				owned_by = ROOT
+			}
+			5090 = {
+				owned_by = ROOT
+			}
+			5089 = {
+				owned_by = ROOT
+			}
+			NOT = {
+				exists = FOM
+			}
+		} 
+		
+		effect = {
+			5089 = {
+				add_province_modifier = {
+					name = yof_fom_forest_buff
+					duration = -1
+				}
+			} 
+			5094 = {
+				add_province_modifier = {
+					name = yof_fom_forest_buff
+					duration = -1
+				}
+			}
+			5090 = {
+				add_province_modifier = {
+					name = yof_fom_forest_buff
+					duration = -1
+				}
+			}
+			Ran_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Mayohiga_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Eastern_mountains = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+	yof_youkari_with_visit = {
+		icon = yof_mission_17
+		position = 13
+		required_missions = {
+			yof_marisa_doom_items
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = Ran_state
+				area = Mayohiga_state
+				area = Eastern_mountains
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+		
+		trigger = { 
+			OR = {
+				AND = {
+					alliance_with = MHG
+					MHG = {
+						has_opinion = {
+							who = ROOT
+							value = 180
+						}
+					}
+				}
+				AND = {
+					Ran_state = {
+						type = all 
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					Mayohiga_state = {
+						type = all 
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					Eastern_mountains = {
+						type = all 
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+		} 
+		
+		effect = { 
+			Fairy_land = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Northern_fairy_land = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = { 
+					alliance_with = MHG
+					MHG = {
+						has_opinion = {
+							who = ROOT
+							value = 180
+						}
+					}
+				}
+				custom_tooltip = THE_YOF_youkari_with_visit_case1_tt_yes
+			}
+			else = {
+				custom_tooltip = THE_YOF_youkari_with_visit_case1_tt_no
+			}
+			tooltip = {
+				add_country_modifier = {
+					name = yof_mhg_dip_buff
+					duration = -1
+				}
+			}
+			if = {
+				limit = { 
+					Ran_state = {
+						type = all 
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					Mayohiga_state = {
+						type = all 
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					Eastern_mountains = {
+						type = all 
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				custom_tooltip = THE_YOF_youkari_with_visit_case2_tt_yes
+			}
+			else = {
+				custom_tooltip = THE_YOF_youkari_with_visit_case2_tt_no
+			}
+			tooltip = {
+				add_country_modifier = {
+					name = yof_mhg_mil_buff
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { 
+						alliance_with = MHG
+						MHG = {
+							has_opinion = {
+								who = ROOT
+								value = 180
+							}
+						}
+					}
+					add_country_modifier = {
+						name = yof_mhg_dip_buff
+						duration = -1
+					}
+				}
+				if = {
+					limit = { 
+						Ran_state = {
+							type = all 
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						Mayohiga_state = {
+							type = all 
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						Eastern_mountains = {
+							type = all 
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+					}
+					add_country_modifier = {
+						name = yof_mhg_mil_buff
+						duration = -1
+					}
+				}
+			}
+		} 
+	}
+}

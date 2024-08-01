@@ -1,0 +1,348 @@
+###雏祭
+country_decisions = {
+	the_yof_hina_matsuri = {
+		color = {
+			13
+			173
+			80
+		}
+		potential = {
+			tag = YOF
+			has_country_flag =  yof_kagiyama_hina_in_forest_allow
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = the_yof_hina_matsuri_cd_t1
+				OR = {
+					had_country_flag = {
+						flag = the_yof_hina_matsuri_cd
+						days = 5475
+					}
+					NOT = {
+						has_country_flag = the_yof_hina_matsuri_cd
+					}
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				change_variable = {
+					which = yof_kagiyama_hina_in_forest_num
+					value = 1
+				}
+			}
+			country_event = {
+				id = flavor_yof.2
+			}
+			add_government_power = {
+				mechanic_type = yokari_forest_mechanic
+				power_type = yokari_forest_doom_power
+				value = 30
+			}
+			clr_country_flag = the_yof_hina_matsuri_cd
+			set_country_flag = the_yof_hina_matsuri_cd
+		}
+	}
+}
+##发布雏人偶
+country_decisions = {
+	the_yof_distribute_hina_dolls = {
+		color = {
+			13
+			173
+			80
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			is_city = yes
+			if = {
+				limit = { ROOT = { has_country_flag = THE_YOF_highlight_province_no_modifier_flag } }
+				NOT = { has_province_modifier = distribute_hina_dolls_province_buff }
+				NOT = { has_province_modifier = yof_hina_dolls_factory_buff }
+			}
+			if = {
+				limit = { ROOT = { has_country_flag = THE_YOF_highlight_province_modifier_1_flag } }
+				has_province_modifier = distribute_hina_dolls_province_buff
+				NOT = { has_province_modifier = yof_hina_dolls_factory_buff }
+			}
+			if = {
+				limit = { ROOT = { has_country_flag = THE_YOF_highlight_province_modifier_2_flag } }
+				NOT = { has_province_modifier = distribute_hina_dolls_province_buff }
+				has_province_modifier = yof_hina_dolls_factory_buff
+			}
+			if = {
+				limit = { ROOT = { has_country_flag = THE_YOF_highlight_province_modifier_1_or_2_flag } }
+				OR = {
+					has_province_modifier = distribute_hina_dolls_province_buff
+					has_province_modifier = yof_hina_dolls_factory_buff
+				}
+			}
+		}
+		potential = {
+			OR = {
+				tag = YOF
+				was_tag = YOF
+			}
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = the_yof_distribute_hina_dolls_desc
+				always = yes
+			}
+		}
+		effect = {
+			THE_YOF_switch_highlight_province_flag = yes
+		}
+	}
+}
+##交诸众神
+country_decisions = {
+	the_bestowing_misforture_upon_the_god = {
+		color = {
+			13
+			173
+			80
+		}
+		potential = {
+			OR = {
+				religion = th_kagiyama
+				tag = YOF
+			}
+		}
+		allow = {
+			if = {
+				limit = { 
+					tag = YOF
+				}
+				has_government_power = {
+					mechanic_type = yokari_forest_mechanic
+					power_type = yokari_forest_doom_power
+					value = 50
+				}
+			}
+			else = {
+				church_power = 50
+			}
+			OR = {
+				NOT = { has_country_modifier = yof_epidemic_buff }
+				NOT = { has_country_modifier = yof_calamity_buff }
+				NOT = { has_country_modifier = yof_flaw_buff }
+				NOT = { has_country_modifier = yof_scar_buff }
+				NOT = { has_country_modifier = yof_injury_buff }
+				NOT = { has_country_modifier = yof_disaster_buff }
+				NOT = { has_country_modifier = yof_severe_buff }
+			}
+		}
+		effect = {
+			country_event = {
+				id = flavor_yof.6
+			}
+		}
+	}
+}
+##转教 雏神
+country_decisions = {
+	the_yof_change_religions_to_kagiyama = {
+		color = {
+			13
+			173
+			80
+		}
+		potential = {
+			tag = YOF
+			has_country_flag = the_yof_change_religions_to_kagiyama_allow_flag
+			NOT = {
+				religion = th_kagiyama
+			}
+		}
+		allow = {
+			treasury = 50
+		}
+		effect = {
+			add_stability = -1
+			add_treasury = -50
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						religion = ROOT
+					}
+					change_religion = th_kagiyama
+				}
+				set_country_flag = THE_can_trigger_Hina_deity_event_flag
+			}
+			change_religion = th_kagiyama
+			add_country_modifier = {
+				name = yof_kagiyama_religions_not_identified_buff
+				duration = -1
+			}
+			add_country_modifier = {
+				name = yof_change_kagiyama_buff
+				duration = 3650
+			}
+		}
+	}
+}
+###隐歧奈的试炼
+#country_decisions = {
+#	the_yof_okina_trial_decision = {
+	#	color = {
+	#		13
+	#		173
+	#		80
+#		}
+	#	potential = {
+	#		tag = YOF
+	#		has_country_flag = yof_okina_trial_flag
+	#	}
+	#	allow = {
+	#		
+	#	}
+	#
+	#	}
+#	}
+#}
+##河童开发
+country_decisions = {
+	the_yof_sages_trial_decision = {
+		color = {
+			13
+			173
+			80
+		}
+		potential = {
+			has_country_flag = yof_hina_with_nitori_start_flag
+		}
+		allow = {
+			has_government_power = {
+				mechanic_type = yokari_forest_mechanic
+				power_type = yokari_forest_doom_power
+				value = 50
+			}
+		}
+		effect = {
+			add_government_power = {
+				mechanic_type = yokari_forest_mechanic
+				power_type = yokari_forest_doom_power
+				value = -50
+			}
+			change_variable = {
+				which = yof_nitori_exploitation_doom_barrier_num
+				value = 1
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						check_variable = {
+							which = yof_nitori_exploitation_doom_barrier_num
+							value = 10
+						}
+					}
+					country_event = {
+						id = flavor_yof.12
+					}
+				}
+			}
+		}
+	}
+}
+
+
+country_decisions = {
+	THE_YOF_ai_add_distribute_hina_dolls_province_buff_decision = {
+		potential = {
+			ai = yes
+			OR = {
+				tag = YOF
+				was_tag = YOF
+			}
+		}
+		allow = {
+			has_government_power = {
+				mechanic_type = yokari_forest_mechanic
+				power_type = yokari_forest_doom_power
+				value = 25
+			}
+			any_owned_province = {
+				AND = {
+					NOT = { has_province_modifier = distribute_hina_dolls_province_buff }
+					NOT = { has_province_modifier = yof_hina_dolls_factory_buff }
+				}
+			}
+		}
+		effect = {
+			random_owned_province = {
+				limit = {
+					NOT = { has_province_modifier = distribute_hina_dolls_province_buff }
+					NOT = { has_province_modifier = yof_hina_dolls_factory_buff }
+				}
+				add_province_modifier = {
+					name = distribute_hina_dolls_province_buff
+					duration = -1
+				}
+			}
+			add_government_power = {
+				mechanic_type = yokari_forest_mechanic
+				power_type = yokari_forest_doom_power
+				value = -25
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	THE_YOF_ai_add_yof_hina_dolls_factory_buff_decision = {
+		potential = {
+			ai = yes
+			has_country_flag = yof_hina_matsuri_factory_allow
+			OR = {
+				tag = YOF
+				was_tag = YOF
+			}
+		}
+		allow = {
+			any_owned_province = {
+				AND = {
+					has_fort_building_trigger = yes
+					has_province_modifier = distribute_hina_dolls_province_buff
+					NOT = { has_province_modifier = yof_hina_dolls_factory_buff }
+				}
+			}
+			if = {
+				limit = {
+					monthly_income = 20.84
+				}
+				treasury = 500
+			}
+			else = {
+				years_of_income = 2
+			}
+		}
+		effect = {
+			random_owned_province = {
+				limit = {
+					has_fort_building_trigger = yes
+					has_province_modifier = distribute_hina_dolls_province_buff
+					NOT = { has_province_modifier = yof_hina_dolls_factory_buff }
+				}
+				remove_province_modifier = distribute_hina_dolls_province_buff
+				add_province_modifier = {
+					name = distribute_hina_dolls_province_buff
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					monthly_income = 20.84
+				}
+				add_treasury = -500
+			}
+			else = {
+				add_years_of_income = -2
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,23 @@
+#$ruler$||support [akyuu]/[kosuzu]/[rinnosuke]/[keine]
+THE_HMC_specifi_ruler_scripted_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = THE_HMC_now_ruler_is_$ruler$_ttt
+		has_ruler_flag = THE_HMC_now_ruler_is_$ruler$_flag
+	}
+}
+
+THE_HMC_ruler_is_akyuu = {
+	THE_HMC_specifi_ruler_scripted_trigger = { ruler = akyuu }
+}
+
+THE_HMC_ruler_is_kosuzu = {
+	THE_HMC_specifi_ruler_scripted_trigger = { ruler = kosuzu }
+}
+
+THE_HMC_ruler_is_rinnosuke = {
+	THE_HMC_specifi_ruler_scripted_trigger = { ruler = rinnosuke }
+}
+
+THE_HMC_ruler_is_keine = {
+	THE_HMC_specifi_ruler_scripted_trigger = { ruler = keine }
+}

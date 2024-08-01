@@ -1,0 +1,2313 @@
+namespace = KKO_flavor
+
+country_event = {
+	id = KKO_flavor.1
+	title = "KKO_flavor.1.t"
+	desc = "KKO_flavor.1.desc"
+	picture = kko_mission_1
+	#is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = KKO
+	}
+	mean_time_to_happen = { days = 1  }
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						government = monarchy
+					}
+				}
+				change_government = monarchy
+			}
+			add_government_reform = Kokoro_monarchy  
+		}
+	}
+	option = {
+		name = KKO_flavor.1.a
+		custom_tooltip = kko_introduce
+		country_event = {
+			id = KKO_qin.1
+		}
+		add_government_power = {
+			mechanic_type = th_kokoro_mechanic
+			power_type = kko_xi_dip_power
+			value = 25
+		}
+		add_government_power = {
+			mechanic_type = th_kokoro_mechanic
+			power_type = kko_nu_mil_power
+			value = 25
+		}
+		add_government_power = {
+			mechanic_type = th_kokoro_mechanic
+			power_type = kko_you_adm_power
+			value = 25
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+#情感失衡灾难
+country_event = {
+	id = KKO_flavor.2
+	title = "KKO_flavor.2.t"
+	desc = "KKO_flavor.2.desc"
+	picture = BAD_WITH_MONARCH_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = { 
+			set_country_flag = kko_disaster_started
+			add_stability = -3
+			set_country_flag = kko_disaster_start_firstway
+			set_variable = {
+				which = kko_emotion_disaster_num
+			}
+		}
+	}
+	option = {
+		name = KKO_flavor.2.a
+		custom_tooltip = KKO_disaster_start1234
+		custom_tooltip = KKO_disaster_start1234_tt
+	}
+}
+country_event = {
+	id = KKO_flavor.3
+	title = "KKO_flavor.3.t"
+	desc = "KKO_flavor.3.desc"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		had_country_flag = {
+			flag = kko_disaster_started
+			days = 10950
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = kko_divergence_first_12
+			clr_country_flag = kko_disaster_started
+		}
+	}
+	option = {
+		name = KKO_flavor.3.a
+	}
+}
+#希望之面丢失
+country_event = {
+	id = KKO_flavor.4
+	title = "KKO_flavor.4.t"
+	desc = "KKO_flavor.4.desc"
+	picture = kko_mission_11
+	fire_only_once = yes
+	trigger = {
+		tag = KKO
+		had_country_flag = {
+			flag = kko_disaster_started
+			days = 18250
+		}
+		NOT = {
+			has_country_flag = kko_xiwang_lose
+		}
+	}
+	mean_time_to_happen = {
+		days = 100
+	}
+	option = {
+		name = KKO_flavor.4.a
+		custom_tooltip = KKO_flavor.4.a.t
+		add_country_modifier = {
+			name = kko_xiwang_lose_buff
+			duration = -1
+		}
+		set_country_flag = kko_xiwang_lose
+	}
+}
+#宗教抉择
+country_event = {
+	id = KKO_flavor.5
+	title = "KKO_flavor.5.t"
+	desc = "KKO_flavor.5.desc"
+	picture = RELIGIOUS_TURMOIL_eventPicture
+	fire_only_once = yes
+	trigger = {
+		tag = KKO
+		had_country_flag = {
+			flag = th_qin_started_the_circle
+			days = 60
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = kko_religious_chance_complete
+		}
+	}
+	option = {
+		name = KKO_flavor.5.a
+		change_religion = th_taoist
+		trigger = {
+			NOT = {
+				alliance_with = MYO
+			}
+		}
+		SNK = {
+			add_opinion = {
+				who = ROOT
+				modifier = th_defense_of_gensokyo_opinion
+			}
+		}
+		add_opinion = {
+			who = SNK
+			modifier = th_defense_of_gensokyo_opinion
+		}
+		add_mil_power = 75
+		set_country_flag = kko_daojiaoxian
+		SNK = {
+			create_subject = {
+				subject_type = th_religious_taofo
+				subject = ROOT
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = KKO_flavor.5.b
+		change_religion = th_buddhist
+		trigger = {
+			NOT = {
+				alliance_with = SNK
+			}
+		}
+		MYO = {
+			add_opinion = {
+				who = ROOT
+				modifier = th_defense_of_gensokyo_opinion
+			}
+		}
+		add_opinion = {
+			who = MYO
+			modifier = th_defense_of_gensokyo_opinion
+		}
+		add_dip_power = 75
+		set_country_flag = kko_fojiaoxian
+		MYO = {
+			create_subject = {
+				subject_type = th_religious_taofo
+				subject = ROOT
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = KKO_flavor.5.c
+		trigger = {
+			was_player = no
+		}
+		ai_chance = {
+			factor = 600
+		}
+	}
+	option = {
+		name = KKO_flavor.5.d
+		add_opinion = {
+			who = MYO
+			modifier = th_fed_fairies_to_rumia
+		}
+		MYO = {
+			add_opinion = {
+				who = ROOT
+				modifier = th_fed_fairies_to_rumia
+			}
+		}
+		add_opinion = {
+			who = SNK
+			modifier = th_fed_fairies_to_rumia
+		}
+		SNK = {
+			add_opinion = {
+				who = ROOT
+				modifier = th_fed_fairies_to_rumia
+			}
+		}
+		add_opinion = {
+			who = CRD
+			modifier = th_defense_of_gensokyo_opinion
+		}
+		CRD = {
+			add_opinion = {
+				who = ROOT
+				modifier = th_defense_of_gensokyo_opinion
+			}
+		}
+		add_historical_friend = CRD
+		CRD = {
+			add_historical_friend = ROOT
+		}
+		set_country_flag = kko_zhongli
+		ai_chance = {
+			factor = 15
+		}
+	}
+}
+#道教战争触发
+country_event = {
+	id = KKO_flavor.6
+	title = "KKO_flavor.6.t"
+	desc = "KKO_flavor.6.desc"
+	picture = CIVIL_WAR_eventPicture
+	fire_only_once = yes
+	trigger = {
+		tag = KKO
+		had_country_flag = {
+			flag = kko_daojiaoxian
+			days = 50
+		}
+	}
+	immediate = {
+		hidden_effect = {
+		}
+	}
+	option = {
+		name = KKO_flavor.6.a
+		custom_tooltip = KKO_flavor.6.a.t
+		SNK = {
+			declare_war_with_cb = {
+				who = MYO
+				casus_belli = cb_snk_religions_war
+			}
+		}
+		KKO = {
+			join_all_offensive_wars_of = SNK
+		}
+		set_country_flag = kko_daojiaoxian_war
+	}
+	option = {
+		name = KKO_flavor.6.b
+		custom_tooltip = KKO_flavor.6.b.t
+		add_casus_belli = {
+			target = MYO
+			type = cb_snk_religions_war
+			months = 180
+		}
+		set_country_flag = kko_fojiaoxian_war
+	}
+}
+#道教战争结束
+country_event = {
+	id = KKO_flavor.7
+	title = KKO_flavor.7.t
+	desc = KKO_flavor.7.desc
+	picture = WUXING_eventPicture
+	fire_only_once = yes
+	hidden = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		tag = KKO
+		is_in_war = {
+			attacker_leader = SNK
+			defender_leader = MYO
+			war_score = 45
+		}
+		has_country_flag = kko_daojiaoxian
+		has_country_flag = kko_daojiaoxian_war
+	}
+	immediate = {
+		hidden_effect = {
+			MYO = {
+				add_country_modifier = {
+					name = kko_religions_hegemony1
+				}
+			}
+			SNK = {
+				add_country_modifier = {
+					name = kko_religions_hegemony2
+				}
+			}
+			KKO = {
+				add_country_modifier = {
+					name = kko_religions_hegemony2
+				}
+			}
+			5140 = {
+				cede_province = KKO
+			}
+			5140 = {
+				add_core = KKO
+			}
+			5142 = {
+				cede_province = KKO
+			}
+			5142 = {
+				add_core = KKO
+			}
+			5143 = {
+				cede_province = SNK
+			}
+			5006 = {
+				cede_province = SNK
+			}
+			SNK = {
+				white_peace = MYO
+			}
+			clr_country_flag = kko_daojiaoxian_war
+			set_country_flag = kko_religions_divergence
+			set_country_flag = kko_religions_divergence_tao
+			set_country_flag = kko_divergence_first_12
+			set_variable = {
+				which = kko_tao_action
+				value = 0
+			}
+		}
+	}
+	option = {
+		name = KKO_flavor.7.a
+		tooltip = {
+			add_country_modifier = {
+				name = kko_religions_hegemony2
+				duration = 7300
+			}
+			SNK = {
+				add_country_modifier = {
+					name = kko_religions_hegemony2
+					duration = 7300
+				}
+			}
+			MYO = {
+				add_country_modifier = {
+					name = kko_religions_hegemony1
+					duration = 7300
+				}
+			}
+		}
+	}
+}
+#佛教战争触发
+country_event = {
+	id = KKO_flavor.8
+	title = "KKO_flavor.8.t"
+	desc = "KKO_flavor.8.desc"
+	picture = CIVIL_WAR_eventPicture
+	fire_only_once = yes
+	trigger = {
+		tag = KKO
+		had_country_flag = {
+			flag = kko_fojiaoxian
+			days = 50
+		}
+	}
+	option = {
+		name = KKO_flavor.8.a
+		MYO = {
+			declare_war_with_cb = {
+				who = SNK
+				casus_belli = cb_myo_religions_war
+			}
+		}
+		KKO = {
+			join_all_offensive_wars_of = MYO
+		}
+		set_country_flag = kko_fojiaoxian_war
+	}
+	option = {
+		name = KKO_flavor.8.b
+		add_casus_belli = {
+			target = SNK
+			type = cb_snk_religions_war
+			months = 180
+		}
+		set_country_flag = kko_fojiaoxian_war
+	}
+}
+#佛教战争结束
+country_event = {
+	id = KKO_flavor.9
+	title = "KKO_flavor.9.t"
+	desc = "KKO_flavor.9.desc"
+	picture = WUXING_eventPicture
+	fire_only_once = yes
+	hidden = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		tag = KKO
+		is_in_war = {
+			attacker_leader = MYO
+			defender_leader = SNK
+			war_score = 45
+		}
+		has_country_flag = kko_fojiaoxian
+		has_country_flag = kko_fojiaoxian_war
+	}
+	immediate = {
+		hidden_effect = {
+			MYO = {
+				add_country_modifier = {
+					name = kko_religions_hegemony2
+				}
+			}
+			SNK = {
+				add_country_modifier = {
+					name = kko_religions_hegemony1
+				}
+			}
+			KKO = {
+				add_country_modifier = {
+					name = kko_religions_hegemony2
+				}
+			}
+			5028 = {
+				cede_province = KKO
+			}
+			5028 = {
+				add_core =  KKO
+			}
+			5169 = {
+				add_core = KKO
+			}
+			5169 = {
+				cede_province = KKO
+			}
+			5027 = {
+				cede_province = MYO
+			}
+			5168 = {
+				cede_province = MYO
+			}
+			MYO = {
+				white_peace = SNK
+			}
+			clr_country_flag = kko_fojiaoxian_war
+			set_country_flag = kko_religions_divergence
+			set_country_flag = kko_religions_divergence_fo
+			set_country_flag = kko_divergence_first_12
+			set_variable = {
+				which = kko_fo_action
+				value = 0
+			}
+		}
+	}
+	option = {
+		name = KKO_flavor.9.a
+		tooltip = {
+			MYO = {
+				add_country_modifier = {
+					name = kko_religions_hegemony2
+				}
+			}
+			SNK = {
+				add_country_modifier = {
+					name = kko_religions_hegemony1
+				}
+			}
+			KKO = {
+				add_country_modifier = {
+					name = kko_religions_hegemony2
+				}
+			}
+		}
+	}
+}
+#与仙界联盟
+country_event = {
+	id = KKO_flavor.10
+	title = "KKO_flavor.10.t"
+	desc = "KKO_flavor.10.desc"
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	fire_only_once = yes
+	trigger = {
+		had_country_flag = {
+			flag = kko_divergence_tao_ok
+			days = 7300
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = kko_divergence_tao_ok
+		}
+	}
+	option = {
+		name = KKO_flavor.10.a
+		SNK = {
+			country_event = {
+				id = KKO_flavor.11
+			}
+		}
+	}
+	option = {
+		name = KKO_flavor.10.b
+		add_trust = {
+			who = SNK
+			value = 25
+			mutual = yes
+		}
+	}
+}
+country_event = {
+	id = KKO_flavor.11
+	title = "KKO_flavor.11.t"
+	desc = "KKO_flavor.11.desc"
+	picture = BAD_WITH_MONARCH_eventPicture
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = KKO_flavor.11.a
+		KKO = {
+			create_union = SNK
+		}
+		ai_chance = {
+			factor = 250
+			modifier = {
+				factor = 0
+				SNK = {
+					development = 250
+				}
+			}
+		}
+	}
+	option = {
+		name = KKO_flavor.11.b
+		KKO = {
+			country_event = {
+				id = KKO_flavor.22
+			}
+		}
+		ai_chance = {
+			factor = 250
+		}
+	}
+}
+#与命莲寺结盟
+country_event = {
+	id = KKO_flavor.12
+	title = "KKO_flavor.12.t"
+	desc = "KKO_flavor.12.desc"
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	fire_only_once = yes
+	trigger = {
+		had_country_flag = {
+			flag = kko_divergence_fo_ok
+			days = 7300
+		}
+	}
+	option = {
+		name = KKO_flavor.12.a
+		MYO = {
+			country_event = {
+				id = KKO_flavor.13
+			}
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = kko_divergence_fo_ok
+		}
+	}
+	option = {
+		name = KKO_flavor.12.b
+		add_casus_belli = {
+			target = MYO
+			type = cb_restore_personal_union
+			months = 180
+		}
+	}
+}
+country_event = {
+	id = KKO_flavor.13
+	title = "KKO_flavor.13.t"
+	desc = "KKO_flavor.13.desc"
+	picture = BAD_WITH_MONARCH_eventPicture
+	is_triggered_only = yes
+	trigger = {}
+	option = {
+		name = KKO_flavor.13.a
+		KKO = {
+			create_union = MYO
+		}
+		ai_chance = {
+			factor = 250
+			modifier = {
+				factor = 0
+				MYO = {
+					development = 250
+				}
+			}
+		}
+	}
+	option = {
+		name = KKO_flavor.13.b
+		country_event = {
+			id = KKO_flavor.27
+		}
+		ai_chance = {
+			factor = 250
+		}
+	}
+}
+#自立宗教
+country_event = {
+	id = KKO_flavor.14
+	title = "KKO_flavor.14.t"
+	desc = "KKO_flavor.14.desc"
+	picture = PRAYING_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		tag = KKO
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = kko_zhongli_down
+			set_country_flag = kko_divergence_first_12
+		}
+	}
+	option = {
+		name = KKO_flavor.14.a
+		change_religion = th_taoist
+		add_country_modifier = {
+			name = kko_zhongli_buff
+			duration = 14600
+		}
+		add_country_modifier = {
+			name = kko_religions_taoist_buff
+			duration = -1
+		}
+	}
+	option = {
+		name = KKO_flavor.14.b
+		change_religion = th_buddhist
+		add_country_modifier = {
+			name = kko_zhongli_buff
+			duration = 14600
+		}
+		add_country_modifier = {
+			name = kko_religions_buddist_buff
+			duration = -1
+		}
+	}
+	option = {
+		name = KKO_flavor.14.c
+		change_religion = th_hakureishinto
+		add_country_modifier = {
+			name = kko_zhongli_buff
+			duration = 14600
+		}
+		add_country_modifier = {
+			name = kko_religions_boli_buff
+			duration = -1
+		}
+	}
+	option = {
+		name = KKO_flavor.14.d
+		change_religion = th_moriyashinto
+		add_country_modifier = {
+			name = kko_zhongli_buff
+			duration = 14600
+		}
+		add_country_modifier = {
+			name = kko_religions_babanfeng_buff
+			duration = -1
+		}
+	}
+}
+#情感异变 stage7 ##古明地恋
+country_event = {
+	id = KKO_flavor.15
+	title = "KKO_flavor.15.t"
+	desc = "KKO_flavor.15.desc"
+	picture = event_qin_flavor_15
+	trigger = {
+		tag = KKO
+		had_country_flag = {
+			flag = th_kko_emotion_sixth_stage_complete
+			days = 1825
+		}
+		NOT = {
+			has_country_flag = kko_xiwang_reget
+		}
+		has_global_flag = hopeless_masquerader_incident_start
+	}
+	mean_time_to_happen = {
+		months = 2
+	}
+	immediate = {
+		hidden_effect = {
+			th_getruler_fighting_skill = {
+				skill_boni = 0
+				type = incident
+			}
+			set_variable = {
+				which = th_kko_emotion_seventh_stage_extra
+				value = 10500
+			}
+			th_defineopponent_fighting_skill = {
+				variable = th_kko_emotion_seventh_stage_extra
+				type = incident
+			}
+			clr_country_flag = th_kko_emotion_sixth_stage_complete
+		}
+	}
+	option = {
+		name = "KKO_flavor.15.a"
+		custom_tooltip = KKO_flavor.15.a.tt
+		highlight = yes
+		th_danmaku_incident_fight_ruler_and_opponent = yes
+		set_country_flag = th_kko_emotion_seventh_stage_extra_complete
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 100
+				th_winnable_fight_trigger = {
+					type = incident
+				}
+			}
+			modifier = {
+				factor = 0
+				th_unwinnable_fight_trigger = {
+					type = incident
+				}
+			}
+		}
+	}
+}
+#情感异变 stage extra ##古明地恋
+country_event = {
+	id = KKO_flavor.16
+	title = "KKO_flavor.16.t"
+	desc = "KKO_flavor.16.desc"
+	picture = event_qin_flavor_15
+	trigger = {
+		had_country_flag = {
+			flag = th_kko_emotion_seventh_stage_extra_complete
+			days = 1825
+		}
+		NOT = {
+			has_country_flag = kko_xiwang_reget
+		}
+		has_global_flag = hopeless_masquerader_incident_start
+	}
+	mean_time_to_happen = {
+		months = 2
+	}
+	immediate = {
+		hidden_effect = {
+			th_getruler_fighting_skill = {
+				skill_boni = 0
+				type = incident
+			}
+			set_variable = {
+				which = th_kko_emotion_stage_extra
+				value = 600
+			}
+			th_defineopponent_fighting_skill = {
+				variable = th_kko_emotion_stage_extra
+				type = incident
+			}
+			clr_country_flag = th_kko_emotion_seventh_stage_extra_complete
+		}
+	}
+	option = {
+		name = "KKO_flavor.16.a"
+		custom_tooltip = KKO_flavor.16.a.tt
+		highlight = yes
+		th_danmaku_incident_fight_ruler_and_opponent = yes
+		set_country_flag = th_kko_emotion_stage_extra_complete
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 100
+				th_winnable_fight_trigger = {
+					type = incident
+				}
+			}
+			modifier = {
+				factor = 0
+				th_unwinnable_fight_trigger = {
+					type = incident
+				}
+			}
+		}
+	}
+}
+#发现恋恋
+#country_event = {
+# id = KKO_flavor.17
+#  title = "KKO_flavor.17.t"
+#desc = "KKO_flavor.17.desc"
+#picture = event_qin_flavor_15
+# is_triggered_only = yes
+#trigger = {
+# }
+# mean_time_to_happen = {
+#   days = 1
+# }
+#  option = {
+#name = KKO_flavor.17.a
+###   custom_tooltip = kko_introduce
+# }
+#3}
+
+#仙界寻求政治支持
+country_event = {
+	id = KKO_flavor.18
+	title = "KKO_flavor.18.t"
+	desc = "KKO_flavor.18.desc"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	trigger = {
+		has_country_flag = kko_daojiaoxian
+		has_country_flag = kko_religions_divergence_tao
+		SNK = {
+			overlord_of = KKO
+		}
+	}
+	mean_time_to_happen = {
+		days = 800
+	}
+	option = {
+		name = KKO_flavor.18.a
+		add_adm_power = -5
+		SNK = {
+			add_trust = {
+				who = KKO
+				value = 1
+			}
+		}
+		hidden_effect = {
+			change_variable = {
+				which = kko_tao_action
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = KKO_flavor.18.b
+		SNK = {
+			add_trust = {
+				who = KKO
+				value = -1
+			}
+		}
+	}
+}
+#仙界寻求的经济支持
+country_event = {
+	id = KKO_flavor.19
+	title = "KKO_flavor.19.t"
+	desc = "KKO_flavor.19.desc"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	trigger = {
+		has_country_flag = kko_daojiaoxian
+		has_country_flag = kko_religions_divergence_tao
+		KKO = {
+			treasury = 50
+		}
+		SNK = {
+			overlord_of = KKO
+		}
+	}
+	mean_time_to_happen = {
+		days = 700
+	}
+	option = {
+		name = KKO_flavor.19.a
+		custom_tooltip = kko_introduce
+		add_treasury = -5
+		SNK = {
+			add_treasury = 5
+		}
+		SNK = {
+			add_trust = {
+				who = KKO
+				value = 1
+			}
+		}
+		hidden_effect = {
+			change_variable = {
+				which = kko_tao_action
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = KKO_flavor.19.b
+		custom_tooltip = kko_introduce
+		add_treasury = -10
+		SNK = {
+			add_treasury = 10
+		}
+		SNK = {
+			add_trust = {
+				who = KKO
+				value = 2
+			}
+		}
+		hidden_effect = {
+			change_variable = {
+				which = kko_tao_action
+				value = 3
+			}
+		}
+	}
+	option = {
+		name = KKO_flavor.19.c
+		custom_tooltip = kko_introduce
+		add_treasury = -25
+		SNK = {
+			add_treasury = 25
+		}
+		SNK = {
+			add_trust = {
+				who = KKO
+				value = 3
+			}
+		}
+		hidden_effect = {
+			change_variable = {
+				which = kko_tao_action
+				value = 5
+			}
+		}
+	}
+	option = {
+		name = KKO_flavor.19.d
+		custom_tooltip = kko_introduce
+		add_prestige = 5
+		SNK = {
+			add_trust = {
+				who = KKO
+				value = -2
+			}
+		}
+	}
+}
+#仙界寻求人力
+country_event = {
+	id = KKO_flavor.20
+	title = "KKO_flavor.20.t"
+	desc = "KKO_flavor.20.desc"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	trigger = {
+		has_country_flag = kko_daojiaoxian
+		has_country_flag = kko_religions_divergence_tao
+		KKO = {
+			manpower = 1
+		}
+		SNK = {
+			overlord_of = KKO
+		}
+	}
+	mean_time_to_happen = {
+		days = 1400
+	}
+	option = {
+		name = KKO_flavor.20.a
+		custom_tooltip = kko_introduce
+		add_manpower = -1
+		hidden_effect = {
+			change_variable = {
+				which = kko_tao_action
+				value = 1
+			}
+		}
+		SNK = {
+			add_trust = {
+				who = root
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = KKO_flavor.20.b
+		custom_tooltip = kko_introduce
+		SNK = {
+			add_trust = {
+				who = root 
+				value = -1
+			}
+		}
+	}
+}
+#仙界的朝贡结束
+country_event = {
+	id = KKO_flavor.21
+	title = "KKO_flavor.21.t"
+	desc = "KKO_flavor.21.desc"
+	fire_only_once = yes
+	picture = kko_mission_1
+	hidden = yes
+	trigger = {
+		check_variable = {
+			which = kko_tao_action
+			value = 75
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = kko_divergence_tao_ok
+			set_country_flag = kko_daojiaoxian_nowdown
+			clr_country_flag = kko_religions_divergence_tao
+		}
+	}
+	option = {
+		name = KKO_flavor.21.a
+		custom_tooltip = kko_introduce
+	}
+}
+#仙界拒绝合作
+country_event = {
+	id = KKO_flavor.22
+	title = "KKO_flavor.22.t"
+	desc = "KKO_flavor.22.desc"
+	picture = CIVIL_WAR_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = KKO_flavor.22.a
+		KKO = {
+			declare_war_with_cb = {
+				who = SNK
+				casus_belli = cb_restore_personal_union
+			}
+		}
+	}
+	option = {
+		name = KKO_flavor.22.b
+		grant_independence = yes
+		add_casus_belli = {
+			target = SNK
+			type = cb_restore_personal_union
+			months = 600
+		}
+	}
+	option = {
+		name = KKO_flavor.22.c
+		add_trust = {
+			who = SNK
+			value = 20
+			mutual = yes
+		}
+	}
+}
+#命莲寺寻求政治支持
+country_event = {
+	id = KKO_flavor.23
+	title = "KKO_flavor.23.t"
+	desc = "KKO_flavor.23.desc"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	trigger = {
+		has_country_flag = kko_fojiaoxian
+		has_country_flag = kko_religions_divergence_fo
+		MYO = {
+			overlord_of = KKO
+		}
+	}
+	mean_time_to_happen = {
+		days = 800
+	}
+	option = {
+		name = KKO_flavor.23.a
+		add_adm_power = -10
+		MYO = {
+			add_trust = {
+				who = root
+				value = 1
+			}
+		}
+		change_variable = {
+			which = kko_fo_action
+			value = 10
+		}
+	}
+	option = {
+		name = KKO_flavor.23.b
+		MYO = {
+			add_trust = {
+				who = root
+				value = -1
+			}
+		}
+	}
+}
+#命莲寺寻求的经济支持
+country_event = {
+	id = KKO_flavor.24
+	title = "KKO_flavor.24.t"
+	desc = "KKO_flavor.24.desc"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	trigger = {
+		has_country_flag = kko_fojiaoxian
+		has_country_flag = kko_religions_divergence_fo
+		KKO = {
+			treasury = 50
+		}
+		MYO = {
+			overlord_of = KKO
+		}
+	}
+	mean_time_to_happen = {
+		days = 780
+	}
+	option = {
+		name = KKO_flavor.24.a
+		add_treasury = -5
+		MYO = {
+			add_treasury = 5
+		}
+		MYO = {
+			add_trust = {
+				who = root
+				value = 1
+			}
+		}
+		change_variable = {
+			which = kko_fo_action
+			value = 1
+		}
+	}
+	option = {
+		name = KKO_flavor.24.b
+		add_treasury = -20
+		MYO = {
+			add_treasury = 20
+		}
+		MYO = {
+			add_trust = {
+				who = root
+				value = 2
+			}
+		}
+		change_variable = {
+			which = kko_fo_action
+			value = 2
+		}
+	}
+	option = {
+		name = KKO_flavor.24.c
+		add_treasury = -45
+		MYO = {
+			add_treasury = 45
+		}
+		MYO = {
+			add_trust = {
+				who = root
+				value = 3
+			}
+		}
+		change_variable = {
+			which = kko_fo_action
+			value = 3
+		}
+	}
+	option = {
+		name = KKO_flavor.24.d
+		add_prestige = 5
+		MYO = {
+			add_trust = {
+				who = root
+				value = -2
+			}
+		}
+	}
+}
+#命莲寺寻求人力
+country_event = {
+	id = KKO_flavor.25
+	title = "KKO_flavor.25.t"
+	desc = "KKO_flavor.25.desc"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	trigger = {
+		has_country_flag = kko_fojiaoxian
+		has_country_flag = kko_religions_divergence_fo
+		KKO = {
+			manpower = 1
+		}
+		MYO = {
+			overlord_of = KKO
+		}
+		
+	}
+	mean_time_to_happen = {
+		days = 1400
+	}
+	option = {
+		name = KKO_flavor.25.a
+		add_manpower = -1
+		change_variable = {
+			which = kko_fo_action
+			value = 1
+		}
+		MYO = {
+			add_trust = {
+				who = root
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = KKO_flavor.25.b
+		MYO = {
+			add_trust = {
+				who = root
+				value = -1
+			}
+		}
+	}
+}
+#命莲寺的朝贡结束
+country_event = {
+	id = KKO_flavor.26
+	title = "KKO_flavor.26.t"
+	desc = "KKO_flavor.26.desc"
+	fire_only_once = yes
+	hidden = yes
+	trigger = {
+		check_variable = {
+			which = kko_fo_action
+			value = 75
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = kko_divergence_fo_ok
+			set_country_flag = kko_fojiaoxian_nowdown
+			clr_country_flag = kko_religions_divergence_fo
+		}
+	}
+	option = {
+		name = KKO_flavor.26.a
+		custom_tooltip = kko_introduce
+	}
+}
+#命莲寺拒绝合作
+country_event = {
+	id = KKO_flavor.27
+	title = "KKO_flavor.27.t"
+	desc = "KKO_flavor.27.desc"
+	picture = CIVIL_WAR_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = KKO_flavor.27.a
+		KKO = {
+			declare_war_with_cb = {
+				who = MYO
+				casus_belli = cb_restore_personal_union
+			}
+		}
+	}
+	option = {
+		name = KKO_flavor.27.b
+		grant_independence = yes
+		add_casus_belli = {
+			target = MYO
+			type = cb_restore_personal_union
+			months = 600
+		}
+	}
+	option = {
+		name = KKO_flavor.22.c
+		add_trust = {
+			who = MYO
+			value = 20
+			mutual = yes
+		}
+	}
+}
+
+##情感异变
+#情感异变stage1 ##云居一轮
+country_event = {
+	id = KKO_flavor.28
+	title = "KKO_flavor.28.t"
+	desc = "KKO_flavor.28.desc"
+	picture = kko_mission_3
+	fire_only_once = yes
+	trigger = {
+		has_global_flag = hopeless_masquerader_incident_start
+		had_country_flag = {
+			flag = hopeless_masquerader_incident_start2
+			days = 180
+		}
+		not = {
+			has_country_flag = kko_xiwang_reget
+		}
+	}
+	mean_time_to_happen = {
+		months = 2
+	}
+	immediate = {
+		hidden_effect = {
+			th_getruler_fighting_skill = {
+				skill_boni = 0
+				type = incident
+			}
+			set_variable = {
+				which = th_kko_emotion_first_stage
+				value = 1050
+			}
+			th_defineopponent_fighting_skill = {
+				variable = th_kko_emotion_first_stage
+				type = incident
+			}
+		}
+	}
+	option = {
+		name = "KKO_flavor.28.a"
+		custom_tooltip = KKO_flavor.28.a.tt
+		highlight = yes
+		th_danmaku_incident_fight_ruler_and_opponent = yes
+		set_country_flag = th_kko_emotion_first_stage_complete
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 100
+				th_winnable_fight_trigger = {
+					type = incident
+				}
+			}
+			modifier = {
+				factor = 0
+				th_unwinnable_fight_trigger = {
+					type = incident
+				}
+			}
+		}
+	}
+} 
+#情感异变stage2 ##荷城河取
+country_event = {
+	id = KKO_flavor.29
+	title = "KKO_flavor.29.t"
+	desc = "KKO_flavor.29.desc"
+	picture = kko_mission_4
+	fire_only_once = yes
+	trigger = {
+		had_country_flag = {
+			flag = th_kko_emotion_first_stage_complete
+			days = 1825
+		}
+		not = {
+			has_country_flag = kko_xiwang_reget
+		}
+		has_global_flag = hopeless_masquerader_incident_start
+	}
+	mean_time_to_happen = {
+		months = 2
+	}
+	immediate = {
+		hidden_effect = {
+			th_getruler_fighting_skill = {
+				skill_boni = 0
+				type = incident
+			}
+			set_variable = {
+				which = th_kko_emotion_second_stage
+				value = 1200
+			}
+			th_defineopponent_fighting_skill = {
+				variable = th_kko_emotion_second_stage
+				type = incident
+			}
+		}
+		clr_country_flag = th_kko_emotion_first_stage_complete
+	}
+	option = {
+		name = "KKO_flavor.29.a"
+		custom_tooltip = KKO_flavor.29.a.tt
+		highlight = yes
+		th_danmaku_incident_fight_ruler_and_opponent = yes
+		set_country_flag = th_kko_emotion_second_stage_complete
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 100
+				th_winnable_fight_trigger = {
+					type = incident
+				}
+			}
+			modifier = {
+				factor = 0
+				th_unwinnable_fight_trigger = {
+					type = incident
+				}
+			}
+		}
+	}
+}
+#情感异变stage3 ##物部布都
+country_event = {
+	id = KKO_flavor.30
+	title = "KKO_flavor.30.t"
+	desc = "KKO_flavor.30.desc"
+	picture = kko_mission_9
+	fire_only_once = yes
+	trigger = {
+		had_country_flag = {
+			flag = th_kko_emotion_second_stage_complete
+			days = 1825
+		}
+		not = {
+			has_country_flag = kko_xiwang_reget
+		}
+		has_global_flag = hopeless_masquerader_incident_start
+	}
+	mean_time_to_happen = {
+		months = 2
+	}
+	immediate = {
+		hidden_effect = {
+			th_getruler_fighting_skill = {
+				skill_boni = 0
+				type = incident
+			}
+			set_variable = {
+				which = th_kko_emotion_third_stage
+				value = 1275
+			}
+			th_defineopponent_fighting_skill = {
+				variable = th_kko_emotion_third_stage
+				type = incident
+			}
+			clr_country_flag = th_kko_emotion_second_stage_complete
+		}
+	}
+	option = {
+		name = "KKO_flavor.30.a"
+		custom_tooltip = KKO_flavor.30.a.tt
+		highlight = yes
+		th_danmaku_incident_fight_ruler_and_opponent = yes
+		set_country_flag = th_kko_emotion_third_stage_complete
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 100
+				th_winnable_fight_trigger = {
+					type = incident
+				}
+			}
+			modifier = {
+				factor = 0
+				th_unwinnable_fight_trigger = {
+					type = incident
+				}
+			}
+		}
+	}
+}
+#情感异变stage4 ##雾雨魔理沙/博丽灵梦 A线
+country_event = {
+	id = KKO_flavor.31
+	title = "KKO_flavor.31.t"
+	desc = "KKO_flavor.31.desc"
+	picture = kko_mission_7
+	fire_only_once = yes
+	trigger = {
+		had_country_flag = {
+			flag = th_kko_emotion_third_stage_complete
+			days = 1825
+		}
+		not = {
+			has_country_flag = kko_xiwang_reget
+		}
+		has_global_flag = hopeless_masquerader_incident_start
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		hidden_effect = {
+			th_getruler_fighting_skill = {
+				skill_boni = 0
+				type = incident
+			}
+			set_variable = {
+				which = th_kko_emotion_fourth_stage
+				value = 1355
+			}
+			th_defineopponent_fighting_skill = {
+				variable = th_kko_emotion_fourth_stage
+				type = incident
+			}
+			clr_country_flag = th_kko_emotion_third_stage_complete
+		}
+	}
+	option = {
+		name = "KKO_flavor.31.a"
+		custom_tooltip = KKO_flavor.31.a.tt
+		highlight = yes
+		th_danmaku_incident_fight_ruler_and_opponent = yes
+		set_country_flag = th_kko_emotion_fourth_stage_complete
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 100
+				th_winnable_fight_trigger = {
+					type = incident
+				}
+			}
+			modifier = {
+				factor = 0
+				th_unwinnable_fight_trigger = {
+					type = incident
+				}
+			}
+		}
+	}
+} 
+#情感异变stage5 ##二岩猯藏
+country_event = {
+	id = KKO_flavor.33
+	title = "KKO_flavor.33.t"
+	desc = "KKO_flavor.33.desc"
+	picture = kko_mission_5
+	fire_only_once = yes
+	trigger = {
+		had_country_flag = {
+			flag = th_kko_emotion_fourth_stage_complete
+			days = 1825
+		}
+		not = {
+			has_country_flag = kko_xiwang_reget
+		}
+		has_global_flag = hopeless_masquerader_incident_start
+	}
+	mean_time_to_happen = {
+		months = 2
+	}
+	immediate = {
+		hidden_effect = {
+			th_getruler_fighting_skill = {
+				skill_boni = 0
+				type = incident
+			}
+			set_variable = {
+				which = th_kko_emotion_fifth_stage
+				value = 1475
+			}
+			th_defineopponent_fighting_skill = {
+				variable = th_kko_emotion_fifth_stage
+				type = incident
+			}
+			clr_country_flag = th_kko_emotion_fourth_stage_complete
+		}
+	}
+	option = {
+		name = "KKO_flavor.33.a"
+		custom_tooltip = KKO_flavor.33.a.tt
+		highlight = yes
+		th_danmaku_incident_fight_ruler_and_opponent = yes
+		set_country_flag = th_kko_emotion_fifth_stage_complete
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 100
+				th_winnable_fight_trigger = {
+					type = incident
+				}
+			}
+			modifier = {
+				factor = 0
+				th_unwinnable_fight_trigger = {
+					type = incident
+				}
+			}
+		}
+	}
+}
+#情感异变stage6 ##圣白莲 A线
+country_event = {
+	id = KKO_flavor.34
+	title = "KKO_flavor.34.t"
+	desc = "KKO_flavor.34.desc"
+	fire_only_once = yes
+	picture = kko_mission_6
+	trigger = {
+		had_country_flag = {
+			flag = th_kko_emotion_fifth_stage_complete
+			days = 1825
+		}
+		has_country_flag = kko_zhongli
+		has_country_flag = kko_daojiaoxian
+		NOT = {
+			has_country_flag = kko_xiwang_reget
+		}
+		has_global_flag = hopeless_masquerader_incident_start
+	}
+	mean_time_to_happen = {
+		months = 2
+	}
+	immediate = {
+		hidden_effect = {
+			th_getruler_fighting_skill = {
+				skill_boni = 0
+				type = incident
+			}
+			set_variable = {
+				which = th_kko_emotion_sixth_stage
+				value = 1555
+			}
+			th_defineopponent_fighting_skill = {
+				variable = th_kko_emotion_sixth_stage
+				type = incident
+			}
+			clr_country_flag = th_kko_emotion_fifth_stage_complete
+		}
+	}
+	option = {
+		name = "KKO_flavor.34.a"
+		custom_tooltip = KKO_flavor.34.a.tt
+		highlight = yes
+		th_danmaku_incident_fight_ruler_and_opponent = yes
+		set_country_flag = th_kko_emotion_sixth_stage_complete
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 100
+				th_winnable_fight_trigger = {
+					type = incident
+				}
+			}
+			modifier = {
+				factor = 0
+				th_unwinnable_fight_trigger = {
+					type = incident
+				}
+			}
+		}
+	}
+}
+#情感异变stage6 ##丰聪耳神子 B线
+country_event = {
+	id = KKO_flavor.35
+	title = "KKO_flavor.35.t"
+	desc = "KKO_flavor.35.desc"
+	fire_only_once = yes
+	picture = kko_mission_8
+	trigger = {
+		had_country_flag = {
+			flag = th_kko_emotion_fifth_stage_complete
+			days = 1825
+		}
+		has_country_flag = kko_fojiaoxian
+		NOT = {
+			has_country_flag = kko_xiwang_reget
+		}
+		has_global_flag = hopeless_masquerader_incident_start
+	}
+	mean_time_to_happen = {
+		months = 2
+	}
+	immediate = {
+		hidden_effect = {
+			th_getruler_fighting_skill = {
+				skill_boni = 0
+				type = incident
+			}
+			set_variable = {
+				which = th_kko_emotion_sixth_stage
+				value = 1555
+			}
+			th_defineopponent_fighting_skill = {
+				variable = th_kko_emotion_sixth_stage
+				type = incident
+			}
+			clr_country_flag = th_kko_emotion_fifth_stage_complete
+		}
+	}
+	option = {
+		name = "KKO_flavor.35.a"
+		custom_tooltip = KKO_flavor.35.a.tt
+		highlight = yes
+		th_danmaku_incident_fight_ruler_and_opponent = yes
+		set_country_flag = th_kko_emotion_sixth_stage_complete
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 100
+				th_winnable_fight_trigger = {
+					type = incident
+				}
+			}
+			modifier = {
+				factor = 0
+				th_unwinnable_fight_trigger = {
+					type = incident
+				}
+			}
+		}
+	}
+}
+#情感异变 已经得到退治
+country_event = {
+	id = KKO_flavor.37
+	title = "KKO_flavor.37.t"
+	desc = "KKO_flavor.37.desc"
+	fire_only_once = yes
+	picture = kko_mission_10
+	trigger = {
+		or = {
+			has_country_flag = kko_xiwang_reget
+			has_country_flag = th_kko_emotion_stage_extra_complete
+		}
+	}
+	mean_time_to_happen = {
+		months = 2
+	}
+	immediate = {
+		hidden_effect = {
+			KKO = {
+				every_neighbor_country = {
+					country_event = {
+						id = KKO_flavor.40
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "KKO_flavor.37.a"
+		remove_country_modifier = kko_xiwang_lose_buff
+		set_country_flag = kko_xiwang_reget
+	}
+}
+##丧失的情感异变 已经开始
+country_event = {
+	id = KKO_flavor.38
+	title = "KKO_flavor.38.t"
+	desc = "KKO_flavor.38.desc"
+	picture = kko_mission_11
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		KKO = {
+			has_country_flag = kko_xiwang_lose
+		}
+		NOT = {
+			has_country_flag = kko_xiwang_reget
+		}
+	}
+	mean_time_to_happen = {
+		months = 2
+	}
+	immediate = {
+		hidden_effect = {
+			KKO = {
+				every_neighbor_country = {
+					country_event = {
+						id = KKO_flavor.39
+					}
+				}
+			}
+			KKO = {
+				set_country_flag = hopeless_masquerader_incident_start2
+			}
+		}
+	}
+	option = {
+		name = "KKO_flavor.38.a"
+		custom_tooltip = KKO_flavor.38.a.tt
+	}
+}
+##丧失的情感异变 已经开始 全局
+country_event = {
+	id = KKO_flavor.39
+	title = "KKO_flavor.39.t"
+	desc = "KKO_flavor.39.desc"
+	picture = kko_mission_11
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		set_global_flag = hopeless_masquerader_incident_start
+	}
+	option = {
+		name = "KKO_flavor.39.a"
+		custom_tooltip = KKO_flavor.38.a.tt
+		add_country_modifier = {
+			name = kko_hopless_neighbours_buff
+			duration = -1
+		}
+	}
+}
+#情感异变 已经得到退治 全局
+country_event = {
+	id = KKO_flavor.40
+	title = "KKO_flavor.40.t"
+	desc = "KKO_flavor.40.desc"
+	picture = kko_mission_10
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		clr_global_flag = hopeless_masquerader_incident_start
+	}
+	option = {
+		name = "KKO_flavor.40.a"
+		remove_country_modifier = kko_hopless_neighbours_buff
+	}
+}
+##恋恋离开事件
+country_event = {
+	id = KKO_flavor.41
+	title = "KKO_flavor.41.t"
+	desc = "KKO_flavor.41.desc"
+	hidden = yes
+	trigger = {
+		has_country_flag = koishi_advisor_unlock12
+		not = {
+			has_country_flag = koishi_advisor_out
+		}
+		advisor = the_koishi
+	}
+	mean_time_to_happen = {
+		days = 180
+	}
+	immediate = {
+		set_country_flag = koishi_advisor_out
+		remove_advisor_by_category = MIL
+	}
+	option = {
+		name = "KKO_flavor.41.a"
+		custom_tooltip = KKO_flavor.41.a.tt
+	}
+}
+##恋恋旅行归来事件
+country_event = {
+	id = KKO_flavor.42
+	title = "KKO_flavor.42.t"
+	desc = "KKO_flavor.42.desc"
+	picture = event_qin_flavor_15
+	trigger = {
+		NOT = {
+			has_mil_advisor = yes
+		}
+		had_country_flag = {
+			flag = koishi_advisor_out
+			days = 600
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = koishi_advisor_out
+			THE_KKO_define_advisor_koishi_scripted_effect = yes
+		}
+	}
+	option = {
+		name = "KKO_flavor.42.a"
+		highlight = yes
+		add_mil_power = 300
+		add_adm_power = 50
+		add_dip_power = 50
+		add_prestige = 10
+		if = {
+			limit = {
+				is_at_war = yes
+			}
+			add_war_exhaustion = -2
+			add_manpower = 12
+			random = {
+				chance = 50
+				hidden_effect = {
+					change_variable = {
+						which = koishi_advisor_technical
+						value = 1
+					}
+				}
+				add_country_modifier = {
+					name = koishi_advisor_tech_buff
+					duration = 1825
+				}
+			}
+		}
+		else = {
+			add_splendor = 200
+			add_country_modifier = {
+				name = koishi_advisor_tech_buff
+				duration = 1825
+			}
+			hidden_effect = {
+				change_variable = {
+					which = koishi_advisor_technical
+					value = 1
+				}
+			}
+			random = {
+				chance = 50
+				add_stability = 1
+			}
+		}
+	}
+}
+####希望之面回归事件
+country_event = {
+	id = KKO_flavor.43
+	title = "KKO_flavor.43.t"
+	desc = "KKO_flavor.43.desc"
+	picture = kko_mission_2
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = KKO_flavor.43.a
+		highlight = yes
+		add_stability = 1
+		add_prestige = 50
+	}
+}
+##幕府将军的邀请
+country_event = {
+	id = KKO_flavor.44
+	title = "KKO_flavor.44.t"
+	desc = "KKO_flavor.44.desc"
+	picture = SHOGUNATE_AUTHORITY_INCIDENT_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = KKO_flavor.44.a
+		custom_tooltip = KKO_flavor.44.a.tt
+		1028 = {
+			every_country = {
+				limit = {
+					is_core = prev
+				}
+				remove_core = prev
+			}
+		}
+		1028 = {
+			cede_province = KKO
+			add_core = KKO
+			change_culture = Tsukumogami_culture
+			THE_KKO_CHANGE_name2_scripted_effect = yes
+		}
+	}
+}
+##日本的巡演 
+##巡演的第一站
+country_event = {
+	id = KKO_flavor.45
+	title = "KKO_flavor.45.t"
+	desc = "KKO_flavor.45.desc"
+	picture = URBANISATION_INCIDENT_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = kko_japan_tour_2
+		}
+	}
+	option = {
+		name = KKO_flavor.45.a
+		custom_tooltip = KKO_flavor.45.a.tt
+		custom_tooltip = KKO_genre_change1234
+		add_prestige = 50
+		add_splendor = 200
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+	}
+}
+country_event = {
+	id = KKO_flavor.46
+	title = "KKO_flavor.46.t"
+	desc = "KKO_flavor.46.desc"
+	picture = URBANISATION_INCIDENT_eventPicture
+	fire_only_once = yes
+	trigger = {
+		had_country_flag = {
+			flag = kko_japan_tour_2
+			days = 1825
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = kko_japan_tour_3
+		}
+	}
+	option = {
+		name = KKO_flavor.46.a
+		custom_tooltip = KKO_flavor.46.a.tt
+		add_prestige = 50
+		add_splendor = 200
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+	}
+}
+country_event = {
+	id = KKO_flavor.47
+	title = "KKO_flavor.47.t"
+	desc = "KKO_flavor.47.desc"
+	picture = URBANISATION_INCIDENT_eventPicture
+	fire_only_once = yes
+	trigger = {
+		had_country_flag = {
+			flag = kko_japan_tour_3
+			days = 1825
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = kko_japan_tour_4
+		}
+	}
+	option = {
+		name = KKO_flavor.47.a
+		custom_tooltip = KKO_flavor.47.a.tt
+		add_prestige = 50
+		add_splendor = 200
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+	}
+}
+country_event = {
+	id = KKO_flavor.48
+	title = "KKO_flavor.48.t"
+	desc = "KKO_flavor.48.desc"
+	picture = URBANISATION_INCIDENT_eventPicture
+	fire_only_once = yes
+	trigger = {
+		had_country_flag = {
+			flag = kko_japan_tour_4
+			days = 1825
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = kko_japan_tour_5
+		}
+	}
+	option = {
+		name = KKO_flavor.48.a
+		custom_tooltip = KKO_flavor.48.a.tt
+		add_prestige = 50
+		add_splendor = 200
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+	}
+}
+country_event = {
+	id = KKO_flavor.49
+	title = "KKO_flavor.49.t"
+	desc = "KKO_flavor.49.desc"
+	picture = URBANISATION_INCIDENT_eventPicture
+	fire_only_once = yes
+	trigger = {
+		had_country_flag = {
+			flag = kko_japan_tour_5
+			days = 1825
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = kko_japan_tour_5
+		}
+	}
+	option = {
+		name = KKO_flavor.49.a
+		custom_tooltip = KKO_flavor.49.a.tt
+		highlight = yes
+		add_prestige = 50
+		add_splendor = 200
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+	}
+}
+##流派选择
+country_event = {
+	id = KKO_flavor.50
+	title = "KKO_flavor.50.t"
+	desc = "KKO_flavor.50.desc"
+	picture = kko_mission_12
+	is_triggered_only = yes
+	immediate = {
+	}
+	option = {
+		name = "KKO_flavor.50.a"
+		set_country_flag = kko_guanshi_on
+		add_country_modifier = {
+			name = kko_guanshi_buff1
+			duration = -1
+		}
+		custom_tooltip = kko_genre_change12
+		tooltip = {
+			add_country_modifier = {
+				name = kko_baosheng_buff2
+				duration = 3650
+			}
+		}
+	}
+	option = {
+		name = "KKO_flavor.50.b"
+		set_country_flag = kko_baosheng_on
+		add_country_modifier = {
+			name = kko_baosheng_buff1
+			duration = -1
+		}
+		custom_tooltip = kko_genre_change12
+		tooltip = {
+			add_country_modifier = {
+				name = kko_baosheng_buff2
+				duration = 3650
+			}
+		}
+	}
+	option = {
+		name = "KKO_flavor.50.c"
+		set_country_flag = kko_jinchun_on
+		add_country_modifier = {
+			name = kko_jinchun_buff1
+			duration = -1
+		}
+		custom_tooltip = kko_genre_change12
+		tooltip = {
+			add_country_modifier = {
+				name = kko_jinchun_buff2
+				duration = 3650
+			}
+		}
+	}
+	option = {
+		name = "KKO_flavor.50.d"
+		set_country_flag = kko_jingang_on
+		add_country_modifier = {
+			name = kko_jingang_buff1
+			duration = -1
+		}
+		custom_tooltip = kko_genre_change12
+		tooltip = {
+			add_country_modifier = {
+				name = kko_jingang_buff2
+				duration = 3650
+			}
+		}
+	}
+	option = {
+		name = "KKO_flavor.50.e"
+		set_country_flag = kko_xiduo_on
+		add_country_modifier = {
+			name = kko_xiduo_buff1
+			duration = -1
+		}
+		custom_tooltip = kko_genre_change12
+		tooltip = {
+			add_country_modifier = {
+				name = kko_xiduo_buff2
+				duration = 3650
+			}
+		}
+	}
+}
+####日本同盟的背叛
+###在完成任务  KKO_japan_5  1年左右触发事件
+#幕府的背叛 幕府对心绮楼开战，但所有大名支持心绮楼这边
+#战争开始时  所有大名成为心绮楼的 宗教朝贡国 附属国代码 th_religious_taofo
+##心绮楼获得全日本的宣称
+##开战后移除 kko_japan_allience_depend_buff 修正
+##战争结束后增加 kko_japan_war_victory_buff 修正
+##战争结束后 心绮楼吞并幕府将军 并且控制京都
+country_event = {
+	id = KKO_flavor.51
+	title = KKO_flavor.51.t
+	desc = KKO_flavor.51.desc
+	picture = CHINESE_GENERAL_eventPicture
+	trigger = {
+		mission_completed = KKO_japan_5
+		is_at_war = no
+		any_country = {
+			has_reform = shogunate
+			is_at_war = no
+		}
+	}
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 365
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_country = {
+				limit = {
+					has_reform = shogunate
+				}
+				save_event_target_as = the_kko_shogunate_target
+			}
+		}
+	}
+	
+	option = {
+		name = KKO_flavor.51.a
+		highlight = yes
+		event_target:the_kko_shogunate_target = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = daimyo_vassal
+				}
+				set_country_flag = THE_kko_create_religious_taofo_from_daimyo_flag
+				ROOT = {
+					create_subject = {
+						subject_type = th_religious_taofo
+						who = PREV
+					}
+				}
+			}
+			custom_tooltip = kko_war_tooltip3	#对ROOT宣战的本地化文本
+			custom_tooltip = kko_war_tooltip4	#提示战争结束效果的本地化文本
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			event_target:the_kko_shogunate_target = {
+				declare_war_with_cb = {
+					casus_belli = cb_insult	#最好是不能吃地的cb
+					who = ROOT
+				}
+				set_country_flag = THE_kko_shogunate_rebel_war_atk_flag
+			}
+			every_subject_country = {
+				limit = {
+					has_country_flag = THE_kko_create_religious_taofo_from_daimyo_flag
+				}
+				join_all_defensive_wars_of = ROOT
+			}
+			every_country = {
+				limit = {
+					has_country_flag = THE_kko_create_religious_taofo_from_daimyo_flag
+				}
+				clr_country_flag = THE_kko_create_religious_taofo_from_daimyo_flag
+			}
+			remove_country_modifier = kko_japan_allience_depend_buff
+			set_country_flag = THE_kko_shogunate_rebel_war_def_flag
+		}
+	}
+}

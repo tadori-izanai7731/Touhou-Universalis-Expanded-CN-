@@ -1,0 +1,69 @@
+defined_text = {
+	name = THE_ROD_mechanic_stage
+	random = no
+	text = {
+		localisation_key = THE_ROD_mechanic_stage_1
+		trigger = {
+			has_government_mechanic = THE_ROD_dark_moon_night_mechanic
+			has_government_power = {
+				mechanic_type = THE_ROD_dark_moon_night_mechanic
+				power_type = THE_ROD_government_mechanic_power
+				value = 0
+			}
+			NOT = {
+				has_government_power = {
+					mechanic_type = THE_ROD_dark_moon_night_mechanic
+					power_type = THE_ROD_government_mechanic_power
+					value = 25
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = THE_ROD_mechanic_stage_2
+		trigger = {
+			has_government_mechanic = THE_ROD_dark_moon_night_mechanic
+			has_government_power = {
+				mechanic_type = THE_ROD_dark_moon_night_mechanic
+				power_type = THE_ROD_government_mechanic_power
+				value = 25
+			}
+			NOT = {
+				has_government_power = {
+					mechanic_type = THE_ROD_dark_moon_night_mechanic
+					power_type = THE_ROD_government_mechanic_power
+					value = 50
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = THE_ROD_mechanic_stage_3
+		trigger = {
+			has_government_mechanic = THE_ROD_dark_moon_night_mechanic
+			has_government_power = {
+				mechanic_type = THE_ROD_dark_moon_night_mechanic
+				power_type = THE_ROD_government_mechanic_power
+				value = 50
+			}
+			NOT = {
+				has_government_power = {
+					mechanic_type = THE_ROD_dark_moon_night_mechanic
+					power_type = THE_ROD_government_mechanic_power
+					value = 75
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = THE_ROD_mechanic_stage_4
+		trigger = {
+			has_government_mechanic = THE_ROD_dark_moon_night_mechanic
+			has_government_power = {
+				mechanic_type = THE_ROD_dark_moon_night_mechanic
+				power_type = THE_ROD_government_mechanic_power
+				value = 75
+			}
+		}
+	}
+}

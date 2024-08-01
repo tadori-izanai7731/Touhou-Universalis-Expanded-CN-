@@ -1,0 +1,43 @@
+THE_LIL_late_spring_disaster = {
+	potential = {
+		OR = {
+			th_is_or_was_tag = { tag = LIL }
+			th_has_copied_from_target = {
+				target = LIL
+			}
+		}
+		has_country_flag = THE_LIL_unlock_spring_origin_triggered_modifier_flag
+		NOT = { has_country_flag = THE_LIL_finish_late_spring_disaster_flag }
+	}
+	can_start = {
+		always = yes
+	}
+	can_stop = {
+		always = no
+	}
+	progress = {
+		modifier = {
+			factor = 10
+			any_owned_province = {
+				has_active_triggered_province_modifier = THE_LIL_spring_origin_triggered_modifier
+			}
+		}
+	}
+	can_end = {
+		custom_trigger_tooltip = {
+			tooltip = THE_LIL_defeated_lily_black_disaster_tt
+			has_country_flag = LIL_defeated_lily_black
+		}
+		custom_trigger_tooltip = {
+			tooltip = THE_LIL_defeated_lily_black_diplomatic_disaster_tt
+			has_country_flag = LIL_defeated_lily_black_diplomatic
+		}
+	}
+	modifier = {
+		stability_cost_modifier = 1
+		global_unrest = 2
+		land_morale = -0.5
+	}
+	on_start = THE_LIL_events.9
+	on_end = THE_LIL_events.10
+}

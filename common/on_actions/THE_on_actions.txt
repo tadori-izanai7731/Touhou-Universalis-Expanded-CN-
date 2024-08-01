@@ -1,0 +1,27 @@
+on_startup = {
+	events = {
+		THE_common_events.0
+	}
+}
+
+on_mercenary_recruited = {
+	if = {
+		limit = {
+			THE_is_free_merc_company = yes
+		}
+		if = {
+			limit = {
+				FROM = {
+					OR = {
+						has_country_flag = fifty_percent_merc_army_professionalism_cost 
+						has_country_modifier = pol_cheap_ap_mercs_modifier
+					}
+				}
+			}
+			FROM = { add_army_professionalism = 0.025 }
+		}
+		else = {
+			FROM = { add_army_professionalism = 0.05 }
+		}
+	}
+}

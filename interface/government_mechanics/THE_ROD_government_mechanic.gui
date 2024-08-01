@@ -1,0 +1,71 @@
+guiTypes = {
+	windowType = {
+		name = "THE_ROD_government_mechanic_interaction_gui"
+		size = { x = 150 y = 80 }
+		moveable = 0
+
+		# Interaction button, graphics replaced from the interaction icon specification
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_THE_ROD_government_interaction"
+			position = { x = 5 y = 5 }
+			buttonFont = "vic_18"
+			clicksound = back_click
+		}
+	}
+	windowType = {
+		name = "THE_ROD_government_mechanic_power_gui"
+		backGround = ""
+		position = { x = 0 y = 0 }
+		size = { x = 300 y = 140 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+
+		#bar and frame
+		iconType = {
+			name = "government_power_bar"
+			spriteType = "GFX_THE_ROD_government_power_bar"
+			position = { x = 35 y = 86 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType = {
+			name = "government_power_bar_frame"
+			spriteType = "GFX_THE_ROD_government_power_bar_frame"
+			position = { x = 24 y = 0 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+	}
+	windowType = { # Copied and adjusted from government_interaction_type, visible as the interaction specifies this, has cost_type specified to the power, and the power doesn't have a UI
+		name = "THE_ROD_german_unity_interaction_gui"
+		size = { x = 300 y = 82 }
+		backGround = ""
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		iconType = { 
+			name = "government_power_bar"
+			spriteType = "GFX_cultural_unity_power_bar"
+			position = { x = 16 y = 49 }
+		}
+
+		# Frame
+		iconType = {
+			name = "government_power_bar_frame"
+			spriteType = "GFX_cultural_unity_mechanic"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+
+		### interaction button
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_THE_ROD_german_culture_unity_icon"
+			position = { x = 10 y = 5 }
+			buttonFont = "vic_18"
+			clicksound = back_click
+		}
+	}
+}

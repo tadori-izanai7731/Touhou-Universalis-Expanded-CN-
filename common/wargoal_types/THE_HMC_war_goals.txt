@@ -1,0 +1,36 @@
+THE_HMC_war_goal_forced_buy_and_sell = {
+	type = superiority
+	
+	attacker = {
+		badboy_factor = 1.0
+		prestige_factor = 1.0
+		peace_cost_factor = 1.0	
+		
+		allowed_provinces = {
+			always = no
+		}
+		allowed_provinces_are_eligible = yes
+
+		peace_options = {
+			po_gold
+			THE_HMC_forced_buy_and_sell_po
+		}
+	}
+	
+	defender = {
+		badboy_factor = 1.0
+		prestige_factor = 1.0
+		peace_cost_factor = 1.0		
+
+		allowed_provinces = {
+			always = no
+		}
+		allowed_provinces_are_eligible = yes
+
+		peace_options = {
+			po_gold
+		}
+	}
+	
+	war_name = THE_HMC_froced_buy_war_name
+}

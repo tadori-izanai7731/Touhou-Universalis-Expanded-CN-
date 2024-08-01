@@ -1,0 +1,831 @@
+country_decisions = {
+	THE_LIL_00_show_special_spring_territory_decision = {
+		color = { 255 255 255 }
+		major = yes
+		potential = {
+			has_government_attribute = THE_LIL_can_transform_vassal_to_spring_territory
+			NOT = { has_country_flag = THE_LIL_show_special_spring_territory_decision_flag }
+		}
+		allow = { }
+		effect = {
+			custom_tooltip = THE_LIL_show_special_spring_territory_decision_tt
+			set_country_flag = THE_LIL_show_special_spring_territory_decision_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	THE_LIL_00_hide_special_spring_territory_decision = {
+		color = { 255 255 255 }
+		major = yes
+		potential = {
+			has_government_attribute = THE_LIL_can_transform_vassal_to_spring_territory
+			has_country_flag = THE_LIL_show_special_spring_territory_decision_flag
+		}
+		allow = { }
+		effect = {
+			custom_tooltip = THE_LIL_hide_special_spring_territory_decision_tt
+			clr_country_flag = THE_LIL_show_special_spring_territory_decision_flag
+		}
+	}
+
+	THE_LIL_01_form_special_spring_territory_L01 = {
+		color = { 255 255 255 }
+		major = yes
+		potential = {
+			has_government_attribute = THE_LIL_can_transform_vassal_to_spring_territory
+			has_country_flag = THE_LIL_show_special_spring_territory_decision_flag
+			NOT = { exists = L01 }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = Forest_of_magic
+				area = Forest_edge_state
+				area = Forest_coast_state
+			}
+		}
+		allow = {
+			if = {
+				limit = {
+					NOT = { mission_completed = THE_LIL_7_2 }
+				}
+				THE_LIL_special_spring_territory_scripted_trigger = { area = Forest_of_magic }
+				THE_LIL_special_spring_territory_scripted_trigger = { area = Forest_edge_state }
+				THE_LIL_special_spring_territory_scripted_trigger = { area = Forest_coast_state }
+			}
+			else = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 6
+					OR = {
+						area = Forest_of_magic
+						area = Forest_coast_state
+						area = Forest_edge_state
+					}
+				}
+			}
+		}
+		effect = {
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = FOM }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Forest_of_magic tag = L01 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Forest_edge_state tag = L01 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Forest_coast_state tag = L01 }
+			THE_LIL_special_spring_territory_create_scripted_effect = { tag = L01 }
+			if = {
+				limit = { mission_completed = THE_LIL_7_2 }
+				Forest_of_magic = { add_core = L01 }
+				Forest_coast_state = { add_core = L01 }
+				Forest_edge_state = { add_core = L01 }
+			}
+		}
+	}
+
+	THE_LIL_01_form_special_spring_territory_L02 = {
+		color = { 255 255 255 }
+		major = yes
+		potential = {
+			has_government_attribute = THE_LIL_can_transform_vassal_to_spring_territory
+			has_country_flag = THE_LIL_show_special_spring_territory_decision_flag
+			NOT = { exists = L02 }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = Hakurei_western_coast
+				area = Hakurei_peninsula_state
+				area = Hakurei_state
+			}
+		}
+		allow = {
+			if = {
+				limit = {
+					NOT = { mission_completed = THE_LIL_7_4 }
+				}
+				THE_LIL_special_spring_territory_scripted_trigger = { area = Hakurei_western_coast }
+				THE_LIL_special_spring_territory_scripted_trigger = { area = Hakurei_peninsula_state }
+				THE_LIL_special_spring_territory_scripted_trigger = { area = Hakurei_state }
+			}
+			else = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 4
+					OR = {
+						area = Hakurei_peninsula_state
+						area = Hakurei_western_coast
+						area = Hakurei_state
+					}
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = HKR }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Hakurei_western_coast tag = L02 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Hakurei_peninsula_state tag = L02 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Hakurei_state tag = L02 }
+			THE_LIL_special_spring_territory_create_scripted_effect = { tag = L02 }
+			if = {
+				limit = { mission_completed = THE_LIL_7_4 }
+				Hakurei_peninsula_state = { add_core = L02 }
+				Hakurei_western_coast = { add_core = L02 }
+				Hakurei_state = { add_core = L02 }
+			}
+		}
+	}
+
+	THE_LIL_01_form_special_spring_territory_L03 = {
+		color = { 255 255 255 }
+		major = yes
+		potential = {
+			has_government_attribute = THE_LIL_can_transform_vassal_to_spring_territory
+			has_country_flag = THE_LIL_show_special_spring_territory_decision_flag
+			NOT = { exists = L03 }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = Human_state
+				area = Kourindou_state
+				area = Raiko_Seki_state
+			}
+		}
+		allow = {
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Human_state }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Kourindou_state }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Raiko_Seki_state }
+		}
+		effect = {
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = SEK }
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = RAI }
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = HMC }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Human_state tag = L03 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Kourindou_state tag = L03 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Raiko_Seki_state tag = L03 }
+			THE_LIL_special_spring_territory_create_scripted_effect = { tag = L03 }
+		}
+	}
+
+	THE_LIL_01_form_special_spring_territory_L04 = {
+		color = { 255 255 255 }
+		major = yes
+		potential = {
+			has_government_attribute = THE_LIL_can_transform_vassal_to_spring_territory
+			has_country_flag = THE_LIL_show_special_spring_territory_decision_flag
+			NOT = { exists = L04 }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = Myouren_state
+				area = Northern_myouren_state
+				area = Eastern_myouren_state
+			}
+		}
+		allow = {
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Myouren_state }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Northern_myouren_state }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Eastern_myouren_state }
+		}
+		effect = {
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = MYO }
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = KOG }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Myouren_state tag = L04 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Northern_myouren_state tag = L04 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Eastern_myouren_state tag = L04 }
+			THE_LIL_special_spring_territory_create_scripted_effect = { tag = L04 }
+		}
+	}
+
+	THE_LIL_01_form_special_spring_territory_L05 = {
+		color = { 255 255 255 }
+		major = yes
+		potential = {
+			has_government_attribute = THE_LIL_can_transform_vassal_to_spring_territory
+			has_country_flag = THE_LIL_show_special_spring_territory_decision_flag
+			NOT = { exists = L05 }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = Ran_state
+				area = Eastern_mountains
+				area = Mayohiga_state
+			}
+		}
+		allow = {
+			if = {
+				limit = {
+					NOT = { mission_completed = THE_LIL_8_5 }
+				}
+				THE_LIL_special_spring_territory_scripted_trigger = { area = Ran_state }
+				THE_LIL_special_spring_territory_scripted_trigger = { area = Eastern_mountains }
+				THE_LIL_special_spring_territory_scripted_trigger = { area = Mayohiga_state }
+			}
+			else = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 3
+					OR = {
+						area = Ran_state
+						area = Eastern_mountains
+						area = Mayohiga_state
+					}
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = MHG }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Ran_state tag = L05 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Eastern_mountains tag = L05 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Mayohiga_state tag = L05 }
+			THE_LIL_special_spring_territory_create_scripted_effect = { tag = L05 }
+			if = {
+				limit = { mission_completed = THE_LIL_8_5 }
+				Ran_state = {
+					add_core = L05
+				}
+				Eastern_mountains = {
+					add_core = L05
+				}
+				Mayohiga_state = {
+					add_core = L05
+				}
+			}
+		}
+	}
+
+	THE_LIL_01_form_special_spring_territory_L06 = {
+		color = { 255 255 255 }
+		major = yes
+		potential = {
+			has_government_attribute = THE_LIL_can_transform_vassal_to_spring_territory
+			has_country_flag = THE_LIL_show_special_spring_territory_decision_flag
+			NOT = { exists = L06 }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = Sunny_plains
+				area = Gengetsu_state
+				area = Perfect_cut_coast
+			}
+		}
+		allow = {
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Sunny_plains }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Gengetsu_state }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Perfect_cut_coast }
+		}
+		effect = {
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = SFF }
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = GNU }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Sunny_plains tag = L06 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Gengetsu_state tag = L06 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Perfect_cut_coast tag = L06 }
+			THE_LIL_special_spring_territory_create_scripted_effect = { tag = L06 }
+		}
+	}
+
+	THE_LIL_01_form_special_spring_territory_L07 = {
+		color = { 255 255 255 }
+		major = yes
+		potential = {
+			has_government_attribute = THE_LIL_can_transform_vassal_to_spring_territory
+			has_country_flag = THE_LIL_show_special_spring_territory_decision_flag
+			NOT = { exists = L07 }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = Western_netherworld
+				area = Northern_netherworld
+				area = Netherworld_state
+				area = Southern_netherworld
+				area = Eastern_netherworld
+			}
+		}
+		allow = {
+			if = {
+				limit = { NOT = { mission_completed = THE_LIL_9_5 } }
+				THE_LIL_special_spring_territory_scripted_trigger = { area = Western_netherworld }
+				THE_LIL_special_spring_territory_scripted_trigger = { area = Northern_netherworld }
+				THE_LIL_special_spring_territory_scripted_trigger = { area = Netherworld_state }
+				THE_LIL_special_spring_territory_scripted_trigger = { area = Southern_netherworld }
+				THE_LIL_special_spring_territory_scripted_trigger = { area = Eastern_netherworld }
+			}
+			else = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 5
+					region = netherworld_region
+				}
+			}
+		}
+		effect = {
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = NET }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Western_netherworld tag = L07 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Northern_netherworld tag = L07 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Netherworld_state tag = L07 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Southern_netherworld tag = L07 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Eastern_netherworld tag = L07 }
+			THE_LIL_special_spring_territory_create_scripted_effect = { tag = L07 }
+			if = {
+				limit = { mission_completed = THE_LIL_9_5  }
+				netherworld_region = {
+					add_core = L07
+				}
+			}
+		}
+	}
+
+	THE_LIL_01_form_special_spring_territory_L08 = {
+		color = { 255 255 255 }
+		major = yes
+		potential = {
+			has_government_attribute = THE_LIL_can_transform_vassal_to_spring_territory
+			has_country_flag = THE_LIL_show_special_spring_territory_decision_flag
+			NOT = { exists = L08 }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = Road_to_hell_state
+				area = Chireiden_state
+				area = Gate_to_the_dead
+				area = Blazing_hell_state
+				area = Oni_exclave_state
+				area = Yuugi_state
+				area = Chireiden_canal_state
+			}
+		}
+		allow = {
+			if = {
+				limit = { NOT = { mission_completed = THE_LIL_8_4 } }
+				THE_LIL_special_spring_territory_scripted_trigger = { area = Road_to_hell_state }
+				THE_LIL_special_spring_territory_scripted_trigger = { area = Chireiden_state }
+				THE_LIL_special_spring_territory_scripted_trigger = { area = Gate_to_the_dead }
+				THE_LIL_special_spring_territory_scripted_trigger = { area = Blazing_hell_state }
+				THE_LIL_special_spring_territory_scripted_trigger = { area = Oni_exclave_state }
+				THE_LIL_special_spring_territory_scripted_trigger = { area = Yuugi_state }
+				THE_LIL_special_spring_territory_scripted_trigger = { area = Chireiden_canal_state }
+			}
+			else = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 6
+					OR = {
+						area = Road_to_hell_state
+						area = Chireiden_state
+						area = Gate_to_the_dead
+						area = Blazing_hell_state
+						area = Oni_exclave_state
+						area = Yuugi_state
+						area = Chireiden_canal_state
+					}
+				}
+			}
+		}
+		effect = {
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = CRD }
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = ONI }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Road_to_hell_state tag = L08 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Chireiden_state tag = L08 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Gate_to_the_dead tag = L08 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Blazing_hell_state tag = L08 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Oni_exclave_state tag = L08 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Yuugi_state tag = L08 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Chireiden_canal_state tag = L08 }
+			THE_LIL_special_spring_territory_create_scripted_effect = { tag = L08 }
+			if = {
+				limit = { mission_completed = THE_LIL_8_4 }
+				Road_to_hell_state = {
+					add_core = L08
+				}
+				Chireiden_state = {
+					add_core = L08
+				}
+				Gate_to_the_dead = {
+					add_core = L08
+				}
+				Blazing_hell_state = {
+					add_core = L08
+				}
+				Oni_exclave_state = {
+					add_core = L08
+				}
+				Yuugi_state = {
+					add_core = L08
+				}
+				Chireiden_canal_state = {
+					add_core = L08
+				}
+			}
+		}
+	}
+
+	THE_LIL_01_form_special_spring_territory_L09 = {
+		color = { 255 255 255 }
+		major = yes
+		potential = {
+			has_government_attribute = THE_LIL_can_transform_vassal_to_spring_territory
+			has_country_flag = THE_LIL_show_special_spring_territory_decision_flag
+			NOT = { exists = L09 }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = Southern_youkai_mountains
+				area = Youkai_Mountains
+				area = North_tengu_plains
+				area = Foot_of_youkai_mountains
+				area = Northern_youkai_mountains
+			}
+		}
+		allow = {
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Southern_youkai_mountains }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Youkai_Mountains }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = North_tengu_plains }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Foot_of_youkai_mountains }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Northern_youkai_mountains }
+		}
+		effect = {
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = TGU }
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = SKT }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Southern_youkai_mountains tag = L09 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Youkai_Mountains tag = L09 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = North_tengu_plains tag = L09 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Foot_of_youkai_mountains tag = L09 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Northern_youkai_mountains tag = L09 }
+			THE_LIL_special_spring_territory_create_scripted_effect = { tag = L09 }
+		}
+	}
+
+	THE_LIL_01_form_special_spring_territory_L10 = {
+		color = { 255 255 255 }
+		major = yes
+		potential = {
+			has_government_attribute = THE_LIL_can_transform_vassal_to_spring_territory
+			has_country_flag = THE_LIL_show_special_spring_territory_decision_flag
+			NOT = { exists = L10 }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = Rika_state
+				area = World_of_fantasies
+				area = Konngaras_state
+			}
+		}
+		allow = {
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Rika_state }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = World_of_fantasies }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Konngaras_state }
+		}
+		effect = {
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = THR }
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = MIM }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Rika_state tag = L10 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = World_of_fantasies tag = L10 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Konngaras_state tag = L10 }
+			THE_LIL_special_spring_territory_create_scripted_effect = { tag = L10 }
+		}
+	}
+
+	THE_LIL_01_form_special_spring_territory_L11 = {
+		color = { 255 255 255 }
+		major = yes
+		potential = {
+			has_government_attribute = THE_LIL_can_transform_vassal_to_spring_territory
+			has_country_flag = THE_LIL_show_special_spring_territory_decision_flag
+			NOT = { exists = L11 }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = Bamboo_forest_of_the_lost
+				area = Eientei_state
+				area = Fujiwara_state
+			}
+		}
+		allow = {
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Bamboo_forest_of_the_lost }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Eientei_state }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Fujiwara_state }
+		}
+		effect = {
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = EIT }
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = FUJ }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Bamboo_forest_of_the_lost tag = L11 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Eientei_state tag = L11 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Fujiwara_state tag = L11 }
+			THE_LIL_special_spring_territory_create_scripted_effect = { tag = L11 }
+		}
+	}
+
+	THE_LIL_01_form_special_spring_territory_L12 = {
+		color = { 255 255 255 }
+		major = yes
+		potential = {
+			has_government_attribute = THE_LIL_can_transform_vassal_to_spring_territory
+			has_country_flag = THE_LIL_show_special_spring_territory_decision_flag
+			NOT = { exists = L12 }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = Sea_of_petroleum
+				area = Hifuu_club
+				area = Sanzu_upstream
+				area = Yachie_state
+				area = Saki_state
+				area = Western_great_border
+				area = Keiki_state
+				area = Great_border
+			}
+		}
+		allow = {
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Sea_of_petroleum }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Hifuu_club }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Sanzu_upstream }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Yachie_state }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Saki_state }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Western_great_border }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Keiki_state }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Great_border }
+		}
+		effect = {
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = HIF }
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = GYK }
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = SKI }
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = YAC }
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = KEI }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Sea_of_petroleum tag = L12 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Hifuu_club tag = L12 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Sanzu_upstream tag = L12 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Yachie_state tag = L12 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Saki_state tag = L12 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Western_great_border tag = L12 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Keiki_state tag = L12 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Great_border tag = L12 }
+			THE_LIL_special_spring_territory_create_scripted_effect = { tag = L12 }
+		}
+	}
+
+	THE_LIL_01_form_special_spring_territory_L13 = {
+		color = { 255 255 255 }
+		major = yes
+		potential = {
+			has_government_attribute = THE_LIL_can_transform_vassal_to_spring_territory
+			has_country_flag = THE_LIL_show_special_spring_territory_decision_flag
+			NOT = { exists = L13 }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = Southern_moriya
+				area = Moriya_state
+				area = Moriya_coast_state
+			}
+		}
+		allow = {
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Southern_moriya }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Moriya_state }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Moriya_coast_state }
+		}
+		effect = {
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = MRY }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Southern_moriya tag = L13 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Moriya_state tag = L13 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Moriya_coast_state tag = L13 }
+			THE_LIL_special_spring_territory_create_scripted_effect = { tag = L13 }
+		}
+	}
+
+	THE_LIL_01_form_special_spring_territory_L14 = {
+		color = { 255 255 255 }
+		major = yes
+		potential = {
+			has_government_attribute = THE_LIL_can_transform_vassal_to_spring_territory
+			has_country_flag = THE_LIL_show_special_spring_territory_decision_flag
+			NOT = { exists = L14 }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = Yumemi_space_state
+				area = Western_dragon_islands
+				area = Eastern_dragon_islands
+				area = Dragon_islands
+			}
+		}
+		allow = {
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Yumemi_space_state }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Western_dragon_islands }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Eastern_dragon_islands }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Dragon_islands }
+		}
+		effect = {
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = HVR }
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = YUM }
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = KNN }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Yumemi_space_state tag = L14 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Western_dragon_islands tag = L14 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Eastern_dragon_islands tag = L14 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Dragon_islands tag = L14 }
+			THE_LIL_special_spring_territory_create_scripted_effect = { tag = L14 }
+		}
+	}
+
+	THE_LIL_01_form_special_spring_territory_L15 = {
+		color = { 255 255 255 }
+		major = yes
+		potential = {
+			has_government_attribute = THE_LIL_can_transform_vassal_to_spring_territory
+			has_country_flag = THE_LIL_show_special_spring_territory_decision_flag
+			NOT = { exists = L15 }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = Kappa_delta
+				area = Genbu_ravine_state
+				area = Kappa_state
+				area = Mountain_kappa_land
+				area = Shining_needle_state
+			}
+		}
+		allow = {
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Kappa_delta }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Genbu_ravine_state }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Kappa_state }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Mountain_kappa_land }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Shining_needle_state }
+		}
+		effect = {
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = KPP }
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = YME }
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = NCS }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Kappa_delta tag = L15 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Genbu_ravine_state tag = L15 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Kappa_state tag = L15 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Mountain_kappa_land tag = L15 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Shining_needle_state tag = L15 }
+			THE_LIL_special_spring_territory_create_scripted_effect = { tag = L15 }
+		}
+	}
+
+	THE_LIL_01_form_special_spring_territory_L16 = {
+		color = { 255 255 255 }
+		major = yes
+		potential = {
+			has_government_attribute = THE_LIL_can_transform_vassal_to_spring_territory
+			has_country_flag = THE_LIL_show_special_spring_territory_decision_flag
+			NOT = { exists = L16 }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = Senkai_state
+				area = Eastern_senkai
+				area = Northern_senkai
+				area = Eastern_old_hakurei_shrine_state
+				area = Old_hakurei_shrine_state
+			}
+		}
+		allow = {
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Senkai_state }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Eastern_senkai }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Northern_senkai }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Eastern_old_hakurei_shrine_state }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Old_hakurei_shrine_state }
+		}
+		effect = {
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = SNK }
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = OKR }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Senkai_state tag = L16 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Eastern_senkai tag = L16 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Northern_senkai tag = L16 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Eastern_old_hakurei_shrine_state tag = L16 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Old_hakurei_shrine_state tag = L16 }
+			THE_LIL_special_spring_territory_create_scripted_effect = { tag = L16 }
+		}
+	}
+
+	THE_LIL_01_form_special_spring_territory_L17 = {
+		color = { 255 255 255 }
+		major = yes
+		potential = {
+			has_government_attribute = THE_LIL_can_transform_vassal_to_spring_territory
+			has_country_flag = THE_LIL_show_special_spring_territory_decision_flag
+			NOT = { exists = L17 }
+		}
+		provinces_to_highlight = {
+			region = japan_region
+		}
+		allow = {
+			japan_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = JAP }
+			japan_region = {
+				if = {
+					limit = { country_or_non_sovereign_subject_holds = ROOT }
+					cede_province = L17
+					add_core = L17
+					remove_core = ROOT
+					remove_claim = ROOT
+				}
+			}
+			THE_LIL_special_spring_territory_create_scripted_effect = { tag = L17 }
+		}
+	}
+
+	THE_LIL_01_form_special_spring_territory_L18 = {
+		color = { 255 255 255 }
+		major = yes
+		potential = {
+			has_government_attribute = THE_LIL_can_transform_vassal_to_spring_territory
+			has_country_flag = THE_LIL_show_special_spring_territory_decision_flag
+			NOT = { exists = L18 }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = Land_of_the_dead
+				area = Higan_southern_coast
+				area = Eastern_higan
+				area = Western_higan
+				area = Higan_state
+			}
+		}
+		allow = {
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Land_of_the_dead }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Higan_southern_coast }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Eastern_higan }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Western_higan }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Higan_state }
+		}
+		effect = {
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = HIG }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Land_of_the_dead tag = L18 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Higan_southern_coast tag = L18 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Eastern_higan tag = L18 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Western_higan tag = L18 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Higan_state tag = L18 }
+			THE_LIL_special_spring_territory_create_scripted_effect = { tag = L18 }
+		}
+	}
+
+	THE_LIL_01_form_special_spring_territory_L19 = {
+		color = { 255 255 255 }
+		major = yes
+		potential = {
+			has_government_attribute = THE_LIL_can_transform_vassal_to_spring_territory
+			has_country_flag = THE_LIL_show_special_spring_territory_decision_flag
+			NOT = { exists = L19 }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = Makai_area
+				area = Western_makai_state
+				area = Makai_peninsula_state
+				area = Makai_coast_state
+			}
+		}
+		allow = {
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Makai_area }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Western_makai_state }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Makai_peninsula_state }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Makai_coast_state }
+		}
+		effect = {
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = MKI }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Makai_area tag = L19 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Western_makai_state tag = L19 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Makai_peninsula_state tag = L19 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Makai_coast_state tag = L19 }
+			THE_LIL_special_spring_territory_create_scripted_effect = { tag = L19 }
+		}
+	}
+
+	THE_LIL_01_form_special_spring_territory_L20 = {
+		color = { 255 255 255 }
+		major = yes
+		potential = {
+			has_government_attribute = THE_LIL_can_transform_vassal_to_spring_territory
+			has_country_flag = THE_LIL_show_special_spring_territory_decision_flag
+			NOT = { exists = L20 }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = Southern_moon_state
+				area = Uncolonized_moon_state
+				area = Western_moon_state
+				area = Northern_moon_state
+				area = Hecetias_colony
+			}
+		}
+		allow = {
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Southern_moon_state }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Uncolonized_moon_state }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Western_moon_state }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Northern_moon_state }
+			THE_LIL_special_spring_territory_scripted_trigger = { area = Hecetias_colony }
+		}
+		effect = {
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = LCU }
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = CLP }
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = JNK }
+			THE_LIL_special_spring_territory_inherit_scripted_effect = { tag = HEC }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Southern_moon_state tag = L20 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Uncolonized_moon_state tag = L20 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Western_moon_state tag = L20 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Northern_moon_state tag = L20 }
+			THE_LIL_special_spring_territory_cede_scripted_effect = { area = Hecetias_colony tag = L20 }
+			THE_LIL_special_spring_territory_create_scripted_effect = { tag = L20 }
+		}
+	}
+}

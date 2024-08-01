@@ -1,0 +1,304 @@
+l_english:
+###TOOLTIP
+ THE_HMC_ramoant_rumor_tt: "§O谣言四起§!"
+ THE_HMC_disaster_akyuu_tt: "§J稗田阿求的捐赠§!"
+ THE_HMC_disaster_kosuzu_tt: "§J本居小铃的号召§!"
+ THE_HMC_disaster_rinnosuke_tt: "§J森近霖之助的协力§!"
+ THE_HMC_disaster_keine_tt: "§J上白泽慧音的陷阵§!"
+ THE_HMC_fake_myo_case1_yes_tt: "£yes£§M如果通过结盟@MYO§Y[MYO.GetName]§!完成任务§!："
+ THE_HMC_fake_myo_case1_no_tt: "£no£§M如果通过结盟@MYO§Y[MYO.GetName]§!完成任务§!："
+ THE_HMC_fake_myo_case2_yes_tt: "£yes£§M如果通过附庸@MYO§Y[MYO.GetName]§!完成任务§!："
+ THE_HMC_fake_myo_case2_no_tt: "£no£§M如果通过附庸@MYO§Y[MYO.GetName]§!完成任务§!："
+ THE_HMC_fake_myo_case3_yes_tt: "£yes£§M如果通过征服@MYO§Y[MYO.GetName]§!完成任务§!："
+ THE_HMC_fake_myo_case3_no_tt: "£no£§M如果通过征服@MYO§Y[MYO.GetName]§!完成任务§!："
+ THE_HMC_fake_eit_case1_yes_tt: "£yes£§M如果通过征服@EIT§Y[EIT.GetName]§!并交好@FUJ§Y[FUJ.GetName]§!完成任务§!："
+ THE_HMC_fake_eit_case1_no_tt: "£no£§M如果通过征服@EIT§Y[EIT.GetName]§!并交好@FUJ§Y[FUJ.GetName]§!完成任务§!："
+ THE_HMC_fake_eit_case2_yes_tt: "£yes£§M如果通过征服@EIT§Y[EIT.GetName]§!但不交好@FUJ§Y[FUJ.GetName]§!完成任务§!："
+ THE_HMC_fake_eit_case2_no_tt: "£no£§M如果通过征服@EIT§Y[EIT.GetName]§!但不交好@FUJ§Y[FUJ.GetName]§!完成任务§!："
+ THE_HMC_fix_great_boundary_tt: "§Y结界正在修复……§!"
+ THE_HMC_clear_ae_tt: "清除@[Root.GetTag]§Y[Root.GetName]§!的£THE_ae_icon£侵略扩张"
+ THE_HMC_fake_snk_case1_yes_tt: "£yes£§M如果通过结盟@SNK§Y[SNK.GetName]§!完成任务§!："
+ THE_HMC_fake_snk_case1_no_tt: "£no£§M如果通过结盟@SNK§Y[SNK.GetName]§!完成任务§!："
+ THE_HMC_fake_snk_case2_yes_tt: "£yes£§M如果通过附庸@SNK§Y[SNK.GetName]§!完成任务§!："
+ THE_HMC_fake_snk_case2_no_tt: "£no£§M如果通过附庸@SNK§Y[SNK.GetName]§!完成任务§!："
+ THE_HMC_fake_snk_case3_yes_tt: "£yes£§M如果通过征服@SNK§Y[SNK.GetName]§!完成任务§!："
+ THE_HMC_fake_snk_case3_no_tt: "£no£§M如果通过征服@SNK§Y[SNK.GetName]§!完成任务§!："
+ THE_HMC_fake_fuj_case1_yes_tt: "£yes£§M如果通过结盟@FUJ§Y[FUJ.GetName]§!完成任务§!："
+ THE_HMC_fake_fuj_case1_no_tt: "£no£§M如果通过结盟@FUJ§Y[FUJ.GetName]§!完成任务§!："
+ THE_HMC_fake_fuj_case2_yes_tt: "£yes£§M如果通过征服@FUJ§Y[FUJ.GetName]§!完成任务§!："
+ THE_HMC_fake_fuj_case2_no_tt: "£no£§M如果通过征服@FUJ§Y[FUJ.GetName]§!完成任务§!："
+ THE_HMC_fake_scr_yes_tt: "£yes£如果§Y[4968.GetName]§!的伟大工程§Y红魔馆§!等级至少为§Y2§!:"
+ THE_HMC_fake_scr_no_tt: "£no£如果§Y[4968.GetName]§!的伟大工程§Y红魔馆§!等级至少为§Y2§!:"
+ THE_HMC_fake_net_yes_tt: "£yes£如果与@NET§Y[NET.GetName]§!处于战争状态，并且至少有§G+80§!的战争分数:"
+ THE_HMC_fake_net_no_tt: "£no£如果与@NET§Y[NET.GetName]§!处于战争状态，并且至少有§G+80§!的战争分数:"
+ THE_HMC_upgrade_country_idea_tt: "升级村落理念\n§Y人里传统§!:\n   发展成本:§G-10.0%§!\n\n§Y高墙之下§!:\n   贸易效率:§G+10.0%§!\n   贸易中心升级花费:§G-50.0%§!\n\n§Y热情好客§!:\n   改善关系:§G+10.0%§!\n   侵略扩张影响:§G-10.0%§!\n\n§Y心灵手巧§!:\n   商品产出:§G+0.10§!\n\n§Y军队外包§!:\n   雇佣兵将领传统修正:§G+25.0%§!\n\n§Y跨越结界§!:\n   舰船贸易竞争力:§G+20.0%§!\n\n§Y包罗万象§!:\n   最大异端容忍度:§G+2.00§!\n   最大异教容忍度:§G+2.00§!\n\n§Y幻想的明灯§!:\n   商队力量:§G+20.0%§!"
+ THE_HMC_republic_tradition_alert_tt: "§O如果共和传统低于30……§!"
+ THE_HMC_now_ruler_is_akyuu_ttt: "当前统治者是§Y稗田阿求§!"
+ THE_HMC_now_ruler_is_kosuzu_ttt: "当前统治者是§Y本居小铃§!"
+ THE_HMC_now_ruler_is_rinnosuke_ttt: "当前统治者是§Y森近霖之助§!"
+ THE_HMC_now_ruler_is_keine_ttt: "当前统治者是§Y上白泽慧音§!"
+ THE_HMC_3_4_effect_1_tt: "解锁§Y佣兵理念组§!第一个理念将获得如下效果:"
+ THE_HMC_3_4_effect_2_tt: "完成§Y佣兵理念组§!将获得如下效果:"
+ THE_HMC_5_4_case1_tt_yes: "£yes£如果任务「§Y月人的文献§!」已完成，获得如下效果:"
+ THE_HMC_5_4_case1_tt_no: "£no£如果任务「§Y月人的文献§!」已完成，获得如下效果:"
+ THE_HMC_2_5_case1_tt_yes: "£yes£如果任务「§Y邀请妹红作为护卫§!」已完成，且正与@FUJ§Y[FUJ.GetName]§!结盟，获得如下效果:"
+ THE_HMC_2_5_case1_tt_no: "£no£如果任务「§Y邀请妹红作为护卫§!」已完成，且正与@FUJ§Y[FUJ.GetName]§!结盟，获得如下效果:"
+ THE_HMC_4_5_case1_tt_yes: "£yes£如果通过结盟@FUJ§Y[FUJ.GetName]§!完成任务，获得如下效果:"
+ THE_HMC_4_5_case1_tt_no: "£no£如果通过结盟@FUJ§Y[FUJ.GetName]§!完成任务，获得如下效果:"
+ THE_HMC_4_5_case2_tt_yes: "£yes£如果通过征服所有§Y迷途竹林§!区域完成任务，获得如下效果:"
+ THE_HMC_4_5_case2_tt_no: "£no£如果通过征服所有§Y迷途竹林§!区域完成任务，获得如下效果:"
+ THE_HMC_5_5_case1_tt_yes: "£yes£如果拥有国家修正「§Y盟友支援§!」，获得如下效果:"
+ THE_HMC_5_5_case1_tt_no: "£no£如果拥有国家修正「§Y盟友支援§!」，获得如下效果:"
+ THE_HMC_5_5_case1_tt: "「§Y盟友支援§!」的持续时间改为§G永久§!。"
+ THE_HMC_1_6_case1_tt_yes: "£yes£如果任务「§Y安全的竹林§!」已完成，且正与@FUJ§Y[FUJ.GetName]§!结盟，获得如下效果:"
+ THE_HMC_1_6_case1_tt_no: "£no£如果任务「§Y安全的竹林§!」已完成，且正与@FUJ§Y[FUJ.GetName]§!结盟，获得如下效果:"
+ THE_HMC_2_6_case1_yes_tt: "£yes£如果通过结盟@MYO§Y[MYO.GetName]§!完成任务："
+ THE_HMC_2_6_case1_no_tt: "£no£如果通过结盟@MYO§Y[MYO.GetName]§!完成任务："
+ THE_HMC_2_6_case2_yes_tt: "£yes£如果通过附庸@MYO§Y[MYO.GetName]§!完成任务："
+ THE_HMC_2_6_case2_no_tt: "£no£如果通过附庸@MYO§Y[MYO.GetName]§!完成任务："
+ THE_HMC_2_6_case3_yes_tt: "£yes£如果通过征服@MYO§Y[MYO.GetName]§!完成任务："
+ THE_HMC_2_6_case3_no_tt: "£no£如果通过征服@MYO§Y[MYO.GetName]§!完成任务："
+ THE_HMC_every_owned_province_tt: "治下所有省份:"
+ THE_HMC_unlock_wealth_password_reform_tt: "解锁共和制第§Y2§!级政府改革「§Y财富密码§!」"
+ THE_HMC_unlock_other_unique_reform_tt: "解锁共和制第§Y4§!级政府改革「§Y稗田的历史§!」\n解锁共和制第§Y8§!级政府改革「§Y本居的妙法§!」\n解锁共和制第§Y10§!级政府改革「§Y白泽的指导§!」\n解锁共和制第§Y12§!级政府改革「§Y香霖的眼光§!」"
+ THE_HMC_cost_100_times_treasury_buy_they_tt: "花费§Y[From.GetName]§!总发展度§Y100§!倍的金币购买它们的土地。"
+ from_total_development_is_10_times_bigger_than_ours: "至少拥有§Y[From.GetName]§!总发展度§Y100§!倍的金币"
+ THE_HMC_add_prosperity_100_tt: "§Y省份§!获得§G100§!繁荣度。"
+ THE_HMC_unlock_more_merc_tt: "§Y解锁更多佣兵团。§!"
+###TOOLTIP_END
+
+###EVENT
+ ###DISASTER_EVENT
+ THE_HMC_disaster_events.1.title: "铃奈庵大火"
+ THE_HMC_disaster_events.1.desc: "缺省"
+ THE_HMC_disaster_events.1.a: "缺省"
+
+ THE_HMC_disaster_events.2.title: "火灾的蔓延"
+ THE_HMC_disaster_events.2.desc: "缺省"
+ THE_HMC_disaster_events.2.a: "缺省"
+
+
+ THE_HMC_disaster_events.3.title: "受灾"
+ THE_HMC_disaster_events.3.desc: "缺省"
+ THE_HMC_disaster_events.3.a: "缺省"
+
+
+ THE_HMC_disaster_events.4.title: "稗田阿求的捐赠"
+ THE_HMC_disaster_events.4.desc: "缺省"
+ THE_HMC_disaster_events.4.a: "缺省"
+
+
+ THE_HMC_disaster_events.5.title: "本居小铃的号召"
+ THE_HMC_disaster_events.5.desc: "缺省"
+ THE_HMC_disaster_events.5.a: "缺省"
+
+
+ THE_HMC_disaster_events.6.title: "森近霖之助的协力"
+ THE_HMC_disaster_events.6.desc: "缺省"
+ THE_HMC_disaster_events.6.a: "缺省"
+
+
+ THE_HMC_disaster_events.7.title: "上白泽慧音的陷阵"
+ THE_HMC_disaster_events.7.desc: "缺省"
+ THE_HMC_disaster_events.7.a: "缺省"
+
+
+ THE_HMC_disaster_events.8.title: "大火被终结"
+ THE_HMC_disaster_events.8.desc: "缺省"
+ THE_HMC_disaster_events.8.a: "缺省"
+
+ ###OTHER_EVENT
+ THE_HMC_events.1.title: "谣言"
+ THE_HMC_events.1.desc: "缺省"
+ THE_HMC_events.1.a: "缺省"
+
+ THE_HMC_events.2.title: "$YEAR$年人间之里内部选举"
+ THE_HMC_events.2.desc: "缺省"
+ THE_HMC_events.2.a: "阿求当选"
+ THE_HMC_events.2.b: "小铃当选"
+ THE_HMC_events.2.c: "霖之助当选"
+ THE_HMC_events.2.d: "慧音当选"
+
+ THE_HMC_events.4.title: "结界修复完成！"
+ THE_HMC_events.4.desc: "缺省"
+ THE_HMC_events.4.a: "缺省"
+###EVENT_END
+
+###DISASTER
+ THE_LIL_suzunaan_fire_disaster: "天干物燥"
+ desc_THE_LIL_suzunaan_fire_disaster: " <灾难描述>"
+###DISASTER_END
+
+###GOVERNMENT
+ THE_HMC_human_capital_four_name_reform: "人间之里四人委员会"
+ THE_HMC_human_capital_four_name_reform_desc: "<政府改革描述>"
+ mechanic_THE_HMC_use_human_capital_election_yes: "使用人间之里内部选举机制。"
+ THE_HMC_wealth_password_reform: "财富密码"
+ THE_HMC_wealth_password_reform_desc: "<政府改革描述>"
+ mechanic_THE_HMC_can_establish_human_trade_league_yes: "可以建立@HMC§M人类贸易联盟§!"
+ mechanic_THE_HMC_unlock_cb_forced_buy_and_sell_yes: "启用宣战理由「§Y强买强卖§!」。\n该宣战理由只能在无贷款且未破产时对相邻国家使用。"
+ THE_HMC_history_reform: "稗田的历史"
+ THE_HMC_history_reform_desc: "<政府改革描述>"
+ THE_HMC_method_reform: "本居的妙法"
+ THE_HMC_method_reform_desc: "<政府改革描述>"
+ THE_HMC_guide_reform: "白泽的指导"
+ THE_HMC_guide_reform_desc: "<政府改革描述>"
+ THE_HMC_insight_reform: "香霖的眼光"
+ THE_HMC_insight_reform_desc: "<政府改革描述>"
+###GOVERNMENT_END
+
+###IDEA
+ THE_HMC_ideas: "村落理念"
+ THE_HMC_ideas_start: "人里传统"
+ THE_HMC_ideas_bonus: "人类野心"
+ THE_HMC_under_the_wall_idea: "高墙之下"
+ THE_HMC_human_hospitality_idea: "热情好客"
+ THE_HMC_clever_and_skillful_idea: "心灵手巧"
+ THE_HMC_military_outsourcing_idea: "军队外包"
+ THE_HMC_cross_boundary_idea: "穿越结界"
+ THE_HMC_tolerance_to_all_idea: "包罗万象"
+ THE_HMC_genso_no_hikari_idea: "幻想的明灯"
+ THE_HMC_under_the_wall_idea_desc: "<理念描述>"
+ THE_HMC_human_hospitality_idea_desc: "<理念描述>"
+ THE_HMC_clever_and_skillful_idea_desc: "<理念描述>"
+ THE_HMC_military_outsourcing_idea_desc: "<理念描述>"
+ THE_HMC_cross_boundary_idea_desc: "<理念描述>"
+ THE_HMC_tolerance_to_all_idea_desc: "<理念描述>"
+ THE_HMC_genso_no_hikari_idea_desc: "<理念描述>"
+ THE_HMC_upgrade_ideas: "村落理念"
+ THE_HMC_upgrade_ideas_start: "人里传统"
+ THE_HMC_upgrade_ideas_bonus: "人类野心"
+ THE_HMC_under_the_wall_upgrade_idea: "高墙之下"
+ THE_HMC_human_hospitality_upgrade_idea: "热情好客"
+ THE_HMC_clever_and_skillful_upgrade_idea: "心灵手巧"
+ THE_HMC_military_outsourcing_upgrade_idea: "军队外包"
+ THE_HMC_cross_boundary_upgrade_idea: "穿越结界"
+ THE_HMC_tolerance_to_all_upgrade_idea: "包罗万象"
+ THE_HMC_genso_no_hikari_upgrade_idea: "幻想的明灯"
+ THE_HMC_under_the_wall_upgrade_idea_desc: "<理念描述>"
+ THE_HMC_human_hospitality_upgrade_idea_desc: "<理念描述>"
+ THE_HMC_clever_and_skillful_upgrade_idea_desc: "<理念描述>"
+ THE_HMC_military_outsourcing_upgrade_idea_desc: "<理念描述>"
+ THE_HMC_cross_boundary_upgrade_idea_desc: "<理念描述>"
+ THE_HMC_tolerance_to_all_upgrade_idea_desc: "<理念描述>"
+ THE_HMC_genso_no_hikari_upgrade_idea_desc: "<理念描述>"
+###IDEA_END
+
+###MODIFIER
+ THE_HMC_fire_province_modifier: "大火"
+ THE_HMC_tumultuous_humanity_1_modifier: "动荡的人类"
+ THE_HMC_tumultuous_humanity_2_modifier: "动荡的人类"
+ THE_HMC_tumultuous_humanity_3_modifier: "动荡的人类"
+ THE_HMC_tumultuous_humanity_4_modifier: "动荡的人类"
+ THE_HMC_trade_activation_modifier: "贸易活化"
+ THE_HMC_learn_buddhist_teachings_modifier: "学习佛法"
+ THE_HMC_understanding_buddhist_teachings_modifier: "拈花微笑"
+ THE_HMC_buddha_laughs_modifier: "佛笑有三"
+ THE_HMC_future_come_modifier: "未来将来"
+ THE_HMC_golden_wall_province_modifier: "金轮之墙"
+ THE_HMC_last_wall_province_modifier: "最后之墙"
+ THE_HMC_full_eat_and_wear_modifier: "人人饱暖"
+ THE_HMC_witch_and_sage_modifier: "工作的巫女与偷懒的贤者"
+ THE_HMC_regimen_modifier: "养生之道"
+ THE_HMC_alchemy_modifier: "实用炼丹术"
+ THE_HMC_fitness_modifier: "强身健体"
+ THE_HMC_fire_heart_modifier: "烈火雄心"
+ THE_HMC_no_scarlet_mist_modifier: "再无红雾"
+ THE_HMC_view_cherry_modifier: "赏樱悦目"
+ THE_HMC_establish_school_0_modifier: "兴办学堂"
+ THE_HMC_establish_school_1_modifier: "见微知著"
+ THE_HMC_establish_school_2_modifier: "润物无声"
+ THE_HMC_establish_school_3_modifier: "基础教育"
+ THE_HMC_establish_school_4_modifier: "劳动教育"
+ THE_HMC_wondering_object_0_modifier: "流浪之物"
+ THE_HMC_wondering_object_1_modifier: "发现宝藏"
+ THE_HMC_strengthen_wall_modifier: "加固城墙"
+ THE_HMC_quite_countryside_modifier: "郊野宁静"
+ THE_HMC_ally_support_modifier: "盟友支援"
+ THE_HMC_gold_armour_modifier: "黄金甲"
+ THE_HMC_gold_army_modifier: "黄金军"
+ THE_HMC_kirisame_chain_modifier: "雾雨连锁"
+ THE_HMC_ice_mountain_part_modifier: "冰山一角"
+ THE_HMC_phoenix_protection_modifier: "不死鸟的加护"
+ THE_HMC_kappa_arcane_modifier: "河童的秘法"
+ THE_utter_devotion_modifier: "赤胆忠心"
+ THE_HMC_learn_buddhist_teachings_true_modifier: "学习佛法"
+ THE_HMC_understanding_buddhist_teachings_true_modifier: "拈花微笑"
+ THE_HMC_buddha_laughs_true_modifier: "佛笑有三"
+ THE_HMC_golden_wall_true_province_modifier: "金轮之墙"
+ THE_HMC_last_wall_true_province_modifier: "最后之墙"
+ 
+ 
+ 
+ 
+ 
+ 
+ ### OPINION_MODIFIER
+ THE_HMC_mission_opinion_modifier: "学习外界技术"
+
+ ### TEADE_MODIFIER
+ THE_HMC_human_exist_trade_modifier: "确立人类存在"
+###MODIFIER_END
+
+###TRIGGERED_MODIFIER
+ THE_HMC_huziwara_fire_triggered_modifier: "藤原之火"
+###TRIGGERED_MODIFIER_END
+
+###CB
+ PEACE_THE_HMC_forced_buy_and_sell_po: "强制购买土地所有权"
+ THE_HMC_forced_buy_and_sell_po_desc: "花费§Y[From.GetName]§!总发展度§Y100§!倍的¤金币购买它们土地的所有权。"
+ CB_ALLOWED_THE_HMC_forced_buy_and_sell_po: "强制购买土地所有权"
+ THE_HMC_cb_forced_buy_and_sell: "强买强卖"
+ THE_HMC_cb_forced_buy_and_sell_desc: ""
+ THE_HMC_froced_buy_war_name: "$ORDER$$FIRST$对$SECOND$强制购买战争"
+ THE_HMC_war_goal_forced_buy_and_sell_desc: "该宣战理由可以花费目标总发展度§Y100§!倍的¤金币购买它们土地的所有权。"
+###CB_END
+
+###MERC
+ THE_HMC_hieda_guard_company: "稗田卫队"
+ THE_HMC_hieda_elite_guard_company: "稗田精英卫队"
+ THE_HMC_hieda_group_company: "稗田大队"
+ THE_HMC_tengu_reporter_company: "特聘天狗记者"
+ THE_HMC_novel_reader_company: "忠实的连载小说读者"
+ THE_HMC_orc_group_company: "人里兽人团"
+ THE_HMC_bamboo_orc_group_company: "竹林狂兽人团"
+ THE_HMC_engineer_chariot_company: "工程师战车"
+ THE_HMC_poor_psychic_company: "贫乏巫女"
+ THE_HMC_poor_magicer_company: "穷苦魔法使学徒"
+ THE_HMC_elite_fairy_company: "§M精锐妖精§!"
+ 
+ 
+ 
+ 
+ 
+ 
+###MERC_END
+
+###SUBJECT_TYPE
+ THE_HMC_human_trade_league_title: "@HMC§M人类贸易联盟§!"
+ THE_HMC_human_trade_league_title_plural: "@HMC§M人类贸易联盟§!"
+ THE_HMC_human_trade_league_long_desc: "@HMC§M人类贸易联盟§!是一类特殊的附属国，仅能通过政府机制或任务建立，不占用外交关系并向宗主国强制转移贸易竞争力。\n此外，每个@HMC§M人类贸易联盟§!都会为宗主国提供§G+2.0%§!贸易效率和§G+2.0%§!贸易引导。"
+ THE_HMC_human_trade_league_is_our: "§Y$NAME$§!是我们的@HMC§M人类贸易联盟§!"
+###SUBJECT_TYPE_END
+
+###DIPLOMATIC_ACTION
+ THE_HMC_transform_to_human_trade_league_title: "建立@HMC§M人类贸易联盟§!"
+ THE_HMC_transform_to_human_trade_league_tooltip: "将§Y[From.GetName]§!转化为@HMC§M人类贸易联盟§!。"
+ THE_HMC_transform_to_human_trade_league_desc: "§Y[From.GetName]§!将成为§Y[Root.GetName]§!的@HMC§M人类贸易联盟§!。\n该附属国不占用外交关系并为宗主国提供§G+2.0%§!贸易效率和§G+2.0%§!贸易引导，但不会提供任何贡金、人力、水手、陆军上限和海军上限。"
+###DIPLOMATIC_ACTION_END
+
+###RULER_EFFECT_TOOLTIP
+ THE_HMC_akyuu_add_1_mil_tt: "§Y稗田阿求§!成为统治者将额外获得§G1§!£mil£。"
+ THE_HMC_kosuzu_add_1_mil_tt: "§Y本居小铃§!成为统治者将额外获得§G1§!£mil£。"
+ THE_HMC_rinnosuke_add_1_adm_tt: "§Y森近霖之助§!成为统治者将额外获得§G1§!£adm£。"
+ THE_HMC_keine_add_1_dip_tt: "§Y上白泽慧音§!成为统治者将额外获得§G1§!£dip£。"
+ THE_HMC_kosuzu_add_1_dip_tt: "§Y本居小铃§!成为统治者将额外获得§G1§!£dip£。"
+ THE_HMC_akyuu_add_scholar_personality_tt: "§Y稗田阿求§!成为统治者将额外获得§Y学者§!特质。"
+ THE_HMC_kosuzu_add_kind_hearted_personality_tt: "§Y本居小铃§!成为统治者将额外获得§Y心地善良§!特质。"
+ THE_HMC_rinnosuke_add_entrepreneur_personality_tt: "§Y森近霖之助§!成为统治者将额外获得§Y实业家§!特质。"
+ THE_HMC_keine_add_well_connected_personality_tt: "§Y上白泽慧音§!成为统治者将额外获得§Y人脉通达§!特质。"
+ THE_HMC_akyuu_add_righteous_personality_tt: "§Y稗田阿求§!成为统治者将额外获得§Y正义§!特质。"
+ THE_HMC_kosuzu_add_free_thinker_personality_tt: "§Y本居小铃§!成为统治者将额外获得§Y天马行空§!特质。"
+ THE_HMC_rinnosuke_add_architectural_visionary_personality_tt: "§Y森近霖之助§!成为统治者将额外获得§Y能工巧匠§!特质。"
+ THE_HMC_keine_add_industrious_personality_tt: "§Y上白泽慧音§!成为统治者将额外获得§Y勤政§!特质。"
+###RULER_EFFECT_TOOLTIP_END

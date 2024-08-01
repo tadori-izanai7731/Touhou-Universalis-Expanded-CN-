@@ -1,0 +1,41 @@
+#ROOT = winner, FROM = loser
+THE_KKO_on_war_ended_scripted_effects = {
+	if = {
+		limit = {
+			has_country_flag = THE_kko_shogunate_rebel_war_def_flag
+			FROM = {
+				has_country_flag = THE_kko_shogunate_rebel_war_atk_flag
+			}
+		}
+		1020 = {
+			if = {
+				limit = {
+					country_or_non_sovereign_subject_holds = FROM
+				}
+				cede_province = ROOT
+				add_core = ROOT
+			}
+		}
+		inherit = FROM
+		add_country_modifier = {
+			name = KKO_japan_war_victory_buff
+			duration = -1
+		}
+		hidden_effect = {
+			clr_country_flag = THE_kko_shogunate_rebel_war_def_flag
+		}
+	}
+
+	if = {
+		limit = {
+			FROM = {
+				has_country_flag = THE_kko_shogunate_rebel_war_def_flag
+			}
+			has_country_flag = THE_kko_shogunate_rebel_war_atk_flag
+		}
+		FROM = {
+			clr_country_flag = THE_kko_shogunate_rebel_war_def_flag
+		}
+		clr_country_flag = THE_kko_shogunate_rebel_war_atk_flag
+	}
+}

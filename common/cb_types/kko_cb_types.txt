@@ -1,0 +1,14 @@
+cb_snk_religions_war = {
+    valid_for_subject = no
+	holy_war = yes
+	is_triggered_only = yes
+	months = 60
+	war_goal = th_religious_superiority_war
+}
+cb_myo_religions_war = {
+    valid_for_subject = no
+	holy_war = yes
+	is_triggered_only = yes
+	months = 60
+	war_goal = th_religious_superiority_war
+}

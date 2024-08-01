@@ -1,0 +1,8 @@
+#$ruler$||support [akyuu]/[kosuzu]/[rinnosuke]/[keine]
+THE_HMC_set_now_ruler_flag_scripted_effect = {
+	clr_ruler_flag = THE_HMC_now_ruler_is_akyuu_flag
+	clr_ruler_flag = THE_HMC_now_ruler_is_kosuzu_flag
+	clr_ruler_flag = THE_HMC_now_ruler_is_rinnosuke_flag
+	clr_ruler_flag = THE_HMC_now_ruler_is_keine_flag
+	set_ruler_flag = THE_HMC_now_ruler_is_$ruler$_flag
+}

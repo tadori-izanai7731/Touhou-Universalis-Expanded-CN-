@@ -1,0 +1,564 @@
+#黑暗中的食物
+THE_ROD_food_in_dark_province_modiffier = {
+	trade_goods_size_modifier = 0.2
+}
+
+#帝国佣兵
+THE_ROD_empire_mercenary_modifier = {
+	mercenary_cost = -0.25
+}
+
+#与吕贝克结盟
+THE_ROD_alliance_hsa_modifier = {
+	diplomatic_upkeep = 1
+	trade_efficiency = 0.1
+}
+
+#船上盟友
+THE_ROD_alliance_rod_modifier = {
+	diplomatic_upkeep = 1
+	global_spy_defence = 0.1
+}
+
+#在黑暗中扩张
+THE_ROD_expand_in_darkness_modifier = {
+	ae_impact = -0.2
+	global_autonomy = -0.05
+	global_regiment_recruit_speed = -0.5
+}
+
+#波美拉尼亚王室
+THE_ROD_pomeranian_royal_modifier = {
+	cavalry_power = 0.1
+	diplomatic_reputation = 1
+}
+
+#边境藩侯
+THE_ROD_border_feudal_lord_modfier = {
+	fort_maintenance_modifier = -0.2
+}
+
+#帝国选举权
+THE_ROD_hre_elector_modifier = {
+	diplomats = 1
+	diplomatic_reputation = 2
+}
+
+#重修马尔堡城堡
+THE_ROD_rebuild_malbork_castle_province_modifier = {
+	local_great_project_upgrade_cost = -0.9
+	local_great_project_upgrade_time = -0.9
+}
+
+#宵暗骑士团
+THE_ROD_darkness_knight_modifier = {
+	cavalry_cost = -0.1
+	cav_to_inf_ratio = 0.1
+}
+
+#升起宵暗旗
+THE_ROD_rise_dark_flag_modifier = {
+	may_perform_slave_raid_on_same_religion = yes
+	coast_raid_range = -1
+}
+
+#统一波罗的
+THE_ROD_unite_baltic_modifier = {
+	core_creation = -0.1
+	land_morale = 0.1
+}
+
+#吸收波罗的传统
+THE_ROD_unite_baltic_culture_modifier = {
+	num_accepted_cultures = 3
+	manpower_in_accepted_culture_provinces = 0.15
+}
+
+#里加教会金库
+THE_ROD_rig_church_treasury_modifier = {
+	church_loyalty_modifier = 0.1
+	church_privilege_slots = 1
+	global_tax_modifier = 0.1
+}
+
+#波罗的海港口
+THE_ROD_baltic_sea_port = {
+	trade_value = 5
+	province_trade_power_modifier = 0.25
+}
+
+#熔炼黄金
+THE_ROD_melt_gold_modifier = {
+	nobles_loyalty_modifier = 0.1
+	stability_cost_modifier = -0.1
+}
+
+#普鲁士人崛起
+THE_ROD_prussian_rise_modifier = {
+	monthly_splendor = 1
+	province_warscore_cost = -0.1
+	unjustified_demands = -0.25
+}
+
+#帝国外交官
+THE_ROD_hre_diplomat_modifier = {
+	diplomatic_upkeep = 1
+	improve_relation_modifier = 0.1
+}
+
+#妖怪的方式
+THE_ROD_youkai_way_modifier_1 = {
+	global_unrest = 3
+	global_missionary_strength = 0.1
+}
+
+#妖怪的方式
+THE_ROD_youkai_way_modifier_2 = {
+	global_unrest = 2
+	global_missionary_strength = 0.085
+}
+
+#妖怪的方式
+THE_ROD_youkai_way_modifier_3 = {
+	global_unrest = 1
+	global_missionary_strength = 0.07
+}
+
+#妖怪的方式
+THE_ROD_youkai_way_modifier_4 = {
+	global_unrest = 0
+	global_missionary_strength = 0.055
+}
+
+#妖怪的方式
+THE_ROD_youkai_way_modifier_5 = {
+	global_unrest = -1
+	global_missionary_strength = 0.04
+}
+
+#妖怪的方式
+THE_ROD_youkai_way_modifier_6 = {
+	global_unrest = -2
+	global_missionary_strength = 0.025
+}
+
+#新手巫女
+THE_ROD_beginner_witch_modifier = {
+	missionaries = 1
+}
+
+#博丽神道帝国
+THE_ROD_hakureishinto_empire = {
+	global_tax_modifier = 0.5
+	warscore_cost_vs_other_religion = -0.2
+}
+
+#融入基督世界
+THE_ROD_christian_world_modifier = {
+	church_privilege_slots = 1
+	church_loyalty_modifier = 0.1
+}
+
+#但泽教皇宫
+THE_ROD_danzig_papal_palace_province_modifier = {
+	papal_influence = 2
+	papal_influence_from_cardinals = 0.25
+	curia_powers_cost = -0.1
+}
+
+#黑暗代行者
+THE_ROD_dark_executer_modifier = {
+	enforce_religion_cost = -0.5
+	global_religious_conversion_resistance = 2.0
+	extra_manpower_at_religious_war = yes
+}
+
+#圣露米娅
+THE_ROD_saint_rumia_modifier = {
+	global_missionary_strength = 0.02
+	warscore_cost_vs_other_religion = -0.2
+	curia_powers_cost = -0.1
+}
+
+#农业发展
+THE_ROD_farm_province_modifier = {
+	local_manpower_modifier = 0.33
+	trade_goods_size_modifier = 0.2
+}
+
+#生产建设
+THE_ROD_production_construction_modifier = {
+	build_time = -0.2
+	build_cost = -0.1
+}
+
+#集齐了！
+THE_ROD_collectedu0021_modifier = {
+	movement_speed = 0.1
+	production_efficiency = 0.1
+	yearly_innovativeness = 0.5
+	fire_damage = 0.1
+	movement_speed_in_fleet_modifier = 1
+}
+
+#波兰王冠
+THE_ROD_polish_legitimacy_modifier = {
+	global_trade_goods_size_modifier = 0.33
+}
+
+#湖边垂钓
+THE_ROD_fishing_in_lake_modifier = {
+	placed_merchant_power = 5
+	global_ship_trade_power = 0.25
+}
+
+#汉萨的遗产
+THE_ROD_hsa_legacy_modifier = {
+	max_flagships = 1
+	merchants = 1
+	trade_steering = 0.1
+}
+
+#暗流舰队
+THE_ROD_undercurrent_fleet_modifier = {
+	global_ship_trade_power = 0.25
+	naval_tradition_from_trade = 1.0
+	sailor_maintenance_modifer = -0.1
+	allowed_marine_fraction = 0.15
+}
+
+#北方战争
+THE_ROD_north_war_modifier = {
+	land_attrition = -0.1
+}
+
+#单向航道
+THE_ROD_one_way_route_modifier = {
+	diplomatic_upkeep = 1
+	global_foreign_trade_power = 0.1
+}
+
+#俄罗斯商品
+THE_ROD_priority_supply_modifier_1 = {
+	prestige = 1
+}
+
+#俄罗斯商品
+THE_ROD_priority_supply_modifier_2 = {
+	prestige = 1
+	naval_forcelimit_modifier = 0.2
+}
+
+#俄罗斯商品
+THE_ROD_priority_supply_modifier_3 = {
+	prestige = 1
+	naval_forcelimit_modifier = 0.2
+	cavalry_cost = -0.1
+}
+
+#俄罗斯商品
+THE_ROD_priority_supply_modifier_4 = {
+	prestige = 1
+	naval_forcelimit_modifier = 0.2
+	cavalry_cost = -0.1
+	land_forcelimit_modifier = 0.2
+	global_regiment_cost = -0.05
+}
+
+#吸收一切
+THE_ROD_absorb_every_modifier = {
+	merchants = 1
+	global_trade_power = 0.25
+	trade_steering = 0.1
+}
+
+#征收通行税
+THE_ROD_euler_strait_tax_province_modifier = {
+	province_trade_power_value = 10
+	province_trade_power_modifier = 2.0
+	global_own_trade_power = 0.1
+}
+
+#自由海域
+THE_ROD_free_sea_modifier = {
+	mercantilism_cost = -0.5
+	burghers_influence_modifier = -0.1
+	global_ship_recruit_speed = -0.1
+}
+
+#白夜昼夏
+THE_ROD_summer_night_modifier = {
+	global_supply_limit_modifier = 0.33
+	manpower_recovery_speed = 0.2
+	land_forcelimit_modifier = 0.2
+	global_monthly_devastation = -0.05
+}
+
+#支持战争
+THE_ROD_support_war_modifier = {
+	war_taxes_cost_modifier = -1
+	land_morale = 0.05
+}
+
+#海岸要塞
+THE_ROD_coast_fort_province_modifier = {
+	local_own_coast_naval_combat_bonus = 1
+	war_exhaustion = -0.03
+}
+
+#黑曜石
+THE_ROD_obsidian_modifier = {
+	hostile_attrition = 1
+	garrison_size = 0.5
+	fort_maintenance_modifier = -0.2
+}
+
+#玄暗帷幕
+THE_ROD_dark_curtain_modifier = {
+	defensiveness = 0.33
+	hostile_attrition = 2
+	max_hostile_attrition = 2
+	fort_maintenance_modifier = -0.1
+}
+
+#军事化社会
+THE_ROD_militarization_society_modifier = {
+	war_taxes_cost_modifier = -1
+	land_morale = 0.05
+	land_maintenance_modifier = -0.1
+	fort_maintenance_modifier = -0.1
+	monthly_militarized_society = 0.1
+	monthly_prussian_militarized_society_1 = 0.05
+	monthly_prussian_militarized_society_2 = 0.1
+	monthly_prussian_militarized_society_3 = 0.15
+}
+
+#逢魔之时
+THE_ROD_yoiyami_modifier = {
+	drill_gain_modifier = 0.33
+	drill_decay_modifier = -0.33
+}
+
+#EX宵暗之军
+THE_ROD_ex_darkness_army_modifier = {
+	infantry_power = 0.1
+	cavalry_power = 0.1
+	artillery_power = 0.1
+	land_attrition = -0.1
+	regiment_manpower_usage = -0.05
+}
+
+#海军部
+THE_ROD_danzig_navy_part = {
+	navy_tradition = 1
+	local_ship_cost = -0.25
+	ship_recruit_speed = -0.33
+}
+
+#改良船体
+THE_ROD_improved_body_modifier = {
+	hull_size_modifier = 0.1
+	sea_repair = yes
+}
+
+#改良舰炮
+THE_ROD_improved_artillery_modifier = {
+	landing_penalty = -1
+	number_of_cannons_modifier = 0.1
+}
+
+#新式海军
+THE_ROD_new_navy_modifier = {
+	sailors_recovery_speed = 0.25
+	naval_morale = 0.1
+}
+
+#寻找幻想
+THE_ROD_seek_gansou_modifier = {
+	naval_attrition = -0.5
+	range = 1.0
+	ship_durability = 0.05
+	movement_speed_in_fleet_modifier = 1
+}
+
+#至新世界
+THE_ROD_new_world_modifier = {
+	colonists = 1
+}
+
+#统治斯堪的纳维亚
+THE_ROD_dominate_scandinavian = {
+	prestige_decay = -0.01
+	num_accepted_cultures = 6
+	liberty_desire_from_subject_development = -0.25
+}
+
+#暗蚀帝国
+THE_ROD_dark_erode_empire_modifier = {
+	prestige = 2
+	governing_capacity = 500
+	governing_capacity_modifier = 0.25
+	max_absolutism = 20
+}
+
+#黑鹰升腾
+THE_ROD_eagle_up_modifier = {
+	global_unrest = -2
+	min_autonomy_in_territories = -0.1
+	all_estate_loyalty_equilibrium = 0.1
+	monthly_THE_ROD_german_cultural_unity_power = 1
+	num_accepted_cultures = 15
+}
+
+#暗之永恒
+THE_ROD_eternal_darkness = {
+	all_power_cost = -0.05
+	num_accepted_cultures = 100
+}
+
+#暮色计划
+THE_ROD_dusk_plan_modifier = {
+	navy_tradition_decay = -0.01
+	disengagement_chance = 0.2
+	global_ship_repair = 0.5
+}
+
+#瓜分波兰
+THE_ROD_partition_poland_modifier = {
+	core_creation = -0.1
+	global_autonomy = -0.05
+	can_recruit_hussars = yes
+}
+
+### Nothing
+#不列颠领域
+THE_ROD_gbr_realm_modifier = {
+	heavy_ship_power = 0.1
+	diplomatic_annexation_cost = -0.1
+}
+
+#法兰西领域
+THE_ROD_fra_realm_modifier = {
+	max_absolutism_effect = 0.1
+	cavalry_power = 0.2
+}
+
+#意大利领域
+THE_ROD_ita_realm_modifier = {
+	idea_cost = -0.1
+	global_manpower_modifier = 0.2
+}
+
+#俄罗斯领域
+THE_ROD_rus_realm_modifier = {
+	global_regiment_cost = -0.1
+	land_forcelimit_modifier = 0.2
+}
+
+
+###EXTRA_HAKUREI_DEITY
+THE_ROD_extra_hakurei_modifier_Hakurei_God = {
+	defensiveness = 0.1
+	tolerance_own = 2
+}
+
+THE_ROD_extra_hakurei_modifier_Yukari = {
+	diplomats = 1
+	diplomatic_reputation = 2
+}
+
+THE_ROD_extra_hakurei_modifier_Hecatia = {
+	development_cost = -0.15
+	global_tax_modifier = 0.20
+}
+
+THE_ROD_extra_hakurei_modifier_Okina = {
+	global_colonial_growth = 25
+	range = 0.3
+}
+
+THE_ROD_extra_hakurei_modifier_Larva = {
+	global_colonial_growth = 25
+	range = 0.3
+}
+
+THE_ROD_extra_hakurei_modifier_Aki_Sisters = {
+	stability_cost_modifier = -0.15
+	production_efficiency = 0.1
+}
+
+THE_ROD_extra_hakurei_modifier_Junko = {
+	discipline = 0.05
+	army_tradition = 1
+}
+
+THE_ROD_extra_hakurei_modifier_Kishin = {
+	naval_morale = 0.1
+	trade_efficiency = 0.1
+}
+
+THE_ROD_extra_hakurei_modifier_Shinki = {
+	idea_cost = -0.1
+	technology_cost = -0.1
+}
+
+THE_ROD_extra_hakurei_modifier_Keiki = {
+	manpower_recovery_speed = 0.1
+	reinforce_speed = 0.2
+}
+
+THE_ROD_extra_hakurei_modifier_Hina = {
+	global_unrest = -1.5
+	global_autonomy = -0.05 
+}
+
+THE_ROD_extra_hakurei_modifier_Kutaka = {
+	garrison_size = 0.25
+	war_exhaustion = -0.05
+}
+
+### Just for no error output
+THE_ROD_extra_hakurei_modifier_Kochiya = { }
+THE_ROD_extra_hakurei_modifier_Suwako = { }
+THE_ROD_extra_hakurei_modifier_Kanako = { }
+######EXTRA_HAKUREI_DEITY_END
+
+###SPECIAL
+#流明耀世
+THE_ROD_illuminate_world = {
+	#lumen
+}
+
+#统领无主秩序
+THE_ROD_rule_unowned_order = {
+	administrative_efficiency = 0.1
+	discipline = 0.1
+	land_morale = 0.25
+	ae_impact = -0.25
+	core_creation = -0.25
+}
+
+#水之暗、船之妖
+THE_ROD_youkai_in_stream = {
+	global_trade_goods_size = 2
+	merchants = 3
+	colonists = 3
+	global_colonial_growth = 200
+	trade_steering = 1.0
+}
+
+#光暗界限
+THE_ROD_lumen_boundary = {
+	fire_damage = 0.5
+	shock_damage = 0.5
+	land_attrition = -0.5
+	artillery_barrage_cost = -1
+}
+
+#月光传说
+THE_ROD_moonlight_legend = {
+	engagement_cost = -1
+	naval_morale_damage_received = -0.5
+	ship_durability = 0.2
+	movement_speed_in_fleet_modifier = 10
+}

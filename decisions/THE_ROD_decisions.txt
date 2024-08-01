@@ -1,0 +1,875 @@
+country_decisions = {
+	THE_ROD_form_bra_personal_union_decision = {
+		color = { 32  32  32 }
+		potential = {
+			NOT = { has_country_flag = THE_ROD_form_bra_personal_union_decision_flag }
+			mission_completed = THE_ROD_1_7
+			exists = BRA
+			BRA = {
+				OR = {
+					NOT = { is_subject_of_type = integrated_personal_union }
+					NOT = { is_subject_of = ROOT }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			owned_by = BRA
+		}
+		allow = {
+			BRA = {
+				is_subject_of = ROOT
+				NOT = { is_subject_of_type = tributary_state }
+				has_opinion = {
+					who = ROOT
+					value = 0
+				}
+			}
+		}
+		effect = {
+			create_subject = {
+				subject_type = integrated_personal_union
+				who = BRA
+			}
+			add_historical_friend = BRA
+			BRA = {
+				add_liberty_desire = -50
+				add_historical_friend = ROOT
+				THE_change_color_to_colony = yes
+				hidden_effect = {
+					if = {
+						limit = { NOT = { government = monarchy } }
+						change_government = monarchy
+					}
+					add_government_reform = autocracy_reform
+				}
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_ROD_decrease_every_country_ae_50_tt
+			hidden_effect = {
+				every_country = {
+					add_aggressive_expansion = {
+						who = ROOT
+						value = -50
+					}
+				}
+				set_country_flag = THE_ROD_form_bra_personal_union_decision_flag
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	THE_ROD_form_boh_personal_union_decision = {
+		color = { 32  32  32 }
+		potential = {
+			NOT = { has_country_flag = THE_ROD_form_boh_personal_union_decision_flag }
+			mission_completed = THE_ROD_1_8
+			exists = BOH
+			BOH = {
+				OR = {
+					NOT = { is_subject_of_type = integrated_personal_union }
+					NOT = { is_subject_of = ROOT }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			owned_by = BOH
+		}
+		allow = {
+			BOH = {
+				is_subject_of = ROOT
+				NOT = { is_subject_of_type = tributary_state }
+				has_opinion = {
+					who = ROOT
+					value = 0
+				}
+			}
+		}
+		effect = {
+			create_subject = {
+				subject_type = integrated_personal_union
+				who = BOH
+			}
+			add_historical_friend = BOH
+			BOH = {
+				add_liberty_desire = -50
+				add_historical_friend = ROOT
+				THE_change_color_to_colony = yes
+				hidden_effect = {
+					if = {
+						limit = { NOT = { government = monarchy } }
+						change_government = monarchy
+					}
+					add_government_reform = autocracy_reform
+				}
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_ROD_decrease_every_country_ae_50_tt
+			hidden_effect = {
+				every_country = {
+					add_aggressive_expansion = {
+						who = ROOT
+						value = -50
+					}
+				}
+				set_country_flag = THE_ROD_form_boh_personal_union_decision_flag
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	THE_ROD_form_sax_personal_union_decision = {
+		color = { 32  32  32 }
+		potential = {
+			NOT = { has_country_flag = THE_ROD_form_sax_personal_union_decision_flag }
+			mission_completed = THE_ROD_1_8
+			exists = SAX
+			SAX = {
+				OR = {
+					NOT = { is_subject_of_type = integrated_personal_union }
+					NOT = { is_subject_of = ROOT }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			owned_by = SAX
+		}
+		allow = {
+			SAX = {
+				is_subject_of = ROOT
+				NOT = { is_subject_of_type = tributary_state }
+				has_opinion = {
+					who = ROOT
+					value = 0
+				}
+			}
+		}
+		effect = {
+			create_subject = {
+				subject_type = integrated_personal_union
+				who = SAX
+			}
+			add_historical_friend = SAX
+			SAX = {
+				add_liberty_desire = -50
+				add_historical_friend = ROOT
+				THE_change_color_to_colony = yes
+				hidden_effect = {
+					if = {
+						limit = { NOT = { government = monarchy } }
+						change_government = monarchy
+					}
+					add_government_reform = autocracy_reform
+				}
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_ROD_decrease_every_country_ae_50_tt
+			hidden_effect = {
+				every_country = {
+					add_aggressive_expansion = {
+						who = ROOT
+						value = -50
+					}
+				}
+				set_country_flag = THE_ROD_form_sax_personal_union_decision_flag
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	THE_ROD_pap_add_saint_cross_opinion_modifier_decision = {
+		color = { 32  32  32 }
+		provinces_to_highlight = {
+			owner = {
+				has_country_flag = THE_ROD_saint_cross_opinion_target_flag
+			}
+		}
+		potential = {
+			tag = PAP
+			has_global_flag = THE_ROD_saint_cross_opinion_available_global_flag
+			NOT = { has_country_flag = THE_ROD_saint_cross_opinion_available_flag }
+			any_country = {
+				has_country_flag = THE_ROD_saint_cross_opinion_target_flag
+			}
+		}
+		allow = {
+			any_country = {
+				has_country_flag = THE_ROD_saint_cross_opinion_target_flag
+			}
+		}
+		effect = {
+			random_country = {
+				limit = {
+					has_country_flag = THE_ROD_saint_cross_opinion_target_flag
+				}
+				ROOT = {
+					add_opinion = {
+						who = PREV
+						modifier = THE_ROD_saint_cross_opinion_modifier
+					}
+				}
+			}
+			set_country_flag = THE_ROD_saint_cross_opinion_available_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	THE_ROD_restore_country_name_decision = {
+		color = { 32  32  32 }
+		potential = {
+			tag = ROD
+			OR = {
+				has_country_flag = THE_ROD_pru_country_name_flag
+				has_country_flag = THE_ROD_hsa_country_name_flag
+				has_country_flag = THE_ROD_ger_country_name_flag
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			restore_country_name = yes
+			clr_country_flag = THE_ROD_pru_country_name_flag
+			clr_country_flag = THE_ROD_hsa_country_name_flag
+			clr_country_flag = THE_ROD_ger_country_name_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	THE_ROD_pru_country_name_decision = {
+		color = { 32  32  32 }
+		potential = {
+			tag = ROD
+			has_country_flag = THE_ROD_unlock_rod_pru_decision_flag
+			NOT = { has_country_flag = THE_ROD_pru_country_name_flag }
+			NOT = { has_country_flag = THE_ROD_disable_rod_pru_decision_flag }
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			override_country_name = ROD_PRU
+			set_country_flag = THE_ROD_pru_country_name_flag
+			clr_country_flag = THE_ROD_hsa_country_name_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	THE_ROD_hsa_country_name_decision = {
+		color = { 32  32  32 }
+		potential = {
+			tag = ROD
+			has_country_flag = THE_ROD_unlock_rod_hsa_decision_flag
+			NOT = { has_country_flag = THE_ROD_hsa_country_name_flag }
+			NOT = { has_country_flag = THE_ROD_disable_rod_hsa_decision_flag }
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			override_country_name = ROD_HSA
+			set_country_flag = THE_ROD_hsa_country_name_flag
+			clr_country_flag = THE_ROD_pru_country_name_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	THE_ROD_ger_country_name_decision = {
+		color = { 32  32  32 }
+		potential = {
+			tag = ROD
+			has_country_flag = THE_ROD_unlock_rod_ger_decision_flag
+			NOT = { has_country_flag = THE_ROD_ger_country_name_flag }
+			NOT = { has_country_flag = THE_ROD_disable_rod_ger_decision_flag }
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			override_country_name = ROD_GER
+			set_country_flag = THE_ROD_ger_country_name_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	THE_ROD_court_banquet_decision = {
+		color = { 32  32  32 }
+		potential = {
+			has_government_attribute = THE_ROD_court_banquet_attribute
+		}
+		allow = {
+			if = {
+				limit = { NOT = { full_idea_group = court_ideas } }
+				adm_power_cost = 50
+				dip_power_cost = 50
+				mil_power_cost = 50
+				custom_trigger_tooltip = {
+					tooltip = THE_ROD_decision_every_10_years_ttt
+					OR = {
+						NOT = { has_country_flag = THE_ROD_court_banquet_decision_flag }
+						had_country_flag = {
+							flag = THE_ROD_court_banquet_decision_flag
+							days = 3650
+						}
+					}
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = THE_ROD_decision_every_5_years_ttt
+					OR = {
+						NOT = { has_country_flag = THE_ROD_court_banquet_decision_flag }
+						had_country_flag = {
+							flag = THE_ROD_court_banquet_decision_flag
+							days = 1825
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = { NOT = { full_idea_group = court_ideas } }
+				adm_power_cost = 50
+				dip_power_cost = 50
+				mil_power_cost = 50
+			}
+			custom_tooltip = THE_ROD_add_10_trust_all_ally_and_subject_tt
+			hidden_effect = {
+				every_ally = {
+					add_trust = {
+						who = ROOT
+						value = 10
+						mutual = yes
+					}
+				}
+				every_subject_country = {
+					add_trust = {
+						who = ROOT
+						value = 10
+						mutual = yes
+					}
+				}
+			}
+			add_estate_loyalty = {
+				estate = all
+				loyalty = 10
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_ROD_court_banquet_decision_extra_effect_tt
+			THE_ROD_court_banquet_decision_extra_scripted_effect = { idea_group = spy_ideas }
+			custom_tooltip = empty_line_tt
+			THE_ROD_court_banquet_decision_extra_scripted_effect = { idea_group = diplomatic_ideas }
+			custom_tooltip = empty_line_tt
+			THE_ROD_court_banquet_decision_extra_scripted_effect = { idea_group = trade_ideas }
+			custom_tooltip = empty_line_tt
+			THE_ROD_court_banquet_decision_extra_scripted_effect = { idea_group = exploration_ideas }
+			custom_tooltip = empty_line_tt
+			THE_ROD_court_banquet_decision_extra_scripted_effect = { idea_group = maritime_ideas }
+			custom_tooltip = empty_line_tt
+			THE_ROD_court_banquet_decision_extra_scripted_effect = { idea_group = influence_ideas }
+			custom_tooltip = empty_line_tt
+			THE_ROD_court_banquet_decision_extra_scripted_effect = { idea_group = court_ideas }
+			hidden_effect = {
+				clr_country_flag = THE_ROD_court_banquet_decision_flag
+				set_country_flag = THE_ROD_court_banquet_decision_flag
+				if = {
+					limit = { full_idea_group = spy_ideas }
+					every_country = {
+						add_aggressive_expansion = {
+							who = ROOT
+							value = -20
+						}
+					}
+				}
+				if = {
+					limit = { full_idea_group = diplomatic_ideas }
+					every_ally = {
+						ROOT = {
+							add_prestige_or_monarch_power = {
+								amount = 10
+							}
+						}
+					}
+					every_subject_country = {
+						ROOT = {
+							add_prestige_or_monarch_power = {
+								amount = 10
+							}
+						}
+					}
+				}
+				if = {
+					limit = { full_idea_group = trade_ideas }
+					home_trade_node_effect_scope = {
+						add_trade_node_income = 60
+					}
+				}
+				if = {
+					limit = { full_idea_group = exploration_ideas }
+					every_province = {
+						limit = {
+							NOT = { has_discovered = ROOT }
+							OR = {
+								any_ally = {
+									has_discovered = PREV
+								}
+								any_subject_country = {
+									has_discovered = PREV
+								}
+							}
+						}
+						discover_country = ROOT
+					}
+				}
+				if = {
+					limit = { full_idea_group = maritime_ideas }
+					every_owned_province = {
+						limit = {
+							has_port = yes
+						}
+						owner = { add_navy_tradition = 1 }
+					}
+				}
+				if = {
+					limit = { full_idea_group = influence_ideas }
+					every_subject_country = {
+						add_liberty_desire = -20
+						overlord = {
+							change_government_reform_progress = 10
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	THE_ROD_become_papal_controller_decision = {
+		color = { 32  32  32 }
+		potential = {
+			has_government_attribute = THE_ROD_become_papal_controller_attribute
+			religion = catholic
+			NOT = { is_papal_controller = yes }
+		}
+		allow = {
+			papal_influence = 200
+		}
+		effect = {
+			add_papal_influence = -200
+			transfer_papal_controller = ROOT
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	THE_ROD_collect_black_gem_decision = {
+		color = { 32  32  32 }
+		provinces_to_highlight = {
+			continent = europe
+			OR = {
+				trade_goods = coal
+				has_latent_trade_goods = coal
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		potential = {
+			has_country_flag = THE_ROD_unlock_collect_black_gem_flag
+		}
+		allow = {
+			all_province = {
+				OR = {
+					NOT = { continent = europe }
+					AND = {
+						NOT = { trade_goods = coal }
+						NOT = { has_latent_trade_goods = coal }
+					}
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = THE_ROD_collectedu0021_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_ROD_every_coal_province_tt
+			tooltip = {
+				add_base_production = 10
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							trade_goods = coal
+							has_latent_trade_goods = coal
+						}
+					}
+					add_base_production = 10
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	THE_ROD_priority_supply_decision = {
+		color = { 32  32  32 }
+		potential = {
+			has_country_flag = THE_ROD_unlock_priority_supply_flag
+			NOT = { has_country_modifier = THE_ROD_priority_supply_modifier_1 }
+			NOT = { has_country_modifier = THE_ROD_priority_supply_modifier_2 }
+			NOT = { has_country_modifier = THE_ROD_priority_supply_modifier_3 }
+			NOT = { has_country_modifier = THE_ROD_priority_supply_modifier_4 }
+		}
+		allow = {
+			33 = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				owner = {
+					has_opinion = {
+						who = ROOT
+						value = 180
+					}
+				}
+			}
+			years_of_income = 2
+		}
+		effect = {
+			add_years_of_income = -2
+			33 = {
+				owner = {
+					add_years_of_income = 2
+				}
+			}
+			if = {
+				limit = {
+					33 = {
+						owner = { total_development = 500 }
+					}
+				}
+				add_country_modifier = {
+					name = THE_ROD_priority_supply_modifier_4
+					duration = 10950
+				}
+			}
+			else_if = {
+				limit = {
+					33 = {
+						owner = { total_development = 300 }
+					}
+				}
+				add_country_modifier = {
+					name = THE_ROD_priority_supply_modifier_3
+					duration = 10950
+				}
+				custom_tooltip = THE_ROD_33_owner_more_development_upgrade_modifier_tt
+			}
+			else_if = {
+				limit = {
+					33 = {
+						owner = { total_development = 100 }
+					}
+				}
+				add_country_modifier = {
+					name = THE_ROD_priority_supply_modifier_2
+					duration = 10950
+				}
+				custom_tooltip = THE_ROD_33_owner_more_development_upgrade_modifier_tt
+			}
+			else = {
+				add_country_modifier = {
+					name = THE_ROD_priority_supply_modifier_1
+					duration = 10950
+				}
+				custom_tooltip = THE_ROD_33_owner_more_development_upgrade_modifier_tt
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	THE_ROD_form_swe_personal_union_decision = {
+		color = { 32  32  32 }
+		potential = {
+			NOT = { has_country_flag = THE_ROD_form_swe_personal_union_decision_flag }
+			has_country_flag = THE_ROD_unlock_form_swe_nor_personal_union_flag
+			exists = SWE
+			SWE = {
+				OR = {
+					NOT = { is_subject_of_type = integrated_personal_union }
+					NOT = { is_subject_of = ROOT }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			owned_by = SWE
+		}
+		allow = {
+			SWE = {
+				is_subject_of = ROOT
+				NOT = { is_subject_of_type = tributary_state }
+				has_opinion = {
+					who = ROOT
+					value = 0
+				}
+			}
+		}
+		effect = {
+			create_subject = {
+				subject_type = integrated_personal_union
+				who = SWE
+			}
+			add_historical_friend = SWE
+			SWE = {
+				add_liberty_desire = -50
+				add_historical_friend = ROOT
+				THE_change_color_to_colony = yes
+				hidden_effect = {
+					if = {
+						limit = { NOT = { government = monarchy } }
+						change_government = monarchy
+					}
+					add_government_reform = autocracy_reform
+				}
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_ROD_decrease_every_country_ae_50_tt
+			hidden_effect = {
+				every_country = {
+					add_aggressive_expansion = {
+						who = ROOT
+						value = -50
+					}
+				}
+				set_country_flag = THE_ROD_form_swe_personal_union_decision_flag
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	THE_ROD_form_nor_personal_union_decision = {
+		color = { 32  32  32 }
+		potential = {
+			NOT = { has_country_flag = THE_ROD_form_nor_personal_union_decision_flag }
+			has_country_flag = THE_ROD_unlock_form_swe_nor_personal_union_flag
+			exists = NOR
+			NOR = {
+				OR = {
+					NOT = { is_subject_of_type = integrated_personal_union }
+					NOT = { is_subject_of = ROOT }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			owned_by = NOR
+		}
+		allow = {
+			NOR = {
+				is_subject_of = ROOT
+				NOT = { is_subject_of_type = tributary_state }
+				has_opinion = {
+					who = ROOT
+					value = 0
+				}
+			}
+		}
+		effect = {
+			create_subject = {
+				subject_type = integrated_personal_union
+				who = NOR
+			}
+			add_historical_friend = NOR
+			NOR = {
+				add_liberty_desire = -50
+				add_historical_friend = ROOT
+				THE_change_color_to_colony = yes
+				hidden_effect = {
+					if = {
+						limit = { NOT = { government = monarchy } }
+						change_government = monarchy
+					}
+					add_government_reform = autocracy_reform
+				}
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_ROD_decrease_every_country_ae_50_tt
+			hidden_effect = {
+				every_country = {
+					add_aggressive_expansion = {
+						who = ROOT
+						value = -50
+					}
+				}
+				set_country_flag = THE_ROD_form_nor_personal_union_decision_flag
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	THE_ROD_rumia_become_general_decision = {
+		color = { 32  32  32 }
+		major = yes
+		potential = {
+			has_country_flag = THE_ROD_unlock_rumia_become_general_flag
+			NOT = { THE_ROD_has_rumia_general = yes }
+		}
+
+		allow = {
+			mil_power_cost = 50
+		}
+		effect = {
+			mil_power_cost = 50
+			custom_tooltip = THE_ROD_rumia_become_general_tt
+			hidden_effect = {
+				THE_ROD_define_general_rumia = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	THE_ROD_check_dark_moon_night_stage_and_modifier_decision = {
+		color = { 32  32  32 }
+		major = yes
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = {
+				OR = {
+					has_fort_building_trigger = yes
+					any_neighbor_province = {
+						owned_by = ROOT
+						has_fort_building_trigger = yes
+					}
+				}
+			}
+		}
+		potential = {
+			has_government_mechanic = THE_ROD_dark_moon_night_mechanic
+		}
+
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = THE_ROD_highlight_province_not_in_fort_zone_ttt
+				always = no
+			}
+		}
+
+		effect = {
+			custom_tooltip = THE_ROD_government_mechanic_power_desc_title
+			###Stage 1
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_ROD_government_mechanic_power_desc_title_1
+			if = {
+				limit = { mission_completed = THE_ROD_1_10 }
+				custom_tooltip = THE_ROD_dark_moon_night_1_10_tt
+			}
+			custom_tooltip = THE_ROD_dark_moon_night_stage1_default_1_tt
+			if = {
+				limit = { mission_completed = THE_ROD_2_4 }
+				custom_tooltip = THE_ROD_dark_moon_night_2_4_tt
+			}
+			if = {
+				limit = { mission_completed = THE_ROD_5_12 }
+				custom_tooltip = THE_ROD_dark_moon_night_5_12_1_tt
+			}
+			custom_tooltip = THE_ROD_dark_moon_night_stage1_default_2_tt
+			###Stage 2
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_ROD_government_mechanic_power_desc_title_2
+			if = {
+				limit = { mission_completed = THE_ROD_2_12 }
+				custom_tooltip = THE_ROD_dark_moon_night_2_12_tt
+			}
+			custom_tooltip = THE_ROD_dark_moon_night_stage2_default_tt
+			if = {
+				limit = { mission_completed = THE_ROD_5_12 }
+				custom_tooltip = THE_ROD_dark_moon_night_5_12_2_tt
+			}
+			if = {
+				limit = { mission_completed = THE_ROD_1_6 }
+				custom_tooltip = THE_ROD_dark_moon_night_1_6_tt
+			}
+			if = {
+				limit = { NOT = { has_country_flag = THE_ROD_decrease_mechanic_debuff_flag } }
+				custom_tooltip = THE_ROD_dark_moon_night_debuff_default_tt
+			}
+			else = {
+				custom_tooltip = THE_ROD_dark_moon_night_debuff_decrease_tt
+			}
+			###Stage 3
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_ROD_government_mechanic_power_desc_title_3
+			if = {
+				limit = { mission_completed = THE_ROD_4_14 }
+				custom_tooltip = THE_ROD_dark_moon_night_4_14_1_tt
+			}
+			custom_tooltip = THE_ROD_dark_moon_night_stage3_default_tt
+			if = {
+				limit = { mission_completed = THE_ROD_3_13 }
+				custom_tooltip = THE_ROD_dark_moon_night_3_13_tt
+			}
+			if = {
+				limit = { mission_completed = THE_ROD_1_8 }
+				custom_tooltip = THE_ROD_dark_moon_night_1_8_tt
+			}
+			if = {
+				limit = { NOT = { has_country_flag = THE_ROD_decrease_mechanic_debuff_flag } }
+				custom_tooltip = THE_ROD_dark_moon_night_debuff_default_tt
+			}
+			else = {
+				custom_tooltip = THE_ROD_dark_moon_night_debuff_decrease_tt
+			}
+			###Stage 4
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_ROD_government_mechanic_power_desc_title_4
+			if = {
+				limit = { mission_completed = THE_ROD_3_15 }
+				custom_tooltip = THE_ROD_dark_moon_night_3_15_tt
+			}
+			custom_tooltip = THE_ROD_dark_moon_night_stage4_default_tt
+			if = {
+				limit = { mission_completed = THE_ROD_4_14 }
+				custom_tooltip = THE_ROD_dark_moon_night_4_14_2_tt
+			}
+			if = {
+				limit = { mission_completed = THE_ROD_3_9 }
+				custom_tooltip = THE_ROD_dark_moon_night_3_9_tt
+			}
+			if = {
+				limit = { NOT = { has_country_flag = THE_ROD_decrease_mechanic_debuff_flag } }
+				custom_tooltip = THE_ROD_dark_moon_night_debuff_default_tt
+			}
+			else = {
+				custom_tooltip = THE_ROD_dark_moon_night_debuff_decrease_tt
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

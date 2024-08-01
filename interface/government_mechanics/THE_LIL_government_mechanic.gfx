@@ -1,0 +1,18 @@
+spriteTypes = {
+	progressbartype = {
+		name = "GFX_THE_LIL_government_power_bar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx\\interface\\government_mechanics\\THE_LIL_progressbar_full.dds"
+		textureFile2 = "gfx\\interface\\provinceView_progressbar_w92_h11_black.dds"
+		size = { x = 230 y = 17 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	spriteType = {
+		name = "GFX_THE_LIL_government_power_bar_frame"
+		texturefile = "gfx\\interface\\government_mechanics\\THE_LIL_progressbar_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+}

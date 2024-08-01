@@ -1,0 +1,50 @@
+THE_NCS_ideas = {
+	#小人族传统
+	start = {
+		move_capital_cost_modifier = -1
+		regiment_manpower_usage = -0.2
+	}
+	#一寸法师野心
+	bonus = {
+		ae_impact = -0.15
+	}
+	trigger = {
+		tag = NCS
+	}
+	free = yes
+	#辉针剑
+	THE_NCS_ki_shin_ken_idea = {
+		shock_damage = 0.1
+		fire_damage = 0.1
+	}
+	#居无定所
+	THE_NCS_nomadic_life_idea = {
+		state_governing_cost = -0.25
+		governing_capacity_modifier = -0.25
+	}
+	#制空权确保
+	THE_NCS_air_superiority_idea = {
+		hostile_attrition = 1
+		defensiveness = 0.2
+	}
+	#小的就是好的
+	THE_NCS_small_is_good_idea = {
+		spy_offence = 0.3
+		movement_speed = 0.1
+	}
+	#弱者之道
+	THE_NCS_way_of_the_weak_idea = {
+		improve_relation_modifier = 0.2
+		diplomatic_upkeep = 1
+	}
+	#！了转反
+	THE_NCS_desrever_idea = {
+		province_warscore_cost = -0.15
+		siege_ability = 0.1
+	}
+	#少彦名之裔
+	THE_NCS_sukuna_hikona_descendant_idea = {
+		trade_goods_size_modifier = 0.1
+		manpower_recovery_speed = 0.2
+	}
+}

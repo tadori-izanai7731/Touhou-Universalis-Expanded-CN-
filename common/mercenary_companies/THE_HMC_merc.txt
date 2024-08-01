@@ -1,0 +1,225 @@
+#稗田卫队
+THE_HMC_hieda_guard_company = {
+	regiments_per_development = 0.02
+	cost_modifier = 1.0
+	home_province = 5124
+	cavalry_weight = 0.25
+	artillery_weight = 0
+	cavalry_cap = 4
+	sprites = { }
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		mission_completed = THE_HMC_3_4
+	}
+	modifier = { 
+		discipline = 0.05
+	}
+}
+
+#稗田精英卫队
+THE_HMC_hieda_elite_guard_company = {
+	regiments_per_development = 0.01
+	cost_modifier = 1.2
+	home_province = 5124
+	cavalry_weight = 0.3
+	artillery_weight = 0
+	cavalry_cap = 6
+	sprites = { }
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		mission_completed = THE_HMC_3_4
+	}
+	modifier = { 
+		recover_army_morale_speed = 0.2
+		reinforce_speed = -0.1
+		discipline = 0.05
+	}
+}
+
+#稗田大队
+THE_HMC_hieda_group_company = {
+	regiments_per_development = 0.04
+	cost_modifier = 1.0
+	home_province = 5124
+	cavalry_weight = 0
+	artillery_weight = 0
+	cavalry_cap = 0
+	sprites = { }
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		mission_completed = THE_HMC_3_4
+	}
+	modifier = { 
+		shock_damage_received = -0.1
+		reserves_organisation = 0.1
+	}
+}
+
+#特聘天狗记者
+THE_HMC_tengu_reporter_company = {
+	regiments_per_development = 0.02
+	cost_modifier = 1.2
+	home_province = 5122
+	cavalry_weight = 0.8
+	artillery_weight = 0
+	cavalry_cap = 16
+	sprites = { }
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		mission_completed = THE_HMC_3_4
+	}
+	modifier = { 
+		discipline = 0.05
+		cavalry_shock = 0.5
+		cav_to_inf_ratio = 0.5
+		cavalry_flanking = 0.2
+	}
+}
+
+#忠实的连载小说读者
+THE_HMC_novel_reader_company = {
+	regiments_per_development = 0.06
+	cost_modifier = 0.5
+	home_province = 5122
+	cavalry_weight = 0
+	artillery_weight = 0
+	cavalry_cap = 0
+	sprites = { }
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		mission_completed = THE_HMC_3_4
+	}
+	modifier = { 
+		fire_damage_received = 0.2
+		shock_damage_received = 0.2
+		reinforce_cost_modifier = -0.5
+		reinforce_speed = 0.2
+		assault_fort_ability = -1
+	}
+}
+
+#人里兽人团
+THE_HMC_orc_group_company = {
+	regiments_per_development = 0.02
+	cost_modifier = 1.05
+	home_province = 5123
+	cavalry_weight = 0.1
+	artillery_weight = 0.6
+	cavalry_cap = 2
+	sprites = { }
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		mission_completed = THE_HMC_3_4
+	}
+	modifier = { 
+		recover_army_morale_speed = 0.1
+		artillery_fire = 1
+	}
+}
+
+#竹林狂兽人团
+THE_HMC_bamboo_orc_group_company = {
+	regiments_per_development = 0.02
+	cost_modifier = 1.05
+	home_province = 5123
+	cavalry_weight = 0.6
+	artillery_weight = 0
+	cavalry_cap = 12
+	sprites = { }
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		mission_completed = THE_HMC_3_4
+	}
+	modifier = { 
+		recover_army_morale_speed = 0.1
+		cavalry_shock = 0.5
+		cav_to_inf_ratio = 0.5
+	}
+}
+
+#工程师战车
+THE_HMC_engineer_chariot_company = {
+	regiments_per_development = 0.01
+	cost_modifier = 1.1
+	home_province = 5150
+	cavalry_weight = 0
+	artillery_weight = 1.0
+	cavalry_cap = 0
+	min_size = 10
+	max_size = 10
+	sprites = { }
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		mission_completed = THE_HMC_3_4
+		mil_tech = 7
+	}
+	modifier = { 
+		artillery_fire = -10
+		artillery_shock = 3
+	}
+}
+
+#贫乏巫女
+THE_HMC_poor_psychic_company = {
+	regiments_per_development = 0.03
+	cost_modifier = 0.9
+	home_province = 5123
+	cavalry_weight = 0
+	artillery_weight = 0.2
+	cavalry_cap = 0
+	sprites = { }
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		mission_completed = THE_HMC_3_4
+	}
+	modifier = { 
+		fire_damage = 0.2
+	}
+}
+
+#穷苦魔法使学徒
+THE_HMC_poor_magicer_company = {
+	regiments_per_development = 0.04
+	cost_modifier = 1.1
+	home_province = 4977
+	cavalry_weight = 0.3
+	artillery_weight = 0.2
+	cavalry_cap = 6
+	sprites = { }
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		mission_completed = THE_HMC_3_4
+	}
+	modifier = { 
+		fire_damage = 0.1
+		shock_damage = 0.1
+		recover_army_morale_speed = -0.05
+		reinforce_speed = -0.1
+	}
+}
+
+#精锐妖精
+THE_HMC_elite_fairy_company = {
+	mercenary_desc_key = THE_NOT_COUNT_TO_FORCE_LIMIT
+	regiments_per_development = 0.01
+	cost_modifier = 0.2
+	home_province = 5082
+	cavalry_weight = 0
+	artillery_weight = 0
+	cavalry_cap = 0
+	max_size = 2
+	counts_towards_force_limit = no
+	sprites = { }
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		OR = {
+			mission_completed = THE_HMC_3_4
+			mission_completed = THE_LIL_4_3
+		}
+	}
+	modifier = { 
+		reserves_organisation = 0.5
+		reinforce_speed = 1.0
+		recover_army_morale_speed = 1.0
+	}
+}

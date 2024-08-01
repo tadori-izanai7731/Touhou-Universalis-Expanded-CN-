@@ -1,0 +1,23 @@
+THE_ROD_have_not_unity_german_culture_scripted_trigger = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = THE_ROD_had_accept_german_$culture$_culture_flag }
+		}
+		any_owned_province = {
+			culture = $culture$
+		}
+	}
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = ""
+			always = no
+		}
+	}
+}
+
+THE_ROD_have_not_unity_german_culture_event_scripted_trigger = {
+	NOT = { has_country_flag = THE_ROD_had_accept_german_$culture$_culture_flag }
+	# any_owned_province = {
+	# 	culture = $culture$
+	# }
+}

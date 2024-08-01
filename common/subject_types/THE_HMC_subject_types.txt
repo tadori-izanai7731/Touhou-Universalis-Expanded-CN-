@@ -1,0 +1,63 @@
+THE_HMC_human_trade_league = { }
+THE_HMC_human_trade_league = {
+	copy_from = default
+	can_have_great_projects_moved_by_overlord = no
+
+	# Triggers:
+	is_potential_overlord = {
+	}
+	
+	# Graphics:
+	sprite = GFX_THE_HMC_human_trade_league_icon
+	diplomacy_overlord_sprite = GFX_THE_HMC_human_trade_league_lead_icon
+	diplomacy_subject_sprite = GFX_THE_HMC_human_trade_league_am_icon
+        
+
+	# Properties:
+	can_be_annexed = yes
+	forms_trade_companies = no
+	can_fight_independence_war = no
+	joins_overlords_wars = yes
+	joins_colonial_wars = no
+	opinion_on_subject_integration = 0 #Determines how much opinion they actually lose when a fellow subject gets integrated.
+	overlord_can_attack = no
+	takes_diplo_slot = no
+	base_liberty_desire = -100
+	relative_power_class = 1
+	should_quit_wars_on_activation = yes
+	uses_military_focus = yes
+	overlord_protects_external = yes
+	counts_for_borders = yes
+	counts_as_overlord_holding = yes
+	can_use_claims = yes
+	share_rebel_popup = yes
+	can_transfer_in_peace = yes
+	can_set_mil_focus = yes
+	can_send_missionary_to_subject = no
+	can_concentrate_development = yes
+	transfer_trade_power = yes
+	transfer_trade_if_merchant_republic = yes
+	extend_trading_range = yes
+	can_gain_favors = yes
+	
+	liberty_desire_development_ratio = 0.1
+	trust_on_start = 50
+	
+	overlord_opinion_modifier = is_trade_protectorate
+	subject_opinion_modifier = is_trade_protectorate
+
+	# Subject Interactions:
+	# (immediate)
+	block_settlement_growth = no
+	allow_settlement_growth = no
+	divert_trade = yes
+
+	# Modifiers:
+	modifier_subject = clear # Trade Protectorate don't get the ordinary subject_nation penalty 
+	modifier_overlord = {
+		trigger = {
+			always = yes
+		}
+		modifier = THE_HMC_human_trade_league_overlord_modifier
+	}
+}

@@ -1,0 +1,92 @@
+THE_HMC_define_election_ruler_scripted_effect = {
+	[[akyuu]
+		define_ruler = {
+			name = "阿求"
+			dynasty = "稗田"
+			adm = 5
+			dip = 5
+			mil = 3
+			age = 20
+			culture = ROOT
+			religion = ROOT
+			female = yes
+			fixed = yes
+		}
+		hidden_effect = {
+			THE_HMC_set_now_ruler_flag_scripted_effect = { ruler = akyuu }
+		}
+	]
+	[[kosuzu]
+		define_ruler = {
+			name = "小铃"
+			dynasty = "本居"
+			adm = 3
+			dip = 4
+			mil = 4
+			age = 20
+			culture = ROOT
+			religion = ROOT
+			female = yes
+			fixed = yes
+		}
+		hidden_effect = {
+			THE_HMC_set_now_ruler_flag_scripted_effect = { ruler = kosuzu }
+		}
+	]
+	[[rinnosuke]
+		define_ruler = {
+			name = "霖之助"
+			dynasty = "森近"
+			adm = 4
+			dip = 6
+			mil = 3
+			age = 20
+			culture = ROOT
+			religion = ROOT
+			male = yes
+			fixed = yes
+		}
+		hidden_effect = {
+			THE_HMC_set_now_ruler_flag_scripted_effect = { ruler = rinnosuke }
+		}
+	]
+	[[keine]
+		define_ruler = {
+			name = "慧音"
+			dynasty = "上白泽"
+			adm = 6
+			dip = 3
+			mil = 5
+			age = 20
+			culture = ROOT
+			religion = ROOT
+			female = yes
+			fixed = yes
+		}
+		hidden_effect = {
+			THE_HMC_set_now_ruler_flag_scripted_effect = { ruler = keine }
+		}
+	]
+}
+
+THE_HMC_define_general_rinnosuke_scripted_effect = {
+	define_general = {
+		name = "慧音 上白泽"
+		fire = 3
+		shock = 6
+		manuever = 4
+		siege = 2
+		female = yes
+	}
+}
+
+THE_HMC_define_general_keine_scripted_effect = {
+	define_general = {
+		name = "霖之助 森近"
+		fire = 2
+		shock = 2
+		manuever = 6
+		siege = 6
+		male = yes
+	}
+}

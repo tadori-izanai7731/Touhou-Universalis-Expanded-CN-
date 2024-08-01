@@ -1,0 +1,403 @@
+THE_HNG_not_believe = {
+	icon = privilege_demand_more_troops
+	max_absolutism = 5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0.05
+	loyalty = 0.1
+	is_valid = { 
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		NOT = { has_country_modifier = THE_HNG_believe_your_country }
+		OR = {
+			AND = {
+				is_emperor_of_china = yes
+				has_disaster = the_hng_disasters_one
+			}
+			has_country_flag = hng_do_the_change2_flag
+		}
+	}
+	can_select = {
+		OR = {
+			AND = {
+				is_emperor_of_china = yes
+				has_disaster = the_hng_disasters_one
+			}
+			has_country_flag = hng_do_the_change2_flag
+		}
+	}
+	on_granted = {
+		custom_tooltip = THE_HNG_not_believe_effrct
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				NOT = { culture_group = ROOT }
+				has_owner_accepted_culture = no
+			}
+			add_permanent_province_modifier = {
+				name = THE_HNG_not_believe_privilege_effrct
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = THE_HNG_not_believe_privilege_effrct
+			}
+			remove_province_modifier = THE_HNG_not_believe_privilege_effrct
+		}
+	}
+	can_revoke = { 
+		custom_trigger_tooltip = {
+			tooltip = THE_HNG_believe_your_country_nobles_privilege
+			has_country_modifier = THE_HNG_believe_your_country
+		}
+	} 
+	on_revoked = {
+		custom_tooltip = THE_HNG_not_believe_remove_effrct
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = THE_HNG_not_believe_privilege_effrct
+			}
+			remove_province_modifier = THE_HNG_not_believe_privilege_effrct
+		}
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = THE_HNG_not_believe_privilege_effrct
+			}
+			remove_province_modifier = THE_HNG_not_believe_privilege_effrct
+		}
+	}
+	penalties = {
+		num_accepted_cultures = -13
+		reduced_liberty_desire = -100
+		vassal_forcelimit_bonus = -0.5
+		vassal_income = -0.5
+		vassal_manpower_bonus = -0.5
+		vassal_sailors_bonus = -0.5
+	}
+	benefits = {
+		core_creation = -0.15
+		nobles_privilege_slots = 1
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+
+
+THE_HNG_yaokai_recover_manpower = {
+	icon = privilege_demand_more_troops
+	max_absolutism = 5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0
+	loyalty = 0.05
+	is_valid = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+	}
+	can_select = {
+	}
+	can_revoke = { 
+	} 
+	penalties = {
+		global_tax_modifier = -0.1
+	}
+	benefits = {
+		global_manpower_modifier = 0.1
+		nobles_privilege_slots = 1
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+THE_HNG_yaokai_fort_maintenance = {
+	icon = privilege_monopoly_of_goods_iron
+	max_absolutism = 5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0.05
+	loyalty = 0.05
+	is_valid = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		OR = {
+			NOT = {
+				total_development = 800
+			}	
+			has_country_modifier = THE_HNG_modernization_gensokyo_army
+			has_reform = defensive_stance_reform
+		}
+	}
+	can_select = {
+		NOT = {
+			total_development = 800 }
+			NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army }
+		}
+		
+		can_revoke = { 
+		} 
+		penalties = {
+			global_regiment_recruit_speed = 0.25
+		}
+		benefits = {
+			fort_maintenance_modifier = -0.5
+			nobles_privilege_slots = 1
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	
+	THE_HNG_yaokai_not_care_imperial_mandate = {
+		icon = privilege_monopoly_of_goods_livestock
+		max_absolutism = 5
+		conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+		influence = -0.1
+		loyalty = 0.1
+		is_valid = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+			NOT ={
+				has_estate_privilege = THE_HNG_nobles_privileges4
+			}
+		}
+		can_select = {
+			is_emperor_of_china = yes
+			NOT ={
+				has_estate_privilege = THE_HNG_nobles_privileges4
+			}
+		}
+		penalties = {
+			imperial_mandate = -0.05
+		}
+		benefits = {
+			fire_damage_received = -0.1
+			nobles_privilege_slots = 1
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	THE_HNG_nobles_privileges1 = {
+		icon = privilege_royal_authority
+		max_absolutism = 5
+		conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+		influence = 0.05
+		loyalty = 0.05
+		is_valid = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+			is_emperor_of_china = yes
+		}
+		can_select = {
+			tag = HNG
+		}
+		can_revoke = { 
+		} 
+		penalties = {
+			global_tax_modifier = -0.1
+		}
+		benefits = {
+			establish_order_cost = -0.5
+			nobles_privilege_slots = 1
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	THE_HNG_nobles_privileges2 = {
+		icon = privilege_demand_more_troops
+		max_absolutism = 10
+		conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+		influence = -0.1
+		loyalty = 0.1
+		is_valid = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+			is_emperor_of_china = yes
+			has_country_flag = hng_do_the_change2_flag
+			has_country_modifier = THE_HNG_believe_your_country
+		}
+		can_select = {
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 80
+			}
+		}
+		can_revoke = { 
+		} 
+		penalties = {
+			
+		}
+		benefits = {
+			culture_conversion_cost = -0.5
+			culture_conversion_time = -0.5
+			nobles_privilege_slots = 2
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	THE_HNG_nobles_privileges3 = {
+		icon = privilege_recruit_minister
+		max_absolutism = 5
+		conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+		influence = 0.05
+		loyalty = 0.05
+		is_valid = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+			NOT ={
+				has_estate_privilege = THE_HNG_nobles_privileges4
+			}
+		}
+		can_select = {
+			NOT ={
+				has_estate_privilege = THE_HNG_nobles_privileges4
+			}
+		}
+		on_granted = {
+			custom_tooltip = THE_HNG_nobles_privileges3_tt
+		}
+		can_revoke = { 
+		} 
+		penalties = {
+			heir_chance = -0.5
+			global_manpower_modifier = -0.01	
+		}
+		benefits = {
+			nobles_privilege_slots = 1
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	THE_HNG_nobles_privileges4 = {
+		icon = privilege_recruit_minister
+		max_absolutism = 10
+		conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 3 } }
+		influence = -0.1
+		loyalty = -0.1
+		is_valid = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+			NOT ={
+				has_estate_privilege = THE_HNG_nobles_privileges3
+			}
+			NOT ={
+				has_estate_privilege = THE_HNG_yaokai_not_care_imperial_mandate
+			}
+		}
+		can_select = {
+			NOT ={
+				has_estate_privilege = THE_HNG_yaokai_not_care_imperial_mandate
+			}
+			NOT ={
+				has_estate_privilege = THE_HNG_nobles_privileges3
+			}
+		}
+		on_granted = {
+			add_country_modifier = {
+				name = THE_hng_mission_modifier138
+				duration = -1
+			}
+			custom_tooltip = THE_HNG_nobles_privileges4_tt
+		}
+		can_revoke = { 
+		} 
+		on_revoked = {
+			remove_country_modifier = THE_hng_mission_modifier138
+		}
+		on_invalid = {
+			remove_country_modifier = THE_hng_mission_modifier138
+	} 
+		penalties = {
+	
+		}
+		benefits = {
+			nobles_privilege_slots = 1
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}	
+	
+	THE_HNG_nobles_privileges5 = {
+		icon = estate_eunuchs_supremacy_over_crown_privilege
+		max_absolutism = 5
+		conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+		influence = 0
+		loyalty = 0.1
+		is_valid = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+			has_country_flag = hng_do_the_change1_flag
+		}
+		can_select = {
+		}
+		on_granted = {
+			add_country_modifier = {
+				name = THE_hng_mission_modifier137
+				duration = -1
+			}
+		}
+		can_revoke = { 
+		}
+		on_revoked = {
+			remove_country_modifier = THE_hng_mission_modifier137
+		}
+		on_invalid = {
+				remove_country_modifier = THE_hng_mission_modifier137
+		} 
+		penalties = {	
+			eunuchs_loyalty_modifier = -0.1
+		}
+		benefits = {
+			nobles_privilege_slots = 1
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

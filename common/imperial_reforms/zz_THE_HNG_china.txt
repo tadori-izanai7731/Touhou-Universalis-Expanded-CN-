@@ -1,0 +1,111 @@
+zz_THE_HNG_four_people_love_meirin = {
+	empire = celestial_empire 
+	potential = {
+		event_target:EmperorOfChina = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+		}
+	}
+	trigger = { 
+		OR = {
+			has_country_modifier = THE_HNG_believe_your_country
+			AND = {
+				has_country_modifier = hng_army_come_from_gensokyo		
+				is_year = 1547
+			}
+		}
+	}
+	member = {
+		governing_cost = -0.1
+	} 
+	emperor = { 
+		min_autonomy_in_territories = -0.1
+	}
+}
+
+zz_THE_HNG_jian_bing_du_zainan_tong_guo = {
+	empire = celestial_empire 
+	potential = {
+		event_target:EmperorOfChina = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+		}
+	}
+	trigger = { 
+		OR = {
+			has_country_modifier = THE_HNG_more_efficient_land_system
+			AND = {
+				has_country_modifier = hng_army_come_from_gensokyo		
+				is_year = 1547
+			}
+		}
+	}
+	member = {
+		production_efficiency = 0.2
+	} 
+	emperor = { 
+		governing_cost = -0.1
+	}
+}
+
+zz_THE_HNG_tong_zhang_du_zainan_tong_guo = {
+	empire = celestial_empire 
+	potential = {
+		event_target:EmperorOfChina = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+		}
+	}
+	trigger = { 
+		OR = {
+			has_country_modifier = THE_HNG_strict_and_complete_economic
+			AND = {
+				has_country_modifier = hng_army_come_from_gensokyo		
+				is_year = 1547
+			}
+		}
+	}
+	member = {
+		ignore_coring_distance = yes
+		development_cost_modifier = -0.15
+	} 
+	emperor = { 
+			gold_depletion_chance_modifier = -1
+			interest = -2
+			global_trade_power = 0.25
+	}
+}
+
+zz_THE_HNG_fu_hua_du_zainan_tong_guo = {
+	empire = celestial_empire 
+	potential = {
+		event_target:EmperorOfChina = {
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+		}
+	}
+	trigger = { 
+		OR = {
+			has_country_modifier = THE_HNG_modernization_gensokyo_army
+			AND = {
+				has_country_modifier = hng_army_come_from_gensokyo		
+				is_year = 1547
+			}
+		}
+	}
+	member = {
+		discipline = 0.05
+	} 
+	emperor = { 
+		drill_decay_modifier = -0.25
+		land_maintenance_modifier = -0.15
+	}
+}

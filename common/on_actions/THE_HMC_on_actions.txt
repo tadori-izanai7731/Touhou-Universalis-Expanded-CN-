@@ -1,0 +1,11 @@
+on_startup = {
+	events = {
+		THE_HMC_events.1
+	}
+}
+
+on_new_term_election = {
+	events = {
+		THE_HMC_events.2
+	}
+}

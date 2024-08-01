@@ -1,0 +1,19 @@
+spriteTypes = {
+	#thanks for EE&ABE
+	spriteType = {
+		name = "GFX_text_icon_fire"
+		texturefile = "gfx//icons//fire_text_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_text_icon_shock"
+		texturefile = "gfx//icons//shock_text_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_text_icon_manuever"
+		texturefile = "gfx//icons//manuever_text_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_text_icon_siege"
+		texturefile = "gfx//icons//siege_text_icon.dds"
+	}
+}

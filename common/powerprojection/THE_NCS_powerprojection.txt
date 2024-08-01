@@ -1,0 +1,13 @@
+#########################################################################
+# POWER PROJECTION IMPACT
+##########################################################################
+
+#Use this one when adding power projection when via add_power_projection, unless you have a specific reason to use another
+
+THE_NCS_music_lover_pp = {
+	max = 25
+	min = 25
+	power = 1
+	decay = no
+}
+

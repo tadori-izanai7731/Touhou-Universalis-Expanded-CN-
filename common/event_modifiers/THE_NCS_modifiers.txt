@@ -1,0 +1,198 @@
+
+#天空之城
+THE_NCS_sky_castle_modifier = {
+	ignore_coring_distance = yes
+	min_autonomy = 1000
+}
+
+#魔力充裕
+THE_NCS_magic_full_modifier = {
+}
+
+#魔力缺乏
+THE_NCS_magic_poor_modifier = {
+	move_capital_cost_modifier = 100
+}
+
+#起飞cd
+THE_NCS_take_off_modifier = {
+}
+
+#第三方袭击
+THE_NCS_third_attack_modifier = {
+	province_warscore_cost = -0.25
+	ae_impact = -0.2
+	improve_relation_modifier = -0.25
+	stability_cost_to_declare_war = 1
+}
+
+#坚定不移走博丽神道之路
+THE_NCS_hakurei_modifier = {
+	global_heretic_missionary_strength = 0.02
+	diplomatic_reputation = 1
+}
+
+#暂时的隐忍
+THE_NCS_temporary_patience_modifier = {
+	liberty_desire = -100
+}
+
+#古老联系
+THE_NCS_ancient_relationship_modifier = {
+	idea_cost = -0.05
+	innovativeness_gain = 0.25
+}
+
+#后裔与后裔
+THE_NCS_descendant_and_descendant_modifier = {
+	prestige = 2
+	monthly_splendor = 2
+}
+
+#守矢的移动分社
+THE_NCS_moriya_branch_modifier = {
+	global_heretic_missionary_strength = 0.02
+}
+
+#博丽的移动分社
+THE_NCS_hakurei_branch_modifier = {
+	global_heretic_missionary_strength = 0.02
+}
+
+#鬼之力再临
+THE_NCS_oni_power_reappearance_modifier = {
+	state_maintenance_modifier = -0.1
+	shock_damage = 0.05
+	fire_damage = 0.05
+}
+
+#安定畜生界
+THE_NCS_chikushyoukai_modifier = {
+	global_unrest = -1.5
+}
+
+#鬼人正邪的活跃
+THE_NCS_kijin_seija_modifier = {
+	spy_offence = 0.1
+	discovered_relations_impact = -0.2
+}
+
+#鬼人正邪的活跃2
+THE_NCS_kijin_seija_2_modifier = {
+	spy_offence = 0.2
+	discovered_relations_impact = -0.2
+	diplomatic_upkeep = 1
+}
+
+#万宝槌之主
+THE_NCS_absolute_uchidenokozuchi_master_modifier = {
+}
+
+#与天邪鬼结盟
+THE_NCS_amanojaku_alliance_modifier = {
+	diplomatic_upkeep = 1
+}
+
+#紧跟天邪鬼
+THE_NCS_follow_amanojaku_modifier = {
+	liberty_desire = -50
+}
+
+#庇护乐团/草根
+THE_NCS_protect_rai_sek_modifier = {
+	diplomatic_upkeep = 1
+}
+
+#庇护面具
+THE_NCS_protect_kko_modifier = {
+	diplomatic_upkeep = 1
+}
+
+#寻亲之战
+THE_NCS_find_mother_modifier = {
+}
+
+#放下
+THE_NCS_get_over_modifier = {
+}
+
+#####万宝槌相关######
+#恢复魔力
+THE_NCS_uchidenokozuchi_recover_modifier = {
+}
+
+#募兵
+THE_NCS_uchidenokozuchi_recruit_modifier = {
+	manpower_recovery_speed = 1
+}
+
+THE_NCS_uchidenokozuchi_recruit_2_modifier = {
+	manpower_recovery_speed = -0.5
+}
+
+#财政
+THE_NCS_uchidenokozuchi_cash_modifier = {
+	global_tax_modifier = 0.5
+	production_efficiency = 0.5
+}
+
+THE_NCS_uchidenokozuchi_cash_2_modifier = {
+	global_tax_modifier = -0.25
+	production_efficiency = -0.25
+}
+
+#训练
+THE_NCS_uchidenokozuchi_train_modifier = {
+	drill_gain_modifier = 2.5
+	drill_decay_modifier = -0.5
+	yearly_army_professionalism = 0.04
+}
+
+THE_NCS_uchidenokozuchi_train_2_modifier = {
+	yearly_army_professionalism = -0.02
+}
+
+#传教
+THE_NCS_uchidenokozuchi_missionary_modifier = {
+	missionaries = 1
+	global_missionary_strength = 0.06
+	missionary_maintenance_cost = -1
+}
+
+THE_NCS_uchidenokozuchi_missionary_2_modifier = {
+	global_missionary_strength = -0.03
+}
+
+#阴谋
+THE_NCS_uchidenokozuchi_spy_modifier = {
+	spy_offence = 0.5
+	global_spy_defence = 1
+	fabricate_claims_cost = -0.5
+	reduced_liberty_desire = 50
+}
+
+THE_NCS_uchidenokozuchi_spy_2_modifier = {
+	spy_offence = -0.25
+	global_spy_defence = -0.5
+	fabricate_claims_cost = 0.25
+	reduced_liberty_desire = -25
+}
+
+#酒宴
+THE_NCS_uchidenokozuchi_party_modifier = {
+	improve_relation_modifier = 0.5
+	diplomatic_reputation = 2
+	diplomatic_annexation_cost = -0.5
+}
+
+THE_NCS_uchidenokozuchi_party_2_modifier = {
+	improve_relation_modifier = -0.25
+	diplomatic_reputation = -1
+	diplomatic_annexation_cost = 0.25
+}
+
+#####provvince_modifier#####
+#风祝出差
+THE_NCS_kazehouri_province_modifier = {
+	local_missionary_strength = 0.03
+}

@@ -1,0 +1,127 @@
+yokari_forest_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 1
+	powers = {
+		yokari_forest_doom_power = {
+			max = 200
+			min = 0
+			scaled_modifier = {
+				trigger = {
+					NOT = { has_country_flag = doom_power_yof_never_come_publishment_allow }
+					NOT = { has_country_flag = yof_defend_siege_allow_flag }
+					NOT = { has_country_flag = yof_dom_saved_not_unrest_allow_flag }
+				}
+				modifier = {
+					morale_damage = 0.10
+					improve_relation_modifier = -0.5
+					relation_with_same_culture_group = -40
+					global_unrest = 4 ##额外
+					stability_cost_modifier = 0.5 ##额外
+					monthly_yokari_forest_doom_power = -1.5
+					diplomatic_reputation = -8
+					ae_impact = 0.50
+				}
+				end_value = 100
+				start_value = 25
+			}
+			
+			##厄运的储存
+			scaled_modifier = {
+				trigger = {
+					NOT = { has_country_flag = doom_power_yof_never_come_publishment_allow }
+					NOT = { has_country_flag = yof_defend_siege_allow_flag }
+					has_country_flag = yof_dom_saved_not_unrest_allow_flag
+				}
+				modifier = {
+					morale_damage = 0.10
+					improve_relation_modifier = -0.5
+					reverse_relation_with_same_religion = -40
+					reverse_relation_with_heathen_religion = -40
+					reverse_relation_with_heretic_religion = -40
+					monthly_yokari_forest_doom_power = -2
+					diplomatic_reputation = -2
+					ae_impact = 0.10
+				}
+				end_value = 100
+				start_value = 25
+			}
+			##不为厄运所缚
+			scaled_modifier = {
+				trigger = {
+					has_country_flag = doom_power_yof_never_come_publishment_allow
+					has_country_flag = yof_dom_saved_not_unrest_allow_flag
+					NOT = {
+						has_country_flag = yof_defend_siege_allow_flag
+					}
+				}
+				modifier = {
+					siege_ability = 0.15
+					morale_damage = 0.10
+					improve_relation_modifier = 0.20
+					diplomats = 1
+					defensiveness = 0.20
+					monthly_yokari_forest_doom_power = -2
+				}
+				end_value = 100
+				start_value = 25
+			}
+			##围城
+			scaled_modifier = {
+				trigger = {
+					has_country_flag = doom_power_yof_never_come_publishment_allow
+					has_country_flag = yof_dom_saved_not_unrest_allow_flag
+					has_country_flag = yof_defend_siege_allow_flag
+				}
+				modifier = {
+					improve_relation_modifier = 0.20
+					diplomats = 1
+					defensiveness = 0.25
+					siege_ability = 0.15
+					development_cost = -0.10
+				}
+				end_value = 100
+				start_value = 25
+			}
+			range_modifier = {
+				trigger = {
+					not = {
+						has_country_flag = yof_rotate_of_dom_out_publishiment_flag
+					}
+				}
+				modifier = {
+					diplomats = 1
+					development_cost = -0.15
+					defensiveness = 0.15
+					monthly_yokari_forest_doom_power = 0.25
+				}
+				start_value = 0
+				end_value = 25
+			}
+			range_modifier = {
+				trigger = {
+					has_country_flag = yof_rotate_of_dom_out_publishiment_flag
+				}
+				modifier = {
+					diplomats = 1
+					diplomatic_reputation = 2
+					development_cost = -0.15
+					defensiveness = 0.20
+					ae_impact = -0.15 ##额外
+					monthly_yokari_forest_doom_power = 0.5
+				}
+				start_value = 0
+				end_value = 25
+			}
+			range_modifier = {
+				trigger = {
+					has_country_flag = yof_defend_siege_allow_flag
+				}
+				modifier = {
+					global_defender_dice_roll_bonus = 1
+				}
+				start_value = 100
+				end_value = 200
+			}
+		}
+	}
+}

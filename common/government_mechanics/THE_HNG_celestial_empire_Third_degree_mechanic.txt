@@ -1,0 +1,1500 @@
+THE_HNG_celestial_empire_Third_degree_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 1
+	available = {
+		OR = {
+			has_dlc = "Third Rome"
+			has_dlc = "Domination"
+		}
+	}
+	powers = {
+		THE_HNG_Inflation_rate_adm_power = {
+			max = 50
+			base_monthly_growth = 0.5
+			is_good = no
+			scaled_modifier = {
+				trigger = {
+					NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic}
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag } 
+				}
+				modifier = {
+					global_trade_goods_size_modifier = -0.6
+					global_trade_goods_size = 0.3
+					all_estate_loyalty_equilibrium = -0.2
+				}
+			}
+			scaled_modifier = {			
+				modifier = {
+					global_trade_goods_size = 0.3
+				}					
+			}
+			scaled_modifier = {
+				trigger = {
+					adm = 4
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Inflation_rate_adm_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Inflation_rate_adm_power = -1
+				}
+			}
+			scaled_modifier = {
+				trigger = {
+					adm = 5
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Inflation_rate_adm_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Inflation_rate_adm_power = -2
+				}
+			}  
+			scaled_modifier = {
+				trigger = {
+					adm = 6
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Inflation_rate_adm_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Inflation_rate_adm_power = -4
+				}
+			}
+			scaled_modifier = {
+				trigger = {
+					has_adm_advisor_3 = yes
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Inflation_rate_adm_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Inflation_rate_adm_power = -1
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Inflation_rate_adm_power
+						value = 0
+					}
+				}
+				modifier = {   
+					monthly_THE_HNG_Inflation_rate_adm_power = -2
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Inflation_rate_adm_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Inflation_rate_adm_power = -3
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					inflation = 1
+					NOT = { inflation = 5 }
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Inflation_rate_adm_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Inflation_rate_adm_power = 2
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					inflation = 5
+					NOT = { inflation = 10 }
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Inflation_rate_adm_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Inflation_rate_adm_power = 4
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					inflation = 10
+					NOT = { inflation = 15 }
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Inflation_rate_adm_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Inflation_rate_adm_power = 6
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					inflation = 15
+					NOT = { inflation = 20 }
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Inflation_rate_adm_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Inflation_rate_adm_power = 8
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					inflation = 20
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Inflation_rate_adm_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Inflation_rate_adm_power = 10
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					monthly_income = 200
+					NOT = { monthly_income = 400 }
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Inflation_rate_adm_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Inflation_rate_adm_power = 2
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					monthly_income = 400
+					NOT = { monthly_income = 600 }
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Inflation_rate_adm_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Inflation_rate_adm_power = 4
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					monthly_income = 600
+					NOT = { monthly_income = 800 }
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Inflation_rate_adm_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Inflation_rate_adm_power = 6
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					monthly_income = 800
+					NOT = { monthly_income = 1000 }
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Inflation_rate_adm_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Inflation_rate_adm_power = 8
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					monthly_income = 1000
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Inflation_rate_adm_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Inflation_rate_adm_power = 10
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					is_year = 1500
+					NOT = { 	is_year = 1550 }
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Inflation_rate_adm_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Inflation_rate_adm_power = 2
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					is_year = 1550
+					NOT = { 	is_year = 1600 }
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Inflation_rate_adm_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Inflation_rate_adm_power = 4
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					is_year = 1600
+					NOT = { 	is_year = 1650 }
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Inflation_rate_adm_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Inflation_rate_adm_power = 6
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					is_year = 1650
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Inflation_rate_adm_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Inflation_rate_adm_power = 10
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					gold_income_percentage = 0.1
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Inflation_rate_adm_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Inflation_rate_adm_power = 4
+				}        
+			} 
+			scaled_modifier = {
+				trigger = {
+					is_bankrupt = yes
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Inflation_rate_adm_power = 1000
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					num_of_loans = 5
+					NOT = { num_of_loans = 10 }
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Inflation_rate_adm_power = 2
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					num_of_loans = 10
+					NOT = { num_of_loans = 15 }
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Inflation_rate_adm_power = 4
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					num_of_loans = 15
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Inflation_rate_adm_power = 6
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					num_of_rebel_armies = 1
+					NOT = { 					num_of_rebel_armies = 5 }
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Inflation_rate_adm_power = 2
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					num_of_rebel_armies = 5
+					NOT = { 					num_of_rebel_armies = 10 }
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Inflation_rate_adm_power = 4
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					num_of_rebel_armies = 15
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Inflation_rate_adm_power = 6
+				}        
+			}
+		}
+		THE_HNG_Merger_degree_dip_power = {
+			max = 50
+			base_monthly_growth = 0.5
+			is_good = no
+			scaled_modifier = {
+				trigger = {
+					NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
+				}
+				modifier = {
+					min_autonomy_in_territories = 0.6
+					min_autonomy = 60
+				}
+			}
+			scaled_modifier = {				
+				modifier = {
+					core_creation = -0.4
+				}					
+			}
+			scaled_modifier = {
+				trigger = {
+					dip = 4
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Merger_degree_dip_power = -1
+				}
+			}
+			scaled_modifier = {
+				trigger = {
+					dip = 5
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Merger_degree_dip_power = -2
+				}
+			}
+			scaled_modifier = {
+				trigger = {
+					dip = 6
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Merger_degree_dip_power = -4
+				}
+			} 
+			scaled_modifier = {
+				trigger = {
+					has_dip_advisor_3 = yes
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Merger_degree_dip_power = -1
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Merger_degree_dip_power = -2
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Merger_degree_dip_power = -3
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					total_development = 1500
+					NOT = { total_development = 2000 }
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Merger_degree_dip_power = 1
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					total_development = 2000
+					NOT = { total_development = 2500 }
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Merger_degree_dip_power = 2
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					total_development = 2500
+					NOT = { total_development = 3000 }
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Merger_degree_dip_power = 4
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					total_development = 3000
+					NOT = { total_development = 3500 }
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Merger_degree_dip_power = 6
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					total_development = 3500
+					NOT = { total_development = 4000 }
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Merger_degree_dip_power = 8
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					total_development = 4000
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Merger_degree_dip_power = 10
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					is_bankrupt = yes
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Merger_degree_dip_power = 1000
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					num_of_loans = 5
+					NOT = { num_of_loans = 10 }
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Merger_degree_dip_power = 2
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					num_of_loans = 10
+					NOT = { num_of_loans = 15 }
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Merger_degree_dip_power = 4
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					num_of_loans = 15
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Merger_degree_dip_power = 6
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					num_of_rebel_armies = 1
+					NOT = { 					num_of_rebel_armies = 5 }
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Merger_degree_dip_power = 2
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					num_of_rebel_armies = 5
+					NOT = { 					num_of_rebel_armies = 10 }
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Merger_degree_dip_power = 4
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					num_of_rebel_armies = 15
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Merger_degree_dip_power = 6
+				}        
+			}
+		}
+		THE_HNG_Army_corruption_mil_power = {
+			max = 50
+			base_monthly_growth = 0.5
+			is_good = no
+			scaled_modifier = {
+				trigger = {
+					NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
+				}
+				modifier = {
+					discipline = -0.2
+					land_morale = -0.4
+					land_maintenance_modifier = 1.4
+					cavalry_power = -1
+				}
+			}
+			scaled_modifier = {		
+				modifier = {
+					land_forcelimit_modifier = 0.4
+					land_maintenance_modifier = -0.4
+				}					
+			}
+			scaled_modifier = {
+				trigger = {
+					mil = 4
+					NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Army_corruption_mil_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Army_corruption_mil_power = -1
+				}
+			}
+			scaled_modifier = {
+				trigger = {
+					mil = 5
+					NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Army_corruption_mil_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Army_corruption_mil_power = -2
+				}
+			}
+			scaled_modifier = {
+				trigger = {
+					mil = 6
+					NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Army_corruption_mil_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Army_corruption_mil_power = -4
+				}
+			}
+			scaled_modifier = {
+				trigger = {
+					has_mil_advisor_3 = yes
+					NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Army_corruption_mil_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Army_corruption_mil_power = -1
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Army_corruption_mil_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Army_corruption_mil_power = -2
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Army_corruption_mil_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Army_corruption_mil_power = -3
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					army_professionalism = 0
+					NOT = { army_professionalism = 0.20 }
+					NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Army_corruption_mil_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Army_corruption_mil_power = 4
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					army_professionalism = 0.20
+					NOT = { army_professionalism = 0.40 }
+					NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Army_corruption_mil_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Army_corruption_mil_power = 2
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					army_professionalism = 0.60
+					NOT = { army_professionalism = 0.80 }
+					NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Army_corruption_mil_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Army_corruption_mil_power = -2
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					army_professionalism = 0.80
+					NOT = { army_professionalism = 1 }
+					NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Army_corruption_mil_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Army_corruption_mil_power = -10
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					army_professionalism = 1
+					NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Army_corruption_mil_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Army_corruption_mil_power = -16
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					army_size = 150
+					NOT = { army_size = 250 }
+					NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Army_corruption_mil_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Army_corruption_mil_power = 2
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					army_size = 250
+					NOT = { army_size = 350 }
+					NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Army_corruption_mil_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Army_corruption_mil_power = 4
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					army_size = 350
+					NOT = { army_size = 500 }
+					NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Army_corruption_mil_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Army_corruption_mil_power = 6
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					army_size = 5000
+					NOT = { army_size = 600 }
+					NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Army_corruption_mil_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Army_corruption_mil_power = 8
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					army_size = 700
+					NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Army_corruption_mil_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Army_corruption_mil_power = 10
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					is_bankrupt = yes
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Army_corruption_mil_power = 1000
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					num_of_loans = 5
+					NOT = { num_of_loans = 10 }
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Army_corruption_mil_power = 2
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					num_of_loans = 10
+					NOT = { num_of_loans = 15 }
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Army_corruption_mil_power = 4
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					num_of_loans = 15
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Army_corruption_mil_power = 6
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					num_of_rebel_armies = 1
+					NOT = { 					num_of_rebel_armies = 5 }
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Army_corruption_mil_power = 2
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					num_of_rebel_armies = 5
+					NOT = { 					num_of_rebel_armies = 10 }
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Army_corruption_mil_power = 4
+				}        
+			}
+			scaled_modifier = {
+				trigger = {
+					num_of_rebel_armies = 15
+					OR = {
+						NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army } 
+						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+						NOT = { has_country_flag = hng_do_the_change3_flag }
+					}
+					has_estate = estate_burghers
+					has_government_power = { 
+						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+						power_type = THE_HNG_Merger_degree_dip_power
+						value = 0
+					}
+				}
+				modifier = {    
+					monthly_THE_HNG_Army_corruption_mil_power = 6
+				}        
+			}
+		}
+	}
+	
+	interactions = {
+		THE_HNG_Inflation_rate_power = {
+			gui = russian_mechanics_interaction_gui
+			icon = GFX_THE_HNG_Inflation_rate
+			cost_type = THE_HNG_Inflation_rate_adm_power
+			cost = 15
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = THE_HNG_mechanic_done
+					adm_power = 50
+				}
+			}
+			effect = {
+				if = {
+					limit = { 
+						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic }
+					}
+					add_years_of_income = -0.25	
+				}
+				add_adm_power = -50
+				add_inflation = -5
+				add_country_modifier = {
+					name = HNG_Inflation_rate_power_buff
+					duration = 1825
+				}
+			}
+			cooldown_years = 5
+			ai_chance = {
+				factor = 10
+			}
+		}
+		THE_HNG_Merger_degree_power = {
+			gui = russian_mechanics_interaction_gui
+			icon = GFX_THE_HNG_Merger_degree
+			cost_type = THE_HNG_Merger_degree_dip_power
+			cost = 15
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = THE_HNG_mechanic_done
+					dip_power = 50
+				}
+			}
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system }
+					}
+					add_years_of_income = -0.25	
+				}
+				add_dip_power = -50
+				add_corruption = -2
+				add_country_modifier = {
+					name = HNG_Merger_degree_power_buff
+					duration = 1825
+				}
+			}
+			cooldown_years = 5
+			ai_chance = {
+				factor = 10
+			}
+		}
+		THE_HNG_Army_corruption_power = {
+			gui = russian_mechanics_interaction_gui
+			icon = GFX_THE_HNG_Army_corruption
+			cost_type = THE_HNG_Army_corruption_mil_power
+			cost = 15
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = THE_HNG_mechanic_done
+					mil_power = 50
+				}
+			}
+			effect = { 
+				if = {
+					limit = { 
+						NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army }
+					}
+					add_years_of_income = -0.25	
+				}
+				add_mil_power = -50
+				add_army_professionalism = 0.03
+				add_country_modifier = {
+					name = HNG_Army_corruption_power_buff
+					duration = 1825
+				}
+			}
+			cooldown_years = 5
+			ai_chance = {
+				factor = 10
+			}
+		}
+	}
+}

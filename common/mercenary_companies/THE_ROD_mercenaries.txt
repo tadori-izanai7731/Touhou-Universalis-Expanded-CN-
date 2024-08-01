@@ -1,0 +1,20 @@
+#吕根海盗
+THE_ROD_rug_pirate_company = {
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+	regiments_per_development = 0.06
+	cost_modifier = 0.5
+	home_province = 4745
+	cavalry_weight = 0
+	artillery_weight = 0
+	counts_towards_force_limit = no
+	max_size = 60
+	sprites = { dlc056_mlo_sprite_pack sav_base_sprite_pack westerngfx_sprite_pack }
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		mission_completed = THE_ROD_4_3
+	}
+	modifier = { 
+		shock_damage = 0.1
+		fire_damage_received = 0.1
+	}
+}

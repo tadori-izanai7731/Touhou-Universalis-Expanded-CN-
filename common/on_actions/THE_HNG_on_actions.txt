@@ -1,0 +1,47 @@
+# province
+# root = location, from = winning country
+on_siege_lost_province =  {
+	if = {
+		limit = { 
+			from = {
+				AND = {
+					OR = {
+						tag = HNG
+						was_tag = HNG
+					}
+					has_country_flag = flavor_THE_HNG_events70
+				}
+			}
+		}
+		root = {
+			change_culture = from
+			change_religion = from
+			add_core = from
+			cede_province = from
+		}
+	}
+	if = {
+		limit = { 
+			root = {
+				base_manpower = 2			
+			}
+			from = {
+				AND = {
+					OR = {
+						tag = HNG
+						was_tag = HNG
+					}
+					has_country_modifier = THE_hng_mission_modifier125
+				}
+			}
+		}
+		root = {
+			add_base_manpower = -1
+		}
+		from = {
+			add_years_of_income = 0.05
+			add_adm_power = 15
+			add_mil_power = 30
+		}
+	}
+}

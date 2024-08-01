@@ -1,0 +1,26 @@
+THE_HMC_huziwara_fire_triggered_modifier = {
+	potential = {
+		owner = {
+			OR = {
+				th_is_or_was_tag = { tag = HMC }
+				th_has_copied_from_target = {
+					target = HMC
+				}
+			}
+		}
+	}
+
+	trigger = {
+		FUJ = {
+			OR = {
+				alliance_with = owner
+				AND = {
+					is_subject_of = owner
+					NOT = { is_subject_of_type = tributary_state }
+				}
+			}
+		}
+	}
+	diplomatic_upkeep = 1
+	backrow_artillery_damage = 0.1
+}

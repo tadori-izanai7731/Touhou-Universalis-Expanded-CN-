@@ -1,0 +1,537 @@
+THE_ROD_dark_moon_night_mechanic = {
+	# alert_icon_gfx = GFX_alerticons_government_mechanics
+	# alert_icon_index = 5
+	available = {
+		always = yes
+	}
+
+	powers = {
+		THE_ROD_government_mechanic_power = {
+			gui = THE_ROD_government_mechanic_power_gui
+			show_before_interactions = yes
+			max = 100
+			range_modifier = {
+				modifier = {
+					improve_relation_modifier = 0.1
+					global_trade_power = 0.1
+				}
+				start_value = 0
+				end_value = 100
+			}
+			range_modifier = {
+				modifier = {
+					spy_offence = 0.15
+					global_monthly_devastation = 0.2
+				}
+				start_value = 25
+				end_value = 100
+			}
+			range_modifier = {
+				modifier = {
+					years_of_nationalism = -10
+					global_monthly_devastation = 0.2
+				}
+				start_value = 50
+				end_value = 100
+			}
+			range_modifier = {
+				modifier = {
+					core_creation = -0.2
+					global_monthly_devastation = 0.2
+				}
+				start_value = 75
+				end_value = 100
+			}
+
+			### Extra Stage 1 Modifier
+			range_modifier = {
+				modifier = {
+					state_maintenance_modifier = -0.2
+				}
+				start_value = 0
+				end_value = 100
+				trigger = {
+					mission_completed = THE_ROD_2_4
+				}
+			}
+			range_modifier = {
+				modifier = {
+					development_cost = -0.1
+				}
+				start_value = 0
+				end_value = 100
+				trigger = {
+					mission_completed = THE_ROD_1_10
+				}
+			}
+			range_modifier = {
+				modifier = {
+					global_regiment_recruit_speed = -0.1
+				}
+				start_value = 0
+				end_value = 100
+				trigger = {
+					mission_completed = THE_ROD_5_12
+				}
+			}
+
+			### Extra Stage 2 Modifier
+			range_modifier = {
+				modifier = {
+					promote_culture_cost = -0.25
+				}
+				start_value = 25
+				end_value = 100
+				trigger = {
+					mission_completed = THE_ROD_1_6
+				}
+			}
+			range_modifier = {
+				modifier = {
+					merchants = 1
+				}
+				start_value = 25
+				end_value = 100
+				trigger = {
+					mission_completed = THE_ROD_2_12
+				}
+			}
+			range_modifier = {
+				modifier = {
+					global_regiment_cost = -0.1
+				}
+				start_value = 25
+				end_value = 100
+				trigger = {
+					mission_completed = THE_ROD_5_12
+				}
+			}
+
+			### Extra Stage 3 Modifier
+			range_modifier = {
+				modifier = {
+					accept_vassalization_reasons = 25
+				}
+				start_value = 50
+				end_value = 100
+				trigger = {
+					mission_completed = THE_ROD_1_8
+				}
+			}
+			range_modifier = {
+				modifier = {
+					trade_company_investment_cost = -0.25
+				}
+				start_value = 50
+				end_value = 100
+				trigger = {
+					mission_completed = THE_ROD_3_13
+				}
+			}
+			range_modifier = {
+				modifier = {
+					discipline = 0.05
+				}
+				start_value = 50
+				end_value = 100
+				trigger = {
+					mission_completed = THE_ROD_4_14
+				}
+			}
+
+			### Extra Stage 4 Modifier
+			range_modifier = {
+				modifier = {
+					administrative_efficiency = 0.05
+				}
+				start_value = 75
+				end_value = 100
+				trigger = {
+					mission_completed = THE_ROD_3_9
+				}
+			}
+			range_modifier = {
+				modifier = {
+					trade_steering = 0.33
+				}
+				start_value = 75
+				end_value = 100
+				trigger = {
+					mission_completed = THE_ROD_3_15
+				}
+			}
+			range_modifier = {
+				modifier = {
+					fire_damage_received = -0.2
+				}
+				start_value = 75
+				end_value = 100
+				trigger = {
+					mission_completed = THE_ROD_4_14
+				}
+			}
+			increases_with_global = no
+		}
+	}
+	interactions = {
+		THE_ROD_government_mechanic_interaction_1 = {
+			gui = THE_ROD_government_mechanic_interaction_gui
+			icon = GFX_THE_ROD_government_mechanic_interaction_1
+			trigger = {
+
+			}
+			effect = {
+				if = {
+					limit = { has_country_flag = THE_ROD_remove_government_mechanic_trigger_flag }
+					add_government_power = {
+						mechanic_type = THE_ROD_dark_moon_night_mechanic
+						power_type = THE_ROD_government_mechanic_power
+						value = 25
+					}
+					hidden_effect = {
+						set_variable = {
+							which = the_rod_darkness_manipulation_var
+							value = 0
+						}
+					}
+				}
+				else = {
+					custom_tooltip = THE_ROD_transform_darkness_manipulation_to_mechanic_power_tt
+					custom_tooltip = empty_line_tt
+					custom_tooltip = THE_ROD_display_darkness_manipulation_var_tt
+					hidden_effect = {
+						if = {
+							limit = {
+								check_variable = {
+									which = the_rod_darkness_manipulation_var
+									value = 100
+								}
+							}
+							add_government_power = {
+								mechanic_type = THE_ROD_dark_moon_night_mechanic
+								power_type = THE_ROD_government_mechanic_power
+								value = 100
+							}
+							set_variable = {
+								which = the_rod_darkness_manipulation_var
+								value = 0
+							}
+						}
+						else = {
+							THE_ROD_transform_darkness_manipulation_to_mechanic_power_scripted_effect = { value = 10 }
+							THE_ROD_transform_darkness_manipulation_to_mechanic_power_scripted_effect = { value = 1 }
+							THE_ROD_transform_darkness_manipulation_to_mechanic_power_scripted_effect = { value = 0.1 }
+							THE_ROD_transform_darkness_manipulation_to_mechanic_power_scripted_effect = { value = 0.01 }
+							THE_ROD_transform_darkness_manipulation_to_mechanic_power_scripted_effect = { value = 0.001 }
+							set_variable = {
+								which = the_rod_darkness_manipulation_var
+								value = 0
+							}
+						}
+					}
+				}
+			}
+			cooldown_years = 5
+			ai_chance = {
+				factor = 0
+			}
+		}
+		THE_ROD_government_mechanic_interaction_2 = {
+			gui = THE_ROD_government_mechanic_interaction_gui
+			icon = GFX_THE_ROD_government_mechanic_interaction_2
+			trigger = {
+				if = {
+					limit = { NOT = { has_country_flag = THE_ROD_remove_government_mechanic_trigger_flag } }
+					adm_power_cost = 100
+					dip_power_cost = 100
+					mil_power_cost = 100
+					has_government_power = {
+						mechanic_type = THE_ROD_dark_moon_night_mechanic
+						power_type = THE_ROD_government_mechanic_power
+						value = 25
+					}
+				}
+				else = {
+					always = yes
+				}
+			}
+			effect = {
+				if = {
+					limit = { NOT = { has_country_flag = THE_ROD_remove_government_mechanic_trigger_flag } }
+					adm_power_cost = 100
+					dip_power_cost = 100
+					mil_power_cost = 100
+				}
+				add_government_power = {
+					mechanic_type = THE_ROD_dark_moon_night_mechanic
+					power_type = THE_ROD_government_mechanic_power
+					value = -25
+				}
+				if = {
+					limit = { has_country_flag = THE_ROD_interface2_extra_effect_flag }
+					custom_tooltip = THE_ROD_mechanic_interface2_extra_effect_tt
+					hidden_effect = {
+						every_ally = {
+							limit = {
+								trust = {
+									who = ROOT
+									value = 100
+								}
+							}
+							every_owned_province = {
+								limit = {
+									any_neighbor_province = {
+										owned_by = ROOT
+									}
+								}
+								add_core = ROOT
+							}
+						}
+					}
+				}
+			}
+			cooldown_years = 5
+			ai_chance = {
+				factor = 0
+			}
+		}
+	}
+}
+
+THE_ROD_german_culture_unity_mechanic = {
+	available = {
+		always = yes
+	}
+	powers = {
+		THE_ROD_german_cultural_unity_power = {
+			# gui = cultural_unity_gov_mech
+			# show_before_interactions = yes
+			max = 100
+			min = 0
+			base_monthly_growth = 0.5
+			scaled_modifier = {
+				trigger = { has_country_flag = THE_ROD_had_accept_german_pommeranian_culture_flag }
+				modifier = {
+					prestige_decay = -0.02
+				}
+			}
+			scaled_modifier = {
+				trigger = { has_country_flag = THE_ROD_had_accept_german_prussian_culture_flag }
+				modifier = {
+					drill_gain_modifier = 0.5
+				}
+			}
+			scaled_modifier = {
+				trigger = { has_country_flag = THE_ROD_had_accept_german_baltic_german_culture_flag }
+				modifier = {
+					stability_cost_modifier = -0.2
+				}
+			}
+			scaled_modifier = {
+				trigger = { has_country_flag = THE_ROD_had_accept_german_lower_saxon_culture_flag }
+				modifier = {
+					improve_relation_modifier = 0.25
+				}
+			}
+			scaled_modifier = {
+				trigger = { has_country_flag = THE_ROD_had_accept_german_hannoverian_culture_flag }
+				modifier = {
+					manpower_recovery_speed = 0.15
+				}
+			}
+			scaled_modifier = {
+				trigger = { has_country_flag = THE_ROD_had_accept_german_hessian_culture_flag }
+				modifier = {
+					production_efficiency = 0.1
+				}
+			}
+			scaled_modifier = {
+				trigger = { has_country_flag = THE_ROD_had_accept_german_saxon_culture_flag }
+				modifier = {
+					ae_impact = -0.1
+				}
+			}
+			scaled_modifier = {
+				trigger = { has_country_flag = THE_ROD_had_accept_german_franconian_culture_flag }
+				modifier = {
+					advisor_cost = -0.15
+				}
+			}
+			scaled_modifier = {
+				trigger = { has_country_flag = THE_ROD_had_accept_german_swabian_culture_flag }
+				modifier = {
+					cavalry_cost = -0.2
+				}
+			}
+			scaled_modifier = {
+				trigger = { has_country_flag = THE_ROD_had_accept_german_swiss_culture_flag }
+				modifier = {
+					garrison_size = 0.2
+				}
+			}
+			scaled_modifier = {
+				trigger = { has_country_flag = THE_ROD_had_accept_german_bavarian_culture_flag }
+				modifier = {
+					development_cost = -0.1
+				}
+			}
+			scaled_modifier = {
+				trigger = { has_country_flag = THE_ROD_had_accept_german_austrian_culture_flag }
+				modifier = {
+					diplomatic_reputation = 2
+				}
+			}
+			scaled_modifier = {
+				trigger = { has_country_flag = THE_ROD_had_accept_german_dutch_culture_flag }
+				modifier = {
+					inflation_reduction = 0.2
+				}
+			}
+			scaled_modifier = {
+				trigger = { has_country_flag = THE_ROD_had_accept_german_flemish_culture_flag }
+				modifier = {
+					morale_damage_received = -0.1
+				}
+			}
+			scaled_modifier = {
+				trigger = { has_country_flag = THE_ROD_had_accept_german_frisian_culture_flag }
+				modifier = {
+					naval_morale = 0.1
+				}
+			}
+			range_modifier = {
+				trigger = { accepted_culture = pommeranian }
+				modifier = { monthly_THE_ROD_german_cultural_unity_power = 0.05 }
+				start_value = 0
+				end_value = 100
+			}
+			range_modifier = {
+				trigger = { accepted_culture = prussian }
+				modifier = { monthly_THE_ROD_german_cultural_unity_power = 0.05 }
+				start_value = 0
+				end_value = 100
+			}
+			range_modifier = {
+				trigger = { accepted_culture = baltic_german }
+				modifier = { monthly_THE_ROD_german_cultural_unity_power = 0.05 }
+				start_value = 0
+				end_value = 100
+			}
+			range_modifier = {
+				trigger = { accepted_culture = lower_saxon }
+				modifier = { monthly_THE_ROD_german_cultural_unity_power = 0.05 }
+				start_value = 0
+				end_value = 100
+			}
+			range_modifier = {
+				trigger = { accepted_culture = hannoverian }
+				modifier = { monthly_THE_ROD_german_cultural_unity_power = 0.05 }
+				start_value = 0
+				end_value = 100
+			}
+			range_modifier = {
+				trigger = { accepted_culture = hessian }
+				modifier = { monthly_THE_ROD_german_cultural_unity_power = 0.05 }
+				start_value = 0
+				end_value = 100
+			}
+			range_modifier = {
+				trigger = { accepted_culture = saxon }
+				modifier = { monthly_THE_ROD_german_cultural_unity_power = 0.05 }
+				start_value = 0
+				end_value = 100
+			}
+			range_modifier = {
+				trigger = { accepted_culture = franconian }
+				modifier = { monthly_THE_ROD_german_cultural_unity_power = 0.05 }
+				start_value = 0
+				end_value = 100
+			}
+			range_modifier = {
+				trigger = { accepted_culture = swabian }
+				modifier = { monthly_THE_ROD_german_cultural_unity_power = 0.05 }
+				start_value = 0
+				end_value = 100
+			}
+			range_modifier = {
+				trigger = { accepted_culture = swiss }
+				modifier = { monthly_THE_ROD_german_cultural_unity_power = 0.05 }
+				start_value = 0
+				end_value = 100
+			}
+			range_modifier = {
+				trigger = { accepted_culture = bavarian }
+				modifier = { monthly_THE_ROD_german_cultural_unity_power = 0.05 }
+				start_value = 0
+				end_value = 100
+			}
+			range_modifier = {
+				trigger = { accepted_culture = austrian }
+				modifier = { monthly_THE_ROD_german_cultural_unity_power = 0.05 }
+				start_value = 0
+				end_value = 100
+			}
+			range_modifier = {
+				trigger = { accepted_culture = dutch }
+				modifier = { monthly_THE_ROD_german_cultural_unity_power = 0.05 }
+				start_value = 0
+				end_value = 100
+			}
+			range_modifier = {
+				trigger = { accepted_culture = flemish }
+				modifier = { monthly_THE_ROD_german_cultural_unity_power = 0.05 }
+				start_value = 0
+				end_value = 100
+			}
+			range_modifier = {
+				trigger = { accepted_culture = frisian }
+				modifier = { monthly_THE_ROD_german_cultural_unity_power = 0.05 }
+				start_value = 0
+				end_value = 100
+			}
+			range_modifier = {
+				trigger = { accepted_culture = gothic_ger }
+				modifier = { monthly_THE_ROD_german_cultural_unity_power = 0.05 }
+				start_value = 0
+				end_value = 100
+			}
+		}
+	}
+	interactions = {
+		THE_ROD_THE_ROD_german_culture_unity_interaction = {
+			gui = THE_ROD_german_unity_interaction_gui
+			# icon = THE_ROD_accept_culture_icon
+			cost_type = THE_ROD_german_cultural_unity_power
+			cost = 100
+			center = no
+			trigger = {
+				OR = {
+					THE_ROD_have_not_unity_german_culture_scripted_trigger = { culture = pommeranian }
+					THE_ROD_have_not_unity_german_culture_scripted_trigger = { culture = prussian }
+					THE_ROD_have_not_unity_german_culture_scripted_trigger = { culture = baltic_german }
+					THE_ROD_have_not_unity_german_culture_scripted_trigger = { culture = lower_saxon }
+					THE_ROD_have_not_unity_german_culture_scripted_trigger = { culture = hannoverian }
+					THE_ROD_have_not_unity_german_culture_scripted_trigger = { culture = hessian }
+					THE_ROD_have_not_unity_german_culture_scripted_trigger = { culture = saxon }
+					THE_ROD_have_not_unity_german_culture_scripted_trigger = { culture = franconian }
+					THE_ROD_have_not_unity_german_culture_scripted_trigger = { culture = swabian }
+					THE_ROD_have_not_unity_german_culture_scripted_trigger = { culture = swiss }
+					THE_ROD_have_not_unity_german_culture_scripted_trigger = { culture = bavarian }
+					THE_ROD_have_not_unity_german_culture_scripted_trigger = { culture = austrian }
+					THE_ROD_have_not_unity_german_culture_scripted_trigger = { culture = dutch }
+					THE_ROD_have_not_unity_german_culture_scripted_trigger = { culture = flemish }
+					THE_ROD_have_not_unity_german_culture_scripted_trigger = { culture = frisian }
+				}
+			}
+			effect = {
+				country_event = {
+					id = THE_ROD_events.3
+				}
+			}
+			cooldown_years = 0
+			ai_chance = {
+				factor = 1000
+			}
+		}
+	}
+}

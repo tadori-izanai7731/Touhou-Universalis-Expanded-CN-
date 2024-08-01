@@ -1,0 +1,177 @@
+THE_ROD_apparitions_stalk_the_night_monarchy = {
+	lock_level_when_selected = yes
+	icon = "gourmet_monarchy_reform"
+	potential = {
+		OR = {
+			has_reform = THE_ROD_apparitions_stalk_the_night_monarchy
+			have_had_reform = THE_ROD_apparitions_stalk_the_night_monarchy
+		}
+		# th_is_or_was_tag = {
+		# 	tag = ROD
+		# }
+	}
+	valid_for_new_country = no
+	valid_for_nation_designer = no
+	allow_normal_conversion = yes
+	can_change_primary_culture = no
+	modifiers = {
+		global_autonomy = -0.05
+		trade_efficiency = 0.1
+		diplomatic_reputation = 1
+		global_unrest = -1
+		num_accepted_cultures = 6
+		governing_capacity = 250
+	}
+
+	conditional = {
+		allow = { always = yes }
+		rulers_can_be_generals = no
+		is_eligible_for_hre_emperor = no
+		# custom_attributes = {
+		# 	can_royal_marry_heathens = yes
+		# }
+		
+	}
+
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+	}
+
+	government_abilities = {
+		THE_ROD_dark_moon_night_mechanic
+	}
+}
+
+THE_ROD_nightingale_reform = {
+	icon = "THE_ROD_nightingale"
+	potential = {
+		has_country_flag = THE_ROD_unlock_nightingale_reform_flag
+	}
+	trigger = { }
+	modifiers = {
+		diplomats = 1
+		diplomatic_upkeep = 2
+		ae_impact = -0.1
+		monthly_favor_modifier = 0.25
+		nobles_loyalty_modifier = 0.1
+	}
+	custom_attributes = {
+		THE_ROD_court_banquet_attribute = yes
+	}
+}
+
+THE_ROD_spread_hakurei_message_reform = {
+	icon = "connection_to_hakurei_reform"
+	potential = {
+		has_country_flag = THE_ROD_unlock_spread_hakurei_message_reform_flag
+	}
+	trigger = {
+		religion = th_hakureishinto
+	}
+	modifiers = {
+		reverse_relation_with_same_religion = 25
+		# reverse_relation_with_heathen_religion = -25
+		prestige_per_development_from_conversion = 0.5
+		enforce_religion_cost = -0.5
+		church_loyalty_modifier = 0.1
+		manpower_in_true_faith_provinces = 0.2
+	}
+	custom_attributes = {
+		gain_monarch_power_from_force_converting = yes
+		THE_ROD_convert_religion_add_church_loyalty_or_adm = yes
+		enables_divine_idea_group = yes
+	}
+}
+
+THE_ROD_darknedd_diocese_reform = {
+	icon = "monastic_elections_reform"
+	potential = {
+		has_country_flag = THE_ROD_unlock_darknedd_diocese_reform_flag
+	}
+	trigger = {
+		religion = catholic
+	}
+	modifiers = {
+		church_loyalty_modifier = 0.1
+		tolerance_own = 2
+		institution_spread_from_true_faith = 0.25
+		papal_influence = 2
+	}
+	custom_attributes = {
+		seizing_land_no_rebels_from_estate_church = yes
+		THE_ROD_become_papal_controller_attribute = yes
+	}
+}
+
+THE_ROD_fall_into_world_port_reform = {
+	icon = "pirate_ship"
+	potential = {
+		has_country_flag = THE_ROD_unlock_fall_into_world_port_reform_flag
+	}
+	trigger = { }
+	modifiers = {
+		merchants = 2
+		placed_merchant_power_modifier = 0.5
+		trade_efficiency = 0.1
+		trade_steering = 0.25
+		trade_company_governing_cost = -0.5
+		burghers_loyalty_modifier = 0.1
+	}
+	custom_attributes = {
+		THE_ROD_darkness_trade_war_without_trigger = yes
+		can_establish_trade_protectorates = yes
+		enables_plutocratic_idea_group = yes
+	}
+}
+
+THE_ROD_pax_youkai_in_german_reform = {
+	icon = "THE_ROD_german"
+
+	potential = {
+		has_country_flag = THE_ROD_unlock_pax_youkai_in_german_reform_flag
+	}
+
+	trigger = { }
+
+	modifiers = {
+		legitimacy = 1
+		republican_tradition = 0.5
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+		all_estate_influence_modifier = -0.05
+		all_estate_loyalty_equilibrium = 0.1
+		all_estate_possible_privileges = 2
+		max_absolutism = 20
+		monthly_THE_ROD_german_cultural_unity_power = 1
+	}
+
+	government_abilities = {
+		THE_ROD_german_culture_unity_mechanic
+	}
+}
+
+THE_ROD_netherland_governor_reform = {
+	icon = "seven_provinces_reform"
+
+	potential = {
+		has_country_flag = THE_ROD_unlock_netherland_governor_reform_flag
+	}
+
+	modifiers = {
+		global_unrest = -2
+		reform_progress_growth = 0.25
+		stability_cost_modifier = -0.25
+		all_estate_influence_modifier = -0.05
+		loyalty_change_on_revoked = 0.1
+		estate_interaction_cooldown_modifier = -0.25
+	}
+
+	custom_attributes = {
+		centralize_state_half_refund = yes
+		centralize_state_development = yes
+		no_more_dutch_revolt = yes
+	}
+}

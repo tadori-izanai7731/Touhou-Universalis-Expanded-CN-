@@ -1,0 +1,64 @@
+Touhou = {
+	th_kagiyama = {	#kagiyama
+		color = { 80 178 142 }
+		heretic = { th_heretic_lunar th_heretic_anime th_heretic_manga_elitists }
+		icon = 42
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			tolerance_heretic = 1
+			tolerance_own = 1
+			fire_damage_received = -0.10
+			shock_damage_received = -0.10
+			rival_border_fort_maintenance = -0.15
+		}
+		
+		province = {
+			local_development_cost = -0.05
+			trade_goods_size_modifier = 0.2
+			province_trade_power_modifier = 0.1
+		}
+		
+		#Center of religions are always for the religion group as a whole
+		#center_of_religion = 4998
+		
+		allowed_center_conversion = {
+			th_hakureishinto
+			th_taoist
+			th_buddhist
+			th_oldhakurei
+			th_shinkism
+			th_scientistic
+		}
+
+		will_get_center = { #Refered to even for initial CoR Spawn
+			always = yes
+		}
+
+		country_as_secondary = {
+			global_missionary_strength = 0.01
+			tolerance_own = 1
+		}
+
+		uses_church_power = yes
+		aspects = {
+			kagiyama_epidemic_aspect
+			kagiyama_calamity_aspect
+			kagiyama_flaw_aspect
+			kagiyama_scar_aspect
+			kagiyama_injury_aspect
+			kagiyama_disaster_aspect
+			kagiyama_severe_aspect
+			kagiyama_misforture_aspect
+			kagiyama_epidemic_aspectv2
+			kagiyama_calamity_aspectv2
+			kagiyama_flaw_aspectv2
+			kagiyama_scar_aspectv2
+			kagiyama_injury_aspectv2
+			kagiyama_disaster_aspectv2
+			kagiyama_severe_aspectv2
+		}
+		aspects_name = KAGIYAMA_ASPECTS
+		
+		harmonized_modifier = th_harmonized_moriya_shintoism
+	}
+}

@@ -1,0 +1,2432 @@
+THE_kko_missions_first_slot = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = KKO
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	has_country_shield = yes
+	KKO_taoism_change = {
+		icon = kko_event_20
+		required_missions = { KKO_religious_chance }
+		position = 3
+		provinces_to_highlight = {
+			owned_by = MYO
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = kko_daojiaoxian_ok
+				has_country_flag = kko_daojiaoxian
+			}
+			OR = {
+				NOT = { exists = MYO }
+				war_with = MYO
+				has_won_war_against = {
+					who = MYO
+					max_years_since = 20
+				}
+			}
+		}
+		effect = {
+			add_government_power = {
+				mechanic_type = th_kokoro_mechanic
+				power_type = kko_xi_dip_power
+				value = -5
+			}
+			add_government_power = {
+				mechanic_type = th_kokoro_mechanic
+				power_type = kko_you_adm_power
+				value = -5
+			}
+			add_government_power = {
+				mechanic_type = th_kokoro_mechanic
+				power_type = kko_nu_mil_power
+				value = 15
+			}
+			add_mil_power = 50
+			Eastern_myouren_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Myouren_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Northern_myouren_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			complete_mission = KKO_foism_change
+		}
+	}
+	KKO_religious_war = {
+		icon = wars_of_religion
+		required_missions = { KKO_taoism_change }
+		required_missions = { KKO_foism_change }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4987
+				province_id = 5141
+				province_id = 5025
+				province_id = 5170
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			num_of_allies = 1
+			OR = {
+				AND = {
+					4987 = {
+						owned_by = KKO
+					}
+					5141 = {
+						owned_by = KKO
+					}
+				}
+				AND = {
+					5025 = {
+						owned_by = KKO
+					}
+					5170 = {
+						owned_by = KKO
+					}
+				}
+			}
+		}
+		effect = {
+			add_mil_power = 50
+			add_adm_power = 50
+			if = {
+				limit = { has_country_flag = kko_daojiaoxian }
+				custom_tooltip = THE_KKO_daojiaoxian_tt_yes
+			}
+			else = {
+				custom_tooltip = THE_KKO_daojiaoxian_tt_no
+			}
+			tooltip = {
+				add_country_modifier = {
+					name = kko_daojiao_war_buff
+					duration = -1
+				}
+			}
+			if = {
+				limit = { has_country_flag = kko_fojiaoxian }
+				custom_tooltip = THE_KKO_fojiaoxian_tt_yes
+			}
+			else = {
+				custom_tooltip = THE_KKO_fojiaoxian_tt_no
+			}
+			tooltip = {
+				add_country_modifier = {
+					name = kko_fojiao_war_buff
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = kko_daojiaoxian
+					}
+					add_country_modifier = {
+						name = kko_daojiao_war_buff
+						duration = 18250
+					}
+				}
+				if = {
+					limit = {
+						has_country_flag = kko_fojiaoxian
+					}
+					add_country_modifier = {
+						name = kko_fojiao_war_buff
+						duration = 18250
+					}
+				}
+			}
+		}
+	}
+	KKO_foism_people = {
+		icon = mission_touhou_myouren_temple
+		required_missions = { KKO_religious_war }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						area = Northern_myouren_state
+						area = Myouren_state
+					}
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				AND = {
+					province_id = 4987
+					OR = {
+						NOT = { num_of_times_improved = 3 }
+						nationalism = 1
+					}
+				}
+				AND = {
+					province_id = 5141
+					OR = {
+						NOT = { num_of_times_improved = 2 }
+						nationalism = 1
+					}
+				}
+				AND = {
+					province_id = 5140
+					OR = {
+						NOT = { num_of_times_improved = 2 }
+						nationalism = 1
+					}
+				}
+				AND = {
+					province_id = 5142
+					OR = {
+						NOT = { num_of_times_improved = 2 }
+						nationalism = 1
+					}
+				}
+			}
+
+		}
+		trigger = {
+			Northern_myouren_state = {
+				type = all
+				OR = {
+					owned_by = KKO
+					owned_by = SNK
+				}
+			}
+			Myouren_state = {
+				type = all
+				OR = {
+					owned_by = KKO
+					owned_by = SNK
+				}
+			}
+			4987 = {
+				num_of_times_improved = 3
+				NOT = {
+					nationalism = 1
+				}
+			}
+			5141 = {
+				num_of_times_improved = 2
+				NOT = {
+					nationalism = 1
+				}
+			}
+			5140 = {
+				num_of_times_improved = 2
+				NOT = {
+					nationalism = 1
+				}
+			}
+			5142 = {
+				num_of_times_improved = 2
+				NOT = {
+					nationalism = 1
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = kko_daojiaoxian_ok
+				has_country_flag = kko_daojiaoxian
+			}
+		}
+		effect = {
+			add_adm_power = 100
+			add_dip_power = 100
+			complete_mission = KKO_taoism_people
+			add_country_modifier = {
+				name = kko_chuanjiao_buff
+				duration = 7300
+			}
+			Eastern_myouren_state = {
+				type = all
+				change_culture = Tsukumogami_culture
+			}
+		}
+	}
+	KKO_taoism_war = {
+		icon = kko_event_22
+		required_missions = { KKO_foism_people }
+		position = 6
+		provinces_to_highlight = {
+			area = Northern_senkai
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			OR = {
+				AND = {
+					diplomatic_reputation = 3
+					custom_trigger_tooltip = {
+						tooltip = kko_daojiaoxian_nowdown1
+						has_country_flag = kko_daojiaoxian_nowdown
+					}
+				}
+				Northern_senkai = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = kko_daojiaoxian_ok
+				has_country_flag = kko_daojiaoxian
+			}
+		}
+		effect = {
+			complete_mission = KKO_foism_war
+			custom_tooltip = THE_KKO_form_union_snk_by_event_tt
+			# custom_tooltip = kko_war_tooltip1
+		}
+	}
+	KKO_religious_peace = {
+		icon = mission_touhou_mountain_castle
+		required_missions = { KKO_taoism_war }
+		required_missions = { KKO_foism_war }
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						area = Eastern_senkai
+						area = Senkai_state
+						area = Eastern_myouren_state
+						area = Northern_myouren_state
+						area = Myouren_state
+						area = Northern_senkai
+					}
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+			}
+
+		}
+		trigger = {
+			Eastern_senkai = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			Senkai_state = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			Eastern_myouren_state = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			Northern_myouren_state = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			Myouren_state = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			Northern_senkai = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			if = {
+				limit = {
+					has_country_flag = kko_daojiaoxian
+				}
+				NOT = {
+					exists = MYO
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = kko_fojiaoxian
+				}
+				NOT = {
+					exists = SNK
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				complete_mission = KKO_free_reilgious
+				complete_mission = KKO_religious_zili
+				complete_mission = KKO_religious_about
+			}
+			complete_mission = KKO_religious_harmony
+			custom_tooltip = empty_line_tt
+			Senkai_state = {
+				type = all
+				change_culture = Tsukumogami_culture
+			}
+			Eastern_senkai = {
+				type = all
+				change_culture = Tsukumogami_culture
+			}
+			Myouren_state = {
+				type = all
+				change_culture = Tsukumogami_culture
+			}
+			Northern_myouren_state = {
+				type = all
+				change_culture = Tsukumogami_culture
+			}
+			if = {
+				limit = { has_country_flag = kko_daojiaoxian }
+				custom_tooltip = THE_KKO_daojiaoxian_tt_yes
+			}
+			else = {
+				custom_tooltip = THE_KKO_daojiaoxian_tt_no
+			}
+			tooltip = {
+				add_country_modifier = {
+					name = kko_daojiao_war_buff2
+					duration = -1
+				}
+			}
+			if = {
+				limit = { has_country_flag = kko_fojiaoxian }
+				custom_tooltip = THE_KKO_fojiaoxian_tt_yes
+			}
+			else = {
+				custom_tooltip = THE_KKO_fojiaoxian_tt_no
+			}
+			tooltip = {
+				add_country_modifier = {
+					name = kko_fojiao_war_buff2
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = kko_daojiaoxian
+					}
+					add_country_modifier = {
+						name = kko_daojiao_war_buff2
+						duration = -1
+					}
+				}
+				if = {
+					limit = {
+						has_country_flag = kko_fojiaoxian
+					}
+					add_country_modifier = {
+						name = kko_fojiao_war_buff2
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	KKO_japan_1 = {
+		icon = mission_to_japan
+		position = 8
+		provinces_to_highlight = {
+			is_capital_of = ASK
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = kko_xiwang_reget123
+				has_country_flag = kko_xiwang_reget
+			}
+			treasury = 500
+			if = {
+				limit = { exists = ASK }
+				ASK = {
+					has_opinion = {
+						who = root
+						value = 150
+					}
+				}
+				ASK = {
+					has_country_modifier = KKO_dark_nengyue_buff1
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kko_japan_allience_depend_buff
+				duration = -1
+			}
+			add_treasury = -500
+			add_prestige = 15
+			add_adm_power = 50
+			1021 = {
+				every_country = {
+					limit = {
+						is_core = PREV
+					}
+					remove_core = PREV
+				}
+			}
+			1021 = {
+				cede_province = KKO
+				add_core = KKO
+				THE_KKO_CHANGE_name_scripted_efffect = yes
+				change_culture = Tsukumogami_culture
+			}
+		}
+	}
+	KKO_japan_2 = {
+		icon = mission_japanese_fort
+		required_missions = { KKO_japan_1 }
+		position = 9
+		provinces_to_highlight = {
+			OR = {
+				is_capital_of = ASK
+				province_id = 1028
+			}
+		}
+		trigger = {
+			if = {
+				limit = { exists = ASK }
+				ASK = {
+					has_opinion = {
+						who = KKO
+						value = 180
+					}
+				} 
+				alliance_with = ASK
+			}
+			1028 = {
+				OR = {
+					owner = {
+						has_opinion = {
+							who = KKO
+							value = 180
+						}
+						alliance_with = KKO
+						has_country_modifier = KKO_dark_nengyue_buff1
+					}
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = kko_japan_tour123
+			country_event = {
+				id = KKO_flavor.44
+			}
+			hidden_effect = {
+				set_country_flag = kko_japan_tour_1
+			}
+		}
+	}
+	KKO_japan_3 = {
+		icon = mission_japanese_samurai
+		required_missions = { KKO_japan_2 }
+		position = 10
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = the_kko_tour_japan_over3
+				OR = {
+					has_country_flag = kko_japan_tour_3
+					has_country_flag = kko_japan_tour_4
+					has_country_flag = kko_japan_tour_5
+				}
+			}
+		}
+		effect = {
+			# custom_tooltip = KKO_genre_change1234
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = { mission_completed = KKO_wuyishi_pailian }
+				custom_tooltip = THE_KKO_unlock_school_change_decision_japan_tt_yes
+			}
+			else = {
+				custom_tooltip = THE_KKO_unlock_school_change_decision_japan_tt_no
+			}
+			tooltip = {
+				custom_tooltip = THE_KKO_unlock_school_change_decision_tt
+			}
+		}
+	}
+	KKO_japan_4 = {
+		icon = jap_five_regent_houses
+		required_missions = { KKO_japan_3 }
+		position = 11
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = the_kko_tour_japan_over5
+				has_country_flag = kko_japan_tour_5
+			}
+		}
+		effect = {
+			custom_tooltip = THE_KKO_unlock_all_noh_school_tt
+			# custom_tooltip = KKO_japan_4_12
+			custom_tooltip = empty_line_tt
+			custom_tooltip = kko_golden_age_reset
+			hidden_effect = {
+				if = {
+					limit = {
+						in_golden_age = yes
+					}
+					extend_golden_age = 600
+				}
+				else = {
+					reset_golden_age = yes
+				}
+			}
+		}
+	}
+	KKO_japan_5 = {
+		icon = mission_touhou_hkr_estate
+		required_missions = { KKO_japan_4 }
+		position = 12
+		trigger = {
+		}
+		effect = {
+			custom_tooltip = THE_KKO_japan_alliance_tt
+			# custom_tooltip = KKO_japan_tooltip_1
+			tooltip = {
+				add_country_modifier = {
+					name = kko_japan_with_allience_buff
+					duration = -1
+				}
+			}
+			custom_tooltip = KKO_japan_tooltip_2
+			custom_tooltip = KKO_japan_tooltip_12
+		}
+	}
+	KKO_chanwan_xiuxing = {
+		icon = mission_touhou_moriya_temple
+		position = 14
+		trigger = {
+			mission_completed = KKO_qinggan_xiuxing
+			AND = {
+				is_in_deficit = yes
+				war_exhaustion = 4
+				NOT = {
+					army_size_percentage = 0.75
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = THE_KKO_remove_mask_debuff_tt
+			set_country_flag = qin_chanwan_ok
+			add_country_modifier = {
+				name = mission_chanwan_buff
+				duration = 18250
+			}
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+		}
+	}
+	KKO_huli_xiuxing = {
+		icon = mission_touhou_myouren_temple
+		position = 15
+		trigger = {
+			mission_completed = KKO_qinggan_xiuxing
+			AND = {
+				manpower_percentage = 0.80
+				army_professionalism = 0.20
+				army_tradition = 40
+				has_commanding_three_star = yes
+			}
+		}
+		effect = {
+			custom_tooltip = THE_KKO_remove_mask_debuff_tt
+			set_country_flag = qin_huli_ok
+			add_country_modifier = {
+				name = mission_huli_buff
+				duration = 18250
+			}
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+		}
+	}
+}
+THE_THE_kko_missions_second_slot = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = KKO
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	has_country_shield = yes
+	KKO_religious_chance = {
+		icon = mission_ahmadabad_paper
+		required_missions = { KKO_free_sentiment }
+		position = 2
+		trigger = {
+			adm_power = 100
+			custom_trigger_tooltip = {
+				tooltip = kko_religious_chance_complete1
+				has_country_flag = kko_religious_chance_complete
+			}
+			custom_trigger_tooltip = {
+				tooltip = kko_tooltip_chance_religious1
+				tag = KKO
+			}
+		}
+		effect = {
+			add_adm_power = -75
+			add_country_modifier = {
+				name = kko_ae_impact_buff
+				duration = 7300
+			}
+			Northern_youkai_mountains = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	KKO_foism_change = {
+		icon = kko_event_21
+		required_missions = { KKO_religious_chance }
+		position = 2
+		provinces_to_highlight = {
+			owned_by = SNK
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = kko_fojiaoxian_ok
+				has_country_flag = kko_fojiaoxian
+			}
+			OR = {
+				NOT = { exists = SNK }
+				war_with = SNK
+				has_won_war_against = {
+					who = SNK
+					max_years_since = 20
+				}
+			}
+		}
+		effect = {
+			add_government_power = {
+				mechanic_type = th_kokoro_mechanic
+				power_type = kko_xi_dip_power
+				value = -5
+			}
+			add_government_power = {
+				mechanic_type = th_kokoro_mechanic
+				power_type = kko_you_adm_power
+				value = -5
+			}
+			add_government_power = {
+				mechanic_type = th_kokoro_mechanic
+				power_type = kko_nu_mil_power
+				value = 15
+			}
+			add_mil_power = 50
+			Eastern_senkai = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Senkai_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Northern_senkai = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			complete_mission = KKO_taoism_change
+		}
+	}
+	KKO_taoism_people = {
+		icon = mission_touhou_senkai
+		required_missions = { KKO_religious_war }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						area = Northern_senkai
+						area = Senkai_state
+					}
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				AND = {
+					province_id = 5025
+					OR = {
+						NOT = { num_of_times_improved = 3 }
+						nationalism = 1
+					}
+				}
+				AND = {
+					province_id = 5028
+					OR = {
+						NOT = { num_of_times_improved = 2 }
+						nationalism = 1
+					}
+				}
+				AND = {
+					province_id = 5169
+					OR = {
+						NOT = { num_of_times_improved = 2 }
+						nationalism = 1
+					}
+				}
+				AND = {
+					province_id = 5170
+					OR = {
+						NOT = { num_of_times_improved = 2 }
+						nationalism = 1
+					}
+				}
+			}
+
+		}
+		trigger = {
+			Northern_senkai = {
+				type = all
+				OR = {
+					owned_by = KKO
+					owned_by = MYO
+				}
+			}
+			Senkai_state = {
+				type = all
+				OR = {
+					owned_by = KKO
+					owned_by = MYO
+				}
+			}
+			5025 = {
+				num_of_times_improved = 3
+				NOT = {
+					nationalism = 1
+				}
+			}
+			5028 = {
+				num_of_times_improved = 2
+				NOT = {
+					nationalism = 1
+				}
+			}
+			5169 = {
+				num_of_times_improved = 2
+				NOT = {
+					nationalism = 1
+				}
+			}
+			5170 = {
+				num_of_times_improved = 2
+				NOT = {
+					nationalism = 1
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = kko_fojiaoxian_ok
+				has_country_flag = kko_fojiaoxian
+			}
+		}
+		effect = {
+			add_adm_power = 100
+			add_dip_power = 100
+			complete_mission = KKO_foism_people
+			add_country_modifier = {
+				name = kko_chuanjiao_buff
+				duration = 7300
+			}
+			Northern_senkai = {
+				type = all
+				change_culture = Tsukumogami_culture
+			}
+		}
+	}
+	KKO_foism_war = {
+		icon = kko_event_23
+		required_missions = { KKO_taoism_people }
+		position = 6
+		provinces_to_highlight = {
+			area = Myouren_state
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			OR = {
+				AND = {
+					diplomatic_reputation = 3
+					custom_trigger_tooltip = {
+						tooltip = kko_fojiaoxian_nowdown1
+						has_country_flag = kko_fojiaoxian_nowdown
+					}
+				}
+				Myouren_state = {
+					type = all 
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = kko_fojiaoxian_ok
+				has_country_flag = kko_fojiaoxian
+			}
+		}
+		effect = {
+			complete_mission = KKO_taoism_war
+			custom_tooltip = THE_KKO_form_union_myo_by_event_tt
+			# custom_tooltip = kko_war_tooltip2
+		}
+	}
+	KKO_chongzhu_xiwang = {
+		icon = kko_event_25
+		required_missions = { KKO_religious_peace }
+		required_missions = { KKO_religious_harmony }
+		position = 8
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = kko_xiwang_lose123
+				has_country_flag = kko_xiwang_lose
+			}
+		}
+		effect = {
+			custom_tooltip = KKO_mircle_create_tooltip
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			hidden_effect = {
+				set_country_flag = kko_xiwang_reget_create
+				set_variable = {
+					which = kko_xiwang_create_num
+				}
+			}
+		}
+	}
+	KKO_qinggan_xiuxing = {
+		icon = kko_event_24
+		position = 13
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = kko_xiwang_reget123
+				has_country_flag = kko_xiwang_reget
+			}
+		}
+		effect = {
+			set_country_flag = qin_xiuxing
+			add_stability = 1
+		}
+	}
+	KKO_bore_xiuxing = {
+		icon = mission_touhou_twilight
+		position = 14
+		trigger = {
+			mission_completed = KKO_qinggan_xiuxing
+			AND = {
+				is_in_war = {
+					war_score = 45
+				}
+				num_of_loans = 4
+				is_in_deficit = yes
+			}
+		}
+		effect = {
+			custom_tooltip = THE_KKO_remove_mask_debuff_tt
+			set_country_flag = qin_bore_ok
+			add_country_modifier = {
+				name = mission_bore_buff
+				duration = 18250
+			}
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+		}
+	}
+	KKO_huonan_xiuxing = {
+		icon = mission_touhou_world_tree
+		position = 15
+		trigger = {
+			mission_completed = KKO_qinggan_xiuxing
+			AND = {
+				total_development = 500
+				current_income_balance = 2
+				has_government_power = {
+					mechanic_type = th_kokoro_mechanic
+					power_type = kko_xi_dip_power
+					value = 30
+				}
+			}
+		}
+		effect = { 
+			custom_tooltip = THE_KKO_remove_mask_debuff_tt
+			set_country_flag = qin_huonan_ok
+			add_country_modifier = {
+				name = mission_huonan_buff
+				duration = 18250
+			}
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+		}
+	}
+}
+THE_kko_missions_third_slot = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = KKO
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	has_country_shield = yes
+	KKO_free_sentiment = {
+		icon = kko_event_2
+		required_missions = {}
+		position = 1
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = th_xin_lunpan
+				has_country_flag = th_qin_started_the_circle
+			}
+			is_year = 1445
+		}
+		effect = {
+			add_stability = 1
+			add_mil_power = 50
+		}
+	}
+	KKO_free_reilgious = {
+		icon = mission_touhou_hakurei_shrine
+		required_missions = { KKO_religious_chance }
+		position = 3
+		provinces_to_highlight = {
+			is_capital_of = CRD
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = kko_zhongli_ok
+				has_country_flag = kko_zhongli
+			}
+			if = {
+				limit = { exists = CRD }
+				CRD = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+				alliance_with = CRD
+			}
+		}
+		effect = {
+			Myouren_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Eastern_myouren_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Northern_myouren_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Senkai_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Eastern_senkai = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Northern_senkai = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	KKO_religious_zili = {
+		icon = mission_religious
+		required_missions = { KKO_free_reilgious }
+		position = 4
+		provinces_to_highlight = {
+			is_capital_of = CRD
+		}
+		trigger = {
+			advisor = theologian
+			if = {
+				limit = { exists = CRD }
+				CRD = {
+					owes_favors = {
+						who = ROOT
+						value = 10
+					}
+				}
+			}
+			adm_power = 100
+			prestige = 15
+			treasury = 50
+		}
+		effect = {
+			country_event = {
+				id = KKO_flavor.14
+			}
+			add_prestige = -10
+			add_adm_power = -100
+			add_treasury = -50
+		}
+	}
+	KKO_religious_about = {
+		icon = religious_resolution
+		required_missions = { KKO_religious_zili }
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				AND  ={
+					OR = {
+						area = Myouren_state
+						area = Northern_senkai
+					}
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					OR = {
+						province_id = 4987
+						province_id = 5025
+					}
+					NOT = { owned_by = ROOT }
+				}
+			}
+
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = Myouren_state
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = Northern_senkai
+			}
+			4987 = {
+				owned_by = ROOT
+			}
+			5025 = {
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kko_xin_yang_buff
+				duration = 7300
+			}
+			add_casus_belli = {
+				type = cb_vassalize_mission
+				target = CRD
+				months = 600
+			}
+		}
+	}
+	KKO_religious_harmony = {
+		icon = mission_touhou_old_reimu
+		required_missions = { KKO_religious_about }
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				area = Eastern_senkai
+				area = Senkai_state
+				area = Eastern_myouren_state
+				area = Northern_myouren_state
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			Eastern_senkai = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			Senkai_state = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			Eastern_myouren_state = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			Northern_myouren_state = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			hidden_effect = {
+				complete_mission = KKO_taoism_change
+				complete_mission = KKO_foism_change
+				complete_mission = KKO_religious_war
+				complete_mission = KKO_foism_people
+				complete_mission = KKO_taoism_people
+				complete_mission = KKO_taoism_war
+				complete_mission = KKO_foism_war
+			}
+			complete_mission = KKO_religious_peace
+			custom_tooltip = empty_line_tt
+			Senkai_state = {
+				type = all
+				change_culture = Tsukumogami_culture
+			}
+			Northern_senkai = {
+				type = all
+				change_culture = Tsukumogami_culture
+			}
+			Eastern_senkai = {
+				type = all
+				change_culture = Tsukumogami_culture
+			}
+			Myouren_state = {
+				type = all
+				change_culture = Tsukumogami_culture
+			}
+			Eastern_myouren_state = {
+				type = all
+				change_culture = Tsukumogami_culture
+			}
+			Northern_myouren_state = {
+				type = all
+				change_culture = Tsukumogami_culture
+			}
+			add_country_modifier = {
+				name = kko_zhongli_buff12
+				duration = -1
+			}
+		}
+	}
+	KKO_zuiqiang_juedou = {
+		icon = kko_event_16
+		required_missions = { KKO_lianlian_youyi }
+		position = 8
+		provinces_to_highlight = {
+			owned_by = CRD
+		}
+		trigger = {
+			if = {
+				limit = {
+					overlord_of = CRD
+				}
+				NOT = {
+					CRD = {
+						liberty_desire = 50
+					}
+				}
+			}
+			else = {
+				NOT = {
+					exists = CRD
+				}
+			}
+		}
+		effect = {
+			add_stability = 1
+			custom_tooltip = KKO_zuiqiang_juedou_tooltip1
+			if = {
+				limit = {
+					KKO = {
+						overlord_of = CRD
+					}
+				}
+				CRD = {
+					add_country_modifier = {
+						name = kko_crd_allience_buff2
+						duration = -1
+					}
+				}
+			}
+			else = {
+				add_adm_power = 100
+			}
+		}
+	}
+	KKO_guihuan_xiwang = {
+		icon = mission_touhou_kokoro
+		required_missions = { KKO_zuiqiang_juedou }
+		required_missions = { KKO_chongzhu_xiwang }
+		position = 9
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = kko_xiwang_reget123
+				has_country_flag = kko_xiwang_reget
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kko_xiwang_get_buff2
+				duration = -1
+			}
+		}
+	}
+	KKO_wuyishi_pailian = {
+		icon = kko_event_18
+		required_missions = { KKO_guihuan_xiwang }
+		position = 10
+		trigger = {
+			check_variable = {
+				which = kko_nengyue_action
+				value = 12
+			}
+			if = {
+				limit = {
+					has_country_flag = koishi_advisor_unlock12
+				}
+				check_variable = {
+					which = koishi_advisor_technical
+					value = 4
+				}
+			}
+		}
+		effect = {
+			add_adm_power = 20
+			add_dip_power = 20
+			add_mil_power = 20
+			# custom_tooltip = xinqilou_on_ok
+			custom_tooltip = THE_KKO_unlock_diplomatic_action_xinqilou_tt
+			set_country_flag = xinqilou_ok
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = { mission_completed = KKO_japan_3 }
+				custom_tooltip = THE_KKO_unlock_school_change_decision_tt_yes
+			}
+			else = {
+				custom_tooltip = THE_KKO_unlock_school_change_decision_tt_no
+			}
+			tooltip = {
+				custom_tooltip = THE_KKO_unlock_school_change_decision_tt
+			}
+			hidden_effect = {
+				set_variable = {
+					which = kko_xinqilou_num
+				}
+			}
+		}
+	}
+	KKO_xinqilou = { 
+		icon = kko_event_19
+		required_missions = { KKO_wuyishi_pailian }
+		position = 11
+		trigger = {
+			total_development = 650
+			custom_trigger_tooltip = {
+				tooltip = THE_KKO_xinqilou_action_tt
+				check_variable = {
+					which = kko_xinqilou_num
+					value = 1
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kko_xinqilou_buff
+				duration = -1
+			}
+		}
+	}
+	KKO_niaoshou = {
+		icon = kko_event_17
+		position = 13
+		provinces_to_highlight = {
+			area = Forest_of_magic
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = Forest_of_magic
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kko_niaoshou_buff
+				duration = 7300
+			}
+		}
+	}
+}
+THE_kko_missions_test_slot = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = KKO
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	has_country_shield = yes
+	KKO_qin_shiheng = {
+		icon = kko_event_12
+		required_missions = { KKO_free_sentiment }
+		position = 2
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = KKO_disaster_started_now
+				has_country_flag = kko_disaster_started
+			}
+		}
+		effect = {
+			add_stability = 1
+			add_adm_power = 150
+			add_government_power = {
+				mechanic_type = th_kokoro_mechanic
+				power_type = kko_you_adm_power
+				value = 20
+			}
+			Great_youkai_forest = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Eastern_youkai_forest = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	KKO_mircle_lose = {
+		icon = kko_event_11
+		required_missions = { KKO_qin_shiheng }
+		position = 3
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = hopeless_masquerader_incident_start34
+				has_global_flag = hopeless_masquerader_incident_start
+			}
+		}
+		effect = {
+			add_adm_power = 50
+			add_mil_power = 50
+			add_dip_power = 50
+			add_prestige = 25
+		}
+	}
+	KKO_koishi_zui = {
+		icon = mission_touhou_wandering_koishi
+		required_missions = { KKO_mircle_lose }
+		position = 6
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = th_kko_emotion_seventh_stage_extra_complete123
+				has_country_flag = th_kko_emotion_seventh_stage_extra_complete
+			}
+		}
+		effect = {
+			add_adm_power = 30
+			add_dip_power = 30
+			add_mil_power = 30
+			Road_to_hell_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Chireiden_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Chireiden_canal_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Yuugi_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Oni_exclave_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Blazing_hell_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = kko_emotion_stage_seventh
+				duration = -1
+			}
+		}
+	}
+	KKO_lianlian_youyi = {
+		icon = kko_event_1
+		required_missions = { KKO_koishi_zui }
+		position = 7
+		provinces_to_highlight = {
+			is_capital_of = CRD
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = th_kko_emotion_stage_extra_complete123
+				has_country_flag = th_kko_emotion_stage_extra_complete
+			}
+			OR = {
+				AND = {
+					alliance_with = CRD
+					CRD = {
+						has_opinion = {
+							who = KKO
+							value = 200
+						}
+					}
+					marriage_with = CRD
+				}
+				AND = {
+					5007 = {
+						owned_by = KKO
+					}
+				}
+				overlord_of = CRD
+			}
+		}
+		effect = {
+			add_adm_power = 50
+			add_government_power = {
+				mechanic_type = th_kokoro_mechanic
+				power_type = kko_xi_dip_power
+				value = 10
+			}
+			# custom_tooltip = koishi_advisor_unlock
+			if = {
+				limit = {
+					KKO = {
+						overlord_of = CRD
+					}
+				}
+				custom_tooltip = THE_KKO_koishi_advisor_tt_yes
+			}
+			else = {
+				custom_tooltip = THE_KKO_koishi_advisor_tt_no
+			}
+			tooltip = {
+				THE_KKO_define_advisor_koishi_scripted_effect = yes
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						KKO = {
+							overlord_of = CRD
+						}
+					}
+					THE_KKO_define_advisor_koishi_scripted_effect = yes
+					set_country_flag = koishi_advisor_unlock12
+					set_variable = {
+						which = koishi_advisor_technical
+						value = 0
+					}
+				}
+			}
+		}
+	}
+	KKO_tianxiegui = {
+		icon = kko_event_13
+		position = 8
+		provinces_to_highlight = {
+			owned_by = NCS
+		}
+		trigger = {
+			mission_completed = KKO_nengmian_biaoyan
+			OR = {
+				NOT = { exists = NCS }
+				NCS = {
+					has_opinion = {
+						who = ROOT
+						value = 85
+					}
+				}
+				NOT = {
+					NCS = {
+						has_opinion = {
+							who = ROOT
+							value = -100
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kko_tianxiegui_buff
+				duration = 18250
+			}
+			add_adm_power = 50
+			add_mil_power = 50
+			add_dip_power = 75
+		}
+	}
+	KKO_tiangou = {
+		icon = kko_event_14
+		position = 9
+		provinces_to_highlight = {
+			area = Southern_youkai_mountains
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			mission_completed = KKO_nengmian_biaoyan
+			OR = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 3
+					area = Southern_youkai_mountains
+				}
+				NOT = { exists = TGU }
+				TGU = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+			}
+		}
+		effect = {
+			add_dip_power = 200
+			Mountain_kappa_land = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Genbu_ravine_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Kappa_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Kappa_delta = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = kko_tiangou_baoshe_buff
+				duration = 7300
+			}
+		}
+	}
+	KKO_hetong = {
+		icon = mission_touhou_kappa_paperwork
+		required_missions = { KKO_tiangou }
+		position = 10
+		provinces_to_highlight = {
+			OR = {
+				area = Kappa_state
+				area = Kappa_delta
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = Kappa_state
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 1
+				area = Kappa_delta
+			}
+		}
+		effect = {
+			complete_mission = KKO_shantong
+			custom_tooltip = empty_line_tt
+			Moriya_coast_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Moriya_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Southern_moriya = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = kko_hetong_buff
+				duration = -1
+			}
+		}
+	}
+	KKO_done_xiuxing = {
+		icon = kko_event_15
+		position = 13
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = all_qin_complete
+				has_country_flag = qin_bore_ok
+				has_country_flag = qin_chanwan_ok
+				has_country_flag = qin_lao_ok
+				has_country_flag = qin_huli_ok
+				has_country_flag = qin_weng_ok
+				has_country_flag = qin_tiangou_ok
+				has_country_flag = qin_xiaomian_ok
+				has_country_flag = qin_huonan_ok
+			}
+		}
+		effect = {
+			set_country_flag = qin_xiuxing_ok
+			add_adm_power = 300
+			add_mil_power = 300
+			add_dip_power = 300
+		}
+	}
+	KKO_tiangou_xiuxing = {
+		icon = mission_touhou_youkai_mountain
+		position = 14
+		trigger = {
+			mission_completed = KKO_qinggan_xiuxing
+			AND = {
+				had_recent_war = 25
+				NOT = {
+					great_power_rank = 4
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = THE_KKO_remove_mask_debuff_tt
+			set_country_flag = qin_tiangou_ok
+			add_country_modifier = {
+				name = mission_tiangou_buff
+				duration = 18250
+			}
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+		}
+	}
+	KKO_weng_xiuxing = {
+		icon = mission_touhou_human_capital
+		position = 15
+		trigger = {
+			mission_completed = KKO_qinggan_xiuxing
+			AND = {
+				inflation = 0
+				monthly_income = 100
+				corruption = 0
+			}
+		}
+		effect = {
+			custom_tooltip = THE_KKO_remove_mask_debuff_tt
+			set_country_flag = qin_weng_ok
+			add_country_modifier = {
+				name = mission_weng_buff
+				duration = 18250
+			}
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+		}
+	}
+}
+THE_kko_missions_fith_slot = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = KKO
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	has_country_shield = yes
+	KKO_dark_nengmian = {
+		icon = kko_event_4
+		required_missions = { KKO_free_sentiment }
+		position = 2
+		trigger = {
+			army_size_percentage = 0.9
+			has_mil_advisor = yes
+		}
+		effect = {
+			THE_KKO_define_advisor_kokoro_scripted_effect = yes
+			Land_of_the_black_doors = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Shinkirou_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	KKO_nengmian_biaoyan = {
+		icon = kko_event_5
+		required_missions = { KKO_dark_nengmian }
+		position = 3
+		provinces_to_highlight = {
+			owner = {
+				is_neighbor_of = ROOT
+				has_country_modifier = KKO_dark_nengyue_buff1
+			}
+		}
+		trigger = {
+			OR = {
+				check_variable = {
+					which = kko_nengyue_action
+					value = 3
+				}
+				any_neighbor_country = {
+					has_country_modifier = KKO_dark_nengyue_buff1
+					has_spy_network_from = {
+						who = KKO
+						value = 30
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = nengyue_biaoyan_buff
+				duration = 10950
+			}
+			set_country_flag = nengyue_biaoyan_down
+			North_tengu_plains = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Youkai_Mountains = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Southern_youkai_mountains = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Foot_of_youkai_mountains= {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	KKO_mishen_zhichi = {
+		icon = kko_event_3
+		required_missions = { KKO_nengmian_biaoyan }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						area = Land_of_the_black_doors
+						area = Shinkirou_state
+					}
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				owned_by = OKI
+				AND = {
+					OR = {
+						province_id = 5016
+						province_id = 5132
+					}
+					NOT = { owned_by = ROOT }
+				}
+			}
+		}
+		trigger = {
+			OR = {
+				AND = {
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 3
+						area = Land_of_the_black_doors
+					}
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 3
+						area = Shinkirou_state
+					}
+				}
+				AND = {
+					NOT = {
+						exists = OKI
+					}
+					OR = {
+						5016 = {
+							owned_by = ROOT
+						}
+						5132 = {
+							owned_by = ROOT
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			set_government_rank = 2
+			add_mil_power = 25
+			add_government_power = {
+				mechanic_type = th_kokoro_mechanic
+				power_type = kko_nu_mil_power
+				value = 10
+			}
+			Land_of_the_black_doors = {
+				type = all
+				change_culture = Tsukumogami_culture
+			}
+			4974 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	KKO_saoling = {
+		icon = kko_event_6
+		required_missions = { KKO_mishen_zhichi }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				owned_by = PRI
+				AND = {
+					province_id = 4974
+					NOT = { owned_by = ROOT }
+				}
+			}
+		}
+		trigger = {
+			OR = {
+				4974 = {
+					owned_by = KKO
+				}
+				NOT = {
+					exists = PRI
+				}
+			}
+		}
+		effect = {
+			Human_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Kourindou_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	KKO_renli_biaoyan = {
+		icon = mission_touhou_human_capital
+		required_missions = { KKO_saoling }
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				area = Human_state
+				area = Kourindou_state
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				area = Human_state
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = Kourindou_state
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kko_renli_biaoyan_buff
+				duration = -1
+			}
+			add_country_modifier = {
+				name = nengyue_biaoyan_buff2
+				duration = 7300
+			}
+			Human_state = {
+				type = all
+				change_culture = Tsukumogami_culture
+			}
+			Kourindou_state = {
+				type = all
+				change_culture = Tsukumogami_culture
+			}
+		}
+	}
+	KKO_xin_jumu = {
+		icon = mission_ahmadabad_paper
+		required_missions = { KKO_renli_biaoyan }
+		position = 7
+		trigger = {
+			check_variable = {
+				which = kko_nengyue_action
+				value = 8
+			}
+		}
+		effect = {
+			set_country_flag = kko_xinjumu
+			# custom_tooltip = kko_xinjumu1
+			add_prestige = 25
+			Raiko_Seki_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	KKO_kuchuan = {
+		icon = kko_event_7
+		position = 9
+		provinces_to_highlight = {
+			area = Raiko_Seki_state
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			mission_completed = KKO_xin_jumu
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 2
+				area = Raiko_Seki_state
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kko_kuchuan_buff
+				duration = -1
+			}
+		}
+	}
+	KKO_shantong = {
+		icon = kko_event_8 
+		required_missions = { KKO_tiangou }
+		position = 10
+		provinces_to_highlight = {
+			OR = {
+				area = Kappa_state
+				area = Mountain_kappa_land
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = Kappa_state
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 1
+				area = Mountain_kappa_land
+			}
+		}
+		effect = {
+			complete_mission = KKO_hetong
+			custom_tooltip = empty_line_tt
+			Moriya_coast_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Moriya_state = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Southern_moriya = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = kko_shantong_buff
+				duration = -1
+			}
+		}
+	}
+	KKO_shoushi = {
+		icon = kko_event_9
+		required_missions = { KKO_hetong }
+		required_missions = { KKO_shantong }
+		position = 11
+		provinces_to_highlight = {
+			OR = {
+				area = Moriya_state
+				area = Southern_moriya
+				area = Moriya_coast_state
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			AND = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 4
+					area = Moriya_state
+				}
+				OR = {
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 2
+						area = Southern_moriya
+					}
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 2
+						area = Moriya_coast_state
+					}
+				}
+			}
+		}
+		effect = {
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			Great_border = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			Western_great_border = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	KKO_zhianshen = {
+		icon = kko_event_10
+		required_missions = { KKO_shoushi }
+		position = 12
+		provinces_to_highlight = {
+			area = Great_border
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				area = Great_border
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kko_zhianshen_buff
+				duration = -1
+			}
+		}
+	}
+	KKO_lao_xiuxing = {
+		icon = mission_touhou_agni
+		position = 14
+		trigger = {
+			mission_completed = KKO_qinggan_xiuxing
+			AND = {
+				NOT = {
+					stability = -1
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = THE_KKO_remove_mask_debuff_tt
+			set_country_flag = qin_lao_ok
+			add_country_modifier = {
+				name = mission_lao_buff
+				duration = 18250
+			}
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+		}
+	}
+	KKO_xiaomian_xiuxing = {
+		icon = mission_touhou_hell_and_heaven
+		position = 15
+		trigger = {
+			mission_completed = KKO_qinggan_xiuxing
+			AND = {
+				NOT = {
+					had_recent_war = 5
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = THE_KKO_remove_mask_debuff_tt
+			set_country_flag = qin_xiaomian_ok
+			add_country_modifier = {
+				name = mission_xiaomian_buff
+				duration = 18250
+			}
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+		}
+	}
+} 

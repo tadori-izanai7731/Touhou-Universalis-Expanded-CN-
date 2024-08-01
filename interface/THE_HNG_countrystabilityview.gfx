@@ -1,0 +1,26 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_disaster_the_hng_disasters_one"
+		texturefile = "gfx//interface//disasters//the_hng_disasters_one.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_disaster_the_hng_disasters_two"
+		texturefile = "gfx//interface//disasters//the_hng_disasters_two.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_disaster_the_hng_disasters_three"
+		texturefile = "gfx//interface//disasters//the_hng_disasters_three.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_disaster_the_hng_disasters_four"
+		texturefile = "gfx//interface//disasters//the_hng_disasters_four.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+}

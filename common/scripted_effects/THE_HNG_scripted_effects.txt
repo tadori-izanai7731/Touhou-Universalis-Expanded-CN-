@@ -1,0 +1,30 @@
+THE_hng_spawn_rebel_not_in_Gensokyan_culture = {
+	for = {
+		amount = $amount$
+		effect = "
+			THE_hng_spawn_rebel_not_in_Scarlett_culture_cycle_effect = { type = $type$ size = $size$ }
+		"
+	}
+	every_province = {
+		limit = {
+			has_province_flag = THE_HNG_event_had_spawn_rebel_province_flag
+		}
+		clr_province_flag = THE_HNG_event_had_spawn_rebel_province_flag
+	}
+}
+
+THE_hng_spawn_rebel_not_in_Scarlett_culture_cycle_effect = {
+	random_owned_province = {
+		limit = {
+			superregion = china_superregion
+			NOT = { culture_group = Gensokyan_culture }
+			NOT = { has_province_flag = THE_HNG_event_had_spawn_rebel_province_flag }
+		}
+		set_province_flag = THE_HNG_event_had_spawn_rebel_province_flag
+		spawn_rebels = {
+			type = $type$ 
+			size = $size$
+		}
+	}
+}
+

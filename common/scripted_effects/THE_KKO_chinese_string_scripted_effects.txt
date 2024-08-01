@@ -1,0 +1,39 @@
+THE_KKO_define_advisor_koishi_scripted_effect = {
+	hire_advisor = {
+		type = the_koishi
+		name = "äSf0W K`"
+		skill = 3
+		cost_multiplier = 0.25
+		culture = Chireidean
+		religion = ROOT
+		female = no
+	}
+}
+THE_KKO_define_advisor_kokoro_scripted_effect = {
+	define_general = {
+		shock = 3
+		fire = 3
+		manuever = 3
+		siege = 3
+		name = "æyÃV"
+		female = no
+	}
+}
+THE_KKO_CHANGE_name_scripted_efffect = {
+	change_province_name = "'Y*–"
+}
+THE_KKO_CHANGE_name2_scripted_effect = {
+	change_province_name = "NSýl"
+}
+THE_KKO_genre_nengyue_clr = {
+	remove_country_modifier = kko_guanshi_buff1
+	remove_country_modifier = kko_baosheng_buff1
+	remove_country_modifier = kko_jinchun_buff1
+	remove_country_modifier = kko_jingang_buff1
+	remove_country_modifier = kko_xiduo_buff1
+	clr_country_flag = kko_guanshi_on
+	clr_country_flag = kko_baosheng_on
+	clr_country_flag = kko_jinchun_on
+	clr_country_flag = kko_jingang_on
+	clr_country_flag = kko_xiduo_on
+}

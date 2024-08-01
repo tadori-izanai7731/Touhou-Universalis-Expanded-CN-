@@ -1,0 +1,124 @@
+THE_HMC_ideas = {
+	#人里传统
+	start = {
+		development_cost = -0.1
+		republican_tradition = 2
+	}
+	
+	#人类野心
+	bonus = {
+		merchants = 2
+	}
+	
+	trigger = {
+		tag = HMC
+		NOT = { has_country_flag = THE_HMC_upgrade_country_idea_flag }
+	}
+	free = yes
+	
+	#高墙之下
+	THE_HMC_under_the_wall_idea = {
+		trade_efficiency = 0.2
+	}
+	
+	#热情好客
+	THE_HMC_human_hospitality_idea = {
+		improve_relation_modifier = 0.2
+	}
+	
+	#心灵手巧
+	THE_HMC_clever_and_skillful_idea = {
+		global_trade_goods_size = 0.15
+	}
+	
+	#军队外包
+	THE_HMC_military_outsourcing_idea = {
+		mercenary_manpower= 0.15
+		mercenary_discipline = 0.05
+		effect = {
+			
+		}
+		removed_effect = {
+			
+		}
+	}
+	
+	#跨越结界
+	THE_HMC_cross_boundary_idea = {
+		trade_steering = 0.3
+	}
+	
+	#包罗万象
+	THE_HMC_tolerance_to_all_idea = {
+		tolerance_heretic = 2
+		tolerance_heathen = 2
+	}
+	
+	#幻想的明灯
+	THE_HMC_genso_no_hikari_idea = {
+		global_trade_power = 0.2
+	}
+}
+
+THE_HMC_upgrade_ideas = {
+	#人里传统
+	start = {
+		development_cost = -0.2
+		republican_tradition = 2
+	}
+	
+	#人类野心
+	bonus = {
+		merchants = 2
+	}
+	
+	trigger = {
+		tag = HMC
+		has_country_flag = THE_HMC_upgrade_country_idea_flag
+	}
+	free = yes
+	
+	#高墙之下
+	THE_HMC_under_the_wall_upgrade_idea = {
+		trade_efficiency = 0.3
+		center_of_trade_upgrade_cost = -0.5
+	}
+	
+	#热情好客
+	THE_HMC_human_hospitality_upgrade_idea = {
+		improve_relation_modifier = 0.3
+		ae_impact = -0.1
+	}
+	
+	#心灵手巧
+	THE_HMC_clever_and_skillful_upgrade_idea = {
+		global_trade_goods_size = 0.3
+	}
+	
+	#军队外包
+	THE_HMC_military_outsourcing_upgrade_idea = {
+		mercenary_manpower= 0.15
+		mercenary_discipline = 0.05
+		merc_leader_army_tradition = 0.25
+	}
+	
+	#跨越结界
+	THE_HMC_cross_boundary_upgrade_idea = {
+		trade_steering = 0.3
+		ship_trade_power_modifier = 0.2
+	}
+	
+	#包罗万象
+	THE_HMC_tolerance_to_all_upgrade_idea = {
+		tolerance_heretic = 2
+		tolerance_heathen = 2
+		tolerance_of_heathens_capacity = 2
+		tolerance_of_heretics_capacity = 2
+	}
+	
+	#幻想的明灯
+	THE_HMC_genso_no_hikari_upgrade_idea = {
+		global_trade_power = 0.2
+		caravan_power = 0.2
+	}
+}

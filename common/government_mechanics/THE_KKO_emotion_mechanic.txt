@@ -1,0 +1,189 @@
+th_kokoro_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 1
+	available = {
+		OR = {
+			has_dlc = "Third Rome"
+			has_dlc = "Domination"
+		}
+	}
+	powers = {
+		kko_you_adm_power = {
+			max = 50
+			base_monthly_growth = 1
+			scaled_modifier = {
+				modifier = {
+					global_unrest = -2
+					harsh_treatment_cost = -0.4
+					production_efficiency = 0.2
+					discipline = -0.10
+					land_morale = -0.20
+					monthly_kko_you_adm_power = -4
+				}
+			}
+		}
+		kko_xi_dip_power = {
+			max = 50
+			base_monthly_growth = 1
+			scaled_modifier = {
+				modifier = {
+					harsh_treatment_cost = 0.4
+					production_efficiency = -0.2
+					global_tax_modifier = -0.2
+					global_autonomy = -0.2
+					war_exhaustion = -0.1
+					monthly_kko_xi_dip_power = -4
+				}
+			}
+		}
+		kko_nu_mil_power = {
+			max = 50
+			base_monthly_growth = 1
+			scaled_modifier = {
+				modifier = {
+					discipline = 0.10
+					global_unrest = 2
+					ae_impact = 0.20
+					land_morale = 0.20
+					global_autonomy = 0.2
+					global_tax_modifier = 0.2
+					monthly_kko_nu_mil_power = -4
+				}
+			}
+			range_modifier = {
+				trigger = {
+				}
+				modifier = {
+					land_attrition = 0.2
+					can_not_declare_war = yes
+				}
+				start_value = 49
+				end_value = 50
+			}
+			range_modifier = {
+				trigger = {
+				}
+				modifier = {
+					reserves_organisation = -0.1
+					can_not_declare_war = yes
+				}
+				start_value = 0
+				end_value = 2
+			}
+		}
+	}
+	
+	interactions = {
+		kko_you_power = {
+			gui = russian_mechanics_interaction_gui
+			icon = GFX_th_kokoro_you
+			cost_type = kko_you_adm_power
+			cost = 2
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = kokoro_mechanic_done
+					OR = {
+						NOT = {
+							has_country_flag = kokoro_mechanic_do
+						}
+						had_country_flag = {
+							flag = kokoro_mechanic_do
+							days = 730
+						}
+					}
+				}
+			}
+			effect = {
+				add_country_modifier = {
+					name = th_kko_you_buff
+					duration = 365
+				}
+				clr_country_flag = kokoro_mechanic_do
+				set_country_flag = kokoro_mechanic_do
+			}
+			cooldown_years = 2
+			ai_chance = {
+				factor = 0
+			}
+		}
+		kko_xi_power = {
+			gui = russian_mechanics_interaction_gui
+			icon = GFX_th_kokoro_xi
+			cost_type = kko_xi_dip_power
+			cost = 2
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = kokoro_mechanic_done
+					OR = {
+						NOT = {
+							has_country_flag = kokoro_mechanic_do
+						}
+						had_country_flag = {
+							flag = kokoro_mechanic_do
+							days = 730
+						}
+					}
+				}
+			}
+			effect = { 
+				add_country_modifier = {
+					name = th_kko_xi_buff
+					duration = 365
+				}
+				clr_country_flag = kokoro_mechanic_do
+				set_country_flag = kokoro_mechanic_do
+			}
+			cooldown_years = 2
+			ai_chance = {
+				factor = 0
+			}
+		}
+		kko_nu_power = {
+			gui = russian_mechanics_interaction_gui
+			icon = GFX_th_kokoro_nu
+			cost_type = kko_nu_mil_power
+			cost = 2
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = kokoro_mechanic_done
+					OR = {
+						NOT = {
+							has_country_flag = kokoro_mechanic_do
+						}
+						had_country_flag = {
+							flag = kokoro_mechanic_do
+							days = 730
+						}
+					}
+				}
+			}
+			effect = { 
+				add_country_modifier = {
+					name = th_kko_nu_buff
+					duration = 365
+				}
+				if = {
+					limit = {
+						is_at_war = yes
+					}
+					add_war_exhaustion = 4
+					add_yearly_manpower = 2.5
+					add_army_professionalism = -0.05
+				}
+				else = {
+					limit = {
+						is_at_war = no
+					}
+					add_war_exhaustion = -2
+					add_army_professionalism = 0.02
+				}
+				clr_country_flag = kokoro_mechanic_do
+				set_country_flag = kokoro_mechanic_do
+			}
+			cooldown_years = 2
+			ai_chance = {
+				factor = 10
+			}
+		}
+	}
+}

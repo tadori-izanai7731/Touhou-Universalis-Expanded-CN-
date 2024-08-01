@@ -1,0 +1,3459 @@
+THE_LIL_guide_mission_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = LIL } 
+
+}
+THE_LIL_guide_mission_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = LIL } 
+
+}
+THE_LIL_guide_mission_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = LIL } 
+
+	THE_LIL_1_3 = {
+		icon = mission_THE_LIL_icon_1
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			always = yes
+		 } 
+
+		effect = {
+			THE_country_event_with_insight = {
+				id = THE_LIL_events.1
+				effect_tooltip = "
+					swap_non_generic_missions = yes
+				"
+			} 
+			hidden_effect = { set_country_flag = LIL_became_empire } 
+		}
+	}
+}
+THE_LIL_guide_mission_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = LIL } 
+
+}
+THE_LIL_guide_mission_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = LIL } 
+
+}
+THE_LIL_mission_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = LIL
+		has_country_flag = THE_LIL_unlock_mission_flag
+	}
+
+	THE_LIL_3_1 = {
+		icon = reform_the_nomocanon
+		position = 3
+		required_missions = {
+			THE_LIL_2_2
+			THE_LIL_2_4
+		}
+		provinces_to_highlight = { owned_by = LRV } 
+
+		trigger = {
+			OR = {
+				LRV = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+				NOT = { exists = LRV } 
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					LRV = {
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
+					}
+				}
+				custom_tooltip = THE_LIL_peace_with_lrv_diplomacy_yes_tt
+			}
+			else = { custom_tooltip = THE_LIL_peace_with_lrv_diplomacy_no_tt } 
+			tooltip = {
+				add_trust = {
+					who = LRV
+					value = 25
+					mutual = yes
+				}
+				add_country_modifier = {
+					name = "THE_LIL_meeting_with_lrv_modifier"
+					duration = 7300
+				}
+			}
+			if = {
+				limit = { NOT = { exists = LRV }  } 
+				custom_tooltip = THE_LIL_peace_with_lrv_war_yes_tt
+			}
+			else = { custom_tooltip = THE_LIL_peace_with_lrv_war_no_tt } 
+			tooltip = {
+				LRV = {
+					ROOT = {
+						custom_tooltip = THE_add_permanent_claim_every_prev_province_tt
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						LRV = {
+							has_opinion = {
+								who = ROOT
+								value = 100
+							}
+						}
+					}
+					add_trust = {
+						who = LRV
+						value = 25
+						mutual = yes
+					}
+					add_country_modifier = {
+						name = "THE_LIL_meeting_with_lrv_modifier"
+						duration = 7300
+					}
+				}
+				if = {
+					limit = { NOT = { exists = LRV }  } 
+					every_province = {
+						limit = { is_core = LRV } 
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+	}
+
+	THE_LIL_8_1 = {
+		icon = mission_touhou_youkai_mountain
+		position = 7
+		required_missions = { THE_LIL_6_3 } 
+		provinces_to_highlight = {
+			OR = {
+				area = Eastern_youkai_forest
+				area = Great_youkai_forest
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			OR = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 3
+					OR = {
+						area = Eastern_youkai_forest
+						area = Great_youkai_forest
+					}
+				}
+				YOF = {
+					alliance_with = ROOT
+					trust = {
+						who = ROOT
+						value = 65
+					}
+					has_opinion = {
+						who = ROOT
+						value = 180
+					}
+					marriage_with = ROOT
+				}
+			}
+		}
+
+		effect = {
+			Youkai_Mountains = {
+				type = all
+				add_permanent_claim = ROOT
+			}
+			former_hell_region = {
+				type = all
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "THE_LIL_doll_remove_misfortune_modifier"
+				duration = -1
+			}
+			THE_LIL_subject_non_tributary_add_modifier = { modifier = THE_LIL_doll_remove_misfortune_modifier } 
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					YOF = {
+						alliance_with = ROOT
+						trust = {
+							who = ROOT
+							value = 65
+						}
+						has_opinion = {
+							who = ROOT
+							value = 180
+						}
+						marriage_with = ROOT
+					}
+				}
+				custom_tooltip = THE_LIL_peace_with_yof_diplomacy_yes_tt
+			}
+			else = { custom_tooltip = THE_LIL_peace_with_yof_diplomacy_no_tt } 
+			tooltip = {
+				add_historical_friend = YOF
+				YOF = { add_historical_friend = ROOT } 
+				add_trust = {
+					who = YOF
+					value = 10
+					mutual = yes
+				}
+				vassalize = YOF
+			}
+			if = {
+				limit = {
+					NOT = {
+						YOF = {
+							alliance_with = ROOT
+							trust = {
+								who = ROOT
+								value = 65
+							}
+							has_opinion = {
+								who = ROOT
+								value = 180
+							}
+							marriage_with = ROOT
+						}
+					}
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 5
+						OR = {
+							area = Eastern_youkai_forest
+							area = Great_youkai_forest
+						}
+					}
+				}
+				custom_tooltip = THE_LIL_peace_with_yof_war_yes_tt
+			}
+			else = { custom_tooltip = THE_LIL_peace_with_yof_war_no_tt } 
+			tooltip = {
+				add_casus_belli = {
+					type = cb_vassalize_mission
+					target = YOF
+					months = 300
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						YOF = {
+							alliance_with = ROOT
+							trust = {
+								who = ROOT
+								value = 65
+							}
+							has_opinion = {
+								who = ROOT
+								value = 180
+							}
+							marriage_with = ROOT
+						}
+					}
+					add_historical_friend = YOF
+					YOF = { add_historical_friend = ROOT } 
+					add_trust = {
+						who = YOF
+						value = 10
+						mutual = yes
+					}
+					vassalize = YOF
+				}
+				else = {
+					add_casus_belli = {
+						type = cb_vassalize_mission
+						target = YOF
+						months = 300
+					}
+				}
+			}
+		}
+	}
+
+	THE_LIL_8_4 = {
+		icon = mission_touhou_jizou
+		position = 8
+		required_missions = { THE_LIL_8_1 } 
+		provinces_to_highlight = {
+			region = former_hell_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 6
+				region = former_hell_region
+			}
+		}
+
+		effect = {
+			THE_add_ruler_stat = {
+				stat = mil
+				value = 1
+			}
+			add_country_modifier = {
+				name = "THE_LIL_zombie_resurrection_modifier"
+				duration = -1
+			}
+			custom_tooltip = THE_LIL_decrese_require_L08_decision_tt
+		}
+	}
+
+	THE_LIL_15_1 = {
+		icon = settle_austrialasia
+		position = 15
+		provinces_to_highlight = {
+			colonial_region = colonial_australia
+			OR = {
+				NOT = { is_city = yes } 
+				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			}
+		}
+
+		trigger = {
+			mission_completed = THE_LIL_6_5
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				colonial_region = colonial_australia
+				is_city = yes
+			}
+		}
+
+		effect = {
+			THE_LIL_colonize_mission_scripted_effect = { colonial_region = colonial_australia } 
+			every_subject_country = {
+				limit = {
+					capital_scope = { colonial_region = colonial_australia } 
+					OR = {
+						is_subject_of_type = crown_colony
+						is_subject_of_type = private_enterprise
+						is_subject_of_type = self_governing_colony
+					}
+				}
+				add_country_modifier = {
+					name = "THE_LIL_wattle_territory_modifier"
+					duration = 18250
+				}
+			}
+		}
+	}
+
+	THE_LIL_17_1 = {
+		icon = mission_colonize_the_caribbean
+		position = 17
+		provinces_to_highlight = {
+			colonial_region = colonial_the_carribean
+			OR = {
+				NOT = { is_city = yes } 
+				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			}
+		}
+
+		trigger = {
+			mission_completed = THE_LIL_6_5
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				colonial_region = colonial_the_carribean
+				is_city = yes
+			}
+		}
+
+		effect = {
+			THE_LIL_colonize_mission_scripted_effect = { colonial_region = colonial_the_carribean } 
+			every_subject_country = {
+				limit = {
+					capital_scope = { colonial_region = colonial_the_carribean } 
+					OR = {
+						is_subject_of_type = crown_colony
+						is_subject_of_type = private_enterprise
+						is_subject_of_type = self_governing_colony
+					}
+				}
+				add_country_modifier = {
+					name = "THE_LIL_ginger_flower_territory_modifier"
+					duration = 18250
+				}
+			}
+		}
+	}
+
+	THE_LIL_18_1 = {
+		icon = mission_explore_the_world
+		position = 18
+		required_missions = { THE_LIL_17_1 } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 484
+				province_id = 490
+				province_id = 487
+			}
+			NOT = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+					has_tax_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_courthouse_building_trigger = yes
+					num_of_times_improved = 3
+				}
+			}
+		}
+
+		trigger = {
+			484 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_tax_building_trigger = yes
+				has_trade_building_trigger = yes
+				has_courthouse_building_trigger = yes
+				num_of_times_improved = 3
+			}
+			490 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_tax_building_trigger = yes
+				has_trade_building_trigger = yes
+				has_courthouse_building_trigger = yes
+				num_of_times_improved = 3
+			}
+			487 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_tax_building_trigger = yes
+				has_trade_building_trigger = yes
+				has_courthouse_building_trigger = yes
+				num_of_times_improved = 3
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_LIL_world_crossing_modifier"
+				duration = -1
+			}
+		}
+	}
+
+	THE_LIL_19_1 = {
+		icon = mission_THE_LIL_icon_9
+		position = 19
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			mission_completed = THE_LIL_6_5
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = achievement_magellans_voyage_tooltip
+					has_country_flag = circumnavigation_first
+				}
+				custom_trigger_tooltip = {
+					tooltip = second_circumnavigation_tt
+					has_country_flag = THE_LIL_circumnavigation_second_flag
+				}
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_LIL_spherical_spring_modifier"
+				duration = -1
+			}
+		}
+	}
+
+	THE_LIL_23_1 = {
+		icon = mission_touhou_newspaper
+		position = 23
+		required_missions = { THE_LIL_22_4 } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { renaissance = 100 } 
+		}
+
+		trigger = {
+			has_institution = renaissance
+			5084 = { country_or_non_sovereign_subject_holds = ROOT } 
+			5081 = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		effect = {
+			add_years_of_income = 2
+			change_innovativeness = 5
+			5084 = { change_trade_goods = cloth } 
+			5081 = { change_trade_goods = paper } 
+			change_government_reform_progress = 100
+			every_owned_province = {
+				limit = { culture = Fairy } 
+				add_institution_embracement = {
+					which = renaissance
+					value = 100
+				}
+			}
+		}
+	}
+
+	THE_LIL_26_1 = {
+		icon = mission_touhou_world_tree
+		position = 26
+		required_missions = { THE_LIL_23_1 } 
+		provinces_to_highlight = {
+			country_or_non_sovereign_subject_holds = ROOT
+			NOT = { is_prosperous = yes } 
+		}
+
+		trigger = {
+			Northern_fairy_land = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			Fairy_land = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			Land_of_the_black_doors = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			Shinkirou_state = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			Eastern_youkai_forest = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			Great_youkai_forest = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			prestige = 50
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 50
+				is_prosperous = yes
+			}
+		}
+
+		effect = {
+			change_innovativeness = 5
+			Northern_fairy_land = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			Fairy_land = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			Land_of_the_black_doors = {
+				add_permanent_province_modifier = {
+					name = "THE_LIL_spring_circle_province_modifier"
+					duration = -1
+				}
+			}
+			Shinkirou_state = {
+				add_permanent_province_modifier = {
+					name = "THE_LIL_spring_circle_province_modifier"
+					duration = -1
+				}
+			}
+			Eastern_youkai_forest = {
+				add_permanent_province_modifier = {
+					name = "THE_LIL_spring_circle_province_modifier"
+					duration = -1
+				}
+			}
+			Great_youkai_forest = {
+				add_permanent_province_modifier = {
+					name = "THE_LIL_spring_circle_province_modifier"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+THE_LIL_mission_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = LIL
+		has_country_flag = THE_LIL_unlock_mission_flag
+	}
+
+	THE_LIL_2_2 = {
+		icon = mission_THE_LIL_icon_2
+		position = 2
+		required_missions = { THE_LIL_1_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				TFR = {
+					OR = {
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = sent_gift
+						}
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = th_got_informed_about_spring
+						}
+					}
+				}
+				NOT = { exists = TFR } 
+			}
+			OR = {
+				LRV = {
+					OR = {
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = sent_gift
+						}
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = th_got_informed_about_spring
+						}
+					}
+				}
+				NOT = { exists = LRV } 
+			}
+		}
+
+		effect = {
+			add_adm_power = 100
+			if = {
+				limit = { exists = TFR } 
+				remove_historical_rival = TFR
+				remove_rival = TFR
+				add_historical_friend = TFR
+				TFR = {
+					remove_historical_rival = ROOT
+					remove_rival = ROOT
+					add_historical_friend = ROOT
+					remove_historical_rival = LRV
+					remove_rival = LRV
+					add_historical_friend = LRV
+					hidden_effect = {
+						set_ai_attitude = {
+							attitude = attitude_friendly
+							who = ROOT
+							locked = yes
+						}
+					}
+				}
+			}
+			else = {
+				TFR = {
+					ROOT = {
+						custom_tooltip = THE_add_permanent_claim_every_prev_province_tt
+					}
+				}
+				hidden_effect = {
+					every_province = {
+						limit = { is_core = TFR } 
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+			if = {
+				limit = { exists = LRV }
+				remove_historical_rival = LRV
+				remove_rival = LRV
+				add_historical_friend = LRV
+				LRV = {
+					remove_historical_rival = ROOT
+					remove_rival = ROOT
+					add_historical_friend = ROOT
+					remove_historical_rival = TFR
+					remove_rival = TFR
+					add_historical_friend = TFR
+					hidden_effect = {
+						set_ai_attitude = {
+							attitude = attitude_friendly
+							who = ROOT
+							locked = yes
+						}
+					}
+				}
+			}			
+			else = {
+				LRV = {
+					ROOT = {
+						custom_tooltip = THE_add_permanent_claim_every_prev_province_tt
+					}
+				}
+				hidden_effect = {
+					every_province = {
+						limit = { is_core = LRV } 
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+			define_advisor = {
+				type = statesman
+				skill = 1
+				culture = ROOT
+				religion = ROOT
+				cost_multiplier = 0.25
+			}
+			add_country_modifier = {
+				name = "THE_LIL_show_goodwill_modifier"
+				duration = 7300
+			}
+		}
+	}
+
+	THE_LIL_3_2 = {
+		icon = law_of_the_pious
+		position = 3
+		required_missions = {
+			THE_LIL_2_2
+			THE_LIL_2_4
+		}
+		provinces_to_highlight = { owned_by = TFR } 
+
+		trigger = {
+			OR = {
+				TFR = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+				NOT = { exists = TFR } 
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					TFR = {
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
+					}
+				}
+				custom_tooltip = THE_LIL_peace_with_tfr_diplomacy_yes_tt
+			}
+			else = { custom_tooltip = THE_LIL_peace_with_tfr_diplomacy_no_tt } 
+			tooltip = {
+				add_trust = {
+					who = TFR
+					value = 25
+					mutual = yes
+				}
+				add_country_modifier = {
+					name = "THE_LIL_meeting_with_tfr_modifier"
+					duration = 7300
+				}
+			}
+			if = {
+				limit = { NOT = { exists = TFR }  } 
+				custom_tooltip = THE_LIL_peace_with_tfr_war_yes_tt
+			}
+			else = { custom_tooltip = THE_LIL_peace_with_tfr_war_no_tt } 
+			tooltip = {
+				TFR = {
+					ROOT = {
+						custom_tooltip = THE_add_permanent_claim_every_prev_province_tt
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						TFR = {
+							has_opinion = {
+								who = ROOT
+								value = 100
+							}
+						}
+					}
+					add_trust = {
+						who = TFR
+						value = 25
+						mutual = yes
+					}
+					add_country_modifier = {
+						name = "THE_LIL_meeting_with_tfr_modifier"
+						duration = 7300
+					}
+				}
+				if = {
+					limit = { NOT = { exists = TFR }  } 
+					every_province = {
+						limit = { is_core = TFR } 
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+	}
+
+	THE_LIL_5_2 = {
+		icon = mission_touhou_okina
+		position = 5
+		required_missions = { THE_LIL_4_3 } 
+		provinces_to_highlight = {
+			area = Land_of_the_black_doors
+			NOT = { owned_by = ROOT } 
+		}
+
+		trigger = {
+			Land_of_the_black_doors = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+
+		effect = {
+			add_adm_power = 100
+			add_prestige = 10
+			add_country_modifier = {
+				name = "THE_LIL_fairy_great_revenge_modifier"
+				duration = 7300
+			}
+			custom_tooltip = THE_LIL_substract_aggressive_10_tt
+			hidden_effect = {
+				every_country = {
+					add_aggressive_expansion = {
+						who = ROOT
+						value = -10
+						apply_calc = no
+					}
+				}
+			}
+		}
+	}
+
+	THE_LIL_7_2 = {
+		icon = mission_touhou_forest_of_magic
+		position = 7
+		required_missions = { THE_LIL_6_3 } 
+		provinces_to_highlight = {
+			OR = {
+				area = Forest_of_magic
+				area = Forest_edge_state
+				area = Forest_coast_state
+			}
+			NOT = { country_or_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 6
+				OR = {
+					area = Forest_of_magic
+					area = Forest_coast_state
+					area = Forest_edge_state
+				}
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_LIL_magician_flight_modifier"
+				duration = -1
+			}
+			THE_LIL_subject_non_tributary_add_modifier = { modifier = THE_LIL_magician_flight_modifier } 
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_LIL_decrese_require_L01_decision_tt
+		}
+	}
+
+	THE_LIL_10_2 = {
+		icon = standardize_relazioni
+		position = 10
+		required_missions = { THE_LIL_9_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				th_incident_has_been_resolved = { incident = mountain_of_faith_incident } 
+				AND = {
+					NOT = { current_age = age_of_discovery } 
+					NOT = { current_age = age_of_reformation } 
+				}
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_LIL_hundred_flowers_bloom_modifier"
+				duration = -1
+			}
+		}
+	}
+
+	THE_LIL_11_2 = {
+		icon = mission_THE_LIL_icon_16
+		position = 11
+		required_missions = { THE_LIL_10_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				full_idea_group = humanist_ideas
+				full_idea_group = religious_ideas
+				full_idea_group = diplomatic_ideas
+				full_idea_group = influence_ideas
+				full_idea_group = plutocracy_ideas
+			}
+		}
+
+		effect = {
+			custom_tooltip = THE_LIL_upgrade_hundred_flowers_bloom_modifier_tt
+			hidden_effect = {
+				remove_country_modifier = THE_LIL_hundred_flowers_bloom_modifier
+				add_country_modifier = {
+					name = "THE_LIL_hundred_flowers_bloom_upgrade_modifier"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	THE_LIL_15_2 = {
+		icon = mission_colonize_california
+		position = 15
+		provinces_to_highlight = {
+			colonial_region = colonial_california
+			OR = {
+				NOT = { is_city = yes } 
+				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			}
+		}
+
+		trigger = {
+			mission_completed = THE_LIL_6_5
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				colonial_region = colonial_california
+				is_city = yes
+			}
+		}
+
+		effect = {
+			THE_LIL_colonize_mission_scripted_effect = { colonial_region = colonial_california } 
+			every_subject_country = {
+				limit = {
+					capital_scope = { colonial_region = colonial_california } 
+					OR = {
+						is_subject_of_type = crown_colony
+						is_subject_of_type = private_enterprise
+						is_subject_of_type = self_governing_colony
+					}
+				}
+				add_country_modifier = {
+					name = "THE_LIL_poppy_territory_modifier"
+					duration = 18250
+				}
+			}
+		}
+	}
+
+	THE_LIL_17_2 = {
+		icon = mission_colonize_alaska
+		position = 17
+		provinces_to_highlight = {
+			colonial_region = colonial_alaska
+			OR = {
+				NOT = { is_city = yes } 
+				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			}
+		}
+
+		trigger = {
+			mission_completed = THE_LIL_6_5
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				colonial_region = colonial_alaska
+				is_city = yes
+			}
+		}
+
+		effect = {
+			THE_LIL_colonize_mission_scripted_effect = { colonial_region = colonial_alaska } 
+			every_subject_country = {
+				limit = {
+					capital_scope = { colonial_region = colonial_alaska } 
+					OR = {
+						is_subject_of_type = crown_colony
+						is_subject_of_type = private_enterprise
+						is_subject_of_type = self_governing_colony
+					}
+				}
+				add_country_modifier = {
+					name = "THE_LIL_myosotis_territory_modifier"
+					duration = 18250
+				}
+			}
+		}
+	}
+
+	THE_LIL_22_2 = {
+		icon = mission_early_game_buildings
+		position = 22
+		required_missions = { THE_LIL_21_3 } 
+		provinces_to_highlight = {
+			province_id = 5084
+			OR = {
+				NOT = { development = 30 } 
+				NOT = { has_tax_building_trigger = yes } 
+				NOT = { has_trade_building_trigger = yes } 
+			}
+		}
+
+		trigger = {
+			5084 = {
+				owned_by = ROOT
+				development = 30
+				has_tax_building_trigger = yes
+				has_trade_building_trigger = yes
+			}
+		}
+
+		effect = {
+			5084 = {
+				add_permanent_province_modifier = {
+					name = "THE_LIL_misty_lake_gemstone_province_modifier"
+					duration = -1
+				}
+				add_or_upgrade_tax_building = yes
+				add_or_upgrade_trade_building = yes
+			}
+		}
+	}
+
+	THE_LIL_23_2 = {
+		icon = develop_our_capital
+		position = 23
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			mission_completed = THE_LIL_21_3
+			5084 = {
+				development = 50
+				has_tax_building_trigger = yes
+				has_production_building_trigger = yes
+				has_trade_building_trigger = yes
+				province_has_current_tech_fort_trigger = yes
+			}
+		}
+
+		effect = {
+			5084 = {
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+				if = {
+					limit = { NOT = { province_has_center_of_trade_of_level = 1 }  } 
+					center_of_trade = 2
+				}
+				else = { add_center_of_trade_level = 2 } 
+			}
+		}
+	}
+
+	THE_LIL_24_2 = {
+		icon = mission_touhou_scarlet_library
+		position = 24
+		required_missions = {
+			THE_LIL_23_1
+			THE_LIL_23_3
+		}
+		provinces_to_highlight = { province_id = 4979 } 
+
+		trigger = {
+			4979 = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					owner = {
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = sent_gift
+						}
+						custom_trigger_tooltip = {
+							tooltip = THE_LIL_had_pranked_by_lil_tt
+							has_country_flag = THE_LIL_spring_power_from_prank_count_flag
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			change_innovativeness = 10
+			add_country_modifier = {
+				name = "THE_LIL_fairy_cleverer_modifier"
+				duration = -1
+			}
+		}
+	}
+
+	THE_LIL_25_2 = {
+		icon = mission_touhou_human_capital
+		position = 25
+		required_missions = { THE_LIL_24_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			THE_LIL_tech_not_backward_scripted_trigger = { type = adm } 
+			THE_LIL_tech_not_backward_scripted_trigger = { type = dip } 
+			THE_LIL_tech_not_backward_scripted_trigger = { type = mil } 
+			innovativeness = 25
+		}
+
+		effect = {
+			4979 = {
+				if = {
+					limit = { NOT = { has_building = university }  } 
+					add_building = university
+				}
+			}
+			capital_scope = {
+				if = {
+					limit = { NOT = { has_building = university }  } 
+					add_building = university
+				}
+			}
+			add_adm_power = 150
+			add_dip_power = 150
+			add_mil_power = 150
+			add_country_modifier = {
+				name = "THE_LIL_studious_fairy_modifier"
+				duration = -1
+			}
+		}
+	}
+
+	THE_LIL_27_2 = {
+		icon = mission_THE_LIL_icon_14
+		position = 27
+		required_missions = {
+			THE_LIL_26_1
+			THE_LIL_25_2
+			THE_LIL_26_3
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_LIL_spring_full_blossom_tt
+				always = yes
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_LIL_spring_full_blossom_modifier"
+				duration = -1
+			}
+			THE_LIL_subject_non_tributary_add_modifier = { modifier = THE_LIL_spring_full_blossom_modifier } 
+		}
+	}
+
+	THE_LIL_29_2 = {
+		icon = mission_touhou_sunny_milk
+		position = 29
+		provinces_to_highlight = { trade_goods = cotton } 
+
+		trigger = {
+			trading_bonus = {
+				trade_goods = cotton
+				value = yes
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_LIL_fairy_mission_sunny_modifier"
+				duration = -1
+			}
+		}
+	}
+
+	THE_LIL_30_2 = {
+		icon = mission_touhou_cirno
+		position = 30
+		provinces_to_highlight = { trade_goods = glass } 
+
+		trigger = {
+			trading_bonus = {
+				trade_goods = glass
+				value = yes
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_LIL_fairy_mission_cirno_modifier"
+				duration = -1
+			}
+		}
+	}
+}
+THE_LIL_mission_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = LIL
+		has_country_flag = THE_LIL_unlock_mission_flag
+	}
+
+	THE_LIL_3_3 = {
+		icon = the_ostend_company
+		position = 3
+		required_missions = {
+			THE_LIL_2_2
+			THE_LIL_2_4
+		}
+		provinces_to_highlight = {
+			is_capital = yes
+			owner = { overlord_of = CIN } 
+		}
+
+		trigger = {
+			if = {
+				limit = { CIN = { is_subject_of = SCR }  } 
+				CIN = {
+					overlord = {
+						has_spy_network_from = {
+							who = ROOT
+							value = 20
+						}
+					}
+				}
+			}
+			else = {
+				OR = {
+					NOT = { exists = CIN } 
+					CIN = { is_subject = no } 
+					CIN = { is_subject_of = ROOT } 
+				}
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_LIL_dai_fairy_conspiracy_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = { CIN = { is_subject_of = SCR }  } 
+				SCR = {
+					add_country_modifier = {
+						name = THE_LIL_destory_ship_modifier
+						duration = 7300
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { exists = CIN }  } 
+				CIN = {
+					ROOT = {
+						custom_tooltip = THE_add_permanent_claim_every_prev_province_tt
+					}
+				}
+				hidden_effect = {
+					every_province = {
+						limit = { is_core = CIN } 
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						exists = CIN
+						CIN = { NOT = { mission_completed = CIN_get_fairy_supporters }  } 
+					}
+					CIN = { complete_mission = CIN_get_fairy_supporters } 
+					Scarlet_mountain = {
+						limit = { NOT = { is_core = CIN }  } 
+						add_core = CIN
+					}
+					Scarlett_domain = {
+						limit = { NOT = { is_core = CIN }  } 
+						add_core = CIN
+					}
+				}
+			}
+		}
+	}
+
+	THE_LIL_4_3 = {
+		icon = mission_THE_LIL_icon_4
+		position = 4
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			calc_true_if = {
+				mission_completed = THE_LIL_3_1
+				mission_completed = THE_LIL_3_2
+				mission_completed = THE_LIL_3_3
+				mission_completed = THE_LIL_3_4
+				mission_completed = THE_LIL_3_5
+				amount = 2
+			}
+			if = {
+				limit = { exists = TFR } 
+				AND = {
+					alliance_with = TFR
+					TFR = {
+						trust = {
+							who = ROOT
+							value = 65
+						}
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+				}
+			}
+			if = {
+				limit = { exists = LRV } 
+				AND = {
+					alliance_with = LRV
+					LRV = {
+						trust = {
+							who = ROOT
+							value = 65
+						}
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+				}
+			}
+			if = {
+				limit = { exists = SCR } 
+				SCR = {
+					has_spy_network_from = {
+						who = ROOT
+						value = 25
+					}
+				}
+			}
+			else = { NOT = { exists = SCR }  } 
+		}
+
+		effect = {
+			Fairy_land = {
+				type = all
+				add_permanent_claim = ROOT
+			}
+			Scarlet_mountain = {
+				type = all
+				add_permanent_claim = ROOT
+			}
+			Scarlett_domain = {
+				type = all
+				add_permanent_claim = ROOT
+			}
+			Scarlet_island = {
+				type = all
+				add_permanent_claim = ROOT
+			}
+			Land_of_the_black_doors = {
+				type = all
+				add_permanent_claim = ROOT
+			}
+			custom_tooltip = THE_LIL_unlock_elite_fairy_company_tt
+			add_country_modifier = {
+				name = "THE_LIL_fairy_regress_modifier"
+				duration = 9125
+			}
+			THE_add_ruler_stat = {
+				stat = mil
+				value = 1
+			}
+			add_adm_power = 100
+		}
+	}
+
+	THE_LIL_6_3 = {
+		icon = mission_touhou_fairies_bunch
+		position = 6
+		required_missions = {
+			THE_LIL_5_2
+			THE_LIL_5_4
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = Fairy_land
+				area = Scarlet_mountain
+				area = Scarlett_domain
+			}
+			NOT = { owned_by = ROOT } 
+			NOT = { owner = { is_subject_of = ROOT }  } 
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 7
+				OR = {
+					area = Fairy_land
+					area = Scarlet_mountain
+					area = Scarlett_domain
+				}
+			}
+			OR = {
+				army_size = SCR
+				has_won_war_against = {
+					max_years_since = 10
+					who = SCR
+				}
+				NOT = { exists = SCR } 
+			}
+		}
+
+		effect = {
+			custom_tooltip = THE_LIL_substract_aggressive_30_tt
+			hidden_effect = {
+				every_country = {
+					add_aggressive_expansion = {
+						who = ROOT
+						value = -30
+						apply_calc = yes
+					}
+				}
+			}
+			THE_add_ruler_stat = {
+				stat = adm
+				value = 1
+			}
+			add_mil_power = 100
+			Forest_of_magic = { add_permanent_claim = ROOT } 
+			Forest_edge_state = { add_permanent_claim = ROOT } 
+			Forest_coast_state = { add_permanent_claim = ROOT } 
+			Ran_state = { add_permanent_claim = ROOT } 
+			Eastern_mountains = { add_permanent_claim = ROOT } 
+			Mayohiga_state = { add_permanent_claim = ROOT } 
+			Eastern_youkai_forest = { add_permanent_claim = ROOT } 
+			Shinkirou_state = { add_permanent_claim = ROOT } 
+			Great_youkai_forest = { add_permanent_claim = ROOT } 
+			custom_tooltip = THE_LIL_unlock_create_daiyousei_advisor_decision_tt
+			set_country_flag = THE_LIL_unlock_create_daiyousei_advisor_decision_flag
+			set_country_flag = LIL_became_empire
+			1993 = {
+				cede_province = ROOT
+				add_core = ROOT
+			}
+			THE_country_event_with_insight = {
+				id = THE_LIL_events.2
+				effect_tooltip = "
+					custom_tooltip = THE_LIL_fairy_meeting_effect_tt
+					if = {
+						limit = { NOT = { government = republic } }
+						change_government = republic
+					}
+					add_government_reform = THE_LIL_fairy_grand_federation_reform
+					custom_tooltip = empty_line_tt
+					add_prestige_or_monarch_power = {
+						amount = 20
+					}
+				"
+			}
+		}
+	}
+
+	THE_LIL_9_3 = {
+		icon = mission_THE_LIL_icon_5
+		position = 9
+		required_missions = {
+			THE_LIL_7_4
+			THE_LIL_8_4
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5084
+				province_id = 4975
+				province_id = 4968
+				province_id = 5094
+				province_id = 4956
+				province_id = 5187
+				province_id = 4989
+				province_id = 5007
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			5084 = { country_or_non_sovereign_subject_holds = ROOT } 
+			4975 = { country_or_non_sovereign_subject_holds = ROOT } 
+			4968 = { country_or_non_sovereign_subject_holds = ROOT } 
+			5094 = { country_or_non_sovereign_subject_holds = ROOT } 
+			4956 = { country_or_non_sovereign_subject_holds = ROOT } 
+			5187 = { country_or_non_sovereign_subject_holds = ROOT } 
+			4989 = { country_or_non_sovereign_subject_holds = ROOT } 
+			5007 = { country_or_non_sovereign_subject_holds = ROOT } 
+			is_great_power = yes
+			prestige = 80
+		}
+
+		effect = {
+			inherit = TFR
+			inherit = LRV
+			inherit = CIN
+			inherit = AKI
+			inherit = PRI
+			add_prestige_or_monarch_power = { amount = 50 } 
+			THE_add_ruler_stat = {
+				stat = mil
+				value = 1
+			}
+			add_adm_power = 100
+			if = {
+				limit = { NOT = { government = republic }  } 
+				change_government = republic
+			}
+			add_government_reform = THE_LIL_fairy_great_federation_reform
+			set_country_flag = THE_LIL_unlock_spring_territory_jurisdiction_reform_flag
+			custom_tooltip = THE_LIL_unlock_spring_territory_jurisdiction_reform_tt
+		}
+	}
+
+	THE_LIL_12_3 = {
+		icon = mission_THE_LIL_icon_7
+		position = 12
+		required_missions = {
+			THE_LIL_11_2
+			THE_LIL_9_3
+			THE_LIL_11_4
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {
+			add_prestige_or_monarch_power = { amount = 50 } 
+			THE_country_event_with_insight = { id = THE_LIL_events.4 } 
+			THE_add_ruler_stat = {
+				stat = dip
+				value = 1
+			}
+			add_country_modifier = {
+				name = "THE_LIL_spring_of_gensokyo"
+				duration = -1
+			}
+			THE_LIL_subject_non_tributary_add_modifier = { modifier = THE_LIL_spring_of_gensokyo } 
+		}
+	}
+
+	THE_LIL_13_3 = {
+		icon = mission_kingdom_of_new_spain
+		position = 13
+		provinces_to_highlight = {
+			colonial_region = colonial_mexico
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			mission_completed = THE_LIL_6_5
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				colonial_region = colonial_mexico
+				is_city = yes
+			}
+		}
+
+		effect = {
+			hidden_effect = {
+				colonial_mexico = {
+					type = all
+					add_permanent_claim = ROOT
+				}
+				colonial_peru = {
+					type = all
+					add_permanent_claim = ROOT
+				}
+			}
+			custom_tooltip = THE_LIL_add_permanent_claim_mexico_tt
+			custom_tooltip = THE_LIL_add_permanent_claim_peru_tt
+			add_country_modifier = {
+				name = "THE_LIL_hakurei_meridian_modifier"
+				duration = -1
+			}
+			every_subject_country = {
+				limit = {
+					capital_scope = { colonial_region = colonial_mexico } 
+					OR = {
+						is_subject_of_type = crown_colony
+						is_subject_of_type = private_enterprise
+						is_subject_of_type = self_governing_colony
+					}
+				}
+				if = {
+					limit = { NOT = { religion = overlord }  } 
+					change_religion = overlord
+				}
+				set_country_flag = has_increased_religious_control
+				add_country_modifier = {
+					name = "THE_LIL_whichs_business_modifier"
+					duration = 18250
+				}
+			}
+		}
+	}
+
+	THE_LIL_14_3 = {
+		icon = mission_THE_LIL_icon_8
+		position = 14
+		required_missions = { THE_LIL_13_3 } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 852
+				province_id = 856
+				province_id = 846
+			}
+			NOT = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+					has_tax_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_courthouse_building_trigger = yes
+					num_of_times_improved = 3
+				}
+			}
+		}
+
+		trigger = {
+			colonial_mexico = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				religion_group = Touhou
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				colonial_region = colonial_mexico
+				trade_goods = gold
+				base_manpower = 4
+				num_of_times_improved = 3
+			}
+			852 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_tax_building_trigger = yes
+				has_trade_building_trigger = yes
+				has_courthouse_building_trigger = yes
+				num_of_times_improved = 3
+			}
+			856 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_tax_building_trigger = yes
+				has_trade_building_trigger = yes
+				has_courthouse_building_trigger = yes
+				num_of_times_improved = 3
+			}
+			846 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_tax_building_trigger = yes
+				has_trade_building_trigger = yes
+				has_courthouse_building_trigger = yes
+				num_of_times_improved = 3
+			}
+		}
+
+		effect = {
+			hidden_effect = {
+				852 = {
+					owner = {
+						add_country_modifier = {
+							name = "THE_LIL_accept_aztek_culture_modifier"
+							duration = -1
+							hidden = yes
+						}
+						if = {
+							limit = { NOT = { accepted_culture = aztek }  } 
+							add_accepted_culture = aztek
+						}
+					}
+				}
+			}
+			852 = {
+				add_great_project_tier = {
+					type = tenochtitlan
+					tier = 1
+				}
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+			every_subject_country = {
+				limit = {
+					capital_scope = { colonial_region = colonial_mexico } 
+					OR = {
+						is_subject_of_type = crown_colony
+						is_subject_of_type = private_enterprise
+						is_subject_of_type = self_governing_colony
+					}
+				}
+				add_country_modifier = {
+					name = "THE_LIL_dahlia_territory_modifier"
+					duration = 18250
+				}
+			}
+		}
+	}
+
+	THE_LIL_15_3 = {
+		icon = mission_invade_island
+		position = 15
+		provinces_to_highlight = {
+			colonial_region = colonial_peru
+			OR = {
+				NOT = { is_city = yes } 
+				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			}
+		}
+
+		trigger = {
+			mission_completed = THE_LIL_6_5
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				colonial_region = colonial_peru
+				is_city = yes
+			}
+		}
+
+		effect = {
+			THE_LIL_colonize_mission_scripted_effect = { colonial_region = colonial_peru } 
+			every_subject_country = {
+				limit = {
+					capital_scope = { colonial_region = colonial_peru } 
+					OR = {
+						is_subject_of_type = crown_colony
+						is_subject_of_type = private_enterprise
+						is_subject_of_type = self_governing_colony
+					}
+				}
+				add_country_modifier = {
+					name = "THE_LIL_cantua_territory_modifier"
+					duration = 18250
+				}
+			}
+		}
+	}
+
+	THE_LIL_16_3 = {
+		icon = mission_potosi_silver
+		position = 16
+		required_missions = { THE_LIL_15_3 } 
+		provinces_to_highlight = {
+			province_id = 795
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+				NOT = { has_production_building_trigger = yes } 
+				NOT = { has_courthouse_building_trigger = yes } 
+				NOT = { base_manpower = 6 } 
+			}
+		}
+
+		trigger = {
+			795 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_production_building_trigger = yes
+				has_courthouse_building_trigger = yes
+				base_manpower = 6
+			}
+		}
+
+		effect = {
+			795 = {
+				add_base_production = 5
+				add_great_project_tier = {
+					type = potosi
+					tier = 1
+				}
+			}
+			custom_tooltip = THE_LIL_potosi_upgrade_tt
+		}
+	}
+
+	THE_LIL_17_3 = {
+		icon = colonize_the_cape
+		position = 17
+		provinces_to_highlight = {
+			colonial_region = colonial_la_plata
+			OR = {
+				NOT = { is_city = yes } 
+				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			}
+		}
+
+		trigger = {
+			mission_completed = THE_LIL_6_5
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				colonial_region = colonial_la_plata
+				is_city = yes
+			}
+		}
+
+		effect = {
+			THE_LIL_colonize_mission_scripted_effect = { colonial_region = colonial_la_plata } 
+			every_subject_country = {
+				limit = {
+					capital_scope = { colonial_region = colonial_la_plata } 
+					OR = {
+						is_subject_of_type = crown_colony
+						is_subject_of_type = private_enterprise
+						is_subject_of_type = self_governing_colony
+					}
+				}
+				add_country_modifier = {
+					name = "THE_LIL_erythrina_corallodendron_territory_modifier"
+					duration = 18250
+				}
+			}
+		}
+	}
+
+	THE_LIL_19_3 = {
+		icon = mission_THE_LIL_icon_10
+		position = 19
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			mission_completed = THE_LIL_13_3
+			mission_completed = THE_LIL_15_1
+			mission_completed = THE_LIL_15_2
+			mission_completed = THE_LIL_15_3
+			mission_completed = THE_LIL_15_4
+			mission_completed = THE_LIL_15_5
+			mission_completed = THE_LIL_17_1
+			mission_completed = THE_LIL_17_2
+			mission_completed = THE_LIL_17_3
+			mission_completed = THE_LIL_17_4
+			mission_completed = THE_LIL_17_5
+			mission_completed = THE_LIL_18_4
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_LIL_new_world_spring_modifier"
+				duration = -1
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							continent = north_america
+							continent = south_america
+							is_city = yes
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				every_subject_country = {
+					limit = { NOT = { is_subject_of_type = tributary_state }  } 
+					every_owned_province = {
+						limit = {
+							OR = {
+								continent = north_america
+								continent = south_america
+								is_city = yes
+							}
+						}
+						add_base_tax = 1
+						add_base_production = 1
+						add_base_manpower = 1
+					}
+				}
+			}
+			custom_tooltip = THE_LIL_new_world_spring_effect_tt
+		}
+	}
+
+	THE_LIL_20_3 = {
+		icon = mission_THE_LIL_icon_11
+		position = 20
+		provinces_to_highlight = {
+			province_id = 5084
+			OR = {
+				NOT = { development = 25 } 
+				NOT = { num_of_times_improved = 6 } 
+				NOT = { owned_by = ROOT } 
+			}
+		}
+
+		trigger = {
+			Northern_fairy_land = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5084 = {
+				owned_by = ROOT
+				development = 25
+				num_of_times_improved = 6
+			}
+		}
+
+		effect = {
+			Northern_fairy_land = {
+				add_permanent_province_modifier = {
+					name = "THE_LIL_spring_circle_province_modifier"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	THE_LIL_21_3 = {
+		icon = mission_pol_breadbasket_europe
+		position = 21
+		required_missions = { THE_LIL_20_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			adm_power_cost = 200
+			dip_power_cost = 200
+			mil_power_cost = 200
+			Fairy_land = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			adm_power_cost = 100
+			dip_power_cost = 100
+			mil_power_cost = 100
+			unlock_estate_privilege = { estate_privilege = estate_burghers_forest_expansion } 
+			unlock_estate_privilege = { estate_privilege = estate_burghers_mountain_expansion } 
+			5084 = { add_base_tax = 10 } 
+			Fairy_land = {
+				add_permanent_province_modifier = {
+					name = "THE_LIL_spring_circle_province_modifier"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	THE_LIL_22_3 = {
+		icon = sway_cologne
+		position = 22
+		required_missions = { THE_LIL_21_3 } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						area = Scarlet_island
+						area = Scarlet_mountain
+						area = Scarlett_domain
+					}
+					OR = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+						devastation = 1
+					}
+				}
+				AND = {
+					province_id = 5074
+					NOT = { has_tax_building_trigger = yes } 
+				}
+				AND = {
+					province_id = 5072
+					NOT = { has_production_building_trigger = yes } 
+				}
+				AND = {
+					province_id = 4968
+					NOT = { has_trade_building_trigger = yes } 
+				}
+				AND = {
+					province_id = 5071
+					NOT = { province_has_current_tech_fort_trigger = yes } 
+				}
+			}
+		}
+
+		trigger = {
+			Scarlet_island = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				NOT = { devastation = 1 } 
+			}
+			Scarlet_mountain = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				NOT = { devastation = 1 } 
+			}
+			Scarlett_domain = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				NOT = { devastation = 1 } 
+			}
+			5074 = { has_tax_building_trigger = yes } 
+			5072 = { has_production_building_trigger = yes } 
+			4968 = { has_trade_building_trigger = yes } 
+			5071 = { province_has_current_tech_fort_trigger = yes } 
+		}
+
+		effect = {
+			Scarlet_island = {
+				add_permanent_province_modifier = {
+					name = "THE_LIL_spring_circle_province_modifier"
+					duration = -1
+				}
+			}
+			Scarlet_mountain = {
+				add_permanent_province_modifier = {
+					name = "THE_LIL_spring_circle_province_modifier"
+					duration = -1
+				}
+			}
+			Scarlett_domain = {
+				add_permanent_province_modifier = {
+					name = "THE_LIL_spring_circle_province_modifier"
+					duration = -1
+				}
+			}
+			5074 = { add_or_upgrade_tax_building = yes } 
+			5072 = { add_or_upgrade_production_building = yes } 
+			4968 = { add_or_upgrade_trade_building = yes } 
+		}
+	}
+
+	THE_LIL_23_3 = {
+		icon = mission_THE_LIL_icon_12
+		position = 23
+		required_missions = { THE_LIL_22_4 } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			OR = {
+				trade_goods = cotton
+				trade_goods = grain
+				trade_goods = fish
+			}
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				OR = {
+					trade_goods = cotton
+					trade_goods = grain
+					trade_goods = fish
+				}
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_LIL_fairy_agriculture_modifier"
+				duration = -1
+			}
+			THE_LIL_subject_non_tributary_add_modifier = { modifier = THE_LIL_fairy_agriculture_modifier } 
+		}
+	}
+
+	THE_LIL_24_3 = {
+		icon = mission_THE_LIL_icon_13
+		position = 24
+		required_missions = { THE_LIL_23_3 } 
+		provinces_to_highlight = {
+			country_or_non_sovereign_subject_holds = ROOT
+			OR = {
+				NOT = { has_tax_building_trigger = yes } 
+				NOT = { has_production_building_trigger = yes } 
+			}
+		}
+
+		trigger = {
+			treasury = 300
+			calc_true_if = {
+				all_province = {
+					country_or_non_sovereign_subject_holds = ROOT
+					has_tax_building_trigger = yes
+					has_production_building_trigger = yes
+				}
+				amount = 15
+			}
+		}
+
+		effect = {
+			add_years_of_income = 1
+			add_country_modifier = {
+				name = "THE_LIL_every_road_to_lil_modifier"
+				duration = -1
+			}
+			custom_tooltip = THE_LIL_every_province_meet_trigger_tt
+			tooltip = {
+				add_base_tax = 1
+				add_base_production = 1
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_tax_building_trigger = yes
+						has_production_building_trigger = yes
+					}
+					add_base_tax = 1
+					add_base_production = 1
+				}
+				every_subject_country = {
+					limit = { NOT = { is_subject_of_type = tributary_state }  } 
+					every_owned_province = {
+						limit = {
+							has_tax_building_trigger = yes
+							has_production_building_trigger = yes
+						}
+						add_base_tax = 1
+						add_base_production = 1
+					}
+				}
+			}
+		}
+	}
+
+	THE_LIL_25_3 = {
+		icon = mission_sw_torquoise_mining
+		position = 25
+		required_missions = { THE_LIL_24_3 } 
+		provinces_to_highlight = {
+			country_or_non_sovereign_subject_holds = ROOT
+			OR = {
+				NOT = { has_production_building_trigger = yes } 
+				NOT = { base_production = 5 } 
+			}
+		}
+
+		trigger = {
+			calc_true_if = {
+				all_province = {
+					country_or_non_sovereign_subject_holds = ROOT
+					has_production_building_trigger = yes
+					base_production = 5
+				}
+				amount = 50
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_LIL_spring_produce_modifier"
+				duration = -1
+			}
+		}
+	}
+
+	THE_LIL_26_3 = {
+		icon = mission_have_manufactories
+		position = 26
+		required_missions = { THE_LIL_25_3 } 
+		provinces_to_highlight = {
+			country_or_non_sovereign_subject_holds = ROOT
+			NOT = { has_manufactory_trigger = yes } 
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				has_manufactory_trigger = yes
+				value = 10
+			}
+		}
+
+		effect = {
+			custom_tooltip = THE_LIL_every_province_meet_trigger_tt
+			tooltip = { add_base_production = 5 } 
+			hidden_effect = {
+				every_owned_province = {
+					limit = { has_manufactory_trigger = yes } 
+					add_base_production = 5
+				}
+				every_subject_country = {
+					limit = { NOT = { is_subject_of_type = tributary_state }  } 
+					every_owned_province = {
+						limit = { has_manufactory_trigger = yes } 
+						add_base_production = 5
+					}
+				}
+			}
+		}
+	}
+
+	THE_LIL_28_3 = {
+		icon = mission_touhou_lily_spring_power
+		position = 28
+		required_missions = {
+			THE_LIL_27_2
+			THE_LIL_27_4
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_LIL_spring_builder_tt
+				always = yes
+			}
+		}
+
+		effect = {
+			add_years_of_income = 5
+			add_stability_or_adm_power = { amount = 3 } 
+			add_country_modifier = {
+				name = "THE_LIL_spring_builder_modifier"
+				duration = -1
+			}
+		}
+	}
+
+	THE_LIL_29_3 = {
+		icon = mission_touhou_luna_child
+		position = 29
+		provinces_to_highlight = { trade_goods = coffee } 
+
+		trigger = {
+			trading_bonus = {
+				trade_goods = coffee
+				value = yes
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_LIL_fairy_mission_luna_modifier"
+				duration = -1
+			}
+		}
+	}
+
+	THE_LIL_30_3 = {
+		icon = mission_touhou_daiyousei
+		position = 30
+		provinces_to_highlight = { trade_goods = grain } 
+
+		trigger = {
+			trading_bonus = {
+				trade_goods = grain
+				value = yes
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_LIL_fairy_mission_daiyousei_modifier"
+				duration = -1
+			}
+		}
+	}
+
+	THE_LIL_31_3 = {
+		icon = mission_touhou_fairy_realm
+		position = 31
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					culture = Fairy
+					OR = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+						NOT = { development = 20 } 
+					}
+				}
+				AND = {
+					province_id = 5084
+					OR = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+						NOT = { development = 50 } 
+					}
+				}
+				AND = {
+					OR = {
+						province_id = 4975
+						province_id = 5083
+						province_id = 4996
+						province_id = 5080
+					}
+					OR = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+						NOT = { development = 30 } 
+					}
+				}
+			}
+		}
+
+		trigger = {
+			mission_completed = THE_LIL_29_2
+			mission_completed = THE_LIL_29_3
+			mission_completed = THE_LIL_29_4
+			mission_completed = THE_LIL_30_2
+			mission_completed = THE_LIL_30_3
+			mission_completed = THE_LIL_30_4
+			all_province = {
+				OR = {
+					AND = {
+						NOT = { continent = gensokyo_continent } 
+						NOT = { continent = moon_continent } 
+					}
+					NOT = { culture = Fairy } 
+					AND = {
+						country_or_non_sovereign_subject_holds = ROOT
+						development = 20
+					}
+				}
+			}
+			5084 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 50
+			}
+			4975 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 30
+			}
+			5083 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 30
+			}
+			4996 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 30
+			}
+			5080 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 30
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_LIL_fairy_happiness_modifier"
+				duration = -1
+			}
+			custom_tooltip = THE_LIL_fairy_happiness_modifier_desc_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						NOT = { superregion = gensokyo_superregion } 
+						NOT = { superregion = gensokyo_orbit_superregion } 
+					}
+					province_event = {
+						id = THE_LIL_events.8
+						days = 36500
+					}
+				}
+			}
+		}
+	}
+}
+THE_LIL_mission_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = LIL
+		has_country_flag = THE_LIL_unlock_mission_flag
+	}
+
+	THE_LIL_2_4 = {
+		icon = mission_THE_LIL_icon_17
+		position = 2
+		required_missions = { THE_LIL_1_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				army_size_percentage = 1.0
+				army_size = 12
+			}
+		}
+
+		effect = {
+			add_prestige = 10
+			add_manpower = 3
+			add_mil_power = 100
+			add_treasury = 50
+			Northern_fairy_land = { add_permanent_claim = ROOT } 
+			Fairy_land = { add_permanent_claim = ROOT } 
+			add_country_modifier = {
+				name = "THE_LIL_fairies_courage_modifier"
+				duration = 7300
+			}
+		}
+	}
+
+	THE_LIL_3_4 = {
+		icon = mission_dominate_the_mediterranean
+		position = 3
+		required_missions = {
+			THE_LIL_2_2
+			THE_LIL_2_4
+		}
+		provinces_to_highlight = { owned_by = PRI } 
+
+		trigger = {
+			OR = {
+				AND = {
+					PRI = {
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
+					}
+					OR = {
+						alliance_with = PRI
+						marriage_with = PRI
+					}
+				}
+				NOT = { exists = PRI } 
+				is_rival = PRI
+				is_enemy = PRI
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					PRI = {
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
+					}
+					OR = {
+						alliance_with = PRI
+						marriage_with = PRI
+					}
+				}
+				custom_tooltip = THE_LIL_peace_with_pri_diplomacy_yes_tt
+			}
+			else = { custom_tooltip = THE_LIL_peace_with_pri_diplomacy_no_tt } 
+			tooltip = {
+				add_historical_friend = PRI
+				PRI = { add_historical_friend = ROOT } 
+				create_alliance = PRI
+				add_trust = {
+					who = PRI
+					value = 10
+					mutual = yes
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						NOT = { exists = PRI } 
+						is_rival = PRI
+						is_enemy = PRI
+					}
+				}
+				custom_tooltip = THE_LIL_peace_with_pri_war_yes_tt
+			}
+			else = { custom_tooltip = THE_LIL_peace_with_pri_war_no_tt } 
+			tooltip = {
+				PRI = {
+					ROOT = {
+						custom_tooltip = THE_add_permanent_claim_every_prev_province_tt
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						PRI = {
+							has_opinion = {
+								who = ROOT
+								value = 100
+							}
+						}
+						OR = {
+							alliance_with = PRI
+							marriage_with = PRI
+						}
+					}
+					add_historical_friend = PRI
+					PRI = { add_historical_friend = ROOT } 
+					create_alliance = PRI
+					add_trust = {
+						who = PRI
+						value = 10
+						mutual = yes
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							NOT = { exists = PRI } 
+							is_rival = PRI
+							is_enemy = PRI
+						}
+					}
+					every_province = {
+						limit = { is_core = PRI } 
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+	}
+
+	THE_LIL_5_4 = {
+		icon = mission_touhou_smug_remilia
+		position = 5
+		required_missions = { THE_LIL_4_3 } 
+		provinces_to_highlight = { is_capital_of = SCR } 
+
+		trigger = {
+			if = {
+				limit = { exists = SCR } 
+				SCR = {
+					has_spy_network_from = {
+						who = ROOT
+						value = 30
+					}
+				}
+			}
+			else = { NOT = { exists = SCR }  } 
+		}
+
+		effect = {
+			if = {
+				limit = { CIN = { is_subject_of = SCR }  } 
+				CIN = {
+					grant_independence = yes
+					hidden_effect = { remove_country_modifier = THE_LIL_dai_fairy_conspiracy_modifier } 
+				}
+				tooltip = { create_alliance = CIN } 
+			}
+			else_if = {
+				limit = { CIN = { is_subject = no }  } 
+				tooltip = { create_alliance = CIN } 
+			}
+			hidden_effect = {
+				if = {
+					limit = { CIN = { is_subject = no }  } 
+					create_alliance = CIN
+				}
+			}
+			TFR = {
+				add_country_modifier = {
+					name = "THE_LIL_support_front_modifier"
+					duration = 7300
+				}
+			}
+			LRV = {
+				add_country_modifier = {
+					name = "THE_LIL_support_front_modifier"
+					duration = 7300
+				}
+			}
+			add_country_modifier = {
+				name = "THE_LIL_fairy_support_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = { exists = SCR } 
+				declare_war_with_cb = {
+					who = SCR
+					casus_belli = cb_humiliate
+				}
+				hidden_effect = {
+					set_country_flag = THE_LIL_scr_mission_war_start_flag
+					THE_country_event_with_insight = {
+						id = THE_LIL_events.5
+						days = 1
+					}
+				}
+				custom_tooltip = THE_LIL_humiliate_war_with_scr_tt
+				if = {
+					limit = { exists = CIN } 
+					custom_tooltip = empty_line_tt
+					custom_tooltip = THE_LIL_scr_mission_war_won_tt
+				}
+			}
+		}
+	}
+
+	THE_LIL_7_4 = {
+		icon = mission_touhou_moriya_temple
+		position = 8
+		required_missions = { THE_LIL_8_5 } 
+		provinces_to_highlight = {
+			OR = {
+				area = Hakurei_state
+				area = Hakurei_peninsula_state
+				area = Hakurei_western_coast
+			}
+			NOT = { country_or_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				OR = {
+					area = Hakurei_peninsula_state
+					area = Hakurei_western_coast
+					area = Hakurei_state
+				}
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_LIL_which_blessing_modifier"
+				duration = -1
+			}
+			THE_LIL_subject_non_tributary_add_modifier = { modifier = THE_LIL_which_blessing_modifier } 
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_LIL_decrese_require_L02_decision_tt
+		}
+	}
+
+	THE_LIL_10_4 = {
+		icon = mission_touhou_lily_growing_darkness
+		position = 10
+		required_missions = {
+			THE_LIL_9_3
+			THE_LIL_9_5
+		}
+		provinces_to_highlight = {
+			province_id = 5106
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = { 5106 = { country_or_non_sovereign_subject_holds = ROOT }  } 
+
+		effect = {
+			THE_country_event_with_insight = {
+				id = THE_LIL_events.3
+				effect_tooltip = "
+					capital_scope = {
+						add_province_triggered_modifier = THE_LIL_spring_origin_triggered_modifier
+					}
+					custom_tooltip = empty_line_tt
+					custom_tooltip = THE_LIL_unlock_late_spring_tt
+				"
+			}
+		} 
+	}
+
+	THE_LIL_11_4 = {
+		icon = mission_THE_LIL_icon_6
+		position = 11
+		required_missions = { THE_LIL_10_4 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_LIL_had_finish_late_spring_disater_tt
+				THE_LIL_finish_late_spring_disater_scripted_trigger = yes
+			}
+		}
+
+		effect = {
+			THE_add_ruler_stat = {
+				stat = adm
+				value = 1
+			}
+			random_province = {
+				limit = { has_province_modifier = THE_LIL_spring_origin_triggered_modifier } 
+				remove_province_triggered_modifier = THE_LIL_spring_origin_triggered_modifier
+			}
+			add_country_modifier = {
+				name = "THE_LIL_always_maintained_power_of_spring_modifier"
+				duration = -1
+			}
+		}
+	}
+
+	THE_LIL_15_4 = {
+		icon = mission_colonize_louisiana
+		position = 15
+		provinces_to_highlight = {
+			colonial_region = colonial_louisiana
+			OR = {
+				NOT = { is_city = yes } 
+				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			}
+		}
+
+		trigger = {
+			mission_completed = THE_LIL_6_5
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				colonial_region = colonial_louisiana
+				is_city = yes
+			}
+		}
+
+		effect = {
+			THE_LIL_colonize_mission_scripted_effect = { colonial_region = colonial_louisiana } 
+			every_subject_country = {
+				limit = {
+					capital_scope = { colonial_region = colonial_louisiana } 
+					OR = {
+						is_subject_of_type = crown_colony
+						is_subject_of_type = private_enterprise
+						is_subject_of_type = self_governing_colony
+					}
+				}
+				add_country_modifier = {
+					name = "THE_LIL_southern_magnolia_territory_modifier"
+					duration = 18250
+				}
+			}
+		}
+	}
+
+	THE_LIL_17_4 = {
+		icon = mission_rb_the_thirteen_colonies
+		position = 17
+		provinces_to_highlight = {
+			colonial_region = colonial_eastern_america
+			OR = {
+				NOT = { is_city = yes } 
+				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			}
+		}
+
+		trigger = {
+			mission_completed = THE_LIL_6_5
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				colonial_region = colonial_eastern_america
+				is_city = yes
+			}
+		}
+
+		effect = {
+			THE_LIL_colonize_mission_scripted_effect = { colonial_region = colonial_eastern_america } 
+			every_subject_country = {
+				limit = {
+					capital_scope = { colonial_region = colonial_eastern_america } 
+					OR = {
+						is_subject_of_type = crown_colony
+						is_subject_of_type = private_enterprise
+						is_subject_of_type = self_governing_colony
+					}
+				}
+				add_country_modifier = {
+					name = "THE_LIL_rose_territory_modifier"
+					duration = 18250
+				}
+			}
+		}
+	}
+
+	THE_LIL_18_4 = {
+		icon = mission_rb_colonise_canada
+		position = 18
+		provinces_to_highlight = {
+			colonial_region = colonial_canada
+			OR = {
+				NOT = { is_city = yes } 
+				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			}
+		}
+
+		trigger = {
+			mission_completed = THE_LIL_6_5
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				colonial_region = colonial_canada
+				is_city = yes
+			}
+		}
+
+		effect = {
+			THE_LIL_colonize_mission_scripted_effect = { colonial_region = colonial_canada } 
+			every_subject_country = {
+				limit = {
+					capital_scope = { colonial_region = colonial_canada } 
+					OR = {
+						is_subject_of_type = crown_colony
+						is_subject_of_type = private_enterprise
+						is_subject_of_type = self_governing_colony
+					}
+				}
+				add_country_modifier = {
+					name = "THE_LIL_maple_leaf_territory_modifier"
+					duration = 18250
+				}
+			}
+		}
+	}
+
+	THE_LIL_22_4 = {
+		icon = mission_zambezi_gold
+		position = 22
+		required_missions = { THE_LIL_21_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = { monthly_income = 15 } 
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_LIL_economic_base_modifier"
+				duration = -1
+			}
+		}
+	}
+
+	THE_LIL_23_4 = {
+		icon = mission_galleys_in_port
+		position = 23
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4974
+				province_id = 5134
+			}
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+				NOT = { has_tax_building_trigger = yes } 
+				NOT = { has_trade_building_trigger = yes } 
+				NOT = { has_dock_building_trigger = yes } 
+				NOT = { has_shipyard_building_trigger = yes } 
+			}
+		}
+
+		trigger = {
+			mission_completed = THE_LIL_21_3
+			4974 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_tax_building_trigger = yes
+				has_trade_building_trigger = yes
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+			}
+			5134 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_tax_building_trigger = yes
+				has_trade_building_trigger = yes
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+			}
+		}
+
+		effect = {
+			4974 = {
+				add_or_upgrade_tax_building = yes
+				add_or_upgrade_trade_building = yes
+				add_or_upgrade_dock_building = yes
+				add_or_upgrade_shipyard_building = yes
+				add_permanent_province_modifier = {
+					name = "THE_LIL_spring_port_province_modifier"
+					duration = -1
+				}
+			}
+			5134 = {
+				add_or_upgrade_tax_building = yes
+				add_or_upgrade_trade_building = yes
+				add_or_upgrade_dock_building = yes
+				add_or_upgrade_shipyard_building = yes
+				add_permanent_province_modifier = {
+					name = "THE_LIL_spring_port_province_modifier"
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = "THE_LIL_misty_lake_treasure_modifier"
+				duration = -1
+			}
+		}
+	}
+
+	THE_LIL_24_4 = {
+		icon = mission_african_gold
+		position = 24
+		required_missions = { THE_LIL_23_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			treasury = 100
+			monthly_income = 50
+			NOT = { inflation = 2 } 
+			NOT = { corruption = 1 } 
+		}
+
+		effect = {
+			THE_country_event_with_insight = {
+				id = THE_LIL_events.6
+				option_1 = "
+					add_treasury = -100
+					add_country_modifier = {
+						name = THE_LIL_fairy_currency_modifier
+						duration = -1
+					}
+				"
+				option_2 = "
+					add_stability = 1
+					add_dip_power = 100
+					add_years_of_income = 2
+				"
+			}
+		} 
+	}
+
+	THE_LIL_25_4 = {
+		icon = mission_rb_the_bank_of_scotland
+		position = 25
+		required_missions = { THE_LIL_24_4 } 
+		provinces_to_highlight = {
+			trade_goods = gold
+			country_or_non_sovereign_subject_holds = ROOT
+			NOT = { base_production = 8 } 
+		}
+
+		trigger = {
+			treasury = 1000
+			monthly_income = 100
+			NOT = { inflation = 2 } 
+			NOT = { corruption = 1 } 
+			stability = 3
+		}
+
+		effect = {
+			add_treasury = -500
+			define_advisor = {
+				type = master_of_mint
+				skill = 3
+				culture = ROOT
+				religion = ROOT
+				cost_multiplier = 0.25
+			}
+			add_country_modifier = {
+				name = "THE_LIL_spring_bank_modifier"
+				duration = -1
+			}
+		}
+	}
+
+	THE_LIL_27_4 = {
+		icon = mission_THE_LIL_icon_15
+		position = 27
+		required_missions = {
+			THE_LIL_26_1
+			THE_LIL_25_4
+			THE_LIL_26_5
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_LIL_spring_always_on_tt
+				always = yes
+			}
+		}
+
+		effect = {
+			change_government_reform_progress = 350
+			change_innovativeness = 10
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_country_modifier = {
+				name = "THE_LIL_spring_always_on_modifier"
+				duration = -1
+			}
+		}
+	}
+
+	THE_LIL_29_4 = {
+		icon = mission_touhou_star_sapphire
+		position = 29
+		provinces_to_highlight = { trade_goods = tropical_wood } 
+
+		trigger = {
+			trading_bonus = {
+				trade_goods = tropical_wood
+				value = yes
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_LIL_fairy_mission_star_modifier"
+				duration = -1
+			}
+		}
+	}
+
+	THE_LIL_30_4 = {
+		icon = mission_touhou_eternity
+		position = 30
+		provinces_to_highlight = { trade_goods = cloth } 
+
+		trigger = {
+			trading_bonus = {
+				trade_goods = cloth
+				value = yes
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_LIL_fairy_mission_larva_modifier"
+				duration = -1
+			}
+		}
+	}
+}
+THE_LIL_mission_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = LIL
+		has_country_flag = THE_LIL_unlock_mission_flag
+	}
+
+	THE_LIL_3_5 = {
+		icon = mission_convert_bengal
+		position = 3
+		required_missions = {
+			THE_LIL_2_2
+			THE_LIL_2_4
+		}
+		provinces_to_highlight = { owned_by = AKI } 
+
+		trigger = {
+			OR = {
+				AND = {
+					AKI = {
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
+					}
+					OR = {
+						alliance_with = AKI
+						marriage_with = AKI
+					}
+				}
+				NOT = { exists = AKI } 
+				is_rival = AKI
+				is_enemy = AKI
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					AKI = {
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
+					}
+					OR = {
+						alliance_with = AKI
+						marriage_with = AKI
+					}
+				}
+				custom_tooltip = THE_LIL_peace_with_aki_diplomacy_yes_tt
+			}
+			else = { custom_tooltip = THE_LIL_peace_with_aki_diplomacy_no_tt } 
+			tooltip = {
+				add_historical_friend = AKI
+				AKI = { add_historical_friend = ROOT } 
+				create_alliance = AKI
+				add_trust = {
+					who = AKI
+					value = 10
+					mutual = yes
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						NOT = { exists = AKI } 
+						is_rival = AKI
+						is_enemy = AKI
+					}
+				}
+				custom_tooltip = THE_LIL_peace_with_aki_war_yes_tt
+			}
+			else = { custom_tooltip = THE_LIL_peace_with_aki_war_no_tt } 
+			tooltip = {
+				AKI = {
+					ROOT = {
+						custom_tooltip = THE_add_permanent_claim_every_prev_province_tt
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						AKI = {
+							has_opinion = {
+								who = ROOT
+								value = 100
+							}
+						}
+						OR = {
+							alliance_with = AKI
+							marriage_with = AKI
+						}
+					}
+					add_historical_friend = AKI
+					AKI = { add_historical_friend = ROOT } 
+					create_alliance = AKI
+					add_trust = {
+						who = AKI
+						value = 10
+						mutual = yes
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							NOT = { exists = AKI } 
+							is_rival = AKI
+							is_enemy = AKI
+						}
+					}
+					every_province = {
+						limit = { is_core = AKI } 
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+	}
+
+	THE_LIL_6_5 = {
+		icon = colonize_the_cape
+		position = 6
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				has_idea_group = exploration_ideas
+				has_idea_group = expansion_ideas
+				custom_trigger_tooltip = {
+					tooltip = THE_has_1_colonists_tt
+					has_global_modifier_value = {
+						which = colonists
+						value = 1
+					}
+				}
+			}
+		}
+
+		effect = {
+			THE_LIL_create_yousei_conquistador_scripted_effects = yes
+			THE_LIL_create_yousei_explorer_scripted_effects = yes
+		}
+	}
+
+	THE_LIL_8_5 = {
+		icon = mission_seize_the_bengal_coast
+		position = 7
+		required_missions = {
+			THE_LIL_6_3
+			THE_LIL_6_5
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = Ran_state
+				area = Eastern_mountains
+				area = Mayohiga_state
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				OR = {
+					area = Ran_state
+					area = Eastern_mountains
+					area = Mayohiga_state
+				}
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			Hakurei_state = { add_permanent_claim = ROOT } 
+			Hakurei_peninsula_state = { add_permanent_claim = ROOT } 
+			Hakurei_western_coast = { add_permanent_claim = ROOT } 
+			netherworld_region = { add_permanent_claim = ROOT } 
+			1995 = { cede_province = ROOT } 
+			add_core = 1995
+			add_country_modifier = {
+				name = "THE_LIL_sage_assistance_modifier"
+				duration = -1
+			}
+			THE_LIL_subject_non_tributary_add_modifier = { modifier = THE_LIL_sage_assistance_modifier } 
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_LIL_decrese_require_L05_decision_tt
+		}
+	}
+
+	THE_LIL_9_5 = {
+		icon = mission_touhou_nether_border
+		position = 9
+		required_missions = { THE_LIL_8_5 } 
+		provinces_to_highlight = {
+			region = netherworld_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			5106 = { country_or_non_sovereign_subject_holds = ROOT } 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				region = netherworld_region
+			}
+		}
+
+		effect = { 
+			custom_tooltip = THE_LIL_decrese_require_L07_decision_tt
+			THE_add_ruler_stat = {
+				stat = adm
+				value = 1
+			} 
+		} 
+	}
+
+	THE_LIL_15_5 = {
+		icon = mission_new_kingdom_of_granada
+		position = 15
+		provinces_to_highlight = {
+			colonial_region = colonial_colombia
+			OR = {
+				NOT = { is_city = yes } 
+				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			}
+		}
+
+		trigger = {
+			mission_completed = THE_LIL_6_5
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				colonial_region = colonial_colombia
+				is_city = yes
+			}
+		}
+
+		effect = {
+			THE_LIL_colonize_mission_scripted_effect = { colonial_region = colonial_colombia } 
+			every_subject_country = {
+				limit = {
+					capital_scope = { colonial_region = colonial_colombia } 
+					OR = {
+						is_subject_of_type = crown_colony
+						is_subject_of_type = private_enterprise
+						is_subject_of_type = self_governing_colony
+					}
+				}
+				add_country_modifier = {
+					name = "THE_LIL_catalan_territory_modifier"
+					duration = 18250
+				}
+			}
+		}
+	}
+
+	THE_LIL_17_5 = {
+		icon = arm_proclaim_great_armenia
+		position = 17
+		provinces_to_highlight = {
+			colonial_region = colonial_brazil
+			OR = {
+				NOT = { is_city = yes } 
+				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			}
+		}
+
+		trigger = {
+			mission_completed = THE_LIL_6_5
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				colonial_region = colonial_brazil
+				is_city = yes
+			}
+		}
+
+		effect = {
+			THE_LIL_colonize_mission_scripted_effect = { colonial_region = colonial_brazil } 
+			every_subject_country = {
+				limit = {
+					capital_scope = { colonial_region = colonial_brazil } 
+					OR = {
+						is_subject_of_type = crown_colony
+						is_subject_of_type = private_enterprise
+						is_subject_of_type = self_governing_colony
+					}
+				}
+				add_country_modifier = {
+					name = "THE_LIL_hairy_crabapple_territory_modifier"
+					duration = 18250
+				}
+			}
+		}
+	}
+
+	THE_LIL_23_5 = {
+		icon = mission_touhou_three_fairies
+		position = 23
+		required_missions = { THE_LIL_22_4 } 
+		provinces_to_highlight = {
+			is_capital = yes
+			owner = {
+				is_subject_of = ROOT
+				NOT = { is_subject_of_type = tributary_state } 
+				OR = {
+					NOT = { has_country_flag = THE_LIL_spring_power_from_prank_count_flag } 
+					AND = {
+						NOT = {
+							has_opinion = {
+								who = ROOT
+								value = 180
+							}
+						}
+						NOT = { marriage_with = ROOT } 
+					}
+				}
+			}
+		}
+
+		trigger = {
+			any_country = { is_subject_of = ROOT } 
+			all_subject_country = {
+				if = {
+					limit = { NOT = { is_subject_of_type = tributary_state }  } 
+					NOT = { liberty_desire = 20 } 
+					OR = {
+						has_opinion = {
+							who = ROOT
+							value = 180
+						}
+						marriage_with = ROOT
+					}
+					custom_trigger_tooltip = {
+						tooltip = THE_LIL_had_pranked_by_lil_tt
+						has_country_flag = THE_LIL_spring_power_from_prank_count_flag
+					}
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = THE_LIL_add_subject_or_ally_favors_10_tt
+			hidden_effect = {
+				every_subject_country = {
+					limit = { NOT = { is_subject_of_type = tributary_state }  } 
+					add_favors = {
+						who = ROOT
+						amount = 10
+					}
+					ROOT = {
+						add_favors = {
+							who = PREV
+							amount = 10
+						}
+					}
+				}
+				every_ally = {
+					add_favors = {
+						who = ROOT
+						amount = 10
+					}
+					ROOT = {
+						add_favors = {
+							who = PREV
+							amount = 10
+						}
+					}
+				}
+			}
+			change_government_reform_progress = 150
+			custom_tooltip = THE_LIL_upgrade_lil_prank_tt
+			set_country_flag = THE_LIL_upgrade_lil_prank_flag
+		}
+	}
+
+	THE_LIL_26_5 = {
+		icon = mission_parthenon
+		position = 26
+		required_missions = { THE_LIL_23_5 } 
+		provinces_to_highlight = {
+			is_capital = yes
+			owner = {
+				is_subject_of = ROOT
+				NOT = { is_subject_of_type = tributary_state } 
+				OR = {
+					NOT = { has_country_flag = THE_LIL_spring_power_from_prank_count_flag } 
+					liberty_desire = 0
+				}
+			}
+		}
+
+		trigger = {
+			calc_true_if = {
+				all_country = {
+					is_subject_of = ROOT
+					NOT = { is_subject_of_type = tributary_state } 
+				}
+				amount = 5
+			}
+			all_subject_country = {
+				NOT = { liberty_desire = 10 } 
+				custom_trigger_tooltip = {
+					tooltip = THE_LIL_had_pranked_by_lil_tt
+					has_country_flag = THE_LIL_spring_power_from_prank_count_flag
+				}
+			}
+		}
+
+		effect = {
+			every_subject_country = {
+				add_trust = {
+					who = ROOT
+					value = 10
+					mutual = yes
+				}
+			}
+			change_government_reform_progress = 300
+			set_country_flag = THE_LIL_unlock_fairy_parliament_reform_flag
+			custom_tooltip = THE_LIL_unlock_fairy_parliament_reform_tt
+			THE_country_event_with_insight = { id = THE_LIL_events.7 } 
+		}
+	}
+}

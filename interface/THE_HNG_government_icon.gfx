@@ -1,0 +1,24 @@
+spriteTypes = {
+	spriteType = {
+		name = "government_reform_the_red_dragon_celestial_empire_reform"
+		texturefile = "gfx//interface//government_reform_icons//the_red_dragon_celestial_empire_reform.dds"
+	}	
+	spriteType = {
+		name = "government_reform_the_searching_for_dragon_points_reform"
+		texturefile = "gfx//interface//government_reform_icons//the_searching_for_dragon_points_reform.dds"
+	}
+	spriteType = {
+		name = "GFX_THE_HNG_Inflation_rate"
+		texturefile = "gfx//interface//government_mechanics//THE_HNG//THE_HNG_Inflation_rate.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_THE_HNG_Army_corruption"
+		texturefile = "gfx//interface//government_mechanics//THE_HNG//THE_HNG_Army_corruption.dds"
+	}
+	spriteType = {
+		name = "GFX_THE_HNG_Merger_degree"
+		texturefile = "gfx//interface//government_mechanics//THE_HNG//THE_HNG_Merger_degree.png"
+	}	
+}

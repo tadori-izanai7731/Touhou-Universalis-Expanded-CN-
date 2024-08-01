@@ -1,0 +1,20 @@
+# FROM is the nation being annexed
+on_annexed = {
+	THE_LIL_on_annexed_scripted_effect = yes
+}
+
+on_create_vassal = {
+	THE_LIL_on_create_vassal_scripted_effect = yes
+}
+
+on_circumnavigation = {
+	THE_LIL_on_circumnavigation_scripted_effect = yes
+}
+
+on_province_owner_change = {
+	THE_LIL_on_province_owner_change_scripted_effect = yes
+}
+
+on_war_won = {
+	THE_LIL_on_war_won_scripted_effect = yes
+}

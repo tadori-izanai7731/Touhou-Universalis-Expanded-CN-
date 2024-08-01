@@ -1,0 +1,47 @@
+THE_yokari_forest_monarchy = {
+	# government mechanics flags go here
+	icon = "Kagiyama_th_reform"
+	can_change_primary_culture = no
+	lock_level_when_selected = yes
+	legacy_government = yes
+	valid_for_new_country = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	native_mechanic = no
+	potential = {
+		OR = {
+			th_is_or_was_tag = {
+				tag = YOF
+			}
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = yokari_forest_monarchy
+			}
+		}
+	}
+	modifiers = {
+		governing_capacity = 150
+		global_unrest = -1
+		tolerance_heretic = 2
+		rival_border_fort_maintenance = -0.15
+		global_prosperity_growth = 0.15
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Rights of Man"
+		}
+		government_abilities = {
+			yokari_forest_mechanic
+		}
+	}
+	ai = {
+		factor = 2
+		modifier = {
+			factor = 0
+			AND = {
+				NOT = { has_idea_group = aristocracy_ideas }
+				NOT = { has_reform = feudal_monarchy }
+			}
+		}
+	}
+}

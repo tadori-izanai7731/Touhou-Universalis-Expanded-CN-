@@ -1,0 +1,11 @@
+THE_NCS_define_kijin_seija_consort_scripted_effect = {
+	define_consort = {
+		name = "正邪"		#Kijin Seija
+		dynasty = "鬼人"
+		culture = Youkai
+		adm = 3
+		dip = 2
+		mil = 5
+		female = yes
+	}
+}

@@ -1,0 +1,66 @@
+#THE_HNG_let_other_country_army_death
+THE_HNG_let_other_country_army_death = {
+	category = th_diplo_action
+	require_acceptance = no
+	
+	is_visible = {	
+		has_country_modifier = THE_HNG_modernization_gensokyo_army			
+		NOT = { overlord_of = FROM }
+		FROM = {
+			NOT = { culture_group = Gensokyan_culture }
+			NOT = { th_has_touhou_technology = yes }
+			NOT = { has_country_flag = THE_HNG_let_other_country_army_death }
+			NOT = { has_country_flag = THE_HNG_disasters_end4 }
+		}
+	}
+	
+	is_allowed = {
+		has_spy_network_in = {
+			who = FROM
+			value = 80
+		}
+		FROM = {
+			NOT = {
+				has_global_modifier_value = {
+					which = discipline
+					value = 0.2
+				}
+			}
+			OR = {
+				AND = {
+					NOT = { is_year = 1550 }
+					NOT = { army_tradition = 85 }
+				}
+				NOT = { army_professionalism = 0.5 }
+			}
+		}
+	}
+	
+	on_accept = {
+		FROM = {
+			set_country_flag = THE_HNG_let_other_country_army_death
+			add_opinion = {
+				who = ROOT
+				modifier = THE_HNG_opinion3
+			}
+		}
+		add_spy_network_in = {
+			who = FROM
+			value = -80		
+		}
+	}
+	
+	ai_will_do = {
+		always = no
+	}
+}
+
+
+
+
+
+
+
+
+
+

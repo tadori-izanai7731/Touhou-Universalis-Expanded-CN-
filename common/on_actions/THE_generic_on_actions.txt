@@ -1,0 +1,35 @@
+on_battle_won_country = {
+	if = {
+		limit = {
+			mission_completed = th_gen_gensokyo_soical_order
+		}
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = the_gene_num_won_battles
+						value = 1
+					}
+				}
+			}
+			set_variable = {
+				which = the_gene_num_won_battles
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = the_gene_num_won_battles
+						value = 100
+					}
+				}
+			}
+			change_variable = {
+				which = the_gene_num_won_battles
+				value = 1
+			}
+		}
+	}
+}

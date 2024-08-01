@@ -1,0 +1,54 @@
+THE_LIL_spring_power_mechanic = {
+	available = {
+		always = yes
+	}
+	powers = {
+		THE_LIL_spring_power = {
+			gui = THE_LIL_government_mechanic_gui
+			max = 100
+			min = 0
+			reset_on_new_ruler = yes
+			base_monthly_growth = 0
+			development_scaled_monthly_growth = 0
+			is_good = yes
+			monarch_power = dip
+			scaled_modifier = {
+				modifier = {
+					diplomatic_reputation = 2
+					improve_relation_modifier = 0.5
+					monthly_THE_LIL_spring_power = -1
+				}
+			}
+			scaled_modifier = {
+				modifier = {
+					diplomats = 1
+					colonists = 1
+				}
+				start_value = 100
+				end_value = 100
+			}
+			scaled_modifier = {
+				trigger = {
+					has_country_flag = THE_LIL_spring_power_upgrade_flag
+				}
+				modifier = {
+					# diplomatic_annexation_cost = 2.0
+					min_autonomy = 20
+					development_cost_modifier = -0.2
+				}
+			}
+			scaled_modifier = {
+				trigger = {
+					has_country_flag = THE_LIL_spring_power_upgrade_flag
+				}
+				modifier = {
+					diplomatic_upkeep = 1
+				}
+				start_value = 100
+				end_value = 100
+			}
+			#every country has flag THE_LIL_spring_power_from_prank_count_flag add 0.03/month
+			#every spring_territory_vassal country add 0.05/month
+		}
+	}
+}

@@ -1,0 +1,106 @@
+#大妖精
+THE_advisor_daiyousei = {
+	monarch_power = DIP
+	skill_scaled_modifier = {
+		trigger = {
+			owner = {
+				has_government_mechanic = russian_modernization_mechanic
+				NOT = { culture_group = PREV }
+			}
+		}
+		modifier = {
+			monthly_russian_modernization = 0.02
+		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_country_flag = jap_dip_advisor_culture_conversion_cost_flag
+			}
+		}
+		modifier = {
+			culture_conversion_cost = -0.05
+		}
+	}
+	
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = republican_tradition_from_advisors 
+			}
+		}
+		modifier = {
+			republican_tradition = 0.02 
+		}
+	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				is_emperor_of_china = yes 
+			}
+		}
+		modifier = {
+			meritocracy = 0.25
+		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { has_country_flag = mng_trade_eff_per_dip_advisor_level_flag }
+		}
+		modifier = { 
+			meritocracy = 0.25 
+			trade_efficiency = 0.02
+		}
+	}
+	# Bonus
+	diplomatic_reputation = 2
+
+	allow_only_female = yes
+
+	chance = {
+		factor = 0
+	}
+
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+the_koishi = {
+	monarch_power = MIL
+	
+	# Bonus
+	can_bypass_forts = yes
+
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				is_emperor_of_china = yes 
+			}
+		}
+		modifier = {
+			meritocracy = 0.25
+		}
+	}
+
+        # allow_only_male = yes
+    allow_only_female = yes
+
+	chance = {
+		factor = 0
+	}
+	
+	ai_will_do = {
+		factor = 10
+	}
+}

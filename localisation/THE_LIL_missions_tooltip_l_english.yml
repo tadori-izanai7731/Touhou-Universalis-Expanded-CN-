@@ -1,0 +1,431 @@
+﻿l_english:
+ THE_LIL_ROOT_TT: "@[Root.GetTag]§Y[Root.GetName]§!"
+ THE_LIL_peace_with_lrv_diplomacy_yes_tt: "£yes£§M‚YœgÇN@LRV§Y[LRV.GetName]§!Y²N„v¹eVŒRbûN¡R§!ÿ"
+ THE_LIL_peace_with_lrv_diplomacy_no_tt: "£no£§M‚YœgÇN@LRV§Y[LRV.GetName]§!Y²N„v¹eVŒRbûN¡R§!ÿ"
+ THE_LIL_peace_with_lrv_war_yes_tt: "£yes£§M‚YœgÇ@LRV§Y[LRV.GetName]§!NXR(W„v¹eVŒRbûN¡R§!ÿ"
+ THE_LIL_peace_with_lrv_war_no_tt: "£no£§M‚YœgÇ@LRV§Y[LRV.GetName]§!NXR(W„v¹eVŒRbûN¡R§!ÿ"
+ THE_LIL_peace_with_tfr_diplomacy_yes_tt: "£yes£§M‚YœgÇN@TFR§Y[TFR.GetName]§!Y²N„v¹eVŒRbûN¡R§!ÿ"
+ THE_LIL_peace_with_tfr_diplomacy_no_tt: "£no£§M‚YœgÇN@TFR§Y[TFR.GetName]§!Y²N„v¹eVŒRbûN¡R§!ÿ"
+ THE_LIL_peace_with_tfr_war_yes_tt: "£yes£§M‚YœgÇ@TFR§Y[TFR.GetName]§!NXR(W„v¹eVŒRbûN¡R§!ÿ"
+ THE_LIL_peace_with_tfr_war_no_tt: "£no£§M‚YœgÇ@TFR§Y[TFR.GetName]§!NXR(W„v¹eVŒRbûN¡R§!ÿ"
+ THE_LIL_cin_will_be_supported_by_fairy_tt: "@CIN§Y[CIN.GetName]§!S·ƒ—Vegê@[Root.GetTag]§Y[Root.GetName]§!0@TFR§Y[TFR.GetName]§!0@LRV§Y[LRV.GetName]§!„v=ecìrËz"
+ THE_LIL_peace_with_pri_diplomacy_yes_tt: "£yes£§M‚YœgÇN@PRI§Y[PRI.GetName]§!Y²N„v¹eVŒRbûN¡R§!ÿ"
+ THE_LIL_peace_with_pri_diplomacy_no_tt: "£no£§M‚YœgÇN@PRI§Y[PRI.GetName]§!Y²N„v¹eVŒRbûN¡R§!ÿ"
+ THE_LIL_peace_with_pri_war_yes_tt: "£yes£§M‚YœgÇ¿RLebVg@PRI§Y[PRI.GetName]§!„v¹eVŒRbûN¡R§!ÿ"
+ THE_LIL_peace_with_pri_war_no_tt: "£no£§M‚YœgÇ¿RLebVg@PRI§Y[PRI.GetName]§!„v¹eVŒRbûN¡R§!ÿ"
+ THE_LIL_peace_with_aki_diplomacy_yes_tt: "£yes£§M‚YœgÇN@AKI§Y[AKI.GetName]§!Y²N„v¹eVŒRbûN¡R§!ÿ"
+ THE_LIL_peace_with_aki_diplomacy_no_tt: "£no£§M‚YœgÇN@AKI§Y[AKI.GetName]§!Y²N„v¹eVŒRbûN¡R§!ÿ"
+ THE_LIL_peace_with_aki_war_yes_tt: "£yes£§M‚YœgÇ¿RLebVg@AKI§Y[AKI.GetName]§!„v¹eVŒRbûN¡R§!ÿ"
+ THE_LIL_peace_with_aki_war_no_tt: "£no£§M‚YœgÇ¿RLebVg@AKI§Y[AKI.GetName]§!„v¹eVŒRbûN¡R§!ÿ"
+ THE_LIL_declare_war_to_scr_tt: "@[Root.GetTag]§Y[Root.GetName]§!SåN§YVg§!„v±Rbt1uùR@SCR§Y[SCR.GetName]§!±Rbÿb‰Nîvh:N§Y[SCR.Capital.GetName]§!"
+ THE_LIL_substract_aggressive_10_tt: "§YNb	gýV¶R§!ÿd–†N§Y[Root.GetName]§!	ÿSOùR§Y[Root.GetName]§!1Y»S§G-10.00§!µOeuib.V0"
+ THE_LIL_substract_aggressive_30_tt: "§YNb	gýV¶R§!ÿd–†N§Y[Root.GetName]§!	ÿSOùR§Y[Root.GetName]§!1Y»S§G-30.00§!µOeuib.V0"
+ THE_LIL_unlock_create_daiyousei_advisor_decision_tt: "§Y=T(u³Q®‹§!ÿÇ–cO'Y–Y¾|b:NbìN„vŒ˜î•"
+ THE_LIL_decision_can_use_every_20_years_tt: "å‹³Q®‹Ïk§Y20§!t^ïSgbLˆN!k0"
+ THE_LIL_after_vassal_will_gain_this_modifier_tt: "Nb	g^—g!^SýVŒT*geg„v^—g!^SýVmNS·ƒ—Vå‹îOck"
+ THE_LIL_peace_with_yof_diplomacy_yes_tt: "£yes£§M‚YœgÇN@YOF§Y[YOF.GetName]§!Óußv„v¹eVŒRbûN¡R§!ÿ"
+ THE_LIL_peace_with_yof_diplomacy_no_tt: "£no£§M‚YœgÇN@YOF§Y[YOF.GetName]§!Óußv„v¹eVŒRbûN¡R§!ÿ"
+ THE_LIL_peace_with_yof_war_yes_tt: "£yes£§M‚YœgÇVg@YOF§Y[YOF.GetName]§!„v¹eVŒRbûN¡R§!ÿ"
+ THE_LIL_peace_with_yof_war_no_tt: "£no£§M‚YœgÇVg@YOF§Y[YOF.GetName]§!„v¹eVŒRbûN¡R§!ÿ"
+ THE_LIL_spring_power_upgrade_tt: "GSµu%fKN›R„v?eœ^ýw›R"
+ THE_LIL_has_spring_power_mechanic_tt: "åb	g%fKN›R:g6R"
+ THE_LIL_spring_territory_static_modifier_tt: "	gžX:V%fKN†˜0W:g6RÿNSVMR%fKN›R'YŽN§Y80§!"
+ THE_LIL_num_of_spring_territory_less_than_10_tt: "SVMR%fKN†˜0WpeÏ‘SŽN§Y10§!"
+ THE_LIL_upgrade_hundred_flowers_bloom_modifier_tt: "GSµu0§YŒv±‚PŸ>e§!0îOckÿ˜Y·ƒ—VåNNHeœgÿ\nckßuáOðN¹RÍV¦^ÿ§G+1.00§!\nVïz¹RÍV¦^ÿ§G+1.00§!\nVYe¹RÍV¦^ÿ§G+1.00§!\ng'YVïz¹RÍV¦^ÿ§G+1.00§!\ng'YVYe¹RÍV¦^ÿ§G+1.00§!"
+ THE_LIL_had_finish_late_spring_disater_tt: "Œp¾–0§YZf%f§!0òTÓumg0"
+ THE_LIL_show_prank_country_quantity_tt: "§Y[Root.the_lil_spring_power_var.GetValue]§!*NýV¶RòT¥c×S[Root.GetName]„v0§Y¥b%f§!0"
+ THE_LIL_show_target_tt: "@[Prev.GetTag]§Y[Prev.GetName]§!"
+ THE_LIL_add_permanent_claim_mexico_tt: "§Y[Root.GetName]§!·ƒ—V†N§Y¨X‰åT§!–kl0W„v8lEN'`±Rðy0"
+ THE_LIL_add_permanent_claim_peru_tt: "§Y[Root.GetName]§!·ƒ—V†N§YØyœ§!–kl0W„v8lEN'`±Rðy0"
+ THE_LIL_potosi_upgrade_tt: "§YâlXb‰ÌRv™qS§!(W3µuöe˜YÙuˆN‚YNHeœgÿ\n,g0WFUÁTµNúQÿ§G+2.00§!\nÏkt^'¨ÀwÏQÏ‘ÿ§G+0.10§!"
+ THE_LIL_new_world_spring_effect_tt: "§Y[Root.GetName]§!ÊSvQ^—g!^SýVÿ\n   »lNNb	gMOŽN§YSŽ2m§!b§YWSŽ2m§!„vÎW^ÿ\n   ·ƒ—V§G1§!úWNxz6e\n   ·ƒ—V§G1§!úWNxuµN\n   ·ƒ—V§G1§!úWNxºN›R"
+ THE_LIL_colonial_australia_effect_tt: "§Y[Root.GetName]§!·ƒ—V†N§Y³o'Y)RšN§!–kl0W„v8lEN'`±Rðy\n§Y[Root.GetName]§!ÊSvQ^—g!^SýVÿ\n   »lNNb	gMOŽN§Y³o'Y)RšN§!–kl0W„vÎW^ÿ\n   ·ƒ—V§G1§!úWNxz6e\n   ·ƒ—V§G1§!úWNxuµN\n   ·ƒ—V§G1§!úWNxºN›R"
+ THE_LIL_colonial_the_carribean_effect_tt: "§Y[Root.GetName]§!·ƒ—V†N§Y RÒRÔk§!–kl0W„v8lEN'`±Rðy\n§Y[Root.GetName]§!ÊSvQ^—g!^SýVÿ\n   »lNNb	gMOŽN§Y RÒRÔk§!–kl0W„vÎW^ÿ\n   ·ƒ—V§G1§!úWNxz6e\n   ·ƒ—V§G1§!úWNxuµN\n   ·ƒ—V§G1§!úWNxºN›R"
+ THE_LIL_colonial_california_effect_tt: "§Y[Root.GetName]§!·ƒ—V†N§Y R)Ry<SšN§!–kl0W„v8lEN'`±Rðy\n§Y[Root.GetName]§!ÊSvQ^—g!^SýVÿ\n   »lNNb	gMOŽN§Y R)Ry<SšN§!–kl0W„vÎW^ÿ\n   ·ƒ—V§G1§!úWNxz6e\n   ·ƒ—V§G1§!úWNxuµN\n   ·ƒ—V§G1§!úWNxºN›R"
+ THE_LIL_colonial_alaska_effect_tt: "§Y[Root.GetName]§!·ƒ—V†N§YaS¯eaSêšN§!–kl0W„v8lEN'`±Rðy\n§Y[Root.GetName]§!ÊSvQ^—g!^SýVÿ\n   »lNNb	gMOŽN§YaS¯eaSêšN§!–kl0W„vÎW^ÿ\n   ·ƒ—V§G1§!úWNxz6e\n   ·ƒ—V§G1§!úWNxuµN\n   ·ƒ—V§G1§!úWNxºN›R"
+ THE_LIL_colonial_peru_effect_tt: "§Y[Root.GetName]§!·ƒ—V†N§YØyœ§!–kl0W„v8lEN'`±Rðy\n§Y[Root.GetName]§!ÊSvQ^—g!^SýVÿ\n   »lNNb	gMOŽN§YØyœ§!–kl0W„vÎW^ÿ\n   ·ƒ—V§G1§!úWNxz6e\n   ·ƒ—V§G1§!úWNxuµN\n   ·ƒ—V§G1§!úWNxºN›R"
+ THE_LIL_colonial_la_plata_effect_tt: "§Y[Root.GetName]§!·ƒ—V†N§YÉbnfÉbTX§!–kl0W„v8lEN'`±Rðy\n§Y[Root.GetName]§!ÊSvQ^—g!^SýVÿ\n   »lNNb	gMOŽN§YÉbnfÉbTX§!–kl0W„vÎW^ÿ\n   ·ƒ—V§G1§!úWNxz6e\n   ·ƒ—V§G1§!úWNxuµN\n   ·ƒ—V§G1§!úWNxºN›R"
+ THE_LIL_colonial_louisiana_effect_tt: "§Y[Root.GetName]§!·ƒ—V†N§Yïf¯e‰R±§!–kl0W„v8lEN'`±Rðy\n§Y[Root.GetName]§!ÊSvQ^—g!^SýVÿ\n   »lNNb	gMOŽN§Yïf¯e‰R±§!–kl0W„vÎW^ÿ\n   ·ƒ—V§G1§!úWNxz6e\n   ·ƒ—V§G1§!úWNxuµN\n   ·ƒ—V§G1§!úWNxºN›R"
+ THE_LIL_colonial_eastern_america_effect_tt: "§Y[Root.GetName]§!·ƒ—V†N§YNŽ2m§!–kl0W„v8lEN'`±Rðy\n§Y[Root.GetName]§!ÊSvQ^—g!^SýVÿ\n   »lNNb	gMOŽN§YNŽ2m§!–kl0W„vÎW^ÿ\n   ·ƒ—V§G1§!úWNxz6e\n   ·ƒ—V§G1§!úWNxuµN\n   ·ƒ—V§G1§!úWNxºN›R"
+ THE_LIL_colonial_canada_effect_tt: "§Y[Root.GetName]§!·ƒ—V†N§Y Rÿb'Y§!–kl0W„v8lEN'`±Rðy\n§Y[Root.GetName]§!ÊSvQ^—g!^SýVÿ\n   »lNNb	gMOŽN§Y Rÿb'Y§!–kl0W„vÎW^ÿ\n   ·ƒ—V§G1§!úWNxz6e\n   ·ƒ—V§G1§!úWNxuµN\n   ·ƒ—V§G1§!úWNxºN›R"
+ THE_LIL_colonial_colombia_effect_tt: "§Y[Root.GetName]§!·ƒ—V†N§YåT&OÔkšN§!–kl0W„v8lEN'`±Rðy\n§Y[Root.GetName]§!ÊSvQ^—g!^SýVÿ\n   »lNNb	gMOŽN§YåT&OÔkšN§!–kl0W„vÎW^ÿ\n   ·ƒ—V§G1§!úWNxz6e\n   ·ƒ—V§G1§!úWNxuµN\n   ·ƒ—V§G1§!úWNxºN›R"
+ THE_LIL_colonial_brazil_effect_tt: "§Y[Root.GetName]§!·ƒ—V†N§YôT‰§!–kl0W„v8lEN'`±Rðy\n§Y[Root.GetName]§!ÊSvQ^—g!^SýVÿ\n   »lNNb	gMOŽN§YôT‰§!–kl0W„vÎW^ÿ\n   ·ƒ—V§G1§!úWNxz6e\n   ·ƒ—V§G1§!úWNxuµN\n   ·ƒ—V§G1§!úWNxºN›R"
+ THE_LIL_prank_not_in_war_tt: "N[From.GetName]N=fLeºN0"
+ THE_LIL_cin_will_help_us_tt: "@CIN§Y[CIN.GetName]§!S(WbìN0ôvb—)s¢u0öe.^©RbìN0"
+ THE_LIL_humiliate_war_with_scr_tt: "@[Root.GetTag]§Y[Root.GetName]§!„vNb	gßvËSýSÂSbÿ@SCR§Y[SCR.GetName]§!„vßvËSROúQb‰N0"
+ THE_LIL_had_pranked_by_lil_tt: "òT¥c×S@[Root.GetTag]§Y[Root.GetName]§!„v0¥b%f0"
+ THE_LIL_add_subject_or_ally_favors_10_tt: "Nb	g^—g!^SýVŒTßvËS·ƒ—V§Y10§!ºNÅ`"
+ THE_LIL_upgrade_lil_prank_tt: "Y²NLˆ¨R0¥b%f0SÔØ§Y25§!£dip£Y²N¹ppe"
+ THE_LIL_every_province_meet_trigger_tt: "Nb	g&rTagöN„vwýNÿ"
+ THE_LIL_adm_tech_not_backward_tt: "¡l	gýV¶R(W£adm£Lˆ?eÑyŽbN…Ç@[Root.GetTag]§Y[Root.GetName]§!"
+ THE_LIL_dip_tech_not_backward_tt: "¡l	gýV¶R(W£dip£Y²NÑyŽbN…Ç@[Root.GetTag]§Y[Root.GetName]§!"
+ THE_LIL_mil_tech_not_backward_tt: "¡l	gýV¶R(W£mil£›Q‹NÑyŽbN…Ç@[Root.GetTag]§Y[Root.GetName]§!"
+ THE_LIL_spring_full_blossom_tt: "%fòTánV"
+ THE_LIL_spring_always_on_tt: "%fS8^(W"
+ THE_LIL_spring_builder_tt: ".%fåe"
+ THE_LIL_fairy_happiness_modifier_desc_tt: "Nb	g^SŽN@[Root.GetTag]§Y[Root.GetName]§!ÿNN(W§Y‰^ó`aN§!!k'YF–ŒT§Y‰^ó`aNhT¹§!!k'YF–„vwýNÿS(W§Y100§!t^TlØS:N§Y–Y¾|§!‡eS0"
+ THE_LIL_win_scr_tt: "þfÏuÖS—VÇùR@SCR§Y[SCR.GetName]§!„vIN‰b‰NÜw)R0"
+ THE_LIL_show_special_spring_territory_decision_tt: ">f:yú^ËzyrŠk§Y%fKN†˜0W§!„v³Q®‹0"
+ THE_LIL_hide_special_spring_territory_decision_tt: "–Ï…ú^ËzyrŠk§Y%fKN†˜0W§!„v³Q®‹0"
+ THE_LIL_special_spring_territory_tt: "Ù=fN*NyrŠk„v§Y%fKN†˜0W§!ÿN`S(u§Y%fKN†˜0W§!NP–"
+ THE_LIL_scr_mission_war_won_tt: "‚YœgbìNb—VÙ:Wb‰N„vÜw)Rÿ@CIN§Y[CIN.GetName]§!Sb:NbìN„vD–¸^ýVÿv^·ƒ—V[5078.GetName]ŒT[5079.GetName]0"
+ THE_LIL_forest_spring_extra_effect_yes_tt: "£yes£§M‚Yœg0§Y^y>yKN%f§!0ûN¡RòTŒRbÿS·ƒ—V‚YNHeœg§!ÿ"
+ THE_LIL_forest_spring_extra_effect_no_tt: "£no£§M‚Yœg0§Y^y>yKN%f§!0ûN¡RòTŒRbÿS·ƒ—V‚YNHeœg§!ÿ"
+ THE_LIL_clan_spring_extra_effect_yes_tt: "£yes£§M‚Yœg0§Yîh—gKN%f§!0ûN¡RòTŒRbÿS·ƒ—V‚YNHeœg§!ÿ"
+ THE_LIL_clan_spring_extra_effect_no_tt: "£no£§M‚Yœg0§Yîh—gKN%f§!0ûN¡RòTŒRbÿS·ƒ—V‚YNHeœg§!ÿ"
+ THE_LIL_decrese_require_L08_decision_tt: "M–NOú^Ëz@L08§Y[L08.GetName]§!„v‰Bl0"
+ THE_LIL_decrese_require_L07_decision_tt: "M–NOú^Ëz@L07§Y[L07.GetName]§!„v‰Bl0"
+ THE_LIL_decrese_require_L05_decision_tt: "M–NOú^Ëz@L05§Y[L05.GetName]§!„v‰Bl0"
+ THE_LIL_decrese_require_L01_decision_tt: "M–NOú^Ëz@L01§Y[L01.GetName]§!„v‰Bl0"
+ THE_LIL_decrese_require_L02_decision_tt: "M–NOú^Ëz@L02§Y[L02.GetName]§!„v‰Bl0"
+ THE_LIL_fairy_meeting_effect_tt: "‚Yœg@CIN§Y[CIN.GetName]§!0@TFR§Y[TFR.GetName]§!b@LRV§Y[LRV.GetName]§!NbìNÓußvÿvQSb:NbìN„vD–¸^ýV0"
+ THE_LIL_unlock_mission_tt: "ky`O‹YÐ0"
+ THE_LIL_unlock_spring_origin_triggered_modifier_tt: "=T(uæ‰ÑSîOck0§Y%fåe„vwn§!0ÿå‹îOck(WÏkt^3-5guHeÿÙuˆN‚YNHeœgÿ\nÑSUSb,gÿ§G-5.0%§!\nûy¨R¦^ÿ§G+10.0%§!\n9VU^kp›R<Pÿ§G+400.00§!\n9VU^kp›R<PîOckÿ§G+50.0%§!"
+ THE_LIL_unlock_late_spring_tt: "§R%fåeÈuSÓumg&&§!"
+ THE_LIL_defeated_lily_black_disaster_tt: "(W9VU^b-NbÜw‰ƒ‰ƒÑž"
+ THE_LIL_defeated_lily_black_diplomatic_disaster_tt: "(WY²N9VU^b-NbÜw‰ƒ‰ƒÑž"
+ lil_lost_against_lily_black_diplomatic_tt: "(WÇ»S§Y5t^§!ô•¡l	g%Ùu‰ƒ‰ƒÑž0"
+ THE_LIL_unlock_colonial_empire_reform_tt: "ã‰•,r§Y8§!µu?eœ^9ei—0–Y¾|°eNLu0"
+ THE_LIL_mission_complete_tt: "‰ƒ‰ƒ„vEe‹NïSýwòTÏuÓumg†NÿFO‰^ó`aNŒTyYUR²w„v–Y¾|tS¡l	g&&\na0Œ¨`NôvåNegùR%fKN–Y¾|„vœU1rÿmNa0Œ¨`Nôv©s0RÙÌ‘ÿN¨YÕ‹Õ‹vQÖN„výV¶R&&"
+ THE_LIL_all_spring_territory_tt: "Nb	g§Y%fKN†˜0W§!·ƒ—V‚YNHeœgÿ"
+ THE_LIL_next_parliament_10_years_after_tt: "N!k–Y¾|®‹OS(W§Y10§!t^TìSV0"
+ THE_LIL_all_spring_territory_transform_dev_to_overlord_tt: "Nb	g§Y%fKN†˜0W§!SI`ÑSUS¦^„v§Y1/20§!lûy0R@[Root.GetTag]§Y[Root.GetName]§!„v–:gôv^SwýN0"
+ THE_LIL_unlock_spring_territory_jurisdiction_reform_tt: "ã‰•,r§Y2§!µu?eœ^9ei—0%fKN†˜0Wyr–6R0"
+ THE_LIL_unlock_fairy_parliament_reform_tt: "ã‰•,r§Y6§!µu?eœ^9ei—0–Y¾|Tw¦®‹O0"
+ THE_has_1_colonists_tt: "åb	góS§G1§!–kl–"
+ THE_add_permanent_claim_every_prev_province_tt: "@[Root.GetTag]§Y[Root.GetName]§!S·ƒ—VNb	g@[Prev.GetTag]§Y[Prev.GetName]§!8hÃVwýN„v8lEN±Rðy"
+ THE_LIL_unlock_elite_fairy_company_tt: "ã‰•0§M¾|•–Y¾|§!0cOuQâV"
+ 
+
+ ###modifier
+ THE_LIL_show_goodwill_modifier: "US°s„Ua"
+ THE_LIL_fairies_courage_modifier: "–Y¾|„vÇRl"
+ THE_LIL_meeting_with_lrv_modifier: "NÉbSætOŒ"
+ THE_LIL_meeting_with_tfr_modifier: "NIQKN–Y¾|OŒ"
+ THE_LIL_dai_fairy_conspiracy_modifier: "'Y–Y¾|„vÆRŒ"
+ THE_LIL_fairy_regress_modifier: "–Y¾|„vÞVRV"
+ THE_LIL_fairy_great_revenge_modifier: "–Y¾|'YYÇN"
+ THE_LIL_support_front_modifier: "=eôcMR¿u"
+ THE_LIL_fairy_support_modifier: "–Y¾|=eôc"
+ THE_LIL_magician_flight_modifier: "T›ÕlO„vÞ˜Lˆ"
+ THE_LIL_which_blessing_modifier: "ëTsY„vkyy"
+ THE_LIL_doll_remove_misfortune_modifier: "ºNvP„vd–„S"
+ THE_LIL_zombie_resurrection_modifier: "õP8S„vYÏ‚"
+ THE_LIL_sage_assistance_modifier: "2w„v©R›R"
+ THE_LIL_hundred_flowers_bloom_modifier: "Œv±‚PŸ>e"
+ THE_LIL_hundred_flowers_bloom_upgrade_modifier: "Œv±‚PŸ>e"
+ THE_LIL_power_of_spring_modifier: "%fKN›R"
+ THE_LIL_always_maintained_power_of_spring_modifier: "hQt^àeO„v%fKN›R"
+ THE_LIL_spring_of_gensokyo: "‰^ó`aNKN%f"
+ THE_LIL_hakurei_meridian_modifier: "ZSKNPRHS¿u"
+ THE_LIL_whichs_business_modifier: "¢uÿuëTsYúQîT"
+ THE_LIL_accept_aztek_culture_modifier: "¥c³u?–yQyrKQ‡eS"
+ THE_LIL_dahlia_territory_modifier: "'YKN±‚†˜0W"
+ THE_LIL_wattle_territory_modifier: "Ñ‘T0k†˜0W"
+ THE_LIL_poppy_territory_modifier: "BŸ|±‚†˜0W"
+ THE_LIL_cantua_territory_modifier: "NW‚m±‚†˜0W"
+ THE_LIL_southern_magnolia_territory_modifier: "WS¹e(gpQ±‚†˜0W"
+ THE_LIL_catalan_territory_modifier: "aSyrÌ‘šNpQ†˜0W"
+ THE_LIL_myosotis_territory_modifier: "ÿRØVb†˜0W"
+ THE_LIL_ginger_flower_territory_modifier: "ÜY±‚†˜0W"
+ THE_LIL_erythrina_corallodendron_territory_modifier: "™ŸYr±‚†˜0W"
+ THE_LIL_rose_territory_modifier: "«spt†˜0W"
+ THE_LIL_hairy_crabapple_territory_modifier: "Ûkù‡*rpQ†˜0W"
+ THE_LIL_maple_leaf_territory_modifier: "«göS†˜0W"
+ THE_LIL_world_crossing_modifier: "2N*NNLu„vASWRïãS"
+ THE_LIL_spherical_spring_modifier: "tbV%f)Y"
+ THE_LIL_new_world_spring_modifier: "°e'YF–KN%f"
+ THE_LIL_spring_circle_province_modifier: "IuN%fKNW"
+ THE_LIL_misty_lake_gemstone_province_modifier: "þ–KNVnTu„vRów"
+ THE_LIL_economic_base_modifier: "ZWžRÏuNmúWNx"
+ THE_LIL_fairy_agriculture_modifier: "–Y¾|œQN"
+ THE_LIL_spring_port_province_modifier: "%fKNÌSPR=n"
+ THE_LIL_misty_lake_treasure_modifier: "þ–KNVn„v0ÌR"
+ THE_LIL_fairy_cleverer_modifier: "ôfYjwf–Y¾|"
+ THE_LIL_every_road_to_lil_modifier: "agag'Yïb¶R"
+ THE_LIL_fairy_currency_modifier: "–Y¾|'^"
+ THE_LIL_studious_fairy_modifier: "‹YfR„v–Y¾|"
+ THE_LIL_spring_bank_modifier: "%f)YFUNö”Lˆ"
+ THE_LIL_spring_produce_modifier: "àr“b%fcRuµN"
+ THE_LIL_fairy_federal_conference_address_province_modifier: "–Y¾|Tw¦O®‹0WNW"
+ THE_LIL_spring_full_blossom_modifier: "%fánV"
+ THE_LIL_spring_always_on_modifier: "%f8^(W"
+ THE_LIL_spring_builder_modifier: "%fKN.w"
+ THE_LIL_fairy_mission_sunny_modifier: "‰R.w„vQh<S"
+ THE_LIL_fairy_mission_luna_modifier: "¾|^y„v2—Z"
+ THE_LIL_fairy_mission_star_modifier: "ÙVŒx„v¯eTX"
+ THE_LIL_fairy_mission_cirno_modifier: "êjŒ„v*t2—ú‹"
+ THE_LIL_fairy_mission_daiyousei_modifier: ")nÔg„v'Y–Y¾|"
+ THE_LIL_fairy_mission_larva_modifier: "NSKN„vÉbSæt"
+ THE_LIL_fairy_happiness_modifier: "x^y„v–Y¾|"
+ THE_LIL_destory_ship_modifier: "4xOW9‚êS"
+ THE_LIL_fairy_parliament_adm_modifier: "–Y¾|Tw¦®‹OÿLˆ?eÐcHh"
+ THE_LIL_fairy_parliament_dip_modifier: "–Y¾|Tw¦®‹OÿÏuNmÐcHh"
+ THE_LIL_fairy_parliament_mil_modifier: "–Y¾|Tw¦®‹Oÿ›Q‹NÐcHh"
+
+ THE_LIL_spring_power_from_prank_1: "1*NýV¶RòT¥c×S0¥b%f0"
+ THE_LIL_spring_power_from_prank_2: "2*NýV¶RòT¥c×S0¥b%f0"
+ THE_LIL_spring_power_from_prank_3: "3*NýV¶RòT¥c×S0¥b%f0"
+ THE_LIL_spring_power_from_prank_4: "4*NýV¶RòT¥c×S0¥b%f0"
+ THE_LIL_spring_power_from_prank_5: "5*NýV¶RòT¥c×S0¥b%f0"
+ THE_LIL_spring_power_from_prank_6: "6*NýV¶RòT¥c×S0¥b%f0"
+ THE_LIL_spring_power_from_prank_7: "7*NýV¶RòT¥c×S0¥b%f0"
+ THE_LIL_spring_power_from_prank_8: "8*NýV¶RòT¥c×S0¥b%f0"
+ THE_LIL_spring_power_from_prank_9: "9*NýV¶RòT¥c×S0¥b%f0"
+ THE_LIL_spring_power_from_prank_10: "10*NýV¶RòT¥c×S0¥b%f0"
+ THE_LIL_spring_power_from_prank_11: "11*NýV¶RòT¥c×S0¥b%f0"
+ THE_LIL_spring_power_from_prank_12: "12*NýV¶RòT¥c×S0¥b%f0"
+ THE_LIL_spring_power_from_prank_13: "13*NýV¶RòT¥c×S0¥b%f0"
+ THE_LIL_spring_power_from_prank_14: "14*NýV¶RòT¥c×S0¥b%f0"
+ THE_LIL_spring_power_from_prank_15: "15*NýV¶RòT¥c×S0¥b%f0"
+ THE_LIL_spring_power_from_prank_16: "16*NýV¶RòT¥c×S0¥b%f0"
+ THE_LIL_spring_power_from_prank_17: "17*NýV¶RòT¥c×S0¥b%f0"
+ THE_LIL_spring_power_from_prank_18: "18*NýV¶RòT¥c×S0¥b%f0"
+ THE_LIL_spring_power_from_prank_19: "19*NýV¶RòT¥c×S0¥b%f0"
+ THE_LIL_spring_power_from_prank_20: "20*NýV¶RòT¥c×S0¥b%f0"
+
+ desc_THE_LIL_hakurei_meridian_modifier: "ZSKNPRHS¿uSÎ%fS„VåNNRRÙu‰ƒ‰ƒ‹vÿåN‰RRÙu‰ƒ‰ƒÑž0"
+ desc_THE_LIL_fairy_happiness_modifier: "Nb	g^SŽN@[Root.GetTag]§Y[Root.GetName]§!ÿNN(W§Y‰^ó`aN§!!k'YF–ŒT§Y‰^ó`aNhT¹§!!k'YF–„vwýNÿS(W§Y100§!t^TlØS:N§Y–Y¾|§!‡eS0"
+
+ THE_LIL_spring_origin_triggered_modifier: "%fåe„vwn"
+ 
+ ###event
+ THE_LIL_events.1.t: "%fåeqV"
+ THE_LIL_events.1.d: "'YÓuLu4xÂˆ„v4–qV‚YT‹^upN,‚¾–åNIcxdÿFOÙZfËyKN°Q·QtS=fžRžR(W(W‹S(W%fKN–Y¾|‰ƒ‰ƒ‹v„v«ŽN0¬QcRê6q=fyYÙMO%f–Y¾|›RÏ‘g:N1VS„vcR‚‚ÿFOyYïSN(WaÙ›NÿyYåwS¬Q)YÇT¿O=f%f)Y0ÔkwÙO'YwNbNØS„vê6qnÞVÿ%V+oNwSmþ–„vVnùR¸Sÿ	gsQ±µ^°Q·Q„v¢ur‚m†™„v.Oû•Mb=fg:NÍ‘‰„vÝ‹˜˜09hnc–Y¾|sYÆNìN±›N‰HNtegàeO‰HNÞNwJS*NgN»SNís„v¢uT›†™„v8TNˆ<›INºNÿ<ONN²‹:NêñT„vm†™*YS†NÿM‘NNyY„vl(ÿàVdk‰vpVn¹„v–Y¾|0–Y¾|ìN„vPR(r(r„vÿN*YÂaÙ›N‹NÅ`ÿFO=fóSNOÞêñT„v¶Rý>eV0	Ý‹=fÙHNô‹ÿFO=f±GY*`„v–Y¾|'Yb‰N0R°s(WØ¡l	g‰jPNeg„va`ÿb¸‹yYÿ‰ƒ‰ƒ‹vÿýwb:NÙ:Wb‰N8nb„vÈuÓuwÿ\n\n§GýV¶Ryrr‚§!ÿ\nTwT–Y¾|ÿÈuÓu)s¢uv`T›„v‹k´f\n:N‰^ó`aN&^eg%fKN–fa\n(WwmY^yØy„v'YF–ËeUS%fKN›R\nN–Y¾|ìNŒTŒqQY	"
+ THE_LIL_events.1.a: "úQÑSÿŒcác`O„v‹TÐÿ"
+
+ THE_LIL_events.2.t: "–Y¾|'YO"
+ THE_LIL_events.2.d: "tQKY„v–Y¾|ìN³QšRôv¥c(W™…SVOÿàV:N±Ì‘	gN.VÖNìNÎN¡lÁ‰Ç„vyr+R•„v'YLhPRÿFO=fLhPRžR(W*YØš†NÿŽN=fÏkNêS–Y¾|ýŒb0R†N^SŽNêñT„vv•Ñ‘'YvbKbiÿ6qTàV:N«ŽØšN³åN=ecêñTw0RLhb—ÿÏk*NºNýonm†Nweg0ÖNìNOSo`ÝQ^yÿIr…V‰ƒ‰ƒ„vÑSŠ&&\n0–Y¾|ìNÿbìNòTÏu‰V•^ûQ%†N2wNv`T›ÿbìNmNnxÝO†N–Y¾|„v‰RhQÿFO=fËYÈu‰°‹OOÿbìN–Y¾|„v›RÏ‘Ø=f1VS„vÿ8^8^:kbìN„vëTsY0*`V„vT›sYÿØ	g±Øš™XT„vºN‰|ìN&&bìNâe6qòTÏuTjOÙHNEN†Nÿ±HN1S”^å‹ R¹lªR›Rÿ’N.^’N©RÿØ‰&&Ø‰Ç„vVÃVÿ0"
+ THE_LIL_events.2.a: "ŽN=f–Y¾|ìN'YŠU0‹Y6wÿ0"
+
+ THE_LIL_events.3.t: "V7h„v–Y*`1j"
+ THE_LIL_events.3.d: "êS«ŽNºNeg0R¥QLuÿ0ŒÝu†N¥QLulQINNQRëX„v²bkSÿÈuŽNa×S0R†N‹kXR„vá‹V„vT››R0±¡wT››R<ONN=fegêê6q„vÿFO=f'`(tSŒRhQNTÿâe^—egê°sLuÿmN^—egê¥QLu0(W¥QLuÿNb	guirýceÑSNwNÍyyrŠk„vIQÿ'Y¦u=f‰|r‚b‹vr‚KN÷mT01S(WÙ7h„vIQKN-Nÿ‰ƒ‰ƒ‹vÉR:VýwYw0R	gNêS–Y¾|`—(Wh•^NOo`ÿNÅNgÅˆNyYêñTêS	gœ˜r‚„vîT+Rÿ4YÑSmN=f••„vÑ‘ÑSÿ«ŽPg<ONNmN=fÙ,‚ZS0\nckÙHNÂ‰ßRNwÿ«ˆÂ‰ßR„v–Y¾|mNAwV†N<w0±=fNˆe„v¢u<wÿck÷+ƒ0WkbÆ‰NwhTôVÿgTjP(W†Neu®V&^¹pÿur‚„vÝ„<wKNN0—Ê`„vŒNºNTöeV†NãS&&"
+ THE_LIL_events.3.a: "0`O=f&&bÿ0"
+
+ THE_LIL_events.4.t: "‰^ó`aNKN%f"
+ THE_LIL_events.4.d: "ÎN0Wup¿k0R¢uT›†™ÿÎNZSKN^y>y0Rþ–KNVnTuÿNS*j=‰^ó`aN„v%fKNU^òT6qK„N0(WÙ7^U^KNTÿPWK„Nw–Y¾|ìN„v¶RíV0v`T›„vm†™0ZSKN„v^y>y0T›sY„vOONb02w„vúW0WåNÊSÉ‰„v¿kX0àeº‹=fŒ(WÀNHNöePeg0RÙ›N0W¹eÿýýwa×S0RN¡w%fa0óŽNÀNHN=f%faÿ=f†wa„Y:N„v–Y¾|ìNTÿ=f'Y'YµTµT„vëTsYTÿ=fOÅ–ïz„^„vv`T›TÿØ=f‰lØžNí‹„v2wÿ‘bb=f³Rž„vÉ‰N RirÿïSýwTrHh1S(WÙ:W«ƒTvQ™Y„v´ROKN-N'T0\n‹†6qNåwSˆmo`=fŒ.OúQeg„vÿFO'Y¶R,Tô‹Ù=f–Y¾|ìN>NžR„v´ROÿŽN=fmNØS—VÏP=f–Y¾|ìNN7h‹YGY†N0äNÖNìNØštQ„v=fÿÙ!k„v´ROŒTZSKN>NžR„vàQ!k´RO¡l	gÀNHNîT+Rÿgq7h=fûR0kjOPN0wR‘¯u0´fº‹'YiÿØ	gÞuNgŒvTsYKN‰|0lx‰ô‹	gÀNHNNT„vÝ‹ÿ<ONN1S=fzzlôf R)n–f†N0\n±²êSON*N²RUR‘„v¶RO=fNÂa„vÿ%f)YN%f)YmNNqVÍTR‘„vsTSVÿÙNRý«ˆ‰ƒ‰ƒw(W<wÌ‘ÿyYÃV-N„vSS¦hó`ÿïSåNô‹òTÏužR°s†N0"
+ THE_LIL_events.4.a: "%f)Yeg†Nÿ"
+
+ THE_LIL_events.6.t: "–Y¾|'^?"
+ THE_LIL_events.6.d: "hg¹Rf˜b­eÿóX¹Rf)ŽAbÿFOlx^ˆVlxØOÑSIQÿ'Y¶RýœU0k0FO=fÙ›Nlx^Nb—„v±‚¹uý*YN†Nÿ‰HN=f±*Nv`T›„vGY*`'Y4Yÿ‰HN=fN*N'Y<wiwÿŒRhQasTNfÿ–Y¾|ìN”^å‹	gêñT„vlx^ÿÔk‚Y*Y3–„vlx^KN‰|0"
+ THE_LIL_events.6.a: "±1SÙHNšR†N0"
+ THE_LIL_events.6.b: "‹Y»žæpJUÿ1S(u±*N'Y4Y'T0"
+
+ THE_LIL_events.7.t: "	šR–Y¾|8lEN®‹O0WNW"
+ THE_LIL_events.7.d: "(WN!k•EN„vÿ«ˆHSm™ß0RüRô„ve™™ÈuÓu„v	ÿ¨‹º‹KNTÿ–Y¾|ìN³QšRsóbeg³QšR‚YUO	šR–Y¾|8lEN®‹O0WNW0±HNÿgÈu„vÜw)Rw1S=f"
+ THE_LIL_events.7.a: "%fKN–Y¾|ÿ"
+ THE_LIL_events.7.b: "IQKN–Y¾|ÿ"
+ THE_LIL_events.7.c: "°QKN–Y¾|ÿ"
+ THE_LIL_events.7.e: "'Y–Y¾|ÿ"
+ THE_LIL_events.7.f: "ÑgXjäQv‡–Y¾|ÿ"
+ THE_LIL_events.7.g: "¢uT›†™„vsYÆN–Y¾|ÿ"
+
+ THE_LIL_events.9.t: "%fåe„vÈuÓu"
+ THE_LIL_events.9.d: "‰ƒ‰ƒ‹v1Y*Ž†Nÿ¡l	gºNåwSyY(WêTÌ‘ÿ–Y¾|ìNmNNO°‹—VÖNìNNbw0R„vŒYuN„v*Žù0ºNìNNysKmÿ%fåe=f&TsSSÈuÓuÿôvóöeô•„vKS4Y&&ÙNÍ‘‰†N0ÍSckyY1Y*Ž†NÿN=fTÿ"
+ THE_LIL_events.9.a: "%f)Y(WêTÌ‘ÿ"
+
+ THE_LIL_events.10.t: "N‰ƒ‰ƒÑž„v¦ušR"
+ THE_LIL_events.10.d: "1SÏPyYëkàeVFQ0Wˆm1YN7hÿ‰ƒ‰ƒ‹vëkàeVFQ0WÞVeg†NÿêS=fºNìNQ!kÑS°syYöeÿèla0RyY=furNwæSNêSNyY•—VàQNNN!jN7h„v–Y¾|„vKbÞVeg„v0àeº‹Œî•‰ƒ‰ƒÙàQ)YÑSu†NÀNHN‹NÅ`ÿyYêSO(u^yØy„v®VrjO:NÞVY0=UNïSåNnx²‹„v=fÿ–Y¾|ìNÈS‰Pdk:gOV´RO†Nÿz˜&^Ø‰²N*N°egËS0.Oô‹±êS–Y¾|=f‰ƒ‰ƒ‹v„vÐYÐYÿàV:NyYN«ŽÑžcˆÿNbåN–Y¾|ìN1SëSyY‰ƒ‰ƒÑž†N0"
+ THE_LIL_events.10.a: "0`O‹YNTÿ`O1S=f‰ƒ‰ƒ'YºN„vÐYÐYÿb=f&&0"
+
+ THE_LIL_events.14.t: "–Y¾|Tw¦®‹OìSV"
+ THE_LIL_events.14.d: "10t^NJS„v–Y¾|Tw¦®‹O(W[Root.GetName]‚YgìSVÿ®‹-^-N„v–Y¾|9hncTê„vIN.VRRb†NNT>mû|ÐcúQ†NêñT„vaÁ‰0N5–¨‹º‹Tÿ®‹OgÈuØ=fØSb†N–Y¾|ìN5Tù•ŒT©sPN„v:WNbÿêSýw1u[Root.Monarch.GetName]ZPúQ³QšR0"
+ THE_LIL_events.14.a: "Ç‘³uLˆ?eÐcHh"
+ THE_LIL_events.14.b: "Ç‘³uÏuNmÐcHh"
+ THE_LIL_events.14.c: "Ç‘³u›Q‹NÐcHh"
+
+ ###decision
+ THE_LIL_create_daiyousei_advisor_decision_title: "Ç–cO'Y–Y¾|b:NbìN„vŒ˜î•"
+ THE_LIL_create_daiyousei_advisor_decision_desc: ""
+ THE_LIL_view_pranked_country_decision_title: "§bågwòT¥c×S0¥b%f0„výV¶R§!"
+ THE_LIL_view_pranked_country_decision_desc: "SIQhûy¨R0R£THE_LIL_execute_decision_icon£åNågwNb	gòT¥c×S0¥b%f0„výV¶R\nUSûQ£THE_LIL_info_decision_icon£Øš®N>f:yvQwýN0"
+ THE_LIL_form_empire_title: "ú^Ëz–kl‹sýV"
+ THE_LIL_form_empire_desc: "ùRbìN„v²NÏeegô‹‰^ó`aN=fGr%Nw‘NÎ‘î†KN0W0NvQZWˆRbìN–Y¾|±èK„N,‚„v.OßuÿN‚YSèla›RôfY0W>e(Wôf:N‡ef„v·ƒÖSôuc%f¦^„výwÏ‘åNÊS–Y¾|NÏe„v‰RhQN0"
+ THE_LIL_00_show_special_spring_territory_decision_title: "§b>f:yú^ËzyrŠk§Y%fKN†˜0W§!„v³Q®‹§!"
+ THE_LIL_00_show_special_spring_territory_decision_desc: "USûQ£THE_LIL_execute_decision_icon£>f:yú^ËzyrŠk§Y%fKN†˜0W§!„v³Q®‹0"
+ THE_LIL_00_hide_special_spring_territory_decision_title: "§b–Ï…ú^ËzyrŠk§Y%fKN†˜0W§!„v³Q®‹§!"
+ THE_LIL_00_hide_special_spring_territory_decision_desc: "USûQ£THE_LIL_execute_decision_icon£–Ï…ú^ËzyrŠk§Y%fKN†˜0W§!„v³Q®‹0"
+ THE_LIL_01_form_special_spring_territory_L01_title: "§b>ú^Ëz@L01§Y[L01.GetName]§!§!"
+ THE_LIL_01_form_special_spring_territory_L01_desc: ""
+ THE_LIL_01_form_special_spring_territory_L02_title: "§b>ú^Ëz@L02§Y[L02.GetName]§!§!"
+ THE_LIL_01_form_special_spring_territory_L02_desc: ""
+ THE_LIL_01_form_special_spring_territory_L03_title: "§b>ú^Ëz@L03§Y[L03.GetName]§!§!"
+ THE_LIL_01_form_special_spring_territory_L03_desc: ""
+ THE_LIL_01_form_special_spring_territory_L04_title: "§b>ú^Ëz@L04§Y[L04.GetName]§!§!"
+ THE_LIL_01_form_special_spring_territory_L04_desc: ""
+ THE_LIL_01_form_special_spring_territory_L05_title: "§b>ú^Ëz@L05§Y[L05.GetName]§!§!"
+ THE_LIL_01_form_special_spring_territory_L05_desc: ""
+ THE_LIL_01_form_special_spring_territory_L06_title: "§b>ú^Ëz@L06§Y[L06.GetName]§!§!"
+ THE_LIL_01_form_special_spring_territory_L06_desc: ""
+ THE_LIL_01_form_special_spring_territory_L07_title: "§b>ú^Ëz@L07§Y[L07.GetName]§!§!"
+ THE_LIL_01_form_special_spring_territory_L07_desc: ""
+ THE_LIL_01_form_special_spring_territory_L08_title: "§b>ú^Ëz@L08§Y[L08.GetName]§!§!"
+ THE_LIL_01_form_special_spring_territory_L08_desc: ""
+ THE_LIL_01_form_special_spring_territory_L09_title: "§b>ú^Ëz@L09§Y[L09.GetName]§!§!"
+ THE_LIL_01_form_special_spring_territory_L09_desc: ""
+ THE_LIL_01_form_special_spring_territory_L10_title: "§b>ú^Ëz@L10§Y[L10.GetName]§!§!"
+ THE_LIL_01_form_special_spring_territory_L10_desc: ""
+ THE_LIL_01_form_special_spring_territory_L11_title: "§b>ú^Ëz@L11§Y[L11.GetName]§!§!"
+ THE_LIL_01_form_special_spring_territory_L11_desc: ""
+ THE_LIL_01_form_special_spring_territory_L12_title: "§b>ú^Ëz@L12§Y[L12.GetName]§!§!"
+ THE_LIL_01_form_special_spring_territory_L12_desc: ""
+ THE_LIL_01_form_special_spring_territory_L13_title: "§b>ú^Ëz@L13§Y[L13.GetName]§!§!"
+ THE_LIL_01_form_special_spring_territory_L13_desc: ""
+ THE_LIL_01_form_special_spring_territory_L14_title: "§b>ú^Ëz@L14§Y[L14.GetName]§!§!"
+ THE_LIL_01_form_special_spring_territory_L14_desc: ""
+ THE_LIL_01_form_special_spring_territory_L15_title: "§b>ú^Ëz@L15§Y[L15.GetName]§!§!"
+ THE_LIL_01_form_special_spring_territory_L15_desc: ""
+ THE_LIL_01_form_special_spring_territory_L16_title: "§b>ú^Ëz@L16§Y[L16.GetName]§!§!"
+ THE_LIL_01_form_special_spring_territory_L16_desc: ""
+ THE_LIL_01_form_special_spring_territory_L17_title: "§b>ú^Ëz@L17§Y[L17.GetName]§!§!"
+ THE_LIL_01_form_special_spring_territory_L17_desc: ""
+ THE_LIL_01_form_special_spring_territory_L18_title: "§b>ú^Ëz@L18§Y[L18.GetName]§!§!"
+ THE_LIL_01_form_special_spring_territory_L18_desc: ""
+ THE_LIL_01_form_special_spring_territory_L19_title: "§b>ú^Ëz@L19§Y[L19.GetName]§!§!"
+ THE_LIL_01_form_special_spring_territory_L19_desc: ""
+ THE_LIL_01_form_special_spring_territory_L20_title: "§b>ú^Ëz@L20§Y[L20.GetName]§!§!"
+ THE_LIL_01_form_special_spring_territory_L20_desc: ""
+
+ ###advisor
+ THE_advisor_daiyousei: "'Y–Y¾|"
+ THE_advisor_daiyousei_desc: ",g1S(W–Y¾|-N	gNwg:NØšf„vºNlÿyY«ˆðy:N'Y–Y¾|ÿÙ7h„vyY(WqS:gÛVO„vY²N:W…QÿT7hNO“ÙuûNUOºN0"
+
+ ###government
+ THE_LIL_fairy_grand_federation_reform: "–Y¾|'YTw¦"
+ THE_LIL_fairy_grand_federation_reform_desc: "%fKN–Y¾|‰ƒ‰ƒ‹vN9NuQNRSÿ1SÓumg†N–Y¾|ìN„vb‰N8nb0yY<ONNÕ‹þV©‹Nb	g–Y¾|øváOÿVn-NÃV±*Ná‹VP``„vm†™Mb=fg'Y„vZÁw0yYZP0R†N0FOØNbkŽNdkÿyYÃV-NúQ°s†N°e„v‹vr‚¦hó`ÿyYmNÈuO©‹ÙN’|ÍyPRV±‚0"
+ THE_LIL_fairy_great_federation_reform: "–Y¾|O'YTw¦"
+ THE_LIL_fairy_great_federation_reform_desc: "–Y¾|(W‰ƒ‰ƒ„v‡s†˜Nÿ©‹±›N:k–Y¾|„vºNßußu1Y%ÿ‹Y(W‰ƒ‰ƒÃV0W„Uo‚ÿAQ¸‹ÖNìNmN ReQ–Y¾|Tw¦0NÇÄ‰éw1S=fÄ‰éwÿŸS†˜0WINºNêS—V«ˆYu(WU^Tÿ†˜0WINºNmNêSýwb:NÖNìN„v.OðXRr0Ùw†NÖNìNNS‹NÿàVdkmNäNÖNìNána0"
+ mechanic_THE_LIL_can_transform_vassal_to_spring_territory_yes: "ïSåNSD–¸^ýVlS:N%fKN†˜0W"
+ mechanic_THE_LIL_strengthen_spring_territory_yes: "åb	góS§Y80§!%fKN›Röe%fKN†˜0W·ƒ—V‚YNHeœg:\nýV¶RºN›RîOckÿ§G+20.0%§!\nºN›Rb`Y¦^ÿ§G+20.0%§!\nýV¶R4lKbîOckÿ§G+20.0%§!\n4lKbb`Y¦^ÿ§G+20.0%§!\nF–›QÄ‰!jNP–îOckÿ§G+20.0%§!\nwm›QÄ‰!jNP–îOckÿ§G+20.0%§!\n9‚êS±‚9ÿ§G-10.0%§!\nè–±‚9ÿ§G-10.0%§!\n8hÃVS±‚9ÿ§G-20.0%§!"
+ mechanic_THE_LIL_fairy_parliament_yes: "Ïk§Y10§!ìSV–Y¾|Tw¦®‹O"
+ ability_THE_LIL_spring_power_mechanic: "%fKN›R"
+ THE_LIL_spring_power: "%fKN›R"
+ THE_LIL_spring_power_desc: "åNNàV.tO§GžX R§!Ïkg%fKN›RžX•ÿ\n - [Root.Monarch.GetName]„v£dip£Y²Nýw›R\n - Ïk*N¥c×S[Root.GetName]0¥b%f0„výV¶R(óY20)\n - Ïk*N[Root.GetName]„v%fKN†˜0W\n\nåNNàV.tO§RÏQS§!Ïkg%fKN›RžX•ÿ\n - Øš%fKN›R[Root.spring_power_upgrade_text]"
+ monthly_THE_LIL_spring_power: "Ïkg%fKN›RžX•"
+ THE_LIL_colonial_empire_reform: "–Y¾|°eNLu"
+ THE_LIL_colonial_empire_reform_desc: "–Y¾|ìN‚Y?aµb¾†N°eNLuÿ‹NžRNÿùRŽN–Y¾|egô‹ÿ9h,g¡l	gÀNHN°eNLu0àeº‹=fêTÌ‘„v'Yê6qýN7hÿ=UNNTR=fÿÙÌ‘¡l	g‰^ó`aNÌ‘±›Nv`8—ÿweg–Y¾|SOŠegŠY0"
+ THE_LIL_spring_territory_jurisdiction_reform: "%fKN†˜0Wyr–6R"
+ THE_LIL_spring_territory_jurisdiction_reform_desc: "‰ƒ‰ƒS†˜0WRVØÙuŸSINÿFOŸSINºNêS—VÏ…(WU^TÿNR”^	g„vbVV”^1uvQÖN„vºNãNLˆ0Ù7hsSýwÏQ‰ÅbÈSýw«N×SŸS	g…VG„vuImÿ¡l	gºNONTa0"
+ THE_LIL_fairy_parliament_reform: "–Y¾|Tw¦®‹O"
+ THE_LIL_fairy_parliament_reform_desc: ""
+
+ ###diplomatic_action
+ # THE_LIL_prank_title: "¥b%f+"
+ # THE_LIL_prank_tooltip: "©‹[From.GetName]åwS%f)Y‰eg†Nv^OvQ„våePRôf‹YÇ›Nÿ\n÷‹O(uÙ*NY²NLˆ¨RwN=f0¥b%f0"
+ # THE_LIL_prank_desc: ":w"
+ THE_LIL_transform_to_spring_territory_title: "cšR:N%fKN†˜0W"
+ THE_LIL_transform_to_spring_territory_tooltip: "S[From.GetName]cšR:N%fKN†˜0W\n%fKN†˜0WN`S(uY²NsQû|ÿÐc›OôfS„v6eeQŒTºN›R\nÏk*N%fKN†˜0WSÐc›OÏkg%fKN›RžX•ÿ§G+0.05§!"
+ THE_LIL_transform_to_spring_territory_desc: "`OnxšR‰S§Y$COUNTRY$§WcšR%fKN†˜0WTÿ\nÙSOOvQØSbN*N%fKN†˜0Wÿ%fKN†˜0WN`S(uY²NsQû|ÿgYêSýwTöeåb	g§Y10§!*N%fKN†˜0W0"
+ THE_LIL_transform_to_vassal_title: "²d•%fKN†˜0W"
+ THE_LIL_transform_to_vassal_tooltip: "²d•[From.GetName]„v%fKN†˜0W\nÙOüRôbìN1Y»S§R1§!3zšR¦^"
+ THE_LIL_transform_to_vassal_desc: "`OnxšR‰²d•§Y$COUNTRY$§W„v%fKN†˜0WTÿ\nÙSOOvQØSbN,‚„vD–¸^ýVÿv^üRôbìN1Y»S§R1§!3zšR¦^0"
+
+ ###subject_type
+ THE_LIL_spring_territory_vassal_is_our: "§Y$NAME$§!=fbìN„v%fKN†˜0W0"
+ THE_LIL_spring_territory_vassal_title: "%fKN†˜0W"
+ THE_LIL_spring_territory_vassal_title_plural: "%fKN†˜0W"
+ THE_LIL_spring_territory_vassal_long_desc: "ND–¸^ýV‰|<Oÿ¡l	gêINY²NCg0FO%fKN†˜0WN`S(uY²NsQû|NNýwTv^ÿÐc›O„v!Ñ‘ŒTºN›RmNôfS0"
+
+ ###ctt
+ THE_LIL_empty_text: ""
+ THE_LIL_spring_power_upgrade_text: "\n\nå‚SVMR%fKN›RØšŽN§Y80§!ÿNb	g%fKN†˜0WS·ƒ—VåNNHeœgÿ\nýV¶RºN›RîOckÿ§G+20.0%§!\nºN›Rb`Y¦^ÿ§G+20.0%§!\nýV¶R4lKbîOckÿ§G+20.0%§!\n4lKbb`Y¦^ÿ§G+20.0%§!\nF–›QÄ‰!jNP–îOckÿ§G+20.0%§!\nwm›QÄ‰!jNP–îOckÿ§G+20.0%§!\n9‚êS±‚9ÿ§G-10.0%§!\nè–±‚9ÿ§G-10.0%§!\n8hÃVS±‚9ÿ§G-20.0%§!"
+
+ ###tag
+ L01: "†Çƒ"
+ L01_ADJ: "†Çƒ"
+ L02: "R—…h±‚"
+ L02_ADJ: "R—…h±‚"
+ L03: "¦ž±‚"
+ L03_ADJ: "¦ž±‚"
+ L04: "v^‚„²ƒ"
+ L04_ADJ: "v^‚„²ƒ"
+ L05: "Fƒ¥‚"
+ L05_ADJ: "Fƒ¥‚"
+ L06: "Tåeu„"
+ L06_ADJ: "Tåeu„"
+ L07: "1j±‚"
+ L07_ADJ: "1j±‚"
+ L08: "7…‡…"
+ L08_ADJ: "7…‡…"
+ L09: "yšIƒ"
+ L09_ADJ: "yšIƒ"
+ L10: "wmÞT™™°…"
+ L10_ADJ: "wmÞT™™°…"
+ L11: "ùz±‚"
+ L11_ADJ: "ùz±‚"
+ L12: "aŒIƒ"
+ L12_ADJ: "aŒIƒ"
+ L13: "kQÒ‰²ƒ"
+ L13_ADJ: "kQÒ‰²ƒ"
+ L14: "Ch±‚"
+ L14_ADJ: "Ch±‚"
+ L15: "4l±‚"
+ L15_ADJ: "4l±‚"
+ L16: "…h±‚"
+ L16_ADJ: "…h±‚"
+ L17: "Êƒ±‚"
+ L17_ADJ: "Êƒ±‚"
+ L18: "ówœ„"
+ L18_ADJ: "ówœ„"
+ L19: "·^CN¨™"
+ L19_ADJ: "·^CN¨™"
+ L20: "gIQ±‚"
+ L20_ADJ: "gIQ±‚"
+
+ ###modifier
+ THE_LIL_can_transform_vassal_to_spring_territory: "%fKN†˜0WNP–"
+
+ ###colonial_name
+ THE_LIL_colonial_alaska_name: "ÿRØVb"
+ THE_LIL_colonial_canada_name: "«göS"
+ THE_LIL_colonial_eastern_america_name: "«spt"
+ THE_LIL_colonial_louisiana_name: "WS¹e(gpQ±‚"
+ THE_LIL_colonial_california_name: "BŸ|±‚"
+ THE_LIL_colonial_mexico_name: "'YKN±‚"
+ THE_LIL_colonial_the_carribean_name: "ÜY±‚"
+ THE_LIL_colonial_colombia_name: "aSyrÌ‘šNpQ"
+ THE_LIL_colonial_peru_name: "NW‚m±‚"
+ THE_LIL_colonial_la_plata_name: "™ŸYr±‚"
+ THE_LIL_colonial_brazil_name: "Ûkù‡*rpQ"
+ THE_LIL_colonial_australia_name: "Ñ‘T0k"
+ THE_LIL_colonial_alaska_name_ADJ: "ÿRØVb"
+ THE_LIL_colonial_canada_name_ADJ: "«göS"
+ THE_LIL_colonial_eastern_america_name_ADJ: "«spt"
+ THE_LIL_colonial_louisiana_name_ADJ: "WS¹e(gpQ±‚"
+ THE_LIL_colonial_california_name_ADJ: "BŸ|±‚"
+ THE_LIL_colonial_mexico_name_ADJ: "'YKN±‚"
+ THE_LIL_colonial_the_carribean_name_ADJ: "ÜY±‚"
+ THE_LIL_colonial_colombia_name_ADJ: "aSyrÌ‘šNpQ"
+ THE_LIL_colonial_peru_name_ADJ: "NW‚m±‚"
+ THE_LIL_colonial_la_plata_name_ADJ: "™ŸYr±‚"
+ THE_LIL_colonial_brazil_name_ADJ: "Ûkù‡*rpQ"
+ THE_LIL_colonial_australia_name_ADJ: "Ñ‘T0k"
+
+ ###extend_from_touhou
+ LIL_enable_lily_black_fight_diplomatic: "=T(uùR‰ƒ‰ƒÑž„vY²N9VU^bÿ"
+ lil_fight_lily_black_diplomatic_title: "N‰ƒ‰ƒ^±ƒKQ©º‹"
+ lil_fight_lily_black_diplomatic_desc: "bìN„vfIN‰ƒ‰ƒ‹vyYªv`„vNb—ck(WpbqNNw‰^ó`aNÿbìN—V(W©º‹-NbÜwyYÿ"
+ lil_fight_lily_black_diplomatic_tt: "§Y[Root.Monarch.GetName]SO(WY²N9VU^b-NGN‰ƒ‰ƒÑžÿ§!"
+
+ #idea
+ THE_LIL_ideas: "%f–Y¾|tõV"
+ THE_LIL_ideas_start: "JT%f.Oßu"
+ THE_LIL_ideas_bonus: "%fcRÎ‘ÃV"
+ THE_LIL_idea_1: "%fÎ˜ŒTl"
+ THE_LIL_idea_2: "%fánºNô•"
+ THE_LIL_idea_3: "	g3–%f"
+ THE_LIL_idea_4: "%fÎ˜—Va"
+ THE_LIL_idea_5: "øRIƒ%fVf"
+ THE_LIL_idea_6: "‚Y‰v%fðS"
+ THE_LIL_idea_7: "™YKbÞV%f"
+ THE_LIL_idea_1_desc: "%fKN–Y¾|(W‰^ó`aNT0Wý×S0R0kÎÿImül‹Y¨R0ïS1rípÅ`„vyY,g«Ž1S=f%f„vaŒVÿmN=fÏk0R%fcR1S×S0RhQ‰^ó`aNsQèl„vùRaŒ0Á‰0RyY1S=fÁ‰0R‹YÐÙ7h„v.Oû•éeòT«ˆNb	gºNŸqåw0"
+ THE_LIL_idea_2_desc: "ÅNÅN(W‰^ó`aNKN…Q.O­d%f)YÜÜNY&&–Y¾|ìNòTÏunx²‹ÿ(W‰^ó`aNKNY	gNwÔk‰^ó`aN'Y—VY„vwm¸S0h—g0ØšqS0IƒŸSåNÊSgÍ‘‰„vºN‰|ÿÖNìN¯wšRœU0k%f)Y0‰ƒ‰ƒ‹TäNŽVN.Oÿ±TìN¯wšRO.^©RyYÿ"
+ THE_LIL_idea_3_desc: "‰ƒ‰ƒmN‰Oo`ÿyY%N<hc	&rTêñT—Bl„v–Y¾|ÿ÷‹BlÖNìN.^êñTRÅbN›NûN¡R0NÇÖNìNŒRhQNåwSêñT	gÀNHNûN¡Rÿ‰ƒ‰ƒN¹ùSlÿN¹Šb¸uagR+R²NÙu2NêSNÆ‹WR„v–Y¾|0"
+ THE_LIL_idea_4_desc: ":N†N–Y¾|„vT››RÿvQÖN„vFU–<ONNN—VN©‹ÖNìNÂa—V RÏQXNd–ÿQNÖNìNZPua0–Y¾|„vÐc›O„vŸSPg™e÷N<hNONÿôfUOµQ%fKN–Y¾|ÔkvQÖNàQMOËS„UŒTs^—VYÿÙSV6qêSO©‹ÖNìNôf×S0kÎ0"
+ THE_LIL_idea_5_desc: "ÎN'Yê6q·ƒÖS†N%f„vy)Rÿ±1S‰T'Yê6q›OIY%f„vmyÁT0‰ƒ‰ƒv^NwÍ‘0ÌRÿàVdkyY—Bl„vÞV¥bøvSVŽrUSÿ=fÚ‹žRNàVÃV0óŽNÀNHN=fàVÃVÿêS	g‰ƒ‰ƒåwS&&"
+ THE_LIL_idea_6_desc: "%f)Y(WêTÌ‘NTÿ%f)Y(WêTÌ‘ÿ%f)Y(W±–Y¾|ìN„v<wiwÌ‘ÿÙÌ‘	g¢u±‚NTÿÙÌ‘	gÿuIƒÿØ	g±O1ULk„vSÄžBž&&"
+ THE_LIL_idea_7_desc: "–Y¾|=fN‰k„vÿ–Y¾|=fàeKS„v0FO=f–Y¾|mNOP`ç`ÿ–Y¾|mNO²`2O0‰©‹ÖNìN(WNˆe„vb:WNKYÇRNgLeÿÙžR(W=fÇŽNØš‰Bl†N0‰ƒ‰ƒmNNœU0kb‰NÿFOyY¡l	gžRÕlÿêSýwKS›R(u%fÎ˜»laT4OìN„vÃV0"
+
+ #disaster
+ THE_LIL_late_spring_disaster: "Zf%f"
+ desc_THE_LIL_late_spring_disaster: "%f)YsSSˆm&&"

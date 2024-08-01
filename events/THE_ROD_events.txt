@@ -1,0 +1,293 @@
+namespace = THE_ROD_events
+
+### Mission Events
+country_event = {
+	id = THE_ROD_events.1
+	title = THE_ROD_events.1.title
+	desc = THE_ROD_events.1.desc
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	major = yes
+
+	goto = 12
+
+	option = {
+		name = THE_ROD_events.1.a
+		add_mercantilism = 10
+		12 = {
+			add_base_tax = 5
+			add_permanent_province_modifier = {
+				name = THE_ROD_euler_strait_tax_province_modifier
+				
+				duration = -1
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = THE_ROD_events.1.b
+		add_country_modifier = {
+			name = THE_ROD_free_sea_modifier
+			duration = -1
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+### Random Triggered Events
+country_event = {
+	id = THE_ROD_events.2
+	title = THE_ROD_events.2.title
+	desc = THE_ROD_events.2.desc
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_flag = THE_ROD_rumia_ability_add_event_flag }
+	}
+
+	immediate = {
+		set_country_flag = THE_ROD_rumia_ability_add_event_flag
+	}
+
+	option = {
+		name = THE_ROD_events.2.a
+		trigger = {
+			NOT = { check_variable = { which = the_rumia_fire_var which = the_rumia_fire_max_var } }
+		}
+		custom_tooltip = THE_ROD_events_2_a_tt
+		hidden_effect = {
+			change_variable = { which = the_rumia_fire_var value = 1 }
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = THE_ROD_events.2.b
+		trigger = {
+			NOT = { check_variable = { which = the_rumia_shock_var which = the_rumia_shock_max_var } }
+		}
+		custom_tooltip = THE_ROD_events_2_b_tt
+		hidden_effect = {
+			change_variable = { which = the_rumia_shock_var value = 1 }
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = THE_ROD_events.2.c
+		trigger = {
+			NOT = { check_variable = { which = the_rumia_manuever_var which = the_rumia_manuever_max_var } }
+		}
+		custom_tooltip = THE_ROD_events_2_c_tt
+		hidden_effect = {
+			change_variable = { which = the_rumia_manuever_var value = 1 }
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = THE_ROD_events.2.d
+		trigger = {
+			NOT = { check_variable = { which = the_rumia_siege_var which = the_rumia_siege_max_var } }
+		}
+		custom_tooltip = THE_ROD_events_2_d_tt
+		hidden_effect = {
+			change_variable = { which = the_rumia_siege_var value = 1 }
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = THE_ROD_events.2.error
+		trigger = {
+			check_variable = { which = the_rumia_fire_var which = the_rumia_fire_max_var }
+			check_variable = { which = the_rumia_shock_var which = the_rumia_shock_max_var }
+			check_variable = { which = the_rumia_manuever_var which = the_rumia_manuever_max_var }
+			check_variable = { which = the_rumia_siege_var which = the_rumia_siege_max_var }
+		}
+		add_mil_power = 50
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	after = {
+		clr_country_flag = THE_ROD_rumia_ability_add_event_flag
+	}
+}
+
+
+country_event = {
+	id = THE_ROD_events.3
+	title = THE_ROD_events.3.title
+	desc = THE_ROD_events.3.desc
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = THE_ROD_events.3.a
+		trigger = {
+			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = pommeranian }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = pommeranian }
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = THE_ROD_events.3.b
+		trigger = {
+			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = prussian }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = prussian }
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = THE_ROD_events.3.c
+		trigger = {
+			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = baltic_german }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = baltic_german }
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = THE_ROD_events.3.d
+		trigger = {
+			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = lower_saxon }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = lower_saxon }
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = THE_ROD_events.3.e
+		trigger = {
+			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = hannoverian }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = hannoverian }
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = THE_ROD_events.3.f
+		trigger = {
+			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = hessian }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = hessian }
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = THE_ROD_events.3.g
+		trigger = {
+			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = saxon }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = saxon }
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = THE_ROD_events.3.h
+		trigger = {
+			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = franconian }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = franconian }
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = THE_ROD_events.3.i
+		trigger = {
+			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = swabian }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = swabian }
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = THE_ROD_events.3.j
+		trigger = {
+			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = swiss }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = swiss }
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = THE_ROD_events.3.k
+		trigger = {
+			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = bavarian }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = bavarian }
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = THE_ROD_events.3.l
+		trigger = {
+			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = austrian }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = austrian }
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = THE_ROD_events.3.m
+		trigger = {
+			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = dutch }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = dutch }
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = THE_ROD_events.3.n
+		trigger = {
+			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = flemish }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = flemish }
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = THE_ROD_events.3.o
+		trigger = {
+			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = frisian }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = frisian }
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,178 @@
+qin_shihen = {
+	potential = {
+		OR = {
+			tag = KKO
+			was_tag = KKO
+		}
+	}
+	can_start = {
+		OR = {
+			AND = {
+				has_government_power = {
+					mechanic_type = th_kokoro_mechanic
+					power_type = kko_you_adm_power
+					value = 50
+				}
+				NOT = {
+					has_government_power = {
+						mechanic_type = th_kokoro_mechanic
+						power_type = kko_xi_dip_power
+						value = 1
+					}
+				}
+			}
+			AND = {
+				has_government_power = {
+					mechanic_type = th_kokoro_mechanic
+					power_type = kko_you_adm_power
+					value = 50
+				}
+				NOT = {
+					has_government_power = {
+						mechanic_type = th_kokoro_mechanic
+						power_type = kko_nu_mil_power
+						value = 1
+					}
+				}
+			}
+			AND = {
+				has_government_power = {
+					mechanic_type = th_kokoro_mechanic
+					power_type = kko_xi_dip_power
+					value = 50
+				}
+				NOT = {
+					has_government_power = {
+						mechanic_type = th_kokoro_mechanic
+						power_type = kko_nu_mil_power
+						value = 1
+					}
+				}
+			}
+			AND = {
+				has_government_power = {
+					mechanic_type = th_kokoro_mechanic
+					power_type = kko_xi_dip_power
+					value = 50
+				}
+				NOT = {
+					has_government_power = {
+						mechanic_type = th_kokoro_mechanic
+						power_type = kko_you_adm_power
+						value = 1
+					}
+				}
+			}
+			AND = {
+				has_government_power = {
+					mechanic_type = th_kokoro_mechanic
+					power_type = kko_nu_mil_power
+					value = 50
+				}
+				NOT = {
+					has_government_power = {
+						mechanic_type = th_kokoro_mechanic
+						power_type = kko_you_adm_power
+						value = 1
+					}
+				}
+			}
+			AND = {
+				has_government_power = {
+					mechanic_type = th_kokoro_mechanic
+					power_type = kko_nu_mil_power
+					value = 50
+				}
+				NOT = {
+					has_government_power = {
+						mechanic_type = th_kokoro_mechanic
+						power_type = kko_xi_dip_power
+						value = 1
+					}
+				}
+			}
+			AND = {
+				has_government_power = {
+					mechanic_type = th_kokoro_mechanic
+					power_type = kko_you_adm_power
+					value = 50
+				}
+				has_government_power = {
+					mechanic_type = th_kokoro_mechanic
+					power_type = kko_xi_dip_power
+					value = 50
+				}
+				has_government_power = {
+					mechanic_type = th_kokoro_mechanic
+					power_type = kko_xi_dip_power
+					value = 50
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = kko_religions_divergence1
+				has_country_flag = kko_divergence_first_12
+			}
+		}
+	}
+	can_stop = {
+		always = no
+	}
+	progress = {
+		modifier = {
+			factor = 5
+			tag = KKO
+		}
+		modifier = {
+			factor = 50
+			custom_trigger_tooltip = {
+				tooltip = kko_religions_divergence1
+				has_country_flag = kko_divergence_first_12
+			}
+		}
+	}
+	can_end = {
+		if = {
+			limit = { 
+				has_country_flag = kko_disaster_start_firstway
+			}
+			custom_trigger_tooltip = {
+				tooltip = kko_disaster_started123
+				OR = {
+					had_country_flag = {
+						flag = kko_disaster_started
+						days = 10950
+					}
+					check_variable = {
+						which = kko_emotion_disaster_num
+						value = 5
+					}
+				}
+			}
+		}
+		else = {
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = kko_disaster_started1234
+					had_country_flag = {
+						flag = kko_disaster_started
+						days = 3650
+					}
+				}
+				stability = 2
+			}
+		}
+	}
+	modifier = {
+		global_unrest = 2
+		morale_damage_received = 0.05
+		shock_damage = -0.075
+		fire_damage = -0.075
+		global_manpower_modifier = -0.10
+		all_power_cost = 0.05
+		prestige = -0.25
+		legitimacy = -0.25
+		global_autonomy = 0.05
+	}
+	on_start = KKO_flavor.2
+	on_end = KKO_flavor.3
+}

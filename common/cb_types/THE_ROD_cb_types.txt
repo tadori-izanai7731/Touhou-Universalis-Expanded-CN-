@@ -1,0 +1,71 @@
+# Napoleonic era imperialism
+cb_THE_ROD_darkcoast_war = {
+	valid_for_subject = no
+
+	prerequisites_self = {
+		has_country_flag = THE_ROD_unlock_darkness_trade_war_flag
+	}
+
+	prerequisites = {
+		FROM = {
+			OR = {
+				is_subject = no
+				is_subject_of_type = tributary_state
+			}
+			OR = {
+				any_owned_province = {
+					has_port = yes
+				}
+				any_subject_country = {
+					any_owned_province = {
+						has_port = yes
+					}
+				}
+			}
+		}
+		OR = {
+			1926 = {
+				trade_share = {
+					country = FROM
+					share = 1
+				}
+			}
+			45 = {
+				trade_share = {
+					country = FROM
+					share = 1
+				}
+			}
+			33 = {
+				trade_share = {
+					country = FROM
+					share = 1
+				}
+			}
+			1269 = {
+				trade_share = {
+					country = FROM
+					share = 1
+				}
+				ROOT = { has_country_flag = THE_ROD_unlock_darkness_trade_war_2_flag }
+			}
+			1975 = {
+				trade_share = {
+					country = FROM
+					share = 1
+				}
+				ROOT = { has_country_flag = THE_ROD_unlock_darkness_trade_war_2_flag }
+			}
+			1652 = {
+				trade_share = {
+					country = FROM
+					share = 1
+				}
+				ROOT = { has_country_flag = THE_ROD_unlock_darkness_trade_war_2_flag }
+			}
+			ROOT = { has_government_attribute = THE_ROD_darkshore_war_without_trigger_attribute }
+		}
+	}
+
+	war_goal = THE_ROD_blockade_ports
+}

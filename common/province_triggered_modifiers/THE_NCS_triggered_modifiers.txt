@@ -1,0 +1,126 @@
+#河童之城
+THE_NCS_kappa_castle_modifier = {
+	potential = {
+		owner = {
+			tag = NCS
+		}
+	}
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = THE_NCS_3_1
+				capital = 4965
+			}
+		}
+	}
+	technology_cost = -0.1
+	idea_cost = -0.05
+	global_institution_spread = 0.5
+}
+
+#天狗之城
+THE_NCS_tengu_castle_modifier = {
+	potential = {
+		owner = {
+			tag = NCS
+		}
+	}
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = THE_NCS_3_1
+				capital = 4963
+			}
+		}
+	}
+	global_attacker_dice_roll_bonus = 1
+	ae_impact = -0.1
+}
+
+#神德之城
+THE_NCS_kami_castle_modifier = {
+	potential = {
+		owner = {
+			tag = NCS
+		}
+	}
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = THE_NCS_3_1
+				capital = 4998
+			}
+		}
+	}
+	missionaries = 1
+	global_missionary_strength = 0.02
+	tolerance_own = 1
+	manpower_in_true_faith_provinces = 0.1
+	reverse_relation_with_same_religion = 20
+}
+
+#阎魔之城
+THE_NCS_enma_castle_modifier = {
+	potential = {
+		owner = {
+			tag = NCS
+		}
+	}
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = THE_NCS_3_1
+				capital = 4983
+			}
+		}
+	}
+	yearly_corruption = -0.1
+	all_power_cost = -0.1
+	idea_cost = 0.1
+	technology_cost = 0.1
+}
+
+#鬼族之城
+THE_NCS_oni_castle_modifier = {
+	potential = {
+		owner = {
+			tag = NCS
+		}
+	}
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = THE_NCS_3_1
+				capital = 5007
+			}
+		}
+	}
+	shock_damage = 0.05
+	fire_damage = 0.05
+	max_general_fire = 2
+	max_general_shock = 2
+	max_general_maneuver = 2
+	max_general_siege = 2
+}
+
+#小人族之城
+THE_NCS_kobito_castle_modifier = {
+	potential = {
+		owner = {
+			tag = NCS
+		}
+	}
+	trigger = {
+		owner = {
+			OR = {
+				mission_completed = THE_NCS_3_1
+				capital = 5035
+			}
+		}
+	}
+	defensiveness = 0.25
+	garrison_size = 0.33
+	administrative_efficiency = 0.05
+}
+
+

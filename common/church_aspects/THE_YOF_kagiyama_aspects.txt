@@ -1,0 +1,271 @@
+kagiyama_epidemic_aspect = {
+	cost = 100
+	potential = {
+		not = {
+			has_country_flag = yof_chruch_1_level_up_flag
+		}
+	}
+	modifier = {
+		manpower_recovery_speed = 0.10
+		global_manpower_modifier = 0.10
+	}
+	ai_will_do = {
+		factor = 15
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
+	}
+}
+kagiyama_calamity_aspect = {
+	cost = 100
+	potential = {
+		not = {
+			has_country_flag = yof_chruch_2_level_up_flag
+		}
+	}
+	modifier = {
+		naval_morale = 0.10
+		ship_durability = 0.10
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
+	}
+}
+kagiyama_flaw_aspect = {
+	cost = 100
+	potential = {
+		not = {
+			has_country_flag = yof_chruch_3_level_up_flag
+		}
+	}
+	modifier = {
+		idea_cost = -0.05
+		technology_cost = -0.10
+	}
+	ai_will_do = {
+		factor = 45
+		modifier = {
+			factor = 1.5
+			is_at_war = no
+		}
+	}
+}
+kagiyama_scar_aspect = {
+	cost = 100
+	potential = {
+		not = {
+			has_country_flag = yof_chruch_4_level_up_flag
+		}
+	}
+	modifier = {
+		diplomats = 1
+		diplomatic_reputation = 2
+	}
+	ai_will_do = {
+		factor = 25
+		modifier = {
+			factor = 1.5
+			is_at_war = no
+		}
+	}
+}
+kagiyama_injury_aspect = {
+	cost = 100
+	potential = {
+		not = {
+			has_country_flag = yof_chruch_5_level_up_flag
+		}
+	}
+	modifier = {
+		development_cost = -0.10
+		build_cost = -0.1
+	}
+	ai_will_do = {
+		factor = 15
+		modifier = {
+			factor = 1.5
+			is_at_war = no
+		}
+	}
+}
+kagiyama_disaster_aspect = {
+	cost = 100
+	potential = {
+		not = {
+			has_country_flag = yof_chruch_6_level_up_flag
+		}
+	}
+	modifier = {
+		global_unrest = -1.5
+		stability_cost_modifier = -0.3
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 1.5
+			is_at_war = no
+		}
+	}
+}
+kagiyama_severe_aspect = {
+	cost = 100
+	potential = {
+		not = {
+			has_country_flag = yof_chruch_7_level_up_flag
+		}
+	}
+	modifier = {
+		global_autonomy = -0.05
+		global_prosperity_growth = 0.5
+	}
+	ai_will_do = {
+		factor = 0
+		modifier = {
+			factor = 1.5
+			is_at_war = no
+		}
+	}
+}
+kagiyama_misforture_aspect = {
+	cost = 100
+	trigger = {
+		mission_completed = yof_smile_to_doom
+	}
+	modifier = {
+		all_power_cost = -0.05
+		administrative_efficiency = 0.05
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 1.5
+			is_at_war = no
+		}
+	}
+}
+
+kagiyama_epidemic_aspectv2 = {
+	cost = 100
+	potential = {
+		has_country_flag = yof_chruch_1_level_up_flag
+	}
+	modifier = {
+		manpower_recovery_speed = 0.15
+		global_manpower_modifier = 0.15
+	}
+	ai_will_do = {
+		factor = 15
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
+	}
+}
+kagiyama_calamity_aspectv2 = {
+	cost = 100
+	potential = {
+		has_country_flag = yof_chruch_2_level_up_flag
+	}
+	modifier = {
+		naval_morale = 0.15
+		ship_durability = 0.10
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
+	}
+}
+kagiyama_flaw_aspectv2 = {
+	cost = 100
+	potential = {
+		has_country_flag = yof_chruch_3_level_up_flag
+	}
+	modifier = {
+		idea_cost = -0.10
+		technology_cost = -0.10
+	}
+	ai_will_do = {
+		factor = 45
+		modifier = {
+			factor = 1.5
+			is_at_war = no
+		}
+	}
+}
+kagiyama_scar_aspectv2 = {
+	cost = 100
+	potential = {
+		has_country_flag = yof_chruch_4_level_up_flag
+	}
+	modifier = {
+		diplomats = 1
+		diplomatic_reputation = 1
+		ae_impact = -0.10
+	}
+	ai_will_do = {
+		factor = 25
+		modifier = {
+			factor = 1.5
+			is_at_war = no
+		}
+	}
+}
+kagiyama_injury_aspectv2 = {
+	cost = 100
+	potential = {
+		has_country_flag = yof_chruch_5_level_up_flag
+	}
+	modifier = {
+		development_cost = -0.15
+		build_time = -0.2
+	}
+	ai_will_do = {
+		factor = 15
+		modifier = {
+			factor = 1.5
+			is_at_war = no
+		}
+	}
+}
+kagiyama_disaster_aspectv2 = {
+	cost = 100
+	potential = {
+		has_country_flag = yof_chruch_6_level_up_flag
+	}
+	modifier = {
+		global_unrest = -1.5
+		stability_cost_modifier = -0.50
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 1.5
+			is_at_war = no
+		}
+	}
+}
+kagiyama_severe_aspectv2 = {
+	cost = 100
+	potential = {
+		has_country_flag = yof_chruch_7_level_up_flag
+	}
+	modifier = {
+		global_autonomy = -0.05
+		global_prosperity_growth = 1
+	}
+	ai_will_do = {
+		factor = 0
+		modifier = {
+			factor = 1.5
+			is_at_war = no
+		}
+	}
+}
