@@ -2910,12 +2910,13 @@ THE_HNG_2_1 = {
 		} 
 		
 		trigger = { 
-			num_of_owned_provinces_with = {
-				region = japan_region
-				is_core = ROOT
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 15
+				region = japan_region
 			}
-			owns_core_province = 1020
+			1020 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		
 		effect = { 
@@ -2987,18 +2988,20 @@ THE_HNG_2_1 = {
 		trigger = {
 			OR = {
 				AND = {
-					num_of_owned_provinces_with = {
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 6
 						OR = {
 							area = Hakurei_state
 							area = Hakurei_peninsula_state
 							area = Hakurei_western_coast
 						}
-						value = 6
 					}
-					owns_core_province = 4955					
+					4955 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}				
 				}
 				SCR = {
-					num_of_owned_provinces_with = {
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 						OR = {
 							area = Hakurei_state
 							area = Hakurei_peninsula_state
@@ -3006,7 +3009,9 @@ THE_HNG_2_1 = {
 						}
 						value = 6
 					}
-					owns_core_province = 4955	
+					4955 = {
+						country_or_non_sovereign_subject_holds = SCR
+					}
 				}
 			}
 		}
@@ -3056,28 +3061,12 @@ THE_HNG_2_1 = {
 		} 
 		
 		trigger = { 
-			OR = {
-				AND = {
-					Scarlett_domain = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					Scarlet_island = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					Scarlet_mountain = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}		
-				}
-				num_of_owned_provinces_with = {
-					OR = {
-						area = Scarlet_island
-						area = Scarlett_domain
-						area = Scarlet_mountain
-					}
-					value = 8
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 8
+				OR = {
+					area = Scarlet_island
+					area = Scarlett_domain
+					area = Scarlet_mountain
 				}
 			}
 		} 
@@ -3446,10 +3435,9 @@ THE_HNG_2_2 = {
 		} 
 		
 		trigger = { 
-			num_of_owned_provinces_with = {
-				region = manchuria_region
-				is_core = ROOT
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 25
+				region = manchuria_region
 			}
 		} 
 		
@@ -3474,10 +3462,9 @@ THE_HNG_2_2 = {
 		} 
 		
 		trigger = { 
-			num_of_owned_provinces_with = {
-				area  = kamchatka_area 
-				is_core = ROOT
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 4
+				area = kamchatka_area 
 			}
 		} 
 		
@@ -3571,15 +3558,17 @@ THE_HNG_2_2 = {
 		}
 		position = 6
 		trigger = {
-			num_of_owned_provinces_with = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
 				OR = {
 					region = ruthenia_region
 					region = russia_region
 					region = ural_region
 				}
-				value = 20
 			}
-			295 = { owned_by = ROOT }
+			295 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = { 
 			add_country_modifier = {
@@ -3779,16 +3768,17 @@ THE_HNG_2_3 = {
 				}
 				has_reform = Gensokyan_celestial_empire
 			}
-			else_if = {
-				num_of_owned_provinces_with = {
+			else = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 30
 					OR = {
 						superregion = china_superregion
 						area = liaoning_area
 					}
-					is_core = ROOT
-					value = 30
 				}
-				owns_core_province = 1816
+				1816 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 				government_rank = 3
 				total_development = 800
 			}
@@ -4194,9 +4184,9 @@ THE_HNG_2_3 = {
 		}
 		
 		trigger = {
-			num_of_owned_provinces_with = {
-				region = central_asia_region
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 25
+				region = central_asia_region
 			}
 			469 = { owned_by = ROOT }
 			441 = { owned_by = ROOT }
@@ -5709,30 +5699,17 @@ THE_HNG_2_5 = {
 		} 
 		
 		trigger = { 
-			OR = {
-				AND = {
-					Ran_state = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					Mayohiga_state = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					Eastern_mountains = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
+			4989 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				OR = {
+					area = Ran_state
+					area = Mayohiga_state
+					area = Eastern_mountains
 				}
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					OR = {
-						area = Ran_state
-						area = Mayohiga_state
-						area = Eastern_mountains
-					}
-					value = 6
-				}
-			}	
+				value = 6
+			}
 		} 
 		
 		effect = { 
@@ -5962,11 +5939,10 @@ THE_HNG_3_2 = {
 			owned_by = ROOT
 		}
 		trigger = {
-			num_of_owned_provinces_with = {
+			any_owned_province = {
 				trade_goods = paper
 				has_production_building_trigger = yes	
 				has_tax_building_trigger = yes	
-				value = 1
 			}
 		}
 		
