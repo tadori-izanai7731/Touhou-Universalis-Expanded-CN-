@@ -687,7 +687,7 @@ THE_THE_kko_missions_second_slot = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = kko_tooltip_chance_religious1
-				tag = KKO
+				always = yes
 			}
 		}
 		effect = {

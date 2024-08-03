@@ -140,7 +140,7 @@ country_event = {
 			days = 60
 		}
 	}
-	immediate = {
+	after = {
 		hidden_effect = {
 			set_country_flag = kko_religious_chance_complete
 		}
@@ -208,7 +208,7 @@ country_event = {
 	option = {
 		name = KKO_flavor.5.c
 		trigger = {
-			was_player = no
+			ai = yes
 		}
 		ai_chance = {
 			factor = 600
