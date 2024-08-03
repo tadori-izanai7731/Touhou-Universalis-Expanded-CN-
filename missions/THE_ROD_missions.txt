@@ -4152,9 +4152,61 @@ THE_ROD_branch_lock_1 = {
 				tooltip = THE_ROD_branch_mission_ttt
 				always = no
 			}
+			custom_trigger_tooltip = {
+				tooltip = THE_ROD_if_select_catholic_branch_ttt
+				always = no
+			}
+			religion = catholic
+			if = {
+				limit = { exists = PAP } 
+				PAP = {
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+				}
+			}
+			else = { religious_unity = 1.0 } 
+			custom_trigger_tooltip = {
+				tooltip = THE_ROD_if_select_hakurei_branch_ttt
+				always = no
+			}
+			religion = th_hakureishinto
+			religious_unity = 0.9
+			has_global_modifier_value = {
+				which = global_missionary_strength
+				value = 0.15
+			}
 		}
 
-		effect = { custom_tooltip = THE_ROD_branch_mission_ttt } 
+		effect = {
+			# custom_tooltip = THE_ROD_branch_mission_ttt
+			custom_tooltip = THE_ROD_if_select_catholic_branch_tt
+			tooltip = {
+				add_papal_influence = 100
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = 10
+				}
+				add_country_modifier = {
+					name = "THE_ROD_christian_world_modifier"
+					duration = -1
+				}
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_ROD_if_select_hakurei_branch_tt
+			tooltip = {
+				THE_ROD_modify_youkai_way_scripted_effect = yes
+				if = {
+					limit = { NOT = { ruler_religion = th_hakureishinto }  } 
+					set_ruler_religion = th_hakureishinto
+				}
+				add_country_modifier = {
+					name = "THE_ROD_beginner_witch_modifier"
+					duration = 10950
+				}
+			}
+		} 
 	}
 
 	THE_ROD_1_19_lock = {
@@ -4168,9 +4220,103 @@ THE_ROD_branch_lock_1 = {
 				tooltip = THE_ROD_branch_mission_ttt
 				always = no
 			}
+			custom_trigger_tooltip = {
+				tooltip = THE_ROD_if_select_catholic_branch_ttt
+				always = no
+			}
+			religion = catholic
+			NOT = { current_age = age_of_discovery } 
+			OR = {
+				full_idea_group = theocracy_gov_ideas
+				full_idea_group = religious_ideas
+				num_of_estate_agendas_completed = {
+					estate = estate_church
+					value = 5
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = THE_ROD_if_select_hakurei_branch_ttt
+				always = no
+			}
+			religion = th_hakureishinto
+			custom_trigger_tooltip = {
+				tooltip = THE_ROD_has_any_personal_deity_ttt
+				OR = {
+					has_personal_deity = Hakurei_God
+					has_personal_deity = Yukari
+					has_personal_deity = Hecatia
+					has_personal_deity = Okina
+					has_personal_deity = Larva
+					has_personal_deity = Aki_Sisters
+					has_personal_deity = Junko
+					has_personal_deity = Kishin
+					has_personal_deity = Shinki
+					has_personal_deity = Keiki
+					has_personal_deity = Hina
+					has_personal_deity = Kutaka
+				}
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				religion = th_hakureishinto
+			}
 		}
 
-		effect = { custom_tooltip = THE_ROD_branch_mission_ttt } 
+		effect = {
+			# custom_tooltip = THE_ROD_branch_mission_ttt
+			custom_tooltip = THE_ROD_if_select_catholic_branch_tt
+			tooltip = {
+				THE_add_ruler_stat = {
+					stat = adm
+					value = 1
+				}
+				add_historical_friend = PAP
+				PAP = { add_historical_friend = ROOT } 
+				if = {
+					limit = {
+						OR = {
+							current_age = age_of_discovery
+							current_age = age_of_reformation
+						}
+					}
+					add_country_modifier_for_age = {
+						name = "THE_ROD_dark_executer_modifier"
+						age = age_of_reformation
+					}
+				}
+				else = {
+					add_country_modifier = {
+						name = "THE_ROD_dark_executer_modifier"
+						duration = 7300
+					}
+				}
+				custom_tooltip = THE_ROD_change_religion_conversion_center_to_catholic_tt
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_ROD_if_select_hakurei_branch_tt
+			tooltip = {
+				THE_ROD_modify_youkai_way_scripted_effect = yes
+				custom_tooltip = THE_ROD_add_personal_deity_same_modifier_tt
+				THE_ROD_add_personal_deity_same_modifier_scripted_effect = yes
+				custom_tooltip = empty_line_tt
+				if = {
+					limit = { has_country_modifier = THE_ROD_beginner_witch_modifier } 
+					custom_tooltip = THE_ROD_1_19_hakurei_tt_yes
+				}
+				else = { custom_tooltip = THE_ROD_1_19_hakurei_tt_no } 
+				tooltip = { custom_tooltip = THE_ROD_1_19_hakurei_tt } 
+				hidden_effect = {
+					if = {
+						limit = { has_country_modifier = THE_ROD_beginner_witch_modifier } 
+						remove_country_modifier = THE_ROD_beginner_witch_modifier
+						add_country_modifier = {
+							name = "THE_ROD_beginner_witch_modifier"
+							duration = -1
+						}
+					}
+				}
+			}
+		} 
 	}
 }
 THE_ROD_branch_lock_2 = {
@@ -4195,9 +4341,109 @@ THE_ROD_branch_lock_2 = {
 				tooltip = THE_ROD_branch_mission_ttt
 				always = no
 			}
+			custom_trigger_tooltip = {
+				tooltip = THE_ROD_if_select_catholic_branch_ttt
+				always = no
+			}
+			religion = catholic
+			OR = {
+				is_papal_controller = yes
+				num_of_owned_provinces_with = {
+					has_cardinal = yes
+					value = 3
+				}
+			}
+			43 = {
+				owned_by = ROOT
+				has_tax_building_trigger = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = THE_ROD_if_select_hakurei_branch_ttt
+				always = no
+			}
+			religion = th_hakureishinto
+			if = {
+				limit = { has_estate = estate_church } 
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 60
+				}
+			}
+			if = {
+				limit = { has_estate = estate_burghers } 
+				estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 60
+				}
+			}
+			43 = {
+				owned_by = ROOT
+				has_tax_building_trigger = yes
+			}
 		}
 
-		effect = { custom_tooltip = THE_ROD_branch_mission_ttt } 
+		effect = {
+			# custom_tooltip = THE_ROD_branch_mission_ttt
+			custom_tooltip = THE_ROD_if_select_catholic_branch_tt
+			tooltip = {
+				if = {
+					limit = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								has_cardinal = yes
+								value = 7
+							}
+						}
+					}
+					if = {
+						limit = {
+							43 = {
+								religion = catholic
+								NOT = { has_cardinal = yes } 
+							}
+						}
+						43 = { add_cardinal = yes } 
+					}
+					else = {
+						random_owned_province = {
+							limit = {
+								religion = catholic
+								NOT = { has_cardinal = yes } 
+							}
+							add_cardinal = yes
+						}
+					}
+				}
+				43 = {
+					add_or_upgrade_tax_building = yes
+					add_permanent_province_modifier = {
+						name = "THE_ROD_danzig_papal_palace_province_modifier"
+						duration = 10950
+					}
+				}
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_ROD_if_select_hakurei_branch_tt
+			tooltip = {
+				THE_ROD_modify_youkai_way_scripted_effect = yes
+				43 = {
+					add_or_upgrade_tax_building = yes
+					add_province_triggered_modifier = THE_ROD_holy_city_danzig_province_triggered_modifier
+				}
+				if = {
+					limit = { full_idea_group = religious_ideas } 
+					custom_tooltip = THE_ROD_2_18_hakurei_tt_yes
+				}
+				else = { custom_tooltip = THE_ROD_2_18_hakurei_tt_no } 
+				tooltip = {
+					add_estate_loyalty = {
+						estate = estate_church
+						loyalty = 20
+					}
+					custom_tooltip = THE_ROD_2_18_hakurei_tt
+				}
+			}
+		} 
 	}
 
 	THE_ROD_2_19_lock = {
@@ -4211,9 +4457,73 @@ THE_ROD_branch_lock_2 = {
 				tooltip = THE_ROD_branch_mission_ttt
 				always = no
 			}
+			custom_trigger_tooltip = {
+				tooltip = THE_ROD_if_select_catholic_branch_ttt
+				always = no
+			}
+			religion = catholic
+			num_of_owned_provinces_with = {
+				has_cardinal = yes
+				value = 5
+			}
+			OR = {
+				owns = 118
+				AND = {
+					alliance_with = PAP
+					PAP = {
+						trust = {
+							who = ROOT
+							value = 100
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = THE_ROD_if_select_hakurei_branch_ttt
+				always = no
+			}
+			religion = th_hakureishinto
+			num_of_estate_agendas_completed = {
+				estate = estate_church
+				value = 5
+			}
+			num_of_owned_provinces_with = {
+				value = 50
+				has_tax_building_trigger = yes
+			}
 		}
 
-		effect = { custom_tooltip = THE_ROD_branch_mission_ttt } 
+		effect = {
+			# custom_tooltip = THE_ROD_branch_mission_ttt
+			custom_tooltip = THE_ROD_if_select_catholic_branch_tt
+			tooltip = {
+				change_government_reform_progress = 300
+				custom_tooltip = THE_ROD_unlock_darknedd_diocese_reform_tt
+				tooltip = { add_government_reform = THE_ROD_darknedd_diocese_reform } 
+				hidden_effect = { set_country_flag = THE_ROD_unlock_darknedd_diocese_reform_flag } 
+				custom_tooltip = empty_line_tt
+				if = {
+					limit = { any_owned_province = { has_province_modifier = THE_ROD_danzig_papal_palace_province_modifier }  } 
+					custom_tooltip = THE_ROD_2_19_catholic_tt_yes
+				}
+				else = { custom_tooltip = THE_ROD_2_19_catholic_tt_no } 
+				custom_tooltip = THE_ROD_2_19_catholic_tt
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_ROD_if_select_hakurei_branch_tt
+			tooltip = {
+				THE_ROD_modify_youkai_way_scripted_effect = yes
+				THE_add_ruler_stat = {
+					stat = adm
+
+					value = 1
+				}
+				change_government_reform_progress = 300
+				custom_tooltip = THE_ROD_unlock_spread_hakurei_message_reform_tt
+				tooltip = { add_government_reform = THE_ROD_spread_hakurei_message_reform } 
+				hidden_effect = { set_country_flag = THE_ROD_unlock_spread_hakurei_message_reform_flag } 
+			}
+		} 
 	}
 
 	THE_ROD_2_20_lock = {
@@ -4230,9 +4540,58 @@ THE_ROD_branch_lock_2 = {
 				tooltip = THE_ROD_branch_mission_ttt
 				always = no
 			}
+			custom_trigger_tooltip = {
+				tooltip = THE_ROD_if_select_catholic_branch_ttt
+				always = no
+			}
+			religion = catholic
+			all_country = {
+				OR = {
+					NOT = { religion_group = christian } 
+					NOT = { total_development = ROOT } 
+				}
+			}
+			has_global_modifier_value = {
+				which = tolerance_own
+				value = 10
+			}
+			custom_trigger_tooltip = {
+				tooltip = THE_ROD_if_select_hakurei_branch_ttt
+				always = no
+			}
+			religion = th_hakureishinto
+			num_of_owned_provinces_with = {
+				value = 100
+				religion = th_hakureishinto
+			}
+			government_rank = 3
+			OR = {
+				NOT = { hre_size = 1 } 
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
 		}
 
-		effect = { custom_tooltip = THE_ROD_branch_mission_ttt } 
+		effect = {
+			# custom_tooltip = THE_ROD_branch_mission_ttt
+			custom_tooltip = THE_ROD_if_select_catholic_branch_tt
+			tooltip = {
+				add_country_modifier = {
+					name = "THE_ROD_saint_rumia_modifier"
+					duration = -1
+				}
+				custom_tooltip = THE_ROD_rome_without_debuff_tt
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_ROD_if_select_hakurei_branch_tt
+			tooltip = {
+				THE_ROD_modify_youkai_way_scripted_effect = yes
+				add_country_modifier = {
+					name = "THE_ROD_hakureishinto_empire"
+					duration = -1
+				}
+			}
+		} 
 	}
 }
 THE_ROD_branch_catholic_1 = {

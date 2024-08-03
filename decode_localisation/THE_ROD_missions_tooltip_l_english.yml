@@ -71,7 +71,7 @@ l_english:
  THE_ROD_1_17_case2_tt_no: "£no£如果§Y天主教§!是@[Root.GetTag]§Y[Root.GetName]§!的正统信仰，获得如下效果:"
  THE_ROD_modify_youkai_way_tt: "「§Y妖怪的方式§!」额外获得以下效果:\n全国叛乱度: §G-1.00§!\n传教强度: §R-1.5%§!\n"
  THE_ROD_unlock_religion_tt: "§M解锁后续任务§!"
- THE_ROD_branch_mission_ttt: "这是一个§Y分支任务§!，完成任务「§Y宵暗领域的宗教问题§!」后解锁。"
+ THE_ROD_branch_mission_ttt: "这是一个§Y分支任务§!，完成任务「§Y宵暗领域的宗教问题§!」后解锁。\n"
  THE_ROD_has_any_personal_deity_ttt: "已选择任意神祇"
  THE_ROD_add_personal_deity_same_modifier_tt: "§Y获得与当前神祇相同效果的修正持续到游戏结束，当前神祇给予如下效果§!:"
  THE_ROD_1_19_hakurei_tt_yes: "£yes£如果仍拥有「§Y新手巫女§!」的修正，获得如下效果:"
@@ -205,6 +205,10 @@ l_english:
  THE_ROD_5_17_case1_tt: "「§Y瓜分波兰§!」的持续时间改为§G永久§!。"
  THE_ROD_highlight_province_not_in_fort_zone_ttt: "点击£THE_LIL_info_decision_icon£高亮显示所有不在§Y要塞控制区§!的省份。"
  THE_ROD_mole_tt: "不是重要内容，摸了"
+ THE_ROD_if_select_catholic_branch_ttt: "\n§M如果选择£catholic_religion_icon£天主教路线，需要完成以下条件§!:\n§M §!"
+ THE_ROD_if_select_hakurei_branch_ttt: "\n§M如果选择£hakurei_religion_icon£博丽神道路线，需要完成以下条件§!:\n§M §!"
+ THE_ROD_if_select_catholic_branch_tt: "§M如果选择£catholic_religion_icon£天主教路线，完成该任务将获得如下效果§!: "
+ THE_ROD_if_select_hakurei_branch_tt: "§M如果选择£hakurei_religion_icon£博丽神道路线，完成该任务将获得如下效果§!: "
 ###TOOLTIP_END
 
 ###MODIFIER

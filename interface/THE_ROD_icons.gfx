@@ -1,4 +1,14 @@
 spriteTypes = {
+	###TEXT_ICON
+	spriteType = {
+		name = "GFX_text_catholic_religion_icon"
+		texturefile = "gfx//icons//THE_ROD_icon//THE_ROD_catholic_religion_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_text_hakurei_religion_icon"
+		texturefile = "gfx//icons//THE_ROD_icon//THE_ROD_hakurei_religion_icon.dds"
+	}
+
 	###GUI
 	spriteType = {
 		name = "GFX_THE_ROD_province_button"
