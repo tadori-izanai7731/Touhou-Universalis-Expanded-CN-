@@ -1,0 +1,21 @@
+THE_KKO_qin_cycle_event_scripted_trigger = {
+	OR = {
+		tag = KKO
+		was_tag = KKO
+	}
+	has_country_flag = th_qin_started_the_circle
+	NOT = { has_country_flag = th_qin_have_event }
+	if = {
+		limit = { NOT = { has_country_flag = kko_xiwang_lose } }
+		had_country_flag = {
+			flag = THE_KKO_last_cycle_event_flag
+			days = 1825
+		}
+	}
+	else = {
+		had_country_flag = {
+			flag = THE_KKO_last_cycle_event_flag
+			days = 183
+		}
+	}
+}

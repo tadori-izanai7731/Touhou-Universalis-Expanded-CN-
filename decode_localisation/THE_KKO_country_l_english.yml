@@ -198,13 +198,13 @@ l_english:
 
  #决议
  th_qin_t_cd: "在5年内未进行操纵"
- th_kko_resite_qin_title: "操控情绪"
- the_kko_gather_mircle_title: "收集希望"
+ th_kko_resite_qin_title: "@KKO操控情绪"
+ the_kko_gather_mircle_title: "@KKO收集希望"
  the_kko_gather_mircle_desc: "收集十次左右足够的希望后，我们能够请求神子重新铸造全新的希望之面。"
- th_kko_resite_qin1_title: "操控情绪"
- the_kko_emotion_disaster_reget_title: "置办舞会演出平衡情绪"
+ th_kko_resite_qin1_title: "@KKO操控情绪"
+ the_kko_emotion_disaster_reget_title: "@KKO置办舞会演出平衡情绪"
  the_kko_emotion_disaster_reget_desc: "舞会上观众的无数积极情感能被秦心利用，使得能够帮助她快速恢复情感平衡。"
- the_kko_tour_japan_title: "开启巡游"
+ the_kko_tour_japan_title: "@KKO开启巡游"
  the_kko_tour_japan_desc: "巡演响应日本民众的支持，并且收获威望金钱与辉煌点数。"
  th_kko_resite_qin_desc: "变化自在的情绪是秦心力量的体现，她能够操纵并运用这些情绪，我们应合理的运作这些面具的长处来达到目的。"
  th_kko_resite_qin1_desc: "变化自在的情绪是秦心力量的体现，她能够操纵并运用这些情绪，我们应合理的运作这些面具的长处来达到目的。"
@@ -234,7 +234,7 @@ l_english:
  KKO_religious_zili_desc: "得益于觉的协助，秦心成功地摆脱了佛道信仰争端的漩涡，这为我们提供了充裕的时间和自主权，来深思熟虑并决定信仰的未来方向。"
  KKO_mircle_lose_title: "亡逝的希望"
  KKO_mircle_lose_desc: "希望之面的丢失彻底打破了秦心66个面具之间的平衡，这场情感的混乱很快就会影响到整个心绮楼，甚至波及到整个幻想乡。"
- KKO_koishi_zui_title: "疏失的“始作俑者”"
+ KKO_koishi_zui_title: "疏失的「始作俑者」
  KKO_koishi_zui_desc: "在情感异变发生之后，我们很快就在人类村落找到了真凶。。。"
  KKO_religious_about_title: "佛道之辩"
  KKO_religious_about_desc: "即使我们的国家重新抉择了，心绮楼这片土地上仍拥有很多佛教徒和道教徒，我们需要调和这两派的关系，取其精华，让他们都为我们所用。"
@@ -572,3 +572,5 @@ l_english:
  cb_snk_religions_war: "宗教霸权之争"
  cb_myo_religions_war: "宗教霸权之争"
  KKO_disaster_start1234_tt: "我们能够通过决议置办宴会来平息灾难"
+
+ THE_KKO_can_use_resite_qin_cycle_ttt: "已拥有任意面具至少§Y1§!天。"

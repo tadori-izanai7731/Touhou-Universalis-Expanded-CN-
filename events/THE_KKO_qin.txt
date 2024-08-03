@@ -13,133 +13,191 @@ country_event = {
 		#tag = KKO
 	}
 	
-	mean_time_to_happen = {
-		months = 1
-	}
-	
 	immediate = {
 		hidden_effect = {
 			set_country_flag = th_qin_started_the_circle
-			set_country_flag = th_qin_first_circle
 		}
 	}
 	option = {
 		name = KKO_qin.1.a
-		country_event = {
-			id = KKO_qin.2
-		}
-		tooltip = {
-			add_country_modifier = {
-				name = q_kko_buff_0
-				duration = -1
+		th_qin_set_cycle = { type = huonan }
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = kko_xiwang_lose }
+				country_event = {
+					id = KKO_qin.3
+					days = 183
+				}
 			}
-		}		
+			else = {
+				country_event = {
+					id = KKO_qin.3
+					days = 1825
+				}
+			}
+			clr_country_flag = th_qin_have_event
+		}
 		ai_chance = {
 			factor = 1
 		}
 	}
 	option = {
 		name = KKO_qin.1.b
-		country_event = {
-			id = KKO_qin.3
-		}
-		tooltip = {
-			add_country_modifier = {
-				name = q_kko_buff_1
-				duration = -1
+		th_qin_set_cycle = { type = huli }	
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = kko_xiwang_lose }
+				country_event = {
+					id = KKO_qin.4
+					days = 183
+				}
 			}
-		}		
+			else = {
+				country_event = {
+					id = KKO_qin.4
+					days = 1825
+				}
+			}
+			clr_country_flag = th_qin_have_event
+		}
 		ai_chance = {
 			factor = 1
 		}
 	}
 	option = {
 		name = KKO_qin.1.c
-		country_event = {
-			id = KKO_qin.4
-		}
-		tooltip = {
-			add_country_modifier = {
-				name = q_kko_buff_2
-				duration = -1
+		th_qin_set_cycle = { type = chanwan }
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = kko_xiwang_lose }
+				country_event = {
+					id = KKO_qin.5
+					days = 183
+				}
 			}
-		}		
+			else = {
+				country_event = {
+					id = KKO_qin.5
+					days = 1825
+				}
+			}
+			clr_country_flag = th_qin_have_event
+		}
 		ai_chance = {
 			factor = 1
 		}
 	}
 	option = {
 		name = KKO_qin.1.d
-		country_event = {
-			id = KKO_qin.5
-		}
-		tooltip = {
-			add_country_modifier = {
-				name = q_kko_buff_3
-				duration = -1
+		th_qin_set_cycle = { type = lao }	
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = kko_xiwang_lose }
+				country_event = {
+					id = KKO_qin.6
+					days = 183
+				}
 			}
-		}		
+			else = {
+				country_event = {
+					id = KKO_qin.6
+					days = 1825
+				}
+			}
+			clr_country_flag = th_qin_have_event
+		}
 		ai_chance = {
 			factor = 1
 		}
 	}
 	option = {
 		name = KKO_qin.1.e
-		country_event = {
-			id = KKO_qin.6
-		}
-		tooltip = {
-			add_country_modifier = {
-				name = q_kko_buff_4
-				duration = -1
+		th_qin_set_cycle = { type = bore }	
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = kko_xiwang_lose }
+				country_event = {
+					id = KKO_qin.7
+					days = 183
+				}
 			}
-		}		
+			else = {
+				country_event = {
+					id = KKO_qin.7
+					days = 1825
+				}
+			}
+			clr_country_flag = th_qin_have_event
+		}
 		ai_chance = {
 			factor = 1
 		}
 	}
-	
 	option = {
 		name = KKO_qin.1.f
-		country_event = {
-			id = KKO_qin.7
-		}
-		tooltip = {
-			add_country_modifier = {
-				name = q_kko_buff_5
-				duration = -1
+		th_qin_set_cycle = { type = weng }	
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = kko_xiwang_lose }
+				country_event = {
+					id = KKO_qin.8
+					days = 183
+				}
 			}
-		}		
+			else = {
+				country_event = {
+					id = KKO_qin.8
+					days = 1825
+				}
+			}
+			clr_country_flag = th_qin_have_event
+		}
 		ai_chance = {
 			factor = 1
 		}
 	}
 	option = {
 		name = KKO_qin.1.g
-		country_event = {
-			id = KKO_qin.8
-		}
-		tooltip = {
-			add_country_modifier = {
-				name = q_kko_buff_6
-				duration = -1
+		th_qin_set_cycle = { type = xiaomian }	
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = kko_xiwang_lose }
+				country_event = {
+					id = KKO_qin.9
+					days = 183
+				}
 			}
-		}		
+			else = {
+				country_event = {
+					id = KKO_qin.9
+					days = 1825
+				}
+			}
+			clr_country_flag = th_qin_have_event
+		}
 		ai_chance = {
 			factor = 1
 		}
 	}
 	option = {
 		name = KKO_qin.1.h
-		country_event = {
-			id = KKO_qin.9
-		}
-		tooltip = {
-			add_country_modifier = {
-				name = q_kko_buff_7
-				duration = -1
+		th_qin_set_cycle = { type = tiangou }
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = kko_xiwang_lose }
+				country_event = {
+					id = KKO_qin.2
+					days = 183
+				}
 			}
-		}	
+			else = {
+				country_event = {
+					id = KKO_qin.2
+					days = 1825
+				}
+			}
+			clr_country_flag = th_qin_have_event
+		}
 		ai_chance = {
 			factor = 1
 		}
@@ -150,42 +208,51 @@ country_event = {
 	title = KKO_qin.2.t
 	desc = KKO_qin.2.d
 	picture = kko_mission_12
+	is_triggered_only = yes
 	
 	trigger = {
-		NOT = { has_country_flag = kko_xiwang_lose }
-		tag = KKO
 		OR = {
-			AND = {
-				has_country_flag = th_qin_started_the_circle
-				had_country_flag = {
-					flag = q_had_tiangou
-					days = 730
-				}
-			}
-			has_country_flag = th_qin_first_circle
+			tag = KKO
+			was_tag = KKO
 		}
+		has_country_flag = th_qin_started_the_circle
 		NOT = { has_country_flag = th_qin_have_event }
-	}
-	
-	mean_time_to_happen = {
-		months = 1
+		if = {
+			limit = { NOT = { has_country_flag = kko_xiwang_lose } }
+			had_country_flag = {
+				flag = THE_KKO_last_cycle_event_flag
+				days = 1825
+			}
+		}
+		else = {
+			had_country_flag = {
+				flag = THE_KKO_last_cycle_event_flag
+				days = 183
+			}
+		}
 	}
 	
 	immediate = {
-		hidden_effect = {
-			if = {
-				limit = {
-					has_country_flag = th_qin_first_circle
-				}
-				clr_country_flag = th_qin_first_circle
-			}
-			clr_country_flag = q_had_tiangou
-			set_country_flag = th_qin_have_event
-		}
+		THE_KKO_qin_cycle_immediate_scripted_effect = yes
 	}
 	
 	after = {
-		clr_country_flag = th_qin_have_event
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = kko_xiwang_lose }
+				country_event = {
+					id = KKO_qin.3
+					days = 183
+				}
+			}
+			else = {
+				country_event = {
+					id = KKO_qin.3
+					days = 1825
+				}
+			}
+			clr_country_flag = th_qin_have_event
+		}
 	}
 	
 	option = {
@@ -198,42 +265,52 @@ country_event = {
 	title = KKO_qin.3.t
 	desc = KKO_qin.3.d
 	picture = kko_mission_12
+
+	is_triggered_only = yes
 	
 	trigger = {
-		NOT = { has_country_flag = kko_xiwang_lose }
-		tag = KKO
 		OR = {
-			AND = {
-				has_country_flag = th_qin_started_the_circle
-				had_country_flag = {
-					flag = q_had_huonan
-					days = 730
-				}
-			}
-			has_country_flag = th_qin_first_circle
+			tag = KKO
+			was_tag = KKO
 		}
+		has_country_flag = th_qin_started_the_circle
 		NOT = { has_country_flag = th_qin_have_event }
-	}
-	
-	mean_time_to_happen = {
-		months = 1
+		if = {
+			limit = { NOT = { has_country_flag = kko_xiwang_lose } }
+			had_country_flag = {
+				flag = THE_KKO_last_cycle_event_flag
+				days = 1825
+			}
+		}
+		else = {
+			had_country_flag = {
+				flag = THE_KKO_last_cycle_event_flag
+				days = 183
+			}
+		}
 	}
 	
 	immediate = {
-		hidden_effect = {
-			if = {
-				limit = {
-					has_country_flag = th_qin_first_circle
-				}
-				clr_country_flag = th_qin_first_circle
-			}
-			clr_country_flag = q_had_huonan
-			set_country_flag = th_qin_have_event
-		}
+		THE_KKO_qin_cycle_immediate_scripted_effect = yes
 	}
 	
 	after = {
-		clr_country_flag = th_qin_have_event
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = kko_xiwang_lose }
+				country_event = {
+					id = KKO_qin.4
+					days = 183
+				}
+			}
+			else = {
+				country_event = {
+					id = KKO_qin.4
+					days = 1825
+				}
+			}
+			clr_country_flag = th_qin_have_event
+		}
 	}
 	
 	option = {
@@ -246,41 +323,51 @@ country_event = {
 	title = KKO_qin.4.t
 	desc = KKO_qin.4.d
 	picture = kko_mission_12
+	is_triggered_only = yes
+
 	trigger = {
-		NOT = { has_country_flag = kko_xiwang_lose }
-		tag = KKO
 		OR = {
-			AND = {
-				has_country_flag = th_qin_started_the_circle
-				had_country_flag = {
-					flag = q_had_huli
-					days = 730
-				}
-			}
-			has_country_flag = th_qin_first_circle
+			tag = KKO
+			was_tag = KKO
 		}
+		has_country_flag = th_qin_started_the_circle
 		NOT = { has_country_flag = th_qin_have_event }
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-	}
-	
-	immediate = {
-		hidden_effect = {
-			if = {
-				limit = {
-					has_country_flag = th_qin_first_circle
-				}
-				clr_country_flag = th_qin_first_circle
+		if = {
+			limit = { NOT = { has_country_flag = kko_xiwang_lose } }
+			had_country_flag = {
+				flag = THE_KKO_last_cycle_event_flag
+				days = 1825
 			}
-			clr_country_flag = q_had_huli
-			set_country_flag = th_qin_have_event
 		}
+		else = {
+			had_country_flag = {
+				flag = THE_KKO_last_cycle_event_flag
+				days = 183
+			}
+		}
+	}
+
+	immediate = {
+		THE_KKO_qin_cycle_immediate_scripted_effect = yes
 	}
 	
 	after = {
-		clr_country_flag = th_qin_have_event
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = kko_xiwang_lose }
+				country_event = {
+					id = KKO_qin.5
+					days = 183
+				}
+			}
+			else = {
+				country_event = {
+					id = KKO_qin.5
+					days = 1825
+				}
+			}
+			clr_country_flag = th_qin_have_event
+		}
 	}
 	
 	option = {
@@ -293,42 +380,51 @@ country_event = {
 	title = KKO_qin.5.t
 	desc = KKO_qin.5.d
 	picture = kko_mission_12
+	is_triggered_only = yes
 	
 	trigger = {
-		NOT = { has_country_flag = kko_xiwang_lose }
-		tag = KKO
 		OR = {
-			AND = {
-				has_country_flag = th_qin_started_the_circle
-				had_country_flag = {
-					flag = q_had_chanwan
-					days = 730
-				}
-			}
-			has_country_flag = th_qin_first_circle
+			tag = KKO
+			was_tag = KKO
 		}
+		has_country_flag = th_qin_started_the_circle
 		NOT = { has_country_flag = th_qin_have_event }
-	}
-	
-	mean_time_to_happen = {
-		months = 1
+		if = {
+			limit = { NOT = { has_country_flag = kko_xiwang_lose } }
+			had_country_flag = {
+				flag = THE_KKO_last_cycle_event_flag
+				days = 1825
+			}
+		}
+		else = {
+			had_country_flag = {
+				flag = THE_KKO_last_cycle_event_flag
+				days = 183
+			}
+		}
 	}
 	
 	immediate = {
-		hidden_effect = {
-			if = {
-				limit = {
-					has_country_flag = th_qin_first_circle
-				}
-				clr_country_flag = th_qin_first_circle
-			}
-			clr_country_flag = q_had_chanwan
-			set_country_flag = th_qin_have_event
-		}
+		THE_KKO_qin_cycle_immediate_scripted_effect = yes
 	}
 	
 	after = {
-		clr_country_flag = th_qin_have_event
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = kko_xiwang_lose }
+				country_event = {
+					id = KKO_qin.6
+					days = 183
+				}
+			}
+			else = {
+				country_event = {
+					id = KKO_qin.6
+					days = 1825
+				}
+			}
+			clr_country_flag = th_qin_have_event
+		}
 	}
 	
 	option = {
@@ -341,42 +437,51 @@ country_event = {
 	title = KKO_qin.6.t
 	desc = KKO_qin.6.d
 	picture = kko_mission_12
+	is_triggered_only = yes
 	
 	trigger = {
-		NOT = { has_country_flag = kko_xiwang_lose }
-		tag = KKO
 		OR = {
-			AND = {
-				has_country_flag = th_qin_started_the_circle
-				had_country_flag = {
-					flag = q_had_lao
-					days = 730
-				}
-			}
-			has_country_flag = th_qin_first_circle
+			tag = KKO
+			was_tag = KKO
 		}
+		has_country_flag = th_qin_started_the_circle
 		NOT = { has_country_flag = th_qin_have_event }
-	}
-	
-	mean_time_to_happen = {
-		months = 1
+		if = {
+			limit = { NOT = { has_country_flag = kko_xiwang_lose } }
+			had_country_flag = {
+				flag = THE_KKO_last_cycle_event_flag
+				days = 1825
+			}
+		}
+		else = {
+			had_country_flag = {
+				flag = THE_KKO_last_cycle_event_flag
+				days = 183
+			}
+		}
 	}
 	
 	immediate = {
-		hidden_effect = {
-			if = {
-				limit = {
-					has_country_flag = th_qin_first_circle
-				}
-				clr_country_flag = th_qin_first_circle
-			}
-			clr_country_flag = q_had_lao
-			set_country_flag = th_qin_have_event
-		}
+		THE_KKO_qin_cycle_immediate_scripted_effect = yes
 	}
 	
 	after = {
-		clr_country_flag = th_qin_have_event
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = kko_xiwang_lose }
+				country_event = {
+					id = KKO_qin.7
+					days = 183
+				}
+			}
+			else = {
+				country_event = {
+					id = KKO_qin.7
+					days = 1825
+				}
+			}
+			clr_country_flag = th_qin_have_event
+		}
 	}
 	
 	option = {
@@ -389,42 +494,51 @@ country_event = {
 	title = KKO_qin.7.t
 	desc = KKO_qin.7.d
 	picture = kko_mission_12
+	is_triggered_only = yes
 	
 	trigger = {
-		NOT = { has_country_flag = kko_xiwang_lose }
-		tag = KKO
 		OR = {
-			AND = {
-				has_country_flag = th_qin_started_the_circle
-				had_country_flag = {
-					flag = q_had_bore
-					days = 730
-				}
-			}
-			has_country_flag = th_qin_first_circle
+			tag = KKO
+			was_tag = KKO
 		}
+		has_country_flag = th_qin_started_the_circle
 		NOT = { has_country_flag = th_qin_have_event }
-	}
-	
-	mean_time_to_happen = {
-		months = 1
+		if = {
+			limit = { NOT = { has_country_flag = kko_xiwang_lose } }
+			had_country_flag = {
+				flag = THE_KKO_last_cycle_event_flag
+				days = 1825
+			}
+		}
+		else = {
+			had_country_flag = {
+				flag = THE_KKO_last_cycle_event_flag
+				days = 183
+			}
+		}
 	}
 	
 	immediate = {
-		hidden_effect = {
-			if = {
-				limit = {
-					has_country_flag = th_qin_first_circle
-				}
-				clr_country_flag = th_qin_first_circle
-			}
-			clr_country_flag = q_had_bore
-			set_country_flag = th_qin_have_event
-		}
+		THE_KKO_qin_cycle_immediate_scripted_effect = yes
 	}
 	
 	after = {
-		clr_country_flag = th_qin_have_event
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = kko_xiwang_lose }
+				country_event = {
+					id = KKO_qin.8
+					days = 183
+				}
+			}
+			else = {
+				country_event = {
+					id = KKO_qin.8
+					days = 1825
+				}
+			}
+			clr_country_flag = th_qin_have_event
+		}
 	}
 	
 	option = {
@@ -437,42 +551,51 @@ country_event = {
 	title = KKO_qin.8.t
 	desc = KKO_qin.8.d
 	picture = kko_mission_12
+	is_triggered_only = yes
 	
 	trigger = {
-		NOT = { has_country_flag = kko_xiwang_lose }
-		tag = KKO
 		OR = {
-			AND = {
-				has_country_flag = th_qin_started_the_circle
-				had_country_flag = {
-					flag = q_had_weng
-					days = 730
-				}
-			}
-			has_country_flag = th_qin_first_circle
+			tag = KKO
+			was_tag = KKO
 		}
+		has_country_flag = th_qin_started_the_circle
 		NOT = { has_country_flag = th_qin_have_event }
-	}
-	
-	mean_time_to_happen = {
-		months = 1
+		if = {
+			limit = { NOT = { has_country_flag = kko_xiwang_lose } }
+			had_country_flag = {
+				flag = THE_KKO_last_cycle_event_flag
+				days = 1825
+			}
+		}
+		else = {
+			had_country_flag = {
+				flag = THE_KKO_last_cycle_event_flag
+				days = 183
+			}
+		}
 	}
 	
 	immediate = {
-		hidden_effect = {
-			if = {
-				limit = {
-					has_country_flag = th_qin_first_circle
-				}
-				clr_country_flag = th_qin_first_circle
-			}
-			clr_country_flag = q_had_weng
-			set_country_flag = th_qin_have_event
-		}
+		THE_KKO_qin_cycle_immediate_scripted_effect = yes
 	}
 	
 	after = {
-		clr_country_flag = th_qin_have_event
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = kko_xiwang_lose }
+				country_event = {
+					id = KKO_qin.9
+					days = 183
+				}
+			}
+			else = {
+				country_event = {
+					id = KKO_qin.9
+					days = 1825
+				}
+			}
+			clr_country_flag = th_qin_have_event
+		}
 	}
 	
 	option = {
@@ -485,42 +608,51 @@ country_event = {
 	title = KKO_qin.9.t
 	desc = KKO_qin.9.d
 	picture = kko_mission_12
+	is_triggered_only = yes
 	
 	trigger = {
-		NOT = { has_country_flag = kko_xiwang_lose }
-		tag = KKO
 		OR = {
-			AND = {
-				has_country_flag = th_qin_started_the_circle
-				had_country_flag = {
-					flag = q_had_xiaomian
-					days = 730
-				}
-			}
-			has_country_flag = th_qin_first_circle
+			tag = KKO
+			was_tag = KKO
 		}
+		has_country_flag = th_qin_started_the_circle
 		NOT = { has_country_flag = th_qin_have_event }
-	}
-	
-	mean_time_to_happen = {
-		months = 1
+		if = {
+			limit = { NOT = { has_country_flag = kko_xiwang_lose } }
+			had_country_flag = {
+				flag = THE_KKO_last_cycle_event_flag
+				days = 1825
+			}
+		}
+		else = {
+			had_country_flag = {
+				flag = THE_KKO_last_cycle_event_flag
+				days = 183
+			}
+		}
 	}
 	
 	immediate = {
-		hidden_effect = {
-			if = {
-				limit = {
-					has_country_flag = th_qin_first_circle
-				}
-				clr_country_flag = th_qin_first_circle
-			}
-			clr_country_flag = q_had_xiaomian
-			set_country_flag = th_qin_have_event
-		}
+		THE_KKO_qin_cycle_immediate_scripted_effect = yes
 	}
 	
 	after = {
-		clr_country_flag = th_qin_have_event
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = kko_xiwang_lose }
+				country_event = {
+					id = KKO_qin.2
+					days = 183
+				}
+			}
+			else = {
+				country_event = {
+					id = KKO_qin.2
+					days = 1825
+				}
+			}
+			clr_country_flag = th_qin_have_event
+		}
 	}
 	
 	option = {
@@ -529,683 +661,5 @@ country_event = {
 		ai_chance = {
 			factor = 1
 		}
-	}
-}
-#心的轮盘（失衡
-country_event = {
-	id = KKO_qin.11
-	title = KKO_qin.11.t
-	desc = KKO_qin.11.desc
-	picture = kko_mission_1
-	is_triggered_only = yes
-	
-	trigger = {
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-	}
-	
-	immediate = {
-		hidden_effect = {
-			set_country_flag = th_qin_started_the_circles
-			set_country_flag = th_qin_first_circles
-		}
-	}
-	option = {	#Start with huonan
-		name = KKO_qin.11.a
-		country_event = {
-			id = KKO_qin.12
-		}
-		tooltip = {
-			if = {
-				limit = {
-					has_country_flag = qin_huonan_ok
-				}
-				add_country_modifier = {
-					name = q_kko_buff_0t
-					duration = -1
-				}
-			}
-			else = {
-				add_country_modifier = {
-					name = q_kko_buff_0s
-					duration = -1
-				}
-			}
-		}	
-	}
-	option = {	#Start with huli
-		name = KKO_qin.11.b
-		country_event = {
-			id = KKO_qin.13
-		}
-		tooltip = {
-			if = {
-				limit = {
-					has_country_flag = qin_huli_ok
-				}
-				add_country_modifier = {
-					name = q_kko_buff_1t
-					duration = -1
-				}
-			}
-			else = {
-				add_country_modifier = {
-					name = q_kko_buff_1s
-					duration = -1
-				}
-			}
-		}	
-	}
-	option = {	#Start with chanwan
-		name = KKO_qin.11.c
-		country_event = {
-			id = KKO_qin.14
-		}
-		tooltip = {
-			if = {
-				limit = {
-					has_country_flag = qin_chanwan_ok
-				}
-				add_country_modifier = {
-					name = q_kko_buff_2t
-					duration = -1
-				}
-			}
-			else = {
-				add_country_modifier = {
-					name = q_kko_buff_2s
-					duration = -1
-				}
-			}
-		}	
-	}
-	option = {	#Start with huonan
-		name = KKO_qin.11.d
-		country_event = {
-			id = KKO_qin.15
-		}
-		tooltip = {
-			if = {
-				limit = {
-					has_country_flag = qin_lao_ok
-				}
-				add_country_modifier = {
-					name = q_kko_buff_3t
-					duration = -1
-				}
-			}
-			else = {
-				add_country_modifier = {
-					name = q_kko_buff_3s
-					duration = -1
-				}
-			}
-		}	
-	}
-	option = {	#Start with huonan
-		name = KKO_qin.11.e
-		country_event = {
-			id = KKO_qin.16
-		}
-		tooltip = {
-			if = {
-				limit = {
-					has_country_flag = qin_bore_ok
-				}
-				add_country_modifier = {
-					name = q_kko_buff_4t
-					duration = -1
-				}
-			}
-			else = {
-				add_country_modifier = {
-					name = q_kko_buff_4s
-					duration = -1
-				}
-			}
-		}	
-	}
-	option = {	#Start with huonan
-		name = KKO_qin.11.f
-		country_event = {
-			id = KKO_qin.17
-		}
-		tooltip = {
-			if = {
-				limit = {
-					has_country_flag = qin_weng_ok
-				}
-				add_country_modifier = {
-					name = q_kko_buff_5t
-					duration = -1
-				}
-			}
-			else = {
-				add_country_modifier = {
-					name = q_kko_buff_5s
-					duration = -1
-				}
-			}
-		}	
-	}
-	option = {	#Start with huonan
-		name = KKO_qin.11.g
-		country_event = {
-			id = KKO_qin.18
-		}
-		tooltip = {
-			if = {
-				limit = {
-					has_country_flag = qin_tiangou_ok
-				}
-				add_country_modifier = {
-					name = q_kko_buff_6t
-					duration = -1
-				}
-			}
-			else = {
-				add_country_modifier = {
-					name = q_kko_buff_6s
-					duration = -1
-				}
-			}
-		}	
-	}
-	option = {	#Start with huonan
-		name = KKO_qin.11.h
-		country_event = {
-			id = KKO_qin.19
-		}
-		tooltip = {
-			if = {
-				limit = {
-					has_country_flag = qin_xiaomian_ok
-				}
-				add_country_modifier = {
-					name = q_kko_buff_7t
-					duration = -1
-				}
-			}
-			else = {
-				add_country_modifier = {
-					name = q_kko_buff_7s
-					duration = -1
-				}
-			}
-		}	
-	}
-}
-country_event = {
-	id = KKO_qin.12
-	title = KKO_qin.12.t
-	desc = KKO_qin.12.d
-	picture = kko_mission_12
-	
-	trigger = {
-		has_country_flag = kko_xiwang_lose
-		tag = KKO
-		OR = {
-			AND = {
-				has_country_flag = th_qin_started_the_circles
-				if = {
-					limit = {
-						has_country_flag = qin_tiangou_ok
-					}
-					had_country_flag = {
-						flag = q_had_tiangous
-						days = 3650
-					}
-				}
-				else = {
-					had_country_flag = {
-						flag = q_had_tiangous
-						days = 150
-					}
-				}
-			}
-			has_country_flag = th_qin_first_circles
-		}
-		NOT = { has_country_flag = th_qin_have_events }
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-	}
-	
-	immediate = {
-		hidden_effect = {
-			if = {
-				limit = {
-					has_country_flag = th_qin_first_circles
-				}
-				clr_country_flag = th_qin_first_circles
-			}
-			clr_country_flag = q_had_tiangous
-			set_country_flag = th_qin_have_events
-		}
-	}
-	
-	after = {
-		clr_country_flag = th_qin_have_events
-	}
-	
-	option = {
-		name = KKO_qin.12.a
-		th_qin_set_cycles = { types = huonans }
-	}
-}
-country_event = {
-	id = KKO_qin.13
-	title = KKO_qin.13.t
-	desc = KKO_qin.13.d
-	picture = kko_mission_12
-	
-	trigger = {
-		has_country_flag = kko_xiwang_lose
-		tag = KKO
-		OR = {
-			AND = {
-				has_country_flag = th_qin_started_the_circles
-				if = {
-					limit = {
-						has_country_flag = kko_xiwang_reget
-					}
-					had_country_flag = {
-						flag = q_had_huonans
-						days = 3650
-					}
-				}
-				else = {
-					had_country_flag = {
-						flag = q_had_huonans
-						days = 150
-					}
-				}
-			}
-			has_country_flag = th_qin_first_circles
-		}
-		NOT = { has_country_flag = th_qin_have_events }
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-	}
-	
-	immediate = {
-		hidden_effect = {
-			if = {
-				limit = {
-					has_country_flag = th_qin_first_circles
-				}
-				clr_country_flag = th_qin_first_circles
-			}
-			clr_country_flag = q_had_huonans
-			set_country_flag = th_qin_have_events
-		}
-	}
-	
-	after = {
-		clr_country_flag = th_qin_have_events
-	}
-	
-	option = {
-		name = KKO_qin.13.a
-		th_qin_set_cycles = { types = hulis }
-	}
-}
-country_event = {
-	id = KKO_qin.14
-	title = KKO_qin.14.t
-	desc = KKO_qin.14.d
-	picture = kko_mission_12
-	
-	trigger = {
-		has_country_flag = kko_xiwang_lose
-		tag = KKO
-		OR = {
-			AND = {
-				has_country_flag = th_qin_started_the_circles
-				if = {
-					limit = {
-						has_country_flag = kko_xiwang_reget
-					}
-					had_country_flag = {
-						flag = q_had_hulis
-						days = 3650
-					}
-				}
-				else = {
-					had_country_flag = {
-						flag = q_had_hulis
-						days = 150
-					}
-				}
-			}
-			has_country_flag = th_qin_first_circles
-		}
-		NOT = { has_country_flag = th_qin_have_events }
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-	}
-	
-	immediate = {
-		hidden_effect = {
-			if = {
-				limit = {
-					has_country_flag = th_qin_first_circles
-				}
-				clr_country_flag = th_qin_first_circles
-			}
-			clr_country_flag = q_had_hulis
-			set_country_flag = th_qin_have_events
-		}
-	}
-	
-	after = {
-		clr_country_flag = th_qin_have_events
-	}
-	
-	option = {
-		name = KKO_qin.14.a
-		th_qin_set_cycles = { types = chanwans }
-	}
-}
-country_event = {
-	id = KKO_qin.15
-	title = KKO_qin.15.t
-	desc = KKO_qin.15.d
-	picture = kko_mission_12
-	
-	trigger = {
-		has_country_flag = kko_xiwang_lose
-		tag = KKO
-		OR = {
-			AND = {
-				has_country_flag = th_qin_started_the_circles
-				if = {
-					limit = {
-						has_country_flag = kko_xiwang_reget
-					}
-					had_country_flag = {
-						flag = q_had_chanwans
-						days = 3650
-					}
-				}
-				else = {
-					had_country_flag = {
-						flag = q_had_chanwans
-						days = 150
-					}
-				}
-			}
-			has_country_flag = th_qin_first_circles
-		}
-		NOT = { has_country_flag = th_qin_have_events }
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-	}
-	
-	immediate = {
-		hidden_effect = {
-			if = {
-				limit = {
-					has_country_flag = th_qin_first_circles
-				}
-				clr_country_flag = th_qin_first_circles
-			}
-			clr_country_flag = q_had_chanwans
-			set_country_flag = th_qin_have_events
-		}
-	}
-	
-	after = {
-		clr_country_flag = th_qin_have_events
-	}
-	
-	option = {
-		name = KKO_qin.15.a
-		th_qin_set_cycles = { types = laos }
-	}
-}
-country_event = {
-	id = KKO_qin.16
-	title = KKO_qin.16.t
-	desc = KKO_qin.16.d
-	picture = kko_mission_12
-	
-	trigger = {
-		has_country_flag = kko_xiwang_lose
-		tag = KKO
-		OR = {
-			AND = {
-				has_country_flag = th_qin_started_the_circles
-				if = {
-					limit = {
-						has_country_flag = kko_xiwang_reget
-					}
-					had_country_flag = {
-						flag = q_had_laos
-						days = 3650
-					}
-				}
-				else = {
-					had_country_flag = {
-						flag = q_had_laos
-						days = 150
-					}
-				}
-			}
-			has_country_flag = th_qin_first_circles
-		}
-		NOT = { has_country_flag = th_qin_have_events }
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-	}
-	
-	immediate = {
-		hidden_effect = {
-			if = {
-				limit = {
-					has_country_flag = th_qin_first_circles
-				}
-				clr_country_flag = th_qin_first_circles
-			}
-			clr_country_flag = q_had_laos
-			set_country_flag = th_qin_have_events
-		}
-	}
-	
-	after = {
-		clr_country_flag = th_qin_have_events
-	}
-	
-	option = {
-		name = KKO_qin.16.a
-		th_qin_set_cycles = { types = bores }
-	}
-}
-country_event = {
-	id = KKO_qin.17
-	title = KKO_qin.17.t
-	desc = KKO_qin.17.d
-	picture = kko_mission_12
-	
-	trigger = {
-		has_country_flag = kko_xiwang_lose
-		tag = KKO
-		OR = {
-			AND = {
-				has_country_flag = th_qin_started_the_circles
-				if = {
-					limit = {
-						has_country_flag = kko_xiwang_reget
-					}
-					had_country_flag = {
-						flag = q_had_bores
-						days = 3650
-					}
-				}
-				else = {
-					had_country_flag = {
-						flag = q_had_bores
-						days = 150
-					}
-				}
-			}
-			has_country_flag = th_qin_first_circles
-		}
-		NOT = { has_country_flag = th_qin_have_events }
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-	}
-	
-	immediate = {
-		hidden_effect = {
-			if = {
-				limit = {
-					has_country_flag = th_qin_first_circles
-				}
-				clr_country_flag = th_qin_first_circles
-			}
-			clr_country_flag = q_had_bores
-			set_country_flag = th_qin_have_events
-		}
-	}
-	
-	after = {
-		clr_country_flag = th_qin_have_events
-	}
-	
-	option = {
-		name = KKO_qin.17.a
-		th_qin_set_cycles = { types = wengs }
-	}
-}
-country_event = {
-	id = KKO_qin.18
-	title = KKO_qin.18.t
-	desc = KKO_qin.18.d
-	picture = kko_mission_12
-	
-	trigger = {
-		has_country_flag = kko_xiwang_lose
-		tag = KKO
-		OR = {
-			AND = {
-				has_country_flag = th_qin_started_the_circles
-				if = {
-					limit = {
-						has_country_flag = kko_xiwang_reget
-					}
-					had_country_flag = {
-						flag = q_had_wengs
-						days = 3650
-					}
-				}
-				else = {
-					had_country_flag = {
-						flag = q_had_wengs
-						days = 150
-					}
-				}
-			}
-			has_country_flag = th_qin_first_circles
-		}
-		NOT = { has_country_flag = th_qin_have_events }
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-	}
-	
-	immediate = {
-		hidden_effect = {
-			if = {
-				limit = {
-					has_country_flag = th_qin_first_circles
-				}
-				clr_country_flag = th_qin_first_circles
-			}
-			clr_country_flag = q_had_wengs
-			set_country_flag = th_qin_have_events
-		}
-	}
-	
-	after = {
-		clr_country_flag = th_qin_have_events
-	}
-	
-	option = {
-		name = KKO_qin.8.a
-		th_qin_set_cycles = { types = xiaomians }
-	}
-}
-country_event = {
-	id = KKO_qin.19
-	title = KKO_qin.19.t
-	desc = KKO_qin.19.d
-	picture = kko_mission_12
-	
-	trigger = {
-		has_country_flag = kko_xiwang_lose
-		tag = KKO
-		OR = {
-			AND = {
-				has_country_flag = th_qin_started_the_circles
-				if = {
-					limit = {
-						has_country_flag = kko_xiwang_reget
-					}
-					had_country_flag = {
-						flag = q_had_xiaomians
-						days = 3650
-					}
-				}
-				else = {
-					had_country_flag = {
-						flag = q_had_xiaomians
-						days = 150
-					}
-				}
-			}
-			has_country_flag = th_qin_first_circles
-		}
-		NOT = { has_country_flag = th_qin_have_events }
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-	}
-	
-	immediate = {
-		hidden_effect = {
-			if = {
-				limit = {
-					has_country_flag = th_qin_first_circles
-				}
-				clr_country_flag = th_qin_first_circles
-			}
-			clr_country_flag = q_had_xiaomians
-			set_country_flag = th_qin_have_events
-		}
-	}
-	
-	after = {
-		clr_country_flag = th_qin_have_events
-	}
-	
-	option = {
-		name = KKO_qin.9.a
-		th_qin_set_cycles = { types = tiangous }
 	}
 }

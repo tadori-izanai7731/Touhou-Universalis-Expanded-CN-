@@ -6,11 +6,11 @@ country_decisions = {
 			168
 		}
 		potential = {
-			tag =  KKO
-			has_country_flag = th_qin_started_the_circle
-			NOT = {
-				has_country_flag = kko_xiwang_lose
+			OR = {
+				tag = KKO
+				was_tag = KKO
 			}
+			has_country_flag = th_qin_started_the_circle
 		}
 		allow = {
 			custom_trigger_tooltip = {
@@ -21,6 +21,13 @@ country_decisions = {
 						flag = th_qin_cycle_cd
 						days = 1825
 					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = THE_KKO_can_use_resite_qin_cycle_ttt
+				had_country_flag = {
+					flag = THE_KKO_last_cycle_event_flag
+					days = 1
 				}
 			}
 			is_at_war = no 
@@ -46,58 +53,61 @@ country_decisions = {
 		}
 	}
 }
-country_decisions = {
-	th_kko_resite_qin1 = {
-		color = {
-			269
-			76
-			168
-		}
-		potential = {
-			tag =  KKO
-			has_country_flag = th_qin_started_the_circle
-			has_country_flag = kko_xiwang_lose
-		}
-		allow = {
-			custom_trigger_tooltip = {
-				tooltip = th_qin_t_cd
-				OR = {
-					NOT = { has_country_flag = th_qin_cycle_cd }
-					had_country_flag = {
-						flag = th_qin_cycle_cd
-						days = 730
-					}
-				}
-			}
-			has_government_power = {
-				mechanic_type = th_kokoro_mechanic
-				power_type = kko_you_adm_power
-				value = 5
-			}
-			is_at_war = no 
-		}
-		effect = {
-			add_country_modifier = {
-				name = change_of_government_you_buff
-				duration = 730
-			}
-			add_country_modifier = {
-				name = change_of_government_nu_buff
-				duration = 730
-			}
-			add_country_modifier = {
-				name = change_of_government_xi_buff
-				duration = 730
-			}
-			add_fervor = -10
-			country_event = {
-				id = KKO_qin.11
-			}
-			clr_country_flag = th_qin_cycle_cd
-			set_country_flag = th_qin_cycle_cd
-		}
-	}
-}
+# country_decisions = {
+# 	th_kko_resite_qin1 = {
+# 		color = {
+# 			269
+# 			76
+# 			168
+# 		}
+# 		potential = {
+# 			OR = {
+# 				tag = KKO
+# 				was_tag = KKO
+# 			}
+# 			has_country_flag = th_qin_started_the_circle
+# 			has_country_flag = kko_xiwang_lose
+# 		}
+# 		allow = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = th_qin_t_cd
+# 				OR = {
+# 					NOT = { has_country_flag = th_qin_cycle_cd }
+# 					had_country_flag = {
+# 						flag = th_qin_cycle_cd
+# 						days = 730
+# 					}
+# 				}
+# 			}
+# 			has_government_power = {
+# 				mechanic_type = th_kokoro_mechanic
+# 				power_type = kko_you_adm_power
+# 				value = 5
+# 			}
+# 			is_at_war = no 
+# 		}
+# 		effect = {
+# 			add_country_modifier = {
+# 				name = change_of_government_you_buff
+# 				duration = 730
+# 			}
+# 			add_country_modifier = {
+# 				name = change_of_government_nu_buff
+# 				duration = 730
+# 			}
+# 			add_country_modifier = {
+# 				name = change_of_government_xi_buff
+# 				duration = 730
+# 			}
+# 			add_fervor = -10
+# 			country_event = {
+# 				id = KKO_qin.11
+# 			}
+# 			clr_country_flag = th_qin_cycle_cd
+# 			set_country_flag = th_qin_cycle_cd
+# 		}
+# 	}
+# }
 
 ##收集希望
 country_decisions = {
@@ -108,7 +118,10 @@ country_decisions = {
 			168
 		}
 		potential = {
-			tag =  KKO
+			OR = {
+				tag = KKO
+				was_tag = KKO
+			}
 			has_country_flag = kko_xiwang_reget_create
 			not = {
 				check_variable = {
@@ -119,7 +132,7 @@ country_decisions = {
 		}
 		allow = {
 			custom_trigger_tooltip = {
-				tooltip = kko_xiwang_create_cd123
+				tooltip = kko_xiwang_create_cd123	#？123 = 730 ？
 				OR = {
 					NOT = { has_country_flag = kko_xiwang_create_cd }
 					had_country_flag = {
@@ -137,11 +150,8 @@ country_decisions = {
 					}
 				}
 			}
-			calc_true_if = {
-				all_country = {
-					th_has_lost_danmaku_duel_against_root = yes
-				}
-				amount = 1
+			any_country = {
+				th_has_lost_danmaku_duel_against_root = yes
 			}
 		}
 		effect = {
@@ -164,15 +174,17 @@ country_decisions = {
 			168
 		}
 		potential = {
-			tag =  KKO
+			OR = {
+				tag = KKO
+				was_tag = KKO
+			}
 			has_country_flag = kko_xiwang_reget_create
+		}
+		allow = {
 			check_variable = {
 				which = kko_xiwang_create_num
 				value = 5
 			}
-		}
-		allow = {
-			tag = KKO
 		}
 		effect = {
 			clr_country_flag = kko_xiwang_reget_create
@@ -193,7 +205,10 @@ country_decisions = {
 			168
 		}
 		potential = {
-			tag =  KKO
+			OR = {
+				tag = KKO
+				was_tag = KKO
+			}
 			has_country_flag = kko_disaster_started
 			not = {
 				check_variable = {
@@ -203,7 +218,6 @@ country_decisions = {
 			}
 		}
 		allow = {
-			tag = KKO
 			treasury = 30
 			adm_power = 15
 			has_government_power = {
@@ -272,8 +286,11 @@ country_decisions = {
 			156
 		}
 		potential = {
-			tag =  KKO
-			KKO = {
+			OR = {
+				tag = KKO
+				was_tag = KKO
+			}
+			ROOT = {
 				overlord_of = CRD
 			}
 			not = {
@@ -281,11 +298,7 @@ country_decisions = {
 			}
 		}
 		allow = {
-			tag = KKO
 			prestige = 40
-			KKO = {
-				overlord_of = CRD
-			}
 		}
 		effect = {
 			add_prestige = -40
@@ -308,7 +321,10 @@ country_decisions = {
 			168
 		}
 		potential = {
-			tag =  KKO
+			OR = {
+				tag = KKO
+				was_tag = KKO
+			}
 			has_country_flag = kko_xiwang_reget_create
 			has_country_flag = kko_japan_tour_1
 		}
@@ -345,16 +361,18 @@ country_decisions = {
 			168
 		}
 		potential = {
-			tag =  KKO
+			OR = {
+				tag = KKO
+				was_tag = KKO
+			}
 			has_country_flag = xinqilou_ok
 			has_country_flag = kko_japan_tour_1
 		}
 		allow = {
-			tag = KKO
 			splendor = 50
 			prestige = 25
 			custom_trigger_tooltip = {
-				tooltip = the_kko_xinqilou_rechange_cd1243
+				tooltip = the_kko_xinqilou_rechange_cd1243	#?1243
 				had_country_flag = {
 					flag = the_kko_xinqilou_rechange_cd
 					days = 7300

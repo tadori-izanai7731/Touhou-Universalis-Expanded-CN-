@@ -1,186 +1,87 @@
-th_qin_remove_all_ways = {
-	remove_country_modifier = q_kko_buff_0
-	remove_country_modifier = q_kko_buff_1
-	remove_country_modifier = q_kko_buff_2
-	remove_country_modifier = q_kko_buff_3
-	remove_country_modifier = q_kko_buff_4
-	remove_country_modifier = q_kko_buff_5
-	remove_country_modifier = q_kko_buff_6
-	remove_country_modifier = q_kko_buff_7
-	clr_country_flag = q_had_huonan
-	clr_country_flag = q_had_huli
-	clr_country_flag = q_had_chanwan
-	clr_country_flag = q_had_lao
-	clr_country_flag = q_had_bore
-	clr_country_flag = q_had_weng
-	clr_country_flag = q_had_xiaomian
-	clr_country_flag = q_had_tiangou
-	clr_country_flag = q_huonan_cycle
-	clr_country_flag = q_huli_cycle
-	clr_country_flag = q_chanwan_cycle
-	clr_country_flag = q_lao_cycle
-	clr_country_flag = q_bore_cycle
-	clr_country_flag = q_weng_cycle
-	clr_country_flag = q_xiaomian_cycle
-	clr_country_flag = q_tiangou_cycle
-}
 #火男
-th_qin_set_cycle_to_huonan = {  
-	set_country_flag = q_had_huonan
-	set_country_flag = q_huonan_cycle
-	add_country_modifier = {
-		name = q_kko_buff_0
-		duration = -1
+th_qin_set_cycle_to_huonan = {
+	THE_KKO_set_cycle_scripted_effect = {
+		type = huonan
+		modifier = 0
 	}
 }
 #狐狸
-th_qin_set_cycle_to_huli = {  
-	set_country_flag = q_had_huli
-	set_country_flag = q_huli_cycle
-	add_country_modifier = {
-		name = q_kko_buff_1
-		duration = -1
+th_qin_set_cycle_to_huli = {
+	THE_KKO_set_cycle_scripted_effect = {
+		type = huli
+		modifier = 1
 	}
 }
 #蝉丸
 th_qin_set_cycle_to_chanwan = {  
-	set_country_flag = q_had_chanwan
-	set_country_flag = q_chanwan_cycle
-	add_country_modifier = {
-		name = q_kko_buff_2
-		duration = -1
+	THE_KKO_set_cycle_scripted_effect = {
+		type = chanwan
+		modifier = 2
 	}
 }
 #佬
 th_qin_set_cycle_to_lao = {  
-	set_country_flag = q_had_lao
-	set_country_flag = q_lao_cycle
-	add_country_modifier = {
-		name = q_kko_buff_3
-		duration = -1
+	THE_KKO_set_cycle_scripted_effect = {
+		type = lao
+		modifier = 3
 	}
 }
 #般若
 th_qin_set_cycle_to_bore = {  
-	set_country_flag = q_had_bore
-	set_country_flag = q_bore_cycle
-	add_country_modifier = {
-		name = q_kko_buff_4
-		duration = -1
+	THE_KKO_set_cycle_scripted_effect = {
+		type = bore
+		modifier = 4
 	}
 }
 #翁
 th_qin_set_cycle_to_weng = {  
-	set_country_flag = q_had_weng
-	set_country_flag = q_weng_cycle
-	add_country_modifier = {
-		name = q_kko_buff_5
-		duration = -1
+	THE_KKO_set_cycle_scripted_effect = {
+		type = weng
+		modifier = 5
 	}
 }
 #女小面
 th_qin_set_cycle_to_xiaomian = {  
-	set_country_flag = q_had_xiaomian
-	set_country_flag = q_xiaomian_cycle
-	add_country_modifier = {
-		name = q_kko_buff_6
-		duration = -1
+	THE_KKO_set_cycle_scripted_effect = {
+		type = xiaomian
+		modifier = 6
 	}
 }
 #天狗
 th_qin_set_cycle_to_tiangou = {  
-	set_country_flag = q_had_tiangou
-	set_country_flag = q_tiangou_cycle
-	add_country_modifier = {
-		name = q_kko_buff_7
-		duration = -1
+	THE_KKO_set_cycle_scripted_effect = {
+		type = tiangou
+		modifier = 7
 	}
 }
 #循环设置
 th_qin_set_cycle = {
-	th_qin_remove_all_ways = yes
+	th_qin_remove_all_wayss = yes
 	th_qin_set_cycle_to_$type$ = yes
 }
-#一般循环
-th_qin_normal_cycle = {
+
+THE_KKO_set_cycle_scripted_effect = {
+	clr_country_flag = THE_KKO_last_cycle_event_flag
+	set_country_flag = THE_KKO_last_cycle_event_flag
+	set_country_flag = q_$type$_cycle
 	if = {
-		limit = {
-			th_current_qin_cycle = {
-				type = huonan
-			}
-		}
-		th_qin_set_cycle = {
-			type = huli
+		limit = { has_country_flag = qin_$type$_ok }
+		add_country_modifier = {
+			name = q_kko_buff_$modifier$t
+			duration = -1
 		}
 	}
 	else_if = {
-		limit = {
-			th_current_qin_cycle = {
-				type = huli
-			}
-		}
-		th_qin_set_cycle = {
-			type = chanwan
+		limit = { has_country_flag = kko_xiwang_lose }
+		add_country_modifier = {
+			name = q_kko_buff_$modifier$s
+			duration = -1
 		}
 	}
-	else_if = {
-		limit = {
-			th_current_qin_cycle = {
-				type = chanwan
-			}
-		}
-		th_qin_set_cycle = {
-			type = lao
-		}
-	}
-	else_if = {
-		limit = {
-			th_current_qin_cycle = {
-				type = lao
-			}
-		}
-		th_qin_set_cycle = {
-			type = bore
-		}
-	}
-	else_if = {
-		limit = {
-			th_current_qin_cycle = {
-				type = bore
-			}
-		}
-		th_qin_set_cycle = {
-			type = weng
-		}
-	}
-	else_if = {
-		limit = {
-			th_current_qin_cycle = {
-				type = weng
-			}
-		}
-		th_qin_set_cycle = {
-			type = xiaomian
-		}
-	}
-	else_if = {
-		limit = {
-			th_current_qin_cycle = {
-				type = xiaomian
-			}
-		}
-		th_qin_set_cycle = {
-			type = tiangou
-		}
-	}
-	else_if = {
-		limit = {
-			th_current_qin_cycle = {
-				type = tiangou
-			}
-		}
-		th_qin_set_cycle = {
-			type = huonan
+	else = {
+		add_country_modifier = {
+			name = q_kko_buff_$modifier$
+			duration = -1
 		}
 	}
 }
@@ -210,14 +111,6 @@ th_qin_remove_all_wayss = {
 	remove_country_modifier = q_kko_buff_5t
 	remove_country_modifier = q_kko_buff_6t
 	remove_country_modifier = q_kko_buff_7t
-	clr_country_flag = q_had_huonans
-	clr_country_flag = q_had_hulis
-	clr_country_flag = q_had_chanwans
-	clr_country_flag = q_had_laos
-	clr_country_flag = q_had_bores
-	clr_country_flag = q_had_wengs
-	clr_country_flag = q_had_xiaomians
-	clr_country_flag = q_had_tiangous
 	clr_country_flag = q_huonan_cycles
 	clr_country_flag = q_huli_cycles
 	clr_country_flag = q_chanwan_cycles
@@ -226,292 +119,4 @@ th_qin_remove_all_wayss = {
 	clr_country_flag = q_weng_cycles
 	clr_country_flag = q_xiaomian_cycles
 	clr_country_flag = q_tiangou_cycles
-}
-#火男
-th_qin_set_cycle_to_huonans = {  
-	set_country_flag = q_had_huonans
-	set_country_flag = q_huonan_cycles
-	if = {
-		limit = {
-			NOT = {
-				has_country_flag = qin_huonan_ok
-			}
-		}
-		add_country_modifier = {
-			name = q_kko_buff_0s
-			duration = -1
-		}
-	}
-	else = {
-		limit = {
-			has_country_flag = qin_huonan_ok
-		}
-		add_country_modifier = {
-			name = q_kko_buff_0t
-			duration = -1
-		}
-	}
-}
-#狐狸
-th_qin_set_cycle_to_hulis = {  
-	set_country_flag = q_had_hulis
-	set_country_flag = q_huli_cycles
-	if = {
-		limit = {
-			NOT = {
-				has_country_flag = qin_huli_ok
-			}
-		}
-		add_country_modifier = {
-			name = q_kko_buff_1s
-			duration = -1
-		}
-	}
-	else = {
-		limit = {
-			has_country_flag = qin_huli_ok
-		}
-		add_country_modifier = {
-			name = q_kko_buff_1t
-			duration = -1
-		}
-	}
-}
-#蝉丸
-th_qin_set_cycle_to_chanwans = {  
-	set_country_flag = q_had_chanwans
-	set_country_flag = q_chanwan_cycles
-	if = {
-		limit = {
-			NOT = {
-				has_country_flag = qin_chanwan_ok
-			}
-		}
-		add_country_modifier = {
-			name = q_kko_buff_2s
-			duration = -1
-		}
-	}
-	else = {
-		limit = {
-			has_country_flag = qin_chanwan_ok
-		}
-		add_country_modifier = {
-			name = q_kko_buff_2t
-			duration = -1
-		}
-	}
-}
-#佬
-th_qin_set_cycle_to_laos = {  
-	set_country_flag = q_had_laos
-	set_country_flag = q_lao_cycles
-	if = {
-		limit = {
-			NOT = {
-				has_country_flag = qin_lao_ok
-			}
-		}
-		add_country_modifier = {
-			name = q_kko_buff_3s
-			duration = -1
-		}
-	}
-	else = {
-		limit = {
-			has_country_flag = qin_lao_ok
-		}
-		add_country_modifier = {
-			name = q_kko_buff_3t
-			duration = -1
-		}
-	}
-}
-#般若
-th_qin_set_cycle_to_bores = {  
-	set_country_flag = q_had_bores
-	set_country_flag = q_bore_cycles
-	if = {
-		limit = {
-			NOT = {
-				has_country_flag = qin_bore_ok
-			}
-		}
-		add_country_modifier = {
-			name = q_kko_buff_4s
-			duration = -1
-		}
-	}
-	else = {
-		limit = {
-			has_country_flag = qin_bore_ok
-		}
-		add_country_modifier = {
-			name = q_kko_buff_4t
-			duration = -1
-		}
-	}
-}
-#翁
-th_qin_set_cycle_to_wengs= {  
-	set_country_flag = q_had_wengs
-	set_country_flag = q_weng_cycles
-	if = {
-		limit = {
-			NOT = {
-				has_country_flag = qin_weng_ok
-			}
-		}
-		add_country_modifier = {
-			name = q_kko_buff_5s
-			duration = -1
-		}
-	}
-	else = {
-		limit = {
-			has_country_flag = qin_weng_ok
-		}
-		add_country_modifier = {
-			name = q_kko_buff_5t
-			duration = -1
-		}
-	}
-}
-#女小面
-th_qin_set_cycle_to_xiaomians = {  
-	set_country_flag = q_had_xiaomians
-	set_country_flag = q_xiaomian_cycles
-	if = {
-		limit = {
-			NOT = {
-				has_country_flag = qin_xiaomian_ok
-			}
-		}
-		add_country_modifier = {
-			name = q_kko_buff_6s
-			duration = -1
-		}
-	}
-	else = {
-		limit = {
-			has_country_flag = qin_xiaomian_ok
-		}
-		add_country_modifier = {
-			name = q_kko_buff_6t
-			duration = -1
-		}
-	}
-}
-#天狗
-th_qin_set_cycle_to_tiangous = {  
-	set_country_flag = q_had_tiangous
-	set_country_flag = q_tiangou_cycles
-	if = {
-		limit = {
-			NOT = {
-				has_country_flag = qin_tiangou_ok
-			}
-		}
-		add_country_modifier = {
-			name = q_kko_buff_7s
-			duration = -1
-		}
-	}
-	else = {
-		limit = {
-			has_country_flag = qin_tiangou_ok
-		}
-		add_country_modifier = {
-			name = q_kko_buff_7t
-			duration = -1
-		}
-	}
-}
-#循环设置
-th_qin_set_cycles = {
-	th_qin_remove_all_wayss = yes
-	th_qin_set_cycle_to_$types$ = yes
-}
-#一般循环
-th_qin_normal_cycles = {
-	if = {
-		limit = {
-			th_current_qin_cycles = {
-				types = huonans
-			}
-		}
-		th_qin_set_cycles = {
-			types = hulis
-		}
-	}
-	else_if = {
-		limit = {
-			th_current_qin_cycles = {
-				types = hulis
-			}
-		}
-		th_qin_set_cycles = {
-			types = chanwans
-		}
-	}
-	else_if = {
-		limit = {
-			th_current_qin_cycles = {
-				types = chanwans
-			}
-		}
-		th_qin_set_cycles = {
-			types = laos
-		}
-	}
-	else_if = {
-		limit = {
-			th_current_qin_cycles = {
-				types = laos
-			}
-		}
-		th_qin_set_cycles = {
-			types = bores
-		}
-	}
-	else_if = {
-		limit = {
-			th_current_qin_cycles = {
-				types = bores
-			}
-		}
-		th_qin_set_cycles = {
-			types = wengs
-		}
-	}
-	else_if = {
-		limit = {
-			th_current_qin_cycles = {
-				types = wengs
-			}
-		}
-		th_qin_set_cycles = {
-			types = xiaomians
-		}
-	}
-	else_if = {
-		limit = {
-			th_current_qin_cycles = {
-				types = xiaomians
-			}
-		}
-		th_qin_set_cycles = {
-			types = tiangous
-		}
-	}
-	else_if = {
-		limit = {
-			th_current_qin_cycles = {
-				types = tiangous
-			}
-		}
-		th_qin_set_cycles = {
-			types = huonans
-		}
-	}
 }
