@@ -26,6 +26,7 @@ THE_HMC_improve_mercenary_contract_mechanic = {
 	interactions = {
 		THE_HMC_improve_mercenary_contract_interaction = {
 			gui = hessian_militarization_gov_mech
+			cost_type = THE_HMC_improve_mercenary_contract_power
 			center = no
 			trigger = {
 				NOT = {
