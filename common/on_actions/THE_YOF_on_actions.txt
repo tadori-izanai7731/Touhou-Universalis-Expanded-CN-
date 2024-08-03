@@ -38,3 +38,11 @@ on_startup = {
 		THE_YOF_events.0
 	}
 }
+
+on_harmonized_th_kagiyama = {
+	on_harmonized_effect = yes
+	on_harmonized_religion_estate_privileges_effect = yes
+	events = {
+		THE_harmony_events.1
+	}
+}
