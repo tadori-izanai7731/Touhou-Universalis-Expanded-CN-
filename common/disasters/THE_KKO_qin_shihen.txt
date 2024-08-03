@@ -11,13 +11,13 @@ qin_shihen = {
 				has_government_power = {
 					mechanic_type = th_kokoro_mechanic
 					power_type = kko_you_adm_power
-					value = 50
+					value = 45
 				}
 				NOT = {
 					has_government_power = {
 						mechanic_type = th_kokoro_mechanic
 						power_type = kko_xi_dip_power
-						value = 1
+						value = 5
 					}
 				}
 			}
@@ -25,13 +25,13 @@ qin_shihen = {
 				has_government_power = {
 					mechanic_type = th_kokoro_mechanic
 					power_type = kko_you_adm_power
-					value = 50
+					value = 45
 				}
 				NOT = {
 					has_government_power = {
 						mechanic_type = th_kokoro_mechanic
 						power_type = kko_nu_mil_power
-						value = 1
+						value = 5
 					}
 				}
 			}
@@ -39,13 +39,13 @@ qin_shihen = {
 				has_government_power = {
 					mechanic_type = th_kokoro_mechanic
 					power_type = kko_xi_dip_power
-					value = 50
+					value = 45
 				}
 				NOT = {
 					has_government_power = {
 						mechanic_type = th_kokoro_mechanic
 						power_type = kko_nu_mil_power
-						value = 1
+						value = 5
 					}
 				}
 			}
@@ -53,13 +53,13 @@ qin_shihen = {
 				has_government_power = {
 					mechanic_type = th_kokoro_mechanic
 					power_type = kko_xi_dip_power
-					value = 50
+					value = 45
 				}
 				NOT = {
 					has_government_power = {
 						mechanic_type = th_kokoro_mechanic
 						power_type = kko_you_adm_power
-						value = 1
+						value = 5
 					}
 				}
 			}
@@ -67,13 +67,13 @@ qin_shihen = {
 				has_government_power = {
 					mechanic_type = th_kokoro_mechanic
 					power_type = kko_nu_mil_power
-					value = 50
+					value = 45
 				}
 				NOT = {
 					has_government_power = {
 						mechanic_type = th_kokoro_mechanic
 						power_type = kko_you_adm_power
-						value = 1
+						value = 5
 					}
 				}
 			}
@@ -81,13 +81,13 @@ qin_shihen = {
 				has_government_power = {
 					mechanic_type = th_kokoro_mechanic
 					power_type = kko_nu_mil_power
-					value = 50
+					value = 45
 				}
 				NOT = {
 					has_government_power = {
 						mechanic_type = th_kokoro_mechanic
 						power_type = kko_xi_dip_power
-						value = 1
+						value = 5
 					}
 				}
 			}
@@ -95,17 +95,40 @@ qin_shihen = {
 				has_government_power = {
 					mechanic_type = th_kokoro_mechanic
 					power_type = kko_you_adm_power
-					value = 50
+					value = 45
 				}
 				has_government_power = {
 					mechanic_type = th_kokoro_mechanic
 					power_type = kko_xi_dip_power
-					value = 50
+					value = 45
 				}
 				has_government_power = {
 					mechanic_type = th_kokoro_mechanic
-					power_type = kko_xi_dip_power
-					value = 50
+					power_type = kko_nu_mil_power
+					value = 45
+				}
+			}
+			AND = {
+				NOT = {
+					has_government_power = {
+						mechanic_type = th_kokoro_mechanic
+						power_type = kko_you_adm_power
+						value = 5
+					}
+				}
+				NOT = {
+					has_government_power = {
+						mechanic_type = th_kokoro_mechanic
+						power_type = kko_xi_dip_power
+						value = 5
+					}
+				}
+				NOT = {
+					has_government_power = {
+						mechanic_type = th_kokoro_mechanic
+						power_type = kko_nu_mil_power
+						value = 5
+					}
 				}
 			}
 			custom_trigger_tooltip = {
@@ -120,7 +143,10 @@ qin_shihen = {
 	progress = {
 		modifier = {
 			factor = 5
-			tag = KKO
+			OR = {
+				tag = KKO
+				was_tag = KKO
+			}
 		}
 		modifier = {
 			factor = 50

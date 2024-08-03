@@ -221,7 +221,6 @@ country_event = {
 		months = 640
 		modifier = {
 			factor = 0.6
-			ai = no
 			has_government_power = {
 				mechanic_type = yokari_forest_mechanic
 				power_type = yokari_forest_doom_power
@@ -230,7 +229,6 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.6
-			ai = no
 			has_government_power = {
 				mechanic_type = yokari_forest_mechanic
 				power_type = yokari_forest_doom_power
@@ -239,7 +237,6 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.4
-			ai = no
 			has_government_power = {
 				mechanic_type = yokari_forest_mechanic
 				power_type = yokari_forest_doom_power
@@ -248,7 +245,6 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.4
-			ai = no
 			has_government_power = {
 				mechanic_type = yokari_forest_mechanic
 				power_type = yokari_forest_doom_power
@@ -257,7 +253,6 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.4
-			ai = no
 			has_government_power = {
 				mechanic_type = yokari_forest_mechanic
 				power_type = yokari_forest_doom_power
@@ -266,7 +261,6 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.4
-			ai = no
 			has_government_power = {
 				mechanic_type = yokari_forest_mechanic
 				power_type = yokari_forest_doom_power
@@ -304,6 +298,7 @@ country_event = {
 				}
 				random_country = {
 					limit = {
+						ai = yes
 						NOT = {
 							has_country_modifier = yof_doom_river_flowed_neighbourhood_buff
 						}
@@ -335,6 +330,7 @@ country_event = {
 					effect = "
 						random_country = {
 							limit = {
+								ai = yes
 								NOT = {
 									has_country_modifier = yof_doom_river_flowed_neighbourhood_buff
 								}
@@ -360,6 +356,7 @@ country_event = {
 					effect = "
 					random_country = {
 						limit = {
+							ai = yes
 							NOT = {
 								has_country_modifier = yof_doom_river_flowed_neighbourhood_buff
 							}

@@ -7,7 +7,10 @@ country_decisions = {
 			80
 		}
 		potential = {
-			tag = YOF
+			OR = {
+				tag = YOF
+				was_tag = YOF
+			}
 			has_country_flag =  yof_kagiyama_hina_in_forest_allow
 		}
 		allow = {
@@ -83,6 +86,7 @@ country_decisions = {
 				tag = YOF
 				was_tag = YOF
 			}
+			ai = no
 		}
 		allow = {
 			custom_trigger_tooltip = {
@@ -107,12 +111,13 @@ country_decisions = {
 			OR = {
 				religion = th_kagiyama
 				tag = YOF
+				was_tag = YOF
 			}
 		}
 		allow = {
 			if = {
 				limit = { 
-					tag = YOF
+					has_government_mechanic = yokari_forest_mechanic
 				}
 				has_government_power = {
 					mechanic_type = yokari_forest_mechanic
@@ -149,7 +154,10 @@ country_decisions = {
 			80
 		}
 		potential = {
-			tag = YOF
+			OR = {
+				tag = YOF
+				was_tag = YOF
+			}
 			has_country_flag = the_yof_change_religions_to_kagiyama_allow_flag
 			NOT = {
 				religion = th_kagiyama
@@ -287,8 +295,9 @@ country_decisions = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
+		ai_importance = 1
 	}
 
 	THE_YOF_ai_add_yof_hina_dolls_factory_buff_decision = {
@@ -342,7 +351,8 @@ country_decisions = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
+		ai_importance = 1
 	}
 }

@@ -2,10 +2,7 @@ th_kokoro_mechanic = {
 	alert_icon_gfx = GFX_alerticons_government_mechanics
 	alert_icon_index = 1
 	available = {
-		OR = {
-			has_dlc = "Third Rome"
-			has_dlc = "Domination"
-		}
+		always = yes
 	}
 	powers = {
 		kko_you_adm_power = {
@@ -57,7 +54,7 @@ th_kokoro_mechanic = {
 					land_attrition = 0.2
 					can_not_declare_war = yes
 				}
-				start_value = 49
+				start_value = 45
 				end_value = 50
 			}
 			range_modifier = {
@@ -68,7 +65,7 @@ th_kokoro_mechanic = {
 					can_not_declare_war = yes
 				}
 				start_value = 0
-				end_value = 2
+				end_value = 5
 			}
 		}
 	}
@@ -182,7 +179,7 @@ th_kokoro_mechanic = {
 			}
 			cooldown_years = 2
 			ai_chance = {
-				factor = 10
+				factor = 0
 			}
 		}
 	}
