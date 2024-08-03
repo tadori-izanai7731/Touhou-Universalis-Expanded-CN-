@@ -1,0 +1,53 @@
+THE_HMC_improve_mercenary_contract_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 11
+	available = {
+		always = yes
+	}
+
+	powers = {
+		THE_HMC_improve_mercenary_contract_power = {
+			max = 100
+			reset_on_new_ruler = no
+			base_monthly_growth = 0
+			development_scaled_monthly_growth = 0
+			scaled_modifier = {
+				modifier = {
+					mercenary_discipline = 0.05
+					land_morale = 0.1
+					mercenary_manpower = 0.2
+					monthly_THE_HMC_improve_mercenary_contract_power = -3
+				}
+			}
+			is_good = yes
+		}
+	}
+	
+	interactions = {
+		THE_HMC_improve_mercenary_contract_interaction = {
+			gui = hessian_militarization_gov_mech
+			center = no
+			trigger = {
+				NOT = {
+					has_government_power = {
+						mechanic_type = THE_HMC_improve_mercenary_contract_mechanic
+						power_type = THE_HMC_improve_mercenary_contract_power
+						value = 100
+					}
+				}
+				years_of_income = 0.04
+			}
+			effect = {
+				add_years_of_income = -0.04
+				add_government_power = {
+					mechanic_type = THE_HMC_improve_mercenary_contract_mechanic
+					power_type = THE_HMC_improve_mercenary_contract_power
+					value = 5
+				}
+			}
+			ai_chance = {
+				factor = 0
+			}
+		}
+	}
+}

@@ -2373,6 +2373,7 @@ THE_HMC_branch_3 = {
 
 		effect = {
 			add_treasury = -500
+			custom_tooltip = THE_HMC_unlock_more_merc_tt
 			custom_tooltip = THE_HMC_3_4_effect_1_tt
 			tooltip = {
 				add_country_modifier = {
@@ -2404,7 +2405,6 @@ THE_HMC_branch_3 = {
 					}
 				}
 			}
-			custom_tooltip = THE_HMC_unlock_more_merc_tt
 		} 
 	}
 
@@ -2448,9 +2448,26 @@ THE_HMC_branch_3 = {
 		required_missions = { THE_HMC_3_7 } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			treasury = 1000
+			num_of_mercenaries = 80
+		} 
 
-		effect = {  } 
+		effect = {
+			add_treasury = -500
+			custom_tooltip = THE_HMC_unlock_more_merc_tt
+			add_country_modifier = {
+				name = THE_HMC_pure_golden_soldier_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_HMC_unlock_sign_contract_reform_tt
+			hidden_effect = {
+				set_country_flag = THE_HMC_unlock_sign_contract_reform_flag
+			}
+			tooltip = {
+				add_government_reform = THE_HMC_sign_contract_reform
+			}
+		} 
 	}
 
 	THE_HMC_3_12 = {

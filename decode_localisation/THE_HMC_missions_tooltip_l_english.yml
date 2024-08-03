@@ -64,6 +64,7 @@ l_english:
  THE_HMC_cost_100_times_treasury_buy_they_tt: "花费§Y[From.GetName]§!总发展度§Y100§!倍的金币购买它们的土地。"
  from_total_development_is_10_times_bigger_than_ours: "至少拥有§Y[From.GetName]§!总发展度§Y100§!倍的金币"
  THE_HMC_add_prosperity_100_tt: "§Y省份§!获得§G100§!繁荣度。"
+ THE_HMC_unlock_sign_contract_reform_tt: "解锁共和制第§Y5§!级政府改革「§Y签订契约§!」"
  THE_HMC_unlock_more_merc_tt: "§Y解锁更多佣兵团。§!"
 ###TOOLTIP_END
 
@@ -145,6 +146,14 @@ l_english:
  THE_HMC_guide_reform_desc: "<政府改革描述>"
  THE_HMC_insight_reform: "香霖的眼光"
  THE_HMC_insight_reform_desc: "<政府改革描述>"
+ THE_HMC_sign_contract_reform: "签订契约"
+ THE_HMC_sign_contract_reform_desc: "<政府改革描述>"
+ ability_THE_HMC_improve_mercenary_contract_mechanic: "§Y雇佣兵契约§!"
+ THE_HMC_improve_mercenary_contract_power: "§Y雇佣兵契约§!"
+ THE_HMC_improve_mercenary_contract_power_desc: "<政府机制进度描述>"
+ THE_HMC_improve_mercenary_contract_interaction: "§改善雇佣兵契约"
+ THE_HMC_improve_mercenary_contract_interaction_desc: "<政府机制互动描述>"
+ monthly_THE_HMC_improve_mercenary_contract_power: "每月§Y雇佣兵契约§!"
 ###GOVERNMENT_END
 
 ###IDEA

@@ -145,3 +145,22 @@ THE_HMC_insight_reform = {
 		advisor_cost = -0.2
 	}
 }
+
+THE_HMC_sign_contract_reform = {
+	# icon = 
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_reform = THE_HMC_sign_contract_reform
+			have_had_reform = THE_HMC_sign_contract_reform
+			has_country_flag = THE_HMC_unlock_sign_contract_reform_flag
+		}
+	}
+	modifiers = {
+		mercenary_cost = -0.2
+		merc_leader_army_tradition = 0.25
+	}
+	government_abilities = {
+		THE_HMC_improve_mercenary_contract_mechanic
+	}
+}

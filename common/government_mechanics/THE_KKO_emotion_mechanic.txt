@@ -18,6 +18,26 @@ th_kokoro_mechanic = {
 					monthly_kko_you_adm_power = -4
 				}
 			}
+			range_modifier = {
+				trigger = {
+					always = yes
+				}
+				modifier = {
+					can_not_build_missionaries = yes
+				}
+				start_value = 45
+				end_value = 50
+			}
+			range_modifier = {
+				trigger = {
+					always = yes
+				}
+				modifier = {
+					can_not_build_missionaries = yes
+				}
+				start_value = 0
+				end_value = 5
+			}
 		}
 		kko_xi_dip_power = {
 			max = 50
@@ -31,6 +51,26 @@ th_kokoro_mechanic = {
 					war_exhaustion = -0.1
 					monthly_kko_xi_dip_power = -4
 				}
+			}
+			range_modifier = {
+				trigger = {
+					always = yes
+				}
+				modifier = {
+					can_not_build_buildings = yes
+				}
+				start_value = 45
+				end_value = 50
+			}
+			range_modifier = {
+				trigger = {
+					always = yes
+				}
+				modifier = {
+					can_not_build_buildings = yes
+				}
+				start_value = 0
+				end_value = 5
 			}
 		}
 		kko_nu_mil_power = {
@@ -49,9 +89,9 @@ th_kokoro_mechanic = {
 			}
 			range_modifier = {
 				trigger = {
+					always = yes
 				}
 				modifier = {
-					land_attrition = 0.2
 					can_not_declare_war = yes
 				}
 				start_value = 45
@@ -59,9 +99,9 @@ th_kokoro_mechanic = {
 			}
 			range_modifier = {
 				trigger = {
+					always = yes
 				}
 				modifier = {
-					reserves_organisation = -0.1
 					can_not_declare_war = yes
 				}
 				start_value = 0
@@ -76,29 +116,15 @@ th_kokoro_mechanic = {
 			icon = GFX_th_kokoro_you
 			cost_type = kko_you_adm_power
 			cost = 2
-			trigger = {
-				custom_trigger_tooltip = {
-					tooltip = kokoro_mechanic_done
-					OR = {
-						NOT = {
-							has_country_flag = kokoro_mechanic_do
-						}
-						had_country_flag = {
-							flag = kokoro_mechanic_do
-							days = 730
-						}
-					}
-				}
-			}
 			effect = {
 				add_country_modifier = {
 					name = th_kko_you_buff
 					duration = 365
 				}
-				clr_country_flag = kokoro_mechanic_do
-				set_country_flag = kokoro_mechanic_do
 			}
 			cooldown_years = 2
+			cooldown_token = th_kokoro_mechanic
+			cooldown_desc = THE_KKO_mechanic_cooldown_desc_tt
 			ai_chance = {
 				factor = 0
 			}
@@ -108,29 +134,15 @@ th_kokoro_mechanic = {
 			icon = GFX_th_kokoro_xi
 			cost_type = kko_xi_dip_power
 			cost = 2
-			trigger = {
-				custom_trigger_tooltip = {
-					tooltip = kokoro_mechanic_done
-					OR = {
-						NOT = {
-							has_country_flag = kokoro_mechanic_do
-						}
-						had_country_flag = {
-							flag = kokoro_mechanic_do
-							days = 730
-						}
-					}
-				}
-			}
 			effect = { 
 				add_country_modifier = {
 					name = th_kko_xi_buff
 					duration = 365
 				}
-				clr_country_flag = kokoro_mechanic_do
-				set_country_flag = kokoro_mechanic_do
 			}
 			cooldown_years = 2
+			cooldown_token = th_kokoro_mechanic
+			cooldown_desc = THE_KKO_mechanic_cooldown_desc_tt
 			ai_chance = {
 				factor = 0
 			}
@@ -140,20 +152,6 @@ th_kokoro_mechanic = {
 			icon = GFX_th_kokoro_nu
 			cost_type = kko_nu_mil_power
 			cost = 2
-			trigger = {
-				custom_trigger_tooltip = {
-					tooltip = kokoro_mechanic_done
-					OR = {
-						NOT = {
-							has_country_flag = kokoro_mechanic_do
-						}
-						had_country_flag = {
-							flag = kokoro_mechanic_do
-							days = 730
-						}
-					}
-				}
-			}
 			effect = { 
 				add_country_modifier = {
 					name = th_kko_nu_buff
@@ -174,10 +172,10 @@ th_kokoro_mechanic = {
 					add_war_exhaustion = -2
 					add_army_professionalism = 0.02
 				}
-				clr_country_flag = kokoro_mechanic_do
-				set_country_flag = kokoro_mechanic_do
 			}
 			cooldown_years = 2
+			cooldown_token = th_kokoro_mechanic
+			cooldown_desc = THE_KKO_mechanic_cooldown_desc_tt
 			ai_chance = {
 				factor = 0
 			}
