@@ -1,0 +1,38 @@
+#Undo
+THE_has_branching_missions_scripted_trigger = {
+	OR = {
+		AND = {
+			OR = {
+				tag = ROD
+				was_tag = ROD
+			}
+			NOT = { has_country_flag = THE_ROD_unlock_hakurei_mission_flag }
+			NOT = { has_country_flag = THE_ROD_unlock_catholic_mission_flag }
+		}
+	}
+}
+
+THE_can_preview_batch_scripted_trigger = {
+	has_country_flag = THE_has_batch_$batch$_active
+}
+
+THE_has_selected_a_branch_scripted_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_selected_a_branch_tt
+		OR = {
+			#Origins
+			#MAL
+			AND = {
+				OR = {
+					has_country_flag = mal_decide_for_conversion
+					has_country_flag = mal_decide_for_tolerance
+				}
+				can_preview_mission_of_key_and_batch = { key = MAL batch = $batch$ }
+			}
+		}
+	}
+}
+
+THE_can_select_current_branch_scripted_trigger = {
+
+}

@@ -414,17 +414,17 @@ THE_ROD_branch_1 = {
 
 		trigger = {
 			OR = {
-				trading_bonus = {
+				trading_part = {
 					trade_goods = fish
-					value = yes
+					value = 0.1
 				}
-				trading_bonus = {
+				trading_part = {
 					trade_goods = grain
-					value = yes
+					value = 0.1
 				}
-				trading_bonus = {
+				trading_part = {
 					trade_goods = livestock
-					value = yes
+					value = 0.1
 				}
 			}
 			manpower_percentage = 0.8
