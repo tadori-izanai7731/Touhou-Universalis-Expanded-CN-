@@ -2174,10 +2174,6 @@ country_event = {
 	}
 	option = {
 		name = flavor_THE_HNG_mission_events.56.f
-		highlight = yes
-		trigger = {
-			religion = th_taoist
-		}
 		change_religion = th_taoist
 		add_country_modifier = {
 			name = THE_hng_mission_modifier143
