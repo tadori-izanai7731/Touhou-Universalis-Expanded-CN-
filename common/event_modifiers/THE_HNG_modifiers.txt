@@ -1031,6 +1031,7 @@ THE_hng_mission_modifier103 = {
 THE_hng_mission_modifier104 = {
 	cb_on_religious_enemies = yes
 	global_missionary_strength = 0.03
+	religion = yes
 }
 
 
@@ -1038,6 +1039,7 @@ THE_hng_mission_modifier104 = {
 THE_hng_mission_modifier105 = {
 	stability_cost_modifier = -0.25
 	tolerance_own = 2
+	religion = yes
 }
 
 #巫女传教
@@ -1046,6 +1048,7 @@ THE_hng_mission_modifier106 = {
 	global_unrest = -0.5
 	missionaries = 1
 	global_missionary_strength = 0.01
+	religion = yes
 }
 
 #东佛传承
