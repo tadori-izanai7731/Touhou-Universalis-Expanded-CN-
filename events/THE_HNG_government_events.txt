@@ -44,7 +44,17 @@ country_event = {
 	title = "flavor_THE_HNG_government_events.2.t"
 	desc = "flavor_THE_HNG_government_events.2.desc"
 	picture = DRAGON_eventPicture
-	is_triggered_only = yes
+	trigger = {
+		had_country_flag = {
+			flag = THE_HNG_had_choose_long_mai
+			days = 10950
+		}
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_reform = THE_HNG_searching_for_dragon_points
+	}
 	
 	option = {
 		name = flavor_THE_HNG_government_events.2.a
@@ -53,6 +63,8 @@ country_event = {
 			name = THE_HNG_gan_drgaon
 			duration = 10950
 		}
+		clr_country_flag = THE_HNG_had_choose_long_mai
+		set_country_flag = THE_HNG_had_choose_long_mai
 	}
 	option = {
 		name = flavor_THE_HNG_government_events.2.b
@@ -61,6 +73,8 @@ country_event = {
 			name = THE_HNG_zhi_drgaon
 			duration = 10950
 		}
+		clr_country_flag = THE_HNG_had_choose_long_mai
+		set_country_flag = THE_HNG_had_choose_long_mai
 	}
 	option = {
 		name = flavor_THE_HNG_government_events.2.c
@@ -69,6 +83,8 @@ country_event = {
 			name = THE_HNG_lai_drgaon
 			duration = 10950
 		}
+		clr_country_flag = THE_HNG_had_choose_long_mai
+		set_country_flag = THE_HNG_had_choose_long_mai
 	}
 	option = {
 		name = flavor_THE_HNG_government_events.2.d
@@ -77,6 +93,8 @@ country_event = {
 			name = THE_HNG_tui_drgaon
 			duration = 10950
 		}
+		clr_country_flag = THE_HNG_had_choose_long_mai
+		set_country_flag = THE_HNG_had_choose_long_mai
 	}
 	option = {
 		name = flavor_THE_HNG_government_events.2.e
@@ -85,9 +103,12 @@ country_event = {
 			name = THE_HNG_sheng_drgaon
 			duration = 10950
 		}
+		clr_country_flag = THE_HNG_had_choose_long_mai
+		set_country_flag = THE_HNG_had_choose_long_mai
 	}
 	option = {
 		name = flavor_THE_HNG_government_events.2.f
+		clr_country_flag = THE_HNG_had_choose_long_mai
 	}
 }
 
