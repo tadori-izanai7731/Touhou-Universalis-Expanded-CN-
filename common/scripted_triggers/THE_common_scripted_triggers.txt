@@ -8,6 +8,6 @@ THE_is_free_merc_company = {
 	}
 }
 
-THE_not_use_common_election_scripted_trigger = {
+THE_use_common_election_scripted_trigger = {
 	NOT = { has_government_attribute = THE_HMC_use_human_capital_election }
 }
