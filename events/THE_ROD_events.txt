@@ -291,3 +291,99 @@ country_event = {
 		}
 	}
 }
+
+### ROD flavor events in THE! ###
+
+country_event = {
+	id = THE_ROD_events.4
+	title = THE_ROD_events.4.title
+	desc = THE_ROD_events.4.desc
+	fire_only_once = yes
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		mission_completed = THE_ROD_2_3
+		is_year = 1500
+		custom_trigger_tooltip = {
+			tooltip = THE_ROD_not_complete_event_ttt
+			always = no
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 2400
+	}
+
+	option = {
+		name = THE_ROD_events.4.a
+		custom_tooltip = THE_ROD_clear_darkness_manipulation_and_dark_moon_night_tt
+		hidden_effect = {
+			set_variable = {
+				which = the_rod_darkness_manipulation_var
+				value = 0
+			}
+			add_government_power = {
+				mechanic_type = THE_ROD_dark_moon_night_mechanic
+				power_type = THE_ROD_government_mechanic_power
+				value = -1000
+			}
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.5
+	title = THE_ROD_events.5.title
+	desc = THE_ROD_events.5.desc
+	fire_only_once = yes
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		mission_completed = THE_ROD_2_3
+		custom_trigger_tooltip = {
+			tooltip = THE_ROD_not_complete_event_ttt
+			always = no
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 600
+	}
+
+	option = {
+		name = THE_ROD_events.5.a
+		add_dip_power = 50
+		change_variable = {
+			which = the_rod_darkness_manipulation_var
+			value = 25
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.6
+	title = THE_ROD_events.6.title
+	desc = THE_ROD_events.6.desc
+	fire_only_once = yes
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		mission_completed = THE_ROD_2_3
+		mission_completed = THE_ROD_1_12
+		custom_trigger_tooltip = {
+			tooltip = THE_ROD_not_complete_event_ttt
+			always = no
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 600
+	}
+
+	option = {
+		name = THE_ROD_events.6.a
+		change_innovativeness = 5
+		THE_ROD_define_advisor_jan_ingenhousz_scripted_effect = yes
+		add_country_modifier = {
+			name = THE_ROD_photosynthesis_modifier
+			duration = -1
+		}
+	}
+}

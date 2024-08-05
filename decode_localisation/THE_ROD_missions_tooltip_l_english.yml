@@ -209,6 +209,7 @@ l_english:
  THE_ROD_if_select_hakurei_branch_ttt: "\n§M如果选择£hakurei_religion_icon£博丽神道路线，需要完成以下条件§!:\n§M §!"
  THE_ROD_if_select_catholic_branch_tt: "§M如果选择£catholic_religion_icon£天主教路线，完成该任务将获得如下效果§!: "
  THE_ROD_if_select_hakurei_branch_tt: "§M如果选择£hakurei_religion_icon£博丽神道路线，完成该任务将获得如下效果§!: "
+ THE_ROD_clear_darkness_manipulation_and_dark_moon_night_tt: "失去所有§Y操控黑暗程度的能力§!和§o吞噬夜光§!。"
 ###TOOLTIP_END
 
 ###MODIFIER
@@ -297,6 +298,7 @@ l_english:
  THE_ROD_fra_realm_modifier: "法兰西领域"
  THE_ROD_ita_realm_modifier: "意大利领域"
  THE_ROD_rus_realm_modifier: "俄罗斯领域"
+ THE_ROD_photosynthesis_modifier: "光合作用"
 ###MODIFIER_END
 
 ###MERC
@@ -440,10 +442,23 @@ l_english:
  THE_ROD_events.3.m: "荷兰"
  THE_ROD_events.3.n: "佛兰德"
  THE_ROD_events.3.o: "弗里斯兰"
+
+ THE_ROD_events.4.title: "宵暗的孤独"
+ THE_ROD_events.4.desc: "自从露米娅来到[43.GetName]已经过去了数十年的时间，这里没有妖精、妖怪和神明，没有退治异变的巫女和魔法使，生活在此地的人类也与幻想乡大不相同。长时间的统治工作消磨了露米娅本就不多的回忆，或许有一天能够回到幻想之地与曾经的朋友再见。"
+ THE_ROD_events.4.a: "不能遗忘身为「妖怪」的能力。"
+
+ THE_ROD_events.5.title: "液态黑暗"
+ THE_ROD_events.5.desc: "露米娅凝聚出的黑暗并不像黑雾或者黑色的固体，而是一种粘稠状的液态物质，具有不可逆的自发分解性，在光照下分解速率会大大加快。这种物质在露米娅的操控下可以不受重力影响，并改变其外在形状。[Capital.GetName]的居民经常能在夏天看到移动的黑色球体，那其实是露米娅使用能力避暑。"
+ THE_ROD_events.5.a: "只有金发和缎带在黑暗之外。"
+
+ THE_ROD_events.6.title: "向光生长"
+ THE_ROD_events.6.desc: "露米娅所在的住所长时间被黑暗笼罩，附近的植物普遍生长状况不佳，部分植物甚至已经枯萎。[Root.GetName]聘请了多位园艺大师进行修复都无法彻底解决这个问题。一维来自荷兰的生物学家简·英格豪斯对这个问题进行深入研究，发现光照对于植物生长具有不可替代的作用，并将其命名「为光合作用」"
+ THE_ROD_events.6.a: "「可我更喜欢黑暗。」"
 ###EVENT_END
 
 ###VARIABLE
  the_rod_rumia_battle_win_var: "露米娅领导的战役胜利"
+ the_rod_darkness_manipulation_var: "操控黑暗程度的能力"
 ###VARIABLE_END
 
 ###CUSTOM_LOCALISATION

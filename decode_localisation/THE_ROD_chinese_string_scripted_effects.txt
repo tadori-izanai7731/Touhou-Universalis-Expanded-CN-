@@ -44,3 +44,14 @@ THE_ROD_on_battle_won_unit_scripted_effect = {
 		}
 	}
 }
+
+THE_ROD_define_advisor_jan_ingenhousz_scripted_effect = {
+	define_advisor = {
+		name = "简 英格豪斯"
+		type = natural_scientist
+		culture = dutch
+		religion = catholic
+		skill = 3
+		cost_multiplier = 0.25
+	}
+}
