@@ -139,10 +139,7 @@ country_decisions = {
 		}
 		
 		allow = {
-			OR = {
-				tag = HNG
-				was_tag = HNG
-			}
+			always = yes
 		}
 		
 		effect = {
