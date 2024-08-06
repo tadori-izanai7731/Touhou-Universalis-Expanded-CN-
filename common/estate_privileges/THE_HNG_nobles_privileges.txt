@@ -36,7 +36,7 @@ THE_HNG_not_believe = {
 				NOT = { culture_group = ROOT }
 				has_owner_accepted_culture = no
 			}
-			add_permanent_province_modifier = {
+			add_province_modifier = {
 				name = THE_HNG_not_believe_privilege_effrct
 				duration = -1
 			}

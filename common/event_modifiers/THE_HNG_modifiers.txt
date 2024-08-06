@@ -21,6 +21,7 @@ HTE_HNG_samurai_home = {
 #互相不信任
 THE_HNG_not_believe_privilege_effrct = {
 	local_manpower_modifier = -0.9
+	religion = yes
 }
 
 #佣兵不关心红
@@ -1481,8 +1482,8 @@ THE_hng_mission_modifier140 = {
 
 #万象象兵
 THE_hng_mission_modifier141 = {
-	cavalry_cost = -0.2
-	cavalry_power = 0.2
+	cavalry_cost = -0.25
+	cavalry_power = 0.25
 }
 
 #道教为尊
