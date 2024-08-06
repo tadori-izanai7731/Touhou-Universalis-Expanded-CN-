@@ -264,6 +264,23 @@ THE_ROD_on_siege_lost_province_sripted_effect = {
 	}
 }
 
+THE_ROD_on_war_ended_scripted_effect = {
+	if = {
+		limit = {
+			has_country_modifier = THE_ROD_support_from_rod_modifier
+			NOT = { war_with = DAN }
+		}
+		remove_country_modifier = THE_ROD_support_from_rod_modifier
+	}
+	if = {
+		limit = {
+			has_country_modifier = THE_ROD_blockade_from_rod_modifier
+			NOT = { war_with = SWE }
+		}
+		remove_country_modifier = THE_ROD_blockade_from_rod_modifier
+	}
+}
+
 ### NOT on_actions scripted effects
 
 THE_change_color_to_colony = {

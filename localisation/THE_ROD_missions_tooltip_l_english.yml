@@ -209,6 +209,8 @@
  THE_ROD_if_select_hakurei_branch_ttt: "\n§M‚Yœg	éb£hakurei_religion_icon£ZSKN^ySï¿uÿ—‰ŒRbåNNagöN§!:\n§M §!"
  THE_ROD_if_select_catholic_branch_tt: "§M‚Yœg	éb£catholic_religion_icon£)YINYeï¿uÿŒRbå‹ûN¡RS·ƒ—V‚YNHeœg§!: "
  THE_ROD_if_select_hakurei_branch_tt: "§M‚Yœg	éb£hakurei_religion_icon£ZSKN^ySï¿uÿŒRbå‹ûN¡RS·ƒ—V‚YNHeœg§!: "
+ THE_ROD_clear_darkness_manipulation_and_dark_moon_night_tt: "1Y»SNb	g§YÍdµcÑž—fz¦^„výw›R§!ŒT§oTlVYIQ§!0"
+ THE_ROD_until_war_end_tt: "cíu0R^txQìrËzb‰NÓumg"
 ###TOOLTIP_END
 
 ###MODIFIER
@@ -297,6 +299,9 @@
  THE_ROD_fra_realm_modifier: "ÕlpQ‰†˜ßW"
  THE_ROD_ita_realm_modifier: "a'Y)R†˜ßW"
  THE_ROD_rus_realm_modifier: "ÄOW¯e†˜ßW"
+ THE_ROD_photosynthesis_modifier: "IQTjO(u"
+ THE_ROD_support_from_rod_modifier: "µR—f†˜ßW=eôc"
+ THE_ROD_blockade_from_rod_modifier: "µR—f†˜ßWS•"
 ###MODIFIER_END
 
 ###MERC
@@ -440,10 +445,29 @@
  THE_ROD_events.3.m: "wƒpQ"
  THE_ROD_events.3.n: "iOpQ·V"
  THE_ROD_events.3.o: "VÌ‘¯epQ"
+
+ THE_ROD_events.4.title: "µR—f„vdRìr"
+ THE_ROD_events.4.desc: "êÎN2—s|Zeg0R[43.GetName]òTÏuÇ»S†NpeASt^„vöeô•ÿÙÌ‘¡l	g–Y¾|0–Y*`ŒT^yfÿ¡l	g»lVØS„vëTsYŒTT›ÕlOÿuIm(Wdk0W„vºN‰|mNN‰^ó`aN'YNøvT0•öeô•„vßu»låTjOˆmèx†N2—s|Z,g1SNY„vÞVÆVÿb¸‹	gN)YýwYÞV0R‰^ó`KN0WNþfÏu„vgËSQÁ‰0"
+ THE_ROD_events.4.a: "NýwWØV«Ž:N0–Y*`0„výw›R0"
+
+ THE_ROD_events.5.title: "²m`Ñž—f"
+ THE_ROD_events.5.desc: "2—s|ZÝQZwúQ„vÑž—fv^NÏPÑžþ–bwÑžr‚„vúVSOÿw=fNÍy˜|.z¶r„v²m`ir(ÿwQ	gNïS„vêÑSRã‰'`ÿ(WIQgqNRã‰‡sO'Y'Y RëV0ÙÍyir((W2—s|Z„vÍdµcNïSåNN×SÍ‘›RqVÍTÿv^9eØSvQY(WbV¶r0[Capital.GetName]„vESlÏu8^ýw(WY)Yw0Rûy¨R„vÑžr‚tSOÿ±vQžR=f2—s|ZO(uýw›R‘f0"
+ THE_ROD_events.5.a: "êS	gÑ‘ÑSŒT&^(WÑž—fKNY0"
+
+ THE_ROD_events.6.title: "TIQu•"
+ THE_ROD_events.6.desc: "2—s|ZNb(W„vOONb•öeô•«ˆÑž—f<riÿD–Ñ„viirnfMu•¶rµQNsOÿèRiiruóòTÏu¯g„0[Root.GetName]Xw÷‹†NYMOíVz‚'Y^ÛLˆîOYýàeÕl‰V•^ã‰³QÙ*Nî•˜˜0NôuegêwƒpQ„vuirfR¶RŽr·ñ‚<hjŒ¯eùRÙ*Nî•˜˜ÛLˆñmeQxvzÿÑS°sIQgqùRŽNiiru•wQ	gNïSÿfãN„vjO(uÿv^SvQ‹TT0:NIQTjO(u0"
+ THE_ROD_events.6.a: "0ïSbôfœU0kÑž—f00"
+
+ THE_ROD_events.7.title: "[SWE.GetName]ìrËzb‰N"
+ THE_ROD_events.7.desc: "[DAN.GetName]ÇaSSlšTwßvùR[NOR.GetName]ŒT[SWE.GetName]ÛLˆTwTßu»lÿN†SòSNY!kTjO„v[NOR.GetName]NTÿ[SWE.GetName]5ÏeùRŽN[DAN.GetName]ýV‹s„vßu»lASRNánÿyr+R=f(W[DAN.GetName]NIl(„Tßv„vb‰N-NlQ6qÑS¨RÛSqN0‚YÊN[DAN.GetName]žR›RNÊSåNŽVw[SWE.GetName]ùRìrËz„vípÅ`Øš¨mÿmN¸‹bìNïSåN.^©R[SWE.GetName]„vTöeJR1V[DAN.GetName]ùRâlW„vwm„vµc6R0"
+ THE_ROD_events.7.a: "×rN7h„v[DAN.GetName]ÿ2—s|ZNšR.^.^:WPR0"
+ THE_ROD_events.7.b: "6RÁˆ[DAN.GetName]ÏuNm=f2—s|ZýwZP„vg'YªR›R0"
+ THE_ROD_events.7.c: "Œÿ[SWE.GetName]ÿÖNìN¢b„vmNNS0"
 ###EVENT_END
 
 ###VARIABLE
  the_rod_rumia_battle_win_var: "2—s|Z†˜üR„vbyVÜw)R"
+ the_rod_darkness_manipulation_var: "ÍdµcÑž—fz¦^„výw›R"
 ###VARIABLE_END
 
 ###CUSTOM_LOCALISATION

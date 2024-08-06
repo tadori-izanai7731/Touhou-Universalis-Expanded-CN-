@@ -367,6 +367,7 @@ country_event = {
 		OR = { tag = ROD was_tag = ROD }
 		mission_completed = THE_ROD_2_3
 		mission_completed = THE_ROD_1_12
+		is_year = 1650
 		custom_trigger_tooltip = {
 			tooltip = THE_ROD_not_complete_event_ttt
 			always = no
@@ -384,6 +385,147 @@ country_event = {
 		add_country_modifier = {
 			name = THE_ROD_photosynthesis_modifier
 			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.7
+	title = THE_ROD_events.7.title
+	desc = THE_ROD_events.7.desc
+	fire_only_once = yes
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		SWE = {
+			OR = {
+				is_in_war = {
+					attacker_leader = THIS
+					defender_leader = DAN
+					casus_belli = cb_independence_war
+				}
+				AND = {
+					is_subject_of = DAN
+					liberty_desire = 50
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = THE_ROD_not_complete_event_ttt
+			always = no
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = THE_ROD_events.7.a
+		if = {
+			limit = {
+				SWE = {
+					is_in_war = {
+						attacker_leader = THIS
+						defender_leader = DAN
+						casus_belli = cb_independence_war
+					}
+				}
+				NOT = { truce_with = DAN }
+			}
+			ROOT = {
+				create_alliance = SWE
+				join_all_offensive_wars_of = SWE
+				add_historical_friend = SWE
+				add_trust = {
+					who = SWE
+					value = 20
+					mutual = yes
+				}
+			}
+			SWE = {
+				add_historical_friend = ROOT
+				add_country_modifier = {
+					name = THE_ROD_support_from_rod_modifier
+					duration = -1
+					desc = THE_ROD_until_war_end_tt
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				SWE = {
+					is_in_war = {
+						attacker_leader = THIS
+						defender_leader = DAN
+						casus_belli = cb_independence_war
+					}
+				}
+			}
+			ROOT = {
+				create_alliance = SWE
+				add_historical_friend = SWE
+				add_trust = {
+					who = SWE
+					value = 20
+					mutual = yes
+				}
+			}
+			SWE = {
+				add_historical_friend = ROOT
+				add_country_modifier = {
+					name = THE_ROD_support_from_rod_modifier
+					duration = -1
+					desc = THE_ROD_until_war_end_tt
+				}
+			}
+		}
+		else = {
+			ROOT = {
+				support_independence_of = SWE
+				add_historical_friend = SWE
+				add_trust = {
+					who = SWE
+					value = 20
+					mutual = yes
+				}
+			}
+			SWE = {
+				add_historical_friend = ROOT
+				add_country_modifier = {
+					name = THE_ROD_support_from_rod_modifier
+					duration = -1
+					desc = THE_ROD_until_war_end_tt
+				}
+			}
+		}
+	}
+
+	option = {
+		name = THE_ROD_events.7.b
+		ROOT = {
+			add_trust = {
+				who = SWE
+				value = 20
+				mutual = yes
+			}
+		}
+		DAN = {
+			add_country_modifier = {
+				name = THE_ROD_blockade_from_rod_modifier
+				duration = -1
+				desc = THE_ROD_until_war_end_tt
+			}
+		}
+	}
+
+	option = {
+		name = THE_ROD_events.7.c
+		add_treasury = 2
+		DAN = {
+			add_treasury = -1
+		}
+		SWE = {
+			add_treasury = -1
 		}
 	}
 }

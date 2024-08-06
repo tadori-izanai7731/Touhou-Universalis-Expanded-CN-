@@ -460,6 +460,22 @@ THE_ROD_photosynthesis_modifier = {
 	global_monthly_devastation = -0.1
 }
 
+#宵暗领域支援
+THE_ROD_support_from_rod_modifier = {
+	land_morale_constant = 0.5
+	land_maintenance_modifier = -0.25
+	manpower_recovery_speed = 0.33
+	siege_ability = 0.2
+}
+
+#宵暗领域封锁
+THE_ROD_blockade_from_rod_modifier = {
+	ship_recruit_speed = 0.33
+	global_ship_repair = -0.25
+	trade_efficiency = -0.2
+	global_trade_power = -0.5
+}
+
 
 ###EXTRA_HAKUREI_DEITY
 THE_ROD_extra_hakurei_modifier_Hakurei_God = {

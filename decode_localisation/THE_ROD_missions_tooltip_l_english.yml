@@ -210,6 +210,7 @@ l_english:
  THE_ROD_if_select_catholic_branch_tt: "§M如果选择£catholic_religion_icon£天主教路线，完成该任务将获得如下效果§!: "
  THE_ROD_if_select_hakurei_branch_tt: "§M如果选择£hakurei_religion_icon£博丽神道路线，完成该任务将获得如下效果§!: "
  THE_ROD_clear_darkness_manipulation_and_dark_moon_night_tt: "失去所有§Y操控黑暗程度的能力§!和§o吞噬夜光§!。"
+ THE_ROD_until_war_end_tt: "持续到瑞典独立战争结束"
 ###TOOLTIP_END
 
 ###MODIFIER
@@ -299,6 +300,8 @@ l_english:
  THE_ROD_ita_realm_modifier: "意大利领域"
  THE_ROD_rus_realm_modifier: "俄罗斯领域"
  THE_ROD_photosynthesis_modifier: "光合作用"
+ THE_ROD_support_from_rod_modifier: "宵暗领域支援"
+ THE_ROD_blockade_from_rod_modifier: "宵暗领域封锁"
 ###MODIFIER_END
 
 ###MERC
@@ -454,6 +457,12 @@ l_english:
  THE_ROD_events.6.title: "向光生长"
  THE_ROD_events.6.desc: "露米娅所在的住所长时间被黑暗笼罩，附近的植物普遍生长状况不佳，部分植物甚至已经枯萎。[Root.GetName]聘请了多位园艺大师进行修复都无法彻底解决这个问题。一维来自荷兰的生物学家简·英格豪斯对这个问题进行深入研究，发现光照对于植物生长具有不可替代的作用，并将其命名「为光合作用」"
  THE_ROD_events.6.a: "「可我更喜欢黑暗。」"
+
+ THE_ROD_events.7.title: "[SWE.GetName]独立战争"
+ THE_ROD_events.7.desc: "[DAN.GetName]通过卡尔马联盟对[NOR.GetName]和[SWE.GetName]进行联合统治，与历史上多次合作的[NOR.GetName]不同，[SWE.GetName]贵族对于[DAN.GetName]国王的统治十分不满，特别是在[DAN.GetName]与汉萨同盟的战争中公然发动叛乱。如今[DAN.GetName]实力不及以往而[SWE.GetName]对独立的热情高涨，也许我们可以帮助[SWE.GetName]的同时削弱[DAN.GetName]对波罗的海的控制。"
+ THE_ROD_events.7.a: "狗一样的[DAN.GetName]，露米娅一定帮帮场子。"
+ THE_ROD_events.7.b: "制裁[DAN.GetName]经济是露米娅能做的最大努力。"
+ THE_ROD_events.7.c: "谁？[SWE.GetName]？他们抢的也不少。"
 ###EVENT_END
 
 ###VARIABLE

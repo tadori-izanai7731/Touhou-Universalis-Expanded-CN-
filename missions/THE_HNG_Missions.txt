@@ -2145,6 +2145,24 @@ THE_HNG_1_5 = {
 			OR = {
 				owned_by = CHG
 				owned_by = KAS
+				AND = {
+					OR = {
+						area = kashgaria_area
+						area = shanshan_area
+						area = tarim_basin_area
+						area = turpan_kumul_area
+						area = zungaria_area
+						area = jetysuu_area
+					}
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					OR = {
+						province_id = 460
+						province_id = 2364
+					}
+					NOT = { is_core = ROOT }
+				}
 			}
 		}
 		
@@ -5499,7 +5517,21 @@ THE_HNG_2_5 = {
 		position = 25
 		required_missions = { THE_HNG_2_3_46 } 
 		provinces_to_highlight = { 
-			owned_by = MLC
+			OR = {
+				owned_by = MLC
+				AND = {
+					OR = {
+						area = jambi_area
+						area = south_sumatra_area
+					}
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					province_id = 596
+					NOT = { is_core = ROOT }
+				}
+			}
+
 		} 
 		
 		trigger = { 
