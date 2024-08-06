@@ -622,8 +622,10 @@ country_event = {
 	
 	option = {
 		name = flavor_THE_HNG_mission_events.17.a
-		every_province = {
-			remove_core = NPL
+		hidden_effect = {
+			every_province = {
+				remove_core = NPL
+			}
 		}
 		nepal_area = {
 			limit = {
