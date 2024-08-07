@@ -269,6 +269,9 @@ THE_ROD_on_war_ended_scripted_effect = {
 		limit = {
 			has_country_modifier = THE_ROD_support_from_rod_modifier
 			NOT = { war_with = DAN }
+			ROOT = {
+				NOT = { is_subject_of = DAN }
+			}
 		}
 		remove_country_modifier = THE_ROD_support_from_rod_modifier
 	}
@@ -276,6 +279,9 @@ THE_ROD_on_war_ended_scripted_effect = {
 		limit = {
 			has_country_modifier = THE_ROD_blockade_from_rod_modifier
 			NOT = { war_with = SWE }
+			SWE = {
+				NOT = { is_subject_of = ROOT }
+			}
 		}
 		remove_country_modifier = THE_ROD_blockade_from_rod_modifier
 	}

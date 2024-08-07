@@ -310,7 +310,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 2400
+		months = 6000
 	}
 
 	option = {
@@ -367,7 +367,7 @@ country_event = {
 		OR = { tag = ROD was_tag = ROD }
 		mission_completed = THE_ROD_2_3
 		mission_completed = THE_ROD_1_12
-		is_year = 1650
+		is_year = 1600
 		custom_trigger_tooltip = {
 			tooltip = THE_ROD_not_complete_event_ttt
 			always = no
@@ -498,6 +498,13 @@ country_event = {
 				}
 			}
 		}
+		DAN = {
+			add_country_modifier = {
+				name = THE_ROD_blockade_from_rod_modifier
+				duration = -1
+				desc = THE_ROD_until_war_end_tt
+			}
+		}
 	}
 
 	option = {
@@ -526,6 +533,126 @@ country_event = {
 		}
 		SWE = {
 			add_treasury = -1
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.8
+	title = THE_ROD_events.8.title
+	desc = THE_ROD_events.8.desc
+	fire_only_once = yes
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		mission_completed = THE_ROD_2_7
+		any_owned_province = {
+			has_terrain = steppe
+		}
+		custom_trigger_tooltip = {
+			tooltip = THE_ROD_not_complete_event_ttt
+			always = no
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 600
+	}
+
+	option = {
+		name = THE_ROD_events.8.a
+		unlock_estate = {
+			estate = estate_cossacks
+		}
+		add_country_modifier = {
+			name = THE_ROD_estate_cossacks_privilege_modifier
+			duration = -1
+		}
+		custom_tooltip = THE_ROD_estate_cossacks_influence_less_than_50_tt
+		hidden_effect = {
+			set_country_flag = THE_ROD_has_estate_cossacks_flag
+		}
+	}
+
+	option = {
+		name = THE_ROD_events.8.b
+		for = {
+			amount = 5
+			effect = "
+				random_owned_province = {
+					limit = {
+						NOT = { has_province_flag = THE_ROD_spawn_rebels_province_flag }
+					}
+					spawn_rebels = {
+						size = 2
+						type = cossack_rebels
+					}
+					hidden_effect = {
+						set_province_flag = THE_ROD_spawn_rebels_province_flag
+					}
+				}
+			"
+		}
+		custom_tooltip = THE_ROD_random_5_livestock_province_tt
+		tooltip = {
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+		hidden_effect = {
+			every_province = {
+				limit = {
+					has_province_flag = THE_ROD_spawn_rebels_province_flag
+				}
+				clr_province_flag = THE_ROD_spawn_rebels_province_flag
+			}
+			for = {
+				amount = 5
+				effect = "
+					random_owned_province = {
+						limit = {
+							NOT = { trade_goods = livestock }
+						}
+						add_base_production = 1
+						add_base_manpower = 1
+					}
+				"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.9
+	title = THE_ROD_events.9.title
+	desc = THE_ROD_events.9.desc
+	fire_only_once = yes
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		has_country_flag = THE_ROD_has_estate_cossacks_flag
+		NOT = {
+			estate_influence = {
+				estate = estate_cossacks
+				influence = 50
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = THE_ROD_not_complete_event_ttt
+			always = no
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	option = {
+		name = THE_ROD_events.9.a
+		hidden_effect = {
+			clr_country_flag = THE_ROD_has_estate_cossacks_flag
+		}
+		remove_country_modifier = THE_ROD_estate_cossacks_privilege_modifier
+		add_country_modifier = {
+			name = THE_ROD_estate_cossacks_system_modifier
+			duration = -1
 		}
 	}
 }

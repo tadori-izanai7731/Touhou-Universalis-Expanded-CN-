@@ -211,6 +211,9 @@
  THE_ROD_if_select_hakurei_branch_tt: "§M‚Yœg	éb£hakurei_religion_icon£ZSKN^ySï¿uÿŒRbå‹ûN¡RS·ƒ—V‚YNHeœg§!: "
  THE_ROD_clear_darkness_manipulation_and_dark_moon_night_tt: "1Y»SNb	g§YÍdµcÑž—fz¦^„výw›R§!ŒT§oTlVYIQ§!0"
  THE_ROD_until_war_end_tt: "cíu0R^txQìrËzb‰NÓumg"
+ THE_ROD_random_5_livestock_province_tt: "»lN–:g§Y5§!*NuµN§Yrrju§!„vwýN:"
+ THE_ROD_estate_cossacks_influence_less_than_50_tt: "ôucNOŽN§Y50%§!„våT(„KQqVÍT›RS	gïSýwùRåT(„KQÛLˆ9ei—0"
+ THE_ROD_not_complete_event_ttt: "¡lZPŒR"
 ###TOOLTIP_END
 
 ###MODIFIER
@@ -302,6 +305,8 @@
  THE_ROD_photosynthesis_modifier: "IQTjO(u"
  THE_ROD_support_from_rod_modifier: "µR—f†˜ßW=eôc"
  THE_ROD_blockade_from_rod_modifier: "µR—f†˜ßWS•"
+ THE_ROD_estate_cossacks_privilege_modifier: "åT(„KQyrCg"
+ THE_ROD_estate_cossacks_system_modifier: "Õ–0tÑ‘lš"
 ###MODIFIER_END
 
 ###MERC
@@ -463,6 +468,15 @@
  THE_ROD_events.7.a: "×rN7h„v[DAN.GetName]ÿ2—s|ZNšR.^.^:WPR0"
  THE_ROD_events.7.b: "6RÁˆ[DAN.GetName]ÏuNm=f2—s|ZýwZP„vg'YªR›R0"
  THE_ROD_events.7.c: "Œÿ[SWE.GetName]ÿÖNìN¢b„vmNNS0"
+
+ THE_ROD_events.8.title: "åT(„KQºN"
+ THE_ROD_events.8.desc: "âlpQåN‰„vœ^X<SšNs^ŸSŒTN'k'YIƒŸSNÿÖNìNegnYBgv^(WIƒŸSN>egrÿåNdkÄuú^†NêñT„v‘šuQè–ÿ	göemNOùRhTôVýV¶R„v¹ƒXQg„^«R c0åT(„KQºN(W'YIƒŸSN	gNw)Y6q„vßu»l0WMOÿTöeÈS4ng5ÏeN7h„vyrCgÿS'YIƒŸS²NÙuÖNìN»ltmNýwÏQ‰hT¹åT(„KQºN„v­ˆpb0"
+ THE_ROD_events.8.a: "0åT(„KQºN‰Q„virŠ‹YT00"
+ THE_ROD_events.8.b: "0NbåNýÙub0Rgr:WÌ‘>egr00"
+
+ THE_ROD_events.9.title: "åT(„KQ‰v°‹ÕlHh"
+ THE_ROD_events.9.desc: "åT(„KQºNùR'YIƒŸS„vê»lv^¡l	gqVÍTbìN„vßu»lSOû|ÿÍSwÐcGSSV0W„vjugrNÑSUSÿôfY„våT(„KQºNmNVËYIN¨RfR`NšRESw„vuImŒT¡rt¹eVÿNèŒR„U„våT(„KQ¡rtÕl³åN9eØSÖNìN0"
+ THE_ROD_events.9.a: "IƒŸSN‰^ó`0"
 ###EVENT_END
 
 ###VARIABLE

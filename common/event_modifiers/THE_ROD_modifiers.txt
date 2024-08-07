@@ -476,6 +476,21 @@ THE_ROD_blockade_from_rod_modifier = {
 	global_trade_power = -0.5
 }
 
+#哥萨克特权
+THE_ROD_estate_cossacks_privilege_modifier = {
+	cossacks_privilege_slots = 1
+	cossacks_influence_modifier = 0.2
+}
+
+#雕琢金马
+THE_ROD_estate_cossacks_system_modifier = {
+	cossacks_privilege_slots = 1
+	cossacks_loyalty_modifier = 0.1
+	can_recruit_cossacks = yes
+	allowed_cossack_fraction = 0.5
+	leader_land_shock = 1
+}
+
 
 ###EXTRA_HAKUREI_DEITY
 THE_ROD_extra_hakurei_modifier_Hakurei_God = {
