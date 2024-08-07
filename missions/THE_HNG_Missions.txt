@@ -5536,7 +5536,9 @@ THE_HNG_2_5 = {
 		
 		trigger = { 
 			NOT = { exists = MLC }
-			owns_core_province = 596
+			596 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			jambi_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
