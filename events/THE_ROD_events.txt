@@ -652,3 +652,32 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = THE_ROD_events.10
+	title = THE_ROD_events.10.title
+	desc = THE_ROD_events.10.desc
+	fire_only_once = yes
+
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		NOT = { current_age = age_of_discovery }
+	}
+
+	mean_time_to_happen = {
+		months = 12000
+	}
+
+	option = {
+		name = THE_ROD_events.10.a
+		add_treasury = -1
+		change_variable = {
+			which = the_rod_darkness_manipulation_var
+			value = 1
+		}
+		if = {
+			limit = { religion = catholic }
+			add_papal_influence = -1
+		}
+	}
+}
