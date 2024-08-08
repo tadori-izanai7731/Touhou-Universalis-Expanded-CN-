@@ -211,8 +211,9 @@ l_english:
  THE_ROD_if_select_hakurei_branch_tt: "§M如果选择£hakurei_religion_icon£博丽神道路线，完成该任务将获得如下效果§!: "
  THE_ROD_clear_darkness_manipulation_and_dark_moon_night_tt: "失去所有§Y操控黑暗程度的能力§!和§o吞噬夜光§!。"
  THE_ROD_until_war_end_tt: "持续到瑞典独立战争结束"
- THE_ROD_random_5_livestock_province_tt: "治下随机§Y5§!个生产§Y牲畜§!的省份:"
+ THE_ROD_random_5_livestock_province_tt: "治下每个生产§Y牲畜§!的省份:"
  THE_ROD_estate_cossacks_influence_less_than_50_tt: "维持低于§Y50%§!的哥萨克影响力将有可能对哥萨克进行改革。"
+ THE_ROD_cossack_rebel_tt: "§R哥萨克将发动叛乱§!。"
  THE_ROD_not_complete_event_ttt: "没做完"
 ###TOOLTIP_END
 
@@ -466,7 +467,7 @@ l_english:
  THE_ROD_events.7.title: "[SWE.GetName]独立战争"
  THE_ROD_events.7.desc: "[DAN.GetName]通过卡尔马联盟对[NOR.GetName]和[SWE.GetName]进行联合统治，与历史上多次合作的[NOR.GetName]不同，[SWE.GetName]贵族对于[DAN.GetName]国王的统治十分不满，特别是在[DAN.GetName]与汉萨同盟的战争中公然发动叛乱。如今[DAN.GetName]实力不及以往而[SWE.GetName]对独立的热情高涨，也许我们可以帮助[SWE.GetName]的同时削弱[DAN.GetName]对波罗的海的控制。"
  THE_ROD_events.7.a: "狗一样的[DAN.GetName]，露米娅一定帮帮场子。"
- THE_ROD_events.7.b: "制裁[DAN.GetName]经济是露米娅能做的最大努力。"
+ THE_ROD_events.7.b: "制裁[DAN.GetName]经济是露米娅能提供的最大支持。"
  THE_ROD_events.7.c: "谁？[SWE.GetName]？他们抢的也不少。"
 
  THE_ROD_events.8.title: "哥萨克人"

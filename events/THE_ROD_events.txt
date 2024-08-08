@@ -567,7 +567,7 @@ country_event = {
 			name = THE_ROD_estate_cossacks_privilege_modifier
 			duration = -1
 		}
-		custom_tooltip = THE_ROD_estate_cossacks_influence_less_than_50_tt
+		# custom_tooltip = THE_ROD_estate_cossacks_influence_less_than_50_tt
 		hidden_effect = {
 			set_country_flag = THE_ROD_has_estate_cossacks_flag
 		}
@@ -575,6 +575,7 @@ country_event = {
 
 	option = {
 		name = THE_ROD_events.8.b
+		custom_tooltip = THE_ROD_cossack_rebel_tt
 		for = {
 			amount = 5
 			effect = "
@@ -592,7 +593,7 @@ country_event = {
 				}
 			"
 		}
-		custom_tooltip = THE_ROD_random_5_livestock_province_tt
+		custom_tooltip = THE_ROD_all_livestock_province_tt
 		tooltip = {
 			add_base_production = 1
 			add_base_manpower = 1
@@ -604,17 +605,12 @@ country_event = {
 				}
 				clr_province_flag = THE_ROD_spawn_rebels_province_flag
 			}
-			for = {
-				amount = 5
-				effect = "
-					random_owned_province = {
-						limit = {
-							NOT = { trade_goods = livestock }
-						}
-						add_base_production = 1
-						add_base_manpower = 1
-					}
-				"
+			every_owned_province = {
+				limit = {
+					trade_goods = livestock
+				}
+				add_base_production = 1
+				add_base_manpower = 1
 			}
 		}
 	}
