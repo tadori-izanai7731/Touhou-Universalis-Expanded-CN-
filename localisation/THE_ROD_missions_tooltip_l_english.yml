@@ -214,6 +214,8 @@
  THE_ROD_random_5_livestock_province_tt: "»lNÏk*NuµN§Yrrju§!„vwýN:"
  THE_ROD_estate_cossacks_influence_less_than_50_tt: "ôucNOŽN§Y50%§!„våT(„KQqVÍT›RS	gïSýwùRåT(„KQÛLˆ9ei—0"
  THE_ROD_cossack_rebel_tt: "§RåT(„KQSÑS¨RÛSqN§!0"
+ THE_ROD_rumia_add_2_shock_tt: "§Y2—s|Z§!„v£icon_shock£²QûQÐcGS§G2§!ÿ…ÇNP–lS:N§G100§!£mil£›Q‹N¹ppe0"
+ THE_ROD_4_14_complete_by_event_ttt: "òTÇ0§Y™li`—¯eyrF–›Q9ei—§!0ŒRbå‹ûN¡R0"
  THE_ROD_not_complete_event_ttt: "¡lZPŒR"
 ###TOOLTIP_END
 
@@ -308,6 +310,8 @@
  THE_ROD_blockade_from_rod_modifier: "µR—f†˜ßWS•"
  THE_ROD_estate_cossacks_privilege_modifier: "åT(„KQyrCg"
  THE_ROD_estate_cossacks_system_modifier: "Õ–0tÑ‘lš"
+ THE_ROD_military_associations_province_modifier: "›Q‹NOSO"
+ THE_ROD_scharnhorst_tactic: "™li`—¯eyrb=g"
 ###MODIFIER_END
 
 ###MERC
@@ -482,6 +486,10 @@
  THE_ROD_events.10.title: "åeŽ†KN4–"
  THE_ROD_events.10.desc: "$YEAR$t^ÑSu„våehQß˜Vw†N2—s|Z„vg'YtQ±ÿåeIQ(WíwíwàQRŸ”…Q«ˆŒRhQnK…ÿ2—s|ZØåN:N±MO¢uT›†™„v8TNˆ<›INºNQ!kÑS¨R†N0¢uþ–VØS0ÿÈS(WàQRŸ”…Qb`Y†NŽVåe„vfšZÿÙ©‹2—s|Zíw‚f—V`w†N–Y*`›RÏ‘„vegnÿNÇˆVëV1S«ˆvQÖN‹N2cúQ‹ˆ†N0dköe„v'k2m'YF–òTÏu^Ûl¥c×S†NåeÃVô‹„v„vÂ‰¹pÿ[Root.GetName]„v«R÷^Ye^P©RÙ!k:gOT2—s|Z–Ê‘†NåeÃVô‹„vtº‹åNÊSåT‹v<S0,r7Œ0VnfÒRŒTKO)Reu„vEe‹N0"
  THE_ROD_events.10.a: "0ŸSegZSKN„vëTsY»SÇÙHNÜ„vg®NNTÿ0"
+
+ THE_ROD_events.11.title: "™li`—¯eyrF–›Q9ei—"
+ THE_ROD_events.11.desc: "™li`—¯eyruŽN·Va×VIlú‹Z„vZS·VYt„vN*NœQl¶R­^ÿ(W[50.GetName]›Q‹NfR!hûNLwöebËz†N0›Q‹NOSO00dköe[Root.GetName]òTÏuŒRb†NhQb—„vF–›Q9ei—ÿøvÔk'k2m±›NÍN*g9ei—„vçeöeãNF–›Qåb	ggØš„v­‹Ãu4ls^ÿÏuÇŒRhQ›Q‹N­‹Ãu„v›Q–ŽVŽVýw(WbyV-NSbúQÊ`ºN„vbmcÔk0FO™li`—¯eyrÍNw0R†NvQ-N„v:w–ÿ'YÄ‰!jckb—jOb„vO¿R¾–åN(WSÄ‰!jmGb-NÑS%c³QšR'`jO(uÿF–›Q„v:g¨RjObýw›R=fb¿u¨cÛ„vÍ‘‰àV.tÿN—g0qS0WIrYBg0WbVôf:VŒëXuQ„vÎ‘bzûQýw›RÿØ8T6e†NÕlpQ‰ŒTeY¯eüfF–›QùRŽNIeÎWjOb„vtº‹Žb=gÿ:N[Root.GetName]„vÛNekF–›Q9ei—ZPúQÍ‘‰!.s0"
+ THE_ROD_events.11.a: "0bmN‰fR0›Q˜RKbŒQ0Tÿ0"
 ###EVENT_END
 
 ###VARIABLE

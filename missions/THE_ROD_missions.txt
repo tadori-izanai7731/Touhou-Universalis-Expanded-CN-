@@ -3065,13 +3065,22 @@ THE_ROD_branch_4 = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			num_of_regiments_at_full_drill = 50
-			OR = {
-				mil_tech = 22
-				num_of_completed_idea_groups_mil = { amount = 2 } 
+			if = {
+				limit = { has_country_flag = THE_ROD_4_14_complete_flag }
+				custom_trigger_tooltip = {
+					tooltip = THE_ROD_4_14_complete_by_event_ttt
+					always = yes
+				}
 			}
-			army_professionalism = 0.5
-			army_tradition = 80
+			else = {
+				num_of_regiments_at_full_drill = 50
+				OR = {
+					mil_tech = 22
+					num_of_completed_idea_groups_mil = { amount = 2 } 
+				}
+				army_professionalism = 0.5
+				army_tradition = 80
+			}
 		}
 
 		effect = {
@@ -3114,6 +3123,12 @@ THE_ROD_branch_4 = {
 				custom_tooltip = THE_ROD_dark_moon_night_4_14_1_tt
 				custom_tooltip = THE_ROD_dark_moon_night_stage4_extra_tt
 				custom_tooltip = THE_ROD_dark_moon_night_4_14_2_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = { has_country_flag = THE_ROD_4_14_complete_flag }
+					clr_country_flag = THE_ROD_4_14_complete_flag
+				}
 			}
 		}
 	}

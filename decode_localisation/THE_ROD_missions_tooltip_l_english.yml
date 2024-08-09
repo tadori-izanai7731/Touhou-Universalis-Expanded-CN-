@@ -214,6 +214,8 @@ l_english:
  THE_ROD_random_5_livestock_province_tt: "治下每个生产§Y牲畜§!的省份:"
  THE_ROD_estate_cossacks_influence_less_than_50_tt: "维持低于§Y50%§!的哥萨克影响力将有可能对哥萨克进行改革。"
  THE_ROD_cossack_rebel_tt: "§R哥萨克将发动叛乱§!。"
+ THE_ROD_rumia_add_2_shock_tt: "§Y露米娅§!的£icon_shock£冲击提升§G2§!，超过上限转化为§G100§!£mil£军事点数。"
+ THE_ROD_4_14_complete_by_event_ttt: "已通过「§Y沙恩霍斯特陆军改革§!」完成该任务。"
  THE_ROD_not_complete_event_ttt: "没做完"
 ###TOOLTIP_END
 
@@ -308,6 +310,8 @@ l_english:
  THE_ROD_blockade_from_rod_modifier: "宵暗领域封锁"
  THE_ROD_estate_cossacks_privilege_modifier: "哥萨克特权"
  THE_ROD_estate_cossacks_system_modifier: "雕琢金马"
+ THE_ROD_military_associations_province_modifier: "军事协会"
+ THE_ROD_scharnhorst_tactic: "沙恩霍斯特战术"
 ###MODIFIER_END
 
 ###MERC
@@ -482,6 +486,10 @@ l_english:
  THE_ROD_events.10.title: "日蚀之阴"
  THE_ROD_events.10.desc: "$YEAR$年发生的日全食引起了露米娅的极大兴趣，日光在短短几分钟内被完全遮蔽，露米娅还以为那位红魔馆的吸血鬼主人再次发动了「红雾异变」；又在几分钟内恢复了往日的明媚，这让露米娅短暂得思考了妖怪力量的来源，不过很快就被其他事挤出脑袋了。此时的欧洲大陆已经广泛接受了日心说的的观点，[Root.GetName]的宫廷教师借助这次机会向露米娅阐释了日心说的理论以及哥白尼、第谷、开普勒和伽利略的故事。"
  THE_ROD_events.10.a: "「原来博丽的巫女去过这么远的月亮上吗！」"
+
+ THE_ROD_events.11.title: "沙恩霍斯特陆军改革"
+ THE_ROD_events.11.desc: "沙恩霍斯特生于德意志汉诺威的博德瑙的一个农民家庭，在[50.GetName]军事学校任职时成立了「军事协会」。此时[Root.GetName]已经完成了全面的陆军改革，相比欧洲那些仍未改革的旧时代陆军拥有极高的训练水平，经过完全军事训练的军队往往能在战役中打出惊人的战损比。但沙恩霍斯特仍看到了其中的缺陷，大规模正面作战的优势难以在小规模遭遇战中发挥决定性作用，陆军的机动作战能力是战线推进的重要因素，丛林、山地等复杂地形更强调士兵的野战突击能力，还吸收了法兰西和奥斯曼陆军对于攻城作战的理论技术，为[Root.GetName]的进一步陆军改革做出重要贡献。"
+ THE_ROD_events.11.a: "「我也要学『军官手册』吗？」"
 ###EVENT_END
 
 ###VARIABLE

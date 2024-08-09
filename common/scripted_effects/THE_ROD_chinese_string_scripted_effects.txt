@@ -44,3 +44,35 @@ THE_ROD_on_battle_won_unit_scripted_effect = {
 		}
 	}
 }
+
+THE_ROD_define_advisor_jan_ingenhousz_scripted_effect = {
+	define_advisor = {
+		name = "Žr ñ‚<hjŒ¯e"
+		type = natural_scientist
+		culture = dutch
+		religion = catholic
+		skill = 3
+		cost_multiplier = 0.25
+	}
+}
+
+THE_ROD_define_advisor_clausewitz_scripted_effect = {
+	define_advisor = {
+		name = "aSS ¯Q KQ³R^Xôu(ƒ"
+		type = commandant
+		culture = prussian
+		religion = ROOT
+		skill = 3
+		cost_multiplier = 0
+	}
+}
+
+THE_ROD_define_blucher_general_scripted_effect = {
+	define_general = {
+		name = "<h^ÈT·V ¯Q ^TGkS"
+		fire = 6
+		shock = 6
+		manuever = 6
+		siege = 6
+	}
+}

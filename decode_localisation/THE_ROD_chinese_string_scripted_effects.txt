@@ -55,3 +55,24 @@ THE_ROD_define_advisor_jan_ingenhousz_scripted_effect = {
 		cost_multiplier = 0.25
 	}
 }
+
+THE_ROD_define_advisor_clausewitz_scripted_effect = {
+	define_advisor = {
+		name = "卡尔 冯 克劳塞维茨"
+		type = commandant
+		culture = prussian
+		religion = ROOT
+		skill = 3
+		cost_multiplier = 0
+	}
+}
+
+THE_ROD_define_blucher_general_scripted_effect = {
+	define_general = {
+		name = "格布哈德 冯 布吕歇尔"
+		fire = 6
+		shock = 6
+		manuever = 6
+		siege = 6
+	}
+}

@@ -491,6 +491,23 @@ THE_ROD_estate_cossacks_system_modifier = {
 	leader_land_shock = 1
 }
 
+#军事协会
+THE_ROD_military_associations_province_modifier = {
+	mil_tech_cost_modifier = -0.1
+	mil_advisor_cost = -0.25
+	fort_level = 1
+	regiment_recruit_speed = -1
+}
+
+#沙恩霍斯特战术
+THE_ROD_scharnhorst_tactic = {
+	movement_speed = 0.2
+	siege_ability = 0.1
+	backrow_artillery_damage = 0.1
+	artillery_level_modifier = 0.25
+	enable_forced_march = yes
+	force_march_free = yes
+}
 
 ###EXTRA_HAKUREI_DEITY
 THE_ROD_extra_hakurei_modifier_Hakurei_God = {
