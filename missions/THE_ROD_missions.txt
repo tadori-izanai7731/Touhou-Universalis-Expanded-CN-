@@ -2352,7 +2352,7 @@ THE_ROD_branch_3 = {
 					region = south_german_region
 				}
 			}
-			great_power_rank = 1
+			NOT = { great_power_rank = 2 }
 			OR = {
 				absolutism = 100
 				all_owned_province = {
