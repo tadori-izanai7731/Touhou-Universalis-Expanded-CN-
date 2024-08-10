@@ -769,3 +769,33 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = THE_ROD_events.12
+	title = THE_ROD_events.12.title
+	desc = THE_ROD_events.12.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		THE_ROD_has_rumia_general = yes
+		custom_trigger_tooltip = {
+			tooltip = THE_ROD_not_complete_event_ttt
+			always = no
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1200
+	}
+
+	option = {
+		name = THE_ROD_events.12.a
+		add_manpower = -0.001
+		add_country_modifier = {
+			name = THE_ROD_new_type_danmaku_modifier
+			duration = -1
+		}
+	}
+}

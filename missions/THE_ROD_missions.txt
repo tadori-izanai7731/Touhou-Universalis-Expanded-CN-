@@ -2379,7 +2379,7 @@ THE_ROD_branch_3 = {
 				name = "THE_ROD_eagle_up_modifier"
 				duration = -1
 			}
-			restore_country_name = "yes"
+			restore_country_name = yes
 			custom_tooltip = THE_ROD_unlock_rod_ger_decision_tt
 			hidden_effect = {
 				set_country_flag = THE_ROD_unlock_rod_ger_decision_flag
@@ -3465,7 +3465,7 @@ THE_ROD_branch_4 = {
 			custom_tooltip = empty_line_tt
 			custom_tooltip = THE_ROD_remove_government_mechanic_trigger_tt
 			hidden_effect = {
-				restore_country_name = "yes"
+				restore_country_name = yes
 				set_country_flag = THE_ROD_remove_government_mechanic_trigger_flag
 				set_country_flag = THE_ROD_disable_rod_ger_decision_flag
 			}

@@ -312,6 +312,7 @@ l_english:
  THE_ROD_estate_cossacks_system_modifier: "雕琢金马"
  THE_ROD_military_associations_province_modifier: "军事协会"
  THE_ROD_scharnhorst_tactic: "沙恩霍斯特战术"
+ THE_ROD_new_type_danmaku_modifier: "火药推进式弹幕"
 ###MODIFIER_END
 
 ###MERC
@@ -490,6 +491,10 @@ l_english:
  THE_ROD_events.11.title: "沙恩霍斯特陆军改革"
  THE_ROD_events.11.desc: "沙恩霍斯特生于德意志汉诺威的博德瑙的一个农民家庭，在[50.GetName]军事学校任职时成立了「军事协会」。此时[Root.GetName]已经完成了全面的陆军改革，相比欧洲那些仍未改革的旧时代陆军拥有极高的训练水平，经过完全军事训练的军队往往能在战役中打出惊人的战损比。但沙恩霍斯特仍看到了其中的缺陷，大规模正面作战的优势难以在小规模遭遇战中发挥决定性作用，陆军的机动作战能力是战线推进的重要因素，丛林、山地等复杂地形更强调士兵的野战突击能力，还吸收了法兰西和奥斯曼陆军对于攻城作战的理论技术，为[Root.GetName]的进一步陆军改革做出重要贡献。"
  THE_ROD_events.11.a: "「我也要学『军官手册』吗？」"
+
+ THE_ROD_events.12.title: "火药与弹幕的结合"
+ THE_ROD_events.12.desc: "「弹幕对决」是幻想乡解决问题的常用方式，所有人使用的弹幕也形态各异，有使用高能八卦炉的魔法使，有掷出巨大阴阳玉的巫女。露米娅在欧洲的战场见到各式火药武器后也被它们的速度和杀伤所震撼，决定使用子弹和炮弹作为自己的新弹幕，陪露米娅测试的士兵见状纷纷告退。"
+ THE_ROD_events.12.a: "「别跑！」"
 ###EVENT_END
 
 ###VARIABLE

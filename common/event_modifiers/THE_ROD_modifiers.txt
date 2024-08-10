@@ -509,6 +509,11 @@ THE_ROD_scharnhorst_tactic = {
 	force_march_free = yes
 }
 
+#火药推进式弹幕
+THE_ROD_new_type_danmaku_modifier = {
+	danmaku_power_constant = 300
+}
+
 ###EXTRA_HAKUREI_DEITY
 THE_ROD_extra_hakurei_modifier_Hakurei_God = {
 	defensiveness = 0.1
