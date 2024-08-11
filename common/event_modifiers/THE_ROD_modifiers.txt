@@ -518,7 +518,7 @@ THE_ROD_new_type_danmaku_modifier = {
 THE_ROD_punctured_ruler_modifier = {
 	monarch_lifespan = -1
 	promote_culture_cost = -0.25
-	prestige_decay = -0.02
+	reverse_relation_with_heathen_religion = 25
 }
 
 ###EXTRA_HAKUREI_DEITY

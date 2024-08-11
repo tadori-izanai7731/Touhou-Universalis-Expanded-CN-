@@ -813,6 +813,10 @@ country_event = {
 			type = all
 			country_or_non_sovereign_subject_holds = ROOT
 		}
+		any_owned_province = {
+			area = wallachia_area
+			has_fort_building_trigger = yes
+		}
 		custom_trigger_tooltip = {
 			tooltip = THE_ROD_not_complete_event_ttt
 			always = no
@@ -823,9 +827,19 @@ country_event = {
 		months = 360
 	}
 
+	immediate = {
+		random_owned_province = {
+			limit = {
+				area = wallachia_area
+				has_fort_building_trigger = yes
+			}
+			save_event_target_as = THE_ROD_wallachia_fort_target
+		}
+	}
+
 	option = {
 		name = THE_ROD_events.13.a
-		4531 = {
+		event_target:THE_ROD_wallachia_fort_target = {
 			add_or_upgrade_fort_building = yes
 		}
 		add_legitimacy = -1
@@ -844,10 +858,6 @@ country_event = {
 
 	trigger = {
 		OR = { tag = ROD was_tag = ROD }
-		wallachia_area = {
-			type = all
-			country_or_non_sovereign_subject_holds = ROOT
-		}
 		has_country_flag = THE_ROD_events_13_flag
 		custom_trigger_tooltip = {
 			tooltip = THE_ROD_not_complete_event_ttt
@@ -865,10 +875,15 @@ country_event = {
 
 	option = {
 		name = THE_ROD_events.14.a
+		add_prestige = 10
 		add_legitimacy = -100
 		add_ruler_modifier = {
 			name = THE_ROD_punctured_ruler_modifier
 			duration = -1
 		}
+	}
+
+	option = {
+		name = THE_ROD_events.14.b
 	}
 }
