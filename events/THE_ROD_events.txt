@@ -799,3 +799,76 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = THE_ROD_events.13
+	title = THE_ROD_events.13.title
+	desc = THE_ROD_events.13.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		wallachia_area = {
+			type = all
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+		custom_trigger_tooltip = {
+			tooltip = THE_ROD_not_complete_event_ttt
+			always = no
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 360
+	}
+
+	option = {
+		name = THE_ROD_events.13.a
+		4531 = {
+			add_or_upgrade_fort_building = yes
+		}
+		add_legitimacy = -1
+		hidden_effect = {
+			set_country_flag = THE_ROD_events_13_flag
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.14
+	title = THE_ROD_events.14.title
+	desc = THE_ROD_events.14.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		wallachia_area = {
+			type = all
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+		has_country_flag = THE_ROD_events_13_flag
+		custom_trigger_tooltip = {
+			tooltip = THE_ROD_not_complete_event_ttt
+			always = no
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 600
+	}
+
+	immediate = {
+		clr_country_flag = THE_ROD_events_13_flag
+	}
+
+	option = {
+		name = THE_ROD_events.14.a
+		add_legitimacy = -100
+		add_ruler_modifier = {
+			name = THE_ROD_punctured_ruler_modifier
+			duration = -1
+		}
+	}
+}

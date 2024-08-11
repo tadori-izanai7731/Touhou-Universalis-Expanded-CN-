@@ -514,6 +514,13 @@ THE_ROD_new_type_danmaku_modifier = {
 	danmaku_power_constant = 300
 }
 
+#被穿刺者
+THE_ROD_punctured_ruler_modifier = {
+	monarch_lifespan = -1
+	promote_culture_cost = -0.25
+	prestige_decay = -0.02
+}
+
 ###EXTRA_HAKUREI_DEITY
 THE_ROD_extra_hakurei_modifier_Hakurei_God = {
 	defensiveness = 0.1

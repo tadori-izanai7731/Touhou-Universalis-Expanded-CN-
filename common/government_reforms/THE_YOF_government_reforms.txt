@@ -45,3 +45,167 @@ THE_yokari_forest_monarchy = {
 		}
 	}
 }
+
+THE_YOF_public_recognition_reform = {
+	# icon = 
+	potential = {
+		religion = th_kagiyama
+	}
+	trigger = {
+		religion = th_kagiyama
+	}
+	allow_normal_conversion = yes
+	modifiers = {
+		church_loyalty_modifier = 0.15
+		church_privilege_slots = 1
+		global_missionary_strength = 0.01
+	}
+}
+
+THE_YOF_doom_condensation_reform = {
+	# icon = 
+	potential = {
+		religion = th_kagiyama
+	}
+	trigger = {
+		religion = th_kagiyama
+	}
+	allow_normal_conversion = yes
+	custom_attributes = {
+		THE_YOF_improve_develpopment_extra_bonus_15 = yes
+	}
+	modifiers = {
+		build_time = -0.1
+	}
+}
+
+THE_YOF_strengthen_kagiyama_influence_reform = {
+	# icon = 
+	potential = {
+		OR = {
+			tag = YOF
+			was_tag = YOF
+		}
+	}
+	trigger = {
+		OR = {
+			tag = YOF
+			was_tag = YOF
+		}
+	}
+	allow_normal_conversion = yes
+	custom_attributes = {
+		enables_divine_idea_group = yes
+	}
+	modifiers = {
+		diplomats = 1
+		war_exhaustion = -0.1
+		reform_progress_growth = 0.1
+	}
+}
+
+
+THE_YOF_comprehensive_religion_reform = {
+	# icon = 
+	potential = {
+		religion = th_kagiyama
+	}
+	trigger = {
+		religion = th_kagiyama
+	}
+	allow_normal_conversion = yes
+	modifiers = {
+		tolerance_heathen = 2
+		reform_progress_growth = 0.1
+		religious_unity = 0.15
+	}
+}
+
+THE_YOF_doom_whirlpool_reform = {
+	# icon = 
+	potential = {
+		religion = th_kagiyama
+	}
+	trigger = {
+		religion = th_kagiyama
+	}
+	modifiers = {
+		ship_trade_power_modifier = 0.25
+		global_trade_goods_size_modifier = 0.15
+	}
+}
+
+THE_YOF_all_doom_circulation_reform = {
+	# icon = 
+	potential = {
+		religion = th_kagiyama
+	}
+	trigger = {
+		religion = th_kagiyama
+	}
+	modifiers = {
+		production_efficiency = 0.05
+		trade_steering = 0.15
+	}
+}
+
+### Republic reform 
+
+### Republic reform 
+
+THE_YOF_education_reform = {
+	# icon = 
+	potential = {
+		religion = th_kagiyama
+	}
+	trigger = {
+		religion = th_kagiyama
+	}
+	modifiers = {
+		reform_progress_growth = 0.15
+	}
+}
+
+THE_YOF_devotion_reform = {
+	# icon = 
+	potential = {
+		religion = th_kagiyama
+	}
+	trigger = {
+		religion = th_kagiyama
+	}
+	modifiers = {
+		allow_free_estate_privilege_revocation = yes
+		missionaries = 1
+		devotion = 0.25
+	}
+}
+
+THE_YOF_suffering_doom_reform = {
+	# icon = 
+	potential = {
+		religion = th_kagiyama
+	}
+	trigger = {
+		religion = th_kagiyama
+	}
+	modifiers = {
+		hostile_attrition = 1
+		morale_damage_received = -0.1
+	}
+}
+
+THE_YOF_kagiyama_crown_reform = {
+	# icon = 
+	potential = {
+		religion = th_kagiyama
+	}
+	trigger = {
+		religion = th_kagiyama
+	}
+	modifiers = {
+		shock_damage_received = -0.05
+		fire_damage_received = -0.1
+		global_prosperity_growth = 0.5
+	}
+}

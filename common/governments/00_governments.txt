@@ -247,6 +247,7 @@ monarchy = {
 				TH_junko_persuer_of_grudge_reform
 				#THE
 				THE_ROD_nightingale_reform
+				THE_YOF_public_recognition_reform
 			}
 		}
 		bureaucracy = {
@@ -288,6 +289,7 @@ monarchy = {
 				#THE
 				THE_ROD_netherland_governor_reform
 				THE_HNG_searching_for_dragon_points
+				THE_YOF_doom_condensation_reform
 			}
 		}
 		state_and_religion = {
@@ -354,6 +356,8 @@ monarchy = {
 				#THE
 				THE_ROD_spread_hakurei_message_reform
 				THE_ROD_darknedd_diocese_reform
+				THE_YOF_strengthen_kagiyama_influence_reform
+				THE_YOF_comprehensive_religion_reform
 			}
 		}
 		military_doctrines = {
@@ -465,6 +469,8 @@ monarchy = {
 				TH_might_of_the_undead
 				TH_devil_realm_reform
 				TH_magician_coven_reform
+				#THE
+				THE_YOF_doom_whirlpool_reform
 			}
 		}
 		growth_of_administration = {
@@ -525,6 +531,7 @@ monarchy = {
 				#THE
 				THE_LIL_colonial_empire_reform
 				THE_ROD_fall_into_world_port_reform
+				THE_YOF_all_doom_circulation_reform
 			}
 		}
 		legitimation_of_power = {
@@ -1033,6 +1040,7 @@ republic = {
 				#THE
 				THE_LIL_spring_territory_jurisdiction_reform
 				THE_HMC_wealth_password_reform
+				THE_YOF_public_recognition_reform
 			}
 		}
 		frequent_elections_vs_consolidation_of_power = {
@@ -1118,6 +1126,7 @@ republic = {
 				state_madrasas_reform
 				#THE
 				THE_HMC_history_reform
+				THE_YOF_comprehensive_religion_reform
 			}
 		}
 		military_doctrines = {
@@ -1264,6 +1273,7 @@ republic = {
 				#THE
 				THE_LIL_colonial_empire_reform
 				THE_HMC_method_reform
+				THE_YOF_all_doom_circulation_reform
 			}
 		}
 		consolidation_of_power_category = {
@@ -1310,6 +1320,8 @@ republic = {
 				TH_republic_royal_democracy
 				TH_republic_embrace_human_dictatorship
 				TH_expansion_into_the_outworld_reform
+				#THE
+				THE_YOF_doom_whirlpool_reform
 			}
 		}
 		office_selection = {
@@ -1323,6 +1335,7 @@ republic = {
 				TH_republic_fairy_office_service
 				#THE
 				THE_HMC_insight_reform
+				THE_YOF_doom_condensation_reform
 			}
 		}
 		question_of_dictatorship = {
@@ -1739,6 +1752,8 @@ theocracy = {
 				commercial_mission_reform
 				mission_to_protect_reform
 				consulate_of_the_sea
+				#THE
+				THE_YOF_public_recognition_reform
 			}
 		}
 		education_of_the_state = {
@@ -1752,6 +1767,8 @@ theocracy = {
 				diwan_al_khass_reform
 				state_madrasas_reform
 				integrated_ottoman_officials
+				#THE
+				THE_YOF_education_reform
 			}
 		}
 		religoius_doctrine = {
@@ -1808,6 +1825,8 @@ theocracy = {
 				anglican_state_church_reform
 				#1.36
 				legacy_of_the_safavid_reform
+				#THE
+				THE_YOF_devotion_reform
 			}
 		}
 		military_doctrines = {
@@ -1941,8 +1960,9 @@ theocracy = {
 				merchant_representation_reform
 				modern_economics_reform
 				chinampa_farms_reform
-				#THE_LIL
+				#THE
 				THE_LIL_colonial_empire_reform
+				THE_YOF_all_doom_circulation_reform
 			}
 		}
 		divine_cause = {
@@ -1954,6 +1974,8 @@ theocracy = {
 				pursuit_of_knowledge_reform
 				#1.37
 				seven_provinces_reform
+				#THE
+				THE_YOF_suffering_doom_reform
 			}
 		}
 		separation_of_power_theocracy = {
@@ -1980,6 +2002,8 @@ theocracy = {
 				belief_and_unity_reform
 				#TOUHOU
 				TH_imperial_gensokyo_reform
+				#THE
+				THE_YOF_kagiyama_crown_reform
 			}
 		}
 		culture_within_the_state = {

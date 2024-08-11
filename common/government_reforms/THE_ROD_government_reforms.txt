@@ -47,9 +47,14 @@ THE_ROD_apparitions_stalk_the_night_monarchy = {
 THE_ROD_nightingale_reform = {
 	icon = "THE_ROD_nightingale"
 	potential = {
-		has_country_flag = THE_ROD_unlock_nightingale_reform_flag
+		OR = {
+			has_reform = THE_ROD_nightingale_reform
+			have_had_reform = THE_ROD_nightingale_reform
+			has_country_flag = THE_ROD_unlock_nightingale_reform_flag
+		}
 	}
 	trigger = { }
+	allow_normal_conversion = yes
 	modifiers = {
 		diplomats = 1
 		diplomatic_upkeep = 2
@@ -65,11 +70,16 @@ THE_ROD_nightingale_reform = {
 THE_ROD_spread_hakurei_message_reform = {
 	icon = "connection_to_hakurei_reform"
 	potential = {
-		has_country_flag = THE_ROD_unlock_spread_hakurei_message_reform_flag
+		OR = {
+			has_reform = THE_ROD_spread_hakurei_message_reform
+			have_had_reform = THE_ROD_spread_hakurei_message_reform
+			has_country_flag = THE_ROD_unlock_spread_hakurei_message_reform_flag
+		}
 	}
 	trigger = {
 		religion = th_hakureishinto
 	}
+	allow_normal_conversion = yes
 	modifiers = {
 		reverse_relation_with_same_religion = 25
 		# reverse_relation_with_heathen_religion = -25
@@ -88,11 +98,16 @@ THE_ROD_spread_hakurei_message_reform = {
 THE_ROD_darknedd_diocese_reform = {
 	icon = "monastic_elections_reform"
 	potential = {
-		has_country_flag = THE_ROD_unlock_darknedd_diocese_reform_flag
+		OR = {
+			has_reform = THE_ROD_darknedd_diocese_reform
+			have_had_reform = THE_ROD_darknedd_diocese_reform
+			has_country_flag = THE_ROD_unlock_darknedd_diocese_reform_flag
+		}
 	}
 	trigger = {
 		religion = catholic
 	}
+	allow_normal_conversion = yes
 	modifiers = {
 		church_loyalty_modifier = 0.1
 		tolerance_own = 2
@@ -108,9 +123,14 @@ THE_ROD_darknedd_diocese_reform = {
 THE_ROD_fall_into_world_port_reform = {
 	icon = "pirate_ship"
 	potential = {
-		has_country_flag = THE_ROD_unlock_fall_into_world_port_reform_flag
+		OR = {
+			has_reform = THE_ROD_fall_into_world_port_reform
+			have_had_reform = THE_ROD_fall_into_world_port_reform
+			has_country_flag = THE_ROD_unlock_fall_into_world_port_reform_flag
+		}
 	}
 	trigger = { }
+	allow_normal_conversion = yes
 	modifiers = {
 		merchants = 2
 		placed_merchant_power_modifier = 0.5
@@ -130,10 +150,16 @@ THE_ROD_pax_youkai_in_german_reform = {
 	icon = "THE_ROD_german"
 
 	potential = {
-		has_country_flag = THE_ROD_unlock_pax_youkai_in_german_reform_flag
+		OR = {
+			has_reform = THE_ROD_pax_youkai_in_german_reform
+			have_had_reform = THE_ROD_pax_youkai_in_german_reform
+			has_country_flag = THE_ROD_unlock_pax_youkai_in_german_reform_flag
+		}
 	}
 
 	trigger = { }
+
+	allow_normal_conversion = yes
 
 	modifiers = {
 		legitimacy = 1
@@ -157,8 +183,15 @@ THE_ROD_netherland_governor_reform = {
 	icon = "seven_provinces_reform"
 
 	potential = {
-		has_country_flag = THE_ROD_unlock_netherland_governor_reform_flag
+		OR = {
+			has_reform = THE_ROD_netherland_governor_reform
+			have_had_reform = THE_ROD_netherland_governor_reform
+			has_country_flag = THE_ROD_unlock_netherland_governor_reform_flag
+		}
 	}
+
+	trigger = { }
+	allow_normal_conversion = yes
 
 	modifiers = {
 		global_unrest = -2

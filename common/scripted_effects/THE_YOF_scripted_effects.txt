@@ -100,3 +100,33 @@ THE_YOF_clare_all_highlight_province_flag = {
 	clr_country_flag = THE_YOF_highlight_province_modifier_2_flag
 	clr_country_flag = THE_YOF_highlight_province_modifier_1_or_2_flag
 }
+
+THE_YOF_on_adm_development_scripted_effect = {
+	if = {
+		limit = { has_government_attribute = THE_YOF_improve_develpopment_extra_bonus_15 }
+		random = {
+			chance = 15
+			add_base_tax = 1
+		}
+	}
+}
+
+THE_YOF_on_dip_development_scripted_effect = {
+	if = {
+		limit = { has_government_attribute = THE_YOF_improve_develpopment_extra_bonus_15 }
+		random = {
+			chance = 15
+			add_base_production = 1
+		}
+	}
+}
+
+THE_YOF_on_mil_development_scripted_effect = {
+	if = {
+		limit = { has_government_attribute = THE_YOF_improve_develpopment_extra_bonus_15 }
+		random = {
+			chance = 15
+			add_base_manpower = 1
+		}
+	}
+}
