@@ -3974,6 +3974,8 @@ country_event = {
 		}
 		remove_country_modifier = THE_HNG_disasters_reform1_completed1_to_confusion
 		THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 4 type = pretender_rebels size = 4 }
+		clr_country_flag = the_hng_had_jia_su_gai_ge_four_year
+		set_country_flag = the_hng_had_jia_su_gai_ge_four_year
 	}
 	option = {
 		name = flavor_THE_HNG_events.92.b
@@ -3993,6 +3995,8 @@ country_event = {
 			loyalty = -10
 		}
 		remove_country_modifier = THE_HNG_disasters3_reform_to_confusion
+		clr_country_flag = the_hng_had_jia_su_gai_ge_four_year
+		set_country_flag = the_hng_had_jia_su_gai_ge_four_year
 	}
 	option = {
 		name = flavor_THE_HNG_events.92.c
@@ -4020,6 +4024,8 @@ country_event = {
 			}
 		}
 		remove_country_modifier = THE_HNG_disasters4_reform_to_confusion
+		clr_country_flag = the_hng_had_jia_su_gai_ge_four_year
+		set_country_flag = the_hng_had_jia_su_gai_ge_four_year
 	}
 	option = {
 		name = flavor_THE_HNG_events.92.d
