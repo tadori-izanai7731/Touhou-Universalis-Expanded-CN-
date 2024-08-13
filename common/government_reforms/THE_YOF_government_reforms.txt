@@ -47,7 +47,7 @@ THE_yokari_forest_monarchy = {
 }
 
 THE_YOF_public_recognition_reform = {
-	# icon = 
+	icon = "THE_YOF_public_recognition_reform"
 	potential = {
 		religion = th_kagiyama
 	}
@@ -63,7 +63,7 @@ THE_YOF_public_recognition_reform = {
 }
 
 THE_YOF_doom_condensation_reform = {
-	# icon = 
+	icon = "THE_YOF_doom_condensation_reform"
 	potential = {
 		religion = th_kagiyama
 	}
@@ -80,7 +80,7 @@ THE_YOF_doom_condensation_reform = {
 }
 
 THE_YOF_strengthen_kagiyama_influence_reform = {
-	# icon = 
+	icon = "THE_YOF_strengthen_kagiyama_influence_reform"
 	potential = {
 		OR = {
 			tag = YOF
@@ -106,7 +106,7 @@ THE_YOF_strengthen_kagiyama_influence_reform = {
 
 
 THE_YOF_comprehensive_religion_reform = {
-	# icon = 
+	icon = "THE_YOF_comprehensive_religion_reform"
 	potential = {
 		religion = th_kagiyama
 	}
@@ -122,7 +122,7 @@ THE_YOF_comprehensive_religion_reform = {
 }
 
 THE_YOF_doom_whirlpool_reform = {
-	# icon = 
+	icon = "THE_YOF_river_reform"
 	potential = {
 		religion = th_kagiyama
 	}
@@ -136,7 +136,7 @@ THE_YOF_doom_whirlpool_reform = {
 }
 
 THE_YOF_all_doom_circulation_reform = {
-	# icon = 
+	icon = "THE_YOF_river_reform"
 	potential = {
 		religion = th_kagiyama
 	}
@@ -154,7 +154,7 @@ THE_YOF_all_doom_circulation_reform = {
 ### Republic reform 
 
 THE_YOF_education_reform = {
-	# icon = 
+	icon = "THE_YOF_education_reform"
 	potential = {
 		religion = th_kagiyama
 	}
@@ -167,7 +167,7 @@ THE_YOF_education_reform = {
 }
 
 THE_YOF_devotion_reform = {
-	# icon = 
+	icon = "THE_YOF_devotion_reform"
 	potential = {
 		religion = th_kagiyama
 	}
@@ -182,7 +182,7 @@ THE_YOF_devotion_reform = {
 }
 
 THE_YOF_suffering_doom_reform = {
-	# icon = 
+	icon = "THE_YOF_suffering_doom_reform"
 	potential = {
 		religion = th_kagiyama
 	}
@@ -196,7 +196,7 @@ THE_YOF_suffering_doom_reform = {
 }
 
 THE_YOF_kagiyama_crown_reform = {
-	# icon = 
+	icon = "THE_YOF_kagiyama_crown_reform"
 	potential = {
 		religion = th_kagiyama
 	}
