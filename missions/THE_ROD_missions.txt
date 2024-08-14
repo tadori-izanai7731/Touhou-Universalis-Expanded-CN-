@@ -3126,12 +3126,6 @@ THE_ROD_branch_4 = {
 				custom_tooltip = THE_ROD_dark_moon_night_stage4_extra_tt
 				custom_tooltip = THE_ROD_dark_moon_night_4_14_2_tt
 			}
-			hidden_effect = {
-				if = {
-					limit = { has_country_flag = THE_ROD_4_14_complete_flag }
-					clr_country_flag = THE_ROD_4_14_complete_flag
-				}
-			}
 		}
 	}
 
