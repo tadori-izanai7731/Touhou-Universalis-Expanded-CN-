@@ -41,3 +41,15 @@ on_battle_won_unit = {
 on_war_ended = {
 	THE_ROD_on_war_ended_scripted_effect = yes
 }
+
+on_heir_death = {
+	THE_ROD_on_heir_death_scripted_effect = yes
+}
+
+on_heir_disinherited = {
+	THE_ROD_on_heir_disinherited_scripted_effect = yes
+}
+
+on_heir_needed_theocracy = {
+	THE_ROD_on_heir_needed_theocracy_scripted_effect = yes
+}

@@ -287,6 +287,27 @@ THE_ROD_on_war_ended_scripted_effect = {
 	}
 }
 
+THE_ROD_on_heir_death_scripted_effect = {
+	if = {
+		limit = { has_country_modifier = THE_ROD_friedrich_wilhelm_modifier }
+		remove_country_modifier = THE_ROD_friedrich_wilhelm_modifier
+	}
+}
+
+THE_ROD_on_heir_disinherited_scripted_effect = {
+	if = {
+		limit = { has_country_modifier = THE_ROD_friedrich_wilhelm_modifier }
+		remove_country_modifier = THE_ROD_friedrich_wilhelm_modifier
+	}
+}
+
+THE_ROD_on_heir_needed_theocracy_scripted_effect = {
+	if = {
+		limit = { has_country_modifier = THE_ROD_friedrich_wilhelm_modifier }
+		remove_country_modifier = THE_ROD_friedrich_wilhelm_modifier
+	}
+}
+
 ### NOT on_actions scripted effects
 
 THE_change_color_to_colony = {

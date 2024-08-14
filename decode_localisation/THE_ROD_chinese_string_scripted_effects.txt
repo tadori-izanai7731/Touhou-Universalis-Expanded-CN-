@@ -76,3 +76,18 @@ THE_ROD_define_blucher_general_scripted_effect = {
 		siege = 6
 	}
 }
+
+THE_ROD_define_heir_friedrich_wilhelm = {
+	define_heir = {
+		name = "腓特烈 威廉"
+		dynasty = ROOT
+		culture = prussian
+		age = 15
+		adm = 6
+		dip = 6
+		mil = 6
+		claim = 0
+		no_consort_with_heir = yes
+		male = yes
+	}
+}

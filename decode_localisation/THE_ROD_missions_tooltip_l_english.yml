@@ -216,6 +216,7 @@ l_english:
  THE_ROD_cossack_rebel_tt: "§R哥萨克将发动叛乱§!。"
  THE_ROD_rumia_add_2_shock_tt: "§Y露米娅§!的£icon_shock£冲击提升§G2§!，超过上限转化为§G100§!£mil£军事点数。"
  THE_ROD_4_14_complete_by_event_ttt: "已通过「§Y沙恩霍斯特陆军改革§!」完成该任务。"
+ THE_ROD_unitl_heir_die_tt: "持续到继承人被废黜或死亡"
  THE_ROD_not_complete_event_ttt: "没做完"
 ###TOOLTIP_END
 
@@ -314,6 +315,8 @@ l_english:
  THE_ROD_scharnhorst_tactic: "沙恩霍斯特战术"
  THE_ROD_new_type_danmaku_modifier: "火药推进式弹幕"
  THE_ROD_punctured_ruler_modifier: "『被穿刺者』"
+ THE_ROD_friedrich_wilhelm_modifier: "腓特烈·威廉的政治才能"
+ THE_ROD_friedrich_wilhelm_mil_modifier: "腓特烈·威廉的『普鲁士精神』"
 ###MODIFIER_END
 
 ###MERC
@@ -505,6 +508,11 @@ l_english:
  THE_ROD_events.14.desc: "《穿刺大公》是[Root.GetName]作家最新编写的戏剧作品，作者以著名的瓦拉几亚大公弗拉德三世·采佩什为原形，讲述了他对抗特兰西瓦尼亚和摩尔达维亚，打压贵族重新掌控瓦拉几亚，最终与奥斯曼帝国决战的故事。即将首映时邀请露米娅饰演决战中被弗拉德三世「穿刺」的奥斯曼统治者。"
  THE_ROD_events.14.a: "刺穿妖心。"
  THE_ROD_events.14.b: "戏剧结束。"
+
+ THE_ROD_events.15.title: "霍亨索伦家族的继承者"
+ THE_ROD_events.15.desc: "自从霍亨索伦家族的领地@BRA勃兰登堡被[Root.GetName]吞并，霍亨索伦家族的支系也被尽数拆解，只有少数几人能够保留旧贵族的身份。家族中最年轻成员腓特烈·威廉，也是家族未来的继承者，在今天举行了自己的15岁生日宴，这场宴会邀请了国内众多贵族和官员，身为统治者的露米娅当然也在其中。群贤毕至，觥筹交错，腓特烈·威廉对于宾客们提出的问题或是对答如流，或是独树一帜，在场众人都夸赞他的政治和军事才能。\n宴会进行到腓特烈·威廉单独致辞时，露米娅抓起全场的焦点就向首都[Capital.GetName]飞去。"
+ THE_ROD_events.15.a: "「以后你就在宫廷中陪我玩吧。」"
+ THE_ROD_events.15.b: "「以后你就和我一起训练军队吧。」"
 ###EVENT_END
 
 ###VARIABLE

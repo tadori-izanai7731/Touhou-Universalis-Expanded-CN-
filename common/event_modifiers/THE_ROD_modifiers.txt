@@ -521,6 +521,21 @@ THE_ROD_punctured_ruler_modifier = {
 	reverse_relation_with_heathen_religion = 25
 }
 
+#腓特烈·威廉的政治才能
+THE_ROD_friedrich_wilhelm_modifier = {
+	country_admin_power = 2
+	country_diplomatic_power = 2
+	country_military_power = 2
+}
+
+#腓特烈·威廉的『普鲁士精神』
+THE_ROD_friedrich_wilhelm_mil_modifier = {
+	country_military_power = 2
+	mil_advisor_cost = -0.25
+	mil_tech_cost_modifier = -0.1
+	yearly_army_professionalism = 0.005
+}
+
 ###EXTRA_HAKUREI_DEITY
 THE_ROD_extra_hakurei_modifier_Hakurei_God = {
 	defensiveness = 0.1
