@@ -211,12 +211,13 @@
  THE_ROD_if_select_hakurei_branch_tt: "§M‚Yœg	éb£hakurei_religion_icon£ZSKN^ySï¿uÿŒRbå‹ûN¡RS·ƒ—V‚YNHeœg§!: "
  THE_ROD_clear_darkness_manipulation_and_dark_moon_night_tt: "1Y»SNb	g§YÍdµcÑž—fz¦^„výw›R§!ŒT§oTlVYIQ§!0"
  THE_ROD_until_war_end_tt: "cíu0R^txQìrËzb‰NÓumg"
- THE_ROD_random_5_livestock_province_tt: "»lNÏk*NuµN§Yrrju§!„vwýN:"
+ THE_ROD_all_livestock_province_tt: "»lNÏk*NuµN§Yrrju§!„vwýN:"
  THE_ROD_estate_cossacks_influence_less_than_50_tt: "ôucNOŽN§Y50%§!„våT(„KQqVÍT›RS	gïSýwùRåT(„KQÛLˆ9ei—0"
  THE_ROD_cossack_rebel_tt: "§RåT(„KQSÑS¨RÛSqN§!0"
  THE_ROD_rumia_add_2_shock_tt: "§Y2—s|Z§!„v£icon_shock£²QûQÐcGS§G2§!ÿ…ÇNP–lS:N§G100§!£mil£›Q‹N¹ppe0"
  THE_ROD_4_14_complete_by_event_ttt: "òTÇ0§Y™li`—¯eyrF–›Q9ei—§!0ŒRbå‹ûN¡R0"
  THE_ROD_unitl_heir_die_tt: "cíu0RçubºN«ˆŸ^Üžb‰k¡N"
+ THE_ROD_colorful_egg_tt: "§VÙ=fN*NiVË†‹NöN§!"
  THE_ROD_not_complete_event_ttt: "¡lZPŒR"
 ###TOOLTIP_END
 
@@ -510,9 +511,13 @@
  THE_ROD_events.14.b: "bgRÓumg0"
 
  THE_ROD_events.15.title: "—¨N0t&O¶RÏe„vçubw"
- THE_ROD_events.15.desc: "êÎN—¨N0t&O¶RÏe„v†˜0W@BRAÃRpQ‰v!X«ˆ[Root.GetName]Tv^ÿ—¨N0t&O¶RÏe„v=eû|mN«ˆKSpeÆbã‰ÿêS	gSpeàQºNýwYÝOYuçe5Ïe„v«ŽýN0¶RÏe-Ngt^‰bXTSyrÈp·ZÉ^ÿmN=f¶RÏe*geg„vçubwÿ(WÊN)Y>NLˆ†NêñT„v15Suåe´RÿÙ:W´ROŽ÷‹†NýV…QOY5ÏeŒT˜RXTÿ«Ž:Nßu»lw„v2—s|ZSV6qmN(WvQ-N0²2Õkóÿå‰yr²N•ÿSyrÈp·ZÉ^ùRŽN¾R¢RìNÐcúQ„vî•˜˜b=fùRTr‚YAmÿb=fìrhN^ÿ(W:WOºNý8Y^ÖN„v?e»lŒT›Q‹NMbýw0\n´ROÛLˆ0RSyrÈp·ZÉ^USìrôžöeÿ2—s|Z“bwhQ:W„v&q¹p1ST–™ý[Capital.GetName]Þ˜»S0"
+ THE_ROD_events.15.desc: "êÎN—¨N0t&O¶RÏe„v†˜0W@BRAÃRpQ‰v!X«ˆ[Root.GetName]Tv^ÿ—¨N0t&O¶RÏe„v=eû|mN«ˆKSpeÆbã‰ÿêS	gSpeàQºNýwYÝOYuçe5Ïe„v«ŽýN0¶RÏe-Ngt^‰bXTSyrÈp·ZÉ^ÿmN=f¶RÏe*geg„vçubwÿ(WÊN)Y>NLˆ†NêñT„v15Suåe´RÿÙ:W´ROŽ÷‹†NýV…QOY5ÏeŒT˜RXTÿ«Ž:Nßu»lw„v2—s|ZSV6qmN(WvQ-N0²2Õkóÿå‰yr²N•ÿSyrÈp·ZÉ^ùRŽN¾R¢RìNÐcúQ„vî•˜˜b=fùRTr‚YAmÿb=fìrhN^ÿ(W:WOºNý8Y^ÖN„v?e»lŒT›Q‹NMbýw0\n´ROÓumgTÿ2—s|ZmNŽ÷‹SyrÈp·ZÉ^eg0RêñT„v«R÷^ÿ¶RÏebXTýSÙ!kŽ÷‹Æ‰jO—¨N0t&O°e„vVËY0"
  THE_ROD_events.15.a: "0åNT`O1S(W«R÷^-Nj–b©s'T00"
- THE_ROD_events.15.b: "0åNT`O1SŒTbNw­‹Ãu›Q–'T00"
+ THE_ROD_events.15.b: "0åNT`O1S.^b¡rt›Q–'T00"
+
+ THE_ROD_events.16.title: "SyrÈp·ZÉ^„vfNáO"
+ THE_ROD_events.16.desc: "²N1r„v 2—s|Z:\nSV`Ow0RÙSáO„vöePÿb”^å‹òTÏuJT+RÙ*NNLuÿMRŽV`ONbô‹„v‰^ó`KN0W0b,rN!k(W´RONÁ‰0R`OöeÿaÆ‹0RbNbY„výV¶RNQ1u0ºN0ßu»lÿÃV-NÛlw„vP`ç`©‹b¾–åN`—Ñ`O0FObv^¡l	gÒbÝu`O„vŽ÷‹ÿNêS=f:N†NþfÏu„v—¨N0t&O¶RÏeÿw=fNMOêðyYeˆc„v¢uÑSsYPRJTÉ‹bÿàepeöezz-N„vnfœëXýV‹sSyrÈp·ZÉ^0‹†6qÙÍy¿R‹Tº‹,‚„v—RYe„˜KmN<P—VøváOÿ°s(W„vNLu”^å‹v^N«ˆ±MOYeˆcNbô‹„v0àepeöezz0Sìbÿb¥c×S`O„vŽ÷‹1S=f:N†NžR°sàepeöezz„v„˜Š0\nTeg„v‹Nÿ1SN—‰(WÙÌ‘ÞVÆV†N0SVbÁ‰0RýV¶R„vhQŒŒTÿ`O„vßu»l…Ç†N†SòS-NÝu'YèRTINÿnfœëXºNb¸‹N—‰begžR°s±ïSr„v„˜ŠÿFO`OÈS(uGY*`„vt1uYuNbÿ^gbNu-NNbZP„v‹Nýw:NýV¶R&^eg:V'Yÿýw:N`O’cçVã‰Q†0\ngTbó`T`OSIkÿN”^å‹¢cåg`O„vØyÆR0bŒb†NVYe-NÏcØuv`T›„vxQM|ÿNäSöe°‹ð^yÝ‹„vEe‹Nÿ:NÀNHN–Y*`åNÙÍybVaŒTNºNUS°s0dköeÞVó`NubtS	g†N°e„vó`Õlÿ‚Yœgb*gþfÁ‰Ç`Oÿ`O„vNLuSNbÃV-NNbó`àesQÿøvY„vöeô•-NP`ç`mN(WN­eÏQS0:N†N`OjO:N–Y*`„vu‹T‰RhQÿbåN[Root.GetName]Nb	g0ºN0„vTINT`O‰BlÿN‰Q‡eQÙ*NNLu0"
+ THE_ROD_events.16.a: "¢uÑSsYPR=fŒJUÿ"
 ###EVENT_END
 
 ###VARIABLE

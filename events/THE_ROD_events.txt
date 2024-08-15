@@ -937,4 +937,45 @@ country_event = {
 			duration = 10950
 		}
 	}
+
+	after = {
+		hidden_effect = {
+			set_country_flag = THE_ROD_can_trigger_event_16_flag
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.16
+	title = THE_ROD_events.16.title
+	desc = THE_ROD_events.16.desc
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 12000000
+	}
+
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		had_country_flag = {
+			flag = THE_ROD_can_trigger_event_16_flag
+			days = 36500
+		}
+		custom_trigger_tooltip = {
+			tooltip = THE_ROD_not_complete_event_ttt
+			always = no
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = THE_ROD_can_trigger_event_16_flag
+		}
+	}
+
+	option = {
+		name = THE_ROD_events.16.a
+		custom_tooltip = THE_ROD_colorful_egg_tt
+	}
 }
