@@ -330,12 +330,14 @@ THE_kko_missions_first_slot = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 12
-				area = Eastern_senkai
-				area = Senkai_state
-				area = Eastern_myouren_state
-				area = Northern_myouren_state
-				area = Myouren_state
-				area = Northern_senkai
+				OR = {
+					area = Eastern_senkai
+					area = Senkai_state
+					area = Eastern_myouren_state
+					area = Northern_myouren_state
+					area = Myouren_state
+					area = Northern_senkai
+				}
 			}
 			# Eastern_senkai = {
 			# 	type = all 
@@ -1244,12 +1246,14 @@ THE_kko_missions_third_slot = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 12
-				area = Eastern_senkai
-				area = Senkai_state
-				area = Eastern_myouren_state
-				area = Northern_myouren_state
-				area = Myouren_state
-				area = Northern_senkai
+				OR = {
+					area = Eastern_senkai
+					area = Senkai_state
+					area = Eastern_myouren_state
+					area = Northern_myouren_state
+					area = Myouren_state
+					area = Northern_senkai
+				}
 			}
 			# Eastern_senkai = {
 			# 	type = all 
