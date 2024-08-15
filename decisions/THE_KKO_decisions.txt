@@ -1,58 +1,58 @@
-country_decisions = {
-	th_kko_resite_qin = {
-		color = {
-			269
-			76
-			168
-		}
-		potential = {
-			OR = {
-				tag = KKO
-				was_tag = KKO
-			}
-			has_country_flag = th_qin_started_the_circle
-		}
-		allow = {
-			custom_trigger_tooltip = {
-				tooltip = th_qin_t_cd
-				OR = {
-					NOT = { has_country_flag = th_qin_cycle_cd }
-					had_country_flag = {
-						flag = th_qin_cycle_cd
-						days = 1825
-					}
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = THE_KKO_can_use_resite_qin_cycle_ttt
-				had_country_flag = {
-					flag = THE_KKO_last_cycle_event_flag
-					days = 1
-				}
-			}
-			is_at_war = no 
-		}
-		effect = {
-			add_country_modifier = {
-				name = change_of_government_you_buff
-				duration = 730
-			}
-			add_country_modifier = {
-				name = change_of_government_nu_buff
-				duration = 730
-			}
-			add_country_modifier = {
-				name = change_of_government_xi_buff
-				duration = 730
-			}
-			country_event = {
-				id = KKO_qin.1
-			}
-			clr_country_flag = th_qin_cycle_cd
-			set_country_flag = th_qin_cycle_cd
-		}
-	}
-}
+# country_decisions = {
+# 	th_kko_resite_qin = {
+# 		color = {
+# 			269
+# 			76
+# 			168
+# 		}
+# 		potential = {
+# 			OR = {
+# 				tag = KKO
+# 				was_tag = KKO
+# 			}
+# 			has_country_flag = th_qin_started_the_circle
+# 		}
+# 		allow = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = th_qin_t_cd
+# 				OR = {
+# 					NOT = { has_country_flag = th_qin_cycle_cd }
+# 					had_country_flag = {
+# 						flag = th_qin_cycle_cd
+# 						days = 1825
+# 					}
+# 				}
+# 			}
+# 			custom_trigger_tooltip = {
+# 				tooltip = THE_KKO_can_use_resite_qin_cycle_ttt
+# 				had_country_flag = {
+# 					flag = THE_KKO_last_cycle_event_flag
+# 					days = 1
+# 				}
+# 			}
+# 			is_at_war = no 
+# 		}
+# 		effect = {
+# 			add_country_modifier = {
+# 				name = change_of_government_you_buff
+# 				duration = 730
+# 			}
+# 			add_country_modifier = {
+# 				name = change_of_government_nu_buff
+# 				duration = 730
+# 			}
+# 			add_country_modifier = {
+# 				name = change_of_government_xi_buff
+# 				duration = 730
+# 			}
+# 			country_event = {
+# 				id = KKO_qin.1
+# 			}
+# 			clr_country_flag = th_qin_cycle_cd
+# 			set_country_flag = th_qin_cycle_cd
+# 		}
+# 	}
+# }
 # country_decisions = {
 # 	th_kko_resite_qin1 = {
 # 		color = {
@@ -389,6 +389,84 @@ country_decisions = {
 				clr_country_flag = the_kko_xinqilou_rechange_cd
 				set_country_flag = the_kko_xinqilou_rechange_cd
 				THE_KKO_genre_nengyue_clr = yes
+			}
+		}
+	}
+}
+country_decisions = {
+	the_kko_gather_adm_you_power = {
+		color = {
+			269
+			76
+			168
+		}
+		potential = {
+			OR = {
+				tag = KKO
+				was_tag = KKO
+			}
+		}
+		allow = {
+			is_at_war = no
+		}
+		effect = {
+			add_adm_power = -50
+			add_government_power = {
+				mechanic_type = th_kokoro_mechanic
+				power_type = kko_you_adm_power
+				value = 5
+			}
+		}
+	}
+}
+country_decisions = {
+	the_kko_gather_dip_xi_power = {
+		color = {
+			269
+			76
+			168
+		}
+		potential = {
+			OR = {
+				tag = KKO
+				was_tag = KKO
+			}
+		}
+		allow = {
+			is_at_war = no
+		}
+		effect = {
+			add_dip_power = -50
+			add_government_power = {
+				mechanic_type = th_kokoro_mechanic
+				power_type = kko_xi_dip_power
+				value = 5
+			}
+		}
+	}
+}
+country_decisions = {
+	the_kko_gather_mil_nu_power = {
+		color = {
+			269
+			76
+			168
+		}
+		potential = {
+			OR = {
+				tag = KKO
+				was_tag = KKO
+			}
+		}
+		allow = {
+			is_at_war = no
+		}
+		effect = {
+			add_mil_power = -50
+			add_government_power = {
+				mechanic_type = th_kokoro_mechanic
+				power_type = kko_nu_mil_power
+				value = 5
 			}
 		}
 	}

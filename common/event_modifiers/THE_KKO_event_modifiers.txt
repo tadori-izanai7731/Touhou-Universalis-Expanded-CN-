@@ -1,16 +1,16 @@
 th_kko_you_buff = {
     culture_conversion_time = -0.30
     harmonization_speed = 0.075
-    monthly_kko_xi_dip_power = 1.5
+    #monthly_kko_xi_dip_power = 1.5
 }
 th_kko_xi_buff = {
     idea_cost = -0.05
     technology_cost = -0.05
-    monthly_kko_nu_mil_power = 1.5
+    #monthly_kko_nu_mil_power = 1.5
 }
 th_kko_nu_buff = {
     fire_damage = 0.1
-    monthly_kko_you_adm_power = 1.5
+    #monthly_kko_you_adm_power = 1.5
 }
 #希望之面buff
 kko_xiwang_lose_buff = {
@@ -132,7 +132,7 @@ KKO_dark_nengyue_buff2 = {
     monthly_splendor = -0.5
 }
 nengyue_biaoyan_buff = {
-    monthly_kko_xi_dip_power = -1
+    #monthly_kko_xi_dip_power = -1
     prestige = 1
 }
 nengyue_biaoyan_buff2 = {
@@ -197,15 +197,15 @@ mission_xiaomian_buff = {
     diplomats = 1
 }
 #政府变化
-change_of_government_you_buff = {
-    monthly_kko_you_adm_power = 0.5
-}
-change_of_government_xi_buff = {
-    monthly_kko_xi_dip_power = 0.5
-}
-change_of_government_nu_buff = {
-    monthly_kko_nu_mil_power = 0.5
-}
+#change_of_government_you_buff = {
+   # monthly_kko_you_adm_power = 0.5
+#}
+#change_of_government_xi_buff = {
+    #monthly_kko_xi_dip_power = 0.5
+#}
+#change_of_government_nu_buff = {
+    #monthly_kko_nu_mil_power = 0.5
+#}
 #宗教霸权
 kko_religions_hegemony1 = {
     global_regiment_cost = 0.10

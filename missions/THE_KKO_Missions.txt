@@ -328,30 +328,39 @@ THE_kko_missions_first_slot = {
 
 		}
 		trigger = {
-			Eastern_senkai = {
-				type = all 
-				country_or_non_sovereign_subject_holds = ROOT
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 12
+				area = Eastern_senkai
+				area = Senkai_state
+				area = Eastern_myouren_state
+				area = Northern_myouren_state
+				area = Myouren_state
+				area = Northern_senkai
 			}
-			Senkai_state = {
-				type = all 
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			Eastern_myouren_state = {
-				type = all 
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			Northern_myouren_state = {
-				type = all 
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			Myouren_state = {
-				type = all 
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			Northern_senkai = {
-				type = all 
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			# Eastern_senkai = {
+			# 	type = all 
+			# 	country_or_non_sovereign_subject_holds = ROOT
+			# }
+			# Senkai_state = {
+			# 	type = all 
+			# 	country_or_non_sovereign_subject_holds = ROOT
+			# }
+			# Eastern_myouren_state = {
+			# 	type = all 
+			# 	country_or_non_sovereign_subject_holds = ROOT
+			# }
+			# Northern_myouren_state = {
+			# 	type = all 
+			# 	country_or_non_sovereign_subject_holds = ROOT
+			# }
+			# Myouren_state = {
+			# 	type = all 
+			# 	country_or_non_sovereign_subject_holds = ROOT
+			# }
+			# Northern_senkai = {
+			# 	type = all 
+			# 	country_or_non_sovereign_subject_holds = ROOT
+			# }
 			if = {
 				limit = {
 					has_country_flag = kko_daojiaoxian
@@ -1218,30 +1227,46 @@ THE_kko_missions_third_slot = {
 		position = 7
 		provinces_to_highlight = {
 			OR = {
+				AND = {
+					OR = {
+						area = Eastern_senkai
+						area = Senkai_state
+						area = Eastern_myouren_state
+						area = Northern_myouren_state
+						area = Myouren_state
+						area = Northern_senkai
+					}
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+			}
+
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 12
 				area = Eastern_senkai
 				area = Senkai_state
 				area = Eastern_myouren_state
 				area = Northern_myouren_state
+				area = Myouren_state
+				area = Northern_senkai
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			Eastern_senkai = {
-				type = all 
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			Senkai_state = {
-				type = all 
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			Eastern_myouren_state = {
-				type = all 
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			Northern_myouren_state = {
-				type = all 
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			# Eastern_senkai = {
+			# 	type = all 
+			# 	country_or_non_sovereign_subject_holds = ROOT
+			# }
+			# Senkai_state = {
+			# 	type = all 
+			# 	country_or_non_sovereign_subject_holds = ROOT
+			# }
+			# Eastern_myouren_state = {
+			# 	type = all 
+			# 	country_or_non_sovereign_subject_holds = ROOT
+			# }
+			# Northern_myouren_state = {
+			# 	type = all 
+			# 	country_or_non_sovereign_subject_holds = ROOT
+			# }
 		}
 		effect = {
 			hidden_effect = {

@@ -115,11 +115,12 @@ th_kokoro_mechanic = {
 			gui = russian_mechanics_interaction_gui
 			icon = GFX_th_kokoro_you
 			cost_type = kko_you_adm_power
-			cost = 2
+			cost = 5
 			effect = {
+				add_adm_power = -50
 				add_country_modifier = {
 					name = th_kko_you_buff
-					duration = 365
+					duration = 730
 				}
 			}
 			cooldown_years = 2
@@ -133,11 +134,12 @@ th_kokoro_mechanic = {
 			gui = russian_mechanics_interaction_gui
 			icon = GFX_th_kokoro_xi
 			cost_type = kko_xi_dip_power
-			cost = 2
+			cost = 5
 			effect = { 
+				add_dip_power = -50
 				add_country_modifier = {
 					name = th_kko_xi_buff
-					duration = 365
+					duration = 730
 				}
 			}
 			cooldown_years = 2
@@ -151,17 +153,18 @@ th_kokoro_mechanic = {
 			gui = russian_mechanics_interaction_gui
 			icon = GFX_th_kokoro_nu
 			cost_type = kko_nu_mil_power
-			cost = 2
+			cost = 5
 			effect = { 
+				add_mil_power = -50
 				add_country_modifier = {
 					name = th_kko_nu_buff
-					duration = 365
+					duration = 730
 				}
 				if = {
 					limit = {
 						is_at_war = yes
 					}
-					add_war_exhaustion = 4
+					add_war_exhaustion = 2
 					add_yearly_manpower = 2.5
 					add_army_professionalism = -0.05
 				}
