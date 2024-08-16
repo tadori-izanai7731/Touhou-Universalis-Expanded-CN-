@@ -1,4 +1,4 @@
-gov_the_yof_monarchy = {
+THE_yokari_forest_monarchy = {
 	rank = {
 		1 = TOUHOU_DOMAIN
 		2 = TOUHOU_REALM
@@ -31,7 +31,7 @@ gov_the_yof_monarchy = {
 
 	trigger = {
 		OR = {
-			has_reform = yokari_forest_monarchy
+			has_reform = THE_yokari_forest_monarchy
 		}
 	}
 }
