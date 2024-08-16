@@ -1,8 +1,8 @@
-gov_Kokoro_monarchy = {
+gov_THE_Kokoro_monarchy = {
 	rank = {
-		1 = TOUHOU_DOMAIN
-		2 = TOUHOU_REALM
-		3 = TOUHOU_EMPIRE
+		1 = THE_KKO_DOMAIN
+		2 = THE_KKO_REALM
+		3 = THE_KKO_EMPIRE
 	}
 	
 	ruler_male = {
@@ -12,9 +12,9 @@ gov_Kokoro_monarchy = {
 	}
 	
 	ruler_female = {
-		3 = TOUHOU_MISTRESS
-		2 = TOUHOU_MISTRESS
-		1 = TOUHOU_MISTRESS
+		3 = THE_KKO_RULER
+		2 = TTHE_KKO_RULER
+		1 = THE_KKO_RULER
 	}
 	
 	heir_male = {
@@ -31,7 +31,7 @@ gov_Kokoro_monarchy = {
 
 	trigger = {
 		OR = {
-			has_reform = Kokoro_monarchy
+			has_reform = THE_Kokoro_monarchy
 		}
 	}
 }
