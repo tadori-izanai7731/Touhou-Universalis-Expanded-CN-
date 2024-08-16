@@ -303,10 +303,6 @@ country_event = {
 		OR = { tag = ROD was_tag = ROD }
 		mission_completed = THE_ROD_2_3
 		is_year = 1500
-		custom_trigger_tooltip = {
-			tooltip = THE_ROD_not_complete_event_ttt
-			always = no
-		}
 	}
 
 	mean_time_to_happen = {
@@ -338,10 +334,6 @@ country_event = {
 	trigger = {
 		OR = { tag = ROD was_tag = ROD }
 		mission_completed = THE_ROD_2_3
-		custom_trigger_tooltip = {
-			tooltip = THE_ROD_not_complete_event_ttt
-			always = no
-		}
 	}
 
 	mean_time_to_happen = {
@@ -368,10 +360,6 @@ country_event = {
 		mission_completed = THE_ROD_2_3
 		mission_completed = THE_ROD_1_12
 		is_year = 1600
-		custom_trigger_tooltip = {
-			tooltip = THE_ROD_not_complete_event_ttt
-			always = no
-		}
 	}
 
 	mean_time_to_happen = {
@@ -408,10 +396,6 @@ country_event = {
 					liberty_desire = 50
 				}
 			}
-		}
-		custom_trigger_tooltip = {
-			tooltip = THE_ROD_not_complete_event_ttt
-			always = no
 		}
 	}
 
@@ -548,10 +532,6 @@ country_event = {
 		any_owned_province = {
 			has_terrain = steppe
 		}
-		custom_trigger_tooltip = {
-			tooltip = THE_ROD_not_complete_event_ttt
-			always = no
-		}
 	}
 
 	mean_time_to_happen = {
@@ -630,10 +610,6 @@ country_event = {
 				influence = 50
 			}
 		}
-		custom_trigger_tooltip = {
-			tooltip = THE_ROD_not_complete_event_ttt
-			always = no
-		}
 	}
 
 	mean_time_to_happen = {
@@ -698,10 +674,6 @@ country_event = {
 	trigger = {
 		OR = { tag = ROD was_tag = ROD }
 		NOT = { current_age = age_of_discovery }
-		custom_trigger_tooltip = {
-			tooltip = THE_ROD_not_complete_event_ttt
-			always = no
-		}
 	}
 
 	mean_time_to_happen = {
@@ -735,10 +707,6 @@ country_event = {
 		mission_completed = THE_ROD_5_13
 		OR = { tag = ROD was_tag = ROD }
 		owns_core_province = 50
-		custom_trigger_tooltip = {
-			tooltip = THE_ROD_not_complete_event_ttt
-			always = no
-		}
 	}
 
 	mean_time_to_happen = {
@@ -780,10 +748,6 @@ country_event = {
 	trigger = {
 		OR = { tag = ROD was_tag = ROD }
 		THE_ROD_has_rumia_general = yes
-		custom_trigger_tooltip = {
-			tooltip = THE_ROD_not_complete_event_ttt
-			always = no
-		}
 	}
 
 	mean_time_to_happen = {
@@ -816,10 +780,6 @@ country_event = {
 		any_owned_province = {
 			area = wallachia_area
 			has_fort_building_trigger = yes
-		}
-		custom_trigger_tooltip = {
-			tooltip = THE_ROD_not_complete_event_ttt
-			always = no
 		}
 	}
 
@@ -859,10 +819,6 @@ country_event = {
 	trigger = {
 		OR = { tag = ROD was_tag = ROD }
 		has_country_flag = THE_ROD_events_13_flag
-		custom_trigger_tooltip = {
-			tooltip = THE_ROD_not_complete_event_ttt
-			always = no
-		}
 	}
 
 	mean_time_to_happen = {
@@ -905,10 +861,6 @@ country_event = {
 		NOT = { mission_completed = THE_ROD_3_19 }
 		NOT = { exists = BRA }
 		NOT = { exists = PRU }
-		custom_trigger_tooltip = {
-			tooltip = THE_ROD_not_complete_event_ttt
-			always = no
-		}
 	}
 
 	option = {
@@ -961,10 +913,6 @@ country_event = {
 		had_country_flag = {
 			flag = THE_ROD_can_trigger_event_16_flag
 			days = 36500
-		}
-		custom_trigger_tooltip = {
-			tooltip = THE_ROD_not_complete_event_ttt
-			always = no
 		}
 	}
 
