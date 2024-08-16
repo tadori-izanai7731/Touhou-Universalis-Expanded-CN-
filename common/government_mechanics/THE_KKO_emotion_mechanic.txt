@@ -7,7 +7,7 @@ th_kokoro_mechanic = {
 	powers = {
 		kko_you_adm_power = {
 			max = 50
-			base_monthly_growth = 1
+			base_monthly_growth = 0
 			scaled_modifier = {
 				modifier = {
 					global_unrest = -2
@@ -15,7 +15,6 @@ th_kokoro_mechanic = {
 					production_efficiency = 0.2
 					discipline = -0.10
 					land_morale = -0.20
-					monthly_kko_you_adm_power = -4
 				}
 			}
 			range_modifier = {
@@ -41,7 +40,7 @@ th_kokoro_mechanic = {
 		}
 		kko_xi_dip_power = {
 			max = 50
-			base_monthly_growth = 1
+			base_monthly_growth = 0
 			scaled_modifier = {
 				modifier = {
 					harsh_treatment_cost = 0.4
@@ -49,7 +48,6 @@ th_kokoro_mechanic = {
 					global_tax_modifier = -0.2
 					global_autonomy = -0.2
 					war_exhaustion = -0.1
-					monthly_kko_xi_dip_power = -4
 				}
 			}
 			range_modifier = {
@@ -75,7 +73,7 @@ th_kokoro_mechanic = {
 		}
 		kko_nu_mil_power = {
 			max = 50
-			base_monthly_growth = 1
+			base_monthly_growth = 0
 			scaled_modifier = {
 				modifier = {
 					discipline = 0.10
@@ -84,7 +82,6 @@ th_kokoro_mechanic = {
 					land_morale = 0.20
 					global_autonomy = 0.2
 					global_tax_modifier = 0.2
-					monthly_kko_nu_mil_power = -4
 				}
 			}
 			range_modifier = {
