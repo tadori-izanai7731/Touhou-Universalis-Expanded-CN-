@@ -387,6 +387,7 @@ the_ask_for_change_to_religions_subject_of_kagiyama = {
 		FROM = {
 			NOT = {
 				is_subject_of = ROOT
+				is_vassal = yes
 			}
 			religion = ROOT
 		}
@@ -825,14 +826,17 @@ the_change_religions_subject_to_vasstal_action = {
 ##赎罪券
 the_ask_for_shinto_remove_modifier = {
 	category = th_diplo_action
+	require_acceptance = yes
 	is_visible = {
-		root = {
+		ROOT = {
 			has_country_modifier = yof_doom_river_flowed_neighbourhood_buff
 		}
 		FROM = {
 			OR = {
-				tag = YOF
-				was_tag = YOF
+				tag = HKR
+				was_tag = HKR
+				tag = MRY
+				was_tag = MRY
 			}
 		}
 	}
@@ -841,7 +845,7 @@ the_ask_for_shinto_remove_modifier = {
 			limit = { 
 				alliance_with = FROM
 			}
-			treasury = 50
+			treasury = 100
 		}
 		else_if = {
 			limit = { 
@@ -862,14 +866,17 @@ the_ask_for_shinto_remove_modifier = {
 		}
 	}
 	on_accept = {
-		root = {
+		ROOT = {
 			remove_country_modifier = yof_doom_river_flowed_neighbourhood_buff
 		}
 		if = {
 			limit = { 
 				alliance_with = FROM
 			}
-			add_treasury = -50
+			add_treasury = -100
+			FROM = {
+				add_treasury = 100
+			}
 		}
 		else_if = {
 			limit = { 
@@ -884,9 +891,172 @@ the_ask_for_shinto_remove_modifier = {
 				}
 			}
 			add_treasury = -150
+			FROM = {
+				add_treasury = 150
+			}
 		}
 		else = {
 			add_treasury = -250
+			FROM = {
+				add_treasury = 250
+			}
+		}
+	}
+	on_decline = {
+	}
+	ai_acceptance = {
+		#<localisation_key>
+		#TH_DIPLO_OPPINION
+		#基础-30
+		add_entry = {
+			name = TH_DIPENDENCE
+			export_to_variable = {
+				variable_name = ai_value
+				value = 15
+			}
+		}
+		add_entry = {
+			name = TH_DIPLO_ENERMY
+			limit = {
+				FROM = {
+					OR = {
+						ai_attitude = {
+							who = ROOT
+							attitude = attitude_rivalry
+						}
+						ai_attitude = {
+							who = ROOT
+							attitude = attitude_hostile
+						}
+					}
+				}
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = -50
+			}
+		}
+	}
+}
+##放弃宗教朝贡国
+the_release_religions_subject_of_kagiyama = {
+	category = th_diplo_action
+	require_acceptance = no
+	is_visible = {
+		OR = {
+			tag = YOF
+			was_tag = YOF
+		}
+		has_country_flag = change_to_kagiyama_religions_allow_flag
+		FROM = {
+			is_subject_of_type = th_religious_kagiyama_subject
+			is_subject_of = YOF
+		}
+	}
+	is_allowed = {
+		FROM = {
+			is_subject_of_type = th_religious_kagiyama_subject
+			is_subject_of = YOF
+		}
+	}
+	on_accept = {
+		FROM = {
+			grant_independence = yes
+			add_opinion = {
+				who = ROOT
+				modifier = th_evil_god
+			}
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+##赎罪券XIANG
+the_shinto_ask_for_remove_modifier = {
+	category = th_diplo_action
+	require_acceptance = yes
+	is_visible = {
+		FROM = {
+			has_country_modifier = yof_doom_river_flowed_neighbourhood_buff
+		}
+		ROOT = {
+			OR = {
+				tag = HKR
+				was_tag = HKR
+				tag = MRY
+				was_tag = MRY
+			}
+		}
+	}
+	is_allowed = {
+		FROM = {
+			has_country_modifier = yof_doom_river_flowed_neighbourhood_buff
+		}
+	}
+	on_accept = {
+		FROM = {
+			remove_country_modifier = yof_doom_river_flowed_neighbourhood_buff
+			add_treasury = -150
+		}
+		ROOT = {
+			add_treasury = 150
+		}
+	}
+	on_decline = {
+	}
+	ai_acceptance = {
+		#<localisation_key>
+		#TH_DIPLO_OPPINION
+		#基础-15
+		add_entry = {
+			name = TH_DIPENDENCE
+			export_to_variable = {
+				variable_name = ai_value
+				value = -15
+			}
+		}
+		add_entry = {
+			name = TH_DIPLO_ENERMY
+			limit = {
+				FROM = {
+					OR = {
+						ai_attitude = {
+							who = ROOT
+							attitude = attitude_rivalry
+						}
+						ai_attitude = {
+							who = ROOT
+							attitude = attitude_hostile
+						}
+					}
+				}
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = -50
+			}
+		}
+		##经济因素
+		add_entry = {
+			name = THE_ECONOMY_VALUE
+			limit = {
+				FROM = {
+					treasury = 150
+				}
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 16
+			}
+		}
+		##在战争中
+		add_entry = {
+			name = THE_WAR_VALUE
+			export_to_variable = {
+				variable_name = ai_value
+				value = 16
+			}
 		}
 	}
 }
