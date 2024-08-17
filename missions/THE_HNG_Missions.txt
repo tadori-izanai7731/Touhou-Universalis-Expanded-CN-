@@ -4423,10 +4423,11 @@ THE_HNG_2_3 = {
 		} 
 		
 		trigger = { 
-			AND = {
 				NOT = {	exists = LCU }
 				NOT = {	exists = LEM }
-			}
+				5360 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 		} 
 		
 		effect = { 
