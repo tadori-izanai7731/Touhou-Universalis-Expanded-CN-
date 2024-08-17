@@ -32,7 +32,7 @@
  kko_introduce: "bòT†Nã‰"
  #‹NöN
    #Œp¾–RËY‹NöN
- KKO_disaster_started_now: "Å`aòT1Yaˆ"
+ KKO_disaster_started_now: "Œp¾–§RÅ`a1Yaˆ§!òTÑSu"
    #^gKNb—0N1Y
  kko_xiwang_lose_buff: "¡N„v^g"
  kko_xiwang_lose: "^gKNb—òT0N1Y"
@@ -328,13 +328,13 @@
  th_shiheng_tiaojian: "Å`a1Yaˆöe"
  #Y²NLˆ¨R
  th_dark_nengyue_title: "hˆoÑž—fýwPN"
- dark_nengyue3: "òTÛLˆ3!kÑž—fýwPNhˆo"
- dark_nengyue8: "òTÛLˆ8!kÑž—fýwPNhˆo"
- kko_xinjumu1: "°eY²NLˆ¨RS=T(u"
- dark_nengyue_on: "2t^…QòThˆoÇÑž—fýwPN"
+ dark_nengyue3: "O(uY²NLˆ¨R§YÑž—fýwPNhˆo§!óS§Y3§!!k"
+ dark_nengyue8: "O(uY²NLˆ¨R§YÑž—fýwPNhˆo§!óS§Y8§!!k"
+ kko_xinjumu1: "=T(u°e„v§YY²NLˆ¨R§!"
+ dark_nengyue_on: "ÝNN!kO(u§YÑž—fýwPNhˆo§!òTÇ»S5t^"
  th_xinqilou_title: "hˆoÃVîu|i"
- xinqilou_on: "5t^…Q*ghˆoÃVîu|i"
- xinqilou_on_ok: "ã‰•Y²NLˆ¨R ÃVîu|i"
+ xinqilou_on: "ÝNN!kO(uÃVîu|iòTÏuÇ»S5t^"
+ xinqilou_on_ok: "ã‰•Y²NLˆ¨R§YÃVîu|i§!"
  th_dark_nengyue_tooltip: "ÃVS(WùR”^ýV¶RhˆoÑž—fýwPN"
  th_dark_nengyue_desc: "ýw=fˆNºNaÅ`„voz‚ÿFOæyÃV„výw=fïSåN:YÖSºN„vaÅ`0Ù1S«ˆðyjONbŒ„vÑž—fýwPN0\n(WÃVîu|iŒRbÅ`aîOLˆMRÿùR”^hˆo„výV¶RTaSO·ƒ—Vÿ§R hQýVÛSqN¦^ +1ÿg¦^‰Lq¹ppe -1§!cbd–3*Ng6eeQÿÃVîu|iSO§G3*Ng6eeQ§!0\n·ƒ—V‚YœgùR”^ýV¶RÒbÝuSO·ƒ—Vÿ§R t^¦^Zg -1ÿg¦^‰Lq¹ppe -0.5§!0\n‚YœgÃVîu|iŒRb†NÅ`aîOLˆÿRdebuffNOuHe0\n"
  th_xinqilou_tooltip: "ÃVS(WùR”^ýV¶RhˆoÃVîu|i"
@@ -342,7 +342,7 @@
  #ûN¡Rh‰Bl
  nengyue_biaoyan_down: "ûN¡RÑž—fýwPNhˆoòTŒRb"
  qin_xiuxing: "ûN¡RÅ`a„vîOLˆòTŒRb"
- all_qin_complete: "Nb	gÅ`aîOLˆòTÏuŒRb"
+ all_qin_complete: "Nb	gÅ`aîOLˆûN¡RŒRb"
  kko_koishi_found: "òTNwKbŒågVØS"
  kko_koishi_restart: "NäSf0WK`ÛLˆ9VU^³Q—e"
  KKO_koishi_complete: "^gKNb—«ˆRVØ"
@@ -357,6 +357,7 @@
  KKO_flavor.2.desc: "bìN„vINºNæyÃVÿŸS,gýwYÇŒ‚‚ê«ŽÅ`êuegnxÝOýV¶R„v3zšRNŒTŒ0FO=fÿNSV„vÅ`êuŒ‚‚üRôæyÃV„vÅ`êu1Yaˆÿ…Š†NLuP–0ÃVîu|iàVdkw–eQ†N÷mqNKN-N0OYØN'N^ya0R†NMRNb*g	g„vÝugÿæyÃV„v›RÏ‘(WÙ¡wÅ`êu)o¡m-N<ONN‚föeàeÕlb`YÿÃVîu|i„v‹TÐàVdkØS—VŒSŒSïSqS0"
  KKO_flavor.2.a: "bìNØýwÇ‘ÖSÀNHNLˆ¨RTÿ"
  KKO_disaster_start1234: "§RŒp¾–òTÏuVËY§!"
+ kko_flavor_3tt: "§Y(W³Q®‹-N	éb@KKOnžR´ROs^aˆÅ`êu3!kegŒRÓuŒp¾–§!"
  KKO_flavor.3.t: "Å`êu1Yaˆ„vÈuÓu"
  KKO_flavor.3.desc: "æyÃVÿbìNåb	gSSŠýw›R„vINºNÿÍ‘°eµc6R†N1Yaˆ„vÅ`a0ÙNlØSO—Vte*NýV¶Rb`Y†NŽVåe„v3zšRNŒTŒ0àepe„vØN'N^ymNàVdkÍ‘·ƒ^g0ÃVîu|i„v‹TÐÿ(WÏu†S†NÙ:W¨RaƒKNTÿÈuŽNÞVRV†Ncknx„vhS0"
  KKO_flavor.3.a: "6qwÿÙNR<ONNêS=fíw‚f„vs^Y—ÿ*geg„vcbÍN6qjoÏ…(W—fY0"
@@ -535,11 +536,11 @@
  ####ûN¡R‰Bl eˆEQô‹f
  kko_daojiaoxian_nowdown1: "ÇN!Ñ‘NáOðN RñmNÙNLu„vTwû|"
  kko_fojiaoxian_nowdown1: "ÇN!Ñ‘NáOðN RñmN‹T²ƒúR„vTwû|"
- hopeless_masquerader_incident_start34: "Å`a„vVØSòTÏuÑSu"
+ hopeless_masquerader_incident_start34: "‹NöN0Å`a„vVØS0æ‰ÑS,Ðc:y:§YÅ`a1YaˆŒp¾–ÑSu30t^Tæ‰ÑS§!"
  th_kko_emotion_seventh_stage_extra_complete123: "(WVØSŒågöemGjA›xy–™"
  th_kko_emotion_stage_extra_complete123: "NäSf0W K`ÛLˆgT„vb—e"
  kko_xiwang_reget123: "Í‘þb^g"
- dark_nengyue12: "óShˆoÇ12!kÑž—fýwPN"
+ dark_nengyue12: "O(uY²NLˆ¨R§YÑž—fýwPNhˆo§!óS§Y12§!!k"
  koishi_advisor_technical1234: "K`K`(WYLuÅeLˆv^VeQYLu‡eSbœg4!k"
  kko_xinqilou_num123: "óSŒRbN!k0ÃVîu|i0"
  th_religious_taofo_title: "—RYeg!ýV"
