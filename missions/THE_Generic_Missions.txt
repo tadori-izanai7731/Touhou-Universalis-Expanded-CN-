@@ -139,7 +139,9 @@ th_gen_gensokyo_conquer = {
 		
 		trigger = { 
 			NOT = { tag = HIG }
-			owns_core_province = 4983
+			4983 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		
 		effect = { 
@@ -176,7 +178,9 @@ th_gen_gensokyo_conquer = {
 		
 		trigger = { 
 			NOT = { tag = MHG }
-			owns_core_province = 4989
+						4989 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		
 		effect = { 
@@ -213,7 +217,9 @@ th_gen_gensokyo_conquer = {
 		
 		trigger = { 
 			NOT = { tag = SFF }
-			owns_core_province = 5152
+			5152 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		
 		effect = { 
@@ -249,7 +255,9 @@ th_gen_gensokyo_conquer = {
 		
 		trigger = { 
 			NOT = { tag = CIN }
-			owns_core_province = 5080
+			5080 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		
 		effect = { 
@@ -509,7 +517,9 @@ th_gen_gensokyo_religions = {
 		
 		trigger = { 
 			NOT = { tag = CRD }
-			owns_core_province = 5007
+			5007 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		
 		effect = { 
@@ -544,7 +554,9 @@ th_gen_gensokyo_religions = {
 		
 		trigger = { 
 			NOT = { tag = OKR }
-			owns_core_province = 5183
+			5183 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		
 		effect = { 
@@ -580,7 +592,9 @@ th_gen_gensokyo_religions = {
 		
 		trigger = { 
 			NOT = { tag = NET }
-			owns_core_province = 4958
+			4958 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		
 		effect = { 
@@ -622,7 +636,9 @@ th_gen_gensokyo_religions = {
 		
 		trigger = { 
 			NOT = { tag = MKI }
-			owns_core_province = 5214
+			5214 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		
 		effect = { 
@@ -805,7 +821,9 @@ th_gen_gensokyo_diplomacy = {
 		} 
 		
 		trigger = { 
-			owns_core_province = 1020
+			1020 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		
 		effect = { 
@@ -826,7 +844,9 @@ th_gen_gensokyo_diplomacy = {
 		
 		trigger = { 
 			NOT = { tag = MRY }
-			owns_core_province = 4998
+			4998 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		
 		effect = { 
@@ -862,7 +882,9 @@ th_gen_gensokyo_diplomacy = {
 		
 		trigger = { 
 			NOT = { tag = YOF }
-			owns_core_province = 5187
+			5187 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		
 		effect = { 
@@ -903,7 +925,9 @@ th_gen_gensokyo_diplomacy = {
 		
 		trigger = { 
 			NOT = { tag = KPP }
-			owns_core_province = 4965
+			4965 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		
 		effect = { 
@@ -944,7 +968,9 @@ th_gen_gensokyo_diplomacy = {
 		
 		trigger = { 
 			NOT = { tag = HMC }
-			owns_core_province = 4978
+			4978 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		
 		effect = { 
@@ -992,25 +1018,63 @@ th_gen_gensokyo_diplomacy = {
 				is_core = ROOT
 				value = 180
 			}
-			owns_core_province = 4968
-			owns_core_province = 4955
-			owns_core_province = 4989
-			owns_core_province = 5094
-			owns_core_province = 4991
-			owns_core_province = 4958
-			owns_core_province = 4978
-			owns_core_province = 4987
-			owns_core_province = 5152
-			owns_core_province = 5032
-			owns_core_province = 5183
-			owns_core_province = 5025
-			owns_core_province = 5214
-			owns_core_province = 4965
-			owns_core_province = 4964
-			owns_core_province = 4998
-			owns_core_province = 5187
-			owns_core_province = 5007
-			owns_core_province = 4983
+			4968 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4955 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4989 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5094 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4991 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4958 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4978 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4987 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5152 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5032 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5183 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5025 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5214 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4965 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4964 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4998 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5187 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5007 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4983 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		
 		effect = {  
@@ -1307,7 +1371,9 @@ th_gen_gensokyo_army = {
 		
 		trigger = { 
 			NOT = { tag = HKR }
-			owns_core_province = 4955
+			4955 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		
 		effect = { 
@@ -1348,7 +1414,9 @@ th_gen_gensokyo_army = {
 		
 		trigger = { 
 			NOT = { tag = MYO }
-			owns_core_province = 4987
+			4987 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		
 		effect = { 
@@ -1384,7 +1452,9 @@ th_gen_gensokyo_army = {
 		
 		trigger = { 
 			NOT = { tag = TGU }
-			owns_core_province = 4964
+			4964 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		
 		effect = { 
@@ -1419,7 +1489,9 @@ th_gen_gensokyo_army = {
 		
 		trigger = { 
 			NOT = { tag = HVR }
-			owns_core_province = 5032
+			5032 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		
 		effect = { 
@@ -1614,7 +1686,9 @@ th_gen_gensokyo_colonization = {
 		
 		trigger = { 
 			NOT = { tag = SCR }
-			owns_core_province = 4968
+			4968 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		
 		effect = { 
@@ -1654,8 +1728,12 @@ th_gen_gensokyo_colonization = {
 		
 		trigger = { 
 			NOT = { tag = FOM }
-			owns_core_province = 5094
-			owns_core_province = 5072
+			5094 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5072 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		
 		effect = { 
@@ -1694,7 +1772,9 @@ th_gen_gensokyo_colonization = {
 		
 		trigger = { 
 			NOT = { tag = SNK }
-			owns_core_province = 5025
+			5025 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		
 		effect = { 
@@ -1730,7 +1810,9 @@ th_gen_gensokyo_colonization = {
 		
 		trigger = { 
 			NOT = { tag = EIT }
-			owns_core_province = 4991
+			4991 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		
 		effect = { 
