@@ -134,7 +134,10 @@ kagiyama_severe_aspect = {
 kagiyama_misforture_aspect = {
 	cost = 100
 	trigger = {
-		has_global_flag = yof_th_kagiyama_misforture_church_allow
+		custom_trigger_tooltip = {
+			tooltip = yof_th_kagiyama_misforture_church_allow_tt
+			has_global_flag = yof_th_kagiyama_misforture_church_allow
+		}
 	}
 	modifier = {
 		all_power_cost = -0.05
