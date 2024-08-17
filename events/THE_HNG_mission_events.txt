@@ -1952,7 +1952,7 @@ country_event = {
 		trigger = {
 			NOT = { exists = MMU }
 			OR = {
-				owns_core_province = 5147
+				owns_core_province = 5144
 				MYO = {
 					has_opinion = {
 						who = ROOT
