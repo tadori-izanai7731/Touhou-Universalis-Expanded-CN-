@@ -101,8 +101,8 @@ kagiyama_disaster_aspect = {
 		}
 	}
 	modifier = {
-		global_unrest = -1.5
-		stability_cost_modifier = -0.3
+		global_unrest = -1
+		stability_cost_modifier = -0.15
 	}
 	ai_will_do = {
 		factor = 10
@@ -134,7 +134,10 @@ kagiyama_severe_aspect = {
 kagiyama_misforture_aspect = {
 	cost = 100
 	trigger = {
-		mission_completed = yof_smile_to_doom
+		custom_trigger_tooltip = {
+			tooltip = yof_th_kagiyama_misforture_church_allow_tt
+			has_global_flag = yof_th_kagiyama_misforture_church_allow
+		}
 	}
 	modifier = {
 		all_power_cost = -0.05
@@ -241,7 +244,7 @@ kagiyama_disaster_aspectv2 = {
 		has_country_flag = yof_chruch_6_level_up_flag
 	}
 	modifier = {
-		global_unrest = -1.5
+		global_unrest = -1
 		stability_cost_modifier = -0.50
 	}
 	ai_will_do = {

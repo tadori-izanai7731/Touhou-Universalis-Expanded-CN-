@@ -92,6 +92,7 @@ country_event = {
 	}
 	option = {
 		name = KKO_flavor.3.a
+		custom_tooltip = kko_flavor_3tt
 	}
 }
 #希望之面丢失
@@ -108,7 +109,7 @@ country_event = {
 		}
 		had_country_flag = {
 			flag = kko_disaster_started
-			days = 18250
+			days = 10950
 		}
 		NOT = {
 			has_country_flag = kko_xiwang_lose
