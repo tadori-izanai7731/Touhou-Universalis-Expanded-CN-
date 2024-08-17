@@ -207,10 +207,6 @@ the_hng_disasters_two = {
 			dip = 6
 		}
 		modifier = {
-			factor = -1
-			mil = 6
-		}
-		modifier = {
 			factor = 1
 			num_of_rebel_armies = 1
 		}
@@ -219,11 +215,11 @@ the_hng_disasters_two = {
 			num_of_rebel_controlled_provinces = 1
 		}
 		modifier = {
-			factor = 3
+			factor = 4
 			NOT ={ imperial_mandate = 50 }
 		}
 		modifier = {
-			factor = 30
+			factor = 100
 			is_bankrupt = yes
 		}
 		modifier = {
@@ -231,7 +227,7 @@ the_hng_disasters_two = {
 			corruption = 3
 		}
 		modifier = {
-			factor = 4
+			factor = 5
 			has_any_disaster = yes
 		}
 	}
