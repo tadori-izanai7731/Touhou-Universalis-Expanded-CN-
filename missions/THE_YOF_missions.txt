@@ -1228,7 +1228,7 @@ THE_yof_slot_3 = {
 			add_mil_power = 150
 			hidden_effect = {
 				set_country_flag = yof_change_religions_subject_to_vasstal_allow_flag
-				set_country_flag = yof_th_kagiyama_misforture_church_allow
+				set_global_flag = yof_th_kagiyama_misforture_church_allow
 			}
 		} 
 	}

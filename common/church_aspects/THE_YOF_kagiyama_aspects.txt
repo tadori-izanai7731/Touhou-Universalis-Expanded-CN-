@@ -134,9 +134,7 @@ kagiyama_severe_aspect = {
 kagiyama_misforture_aspect = {
 	cost = 100
 	trigger = {
-		YOF = {
-			mission_completed = yof_smile_to_doom
-		}
+		has_global_flag = yof_th_kagiyama_misforture_church_allow
 	}
 	modifier = {
 		all_power_cost = -0.05
