@@ -140,9 +140,12 @@ THE_HNG_yaokai_fort_maintenance = {
 		}
 	}
 	can_select = {
-		NOT = {
-			total_development = 800 }
-			NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army }
+		OR = {
+		NOT = {  
+			total_development = 800 
+		}
+			has_country_modifier = THE_HNG_modernization_gensokyo_army 
+		}
 		}
 		
 		can_revoke = { 
