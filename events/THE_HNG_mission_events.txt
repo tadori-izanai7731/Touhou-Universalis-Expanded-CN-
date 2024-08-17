@@ -542,7 +542,7 @@ country_event = {
 		custom_tooltip = THE_HNG_mission34_tt
 		set_country_flag = THE_HNG_country_flag_mission1
 	}
-
+	
 	after = {
 		hidden_effect = {
 			country_event = {
@@ -566,7 +566,7 @@ country_event = {
 			NOT = { war_with = ROOT }
 		}
 	}
-
+	
 	immediate = {
 		hidden_effect = {
 			declare_war_with_cb = {
@@ -940,7 +940,7 @@ country_event = {
 			add_base_manpower = 3
 		}
 	}
-
+	
 	option = {
 		name = flavor_THE_HNG_mission_events.25.b
 		add_country_modifier = {
@@ -954,11 +954,11 @@ country_event = {
 			add_base_production = 3
 			add_base_manpower = 3
 		}
-       change_religion = th_taoist
-	   add_country_modifier = {
-		name = THE_hng_mission_modifier142
-		duration = -1
-	   }
+		change_religion = th_taoist
+		add_country_modifier = {
+			name = THE_hng_mission_modifier142
+			duration = -1
+		}
 	}
 }
 
@@ -1139,7 +1139,7 @@ country_event = {
 		}
 		set_country_flag = THE_HNG_mission_event34
 	}
-
+	
 	after = {
 		country_event = {
 			id = flavor_THE_HNG_mission_events.35
@@ -1558,7 +1558,7 @@ country_event = {
 	desc = "flavor_THE_HNG_mission_events.46.desc"
 	picture = THE_HNG_mission6
 	is_triggered_only = yes
-
+	
 	option = {
 		name = flavor_THE_HNG_mission_events.46.a
 		add_manpower = 0.001
@@ -1796,7 +1796,26 @@ country_event = {
 		name = flavor_THE_HNG_mission_events.52.b
 		trigger = {
 			NOT = { exists = PRS }
-			owns_core_province = 5286
+			5286 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			CRD = {
+				has_opinion = {
+					who = ROOT
+					value = 150
+				}
+			}
+			AND = {
+				NOT = { exists = CRD }
+				5286 = {
+					owner = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+				}
+			}
 		}
 		set_country_flag = THE_HNG_had_PRS_subject
 		persia_region = {
@@ -1952,11 +1971,24 @@ country_event = {
 		trigger = {
 			NOT = { exists = MMU }
 			OR = {
-				owns_core_province = 5144
+				5144 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 				MYO = {
 					has_opinion = {
 						who = ROOT
 						value = 150
+					}
+				}
+				AND = {
+					NOT = { exists = MYO }
+					5144 = {
+						owner = {
+							has_opinion = {
+								who = ROOT
+								value = 150
+							}
+						}
 					}
 				}
 			}
@@ -2143,7 +2175,9 @@ country_event = {
 		trigger = {
 			NOT = { religion = th_taoist }
 			OR = {
-				owns_core_province = 4987
+				4987 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 				MYO = {
 					alliance_with = ROOT	
 					has_opinion = {
@@ -2206,7 +2240,7 @@ country_event = {
 	desc = "flavor_THE_HNG_mission_events.57.desc"
 	picture = RESORT_PARADISE_eventPicture
 	fire_only_once = yes
-
+	
 	major = yes
 	major_trigger = {
 		capital_scope = {
@@ -2217,7 +2251,7 @@ country_event = {
 			}
 		}
 	}
-
+	
 	trigger = {
 		is_emperor_of_china = yes
 		war_with = HNG

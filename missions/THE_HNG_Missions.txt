@@ -1000,8 +1000,12 @@ THE_HNG_1_2 = {
 		} 
 		
 		trigger = { 
-			owns_core_province = 2402
-			owns_core_province = 579
+			2402 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			579 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			treasury = 200
 		} 
 		
@@ -1195,8 +1199,12 @@ THE_HNG_1_3 = {
 		} 
 		
 		trigger = { 
-			owns_core_province = 2166
-			owns_core_province = 660	
+			2166 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			660 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		
 		effect = {
@@ -1801,10 +1809,18 @@ THE_HNG_1_4 = {
 		} 
 		
 		trigger = { 
-			owns_core_province = 600
-			owns_core_province = 4831
-			owns_core_province = 2389
-			owns_core_province = 601
+			600 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4831 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2389 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			601 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		
 		effect = {
@@ -1987,7 +2003,9 @@ THE_HNG_1_5 = {
 			OR = {
 				AND = {
 					NOT = { exists = RYU }
-					owns_core_province = 1015
+					1015 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
 				}
 				AND = {
 					RYU ={
@@ -2193,8 +2211,12 @@ THE_HNG_1_5 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
-			owns_core_province = 460
-			owns_core_province = 2364
+			460 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2364 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		
 		effect = { 
@@ -3119,7 +3141,9 @@ THE_HNG_2_1 = {
 				}
 				AND = {
 					NOT = { exists = AKI }
-					owns_core_province = 5134
+					5134 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
 				}
 			}
 		} 
@@ -3159,7 +3183,9 @@ THE_HNG_2_1 = {
 				}
 				AND = {
 					NOT = { exists = SNK }
-					owns_core_province = 4973
+					4973 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
 				}
 			}
 		} 
@@ -3617,7 +3643,9 @@ THE_HNG_2_2 = {
 				}
 				AND = {
 					NOT = { exists = TGU }
-					owns_core_province = 4964
+					4964 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
 				}
 			}
 		} 
@@ -3644,7 +3672,9 @@ THE_HNG_2_2 = {
 		} 
 		
 		trigger = { 
-			owns_core_province = 5315
+			5315 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		
 		effect = { 
@@ -4346,7 +4376,9 @@ THE_HNG_2_3 = {
 				}
 				AND = {
 					NOT = { exists = YME }
-					owns_core_province = 5219
+					5219 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
 				}
 			}
 		} 
@@ -4391,10 +4423,11 @@ THE_HNG_2_3 = {
 		} 
 		
 		trigger = { 
-			AND = {
 				NOT = {	exists = LCU }
 				NOT = {	exists = LEM }
-			}
+				5360 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 		} 
 		
 		effect = { 
@@ -4434,8 +4467,12 @@ THE_HNG_2_3 = {
 		} 
 		
 		trigger = { 
-			owns_core_province = 4964
-			owns_core_province = 5032
+			4964 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5032 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		
 		effect = { 
@@ -4920,7 +4957,9 @@ THE_HNG_2_4 = {
 		} 
 		
 		trigger = {
-			owns_core_province = 1205
+			1205 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			mogadishu_area = {
 				type = all
 				owned_by = ROOT
@@ -4953,10 +4992,18 @@ THE_HNG_2_4 = {
 			OR = { 
 				AND = {
 					exists = PER
-					owns_core_province = 426
-					owns_core_province = 416
-					owns_core_province = 429
-					owns_core_province = 433
+					426 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					416 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					429 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					433 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
 				}
 				AND = {
 					NOT= { exists = PER }
@@ -4972,10 +5019,18 @@ THE_HNG_2_4 = {
 			if = {
 				limit = {
 					exists = PER
-					owns_core_province = 426
-					owns_core_province = 416
-					owns_core_province = 429
-					owns_core_province = 433
+					426 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					416 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					429 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					433 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
 				}
 				custom_tooltip = THE_HNG_2_4_51_case1_tt_yes
 			}
@@ -5025,10 +5080,18 @@ THE_HNG_2_4 = {
 				if = {
 					limit = { 
 						exists = PER
-						owns_core_province = 426
-						owns_core_province = 416
-						owns_core_province = 429
-						owns_core_province = 433
+						426 = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						416 = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						429 = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						433 = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
 					}
 					inherit = PER
 					persia_region = {
@@ -5117,7 +5180,9 @@ THE_HNG_2_4 = {
 				}
 				AND = {
 					NOT = { exists = ONI }
-					owns_core_province = 5008
+					5008 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
 				}
 			}
 		} 
@@ -5144,7 +5209,9 @@ THE_HNG_2_4 = {
 		} 
 		
 		trigger = { 
-			owns_core_province = 5330
+			5330 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		
 		effect = { 
@@ -5226,7 +5293,9 @@ THE_HNG_2_5 = {
 				}
 			}
 			else_if = {
-				owns_core_province = 1816
+				1816 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 			}
 		} 
 		
@@ -5742,7 +5811,7 @@ THE_HNG_2_5 = {
 					area = Mayohiga_state
 					area = Eastern_mountains
 				}
-				value = 6
+				value = 5
 			}
 		} 
 		
@@ -5780,7 +5849,9 @@ THE_HNG_2_5 = {
 				}
 				AND = {
 					NOT = { exists = KPP }
-					owns_core_province = 4965
+					4965 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
 				}
 			}
 		} 
@@ -5817,7 +5888,9 @@ THE_HNG_2_5 = {
 				}
 				AND = {
 					NOT = { exists = MYO }
-					owns_core_province = 4987
+					4987 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
 				}
 			}
 		} 
@@ -6288,7 +6361,9 @@ THE_HNG_3_5 = {
 			imperial_mandate = 50
 			empire_of_china_reform_level = 3
 			OR = {
-				owns_core_province = 4968
+				4968 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 				NOT = { exists = SCR }
 				SCR = {
 					has_opinion = {

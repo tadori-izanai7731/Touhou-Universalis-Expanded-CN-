@@ -73,7 +73,9 @@ country_decisions = {
 			NOT = { has_country_modifier = THE_HNG_The_Joy_of_Reunion }
 			OR = {
 				NOT = { exists = SCR }
-				owns_core_province = 4968
+				4968 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 			}
 		}
 		allow = {
