@@ -629,6 +629,8 @@ THE_HNG_believe_your_country = {
 	administrative_efficiency = 0.025
 	imperial_mandate = 0.03
 	num_accepted_cultures = 20
+	possible_policy = 1
+	free_policy = 1
 }
 
 #急需改革
@@ -651,6 +653,7 @@ THE_hng_mission_modifier46 = {
 THE_hng_mission_modifier47 = {
 	all_estate_loyalty_equilibrium = 0.1
 	all_estate_influence_modifier = -0.1
+	all_estate_possible_privileges = 1
 }
 
 #胡说，幻想乡人怎么会有腐败！
