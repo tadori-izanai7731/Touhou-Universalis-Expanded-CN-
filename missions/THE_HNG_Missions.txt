@@ -1070,15 +1070,14 @@ THE_HNG_1_2 = {
 		position = 14
 		
 		trigger = {  
-			religious_unity = 0.8
+			total_development = 150
 			OR = {
-				total_development = 150
+				religious_unity = 0.8
 				AND = {
 					is_year = 1453
 					religion = confucianism
 				}
-			}
-			
+			}	
 		} 
 		
 		effect = { 
