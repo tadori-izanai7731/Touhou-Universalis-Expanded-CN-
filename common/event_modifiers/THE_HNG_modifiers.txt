@@ -392,6 +392,7 @@ THE_hng_mission_modifier19 = {
 THE_hng_mission_modifier20 = {
 	ae_impact = -0.25
 	land_forcelimit = 10
+	land_maintenance_modifier = -0.1
 	may_return_manpower_on_disband = yes
 }
 
@@ -1435,7 +1436,7 @@ THE_hng_mission_modifier134 = {
 
 #“红茶”的发源地
 THE_hng_mission_modifier135 = {
-	trade_goods_size = 0.5
+	trade_goods_size = 1
 	local_institution_spread = 0.25
 }
 
@@ -1505,5 +1506,11 @@ THE_hng_mission_modifier143 = {
 	global_missionary_strength = 0.01
 	missionaries = 1
 	monthly_fervor_increase = 4
+	religion = yes
+}
+
+#强调独尊儒术
+THE_hng_mission_modifier144 = {
+	tolerance_own = 2
 	religion = yes
 }
