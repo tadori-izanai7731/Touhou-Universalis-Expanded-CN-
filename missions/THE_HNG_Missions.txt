@@ -459,6 +459,12 @@ THE_HNG_1_1 = {
 		} 
 		
 		effect = { 
+			if = {
+				limit = {
+					religion = confucianism
+				}
+				add_harmonization_progress = 100
+			}
 			THE_country_event_with_insight = {
 				id = flavor_THE_HNG_mission_events.12
 				option_1 = "
@@ -1079,6 +1085,12 @@ THE_HNG_1_2 = {
 			add_adm_power = 75
 			add_dip_power = 75
 			add_mil_power = 75
+			if = {
+				limit = {
+					religion = confucianism
+				}
+				add_harmonized_religion = mahayana
+			}
 		} 
 	}
 	
@@ -1099,6 +1111,15 @@ THE_HNG_1_2 = {
 			add_country_modifier = {
 				name = THE_hng_mission_modifier42
 				duration = -1
+			}
+			if = {
+				limit = {
+					religion = confucianism
+				}
+				add_country_modifier = {
+					name = THE_hng_mission_modifier144
+					duration = -1
+				}
 			}
 		} 
 	}
@@ -1305,7 +1326,7 @@ THE_HNG_1_3 = {
 				set_country_flag = MUG_more_chance_for_elephants_flag
 				add_country_modifier = {
 					name = THE_hng_mission_modifier141
-					duration = 3650
+					duration = 9125
 				}
 			}
 			if = {
@@ -1325,7 +1346,7 @@ THE_HNG_1_3 = {
 				set_country_flag = MUG_more_chance_for_elephants_flag
 				add_country_modifier = {
 					name = THE_hng_mission_modifier141
-					duration = 3650
+					duration = 9125
 				}
 			}
 			indo_china_region = {
