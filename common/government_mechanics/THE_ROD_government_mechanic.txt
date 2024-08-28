@@ -170,6 +170,38 @@ THE_ROD_dark_moon_night_mechanic = {
 					mission_completed = THE_ROD_4_14
 				}
 			}
+
+			# Decrease debuff!
+			range_modifier = {
+				modifier = {
+					global_monthly_devastation = -0.05
+				}
+				start_value = 25
+				end_value = 100
+				trigger = {
+					has_country_flag = THE_ROD_decrease_mechanic_debuff_flag
+				}
+			}
+			range_modifier = {
+				modifier = {
+					global_monthly_devastation = -0.05
+				}
+				start_value = 50
+				end_value = 100
+				trigger = {
+					has_country_flag = THE_ROD_decrease_mechanic_debuff_flag
+				}
+			}
+			range_modifier = {
+				modifier = {
+					global_monthly_devastation = -0.05
+				}
+				start_value = 75
+				end_value = 100
+				trigger = {
+					has_country_flag = THE_ROD_decrease_mechanic_debuff_flag
+				}
+			}
 			increases_with_global = no
 		}
 	}

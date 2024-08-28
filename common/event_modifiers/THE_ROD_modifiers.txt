@@ -87,6 +87,12 @@ THE_ROD_baltic_sea_port = {
 	province_trade_power_modifier = 0.25
 }
 
+#波罗的海港口
+THE_ROD_baltic_sea_port_2 = {
+	trade_value = 10
+	province_trade_power_modifier = 0.5
+}
+
 #熔炼黄金
 THE_ROD_melt_gold_modifier = {
 	nobles_loyalty_modifier = 0.1
@@ -534,6 +540,15 @@ THE_ROD_friedrich_wilhelm_mil_modifier = {
 	mil_advisor_cost = -0.25
 	mil_tech_cost_modifier = -0.1
 	yearly_army_professionalism = 0.005
+}
+
+#波罗的海贸易中心
+THE_ROD_baltic_sea_trade_center_province_modifier = {
+	merchants = 1
+	trade_efficiency = 0.02
+	trade_steering = 0.03
+	global_prov_trade_power_modifier = 0.04
+	placed_merchant_power_modifier = 0.05
 }
 
 ###EXTRA_HAKUREI_DEITY

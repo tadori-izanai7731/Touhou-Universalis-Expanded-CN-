@@ -359,7 +359,7 @@ country_event = {
 		OR = { tag = ROD was_tag = ROD }
 		mission_completed = THE_ROD_2_3
 		mission_completed = THE_ROD_1_12
-		is_year = 1600
+		is_year = 1550
 	}
 
 	mean_time_to_happen = {
@@ -373,6 +373,10 @@ country_event = {
 		add_country_modifier = {
 			name = THE_ROD_photosynthesis_modifier
 			duration = -1
+		}
+		custom_tooltip = THE_ROD_decrease_dark_moon_night_negative_effect_tt
+		hidden_effect = {
+			set_country_flag = THE_ROD_decrease_mechanic_debuff_flag
 		}
 	}
 }
@@ -925,5 +929,45 @@ country_event = {
 	option = {
 		name = THE_ROD_events.16.a
 		custom_tooltip = THE_ROD_colorful_egg_tt
+	}
+}
+
+#波罗的海贸易事件组
+country_event = {
+	id = THE_ROD_events.17
+	title = THE_ROD_events.17.title
+	desc = THE_ROD_events.17.desc
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 120
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		43 = {
+			owned_by = ROOT
+			has_province_modifier = THE_ROD_baltic_sea_port
+		}
+	}
+
+	option = {
+		name = THE_ROD_events.17.a
+		custom_tooltip = THE_ROD_baltic_trade_event_tt
+		custom_tooltip = empty_line_tt
+		43 = {
+			hidden_effect = {
+				remove_province_modifier = THE_ROD_baltic_sea_port
+				add_permanent_province_modifier = {
+					name = THE_ROD_baltic_sea_port_2
+					duration = -1
+				}
+				add_permanent_province_modifier = {
+					name = THE_ROD_baltic_sea_trade_center_province_modifier
+					duration = -1
+				}
+			}
+			custom_tooltip = THE_ROD_upgrade_baltic_sea_port_tt
+		}
 	}
 }
