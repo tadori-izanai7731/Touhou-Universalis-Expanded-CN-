@@ -5,6 +5,9 @@ country_event = {
 	desc = "flavor_THE_HNG_government_events.1.desc"
 	picture = DRAGON_eventPicture
 	is_triggered_only = yes
+	trigger = {
+		has_government_attribute = HNG_searching_for_dragon_points
+	}
 	
 	option = {
 		name = flavor_THE_HNG_government_events.1.a
@@ -45,6 +48,9 @@ country_event = {
 	desc = "flavor_THE_HNG_government_events.2.desc"
 	picture = DRAGON_eventPicture
 	is_triggered_only = yes
+	trigger = {
+		has_government_attribute = HNG_searching_for_dragon_points
+	}
 	
 	option = {
 		name = flavor_THE_HNG_government_events.2.a
@@ -129,10 +135,6 @@ country_event = {
 	is_triggered_only = yes
 	hidden = yes
 	trigger = {
-		OR = {
-			tag = HNG
-			was_tag = HNG
-		}
 		has_government_attribute = HNG_searching_for_dragon_points
 	}
 	immediate = {
