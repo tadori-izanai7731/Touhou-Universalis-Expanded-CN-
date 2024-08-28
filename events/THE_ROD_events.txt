@@ -944,6 +944,10 @@ country_event = {
 		months = 120
 	}
 	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = THE_ROD_not_complete_event_ttt
+			always = no
+		}
 		OR = { tag = ROD was_tag = ROD }
 		43 = {
 			owned_by = ROOT
