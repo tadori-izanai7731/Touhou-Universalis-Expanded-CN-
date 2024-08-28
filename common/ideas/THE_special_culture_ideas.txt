@@ -1,5 +1,5 @@
 THE_youkai_ideas = {
-	category = MIL
+	category = ADM
 
 	bonus = {
 		leader_siege = 1
@@ -9,6 +9,7 @@ THE_youkai_ideas = {
 	}
 
 	trigger = {
+		always = no
 		OR = {
 			THE_can_use_special_culture_ideas = {
 				type = youkai
@@ -17,18 +18,28 @@ THE_youkai_ideas = {
 	}
 	
 	THE_youkai_ideas_1 = {
+		stability_cost_modifier = -0.2
 	}	
 	THE_youkai_ideas_2 = {
+		spy_offence = 0.25
+		global_spy_defence = 0.25
 	}	
 	THE_youkai_ideas_3 = {
+		morale_damage = 0.1
+		reserves_organisation = 0.15
 	}	
 	THE_youkai_ideas_4 = {
+		prestige = 0.02
 	}	
 	THE_youkai_ideas_5 = {
+		ae_impact = -0.1
+		overextension_impact_modifier = -0.3
 	}	
 	THE_youkai_ideas_6 = {
+		yearly_corruption = -0.2
 	}	
 	THE_youkai_ideas_7 = {
+		
 	}
 	
 
