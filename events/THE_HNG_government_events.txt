@@ -55,7 +55,7 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = {
-				id = flavor_THE_HNG_government_events.2.hidden
+				id = flavor_THE_HNG_government_events.2.1
 				days = 10950
 			}
 		}
@@ -69,7 +69,7 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = {
-				id = flavor_THE_HNG_government_events.2.hidden
+				id = flavor_THE_HNG_government_events.2.1
 				days = 10950
 			}
 		}
@@ -83,7 +83,7 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = {
-				id = flavor_THE_HNG_government_events.2.hidden
+				id = flavor_THE_HNG_government_events.2.1
 				days = 10950
 			}
 		}
@@ -97,7 +97,7 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = {
-				id = flavor_THE_HNG_government_events.2.hidden
+				id = flavor_THE_HNG_government_events.2.1
 				days = 10950
 			}
 		}
@@ -111,7 +111,7 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = {
-				id = flavor_THE_HNG_government_events.2.hidden
+				id = flavor_THE_HNG_government_events.2.1
 				days = 10950
 			}
 		}
@@ -122,12 +122,19 @@ country_event = {
 }
 
 country_event = {
-	id = flavor_THE_HNG_government_events.2.hidden
+	id = flavor_THE_HNG_government_events.2.1
 	title = NONE
 	desc = NONE
 	picture = NUKE_eventPicture
 	is_triggered_only = yes
 	hidden = yes
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		has_government_attribute = HNG_searching_for_dragon_points
+	}
 	immediate = {
 		country_event = {
 			id = flavor_THE_HNG_government_events.2
