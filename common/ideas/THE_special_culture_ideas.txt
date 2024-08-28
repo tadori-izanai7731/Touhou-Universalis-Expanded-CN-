@@ -1,0 +1,38 @@
+THE_youkai_ideas = {
+	category = MIL
+
+	bonus = {
+		leader_siege = 1
+		nobles_loyalty_modifier = 0.1
+		rajput_loyalty_modifier = 0.1
+		maratha_loyalty_modifier = 0.1
+	}
+
+	trigger = {
+		OR = {
+			THE_can_use_special_culture_ideas = {
+				type = youkai
+			}
+		}
+	}
+	
+	THE_youkai_ideas_1 = {
+	}	
+	THE_youkai_ideas_2 = {
+	}	
+	THE_youkai_ideas_3 = {
+	}	
+	THE_youkai_ideas_4 = {
+	}	
+	THE_youkai_ideas_5 = {
+	}	
+	THE_youkai_ideas_6 = {
+	}	
+	THE_youkai_ideas_7 = {
+	}
+	
+
+	ai_will_do = {
+		factor = 5
+	}
+}
