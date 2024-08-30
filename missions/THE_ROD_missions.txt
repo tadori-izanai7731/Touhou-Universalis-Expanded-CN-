@@ -4562,9 +4562,12 @@ THE_ROD_branch_lock_2 = {
 					NOT = { total_development = ROOT } 
 				}
 			}
-			has_global_modifier_value = {
-				which = tolerance_own
-				value = 10
+			custom_trigger_tooltip = {
+				tooltip = THE_ROD_has_tolerance_own_10
+				has_global_modifier_value = {
+					which = tolerance_own
+					value = 10
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = THE_ROD_if_select_hakurei_branch_ttt
@@ -4862,9 +4865,12 @@ THE_ROD_branch_catholic_2 = {
 					NOT = { total_development = ROOT } 
 				}
 			}
-			has_global_modifier_value = {
-				which = tolerance_own
-				value = 10
+			custom_trigger_tooltip = {
+				tooltip = THE_ROD_has_tolerance_own_10
+				has_global_modifier_value = {
+					which = tolerance_own
+					value = 10
+				}
 			}
 		}
 
