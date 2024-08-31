@@ -12,7 +12,7 @@ THE_use_common_election_scripted_trigger = {
 	NOT = { has_government_attribute = THE_HMC_use_human_capital_election }
 }
 
-THE_can_use_special_culture_ideas = {
+THE_can_use_special_culture_ideas_scripted_trigger = {
 	ai = no
 	OR = {
 		has_country_flag = THE_can_use_$type$_ideas_flag

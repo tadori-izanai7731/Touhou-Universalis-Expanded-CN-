@@ -1,0 +1,1444 @@
+
+### youkai ideas policies
+THE_youkai_kami_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_youkai_ideas
+		has_idea_group = THE_kami_ideas
+	}
+	allow = {
+		full_idea_group = THE_youkai_ideas
+		full_idea_group = THE_kami_ideas
+	}
+	
+	# modifier
+	global_missionary_strength = 0.02
+	prestige_per_development_from_conversion = 1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_youkai_court_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_youkai_ideas
+		has_idea_group = court_ideas
+	}
+	allow = {
+		full_idea_group = THE_youkai_ideas
+		full_idea_group = court_ideas
+	}
+	
+	# modifier
+	years_of_nationalism = -5
+	advisor_pool = 2
+	
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_youkai_diplomatic_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_youkai_ideas
+		has_idea_group = diplomatic_ideas
+	}
+	allow = {
+		full_idea_group = THE_youkai_ideas
+		full_idea_group = diplomatic_ideas
+	}
+	
+	# modifier
+	diplomatic_upkeep = 1
+	advisor_cost = -0.2
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_youkai_spy_policy= {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_youkai_ideas
+		has_idea_group = spy_ideas
+	}
+	allow = {
+		full_idea_group = THE_youkai_ideas
+		full_idea_group = spy_ideas
+	}
+	
+	# modifier
+	siege_ability = 0.15
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_youkai_exploration_policy= {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_youkai_ideas
+		has_idea_group = exploration_ideas
+	}
+	allow = {
+		full_idea_group = THE_youkai_ideas
+		full_idea_group = exploration_ideas
+	}
+	
+	# modifier
+	range = 0.5
+	colonist_placement_chance = 0.05
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_youkai_influence_policy= {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_youkai_ideas
+		has_idea_group = influence_ideas
+	}
+	allow = {
+		full_idea_group = THE_youkai_ideas
+		full_idea_group = influence_ideas
+	}
+	
+	# modifier
+	liberty_desire_from_subject_development = -0.1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_youkai_maritime_policy= {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_youkai_ideas
+		has_idea_group = maritime_ideas
+	}
+	allow = {
+		full_idea_group = THE_youkai_ideas
+		full_idea_group = maritime_ideas
+	}
+	
+	# modifier
+	naval_forcelimit_modifier = 0.25
+	ship_trade_power_modifier = 0.2
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_youkai_trade_policy= {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_youkai_ideas
+		has_idea_group = trade_ideas
+	}
+	allow = {
+		full_idea_group = THE_youkai_ideas
+		full_idea_group = trade_ideas
+	}
+	
+	# modifier
+	global_trade_power = 0.2
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_youkai_human_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_youkai_ideas
+		has_idea_group = THE_human_ideas
+	}
+	allow = {
+		full_idea_group = THE_youkai_ideas
+		full_idea_group = THE_human_ideas
+	}
+	
+	# modifier
+	harsh_treatment_cost = -0.3
+	stability_cost_modifier = -0.15
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_youkai_fairy_policy= {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_youkai_ideas
+		has_idea_group = THE_fairy_ideas
+	}
+	allow = {
+		full_idea_group = THE_youkai_ideas
+		full_idea_group = THE_fairy_ideas
+	}
+	
+	# modifier
+	global_trade_goods_size_modifier = 0.1
+	production_efficiency = 0.1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_youkai_aristocracy_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_youkai_ideas
+		has_idea_group = aristocracy_ideas
+	}
+	allow = {
+		full_idea_group = THE_youkai_ideas
+		full_idea_group = aristocracy_ideas
+	}
+	
+	# modifier
+	build_cost = -0.15
+	build_time = -0.1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_youkai_plutocracy_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_youkai_ideas
+		has_idea_group = plutocracy_ideas
+	}
+	allow = {
+		full_idea_group = THE_youkai_ideas
+		full_idea_group = plutocracy_ideas
+	}
+	
+	# modifier
+	trade_efficiency = 0.1
+	trade_steering = 0.1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_youkai_theocracy_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_youkai_ideas
+		has_idea_group = theocracy_gov_ideas
+	}
+	allow = {
+		full_idea_group = THE_youkai_ideas
+		full_idea_group = theocracy_gov_ideas
+	}
+	
+	# modifier
+	tolerance_heretic = 2
+	tolerance_of_heretics_capacity = 1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_youkai_indigenous_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_youkai_ideas
+		has_idea_group = indigenous_ideas
+	}
+	allow = {
+		full_idea_group = THE_youkai_ideas
+		full_idea_group = indigenous_ideas
+	}
+	
+	# modifier
+	manpower_recovery_speed = 0.2
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_youkai_horde_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_youkai_ideas
+		has_idea_group = horde_gov_ideas
+	}
+	allow = {
+		full_idea_group = THE_youkai_ideas
+		full_idea_group = horde_gov_ideas
+	}
+	
+	# modifier
+	raze_power_gain = 0.2
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_youkai_defensive_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_youkai_ideas
+		has_idea_group = defensive_ideas
+	}
+	allow = {
+		full_idea_group = THE_youkai_ideas
+		full_idea_group = defensive_ideas
+	}
+	
+	# modifier
+	defensiveness = 0.25
+	fort_maintenance_modifier = -0.2
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_youkai_mercenary_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_youkai_ideas
+		has_idea_group = mercenary_ideas
+	}
+	allow = {
+		full_idea_group = THE_youkai_ideas
+		full_idea_group = mercenary_ideas
+	}
+	
+	# modifier
+	mercenary_manpower = 0.15
+	merc_maintenance_modifier = -0.1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_youkai_naval_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_youkai_ideas
+		has_idea_group = naval_ideas
+	}
+	allow = {
+		full_idea_group = THE_youkai_ideas
+		full_idea_group = naval_ideas
+	}
+	
+	# modifier
+	heavy_ship_power = 0.1
+	light_ship_power = 0.1
+	light_ship_power = 0.1
+	transport_power = 0.1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_youkai_offensive_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_youkai_ideas
+		has_idea_group = offensive_ideas
+	}
+	allow = {
+		full_idea_group = THE_youkai_ideas
+		full_idea_group = offensive_ideas
+	}
+	
+	# modifier
+	artillery_fire = 0.5
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_youkai_quality_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_youkai_ideas
+		has_idea_group = quality_ideas
+	}
+	allow = {
+		full_idea_group = THE_youkai_ideas
+		full_idea_group = quality_ideas
+	}
+	
+	# modifier
+	military_tactics = 0.1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_youkai_quantity_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_youkai_ideas
+		has_idea_group = quantity_ideas
+	}
+	allow = {
+		full_idea_group = THE_youkai_ideas
+		full_idea_group = quantity_ideas
+	}
+	
+	# modifier
+	regiment_manpower_usage = -0.1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_kami_youkai_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_kami_ideas
+		has_idea_group = THE_youkai_ideas
+	}
+	allow = {
+		full_idea_group = THE_kami_ideas
+		full_idea_group = THE_youkai_ideas
+	}
+	
+	# modifier
+	missionaries = 1
+	shock_damage_received = -0.1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_kami_court_policy= {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_kami_ideas
+		has_idea_group = court_ideas
+	}
+	allow = {
+		full_idea_group = THE_kami_ideas
+		full_idea_group = court_ideas
+	}
+	
+	# modifier
+	governing_capacity_modifier = 0.2
+	global_missionary_strength = 0.02
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_kami_diplomatic_policy= {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_kami_ideas
+		has_idea_group = diplomatic_ideas
+	}
+	allow = {
+		full_idea_group = THE_kami_ideas
+		full_idea_group = diplomatic_ideas
+	}
+	
+	# modifier
+	diplomats = 1
+	missionaries = 1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_kami_spy_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_kami_ideas
+		has_idea_group = spy_ideas
+	}
+	allow = {
+		full_idea_group = THE_kami_ideas
+		full_idea_group = spy_ideas
+	}
+	
+	# modifier
+	diplomatic_upkeep = 1
+	global_spy_defence = 0.33
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_kami_exploration_policy= {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_kami_ideas
+		has_idea_group = exploration_ideas
+	}
+	allow = {
+		full_idea_group = THE_kami_ideas
+		full_idea_group = exploration_ideas
+	}
+	
+	# modifier
+	colonists = 1
+	native_assimilation = 0.5
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_kami_influence_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_kami_ideas
+		has_idea_group = influence_ideas
+	}
+	allow = {
+		full_idea_group = THE_kami_ideas
+		full_idea_group = influence_ideas
+	}
+	
+	# modifier
+	governing_cost = -0.05
+	state_maintenance_modifier = -0.2
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_kami_maritime_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_kami_ideas
+		has_idea_group = maritime_ideas
+	}
+	allow = {
+		full_idea_group = THE_kami_ideas
+		full_idea_group = maritime_ideas
+	}
+	
+	# modifier
+	trade_company_governing_cost = -0.1
+	tolerance_heathen = 2
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_kami_trade_policy= {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_kami_ideas
+		has_idea_group = trade_ideas
+	}
+	allow = {
+		full_idea_group = THE_kami_ideas
+		full_idea_group = trade_ideas
+	}
+	
+	# modifier
+	trade_efficiency = 0.15
+	global_missionary_strength = 0.02
+
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_kami_human_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_kami_ideas
+		has_idea_group = THE_human_ideas
+	}
+	allow = {
+		full_idea_group = THE_kami_ideas
+		full_idea_group = THE_human_ideas
+	}
+	
+	# modifier
+	global_tax_modifier = 0.2
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_kami_fairy_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_kami_ideas
+		has_idea_group = THE_fairy_ideas
+	}
+	allow = {
+		full_idea_group = THE_kami_ideas
+		full_idea_group = THE_fairy_ideas
+	}
+	
+	# modifier
+	years_of_nationalism = -5
+	land_morale_constant = 0.25
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_kami_aristocracy_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_kami_ideas
+		has_idea_group = aristocracy_ideas
+	}
+	allow = {
+		full_idea_group = THE_kami_ideas
+		full_idea_group = aristocracy_ideas
+	}
+	
+	# modifier
+	leader_land_fire = 2
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_kami_plutocracy_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_kami_ideas
+		has_idea_group = plutocracy_ideas
+	}
+	allow = {
+		full_idea_group = THE_kami_ideas
+		full_idea_group = plutocracy_ideas
+	}
+	
+	# modifier
+	church_privilege_slots = 1
+	burghers_privilege_slots = 1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_kami_theocracy_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_kami_ideas
+		has_idea_group = theocracy_gov_ideas
+	}
+	allow = {
+		full_idea_group = THE_kami_ideas
+		full_idea_group = theocracy_gov_ideas
+	}
+	
+	# modifier
+	global_unrest = -1
+	tolerance_own = 2
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_kami_indigenous_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_kami_ideas
+		has_idea_group = indigenous_ideas
+	}
+	allow = {
+		full_idea_group = THE_kami_ideas
+		full_idea_group = indigenous_ideas
+	}
+	
+	# modifier
+	discipline = 0.05
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_kami_horde_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_kami_ideas
+		has_idea_group = horde_gov_ideas
+	}
+	allow = {
+		full_idea_group = THE_kami_ideas
+		full_idea_group = horde_gov_ideas
+	}
+	
+	# modifier
+	cav_to_inf_ratio = 0.25
+	cavalry_cost = -0.1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_kami_defensive_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_kami_ideas
+		has_idea_group = defensive_ideas
+	}
+	allow = {
+		full_idea_group = THE_kami_ideas
+		full_idea_group = defensive_ideas
+	}
+	
+	# modifier
+	rival_border_fort_maintenance = -0.5
+	own_territory_dice_roll_bonus = 1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_kami_mercenary_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_kami_ideas
+		has_idea_group = mercenary_ideas
+	}
+	allow = {
+		full_idea_group = THE_kami_ideas
+		full_idea_group = mercenary_ideas
+	}
+	
+	# modifier
+	mercenary_discipline = 0.05
+	land_maintenance_modifier = -0.05
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_kami_naval_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_kami_ideas
+		has_idea_group = naval_ideas
+	}
+	allow = {
+		full_idea_group = THE_kami_ideas
+		full_idea_group = naval_ideas
+	}
+	
+	# modifier
+	missionaries = 1
+	hull_size_modifier = 0.1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_kami_offensive_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_kami_ideas
+		has_idea_group = offensive_ideas
+	}
+	allow = {
+		full_idea_group = THE_kami_ideas
+		full_idea_group = offensive_ideas
+	}
+	
+	# modifier
+	movement_speed = 0.1
+	infantry_power = 0.1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_kami_quality_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_kami_ideas
+		has_idea_group = quality_ideas
+	}
+	allow = {
+		full_idea_group = THE_kami_ideas
+		full_idea_group = quality_ideas
+	}
+	
+	# modifier
+	global_heretic_missionary_strength = 0.03
+	fire_damage = 0.05
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_kami_quantity_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_kami_ideas
+		has_idea_group = quantity_ideas
+	}
+	allow = {
+		full_idea_group = THE_kami_ideas
+		full_idea_group = quantity_ideas
+	}
+	
+	# modifier
+	missionaries = 1
+	same_religion_advisor_cost = -0.2
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_human_administrative_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_human_ideas
+		has_idea_group = administrative_ideas
+	}
+	allow = {
+		full_idea_group = THE_human_ideas
+		full_idea_group = administrative_ideas
+	}
+	
+	# modifier
+	yearly_corruption = -0.15
+	legitimacy = 1
+	republican_tradition = 0.5
+	devotion = 1
+	horde_unity = 1
+	meritocracy = 1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_human_economic_policy= {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_human_ideas
+		has_idea_group = economic_ideas
+	}
+	allow = {
+		full_idea_group = THE_human_ideas
+		full_idea_group = economic_ideas
+	}
+	
+	# modifier
+	prestige_decay = -0.01
+	production_efficiency = 0.15
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_human_expansion_policy= {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_human_ideas
+		has_idea_group = expansion_ideas
+	}
+	allow = {
+		full_idea_group = THE_human_ideas
+		full_idea_group = expansion_ideas
+	}
+	
+	# modifier
+	trade_steering = 0.2
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_human_humanist_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_human_ideas
+		has_idea_group = humanist_ideas
+	}
+	allow = {
+		full_idea_group = THE_human_ideas
+		full_idea_group = humanist_ideas
+	}
+	
+	# modifier
+	tolerance_heathen = 2
+	religious_unity = 0.2
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_human_infrastructure_policy= {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_human_ideas
+		has_idea_group = infrastructure_ideas
+	}
+	allow = {
+		full_idea_group = THE_human_ideas
+		full_idea_group = infrastructure_ideas
+	}
+	
+	# modifier
+	movement_speed = 0.05
+	envoy_travel_time = -0.2
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_human_innovativeness_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_human_ideas
+		has_idea_group = innovativeness_ideas
+	}
+	allow = {
+		full_idea_group = THE_human_ideas
+		full_idea_group = innovativeness_ideas
+	}
+	
+	# modifier
+	embracement_cost = -0.25
+	technology_cost = -0.1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_human_religious_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_human_ideas
+		has_idea_group = religious_ideas
+	}
+	allow = {
+		full_idea_group = THE_human_ideas
+		full_idea_group = religious_ideas
+	}
+	
+	# modifier
+	tolerance_heathen = 1
+	tolerance_heretic = 1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_human_youkai_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_human_ideas
+		has_idea_group = THE_youkai_ideas
+	}
+	allow = {
+		full_idea_group = THE_human_ideas
+		full_idea_group = THE_youkai_ideas
+	}
+	
+	# modifier
+	global_unrest = -2
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_human_kami_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_human_ideas
+		has_idea_group = THE_kami_ideas
+	}
+	allow = {
+		full_idea_group = THE_human_ideas
+		full_idea_group = THE_kami_ideas
+	}
+	
+	# modifier
+	state_maintenance_modifier = -0.2
+	tolerance_own = 1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_human_fairy_policy= {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_human_ideas
+		has_idea_group = THE_fairy_ideas
+	}
+	allow = {
+		full_idea_group = THE_human_ideas
+		full_idea_group = THE_fairy_ideas
+	}
+	
+	# modifier
+	spy_offence = 0.15
+	production_efficiency = 0.15
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# THE_human_$$$$$_policy= {
+# 	monarch_power = 
+
+# 	potential = {
+# 		has_idea_group = THE_human_ideas
+# 		has_idea_group = 
+# 	}
+# 	allow = {
+# 		full_idea_group = THE_human_ideas
+# 		full_idea_group = 
+# 	}
+	
+# 	# modifier
+
+# 	effect = {}
+# 	removed_effect = {}
+# 	ai_will_do = {
+# 		factor = 1
+# 	}
+# }
+
+# THE_human_$$$$$_policy= {
+# 	monarch_power = 
+
+# 	potential = {
+# 		has_idea_group = THE_human_ideas
+# 		has_idea_group = 
+# 	}
+# 	allow = {
+# 		full_idea_group = THE_human_ideas
+# 		full_idea_group = 
+# 	}
+	
+# 	# modifier
+
+# 	effect = {}
+# 	removed_effect = {}
+# 	ai_will_do = {
+# 		factor = 1
+# 	}
+# }
+
+# THE_human_$$$$$_policy= {
+# 	monarch_power = 
+
+# 	potential = {
+# 		has_idea_group = THE_human_ideas
+# 		has_idea_group = 
+# 	}
+# 	allow = {
+# 		full_idea_group = THE_human_ideas
+# 		full_idea_group = 
+# 	}
+	
+# 	# modifier
+
+# 	effect = {}
+# 	removed_effect = {}
+# 	ai_will_do = {
+# 		factor = 1
+# 	}
+# }
+
+# THE_human_$$$$$_policy= {
+# 	monarch_power = 
+
+# 	potential = {
+# 		has_idea_group = THE_human_ideas
+# 		has_idea_group = 
+# 	}
+# 	allow = {
+# 		full_idea_group = THE_human_ideas
+# 		full_idea_group = 
+# 	}
+	
+# 	# modifier
+
+# 	effect = {}
+# 	removed_effect = {}
+# 	ai_will_do = {
+# 		factor = 1
+# 	}
+# }
+
+# THE_human_$$$$$_policy= {
+# 	monarch_power = 
+
+# 	potential = {
+# 		has_idea_group = THE_human_ideas
+# 		has_idea_group = 
+# 	}
+# 	allow = {
+# 		full_idea_group = THE_human_ideas
+# 		full_idea_group = 
+# 	}
+	
+# 	# modifier
+
+# 	effect = {}
+# 	removed_effect = {}
+# 	ai_will_do = {
+# 		factor = 1
+# 	}
+# }
+
+# THE_human_$$$$$_policy= {
+# 	monarch_power = 
+
+# 	potential = {
+# 		has_idea_group = THE_human_ideas
+# 		has_idea_group = 
+# 	}
+# 	allow = {
+# 		full_idea_group = THE_human_ideas
+# 		full_idea_group = 
+# 	}
+	
+# 	# modifier
+
+# 	effect = {}
+# 	removed_effect = {}
+# 	ai_will_do = {
+# 		factor = 1
+# 	}
+# }
+
+# THE_human_$$$$$_policy= {
+# 	monarch_power = 
+
+# 	potential = {
+# 		has_idea_group = THE_human_ideas
+# 		has_idea_group = 
+# 	}
+# 	allow = {
+# 		full_idea_group = THE_human_ideas
+# 		full_idea_group = 
+# 	}
+	
+# 	# modifier
+
+# 	effect = {}
+# 	removed_effect = {}
+# 	ai_will_do = {
+# 		factor = 1
+# 	}
+# }
+
+# THE_human_$$$$$_policy= {
+# 	monarch_power = 
+
+# 	potential = {
+# 		has_idea_group = THE_human_ideas
+# 		has_idea_group = 
+# 	}
+# 	allow = {
+# 		full_idea_group = THE_human_ideas
+# 		full_idea_group = 
+# 	}
+	
+# 	# modifier
+
+# 	effect = {}
+# 	removed_effect = {}
+# 	ai_will_do = {
+# 		factor = 1
+# 	}
+# }
+
+# THE_human_$$$$$_policy= {
+# 	monarch_power = 
+
+# 	potential = {
+# 		has_idea_group = THE_human_ideas
+# 		has_idea_group = 
+# 	}
+# 	allow = {
+# 		full_idea_group = THE_human_ideas
+# 		full_idea_group = 
+# 	}
+	
+# 	# modifier
+
+# 	effect = {}
+# 	removed_effect = {}
+# 	ai_will_do = {
+# 		factor = 1
+# 	}
+# }
+
+# THE_human_$$$$$_policy= {
+# 	monarch_power = 
+
+# 	potential = {
+# 		has_idea_group = THE_human_ideas
+# 		has_idea_group = 
+# 	}
+# 	allow = {
+# 		full_idea_group = THE_human_ideas
+# 		full_idea_group = 
+# 	}
+	
+# 	# modifier
+
+# 	effect = {}
+# 	removed_effect = {}
+# 	ai_will_do = {
+# 		factor = 1
+# 	}
+# }
+
+# THE_human_$$$$$_policy= {
+# 	monarch_power = 
+
+# 	potential = {
+# 		has_idea_group = THE_human_ideas
+# 		has_idea_group = 
+# 	}
+# 	allow = {
+# 		full_idea_group = THE_human_ideas
+# 		full_idea_group = 
+# 	}
+	
+# 	# modifier
+
+# 	effect = {}
+# 	removed_effect = {}
+# 	ai_will_do = {
+# 		factor = 1
+# 	}
+# }
+
+# THE_human_$$$$$_policy= {
+# 	monarch_power = 
+
+# 	potential = {
+# 		has_idea_group = THE_human_ideas
+# 		has_idea_group = 
+# 	}
+# 	allow = {
+# 		full_idea_group = THE_human_ideas
+# 		full_idea_group = 
+# 	}
+	
+# 	# modifier
+
+# 	effect = {}
+# 	removed_effect = {}
+# 	ai_will_do = {
+# 		factor = 1
+# 	}
+# }

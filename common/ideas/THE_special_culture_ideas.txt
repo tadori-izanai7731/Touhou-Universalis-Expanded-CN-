@@ -1,7 +1,9 @@
+# youkai
 THE_youkai_ideas = {
 	category = ADM
 
 	bonus = {
+		max_absolutism = 10
 		nobles_loyalty_modifier = 0.2
 		rajput_loyalty_modifier = 0.2
 		maratha_loyalty_modifier = 0.2
@@ -10,7 +12,7 @@ THE_youkai_ideas = {
 	trigger = {
 		OR = {
 			has_country_flag = THE_ideas_test_flag
-			THE_can_use_special_culture_ideas = {
+			THE_can_use_special_culture_ideas_scripted_trigger = {
 				type = youkai
 			}
 			full_idea_group = THE_gensokyan_ideas
@@ -39,7 +41,8 @@ THE_youkai_ideas = {
 		yearly_corruption = -0.2
 	}	
 	THE_youkai_ideas_7 = {
-		free_policy = 1
+		national_focus_years = -10
+		possible_policy = 1
 	}
 	
 
@@ -48,11 +51,14 @@ THE_youkai_ideas = {
 	}
 }
 
+# kami
 THE_kami_ideas = {
 	category = ADM
 
 	bonus = {
 		church_loyalty_modifier = 0.2
+		brahmins_hindu_loyalty_modifier = 0.2
+		brahmins_muslim_loyalty_modifier = 0.2
 		legitimacy = 2
 		republican_tradition = 1
 		devotion = 2
@@ -63,7 +69,7 @@ THE_kami_ideas = {
 	trigger = {
 		OR = {
 			has_country_flag = THE_ideas_test_flag
-			THE_can_use_special_culture_ideas = {
+			THE_can_use_special_culture_ideas_scripted_trigger = {
 				type = kami
 			}
 			full_idea_group = THE_gensokyan_ideas
@@ -88,7 +94,8 @@ THE_kami_ideas = {
 		institution_spread_from_true_faith = 0.2
 	}	
 	THE_kami_ideas_6 = {
-		warscore_cost_vs_other_religion = -0.2
+		autonomy_change_time = -0.25
+		monthly_heir_claim_increase = 0.1
 	}	
 	THE_kami_ideas_7 = {
 		reverse_relation_with_same_religion = 15
@@ -100,18 +107,19 @@ THE_kami_ideas = {
 	}
 }
 
+# human
 THE_human_ideas = {
 	category = DIP
 
 	bonus = {
-		global_prosperity_growth = 2.5
+		global_prosperity_growth = 2
 		min_autonomy_in_territories = -0.05
 	}
 
 	trigger = {
 		OR = {
 			has_country_flag = THE_ideas_test_flag
-			THE_can_use_special_culture_ideas = {
+			THE_can_use_special_culture_ideas_scripted_trigger = {
 				type = human
 			}
 			full_idea_group = THE_gensokyan_ideas
@@ -150,17 +158,19 @@ THE_human_ideas = {
 	}
 }
 
+# fairy
 THE_fairy_ideas = {
 	category = DIP
 
 	bonus = {
-		naval_forcelimit_modifier = 0.5
+		naval_forcelimit_modifier = 0.33
+		regiment_disembark_speed = 0.25
 	}
 
 	trigger = {
 		OR = {
 			has_country_flag = THE_ideas_test_flag
-			THE_can_use_special_culture_ideas = {
+			THE_can_use_special_culture_ideas_scripted_trigger = {
 				type = fairy
 			}
 			full_idea_group = THE_gensokyan_ideas
@@ -184,7 +194,7 @@ THE_fairy_ideas = {
 		recover_army_morale_speed = 0.1
 	}	
 	THE_fairy_ideas_5 = {
-		may_perform_slave_raid = yes
+		may_perform_slave_raid_on_same_religion = yes
 		privateer_efficiency = 0.25
 	}	
 	THE_fairy_ideas_6 = {
@@ -202,6 +212,7 @@ THE_fairy_ideas = {
 	}
 }
 
+# lunarian
 THE_lunarian_ideas = {
 	category = MIL
 
@@ -215,7 +226,7 @@ THE_lunarian_ideas = {
 	trigger = {
 		OR = {
 			has_country_flag = THE_ideas_test_flag
-			THE_can_use_special_culture_ideas = {
+			THE_can_use_special_culture_ideas_scripted_trigger = {
 				type = lunarian
 			}
 		}
@@ -280,6 +291,7 @@ THE_lunarian_ideas = {
 	}
 }
 
+# gensokyan
 THE_gensokyan_ideas = {
 	category = MIL
 
@@ -293,7 +305,7 @@ THE_gensokyan_ideas = {
 	trigger = {
 		OR = {
 			has_country_flag = THE_ideas_test_flag
-			THE_can_use_special_culture_ideas = {
+			THE_can_use_special_culture_ideas_scripted_trigger = {
 				type = gensokyan
 			}
 		}
