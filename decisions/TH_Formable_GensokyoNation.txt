@@ -35,10 +35,7 @@ country_decisions = {
 			#	province_id = 5007
 			#	province_id = 4983
 			#}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
