@@ -43,29 +43,28 @@ country_decisions = {
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 4968
-			owns_core_province = 4955
-			owns_core_province = 4989
-			owns_core_province = 5094
-			owns_core_province = 4991
-			owns_core_province = 4958
-			owns_core_province = 4978
-			owns_core_province = 4987
-			owns_core_province = 5152
-			owns_core_province = 5032
-			owns_core_province = 5183
-			owns_core_province = 5025
-			owns_core_province = 5214
-			owns_core_province = 4965
-			owns_core_province = 4964
-			owns_core_province = 4998
-			owns_core_province = 5187
-			owns_core_province = 5007
-			owns_core_province = 4983
-			num_of_owned_provinces_with = {
-				continent = gensokyo_continent
-				is_core = ROOT
+			4968 = { country_or_non_sovereign_subject_holds = ROOT  }
+			4955 = { country_or_non_sovereign_subject_holds = ROOT  }
+			4989 = { country_or_non_sovereign_subject_holds = ROOT  }
+			5094 = { country_or_non_sovereign_subject_holds = ROOT  }
+			4991 = { country_or_non_sovereign_subject_holds = ROOT  }
+			4958 = { country_or_non_sovereign_subject_holds = ROOT  }
+			4978 = { country_or_non_sovereign_subject_holds = ROOT  }
+			4987 = { country_or_non_sovereign_subject_holds = ROOT  }
+			5152 = { country_or_non_sovereign_subject_holds = ROOT  }
+			5032 = { country_or_non_sovereign_subject_holds = ROOT  }
+			5183 = { country_or_non_sovereign_subject_holds = ROOT  }
+			5025 = { country_or_non_sovereign_subject_holds = ROOT  }
+			5214 = { country_or_non_sovereign_subject_holds = ROOT  }
+			4965 = { country_or_non_sovereign_subject_holds = ROOT  }
+			4964 = { country_or_non_sovereign_subject_holds = ROOT  }
+			4998 = { country_or_non_sovereign_subject_holds = ROOT  }
+			5187 = { country_or_non_sovereign_subject_holds = ROOT  }
+			5007 = { country_or_non_sovereign_subject_holds = ROOT  }
+			4983 = { country_or_non_sovereign_subject_holds = ROOT  }
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 200
+				continent = gensokyo_continent
 			}
 		}
 		effect = {
@@ -99,6 +98,7 @@ country_decisions = {
 					duration = 3650
 				}
 			}
+			custom_tooltip = THE_unlock_gensokyan_ideas_tt
 			hidden_effect = {
 				set_country_flag = th_formed_gensokyo_flag
 			}

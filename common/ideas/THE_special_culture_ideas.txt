@@ -11,11 +11,28 @@ THE_youkai_ideas = {
 
 	trigger = {
 		OR = {
-			has_country_flag = THE_ideas_test_flag
+			primary_culture = Netherlandish
+			primary_culture = Eientei
+			primary_culture = Scarlett
+			primary_culture = Magician
+			primary_culture = Tengu
+			primary_culture = Kappa
+			primary_culture = Chireidean
+			primary_culture = Higanean
+			primary_culture = Youkai
+			primary_culture = Oni_culture
+			primary_culture = Tsukumogami_culture
+			primary_culture = Inchling_culture
+			primary_culture = Poltergeist_culture
+			primary_culture = Gyokuto
 			THE_can_use_special_culture_ideas_scripted_trigger = {
 				type = youkai
 			}
-			full_idea_group = THE_gensokyan_ideas
+			AND = {
+				full_idea_group = THE_gensokyan_ideas
+				NOT = { was_tag = LCU }
+				NOT = { tag = LCU }
+			}
 		}
 	}
 	
@@ -68,11 +85,15 @@ THE_kami_ideas = {
 
 	trigger = {
 		OR = {
-			has_country_flag = THE_ideas_test_flag
+			primary_culture = Makaian
 			THE_can_use_special_culture_ideas_scripted_trigger = {
 				type = kami
 			}
-			full_idea_group = THE_gensokyan_ideas
+			AND = {
+				full_idea_group = THE_gensokyan_ideas
+				NOT = { was_tag = LCU }
+				NOT = { tag = LCU }
+			}
 		}
 	}
 	
@@ -118,11 +139,18 @@ THE_human_ideas = {
 
 	trigger = {
 		OR = {
-			has_country_flag = THE_ideas_test_flag
+			primary_culture = Magician
+			primary_culture = Gensokyo_human
+			primary_culture = Senkaian
+			primary_culture = Heavenish
 			THE_can_use_special_culture_ideas_scripted_trigger = {
 				type = human
 			}
-			full_idea_group = THE_gensokyan_ideas
+			AND = {
+				full_idea_group = THE_gensokyan_ideas
+				NOT = { was_tag = LCU }
+				NOT = { tag = LCU }
+			}
 		}
 	}
 	
@@ -169,11 +197,15 @@ THE_fairy_ideas = {
 
 	trigger = {
 		OR = {
-			has_country_flag = THE_ideas_test_flag
+			primary_culture = Fairy
 			THE_can_use_special_culture_ideas_scripted_trigger = {
 				type = fairy
 			}
-			full_idea_group = THE_gensokyan_ideas
+			AND = {
+				full_idea_group = THE_gensokyan_ideas
+				NOT = { was_tag = LCU }
+				NOT = { tag = LCU }
+			}
 		}
 	}
 	
@@ -225,7 +257,7 @@ THE_lunarian_ideas = {
 
 	trigger = {
 		OR = {
-			has_country_flag = THE_ideas_test_flag
+			primary_culture = Lunarian_culture
 			THE_can_use_special_culture_ideas_scripted_trigger = {
 				type = lunarian
 			}
@@ -304,7 +336,7 @@ THE_gensokyan_ideas = {
 
 	trigger = {
 		OR = {
-			has_country_flag = THE_ideas_test_flag
+			has_country_flag = th_formed_gensokyo_flag
 			THE_can_use_special_culture_ideas_scripted_trigger = {
 				type = gensokyan
 			}

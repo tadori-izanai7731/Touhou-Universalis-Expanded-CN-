@@ -1,0 +1,44 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_THE_youkai_ideas"
+		texturefile = "gfx//interface//ideas//THE_youkai_ideas.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_idea_THE_kami_ideas"
+		texturefile = "gfx//interface//ideas//THE_kami_ideas.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_idea_THE_human_ideas"
+		texturefile = "gfx//interface//ideas//THE_human_ideas.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_idea_THE_fairy_ideas"
+		texturefile = "gfx//interface//ideas//THE_fairy_ideas.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_idea_THE_lunarian_ideas"
+		texturefile = "gfx//interface//ideas//THE_lunarian_ideas.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_idea_THE_gensokyan_ideas"
+		texturefile = "gfx//interface//ideas//THE_gensokyan_ideas.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+}
