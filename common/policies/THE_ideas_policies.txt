@@ -1967,506 +1967,542 @@ THE_lunarian_economic_policy= {
 	}
 }
 
-# THE_lunarian_$$$$$_policy= {
-# 	monarch_power = 
+THE_lunarian_expansion_policy= {
+	monarch_power = ADM
 
-# 	potential = {
-# 		has_idea_group = THE_lunarian_ideas
-# 		has_idea_group = 
-# 	}
-# 	allow = {
-# 		full_idea_group = THE_lunarian_ideas
-# 		full_idea_group = 
-# 	}
+	potential = {
+		has_idea_group = THE_lunarian_ideas
+		has_idea_group = expansion_ideas
+	}
+	allow = {
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = expansion_ideas
+	}
 	
-# 	# modifier
+	# modifier
+	colonists = 2
+	colony_cost_modifier = -0.5
 
-# 	effect = {}
-# 	removed_effect = {}
-# 	ai_will_do = {
-# 		factor = 1
-# 	}
-# }
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
 
-# THE_lunarian_$$$$$_policy= {
-# 	monarch_power = 
+THE_lunarian_humanist_policy= {
+	monarch_power = MIL
 
-# 	potential = {
-# 		has_idea_group = THE_lunarian_ideas
-# 		has_idea_group = 
-# 	}
-# 	allow = {
-# 		full_idea_group = THE_lunarian_ideas
-# 		full_idea_group = 
-# 	}
+	potential = {
+		has_idea_group = THE_lunarian_ideas
+		has_idea_group = humanist_ideas
+	}
+	allow = {
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = humanist_ideas
+	}
 	
-# 	# modifier
+	# modifier
+	no_religion_penalty = yes
 
-# 	effect = {}
-# 	removed_effect = {}
-# 	ai_will_do = {
-# 		factor = 1
-# 	}
-# }
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
 
-# THE_lunarian_$$$$$_policy= {
-# 	monarch_power = 
+THE_lunarian_infrastructure_policy= {
+	monarch_power = ADM
 
-# 	potential = {
-# 		has_idea_group = THE_lunarian_ideas
-# 		has_idea_group = 
-# 	}
-# 	allow = {
-# 		full_idea_group = THE_lunarian_ideas
-# 		full_idea_group = 
-# 	}
+	potential = {
+		has_idea_group = THE_lunarian_ideas
+		has_idea_group = infrastructure_ideas
+	}
+	allow = {
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = infrastructure_ideas
+	}
 	
-# 	# modifier
+	# modifier
+	development_cost_modifier = -0.1
 
-# 	effect = {}
-# 	removed_effect = {}
-# 	ai_will_do = {
-# 		factor = 1
-# 	}
-# }
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
 
-# THE_lunarian_$$$$$_policy= {
-# 	monarch_power = 
+THE_lunarian_innovativeness_policy= {
+	monarch_power = MIL
 
-# 	potential = {
-# 		has_idea_group = THE_lunarian_ideas
-# 		has_idea_group = 
-# 	}
-# 	allow = {
-# 		full_idea_group = THE_lunarian_ideas
-# 		full_idea_group = 
-# 	}
+	potential = {
+		has_idea_group = THE_lunarian_ideas
+		has_idea_group = innovativeness_ideas
+	}
+	allow = {
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = innovativeness_ideas
+	}
 	
-# 	# modifier
+	# modifier
+	naval_attrition = -0.5
 
-# 	effect = {}
-# 	removed_effect = {}
-# 	ai_will_do = {
-# 		factor = 1
-# 	}
-# }
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
 
-# THE_lunarian_$$$$$_policy= {
-# 	monarch_power = 
+THE_lunarian_religious_policy= {
+	monarch_power = ADM
 
-# 	potential = {
-# 		has_idea_group = THE_lunarian_ideas
-# 		has_idea_group = 
-# 	}
-# 	allow = {
-# 		full_idea_group = THE_lunarian_ideas
-# 		full_idea_group = 
-# 	}
+	potential = {
+		has_idea_group = THE_lunarian_ideas
+		has_idea_group = religious_ideas
+	}
+	allow = {
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = religious_ideas
+	}
 	
-# 	# modifier
+	# modifier
+	global_missionary_strength = 0.05
 
-# 	effect = {}
-# 	removed_effect = {}
-# 	ai_will_do = {
-# 		factor = 1
-# 	}
-# }
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
 
-# THE_lunarian_$$$$$_policy= {
-# 	monarch_power = 
+THE_lunarian_court_policy= {
+	monarch_power = DIP
 
-# 	potential = {
-# 		has_idea_group = THE_lunarian_ideas
-# 		has_idea_group = 
-# 	}
-# 	allow = {
-# 		full_idea_group = THE_lunarian_ideas
-# 		full_idea_group = 
-# 	}
+	potential = {
+		has_idea_group = THE_lunarian_ideas
+		has_idea_group = court_ideas
+	}
+	allow = {
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = court_ideas
+	}
 	
-# 	# modifier
+	# modifier
+	free_policy = 1
 
-# 	effect = {}
-# 	removed_effect = {}
-# 	ai_will_do = {
-# 		factor = 1
-# 	}
-# }
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
 
-# THE_lunarian_$$$$$_policy= {
-# 	monarch_power = 
+THE_lunarian_diplomatic_policy= {
+	monarch_power = MIL
 
-# 	potential = {
-# 		has_idea_group = THE_lunarian_ideas
-# 		has_idea_group = 
-# 	}
-# 	allow = {
-# 		full_idea_group = THE_lunarian_ideas
-# 		full_idea_group = 
-# 	}
+	potential = {
+		has_idea_group = THE_lunarian_ideas
+		has_idea_group = diplomatic_ideas
+	}
+	allow = {
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = diplomatic_ideas
+	}
 	
-# 	# modifier
+	# modifier
+	province_warscore_cost = -0.1
+	annexation_relations_impact = -0.5
 
-# 	effect = {}
-# 	removed_effect = {}
-# 	ai_will_do = {
-# 		factor = 1
-# 	}
-# }
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
 
-# THE_lunarian_$$$$$_policy= {
-# 	monarch_power = 
+THE_lunarian_spy_policy= {
+	monarch_power = DIP
 
-# 	potential = {
-# 		has_idea_group = THE_lunarian_ideas
-# 		has_idea_group = 
-# 	}
-# 	allow = {
-# 		full_idea_group = THE_lunarian_ideas
-# 		full_idea_group = 
-# 	}
+	potential = {
+		has_idea_group = THE_lunarian_ideas
+		has_idea_group = spy_ideas
+	}
+	allow = {
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = spy_ideas
+	}
 	
-# 	# modifier
+	# modifier
+	global_spy_defence = 1
 
-# 	effect = {}
-# 	removed_effect = {}
-# 	ai_will_do = {
-# 		factor = 1
-# 	}
-# }
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
 
-# THE_lunarian_$$$$$_policy= {
-# 	monarch_power = 
+THE_lunarian_exploration_policy= {
+	monarch_power = DIP
 
-# 	potential = {
-# 		has_idea_group = THE_lunarian_ideas
-# 		has_idea_group = 
-# 	}
-# 	allow = {
-# 		full_idea_group = THE_lunarian_ideas
-# 		full_idea_group = 
-# 	}
+	potential = {
+		has_idea_group = THE_lunarian_ideas
+		has_idea_group = exploration_ideas
+	}
+	allow = {
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = exploration_ideas
+	}
 	
-# 	# modifier
+	# modifier
+	native_uprising_chance = -1
+	auto_explore_adjacent_to_colony = yes
 
-# 	effect = {}
-# 	removed_effect = {}
-# 	ai_will_do = {
-# 		factor = 1
-# 	}
-# }
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
 
-# THE_lunarian_$$$$$_policy= {
-# 	monarch_power = 
+THE_lunarian_influence_policy= {
+	monarch_power = MIL
 
-# 	potential = {
-# 		has_idea_group = THE_lunarian_ideas
-# 		has_idea_group = 
-# 	}
-# 	allow = {
-# 		full_idea_group = THE_lunarian_ideas
-# 		full_idea_group = 
-# 	}
+	potential = {
+		has_idea_group = THE_lunarian_ideas
+		has_idea_group = influence_ideas
+	}
+	allow = {
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = influence_ideas
+	}
 	
-# 	# modifier
+	# modifier
+	vassal_forcelimit_bonus = 1
+	vassal_naval_forcelimit_bonus = 1
 
-# 	effect = {}
-# 	removed_effect = {}
-# 	ai_will_do = {
-# 		factor = 1
-# 	}
-# }
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
 
-# THE_lunarian_$$$$$_policy= {
-# 	monarch_power = 
+THE_lunarian_maritime_policy= {
+	monarch_power = DIP
 
-# 	potential = {
-# 		has_idea_group = THE_lunarian_ideas
-# 		has_idea_group = 
-# 	}
-# 	allow = {
-# 		full_idea_group = THE_lunarian_ideas
-# 		full_idea_group = 
-# 	}
+	potential = {
+		has_idea_group = THE_lunarian_ideas
+		has_idea_group = maritime_ideas
+	}
+	allow = {
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = maritime_ideas
+	}
 	
-# 	# modifier
+	# modifier
+	leader_naval_manuever = 2
 
-# 	effect = {}
-# 	removed_effect = {}
-# 	ai_will_do = {
-# 		factor = 1
-# 	}
-# }
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
 
-# THE_lunarian_$$$$$_policy= {
-# 	monarch_power = 
+THE_lunarian_trade_policy= {
+	monarch_power = DIP
 
-# 	potential = {
-# 		has_idea_group = THE_lunarian_ideas
-# 		has_idea_group = 
-# 	}
-# 	allow = {
-# 		full_idea_group = THE_lunarian_ideas
-# 		full_idea_group = 
-# 	}
+	potential = {
+		has_idea_group = THE_lunarian_ideas
+		has_idea_group = trade_ideas
+	}
+	allow = {
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = trade_ideas
+	}
 	
-# 	# modifier
+	# modifier
+	embargo_efficiency = 1
+	privateer_efficiency = 0.5
 
-# 	effect = {}
-# 	removed_effect = {}
-# 	ai_will_do = {
-# 		factor = 1
-# 	}
-# }
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
 
-# THE_lunarian_$$$$$_policy= {
-# 	monarch_power = 
+THE_lunarian_aristocracy_policy= {
+	monarch_power = MIL
 
-# 	potential = {
-# 		has_idea_group = THE_lunarian_ideas
-# 		has_idea_group = 
-# 	}
-# 	allow = {
-# 		full_idea_group = THE_lunarian_ideas
-# 		full_idea_group = 
-# 	}
+	potential = {
+		has_idea_group = THE_lunarian_ideas
+		has_idea_group = aristocracy_ideas
+	}
+	allow = {
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = aristocracy_ideas
+	}
 	
-# 	# modifier
+	# modifier
+	own_territory_dice_roll_bonus = 1
 
-# 	effect = {}
-# 	removed_effect = {}
-# 	ai_will_do = {
-# 		factor = 1
-# 	}
-# }
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
 
-# THE_lunarian_$$$$$_policy= {
-# 	monarch_power = 
+THE_lunarian_plutocracy_policy= {
+	monarch_power = MIL
 
-# 	potential = {
-# 		has_idea_group = THE_lunarian_ideas
-# 		has_idea_group = 
-# 	}
-# 	allow = {
-# 		full_idea_group = THE_lunarian_ideas
-# 		full_idea_group = 
-# 	}
+	potential = {
+		has_idea_group = THE_lunarian_ideas
+		has_idea_group = plutocracy_ideas
+	}
+	allow = {
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = plutocracy_ideas
+	}
 	
-# 	# modifier
+	# modifier
+	gold_depletion_chance_modifier = -5
 
-# 	effect = {}
-# 	removed_effect = {}
-# 	ai_will_do = {
-# 		factor = 1
-# 	}
-# }
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
 
-# THE_lunarian_$$$$$_policy= {
-# 	monarch_power = 
+THE_lunarian_theocracy_policy= {
+	monarch_power = MIL
 
-# 	potential = {
-# 		has_idea_group = THE_lunarian_ideas
-# 		has_idea_group = 
-# 	}
-# 	allow = {
-# 		full_idea_group = THE_lunarian_ideas
-# 		full_idea_group = 
-# 	}
+	potential = {
+		has_idea_group = THE_lunarian_ideas
+		has_idea_group = theocracy_gov_ideas
+	}
+	allow = {
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = theocracy_gov_ideas
+	}
 	
-# 	# modifier
+	# modifier
+	missionaries = 2
+	missionary_maintenance_cost = -0.5
 
-# 	effect = {}
-# 	removed_effect = {}
-# 	ai_will_do = {
-# 		factor = 1
-# 	}
-# }
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
 
-# THE_lunarian_$$$$$_policy= {
-# 	monarch_power = 
+THE_lunarian_indigenous_policy= {
+	monarch_power = MIL
 
-# 	potential = {
-# 		has_idea_group = THE_lunarian_ideas
-# 		has_idea_group = 
-# 	}
-# 	allow = {
-# 		full_idea_group = THE_lunarian_ideas
-# 		full_idea_group = 
-# 	}
+	potential = {
+		has_idea_group = THE_lunarian_ideas
+		has_idea_group = indigenous_ideas
+	}
+	allow = {
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = indigenous_ideas
+	}
 	
-# 	# modifier
+	# modifier
+	military_tactics = 0.25
 
-# 	effect = {}
-# 	removed_effect = {}
-# 	ai_will_do = {
-# 		factor = 1
-# 	}
-# }
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
 
-# THE_lunarian_$$$$$_policy= {
-# 	monarch_power = 
+THE_lunarian_horde_policy= {
+	monarch_power = MIL
 
-# 	potential = {
-# 		has_idea_group = THE_lunarian_ideas
-# 		has_idea_group = 
-# 	}
-# 	allow = {
-# 		full_idea_group = THE_lunarian_ideas
-# 		full_idea_group = 
-# 	}
+	potential = {
+		has_idea_group = THE_lunarian_ideas
+		has_idea_group = horde_gov_ideas
+	}
+	allow = {
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = horde_gov_ideas
+	}
 	
-# 	# modifier
+	# modifier
+	assault_fort_cost_modifier = -0.5
+	assault_fort_ability = 0.5
 
-# 	effect = {}
-# 	removed_effect = {}
-# 	ai_will_do = {
-# 		factor = 1
-# 	}
-# }
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
 
-# THE_lunarian_$$$$$_policy= {
-# 	monarch_power = 
+THE_lunarian_defensive_policy= {
+	monarch_power = MIL
 
-# 	potential = {
-# 		has_idea_group = THE_lunarian_ideas
-# 		has_idea_group = 
-# 	}
-# 	allow = {
-# 		full_idea_group = THE_lunarian_ideas
-# 		full_idea_group = 
-# 	}
+	potential = {
+		has_idea_group = THE_lunarian_ideas
+		has_idea_group = defensive_ideas
+	}
+	allow = {
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = defensive_ideas
+	}
 	
-# 	# modifier
+	# modifier
+	may_refill_garrison = yes
+	global_garrison_growth = 0.5
 
-# 	effect = {}
-# 	removed_effect = {}
-# 	ai_will_do = {
-# 		factor = 1
-# 	}
-# }
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
 
-# THE_lunarian_$$$$$_policy= {
-# 	monarch_power = 
+THE_lunarian_mercenary_policy= {
+	monarch_power = MIL
 
-# 	potential = {
-# 		has_idea_group = THE_lunarian_ideas
-# 		has_idea_group = 
-# 	}
-# 	allow = {
-# 		full_idea_group = THE_lunarian_ideas
-# 		full_idea_group = 
-# 	}
+	potential = {
+		has_idea_group = THE_lunarian_ideas
+		has_idea_group = mercenary_ideas
+	}
+	allow = {
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = mercenary_ideas
+	}
 	
-# 	# modifier
+	# modifier
+	possible_condottieri = 1
+	possible_mil_policy = 2
 
-# 	effect = {}
-# 	removed_effect = {}
-# 	ai_will_do = {
-# 		factor = 1
-# 	}
-# }
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
 
-# THE_lunarian_$$$$$_policy= {
-# 	monarch_power = 
+THE_lunarian_naval_policy= {
+	monarch_power = MIL
 
-# 	potential = {
-# 		has_idea_group = THE_lunarian_ideas
-# 		has_idea_group = 
-# 	}
-# 	allow = {
-# 		full_idea_group = THE_lunarian_ideas
-# 		full_idea_group = 
-# 	}
+	potential = {
+		has_idea_group = THE_lunarian_ideas
+		has_idea_group = naval_ideas
+	}
+	allow = {
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = naval_ideas
+	}
 	
-# 	# modifier
+	# modifier
+	own_coast_naval_combat_bonus = 1
 
-# 	effect = {}
-# 	removed_effect = {}
-# 	ai_will_do = {
-# 		factor = 1
-# 	}
-# }
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
 
-# THE_lunarian_$$$$$_policy= {
-# 	monarch_power = 
+THE_lunarian_offensive_policy= {
+	monarch_power = MIL
 
-# 	potential = {
-# 		has_idea_group = THE_lunarian_ideas
-# 		has_idea_group = 
-# 	}
-# 	allow = {
-# 		full_idea_group = THE_lunarian_ideas
-# 		full_idea_group = 
-# 	}
+	potential = {
+		has_idea_group = THE_lunarian_ideas
+		has_idea_group = offensive_ideas
+	}
+	allow = {
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = offensive_ideas
+	}
 	
-# 	# modifier
+	# modifier
+	siege_ability = 0.3
 
-# 	effect = {}
-# 	removed_effect = {}
-# 	ai_will_do = {
-# 		factor = 1
-# 	}
-# }
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
 
-# THE_lunarian_$$$$$_policy= {
-# 	monarch_power = 
+THE_lunarian_quality_policy= {
+	monarch_power = MIL
 
-# 	potential = {
-# 		has_idea_group = THE_lunarian_ideas
-# 		has_idea_group = 
-# 	}
-# 	allow = {
-# 		full_idea_group = THE_lunarian_ideas
-# 		full_idea_group = 
-# 	}
+	potential = {
+		has_idea_group = THE_lunarian_ideas
+		has_idea_group = quality_ideas
+	}
+	allow = {
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = quality_ideas
+	}
 	
-# 	# modifier
+	# modifier
+	infantry_power = 0.2
+	artillery_power = 0.2
 
-# 	effect = {}
-# 	removed_effect = {}
-# 	ai_will_do = {
-# 		factor = 1
-# 	}
-# }
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
 
-# THE_lunarian_$$$$$_policy= {
-# 	monarch_power = 
+THE_lunarian_quantity_policy= {
+	monarch_power = MIL
 
-# 	potential = {
-# 		has_idea_group = THE_lunarian_ideas
-# 		has_idea_group = 
-# 	}
-# 	allow = {
-# 		full_idea_group = THE_lunarian_ideas
-# 		full_idea_group = 
-# 	}
+	potential = {
+		has_idea_group = THE_lunarian_ideas
+		has_idea_group = quantity_ideas
+	}
+	allow = {
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = quantity_ideas
+	}
 	
-# 	# modifier
+	# modifier
+	army_tradition = 2
+	navy_tradition = 2
 
-# 	effect = {}
-# 	removed_effect = {}
-# 	ai_will_do = {
-# 		factor = 1
-# 	}
-# }
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
 
-# THE_lunarian_$$$$$_policy= {
-# 	monarch_power = 
+THE_lunarian_gensokyan_policy= {
+	monarch_power = MIL
 
-# 	potential = {
-# 		has_idea_group = THE_lunarian_ideas
-# 		has_idea_group = 
-# 	}
-# 	allow = {
-# 		full_idea_group = THE_lunarian_ideas
-# 		full_idea_group = 
-# 	}
+	potential = {
+		has_idea_group = THE_lunarian_ideas
+		has_idea_group = THE_gensokyan_ideas
+	}
+	allow = {
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = THE_gensokyan_ideas
+	}
 	
-# 	# modifier
+	# modifier
+	administrative_efficiency = 1
+	all_power_cost = -1
 
-# 	effect = {}
-# 	removed_effect = {}
-# 	ai_will_do = {
-# 		factor = 1
-# 	}
-# }
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
