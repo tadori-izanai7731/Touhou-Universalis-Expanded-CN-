@@ -314,29 +314,34 @@ THE_gensokyan_ideas = {
 	THE_gensokyan_ideas_1 = {
 		backrow_artillery_damage = 0.25
 		artillery_levels_available_vs_fort = 2
+		artillery_level_modifier = 0.5
 	}	
 	THE_gensokyan_ideas_2 = {
 		colony_development_boost = 2
-		trade_company_investment_cost = -0.25
+		reduced_liberty_desire = 50
+		diplomatic_annexation_cost = -0.25
 	}	
 	THE_gensokyan_ideas_3 = {
-		core_creation = -0.2
+		core_creation = -0.25
+		governing_cost = -0.25
 		ignore_coring_distance = yes
 	}	
 	THE_gensokyan_ideas_4 = {
 		num_accepted_cultures = 10
 		manpower_in_own_culture_provinces = 0.25
-		manpower_in_accepted_culture_provinces = 0.1
+		manpower_in_accepted_culture_provinces = 0.25
 	}	
 	THE_gensokyan_ideas_5 = {
-		tolerance_own = 2
+		tolerance_own = 3
 		no_religion_penalty = yes
-	}	
+	}
 	THE_gensokyan_ideas_6 = {
-		trade_goods_size_modifier = 0.2
+		trade_goods_size = 1
+		development_cost_modifier = -0.1
 	}	
 	THE_gensokyan_ideas_7 = {
-		administrative_efficiency = 0.05
+		administrative_efficiency = 0.1
+		all_power_cost = -0.1
 	}
 	
 

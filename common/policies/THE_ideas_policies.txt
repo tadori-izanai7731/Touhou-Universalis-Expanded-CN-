@@ -1191,15 +1191,791 @@ THE_human_fairy_policy= {
 	}
 }
 
-# THE_human_$$$$$_policy= {
+THE_human_aristocracy_policy= {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_human_ideas
+		has_idea_group = aristocracy_ideas
+	}
+	allow = {
+		full_idea_group = THE_human_ideas
+		full_idea_group = aristocracy_ideas
+	}
+	
+	# modifier
+	improve_relation_modifier = 0.2
+	discovered_relations_impact = -0.5
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_human_plutocracy_policy= {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_human_ideas
+		has_idea_group = plutocracy_ideas
+	}
+	allow = {
+		full_idea_group = THE_human_ideas
+		full_idea_group = plutocracy_ideas
+	}
+	
+	# modifier
+	global_tax_modifier = 0.15
+	global_autonomy = -0.05
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_human_theocracy_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_human_ideas
+		has_idea_group = theocracy_gov_ideas
+	}
+	allow = {
+		full_idea_group = THE_human_ideas
+		full_idea_group = theocracy_gov_ideas
+	}
+	
+	# modifier
+	danmaku_power_constant = 200
+	land_morale = 0.1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_human_indigenous_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_human_ideas
+		has_idea_group = indigenous_ideas
+	}
+	allow = {
+		full_idea_group = THE_human_ideas
+		full_idea_group = indigenous_ideas
+	}
+	
+	# modifier
+	shock_damage = 0.15
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_human_horde_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_human_ideas
+		has_idea_group = horde_gov_ideas
+	}
+	allow = {
+		full_idea_group = THE_human_ideas
+		full_idea_group = horde_gov_ideas
+	}
+	
+	# modifier
+	loot_amount = 0.25
+	available_province_loot = 0.5
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_human_defensive_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_human_ideas
+		has_idea_group = defensive_ideas
+	}
+	allow = {
+		full_idea_group = THE_human_ideas
+		full_idea_group = defensive_ideas
+	}
+	
+	# modifier
+	defensiveness = 0.1
+	garrison_size = 0.2
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_human_mercenary_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_human_ideas
+		has_idea_group = mercenary_ideas
+	}
+	allow = {
+		full_idea_group = THE_human_ideas
+		full_idea_group = mercenary_ideas
+	}
+	
+	# modifier
+	mercenary_discipline = 0.05
+	merc_leader_army_tradition = 0.25
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_human_naval_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_human_ideas
+		has_idea_group = naval_ideas
+	}
+	allow = {
+		full_idea_group = THE_human_ideas
+		full_idea_group = naval_ideas
+	}
+	
+	# modifier
+	galley_power = 0.3
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_human_offensive_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_human_ideas
+		has_idea_group = offensive_ideas
+	}
+	allow = {
+		full_idea_group = THE_human_ideas
+		full_idea_group = offensive_ideas
+	}
+	
+	# modifier
+	years_of_nationalism = -5
+	army_tradition_decay = -0.02
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_human_quality_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_human_ideas
+		has_idea_group = quality_ideas
+	}
+	allow = {
+		full_idea_group = THE_human_ideas
+		full_idea_group = quality_ideas
+	}
+	
+	# modifier
+	infantry_fire = 0.25
+	cavalry_shock = 0.25
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_human_quantity_policy= {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_human_ideas
+		has_idea_group = quantity_ideas
+	}
+	allow = {
+		full_idea_group = THE_human_ideas
+		full_idea_group = quantity_ideas
+	}
+	
+	# modifier
+	diplomatic_reputation = 2
+	heir_chance = 1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_fairy_administrative_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_fairy_ideas
+		has_idea_group = administrative_ideas
+	}
+	allow = {
+		full_idea_group = THE_fairy_ideas
+		full_idea_group = administrative_ideas
+	}
+	
+	# modifier
+	advisor_cost = -0.1
+	yearly_corruption = -0.05
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_fairy_economic_policy= {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_fairy_ideas
+		has_idea_group = economic_ideas
+	}
+	allow = {
+		full_idea_group = THE_fairy_ideas
+		full_idea_group = economic_ideas
+	}
+	
+	# modifier
+	interest = -2
+	inflation_action_cost = -0.5
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_fairy_expansion_policy= {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_fairy_ideas
+		has_idea_group = expansion_ideas
+	}
+	allow = {
+		full_idea_group = THE_fairy_ideas
+		full_idea_group = expansion_ideas
+	}
+	
+	# modifier
+	global_colonial_growth = 50
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_fairy_humanist_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_fairy_ideas
+		has_idea_group = humanist_ideas
+	}
+	allow = {
+		full_idea_group = THE_fairy_ideas
+		full_idea_group = humanist_ideas
+	}
+	
+	# modifier
+	religious_unity = 0.3
+	church_privilege_slots = 1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_fairy_infrastructure_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_fairy_ideas
+		has_idea_group = infrastructure_ideas
+	}
+	allow = {
+		full_idea_group = THE_fairy_ideas
+		full_idea_group = infrastructure_ideas
+	}
+	
+	# modifier
+	global_allowed_num_of_buildings = 1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_fairy_innovativeness_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_fairy_ideas
+		has_idea_group = innovativeness_ideas
+	}
+	allow = {
+		full_idea_group = THE_fairy_ideas
+		full_idea_group = innovativeness_ideas
+	}
+	
+	# modifier
+	embracement_cost = -0.2
+	innovativeness_gain = 0.5
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_fairy_religious_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_fairy_ideas
+		has_idea_group = religious_ideas
+	}
+	allow = {
+		full_idea_group = THE_fairy_ideas
+		full_idea_group = religious_ideas
+	}
+	
+	# modifier
+	tolerance_heretic = 1
+	tolerance_own = 1
+	tolerance_heathen = 1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_fairy_youkai_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_fairy_ideas
+		has_idea_group = THE_youkai_ideas
+	}
+	allow = {
+		full_idea_group = THE_fairy_ideas
+		full_idea_group = THE_youkai_ideas
+	}
+	
+	# modifier
+	country_diplomatic_power = 1
+	spy_offence = 0.3
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_fairy_kami_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_fairy_ideas
+		has_idea_group = THE_kami_ideas
+	}
+	allow = {
+		full_idea_group = THE_fairy_ideas
+		full_idea_group = THE_kami_ideas
+	}
+	
+	# modifier
+	global_missionary_strength = 0.02
+	manpower_in_true_faith_provinces = 0.2
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_fairy_human_policy= {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_fairy_ideas
+		has_idea_group = THE_human_ideas
+	}
+	allow = {
+		full_idea_group = THE_fairy_ideas
+		full_idea_group = THE_human_ideas
+	}
+	
+	# modifier
+	governing_capacity_modifier = 0.1
+	manpower_recovery_speed = 0.2
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_fairy_aristocracy_policy= {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_fairy_ideas
+		has_idea_group = aristocracy_ideas
+	}
+	allow = {
+		full_idea_group = THE_fairy_ideas
+		full_idea_group = aristocracy_ideas
+	}
+	
+	# modifier
+	global_trade_goods_size_modifier = 0.05
+	development_cost = -0.1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_fairy_plutocracy_policy= {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_fairy_ideas
+		has_idea_group = plutocracy_ideas
+	}
+	allow = {
+		full_idea_group = THE_fairy_ideas
+		full_idea_group = plutocracy_ideas
+	}
+	
+	# modifier
+	production_efficiency = 0.15
+	global_unrest = -1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_fairy_theocracy_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_fairy_ideas
+		has_idea_group = theocracy_gov_ideas
+	}
+	allow = {
+		full_idea_group = THE_fairy_ideas
+		full_idea_group = theocracy_gov_ideas
+	}
+	
+	# modifier
+	global_tax_modifier = 0.2
+	tolerance_heretic = 2
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_fairy_indigenous_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_fairy_ideas
+		has_idea_group = indigenous_ideas
+	}
+	allow = {
+		full_idea_group = THE_fairy_ideas
+		full_idea_group = indigenous_ideas
+	}
+	
+	# modifier
+	land_attrition = -0.2
+	global_supply_limit_modifier = 0.2
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_fairy_horde_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_fairy_ideas
+		has_idea_group = horde_gov_ideas
+	}
+	allow = {
+		full_idea_group = THE_fairy_ideas
+		full_idea_group = horde_gov_ideas
+	}
+	
+	# modifier
+	cavalry_flanking = 0.25
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_fairy_defensive_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_fairy_ideas
+		has_idea_group = defensive_ideas
+	}
+	allow = {
+		full_idea_group = THE_fairy_ideas
+		full_idea_group = defensive_ideas
+	}
+	
+	# modifier
+	global_spy_defence = 0.33
+	defensiveness = 0.15
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_fairy_mercenary_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_fairy_ideas
+		has_idea_group = mercenary_ideas
+	}
+	allow = {
+		full_idea_group = THE_fairy_ideas
+		full_idea_group = mercenary_ideas
+	}
+	
+	# modifier
+	mercenary_cost = -0.2
+	mercenary_manpower = 0.1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_fairy_naval_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_fairy_ideas
+		has_idea_group = naval_ideas
+	}
+	allow = {
+		full_idea_group = THE_fairy_ideas
+		full_idea_group = naval_ideas
+	}
+	
+	# modifier
+	coast_raid_range = 2
+	blockade_efficiency = 0.5
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_fairy_offensive_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_fairy_ideas
+		has_idea_group = offensive_ideas
+	}
+	allow = {
+		full_idea_group = THE_fairy_ideas
+		full_idea_group = offensive_ideas
+	}
+	
+	# modifier
+	recover_army_morale_speed = 0.05
+	reinforce_speed = 0.2
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_fairy_quality_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_fairy_ideas
+		has_idea_group = quality_ideas
+	}
+	allow = {
+		full_idea_group = THE_fairy_ideas
+		full_idea_group = quality_ideas
+	}
+	
+	# modifier
+	leader_land_shock = 1
+	leader_land_manuever = 1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_fairy_quantity_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_fairy_ideas
+		has_idea_group = quantity_ideas
+	}
+	allow = {
+		full_idea_group = THE_fairy_ideas
+		full_idea_group = quantity_ideas
+	}
+	
+	# modifier
+	manpower_recovery_speed = 0.25
+	global_manpower = 0.1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_lunarian_administrative_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_lunarian_ideas
+		has_idea_group = administrative_ideas
+	}
+	allow = {
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = administrative_ideas
+	}
+	
+	# modifier
+	administrative_efficiency = 0.05
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+THE_lunarian_economic_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_lunarian_ideas
+		has_idea_group = economic_ideas
+	}
+	allow = {
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = economic_ideas
+	}
+	
+	# modifier
+	global_trade_goods_size = 0.2
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# THE_lunarian_$$$$$_policy= {
 # 	monarch_power = 
 
 # 	potential = {
-# 		has_idea_group = THE_human_ideas
+# 		has_idea_group = THE_lunarian_ideas
 # 		has_idea_group = 
 # 	}
 # 	allow = {
-# 		full_idea_group = THE_human_ideas
+# 		full_idea_group = THE_lunarian_ideas
 # 		full_idea_group = 
 # 	}
 	
@@ -1212,15 +1988,15 @@ THE_human_fairy_policy= {
 # 	}
 # }
 
-# THE_human_$$$$$_policy= {
+# THE_lunarian_$$$$$_policy= {
 # 	monarch_power = 
 
 # 	potential = {
-# 		has_idea_group = THE_human_ideas
+# 		has_idea_group = THE_lunarian_ideas
 # 		has_idea_group = 
 # 	}
 # 	allow = {
-# 		full_idea_group = THE_human_ideas
+# 		full_idea_group = THE_lunarian_ideas
 # 		full_idea_group = 
 # 	}
 	
@@ -1233,15 +2009,15 @@ THE_human_fairy_policy= {
 # 	}
 # }
 
-# THE_human_$$$$$_policy= {
+# THE_lunarian_$$$$$_policy= {
 # 	monarch_power = 
 
 # 	potential = {
-# 		has_idea_group = THE_human_ideas
+# 		has_idea_group = THE_lunarian_ideas
 # 		has_idea_group = 
 # 	}
 # 	allow = {
-# 		full_idea_group = THE_human_ideas
+# 		full_idea_group = THE_lunarian_ideas
 # 		full_idea_group = 
 # 	}
 	
@@ -1254,15 +2030,15 @@ THE_human_fairy_policy= {
 # 	}
 # }
 
-# THE_human_$$$$$_policy= {
+# THE_lunarian_$$$$$_policy= {
 # 	monarch_power = 
 
 # 	potential = {
-# 		has_idea_group = THE_human_ideas
+# 		has_idea_group = THE_lunarian_ideas
 # 		has_idea_group = 
 # 	}
 # 	allow = {
-# 		full_idea_group = THE_human_ideas
+# 		full_idea_group = THE_lunarian_ideas
 # 		full_idea_group = 
 # 	}
 	
@@ -1275,15 +2051,15 @@ THE_human_fairy_policy= {
 # 	}
 # }
 
-# THE_human_$$$$$_policy= {
+# THE_lunarian_$$$$$_policy= {
 # 	monarch_power = 
 
 # 	potential = {
-# 		has_idea_group = THE_human_ideas
+# 		has_idea_group = THE_lunarian_ideas
 # 		has_idea_group = 
 # 	}
 # 	allow = {
-# 		full_idea_group = THE_human_ideas
+# 		full_idea_group = THE_lunarian_ideas
 # 		full_idea_group = 
 # 	}
 	
@@ -1296,15 +2072,15 @@ THE_human_fairy_policy= {
 # 	}
 # }
 
-# THE_human_$$$$$_policy= {
+# THE_lunarian_$$$$$_policy= {
 # 	monarch_power = 
 
 # 	potential = {
-# 		has_idea_group = THE_human_ideas
+# 		has_idea_group = THE_lunarian_ideas
 # 		has_idea_group = 
 # 	}
 # 	allow = {
-# 		full_idea_group = THE_human_ideas
+# 		full_idea_group = THE_lunarian_ideas
 # 		full_idea_group = 
 # 	}
 	
@@ -1317,15 +2093,15 @@ THE_human_fairy_policy= {
 # 	}
 # }
 
-# THE_human_$$$$$_policy= {
+# THE_lunarian_$$$$$_policy= {
 # 	monarch_power = 
 
 # 	potential = {
-# 		has_idea_group = THE_human_ideas
+# 		has_idea_group = THE_lunarian_ideas
 # 		has_idea_group = 
 # 	}
 # 	allow = {
-# 		full_idea_group = THE_human_ideas
+# 		full_idea_group = THE_lunarian_ideas
 # 		full_idea_group = 
 # 	}
 	
@@ -1338,15 +2114,15 @@ THE_human_fairy_policy= {
 # 	}
 # }
 
-# THE_human_$$$$$_policy= {
+# THE_lunarian_$$$$$_policy= {
 # 	monarch_power = 
 
 # 	potential = {
-# 		has_idea_group = THE_human_ideas
+# 		has_idea_group = THE_lunarian_ideas
 # 		has_idea_group = 
 # 	}
 # 	allow = {
-# 		full_idea_group = THE_human_ideas
+# 		full_idea_group = THE_lunarian_ideas
 # 		full_idea_group = 
 # 	}
 	
@@ -1359,15 +2135,15 @@ THE_human_fairy_policy= {
 # 	}
 # }
 
-# THE_human_$$$$$_policy= {
+# THE_lunarian_$$$$$_policy= {
 # 	monarch_power = 
 
 # 	potential = {
-# 		has_idea_group = THE_human_ideas
+# 		has_idea_group = THE_lunarian_ideas
 # 		has_idea_group = 
 # 	}
 # 	allow = {
-# 		full_idea_group = THE_human_ideas
+# 		full_idea_group = THE_lunarian_ideas
 # 		full_idea_group = 
 # 	}
 	
@@ -1380,15 +2156,15 @@ THE_human_fairy_policy= {
 # 	}
 # }
 
-# THE_human_$$$$$_policy= {
+# THE_lunarian_$$$$$_policy= {
 # 	monarch_power = 
 
 # 	potential = {
-# 		has_idea_group = THE_human_ideas
+# 		has_idea_group = THE_lunarian_ideas
 # 		has_idea_group = 
 # 	}
 # 	allow = {
-# 		full_idea_group = THE_human_ideas
+# 		full_idea_group = THE_lunarian_ideas
 # 		full_idea_group = 
 # 	}
 	
@@ -1401,15 +2177,15 @@ THE_human_fairy_policy= {
 # 	}
 # }
 
-# THE_human_$$$$$_policy= {
+# THE_lunarian_$$$$$_policy= {
 # 	monarch_power = 
 
 # 	potential = {
-# 		has_idea_group = THE_human_ideas
+# 		has_idea_group = THE_lunarian_ideas
 # 		has_idea_group = 
 # 	}
 # 	allow = {
-# 		full_idea_group = THE_human_ideas
+# 		full_idea_group = THE_lunarian_ideas
 # 		full_idea_group = 
 # 	}
 	
@@ -1422,15 +2198,267 @@ THE_human_fairy_policy= {
 # 	}
 # }
 
-# THE_human_$$$$$_policy= {
+# THE_lunarian_$$$$$_policy= {
 # 	monarch_power = 
 
 # 	potential = {
-# 		has_idea_group = THE_human_ideas
+# 		has_idea_group = THE_lunarian_ideas
 # 		has_idea_group = 
 # 	}
 # 	allow = {
-# 		full_idea_group = THE_human_ideas
+# 		full_idea_group = THE_lunarian_ideas
+# 		full_idea_group = 
+# 	}
+	
+# 	# modifier
+
+# 	effect = {}
+# 	removed_effect = {}
+# 	ai_will_do = {
+# 		factor = 1
+# 	}
+# }
+
+# THE_lunarian_$$$$$_policy= {
+# 	monarch_power = 
+
+# 	potential = {
+# 		has_idea_group = THE_lunarian_ideas
+# 		has_idea_group = 
+# 	}
+# 	allow = {
+# 		full_idea_group = THE_lunarian_ideas
+# 		full_idea_group = 
+# 	}
+	
+# 	# modifier
+
+# 	effect = {}
+# 	removed_effect = {}
+# 	ai_will_do = {
+# 		factor = 1
+# 	}
+# }
+
+# THE_lunarian_$$$$$_policy= {
+# 	monarch_power = 
+
+# 	potential = {
+# 		has_idea_group = THE_lunarian_ideas
+# 		has_idea_group = 
+# 	}
+# 	allow = {
+# 		full_idea_group = THE_lunarian_ideas
+# 		full_idea_group = 
+# 	}
+	
+# 	# modifier
+
+# 	effect = {}
+# 	removed_effect = {}
+# 	ai_will_do = {
+# 		factor = 1
+# 	}
+# }
+
+# THE_lunarian_$$$$$_policy= {
+# 	monarch_power = 
+
+# 	potential = {
+# 		has_idea_group = THE_lunarian_ideas
+# 		has_idea_group = 
+# 	}
+# 	allow = {
+# 		full_idea_group = THE_lunarian_ideas
+# 		full_idea_group = 
+# 	}
+	
+# 	# modifier
+
+# 	effect = {}
+# 	removed_effect = {}
+# 	ai_will_do = {
+# 		factor = 1
+# 	}
+# }
+
+# THE_lunarian_$$$$$_policy= {
+# 	monarch_power = 
+
+# 	potential = {
+# 		has_idea_group = THE_lunarian_ideas
+# 		has_idea_group = 
+# 	}
+# 	allow = {
+# 		full_idea_group = THE_lunarian_ideas
+# 		full_idea_group = 
+# 	}
+	
+# 	# modifier
+
+# 	effect = {}
+# 	removed_effect = {}
+# 	ai_will_do = {
+# 		factor = 1
+# 	}
+# }
+
+# THE_lunarian_$$$$$_policy= {
+# 	monarch_power = 
+
+# 	potential = {
+# 		has_idea_group = THE_lunarian_ideas
+# 		has_idea_group = 
+# 	}
+# 	allow = {
+# 		full_idea_group = THE_lunarian_ideas
+# 		full_idea_group = 
+# 	}
+	
+# 	# modifier
+
+# 	effect = {}
+# 	removed_effect = {}
+# 	ai_will_do = {
+# 		factor = 1
+# 	}
+# }
+
+# THE_lunarian_$$$$$_policy= {
+# 	monarch_power = 
+
+# 	potential = {
+# 		has_idea_group = THE_lunarian_ideas
+# 		has_idea_group = 
+# 	}
+# 	allow = {
+# 		full_idea_group = THE_lunarian_ideas
+# 		full_idea_group = 
+# 	}
+	
+# 	# modifier
+
+# 	effect = {}
+# 	removed_effect = {}
+# 	ai_will_do = {
+# 		factor = 1
+# 	}
+# }
+
+# THE_lunarian_$$$$$_policy= {
+# 	monarch_power = 
+
+# 	potential = {
+# 		has_idea_group = THE_lunarian_ideas
+# 		has_idea_group = 
+# 	}
+# 	allow = {
+# 		full_idea_group = THE_lunarian_ideas
+# 		full_idea_group = 
+# 	}
+	
+# 	# modifier
+
+# 	effect = {}
+# 	removed_effect = {}
+# 	ai_will_do = {
+# 		factor = 1
+# 	}
+# }
+
+# THE_lunarian_$$$$$_policy= {
+# 	monarch_power = 
+
+# 	potential = {
+# 		has_idea_group = THE_lunarian_ideas
+# 		has_idea_group = 
+# 	}
+# 	allow = {
+# 		full_idea_group = THE_lunarian_ideas
+# 		full_idea_group = 
+# 	}
+	
+# 	# modifier
+
+# 	effect = {}
+# 	removed_effect = {}
+# 	ai_will_do = {
+# 		factor = 1
+# 	}
+# }
+
+# THE_lunarian_$$$$$_policy= {
+# 	monarch_power = 
+
+# 	potential = {
+# 		has_idea_group = THE_lunarian_ideas
+# 		has_idea_group = 
+# 	}
+# 	allow = {
+# 		full_idea_group = THE_lunarian_ideas
+# 		full_idea_group = 
+# 	}
+	
+# 	# modifier
+
+# 	effect = {}
+# 	removed_effect = {}
+# 	ai_will_do = {
+# 		factor = 1
+# 	}
+# }
+
+# THE_lunarian_$$$$$_policy= {
+# 	monarch_power = 
+
+# 	potential = {
+# 		has_idea_group = THE_lunarian_ideas
+# 		has_idea_group = 
+# 	}
+# 	allow = {
+# 		full_idea_group = THE_lunarian_ideas
+# 		full_idea_group = 
+# 	}
+	
+# 	# modifier
+
+# 	effect = {}
+# 	removed_effect = {}
+# 	ai_will_do = {
+# 		factor = 1
+# 	}
+# }
+
+# THE_lunarian_$$$$$_policy= {
+# 	monarch_power = 
+
+# 	potential = {
+# 		has_idea_group = THE_lunarian_ideas
+# 		has_idea_group = 
+# 	}
+# 	allow = {
+# 		full_idea_group = THE_lunarian_ideas
+# 		full_idea_group = 
+# 	}
+	
+# 	# modifier
+
+# 	effect = {}
+# 	removed_effect = {}
+# 	ai_will_do = {
+# 		factor = 1
+# 	}
+# }
+
+# THE_lunarian_$$$$$_policy= {
+# 	monarch_power = 
+
+# 	potential = {
+# 		has_idea_group = THE_lunarian_ideas
+# 		has_idea_group = 
+# 	}
+# 	allow = {
+# 		full_idea_group = THE_lunarian_ideas
 # 		full_idea_group = 
 # 	}
 	
