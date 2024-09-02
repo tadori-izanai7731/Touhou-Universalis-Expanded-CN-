@@ -5,6 +5,7 @@ l_english:
 ###CUSTOM_TOOLTIP
  THE_display_the_country_content_tt: "§YFasterliya§!:\n@KKO心绮楼\n@YOF妖怪之森\n\n§Y一只沙包§!:\n@LIL迎春花小径\n@NCS辉针城\n@HMC人间之里(beta)\n\n§Y圆神信徒齐格酱§!:\n@HNG红(由@SCR红魔馆释放)\n\n§YSEKGY§!:\n@ROD宵暗领域(由@YOF妖怪之森释放)"
  THE_unlock_gensokyan_ideas_tt: "允许使用「§Y幻想乡理念§!」"
+ THE_special_culture_ideas_test_tt: "为玩家解锁「§Y东方风云拓展§!」所有新增理念组。"
 ###CUSTOM_TOOLTIP_END
 
 ### MERC_DESC
@@ -21,6 +22,11 @@ l_english:
  THE_common_events.0.desc: "本模组是「东方风云/Touhou Universalis Updated (CN)」的拓展模组，为部分tag制作了全新的任务和机制，将光标移动到事件选项即可查看已制作的tag。\n§R注意§!:本模组与其他东方风云拓展模组并不兼容。\n\n如果遇到bug或有想要制作的tag，欢迎前往东方风云交流群569280689。"
  THE_common_events.0.option: "祝您游玩愉快。"
 ###EVENT_END
+
+###DECISION
+ THE_unlock_special_culture_ideas_for_player_decision_title: "「§Y东方风云拓展§!」理念组测试决议"
+ THE_unlock_special_culture_ideas_for_player_decision_desc: ""
+###DECISION_END
 
 ###IDEA
  THE_youkai_ideas: "妖怪理念"

@@ -1,0 +1,15 @@
+country_decisions = {
+	THE_unlock_special_culture_ideas_for_player_decision = {
+		potential = {
+			ai = no
+			NOT = { has_country_flag = THE_special_culture_ideas_test_flag }
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			set_country_flag = THE_special_culture_ideas_test_flag
+			custom_tooltip = THE_special_culture_ideas_test_tt
+		}
+	}
+}
