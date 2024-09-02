@@ -12,7 +12,6 @@ THE_youkai_ideas = {
 	trigger = {
 		OR = {
 			primary_culture = Netherlandish
-			primary_culture = Eientei
 			primary_culture = Scarlett
 			primary_culture = Magician
 			primary_culture = Tengu
@@ -143,6 +142,7 @@ THE_human_ideas = {
 			primary_culture = Gensokyo_human
 			primary_culture = Senkaian
 			primary_culture = Heavenish
+			primary_culture = Eientei
 			THE_can_use_special_culture_ideas_scripted_trigger = {
 				type = human
 			}
