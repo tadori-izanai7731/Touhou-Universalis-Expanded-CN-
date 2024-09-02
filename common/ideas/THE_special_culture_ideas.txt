@@ -352,7 +352,7 @@ THE_gensokyan_ideas = {
 		monthly_reform_progress_modifier = 0.5
 		max_revolutionary_zeal = 50
 		max_absolutism = 50
-		yearly_government_power = 5
+		yearly_absolutism = 5
 		yearly_revolutionary_zeal = 5
 		yearly_government_power = 24
 	}
@@ -398,9 +398,9 @@ THE_gensokyan_ideas = {
 	}
 	#满身疮痍
 	THE_gensokyan_ideas_6 = {
-		morale_damage_received = 0.25
-		fire_damage_received = 0.25
-		shock_damage_received = 0.25
+		morale_damage_received = -0.25
+		fire_damage_received = -0.25
+		shock_damage_received = -0.25
 	}	
 	#未知物语
 	THE_gensokyan_ideas_7 = {
