@@ -36,7 +36,8 @@ THE_youkai_ideas = {
 	}
 	
 	THE_youkai_ideas_1 = {
-		stability_cost_modifier = -0.2
+		stability_cost_modifier = -0.25
+		global_unrest = -1
 	}	
 	THE_youkai_ideas_2 = {
 		spy_offence = 0.25
@@ -48,6 +49,7 @@ THE_youkai_ideas = {
 	}	
 	THE_youkai_ideas_4 = {
 		prestige = 2
+		diplomatic_upkeep = 2
 	}	
 	THE_youkai_ideas_5 = {
 		ae_impact = -0.1
@@ -55,6 +57,7 @@ THE_youkai_ideas = {
 	}	
 	THE_youkai_ideas_6 = {
 		yearly_corruption = -0.2
+		global_autonomy = -0.05
 	}	
 	THE_youkai_ideas_7 = {
 		national_focus_years = -10
@@ -98,27 +101,39 @@ THE_kami_ideas = {
 	
 	THE_kami_ideas_1 = {
 		cb_on_religious_enemies = yes
+		papal_influence = 2
+		monthly_fervor_increase = 0.25
+		church_power_modifier = 0.1
+		monthly_piety_accelerator = 0.001
+		yearly_karma_decay = 0.1
+		yearly_doom_reduction = 1
+		yearly_authority = 0.15
+		yearly_patriarch_authority = 0.005
 	}	
 	THE_kami_ideas_2 = {
 		missionaries = 2
+		imperial_mandate = 0.2
+		imperial_authority_value = 0.2
 	}	
 	THE_kami_ideas_3 = {
 		unjustified_demands = -0.25
+		monthly_splendor = 3
 	}	
 	THE_kami_ideas_4 = {
-		tolerance_own = 2
+		tolerance_own = 3
 		global_missionary_strength = 0.02
 	}	
 	THE_kami_ideas_5 = {
-		manpower_in_true_faith_provinces = 0.2
-		institution_spread_from_true_faith = 0.2
+		manpower_in_true_faith_provinces = 0.25
+		institution_spread_from_true_faith = 0.5
 	}	
 	THE_kami_ideas_6 = {
-		autonomy_change_time = -0.25
+		autonomy_change_time = -0.5
 		monthly_heir_claim_increase = 0.1
 	}	
 	THE_kami_ideas_7 = {
-		reverse_relation_with_same_religion = 15
+		reverse_relation_with_same_religion = 20
+		war_exhaustion = -0.1
 	}
 	
 
@@ -132,8 +147,8 @@ THE_human_ideas = {
 	category = DIP
 
 	bonus = {
-		global_prosperity_growth = 2
-		min_autonomy_in_territories = -0.05
+		global_monthly_devastation = -2
+		governing_cost = -0.1
 	}
 
 	trigger = {
@@ -156,28 +171,32 @@ THE_human_ideas = {
 	
 	THE_human_ideas_1 = {
 		diplomats = 2
+		envoy_travel_time = -0.33
 	}	
 	THE_human_ideas_2 = {
 		num_accepted_cultures = 5
 		promote_culture_cost = -0.5
 	}	
 	THE_human_ideas_3 = {
-		development_cost = -0.1
+		development_cost = -0.15
 		reform_progress_growth = 0.3
 	}	
 	THE_human_ideas_4 = {
-		improve_relation_modifier = 0.3
-		ae_impact = -0.05
+		improve_relation_modifier = 0.5
+		diplomatic_reputation = 2
 	}	
 	THE_human_ideas_5 = {
 		fort_maintenance_modifier = -0.3
-		garrison_size = 0.25
+		global_defender_dice_roll_bonus = 1
 	}	
 	THE_human_ideas_6 = {
 		expand_administration_cost = -1
+		estate_interaction_cooldown_modifier = -0.5
 	}	
 	THE_human_ideas_7 = {
-		tolerance_heretic = 3
+		monthly_favor_modifier = 0.25
+		parliament_backing_chance = 0.1
+		merc_independent_from_trade_range = yes
 	}
 	
 
@@ -210,24 +229,26 @@ THE_fairy_ideas = {
 	}
 	
 	THE_fairy_ideas_1 = {
-		global_manpower = 5
+		global_manpower = 10
 		manpower_recovery_speed = 0.2
 	}	
 	THE_fairy_ideas_2 = {
-		same_culture_advisor_cost = -0.3
+		same_culture_advisor_cost = -0.5
 		advisor_pool = 1
 	}	
 	THE_fairy_ideas_3 = {
-		global_colonial_growth = 20
-		colonist_placement_chance = 0.1
+		colonists = 1
+		global_colonial_growth = 30
+		colonist_placement_chance = 0.15
 	}	
 	THE_fairy_ideas_4 = {
-		culture_conversion_cost = -0.2
+		culture_conversion_cost = -0.25
 		recover_army_morale_speed = 0.1
 	}	
 	THE_fairy_ideas_5 = {
 		may_perform_slave_raid_on_same_religion = yes
 		privateer_efficiency = 0.25
+		global_ship_recruit_speed = -0.25
 	}	
 	THE_fairy_ideas_6 = {
 		production_efficiency = 0.1
@@ -328,10 +349,12 @@ THE_gensokyan_ideas = {
 	category = MIL
 
 	bonus = {
-		free_policy = 1
-		country_admin_power = 1
-		country_diplomatic_power = 1
-		country_military_power = 1
+		monthly_reform_progress_modifier = 0.5
+		max_revolutionary_zeal = 50
+		max_absolutism = 50
+		yearly_government_power = 5
+		yearly_revolutionary_zeal = 5
+		yearly_government_power = 24
 	}
 
 	trigger = {
@@ -343,37 +366,94 @@ THE_gensokyan_ideas = {
 		}
 	}
 	
+	#花开似锦
 	THE_gensokyan_ideas_1 = {
-		backrow_artillery_damage = 0.25
-		artillery_levels_available_vs_fort = 2
-		artillery_level_modifier = 0.5
+		ae_impact = -0.33
+		global_manpower_modifier = 0.5
+		land_forcelimit_modifier = 0.5
 	}	
+	#梦现交错
 	THE_gensokyan_ideas_2 = {
-		colony_development_boost = 2
-		reduced_liberty_desire = 50
-		diplomatic_annexation_cost = -0.25
+		province_warscore_cost = -0.25
+		diplomats = 2
+		envoy_travel_time = -0.5
 	}	
+	#灵异传说
 	THE_gensokyan_ideas_3 = {
 		core_creation = -0.25
-		governing_cost = -0.25
 		ignore_coring_distance = yes
+		governing_cost = -0.25
 	}	
+	#异变缘起
 	THE_gensokyan_ideas_4 = {
-		num_accepted_cultures = 10
-		manpower_in_own_culture_provinces = 0.25
-		manpower_in_accepted_culture_provinces = 0.25
+		morale_damage = 0.25
+		fire_damage = 0.25
+		shock_damage = 0.25
 	}	
+	#妖魅怪奇
 	THE_gensokyan_ideas_5 = {
-		tolerance_own = 3
-		no_religion_penalty = yes
+		num_accepted_cultures = 10
+		culture_conversion_time = -0.33
+		culture_conversion_cost = -0.33
 	}
+	#满身疮痍
 	THE_gensokyan_ideas_6 = {
-		trade_goods_size = 1
-		development_cost_modifier = -0.1
+		morale_damage_received = 0.25
+		fire_damage_received = 0.25
+		shock_damage_received = 0.25
 	}	
+	#未知物语
 	THE_gensokyan_ideas_7 = {
 		administrative_efficiency = 0.1
 		all_power_cost = -0.1
+	}
+	#追寻不懈
+	THE_gensokyan_ideas_8 = {
+		discipline = 0.1
+		manpower_recovery_speed = 0.5
+		warscore_from_battles_modifier = 1
+	}	
+	#告曰符卡
+	THE_gensokyan_ideas_9 = {
+		movement_speed = 0.25
+		leader_land_fire = 3
+		leader_naval_fire = 3
+		number_of_cannons_modifier = 0.25
+	}	
+	#颂之以歌
+	THE_gensokyan_ideas_10 = {
+		improve_relation_modifier = 1
+		reverse_relation_with_same_religion = 50
+		reverse_relation_with_heretic_religion = 50
+		reverse_relation_with_heathen_religion = 50
+		unjustified_demands = -1
+	}	
+	#宏伟筑梦
+	THE_gensokyan_ideas_11 = {
+		great_project_upgrade_time = -0.5
+		development_cost_modifier = -0.2
+		build_time = -0.5
+	}	
+	#幻想之庭
+	THE_gensokyan_ideas_12 = {
+		global_trade_goods_size = 1
+		embracement_cost = -1
+		prestige = 5
+		all_estate_loyalty_equilibrium = 0.3
+	}
+	#花落如缤
+	THE_gensokyan_ideas_13 = {
+		native_assimilation = 2
+		colonists = 3
+		global_colonial_growth = 100
+	}	
+	#虚幻终末
+	THE_gensokyan_ideas_14 = {
+		can_bypass_forts = yes
+		allow_client_states = yes
+		can_revoke_parliament_seats = yes
+		reduced_stab_impacts = yes
+		may_establish_frontier = yes
 	}
 	
 

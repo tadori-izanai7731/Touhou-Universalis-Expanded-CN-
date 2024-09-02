@@ -14,7 +14,7 @@ cb_THE_imperial = {
 			has_country_modifier = THE_hng_mission_modifier76
 			has_country_modifier = THE_hng_mission_modifier125
 			has_country_modifier = THE_hng_mission_modifier126
-			has_idea = THE_gensokyan_ideas_7
+			has_idea = THE_gensokyan_ideas_14
 		}		
 		is_free_or_tributary_trigger = yes
 		is_revolutionary = no
@@ -30,7 +30,7 @@ cb_THE_nationalist = {
 		is_free_or_tributary_trigger = yes
 		is_revolutionary = no
 		NOT = { dip_tech = 23 }
-		has_idea = THE_gensokyan_ideas_7
+		has_idea = THE_gensokyan_ideas_14
 	}
 
 	prerequisites = {
