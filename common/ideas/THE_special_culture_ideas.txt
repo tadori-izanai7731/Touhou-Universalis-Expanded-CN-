@@ -10,6 +10,7 @@ THE_youkai_ideas = {
 	}
 
 	trigger = {
+		NOT = { THE_forbid_special_culture_ideas_scripted_trigger = { type = youkai } }
 		OR = {
 			primary_culture = Netherlandish
 			primary_culture = Scarlett
@@ -86,6 +87,7 @@ THE_kami_ideas = {
 	}
 
 	trigger = {
+		NOT = { THE_forbid_special_culture_ideas_scripted_trigger = { type = kami } }
 		OR = {
 			primary_culture = Makaian
 			THE_can_use_special_culture_ideas_scripted_trigger = {
@@ -152,6 +154,7 @@ THE_human_ideas = {
 	}
 
 	trigger = {
+		NOT = { THE_forbid_special_culture_ideas_scripted_trigger = { type = human } }
 		OR = {
 			primary_culture = Magician
 			primary_culture = Gensokyo_human
@@ -215,6 +218,7 @@ THE_fairy_ideas = {
 	}
 
 	trigger = {
+		NOT = { THE_forbid_special_culture_ideas_scripted_trigger = { type = Fairy } }
 		OR = {
 			primary_culture = Fairy
 			THE_can_use_special_culture_ideas_scripted_trigger = {
@@ -277,6 +281,7 @@ THE_lunarian_ideas = {
 	}
 
 	trigger = {
+		NOT = { THE_forbid_special_culture_ideas_scripted_trigger = { type = lunarian } }
 		OR = {
 			primary_culture = Lunarian_culture
 			THE_can_use_special_culture_ideas_scripted_trigger = {
@@ -358,6 +363,7 @@ THE_gensokyan_ideas = {
 	}
 
 	trigger = {
+		NOT = { THE_forbid_special_culture_ideas_scripted_trigger = { type = gensokyan } }
 		OR = {
 			has_country_flag = th_formed_gensokyo_flag
 			THE_can_use_special_culture_ideas_scripted_trigger = {

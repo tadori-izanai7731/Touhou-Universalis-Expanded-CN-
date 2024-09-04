@@ -12,4 +12,16 @@ country_decisions = {
 			custom_tooltip = THE_special_culture_ideas_test_tt
 		}
 	}
+	THE_testtest_decision = {
+		potential = {
+			ai = no
+			has_country_flag = THE_testtest_avliable_flag
+		}
+		allow = {
+			# Test Trigger
+		}
+		effect = {
+			# Test Effect
+		}
+	}
 }
