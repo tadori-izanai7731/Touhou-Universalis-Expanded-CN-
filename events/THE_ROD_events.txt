@@ -944,10 +944,6 @@ country_event = {
 		months = 240
 	}
 	trigger = {
-		custom_trigger_tooltip = {
-			tooltip = THE_ROD_not_complete_event_ttt
-			always = no
-		}
 		OR = { tag = ROD was_tag = ROD }
 		43 = {
 			owned_by = ROOT
@@ -988,10 +984,6 @@ country_event = {
 		months = 240
 	}
 	trigger = {
-		custom_trigger_tooltip = {
-			tooltip = THE_ROD_not_complete_event_ttt
-			always = no
-		}
 		OR = { tag = ROD was_tag = ROD }
 		45 = {
 			owned_by = ROOT
@@ -1032,10 +1024,6 @@ country_event = {
 		months = 240
 	}
 	trigger = {
-		custom_trigger_tooltip = {
-			tooltip = THE_ROD_not_complete_event_ttt
-			always = no
-		}
 		OR = { tag = ROD was_tag = ROD }
 		38 = {
 			owned_by = ROOT
@@ -1076,10 +1064,6 @@ country_event = {
 		months = 240
 	}
 	trigger = {
-		custom_trigger_tooltip = {
-			tooltip = THE_ROD_not_complete_event_ttt
-			always = no
-		}
 		OR = { tag = ROD was_tag = ROD }
 		12 = {
 			owned_by = ROOT
@@ -1120,10 +1104,6 @@ country_event = {
 		months = 240
 	}
 	trigger = {
-		custom_trigger_tooltip = {
-			tooltip = THE_ROD_not_complete_event_ttt
-			always = no
-		}
 		OR = { tag = ROD was_tag = ROD }
 		25 = {
 			owned_by = ROOT
@@ -1164,10 +1144,6 @@ country_event = {
 		months = 240
 	}
 	trigger = {
-		custom_trigger_tooltip = {
-			tooltip = THE_ROD_not_complete_event_ttt
-			always = no
-		}
 		OR = { tag = ROD was_tag = ROD }
 		33 = {
 			owned_by = ROOT
