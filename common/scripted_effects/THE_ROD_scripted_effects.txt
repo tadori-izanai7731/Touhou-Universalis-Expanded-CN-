@@ -308,6 +308,31 @@ THE_ROD_on_heir_needed_theocracy_scripted_effect = {
 	}
 }
 
+THE_ROD_on_dip_tech_taken_scripted_effect = {
+	if = {
+		limit = { has_country_flag = THE_ROD_lubeck_crane_flag }
+		every_owned_province = {
+			limit = {
+				has_trade_building_trigger = yes
+			}
+			add_base_production = 1
+		}
+		every_owned_province = {
+			limit = {
+				has_shipyard_building_trigger = yes
+			}
+			add_base_production = 1
+		}
+		every_owned_province = {
+			limit = {
+				has_dock_building_trigger = yes	
+			}
+			add_base_production = 1
+		}
+	}
+}
+
+
 ### NOT on_actions scripted effects
 
 THE_change_color_to_colony = {

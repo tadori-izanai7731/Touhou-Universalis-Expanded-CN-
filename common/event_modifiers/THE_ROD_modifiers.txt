@@ -551,6 +551,13 @@ THE_ROD_baltic_sea_trade_center_province_modifier = {
 	placed_merchant_power_modifier = 0.05
 }
 
+#日落海盗
+THE_ROD_sunset_pirates_modifier = {
+	coast_raid_range = 2
+	privateer_efficiency = 0.1
+	available_province_loot = 0.2
+}
+
 ###EXTRA_HAKUREI_DEITY
 THE_ROD_extra_hakurei_modifier_Hakurei_God = {
 	defensiveness = 0.1

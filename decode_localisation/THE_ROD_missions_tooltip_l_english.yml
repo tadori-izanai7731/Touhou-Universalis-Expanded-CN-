@@ -222,6 +222,7 @@ l_english:
  THE_ROD_upgrade_baltic_sea_port_tt: "[This.GetName]的港口将得到扩建。\n[This.GetName]获得「§Y波罗的海贸易中心§!」持续到游戏结束，给予如下效果:\n商人团: §G+1§!\n贸易效率: §G+2.0%§!\n贸易引导: §G+3.0%§!\n省份贸易竞争力修正: §G+4.0%§!\n已配置商人团竞争力修正: §G+5.0%§!"
  THE_ROD_baltic_trade_event_tt: "该事件属于@ROD§M波罗的海贸易§!事件组。"
  THE_ROD_has_tolerance_own_10: "拥有至少§G+10§!正统信仰容忍度"
+ THE_ROD_lubeck_crane_tt: "\n治下所有省份从§Y贸易§!和§Y海军§!建筑获得£icon_production_in_text£§Y基础生产§!\n之后每次升级£dip£§Y外交科技§!都会触发该效果"
  THE_ROD_not_complete_event_ttt: "没做完"
 ###TOOLTIP_END
 
@@ -324,6 +325,7 @@ l_english:
  THE_ROD_friedrich_wilhelm_modifier: "腓特烈·威廉的政治才能"
  THE_ROD_friedrich_wilhelm_mil_modifier: "腓特烈·威廉的『普鲁士精神』"
  THE_ROD_baltic_sea_trade_center_province_modifier: "波罗的海贸易中心"
+ THE_ROD_sunset_pirates_modifier: "日落海盗"
 ###MODIFIER_END
 
 ###MERC
@@ -548,6 +550,14 @@ l_english:
  THE_ROD_events.22.title: "东方窗口——[33.GetName]"
  THE_ROD_events.22.desc: "从基辅公国独立的诺夫哥罗德最初只能称为渔猎和手工业者的小城镇，经过数个世纪的发展称为俄罗斯北方庞大的商人共和国，诺夫哥罗德也成为汉萨同盟在东方的重要贸易对象。[33.GetName]拥有优良的地理位置，却并未发展为诺夫哥罗德的首都。但凭借世界贸易的兴起、东欧的交流需求和西伯利亚的未开发资源，对于波罗的海最东方的优良港口城市[33.GetName]，繁荣只需要短暂的等待。"
  THE_ROD_events.22.a: "愿你永远美丽。"
+
+ THE_ROD_events.23.title: "信仰穆斯林的海盗"
+ THE_ROD_events.23.desc: "吕根和哥得兰是波罗的海区域主要的海盗聚集地，如今都被露米娅占有并给予当地海盗合法的劫掠权。最近海盗们在劫掠时遇到了另一批头戴头巾的穆斯林海盗，对方声称他们来自东南方的日落之地，在劫掠海岸方面拥有更好的装备和经验，能够前往更远的海岸并劫掠更多财富。出于同是天涯沦落人的命运，海盗间的友好交流很快促进了[Root.GetName]海盗的发展。"
+ THE_ROD_events.23.a: "[Root.GetName]新到一批马格里布战舰。"
+
+ THE_ROD_events.24.title: "港口起重机"
+ THE_ROD_events.24.desc: "汉萨同盟港口的一种奇怪机械造物引起了露米娅的兴趣，港口的管理者便向露米娅介绍了「起重机」的原理和作用，需要装卸的大型货物可以用起重机轻松地吊起，船坞里建造的大型船只可以使用起重机进行分段式安装，港口的运行效率仿佛被这个机械掌控。"
+ THE_ROD_events.24.a: "『暗示』。"
 ###EVENT_END
 
 ###VARIABLE

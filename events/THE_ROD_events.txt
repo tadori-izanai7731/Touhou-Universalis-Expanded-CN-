@@ -15,6 +15,8 @@ country_event = {
 
 	option = {
 		name = THE_ROD_events.1.a
+		custom_tooltip = THE_ROD_baltic_trade_event_tt
+		custom_tooltip = empty_line_tt
 		add_mercantilism = 10
 		12 = {
 			add_base_tax = 5
@@ -31,6 +33,8 @@ country_event = {
 
 	option = {
 		name = THE_ROD_events.1.b
+		custom_tooltip = THE_ROD_baltic_trade_event_tt
+		custom_tooltip = empty_line_tt
 		add_country_modifier = {
 			name = THE_ROD_free_sea_modifier
 			duration = -1
@@ -1169,6 +1173,98 @@ country_event = {
 				}
 			}
 			custom_tooltip = THE_ROD_upgrade_baltic_sea_port_tt
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.23
+	title = THE_ROD_events.23.title
+	desc = THE_ROD_events.23.desc
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 360
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		mission_completed = THE_ROD_4_6
+		4745 = { country_or_non_sovereign_subject_holds = ROOT }
+		25 = { country_or_non_sovereign_subject_holds = ROOT }
+		OR = {
+			any_ally = {
+				religion_group = muslim
+			}
+			any_province = {
+				region = maghreb_region
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+	}
+
+	option = {
+		name = THE_ROD_events.23.a
+		custom_tooltip = THE_ROD_baltic_trade_event_tt
+		custom_tooltip = empty_line_tt
+		add_country_modifier = {
+			name = THE_ROD_sunset_pirates_modifier
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.24
+	title = THE_ROD_events.24.title
+	desc = THE_ROD_events.24.desc
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 600
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		OR = {
+			alliance_with = HSA
+			45 = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+	}
+
+	option = {
+		name = THE_ROD_events.24.a
+		custom_tooltip = THE_ROD_baltic_trade_event_tt
+		custom_tooltip = empty_line_tt
+		add_dip_power = 100
+		if = {
+			limit = { alliance_with = HSA }
+			add_favors = {
+				who = HSA
+				amount = -100
+			}
+		}
+		custom_tooltip = THE_ROD_lubeck_crane_tt
+		hidden_effect = {
+			set_country_flag = THE_ROD_lubeck_crane_flag
+			every_owned_province = {
+				limit = {
+					has_trade_building_trigger = yes
+				}
+				add_base_production = 1
+			}
+			every_owned_province = {
+				limit = {
+					has_shipyard_building_trigger = yes
+				}
+				add_base_production = 1
+			}
+			every_owned_province = {
+				limit = {
+					has_dock_building_trigger = yes	
+				}
+				add_base_production = 1
+			}
 		}
 	}
 }
