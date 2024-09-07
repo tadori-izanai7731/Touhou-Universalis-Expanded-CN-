@@ -1,0 +1,322 @@
+# country_decisions = {
+# 	THE_HVR_set_variable_change_step_decision = {
+# 		potential = {
+# 			OR = { tag = HVR was_tag = HVR }
+# 			ai = no
+# 		}
+# 		allow = {
+# 			always = yes
+# 		}
+# 		effect = {
+# 			country_event = {
+# 				id = THE_HVR_events.0
+# 			}
+# 			hidden_effect = {
+# 				set_country_flag = THE_HVR_can_change_country_color_flag
+# 				set_variable = {
+# 					which = the_hvr_red_var
+# 					value = 0
+# 				}
+# 				set_variable = {
+# 					which = the_hvr_green_var
+# 					value = 0
+# 				}
+# 				set_variable = {
+# 					which = the_hvr_blue_var
+# 					value = 0
+# 				}
+# 			}
+# 		}
+# 		ai_will_do = {
+# 			factor = 0
+# 		}
+# 	}
+# 	THE_HVR_variable_red_change_decision = {
+# 		potential = {
+# 			OR = { tag = HVR was_tag = HVR }
+# 			has_country_flag = THE_HVR_can_change_country_color_flag
+# 			ai = no
+# 		}
+# 		allow = {
+# 			always = yes
+# 		}
+# 		effect = {
+# 			custom_tooltip = THE_HVR_display_red_variable_value_tt
+# 			if = {
+# 				limit = { has_country_flag = THE_HVR_variable_step_100_flag }
+# 				change_variable = {
+# 					which = the_hvr_red_var
+# 					value = 100
+# 				}
+# 			}
+# 			if = {
+# 				limit = { has_country_flag = THE_HVR_variable_step_10_flag }
+# 				change_variable = {
+# 					which = the_hvr_red_var
+# 					value = 10
+# 				}
+# 			}
+# 			if = {
+# 				limit = { has_country_flag = THE_HVR_variable_step_1_flag }
+# 				change_variable = {
+# 					which = the_hvr_red_var
+# 					value = 1
+# 				}
+# 			}
+# 			hidden_effect = {
+# 				if = {
+# 					limit = { check_variable = { which = the_hvr_red_var value = 255 } }
+# 					set_variable = { which = the_hvr_red_var value = 255 }
+# 				}
+# 				if = {
+# 					limit = { NOT = { check_variable = { which = the_hvr_red_var value = 1 } } }
+# 					set_variable = { which = the_hvr_red_var value = 0 }
+# 				}
+# 				THE_HVR_set_color_scripted_effect = yes
+# 			}
+# 		}
+# 		ai_will_do = {
+# 			factor = 0
+# 		}
+# 	}
+# 	THE_HVR_variable_red_subtract_decision = {
+# 		potential = {
+# 			OR = { tag = HVR was_tag = HVR }
+# 			has_country_flag = THE_HVR_can_change_country_color_flag
+# 			ai = no
+# 		}
+# 		allow = {
+# 			always = yes
+# 		}
+# 		effect = {
+# 			custom_tooltip = THE_HVR_display_red_variable_value_tt
+# 			if = {
+# 				limit = { has_country_flag = THE_HVR_variable_step_100_flag }
+# 				subtract_variable = {
+# 					which = the_hvr_red_var
+# 					value = 100
+# 				}
+# 			}
+# 			if = {
+# 				limit = { has_country_flag = THE_HVR_variable_step_10_flag }
+# 				subtract_variable = {
+# 					which = the_hvr_red_var
+# 					value = 10
+# 				}
+# 			}
+# 			if = {
+# 				limit = { has_country_flag = THE_HVR_variable_step_1_flag }
+# 				subtract_variable = {
+# 					which = the_hvr_red_var
+# 					value = 1
+# 				}
+# 			}
+# 			hidden_effect = {
+# 				if = {
+# 					limit = { check_variable = { which = the_hvr_red_var value = 255 } }
+# 					set_variable = { which = the_hvr_red_var value = 255 }
+# 				}
+# 				if = {
+# 					limit = { NOT = { check_variable = { which = the_hvr_red_var value = 1 } } }
+# 					set_variable = { which = the_hvr_red_var value = 0 }
+# 				}
+# 				THE_HVR_set_color_scripted_effect = yes
+# 			}
+# 		}
+# 		ai_will_do = {
+# 			factor = 0
+# 		}
+# 	}
+# 	THE_HVR_variable_green_change_decision = {
+# 		potential = {
+# 			OR = { tag = HVR was_tag = HVR }
+# 			has_country_flag = THE_HVR_can_change_country_color_flag
+# 			ai = no
+# 		}
+# 		allow = {
+# 			always = yes
+# 		}
+# 		effect = {
+# 			custom_tooltip = THE_HVR_display_green_variable_value_tt
+# 			if = {
+# 				limit = { has_country_flag = THE_HVR_variable_step_100_flag }
+# 				change_variable = {
+# 					which = the_hvr_green_var
+# 					value = 100
+# 				}
+# 			}
+# 			if = {
+# 				limit = { has_country_flag = THE_HVR_variable_step_10_flag }
+# 				change_variable = {
+# 					which = the_hvr_green_var
+# 					value = 10
+# 				}
+# 			}
+# 			if = {
+# 				limit = { has_country_flag = THE_HVR_variable_step_1_flag }
+# 				change_variable = {
+# 					which = the_hvr_green_var
+# 					value = 1
+# 				}
+# 			}
+# 			hidden_effect = {
+# 				if = {
+# 					limit = { check_variable = { which = the_hvr_green_var value = 255 } }
+# 					set_variable = { which = the_hvr_green_var value = 255 }
+# 				}
+# 				if = {
+# 					limit = { NOT = { check_variable = { which = the_hvr_green_var value = 1 } } }
+# 					set_variable = { which = the_hvr_green_var value = 0 }
+# 				}
+# 				THE_HVR_set_color_scripted_effect = yes
+# 			}
+# 		}
+# 		ai_will_do = {
+# 			factor = 0
+# 		}
+# 	}
+# 	THE_HVR_variable_green_subtract_decision = {
+# 		potential = {
+# 			OR = { tag = HVR was_tag = HVR }
+# 			has_country_flag = THE_HVR_can_change_country_color_flag
+# 			ai = no
+# 		}
+# 		allow = {
+# 			always = yes
+# 		}
+# 		effect = {
+# 			custom_tooltip = THE_HVR_display_green_variable_value_tt
+# 			if = {
+# 				limit = { has_country_flag = THE_HVR_variable_step_100_flag }
+# 				subtract_variable = {
+# 					which = the_hvr_green_var
+# 					value = 100
+# 				}
+# 			}
+# 			if = {
+# 				limit = { has_country_flag = THE_HVR_variable_step_10_flag }
+# 				subtract_variable = {
+# 					which = the_hvr_green_var
+# 					value = 10
+# 				}
+# 			}
+# 			if = {
+# 				limit = { has_country_flag = THE_HVR_variable_step_1_flag }
+# 				subtract_variable = {
+# 					which = the_hvr_green_var
+# 					value = 1
+# 				}
+# 			}
+# 			hidden_effect = {
+# 				if = {
+# 					limit = { check_variable = { which = the_hvr_green_var value = 255 } }
+# 					set_variable = { which = the_hvr_green_var value = 255 }
+# 				}
+# 				if = {
+# 					limit = { NOT = { check_variable = { which = the_hvr_green_var value = 1 } } }
+# 					set_variable = { which = the_hvr_green_var value = 0 }
+# 				}
+# 				THE_HVR_set_color_scripted_effect = yes
+# 			}
+# 		}
+# 		ai_will_do = {
+# 			factor = 0
+# 		}
+# 	}
+# 	THE_HVR_variable_blue_change_decision = {
+# 		potential = {
+# 			OR = { tag = HVR was_tag = HVR }
+# 			has_country_flag = THE_HVR_can_change_country_color_flag
+# 			ai = no
+# 		}
+# 		allow = {
+# 			always = yes
+# 		}
+# 		effect = {
+# 			custom_tooltip = THE_HVR_display_blue_variable_value_tt
+# 			if = {
+# 				limit = { has_country_flag = THE_HVR_variable_step_100_flag }
+# 				change_variable = {
+# 					which = the_hvr_blue_var
+# 					value = 100
+# 				}
+# 			}
+# 			if = {
+# 				limit = { has_country_flag = THE_HVR_variable_step_10_flag }
+# 				change_variable = {
+# 					which = the_hvr_blue_var
+# 					value = 10
+# 				}
+# 			}
+# 			if = {
+# 				limit = { has_country_flag = THE_HVR_variable_step_1_flag }
+# 				change_variable = {
+# 					which = the_hvr_blue_var
+# 					value = 1
+# 				}
+# 			}
+# 			hidden_effect = {
+# 				if = {
+# 					limit = { check_variable = { which = the_hvr_blue_var value = 255 } }
+# 					set_variable = { which = the_hvr_blue_var value = 255 }
+# 				}
+# 				if = {
+# 					limit = { NOT = { check_variable = { which = the_hvr_blue_var value = 1 } } }
+# 					set_variable = { which = the_hvr_blue_var value = 0 }
+# 				}
+# 				THE_HVR_set_color_scripted_effect = yes
+# 			}
+# 		}
+# 		ai_will_do = {
+# 			factor = 0
+# 		}
+# 	}
+# 	THE_HVR_variable_blue_subtract_decision = {
+# 		potential = {
+# 			OR = { tag = HVR was_tag = HVR }
+# 			has_country_flag = THE_HVR_can_change_country_color_flag
+# 			ai = no
+# 		}
+# 		allow = {
+# 			always = yes
+# 		}
+# 		effect = {
+# 			custom_tooltip = THE_HVR_display_blue_variable_value_tt
+# 			if = {
+# 				limit = { has_country_flag = THE_HVR_variable_step_100_flag }
+# 				subtract_variable = {
+# 					which = the_hvr_blue_var
+# 					value = 100
+# 				}
+# 			}
+# 			if = {
+# 				limit = { has_country_flag = THE_HVR_variable_step_10_flag }
+# 				subtract_variable = {
+# 					which = the_hvr_blue_var
+# 					value = 10
+# 				}
+# 			}
+# 			if = {
+# 				limit = { has_country_flag = THE_HVR_variable_step_1_flag }
+# 				subtract_variable = {
+# 					which = the_hvr_blue_var
+# 					value = 1
+# 				}
+# 			}
+# 			hidden_effect = {
+# 				if = {
+# 					limit = { check_variable = { which = the_hvr_blue_var value = 255 } }
+# 					set_variable = { which = the_hvr_blue_var value = 255 }
+# 				}
+# 				if = {
+# 					limit = { NOT = { check_variable = { which = the_hvr_blue_var value = 1 } } }
+# 					set_variable = { which = the_hvr_blue_var value = 0 }
+# 				}
+# 				THE_HVR_set_color_scripted_effect = yes
+# 			}
+# 		}
+# 		ai_will_do = {
+# 			factor = 0
+# 		}
+# 	}
+# }
