@@ -1,0 +1,776 @@
+THE_HVR_set_color_red = {
+	if = { limit = { check_variable = { which = the_hvr_red_var value = 255 } } THE_HVR_set_color_green = { r = 255 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 254 } } THE_HVR_set_color_green = { r = 254 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 253 } } THE_HVR_set_color_green = { r = 253 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 252 } } THE_HVR_set_color_green = { r = 252 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 251 } } THE_HVR_set_color_green = { r = 251 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 250 } } THE_HVR_set_color_green = { r = 250 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 249 } } THE_HVR_set_color_green = { r = 249 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 248 } } THE_HVR_set_color_green = { r = 248 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 247 } } THE_HVR_set_color_green = { r = 247 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 246 } } THE_HVR_set_color_green = { r = 246 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 245 } } THE_HVR_set_color_green = { r = 245 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 244 } } THE_HVR_set_color_green = { r = 244 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 243 } } THE_HVR_set_color_green = { r = 243 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 242 } } THE_HVR_set_color_green = { r = 242 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 241 } } THE_HVR_set_color_green = { r = 241 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 240 } } THE_HVR_set_color_green = { r = 240 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 239 } } THE_HVR_set_color_green = { r = 239 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 238 } } THE_HVR_set_color_green = { r = 238 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 237 } } THE_HVR_set_color_green = { r = 237 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 236 } } THE_HVR_set_color_green = { r = 236 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 235 } } THE_HVR_set_color_green = { r = 235 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 234 } } THE_HVR_set_color_green = { r = 234 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 233 } } THE_HVR_set_color_green = { r = 233 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 232 } } THE_HVR_set_color_green = { r = 232 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 231 } } THE_HVR_set_color_green = { r = 231 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 230 } } THE_HVR_set_color_green = { r = 230 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 229 } } THE_HVR_set_color_green = { r = 229 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 228 } } THE_HVR_set_color_green = { r = 228 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 227 } } THE_HVR_set_color_green = { r = 227 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 226 } } THE_HVR_set_color_green = { r = 226 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 225 } } THE_HVR_set_color_green = { r = 225 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 224 } } THE_HVR_set_color_green = { r = 224 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 223 } } THE_HVR_set_color_green = { r = 223 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 222 } } THE_HVR_set_color_green = { r = 222 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 221 } } THE_HVR_set_color_green = { r = 221 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 220 } } THE_HVR_set_color_green = { r = 220 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 219 } } THE_HVR_set_color_green = { r = 219 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 218 } } THE_HVR_set_color_green = { r = 218 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 217 } } THE_HVR_set_color_green = { r = 217 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 216 } } THE_HVR_set_color_green = { r = 216 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 215 } } THE_HVR_set_color_green = { r = 215 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 214 } } THE_HVR_set_color_green = { r = 214 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 213 } } THE_HVR_set_color_green = { r = 213 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 212 } } THE_HVR_set_color_green = { r = 212 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 211 } } THE_HVR_set_color_green = { r = 211 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 210 } } THE_HVR_set_color_green = { r = 210 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 209 } } THE_HVR_set_color_green = { r = 209 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 208 } } THE_HVR_set_color_green = { r = 208 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 207 } } THE_HVR_set_color_green = { r = 207 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 206 } } THE_HVR_set_color_green = { r = 206 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 205 } } THE_HVR_set_color_green = { r = 205 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 204 } } THE_HVR_set_color_green = { r = 204 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 203 } } THE_HVR_set_color_green = { r = 203 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 202 } } THE_HVR_set_color_green = { r = 202 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 201 } } THE_HVR_set_color_green = { r = 201 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 200 } } THE_HVR_set_color_green = { r = 200 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 199 } } THE_HVR_set_color_green = { r = 199 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 198 } } THE_HVR_set_color_green = { r = 198 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 197 } } THE_HVR_set_color_green = { r = 197 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 196 } } THE_HVR_set_color_green = { r = 196 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 195 } } THE_HVR_set_color_green = { r = 195 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 194 } } THE_HVR_set_color_green = { r = 194 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 193 } } THE_HVR_set_color_green = { r = 193 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 192 } } THE_HVR_set_color_green = { r = 192 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 191 } } THE_HVR_set_color_green = { r = 191 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 190 } } THE_HVR_set_color_green = { r = 190 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 189 } } THE_HVR_set_color_green = { r = 189 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 188 } } THE_HVR_set_color_green = { r = 188 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 187 } } THE_HVR_set_color_green = { r = 187 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 186 } } THE_HVR_set_color_green = { r = 186 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 185 } } THE_HVR_set_color_green = { r = 185 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 184 } } THE_HVR_set_color_green = { r = 184 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 183 } } THE_HVR_set_color_green = { r = 183 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 182 } } THE_HVR_set_color_green = { r = 182 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 181 } } THE_HVR_set_color_green = { r = 181 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 180 } } THE_HVR_set_color_green = { r = 180 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 179 } } THE_HVR_set_color_green = { r = 179 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 178 } } THE_HVR_set_color_green = { r = 178 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 177 } } THE_HVR_set_color_green = { r = 177 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 176 } } THE_HVR_set_color_green = { r = 176 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 175 } } THE_HVR_set_color_green = { r = 175 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 174 } } THE_HVR_set_color_green = { r = 174 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 173 } } THE_HVR_set_color_green = { r = 173 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 172 } } THE_HVR_set_color_green = { r = 172 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 171 } } THE_HVR_set_color_green = { r = 171 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 170 } } THE_HVR_set_color_green = { r = 170 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 169 } } THE_HVR_set_color_green = { r = 169 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 168 } } THE_HVR_set_color_green = { r = 168 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 167 } } THE_HVR_set_color_green = { r = 167 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 166 } } THE_HVR_set_color_green = { r = 166 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 165 } } THE_HVR_set_color_green = { r = 165 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 164 } } THE_HVR_set_color_green = { r = 164 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 163 } } THE_HVR_set_color_green = { r = 163 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 162 } } THE_HVR_set_color_green = { r = 162 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 161 } } THE_HVR_set_color_green = { r = 161 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 160 } } THE_HVR_set_color_green = { r = 160 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 159 } } THE_HVR_set_color_green = { r = 159 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 158 } } THE_HVR_set_color_green = { r = 158 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 157 } } THE_HVR_set_color_green = { r = 157 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 156 } } THE_HVR_set_color_green = { r = 156 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 155 } } THE_HVR_set_color_green = { r = 155 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 154 } } THE_HVR_set_color_green = { r = 154 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 153 } } THE_HVR_set_color_green = { r = 153 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 152 } } THE_HVR_set_color_green = { r = 152 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 151 } } THE_HVR_set_color_green = { r = 151 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 150 } } THE_HVR_set_color_green = { r = 150 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 149 } } THE_HVR_set_color_green = { r = 149 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 148 } } THE_HVR_set_color_green = { r = 148 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 147 } } THE_HVR_set_color_green = { r = 147 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 146 } } THE_HVR_set_color_green = { r = 146 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 145 } } THE_HVR_set_color_green = { r = 145 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 144 } } THE_HVR_set_color_green = { r = 144 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 143 } } THE_HVR_set_color_green = { r = 143 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 142 } } THE_HVR_set_color_green = { r = 142 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 141 } } THE_HVR_set_color_green = { r = 141 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 140 } } THE_HVR_set_color_green = { r = 140 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 139 } } THE_HVR_set_color_green = { r = 139 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 138 } } THE_HVR_set_color_green = { r = 138 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 137 } } THE_HVR_set_color_green = { r = 137 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 136 } } THE_HVR_set_color_green = { r = 136 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 135 } } THE_HVR_set_color_green = { r = 135 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 134 } } THE_HVR_set_color_green = { r = 134 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 133 } } THE_HVR_set_color_green = { r = 133 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 132 } } THE_HVR_set_color_green = { r = 132 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 131 } } THE_HVR_set_color_green = { r = 131 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 130 } } THE_HVR_set_color_green = { r = 130 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 129 } } THE_HVR_set_color_green = { r = 129 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 128 } } THE_HVR_set_color_green = { r = 128 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 127 } } THE_HVR_set_color_green = { r = 127 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 126 } } THE_HVR_set_color_green = { r = 126 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 125 } } THE_HVR_set_color_green = { r = 125 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 124 } } THE_HVR_set_color_green = { r = 124 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 123 } } THE_HVR_set_color_green = { r = 123 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 122 } } THE_HVR_set_color_green = { r = 122 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 121 } } THE_HVR_set_color_green = { r = 121 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 120 } } THE_HVR_set_color_green = { r = 120 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 119 } } THE_HVR_set_color_green = { r = 119 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 118 } } THE_HVR_set_color_green = { r = 118 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 117 } } THE_HVR_set_color_green = { r = 117 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 116 } } THE_HVR_set_color_green = { r = 116 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 115 } } THE_HVR_set_color_green = { r = 115 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 114 } } THE_HVR_set_color_green = { r = 114 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 113 } } THE_HVR_set_color_green = { r = 113 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 112 } } THE_HVR_set_color_green = { r = 112 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 111 } } THE_HVR_set_color_green = { r = 111 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 110 } } THE_HVR_set_color_green = { r = 110 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 109 } } THE_HVR_set_color_green = { r = 109 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 108 } } THE_HVR_set_color_green = { r = 108 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 107 } } THE_HVR_set_color_green = { r = 107 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 106 } } THE_HVR_set_color_green = { r = 106 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 105 } } THE_HVR_set_color_green = { r = 105 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 104 } } THE_HVR_set_color_green = { r = 104 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 103 } } THE_HVR_set_color_green = { r = 103 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 102 } } THE_HVR_set_color_green = { r = 102 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 101 } } THE_HVR_set_color_green = { r = 101 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 100 } } THE_HVR_set_color_green = { r = 100 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 99 } } THE_HVR_set_color_green = { r = 99 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 98 } } THE_HVR_set_color_green = { r = 98 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 97 } } THE_HVR_set_color_green = { r = 97 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 96 } } THE_HVR_set_color_green = { r = 96 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 95 } } THE_HVR_set_color_green = { r = 95 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 94 } } THE_HVR_set_color_green = { r = 94 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 93 } } THE_HVR_set_color_green = { r = 93 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 92 } } THE_HVR_set_color_green = { r = 92 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 91 } } THE_HVR_set_color_green = { r = 91 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 90 } } THE_HVR_set_color_green = { r = 90 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 89 } } THE_HVR_set_color_green = { r = 89 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 88 } } THE_HVR_set_color_green = { r = 88 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 87 } } THE_HVR_set_color_green = { r = 87 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 86 } } THE_HVR_set_color_green = { r = 86 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 85 } } THE_HVR_set_color_green = { r = 85 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 84 } } THE_HVR_set_color_green = { r = 84 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 83 } } THE_HVR_set_color_green = { r = 83 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 82 } } THE_HVR_set_color_green = { r = 82 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 81 } } THE_HVR_set_color_green = { r = 81 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 80 } } THE_HVR_set_color_green = { r = 80 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 79 } } THE_HVR_set_color_green = { r = 79 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 78 } } THE_HVR_set_color_green = { r = 78 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 77 } } THE_HVR_set_color_green = { r = 77 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 76 } } THE_HVR_set_color_green = { r = 76 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 75 } } THE_HVR_set_color_green = { r = 75 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 74 } } THE_HVR_set_color_green = { r = 74 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 73 } } THE_HVR_set_color_green = { r = 73 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 72 } } THE_HVR_set_color_green = { r = 72 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 71 } } THE_HVR_set_color_green = { r = 71 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 70 } } THE_HVR_set_color_green = { r = 70 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 69 } } THE_HVR_set_color_green = { r = 69 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 68 } } THE_HVR_set_color_green = { r = 68 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 67 } } THE_HVR_set_color_green = { r = 67 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 66 } } THE_HVR_set_color_green = { r = 66 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 65 } } THE_HVR_set_color_green = { r = 65 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 64 } } THE_HVR_set_color_green = { r = 64 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 63 } } THE_HVR_set_color_green = { r = 63 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 62 } } THE_HVR_set_color_green = { r = 62 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 61 } } THE_HVR_set_color_green = { r = 61 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 60 } } THE_HVR_set_color_green = { r = 60 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 59 } } THE_HVR_set_color_green = { r = 59 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 58 } } THE_HVR_set_color_green = { r = 58 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 57 } } THE_HVR_set_color_green = { r = 57 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 56 } } THE_HVR_set_color_green = { r = 56 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 55 } } THE_HVR_set_color_green = { r = 55 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 54 } } THE_HVR_set_color_green = { r = 54 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 53 } } THE_HVR_set_color_green = { r = 53 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 52 } } THE_HVR_set_color_green = { r = 52 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 51 } } THE_HVR_set_color_green = { r = 51 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 50 } } THE_HVR_set_color_green = { r = 50 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 49 } } THE_HVR_set_color_green = { r = 49 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 48 } } THE_HVR_set_color_green = { r = 48 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 47 } } THE_HVR_set_color_green = { r = 47 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 46 } } THE_HVR_set_color_green = { r = 46 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 45 } } THE_HVR_set_color_green = { r = 45 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 44 } } THE_HVR_set_color_green = { r = 44 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 43 } } THE_HVR_set_color_green = { r = 43 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 42 } } THE_HVR_set_color_green = { r = 42 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 41 } } THE_HVR_set_color_green = { r = 41 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 40 } } THE_HVR_set_color_green = { r = 40 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 39 } } THE_HVR_set_color_green = { r = 39 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 38 } } THE_HVR_set_color_green = { r = 38 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 37 } } THE_HVR_set_color_green = { r = 37 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 36 } } THE_HVR_set_color_green = { r = 36 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 35 } } THE_HVR_set_color_green = { r = 35 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 34 } } THE_HVR_set_color_green = { r = 34 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 33 } } THE_HVR_set_color_green = { r = 33 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 32 } } THE_HVR_set_color_green = { r = 32 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 31 } } THE_HVR_set_color_green = { r = 31 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 30 } } THE_HVR_set_color_green = { r = 30 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 29 } } THE_HVR_set_color_green = { r = 29 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 28 } } THE_HVR_set_color_green = { r = 28 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 27 } } THE_HVR_set_color_green = { r = 27 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 26 } } THE_HVR_set_color_green = { r = 26 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 25 } } THE_HVR_set_color_green = { r = 25 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 24 } } THE_HVR_set_color_green = { r = 24 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 23 } } THE_HVR_set_color_green = { r = 23 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 22 } } THE_HVR_set_color_green = { r = 22 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 21 } } THE_HVR_set_color_green = { r = 21 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 20 } } THE_HVR_set_color_green = { r = 20 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 19 } } THE_HVR_set_color_green = { r = 19 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 18 } } THE_HVR_set_color_green = { r = 18 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 17 } } THE_HVR_set_color_green = { r = 17 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 16 } } THE_HVR_set_color_green = { r = 16 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 15 } } THE_HVR_set_color_green = { r = 15 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 14 } } THE_HVR_set_color_green = { r = 14 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 13 } } THE_HVR_set_color_green = { r = 13 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 12 } } THE_HVR_set_color_green = { r = 12 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 11 } } THE_HVR_set_color_green = { r = 11 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 10 } } THE_HVR_set_color_green = { r = 10 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 9 } } THE_HVR_set_color_green = { r = 9 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 8 } } THE_HVR_set_color_green = { r = 8 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 7 } } THE_HVR_set_color_green = { r = 7 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 6 } } THE_HVR_set_color_green = { r = 6 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 5 } } THE_HVR_set_color_green = { r = 5 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 4 } } THE_HVR_set_color_green = { r = 4 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 3 } } THE_HVR_set_color_green = { r = 3 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 2 } } THE_HVR_set_color_green = { r = 2 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 1 } } THE_HVR_set_color_green = { r = 1 } }
+	else_if = { limit = { check_variable = { which = the_hvr_red_var value = 0 } } THE_HVR_set_color_green = { r = 0 } }
+}
+
+THE_HVR_set_color_green = {
+	if = { limit = { check_variable = { which = the_hvr_green_var value = 255 } } THE_HVR_set_color_blue = { r = $r$ g = 255 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 254 } } THE_HVR_set_color_blue = { r = $r$ g = 254 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 253 } } THE_HVR_set_color_blue = { r = $r$ g = 253 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 252 } } THE_HVR_set_color_blue = { r = $r$ g = 252 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 251 } } THE_HVR_set_color_blue = { r = $r$ g = 251 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 250 } } THE_HVR_set_color_blue = { r = $r$ g = 250 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 249 } } THE_HVR_set_color_blue = { r = $r$ g = 249 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 248 } } THE_HVR_set_color_blue = { r = $r$ g = 248 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 247 } } THE_HVR_set_color_blue = { r = $r$ g = 247 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 246 } } THE_HVR_set_color_blue = { r = $r$ g = 246 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 245 } } THE_HVR_set_color_blue = { r = $r$ g = 245 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 244 } } THE_HVR_set_color_blue = { r = $r$ g = 244 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 243 } } THE_HVR_set_color_blue = { r = $r$ g = 243 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 242 } } THE_HVR_set_color_blue = { r = $r$ g = 242 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 241 } } THE_HVR_set_color_blue = { r = $r$ g = 241 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 240 } } THE_HVR_set_color_blue = { r = $r$ g = 240 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 239 } } THE_HVR_set_color_blue = { r = $r$ g = 239 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 238 } } THE_HVR_set_color_blue = { r = $r$ g = 238 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 237 } } THE_HVR_set_color_blue = { r = $r$ g = 237 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 236 } } THE_HVR_set_color_blue = { r = $r$ g = 236 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 235 } } THE_HVR_set_color_blue = { r = $r$ g = 235 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 234 } } THE_HVR_set_color_blue = { r = $r$ g = 234 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 233 } } THE_HVR_set_color_blue = { r = $r$ g = 233 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 232 } } THE_HVR_set_color_blue = { r = $r$ g = 232 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 231 } } THE_HVR_set_color_blue = { r = $r$ g = 231 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 230 } } THE_HVR_set_color_blue = { r = $r$ g = 230 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 229 } } THE_HVR_set_color_blue = { r = $r$ g = 229 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 228 } } THE_HVR_set_color_blue = { r = $r$ g = 228 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 227 } } THE_HVR_set_color_blue = { r = $r$ g = 227 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 226 } } THE_HVR_set_color_blue = { r = $r$ g = 226 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 225 } } THE_HVR_set_color_blue = { r = $r$ g = 225 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 224 } } THE_HVR_set_color_blue = { r = $r$ g = 224 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 223 } } THE_HVR_set_color_blue = { r = $r$ g = 223 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 222 } } THE_HVR_set_color_blue = { r = $r$ g = 222 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 221 } } THE_HVR_set_color_blue = { r = $r$ g = 221 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 220 } } THE_HVR_set_color_blue = { r = $r$ g = 220 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 219 } } THE_HVR_set_color_blue = { r = $r$ g = 219 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 218 } } THE_HVR_set_color_blue = { r = $r$ g = 218 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 217 } } THE_HVR_set_color_blue = { r = $r$ g = 217 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 216 } } THE_HVR_set_color_blue = { r = $r$ g = 216 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 215 } } THE_HVR_set_color_blue = { r = $r$ g = 215 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 214 } } THE_HVR_set_color_blue = { r = $r$ g = 214 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 213 } } THE_HVR_set_color_blue = { r = $r$ g = 213 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 212 } } THE_HVR_set_color_blue = { r = $r$ g = 212 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 211 } } THE_HVR_set_color_blue = { r = $r$ g = 211 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 210 } } THE_HVR_set_color_blue = { r = $r$ g = 210 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 209 } } THE_HVR_set_color_blue = { r = $r$ g = 209 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 208 } } THE_HVR_set_color_blue = { r = $r$ g = 208 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 207 } } THE_HVR_set_color_blue = { r = $r$ g = 207 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 206 } } THE_HVR_set_color_blue = { r = $r$ g = 206 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 205 } } THE_HVR_set_color_blue = { r = $r$ g = 205 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 204 } } THE_HVR_set_color_blue = { r = $r$ g = 204 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 203 } } THE_HVR_set_color_blue = { r = $r$ g = 203 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 202 } } THE_HVR_set_color_blue = { r = $r$ g = 202 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 201 } } THE_HVR_set_color_blue = { r = $r$ g = 201 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 200 } } THE_HVR_set_color_blue = { r = $r$ g = 200 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 199 } } THE_HVR_set_color_blue = { r = $r$ g = 199 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 198 } } THE_HVR_set_color_blue = { r = $r$ g = 198 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 197 } } THE_HVR_set_color_blue = { r = $r$ g = 197 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 196 } } THE_HVR_set_color_blue = { r = $r$ g = 196 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 195 } } THE_HVR_set_color_blue = { r = $r$ g = 195 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 194 } } THE_HVR_set_color_blue = { r = $r$ g = 194 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 193 } } THE_HVR_set_color_blue = { r = $r$ g = 193 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 192 } } THE_HVR_set_color_blue = { r = $r$ g = 192 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 191 } } THE_HVR_set_color_blue = { r = $r$ g = 191 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 190 } } THE_HVR_set_color_blue = { r = $r$ g = 190 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 189 } } THE_HVR_set_color_blue = { r = $r$ g = 189 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 188 } } THE_HVR_set_color_blue = { r = $r$ g = 188 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 187 } } THE_HVR_set_color_blue = { r = $r$ g = 187 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 186 } } THE_HVR_set_color_blue = { r = $r$ g = 186 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 185 } } THE_HVR_set_color_blue = { r = $r$ g = 185 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 184 } } THE_HVR_set_color_blue = { r = $r$ g = 184 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 183 } } THE_HVR_set_color_blue = { r = $r$ g = 183 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 182 } } THE_HVR_set_color_blue = { r = $r$ g = 182 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 181 } } THE_HVR_set_color_blue = { r = $r$ g = 181 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 180 } } THE_HVR_set_color_blue = { r = $r$ g = 180 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 179 } } THE_HVR_set_color_blue = { r = $r$ g = 179 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 178 } } THE_HVR_set_color_blue = { r = $r$ g = 178 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 177 } } THE_HVR_set_color_blue = { r = $r$ g = 177 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 176 } } THE_HVR_set_color_blue = { r = $r$ g = 176 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 175 } } THE_HVR_set_color_blue = { r = $r$ g = 175 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 174 } } THE_HVR_set_color_blue = { r = $r$ g = 174 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 173 } } THE_HVR_set_color_blue = { r = $r$ g = 173 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 172 } } THE_HVR_set_color_blue = { r = $r$ g = 172 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 171 } } THE_HVR_set_color_blue = { r = $r$ g = 171 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 170 } } THE_HVR_set_color_blue = { r = $r$ g = 170 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 169 } } THE_HVR_set_color_blue = { r = $r$ g = 169 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 168 } } THE_HVR_set_color_blue = { r = $r$ g = 168 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 167 } } THE_HVR_set_color_blue = { r = $r$ g = 167 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 166 } } THE_HVR_set_color_blue = { r = $r$ g = 166 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 165 } } THE_HVR_set_color_blue = { r = $r$ g = 165 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 164 } } THE_HVR_set_color_blue = { r = $r$ g = 164 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 163 } } THE_HVR_set_color_blue = { r = $r$ g = 163 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 162 } } THE_HVR_set_color_blue = { r = $r$ g = 162 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 161 } } THE_HVR_set_color_blue = { r = $r$ g = 161 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 160 } } THE_HVR_set_color_blue = { r = $r$ g = 160 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 159 } } THE_HVR_set_color_blue = { r = $r$ g = 159 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 158 } } THE_HVR_set_color_blue = { r = $r$ g = 158 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 157 } } THE_HVR_set_color_blue = { r = $r$ g = 157 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 156 } } THE_HVR_set_color_blue = { r = $r$ g = 156 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 155 } } THE_HVR_set_color_blue = { r = $r$ g = 155 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 154 } } THE_HVR_set_color_blue = { r = $r$ g = 154 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 153 } } THE_HVR_set_color_blue = { r = $r$ g = 153 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 152 } } THE_HVR_set_color_blue = { r = $r$ g = 152 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 151 } } THE_HVR_set_color_blue = { r = $r$ g = 151 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 150 } } THE_HVR_set_color_blue = { r = $r$ g = 150 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 149 } } THE_HVR_set_color_blue = { r = $r$ g = 149 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 148 } } THE_HVR_set_color_blue = { r = $r$ g = 148 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 147 } } THE_HVR_set_color_blue = { r = $r$ g = 147 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 146 } } THE_HVR_set_color_blue = { r = $r$ g = 146 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 145 } } THE_HVR_set_color_blue = { r = $r$ g = 145 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 144 } } THE_HVR_set_color_blue = { r = $r$ g = 144 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 143 } } THE_HVR_set_color_blue = { r = $r$ g = 143 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 142 } } THE_HVR_set_color_blue = { r = $r$ g = 142 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 141 } } THE_HVR_set_color_blue = { r = $r$ g = 141 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 140 } } THE_HVR_set_color_blue = { r = $r$ g = 140 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 139 } } THE_HVR_set_color_blue = { r = $r$ g = 139 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 138 } } THE_HVR_set_color_blue = { r = $r$ g = 138 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 137 } } THE_HVR_set_color_blue = { r = $r$ g = 137 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 136 } } THE_HVR_set_color_blue = { r = $r$ g = 136 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 135 } } THE_HVR_set_color_blue = { r = $r$ g = 135 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 134 } } THE_HVR_set_color_blue = { r = $r$ g = 134 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 133 } } THE_HVR_set_color_blue = { r = $r$ g = 133 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 132 } } THE_HVR_set_color_blue = { r = $r$ g = 132 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 131 } } THE_HVR_set_color_blue = { r = $r$ g = 131 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 130 } } THE_HVR_set_color_blue = { r = $r$ g = 130 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 129 } } THE_HVR_set_color_blue = { r = $r$ g = 129 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 128 } } THE_HVR_set_color_blue = { r = $r$ g = 128 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 127 } } THE_HVR_set_color_blue = { r = $r$ g = 127 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 126 } } THE_HVR_set_color_blue = { r = $r$ g = 126 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 125 } } THE_HVR_set_color_blue = { r = $r$ g = 125 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 124 } } THE_HVR_set_color_blue = { r = $r$ g = 124 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 123 } } THE_HVR_set_color_blue = { r = $r$ g = 123 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 122 } } THE_HVR_set_color_blue = { r = $r$ g = 122 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 121 } } THE_HVR_set_color_blue = { r = $r$ g = 121 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 120 } } THE_HVR_set_color_blue = { r = $r$ g = 120 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 119 } } THE_HVR_set_color_blue = { r = $r$ g = 119 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 118 } } THE_HVR_set_color_blue = { r = $r$ g = 118 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 117 } } THE_HVR_set_color_blue = { r = $r$ g = 117 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 116 } } THE_HVR_set_color_blue = { r = $r$ g = 116 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 115 } } THE_HVR_set_color_blue = { r = $r$ g = 115 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 114 } } THE_HVR_set_color_blue = { r = $r$ g = 114 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 113 } } THE_HVR_set_color_blue = { r = $r$ g = 113 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 112 } } THE_HVR_set_color_blue = { r = $r$ g = 112 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 111 } } THE_HVR_set_color_blue = { r = $r$ g = 111 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 110 } } THE_HVR_set_color_blue = { r = $r$ g = 110 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 109 } } THE_HVR_set_color_blue = { r = $r$ g = 109 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 108 } } THE_HVR_set_color_blue = { r = $r$ g = 108 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 107 } } THE_HVR_set_color_blue = { r = $r$ g = 107 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 106 } } THE_HVR_set_color_blue = { r = $r$ g = 106 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 105 } } THE_HVR_set_color_blue = { r = $r$ g = 105 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 104 } } THE_HVR_set_color_blue = { r = $r$ g = 104 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 103 } } THE_HVR_set_color_blue = { r = $r$ g = 103 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 102 } } THE_HVR_set_color_blue = { r = $r$ g = 102 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 101 } } THE_HVR_set_color_blue = { r = $r$ g = 101 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 100 } } THE_HVR_set_color_blue = { r = $r$ g = 100 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 99 } } THE_HVR_set_color_blue = { r = $r$ g = 99 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 98 } } THE_HVR_set_color_blue = { r = $r$ g = 98 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 97 } } THE_HVR_set_color_blue = { r = $r$ g = 97 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 96 } } THE_HVR_set_color_blue = { r = $r$ g = 96 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 95 } } THE_HVR_set_color_blue = { r = $r$ g = 95 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 94 } } THE_HVR_set_color_blue = { r = $r$ g = 94 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 93 } } THE_HVR_set_color_blue = { r = $r$ g = 93 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 92 } } THE_HVR_set_color_blue = { r = $r$ g = 92 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 91 } } THE_HVR_set_color_blue = { r = $r$ g = 91 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 90 } } THE_HVR_set_color_blue = { r = $r$ g = 90 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 89 } } THE_HVR_set_color_blue = { r = $r$ g = 89 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 88 } } THE_HVR_set_color_blue = { r = $r$ g = 88 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 87 } } THE_HVR_set_color_blue = { r = $r$ g = 87 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 86 } } THE_HVR_set_color_blue = { r = $r$ g = 86 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 85 } } THE_HVR_set_color_blue = { r = $r$ g = 85 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 84 } } THE_HVR_set_color_blue = { r = $r$ g = 84 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 83 } } THE_HVR_set_color_blue = { r = $r$ g = 83 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 82 } } THE_HVR_set_color_blue = { r = $r$ g = 82 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 81 } } THE_HVR_set_color_blue = { r = $r$ g = 81 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 80 } } THE_HVR_set_color_blue = { r = $r$ g = 80 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 79 } } THE_HVR_set_color_blue = { r = $r$ g = 79 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 78 } } THE_HVR_set_color_blue = { r = $r$ g = 78 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 77 } } THE_HVR_set_color_blue = { r = $r$ g = 77 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 76 } } THE_HVR_set_color_blue = { r = $r$ g = 76 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 75 } } THE_HVR_set_color_blue = { r = $r$ g = 75 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 74 } } THE_HVR_set_color_blue = { r = $r$ g = 74 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 73 } } THE_HVR_set_color_blue = { r = $r$ g = 73 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 72 } } THE_HVR_set_color_blue = { r = $r$ g = 72 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 71 } } THE_HVR_set_color_blue = { r = $r$ g = 71 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 70 } } THE_HVR_set_color_blue = { r = $r$ g = 70 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 69 } } THE_HVR_set_color_blue = { r = $r$ g = 69 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 68 } } THE_HVR_set_color_blue = { r = $r$ g = 68 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 67 } } THE_HVR_set_color_blue = { r = $r$ g = 67 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 66 } } THE_HVR_set_color_blue = { r = $r$ g = 66 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 65 } } THE_HVR_set_color_blue = { r = $r$ g = 65 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 64 } } THE_HVR_set_color_blue = { r = $r$ g = 64 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 63 } } THE_HVR_set_color_blue = { r = $r$ g = 63 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 62 } } THE_HVR_set_color_blue = { r = $r$ g = 62 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 61 } } THE_HVR_set_color_blue = { r = $r$ g = 61 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 60 } } THE_HVR_set_color_blue = { r = $r$ g = 60 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 59 } } THE_HVR_set_color_blue = { r = $r$ g = 59 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 58 } } THE_HVR_set_color_blue = { r = $r$ g = 58 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 57 } } THE_HVR_set_color_blue = { r = $r$ g = 57 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 56 } } THE_HVR_set_color_blue = { r = $r$ g = 56 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 55 } } THE_HVR_set_color_blue = { r = $r$ g = 55 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 54 } } THE_HVR_set_color_blue = { r = $r$ g = 54 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 53 } } THE_HVR_set_color_blue = { r = $r$ g = 53 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 52 } } THE_HVR_set_color_blue = { r = $r$ g = 52 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 51 } } THE_HVR_set_color_blue = { r = $r$ g = 51 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 50 } } THE_HVR_set_color_blue = { r = $r$ g = 50 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 49 } } THE_HVR_set_color_blue = { r = $r$ g = 49 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 48 } } THE_HVR_set_color_blue = { r = $r$ g = 48 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 47 } } THE_HVR_set_color_blue = { r = $r$ g = 47 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 46 } } THE_HVR_set_color_blue = { r = $r$ g = 46 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 45 } } THE_HVR_set_color_blue = { r = $r$ g = 45 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 44 } } THE_HVR_set_color_blue = { r = $r$ g = 44 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 43 } } THE_HVR_set_color_blue = { r = $r$ g = 43 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 42 } } THE_HVR_set_color_blue = { r = $r$ g = 42 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 41 } } THE_HVR_set_color_blue = { r = $r$ g = 41 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 40 } } THE_HVR_set_color_blue = { r = $r$ g = 40 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 39 } } THE_HVR_set_color_blue = { r = $r$ g = 39 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 38 } } THE_HVR_set_color_blue = { r = $r$ g = 38 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 37 } } THE_HVR_set_color_blue = { r = $r$ g = 37 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 36 } } THE_HVR_set_color_blue = { r = $r$ g = 36 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 35 } } THE_HVR_set_color_blue = { r = $r$ g = 35 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 34 } } THE_HVR_set_color_blue = { r = $r$ g = 34 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 33 } } THE_HVR_set_color_blue = { r = $r$ g = 33 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 32 } } THE_HVR_set_color_blue = { r = $r$ g = 32 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 31 } } THE_HVR_set_color_blue = { r = $r$ g = 31 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 30 } } THE_HVR_set_color_blue = { r = $r$ g = 30 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 29 } } THE_HVR_set_color_blue = { r = $r$ g = 29 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 28 } } THE_HVR_set_color_blue = { r = $r$ g = 28 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 27 } } THE_HVR_set_color_blue = { r = $r$ g = 27 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 26 } } THE_HVR_set_color_blue = { r = $r$ g = 26 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 25 } } THE_HVR_set_color_blue = { r = $r$ g = 25 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 24 } } THE_HVR_set_color_blue = { r = $r$ g = 24 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 23 } } THE_HVR_set_color_blue = { r = $r$ g = 23 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 22 } } THE_HVR_set_color_blue = { r = $r$ g = 22 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 21 } } THE_HVR_set_color_blue = { r = $r$ g = 21 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 20 } } THE_HVR_set_color_blue = { r = $r$ g = 20 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 19 } } THE_HVR_set_color_blue = { r = $r$ g = 19 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 18 } } THE_HVR_set_color_blue = { r = $r$ g = 18 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 17 } } THE_HVR_set_color_blue = { r = $r$ g = 17 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 16 } } THE_HVR_set_color_blue = { r = $r$ g = 16 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 15 } } THE_HVR_set_color_blue = { r = $r$ g = 15 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 14 } } THE_HVR_set_color_blue = { r = $r$ g = 14 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 13 } } THE_HVR_set_color_blue = { r = $r$ g = 13 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 12 } } THE_HVR_set_color_blue = { r = $r$ g = 12 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 11 } } THE_HVR_set_color_blue = { r = $r$ g = 11 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 10 } } THE_HVR_set_color_blue = { r = $r$ g = 10 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 9 } } THE_HVR_set_color_blue = { r = $r$ g = 9 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 8 } } THE_HVR_set_color_blue = { r = $r$ g = 8 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 7 } } THE_HVR_set_color_blue = { r = $r$ g = 7 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 6 } } THE_HVR_set_color_blue = { r = $r$ g = 6 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 5 } } THE_HVR_set_color_blue = { r = $r$ g = 5 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 4 } } THE_HVR_set_color_blue = { r = $r$ g = 4 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 3 } } THE_HVR_set_color_blue = { r = $r$ g = 3 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 2 } } THE_HVR_set_color_blue = { r = $r$ g = 2 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 1 } } THE_HVR_set_color_blue = { r = $r$ g = 1 } }
+	else_if = { limit = { check_variable = { which = the_hvr_green_var value = 0 } } THE_HVR_set_color_blue = { r = $r$ g = 0 } }
+}
+
+THE_HVR_set_color_blue = {
+	if = { limit = { check_variable = { which = the_hvr_blue_var value = 255 } } change_country_color = { color = { $r$ $g$ 255 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 254 } } change_country_color = { color = { $r$ $g$ 254 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 253 } } change_country_color = { color = { $r$ $g$ 253 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 252 } } change_country_color = { color = { $r$ $g$ 252 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 251 } } change_country_color = { color = { $r$ $g$ 251 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 250 } } change_country_color = { color = { $r$ $g$ 250 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 249 } } change_country_color = { color = { $r$ $g$ 249 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 248 } } change_country_color = { color = { $r$ $g$ 248 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 247 } } change_country_color = { color = { $r$ $g$ 247 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 246 } } change_country_color = { color = { $r$ $g$ 246 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 245 } } change_country_color = { color = { $r$ $g$ 245 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 244 } } change_country_color = { color = { $r$ $g$ 244 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 243 } } change_country_color = { color = { $r$ $g$ 243 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 242 } } change_country_color = { color = { $r$ $g$ 242 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 241 } } change_country_color = { color = { $r$ $g$ 241 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 240 } } change_country_color = { color = { $r$ $g$ 240 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 239 } } change_country_color = { color = { $r$ $g$ 239 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 238 } } change_country_color = { color = { $r$ $g$ 238 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 237 } } change_country_color = { color = { $r$ $g$ 237 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 236 } } change_country_color = { color = { $r$ $g$ 236 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 235 } } change_country_color = { color = { $r$ $g$ 235 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 234 } } change_country_color = { color = { $r$ $g$ 234 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 233 } } change_country_color = { color = { $r$ $g$ 233 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 232 } } change_country_color = { color = { $r$ $g$ 232 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 231 } } change_country_color = { color = { $r$ $g$ 231 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 230 } } change_country_color = { color = { $r$ $g$ 230 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 229 } } change_country_color = { color = { $r$ $g$ 229 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 228 } } change_country_color = { color = { $r$ $g$ 228 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 227 } } change_country_color = { color = { $r$ $g$ 227 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 226 } } change_country_color = { color = { $r$ $g$ 226 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 225 } } change_country_color = { color = { $r$ $g$ 225 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 224 } } change_country_color = { color = { $r$ $g$ 224 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 223 } } change_country_color = { color = { $r$ $g$ 223 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 222 } } change_country_color = { color = { $r$ $g$ 222 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 221 } } change_country_color = { color = { $r$ $g$ 221 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 220 } } change_country_color = { color = { $r$ $g$ 220 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 219 } } change_country_color = { color = { $r$ $g$ 219 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 218 } } change_country_color = { color = { $r$ $g$ 218 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 217 } } change_country_color = { color = { $r$ $g$ 217 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 216 } } change_country_color = { color = { $r$ $g$ 216 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 215 } } change_country_color = { color = { $r$ $g$ 215 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 214 } } change_country_color = { color = { $r$ $g$ 214 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 213 } } change_country_color = { color = { $r$ $g$ 213 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 212 } } change_country_color = { color = { $r$ $g$ 212 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 211 } } change_country_color = { color = { $r$ $g$ 211 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 210 } } change_country_color = { color = { $r$ $g$ 210 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 209 } } change_country_color = { color = { $r$ $g$ 209 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 208 } } change_country_color = { color = { $r$ $g$ 208 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 207 } } change_country_color = { color = { $r$ $g$ 207 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 206 } } change_country_color = { color = { $r$ $g$ 206 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 205 } } change_country_color = { color = { $r$ $g$ 205 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 204 } } change_country_color = { color = { $r$ $g$ 204 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 203 } } change_country_color = { color = { $r$ $g$ 203 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 202 } } change_country_color = { color = { $r$ $g$ 202 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 201 } } change_country_color = { color = { $r$ $g$ 201 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 200 } } change_country_color = { color = { $r$ $g$ 200 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 199 } } change_country_color = { color = { $r$ $g$ 199 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 198 } } change_country_color = { color = { $r$ $g$ 198 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 197 } } change_country_color = { color = { $r$ $g$ 197 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 196 } } change_country_color = { color = { $r$ $g$ 196 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 195 } } change_country_color = { color = { $r$ $g$ 195 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 194 } } change_country_color = { color = { $r$ $g$ 194 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 193 } } change_country_color = { color = { $r$ $g$ 193 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 192 } } change_country_color = { color = { $r$ $g$ 192 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 191 } } change_country_color = { color = { $r$ $g$ 191 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 190 } } change_country_color = { color = { $r$ $g$ 190 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 189 } } change_country_color = { color = { $r$ $g$ 189 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 188 } } change_country_color = { color = { $r$ $g$ 188 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 187 } } change_country_color = { color = { $r$ $g$ 187 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 186 } } change_country_color = { color = { $r$ $g$ 186 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 185 } } change_country_color = { color = { $r$ $g$ 185 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 184 } } change_country_color = { color = { $r$ $g$ 184 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 183 } } change_country_color = { color = { $r$ $g$ 183 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 182 } } change_country_color = { color = { $r$ $g$ 182 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 181 } } change_country_color = { color = { $r$ $g$ 181 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 180 } } change_country_color = { color = { $r$ $g$ 180 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 179 } } change_country_color = { color = { $r$ $g$ 179 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 178 } } change_country_color = { color = { $r$ $g$ 178 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 177 } } change_country_color = { color = { $r$ $g$ 177 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 176 } } change_country_color = { color = { $r$ $g$ 176 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 175 } } change_country_color = { color = { $r$ $g$ 175 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 174 } } change_country_color = { color = { $r$ $g$ 174 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 173 } } change_country_color = { color = { $r$ $g$ 173 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 172 } } change_country_color = { color = { $r$ $g$ 172 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 171 } } change_country_color = { color = { $r$ $g$ 171 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 170 } } change_country_color = { color = { $r$ $g$ 170 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 169 } } change_country_color = { color = { $r$ $g$ 169 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 168 } } change_country_color = { color = { $r$ $g$ 168 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 167 } } change_country_color = { color = { $r$ $g$ 167 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 166 } } change_country_color = { color = { $r$ $g$ 166 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 165 } } change_country_color = { color = { $r$ $g$ 165 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 164 } } change_country_color = { color = { $r$ $g$ 164 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 163 } } change_country_color = { color = { $r$ $g$ 163 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 162 } } change_country_color = { color = { $r$ $g$ 162 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 161 } } change_country_color = { color = { $r$ $g$ 161 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 160 } } change_country_color = { color = { $r$ $g$ 160 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 159 } } change_country_color = { color = { $r$ $g$ 159 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 158 } } change_country_color = { color = { $r$ $g$ 158 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 157 } } change_country_color = { color = { $r$ $g$ 157 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 156 } } change_country_color = { color = { $r$ $g$ 156 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 155 } } change_country_color = { color = { $r$ $g$ 155 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 154 } } change_country_color = { color = { $r$ $g$ 154 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 153 } } change_country_color = { color = { $r$ $g$ 153 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 152 } } change_country_color = { color = { $r$ $g$ 152 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 151 } } change_country_color = { color = { $r$ $g$ 151 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 150 } } change_country_color = { color = { $r$ $g$ 150 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 149 } } change_country_color = { color = { $r$ $g$ 149 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 148 } } change_country_color = { color = { $r$ $g$ 148 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 147 } } change_country_color = { color = { $r$ $g$ 147 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 146 } } change_country_color = { color = { $r$ $g$ 146 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 145 } } change_country_color = { color = { $r$ $g$ 145 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 144 } } change_country_color = { color = { $r$ $g$ 144 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 143 } } change_country_color = { color = { $r$ $g$ 143 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 142 } } change_country_color = { color = { $r$ $g$ 142 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 141 } } change_country_color = { color = { $r$ $g$ 141 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 140 } } change_country_color = { color = { $r$ $g$ 140 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 139 } } change_country_color = { color = { $r$ $g$ 139 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 138 } } change_country_color = { color = { $r$ $g$ 138 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 137 } } change_country_color = { color = { $r$ $g$ 137 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 136 } } change_country_color = { color = { $r$ $g$ 136 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 135 } } change_country_color = { color = { $r$ $g$ 135 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 134 } } change_country_color = { color = { $r$ $g$ 134 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 133 } } change_country_color = { color = { $r$ $g$ 133 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 132 } } change_country_color = { color = { $r$ $g$ 132 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 131 } } change_country_color = { color = { $r$ $g$ 131 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 130 } } change_country_color = { color = { $r$ $g$ 130 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 129 } } change_country_color = { color = { $r$ $g$ 129 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 128 } } change_country_color = { color = { $r$ $g$ 128 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 127 } } change_country_color = { color = { $r$ $g$ 127 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 126 } } change_country_color = { color = { $r$ $g$ 126 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 125 } } change_country_color = { color = { $r$ $g$ 125 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 124 } } change_country_color = { color = { $r$ $g$ 124 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 123 } } change_country_color = { color = { $r$ $g$ 123 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 122 } } change_country_color = { color = { $r$ $g$ 122 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 121 } } change_country_color = { color = { $r$ $g$ 121 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 120 } } change_country_color = { color = { $r$ $g$ 120 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 119 } } change_country_color = { color = { $r$ $g$ 119 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 118 } } change_country_color = { color = { $r$ $g$ 118 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 117 } } change_country_color = { color = { $r$ $g$ 117 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 116 } } change_country_color = { color = { $r$ $g$ 116 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 115 } } change_country_color = { color = { $r$ $g$ 115 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 114 } } change_country_color = { color = { $r$ $g$ 114 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 113 } } change_country_color = { color = { $r$ $g$ 113 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 112 } } change_country_color = { color = { $r$ $g$ 112 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 111 } } change_country_color = { color = { $r$ $g$ 111 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 110 } } change_country_color = { color = { $r$ $g$ 110 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 109 } } change_country_color = { color = { $r$ $g$ 109 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 108 } } change_country_color = { color = { $r$ $g$ 108 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 107 } } change_country_color = { color = { $r$ $g$ 107 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 106 } } change_country_color = { color = { $r$ $g$ 106 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 105 } } change_country_color = { color = { $r$ $g$ 105 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 104 } } change_country_color = { color = { $r$ $g$ 104 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 103 } } change_country_color = { color = { $r$ $g$ 103 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 102 } } change_country_color = { color = { $r$ $g$ 102 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 101 } } change_country_color = { color = { $r$ $g$ 101 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 100 } } change_country_color = { color = { $r$ $g$ 100 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 99 } } change_country_color = { color = { $r$ $g$ 99 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 98 } } change_country_color = { color = { $r$ $g$ 98 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 97 } } change_country_color = { color = { $r$ $g$ 97 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 96 } } change_country_color = { color = { $r$ $g$ 96 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 95 } } change_country_color = { color = { $r$ $g$ 95 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 94 } } change_country_color = { color = { $r$ $g$ 94 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 93 } } change_country_color = { color = { $r$ $g$ 93 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 92 } } change_country_color = { color = { $r$ $g$ 92 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 91 } } change_country_color = { color = { $r$ $g$ 91 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 90 } } change_country_color = { color = { $r$ $g$ 90 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 89 } } change_country_color = { color = { $r$ $g$ 89 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 88 } } change_country_color = { color = { $r$ $g$ 88 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 87 } } change_country_color = { color = { $r$ $g$ 87 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 86 } } change_country_color = { color = { $r$ $g$ 86 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 85 } } change_country_color = { color = { $r$ $g$ 85 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 84 } } change_country_color = { color = { $r$ $g$ 84 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 83 } } change_country_color = { color = { $r$ $g$ 83 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 82 } } change_country_color = { color = { $r$ $g$ 82 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 81 } } change_country_color = { color = { $r$ $g$ 81 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 80 } } change_country_color = { color = { $r$ $g$ 80 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 79 } } change_country_color = { color = { $r$ $g$ 79 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 78 } } change_country_color = { color = { $r$ $g$ 78 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 77 } } change_country_color = { color = { $r$ $g$ 77 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 76 } } change_country_color = { color = { $r$ $g$ 76 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 75 } } change_country_color = { color = { $r$ $g$ 75 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 74 } } change_country_color = { color = { $r$ $g$ 74 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 73 } } change_country_color = { color = { $r$ $g$ 73 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 72 } } change_country_color = { color = { $r$ $g$ 72 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 71 } } change_country_color = { color = { $r$ $g$ 71 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 70 } } change_country_color = { color = { $r$ $g$ 70 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 69 } } change_country_color = { color = { $r$ $g$ 69 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 68 } } change_country_color = { color = { $r$ $g$ 68 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 67 } } change_country_color = { color = { $r$ $g$ 67 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 66 } } change_country_color = { color = { $r$ $g$ 66 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 65 } } change_country_color = { color = { $r$ $g$ 65 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 64 } } change_country_color = { color = { $r$ $g$ 64 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 63 } } change_country_color = { color = { $r$ $g$ 63 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 62 } } change_country_color = { color = { $r$ $g$ 62 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 61 } } change_country_color = { color = { $r$ $g$ 61 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 60 } } change_country_color = { color = { $r$ $g$ 60 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 59 } } change_country_color = { color = { $r$ $g$ 59 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 58 } } change_country_color = { color = { $r$ $g$ 58 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 57 } } change_country_color = { color = { $r$ $g$ 57 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 56 } } change_country_color = { color = { $r$ $g$ 56 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 55 } } change_country_color = { color = { $r$ $g$ 55 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 54 } } change_country_color = { color = { $r$ $g$ 54 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 53 } } change_country_color = { color = { $r$ $g$ 53 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 52 } } change_country_color = { color = { $r$ $g$ 52 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 51 } } change_country_color = { color = { $r$ $g$ 51 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 50 } } change_country_color = { color = { $r$ $g$ 50 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 49 } } change_country_color = { color = { $r$ $g$ 49 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 48 } } change_country_color = { color = { $r$ $g$ 48 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 47 } } change_country_color = { color = { $r$ $g$ 47 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 46 } } change_country_color = { color = { $r$ $g$ 46 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 45 } } change_country_color = { color = { $r$ $g$ 45 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 44 } } change_country_color = { color = { $r$ $g$ 44 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 43 } } change_country_color = { color = { $r$ $g$ 43 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 42 } } change_country_color = { color = { $r$ $g$ 42 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 41 } } change_country_color = { color = { $r$ $g$ 41 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 40 } } change_country_color = { color = { $r$ $g$ 40 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 39 } } change_country_color = { color = { $r$ $g$ 39 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 38 } } change_country_color = { color = { $r$ $g$ 38 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 37 } } change_country_color = { color = { $r$ $g$ 37 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 36 } } change_country_color = { color = { $r$ $g$ 36 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 35 } } change_country_color = { color = { $r$ $g$ 35 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 34 } } change_country_color = { color = { $r$ $g$ 34 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 33 } } change_country_color = { color = { $r$ $g$ 33 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 32 } } change_country_color = { color = { $r$ $g$ 32 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 31 } } change_country_color = { color = { $r$ $g$ 31 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 30 } } change_country_color = { color = { $r$ $g$ 30 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 29 } } change_country_color = { color = { $r$ $g$ 29 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 28 } } change_country_color = { color = { $r$ $g$ 28 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 27 } } change_country_color = { color = { $r$ $g$ 27 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 26 } } change_country_color = { color = { $r$ $g$ 26 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 25 } } change_country_color = { color = { $r$ $g$ 25 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 24 } } change_country_color = { color = { $r$ $g$ 24 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 23 } } change_country_color = { color = { $r$ $g$ 23 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 22 } } change_country_color = { color = { $r$ $g$ 22 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 21 } } change_country_color = { color = { $r$ $g$ 21 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 20 } } change_country_color = { color = { $r$ $g$ 20 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 19 } } change_country_color = { color = { $r$ $g$ 19 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 18 } } change_country_color = { color = { $r$ $g$ 18 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 17 } } change_country_color = { color = { $r$ $g$ 17 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 16 } } change_country_color = { color = { $r$ $g$ 16 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 15 } } change_country_color = { color = { $r$ $g$ 15 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 14 } } change_country_color = { color = { $r$ $g$ 14 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 13 } } change_country_color = { color = { $r$ $g$ 13 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 12 } } change_country_color = { color = { $r$ $g$ 12 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 11 } } change_country_color = { color = { $r$ $g$ 11 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 10 } } change_country_color = { color = { $r$ $g$ 10 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 9 } } change_country_color = { color = { $r$ $g$ 9 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 8 } } change_country_color = { color = { $r$ $g$ 8 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 7 } } change_country_color = { color = { $r$ $g$ 7 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 6 } } change_country_color = { color = { $r$ $g$ 6 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 5 } } change_country_color = { color = { $r$ $g$ 5 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 4 } } change_country_color = { color = { $r$ $g$ 4 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 3 } } change_country_color = { color = { $r$ $g$ 3 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 2 } } change_country_color = { color = { $r$ $g$ 2 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 1 } } change_country_color = { color = { $r$ $g$ 1 } } }
+	else_if = { limit = { check_variable = { which = the_hvr_blue_var value = 0 } } change_country_color = { color = { $r$ $g$ 0 } } }
+}

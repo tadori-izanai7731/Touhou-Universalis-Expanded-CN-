@@ -1255,16 +1255,50 @@ country_event = {
 			}
 			every_owned_province = {
 				limit = {
-					has_shipyard_building_trigger = yes
+					OR = {
+						has_dock_building_trigger = yes
+						has_shipyard_building_trigger = yes
+					}
 				}
 				add_base_production = 1
 			}
-			every_owned_province = {
-				limit = {
-					has_dock_building_trigger = yes	
-				}
-				add_base_production = 1
-			}
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.25
+	title = THE_ROD_events.25.title
+	desc = THE_ROD_events.25.desc
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 360
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		lower_saxony_area = {
+			type = all
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+	}
+
+	option = {
+		name = THE_ROD_events.25.a
+		custom_tooltip = THE_ROD_baltic_trade_event_tt
+		custom_tooltip = empty_line_tt
+		add_dip_power = 100
+		lower_saxony_area = {
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 3
+		}
+		change_price = {
+			trade_goods = salt
+			key = THE_ROD_salt_road_tt
+			value = 0.2
+			duration = -1
 		}
 	}
 }
