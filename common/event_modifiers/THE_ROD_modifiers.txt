@@ -558,6 +558,12 @@ THE_ROD_sunset_pirates_modifier = {
 	available_province_loot = 0.2
 }
 
+#法伦大金矿
+THE_ROD_falun_gold_mine_province_modifier = {
+	local_development_cost_modifier = -0.2
+	local_gold_depletion_chance_modifier = -2.0
+}
+
 ###EXTRA_HAKUREI_DEITY
 THE_ROD_extra_hakurei_modifier_Hakurei_God = {
 	defensiveness = 0.1

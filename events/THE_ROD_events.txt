@@ -8,11 +8,11 @@ country_event = {
 	picture = DECLARATION_INDEPENDENCE_eventPicture
 	is_triggered_only = yes
 	fire_only_once = yes
-
+	
 	major = yes
-
+	
 	goto = 12
-
+	
 	option = {
 		name = THE_ROD_events.1.a
 		custom_tooltip = THE_ROD_baltic_trade_event_tt
@@ -30,7 +30,7 @@ country_event = {
 			factor = 1
 		}
 	}
-
+	
 	option = {
 		name = THE_ROD_events.1.b
 		custom_tooltip = THE_ROD_baltic_trade_event_tt
@@ -51,15 +51,15 @@ country_event = {
 	title = THE_ROD_events.2.title
 	desc = THE_ROD_events.2.desc
 	is_triggered_only = yes
-
+	
 	trigger = {
 		NOT = { has_country_flag = THE_ROD_rumia_ability_add_event_flag }
 	}
-
+	
 	immediate = {
 		set_country_flag = THE_ROD_rumia_ability_add_event_flag
 	}
-
+	
 	option = {
 		name = THE_ROD_events.2.a
 		trigger = {
@@ -73,7 +73,7 @@ country_event = {
 			factor = 1
 		}
 	}
-
+	
 	option = {
 		name = THE_ROD_events.2.b
 		trigger = {
@@ -87,7 +87,7 @@ country_event = {
 			factor = 1
 		}
 	}
-
+	
 	option = {
 		name = THE_ROD_events.2.c
 		trigger = {
@@ -101,7 +101,7 @@ country_event = {
 			factor = 1
 		}
 	}
-
+	
 	option = {
 		name = THE_ROD_events.2.d
 		trigger = {
@@ -115,7 +115,7 @@ country_event = {
 			factor = 1
 		}
 	}
-
+	
 	option = {
 		name = THE_ROD_events.2.error
 		trigger = {
@@ -130,7 +130,7 @@ country_event = {
 			factor = 1
 		}
 	}
-
+	
 	after = {
 		clr_country_flag = THE_ROD_rumia_ability_add_event_flag
 	}
@@ -143,7 +143,7 @@ country_event = {
 	desc = THE_ROD_events.3.desc
 	picture = DECLARATION_INDEPENDENCE_eventPicture
 	is_triggered_only = yes
-
+	
 	option = {
 		name = THE_ROD_events.3.a
 		trigger = {
@@ -308,11 +308,11 @@ country_event = {
 		mission_completed = THE_ROD_2_3
 		is_year = 1500
 	}
-
+	
 	mean_time_to_happen = {
 		months = 6000
 	}
-
+	
 	option = {
 		name = THE_ROD_events.4.a
 		custom_tooltip = THE_ROD_clear_darkness_manipulation_and_dark_moon_night_tt
@@ -339,11 +339,11 @@ country_event = {
 		OR = { tag = ROD was_tag = ROD }
 		mission_completed = THE_ROD_2_3
 	}
-
+	
 	mean_time_to_happen = {
 		months = 600
 	}
-
+	
 	option = {
 		name = THE_ROD_events.5.a
 		add_dip_power = 50
@@ -365,11 +365,11 @@ country_event = {
 		mission_completed = THE_ROD_1_12
 		is_year = 1550
 	}
-
+	
 	mean_time_to_happen = {
 		months = 600
 	}
-
+	
 	option = {
 		name = THE_ROD_events.6.a
 		change_innovativeness = 5
@@ -406,11 +406,11 @@ country_event = {
 			}
 		}
 	}
-
+	
 	mean_time_to_happen = {
 		months = 12
 	}
-
+	
 	option = {
 		name = THE_ROD_events.7.a
 		if = {
@@ -498,7 +498,7 @@ country_event = {
 			}
 		}
 	}
-
+	
 	option = {
 		name = THE_ROD_events.7.b
 		ROOT = {
@@ -516,7 +516,7 @@ country_event = {
 			}
 		}
 	}
-
+	
 	option = {
 		name = THE_ROD_events.7.c
 		add_treasury = 2
@@ -541,11 +541,11 @@ country_event = {
 			has_terrain = steppe
 		}
 	}
-
+	
 	mean_time_to_happen = {
 		months = 600
 	}
-
+	
 	option = {
 		name = THE_ROD_events.8.a
 		unlock_estate = {
@@ -560,7 +560,7 @@ country_event = {
 			set_country_flag = THE_ROD_has_estate_cossacks_flag
 		}
 	}
-
+	
 	option = {
 		name = THE_ROD_events.8.b
 		custom_tooltip = THE_ROD_cossack_rebel_tt
@@ -619,11 +619,11 @@ country_event = {
 			}
 		}
 	}
-
+	
 	mean_time_to_happen = {
 		months = 240
 	}
-
+	
 	option = {
 		name = THE_ROD_events.9.a
 		hidden_effect = {
@@ -678,16 +678,16 @@ country_event = {
 	title = THE_ROD_events.10.title
 	desc = THE_ROD_events.10.desc
 	fire_only_once = yes
-
+	
 	trigger = {
 		OR = { tag = ROD was_tag = ROD }
 		NOT = { current_age = age_of_discovery }
 	}
-
+	
 	mean_time_to_happen = {
 		months = 12000
 	}
-
+	
 	option = {
 		name = THE_ROD_events.10.a
 		add_treasury = -1
@@ -706,21 +706,21 @@ country_event = {
 	id = THE_ROD_events.11
 	title = THE_ROD_events.11.title
 	desc = THE_ROD_events.11.desc
-
+	
 	fire_only_once = yes
-
+	
 	major = yes
-
+	
 	trigger = {
 		mission_completed = THE_ROD_5_13
 		OR = { tag = ROD was_tag = ROD }
 		owns_core_province = 50
 	}
-
+	
 	mean_time_to_happen = {
 		months = 600
 	}
-
+	
 	option = {
 		name = THE_ROD_events.11.a
 		add_mil_power = 300
@@ -750,18 +750,18 @@ country_event = {
 	id = THE_ROD_events.12
 	title = THE_ROD_events.12.title
 	desc = THE_ROD_events.12.desc
-
+	
 	fire_only_once = yes
-
+	
 	trigger = {
 		OR = { tag = ROD was_tag = ROD }
 		THE_ROD_has_rumia_general = yes
 	}
-
+	
 	mean_time_to_happen = {
 		months = 1200
 	}
-
+	
 	option = {
 		name = THE_ROD_events.12.a
 		add_manpower = -0.001
@@ -776,9 +776,9 @@ country_event = {
 	id = THE_ROD_events.13
 	title = THE_ROD_events.13.title
 	desc = THE_ROD_events.13.desc
-
+	
 	fire_only_once = yes
-
+	
 	trigger = {
 		OR = { tag = ROD was_tag = ROD }
 		wallachia_area = {
@@ -790,11 +790,11 @@ country_event = {
 			has_fort_building_trigger = yes
 		}
 	}
-
+	
 	mean_time_to_happen = {
 		months = 360
 	}
-
+	
 	immediate = {
 		random_owned_province = {
 			limit = {
@@ -804,7 +804,7 @@ country_event = {
 			save_event_target_as = THE_ROD_wallachia_fort_target
 		}
 	}
-
+	
 	option = {
 		name = THE_ROD_events.13.a
 		event_target:THE_ROD_wallachia_fort_target = {
@@ -821,22 +821,22 @@ country_event = {
 	id = THE_ROD_events.14
 	title = THE_ROD_events.14.title
 	desc = THE_ROD_events.14.desc
-
+	
 	fire_only_once = yes
-
+	
 	trigger = {
 		OR = { tag = ROD was_tag = ROD }
 		has_country_flag = THE_ROD_events_13_flag
 	}
-
+	
 	mean_time_to_happen = {
 		months = 600
 	}
-
+	
 	immediate = {
 		clr_country_flag = THE_ROD_events_13_flag
 	}
-
+	
 	option = {
 		name = THE_ROD_events.14.a
 		add_prestige = 10
@@ -846,7 +846,7 @@ country_event = {
 			duration = -1
 		}
 	}
-
+	
 	option = {
 		name = THE_ROD_events.14.b
 	}
@@ -856,13 +856,13 @@ country_event = {
 	id = THE_ROD_events.15
 	title = THE_ROD_events.15.title
 	desc = THE_ROD_events.15.desc
-
+	
 	fire_only_once = yes
-
+	
 	mean_time_to_happen = {
 		months = 360
 	}
-
+	
 	trigger = {
 		OR = { tag = ROD was_tag = ROD }
 		mission_completed = THE_ROD_3_9
@@ -870,7 +870,7 @@ country_event = {
 		NOT = { exists = BRA }
 		NOT = { exists = PRU }
 	}
-
+	
 	option = {
 		name = THE_ROD_events.15.a
 		add_estate_loyalty = {
@@ -884,7 +884,7 @@ country_event = {
 			desc = THE_ROD_unitl_heir_die_tt
 		}
 	}
-
+	
 	option = {
 		name = THE_ROD_events.15.b
 		add_estate_loyalty = {
@@ -897,7 +897,7 @@ country_event = {
 			duration = 10950
 		}
 	}
-
+	
 	after = {
 		hidden_effect = {
 			set_country_flag = THE_ROD_can_trigger_event_16_flag
@@ -909,13 +909,13 @@ country_event = {
 	id = THE_ROD_events.16
 	title = THE_ROD_events.16.title
 	desc = THE_ROD_events.16.desc
-
+	
 	fire_only_once = yes
-
+	
 	mean_time_to_happen = {
 		months = 12000000
 	}
-
+	
 	trigger = {
 		OR = { tag = ROD was_tag = ROD }
 		had_country_flag = {
@@ -923,13 +923,13 @@ country_event = {
 			days = 36500
 		}
 	}
-
+	
 	immediate = {
 		hidden_effect = {
 			clr_country_flag = THE_ROD_can_trigger_event_16_flag
 		}
 	}
-
+	
 	option = {
 		name = THE_ROD_events.16.a
 		custom_tooltip = THE_ROD_colorful_egg_tt
@@ -941,9 +941,9 @@ country_event = {
 	id = THE_ROD_events.17
 	title = THE_ROD_events.17.title
 	desc = THE_ROD_events.17.desc
-
+	
 	fire_only_once = yes
-
+	
 	mean_time_to_happen = {
 		months = 240
 	}
@@ -955,7 +955,7 @@ country_event = {
 		}
 	}
 	goto = 43
-
+	
 	option = {
 		name = THE_ROD_events.17.a
 		custom_tooltip = THE_ROD_baltic_trade_event_tt
@@ -981,9 +981,9 @@ country_event = {
 	id = THE_ROD_events.18
 	title = THE_ROD_events.18.title
 	desc = THE_ROD_events.18.desc
-
+	
 	fire_only_once = yes
-
+	
 	mean_time_to_happen = {
 		months = 240
 	}
@@ -995,7 +995,7 @@ country_event = {
 		}
 	}
 	goto = 45
-
+	
 	option = {
 		name = THE_ROD_events.18.a
 		custom_tooltip = THE_ROD_baltic_trade_event_tt
@@ -1021,9 +1021,9 @@ country_event = {
 	id = THE_ROD_events.19
 	title = THE_ROD_events.19.title
 	desc = THE_ROD_events.19.desc
-
+	
 	fire_only_once = yes
-
+	
 	mean_time_to_happen = {
 		months = 240
 	}
@@ -1035,7 +1035,7 @@ country_event = {
 		}
 	}
 	goto = 38
-
+	
 	option = {
 		name = THE_ROD_events.19.a
 		custom_tooltip = THE_ROD_baltic_trade_event_tt
@@ -1061,9 +1061,9 @@ country_event = {
 	id = THE_ROD_events.20
 	title = THE_ROD_events.20.title
 	desc = THE_ROD_events.20.desc
-
+	
 	fire_only_once = yes
-
+	
 	mean_time_to_happen = {
 		months = 240
 	}
@@ -1075,7 +1075,7 @@ country_event = {
 		}
 	}
 	goto = 12
-
+	
 	option = {
 		name = THE_ROD_events.20.a
 		custom_tooltip = THE_ROD_baltic_trade_event_tt
@@ -1101,9 +1101,9 @@ country_event = {
 	id = THE_ROD_events.21
 	title = THE_ROD_events.21.title
 	desc = THE_ROD_events.21.desc
-
+	
 	fire_only_once = yes
-
+	
 	mean_time_to_happen = {
 		months = 240
 	}
@@ -1115,7 +1115,7 @@ country_event = {
 		}
 	}
 	goto = 25
-
+	
 	option = {
 		name = THE_ROD_events.21.a
 		custom_tooltip = THE_ROD_baltic_trade_event_tt
@@ -1141,9 +1141,9 @@ country_event = {
 	id = THE_ROD_events.22
 	title = THE_ROD_events.22.title
 	desc = THE_ROD_events.22.desc
-
+	
 	fire_only_once = yes
-
+	
 	mean_time_to_happen = {
 		months = 240
 	}
@@ -1155,7 +1155,7 @@ country_event = {
 		}
 	}
 	goto = 33
-
+	
 	option = {
 		name = THE_ROD_events.22.a
 		custom_tooltip = THE_ROD_baltic_trade_event_tt
@@ -1181,9 +1181,9 @@ country_event = {
 	id = THE_ROD_events.23
 	title = THE_ROD_events.23.title
 	desc = THE_ROD_events.23.desc
-
+	
 	fire_only_once = yes
-
+	
 	mean_time_to_happen = {
 		months = 360
 	}
@@ -1202,7 +1202,7 @@ country_event = {
 			}
 		}
 	}
-
+	
 	option = {
 		name = THE_ROD_events.23.a
 		custom_tooltip = THE_ROD_baltic_trade_event_tt
@@ -1218,9 +1218,9 @@ country_event = {
 	id = THE_ROD_events.24
 	title = THE_ROD_events.24.title
 	desc = THE_ROD_events.24.desc
-
+	
 	fire_only_once = yes
-
+	
 	mean_time_to_happen = {
 		months = 600
 	}
@@ -1231,7 +1231,7 @@ country_event = {
 			45 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 	}
-
+	
 	option = {
 		name = THE_ROD_events.24.a
 		custom_tooltip = THE_ROD_baltic_trade_event_tt
@@ -1270,9 +1270,9 @@ country_event = {
 	id = THE_ROD_events.25
 	title = THE_ROD_events.25.title
 	desc = THE_ROD_events.25.desc
-
+	
 	fire_only_once = yes
-
+	
 	mean_time_to_happen = {
 		months = 360
 	}
@@ -1283,7 +1283,7 @@ country_event = {
 			country_or_non_sovereign_subject_holds = ROOT
 		}
 	}
-
+	
 	option = {
 		name = THE_ROD_events.25.a
 		custom_tooltip = THE_ROD_baltic_trade_event_tt
@@ -1299,6 +1299,138 @@ country_event = {
 			key = THE_ROD_salt_road_tt
 			value = 0.2
 			duration = -1
+		}
+		custom_tooltip = empty_line_tt
+		custom_tooltip = THE_ROD_salt_road_add_mercantilism_tt
+		hidden_effect = {
+			# write by python
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 1 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 2 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 3 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 4 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 5 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 6 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 7 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 8 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 9 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 10 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 11 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 12 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 13 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 14 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 15 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 16 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 17 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 18 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 19 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 20 } } add_mercantilism = 1 }
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.26
+	title = THE_ROD_events.26.title
+	desc = THE_ROD_events.26.desc
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		8 = { country_or_non_sovereign_subject_holds = ROOT }
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_list = {
+				90 = { }
+				10 = { set_country_flag = THE_ROD_discover_gold_flag }
+			}
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.26.a
+		custom_tooltip = THE_ROD_baltic_trade_event_tt
+		custom_tooltip = empty_line_tt
+		8 = {
+			add_great_project_tier = {
+				type = falun_copper_mine
+				tier = 1
+			}
+		}
+		add_inflation = -10
+		change_price = {
+			trade_goods = copper
+			key = SWEDEN_COPPER_MONOPOLIZATION
+			value = 0.5
+			duration = -1
+		}
+		change_price = {
+			trade_goods = iron
+			key = SWEDEN_IRON_MONOPOLIZATION
+			value = 0.2
+			duration = -1
+		}
+	}
+
+	option = {
+		name = THE_ROD_events.26.b
+		custom_tooltip = THE_ROD_baltic_trade_event_tt
+		custom_tooltip = empty_line_tt
+		8 = {
+			add_great_project_tier = {
+				type = falun_copper_mine
+				tier = 1
+			}
+		}
+		add_years_of_owned_provinces_production_income = {
+			years = 5
+			trigger = {
+				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					trade_goods = copper
+					trade_goods = iron
+				}
+			}
+			custom_tooltip = THE_ROD_copper_or_iron_province_tt
+		}
+	}
+
+	option = {
+		name = THE_ROD_events.26.c
+		highlight = yes
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_ROD_discover_gold_tt
+				has_country_flag = THE_ROD_discover_gold_flag
+			}
+		}
+		custom_tooltip = THE_ROD_baltic_trade_event_tt
+		custom_tooltip = empty_line_tt
+		8 = {
+			add_great_project_tier = {
+				type = falun_copper_mine
+				tier = 1
+			}
+			change_trade_goods = gold
+			add_base_production = 10
+			add_permanent_province_modifier = {
+				name = THE_ROD_falun_gold_mine_province_modifier
+				duration = -1
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = THE_ROD_discover_gold_flag }
+				clr_country_flag = THE_ROD_discover_gold_flag
+			}
 		}
 	}
 }

@@ -224,6 +224,9 @@ l_english:
  THE_ROD_has_tolerance_own_10: "拥有至少§G+10§!正统信仰容忍度"
  THE_ROD_lubeck_crane_tt: "\n治下所有省份从§Y贸易§!和§Y海军§!建筑获得£icon_production_in_text£§Y基础生产§!\n之后每次升级£dip£§Y外交科技§!都会触发该效果"
  THE_ROD_salt_road_tt: "盐路繁荣"
+ THE_ROD_salt_road_add_mercantilism_tt: "当前每拥有全球§Y1%§!的§Y盐§!市场，获得§G1§!重商主义，至多获得§G20§!重商主义。"
+ THE_ROD_copper_or_iron_province_tt: "从治下所有生产§Y铜矿§!或§Y铁矿§!的省份"
+ THE_ROD_discover_gold_tt: "居然是真的！"
  THE_ROD_not_complete_event_ttt: "没做完"
 ###TOOLTIP_END
 
@@ -327,6 +330,7 @@ l_english:
  THE_ROD_friedrich_wilhelm_mil_modifier: "腓特烈·威廉的『普鲁士精神』"
  THE_ROD_baltic_sea_trade_center_province_modifier: "波罗的海贸易中心"
  THE_ROD_sunset_pirates_modifier: "日落海盗"
+ THE_ROD_falun_gold_mine_province_modifier: "法伦大金矿"
 ###MODIFIER_END
 
 ###MERC
@@ -563,6 +567,12 @@ l_english:
  THE_ROD_events.25.title: "北方盐路"
  THE_ROD_events.25.desc: "「盐路」特指北德意志的一条食盐商路，[45.GetName]人将海水晒成盐，运往北德意志其他需求盐的地区，沿途获利最多的是[44.GetName]、[1857.GetName]和[53.GetName]，当地商人以此获得了巨额利润，以至于人们称盐为「白金」。如今控制着这条商路的[Root.GetName]也能从中获得更多话语权"
  THE_ROD_events.25.a: "「好咸，一点都不好吃。」"
+
+ THE_ROD_events.26.title: "法伦大铜矿"
+ THE_ROD_events.26.desc: "法伦大铜矿位于[8.GetName]，是当时欧洲最大的铜矿生产地区，一半以上的铜矿都由法伦大铜矿生产，是[SWE.GetName]的重要经济来源。随着青铜炮在战场上的普及，作为原材料的铜矿变得至关重要，如何提升[8.GetName]的铜矿产出也被提上议程。"
+ THE_ROD_events.26.a: "我们应该扩大铜矿生产。"
+ THE_ROD_events.26.b: "我们可以限制铜矿出口。"
+ THE_ROD_events.26.c: "我们在铜矿下挖到了黄金！"
 ###EVENT_END
 
 ###VARIABLE
