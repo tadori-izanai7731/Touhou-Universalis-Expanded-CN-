@@ -1489,6 +1489,9 @@ country_event = {
 			add_building = wharf
 		}
 		custom_tooltip = THE_ROD_subarctic_islands_area_extra_improve_bonus_tt
+		hidden_effect = {
+			set_country_flag = THE_ROD_subarctic_islands_area_extra_improve_bonus_flag
+		}
 	}
 
 	option = {
