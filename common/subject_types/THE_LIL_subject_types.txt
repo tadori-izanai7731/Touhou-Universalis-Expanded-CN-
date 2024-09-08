@@ -29,17 +29,7 @@ THE_LIL_spring_territory_vassal = {
 		modifier = THE_LIL_spring_territory_static_modifier
 		trigger = {
 			overlord = {
-				custom_trigger_tooltip = {
-					tooltip = THE_LIL_spring_territory_static_modifier_tt
-					AND = {
-						has_government_attribute = THE_LIL_strengthen_spring_territory
-						has_government_power = {
-							mechanic_type = THE_LIL_spring_power_mechanic
-							power_type = THE_LIL_spring_power
-							value = 80
-						}
-					}
-				}
+				has_government_attribute = THE_LIL_strengthen_spring_territory
 			}
 		}
 	}
