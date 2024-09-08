@@ -227,6 +227,8 @@ l_english:
  THE_ROD_salt_road_add_mercantilism_tt: "当前每拥有全球§Y1%§!的§Y盐§!市场，获得§G1§!重商主义，至多获得§G20§!重商主义。"
  THE_ROD_copper_or_iron_province_tt: "从治下所有生产§Y铜矿§!或§Y铁矿§!的省份"
  THE_ROD_discover_gold_tt: "居然是真的！"
+ THE_ROD_cost_500_purchase_iceland_tt: "花费§Y500§!¤购买§Y北大西洋诸岛§!区域的所有权。"
+ THE_ROD_subarctic_islands_area_extra_improve_bonus_tt: "提升§Y北大西洋诸岛§!区域的省份将获得§G双倍§!发展度。"
  THE_ROD_not_complete_event_ttt: "没做完"
 ###TOOLTIP_END
 
@@ -422,11 +424,11 @@ l_english:
 
 ###COUNTRY_NAME
  ROD_PRU: "宵暗-普鲁士领域"
- ROD_PRU_ADJ: "宵暗"
+ ROD_PRU_ADJ: "宵暗领域"
  ROD_HSA: "宵暗-汉萨领域"
- ROD_HSA_ADJ: "宵暗"
+ ROD_HSA_ADJ: "宵暗领域"
  ROD_GER: "宵暗-德意志领域"
- ROD_GER_ADJ: "宵暗"
+ ROD_GER_ADJ: "宵暗领域"
 ###COUNTRY_NAME_END
 
 ###GUI
@@ -573,6 +575,11 @@ l_english:
  THE_ROD_events.26.a: "我们应该扩大铜矿生产。"
  THE_ROD_events.26.b: "我们可以限制铜矿出口。"
  THE_ROD_events.26.c: "我们在铜矿下挖到了黄金！"
+
+ THE_ROD_events.27.title: "北大西洋航路"
+ THE_ROD_events.27.desc: "冰岛最早由维京人发现，这里远离欧洲大陆，气候寒冷，挪威最终统治了这座岛屿。但是冰岛遍布火山和河流，来自地下的热量使冰岛能够发展农业；来自北大西洋的温暖洋流为冰岛渔场带来了丰富的鳕鱼等鱼类资源，是当地主要的出口商品。出于[Root.GetName]的贸易需求，当地进出口贸易基本被[Root.GetName]的商人垄断，与冰岛的联系更加紧密，通往冰岛的航路也更加繁荣。"
+ THE_ROD_events.27.a: "想念雾之湖的人鱼小姐。"
+ THE_ROD_events.27.b: "鳕鱼看上去不好吃。"
 ###EVENT_END
 
 ###VARIABLE

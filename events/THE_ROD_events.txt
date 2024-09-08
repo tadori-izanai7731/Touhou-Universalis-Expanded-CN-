@@ -1351,6 +1351,8 @@ country_event = {
 			}
 		}
 	}
+
+	goto = 8
 	
 	option = {
 		name = THE_ROD_events.26.a
@@ -1432,5 +1434,74 @@ country_event = {
 				clr_country_flag = THE_ROD_discover_gold_flag
 			}
 		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.27
+	title = THE_ROD_events.27.title
+	desc = THE_ROD_events.27.desc
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 240
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		23 = { country_or_non_sovereign_subject_holds = ROOT }
+	}
+	
+	option = {
+		name = THE_ROD_events.27.a
+		custom_tooltip = THE_ROD_baltic_trade_event_tt
+		custom_tooltip = empty_line_tt
+		if = {
+			limit = {
+				OR = {
+					370 = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+					371 = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+					1978 = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+					1979 = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+				}
+			}
+			custom_tooltip = THE_ROD_cost_500_purchase_iceland_tt
+			custom_tooltip = empty_line_tt
+			hidden_effect = {
+				add_treasury = -500
+				subarctic_islands_area = {
+					limit = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+					remove_core = owner
+					cede_province = ROOT
+					add_core = ROOT
+				}
+			}
+		}
+		subarctic_islands_area = {
+			add_base_tax = 3
+			add_base_production = 5
+			add_base_manpower = 3
+			change_trade_goods = fish
+			add_building = grand_shipyard
+			add_building = drydock
+			add_building = wharf
+		}
+		custom_tooltip = THE_ROD_subarctic_islands_area_extra_improve_bonus_tt
+	}
+
+	option = {
+		name = THE_ROD_events.27.b
+		trigger = {
+			OR = {
+				370 = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+				371 = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+				1978 = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+				1979 = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+			}
+		}
+		custom_tooltip = THE_ROD_baltic_trade_event_tt
+		custom_tooltip = empty_line_tt
 	}
 }

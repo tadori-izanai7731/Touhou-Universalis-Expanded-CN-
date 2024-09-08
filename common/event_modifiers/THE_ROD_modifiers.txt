@@ -562,6 +562,7 @@ THE_ROD_sunset_pirates_modifier = {
 THE_ROD_falun_gold_mine_province_modifier = {
 	local_development_cost_modifier = -0.2
 	local_gold_depletion_chance_modifier = -2.0
+	monthly_gold_inflation_modifier = -0.25
 }
 
 ###EXTRA_HAKUREI_DEITY

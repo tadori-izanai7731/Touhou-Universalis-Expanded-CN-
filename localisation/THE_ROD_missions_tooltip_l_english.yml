@@ -227,6 +227,8 @@
  THE_ROD_salt_road_add_mercantilism_tt: "SVMRÏkåb	ghQt§Y1%§!„v§YÐv§!^:Wÿ·ƒ—V§G1§!Í‘FUININÿóY·ƒ—V§G20§!Í‘FUININ0"
  THE_ROD_copper_or_iron_province_tt: "ÎN»lNNb	guµN§YÜ”ÿw§!b§YÁ”ÿw§!„vwýN"
  THE_ROD_discover_gold_tt: "ES6q=fw„vÿ"
+ THE_ROD_cost_500_purchase_iceland_tt: "±‚9§Y500§!¤-pN§YS'Y‰mø‹›S§!:SßW„vNb	gCg0"
+ THE_ROD_subarctic_islands_area_extra_improve_bonus_tt: "ÐcGS§YS'Y‰mø‹›S§!:SßW„vwýNS·ƒ—V§GÌSP§!ÑSUS¦^0"
  THE_ROD_not_complete_event_ttt: "¡lZPŒR"
 ###TOOLTIP_END
 
@@ -422,11 +424,11 @@
 
 ###COUNTRY_NAME
  ROD_PRU: "µR—f-nfœëX†˜ßW"
- ROD_PRU_ADJ: "µR—f"
+ ROD_PRU_ADJ: "µR—f†˜ßW"
  ROD_HSA: "µR—f-Il(„†˜ßW"
- ROD_HSA_ADJ: "µR—f"
+ ROD_HSA_ADJ: "µR—f†˜ßW"
  ROD_GER: "µR—f-·Va×V†˜ßW"
- ROD_GER_ADJ: "µR—f"
+ ROD_GER_ADJ: "µR—f†˜ßW"
 ###COUNTRY_NAME_END
 
 ###GUI
@@ -573,6 +575,11 @@
  THE_ROD_events.26.a: "bìN”^å‹ib'YÜ”ÿwuµN0"
  THE_ROD_events.26.b: "bìNïSåNP–6RÜ”ÿwúQãS0"
  THE_ROD_events.26.c: "bìN(WÜ”ÿwNc0R†NÄžÑ‘ÿ"
+
+ THE_ROD_events.27.title: "S'Y‰m*‚ï"
+ THE_ROD_events.27.desc: "°Q›Sgée1uôu¬NºNÑS°sÿÙÌ‘Ü»y'k2m'YF–ÿlPÒR·Qÿ*cZgÈußu»l†NÙµ^›SS0FO=f°Q›SM^kpqSŒT³lAmÿegê0WN„vípÏ‘O°Q›SýwYÑSUSœQNÿegêS'Y‰m„v)n–fmAm:N°Q›Sn:W&^eg†N0NÌR„vÕœ|œIr|œ‰|Dnÿ=fSV0WIN‰„vúQãSFUÁT0úQŽN[Root.GetName]„v8f—BlÿSV0WÛúQãS8fúW,g«ˆ[Root.GetName]„vFUºN„W­eÿN°Q›S„vTwû|ôf R'tÆRÿŽV°Q›S„v*‚ïmNôf RAucƒ0"
+ THE_ROD_events.27.a: "ó`õVþ–KNVn„vºN|œSÐY0"
+ THE_ROD_events.27.b: "Õœ|œwN»SN‹YT0"
 ###EVENT_END
 
 ###VARIABLE
