@@ -385,6 +385,10 @@ country_decisions = {
 			THE_ROD_court_banquet_decision_extra_scripted_effect = { idea_group = influence_ideas }
 			custom_tooltip = empty_line_tt
 			THE_ROD_court_banquet_decision_extra_scripted_effect = { idea_group = court_ideas }
+			custom_tooltip = empty_line_tt
+			THE_ROD_court_banquet_decision_extra_scripted_effect = { idea_group = THE_human_ideas }
+			custom_tooltip = empty_line_tt
+			THE_ROD_court_banquet_decision_extra_scripted_effect = { idea_group = THE_fairy_ideas }
 			hidden_effect = {
 				clr_country_flag = THE_ROD_court_banquet_decision_flag
 				set_country_flag = THE_ROD_court_banquet_decision_flag
@@ -454,6 +458,34 @@ country_decisions = {
 							change_government_reform_progress = 10
 						}
 					}
+				}
+				if = {
+					limit = { full_idea_group = THE_human_ideas }
+					every_owned_province = {
+						limit = {
+							NOT = { has_building = town_hall }
+							any_neighbor_province = {
+								owned_by = ROOT
+								has_building = town_hall
+							}
+						}
+						add_building = town_hall
+					}
+					every_owned_province = {
+						limit = {
+							NOT = { has_courthouse_building_trigger = yes }
+							any_neighbor_province = {
+								owned_by = ROOT
+								has_building = courthouse
+							}
+						}
+						add_building = courthouse
+					}
+				}
+				if = {
+					limit = { full_idea_group = THE_fairy_ideas }
+					add_yearly_sailors = -1
+					add_yearly_manpower = 5
 				}
 			}
 		}
