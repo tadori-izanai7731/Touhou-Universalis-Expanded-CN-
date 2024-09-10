@@ -627,41 +627,37 @@ country_event = {
 				remove_core = NPL
 			}
 		}
-		nepal_area = {
-			limit = {
-				owned_by = ROOT
+		hidden_effect = {
+			bhutan_area = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_core = NPL
+				remove_core = owner
 			}
-			add_core = NPL
-			remove_core = ROOT
-			change_religion = ROOT
-		}
-		bhutan_area = {
-			limit = {
-				owned_by = ROOT
+			hindusthan_region = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_core = NPL
+				remove_core = owner
 			}
-			add_core = NPL
-			remove_core = ROOT
-			change_religion = ROOT
-		}
-		hindusthan_region = {
-			limit = {
-				owned_by = ROOT
-			}
-			add_core = NPL
-			remove_core = ROOT
-			change_religion = ROOT
 		}
 		release = NPL
+		hidden_effect = {
+			every_province = {
+				limit = {
+					NOT = { owned_by = NPL }
+					is_core = NPL
+				}
+				cede_province = NPL
+			}
+		}
 		create_subject = {
 			subject_type = th_special_march
 			subject = NPL
 		}
-		2071 = {
-			add_base_tax = 3
-			add_base_production = 3
-			add_base_manpower = 3
-			center_of_trade = 2
-		}
+		custom_tooltip = THE_HNG_EXTRA_set_npl_province_tt
 		NPL = {
 			hidden_effect = {
 				country_event = {
@@ -678,21 +674,21 @@ country_event = {
 				add_sailors = 100
 				add_prestige = 100
 				change_estate_land_share = {
-					estate = estate_church
-					share = 50
-				}
-				change_estate_land_share = {
-					estate = estate_burghers
-					share = 50
-				}
-				change_estate_land_share = {
-					estate = estate_nobles
-					share = 100
+					estate = all
+					share = -100
 				}
 				change_religion = ROOT
 				every_owned_province = {
 					change_religion = ROOT
 				}
+			}
+		}
+		NPL = {
+			capital_scope = {
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+				center_of_trade = 2
 			}
 		}
 	}
@@ -721,13 +717,8 @@ country_event = {
 			name = THE_hng_mission_modifier29
 			duration = -1
 		}
-		change_technology_group = tech_gensokyan
 		change_unit_type = tech_gensokyan
 		india_superregion = {
-			limit = {
-				NOT = { is_core = ROOT }
-				NOT = { is_permanent_claim = ROOT }
-			}
 			add_permanent_claim = ROOT
 		}
 	}

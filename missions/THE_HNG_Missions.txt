@@ -105,7 +105,10 @@ THE_HNG_1_1 = {
 		required_missions = { THE_HNG_0_3_1 } 
 		
 		trigger = { 
-			army_size_percentage = 1
+			OR = {
+				army_size_percentage = 1
+				army_size = 30
+			}
 		} 
 		
 		effect = { 
@@ -131,10 +134,13 @@ THE_HNG_1_1 = {
 		
 		effect = {
 			add_treasury = -100
-			remove_country_modifier = hng_Mercenaries_not_care
-			add_country_modifier = {
-				name = THE_hng_mission_modifier2
-				duration = -1
+			if = {
+				limit = { has_country_modifier = hng_Mercenaries_not_care }
+				remove_country_modifier = hng_Mercenaries_not_care
+				add_country_modifier = {
+					name = THE_hng_mission_modifier2
+					duration = -1
+				}
 			}
 		} 
 	}
@@ -159,7 +165,7 @@ THE_HNG_1_1 = {
 			THE_country_event_with_insight = {
 				id = flavor_THE_HNG_mission_events.2
 				effect_tooltip = "
-					remove_country_modifier = THE_hng_mission_modifier2
+					custom_tooltip = THE_HNG_EXTRA_remove_modifier2_tt
 					if = {
 						limit = { NOT = { has_country_flag = hng_do_the_change3_flag } }
 						add_country_modifier = {
@@ -202,7 +208,7 @@ THE_HNG_1_1 = {
 			is_at_war = yes
 			OR = {
 				num_of_samurai = 3
-				army_size = 15
+				army_size = 40
 			}
 		} 
 		
@@ -233,8 +239,14 @@ THE_HNG_1_1 = {
 		} 
 		
 		trigger = { 
-			any_ally = {
-				capital_scope = {
+			OR = {
+				any_ally = {
+					capital_scope = {
+						continent = gensokyo_continent
+					}
+				}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 10
 					continent = gensokyo_continent
 				}
 			}
@@ -278,6 +290,7 @@ THE_HNG_1_1 = {
 				MNG = {
 					is_rival = HNG	
 				}
+				is_enemy = MNG
 				NOT = { exists = MNG }
 			}
 		} 
@@ -286,7 +299,6 @@ THE_HNG_1_1 = {
 			red_river_delta_area = {
 				limit = { 
 					NOT = { owned_by = ROOT } 
-					NOT = { is_core = ROOT } 
 				}
 				add_permanent_province_modifier = {
 					name = THE_hng_mission_modifier62
@@ -296,7 +308,6 @@ THE_HNG_1_1 = {
 			vietnam_area = {
 				limit = { 
 					NOT = { owned_by = ROOT } 
-					NOT = { is_core = ROOT } 
 				}
 				add_permanent_province_modifier = {
 					name = THE_hng_mission_modifier62
@@ -369,9 +380,18 @@ THE_HNG_1_1 = {
 		} 
 		
 		trigger = { 
-			any_ally = {
-				capital_scope = {
-					continent = gensokyo_continent
+			OR = {
+				any_ally = {
+					capital_scope = {
+						continent = gensokyo_continent
+					}
+				}
+				all_country = {
+					NOT = {
+						capital_scope = {
+							continent = gensokyo_continent
+						}
+					}
 				}
 			}
 			num_of_allies = 3	
@@ -736,7 +756,6 @@ THE_HNG_1_2 = {
 		required_missions = { THE_HNG_1_1_5 } 
 		
 		trigger = { 
-			army_size = 40
 			has_global_modifier_value = {
 				which = discipline
 				value = 0.15
@@ -766,6 +785,7 @@ THE_HNG_1_2 = {
 		
 		trigger = { 
 			677 = {
+				country_or_non_sovereign_subject_holds = ROOT
 				development = 15
 				has_tax_building_trigger = yes	
 			}
@@ -1001,7 +1021,10 @@ THE_HNG_1_2 = {
 		position = 10
 		required_missions = { THE_HNG_1_2_10 } 
 		provinces_to_highlight = { 
-			area = rakhine_area
+			OR = {
+				province_id = 2402
+				province_id = 579
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		} 
 		
@@ -1174,21 +1197,42 @@ THE_HNG_1_3 = {
 		} 
 		
 		trigger = { 
-			event_target:EmperorOfChina  ={
-				has_opinion = {
-					who = HNG
-					value = 75
+			if = {
+				limit = {
+					any_country = {
+						is_emperor_of_china = yes
+					}
+					NOT = { is_emperor_of_china = yes }
+				}
+				event_target:EmperorOfChina  ={
+					has_opinion = {
+						who = HNG
+						value = 75
+					}
+				}
+			}
+			else = {
+				OR = {
+					NOT = {
+						any_country = {
+							is_emperor_of_china = yes
+						}
+					}
+					is_emperor_of_china = yes
 				}
 			}
 		} 
 		
 		effect = { 
-			event_target:EmperorOfChina  = {
-				add_opinion = {
-					who = ROOT
-					modifier = THE_HNG_opinion1
+			if = {
+				limit = { NOT = { is_emperor_of_china = yes } }
+				event_target:EmperorOfChina  = {
+					add_opinion = {
+						who = ROOT
+						modifier = THE_HNG_opinion1
+					}
+					add_mandate = 10
 				}
-				add_mandate = 10
 			}
 			add_country_modifier = {
 				name = THE_hng_mission_modifier20
@@ -1267,13 +1311,30 @@ THE_HNG_1_3 = {
 						}
 					}
 				}
+				NOT = { exists = LXA }
 			}
 		} 
 		
 		effect = { 
-			LXA = {
-				country_event = {
-					id = flavor_THE_HNG_mission_events.13
+			if = {
+				limit = { exists = LXA }
+				LXA = {
+					country_event = {
+						id = flavor_THE_HNG_mission_events.13
+					}
+				}
+			}
+			else = {
+				LXA = {
+					ROOT = {
+						custom_tooltip = THE_add_permanent_claim_every_prev_province_tt
+					}
+				}
+				hidden_effect = {
+					every_province = {
+						limit = { is_core = LXA } 
+						add_permanent_claim = ROOT
+					}
 				}
 			}
 		} 
@@ -1319,6 +1380,13 @@ THE_HNG_1_3 = {
 			add_splendor = 800
 			if = {
 				limit = {
+					has_country_flag = hng_do_the_change1_flag
+				}
+				add_years_of_income = 1
+				add_manpower = 1
+			}
+			if = {
+				limit = {
 					has_country_flag = hng_do_the_change2_flag
 				}
 				custom_tooltip = MUG_more_chance_for_elephants
@@ -1327,13 +1395,6 @@ THE_HNG_1_3 = {
 					name = THE_hng_mission_modifier141
 					duration = 9125
 				}
-			}
-			if = {
-				limit = {
-					has_country_flag = hng_do_the_change1_flag
-				}
-				add_years_of_income = 1
-				add_manpower = 1
 			}
 			if = {
 				limit = {
@@ -1388,28 +1449,11 @@ THE_HNG_1_3 = {
 					add_permanent_claim = LXA
 				}
 				hidden_effect = {
-					change_technology_group = tech_gensokyan
 					change_unit_type = tech_gensokyan
 					change_religion = ROOT
 					every_owned_province = {
 						change_religion = ROOT
 					}					
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						OR = {
-							has_country_flag = hng_do_the_change2_flag
-							has_country_flag = hng_do_the_change3_flag
-						}
-					}
-					capital_scope = {
-						cavalry = ROOT
-					}
-					capital_scope = {
-						cavalry = ROOT
-					}
 				}
 			}
 		} 
@@ -1473,14 +1517,53 @@ THE_HNG_1_3 = {
 		required_missions = { THE_HNG_1_3_14 } 
 		
 		trigger = { 
-			661 = {
-				base_production = 10
+			if = {
+				limit = {
+					661 = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+				}
+				661 = {
+					country_or_non_sovereign_subject_holds = ROOT
+					base_production = 10
+				}
 			}
-			2165 = {
-				base_production = 5
+			else = {
+				661 = {
+					base_production = 10
+				}
 			}
-			2167 = {
-				base_production = 5
+			if = {
+				limit = {
+					2165 = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+				}
+				2165 = {
+					country_or_non_sovereign_subject_holds = ROOT
+					base_production = 10
+				}
+			}
+			else = {
+				2165 = {
+					base_production = 10
+				}
+			}
+			if = {
+				limit = {
+					2167 = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+				}
+				2167 = {
+					country_or_non_sovereign_subject_holds = ROOT
+					base_production = 10
+				}
+			}
+			else = {
+				2167 = {
+					base_production = 10
+				}
 			}
 		} 
 		
@@ -1525,6 +1608,7 @@ THE_HNG_1_3 = {
 		
 		trigger = { 
 			661 = {
+				country_or_non_sovereign_subject_holds = ROOT
 				has_manpower_building_trigger = yes	
 				has_courthouse_building_trigger = yes	
 				development = 40
@@ -1626,21 +1710,23 @@ THE_HNG_1_4 = {
 		}
 		
 		trigger = { 
-			any_country = {
-				capital_scope = {region = tibet_region }
-				has_spy_network_from = {
-					who = ROOT
-					value = 20
+			OR = {
+				any_country = {
+					capital_scope = { region = tibet_region }
+					has_spy_network_from = {
+						who = ROOT
+						value = 20
+					}
+				}
+				tibet_region = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
 				}
 			}
 		} 
 		
 		effect = {
 			tibet_region = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
 				add_permanent_claim = ROOT
 			}
 		} 
@@ -1656,8 +1742,8 @@ THE_HNG_1_4 = {
 		} 
 		
 		trigger = { 
-			tibet_region = {
-				type = all
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		} 
@@ -1670,8 +1756,8 @@ THE_HNG_1_4 = {
 						region = tibet_region
 						owned_by = ROOT
 					}
-					add_prosperity = 100
 					add_devastation = -100
+					add_prosperity = 100
 				}
 			}
 		} 
@@ -1701,66 +1787,30 @@ THE_HNG_1_4 = {
 		
 		effect = { 
 			kashgaria_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
 				add_permanent_claim = ROOT
 			}
 			shanshan_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
 				add_permanent_claim = ROOT
 			}
 			tarim_basin_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
 				add_permanent_claim = ROOT
 			}
 			turpan_kumul_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
 				add_permanent_claim = ROOT
 			}
 			zungaria_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
 				add_permanent_claim = ROOT
 			}
 			jetysuu_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
 				add_permanent_claim = ROOT
 			}
 			arys_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
 				add_permanent_claim = ROOT
 			}
 			ferghana_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
 				add_permanent_claim = ROOT
 			}
 			nepal_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
 				add_permanent_claim = ROOT
 			}
 		} 
@@ -1772,7 +1822,7 @@ THE_HNG_1_4 = {
 		required_missions = { THE_HNG_1_4_6 } 
 		provinces_to_highlight = { 
 			area = nepal_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { owned_by = ROOT }
 		} 
 		
 		trigger = { 
@@ -1781,18 +1831,11 @@ THE_HNG_1_4 = {
 			}
 			nepal_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				owned_by = ROOT
 			}
 		} 
 		
 		effect = { 
-			hindusthan_region = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			country_event = {
 				id = flavor_THE_HNG_mission_events.17
 			}
@@ -1832,7 +1875,13 @@ THE_HNG_1_4 = {
 		position = 9
 		required_missions = { THE_HNG_1_4_9 } 
 		provinces_to_highlight = { 
-			owned_by = AYU
+			OR = {
+				province_id = 600
+				province_id = 4831
+				province_id = 2389
+				province_id = 601
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		} 
 		
 		trigger = { 
@@ -1872,8 +1921,21 @@ THE_HNG_1_4 = {
 		} 
 		
 		trigger = { 
-			661 = { 
-				province_has_center_of_trade_of_level = 2 
+			if = {
+				limit = {
+					661 = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+				}
+				661 = {
+					country_or_non_sovereign_subject_holds = ROOT
+					province_has_center_of_trade_of_level = 2 
+				}
+			}
+			else = {
+				661 = {
+					province_has_center_of_trade_of_level = 2 
+				}
 			}
 		} 
 		
@@ -2034,14 +2096,16 @@ THE_HNG_1_5 = {
 						country_or_non_sovereign_subject_holds = ROOT
 					}
 				}
-				AND = {
-					RYU ={
-						NOT = { num_of_cities = 2 }
-						has_opinion = {
-							who = HNG
-							value = 130
-						}
+				RYU ={
+					NOT = { num_of_cities = 2 }
+					has_opinion = {
+						who = HNG
+						value = 130
 					}
+				}
+				RYU = {
+					is_subject_of = ROOT
+					is_subject_other_than_tributary_trigger = yes
 				}
 			}
 		}
@@ -2062,7 +2126,6 @@ THE_HNG_1_5 = {
 					}
 					add_core = RYU
 					remove_core = ROOT
-					change_religion = ROOT
 				}
 			}
 			release = RYU
@@ -2070,11 +2133,18 @@ THE_HNG_1_5 = {
 				subject_type = th_special_march
 				subject = RYU
 			}
-			1015 = {
-				add_base_tax = 3
-				add_base_production = 3
-				add_base_manpower = 3
-				center_of_trade = 2
+			hidden_effect = {
+				RYU = {
+					set_capital = 1015
+				}
+			}
+			RYU = {
+				capital_scope = {
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 3
+					center_of_trade = 2
+				}
 			}
 			RYU = {
 				hidden_effect = {
@@ -2088,16 +2158,8 @@ THE_HNG_1_5 = {
 					add_sailors = 100
 					add_prestige = 100
 					change_estate_land_share = {
-						estate = estate_church
-						share = 50
-					}
-					change_estate_land_share = {
-						estate = estate_burghers
-						share = 50
-					}
-					change_estate_land_share = {
-						estate = estate_nobles
-						share = 100
+						estate = all
+						share = -100
 					}
 					change_religion = ROOT
 					every_owned_province = {
@@ -2301,72 +2363,44 @@ THE_HNG_1_5 = {
 			THE_HNG_1_5_9
 			THE_HNG_1_4_10
 		}
+		trigger = { }
 		effect = {
 			custom_tooltip = THE_HNG_mission3_tt
-			
 			hidden_effect = {
 				4823 = {
-					owner = {
-						4823 = {
-							remove_core = PREV
-							add_core = ROOT
-							cede_province = ROOT
-						}
-					}
+					remove_core = owner
+					add_core = ROOT
+					cede_province = ROOT
 				}
 				4824 = {
-					owner = {
-						4824 = {
-							remove_core = PREV
-							add_core = ROOT
-							cede_province = ROOT
-						}
-					}
+					remove_core = owner
+					add_core = ROOT
+					cede_province = ROOT
 				}
 				2375 = {
-					owner = {
-						2375 = {
-							remove_core = PREV
-							add_core = ROOT
-							cede_province = ROOT
-						}
-					}
+					remove_core = owner
+					add_core = ROOT
+					cede_province = ROOT
 				}
 				2374 = {
-					owner = {
-						2374 = {
-							remove_core = PREV
-							add_core = ROOT
-							cede_province = ROOT
-						}
-					}
+					remove_core = owner
+					add_core = ROOT
+					cede_province = ROOT
 				}
 				606 = {
-					owner = {
-						606 = {
-							remove_core = PREV
-							add_core = ROOT
-							cede_province = ROOT
-						}
-					}
+					remove_core = owner
+					add_core = ROOT
+					cede_province = ROOT
 				}
 				607 = {
-					owner = {
-						607 = {
-							remove_core = PREV
-							add_core = ROOT
-							cede_province = ROOT
-						}
-					}
+					remove_core = owner
+					add_core = ROOT
+					cede_province = ROOT
 				}
 				4822 = {
-					owner = {
-						4822 = {
-							remove_core = PREV
-							add_core = ROOT
-							cede_province = ROOT
-						}
-					}
+					remove_core = owner
+					add_core = ROOT
+					cede_province = ROOT
 				}
 			}
 		}
@@ -2397,14 +2431,20 @@ THE_HNG_1_5 = {
 		required_missions = { THE_HNG_1_5_18 } 
 		
 		trigger = { 
-			OR = {
-				alliance_with = SCR
-				SCR = {
-					has_opinion = {
-						who = ROOT
-						value = 200
+			if = {
+				limit = { exists = SCR }
+				OR = {
+					alliance_with = SCR
+					SCR = {
+						has_opinion = {
+							who = ROOT
+							value = 200
+						}
 					}
 				}
+			}
+			else = {
+				4968 = { country_or_non_sovereign_subject_holds = ROOT }
 			}
 		} 
 		
@@ -2435,55 +2475,58 @@ THE_HNG_1_5 = {
 				MNG ={
 					NOT = {
 						total_development = 1000
+					}
+					NOT = {
 						is_emperor_of_china = yes
 					}
 				}
+				NOT = { exists = MNG }
 			}
 		} 
 		
 		effect = {
 			custom_tooltip = THE_HNG_mission4_tt
-			MNG = {
-				add_country_modifier = {
-					name = THE_hng_mission_modifier39
-					duration = -1
+			if = {
+				limit = { exists = MNG }
+				MNG = {
+					add_country_modifier = {
+						name = THE_hng_mission_modifier39
+						duration = -1
+					}
 				}
 			}
+			custom_tooltip = THE_HNG_EXTRA_give_southwestern_province_tt
 			hidden_effect = {
 				2748 = {
-					owner = {
-						2748 = {
-							remove_core = PREV
-							add_core = ROOT
-							cede_province = ROOT
-						}
+					if = {
+						limit = { owner = { tag = MNG } }
+						remove_core = owner
+						add_core = ROOT
+						cede_province = ROOT
 					}
 				}
 				675 = {
-					owner = {
-						675 = {
-							remove_core = PREV
-							add_core = ROOT
-							cede_province = ROOT
-						}
+					if = {
+						limit = { owner = { tag = MNG } }
+						remove_core = owner
+						add_core = ROOT
+						cede_province = ROOT
 					}
 				}
 				662 = {
-					owner = {
-						662 = {
-							remove_core = PREV
-							add_core = ROOT
-							cede_province = ROOT
-						}
+					if = {
+						limit = { owner = { tag = MNG } }
+						remove_core = owner
+						add_core = ROOT
+						cede_province = ROOT
 					}
 				}
 				663 = {
-					owner = {
-						663 = {
-							remove_core = PREV
-							add_core = ROOT
-							cede_province = ROOT
-						}
+					if = {
+						limit = { owner = { tag = MNG } }
+						remove_core = owner
+						add_core = ROOT
+						cede_province = ROOT
 					}
 				}
 			}

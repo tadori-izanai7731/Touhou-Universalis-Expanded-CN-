@@ -18,8 +18,11 @@ country_event = {
 		name = flavor_THE_HNG_events.1.a
 		change_unit_type = chinese
 		set_country_flag = hng_do_the_change1_flag 
-		country_event = {
-			id = flavor_THE_HNG_events.2
+		2165 = {
+			add_permanent_province_modifier = {
+				name = HTE_HNG_samurai_home
+				duration = -1
+			}
 		}
 		add_country_modifier = {
 			name = hng_come_from_gensokyo
@@ -27,6 +30,10 @@ country_event = {
 		}
 		add_country_modifier = {
 			name = hng_Mercenaries_not_care
+			duration = -1
+		}
+		add_country_modifier = {
+			name = hng_samurai_come_from_gensokyo
 			duration = -1
 		}
 		ai_chance = {
@@ -70,34 +77,34 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = flavor_THE_HNG_events.2
-	title = "flavor_THE_HNG_events.2.t"
-	desc = "flavor_THE_HNG_events.2.desc"
-	picture = DRAGON_eventPicture
-	is_triggered_only = yes
+# country_event = {
+# 	id = flavor_THE_HNG_events.2
+# 	title = "flavor_THE_HNG_events.2.t"
+# 	desc = "flavor_THE_HNG_events.2.desc"
+# 	picture = DRAGON_eventPicture
+# 	is_triggered_only = yes
 	
-	option = {
-		name = flavor_THE_HNG_events.2.a
-		2165 = {
-			add_permanent_province_modifier = {
-				name = HTE_HNG_samurai_home
-				duration = -1
-			}
-		}
-		ai_chance = {
-			factor = 100
-		}
-		add_country_modifier = {
-			name = hng_come_from_gensokyo
-			duration = -1
-		}
-		add_country_modifier = {
-			name = hng_samurai_come_from_gensokyo
-			duration = -1
-		}
-	}
-}
+# 	option = {
+# 		name = flavor_THE_HNG_events.2.a
+# 		2165 = {
+# 			add_permanent_province_modifier = {
+# 				name = HTE_HNG_samurai_home
+# 				duration = -1
+# 			}
+# 		}
+# 		ai_chance = {
+# 			factor = 100
+# 		}
+# 		add_country_modifier = {
+# 			name = hng_come_from_gensokyo
+# 			duration = -1
+# 		}
+# 		add_country_modifier = {
+# 			name = hng_samurai_come_from_gensokyo
+# 			duration = -1
+# 		}
+# 	}
+# }
 
 country_event = {
 	id = flavor_THE_HNG_events.3
