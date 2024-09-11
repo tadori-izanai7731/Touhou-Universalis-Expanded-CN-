@@ -470,7 +470,7 @@ THE_ROD_add_darkness_manipulation_var_from_battle = {
 	}
 	export_to_variable = {
 		which = the_rod_random_battle_m_var
-		value = modifier:discipline
+		value = modifier:land_morale
 	}
 	divide_variable = {
 		which = the_rod_random_battle_m_var
