@@ -2,7 +2,10 @@ country_decisions = {
 	the_hng_gensokyo_scr_home_age_of_discovery = {
 		color = { 255 50 50 }
 		potential = {
-			tag = HNG
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
 			exists = SCR
 			current_age = age_of_discovery
 			NOT = { has_country_modifier = THE_HNG_The_Joy_of_Reunion }
@@ -35,7 +38,10 @@ country_decisions = {
 	the_hng_gensokyo_scr_home_not_age_of_discovery = {
 		color = { 255 50 50 }
 		potential = {
-			tag = HNG
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
 			exists = SCR
 			NOT = { current_age = age_of_discovery }
 			NOT = { has_country_modifier = THE_HNG_The_Joy_of_Reunion }
@@ -68,7 +74,10 @@ country_decisions = {
 	the_hng_new_gensokyo_scr_home = {
 		color = { 255 50 50 }
 		potential = {
-			tag = HNG
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
 			NOT = { has_country_modifier = THE_HNG_help_from_Scarlet_new_home }
 			NOT = { has_country_modifier = THE_HNG_The_Joy_of_Reunion }
 			OR = {
@@ -338,35 +347,35 @@ country_decisions = {
 	}
 	
 	#儒教bug问题
-	the_hng_confucianism_may_be_bug = {
-		color = { 255 189 0 }
-		potential = {
-			is_emperor_of_china = yes
-			religion = confucianism
-			NOT = {	has_harmonized_with = buddhism }
-			NOT = {	has_harmonized_with = vajrayana }
-			NOT = {	has_harmonized_with = mahayana }
-			NOT = {	has_harmonized_with = pagan }
-			NOT = {	has_harmonized_with = dharmic }
-		}
-		allow = {
-			OR = {
-				tag = HNG
-				was_tag = HNG
-			}
-		}
-		effect = {
-			add_harmonized_religion = buddhism
-			add_harmonized_religion = vajrayana
-			add_harmonized_religion = mahayana
-			add_harmonized_religion = hinduism
-			add_harmonized_religion = animism
-			add_harmonized_religion = th_hakureishinto
-		}
-		ai_will_do = {
-			factor = 10
-		}
-	}
+	# the_hng_confucianism_may_be_bug = {
+	# 	color = { 255 189 0 }
+	# 	potential = {
+	# 		is_emperor_of_china = yes
+	# 		religion = confucianism
+	# 		NOT = {	has_harmonized_with = buddhism }
+	# 		NOT = {	has_harmonized_with = vajrayana }
+	# 		NOT = {	has_harmonized_with = mahayana }
+	# 		NOT = {	has_harmonized_with = pagan }
+	# 		NOT = {	has_harmonized_with = dharmic }
+	# 	}
+	# 	allow = {
+	# 		OR = {
+	# 			tag = HNG
+	# 			was_tag = HNG
+	# 		}
+	# 	}
+	# 	effect = {
+	# 		add_harmonized_religion = buddhism
+	# 		add_harmonized_religion = vajrayana
+	# 		add_harmonized_religion = mahayana
+	# 		add_harmonized_religion = hinduism
+	# 		add_harmonized_religion = animism
+	# 		add_harmonized_religion = th_hakureishinto
+	# 	}
+	# 	ai_will_do = {
+	# 		factor = 10
+	# 	}
+	# }
 	
 	#合并澜沧
 	the_hng_inherit_LXA_once = {
@@ -401,23 +410,19 @@ country_decisions = {
 			factor = 10
 		}
 	}
-	
 	#合并尼泊尔
 	the_hng_inherit_NPL_once = {
 		color = { 255 50 50 }
 		potential = {
 			had_country_flag = {
 				flag = THE_HNG_had_NPL_subject
-				days = 18250
+				days = 10950
 			}
 			OR = {
 				tag = HNG
 				was_tag = HNG	
 			}
-			NPL = {
-				is_subject_of = ROOT
-			}
-			NOT = { has_country_flag = THE_HNG_had_inherit_NPL_once }
+			exists = NPL
 		}
 		allow = {
 			NPL= {
@@ -425,6 +430,7 @@ country_decisions = {
 					who = ROOT
 					value = 200
 				}
+				is_subject_of = ROOT
 			}
 			is_at_war = no
 			OR = {
@@ -434,7 +440,7 @@ country_decisions = {
 		}
 		effect = {
 			inherit = NPL
-			set_country_flag = THE_HNG_had_inherit_NPL_once
+			clr_country_flag = THE_HNG_had_NPL_subject
 		}
 		ai_will_do = {
 			factor = 10
@@ -484,14 +490,13 @@ country_decisions = {
 		potential = {
 			had_country_flag = {
 				flag = THE_HNG_had_SCR_subject
-				days = 18250
+				days = 10950
 			}
 			OR = {
 				tag = HNG
 				was_tag = HNG	
 			}
 			senior_union_with = SCR
-			NOT = { has_country_flag = THE_HNG_had_inherit_SCR_once }
 		}
 		allow = {
 			SCR = {
@@ -508,7 +513,7 @@ country_decisions = {
 		}
 		effect = {
 			inherit = SCR
-			set_country_flag = THE_HNG_had_inherit_SCR_once
+			clr_country_flag = THE_HNG_had_inherit_SCR_once
 		}
 		ai_will_do = {
 			factor = 10
@@ -552,45 +557,44 @@ country_decisions = {
 			factor = 10
 		}
 	}
-	
 	#合并星
-	the_hng_inherit_MMU_once = {
-		color = { 255 50 50 }
-		potential = {
-			had_country_flag = {
-				flag = THE_HNG_had_MMU_subject
-				days = 10950
-			}
-			OR = {
-				tag = HNG
-				was_tag = HNG	
-			}
-			MMU = {
-				is_subject_of = ROOT
-			}
-			NOT = { has_country_flag = THE_HNG_had_inherit_MMU_once }
-		}
-		allow = {
-			OR = {
-				legitimacy = 100
-				imperial_mandate = 80
-			}
-			MMU = {
-				has_opinion = {
-					who = ROOT
-					value = 200
-				}
-			}
-			is_at_war = no
-		}
-		effect = {
-			inherit = MMU
-			set_country_flag = THE_HNG_had_inherit_MMU_once
-		}
-		ai_will_do = {
-			factor = 10
-		}
-	}
+	# the_hng_inherit_MMU_once = {
+	# 	color = { 255 50 50 }
+	# 	potential = {
+	# 		had_country_flag = {
+	# 			flag = THE_HNG_had_MMU_subject
+	# 			days = 10950
+	# 		}
+	# 		OR = {
+	# 			tag = HNG
+	# 			was_tag = HNG	
+	# 		}
+	# 		MMU = {
+	# 			is_subject_of = ROOT
+	# 		}
+	# 		NOT = { has_country_flag = THE_HNG_had_inherit_MMU_once }
+	# 	}
+	# 	allow = {
+	# 		OR = {
+	# 			legitimacy = 100
+	# 			imperial_mandate = 80
+	# 		}
+	# 		MMU = {
+	# 			has_opinion = {
+	# 				who = ROOT
+	# 				value = 200
+	# 			}
+	# 		}
+	# 		is_at_war = no
+	# 	}
+	# 	effect = {
+	# 		inherit = MMU
+	# 		set_country_flag = THE_HNG_had_inherit_MMU_once
+	# 	}
+	# 	ai_will_do = {
+	# 		factor = 10
+	# 	}
+	# }
 	#合并波斯
 	the_hng_inherit_PER_once = {
 		color = { 255 50 50 }
@@ -603,10 +607,7 @@ country_decisions = {
 				tag = HNG
 				was_tag = HNG	
 			}
-			PER = {
-				is_subject_of = ROOT
-			}
-			NOT = { has_country_flag = THE_HNG_had_inherit_PER_once }
+			exists = PER
 		}
 		allow = {
 			is_at_war = no
@@ -615,6 +616,7 @@ country_decisions = {
 					who = ROOT
 					value = 200
 				}
+				is_subject_of = root
 			}
 			OR = {
 				legitimacy = 100
@@ -623,51 +625,50 @@ country_decisions = {
 		}
 		effect = {
 			inherit = PER
-			set_country_flag = THE_HNG_had_inherit_PER_once
+			clr_country_flag = THE_HNG_had_PER_subject
 		}
 		ai_will_do = {
 			factor = 10
 		}
 	}
-	
 	#合并水桥
-	the_hng_inherit_PRS_once = {
-		color = { 255 50 50 }
-		potential = {
-			had_country_flag = {
-				flag = THE_HNG_had_PRS_subject
-				days = 10950
-			}
-			OR = {
-				tag = HNG
-				was_tag = HNG	
-			}
-			PRS = {
-				is_subject_of = ROOT
-			}
-			NOT = { has_country_flag = THE_HNG_had_inherit_PRS_once }
-		}
-		allow = {
-			is_at_war = no
-			PRS = {
-				has_opinion = {
-					who = ROOT
-					value = 200
-				}
-			}
-			OR = {
-				legitimacy = 100
-				imperial_mandate = 80
-			}
-		}
-		effect = {
-			inherit = PRS
-			set_country_flag = THE_HNG_had_inherit_PRS_once
-		}
-		ai_will_do = {
-			factor = 10
-		}
-	}
+	# the_hng_inherit_PRS_once = {
+	# 	color = { 255 50 50 }
+	# 	potential = {
+	# 		had_country_flag = {
+	# 			flag = THE_HNG_had_PRS_subject
+	# 			days = 10950
+	# 		}
+	# 		OR = {
+	# 			tag = HNG
+	# 			was_tag = HNG	
+	# 		}
+	# 		PRS = {
+	# 			is_subject_of = ROOT
+	# 		}
+	# 		NOT = { has_country_flag = THE_HNG_had_inherit_PRS_once }
+	# 	}
+	# 	allow = {
+	# 		is_at_war = no
+	# 		PRS = {
+	# 			has_opinion = {
+	# 				who = ROOT
+	# 				value = 200
+	# 			}
+	# 		}
+	# 		OR = {
+	# 			legitimacy = 100
+	# 			imperial_mandate = 80
+	# 		}
+	# 	}
+	# 	effect = {
+	# 		inherit = PRS
+	# 		set_country_flag = THE_HNG_had_inherit_PRS_once
+	# 	}
+	# 	ai_will_do = {
+	# 		factor = 10
+	# 	}
+	# }
 	#合并安南
 	the_hng_inherit_ANN_once = {
 		color = { 255 50 50 }
@@ -715,10 +716,7 @@ country_decisions = {
 				tag = HNG
 				was_tag = HNG	
 			}
-			KOR = {
-				march_of = ROOT
-			}
-			NOT = { has_country_flag = THE_HNG_had_inherit_KOR_once }
+			KOR = { is_subject_of = ROOT }
 		}
 		allow = {
 			is_at_war = no
@@ -731,11 +729,12 @@ country_decisions = {
 					who = ROOT
 					value = 200
 				}
+				march_of = ROOT
 			}
 		}
 		effect = {
 			inherit = KOR
-			set_country_flag = THE_HNG_had_inherit_KOR_once
+			clr_country_flag = THE_HNG_had_KOR_subject
 		}
 		ai_will_do = {
 			factor = 10
@@ -1293,34 +1292,3 @@ country_decisions = {
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

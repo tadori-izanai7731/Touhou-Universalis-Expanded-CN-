@@ -626,14 +626,13 @@ country_event = {
 			every_province = {
 				remove_core = NPL
 			}
-		}
-		hidden_effect = {
 			bhutan_area = {
 				limit = {
 					country_or_non_sovereign_subject_holds = ROOT
 				}
 				add_core = NPL
 				remove_core = owner
+				cede_province = ROOT
 			}
 			hindusthan_region = {
 				limit = {
@@ -641,18 +640,10 @@ country_event = {
 				}
 				add_core = NPL
 				remove_core = owner
+				cede_province = ROOT
 			}
 		}
 		release = NPL
-		hidden_effect = {
-			every_province = {
-				limit = {
-					NOT = { owned_by = NPL }
-					is_core = NPL
-				}
-				cede_province = NPL
-			}
-		}
 		create_subject = {
 			subject_type = th_special_march
 			subject = NPL
@@ -683,13 +674,15 @@ country_event = {
 				}
 			}
 		}
+		2071 = {
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 3
+			center_of_trade = 2
+		}
+		set_country_flag = THE_HNG_had_NPL_subject
 		NPL = {
-			capital_scope = {
-				add_base_tax = 3
-				add_base_production = 3
-				add_base_manpower = 3
-				center_of_trade = 2
-			}
+			ROOT = { custom_tooltip = THE_HNG_EXTRA_can_inhert_tag_30_years_tt }
 		}
 	}
 }
@@ -1096,6 +1089,24 @@ country_event = {
 	option = {
 		name = flavor_THE_HNG_mission_events.33.a
 		add_treasury = -500
+		if = {
+			limit = { exists = KPP }
+			KPP = { add_treasury = 250 }
+		}
+		else = {
+			4965 = {
+				owner = { add_treasury = 250 }
+			}
+		}
+		if = {
+			limit = { exists = YME }
+			YME = { add_treasury = 250 }
+		}
+		else = {
+			5219 = {
+				owner = { add_treasury = 250 }
+			}
+		}
 		add_country_modifier = {
 			name = THE_hng_mission_modifier72
 			duration = 1825
@@ -1255,10 +1266,8 @@ country_event = {
 	option = {
 		name = flavor_THE_HNG_mission_events.38.b
 		trigger = {
-			NOT = {
-				SCR = {
-					ai = yes
-				}
+			SCR = {
+				ai = no
 			}
 		}
 		if = {
@@ -1289,9 +1298,6 @@ country_event = {
 		if = {
 			limit = {
 				exists = SCR
-				SCR = {
-					ai = yes
-				}
 			}
 			add_casus_belli = {
 				target = SCR
@@ -1466,12 +1472,6 @@ country_event = {
 		add_adm_power = 100
 		add_dip_power = 100
 		add_mil_power = 100
-		MYO = {
-			change_innovativeness = 20
-			add_adm_power = 300
-			add_dip_power = 300
-			add_mil_power = 300
-		}
 	}
 }
 
@@ -1721,19 +1721,44 @@ country_event = {
 	
 	option = {
 		name = flavor_THE_HNG_mission_events.52.a
-		set_country_flag = THE_HNG_had_PER_subject
-		persia_region = {
-			limit = {
-				owned_by = ROOT
+		tooltip = { 
+			release = PER
+			create_subject = {
+				subject_type = th_special_march
+				subject = PER
 			}
-			add_core = PER
-			remove_core = ROOT
-			change_religion = ROOT
+			429 = {
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+				center_of_trade = 2
+			}
+			PER = {
+				change_unit_type = tech_gensokyan
+				add_country_modifier = {
+					name = THE_hng_mission_modifier96
+					duration = -1
+				}
+			}
 		}
-		release = PER
-		create_subject = {
-			subject_type = th_special_march
-			subject = PER
+		set_country_flag = THE_HNG_had_PER_subject
+		PER = {
+			ROOT = { custom_tooltip = THE_HNG_EXTRA_can_inhert_tag_30_years_tt }
+		}
+		hidden_effect = {
+			persia_region = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_core = PER
+				remove_core = ROOT
+				change_religion = ROOT
+			}
+			release = PER
+			create_subject = {
+				subject_type = th_special_march
+				subject = PER
+			}
 		}
 		PER = {
 			hidden_effect = {
@@ -1746,131 +1771,114 @@ country_event = {
 					add_base_manpower = 3
 					center_of_trade = 2
 				}
-				change_technology_group = tech_gensokyan
 				change_unit_type = tech_gensokyan
 				add_country_modifier = {
 					name = THE_hng_mission_modifier96
 					duration = -1
 				}
 				persia_region = {
-					limit = { 
-						NOT = { owned_by = PER } 
-						NOT = { is_core = PER } 
-					}
 					add_core = PER 
 				}
 				anatolia_region = {
-					limit = { 
-						NOT = { owned_by = PER } 
-						NOT = { is_core = PER } 
-					}
 					add_permanent_claim = PER 
 				}
 				mashriq_region = {
-					limit = { 
-						NOT = { owned_by = PER } 
-						NOT = { is_core = PER } 
-					}
 					add_permanent_claim = PER 
 				}
 				egypt_region = {
-					limit = { 
-						NOT = { owned_by = PER } 
-						NOT = { is_core = PER } 
-					}
 					add_permanent_claim = PER 
 				}
 			}
 		}
 	}
-	option = {
-		name = flavor_THE_HNG_mission_events.52.b
-		trigger = {
-			NOT = { exists = PRS }
-			5286 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			CRD = {
-				has_opinion = {
-					who = ROOT
-					value = 150
-				}
-			}
-			AND = {
-				NOT = { exists = CRD }
-				5286 = {
-					owner = {
-						has_opinion = {
-							who = ROOT
-							value = 150
-						}
-					}
-				}
-			}
-		}
-		set_country_flag = THE_HNG_had_PRS_subject
-		persia_region = {
-			limit = {
-				owned_by = ROOT
-			}
-			add_core = PRS
-			remove_core = ROOT
-			change_religion = ROOT
-		}
-		release = PRS
-		create_subject = {
-			subject_type = th_special_march
-			subject = PRS
-		}
-		429 = {
-			add_base_tax = 3
-			add_base_production = 3
-			add_base_manpower = 3
-			center_of_trade = 2
-		}
-		PRS = {
-			add_country_modifier = {
-				name = THE_hng_mission_modifier97
-				duration = -1
-			}
-			hidden_effect = {
-				add_treasury = 5000
-				add_manpower = 50
-				add_sailors = 10000
-				change_technology_group = tech_gensokyan
-				change_unit_type = tech_gensokyan
-				th_respawn_ruler_with_new_stats_effect = yes
-				persia_region = {
-					limit = { 
-						NOT = { owned_by = PRS } 
-						NOT = { is_core = PRS } 
-					}
-					add_permanent_claim = PRS 
-				}
-				anatolia_region = {
-					limit = { 
-						NOT = { owned_by = PRS } 
-						NOT = { is_core = PRS } 
-					}
-					add_permanent_claim = PRS 
-				}
-				mashriq_region = {
-					limit = { 
-						NOT = { owned_by = PRS } 
-						NOT = { is_core = PRS } 
-					}
-					add_permanent_claim = PRS 
-				}
-				egypt_region = {
-					limit = { 
-						NOT = { owned_by = PRS } 
-						NOT = { is_core = PRS } 
-					}
-					add_permanent_claim = PRS 
-				}
-			}
-		}
-	}
+	# option = {
+	# 	name = flavor_THE_HNG_mission_events.52.b
+	# 	trigger = {
+	# 		NOT = { exists = PRS }
+	# 		5286 = {
+	# 			country_or_non_sovereign_subject_holds = ROOT
+	# 		}
+	# 		CRD = {
+	# 			has_opinion = {
+	# 				who = ROOT
+	# 				value = 150
+	# 			}
+	# 		}
+	# 		AND = {
+	# 			NOT = { exists = CRD }
+	# 			5286 = {
+	# 				owner = {
+	# 					has_opinion = {
+	# 						who = ROOT
+	# 						value = 150
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# 	set_country_flag = THE_HNG_had_PRS_subject
+	# 	persia_region = {
+	# 		limit = {
+	# 			owned_by = ROOT
+	# 		}
+	# 		add_core = PRS
+	# 		remove_core = ROOT
+	# 		change_religion = ROOT
+	# 	}
+	# 	release = PRS
+	# 	create_subject = {
+	# 		subject_type = th_special_march
+	# 		subject = PRS
+	# 	}
+	# 	429 = {
+	# 		add_base_tax = 3
+	# 		add_base_production = 3
+	# 		add_base_manpower = 3
+	# 		center_of_trade = 2
+	# 	}
+	# 	PRS = {
+	# 		add_country_modifier = {
+	# 			name = THE_hng_mission_modifier97
+	# 			duration = -1
+	# 		}
+	# 		hidden_effect = {
+	# 			add_treasury = 5000
+	# 			add_manpower = 50
+	# 			add_sailors = 10000
+	# 			change_technology_group = tech_gensokyan
+	# 			change_unit_type = tech_gensokyan
+	# 			th_respawn_ruler_with_new_stats_effect = yes
+	# 			persia_region = {
+	# 				limit = { 
+	# 					NOT = { owned_by = PRS } 
+	# 					NOT = { is_core = PRS } 
+	# 				}
+	# 				add_permanent_claim = PRS 
+	# 			}
+	# 			anatolia_region = {
+	# 				limit = { 
+	# 					NOT = { owned_by = PRS } 
+	# 					NOT = { is_core = PRS } 
+	# 				}
+	# 				add_permanent_claim = PRS 
+	# 			}
+	# 			mashriq_region = {
+	# 				limit = { 
+	# 					NOT = { owned_by = PRS } 
+	# 					NOT = { is_core = PRS } 
+	# 				}
+	# 				add_permanent_claim = PRS 
+	# 			}
+	# 			egypt_region = {
+	# 				limit = { 
+	# 					NOT = { owned_by = PRS } 
+	# 					NOT = { is_core = PRS } 
+	# 				}
+	# 				add_permanent_claim = PRS 
+	# 			}
+	# 		}
+	# 	}
+	# }
 	option = {
 		name = flavor_THE_HNG_mission_events.52.c
 	}
@@ -1901,19 +1909,44 @@ country_event = {
 	
 	option = {
 		name = flavor_THE_HNG_mission_events.54.a
-		set_country_flag = THE_HNG_had_LFA_subject
-		malaya_region = {
-			limit = {
-				owned_by = ROOT
+		tooltip = { 
+			release = LFA
+			create_subject = {
+				subject_type = th_special_march
+				subject = LFA
 			}
-			add_core = LFA
-			remove_core = ROOT
-			change_religion = ROOT
+			622 = {
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+				center_of_trade = 2
+			}
+			LFA = {
+				change_unit_type = tech_gensokyan
+				add_country_modifier = {
+					name = THE_hng_mission_modifier100
+					duration = -1
+				}
+			}
 		}
-		release = LFA
-		create_subject = {
-			subject_type = th_special_march
-			subject = LFA
+		set_country_flag = THE_HNG_had_LFA_subject
+		LFA = {
+			ROOT = { custom_tooltip = THE_HNG_EXTRA_can_inhert_tag_30_years_tt }
+		}
+		hidden_effect = {
+			malaya_region = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_core = LFA
+				remove_core = owner
+				change_religion = ROOT
+			}
+			release = LFA
+			create_subject = {
+				subject_type = th_special_march
+				subject = LFA
+			}
 		}
 		LFA = {
 			hidden_effect = {
@@ -1927,122 +1960,109 @@ country_event = {
 					add_base_manpower = 3
 					center_of_trade = 2
 				}
-				change_technology_group = tech_gensokyan
 				change_unit_type = tech_gensokyan
 				add_country_modifier = {
 					name = THE_hng_mission_modifier100
 					duration = -1
 				}
 				malaya_region = {
-					limit = { 
-						NOT = { owned_by = LFA } 
-						NOT = { is_core = LFA } 
-					}
 					add_permanent_claim = LFA 
 				}
 				indonesia_region = {
-					limit = { 
-						NOT = { owned_by = LFA } 
-						NOT = { is_core = LFA } 
-					}
 					add_permanent_claim = LFA 
 				}
 				moluccas_region = {
-					limit = { 
-						NOT = { owned_by = LFA } 
-						NOT = { is_core = LFA } 
-					}
 					add_permanent_claim = LFA 
 				}
 			}
 		}
 	}
-	option = {
-		name = flavor_THE_HNG_mission_events.54.b
-		trigger = {
-			NOT = { exists = MMU }
-			OR = {
-				5144 = {
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-				MYO = {
-					has_opinion = {
-						who = ROOT
-						value = 150
-					}
-				}
-				AND = {
-					NOT = { exists = MYO }
-					5144 = {
-						owner = {
-							has_opinion = {
-								who = ROOT
-								value = 150
-							}
-						}
-					}
-				}
-			}
-		}
-		set_country_flag = THE_HNG_had_MMU_subject
-		malaya_region = {
-			limit = {
-				owned_by = ROOT
-			}
-			add_core = MMU
-			remove_core = ROOT
-			change_religion = ROOT
-		}
-		release = MMU
-		create_subject = {
-			subject_type = th_special_march
-			subject = MMU
-		}
-		2677 = {
-			add_base_tax = 3
-			add_base_production = 3
-			add_base_manpower = 3
-			center_of_trade = 2
-		}
-		MMU = {
-			add_country_modifier = {
-				name = THE_hng_mission_modifier101
-				duration = -1
-			}
-			hidden_effect = {
-				add_treasury = 5000
-				add_manpower = 50
-				add_sailors = 10000
-				th_respawn_ruler_with_new_stats_effect = yes
-				set_capital = 2677
-				change_technology_group = tech_gensokyan
-				change_unit_type = tech_gensokyan
-				change_religion = ROOT
-				add_government_reform = Gensokyan_mmu_thalassocratic_monarchy
-				moluccas_region = {
-					limit = { 
-						NOT = { owned_by = MMU } 
-						NOT = { is_core = MMU } 
-					}
-					add_permanent_claim = MMU 
-				}
-				malaya_region = {
-					limit = { 
-						NOT = { owned_by = MMU } 
-						NOT = { is_core = MMU } 
-					}
-					add_permanent_claim = MMU 
-				}
-				indonesia_region = {
-					limit = { 
-						NOT = { owned_by = MMU } 
-						NOT = { is_core = MMU } 
-					}
-					add_permanent_claim = MMU 
-				}
-			}
-		}
-	}
+	# option = {
+	# 	name = flavor_THE_HNG_mission_events.54.b
+	# 	trigger = {
+	# 		NOT = { exists = MMU }
+	# 		OR = {
+	# 			5144 = {
+	# 				country_or_non_sovereign_subject_holds = ROOT
+	# 			}
+	# 			MYO = {
+	# 				has_opinion = {
+	# 					who = ROOT
+	# 					value = 150
+	# 				}
+	# 			}
+	# 			AND = {
+	# 				NOT = { exists = MYO }
+	# 				5144 = {
+	# 					owner = {
+	# 						has_opinion = {
+	# 							who = ROOT
+	# 							value = 150
+	# 						}
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# 	set_country_flag = THE_HNG_had_MMU_subject
+	# 	malaya_region = {
+	# 		limit = {
+	# 			owned_by = ROOT
+	# 		}
+	# 		add_core = MMU
+	# 		remove_core = ROOT
+	# 		change_religion = ROOT
+	# 	}
+	# 	release = MMU
+	# 	create_subject = {
+	# 		subject_type = th_special_march
+	# 		subject = MMU
+	# 	}
+	# 	2677 = {
+	# 		add_base_tax = 3
+	# 		add_base_production = 3
+	# 		add_base_manpower = 3
+	# 		center_of_trade = 2
+	# 	}
+	# 	MMU = {
+	# 		add_country_modifier = {
+	# 			name = THE_hng_mission_modifier101
+	# 			duration = -1
+	# 		}
+	# 		hidden_effect = {
+	# 			add_treasury = 5000
+	# 			add_manpower = 50
+	# 			add_sailors = 10000
+	# 			th_respawn_ruler_with_new_stats_effect = yes
+	# 			set_capital = 2677
+	# 			change_technology_group = tech_gensokyan
+	# 			change_unit_type = tech_gensokyan
+	# 			change_religion = ROOT
+	# 			add_government_reform = Gensokyan_mmu_thalassocratic_monarchy
+	# 			moluccas_region = {
+	# 				limit = { 
+	# 					NOT = { owned_by = MMU } 
+	# 					NOT = { is_core = MMU } 
+	# 				}
+	# 				add_permanent_claim = MMU 
+	# 			}
+	# 			malaya_region = {
+	# 				limit = { 
+	# 					NOT = { owned_by = MMU } 
+	# 					NOT = { is_core = MMU } 
+	# 				}
+	# 				add_permanent_claim = MMU 
+	# 			}
+	# 			indonesia_region = {
+	# 				limit = { 
+	# 					NOT = { owned_by = MMU } 
+	# 					NOT = { is_core = MMU } 
+	# 				}
+	# 				add_permanent_claim = MMU 
+	# 			}
+	# 		}
+	# 	}
+	# }
 	option = {
 		name = flavor_THE_HNG_mission_events.54.c
 	}
@@ -2057,14 +2077,6 @@ country_event = {
 	
 	option = {
 		name = flavor_THE_HNG_mission_events.55.a
-		1177 = {
-			add_core = HNG
-			cede_province = HNG
-		}
-		1179 = {
-			add_core = HNG
-			cede_province = HNG
-		}
 		th_colonize_dev_province = {
 			province = 1177
 		}

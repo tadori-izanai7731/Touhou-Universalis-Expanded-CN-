@@ -1110,6 +1110,7 @@ THE_HNG_1_2 = {
 			if = {
 				limit = {
 					religion = confucianism
+					NOT = { has_harmonized_with = mahayana }
 				}
 				add_harmonized_religion = mahayana
 			}
@@ -1836,10 +1837,22 @@ THE_HNG_1_4 = {
 		} 
 		
 		effect = { 
-			country_event = {
+			THE_country_event_with_insight = {
 				id = flavor_THE_HNG_mission_events.17
+				effect_tooltip = "
+					release = NPL
+					create_subject = {
+						subject_type = th_special_march
+						subject = NPL
+					}
+					2071 = {
+						add_base_tax = 3
+						add_base_production = 3
+						add_base_manpower = 3
+						center_of_trade = 2
+					}
+				"
 			}
-			set_country_flag = THE_HNG_had_NPL_subject
 		} 
 	}
 	
@@ -2720,7 +2733,13 @@ THE_HNG_2_1 = {
 		
 		effect = {  
 			set_country_flag = THE_HNG_searching_for_dragon_points_can_use
-			add_government_reform = THE_HNG_searching_for_dragon_points
+			if = {
+				limit = { government = monarchy }
+				add_government_reform = THE_HNG_searching_for_dragon_points
+			}
+			else = {
+				custom_tooltip = THE_HNG_EXTRA_unlock_searching_for_dragon_points_reform_tt
+			}
 		} 
 	}
 	
@@ -2844,11 +2863,7 @@ THE_HNG_2_1 = {
 		position = 25
 		required_missions = { THE_HNG_2_3_46 } 
 		provinces_to_highlight = { 
-			OR = { 
-				area = pyongan_area 
-				area = hamgyeong_area 
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			is_capital_of = KOR
 		} 
 		
 		trigger = {
@@ -3001,10 +3016,6 @@ THE_HNG_2_1 = {
 		
 		effect = { 
 			japan_region = {
-				limit = { 
-					NOT = { owned_by = ROOT } 
-					NOT = { is_core = ROOT } 
-				}
 				add_permanent_claim = ROOT 
 			}
 		} 
@@ -3042,7 +3053,12 @@ THE_HNG_2_1 = {
 				set_base_production = 1
 				set_base_manpower = 1
 			}
-			set_country_flag = THE_HNG_had_KOR_subject	
+			set_country_flag = THE_HNG_had_KOR_subject
+			KOR = {
+				ROOT = {
+					custom_tooltip = THE_HNG_EXTRA_can_inhert_tag_30_years_tt
+				}
+			}
 		} 
 	}
 	
@@ -3059,24 +3075,12 @@ THE_HNG_2_1 = {
 		
 		effect = { 
 			Hakurei_western_coast = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
 				add_permanent_claim = ROOT
 			}
 			Hakurei_peninsula_state = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
 				add_permanent_claim = ROOT
 			}
 			Hakurei_state = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
 				add_permanent_claim = ROOT
 			}
 		} 
@@ -3128,27 +3132,21 @@ THE_HNG_2_1 = {
 		effect = { 
 			add_years_of_income = -0.5
 			Eastern_mountains = {
-				type = all
 				add_permanent_claim = ROOT
 			}
 			Mayohiga_state = {
-				type = all
 				add_permanent_claim = ROOT
 			}
 			Ran_state = {
-				type = all
 				add_permanent_claim = ROOT
 			}
 			Scarlet_mountain = {
-				type = all
 				add_permanent_claim = ROOT
 			}
 			Scarlett_domain = {
-				type = all
 				add_permanent_claim = ROOT
 			}
 			Scarlet_island = {
-				type = all
 				add_permanent_claim = ROOT
 			}
 			country_event = {
@@ -3182,10 +3180,15 @@ THE_HNG_2_1 = {
 		} 
 		
 		effect = { 
-			set_country_flag = THE_HNG_had_SCR_subject
 			add_country_modifier = {
 				name = THE_hng_mission_modifier64
 				duration = -1
+			}
+			set_country_flag = THE_HNG_had_SCR_subject
+			SCR = {
+				ROOT = {
+					custom_tooltip = THE_HNG_EXTRA_can_inhert_tag_30_years_tt
+				}
 			}
 		} 
 	}
@@ -3263,7 +3266,7 @@ THE_HNG_2_1 = {
 		effect = { 
 			THE_country_event_with_insight = {
 				id = flavor_THE_HNG_mission_events.25
-				effect_tooltip = "
+				option_1 = "
 					add_country_modifier = {
 						name = THE_hng_mission_modifier56
 						duration = -1
@@ -3274,7 +3277,24 @@ THE_HNG_2_1 = {
 						add_base_production = 3
 						add_base_manpower = 3
 					}
-					custom_tooltip = THE_HNG_zhuan_huan_dong_dao_tt
+				"
+				option_2 = "
+					add_country_modifier = {
+						name = THE_hng_mission_modifier56
+						duration = -1
+					}
+					2174 = {
+						change_culture = Senkaian
+						change_religion = th_taoist
+						add_base_tax = 3
+						add_base_production = 3
+						add_base_manpower = 3
+					}
+					change_religion = th_taoist
+					add_country_modifier = {
+						name = THE_hng_mission_modifier142
+						duration = -1
+					}
 				"
 			}
 		} 
@@ -3418,6 +3438,7 @@ THE_HNG_2_2 = {
 		trigger = {
 			OR = {
 				AND = {
+					is_at_war = no
 					estate_loyalty = {
 						estate = all
 						loyalty = 70
@@ -3428,24 +3449,14 @@ THE_HNG_2_2 = {
 						limit = { is_emperor_of_china = yes } 
 						imperial_mandate = 80
 					}
-					is_at_war = no
 				}
 				AND = {
-					grown_by_states = 6
-					if = {
-						limit = {
-							OR = {
-								has_dlc = "Emperor"
-								has_dlc = "Rights of Man"
-							}
-						}
-						OR = {
-							grown_by_development = 500
-							NOT = { great_power_rank = 2 } 
-						}
-					}
-					else = { grown_by_development = 350 } 
 					is_at_war = yes
+					grown_by_states = 6
+					OR = {
+						grown_by_development = 500
+						NOT = { great_power_rank = 2 } 
+					}
 				}
 			}
 		}
@@ -3557,10 +3568,6 @@ THE_HNG_2_2 = {
 		
 		effect = { 
 			east_siberia_region = {
-				limit = { 
-					NOT = { owned_by = ROOT } 
-					NOT = { is_core = ROOT } 
-				}
 				add_permanent_claim = ROOT 
 			}
 		} 
@@ -3616,10 +3623,6 @@ THE_HNG_2_2 = {
 		
 		effect = { 
 			mexico_region = {
-				limit = { 
-					NOT = { owned_by = ROOT } 
-					NOT = { is_core = ROOT } 
-				}
 				add_permanent_claim = ROOT 
 			}
 		} 
@@ -3640,7 +3643,7 @@ THE_HNG_2_2 = {
 				}
 				custom_trigger_tooltip = {
 					tooltip = second_circumnavigation_tt
-					has_country_flag = THE_LIL_circumnavigation_second_flag
+					has_country_flag = circumnavigation_done
 				}
 			}
 		} 
@@ -3668,9 +3671,8 @@ THE_HNG_2_2 = {
 				region = russia_region
 				region = ural_region
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-		position = 6
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 20
@@ -3876,7 +3878,6 @@ THE_HNG_2_3 = {
 		trigger = { 		
 			if = {
 				limit = {
-					has_dlc = "Mandate of Heaven"
 					OR = {
 						any_country = {
 							is_emperor_of_china = yes
@@ -3913,17 +3914,20 @@ THE_HNG_2_3 = {
 					}
 				}
 				set_country_flag = THE_HNG_red_dragon_celestial_empire_can_use
-				add_government_reform = THE_HNG_red_dragon_celestial_empire
-				set_meritocracy = 100	 
+				if = {
+					limit = { government = monarchy }
+					add_government_reform = THE_HNG_red_dragon_celestial_empire
+				}
+				else = {
+					custom_tooltip = THE_HNG_EXTRA_unlock_red_dragon_celestial_empire_reform_tt
+				}
+				if = {
+					limit = { uses_meritocracy = yes }
+					set_meritocracy = 100
+				}
 			}
 			if = {
 				limit = {
-					OR = {
-						any_country = {
-							is_emperor_of_china = yes
-						}
-						is_emperor_of_china = yes
-					}
 					NOT = { has_country_flag = 	hng_do_the_change3_flag }
 				}
 				add_country_modifier = {
@@ -3961,9 +3965,19 @@ THE_HNG_2_3 = {
 						limit = { exists = KPP }
 						KPP = { add_treasury = 250 }
 					}
+					else = {
+						4965 = {
+							owner = { add_treasury = 250 }
+						}
+					}
 					if = {
 						limit = { exists = YME }
 						YME = { add_treasury = 250 }
+					}
+					else = {
+						5219 = {
+							owner = { add_treasury = 250 }
+						}
 					}
 					add_country_modifier = {
 						name = THE_hng_mission_modifier72
@@ -4240,22 +4254,17 @@ THE_HNG_2_3 = {
 		required_missions = { THE_HNG_2_3_46 } 
 		
 		trigger = { 
-			army_size_percentage = 0.75
+			OR = {
+				army_size_percentage = 0.75
+				army_size = 150
+			}
 		} 
 		
 		effect = { 
 			mongolia_region = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
 				add_permanent_claim = ROOT
 			}
 			manchuria_region = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
 				add_permanent_claim = ROOT
 			}
 		} 
@@ -4283,10 +4292,6 @@ THE_HNG_2_3 = {
 				duration = -1
 			}
 			central_asia_region = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
 				add_permanent_claim = ROOT
 			}
 		} 
@@ -4312,45 +4317,21 @@ THE_HNG_2_3 = {
 		
 		effect = { 
 			persia_region = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
 				add_permanent_claim = ROOT
 			}
 			khorasan_region = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
 				add_permanent_claim = ROOT
 			}
 			crimea_region = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
 				add_permanent_claim = ROOT
 			}
 			ural_region = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
 				add_permanent_claim = ROOT
 			}
 			russia_region = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
 				add_permanent_claim = ROOT
 			}
 			ruthenia_region = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
 				add_permanent_claim = ROOT
 			}
 			add_mandate = 20
@@ -4415,10 +4396,6 @@ THE_HNG_2_3 = {
 			add_splendor = 1600
 			hidden_effect = {
 				gensokyo_continent = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT	}
-						NOT = { is_core = ROOT	}
-					}
 					add_permanent_claim = ROOT
 				}
 			}
@@ -4456,13 +4433,10 @@ THE_HNG_2_3 = {
 		effect = { 
 			add_treasury = -1000
 			moon_region = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
 				add_permanent_claim = ROOT
 			}
 			moon_region = {
+				limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
 				add_permanent_province_modifier = {
 					name = THE_hng_mission_modifier130
 					duration = 7300
@@ -4493,11 +4467,11 @@ THE_HNG_2_3 = {
 		} 
 		
 		trigger = { 
-				NOT = {	exists = LCU }
-				NOT = {	exists = LEM }
-				5360 = {
-					country_or_non_sovereign_subject_holds = ROOT
-				}
+			NOT = {	exists = LCU }
+			NOT = {	exists = LEM }
+			5320 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		} 
 		
 		effect = { 
@@ -4951,10 +4925,6 @@ THE_HNG_2_4 = {
 		
 		effect = { 
 			coromandel_region = {
-				limit = { 
-					NOT = { owned_by = ROOT } 
-					NOT = { is_core = ROOT } 
-				}
 				add_permanent_claim = ROOT 
 			}
 			add_country_modifier = {
@@ -4989,10 +4959,6 @@ THE_HNG_2_4 = {
 		
 		effect = { 
 			horn_of_africa_region = {
-				limit = { 
-					NOT = { owned_by = ROOT } 
-					NOT = { is_core = ROOT } 
-				}
 				add_permanent_claim = ROOT 
 			}
 			THE_country_event_with_insight = {
@@ -5006,12 +4972,6 @@ THE_HNG_2_4 = {
 					add_adm_power = 100
 					add_dip_power = 100
 					add_mil_power = 100
-					MYO = {
-						change_innovativeness = 20
-						add_adm_power = 300
-						add_dip_power = 300
-						add_mil_power = 300
-					}
 				"
 			}
 		} 
@@ -5027,12 +4987,9 @@ THE_HNG_2_4 = {
 		} 
 		
 		trigger = {
-			1205 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
 			mogadishu_area = {
 				type = all
-				owned_by = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			} 
 		} 
 		
@@ -5049,12 +5006,23 @@ THE_HNG_2_4 = {
 		position = 29
 		required_missions = { THE_HNG_2_3_50 } 
 		provinces_to_highlight = {
-			OR = {
-				owned_by = PER
-				province_id = 426
-				province_id = 416
-				province_id = 429
-				province_id = 433
+			if = {
+				limit = { exists = PER }
+				AND = {
+					OR = {
+						province_id = 426
+						province_id = 416
+						province_id = 429
+						province_id = 433
+					}
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+			}
+			else = {
+				AND = {
+					region = persia_region
+					NOT = { owned_by = ROOT }
+				}
 			}
 		}
 		
@@ -5119,7 +5087,6 @@ THE_HNG_2_4 = {
 					center_of_trade = 2
 				}
 				PER = {
-					change_technology_group = tech_gensokyan
 					change_unit_type = tech_gensokyan
 					add_country_modifier = {
 						name = THE_hng_mission_modifier96
@@ -5141,8 +5108,28 @@ THE_HNG_2_4 = {
 				custom_tooltip = THE_HNG_otherwise_tt_no
 			}
 			tooltip = { 
-				country_event = {
+				THE_country_event_with_insight = {
 					id = flavor_THE_HNG_mission_events.52
+					effect_tooltip = "
+						release = PER
+						create_subject = {
+							subject_type = th_special_march
+							subject = PER
+						}
+						429 = {
+							add_base_tax = 3
+							add_base_production = 3
+							add_base_manpower = 3
+							center_of_trade = 2
+						}
+						PER = {
+							change_unit_type = tech_gensokyan
+							add_country_modifier = {
+								name = THE_hng_mission_modifier96
+								duration = -1
+							}
+						}
+					"
 				}
 			}
 			
@@ -5166,10 +5153,10 @@ THE_HNG_2_4 = {
 					inherit = PER
 					persia_region = {
 						limit = {
-							owned_by = ROOT
+							country_or_non_sovereign_subject_holds = ROOT
 						}
 						add_core = PER
-						remove_core = ROOT
+						remove_core = owner
 						change_religion = ROOT
 					}
 					release = PER
@@ -5184,38 +5171,21 @@ THE_HNG_2_4 = {
 						center_of_trade = 2
 					}
 					PER = {
-						change_technology_group = tech_gensokyan
 						change_unit_type = tech_gensokyan
 						add_country_modifier = {
 							name = THE_hng_mission_modifier96
 							duration = -1
 						}
 						persia_region = {
-							limit = { 
-								NOT = { owned_by = PER } 
-								NOT = { is_core = PER } 
-							}
-							add_permanent_claim = PER 
+							add_core = PER 
 						}
 						anatolia_region = {
-							limit = { 
-								NOT = { owned_by = PER } 
-								NOT = { is_core = PER } 
-							}
 							add_permanent_claim = PER 
 						}
 						mashriq_region = {
-							limit = { 
-								NOT = { owned_by = PER } 
-								NOT = { is_core = PER } 
-							}
 							add_permanent_claim = PER 
 						}
 						egypt_region = {
-							limit = { 
-								NOT = { owned_by = PER } 
-								NOT = { is_core = PER } 
-							}
 							add_permanent_claim = PER 
 						}
 					}
@@ -5430,7 +5400,7 @@ THE_HNG_2_5 = {
 		trigger = {
 			taiwan_area = {
 				type = all
-				is_empty = no
+				is_city = yes
 			}	
 		} 
 		
@@ -5667,7 +5637,7 @@ THE_HNG_2_5 = {
 				}
 				AND = {
 					province_id = 596
-					NOT = { is_core = ROOT }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 			}
 
@@ -5695,18 +5665,23 @@ THE_HNG_2_5 = {
 			THE_country_event_with_insight = {
 				id = flavor_THE_HNG_mission_events.54
 				effect_tooltip = "
-					malaya_region = {
-						limit = {
-							owned_by = ROOT
-						}
-						add_core = LFA
-						remove_core = ROOT
-						change_religion = ROOT
-					}
 					release = LFA
 					create_subject = {
 						subject_type = th_special_march
 						subject = LFA
+					}
+					622 = {
+						add_base_tax = 3
+						add_base_production = 3
+						add_base_manpower = 3
+						center_of_trade = 2
+					}
+					LFA = {
+						change_unit_type = tech_gensokyan
+						add_country_modifier = {
+							name = THE_hng_mission_modifier96
+							duration = -1
+						}
 					}
 				"
 			}
@@ -5773,10 +5748,6 @@ THE_HNG_2_5 = {
 		effect = { 
 			add_mercantilism = 5
 			moluccas_region = {
-				limit = { 
-					NOT = { owned_by = ROOT } 
-					NOT = { is_core = ROOT } 
-				}
 				add_permanent_claim = ROOT 
 			}
 		} 
@@ -5835,14 +5806,6 @@ THE_HNG_2_5 = {
 			THE_country_event_with_insight = {
 				id = flavor_THE_HNG_mission_events.55
 				effect_tooltip = "
-					1177 = {
-						add_core = HNG
-						cede_province = HNG
-					}
-					1179 = {
-						add_core = HNG
-						cede_province = HNG
-					}
 					th_colonize_dev_province = {
 						province = 1177
 					}
@@ -5868,7 +5831,7 @@ THE_HNG_2_5 = {
 				area = Mayohiga_state
 				area = Ran_state
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		} 
 		
 		trigger = { 
