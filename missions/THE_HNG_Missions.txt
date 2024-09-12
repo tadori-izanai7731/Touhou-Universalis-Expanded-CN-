@@ -2124,7 +2124,6 @@ THE_HNG_1_5 = {
 		}
 		
 		effect = { 
-			set_country_flag = THE_HNG_had_RYU_subject
 			japan_region = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -2178,6 +2177,13 @@ THE_HNG_1_5 = {
 					every_owned_province = {
 						change_religion = ROOT
 					}
+				}
+			}
+			set_country_flag = THE_HNG_had_RYU_subject
+			custom_tooltip = empty_line_tt
+			RYU = {
+				ROOT = {
+					custom_tooltip = THE_HNG_EXTRA_can_inhert_tag_30_years_tt
 				}
 			}
 		} 
@@ -5679,7 +5685,7 @@ THE_HNG_2_5 = {
 					LFA = {
 						change_unit_type = tech_gensokyan
 						add_country_modifier = {
-							name = THE_hng_mission_modifier96
+							name = THE_hng_mission_modifier100
 							duration = -1
 						}
 					}

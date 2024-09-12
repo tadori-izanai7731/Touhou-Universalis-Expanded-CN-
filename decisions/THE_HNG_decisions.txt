@@ -452,16 +452,13 @@ country_decisions = {
 		potential = {
 			had_country_flag = {
 				flag = THE_HNG_had_RYU_subject
-				days = 18250
+				days = 10950
 			}
 			OR = {
 				tag = HNG
 				was_tag = HNG	
 			}
-			RYU = {
-				is_subject_of = ROOT
-			}
-			NOT = { has_country_flag = THE_HNG_had_inherit_RYU_once }
+			exists = RYU
 		}
 		allow = {
 			RYU = {
@@ -469,6 +466,7 @@ country_decisions = {
 					who = ROOT
 					value = 200
 				}
+				is_subject_of = ROOT
 			}
 			is_at_war = no
 			OR = {
@@ -478,7 +476,7 @@ country_decisions = {
 		}
 		effect = {
 			inherit = RYU
-			set_country_flag = THE_HNG_had_inherit_RYU_once
+			clr_country_flag = THE_HNG_had_RYU_subject
 		}
 		ai_will_do = {
 			factor = 10
@@ -531,10 +529,7 @@ country_decisions = {
 				tag = HNG
 				was_tag = HNG	
 			}
-			LFA = {
-				is_subject_of = ROOT
-			}
-			NOT = { has_country_flag = THE_HNG_had_inherit_LFA_once }
+			exists = LFA
 		}
 		allow = {
 			is_at_war = no
@@ -543,6 +538,7 @@ country_decisions = {
 					who = ROOT
 					value = 200
 				}
+				is_subject_of = ROOT
 			}
 			OR = {
 				legitimacy = 100
@@ -551,7 +547,7 @@ country_decisions = {
 		}
 		effect = {
 			inherit = LFA
-			set_country_flag = THE_HNG_had_inherit_LFA_once
+			clr_country_flag = THE_HNG_had_LFA_subject
 		}
 		ai_will_do = {
 			factor = 10
@@ -677,23 +673,22 @@ country_decisions = {
 				tag = HNG
 				was_tag = HNG	
 			}
-			ANN = {
-				march_of = ROOT
-			}
+			exists = ANN
 			mission_completed = THE_HNG_2_3_44
 			NOT = { has_country_flag = THE_HNG_had_inherit_ANN_once }
 		}
 		allow = {
 			is_at_war = no
-			OR = {
-				legitimacy = 100
-				imperial_mandate = 80
-			}
 			ANN = {
 				has_opinion = {
 					who = ROOT
 					value = 200
 				}
+				march_of = ROOT
+			}
+			OR = {
+				legitimacy = 100
+				imperial_mandate = 80
 			}
 		}
 		effect = {
@@ -716,7 +711,7 @@ country_decisions = {
 				tag = HNG
 				was_tag = HNG	
 			}
-			KOR = { is_subject_of = ROOT }
+			exists = KOR
 		}
 		allow = {
 			is_at_war = no
@@ -968,7 +963,7 @@ country_decisions = {
 				tag = HNG
 				was_tag = HNG
 			}
-			mission_completed = THE_HNG_3_1_70
+			mission_completed = THE_HNG_3_1_71
 			NOT = { has_country_flag = THE_HNG_disasters3_reform3_had_completed  }
 			NOT = { has_country_flag = THE_HNG_disasters_lose3  }
 		}

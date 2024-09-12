@@ -79,7 +79,6 @@ THE_HNG_help_from_Koakuma = {
 
 #红魔馆的新家
 THE_HNG_help_from_Scarlet_new_home = {
-	global_tax_income = -120
 	core_creation = -0.05
 	discipline = 0.03
 	idea_cost = -0.025
@@ -867,6 +866,8 @@ THE_hng_mission_modifier79 = {
 #龙之怒
 THE_hng_mission_modifier80 = {
 	fire_damage = 0.01
+	shock_damage = 0.01
+	morale_damage = 0.01
 }
 
 #勇猛的妖怪武士们
