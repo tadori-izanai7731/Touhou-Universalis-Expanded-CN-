@@ -452,3 +452,13 @@ THE_clear_deity_event_flag_effect = {
 THE_set_deity_event_flag_effect = {
 	set_country_flag = THE_had_deity_event_$deity$_flag
 }
+
+# type = $type$
+THE_unlock_special_culture_ideas_scripted_effect = {
+	if = {
+		limit = { has_country_flag = THE_forbid_$type$_ideas_flag }
+		clr_country_flag = THE_forbid_$type$_ideas_flag
+	}
+	set_country_flag = THE_can_use_$type$_ideas_flag
+	custom_tooltip = THE_unlock_$type$_ideas_tt
+}

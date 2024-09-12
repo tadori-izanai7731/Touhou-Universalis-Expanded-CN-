@@ -15,6 +15,7 @@ THE_youkai_kami_policy= {
 	# modifier
 	global_missionary_strength = 0.02
 	prestige_per_development_from_conversion = 1
+	harmonization_speed = 0.1
 
 	effect = {}
 	removed_effect = {}
@@ -491,6 +492,7 @@ THE_kami_youkai_policy= {
 	# modifier
 	missionaries = 1
 	shock_damage_received = -0.1
+	yearly_harmony = 0.25
 
 	effect = {}
 	removed_effect = {}
@@ -514,6 +516,7 @@ THE_kami_court_policy= {
 	# modifier
 	governing_capacity_modifier = 0.2
 	global_missionary_strength = 0.02
+	harmonization_speed = 0.1
 
 	effect = {}
 	removed_effect = {}
@@ -537,6 +540,7 @@ THE_kami_diplomatic_policy= {
 	# modifier
 	diplomats = 1
 	missionaries = 1
+	yearly_harmony = 0.25
 
 	effect = {}
 	removed_effect = {}
@@ -652,6 +656,7 @@ THE_kami_trade_policy= {
 	# modifier
 	trade_efficiency = 0.15
 	global_missionary_strength = 0.02
+	harmonization_speed = 0.1
 
 
 	effect = {}
@@ -880,6 +885,7 @@ THE_kami_naval_policy= {
 	# modifier
 	missionaries = 1
 	hull_size_modifier = 0.1
+	yearly_harmony = 0.25
 
 	effect = {}
 	removed_effect = {}
@@ -949,6 +955,7 @@ THE_kami_quantity_policy= {
 	# modifier
 	missionaries = 1
 	same_religion_advisor_cost = -0.2
+	yearly_harmony = 0.25
 
 	effect = {}
 	removed_effect = {}
@@ -1638,6 +1645,7 @@ THE_fairy_kami_policy= {
 	# modifier
 	global_missionary_strength = 0.02
 	manpower_in_true_faith_provinces = 0.2
+	harmonization_speed = 0.1
 
 	effect = {}
 	removed_effect = {}
@@ -2068,6 +2076,7 @@ THE_lunarian_religious_policy= {
 	
 	# modifier
 	global_missionary_strength = 0.05
+	harmonization_speed = 0.5
 
 	effect = {}
 	removed_effect = {}
@@ -2293,6 +2302,7 @@ THE_lunarian_theocracy_policy= {
 	# modifier
 	missionaries = 2
 	missionary_maintenance_cost = -0.5
+	yearly_harmony = 0.5
 
 	effect = {}
 	removed_effect = {}

@@ -187,6 +187,9 @@ country_decisions = {
 				name = yof_change_kagiyama_buff
 				duration = 3650
 			}
+			THE_unlock_special_culture_ideas_scripted_effect = {
+				type = kami
+			}
 		}
 	}
 }

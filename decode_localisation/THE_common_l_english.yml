@@ -1,9 +1,28 @@
 l_english:
 
+###GOVERNMENT
+ THE_can_use_youkai_ideas_government_attribute_yes: "允许§Y妖怪§!理念组。"
+ THE_can_use_kami_ideas_government_attribute_yes: "允许§Y神明§!理念组。"
+ THE_can_use_human_ideas_government_attribute_yes: "允许§Y人类§!理念组。"
+ THE_can_use_fairy_ideas_government_attribute_yes: "允许§Y妖精§!理念组。"
+ THE_can_use_lunarian_ideas_government_attribute_yes: "允许§Y月人§!理念组。"
+ THE_can_use_gensokyan_ideas_government_attribute_yes: "允许§Y幻想乡§!理念组。"
+ THE_forbid_youkai_ideas_government_attribute_yes: "不允许§Y妖怪§!理念组。"
+ THE_forbid_kami_ideas_government_attribute_yes: "不允许§Y神明§!理念组。"
+ THE_forbid_human_ideas_government_attribute_yes: "不允许§Y人类§!理念组。"
+ THE_forbid_fairy_ideas_government_attribute_yes: "不允许§Y妖精§!理念组。"
+ THE_forbid_lunarian_ideas_government_attribute_yes: "不允许§Y月人§!理念组。"
+ THE_forbid_gensokyan_ideas_government_attribute_yes: "不允许§Y幻想乡§!理念组。"
+###GOVERNMENT_END
 
 
 ###CUSTOM_TOOLTIP
  THE_display_the_country_content_tt: "§YFasterliya§!:\n@KKO心绮楼\n@YOF妖怪之森\n\n§Y一只沙包§!:\n@LIL迎春花小径\n@NCS辉针城\n@HMC人间之里(beta)\n\n§Y圆神信徒齐格酱§!:\n@HNG红(由@SCR红魔馆释放)\n\n§YSEKGY§!:\n@ROD宵暗领域(由@YOF妖怪之森释放)"
+ THE_unlock_youkai_ideas_tt: "允许使用「§Y妖怪理念§!」"
+ THE_unlock_kami_ideas_tt: "允许使用「§Y神明理念§!」"
+ THE_unlock_human_ideas_tt: "允许使用「§Y人类理念§!」"
+ THE_unlock_fairy_ideas_tt: "允许使用「§Y妖精理念§!」"
+ THE_unlock_lunarian_ideas_tt: "允许使用「§Y月人理念§!」"
  THE_unlock_gensokyan_ideas_tt: "允许使用「§Y幻想乡理念§!」"
  THE_special_culture_ideas_test_tt: "为玩家解锁「§Y东方风云拓展§!」所有新增理念组。"
 ###CUSTOM_TOOLTIP_END
