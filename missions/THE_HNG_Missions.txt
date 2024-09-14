@@ -1745,7 +1745,7 @@ THE_HNG_1_4 = {
 		trigger = { 
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 15
-				country_or_non_sovereign_subject_holds = ROOT
+				region = tibet_region
 			}
 		} 
 		
