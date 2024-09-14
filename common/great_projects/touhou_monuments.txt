@@ -901,10 +901,10 @@ th_monument_myouren_temple = {
 	}
 	tier_1 = {
 		upgrade_time = {
-			months = 30
+			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 250
+			factor = 1000
 		}
 		province_modifiers = {
 		}
@@ -918,10 +918,10 @@ th_monument_myouren_temple = {
 	}
 	tier_2 = {
 		upgrade_time = {
-			months = 60
+			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 500
+			factor = 2000
 		}
 		province_modifiers = {
 			local_prosperity_growth = 0.1
@@ -941,10 +941,10 @@ th_monument_myouren_temple = {
 	}
 	tier_3 = {
 		upgrade_time = {
-			months = 90
+			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 750
+			factor = 5000
 		}
 		province_modifiers = {
 			local_prosperity_growth = 0.2
@@ -1134,10 +1134,10 @@ th_monument_dragons_palace = {
 	}
 	tier_1 = {
 		upgrade_time = {
-			months = 30
+			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 250
+			factor = 1000
 		}
 		province_modifiers = {
 		}
@@ -1153,10 +1153,10 @@ th_monument_dragons_palace = {
 	}
 	tier_2 = {
 		upgrade_time = {
-			months = 60
+			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 500
+			factor = 2000
 		}
 		province_modifiers = {
 			local_ship_repair = 0.66
@@ -1180,10 +1180,10 @@ th_monument_dragons_palace = {
 	}
 	tier_3 = {
 		upgrade_time = {
-			months = 90
+			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 750
+			factor = 5000
 		}
 		province_modifiers = {
 			local_ship_repair = 1.33
