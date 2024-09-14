@@ -2013,10 +2013,10 @@ th_monument_youkai_forest = {
 	}
 	tier_1 = {
 		upgrade_time = {
-			months = 30
+			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 250
+			factor = 1000
 		}
 		province_modifiers = {
 		}
@@ -2026,20 +2026,24 @@ th_monument_youkai_forest = {
 			governing_capacity = 150
 		}
 		on_upgraded = {
-			owner = {
-				add_estate_loyalty = {
-					estate = estate_nobles
-					loyalty = 10
+		}
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					has_government_mechanic = yokari_forest_mechanic
 				}
+			}
+			modifier = {
+				monthly_yokari_forest_doom_power = 0.05
 			}
 		}
 	}
 	tier_2 = {
 		upgrade_time = {
-			months = 60
+			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 500
+			factor = 2000
 		}
 		province_modifiers = {
 			local_hostile_movement_speed = -0.25
@@ -2052,22 +2056,36 @@ th_monument_youkai_forest = {
 		}
 		country_modifiers = {
 			governing_capacity = 200
+			nobles_loyalty_modifier = 0.05
 		}
 		on_upgraded = {
-			owner = {
-				add_estate_loyalty = {
-					estate = estate_nobles
-					loyalty = 10
+		}
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					has_government_mechanic = yokari_forest_mechanic
 				}
+			}
+			modifier = {
+				monthly_yokari_forest_doom_power = 0.15
+			}
+		}
+		conditional_modifier = {
+			trigger = {
+				religion = th_kagiyama
+				has_owner_religion = yes
+			}
+			modifier = {
+				church_power_modifier = 0.1
 			}
 		}
 	}
 	tier_3 = {
 		upgrade_time = {
-			months = 90
+			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 750
+			factor = 5000
 		}
 		province_modifiers = {
 			local_hostile_movement_speed = -0.5
@@ -2080,13 +2098,27 @@ th_monument_youkai_forest = {
 		}
 		country_modifiers = {
 			governing_capacity = 250
+			nobles_loyalty_modifier = 0.1
 		}
 		on_upgraded = {
-			owner = {
-				add_estate_loyalty = {
-					estate = estate_nobles
-					loyalty = 10
+		}
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					has_government_mechanic = yokari_forest_mechanic
 				}
+			}
+			modifier = {
+				monthly_yokari_forest_doom_power = 0.25
+			}
+		}
+		conditional_modifier = {
+			trigger = {
+				religion = th_kagiyama
+				has_owner_religion = yes
+			}
+			modifier = {
+				church_power_modifier = 0.25
 			}
 		}
 	}
@@ -2143,10 +2175,10 @@ th_monument_chireiden = {
 	}
 	tier_1 = {
 		upgrade_time = {
-			months = 30
+			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 250
+			factor = 1000
 		}
 		province_modifiers = {
 		}
@@ -2156,20 +2188,14 @@ th_monument_chireiden = {
 			governing_capacity = 150
 		}
 		on_upgraded = {
-			owner = {
-				add_country_modifier = {
-					name = th_better_diplomacy
-					duration = 3650
-				}
-			}
 		}
 	}
 	tier_2 = {
 		upgrade_time = {
-			months = 60
+			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 500
+			factor = 2000
 		}
 		province_modifiers = {
 			institution_growth = 4
@@ -2182,22 +2208,17 @@ th_monument_chireiden = {
 		}
 		country_modifiers = {
 			governing_capacity = 200
+			diplomatic_annexation_cost = -0.05
 		}
 		on_upgraded = {
-			owner = {
-				add_country_modifier = {
-					name = th_better_diplomacy
-					duration = 3650
-				}
-			}
 		}
 	}
 	tier_3 = {
 		upgrade_time = {
-			months = 90
+			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 750
+			factor = 5000
 		}
 		province_modifiers = {
 			institution_growth = 8
@@ -2210,14 +2231,9 @@ th_monument_chireiden = {
 		}
 		country_modifiers = {
 			governing_capacity = 250
+			diplomatic_annexation_cost = -0.1
 		}
 		on_upgraded = {
-			owner = {
-				add_country_modifier = {
-					name = th_better_diplomacy
-					duration = 3650
-				}
-			}
 		}
 	}
 }
@@ -2273,10 +2289,10 @@ th_monument_yamas_palace = {
 	}
 	tier_1 = {
 		upgrade_time = {
-			months = 30
+			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 250
+			factor = 1000
 		}
 		province_modifiers = {
 		}
@@ -2286,21 +2302,14 @@ th_monument_yamas_palace = {
 			governing_capacity = 150
 		}
 		on_upgraded = {
-			owner = {
-				add_corruption = -1
-				add_country_modifier = {
-					name = th_yamas_lecture
-					duration = 3650
-				}
-			}
 		}
 	}
 	tier_2 = {
 		upgrade_time = {
-			months = 60
+			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 500
+			factor = 2000
 		}
 		province_modifiers = {
 			local_state_maintenance_modifier = -0.33
@@ -2313,15 +2322,9 @@ th_monument_yamas_palace = {
 		}
 		country_modifiers = {
 			governing_capacity = 200
+			yearly_corruption = -0.1
 		}
 		on_upgraded = {
-			owner = {
-				add_corruption = -1
-				add_country_modifier = {
-					name = th_yamas_lecture
-					duration = 3650
-				}
-			}
 		}
 	}
 	tier_3 = {
@@ -2342,15 +2345,9 @@ th_monument_yamas_palace = {
 		}
 		country_modifiers = {
 			governing_capacity = 250
+			yearly_corruption = -0.2
 		}
 		on_upgraded = {
-			owner = {
-				add_corruption = -1
-				add_country_modifier = {
-					name = th_yamas_lecture
-					duration = 3650
-				}
-			}
 		}
 	}
 }
@@ -2417,14 +2414,9 @@ th_monument_lunar_capital = {
 		}
 		country_modifiers = {
 			governing_capacity = 150
+			culture_conversion_cost = -0.05
 		}
 		on_upgraded = {
-			owner = {
-				add_country_modifier = {
-					name = th_lunarian_assimilation
-					duration = 3650
-				}
-			}
 		}
 	}
 	tier_2 = {
@@ -2443,14 +2435,9 @@ th_monument_lunar_capital = {
 		}
 		country_modifiers = {
 			governing_capacity = 200
+			culture_conversion_cost = -0.1
 		}
 		on_upgraded = {
-			owner = {
-				add_country_modifier = {
-					name = th_lunarian_assimilation
-					duration = 3650
-				}
-			}
 		}
 	}
 	tier_3 = {
@@ -2469,14 +2456,9 @@ th_monument_lunar_capital = {
 		}
 		country_modifiers = {
 			governing_capacity = 250
+			culture_conversion_cost = -0.2
 		}
 		on_upgraded = {
-			owner = {
-				add_country_modifier = {
-					name = th_lunarian_assimilation
-					duration = 3650
-				}
-			}
 		}
 	}
 }
@@ -2842,10 +2824,10 @@ th_monument_kourindou = {
 	}
 	tier_1 = {
 		upgrade_time = {
-			months = 30
+			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 250
+			factor = 1000
 		}
 		province_modifiers = {
 		}
@@ -2858,10 +2840,10 @@ th_monument_kourindou = {
 	}
 	tier_2 = {
 		upgrade_time = {
-			months = 60
+			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 500
+			factor = 2000
 		}
 		province_modifiers = {
 		}
@@ -2877,10 +2859,10 @@ th_monument_kourindou = {
 	}
 	tier_3 = {
 		upgrade_time = {
-			months = 90
+			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 2000
+			factor = 5000
 		}
 		province_modifiers = {
 		}
@@ -2946,10 +2928,10 @@ th_monument_mystia_food_cart = {
 	}
 	tier_1 = {
 		upgrade_time = {
-			months = 30
+			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 250
+			factor = 1000
 		}
 		province_modifiers = {
 			supply_limit = 6
@@ -2964,10 +2946,10 @@ th_monument_mystia_food_cart = {
 	}
 	tier_2 = {
 		upgrade_time = {
-			months = 60
+			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 500
+			factor = 2000
 		}
 		province_modifiers = {
 			supply_limit = 8
@@ -2984,10 +2966,10 @@ th_monument_mystia_food_cart = {
 	}
 	tier_3 = {
 		upgrade_time = {
-			months = 90
+			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 750
+			factor = 5000
 		}
 		province_modifiers = {
 			supply_limit = 10
