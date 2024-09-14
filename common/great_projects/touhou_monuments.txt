@@ -2329,10 +2329,10 @@ th_monument_yamas_palace = {
 	}
 	tier_3 = {
 		upgrade_time = {
-			months = 90
+			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 750
+			factor = 5000
 		}
 		province_modifiers = {
 			local_state_maintenance_modifier = -0.66
@@ -2403,10 +2403,10 @@ th_monument_lunar_capital = {
 	}
 	tier_1 = {
 		upgrade_time = {
-			months = 30
+			months = 120
 		}
 		cost_to_upgrade = {
-			factor = 250
+			factor = 1000
 		}
 		province_modifiers = {
 		}
@@ -2421,10 +2421,10 @@ th_monument_lunar_capital = {
 	}
 	tier_2 = {
 		upgrade_time = {
-			months = 60
+			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 500
+			factor = 2000
 		}
 		province_modifiers = {
 			trade_goods_size = 1
@@ -2442,10 +2442,10 @@ th_monument_lunar_capital = {
 	}
 	tier_3 = {
 		upgrade_time = {
-			months = 90
+			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 750
+			factor = 5000
 		}
 		province_modifiers = {
 			trade_goods_size = 2
