@@ -1970,27 +1970,36 @@ THE_HNG_1_4 = {
 		trigger = { 
 			if = {
 				limit = {
-				has_country_flag = hng_do_the_change1_flag
-				 }
-					is_emperor_of_china = yes
-					has_disaster = the_hng_disasters_one
-					has_estate_privilege = THE_HNG_not_believe
+					has_country_flag = hng_do_the_change1_flag
+				}
+				OR = {
+					AND = {
+						is_emperor_of_china = yes
+						has_disaster = the_hng_disasters_one
+						has_estate_privilege = THE_HNG_not_believe
+					}
+					AND = {
+						has_country_modifier = THE_HNG_more_efficient_land_system
+						has_country_modifier = THE_HNG_strict_and_complete_economic
+						has_country_modifier = THE_HNG_modernization_gensokyo_army
+					}
+				}
 			}
 			if = {
 				limit = {
-				has_country_flag = hng_do_the_change2_flag
-				 }
-									has_country_modifier = hng_army_come_from_gensokyo
-					has_estate_privilege = THE_HNG_not_believe 
+					has_country_flag = hng_do_the_change2_flag
+				}
+				has_country_modifier = hng_army_come_from_gensokyo
+				has_estate_privilege = THE_HNG_not_believe 
 			}
 			if = {
 				limit = {
-				has_country_flag = hng_do_the_change3_flag
-				 }
-				 	has_country_modifier = THE_HNG_more_efficient_land_system
-					has_country_modifier = THE_HNG_strict_and_complete_economic
-					has_country_modifier = THE_HNG_modernization_gensokyo_army
-					is_year = 1600
+					has_country_flag = hng_do_the_change3_flag
+				}
+				has_country_modifier = THE_HNG_more_efficient_land_system
+				has_country_modifier = THE_HNG_strict_and_complete_economic
+				has_country_modifier = THE_HNG_modernization_gensokyo_army
+				is_year = 1547
 			}
 			estate_loyalty = {
 				estate = all
@@ -5653,7 +5662,7 @@ THE_HNG_2_5 = {
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 			}
-
+			
 		} 
 		
 		trigger = { 
