@@ -150,9 +150,6 @@ country_event = {
 			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = pommeranian }
 		}
 		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = pommeranian }
-		ai_chance = {
-			factor = 1
-		}
 	}
 	option = {
 		name = THE_ROD_events.3.b
@@ -160,9 +157,6 @@ country_event = {
 			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = prussian }
 		}
 		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = prussian }
-		ai_chance = {
-			factor = 1
-		}
 	}
 	option = {
 		name = THE_ROD_events.3.c
@@ -170,9 +164,6 @@ country_event = {
 			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = baltic_german }
 		}
 		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = baltic_german }
-		ai_chance = {
-			factor = 1
-		}
 	}
 	option = {
 		name = THE_ROD_events.3.d
@@ -180,9 +171,6 @@ country_event = {
 			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = lower_saxon }
 		}
 		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = lower_saxon }
-		ai_chance = {
-			factor = 1
-		}
 	}
 	option = {
 		name = THE_ROD_events.3.e
@@ -190,9 +178,6 @@ country_event = {
 			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = hannoverian }
 		}
 		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = hannoverian }
-		ai_chance = {
-			factor = 1
-		}
 	}
 	option = {
 		name = THE_ROD_events.3.f
@@ -200,9 +185,6 @@ country_event = {
 			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = hessian }
 		}
 		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = hessian }
-		ai_chance = {
-			factor = 1
-		}
 	}
 	option = {
 		name = THE_ROD_events.3.g
@@ -210,9 +192,6 @@ country_event = {
 			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = saxon }
 		}
 		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = saxon }
-		ai_chance = {
-			factor = 1
-		}
 	}
 	option = {
 		name = THE_ROD_events.3.h
@@ -220,9 +199,6 @@ country_event = {
 			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = franconian }
 		}
 		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = franconian }
-		ai_chance = {
-			factor = 1
-		}
 	}
 	option = {
 		name = THE_ROD_events.3.i
@@ -230,9 +206,6 @@ country_event = {
 			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = swabian }
 		}
 		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = swabian }
-		ai_chance = {
-			factor = 1
-		}
 	}
 	option = {
 		name = THE_ROD_events.3.j
@@ -240,9 +213,6 @@ country_event = {
 			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = swiss }
 		}
 		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = swiss }
-		ai_chance = {
-			factor = 1
-		}
 	}
 	option = {
 		name = THE_ROD_events.3.k
@@ -250,9 +220,6 @@ country_event = {
 			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = bavarian }
 		}
 		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = bavarian }
-		ai_chance = {
-			factor = 1
-		}
 	}
 	option = {
 		name = THE_ROD_events.3.l
@@ -260,9 +227,6 @@ country_event = {
 			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = austrian }
 		}
 		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = austrian }
-		ai_chance = {
-			factor = 1
-		}
 	}
 	option = {
 		name = THE_ROD_events.3.m
@@ -270,9 +234,6 @@ country_event = {
 			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = dutch }
 		}
 		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = dutch }
-		ai_chance = {
-			factor = 1
-		}
 	}
 	option = {
 		name = THE_ROD_events.3.n
@@ -280,9 +241,6 @@ country_event = {
 			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = flemish }
 		}
 		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = flemish }
-		ai_chance = {
-			factor = 1
-		}
 	}
 	option = {
 		name = THE_ROD_events.3.o
@@ -290,9 +248,6 @@ country_event = {
 			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = frisian }
 		}
 		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = frisian }
-		ai_chance = {
-			factor = 1
-		}
 	}
 }
 
@@ -1498,5 +1453,51 @@ country_event = {
 		}
 		custom_tooltip = THE_ROD_baltic_trade_event_tt
 		custom_tooltip = empty_line_tt
+	}
+}
+
+
+### German Empire Event Group!
+### 德意志帝国事件组
+country_event = {
+	id = THE_ROD_events.28
+	title = THE_ROD_events.28.title
+	desc = THE_ROD_events.28.desc
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 1200
+		modifier = {
+			factor = 0.5
+			has_idea_group = mercenary_ideas
+		}
+		modifier = {
+			factor = 0.5
+			full_idea_group = mercenary_ideas
+		}
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+	}
+	
+	option = {
+		name = THE_ROD_events.28.a
+		custom_tooltip = THE_ROD_german_empire_event_tt
+		custom_tooltip = empty_line_tt
+		custom_tooltip = THE_ROD_unlock_more_mercenary_tt
+		tooltip = {
+			add_country_modifier = {
+				name = mercenaries_to_the_standard
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			remove_country_modifier = mercenaries_to_the_standard
+			add_country_modifier = {
+				name = mercenaries_to_the_standard
+				duration = -1
+			}
+		}
 	}
 }

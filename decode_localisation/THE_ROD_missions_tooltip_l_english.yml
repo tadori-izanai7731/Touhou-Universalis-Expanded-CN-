@@ -226,6 +226,9 @@ l_english:
  THE_ROD_decrease_dark_moon_night_negative_effect_tt: "§Y降低§O吞噬夜光§!带来的负面效果。§!"
  THE_ROD_upgrade_baltic_sea_port_tt: "[This.GetName]的港口将得到扩建。\n[This.GetName]获得「§Y波罗的海贸易中心§!」持续到游戏结束，给予如下效果:\n商人团: §G+1§!\n贸易效率: §G+2.0%§!\n贸易引导: §G+3.0%§!\n省份贸易竞争力修正: §G+4.0%§!\n已配置商人团竞争力修正: §G+5.0%§!"
  THE_ROD_baltic_trade_event_tt: "该事件属于@ROD§M波罗的海贸易§!事件组。"
+ THE_ROD_german_empire_event_tt: "该事件属于@ROD§O德意志帝国§!事件组。"
+ THE_ROD_god_and_saint_event_tt: "该事件属于@ROD§Y神与圣§!事件组。"
+ THE_ROD_darkness_order_event_tt: "该事件属于@ROD§J宵暗骑士团§!事件组。"
  THE_ROD_has_tolerance_own_10: "拥有至少§G+10§!正统信仰容忍度"
  THE_ROD_lubeck_crane_tt: "\n治下每个拥有§Y贸易§!和§Y海军上限§!建筑的省份获得§G1§!£icon_production_in_text£§Y基础生产§!\n之后每次升级£dip£§Y外交科技§!都会触发该效果"
  THE_ROD_salt_road_tt: "盐路繁荣"
@@ -234,6 +237,7 @@ l_english:
  THE_ROD_discover_gold_tt: "居然是真的！"
  THE_ROD_cost_500_purchase_iceland_tt: "花费§Y500§!¤购买§Y北大西洋诸岛§!区域的所有权。"
  THE_ROD_subarctic_islands_area_extra_improve_bonus_tt: "提升§Y北大西洋诸岛§!区域的省份将获得§G双倍§!发展度。"
+ THE_ROD_unlock_more_mercenary_tt: "§Y解锁更多佣兵团。§!"
  THE_ROD_not_complete_event_ttt: "没做完"
 ###TOOLTIP_END
 
@@ -584,7 +588,11 @@ l_english:
  THE_ROD_events.27.title: "北大西洋航路"
  THE_ROD_events.27.desc: "冰岛最早由维京人发现，这里远离欧洲大陆，气候寒冷，挪威最终统治了这座岛屿。但是冰岛遍布火山和河流，来自地下的热量使冰岛能够发展农业；来自北大西洋的温暖洋流为冰岛渔场带来了丰富的鳕鱼等鱼类资源，是当地主要的出口商品。出于[Root.GetName]的贸易需求，当地进出口贸易基本被[Root.GetName]的商人垄断，与冰岛的联系更加紧密，通往冰岛的航路也更加繁荣。"
  THE_ROD_events.27.a: "想念雾之湖的人鱼小姐。"
- THE_ROD_events.27.b: "鳕鱼看上去不好吃。"
+ THE_ROD_events.27.b: "鳕鱼好吃吗？"
+
+ THE_ROD_events.28.title: "逐金者"
+ THE_ROD_events.28.desc: "神圣罗马帝国内部城邦林立，对于一些地理条件较差的地区根本无法做到自给自足，更不用说向皇帝提供财富和兵员。由此，德意志地区成为了雇佣兵最庞大的发源地，来自穷山恶水的人为了金钱不择手段，凭借原始但有效的作战方式占据了雇佣兵市场。对于露米娅，这里没有幻想乡随处可见的小妖，在战场上使用自己的士兵和外国雇佣的士兵到底有什么区别，并不是一件容易理解的事。"
+ THE_ROD_events.28.a: "所以用钱就可以换来士兵，真奇怪。"
 ###EVENT_END
 
 ###VARIABLE
