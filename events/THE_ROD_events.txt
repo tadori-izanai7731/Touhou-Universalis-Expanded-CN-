@@ -363,11 +363,11 @@ country_event = {
 		OR = { tag = ROD was_tag = ROD }
 		mission_completed = THE_ROD_2_3
 		mission_completed = THE_ROD_1_12
-		is_year = 1550
+		is_year = 1500
 	}
 	
 	mean_time_to_happen = {
-		months = 600
+		months = 300
 	}
 	
 	option = {
@@ -718,7 +718,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 600
+		months = 300
 	}
 	
 	option = {
@@ -1250,15 +1250,7 @@ country_event = {
 			every_owned_province = {
 				limit = {
 					has_trade_building_trigger = yes
-				}
-				add_base_production = 1
-			}
-			every_owned_province = {
-				limit = {
-					OR = {
-						has_dock_building_trigger = yes
-						has_shipyard_building_trigger = yes
-					}
+					has_shipyard_building_trigger = yes
 				}
 				add_base_production = 1
 			}

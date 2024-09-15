@@ -412,7 +412,7 @@ THE_ROD_eagle_up_modifier = {
 	global_unrest = -2
 	min_autonomy_in_territories = -0.1
 	all_estate_loyalty_equilibrium = 0.1
-	monthly_THE_ROD_german_cultural_unity_power = 1
+	monthly_THE_ROD_german_cultural_unity_power = 0.5
 	num_accepted_cultures = 15
 }
 
