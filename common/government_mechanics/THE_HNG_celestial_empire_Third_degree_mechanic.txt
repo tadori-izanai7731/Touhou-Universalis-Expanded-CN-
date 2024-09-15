@@ -32,11 +32,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 			scaled_modifier = {
 				trigger = {
 					adm = 4
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -51,11 +49,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 			scaled_modifier = {
 				trigger = {
 					adm = 5
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -70,11 +66,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 			scaled_modifier = {
 				trigger = {
 					adm = 6
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -89,11 +83,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 			scaled_modifier = {
 				trigger = {
 					has_adm_advisor_3 = yes
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -107,11 +99,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 			}
 			scaled_modifier = {
 				trigger = {
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -125,11 +115,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 			}
 			scaled_modifier = {
 				trigger = {
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -145,11 +133,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 				trigger = {
 					inflation = 1
 					NOT = { inflation = 5 }
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -165,11 +151,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 				trigger = {
 					inflation = 5
 					NOT = { inflation = 10 }
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -185,11 +169,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 				trigger = {
 					inflation = 10
 					NOT = { inflation = 15 }
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -205,11 +187,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 				trigger = {
 					inflation = 15
 					NOT = { inflation = 20 }
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -224,11 +204,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 			scaled_modifier = {
 				trigger = {
 					inflation = 20
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -244,11 +222,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 				trigger = {
 					monthly_income = 200
 					NOT = { monthly_income = 400 }
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -264,11 +240,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 				trigger = {
 					monthly_income = 400
 					NOT = { monthly_income = 600 }
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -284,11 +258,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 				trigger = {
 					monthly_income = 600
 					NOT = { monthly_income = 800 }
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -304,11 +276,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 				trigger = {
 					monthly_income = 800
 					NOT = { monthly_income = 1000 }
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -323,11 +293,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 			scaled_modifier = {
 				trigger = {
 					monthly_income = 1000
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -343,11 +311,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 				trigger = {
 					is_year = 1500
 					NOT = { 	is_year = 1550 }
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -363,11 +329,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 				trigger = {
 					is_year = 1550
 					NOT = { 	is_year = 1600 }
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -383,11 +347,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 				trigger = {
 					is_year = 1600
 					NOT = { 	is_year = 1650 }
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -402,11 +364,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 			scaled_modifier = {
 				trigger = {
 					is_year = 1650
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -421,11 +381,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 			scaled_modifier = {
 				trigger = {
 					gold_income_percentage = 0.1
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic} 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -598,11 +556,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 			scaled_modifier = {
 				trigger = {
 					dip = 4
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -617,11 +573,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 			scaled_modifier = {
 				trigger = {
 					dip = 5
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -636,11 +590,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 			scaled_modifier = {
 				trigger = {
 					dip = 6
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -655,11 +607,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 			scaled_modifier = {
 				trigger = {
 					has_dip_advisor_3 = yes
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -673,11 +623,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 			}
 			scaled_modifier = {
 				trigger = {
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -691,11 +639,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 			}
 			scaled_modifier = {
 				trigger = {
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -711,11 +657,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 				trigger = {
 					total_development = 1500
 					NOT = { total_development = 2000 }
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -731,11 +675,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 				trigger = {
 					total_development = 2000
 					NOT = { total_development = 2500 }
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -751,11 +693,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 				trigger = {
 					total_development = 2500
 					NOT = { total_development = 3000 }
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -771,11 +711,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 				trigger = {
 					total_development = 3000
 					NOT = { total_development = 3500 }
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -791,11 +729,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 				trigger = {
 					total_development = 3500
 					NOT = { total_development = 4000 }
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -810,11 +746,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 			scaled_modifier = {
 				trigger = {
 					total_development = 4000
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -829,11 +763,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 			scaled_modifier = {
 				trigger = {
 					is_bankrupt = yes
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -849,11 +781,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 				trigger = {
 					num_of_loans = 5
 					NOT = { num_of_loans = 10 }
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -869,11 +799,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 				trigger = {
 					num_of_loans = 10
 					NOT = { num_of_loans = 15 }
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -888,11 +816,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 			scaled_modifier = {
 				trigger = {
 					num_of_loans = 15
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -908,11 +834,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 				trigger = {
 					num_of_rebel_armies = 1
 					NOT = { 					num_of_rebel_armies = 5 }
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -928,11 +852,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 				trigger = {
 					num_of_rebel_armies = 5
 					NOT = { 					num_of_rebel_armies = 10 }
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
@@ -947,11 +869,9 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 			scaled_modifier = {
 				trigger = {
 					num_of_rebel_armies = 15
-					OR = {
-						NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
-						NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-						NOT = { has_country_flag = hng_do_the_change3_flag }
-					}
+					NOT = { has_country_modifier = THE_HNG_more_efficient_land_system } 
+					NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
+					NOT = { has_country_flag = hng_do_the_change3_flag }
 					has_estate = estate_burghers
 					has_government_power = { 
 						mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
