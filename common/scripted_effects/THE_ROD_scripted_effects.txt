@@ -338,7 +338,7 @@ THE_ROD_on_adm_development_scripted_effect = {
 				province_id = 1978
 				province_id = 1979
 			}
-			FROM = { has_country_flag = THE_ROD_subarctic_islands_area_extra_improve_bonus_flag }
+			owner = { has_country_flag = THE_ROD_subarctic_islands_area_extra_improve_bonus_flag }
 		}
 		add_base_tax = 1
 	}
@@ -353,7 +353,7 @@ THE_ROD_on_dip_development_scripted_effect = {
 				province_id = 1978
 				province_id = 1979
 			}
-			FROM = { has_country_flag = THE_ROD_subarctic_islands_area_extra_improve_bonus_flag }
+			owner = { has_country_flag = THE_ROD_subarctic_islands_area_extra_improve_bonus_flag }
 		}
 		add_base_production = 1
 	}
@@ -368,7 +368,7 @@ THE_ROD_on_mil_development_scripted_effect = {
 				province_id = 1978
 				province_id = 1979
 			}
-			FROM = { has_country_flag = THE_ROD_subarctic_islands_area_extra_improve_bonus_flag }
+			owner = { has_country_flag = THE_ROD_subarctic_islands_area_extra_improve_bonus_flag }
 		}
 		add_base_manpower = 1
 	}

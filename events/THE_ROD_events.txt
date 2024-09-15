@@ -1471,7 +1471,7 @@ country_event = {
 				add_treasury = -500
 				subarctic_islands_area = {
 					limit = {
-						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+						NOT = { owned_by = ROOT }
 					}
 					remove_core = owner
 					cede_province = ROOT
