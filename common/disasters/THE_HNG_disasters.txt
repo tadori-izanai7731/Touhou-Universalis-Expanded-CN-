@@ -195,11 +195,7 @@ the_hng_disasters_two = {
 			adm = 6
 		}
 		modifier = {
-			factor = -1
-			dip = 4
-		}
-		modifier = {
-			factor = -1
+			factor = -2
 			dip = 5
 		}
 		modifier = {
@@ -207,11 +203,11 @@ the_hng_disasters_two = {
 			dip = 6
 		}
 		modifier = {
-			factor = 1
+			factor = 2
 			num_of_rebel_armies = 1
 		}
 		modifier = {
-			factor = 1
+			factor = 2
 			num_of_rebel_controlled_provinces = 1
 		}
 		modifier = {
@@ -229,6 +225,14 @@ the_hng_disasters_two = {
 		modifier = {
 			factor = 5
 			has_any_disaster = yes
+		}
+		modifier = {
+			factor = 5
+			total_development = 2500
+		}
+		modifier = {
+			factor = 5
+			total_development = 3000
 		}
 	}
 	can_end = {

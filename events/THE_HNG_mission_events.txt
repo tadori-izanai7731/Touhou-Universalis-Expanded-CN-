@@ -144,6 +144,17 @@ country_event = {
 				}
 			}
 		}
+		if = {
+			limit = {
+				religion = confucianism
+			}
+			ANN = {
+			add_harmonized_religion = tengri_pagan_reformed
+			add_harmonized_religion = buddhism
+			add_harmonized_religion = mahayana
+			add_harmonized_religion = th_hakureishinto
+			}
+		}
 		event_target:EmperorOfChina = {
 			create_march = ANN
 			add_country_modifier = {
@@ -228,6 +239,17 @@ country_event = {
 		create_march = ANN
 		add_years_of_income = 2
 		add_army_professionalism = 0.05
+		if = {
+			limit = {
+				religion = confucianism
+			}
+			ANN = {
+			add_harmonized_religion = tengri_pagan_reformed
+			add_harmonized_religion = buddhism
+			add_harmonized_religion = mahayana
+			add_harmonized_religion = th_hakureishinto
+			}
+		}
 	}
 	option = {
 		name = flavor_THE_HNG_mission_events.4.c
@@ -683,6 +705,17 @@ country_event = {
 		set_country_flag = THE_HNG_had_NPL_subject
 		NPL = {
 			ROOT = { custom_tooltip = THE_HNG_EXTRA_can_inhert_tag_30_years_tt }
+		}
+		if = {
+			limit = {
+				religion = confucianism
+			}
+			NPL = {
+			add_harmonized_religion = buddhism
+			add_harmonized_religion = sunni
+			add_harmonized_religion = hinduism
+			add_harmonized_religion = th_hakureishinto
+			}
 		}
 	}
 }
@@ -1789,6 +1822,17 @@ country_event = {
 				}
 			}
 		}
+		if = {
+			limit = {
+				religion = confucianism
+			}
+			PER = {
+			add_harmonized_religion = zoroastrian
+			add_harmonized_religion = sunni
+			add_harmonized_religion = hinduism
+			add_harmonized_religion = th_hakureishinto
+			}
+		}
 	}
 	# option = {
 	# 	name = flavor_THE_HNG_mission_events.52.b
@@ -1973,6 +2017,16 @@ country_event = {
 				moluccas_region = {
 					add_permanent_claim = LFA 
 				}
+			}
+		}
+		if = {
+			limit = {
+				religion = confucianism
+			}
+			LFA = {
+			add_harmonized_religion = sunni
+			add_harmonized_religion = hinduism
+			add_harmonized_religion = th_hakureishinto
 			}
 		}
 	}
