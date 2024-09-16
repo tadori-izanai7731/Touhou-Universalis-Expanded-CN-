@@ -11380,6 +11380,21 @@ brandenburg_gate = {
 				max_absolutism_effect = 0.1
 			}
 		}
+		conditional_modifier = {
+			tooltip_potential = {
+				owner = {
+					has_country_flag = THE_ROD_upgrade_brandenburg_gate_flag
+				}
+			}
+			trigger = {
+				owner = {
+					has_government_mechanic = THE_ROD_german_culture_unity_mechanic
+				}
+			}
+			modifier = {
+				monthly_THE_ROD_german_cultural_unity_power = 0.5
+			}
+		}
 		on_upgraded = {
 		}
 	}
