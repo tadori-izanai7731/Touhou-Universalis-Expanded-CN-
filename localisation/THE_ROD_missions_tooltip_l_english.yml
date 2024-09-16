@@ -108,6 +108,7 @@
  THE_ROD_every_poland_or_ruthenia_province_tt: "»lNÏk*NMOŽN§YâlpQ§!b§Yœ^X<SšN§!0W:S„vwýN:"
  THE_ROD_can_use_poland_crown_ab_tt: "AQ¸‹O(u0§YâlpQ‹s Q§!0öeãNýw›R0"
  THE_ROD_2_13_case1_tt_yes: "£yes£‚YœgSVMRYŽN§Y0Wt'YÑS°s§!b§Y—RYe9ei—§!öeãNÿ·ƒ—V‚YNHeœg:"
+ THE_ROD_2_13_case1_tt_no: "£no£‚YœgSVMRYŽN§Y0Wt'YÑS°s§!b§Y—RYe9ei—§!öeãNÿ·ƒ—V‚YNHeœg:"
  THE_ROD_unlock_darkness_trade_war_tt: "ã‰•±Rbt1u0§YµR¸Sb‰N§!0\nå‹±Rbt1uêSýwrR©‹§M¿lwmwýN§!ÿïSùRNb	g(W§YâlW„vwm§!0§YTKQ§!b§Yú‹+YåTW·V§!8f:Såb	g§Y1%§!8fÞz‰N›R„výV¶RO(u0"
  THE_ROD_mixture_naval_doctrine_1_tt_yes: "£yes£‚YœgûN¡R0§YÎN[33.GetName]úQÑS§!0òTŒRbÿ·ƒ—V‚YNHeœg:"
  THE_ROD_mixture_naval_doctrine_1_tt_no: "£no£‚YœgûN¡R0§YÎN[33.GetName]úQÑS§!0òTŒRbÿ·ƒ—V‚YNHeœg:"
@@ -225,6 +226,9 @@
  THE_ROD_decrease_dark_moon_night_negative_effect_tt: "§YM–NO§OTlVYIQ§!&^eg„vb—Heœg0§!"
  THE_ROD_upgrade_baltic_sea_port_tt: "[This.GetName]„v=nãSS—V0Ribú^0\n[This.GetName]·ƒ—V0§YâlW„vwm8f-NÃV§!0cíu0R8nbÓumgÿÙuˆN‚YNHeœg:\nFUºNâV: §G+1§!\n8fHe‡s: §G+2.0%§!\n8fVüR: §G+3.0%§!\nwýN8fÞz‰N›RîOck: §G+4.0%§!\nòTM‘nFUºNâVÞz‰N›RîOck: §G+5.0%§!"
  THE_ROD_baltic_trade_event_tt: "å‹‹NöN^SŽN@ROD§MâlW„vwm8f§!‹NöNÄu0"
+ THE_ROD_german_empire_event_tt: "å‹‹NöN^SŽN@ROD§O·Va×V^ýV§!‹NöNÄu0"
+ THE_ROD_god_and_saint_event_tt: "å‹‹NöN^SŽN@ROD§Y^yN1W§!‹NöNÄu0"
+ THE_ROD_darkness_order_event_tt: "å‹‹NöN^SŽN@ROD§JµR—f‘šëXâV§!‹NöNÄu0"
  THE_ROD_has_tolerance_own_10: "åb	góS§G+10§!ckßuáOðN¹RÍV¦^"
  THE_ROD_lubeck_crane_tt: "\n»lNÏk*Nåb	g§Y8f§!ŒT§Ywm›QNP–§!ú^Qr„vwýN·ƒ—V§G1§!£icon_production_in_text£§YúWNxuµN§!\nKNTÏk!kGSµu£dip£§YY²NÑyŽb§!ýOæ‰ÑSå‹Heœg"
  THE_ROD_salt_road_tt: "ÐvïAucƒ"
@@ -233,6 +237,7 @@
  THE_ROD_discover_gold_tt: "ES6q=fw„vÿ"
  THE_ROD_cost_500_purchase_iceland_tt: "±‚9§Y500§!¤-pN§YS'Y‰mø‹›S§!:SßW„vNb	gCg0"
  THE_ROD_subarctic_islands_area_extra_improve_bonus_tt: "ÐcGS§YS'Y‰mø‹›S§!:SßW„vwýNS·ƒ—V§GÌSP§!ÑSUS¦^0"
+ THE_ROD_unlock_more_mercenary_tt: "§Yã‰•ôfYcOuQâV0§!"
  THE_ROD_not_complete_event_ttt: "¡lZPŒR"
 ###TOOLTIP_END
 
@@ -378,7 +383,7 @@
  mechanic_THE_ROD_darkness_trade_war_without_trigger_yes: "ïSåNùRûNUOýV¶RO(u0§YµR¸Sb‰N§!0±Rbt1u"
  ability_THE_ROD_german_culture_unity_mechanic: "§M·Va×V‡eSßuN§!"
  THE_ROD_german_cultural_unity_power: "§M·Va×V‡eSßuNÛ¦^§!"
- THE_ROD_german_cultural_unity_power_desc: "Ïk*NòT¥c³u„v§Yåe3wüf§!‡eSSÐc›O§G+0.05§!g¦^§M·Va×V‡eSßuNÛ¦^§!\n\nÇ?eœ^’N¨R‡T§Yåe3wüf§!‡eSSOvQNQ`S(uïS¥c×S‡eSNP–ÿv^O§M·Va×V‡eSßuNÛ¦^§!·ƒ—V˜YHeœg"
+ THE_ROD_german_cultural_unity_power_desc: "Ïk*NòT¥c³u„v§Yåe3wüf§!‡eSSÐc›O§G+0.1§!g¦^§M·Va×V‡eSßuNÛ¦^§!\n\nÇ?eœ^’N¨R‡T§Yåe3wüf§!‡eSSOvQNQ`S(uïS¥c×S‡eSNP–ÿv^O§M·Va×V‡eSßuNÛ¦^§!·ƒ—V˜YHeœg"
  THE_ROD_THE_ROD_german_culture_unity_interaction: "‡Tåe3wüf‡eS"
  THE_ROD_THE_ROD_german_culture_unity_interaction_desc: ""
  monthly_THE_ROD_german_cultural_unity_power: "g¦^§M·Va×V‡eSßuNÛ¦^§!"
@@ -583,7 +588,11 @@
  THE_ROD_events.27.title: "S'Y‰m*‚ï"
  THE_ROD_events.27.desc: "°Q›Sgée1uôu¬NºNÑS°sÿÙÌ‘Ü»y'k2m'YF–ÿlPÒR·Qÿ*cZgÈußu»l†NÙµ^›SS0FO=f°Q›SM^kpqSŒT³lAmÿegê0WN„vípÏ‘O°Q›SýwYÑSUSœQNÿegêS'Y‰m„v)n–fmAm:N°Q›Sn:W&^eg†N0NÌR„vÕœ|œIr|œ‰|Dnÿ=fSV0WIN‰„vúQãSFUÁT0úQŽN[Root.GetName]„v8f—BlÿSV0WÛúQãS8fúW,g«ˆ[Root.GetName]„vFUºN„W­eÿN°Q›S„vTwû|ôf R'tÆRÿŽV°Q›S„v*‚ïmNôf RAucƒ0"
  THE_ROD_events.27.a: "ó`õVþ–KNVn„vºN|œSÐY0"
- THE_ROD_events.27.b: "Õœ|œwN»SN‹YT0"
+ THE_ROD_events.27.b: "Õœ|œ‹YTTÿ"
+
+ THE_ROD_events.28.title: "Ñ‘w"
+ THE_ROD_events.28.desc: "^y1WWlš^ýV…QèÎW¦—gËzÿùRŽNN›N0WtagöNƒîT„v0W:S9h,gàeÕlZP0RêÙuê³ÿôfN(uô‹T‡v^Ðc›O0ÌRŒTuQXT01udkÿ·Va×V0W:Sb:N†NÇ–cOuQgž^'Y„vÑSn0WÿegêwzqSv`4l„vºN:N†NÑ‘±”NébKbµkÿíQPŸSËYFO	gHe„vjOb¹eV`Snc†NÇ–cOuQ^:W0ùRŽN2—s|ZÿÙÌ‘¡l	g‰^ó`aN–YïSÁ‰„vS–Yÿ(Wb:WNO(uêñT„vëXuQŒTYýVÇ–cO„vëXuQ0R•^	gÀNHN:S+Rÿv^N=fNöN¹Rftã‰„v‹N0"
+ THE_ROD_events.28.a: "NbåN(u±”1SïSåNbcegëXuQÿwGY*`0"
 ###EVENT_END
 
 ###VARIABLE
