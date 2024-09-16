@@ -572,6 +572,12 @@ THE_ROD_markgraftum_modifier = {
 	global_monthly_devastation = -0.05
 }
 
+#哈布斯堡联姻
+THE_ROD_habsburg_marriage_modifier = {
+	diplomatic_upkeep = 1
+	yearly_global_trust_growth = 2
+}
+
 ###EXTRA_HAKUREI_DEITY
 THE_ROD_extra_hakurei_modifier_Hakurei_God = {
 	defensiveness = 0.1
