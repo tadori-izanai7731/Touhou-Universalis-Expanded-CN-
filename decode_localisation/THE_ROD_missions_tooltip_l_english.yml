@@ -221,6 +221,7 @@ l_english:
  THE_ROD_cossack_rebel_tt: "§R哥萨克将发动叛乱§!。"
  THE_ROD_rumia_add_2_shock_tt: "§Y露米娅§!的£icon_shock£冲击提升§G2§!，超过上限转化为§G100§!£mil£军事点数。"
  THE_ROD_4_14_complete_by_event_ttt: "已通过「§Y沙恩霍斯特陆军改革§!」完成该任务。"
+ THE_ROD_diplomatic_mission_complete_by_event_ttt: "已通过「§Y哈布斯堡联姻§!」完成该任务。"
  THE_ROD_unitl_heir_die_tt: "持续到继承人被废黜或死亡"
  THE_ROD_colorful_egg_tt: "§V这是一个彩蛋事件§!"
  THE_ROD_decrease_dark_moon_night_negative_effect_tt: "§Y降低§O吞噬夜光§!带来的负面效果。§!"
@@ -240,6 +241,8 @@ l_english:
  THE_ROD_unlock_more_mercenary_tt: "§Y解锁更多佣兵团。§!"
  THE_ROD_upgrade_brandenburg_gate_tt: "伟大工程「§Y勃兰登堡门§!」将获得额外效果。"
  THE_ROD_fort_manpower_bonus_tt: "在拥有§Y要塞§!建筑的省份提升人力将获得§G双倍§!人力。"
+ THE_ROD_complete_diplomatic_mission_tt: "完成任务「§Y参与帝国外交§!」、「§Y如鬼灯闪烁§!」、「§Y唱响月之歌§!」。"
+ THE_ROD_force_create_marriage_hab_tt: "与@[Prev.GetTag]§Y[Prev.GetName]§!王室联姻，此王室联姻不受宗教限制。"
  THE_ROD_not_complete_event_ttt: "没做完"
 ###TOOLTIP_END
 
@@ -345,6 +348,7 @@ l_english:
  THE_ROD_sunset_pirates_modifier: "日落海盗"
  THE_ROD_falun_gold_mine_province_modifier: "法伦大金矿"
  THE_ROD_markgraftum_modifier: "藩侯国头衔"
+ THE_ROD_habsburg_marriage_modifier: "哈布斯堡联姻"
 ###MODIFIER_END
 
 ###MERC
@@ -605,6 +609,11 @@ l_english:
  THE_ROD_events.30.title: "藩侯国"
  THE_ROD_events.30.desc: "藩侯国是神圣罗马帝国皇帝向身处帝国边境的邦国授予的特殊头衔，在神圣罗马帝国早期主要负责边境开拓和防卫，帝国稳固后逐渐演化成一种邦国身份地位的头衔，@BRA勃兰登堡更是凭借藩侯国身份成为选帝侯国。自从[Root.GetName]加入神圣罗马帝国，在地理位置上是真正的神圣罗马帝国边境，获得藩侯国头衔也是顺理成章。"
  THE_ROD_events.30.a: "是时候造要塞了。"
+
+ THE_ROD_events.31.title: "哈布斯堡联姻"
+ THE_ROD_events.31.desc: "位于南德意志的@HAB[HAB.GetName]大公国由哈布斯堡家族统治，凭借家族独特的政治联姻长期占据神圣罗马帝国皇位，最近一封官方文书表明了哈布斯堡家族对尊敬的露米娅的联姻意向，出于哈布斯堡家族目前的政治地位和人尽皆知的联姻历史，这件事必须仔细考虑。以下是@HAB[HAB.GetName]外交官送来的文书。\n\n亲爱的 露米娅：\n根据[HAB.GetName]记载的史料，在你还只是但泽公爵的时候，就是通过[HAB.GetName]的引荐加入神圣罗马帝国。看着你将自己的属地从[43.GetName]发展为如今的规模，这一代哈布斯堡家族无人不知你的美丽与才华。尽管你看上去与一般的人并不相同，但是谁会在意一个美丽女子身上少许的特殊性，哈布斯堡家族也相信两国的联姻也能为彼此带来更好的发展。"
+ THE_ROD_events.31.a: "绯色衣装，迈步夜行。"
+ THE_ROD_events.31.b: "异世歌谣，月之恶戏。"
 ###EVENT_END
 
 ###VARIABLE

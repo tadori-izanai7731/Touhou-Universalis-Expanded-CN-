@@ -221,6 +221,7 @@
  THE_ROD_cossack_rebel_tt: "§RåT(„KQSÑS¨RÛSqN§!0"
  THE_ROD_rumia_add_2_shock_tt: "§Y2—s|Z§!„v£icon_shock£²QûQÐcGS§G2§!ÿ…ÇNP–lS:N§G100§!£mil£›Q‹N¹ppe0"
  THE_ROD_4_14_complete_by_event_ttt: "òTÇ0§Y™li`—¯eyrF–›Q9ei—§!0ŒRbå‹ûN¡R0"
+ THE_ROD_diplomatic_mission_complete_by_event_ttt: "òTÇ0§YÈT^¯e!XTwûY§!0ŒRbå‹ûN¡R0"
  THE_ROD_unitl_heir_die_tt: "cíu0RçubºN«ˆŸ^Üžb‰k¡N"
  THE_ROD_colorful_egg_tt: "§VÙ=fN*NiVË†‹NöN§!"
  THE_ROD_decrease_dark_moon_night_negative_effect_tt: "§YM–NO§OTlVYIQ§!&^eg„vb—Heœg0§!"
@@ -240,6 +241,8 @@
  THE_ROD_unlock_more_mercenary_tt: "§Yã‰•ôfYcOuQâV0§!"
  THE_ROD_upgrade_brandenburg_gate_tt: "O'YåTz0§YÃRpQ‰v!Xè•§!0S·ƒ—V˜YHeœg0"
  THE_ROD_fort_manpower_bonus_tt: "(Wåb	g§Y‰^X§!ú^Qr„vwýNÐcGSºN›RS·ƒ—V§GÌSP§!ºN›R0"
+ THE_ROD_complete_diplomatic_mission_tt: "ŒRbûN¡R0§YÂSN^ýVY²N§!000§Y‚Y<›opê•Áp§!000§Y1UÍTgKNLk§!00"
+ THE_ROD_force_create_marriage_hab_tt: "N@[Prev.GetTag]§Y[Prev.GetName]§!‹s²RTwûYÿdk‹s²RTwûYN×S—RYeP–6R0"
  THE_ROD_not_complete_event_ttt: "¡lZPŒR"
 ###TOOLTIP_END
 
@@ -345,6 +348,7 @@
  THE_ROD_sunset_pirates_modifier: "åeK„wm×v"
  THE_ROD_falun_gold_mine_province_modifier: "Õl&O'YÑ‘ÿw"
  THE_ROD_markgraftum_modifier: "é…¯OýV4YTˆ"
+ THE_ROD_habsburg_marriage_modifier: "ÈT^¯e!XTwûY"
 ###MODIFIER_END
 
 ###MERC
@@ -605,6 +609,11 @@
  THE_ROD_events.30.title: "é…¯OýV"
  THE_ROD_events.30.desc: "é…¯OýV=f^y1WWlš^ýV‡v^T«ŽY^ýV¹ƒX„v¦ýVˆcˆN„vyrŠk4YTˆÿ(W^y1WWlš^ýVéegIN‰1¹ƒXVÓbŒT2–kSÿ^ýV3zúVTnoSbNÍy¦ýV«ŽýN0WMO„v4YTˆÿ@BRAÃRpQ‰v!Xôf=fíQPé…¯OýV«ŽýNb:N	^¯OýV0êÎN[Root.GetName] ReQ^y1WWlš^ýVÿ(W0WtMOnN=fwck„v^y1WWlš^ýV¹ƒXÿ·ƒ—Vé…¯OýV4YTˆmN=fz˜tbàz0"
  THE_ROD_events.30.a: "=föeP.‰^X†N0"
+
+ THE_ROD_events.31.title: "ÈT^¯e!XTwûY"
+ THE_ROD_events.31.desc: "MOŽNWS·Va×V„v@HAB[HAB.GetName]'YlQýV1uÈT^¯e!X¶RÏeßu»lÿíQP¶RÏeìryr„v?e»lTwûY•g`Snc^y1WWlš^ýV‡vMOÿgÑNS˜R¹e‡efNhˆf†NÈT^¯e!X¶RÏeùRSle„v2—s|Z„vTwûYaTÿúQŽNÈT^¯e!X¶RÏeîvMR„v?e»l0WMOŒTºNKS†våw„vTwûY†SòSÿÙöN‹NÅV‰˜ÔNÆuwQ†0åNN=f@HAB[HAB.GetName]Y²N˜Reg„v‡efN0\n\n²N1r„v 2—s|Zÿ\n9hnc[HAB.GetName]°‹‹„vòS™eÿ(W`OØêS=fFOýllQ5r„vöePÿ1S=fÇ[HAB.GetName]„vVPƒ ReQ^y1WWlš^ýV0wNw`OSêñT„v^S0WÎN[43.GetName]ÑSUS:N‚YÊN„vÄ‰!jÿÙNãNÈT^¯e!X¶RÏeàeºNNåw`O„vŽKNNMbNS0KS¡r`OwN»SNN,‚„vºNv^NøvTÿFO=fŒO(WaN*NŽKNsYPR«ŽNS¸‹„vyrŠk'`ÿÈT^¯e!X¶RÏemNøváO2NýV„vTwûYmNýw:N|Vdk&^egôf‹Y„vÑSUS0"
+ THE_ROD_events.31.a: "ïur‚cˆÅˆÿÈekYLˆ0"
+ THE_ROD_events.31.b: "VNLk1ŒÿgKNv`b0"
 ###EVENT_END
 
 ###VARIABLE

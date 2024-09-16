@@ -3592,46 +3592,55 @@ THE_ROD_branch_5 = {
 		}
 
 		trigger = {
-			OR = {
-				advisor = statesman
-				advisor = diplomat
-			}
 			if = {
-				limit = { hre_size = 1 } 
-				OR = {
-					alliance_with = emperor
-					calc_true_if = {
-						all_country = {
-							is_elector = yes
-							OR = {
-								is_subject_of = ROOT
-								alliance_with = ROOT
-							}
-						}
-						amount = 2
-					}
+				limit = { has_country_flag = THE_ROD_complete_diplomatic_mission_flag }
+				custom_trigger_tooltip = {
+					tooltip = THE_ROD_diplomatic_mission_complete_by_event_ttt
+					has_country_flag = THE_ROD_complete_diplomatic_mission_flag
 				}
 			}
 			else = {
 				OR = {
-					calc_true_if = {
-						all_country = {
-							capital_scope = {
+					advisor = statesman
+					advisor = diplomat
+				}
+				if = {
+					limit = { hre_size = 1 } 
+					OR = {
+						alliance_with = emperor
+						calc_true_if = {
+							all_country = {
+								is_elector = yes
 								OR = {
-									region = north_german_region
-									region = south_german_region
+									is_subject_of = ROOT
+									alliance_with = ROOT
 								}
 							}
-							marriage_with = ROOT
+							amount = 2
 						}
-						amount = 2
 					}
-					all_country = {
-						NOT = {
-							capital_scope = {
-								OR = {
-									region = north_german_region
-									region = south_german_region
+				}
+				else = {
+					OR = {
+						calc_true_if = {
+							all_country = {
+								capital_scope = {
+									OR = {
+										region = north_german_region
+										region = south_german_region
+									}
+								}
+								marriage_with = ROOT
+							}
+							amount = 2
+						}
+						all_country = {
+							NOT = {
+								capital_scope = {
+									OR = {
+										region = north_german_region
+										region = south_german_region
+									}
 								}
 							}
 						}
@@ -3671,20 +3680,29 @@ THE_ROD_branch_5 = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			any_ally = {
-				trust = {
-					who = ROOT
-					value = 75
+			if = {
+				limit = { has_country_flag = THE_ROD_complete_diplomatic_mission_flag }
+				custom_trigger_tooltip = {
+					tooltip = THE_ROD_diplomatic_mission_complete_by_event_ttt
+					has_country_flag = THE_ROD_complete_diplomatic_mission_flag
 				}
 			}
-			OR = {
-				num_of_subjects = 3
-				num_of_estate_agendas_completed = {
-					estate = estate_nobles
-					value = 3
+			else = {
+				any_ally = {
+					trust = {
+						who = ROOT
+						value = 75
+					}
 				}
+				OR = {
+					num_of_subjects = 3
+					num_of_estate_agendas_completed = {
+						estate = estate_nobles
+						value = 3
+					}
+				}
+				reform_level = 2
 			}
-			reform_level = 2
 		}
 
 		effect = {
@@ -3705,16 +3723,25 @@ THE_ROD_branch_5 = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			calc_true_if = {
-				all_ally = {
-					trust = {
-						who = ROOT
-						value = 100
-					}
+			if = {
+				limit = { has_country_flag = THE_ROD_complete_diplomatic_mission_flag }
+				custom_trigger_tooltip = {
+					tooltip = THE_ROD_diplomatic_mission_complete_by_event_ttt
+					has_country_flag = THE_ROD_complete_diplomatic_mission_flag
 				}
-				amount = 3
 			}
-			has_reform = THE_ROD_apparitions_stalk_the_night_monarchy
+			else = {
+				calc_true_if = {
+					all_ally = {
+						trust = {
+							who = ROOT
+							value = 100
+						}
+					}
+					amount = 3
+				}
+				has_reform = THE_ROD_apparitions_stalk_the_night_monarchy
+			}
 		}
 
 		effect = {
