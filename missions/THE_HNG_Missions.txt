@@ -5233,6 +5233,12 @@ THE_HNG_2_4 = {
 					}
 				}
 			}
+			if = {
+				limit = {
+					religion = confucianism
+				}
+				add_harmonized_religion = zoroastrian
+			}
 		}
 	}
 	
