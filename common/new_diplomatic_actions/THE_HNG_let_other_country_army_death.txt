@@ -17,7 +17,7 @@ THE_HNG_let_other_country_army_death = {
 	is_allowed = {
 		has_spy_network_in = {
 			who = FROM
-			value = 80
+			value = 50
 		}
 		FROM = {
 			NOT = {
@@ -46,7 +46,7 @@ THE_HNG_let_other_country_army_death = {
 		}
 		add_spy_network_in = {
 			who = FROM
-			value = -80		
+			value = -50	
 		}
 	}
 	
