@@ -4,8 +4,8 @@ l_english:
  THE_ROD_else_tt_no: "£no£否则:"
  THE_ROD_burghers_influence_yes_tt: "£yes£如果完成任务时§Y[Root.Get市民Name]§!阶层至少有§Y30§!影响力，获得如下效果:"
  THE_ROD_burghers_influence_no_tt: "£no£如果完成任务时§Y[Root.Get市民Name]§!阶层至少有§Y30§!影响力，获得如下效果:"
- THE_ROD_create_fort_yes_tt: "£yes£如果§Y[43.GetName]§!没有任何堡垒建筑："
- THE_ROD_create_fort_no_tt: "£no£如果§Y[43.GetName]§!没有任何堡垒建筑："
+ THE_ROD_create_fort_yes_tt: "£yes£如果§Y[43.GetName]§!没有任何要塞建筑："
+ THE_ROD_create_fort_no_tt: "£no£如果§Y[43.GetName]§!没有任何要塞建筑："
  THE_ROD_gain_point_base_on_emperor_opinion_tt: "@[Emperor.GetTag]§Y[Emperor.GetName]§!对@[Root.GetTag]§Y[Root.GetName]§!每有§G1§!点好感度,获得§G1§!点随机君主点数"
  THE_ROD_alliance_hsa_yes_tt: "£yes£如果@HSA§Y[HSA.GetName]§!对我们的好感度达到§G50§!，获得如下效果："
  THE_ROD_alliance_hsa_no_tt: "£no£如果@HSA§Y[HSA.GetName]§!对我们的好感度达到§G50§!，获得如下效果："
@@ -239,6 +239,7 @@ l_english:
  THE_ROD_subarctic_islands_area_extra_improve_bonus_tt: "提升§Y北大西洋诸岛§!区域的省份将获得§G双倍§!发展度。"
  THE_ROD_unlock_more_mercenary_tt: "§Y解锁更多佣兵团。§!"
  THE_ROD_upgrade_brandenburg_gate_tt: "伟大工程「§Y勃兰登堡门§!」将获得额外效果。"
+ THE_ROD_fort_manpower_bonus_tt: "在拥有§Y要塞§!建筑的省份提升人力将获得§G双倍§!人力。"
  THE_ROD_not_complete_event_ttt: "没做完"
 ###TOOLTIP_END
 
@@ -343,6 +344,7 @@ l_english:
  THE_ROD_baltic_sea_trade_center_province_modifier: "波罗的海贸易中心"
  THE_ROD_sunset_pirates_modifier: "日落海盗"
  THE_ROD_falun_gold_mine_province_modifier: "法伦大金矿"
+ THE_ROD_markgraftum_modifier: "藩侯国头衔"
 ###MODIFIER_END
 
 ###MERC
@@ -594,6 +596,15 @@ l_english:
  THE_ROD_events.28.title: "逐金者"
  THE_ROD_events.28.desc: "神圣罗马帝国内部城邦林立，对于一些地理条件较差的地区根本无法做到自给自足，更不用说向皇帝提供财富和兵员。由此，德意志地区成为了雇佣兵最庞大的发源地，来自穷山恶水的人为了金钱不择手段，凭借原始但有效的作战方式占据了雇佣兵市场。对于露米娅，这里没有幻想乡随处可见的小妖，在战场上使用自己的士兵和外国雇佣的士兵到底有什么区别，并不是一件容易理解的事。"
  THE_ROD_events.28.a: "所以用钱就可以换来士兵，真奇怪。"
+
+ THE_ROD_events.29.title: "迁都柏林"
+ THE_ROD_events.29.desc: "位于神圣罗马帝国最北方的选帝侯国@BRA勃兰登堡，其首都[50.GetName]是北德意志重要的行政和文化中心，迁都[50.GetName]无疑会给[Root.GetName]带来更好的发展，也有利于日耳曼文化的统一事业。"
+ THE_ROD_events.29.a: "勃兰登堡门将成为日耳曼文化的象征。"
+ THE_ROD_events.29.b: "在[Capital.GetName]已经住习惯了。"
+
+ THE_ROD_events.30.title: "藩侯国"
+ THE_ROD_events.30.desc: "藩侯国是神圣罗马帝国皇帝向身处帝国边境的邦国授予的特殊头衔，在神圣罗马帝国早期主要负责边境开拓和防卫，帝国稳固后逐渐演化成一种邦国身份地位的头衔，@BRA勃兰登堡更是凭借藩侯国身份成为选帝侯国。自从[Root.GetName]加入神圣罗马帝国，在地理位置上是真正的神圣罗马帝国边境，获得藩侯国头衔也是顺理成章。"
+ THE_ROD_events.30.a: "是时候造要塞了。"
 ###EVENT_END
 
 ###VARIABLE

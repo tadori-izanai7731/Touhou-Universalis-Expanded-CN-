@@ -364,6 +364,13 @@ THE_ROD_on_mil_development_scripted_effect = {
 		}
 		add_base_manpower = 1
 	}
+	if = {
+		limit = {
+			has_fort_building_trigger = yes
+			owner = { has_country_flag = THE_ROD_fort_manpower_bonus_flag }
+		}
+		add_base_manpower = 1
+	}
 }
 
 

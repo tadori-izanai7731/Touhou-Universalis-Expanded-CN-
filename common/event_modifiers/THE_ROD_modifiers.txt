@@ -565,6 +565,13 @@ THE_ROD_falun_gold_mine_province_modifier = {
 	monthly_gold_inflation_modifier = -0.25
 }
 
+#藩侯国头衔
+THE_ROD_markgraftum_modifier = {
+	fort_maintenance_modifier = -0.1
+	build_time = -0.2
+	global_monthly_devastation = -0.05
+}
+
 ###EXTRA_HAKUREI_DEITY
 THE_ROD_extra_hakurei_modifier_Hakurei_God = {
 	defensiveness = 0.1
