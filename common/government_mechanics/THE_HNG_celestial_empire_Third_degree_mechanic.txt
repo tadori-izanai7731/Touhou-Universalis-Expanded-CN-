@@ -1348,10 +1348,10 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 				add_inflation = -5
 				add_country_modifier = {
 					name = HNG_Inflation_rate_power_buff
-					duration = 1825
+					duration = 2555
 				}
 			}
-			cooldown_years = 5
+			cooldown_years = 7
 			ai_chance = {
 				factor = 10
 			}
@@ -1378,10 +1378,10 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 				add_corruption = -2
 				add_country_modifier = {
 					name = HNG_Merger_degree_power_buff
-					duration = 1825
+					duration = 2555
 				}
 			}
-			cooldown_years = 5
+			cooldown_years = 7
 			ai_chance = {
 				factor = 10
 			}
@@ -1408,10 +1408,10 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 				add_army_professionalism = 0.03
 				add_country_modifier = {
 					name = HNG_Army_corruption_power_buff
-					duration = 1825
+					duration = 2555
 				}
 			}
-			cooldown_years = 5
+			cooldown_years = 7
 			ai_chance = {
 				factor = 10
 			}

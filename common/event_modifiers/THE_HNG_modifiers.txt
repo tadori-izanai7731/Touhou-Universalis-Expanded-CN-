@@ -1115,7 +1115,7 @@ THE_hng_mission_modifier109 = {
 THE_HNG_more_efficient_land_system = {
 	governing_cost = -0.1
 	global_autonomy = -0.2
-	monthly_THE_HNG_Merger_degree_dip_power = 1
+	monthly_THE_HNG_Merger_degree_dip_power = 2
 }
 
 #得到缓解的饥荒
@@ -1206,7 +1206,7 @@ THE_hng_mission_modifier120 = {
 THE_HNG_strict_and_complete_economic = {
 	administrative_efficiency = 0.05
 	monarch_power_tribute = 1
-	monthly_THE_HNG_Inflation_rate_adm_power = 1
+	monthly_THE_HNG_Inflation_rate_adm_power = 2
 }
 
 #第一次财政改革
@@ -1328,7 +1328,7 @@ THE_HNG_modernization_gensokyo_army = {
 	reinforce_speed = 0.15
 	enable_forced_march = yes
 	force_march_free = yes
-	monthly_THE_HNG_Army_corruption_mil_power = 1
+	monthly_THE_HNG_Army_corruption_mil_power = 2
 }
 
 

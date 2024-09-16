@@ -22,6 +22,7 @@ zz_THE_HNG_four_people_love_meirin = {
 	} 
 	emperor = { 
 		min_autonomy_in_territories = -0.1
+		global_unrest = -1
 	}
 }
 
@@ -49,6 +50,7 @@ zz_THE_HNG_jian_bing_du_zainan_tong_guo = {
 	} 
 	emperor = { 
 		governing_cost = -0.1
+		governing_capacity_modifier = 0.05
 	}
 }
 
