@@ -595,7 +595,7 @@ country_event = {
 				who = event_target:EmperorOfChina
 				casus_belli = cb_chinese_unification
 			}
-			add_stability = 3
+			add_stability = 5
 			add_war_exhaustion = -5
 			every_known_country = {
 				add_aggressive_expansion = {
@@ -613,7 +613,7 @@ country_event = {
 				who = event_target:EmperorOfChina 
 				casus_belli = cb_chinese_unification
 			}
-			add_stability = 3
+			add_stability = 5
 			add_war_exhaustion = -5
 		}
 	}
