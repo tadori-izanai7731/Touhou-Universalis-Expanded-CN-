@@ -581,13 +581,6 @@ country_event = {
 	desc = "flavor_THE_HNG_mission_events.15.desc"
 	picture = DRAGON_eventPicture
 	is_triggered_only = yes
-	trigger = {
-		NOT = { is_emperor_of_china = yes }
-		any_country = {
-			is_emperor_of_china = yes
-			NOT = { war_with = ROOT }
-		}
-	}
 	
 	immediate = {
 		hidden_effect = {
@@ -595,7 +588,7 @@ country_event = {
 				who = event_target:EmperorOfChina
 				casus_belli = cb_chinese_unification
 			}
-			add_stability = 3
+			add_stability = 5
 			add_war_exhaustion = -5
 			every_known_country = {
 				add_aggressive_expansion = {
@@ -613,7 +606,7 @@ country_event = {
 				who = event_target:EmperorOfChina 
 				casus_belli = cb_chinese_unification
 			}
-			add_stability = 3
+			add_stability = 5
 			add_war_exhaustion = -5
 		}
 	}
