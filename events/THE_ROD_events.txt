@@ -1474,10 +1474,6 @@ country_event = {
 			factor = 0.5
 			has_idea_group = mercenary_ideas
 		}
-		modifier = {
-			factor = 0.5
-			full_idea_group = mercenary_ideas
-		}
 	}
 	trigger = {
 		OR = { tag = ROD was_tag = ROD }
@@ -1500,6 +1496,63 @@ country_event = {
 				name = mercenaries_to_the_standard
 				duration = -1
 			}
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.29
+	title = THE_ROD_events.29.title
+	desc = THE_ROD_events.29.desc
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		50 = {
+			owned_by = ROOT
+			is_state_core = ROOT
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.29.a
+		custom_tooltip = THE_ROD_german_empire_event_tt
+		custom_tooltip = empty_line_tt
+		50 = {
+			move_capital_effect = yes
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 3
+			add_great_project_tier = {
+				type = brandenburg_gate
+				tier = 1
+			}
+		}
+		add_prestige_or_monarch_power = {
+			amount = 20
+		}
+		custom_tooltip = THE_ROD_upgrade_brandenburg_gate_tt
+		hidden_effect = {
+			set_country_flag = THE_ROD_upgrade_brandenburg_gate_flag
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.29.b
+		custom_tooltip = THE_ROD_german_empire_event_tt
+		custom_tooltip = empty_line_tt
+		capital_scope = {
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 3
+		}
+		custom_tooltip = THE_ROD_upgrade_brandenburg_gate_tt
+		hidden_effect = {
+			set_country_flag = THE_ROD_upgrade_brandenburg_gate_flag
 		}
 	}
 }
