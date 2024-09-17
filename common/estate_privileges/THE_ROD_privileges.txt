@@ -41,7 +41,6 @@ THE_ROD_estate_church_peasants_privilege = {
 	penalties = {
 	}
 	benefits = {
-		global_unrest = -0.5
 		idea_cost = -0.1
 		global_institution_spread = 0.5
 		embracement_cost = -0.25
@@ -66,7 +65,6 @@ THE_ROD_estate_nobles_peasants_privilege = {
 	penalties = {
 	}
 	benefits = {
-		global_unrest = -0.5
 		land_morale = 0.1
 		global_manpower_modifier = 0.2
 		army_tradition_decay = -0.01
@@ -91,7 +89,6 @@ THE_ROD_estate_burghers_peasants_privilege = {
 	penalties = {
 	}
 	benefits = {
-		global_unrest = -0.5
 		global_trade_goods_size_modifier = 0.1
 		global_ship_recruit_speed = -0.2
 		build_time = -0.2

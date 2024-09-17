@@ -243,6 +243,7 @@
  THE_ROD_fort_manpower_bonus_tt: "(Wåb	g§Y‰^X§!ú^Qr„vwýNÐcGSºN›RS·ƒ—V§GÌSP§!ºN›R0"
  THE_ROD_complete_diplomatic_mission_tt: "ŒRbûN¡R0§YÂSN^ýVY²N§!000§Y‚Y<›opê•Áp§!000§Y1UÍTgKNLk§!00"
  THE_ROD_force_create_marriage_hab_tt: "N@[Prev.GetTag]§Y[Prev.GetName]§!‹s²RTwûYÿdk‹s²RTwûYN×S—RYeP–6R0"
+ THE_ROD_unlock_peasants_parliament_reform_tt: "ã‰•TIN6R,r6µu?eœ^9ei—0§YœQl®‹O§!0ÿžRLˆå‹9ei—S·ƒ—V‚YNHeœg:"
  THE_ROD_not_complete_event_ttt: "¡lZPŒR"
 ###TOOLTIP_END
 
@@ -349,6 +350,8 @@
  THE_ROD_falun_gold_mine_province_modifier: "Õl&O'YÑ‘ÿw"
  THE_ROD_markgraftum_modifier: "é…¯OýV4YTˆ"
  THE_ROD_habsburg_marriage_modifier: "ÈT^¯e!XTwûY"
+ THE_ROD_safeguard_peasants_privilege_modifier: "œQl)RÊv"
+ THE_ROD_out_of_peasants_war_modifier: "n«ŽœQlb‰NåNY"
 ###MODIFIER_END
 
 ###MERC
@@ -370,6 +373,8 @@
  THE_ROD_pax_youkai_in_german_reform_desc: ""
  THE_ROD_netherland_governor_reform: "<S·VpQI`cw"
  THE_ROD_netherland_governor_reform_desc: ""
+ THE_ROD_peasants_parliament_reform: "œQl®‹O"
+ THE_ROD_peasants_parliament_reform_desc: "œQl®‹Ov^N=fWRb—aINN1uœQlÄub„v?e»l:g„gÿƒR„vXR(WŒRhQO`—ßu»lw2—s|Z„v*NºNCgZ0jO:N2—s|Z„vôv^S:g„gÿÏkt^1uTÞTœQl¨c	wMRŽV–™ýÂS R®‹O0®‹OSìbl	¡Råg0‘uî•ã‰Tr0ÑyfRcüR0³QVr6RšRIr…Q¹Rÿ2—s|Z,gºNmNSÂSOÝOÁ‹®‹OAmz„vlQcklQV0"
 
  ability_THE_ROD_dark_moon_night_mechanic: "§M—fgY§!"
  THE_ROD_government_mechanic_power: "§OTlVYIQ§!"
@@ -388,7 +393,9 @@
  mechanic_THE_ROD_convert_religion_add_church_loyalty_or_adm_yes: "ŒRb.OYežX R§YYeëX§!6–BS§G1%§!àVÚ‹¦^v^·ƒ—V§G5§!£adm£Lˆ?e¹ppe"
  mechanic_THE_ROD_become_papal_controller_attribute_yes: "=T(u0§YqVÍTYe÷^Ñv²b	>N§!0³Q®‹"
  mechanic_THE_ROD_darkness_trade_war_without_trigger_yes: "ïSåNùRûNUOýV¶RO(u0§YµR¸Sb‰N§!0±Rbt1u"
+ mechanic_THE_ROD_enable_peasants_privilege_attributes_yes: "=T(uT6–BSœQlyrCg"
  ability_THE_ROD_german_culture_unity_mechanic: "§M·Va×V‡eSßuN§!"
+ THE_ROD_german_culture_unity_mechanic: "§M·Va×V‡eSßuN§!"
  THE_ROD_german_cultural_unity_power: "§M·Va×V‡eSßuNÛ¦^§!"
  THE_ROD_german_cultural_unity_power_desc: "Ïk*NòT¥c³u„v§Yåe3wüf§!‡eSSÐc›O§G+0.1§!g¦^§M·Va×V‡eSßuNÛ¦^§!\n\nÇ?eœ^’N¨R‡T§Yåe3wüf§!‡eSSOvQNQ`S(uïS¥c×S‡eSNP–ÿv^O§M·Va×V‡eSßuNÛ¦^§!·ƒ—V˜YHeœg"
  THE_ROD_THE_ROD_german_culture_unity_interaction: "‡Tåe3wüf‡eS"
@@ -432,6 +439,12 @@
 ###PRIVILEGE
  THE_ROD_estate_nobles_knight_tradition: "‘šëXâV.Oßu"
  THE_ROD_estate_nobles_knight_tradition_desc: "<yrCgÏcð>"
+ THE_ROD_estate_church_peasants_privilege: "œQlyrCgÿnfÊSYeOfR!h"
+ THE_ROD_estate_church_peasants_privilege_desc: ""
+ THE_ROD_estate_nobles_peasants_privilege: "œQlyrCgÿŒR„UluQ­‹Ãu"
+ THE_ROD_estate_nobles_peasants_privilege_desc: ""
+ THE_ROD_estate_burghers_peasants_privilege: "œQlyrCgÿã‰Ê‘FUNT¦u"
+ THE_ROD_estate_burghers_peasants_privilege_desc: ""
 ###PRIVILEGE_END
 
 ###OPINION_MODIFIER
@@ -614,6 +627,12 @@
  THE_ROD_events.31.desc: "MOŽNWS·Va×V„v@HAB[HAB.GetName]'YlQýV1uÈT^¯e!X¶RÏeßu»lÿíQP¶RÏeìryr„v?e»lTwûY•g`Snc^y1WWlš^ýV‡vMOÿgÑNS˜R¹e‡efNhˆf†NÈT^¯e!X¶RÏeùRSle„v2—s|Z„vTwûYaTÿúQŽNÈT^¯e!X¶RÏeîvMR„v?e»l0WMOŒTºNKS†våw„vTwûY†SòSÿÙöN‹NÅV‰˜ÔNÆuwQ†0åNN=f@HAB[HAB.GetName]Y²N˜Reg„v‡efN0\n\n²N1r„v 2—s|Zÿ\n9hnc[HAB.GetName]°‹‹„vòS™eÿ(W`OØêS=fFOýllQ5r„vöePÿ1S=fÇ[HAB.GetName]„vVPƒ ReQ^y1WWlš^ýV0wNw`OSêñT„v^S0WÎN[43.GetName]ÑSUS:N‚YÊN„vÄ‰!jÿÙNãNÈT^¯e!X¶RÏeàeºNNåw`O„vŽKNNMbNS0KS¡r`OwN»SNN,‚„vºNv^NøvTÿFO=fŒO(WaN*NŽKNsYPR«ŽNS¸‹„vyrŠk'`ÿÈT^¯e!X¶RÏemNøváO2NýV„vTwûYmNýw:N|Vdk&^egôf‹Y„vÑSUS0"
  THE_ROD_events.31.a: "ïur‚cˆÅˆÿÈekYLˆ0"
  THE_ROD_events.31.b: "VNLk1ŒÿgKNv`b0"
+
+ THE_ROD_events.32.title: "œQlb‰NqVÍT"
+ THE_ROD_events.32.desc: ""
+ THE_ROD_events.32.a: "œQl„vNán1u6–BS»SŒŒT0"
+ THE_ROD_events.32.b: "óS”^å‹ÝOÁ‹œQl„vúW,gCg)R0"
+ THE_ROD_events.32.c: "ºNŒTºN„vîTV‚Sýw…ÇºNŒT–Y0"
 ###EVENT_END
 
 ###VARIABLE

@@ -350,6 +350,8 @@ l_english:
  THE_ROD_falun_gold_mine_province_modifier: "法伦大金矿"
  THE_ROD_markgraftum_modifier: "藩侯国头衔"
  THE_ROD_habsburg_marriage_modifier: "哈布斯堡联姻"
+ THE_ROD_safeguard_peasants_privilege_modifier: "农民利益"
+ THE_ROD_out_of_peasants_war_modifier: "置身农民战争以外"
 ###MODIFIER_END
 
 ###MERC
@@ -371,6 +373,8 @@ l_english:
  THE_ROD_pax_youkai_in_german_reform_desc: ""
  THE_ROD_netherland_governor_reform: "尼德兰总督"
  THE_ROD_netherland_governor_reform_desc: ""
+ THE_ROD_peasants_parliament_reform: "农民议会"
+ THE_ROD_peasants_parliament_reform_desc: "农民议会并不是字面意义上由农民组成的政治机构，它的存在完全依靠统治者露米娅的个人权威。作为露米娅的直属机构，每年由各州农民推选者前往首都参加议会。议会包括民选审查、疑问解答、科学指导、决策制定等内容，露米娅本人也将参会保证议会流程的公正公开。"
 
  ability_THE_ROD_dark_moon_night_mechanic: "§M暗月夜§!"
  THE_ROD_government_mechanic_power: "§O吞噬夜光§!"
@@ -389,8 +393,9 @@ l_english:
  mechanic_THE_ROD_convert_religion_add_church_loyalty_or_adm_yes: "完成传教增加§Y教士§!阶层§G1%§!忠诚度并获得§G5§!£adm£行政点数"
  mechanic_THE_ROD_become_papal_controller_attribute_yes: "启用「§Y影响教廷监护选举§!」决议"
  mechanic_THE_ROD_darkness_trade_war_without_trigger_yes: "可以对任何国家使用「§Y宵岸战争§!」宣战理由"
- mechanic_THE_ROD_enable_peasants_privilege_attributes_yes: "启用农民议会阶层特权"
+ mechanic_THE_ROD_enable_peasants_privilege_attributes_yes: "启用各阶层农民特权"
  ability_THE_ROD_german_culture_unity_mechanic: "§M德意志文化统一§!"
+ THE_ROD_german_culture_unity_mechanic: "§M德意志文化统一§!"
  THE_ROD_german_cultural_unity_power: "§M德意志文化统一进度§!"
  THE_ROD_german_cultural_unity_power_desc: "每个已接纳的§Y日耳曼§!文化将提供§G+0.1§!月度§M德意志文化统一进度§!\n\n通过政府互动融合§Y日耳曼§!文化将使其不再占用可接受文化上限，并使§M德意志文化统一进度§!获得额外效果"
  THE_ROD_THE_ROD_german_culture_unity_interaction: "融合日耳曼文化"
@@ -434,6 +439,12 @@ l_english:
 ###PRIVILEGE
  THE_ROD_estate_nobles_knight_tradition: "骑士团传统"
  THE_ROD_estate_nobles_knight_tradition_desc: "<特权描述>"
+ THE_ROD_estate_church_peasants_privilege: "农民特权：普及教会学校"
+ THE_ROD_estate_church_peasants_privilege_desc: ""
+ THE_ROD_estate_nobles_peasants_privilege: "农民特权：完善民兵训练"
+ THE_ROD_estate_nobles_peasants_privilege_desc: ""
+ THE_ROD_estate_burghers_peasants_privilege: "农民特权：解释商业合约"
+ THE_ROD_estate_burghers_peasants_privilege_desc: ""
 ###PRIVILEGE_END
 
 ###OPINION_MODIFIER
@@ -616,6 +627,12 @@ l_english:
  THE_ROD_events.31.desc: "位于南德意志的@HAB[HAB.GetName]大公国由哈布斯堡家族统治，凭借家族独特的政治联姻长期占据神圣罗马帝国皇位，最近一封官方文书表明了哈布斯堡家族对尊敬的露米娅的联姻意向，出于哈布斯堡家族目前的政治地位和人尽皆知的联姻历史，这件事必须仔细考虑。以下是@HAB[HAB.GetName]外交官送来的文书。\n\n亲爱的 露米娅：\n根据[HAB.GetName]记载的史料，在你还只是但泽公爵的时候，就是通过[HAB.GetName]的引荐加入神圣罗马帝国。看着你将自己的属地从[43.GetName]发展为如今的规模，这一代哈布斯堡家族无人不知你的美丽与才华。尽管你看上去与一般的人并不相同，但是谁会在意一个美丽女子身上少许的特殊性，哈布斯堡家族也相信两国的联姻也能为彼此带来更好的发展。"
  THE_ROD_events.31.a: "绯色衣装，迈步夜行。"
  THE_ROD_events.31.b: "异世歌谣，月之恶戏。"
+
+ THE_ROD_events.32.title: "农民战争影响"
+ THE_ROD_events.32.desc: ""
+ THE_ROD_events.32.a: "农民的不满由阶层去调和。"
+ THE_ROD_events.32.b: "至少应该保证农民的基本权利。"
+ THE_ROD_events.32.c: "人和人的差异岂能超过人和妖。"
 ###EVENT_END
 
 ###VARIABLE

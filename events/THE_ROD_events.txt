@@ -1684,7 +1684,7 @@ country_event = {
 		custom_tooltip = empty_line_tt
 		add_stability = 1
 		add_estate_loyalty = {
-			estate = estate_nobles
+			estate = all
 			loyalty = 10
 		}
 	}
@@ -1695,7 +1695,7 @@ country_event = {
 		custom_tooltip = empty_line_tt
 		add_stability = -1
 		add_estate_loyalty = {
-			estate = estate_nobles
+			estate = all
 			loyalty = -20
 		}
 		add_country_modifier = {
@@ -1719,7 +1719,7 @@ country_event = {
 		custom_tooltip = empty_line_tt
 		add_stability = -3
 		add_estate_loyalty = {
-			estate = estate_nobles
+			estate = all
 			loyalty = -50
 		}
 		custom_tooltip = THE_ROD_unlock_peasants_parliament_reform_tt

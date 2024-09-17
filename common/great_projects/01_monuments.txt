@@ -11387,6 +11387,11 @@ brandenburg_gate = {
 				}
 			}
 			trigger = {
+				hidden_trigger = {
+					owner = {
+						has_country_flag = THE_ROD_upgrade_brandenburg_gate_flag
+					}
+				}
 				owner = {
 					has_government_mechanic = THE_ROD_german_culture_unity_mechanic
 				}
