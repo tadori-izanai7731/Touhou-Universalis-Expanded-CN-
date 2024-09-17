@@ -1,0 +1,18 @@
+estate_church = {
+	privileges = {
+		THE_ROD_estate_church_peasants_privilege
+	}
+}
+
+estate_nobles = {
+	privileges = {
+		THE_ROD_estate_nobles_knight_tradition
+		THE_ROD_estate_nobles_peasants_privilege
+	}
+}
+
+estate_burghers = {
+	privileges = {
+		THE_ROD_estate_burghers_peasants_privilege
+	}
+}

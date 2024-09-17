@@ -167,8 +167,7 @@ THE_ROD_pax_youkai_in_german_reform = {
 		devotion = 1
 		horde_unity = 1
 		meritocracy = 1
-		all_estate_influence_modifier = -0.05
-		all_estate_loyalty_equilibrium = 0.1
+		all_estate_loyalty_equilibrium = 0.05
 		all_estate_possible_privileges = 2
 		max_absolutism = 20
 		monthly_THE_ROD_german_cultural_unity_power = 0.5
@@ -197,7 +196,6 @@ THE_ROD_netherland_governor_reform = {
 		global_unrest = -2
 		reform_progress_growth = 0.25
 		stability_cost_modifier = -0.25
-		all_estate_influence_modifier = -0.05
 		loyalty_change_on_revoked = 0.1
 		estate_interaction_cooldown_modifier = -0.25
 	}
@@ -206,5 +204,36 @@ THE_ROD_netherland_governor_reform = {
 		centralize_state_half_refund = yes
 		centralize_state_development = yes
 		no_more_dutch_revolt = yes
+	}
+}
+
+THE_ROD_peasants_parliament_reform = {
+	icon = "peasant_republic"
+
+	potential = {
+		OR = {
+			has_reform = THE_ROD_peasants_parliament_reform
+			have_had_reform = THE_ROD_peasants_parliament_reform
+			has_country_flag = THE_ROD_unlock_peasants_parliament_reform_flag
+		}
+	}
+
+	trigger = {
+		crown_land_share = 50
+	}
+	allow_normal_conversion = yes
+
+	modifiers = {
+		development_cost = -0.1
+		production_efficiency = 0.1
+		all_estate_loyalty_equilibrium = -0.1
+		min_autonomy_in_territories = -0.05
+		global_monthly_devastation = -0.1
+		monthly_THE_ROD_german_cultural_unity_power = 0.5
+	}
+
+	custom_attributes = {
+		is_peasants_republic = yes
+		THE_ROD_enable_peasants_privilege_attributes = yes
 	}
 }

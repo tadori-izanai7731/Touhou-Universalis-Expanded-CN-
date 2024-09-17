@@ -411,7 +411,7 @@ THE_ROD_dark_erode_empire_modifier = {
 THE_ROD_eagle_up_modifier = {
 	global_unrest = -2
 	min_autonomy_in_territories = -0.1
-	all_estate_loyalty_equilibrium = 0.1
+	all_estate_loyalty_equilibrium = 0.05
 	monthly_THE_ROD_german_cultural_unity_power = 0.5
 	num_accepted_cultures = 15
 }
@@ -436,7 +436,6 @@ THE_ROD_partition_poland_modifier = {
 	can_recruit_hussars = yes
 }
 
-### Nothing
 #不列颠领域
 THE_ROD_gbr_realm_modifier = {
 	heavy_ship_power = 0.1
@@ -576,6 +575,19 @@ THE_ROD_markgraftum_modifier = {
 THE_ROD_habsburg_marriage_modifier = {
 	diplomatic_upkeep = 1
 	yearly_global_trust_growth = 2
+}
+
+#农民利益
+THE_ROD_safeguard_peasants_privilege_modifier = {
+	nobles_loyalty_modifier = -0.1
+	global_tax_modifier = -0.1
+	development_cost = -0.1
+	production_efficiency = 0.1
+}
+
+#置身农民战争之外
+THE_ROD_out_of_peasants_war_modifier = {
+	global_unrest = -6
 }
 
 ###EXTRA_HAKUREI_DEITY

@@ -78,4 +78,10 @@ spriteTypes = {
 		name = "mission_THE_ROD_icon_13"
 		texturefile = "gfx//interface//missions//THE_ROD//THE_ROD_icon_13.dds"
 	}
+
+	### privilege
+	spriteType = {
+		name = "THE_ROD_privilege_institution"
+		texturefile = "gfx/interface/privilege/THE_ROD_privilege_institution.dds"
+	}
 }
