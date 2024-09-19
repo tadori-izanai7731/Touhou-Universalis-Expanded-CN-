@@ -245,6 +245,7 @@ l_english:
  THE_ROD_complete_diplomatic_mission_tt: "完成任务「§Y参与帝国外交§!」、「§Y如鬼灯闪烁§!」、「§Y唱响月之歌§!」。"
  THE_ROD_force_create_marriage_hab_tt: "与@[Prev.GetTag]§Y[Prev.GetName]§!王室联姻，此王室联姻不受宗教限制。"
  THE_ROD_unlock_peasants_parliament_reform_tt: "解锁君主制第6级政府改革「§Y农民议会§!」，实行该改革将获得如下效果:"
+ THE_ROD_add_unity_german_culture_power_from_grain_or_wine_tt: "从治下每个生产§Y谷物§!或§Y酒类§!的省份获得§G1§!§M德意志文化统一进度§!"
  THE_ROD_not_complete_event_ttt: "没做完"
 ###TOOLTIP_END
 
@@ -634,6 +635,10 @@ l_english:
  THE_ROD_events.32.a: "农民的不满由阶层去调和。"
  THE_ROD_events.32.b: "至少应该保证农民的基本权利。"
  THE_ROD_events.32.c: "人和人的差异岂能超过人和妖。"
+
+ THE_ROD_events.33.title: "巴伐利亚啤酒节"
+ THE_ROD_events.33.desc: "巴伐利亚的人民喜爱喝啤酒，为此举办了每年一次的「啤酒节」来庆祝这种酒精饮品并在当天尽情饮用啤酒。南德意志地区同样是著名的葡萄酒产地，特别是[2955.GetName]产出的葡萄酒。今年的「啤酒节」上啤酒派和葡萄酒派争执不休，誓要证明自己所支持的是最优秀的酒，为此两派向「啤酒节」的冠军露米娅询问。"
+ THE_ROD_events.33.a: "「尝起来都差不多吧，不像幻想乡的酒。」"
 ###EVENT_END
 
 ###VARIABLE

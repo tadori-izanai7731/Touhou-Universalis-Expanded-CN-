@@ -1740,11 +1740,11 @@ country_event = {
 	fire_only_once = yes
 	
 	mean_time_to_happen = {
-		months = 600
+		months = 300
 		modifier = {
 			factor = 0.5
 			OR = {
-				2955 = { country_or_non_sovereign_subject_holds = ROOT }
+				65 = { country_or_non_sovereign_subject_holds = ROOT }
 				exists = BAV
 			}
 		}
@@ -1752,17 +1752,17 @@ country_event = {
 	trigger = {
 		OR = {
 			is_year = 1500
-			2955 = { country_or_non_sovereign_subject_holds = ROOT }
+			65 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 	}
 	
 	option = {
-		name = THE_ROD_events.32.a
+		name = THE_ROD_events.33.a
 		custom_tooltip = THE_ROD_german_empire_event_tt
 		custom_tooltip = empty_line_tt
 		add_prestige = 10
 		add_years_of_owned_provinces_production_income = {
-			years = 10
+			years = 5
 			trigger = {
 				OR = {
 					trade_goods = grain
@@ -1770,6 +1770,32 @@ country_event = {
 				}
 			}
 			custom_tooltip = THE_ROD_grain_or_wine_province_tt
+		}
+		if = {
+			limit = { has_government_mechanic = THE_ROD_german_culture_unity_mechanic }
+			if = {
+				limit = { THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = bavarian } }
+				THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = bavarian }
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_ROD_add_unity_german_culture_power_from_grain_or_wine_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							trade_goods = grain
+							trade_goods = wine
+						}
+					}
+					ROOT = {
+						add_government_power = {
+							mechanic_type = THE_ROD_german_culture_unity_mechanic
+							power_type = THE_ROD_german_cultural_unity_power
+							value = 1
+						}
+					}
+				}
+			}
 		}
 	}
 }

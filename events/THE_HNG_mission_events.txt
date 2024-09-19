@@ -1497,7 +1497,14 @@ country_event = {
 	option = {
 		name = flavor_THE_HNG_mission_events.44.a
 		change_innovativeness = 20
-		add_years_of_income = -2
+		if = {
+			limit = {
+				NOT = { is_in_deficit = yes }
+				NOT = { is_bankrupt = yes }
+				NOT = { num_of_loans = 1 }
+			}
+			add_treasury = -7
+		}
 		th_increase_ruler_adm_stat = {
 			adm = 1
 		}
