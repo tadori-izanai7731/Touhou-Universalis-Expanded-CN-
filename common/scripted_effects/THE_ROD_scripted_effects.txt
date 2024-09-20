@@ -373,6 +373,22 @@ THE_ROD_on_mil_development_scripted_effect = {
 	}
 }
 
+THE_ROD_on_core_scripted_effect = {
+	if = {
+		limit = { FROM = { has_country_flag = THE_ROD_core_add_darkness_manipulation_var_flag } }
+		FROM = {
+			random_variable = {
+				which = the_rod_random_core_var
+				value = 3
+			}
+			change_variable = {
+				which = the_rod_darkness_manipulation_var
+				which = the_rod_random_core_var
+			}
+		}
+	}
+}
+
 
 ### NOT on_actions scripted effects
 

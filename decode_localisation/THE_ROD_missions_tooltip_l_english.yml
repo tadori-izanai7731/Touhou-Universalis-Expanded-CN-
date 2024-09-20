@@ -233,6 +233,7 @@ l_english:
  THE_ROD_has_tolerance_own_10: "拥有至少§G+10§!正统信仰容忍度"
  THE_ROD_lubeck_crane_tt: "\n治下每个拥有§Y贸易§!和§Y海军上限§!建筑的省份获得§G1§!£icon_production_in_text£§Y基础生产§!\n之后每次升级£dip£§Y外交科技§!都会触发该效果"
  THE_ROD_salt_road_tt: "盐路繁荣"
+ THE_ROD_black_glass_key_tt: "黑水晶"
  THE_ROD_salt_road_add_mercantilism_tt: "当前每拥有全球§Y1%§!的§Y盐§!市场，获得§G1§!重商主义，至多获得§G20§!重商主义。"
  THE_ROD_copper_or_iron_province_tt: "从治下所有生产§Y铜矿§!或§Y铁矿§!的省份"
  THE_ROD_grain_or_wine_province_tt: "从治下所有生产§Y谷物§!或§Y酒类§!的省份"
@@ -246,6 +247,7 @@ l_english:
  THE_ROD_force_create_marriage_hab_tt: "与@[Prev.GetTag]§Y[Prev.GetName]§!王室联姻，此王室联姻不受宗教限制。"
  THE_ROD_unlock_peasants_parliament_reform_tt: "解锁君主制第6级政府改革「§Y农民议会§!」，实行该改革将获得如下效果:"
  THE_ROD_add_unity_german_culture_power_from_grain_or_wine_tt: "从治下每个生产§Y谷物§!或§Y酒类§!的省份获得§G1§!§M德意志文化统一进度§!"
+ THE_ROD_core_add_darkness_manipulation_var_tt: "完成省份核心化将获得§Y操控黑暗程度的能力§!"
  THE_ROD_not_complete_event_ttt: "没做完"
 ###TOOLTIP_END
 
@@ -639,6 +641,10 @@ l_english:
  THE_ROD_events.33.title: "巴伐利亚啤酒节"
  THE_ROD_events.33.desc: "巴伐利亚的人民喜爱喝啤酒，并将这种爱好发扬为每年一次的「啤酒节」来庆祝这种酒精饮品并在当天尽情饮用啤酒。南德意志地区同样是著名的葡萄酒产地，特别是[2955.GetName]产出的葡萄酒。今年的「啤酒节」上啤酒派和葡萄酒派争执不休，誓要证明自己所支持的是最优秀的酒，为此两派向「啤酒节」的冠军露米娅询问。"
  THE_ROD_events.33.a: "「尝起来都差不多吧，不像幻想乡的酒。」"
+
+ THE_ROD_events.34.title: "黑水晶王冠"
+ THE_ROD_events.34.desc: "自从[Root.GetName]晋升为王国，我们的统治者露米娅一直缺少一顶足以匹配她身份的王冠，以彰显她的地位。最近波希米亚地区的水晶产业有了突破性的发展，在诸位宫廷大臣的商议下，经过国内众多水晶工匠的研究，终于制造出黑暗但清澈的水晶，并以此为核心打造了独属于露米娅的黑水晶王冠"
+ THE_ROD_events.34.a: "凌然一切之上的黑暗"
 ###EVENT_END
 
 ###VARIABLE

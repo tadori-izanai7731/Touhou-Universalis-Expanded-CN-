@@ -1799,3 +1799,41 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = THE_ROD_events.34
+	title = THE_ROD_events.34.title
+	desc = THE_ROD_events.34.desc
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.5
+			trade_goods_produced_amount = {
+				trade_goods = glass
+				amount = 10
+			}
+		}
+	}
+	trigger = {
+		government_rank = 2
+	}
+	
+	option = {
+		name = THE_ROD_events.34.a
+		custom_tooltip = THE_ROD_german_empire_event_tt
+		custom_tooltip = empty_line_tt
+		custom_tooltip = THE_ROD_core_add_darkness_manipulation_var_tt
+		hidden_effect = {
+			set_country_flag = THE_ROD_core_add_darkness_manipulation_var_flag
+		}
+		change_price = {
+			trade_goods = glass
+			key = THE_ROD_black_glass_key_tt
+			value = 0.2
+			duration = -1
+		}
+	}
+}
