@@ -1962,6 +1962,9 @@ country_event = {
 	
 	option = {
 		name = THE_ROD_events.36.a
+		trigger = {
+			NOT = { has_country_modifier = trust_from_mercs }
+		}
 		custom_tooltip = THE_ROD_german_empire_event_tt
 		custom_tooltip = empty_line_tt
 		hidden_effect = {
@@ -1975,6 +1978,9 @@ country_event = {
 	
 	option = {
 		name = THE_ROD_events.36.b
+		trigger = {
+			NOT = { has_country_modifier = great_reputation_modifier }
+		}
 		custom_tooltip = THE_ROD_german_empire_event_tt
 		custom_tooltip = empty_line_tt
 		hidden_effect = {
@@ -1988,6 +1994,9 @@ country_event = {
 	
 	option = {
 		name = THE_ROD_events.36.c
+		trigger = {
+			NOT = { has_country_modifier = mercenary_leadership }
+		}
 		custom_tooltip = THE_ROD_german_empire_event_tt
 		custom_tooltip = empty_line_tt
 		hidden_effect = {
