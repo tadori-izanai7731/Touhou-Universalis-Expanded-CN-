@@ -251,7 +251,7 @@ country_event = {
 	}
 }
 
-### ROD flavor events in THE! ###
+### ROD flavor events in THE!
 
 country_event = {
 	id = THE_ROD_events.4
@@ -1469,13 +1469,13 @@ country_event = {
 	fire_only_once = yes
 	
 	mean_time_to_happen = {
-		months = 1200
+		months = 600
 		modifier = {
-			factor = 0.5
+			factor = 0.75
 			has_idea_group = mercenary_ideas
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.75
 			full_idea_group = mercenary_ideas
 		}
 	}
@@ -1812,9 +1812,9 @@ country_event = {
 		months = 300
 		modifier = {
 			factor = 0.5
-			trade_goods_produced_amount = {
+			trading_bonus = {
 				trade_goods = glass
-				amount = 10
+				value = yes
 			}
 		}
 	}
@@ -1934,6 +1934,68 @@ country_event = {
 					}
 				"
 			}
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.36
+	title = THE_ROD_events.36.title
+	desc = THE_ROD_events.36.desc
+	
+	mean_time_to_happen = {
+		months = 240
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		num_of_mercenaries = 1
+		OR = {
+			has_country_modifier = mercenaries_to_the_standard
+			full_idea_group = mercenary_ideas
+		}
+		OR = {
+			NOT = { has_country_modifier = trust_from_mercs }
+			NOT = { has_country_modifier = great_reputation_modifier }
+			NOT = { has_country_modifier = mercenary_leadership }
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.36.a
+		custom_tooltip = THE_ROD_german_empire_event_tt
+		custom_tooltip = empty_line_tt
+		hidden_effect = {
+			remove_country_modifier = trust_from_mercs
+		}
+		add_country_modifier = {
+			name = trust_from_mercs
+			duration = -1
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.36.b
+		custom_tooltip = THE_ROD_german_empire_event_tt
+		custom_tooltip = empty_line_tt
+		hidden_effect = {
+			remove_country_modifier = great_reputation_modifier
+		}
+		add_country_modifier = {
+			name = great_reputation_modifier
+			duration = -1
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.36.c
+		custom_tooltip = THE_ROD_german_empire_event_tt
+		custom_tooltip = empty_line_tt
+		hidden_effect = {
+			remove_country_modifier = mercenary_leadership
+		}
+		add_country_modifier = {
+			name = mercenary_leadership
+			duration = -1
 		}
 	}
 }
