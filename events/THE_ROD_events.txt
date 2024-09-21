@@ -1853,12 +1853,18 @@ country_event = {
 	trigger = {
 		OR = { tag = ROD was_tag = ROD }
 		hre_size = 1
+		is_part_of_hre = yes
 	}
 	
 	option = {
 		name = THE_ROD_events.35.a
 		custom_tooltip = THE_ROD_german_empire_event_tt
 		custom_tooltip = empty_line_tt
+		43 = {
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+		}
 		custom_tooltip = THE_ROD_free_city_trade_power_tt
 		hidden_effect = {
 			set_variable = {
@@ -1887,6 +1893,11 @@ country_event = {
 							key = THE_ROD_free_city_trade_power_key_tt
 						}
 					}
+				"
+			}
+			for_variable_amount = {
+				variable = the_rod_free_city_var
+				effect = "
 					61 = {
 						add_trade_modifier = {
 							who = ROOT
@@ -1895,6 +1906,11 @@ country_event = {
 							key = THE_ROD_free_city_trade_power_key_tt
 						}
 					}
+				"
+			}
+			for_variable_amount = {
+				variable = the_rod_free_city_var
+				effect = "
 					1876 = {
 						add_trade_modifier = {
 							who = ROOT
@@ -1903,6 +1919,11 @@ country_event = {
 							key = THE_ROD_free_city_trade_power_key_tt
 						}
 					}
+				"
+			}
+			for_variable_amount = {
+				variable = the_rod_free_city_var
+				effect = "
 					134 = {
 						add_trade_modifier = {
 							who = ROOT
