@@ -492,7 +492,7 @@ country_event = {
 			create_union = LXA
 		}
 		ai_chance = { 
-			factor = 75
+			factor = 30
 			modifier = {
 				factor = 0
 				NOT = { 
@@ -535,7 +535,7 @@ country_event = {
 			}
 		}
 		ai_chance = { 
-			factor = 25
+			factor = 12
 			modifier = {
 				factor = 0
 				NOT = { prestige = 50 }
