@@ -590,6 +590,21 @@ THE_ROD_out_of_peasants_war_modifier = {
 	global_unrest = -6
 }
 
+#共同体愿景
+THE_ROD_unity_wish_modifier = {
+	diplomatic_reputation = 1
+	diplomatic_annexation_cost = -0.1
+	accept_vassalization_reasons = 10
+	transfer_trade_power_reasons = 30
+	annexation_relations_impact = -0.25
+}
+
+#血与骨
+THE_ROD_blood_and_bone_province_modifier = {
+	production_efficiency = 0.01
+	trade_goods_size = 2
+}
+
 ###EXTRA_HAKUREI_DEITY
 THE_ROD_extra_hakurei_modifier_Hakurei_God = {
 	defensiveness = 0.1

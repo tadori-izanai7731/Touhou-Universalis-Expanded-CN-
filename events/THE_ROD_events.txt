@@ -143,6 +143,7 @@ country_event = {
 	desc = THE_ROD_events.3.desc
 	picture = DECLARATION_INDEPENDENCE_eventPicture
 	is_triggered_only = yes
+
 	
 	option = {
 		name = THE_ROD_events.3.a
@@ -150,6 +151,7 @@ country_event = {
 			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = pommeranian }
 		}
 		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = pommeranian }
+		THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = yes
 	}
 	option = {
 		name = THE_ROD_events.3.b
@@ -157,6 +159,7 @@ country_event = {
 			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = prussian }
 		}
 		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = prussian }
+		THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = yes
 	}
 	option = {
 		name = THE_ROD_events.3.c
@@ -164,6 +167,7 @@ country_event = {
 			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = baltic_german }
 		}
 		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = baltic_german }
+		THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = yes
 	}
 	option = {
 		name = THE_ROD_events.3.d
@@ -171,6 +175,7 @@ country_event = {
 			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = lower_saxon }
 		}
 		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = lower_saxon }
+		THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = yes
 	}
 	option = {
 		name = THE_ROD_events.3.e
@@ -178,6 +183,7 @@ country_event = {
 			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = hannoverian }
 		}
 		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = hannoverian }
+		THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = yes
 	}
 	option = {
 		name = THE_ROD_events.3.f
@@ -185,6 +191,7 @@ country_event = {
 			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = hessian }
 		}
 		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = hessian }
+		THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = yes
 	}
 	option = {
 		name = THE_ROD_events.3.g
@@ -192,6 +199,7 @@ country_event = {
 			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = saxon }
 		}
 		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = saxon }
+		THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = yes
 	}
 	option = {
 		name = THE_ROD_events.3.h
@@ -199,6 +207,7 @@ country_event = {
 			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = franconian }
 		}
 		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = franconian }
+		THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = yes
 	}
 	option = {
 		name = THE_ROD_events.3.i
@@ -206,6 +215,7 @@ country_event = {
 			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = swabian }
 		}
 		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = swabian }
+		THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = yes
 	}
 	option = {
 		name = THE_ROD_events.3.j
@@ -213,6 +223,7 @@ country_event = {
 			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = swiss }
 		}
 		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = swiss }
+		THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = yes
 	}
 	option = {
 		name = THE_ROD_events.3.k
@@ -220,6 +231,7 @@ country_event = {
 			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = bavarian }
 		}
 		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = bavarian }
+		THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = yes
 	}
 	option = {
 		name = THE_ROD_events.3.l
@@ -227,6 +239,7 @@ country_event = {
 			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = austrian }
 		}
 		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = austrian }
+		THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = yes
 	}
 	option = {
 		name = THE_ROD_events.3.m
@@ -234,6 +247,7 @@ country_event = {
 			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = dutch }
 		}
 		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = dutch }
+		THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = yes
 	}
 	option = {
 		name = THE_ROD_events.3.n
@@ -241,6 +255,7 @@ country_event = {
 			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = flemish }
 		}
 		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = flemish }
+		THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = yes
 	}
 	option = {
 		name = THE_ROD_events.3.o
@@ -248,6 +263,7 @@ country_event = {
 			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = frisian }
 		}
 		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = frisian }
+		THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = yes
 	}
 }
 
@@ -1485,8 +1501,6 @@ country_event = {
 	
 	option = {
 		name = THE_ROD_events.28.a
-		custom_tooltip = THE_ROD_german_empire_event_tt
-		custom_tooltip = empty_line_tt
 		custom_tooltip = THE_ROD_unlock_more_mercenary_tt
 		tooltip = {
 			add_country_modifier = {
@@ -1965,8 +1979,6 @@ country_event = {
 		trigger = {
 			NOT = { has_country_modifier = trust_from_mercs }
 		}
-		custom_tooltip = THE_ROD_german_empire_event_tt
-		custom_tooltip = empty_line_tt
 		hidden_effect = {
 			remove_country_modifier = trust_from_mercs
 		}
@@ -1981,8 +1993,6 @@ country_event = {
 		trigger = {
 			NOT = { has_country_modifier = great_reputation_modifier }
 		}
-		custom_tooltip = THE_ROD_german_empire_event_tt
-		custom_tooltip = empty_line_tt
 		hidden_effect = {
 			remove_country_modifier = great_reputation_modifier
 		}
@@ -1997,14 +2007,138 @@ country_event = {
 		trigger = {
 			NOT = { has_country_modifier = mercenary_leadership }
 		}
-		custom_tooltip = THE_ROD_german_empire_event_tt
-		custom_tooltip = empty_line_tt
 		hidden_effect = {
 			remove_country_modifier = mercenary_leadership
 		}
 		add_country_modifier = {
 			name = mercenary_leadership
 			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.37
+	title = THE_ROD_events.37.title
+	desc = THE_ROD_events.37.desc
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 0.2
+			calc_true_if = {
+				amount = 5
+				accepted_culture = pommeranian
+				accepted_culture = prussian
+				accepted_culture = baltic_german
+				accepted_culture = lower_saxon
+				accepted_culture = hannoverian
+				accepted_culture = hessian
+				accepted_culture = saxon
+				accepted_culture = franconian
+				accepted_culture = swabian
+				accepted_culture = swiss
+				accepted_culture = bavarian
+				accepted_culture = austrian
+				accepted_culture = dutch
+				accepted_culture = flemish
+				accepted_culture = frisian
+			}
+		}
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		has_government_mechanic = THE_ROD_german_culture_unity_mechanic
+	}
+	
+	option = {
+		name = THE_ROD_events.37.a
+		custom_tooltip = THE_ROD_german_empire_event_tt
+		custom_tooltip = empty_line_tt
+		custom_tooltip = THE_ROD_german_culture_unity_mechanic_interaction_receive_power_tt
+		hidden_effect = {
+			set_country_flag = THE_ROD_german_culture_unity_mechanic_interaction_receive_power_flag
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.38
+	title = THE_ROD_events.38.title
+	desc = THE_ROD_events.38.desc
+	
+	mean_time_to_happen = {
+		months = 600
+		modifier = {
+			factor = 0.5
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				OR = {
+					region = north_german_region
+					region = south_german_region
+				}
+				trade_goods = iron
+			}
+		}
+		modifier = {
+			factor = 0.5
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				OR = {
+					region = north_german_region
+					region = south_german_region
+				}
+				trade_goods = coal
+			}
+		}
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		is_year = 1600
+	}
+	
+	option = {
+		name = THE_ROD_events.38.a
+		custom_tooltip = THE_ROD_german_empire_event_tt
+		custom_tooltip = empty_line_tt
+		add_country_modifier = {
+			name = THE_ROD_unity_wish_modifier
+			duration = -1
+		}
+		custom_tooltip = THE_ROD_german_coal_or_iron_province_effect_tt
+		tooltip = {
+			add_permanent_province_modifier = {
+				name = THE_ROD_blood_and_bone_province_modifier
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			north_german_region = {
+				limit = {
+					OR = {
+						trade_goods = iron
+						trade_goods = coal
+						has_latent_trade_goods = coal
+					}
+				}
+				add_permanent_province_modifier = {
+					name = THE_ROD_blood_and_bone_province_modifier
+					duration = -1
+				}
+			}
+			south_german_region = {
+				limit = {
+					OR = {
+						trade_goods = iron
+						trade_goods = coal
+						has_latent_trade_goods = coal
+					}
+				}
+				add_permanent_province_modifier = {
+					name = THE_ROD_blood_and_bone_province_modifier
+					duration = -1
+				}
+			}
 		}
 	}
 }

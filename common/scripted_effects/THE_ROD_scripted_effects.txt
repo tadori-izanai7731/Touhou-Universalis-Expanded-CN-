@@ -611,6 +611,41 @@ THE_ROD_mission_4_10_scripted_effect = {
 	}
 }
 
+THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = {
+	if = {
+		limit = { has_country_flag = THE_ROD_german_culture_unity_mechanic_interaction_receive_power_flag }
+		custom_tooltip = THE_ROD_add_unity_german_culture_power_from_accepted_culture_tt
+		hidden_effect = {
+			THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted = { culture = pommeranian }
+			THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted = { culture = prussian }
+			THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted = { culture = baltic_german }
+			THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted = { culture = lower_saxon }
+			THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted = { culture = hannoverian }
+			THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted = { culture = hessian }
+			THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted = { culture = saxon }
+			THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted = { culture = franconian }
+			THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted = { culture = swabian }
+			THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted = { culture = swiss }
+			THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted = { culture = bavarian }
+			THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted = { culture = austrian }
+			THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted = { culture = dutch }
+			THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted = { culture = flemish }
+			THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted = { culture = frisian }
+		}
+	}
+}
+
+THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted = {
+	if = {
+		limit = { accepted_culture = $culture$ }
+		add_government_power = {
+			mechanic_type = THE_ROD_german_culture_unity_mechanic
+			power_type = THE_ROD_german_cultural_unity_power
+			value = 5
+		}
+	}
+}
+
 #$the_rumia_fire_var
 #$the_rumia_shock_var
 #$the_rumia_manuever_var

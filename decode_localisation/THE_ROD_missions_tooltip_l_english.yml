@@ -250,6 +250,9 @@ l_english:
  THE_ROD_core_add_darkness_manipulation_var_tt: "完成省份核心化将获得§Y操控黑暗程度的能力§!"
  THE_ROD_free_city_trade_power_key_tt: "自由市贸易"
  THE_ROD_free_city_trade_power_tt: "当前每有一个§Y自由市§!，我们在§Y吕贝克§!、§Y萨克森§!、§Y莱茵兰§!、§Y维也纳§!贸易区获得永久§G+5.00§!贸易竞争力"
+ THE_ROD_german_culture_unity_mechanic_interaction_receive_power_tt: "§M德意志文化统一§!政府互动将根据已接纳的§G日耳曼§!文化数量返还§M德意志文化统一§!进度。"
+ THE_ROD_add_unity_german_culture_power_from_accepted_culture_tt: "当前每个已接纳的§Y日耳曼§!文化提供§G+5.00§!§M德意志文化统一§!进度。"
+ THE_ROD_german_coal_or_iron_province_effect_tt: "每个§Y北德意志§!或§Y南德意志§!且生产§Y煤炭§!或§Y铁矿§!的省份:"
  THE_ROD_not_complete_event_ttt: "没做完"
 ###TOOLTIP_END
 
@@ -358,6 +361,8 @@ l_english:
  THE_ROD_habsburg_marriage_modifier: "哈布斯堡联姻"
  THE_ROD_safeguard_peasants_privilege_modifier: "农民利益"
  THE_ROD_out_of_peasants_war_modifier: "置身农民战争以外"
+ THE_ROD_unity_wish_modifier: "共同体愿景"
+ THE_ROD_blood_and_bone_province_modifier: "血与骨"
 ###MODIFIER_END
 
 ###MERC
@@ -657,6 +662,14 @@ l_english:
  THE_ROD_events.36.a: "他们相信我们的信用。"
  THE_ROD_events.36.b: "他们是仁慈的征服者。"
  THE_ROD_events.36.c: "他们是优秀的领导者。"
+
+ THE_ROD_events.37.title: "日耳曼民族主义"
+ THE_ROD_events.37.desc: ""
+ THE_ROD_events.37.a: "无论如何，让他们来吧。"
+
+ THE_ROD_events.38.title: "德意志煤钢共同体"
+ THE_ROD_events.38.desc: ""
+ THE_ROD_events.38.a: "希望之星，直上云霄。"
 ###EVENT_END
 
 ###VARIABLE
