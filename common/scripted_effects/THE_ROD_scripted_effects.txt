@@ -614,6 +614,7 @@ THE_ROD_mission_4_10_scripted_effect = {
 THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = {
 	if = {
 		limit = { has_country_flag = THE_ROD_german_culture_unity_mechanic_interaction_receive_power_flag }
+		custom_tooltip = empty_line_tt
 		custom_tooltip = THE_ROD_add_unity_german_culture_power_from_accepted_culture_tt
 		hidden_effect = {
 			THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted = { culture = pommeranian }
