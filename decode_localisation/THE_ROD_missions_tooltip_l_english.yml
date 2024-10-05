@@ -197,6 +197,10 @@ l_english:
  THE_ROD_german_culture_unity_extra_modifier_dutch_tt: "每年通货膨胀减量: §G+0.20§!"
  THE_ROD_german_culture_unity_extra_modifier_flemish_tt: "所受士气打击: §G-10.0%§!"
  THE_ROD_german_culture_unity_extra_modifier_frisian_tt: "海军士气: §G+10.0%§!"
+ THE_ROD_german_culture_unity_extra_modifier_gothic_ger_tt: "省份战争分数花费: §G-10.0%§!"
+ THE_ROD_german_culture_unity_extra_modifier_THE_czech_german_culture_tt: "炮兵冲击力: §G+1.00§!"
+ THE_ROD_german_culture_unity_extra_modifier_THE_sorbian_german_culture_tt: "异教容忍度: §G+3.00§!"
+ THE_ROD_german_culture_unity_extra_modifier_THE_schlesian_german_culture_tt: "异端容忍度: §G+3.00§!"
  THE_ROD_siege_won_add_core_in_german_tt: "在战争中占领§Y北德意志§!和§Y南德意志§!地区的省份将添加§Y[Root.GetName]§!的核心"
  THE_ROD_unlock_rod_ger_decision_tt: "禁用§Y宵暗-普鲁士领域§!和§Y宵暗-汉萨领域§!的修饰性国名。\n\n解锁决议「§Y宵暗-德意志领域§!」\n允许我们将德意志加入国家名称。"
  THE_ROD_remove_government_mechanic_trigger_tt: "§M暗月夜§!的政府互动不再有任何消耗。\n§M暗符「Demarcation」§!的效果改为增加§G25§!§O吞噬夜光§!。"
@@ -253,6 +257,7 @@ l_english:
  THE_ROD_german_culture_unity_mechanic_interaction_receive_power_tt: "§M德意志文化统一§!政府互动将根据已接纳的§G日耳曼§!文化数量返还§M德意志文化统一§!进度。"
  THE_ROD_add_unity_german_culture_power_from_accepted_culture_tt: "当前每个已接纳的§Y日耳曼§!文化提供§G5.00§!§M德意志文化统一§!进度。"
  THE_ROD_german_coal_or_iron_province_effect_tt: "每个§Y北德意志§!或§Y南德意志§!地区且生产§Y煤炭§!或§Y铁矿§!的省份获得如下效果:"
+ THE_ROD_assimilate_boh_tt: "治下随机§Y10§!个省份:"
  THE_ROD_not_complete_event_ttt: "没做完"
 ###TOOLTIP_END
 
@@ -664,12 +669,21 @@ l_english:
  THE_ROD_events.36.c: "他们是优秀的领导者。"
 
  THE_ROD_events.37.title: "日耳曼民族主义"
- THE_ROD_events.37.desc: "威斯特伐利亚合约建立了全新的国际外交体系，即彼此互相承认主权与领土。许多国家，比如常年与德意志进行战争的法兰西和脱离神圣罗马帝国的尼德兰，实际上都开始了民族主义的进程，这是一种经济、文化、政治和外交共同影响的结果，构建出的「民族」概念进而推动国家的统一。回到眼下的德意志帝国，或许政治家会说「德意志很大，容得下两个列强。」，但这并不是日耳曼民族应当进行分化的理由，在文化与政治的角度分裂并无益处，更不用说日益进步的管理方式和对欧洲以外利益的追求，以全新的「德意志」取代旧有的「日耳曼」才是民族主义道路。曾经我们都讲述德意志的语言，现在让我们建立真正的「德意志帝国」。"
+ THE_ROD_events.37.desc: "威斯特伐利亚合约建立了全新的国际外交体系，即彼此互相承认主权与领土。许多国家，比如常年与德意志进行战争的法兰西和脱离神圣罗马帝国的尼德兰，实际上都开始了民族主义的进程，这是一种经济、文化、政治和外交共同影响的结果，构建出的「民族」概念进而推动国家的统一。回到眼下的德意志，或许政治家会说「德意志很大，容得下两个列强。」，但这并不是日耳曼民族应当进行分化的理由，在文化与政治的角度分裂并无益处，更不用说日益进步的管理方式和对欧洲以外利益的追求，以全新的「德意志」取代旧有的「日耳曼」才是民族主义道路。曾经我们都讲述德意志的语言，现在让我们建立真正的「德意志帝国」。"
  THE_ROD_events.37.a: "无论如何，我们需要他们。"
 
  THE_ROD_events.38.title: "德意志煤钢共同体"
  THE_ROD_events.38.desc: "德意志的统一并不一定需要铁与血的战争，随着蒸汽动力和钢制材料的大规模使用，工业实力逐渐成为国家发展的最重要因素。毫无疑问，那些具有一定人力或资源的小国在工业化的发展上无法与大规模生产的大国相比，正是基于这种对工业化落后的恐慌，宵暗领域提出了德意志煤钢共同体计划。该计划并非具有强烈的扩张意图，而是通过生产和贸易将德意志其他地区的钢铁和煤炭连接为一个整体，如果该计划成功实施，或许能推广至全欧洲甚至整个世界。"
  THE_ROD_events.38.a: "希望之星，直上云霄。"
+
+ THE_ROD_events.39.title: "哥特与日耳曼"
+ THE_ROD_events.39.desc: "「哥特人」是罗马帝国时期东日耳曼人部落的一支分支部族，主要定居在潘诺尼亚地区。公元4世纪，哥特人内部分裂为Visigoths和Ostrogoths，最后演变为西哥特与东哥特。匈人西征迫使他们生活在罗马帝国和匈人帝国的统治下，随着帝国的分裂先后在伊比利亚和意大利建立了自己的政权，像所有政权一样经历发展、繁荣、衰落、灭亡的命运，仅存的一些哥特人生活在曾经狄奥多罗王国的[2410.GetName]。或许哥特人在文化上更像匈牙利人、意大利人、伊比利亚人、希腊人甚至征服他们的匈人，但在一个全新的强大德意志帝国面前，成为古老的日耳曼民族显然是一种好选择。"
+ THE_ROD_events.39.a: "在漫长的历史面前，我们构建的民族不值一提。"
+
+ THE_ROD_events.40.title: "《德意志史——波希米亚分卷》"
+ THE_ROD_events.40.desc: "作为曾经神圣罗马帝国的选帝侯，这个由捷克人统治的波希米亚王国曾令无数公爵国王趋之若鹜。但今非昔比，帝国解散和民族主义的背景下，尽管我们对外族的态度是和平共处，日耳曼人统治的德意志帝国与曾经亦为统治者的西斯拉夫人依然出现了难以调和的矛盾。针对这一问题召开的内阁会议上，正在编纂德意志史的历史学家提出的民族平等方案得到了在场大多数的认可，一些更加激进者认为所谓的西斯拉夫民族早已不能被称为民族，这些生活在德意志土地上的就是正统的日耳曼人。"
+ THE_ROD_events.40.a: "列入主要卷。"
+ THE_ROD_events.40.a: "列入附加卷。"
 ###EVENT_END
 
 ###VARIABLE
@@ -683,3 +697,9 @@ l_english:
  THE_ROD_mechanic_stage_3: "寂静之夜"
  THE_ROD_mechanic_stage_4: "暗月之夜"
 ###CUSTOM_LOCALISATION_END
+
+###CULTURE
+ THE_czech_german_culture: "捷克"
+ THE_sorbian_german_culture: "索布"
+ THE_schlesian_german_culture: "西里西亚"
+###CULTURE_END

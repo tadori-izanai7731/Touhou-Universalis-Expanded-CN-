@@ -2021,6 +2021,8 @@ country_event = {
 	id = THE_ROD_events.37
 	title = THE_ROD_events.37.title
 	desc = THE_ROD_events.37.desc
+
+	fire_only_once = yes
 	
 	mean_time_to_happen = {
 		months = 60
@@ -2066,6 +2068,8 @@ country_event = {
 	id = THE_ROD_events.38
 	title = THE_ROD_events.38.title
 	desc = THE_ROD_events.38.desc
+
+	fire_only_once = yes
 	
 	mean_time_to_happen = {
 		months = 600
@@ -2139,6 +2143,125 @@ country_event = {
 					duration = -1
 				}
 			}
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.39
+	title = THE_ROD_events.39.title
+	desc = THE_ROD_events.39.desc
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		has_government_mechanic = THE_ROD_german_culture_unity_mechanic
+		NOT = { exists = FEO }
+		2410 = { owned_by = ROOT }
+		any_owned_province = {
+			culture = goths
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.39.a
+		custom_tooltip = THE_ROD_german_empire_event_tt
+		custom_tooltip = empty_line_tt
+		hidden_effect = {
+			THE_ROD_upgrade_global_culture_scripted_effect = { culture_old = goths culture_new = gothic_ger }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = gothic_ger }
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.40
+	title = THE_ROD_events.40.title
+	desc = THE_ROD_events.40.desc
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		NOT = { hre_size = 1 }
+		has_government_mechanic = THE_ROD_german_culture_unity_mechanic
+		owns_all_provinces = {
+			OR = {
+				culture = czech
+				culture = sorbian
+				culture = schlesian
+			}
+			continent = europe
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.40.a
+		custom_tooltip = THE_ROD_german_empire_event_tt
+		custom_tooltip = empty_line_tt
+		hidden_effect = {
+			THE_ROD_upgrade_global_culture_scripted_effect = { culture_old = czech culture_new = THE_czech_german_culture }
+			THE_ROD_upgrade_global_culture_scripted_effect = { culture_old = sorbian culture_new = THE_sorbian_german_culture }
+			THE_ROD_upgrade_global_culture_scripted_effect = { culture_old = schlesian culture_new = THE_schlesian_german_culture }
+		}
+		THE_ROD_unity_german_culture_mechanic_without_prestige_scripted_effect = { culture = THE_czech_german_culture }
+		custom_tooltip = empty_line_tt
+		custom_tooltip = empty_line_tt
+		THE_ROD_unity_german_culture_mechanic_without_prestige_scripted_effect = { culture = THE_sorbian_german_culture }
+		custom_tooltip = empty_line_tt
+		custom_tooltip = empty_line_tt
+		THE_ROD_unity_german_culture_mechanic_without_prestige_scripted_effect = { culture = THE_schlesian_german_culture }
+		custom_tooltip = empty_line_tt
+		custom_tooltip = empty_line_tt
+		add_government_power = {
+			mechanic_type = THE_ROD_german_culture_unity_mechanic
+			power_type = THE_ROD_german_cultural_unity_power
+			value = -100
+		}
+		custom_tooltip = empty_line_tt
+		custom_tooltip = THE_ROD_assimilate_boh_tt
+		tooltip = {
+			particularist_rebels = 2
+		}
+		hidden_effect = {
+			for = {
+				amount = 10
+				effect = "
+					random_owned_province = {
+						limit = { culture_group = germanic }
+						particularist_rebels = 2
+					}
+				"
+			}
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.40.b
+		custom_tooltip = THE_ROD_german_empire_event_tt
+		custom_tooltip = empty_line_tt
+		add_dip_power = -300
+		add_accepted_culture_or_dip_power = {
+			culture = czech
+			dip_reward = yes
+			free = yes
+		}
+		add_accepted_culture_or_dip_power = {
+			culture = sorbian
+			dip_reward = yes
+			free = yes
+		}
+		add_accepted_culture_or_dip_power = {
+			culture = schlesian
+			dip_reward = yes
+			free = yes
 		}
 	}
 }

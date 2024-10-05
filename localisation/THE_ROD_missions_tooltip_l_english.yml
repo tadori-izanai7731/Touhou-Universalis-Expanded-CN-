@@ -197,6 +197,10 @@
  THE_ROD_german_culture_unity_extra_modifier_dutch_tt: "Ïkt^'¨ÀwÏQÏ‘: §G+0.20§!"
  THE_ROD_german_culture_unity_extra_modifier_flemish_tt: "Nb×SëXlSbûQ: §G-10.0%§!"
  THE_ROD_german_culture_unity_extra_modifier_frisian_tt: "wm›QëXl: §G+10.0%§!"
+ THE_ROD_german_culture_unity_extra_modifier_gothic_ger_tt: "wýNb‰NRpe±‚9: §G-10.0%§!"
+ THE_ROD_german_culture_unity_extra_modifier_THE_czech_german_culture_tt: "®puQ²QûQ›R: §G+1.00§!"
+ THE_ROD_german_culture_unity_extra_modifier_THE_sorbian_german_culture_tt: "VYe¹RÍV¦^: §G+3.00§!"
+ THE_ROD_german_culture_unity_extra_modifier_THE_schlesian_german_culture_tt: "Vïz¹RÍV¦^: §G+3.00§!"
  THE_ROD_siege_won_add_core_in_german_tt: "(Wb‰N-N`S†˜§YS·Va×V§!ŒT§YWS·Va×V§!0W:S„vwýNSûm R§Y[Root.GetName]§!„v8hÃV"
  THE_ROD_unlock_rod_ger_decision_tt: "y(u§YµR—f-nfœëX†˜ßW§!ŒT§YµR—f-Il(„†˜ßW§!„vîOp™'`ýVT0\n\nã‰•³Q®‹0§YµR—f-·Va×V†˜ßW§!0\nAQ¸‹bìNS·Va×V ReQýV¶RTðy0"
  THE_ROD_remove_government_mechanic_trigger_tt: "§M—fgY§!„v?eœ^’N¨RNQ	gûNUOˆmw0\n§M—f&r0Demarcation0§!„vHeœg9e:NžX R§G25§!§OTlVYIQ§!0"
@@ -253,6 +257,7 @@
  THE_ROD_german_culture_unity_mechanic_interaction_receive_power_tt: "§M·Va×V‡eSßuN§!?eœ^’N¨RS9hncòT¥c³u„v§Gåe3wüf§!‡eSpeÏ‘ÔØ§M·Va×V‡eSßuN§!Û¦^0"
  THE_ROD_add_unity_german_culture_power_from_accepted_culture_tt: "SVMRÏk*NòT¥c³u„v§Yåe3wüf§!‡eSÐc›O§G5.00§!§M·Va×V‡eSßuN§!Û¦^0"
  THE_ROD_german_coal_or_iron_province_effect_tt: "Ïk*N§YS·Va×V§!b§YWS·Va×V§!0W:SNuµN§Ydq­p§!b§YÁ”ÿw§!„vwýN·ƒ—V‚YNHeœg:"
+ THE_ROD_assimilate_boh_tt: "»lN–:g§Y10§!*NwýN:"
  THE_ROD_not_complete_event_ttt: "¡lZPŒR"
 ###TOOLTIP_END
 
@@ -664,12 +669,21 @@
  THE_ROD_events.36.c: "ÖNìN=fOÀy„v†˜üRw0"
 
  THE_ROD_events.37.title: "åe3wüflÏeININ"
- THE_ROD_events.37.desc: "Z¯eyrO)RšNT¦uú^Ëz†NhQ°e„výVE–Y²NSOû|ÿsS|Vdk’Nøvb²‹INCgN†˜W0¸‹YýV¶RÿÔk‚Y8^t^N·Va×VÛLˆb‰N„vÕlpQ‰ŒT1»y^y1WWlš^ýV„v<S·VpQÿžRE–NýVËY†NlÏeININ„vÛzÿÙ=fNÍyÏuNm0‡eS0?e»lŒTY²NqQTqVÍT„vÓuœgÿ„gú^úQ„v0lÏe0‚iõVÛw¨c¨RýV¶R„vßuN0ÞV0R<wN„v·Va×V^ýVÿb¸‹?e»l¶ROô‹0·Va×VˆV'Yÿ¹R—VN2N*NR:V00ÿFOÙv^N=fåe3wüflÏe”^SVÛLˆRS„vt1uÿ(W‡eSN?e»l„vÒ‰¦^RÂˆv^àeÊvYÿôfN(uô‹åeÊvÛek„v¡rt¹eVŒTùR'k2måNY)RÊv„výBlÿåNhQ°e„v0·Va×V0ÖSãNçe	g„v0åe3wüf0Mb=flÏeININSï0þfÏubìNý²‹ð·Va×V„ví‹Šÿ°s(W©‹bìNú^Ëzwck„v0·Va×V^ýV00"
+ THE_ROD_events.37.desc: "Z¯eyrO)RšNT¦uú^Ëz†NhQ°e„výVE–Y²NSOû|ÿsS|Vdk’Nøvb²‹INCgN†˜W0¸‹YýV¶RÿÔk‚Y8^t^N·Va×VÛLˆb‰N„vÕlpQ‰ŒT1»y^y1WWlš^ýV„v<S·VpQÿžRE–NýVËY†NlÏeININ„vÛzÿÙ=fNÍyÏuNm0‡eS0?e»lŒTY²NqQTqVÍT„vÓuœgÿ„gú^úQ„v0lÏe0‚iõVÛw¨c¨RýV¶R„vßuN0ÞV0R<wN„v·Va×Vÿb¸‹?e»l¶ROô‹0·Va×VˆV'Yÿ¹R—VN2N*NR:V00ÿFOÙv^N=fåe3wüflÏe”^SVÛLˆRS„vt1uÿ(W‡eSN?e»l„vÒ‰¦^RÂˆv^àeÊvYÿôfN(uô‹åeÊvÛek„v¡rt¹eVŒTùR'k2måNY)RÊv„výBlÿåNhQ°e„v0·Va×V0ÖSãNçe	g„v0åe3wüf0Mb=flÏeININSï0þfÏubìNý²‹ð·Va×V„ví‹Šÿ°s(W©‹bìNú^Ëzwck„v0·Va×V^ýV00"
  THE_ROD_events.37.a: "àeº‹‚YUOÿbìN—‰ÖNìN0"
 
  THE_ROD_events.38.title: "·Va×Vdq¢”qQTSO"
  THE_ROD_events.38.desc: "·Va×V„vßuNv^NNšR—‰Á”NNˆ„vb‰Nÿ–Nw¸„‹l¨R›RŒT¢”6RPg™e„v'YÄ‰!jO(uÿåTNžR›Rnb:NýV¶RÑSUS„vgÍ‘‰àV.t0ëkàe‘uî•ÿ±›NwQ	gNšRºN›RbDn„vSýV(WåTNS„vÑSUSNàeÕlN'YÄ‰!juµN„v'YýVøvÔkÿck=fúWŽNÙÍyùRåTNSK„T„vP`LaÿµR—f†˜ßWÐcúQ†N·Va×Vdq¢”qQTSO¡‹R0å‹¡‹Rv^^—wQ	g:VÈp„vib.VaþVÿw=fÇuµNŒT8fS·Va×VvQÖN0W:S„v¢”Á”ŒTdq­pÞ¥c:NN*NteSOÿ‚Yœgå‹¡‹RbŸRžRËeÿb¸‹ýw¨c^óhQ'k2muóte*NNLu0"
  THE_ROD_events.38.a: "^gKNfÿôvN‘N—0"
+
+ THE_ROD_events.39.title: "åTyrNåe3wüf"
+ THE_ROD_events.39.desc: "0åTyrºN0=fWlš^ýVöegNåe3wüfºNèK„„vN=eR=eèÏeÿIN‰šRES(WXoú‹<SšN0W:S0lQCQ4NªuÿåTyrºN…QèRÂˆ:NVisigothsŒTOstrogothsÿgToØS:N‰åTyrNNåTyr0SºN‰VëOÖNìNuIm(WWlš^ýVŒTSºN^ýV„vßu»lNÿ–Nw^ýV„vRÂˆHQT(WOÔk)RšNŒTa'Y)Rú^Ëz†NêñT„v?eCgÿÏPNb	g?eCgN7hÏu†SÑSUS0Aucƒ0pˆK„0mp¡N„v‹TÐÿÅNXR„vN›NåTyrºNuIm(WþfÏuÄreYYW‹sýV„v[2410.GetName]0b¸‹åTyrºN(W‡eSNôfÏPSYr)RºN0a'Y)RºN0OÔk)RšNºN0^JºNuóVgÖNìN„vSºNÿFO(WN*NhQ°e„v:V'Y·Va×V^ýVb—MRÿb:NäSw„våe3wüflÏe>f6q=fNÍy‹Y	éb0"
+ THE_ROD_events.39.a: "(W+o•„v†SòSb—MRÿbìN„gú^„vlÏeN<PNÐc0"
+
+ THE_ROD_events.40.title: "0·Va×VòSâl^s|šNRwS0"
+ THE_ROD_events.40.desc: "jO:NþfÏu^y1WWlš^ýV„v	^¯OÿÙ*N1uwcKQºNßu»l„vâl^s|šN‹sýVþfäNàepelQ5rýV‹s‹KNå‚jž0FOÊN^—fÔkÿ^ýVã‰ceŒTlÏeININ„vÌwofNÿKS¡rbìNùRYÏe„v`¦^=fŒTs^qQYÿåe3wüfºNßu»l„v·Va×V^ýVNþfÏu¦N:Nßu»lw„v‰¯eÉb+YºNO6qúQ°s†N¾–åNŒŒT„vÛwþv0ˆ”ùRÙNî•˜˜ìSV„v…Q–O®‹Nÿck(W‚u·Va×VòS„v†SòSfR¶RÐcúQ„vlÏes^Ir¹eHh—V0R†N(W:W'YYpe„v²‹ïSÿN›Nôf RÀoÛw²‹:NNbŒ„v‰¯eÉb+YlÏeéeòTNýw«ˆðy:NlÏeÿÙ›NuIm(W·Va×VW0WN„v1S=fckßu„våe3wüfºN0"
+ THE_ROD_events.40.a: "ReQIN‰wS0"
+ THE_ROD_events.40.a: "ReQD– RwS0"
 ###EVENT_END
 
 ###VARIABLE
@@ -683,3 +697,9 @@
  THE_ROD_mechanic_stage_3: "ÂRY—KNY"
  THE_ROD_mechanic_stage_4: "—fgKNY"
 ###CUSTOM_LOCALISATION_END
+
+###CULTURE
+ THE_czech_german_culture: "wcKQ"
+ THE_sorbian_german_culture: "0t^"
+ THE_schlesian_german_culture: "‰Ì‘‰šN"
+###CULTURE_END

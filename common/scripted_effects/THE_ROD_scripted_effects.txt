@@ -600,6 +600,18 @@ THE_ROD_unity_german_culture_mechanic_scripted_effect = {
 	set_country_flag = THE_ROD_had_accept_german_$culture$_culture_flag
 }
 
+THE_ROD_unity_german_culture_mechanic_without_prestige_scripted_effect = {
+	add_accepted_culture_or_dip_power = {
+		culture = $culture$
+		dip_reward = yes
+		free = yes
+	}
+	custom_tooltip = empty_line_tt
+	custom_tooltip = THE_ROD_german_culture_unity_extra_add_modifier_tt
+	custom_tooltip = THE_ROD_german_culture_unity_extra_modifier_$culture$_tt
+	set_country_flag = THE_ROD_had_accept_german_$culture$_culture_flag
+}
+
 
 THE_ROD_mission_4_10_scripted_effect = {
 	for = {
@@ -632,6 +644,10 @@ THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = {
 			THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted = { culture = dutch }
 			THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted = { culture = flemish }
 			THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted = { culture = frisian }
+			THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted = { culture = gothic_ger }
+			THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted = { culture = THE_czech_german_culture }
+			THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted = { culture = THE_sorbian_german_culture }
+			THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted = { culture = THE_schlesian_german_culture }
 		}
 	}
 }
@@ -644,6 +660,21 @@ THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted = {
 			power_type = THE_ROD_german_cultural_unity_power
 			value = 5
 		}
+	}
+}
+
+THE_ROD_upgrade_global_culture_scripted_effect = {
+	every_country = {
+		limit = {
+			primary_culture = $culture_old$
+		}
+		change_primary_culture = $culture_new$
+	}
+	every_province = {
+		limit = {
+			culture = $culture_old$
+		}
+		change_culture = $culture_new$
 	}
 }
 

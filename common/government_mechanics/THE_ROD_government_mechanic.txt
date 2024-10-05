@@ -431,6 +431,30 @@ THE_ROD_german_culture_unity_mechanic = {
 					naval_morale = 0.1
 				}
 			}
+			scaled_modifier = {
+				trigger = { has_country_flag = THE_ROD_had_accept_german_gothic_ger_culture_flag }
+				modifier = {
+					province_warscore_cost = -0.1
+				}
+			}
+			scaled_modifier = {
+				trigger = { has_country_flag = THE_ROD_had_accept_german_THE_czech_german_culture_culture_flag }
+				modifier = {
+					artillery_shock = 1
+				}
+			}
+			scaled_modifier = {
+				trigger = { has_country_flag = THE_ROD_had_accept_german_THE_sorbian_german_culture_culture_flag }
+				modifier = {
+					tolerance_heathen = 3
+				}
+			}
+			scaled_modifier = {
+				trigger = { has_country_flag = THE_ROD_had_accept_german_THE_schlesian_german_culture_culture_flag }
+				modifier = {
+					tolerance_heretic = 3
+				}
+			}
 			range_modifier = {
 				trigger = { accepted_culture = pommeranian }
 				modifier = { monthly_THE_ROD_german_cultural_unity_power = 0.1 }
@@ -523,6 +547,24 @@ THE_ROD_german_culture_unity_mechanic = {
 			}
 			range_modifier = {
 				trigger = { accepted_culture = gothic_ger }
+				modifier = { monthly_THE_ROD_german_cultural_unity_power = 0.1 }
+				start_value = 0
+				end_value = 100
+			}
+			range_modifier = {
+				trigger = { accepted_culture = THE_czech_german_culture }
+				modifier = { monthly_THE_ROD_german_cultural_unity_power = 0.1 }
+				start_value = 0
+				end_value = 100
+			}
+			range_modifier = {
+				trigger = { accepted_culture = THE_sorbian_german_culture }
+				modifier = { monthly_THE_ROD_german_cultural_unity_power = 0.1 }
+				start_value = 0
+				end_value = 100
+			}
+			range_modifier = {
+				trigger = { accepted_culture = THE_schlesian_german_culture }
 				modifier = { monthly_THE_ROD_german_cultural_unity_power = 0.1 }
 				start_value = 0
 				end_value = 100
