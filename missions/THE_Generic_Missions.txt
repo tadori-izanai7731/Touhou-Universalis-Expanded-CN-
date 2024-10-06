@@ -59,7 +59,7 @@
 # 					controlled_by = owner
 # 					is_core = ROOT
 # 				}
-# 				amount = 5
+# 				amount = 3
 # 			}
 # 		} 
 		
@@ -200,9 +200,9 @@
 # 			}
 # 			else = {
 # 				4989 = {
-# 					add_base_tax = 3 
-# 					add_base_production = 3 
-# 					add_base_manpower = 3
+# 					add_base_tax = 1
+# 					add_base_production = 1
+# 					add_base_manpower = 1
 # 				}
 # 			} 
 # 		}
@@ -238,9 +238,9 @@
 # 			}
 # 			else = {
 # 				5152 = {
-# 					add_base_tax = 3 
-# 					add_base_production = 3 
-# 					add_base_manpower = 3
+# 					add_base_tax = 1
+# 					add_base_production = 1 
+# 					add_base_manpower = 1
 # 				}
 # 			} 
 # 		}
@@ -271,9 +271,9 @@
 # 					name = cirno_home
 # 					duration = -1
 # 				}
-# 				add_base_tax = 3 
-# 				add_base_production = 3 
-# 				add_base_manpower = 3
+# 				add_base_tax = 1 
+# 				add_base_production = 1
+# 				add_base_manpower = 1
 # 			}
 # 		}
 # 	}
@@ -314,7 +314,7 @@
 		
 # 		trigger = { 
 # 			num_of_owned_provinces_with = {
-# 				value = 10
+# 				value = 5
 # 				has_tax_building_trigger = yes
 # 			}
 # 		} 
@@ -646,9 +646,9 @@
 # 			add_dip_power = 300
 # 			add_mil_power = 300
 # 			5214 = {
-# 				add_base_tax = 3 
-# 				add_base_production = 3 
-# 				add_base_manpower = 3
+# 				add_base_tax = 1 
+# 				add_base_production = 1
+# 				add_base_manpower = 1
 # 			}
 # 			if = {
 # 				limit = { has_dlc = "Leviathan" } 
@@ -720,9 +720,9 @@
 # 		required_missions = { th_gen_gensokyo_friend } 
 		
 # 		trigger = { 
-# 			num_of_non_tributary_subjects = 2
-# 			diplomatic_reputation = 4
-# 			num_of_royal_marriages = 2
+# 			num_of_non_tributary_subjects = 1
+# 			diplomatic_reputation = 3
+# 			num_of_royal_marriages = 1
 # 		} 
 		
 # 		effect = { 
@@ -893,9 +893,9 @@
 # 				loyalty = 100
 # 			}
 # 			5187 = {
-# 				add_base_tax = 3 
-# 				add_base_production = 3 
-# 				add_base_manpower = 3
+# 				add_base_tax = 1 
+# 				add_base_production = 1
+# 				add_base_manpower = 1
 # 			}
 # 			if = {
 # 				limit = { has_dlc = "Leviathan" } 
@@ -978,9 +978,9 @@
 # 				id = flavor_thzigmission.1
 # 			}
 # 			4978 = {
-# 				add_base_tax = 3 
-# 				add_base_production = 3 
-# 				add_base_manpower = 3
+# 				add_base_tax = 1 
+# 				add_base_production = 1
+# 				add_base_manpower = 1
 # 			}
 # 			if = {
 # 				limit = { has_dlc = "Leviathan" } 
@@ -1382,9 +1382,9 @@
 # 				loyalty = 10
 # 			}	
 # 			4955 = {
-# 				add_base_tax = 3 
-# 				add_base_production = 3 
-# 				add_base_manpower = 3
+# 				add_base_tax = 1 
+# 				add_base_production = 1
+# 				add_base_manpower = 1
 # 			}
 # 			if = {
 # 				limit = { has_dlc = "Leviathan" } 
