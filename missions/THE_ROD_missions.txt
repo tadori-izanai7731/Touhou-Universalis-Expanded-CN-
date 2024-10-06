@@ -4667,15 +4667,30 @@ THE_ROD_branch_catholic_1 = {
 		trigger = {
 			religion = catholic
 			if = {
-				limit = { exists = PAP } 
-				PAP = {
-					has_opinion = {
-						who = ROOT
-						value = 150
+				limit = { has_country_flag = THE_ROD_decrease_1_18_trigger_flag }
+				if = {
+					limit = { exists = PAP } 
+					PAP = {
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
 					}
 				}
+				else = { religious_unity = 0.75 } 
 			}
-			else = { religious_unity = 1.0 } 
+			else = {
+				if = {
+					limit = { exists = PAP } 
+					PAP = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+				}
+				else = { religious_unity = 1.0 } 
+			}
 		}
 
 		effect = {

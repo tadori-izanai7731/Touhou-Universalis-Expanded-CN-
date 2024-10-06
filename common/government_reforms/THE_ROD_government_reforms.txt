@@ -90,8 +90,19 @@ THE_ROD_spread_hakurei_message_reform = {
 	}
 	custom_attributes = {
 		gain_monarch_power_from_force_converting = yes
-		THE_ROD_convert_religion_add_church_loyalty_or_adm = yes
 		enables_divine_idea_group = yes
+	}
+	conditional = {
+		allow = { NOT = { has_country_flag = THE_ROD_hakureishinto_reform_extra_flag } }
+		custom_attributes = {
+			THE_ROD_convert_religion_add_church_loyalty_or_adm = yes
+		}
+	}
+	conditional = {
+		allow = { has_country_flag = THE_ROD_hakureishinto_reform_extra_flag }
+		custom_attributes = {
+			THE_ROD_convert_religion_add_church_loyalty_or_adm_dip_mil = yes
+		}
 	}
 }
 

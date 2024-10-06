@@ -507,6 +507,21 @@ country_decisions = {
 		effect = {
 			add_papal_influence = -200
 			transfer_papal_controller = ROOT
+			if = {
+				limit = { has_country_flag = THE_ROD_catholic_great_project_decrease_decision_cost_flag }
+				if = { limit = { any_owned_province = { has_great_project = { type = st_basil_cathedral tier = 3 } } } add_papal_influence = 10 }
+				if = { limit = { any_owned_province = { has_great_project = { type = heddal_stave_church tier = 3 } } } add_papal_influence = 10 }
+				if = { limit = { any_owned_province = { has_great_project = { type = hagia_sophia tier = 3 } } } add_papal_influence = 10 }
+				if = { limit = { any_owned_province = { has_great_project = { type = holy_city_jerusalem tier = 3 } } } add_papal_influence = 10 }
+				if = { limit = { any_owned_province = { has_great_project = { type = cologne_cathedral tier = 3 } } } add_papal_influence = 10 }
+				if = { limit = { any_owned_province = { has_great_project = { type = ulm_minster_great_project tier = 3 } } } add_papal_influence = 10 }
+				if = { limit = { any_owned_province = { has_great_project = { type = duomo_milano tier = 3 } } } add_papal_influence = 10 }
+				if = { limit = { any_owned_province = { has_great_project = { type = santa_maria_del_fiore tier = 3 } } } add_papal_influence = 10 }
+				if = { limit = { any_owned_province = { has_great_project = { type = stpeters_cathedral tier = 3 } } } add_papal_influence = 10 }
+				if = { limit = { any_owned_province = { has_great_project = { type = palace_of_the_popes tier = 3 } } } add_papal_influence = 10 }
+				if = { limit = { any_owned_province = { has_great_project = { type = notre_dame_cathedral tier = 3 } } } add_papal_influence = 10 }
+				if = { limit = { any_owned_province = { has_great_project = { type = prague tier = 3 } } } add_papal_influence = 10 }
+			}
 		}
 		ai_will_do = {
 			factor = 1

@@ -1,1843 +1,1843 @@
-th_gen_gensokyo_conquer = {
-	slot = 1
-	generic = yes
-	ai = yes
-	potential_on_load = {
-		always = yes
-	}
-	potential = {
-		culture_group = Gensokyan_culture
-		NOT = { map_setup = map_setup_random }
-	}
-	has_country_shield = yes
+# th_gen_gensokyo_conquer = {
+# 	slot = 1
+# 	generic = yes
+# 	ai = yes
+# 	potential_on_load = {
+# 		always = yes
+# 	}
+# 	potential = {
+# 		culture_group = Gensokyan_culture
+# 		NOT = { map_setup = map_setup_random }
+# 	}
+# 	has_country_shield = yes
 	
-	th_gen_gensokyo_prepare_expand = {
-		icon = mission_assemble_an_army
-		position = 1
+# 	th_gen_gensokyo_prepare_expand = {
+# 		icon = mission_assemble_an_army
+# 		position = 1
 		
-		trigger = { 
-			mil_tech = 4
-		} 
+# 		trigger = { 
+# 			mil_tech = 4
+# 		} 
 		
-		effect = { 
-			add_country_modifier = {
-				name = touhou_prepare_expanion
-				duration = -1
-			} 
-		}
-	}
+# 		effect = { 
+# 			add_country_modifier = {
+# 				name = touhou_prepare_expanion
+# 				duration = -1
+# 			} 
+# 		}
+# 	}
 	
-	th_gen_gensokyo_national_expansion = {
-		icon = mission_touhou_greek_fire
-		position = 2
-		required_missions = { th_gen_gensokyo_prepare_expand } 
+# 	th_gen_gensokyo_national_expansion = {
+# 		icon = mission_touhou_greek_fire
+# 		position = 2
+# 		required_missions = { th_gen_gensokyo_prepare_expand } 
 		
-		trigger = { 
-			grown_by_development = 100
-		} 
+# 		trigger = { 
+# 			grown_by_development = 100
+# 		} 
 		
-		effect = { 
-			add_country_modifier = {
-				name = touhou_prepare_build
-				duration = 7300
-			} 
-		} 
-	}
+# 		effect = { 
+# 			add_country_modifier = {
+# 				name = touhou_prepare_build
+# 				duration = 7300
+# 			} 
+# 		} 
+# 	}
 	
-	th_gen_gensokyo_trade = {
-		icon = mission_high_income
-		position = 3
-		required_missions = { th_gen_gensokyo_national_expansion } 
+# 	th_gen_gensokyo_trade = {
+# 		icon = mission_high_income
+# 		position = 3
+# 		required_missions = { th_gen_gensokyo_national_expansion } 
 		
-		trigger = {
-			calc_true_if = {
-				all_owned_province = {
-					OR = {
-						province_has_center_of_trade_of_level = 2
-						province_has_center_of_trade_of_level = 3
-					}
-					controlled_by = owner
-					is_core = ROOT
-				}
-				amount = 5
-			}
-		} 
+# 		trigger = {
+# 			calc_true_if = {
+# 				all_owned_province = {
+# 					OR = {
+# 						province_has_center_of_trade_of_level = 2
+# 						province_has_center_of_trade_of_level = 3
+# 					}
+# 					controlled_by = owner
+# 					is_core = ROOT
+# 				}
+# 				amount = 5
+# 			}
+# 		} 
 		
-		effect = { 
-			add_country_modifier = {
-				name = touhou_gensokyo_trade
-				duration = -1
-			}      
-		} 
-	}
+# 		effect = { 
+# 			add_country_modifier = {
+# 				name = touhou_gensokyo_trade
+# 				duration = -1
+# 			}      
+# 		} 
+# 	}
 	
-	th_gen_gensokyo_temples = {
-		icon = mission_touhou_team_nine
-		position = 4
-		required_missions = { th_gen_gensokyo_trade } 
+# 	th_gen_gensokyo_temples = {
+# 		icon = mission_touhou_team_nine
+# 		position = 4
+# 		required_missions = { th_gen_gensokyo_trade } 
 		
-		trigger = { 
-			num_of_owned_provinces_with = {
-				value = 10
-				has_trade_building_trigger = yes
-				has_production_building_trigger = yes
-			}
-			calc_true_if = {
-				desc = build_manufactories_mission_tooltip
-				all_owned_province = {
-					OR = {
-						has_building = mills
-						has_building = farm_estate
-						has_building = tradecompany
-						has_building = plantations
-						has_building = textile
-						has_building = weapons
-						has_building = wharf
-						has_building = furnace
-					}
-				}
-				amount = 3
-			}
-			is_year = 1470
-		} 
+# 		trigger = { 
+# 			num_of_owned_provinces_with = {
+# 				value = 10
+# 				has_trade_building_trigger = yes
+# 				has_production_building_trigger = yes
+# 			}
+# 			calc_true_if = {
+# 				desc = build_manufactories_mission_tooltip
+# 				all_owned_province = {
+# 					OR = {
+# 						has_building = mills
+# 						has_building = farm_estate
+# 						has_building = tradecompany
+# 						has_building = plantations
+# 						has_building = textile
+# 						has_building = weapons
+# 						has_building = wharf
+# 						has_building = furnace
+# 					}
+# 				}
+# 				amount = 3
+# 			}
+# 			is_year = 1470
+# 		} 
 		
-		effect = { 
-			add_country_modifier = {
-				name = touhou_gensokyo_more_trade
-				duration = -1
-			} 
-		} 
-	}
+# 		effect = { 
+# 			add_country_modifier = {
+# 				name = touhou_gensokyo_more_trade
+# 				duration = -1
+# 			} 
+# 		} 
+# 	}
 	
-	th_gen_gensokyo_form_an_empire = {
-		icon = mission_touhou_human_capital
-		position = 5
-		required_missions = { th_gen_gensokyo_temples } 
-		trigger = {
-			OR = {
-				tag = GNK
-				government_rank = 3
-			}
-			total_development = 650
-		}
+# 	th_gen_gensokyo_form_an_empire = {
+# 		icon = mission_touhou_human_capital
+# 		position = 5
+# 		required_missions = { th_gen_gensokyo_temples } 
+# 		trigger = {
+# 			OR = {
+# 				tag = GNK
+# 				government_rank = 3
+# 			}
+# 			total_development = 650
+# 		}
 		
-		effect = {
-			add_country_modifier = {
-				name = touhou_gensokyo_an_own_empire
-				duration = -1
-			}
-		}
-	}
+# 		effect = {
+# 			add_country_modifier = {
+# 				name = touhou_gensokyo_an_own_empire
+# 				duration = -1
+# 			}
+# 		}
+# 	}
 	
-	th_gen_gensokyo_help_yama = {
-		icon = mission_touhou_empress_eiki
-		position = 6
+# 	th_gen_gensokyo_help_yama = {
+# 		icon = mission_touhou_empress_eiki
+# 		position = 6
 		
-		provinces_to_highlight = {
-			province_id = 4983
-		}
+# 		provinces_to_highlight = {
+# 			province_id = 4983
+# 		}
 		
-		trigger = { 
-			NOT = { tag = HIG }
-			4983 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		} 
+# 		trigger = { 
+# 			NOT = { tag = HIG }
+# 			4983 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 		} 
 		
-		effect = { 
-			add_country_modifier = {
-				name = touhou_gensokyo_yamas_palace
-				duration = -1
-			}
+# 		effect = { 
+# 			add_country_modifier = {
+# 				name = touhou_gensokyo_yamas_palace
+# 				duration = -1
+# 			}
 			
-			if = {
-				limit = { has_dlc = "Leviathan" } 
-				4983 = { 
-					add_great_project_tier = {
-						type = th_monument_yamas_palace 
-						tier = 1 
-					}
-				}
-			}
-			else = {
-				4983 = {
-					add_base_tax = 3 
-					add_base_production = 3 
-					add_base_manpower = 3
-				}
-			} 
-		}
-	}
+# 			if = {
+# 				limit = { has_dlc = "Leviathan" } 
+# 				4983 = { 
+# 					add_great_project_tier = {
+# 						type = th_monument_yamas_palace 
+# 						tier = 1 
+# 					}
+# 				}
+# 			}
+# 			else = {
+# 				4983 = {
+# 					add_base_tax = 3 
+# 					add_base_production = 3 
+# 					add_base_manpower = 3
+# 				}
+# 			} 
+# 		}
+# 	}
 	
-	th_gen_gensokyo_sleeping_yukari = {
-		icon = mission_touhou_sleeping_yukari
-		position = 7
-		provinces_to_highlight = {
-			province_id = 4989
-		}
+# 	th_gen_gensokyo_sleeping_yukari = {
+# 		icon = mission_touhou_sleeping_yukari
+# 		position = 7
+# 		provinces_to_highlight = {
+# 			province_id = 4989
+# 		}
 		
-		trigger = { 
-			NOT = { tag = MHG }
-						4989 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		} 
+# 		trigger = { 
+# 			NOT = { tag = MHG }
+# 			4989 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 		} 
 		
-		effect = { 
-			add_country_modifier = {
-				name = touhou_gensokyo_boundary_portal
-				duration = -1
-			}
+# 		effect = { 
+# 			add_country_modifier = {
+# 				name = touhou_gensokyo_boundary_portal
+# 				duration = -1
+# 			}
 			
-			if = {
-				limit = { has_dlc = "Leviathan" } 
-				4989 = { 
-					add_great_project_tier = {
-						type = th_monument_mayohiga
-						tier = 1 
-					}
-				}
-			}
-			else = {
-				4989 = {
-					add_base_tax = 3 
-					add_base_production = 3 
-					add_base_manpower = 3
-				}
-			} 
-		}
-	}
+# 			if = {
+# 				limit = { has_dlc = "Leviathan" } 
+# 				4989 = { 
+# 					add_great_project_tier = {
+# 						type = th_monument_mayohiga
+# 						tier = 1 
+# 					}
+# 				}
+# 			}
+# 			else = {
+# 				4989 = {
+# 					add_base_tax = 3 
+# 					add_base_production = 3 
+# 					add_base_manpower = 3
+# 				}
+# 			} 
+# 		}
+# 	}
 	
-	th_gen_gensokyo_protect_flower = {
-		icon = mission_touhou_yuuka_empire
-		position = 8
-		provinces_to_highlight = {
-			province_id = 5152
-		}
+# 	th_gen_gensokyo_protect_flower = {
+# 		icon = mission_touhou_yuuka_empire
+# 		position = 8
+# 		provinces_to_highlight = {
+# 			province_id = 5152
+# 		}
 		
-		trigger = { 
-			NOT = { tag = SFF }
-			5152 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		} 
+# 		trigger = { 
+# 			NOT = { tag = SFF }
+# 			5152 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 		} 
 		
-		effect = { 
-			add_country_modifier = {
-				name = touhou_gensokyo_sunflower_power
-				duration = -1
-			}
-			if = {
-				limit = { has_dlc = "Leviathan" } 
-				5152 = { 
-					add_great_project_tier = {
-						type = th_monument_sun_garden
-						tier = 1 
-					}
-				}
-			}
-			else = {
-				5152 = {
-					add_base_tax = 3 
-					add_base_production = 3 
-					add_base_manpower = 3
-				}
-			} 
-		}
-	}
+# 		effect = { 
+# 			add_country_modifier = {
+# 				name = touhou_gensokyo_sunflower_power
+# 				duration = -1
+# 			}
+# 			if = {
+# 				limit = { has_dlc = "Leviathan" } 
+# 				5152 = { 
+# 					add_great_project_tier = {
+# 						type = th_monument_sun_garden
+# 						tier = 1 
+# 					}
+# 				}
+# 			}
+# 			else = {
+# 				5152 = {
+# 					add_base_tax = 3 
+# 					add_base_production = 3 
+# 					add_base_manpower = 3
+# 				}
+# 			} 
+# 		}
+# 	}
 	
-	th_gen_gensokyo_warlord_cirno = {
-		icon = mission_touhou_the_strongest
-		position = 9
-		provinces_to_highlight = {
-			province_id = 5080
-		}
+# 	th_gen_gensokyo_warlord_cirno = {
+# 		icon = mission_touhou_the_strongest
+# 		position = 9
+# 		provinces_to_highlight = {
+# 			province_id = 5080
+# 		}
 		
-		trigger = { 
-			NOT = { tag = CIN }
-			5080 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		} 
+# 		trigger = { 
+# 			NOT = { tag = CIN }
+# 			5080 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 		} 
 		
-		effect = { 
-			THE_common_define_general_cirno = yes
-			add_country_modifier = {
-				name = th_gen_gensokyo_warlord_cirno
-				duration = -1
-			}
-			5080 = {
-				add_permanent_province_modifier = {
-					name = cirno_home
-					duration = -1
-				}
-				add_base_tax = 3 
-				add_base_production = 3 
-				add_base_manpower = 3
-			}
-		}
-	}
-}
+# 		effect = { 
+# 			THE_common_define_general_cirno = yes
+# 			add_country_modifier = {
+# 				name = th_gen_gensokyo_warlord_cirno
+# 				duration = -1
+# 			}
+# 			5080 = {
+# 				add_permanent_province_modifier = {
+# 					name = cirno_home
+# 					duration = -1
+# 				}
+# 				add_base_tax = 3 
+# 				add_base_production = 3 
+# 				add_base_manpower = 3
+# 			}
+# 		}
+# 	}
+# }
 
-th_gen_gensokyo_religions = {
-	slot = 2
-	generic = yes
-	ai = yes
-	potential_on_load = {
-		always = yes
-	}
-	potential = {
-		culture_group = Gensokyan_culture
-		NOT = { map_setup = map_setup_random }
-	}
-	has_country_shield = yes
-	th_gen_gensokyo_religions = {
-		icon = mission_touhou_th_more_shrines
-		position = 1
+# th_gen_gensokyo_religions = {
+# 	slot = 2
+# 	generic = yes
+# 	ai = yes
+# 	potential_on_load = {
+# 		always = yes
+# 	}
+# 	potential = {
+# 		culture_group = Gensokyan_culture
+# 		NOT = { map_setup = map_setup_random }
+# 	}
+# 	has_country_shield = yes
+# 	th_gen_gensokyo_religions = {
+# 		icon = mission_touhou_th_more_shrines
+# 		position = 1
 		
-		trigger = { 
-			dip_tech = 4
-			religious_unity = 1
-		} 
+# 		trigger = { 
+# 			dip_tech = 4
+# 			religious_unity = 1
+# 		} 
 		
-		effect = { 
-			country_event = {
-				id = flavor_thzigmission.2
-			}
-		} 
-	}
+# 		effect = { 
+# 			country_event = {
+# 				id = flavor_thzigmission.2
+# 			}
+# 		} 
+# 	}
 	
-	th_gen_gensokyo_more_shrine = {
-		icon = mission_touhou_moriya_temple
-		position = 2
-		required_missions = { th_gen_gensokyo_religions } 
+# 	th_gen_gensokyo_more_shrine = {
+# 		icon = mission_touhou_moriya_temple
+# 		position = 2
+# 		required_missions = { th_gen_gensokyo_religions } 
 		
-		trigger = { 
-			num_of_owned_provinces_with = {
-				value = 10
-				has_tax_building_trigger = yes
-			}
-		} 
+# 		trigger = { 
+# 			num_of_owned_provinces_with = {
+# 				value = 10
+# 				has_tax_building_trigger = yes
+# 			}
+# 		} 
 		
-		effect = { 
-			add_country_modifier = {
-				name = touhou_mission_religious_tax
-				duration = -1
-			}
+# 		effect = { 
+# 			add_country_modifier = {
+# 				name = touhou_mission_religious_tax
+# 				duration = -1
+# 			}
 			
-			add_country_modifier = {
-				name = touhou_mission_build_religious_communities
-				duration = 7300
-			}	
-		} 
-	}
+# 			add_country_modifier = {
+# 				name = touhou_mission_build_religious_communities
+# 				duration = 7300
+# 			}	
+# 		} 
+# 	}
 	
-	th_gen_gensokyo_collect = {
-		icon = mission_touhou_mry_dof_lvl5
-		position = 3
-		required_missions = { th_gen_gensokyo_more_shrine } 
+# 	th_gen_gensokyo_collect = {
+# 		icon = mission_touhou_mry_dof_lvl5
+# 		position = 3
+# 		required_missions = { th_gen_gensokyo_more_shrine } 
 		
-		trigger = {
-			OR = { 
-				AND = {
-					religious_unity = 1
-					custom_trigger_tooltip = {
-						tooltip = obj_convert_10_provinces_tooltip
-						check_variable = { which = num_converted_religion value = 10 }
-					}
-				}
-				AND = {
-					religious_unity = 1
-					num_of_harmonized = 2
-				}
-			}	
-		} 
+# 		trigger = {
+# 			OR = { 
+# 				AND = {
+# 					religious_unity = 1
+# 					custom_trigger_tooltip = {
+# 						tooltip = obj_convert_10_provinces_tooltip
+# 						check_variable = { which = num_converted_religion value = 10 }
+# 					}
+# 				}
+# 				AND = {
+# 					religious_unity = 1
+# 					num_of_harmonized = 2
+# 				}
+# 			}	
+# 		} 
 		
-		effect = {
-			custom_tooltip = th_gen_gensokyo_collect1_yes_tt
-			tooltip = { 
-				add_country_modifier = {
-					name = touhou_mission_Belief_first
-					duration = -1
-				}	
-			}
-			custom_tooltip = th_gen_gensokyo_collect2_yes_tt
-			tooltip = { 
-				add_country_modifier = {
-					name = touhou_mission_Coexistence_first
-					duration = -1
-				}	
-			}
+# 		effect = {
+# 			custom_tooltip = th_gen_gensokyo_collect1_yes_tt
+# 			tooltip = { 
+# 				add_country_modifier = {
+# 					name = touhou_mission_Belief_first
+# 					duration = -1
+# 				}	
+# 			}
+# 			custom_tooltip = th_gen_gensokyo_collect2_yes_tt
+# 			tooltip = { 
+# 				add_country_modifier = {
+# 					name = touhou_mission_Coexistence_first
+# 					duration = -1
+# 				}	
+# 			}
 			
-			hidden_effect = {
-				if = {
-					limit = { 
-						religious_unity = 1
-						num_of_harmonized = 2
-					}
-					add_adm_power = 100
-					add_country_modifier = {
-						name = touhou_mission_Coexistence_first
-						duration = -1
-					}		
-				}
-				else = {
-					add_country_modifier = {
-						name = touhou_mission_Belief_first
-						duration = -1
-					}	
-				}
-			}
-		}
-	}
+# 			hidden_effect = {
+# 				if = {
+# 					limit = { 
+# 						religious_unity = 1
+# 						num_of_harmonized = 2
+# 					}
+# 					add_adm_power = 100
+# 					add_country_modifier = {
+# 						name = touhou_mission_Coexistence_first
+# 						duration = -1
+# 					}		
+# 				}
+# 				else = {
+# 					add_country_modifier = {
+# 						name = touhou_mission_Belief_first
+# 						duration = -1
+# 					}	
+# 				}
+# 			}
+# 		}
+# 	}
 	
-	th_gen_gensokyo_reformation = {
-		icon = mission_touhou_kanako_suwako
-		position = 4
-		required_missions = { th_gen_gensokyo_collect } 
-		trigger = {
-			is_year = 1500
-			OR = { 
-				AND = {
-					religious_unity = 1
-					custom_trigger_tooltip = {
-						tooltip = obj_force_converted_tooltip
-						has_country_flag = force_converted
-					}
-				}
-				AND = {
-					religious_unity = 1
-					num_of_harmonized = 3
-				}
-			}	
-		} 
+# 	th_gen_gensokyo_reformation = {
+# 		icon = mission_touhou_kanako_suwako
+# 		position = 4
+# 		required_missions = { th_gen_gensokyo_collect } 
+# 		trigger = {
+# 			is_year = 1500
+# 			OR = { 
+# 				AND = {
+# 					religious_unity = 1
+# 					custom_trigger_tooltip = {
+# 						tooltip = obj_force_converted_tooltip
+# 						has_country_flag = force_converted
+# 					}
+# 				}
+# 				AND = {
+# 					religious_unity = 1
+# 					num_of_harmonized = 3
+# 				}
+# 			}	
+# 		} 
 		
-		effect = {
-			custom_tooltip = th_gen_gensokyo_reformation1_yes_tt
-			tooltip = { 
-				add_country_modifier = {
-					name = touhou_mission_Missionary_heresy
-					duration = 36500
-				}	
-			}
-			custom_tooltip = th_gen_gensokyo_reformation2_yes_tt
-			tooltip = { 
-				add_harmonization_progress = 100
-			}
+# 		effect = {
+# 			custom_tooltip = th_gen_gensokyo_reformation1_yes_tt
+# 			tooltip = { 
+# 				add_country_modifier = {
+# 					name = touhou_mission_Missionary_heresy
+# 					duration = 36500
+# 				}	
+# 			}
+# 			custom_tooltip = th_gen_gensokyo_reformation2_yes_tt
+# 			tooltip = { 
+# 				add_harmonization_progress = 100
+# 			}
 			
-			hidden_effect = {
-				if = {
-					limit = { 
-						religious_unity = 1
-						custom_trigger_tooltip = {
-							tooltip = obj_force_converted_tooltip
-							has_country_flag = force_converted
-						}
-					}
-					add_country_modifier = {
-						name = touhou_mission_Missionary_heresy
-						duration = 36500
-					}		
-				}
-				else = {
-					add_harmonization_progress = 100	
-				}
-			}
-		}
-	}
+# 			hidden_effect = {
+# 				if = {
+# 					limit = { 
+# 						religious_unity = 1
+# 						custom_trigger_tooltip = {
+# 							tooltip = obj_force_converted_tooltip
+# 							has_country_flag = force_converted
+# 						}
+# 					}
+# 					add_country_modifier = {
+# 						name = touhou_mission_Missionary_heresy
+# 						duration = 36500
+# 					}		
+# 				}
+# 				else = {
+# 					add_harmonization_progress = 100	
+# 				}
+# 			}
+# 		}
+# 	}
 	
-	th_gen_gensokyo_reformation_forever = {
-		icon = mission_touhou_challenge_moriya
-		position = 5
-		required_missions = { th_gen_gensokyo_reformation } 
-		trigger = {
-			is_year = 1500
-			OR = { 
-				AND = {
-					religious_unity = 1
-					custom_trigger_tooltip = {
-						tooltip = obj_convert_10_provinces_tooltip
-						check_variable = { which = num_converted_religion value = 20 }
-					}
-				}
-				AND = {
-					religious_unity = 1
-					num_of_harmonized = 5
-				}
-			}
-		}	
+# 	th_gen_gensokyo_reformation_forever = {
+# 		icon = mission_touhou_challenge_moriya
+# 		position = 5
+# 		required_missions = { th_gen_gensokyo_reformation } 
+# 		trigger = {
+# 			is_year = 1500
+# 			OR = { 
+# 				AND = {
+# 					religious_unity = 1
+# 					custom_trigger_tooltip = {
+# 						tooltip = obj_convert_10_provinces_tooltip
+# 						check_variable = { which = num_converted_religion value = 20 }
+# 					}
+# 				}
+# 				AND = {
+# 					religious_unity = 1
+# 					num_of_harmonized = 5
+# 				}
+# 			}
+# 		}	
 		
-		effect = {
-			custom_tooltip = th_gen_gensokyo_reformation_forever1_yes_tt
-			tooltip = { 
-				add_country_modifier = {
-					name = touhou_mission_reformation_forever
-					duration = -1
-				}	
-			}
-			custom_tooltip = th_gen_gensokyo_reformation_forever2_yes_tt
-			tooltip = { 
-				add_country_modifier = {
-					name = touhou_mission_harmonious_world
-					duration = -1
-				}	
-			}
+# 		effect = {
+# 			custom_tooltip = th_gen_gensokyo_reformation_forever1_yes_tt
+# 			tooltip = { 
+# 				add_country_modifier = {
+# 					name = touhou_mission_reformation_forever
+# 					duration = -1
+# 				}	
+# 			}
+# 			custom_tooltip = th_gen_gensokyo_reformation_forever2_yes_tt
+# 			tooltip = { 
+# 				add_country_modifier = {
+# 					name = touhou_mission_harmonious_world
+# 					duration = -1
+# 				}	
+# 			}
 			
-			hidden_effect = {
-				if = {
-					limit = { 
-						religious_unity = 1
-						custom_trigger_tooltip = {
-							tooltip = obj_convert_10_provinces_tooltip
-							check_variable = { which = num_converted_religion value = 20 }
-						}
-					}
-					add_country_modifier = {
-						name = touhou_mission_reformation_forever
-						duration = -1
-					}			
-				}
-				else = {
-					add_country_modifier = {
-						name = touhou_mission_harmonious_world
-						duration = -1
-					}		
-				}
-			}
-		}
-	}
+# 			hidden_effect = {
+# 				if = {
+# 					limit = { 
+# 						religious_unity = 1
+# 						custom_trigger_tooltip = {
+# 							tooltip = obj_convert_10_provinces_tooltip
+# 							check_variable = { which = num_converted_religion value = 20 }
+# 						}
+# 					}
+# 					add_country_modifier = {
+# 						name = touhou_mission_reformation_forever
+# 						duration = -1
+# 					}			
+# 				}
+# 				else = {
+# 					add_country_modifier = {
+# 						name = touhou_mission_harmonious_world
+# 						duration = -1
+# 					}		
+# 				}
+# 			}
+# 		}
+# 	}
 	
 	
-	th_gen_gensokyo_appeal_to_satori = {
-		icon = mission_touhou_scarlet_komeiji_union
-		position = 6
-		provinces_to_highlight = {
-			province_id = 5007
-		}
+# 	th_gen_gensokyo_appeal_to_satori = {
+# 		icon = mission_touhou_scarlet_komeiji_union
+# 		position = 6
+# 		provinces_to_highlight = {
+# 			province_id = 5007
+# 		}
 		
-		trigger = { 
-			NOT = { tag = CRD }
-			5007 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		} 
+# 		trigger = { 
+# 			NOT = { tag = CRD }
+# 			5007 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 		} 
 		
-		effect = { 
-			add_country_modifier = {
-				name = touhou_gensokyo_better_diplomacy
-				duration = -1
-			}
-			if = {
-				limit = { has_dlc = "Leviathan" } 
-				5007 = { 
-					add_great_project_tier = {
-						type = th_monument_chireiden
-						tier = 1 
-					}
-				}
-			}
-			else = {
-				5007 = {
-					add_base_tax = 3 
-					add_base_production = 3 
-					add_base_manpower = 3
-				}
-			} 
-		}
-	}
-	th_gen_gensokyo_old_visit = {
-		icon = mission_touhou_shrines
-		position = 7
-		provinces_to_highlight = {
-			province_id = 5183
-		}
+# 		effect = { 
+# 			add_country_modifier = {
+# 				name = touhou_gensokyo_better_diplomacy
+# 				duration = -1
+# 			}
+# 			if = {
+# 				limit = { has_dlc = "Leviathan" } 
+# 				5007 = { 
+# 					add_great_project_tier = {
+# 						type = th_monument_chireiden
+# 						tier = 1 
+# 					}
+# 				}
+# 			}
+# 			else = {
+# 				5007 = {
+# 					add_base_tax = 3 
+# 					add_base_production = 3 
+# 					add_base_manpower = 3
+# 				}
+# 			} 
+# 		}
+# 	}
+# 	th_gen_gensokyo_old_visit = {
+# 		icon = mission_touhou_shrines
+# 		position = 7
+# 		provinces_to_highlight = {
+# 			province_id = 5183
+# 		}
 		
-		trigger = { 
-			NOT = { tag = OKR }
-			5183 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		} 
+# 		trigger = { 
+# 			NOT = { tag = OKR }
+# 			5183 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 		} 
 		
-		effect = { 
-			add_country_modifier = {
-				name = touhou_gensokyo_hakurei_legacy
-				duration = 3650
-			}
-			if = {
-				limit = { has_dlc = "Leviathan" } 
-				5183 = { 
-					add_great_project_tier = {
-						type = th_monument_old_hakurei_shrine
-						tier = 1 
-					}
-				}
-			}
-			else = {
-				5183 = {
-					add_base_tax = 3 
-					add_base_production = 3 
-					add_base_manpower = 3
-				}
-			} 
-		}
-	}
+# 		effect = { 
+# 			add_country_modifier = {
+# 				name = touhou_gensokyo_hakurei_legacy
+# 				duration = 3650
+# 			}
+# 			if = {
+# 				limit = { has_dlc = "Leviathan" } 
+# 				5183 = { 
+# 					add_great_project_tier = {
+# 						type = th_monument_old_hakurei_shrine
+# 						tier = 1 
+# 					}
+# 				}
+# 			}
+# 			else = {
+# 				5183 = {
+# 					add_base_tax = 3 
+# 					add_base_production = 3 
+# 					add_base_manpower = 3
+# 				}
+# 			} 
+# 		}
+# 	}
 	
-	th_gen_gensokyo_full_net = {
-		icon = mission_touhou_yuyuko_cake
-		position = 8
-		provinces_to_highlight = {
-			province_id = 4958
-		}
+# 	th_gen_gensokyo_full_net = {
+# 		icon = mission_touhou_yuyuko_cake
+# 		position = 8
+# 		provinces_to_highlight = {
+# 			province_id = 4958
+# 		}
 		
-		trigger = { 
-			NOT = { tag = NET }
-			4958 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		} 
+# 		trigger = { 
+# 			NOT = { tag = NET }
+# 			4958 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 		} 
 		
-		effect = { 
-			add_country_modifier = {
-				name = touhou_gensokyo_pleased_ghosts
-				duration = -1
-			}
-			add_adm_power = 100
-			4958 = {
-				add_base_tax = -2
-				add_base_production = -2 
-				add_base_manpower = -2
-			}
-			if = {
-				limit = { has_dlc = "Leviathan" } 
-				4958 = { 
-					add_great_project_tier = {
-						type = th_monument_hakugyokurou
-						tier = 1 
-					}
-				}
-			}
-			else = {
-				4958 = {
-					add_base_tax = 3 
-					add_base_production = 3 
-					add_base_manpower = 3
-				}
-			} 
-		}
-	}
+# 		effect = { 
+# 			add_country_modifier = {
+# 				name = touhou_gensokyo_pleased_ghosts
+# 				duration = -1
+# 			}
+# 			add_adm_power = 100
+# 			4958 = {
+# 				add_base_tax = -2
+# 				add_base_production = -2 
+# 				add_base_manpower = -2
+# 			}
+# 			if = {
+# 				limit = { has_dlc = "Leviathan" } 
+# 				4958 = { 
+# 					add_great_project_tier = {
+# 						type = th_monument_hakugyokurou
+# 						tier = 1 
+# 					}
+# 				}
+# 			}
+# 			else = {
+# 				4958 = {
+# 					add_base_tax = 3 
+# 					add_base_production = 3 
+# 					add_base_manpower = 3
+# 				}
+# 			} 
+# 		}
+# 	}
 	
-	th_gen_gensokyo_shinki_new_believers = {
-		icon = mission_touhou_empress_shinki
-		position = 9
-		provinces_to_highlight = {
-			province_id = 5214
-		}
+# 	th_gen_gensokyo_shinki_new_believers = {
+# 		icon = mission_touhou_empress_shinki
+# 		position = 9
+# 		provinces_to_highlight = {
+# 			province_id = 5214
+# 		}
 		
-		trigger = { 
-			NOT = { tag = MKI }
-			5214 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		} 
+# 		trigger = { 
+# 			NOT = { tag = MKI }
+# 			5214 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 		} 
 		
-		effect = { 
-			add_adm_power = 300
-			add_dip_power = 300
-			add_mil_power = 300
-			5214 = {
-				add_base_tax = 3 
-				add_base_production = 3 
-				add_base_manpower = 3
-			}
-			if = {
-				limit = { has_dlc = "Leviathan" } 
-				5214 = { 
-					add_great_project_tier = {
-						type = th_monument_pandaemonium
-						tier = 1 
-					}
-				}
-			}
-			else = {
-				5214 = {
-					add_base_tax = 3 
-					add_base_production = 3 
-					add_base_manpower = 3
-				}
-			} 
-		}
-	}
-}
-th_gen_gensokyo_diplomacy = {
-	slot = 3
-	generic = yes
-	ai = yes
-	potential_on_load = {
-		always = yes
-	}
-	potential = {
-		culture_group = Gensokyan_culture
-		NOT = { map_setup = map_setup_random }
-	}
-	has_country_shield = yes
+# 		effect = { 
+# 			add_adm_power = 300
+# 			add_dip_power = 300
+# 			add_mil_power = 300
+# 			5214 = {
+# 				add_base_tax = 3 
+# 				add_base_production = 3 
+# 				add_base_manpower = 3
+# 			}
+# 			if = {
+# 				limit = { has_dlc = "Leviathan" } 
+# 				5214 = { 
+# 					add_great_project_tier = {
+# 						type = th_monument_pandaemonium
+# 						tier = 1 
+# 					}
+# 				}
+# 			}
+# 			else = {
+# 				5214 = {
+# 					add_base_tax = 3 
+# 					add_base_production = 3 
+# 					add_base_manpower = 3
+# 				}
+# 			} 
+# 		}
+# 	}
+# }
+# th_gen_gensokyo_diplomacy = {
+# 	slot = 3
+# 	generic = yes
+# 	ai = yes
+# 	potential_on_load = {
+# 		always = yes
+# 	}
+# 	potential = {
+# 		culture_group = Gensokyan_culture
+# 		NOT = { map_setup = map_setup_random }
+# 	}
+# 	has_country_shield = yes
 	
-	th_gen_gensokyo_friend = {
-		icon = mission_touhou_marisa_alice
-		position = 1
-		trigger = { 
-			calc_true_if = {
-				all_ally = {
-					has_opinion = {
-						who = ROOT
-						value = 150
-					}
-					if = {
-						limit = { has_dlc = "Leviathan" }
-						trust = { who = ROOT value = 75 }
-					}
-					else = { monthly_dip = 8 }
-					if = { 
-						limit = { is_subject_of = ROOT }
-						NOT = { liberty_desire = 10 }
-					}	
-				}
-				amount = 1
-			}
-		}
+# 	th_gen_gensokyo_friend = {
+# 		icon = mission_touhou_marisa_alice
+# 		position = 1
+# 		trigger = { 
+# 			calc_true_if = {
+# 				all_ally = {
+# 					has_opinion = {
+# 						who = ROOT
+# 						value = 150
+# 					}
+# 					if = {
+# 						limit = { has_dlc = "Leviathan" }
+# 						trust = { who = ROOT value = 75 }
+# 					}
+# 					else = { monthly_dip = 8 }
+# 					if = { 
+# 						limit = { is_subject_of = ROOT }
+# 						NOT = { liberty_desire = 10 }
+# 					}	
+# 				}
+# 				amount = 1
+# 			}
+# 		}
 		
-		effect = { 
-			add_country_modifier = {
-				name = th_gensokyo_friend
-				duration = -1
-			}
-		}
-	}
+# 		effect = { 
+# 			add_country_modifier = {
+# 				name = th_gensokyo_friend
+# 				duration = -1
+# 			}
+# 		}
+# 	}
 	
-	th_gen_gensokyo_protect = {
-		icon = mission_touhou_daiyousei
-		position = 2
-		required_missions = { th_gen_gensokyo_friend } 
+# 	th_gen_gensokyo_protect = {
+# 		icon = mission_touhou_daiyousei
+# 		position = 2
+# 		required_missions = { th_gen_gensokyo_friend } 
 		
-		trigger = { 
-			num_of_non_tributary_subjects = 2
-			diplomatic_reputation = 4
-			num_of_royal_marriages = 2
-		} 
+# 		trigger = { 
+# 			num_of_non_tributary_subjects = 2
+# 			diplomatic_reputation = 4
+# 			num_of_royal_marriages = 2
+# 		} 
 		
-		effect = { 
-			add_country_modifier = {
-				name = th_gensokyo_protect_friend
-				duration = 7300
-			}
-		} 
-	}
+# 		effect = { 
+# 			add_country_modifier = {
+# 				name = th_gensokyo_protect_friend
+# 				duration = 7300
+# 			}
+# 		} 
+# 	}
 	
-	th_gen_gensokyo_war = {
-		icon = mission_touhou_army
-		position = 3
-		required_missions = { th_gen_gensokyo_protect } 
+# 	th_gen_gensokyo_war = {
+# 		icon = mission_touhou_army
+# 		position = 3
+# 		required_missions = { th_gen_gensokyo_protect } 
 		
-		trigger = { 
-			any_country = {
-				NOT = { capital_scope = { continent = gensokyo_continent } }
-				NOT = { capital_scope = { continent = moon_continent } }
-				war_with = ROOT
-			}
-		} 
+# 		trigger = { 
+# 			any_country = {
+# 				NOT = { capital_scope = { continent = gensokyo_continent } }
+# 				NOT = { capital_scope = { continent = moon_continent } }
+# 				war_with = ROOT
+# 			}
+# 		} 
 		
-		effect = { 
-			add_country_modifier = {
-				name = th_gen_gensokyo_war
-				duration = -1
-			}
-		} 
-	}
+# 		effect = { 
+# 			add_country_modifier = {
+# 				name = th_gen_gensokyo_war
+# 				duration = -1
+# 			}
+# 		} 
+# 	}
 	
-	th_gen_gensokyo_wind = {
-		icon = mission_junk_boat
-		position = 4
-		required_missions = { th_gen_gensokyo_war } 
+# 	th_gen_gensokyo_wind = {
+# 		icon = mission_junk_boat
+# 		position = 4
+# 		required_missions = { th_gen_gensokyo_war } 
 		
-		trigger = { 
-			total_development = 1000
-			num_of_transport = 30
-		} 
+# 		trigger = { 
+# 			total_development = 1000
+# 			num_of_transport = 30
+# 		} 
 		
-		effect = {
-			kinai_area = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			chubu_area = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			eastern_chubu_area = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			kanto_area = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-		}
-	}
+# 		effect = {
+# 			kinai_area = {
+# 				limit = {
+# 					NOT = {
+# 						is_core = ROOT
+# 					}
+# 					NOT = {
+# 						is_permanent_claim = ROOT
+# 					}
+# 				}
+# 				add_permanent_claim = ROOT
+# 			}
+# 			chubu_area = {
+# 				limit = {
+# 					NOT = {
+# 						is_core = ROOT
+# 					}
+# 					NOT = {
+# 						is_permanent_claim = ROOT
+# 					}
+# 				}
+# 				add_permanent_claim = ROOT
+# 			}
+# 			eastern_chubu_area = {
+# 				limit = {
+# 					NOT = {
+# 						is_core = ROOT
+# 					}
+# 					NOT = {
+# 						is_permanent_claim = ROOT
+# 					}
+# 				}
+# 				add_permanent_claim = ROOT
+# 			}
+# 			kanto_area = {
+# 				limit = {
+# 					NOT = {
+# 						is_core = ROOT
+# 					}
+# 					NOT = {
+# 						is_permanent_claim = ROOT
+# 					}
+# 				}
+# 				add_permanent_claim = ROOT
+# 			}
+# 		}
+# 	}
 	
-	th_gen_gensokyo_kyoto = {
-		icon = mission_japanese_fort
-		position = 5
-		required_missions = { th_gen_gensokyo_wind } 
-		provinces_to_highlight = { 
-			province_id = 1020
-		} 
+# 	th_gen_gensokyo_kyoto = {
+# 		icon = mission_japanese_fort
+# 		position = 5
+# 		required_missions = { th_gen_gensokyo_wind } 
+# 		provinces_to_highlight = { 
+# 			province_id = 1020
+# 		} 
 		
-		trigger = { 
-			1020 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		} 
+# 		trigger = { 
+# 			1020 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 		} 
 		
-		effect = { 
-			country_event = {
-				id = flavor_thzigmission.3
-			}
-		} 
-	}
+# 		effect = { 
+# 			country_event = {
+# 				id = flavor_thzigmission.3
+# 			}
+# 		} 
+# 	}
 	
 	
 	
-	th_gen_gensokyo_visit_moriya = {
-		icon = mission_touhou_kanako_suwako
-		position = 6
-		provinces_to_highlight = {
-			province_id = 4998
-		}
+# 	th_gen_gensokyo_visit_moriya = {
+# 		icon = mission_touhou_kanako_suwako
+# 		position = 6
+# 		provinces_to_highlight = {
+# 			province_id = 4998
+# 		}
 		
-		trigger = { 
-			NOT = { tag = MRY }
-			4998 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		} 
+# 		trigger = { 
+# 			NOT = { tag = MRY }
+# 			4998 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 		} 
 		
-		effect = { 
-			add_country_modifier = {
-				name = touhou_gensokyo_religious_fervor
-				duration = 3650
-			}
-			if = {
-				limit = { has_dlc = "Leviathan" } 
-				4998 = { 
-					add_great_project_tier = {
-						type = th_monument_moriya_shrine
-						tier = 1 
-					}
-				}
-			}
-			else = {
-				4998 = {
-					add_base_tax = 3 
-					add_base_production = 3 
-					add_base_manpower = 3
-				}
-			} 
-		}
-	}
+# 		effect = { 
+# 			add_country_modifier = {
+# 				name = touhou_gensokyo_religious_fervor
+# 				duration = 3650
+# 			}
+# 			if = {
+# 				limit = { has_dlc = "Leviathan" } 
+# 				4998 = { 
+# 					add_great_project_tier = {
+# 						type = th_monument_moriya_shrine
+# 						tier = 1 
+# 					}
+# 				}
+# 			}
+# 			else = {
+# 				4998 = {
+# 					add_base_tax = 3 
+# 					add_base_production = 3 
+# 					add_base_manpower = 3
+# 				}
+# 			} 
+# 		}
+# 	}
 	
-	th_gen_gensokyo_youkai_forest = {
-		icon = mission_touhou_youkai_forest
-		position = 7
-		provinces_to_highlight = {
-			province_id = 5187
-		}
+# 	th_gen_gensokyo_youkai_forest = {
+# 		icon = mission_touhou_youkai_forest
+# 		position = 7
+# 		provinces_to_highlight = {
+# 			province_id = 5187
+# 		}
 		
-		trigger = { 
-			NOT = { tag = YOF }
-			5187 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		} 
+# 		trigger = { 
+# 			NOT = { tag = YOF }
+# 			5187 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 		} 
 		
-		effect = { 
-			add_estate_loyalty = {
-				estate = estate_nobles
-				loyalty = 100
-			}
-			5187 = {
-				add_base_tax = 3 
-				add_base_production = 3 
-				add_base_manpower = 3
-			}
-			if = {
-				limit = { has_dlc = "Leviathan" } 
-				5187 = { 
-					add_great_project_tier = {
-						type = th_monument_youkai_forest
-						tier = 1 
-					}
-				}
-			}
-			else = {
-				5187 = {
-					add_base_tax = 3 
-					add_base_production = 3 
-					add_base_manpower = 3
-				}
-			} 
-		}
-	}
+# 		effect = { 
+# 			add_estate_loyalty = {
+# 				estate = estate_nobles
+# 				loyalty = 100
+# 			}
+# 			5187 = {
+# 				add_base_tax = 3 
+# 				add_base_production = 3 
+# 				add_base_manpower = 3
+# 			}
+# 			if = {
+# 				limit = { has_dlc = "Leviathan" } 
+# 				5187 = { 
+# 					add_great_project_tier = {
+# 						type = th_monument_youkai_forest
+# 						tier = 1 
+# 					}
+# 				}
+# 			}
+# 			else = {
+# 				5187 = {
+# 					add_base_tax = 3 
+# 					add_base_production = 3 
+# 					add_base_manpower = 3
+# 				}
+# 			} 
+# 		}
+# 	}
 	
-	th_gen_gensokyo_kappa_boss = {
-		icon = mission_touhou_kappa_paperwork
-		position = 8
-		provinces_to_highlight = {
-			province_id = 4965
-		}
+# 	th_gen_gensokyo_kappa_boss = {
+# 		icon = mission_touhou_kappa_paperwork
+# 		position = 8
+# 		provinces_to_highlight = {
+# 			province_id = 4965
+# 		}
 		
-		trigger = { 
-			NOT = { tag = KPP }
-			4965 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		} 
+# 		trigger = { 
+# 			NOT = { tag = KPP }
+# 			4965 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 		} 
 		
-		effect = { 
-			add_country_modifier = {
-				name = touhou_gensokyo_pleased_kappa
-				duration = 3650
-			}
-			4965 = {
-				add_base_tax = 1
-				add_base_production = 1
-				add_base_manpower = 1
-			}
-			if = {
-				limit = { has_dlc = "Leviathan" } 
-				4965 = { 
-					add_great_project_tier = {
-						type = th_monument_kappapolis
-						tier = 1 
-					}
-				}
-			}
-			else = {
-				4965 = {
-					add_base_tax = 3 
-					add_base_production = 3 
-					add_base_manpower = 3
-				}
-			} 
-		}
-	}
+# 		effect = { 
+# 			add_country_modifier = {
+# 				name = touhou_gensokyo_pleased_kappa
+# 				duration = 3650
+# 			}
+# 			4965 = {
+# 				add_base_tax = 1
+# 				add_base_production = 1
+# 				add_base_manpower = 1
+# 			}
+# 			if = {
+# 				limit = { has_dlc = "Leviathan" } 
+# 				4965 = { 
+# 					add_great_project_tier = {
+# 						type = th_monument_kappapolis
+# 						tier = 1 
+# 					}
+# 				}
+# 			}
+# 			else = {
+# 				4965 = {
+# 					add_base_tax = 3 
+# 					add_base_production = 3 
+# 					add_base_manpower = 3
+# 				}
+# 			} 
+# 		}
+# 	}
 	
-	th_gen_gensokyo_humans = {
-		icon = mission_unite_home_region
-		position = 9
-		provinces_to_highlight = {
-			province_id = 4978
-		}
+# 	th_gen_gensokyo_humans = {
+# 		icon = mission_unite_home_region
+# 		position = 9
+# 		provinces_to_highlight = {
+# 			province_id = 4978
+# 		}
 		
-		trigger = { 
-			NOT = { tag = HMC }
-			4978 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		} 
+# 		trigger = { 
+# 			NOT = { tag = HMC }
+# 			4978 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 		} 
 		
-		effect = { 
-			country_event = {
-				id = flavor_thzigmission.1
-			}
-			4978 = {
-				add_base_tax = 3 
-				add_base_production = 3 
-				add_base_manpower = 3
-			}
-			if = {
-				limit = { has_dlc = "Leviathan" } 
-				4978 = { 
-					add_great_project_tier = {
-						type = th_monument_human_capital
-						tier = 1 
-					}
-				}
-			}
-			else = {
-				4978 = {
-					add_base_tax = 3 
-					add_base_production = 3 
-					add_base_manpower = 3
-				}
-			} 
-		}
-	}
+# 		effect = { 
+# 			country_event = {
+# 				id = flavor_thzigmission.1
+# 			}
+# 			4978 = {
+# 				add_base_tax = 3 
+# 				add_base_production = 3 
+# 				add_base_manpower = 3
+# 			}
+# 			if = {
+# 				limit = { has_dlc = "Leviathan" } 
+# 				4978 = { 
+# 					add_great_project_tier = {
+# 						type = th_monument_human_capital
+# 						tier = 1 
+# 					}
+# 				}
+# 			}
+# 			else = {
+# 				4978 = {
+# 					add_base_tax = 3 
+# 					add_base_production = 3 
+# 					add_base_manpower = 3
+# 				}
+# 			} 
+# 		}
+# 	}
 	
-	th_gen_gensokyo_unite = {
-		icon = mission_touhou_cirno_independence
-		position = 10
-		provinces_to_highlight = {
-			continent = gensokyo_continent
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
-		}
-		trigger = { 
-			NOT = { tag = LCU }
-			num_of_owned_provinces_with = {
-				continent = gensokyo_continent
-				is_core = ROOT
-				value = 180
-			}
-			4968 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			4955 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			4989 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			5094 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			4991 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			4958 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			4978 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			4987 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			5152 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			5032 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			5183 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			5025 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			5214 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			4965 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			4964 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			4998 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			5187 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			5007 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			4983 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
+# 	th_gen_gensokyo_unite = {
+# 		icon = mission_touhou_cirno_independence
+# 		position = 10
+# 		provinces_to_highlight = {
+# 			continent = gensokyo_continent
+# 			OR = {
+# 				NOT = { owned_by = ROOT }
+# 				NOT = { is_core = ROOT }
+# 			}
+# 		}
+# 		trigger = { 
+# 			NOT = { tag = LCU }
+# 			num_of_owned_provinces_with = {
+# 				continent = gensokyo_continent
+# 				is_core = ROOT
+# 				value = 180
+# 			}
+# 			4968 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 			4955 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 			4989 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 			5094 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 			4991 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 			4958 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 			4978 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 			4987 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 			5152 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 			5032 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 			5183 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 			5025 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 			5214 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 			4965 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 			4964 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 			4998 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 			5187 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 			5007 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 			4983 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 		}
 		
-		effect = {  
-			add_country_modifier = {
-				name = th_gensokyo_unite
-				duration = -1
-			}
-			custom_tooltip = th_gen_gensokyo_unite_yes_tt
-		} 
-	}
-}
+# 		effect = {  
+# 			add_country_modifier = {
+# 				name = th_gensokyo_unite
+# 				duration = -1
+# 			}
+# 			custom_tooltip = th_gen_gensokyo_unite_yes_tt
+# 		} 
+# 	}
+# }
 
 
-th_gen_gensokyo_army = {
-	slot = 4
-	generic = yes
-	ai = yes
+# th_gen_gensokyo_army = {
+# 	slot = 4
+# 	generic = yes
+# 	ai = yes
 	
-	potential = {
-		culture_group = Gensokyan_culture
-		NOT = { map_setup = map_setup_random }
-	}
-	has_country_shield = yes
+# 	potential = {
+# 		culture_group = Gensokyan_culture
+# 		NOT = { map_setup = map_setup_random }
+# 	}
+# 	has_country_shield = yes
 	
-	th_gen_gensokyo_practice = {
-		icon = mission_touhou_agni
-		position = 1
+# 	th_gen_gensokyo_practice = {
+# 		icon = mission_touhou_agni
+# 		position = 1
 		
-		trigger = { 
-			army_size_percentage = 1
-		} 
+# 		trigger = { 
+# 			army_size_percentage = 1
+# 		} 
 		
-		effect = { 
-			add_country_modifier = {
-				name = th_gensokyo_army_power
-				duration = 7300
-			}
-		} 
-	}
+# 		effect = { 
+# 			add_country_modifier = {
+# 				name = th_gensokyo_army_power
+# 				duration = 7300
+# 			}
+# 		} 
+# 	}
 	
-	th_gen_gensokyo_prepare = {
-		icon = mission_touhou_scarlet_library
-		position = 2
-		required_missions = { th_gen_gensokyo_practice } 
+# 	th_gen_gensokyo_prepare = {
+# 		icon = mission_touhou_scarlet_library
+# 		position = 2
+# 		required_missions = { th_gen_gensokyo_practice } 
 		
-		trigger = { 
-			has_global_modifier_value = {
-				which = discipline
-				value = 0.1
-			}
-			army_size = 30
-		} 
+# 		trigger = { 
+# 			has_global_modifier_value = {
+# 				which = discipline
+# 				value = 0.1
+# 			}
+# 			army_size = 30
+# 		} 
 		
-		effect = { 
-			change_government_reform_progress = 100
-			add_country_modifier = {
-				name = th_gensokyo_army_power_prepare
-				duration = -1
-			}
-		} 
-	}
+# 		effect = { 
+# 			change_government_reform_progress = 100
+# 			add_country_modifier = {
+# 				name = th_gensokyo_army_power_prepare
+# 				duration = -1
+# 			}
+# 		} 
+# 	}
 	
-	th_gen_gensokyo_exercise = {
-		icon = mission_touhou_marisa_master_spark
-		position = 3
-		required_missions = { th_gen_gensokyo_prepare } 
+# 	th_gen_gensokyo_exercise = {
+# 		icon = mission_touhou_marisa_master_spark
+# 		position = 3
+# 		required_missions = { th_gen_gensokyo_prepare } 
 		
-		trigger = {
-			army_size = 50
-			if = {
-				limit = {
-					ai = yes
-				}
-				total_development = 300
-			}
-			else = {
-				calc_true_if = {
-					all_country = {
-						th_has_lost_danmaku_duel_against_root = yes
-					}
-					amount = 3
-				}
-			}
-		}
+# 		trigger = {
+# 			army_size = 50
+# 			if = {
+# 				limit = {
+# 					ai = yes
+# 				}
+# 				total_development = 300
+# 			}
+# 			else = {
+# 				calc_true_if = {
+# 					all_country = {
+# 						th_has_lost_danmaku_duel_against_root = yes
+# 					}
+# 					amount = 3
+# 				}
+# 			}
+# 		}
 		
-		effect = { 
-			add_country_modifier = {
-				name = th_gensokyo_danmaku_exercise
-				duration = -1
-			}
-		} 
-	}
+# 		effect = { 
+# 			add_country_modifier = {
+# 				name = th_gensokyo_danmaku_exercise
+# 				duration = -1
+# 			}
+# 		} 
+# 	}
 	
-	th_gen_gensokyo_soical_order = {
-		icon = mission_touhou_hkr_estate
-		position = 4
-		required_missions = { th_gen_gensokyo_exercise } 
+# 	th_gen_gensokyo_soical_order = {
+# 		icon = mission_touhou_hkr_estate
+# 		position = 4
+# 		required_missions = { th_gen_gensokyo_exercise } 
 		
-		trigger = { 
-			custom_trigger_tooltip = {
-				tooltip = JAP_balance_the_four_divisions_tt
-				OR = {
-					AND = {
-						if = {
-							limit = {
-								has_estate = estate_burghers
-							}
-							estate_loyalty = {
-								estate = estate_burghers
-								loyalty = 60
-							}
-						}
-						if = {
-							limit = {
-								has_estate = estate_church
-							}
-							estate_loyalty = {
-								estate = estate_church
-								loyalty = 60
-							}
-						}
-					}
-					AND = {
-						if = {
-							limit = {
-								has_estate = estate_burghers
-							}
-							estate_loyalty = {
-								estate = estate_burghers
-								loyalty = 60
-							}
-						}
-						if = {
-							limit = {
-								has_estate = estate_nobles
-							}
-							estate_loyalty = {
-								estate = estate_nobles
-								loyalty = 60
-							}
-						}
-					}
-					AND = {
-						if = {
-							limit = {
-								has_estate = estate_church
-							}
-							estate_loyalty = {
-								estate = estate_church
-								loyalty = 60
-							}
-						}
-						if = {
-							limit = {
-								has_estate = estate_nobles
-							}
-							estate_loyalty = {
-								estate = estate_nobles
-								loyalty = 60
-							}
-						}
-					}
-				}
-			}
-		}
+# 		trigger = { 
+# 			custom_trigger_tooltip = {
+# 				tooltip = JAP_balance_the_four_divisions_tt
+# 				OR = {
+# 					AND = {
+# 						if = {
+# 							limit = {
+# 								has_estate = estate_burghers
+# 							}
+# 							estate_loyalty = {
+# 								estate = estate_burghers
+# 								loyalty = 60
+# 							}
+# 						}
+# 						if = {
+# 							limit = {
+# 								has_estate = estate_church
+# 							}
+# 							estate_loyalty = {
+# 								estate = estate_church
+# 								loyalty = 60
+# 							}
+# 						}
+# 					}
+# 					AND = {
+# 						if = {
+# 							limit = {
+# 								has_estate = estate_burghers
+# 							}
+# 							estate_loyalty = {
+# 								estate = estate_burghers
+# 								loyalty = 60
+# 							}
+# 						}
+# 						if = {
+# 							limit = {
+# 								has_estate = estate_nobles
+# 							}
+# 							estate_loyalty = {
+# 								estate = estate_nobles
+# 								loyalty = 60
+# 							}
+# 						}
+# 					}
+# 					AND = {
+# 						if = {
+# 							limit = {
+# 								has_estate = estate_church
+# 							}
+# 							estate_loyalty = {
+# 								estate = estate_church
+# 								loyalty = 60
+# 							}
+# 						}
+# 						if = {
+# 							limit = {
+# 								has_estate = estate_nobles
+# 							}
+# 							estate_loyalty = {
+# 								estate = estate_nobles
+# 								loyalty = 60
+# 							}
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
 		
-		effect = { 
-			add_country_modifier = {
-				name = th_gensokyo_soical_order_army
-				duration = 3650
-			}
-			add_country_modifier = {
-				name = th_gensokyo_soical_order_danmaku
-				duration = -1
-			}
-		} 
-	}
+# 		effect = { 
+# 			add_country_modifier = {
+# 				name = th_gensokyo_soical_order_army
+# 				duration = 3650
+# 			}
+# 			add_country_modifier = {
+# 				name = th_gensokyo_soical_order_danmaku
+# 				duration = -1
+# 			}
+# 		} 
+# 	}
 	
-	th_gen_gensokyo_new_rule = {
-		icon = mission_touhou_twilight
-		position = 5
-		required_missions = { th_gen_gensokyo_soical_order } 
+# 	th_gen_gensokyo_new_rule = {
+# 		icon = mission_touhou_twilight
+# 		position = 5
+# 		required_missions = { th_gen_gensokyo_soical_order } 
 		
-		trigger = { 
-			if = {
-				limit = {
-					NOT = {
-						check_variable = {
-							which = the_gene_num_won_battles
-							value = 1
-						}
-					}
-				}
-				custom_trigger_tooltip = {
-					tooltip = THE_generic_won_100_times_no_tt
-					always = no
-				}
-			}
-			else = {
-				custom_trigger_tooltip = {
-					tooltip = THE_generic_won_100_times_tt
-					check_variable = {
-						which = the_gene_num_won_battles
-						value = 100
-					}
-				}
-			}
-			has_global_modifier_value = {
-				which = discipline
-				value = 0.2
-			}
-			custom_trigger_tooltip = {
-				tooltip = JAP_balance_the_four_divisions_tt
-				OR = {
-					AND = {
-						if = {
-							limit = {
-								has_estate = estate_burghers
-							}
-							estate_loyalty = {
-								estate = estate_burghers
-								loyalty = 60
-							}
-						}
-						if = {
-							limit = {
-								has_estate = estate_church
-							}
-							estate_loyalty = {
-								estate = estate_church
-								loyalty = 60
-							}
-						}
-					}
-					AND = {
-						if = {
-							limit = {
-								has_estate = estate_burghers
-							}
-							estate_loyalty = {
-								estate = estate_burghers
-								loyalty = 60
-							}
-						}
-						if = {
-							limit = {
-								has_estate = estate_nobles
-							}
-							estate_loyalty = {
-								estate = estate_nobles
-								loyalty = 60
-							}
-						}
-					}
-					AND = {
-						if = {
-							limit = {
-								has_estate = estate_church
-							}
-							estate_loyalty = {
-								estate = estate_church
-								loyalty = 60
-							}
-						}
-						if = {
-							limit = {
-								has_estate = estate_nobles
-							}
-							estate_loyalty = {
-								estate = estate_nobles
-								loyalty = 60
-							}
-						}
-					}
-				}
-			}
-		}
+# 		trigger = { 
+# 			if = {
+# 				limit = {
+# 					NOT = {
+# 						check_variable = {
+# 							which = the_gene_num_won_battles
+# 							value = 1
+# 						}
+# 					}
+# 				}
+# 				custom_trigger_tooltip = {
+# 					tooltip = THE_generic_won_100_times_no_tt
+# 					always = no
+# 				}
+# 			}
+# 			else = {
+# 				custom_trigger_tooltip = {
+# 					tooltip = THE_generic_won_100_times_tt
+# 					check_variable = {
+# 						which = the_gene_num_won_battles
+# 						value = 100
+# 					}
+# 				}
+# 			}
+# 			has_global_modifier_value = {
+# 				which = discipline
+# 				value = 0.2
+# 			}
+# 			custom_trigger_tooltip = {
+# 				tooltip = JAP_balance_the_four_divisions_tt
+# 				OR = {
+# 					AND = {
+# 						if = {
+# 							limit = {
+# 								has_estate = estate_burghers
+# 							}
+# 							estate_loyalty = {
+# 								estate = estate_burghers
+# 								loyalty = 60
+# 							}
+# 						}
+# 						if = {
+# 							limit = {
+# 								has_estate = estate_church
+# 							}
+# 							estate_loyalty = {
+# 								estate = estate_church
+# 								loyalty = 60
+# 							}
+# 						}
+# 					}
+# 					AND = {
+# 						if = {
+# 							limit = {
+# 								has_estate = estate_burghers
+# 							}
+# 							estate_loyalty = {
+# 								estate = estate_burghers
+# 								loyalty = 60
+# 							}
+# 						}
+# 						if = {
+# 							limit = {
+# 								has_estate = estate_nobles
+# 							}
+# 							estate_loyalty = {
+# 								estate = estate_nobles
+# 								loyalty = 60
+# 							}
+# 						}
+# 					}
+# 					AND = {
+# 						if = {
+# 							limit = {
+# 								has_estate = estate_church
+# 							}
+# 							estate_loyalty = {
+# 								estate = estate_church
+# 								loyalty = 60
+# 							}
+# 						}
+# 						if = {
+# 							limit = {
+# 								has_estate = estate_nobles
+# 							}
+# 							estate_loyalty = {
+# 								estate = estate_nobles
+# 								loyalty = 60
+# 							}
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
 		
-		effect = { 
-			add_country_modifier = {
-				name = th_gensokyo_danmaku_new_rule
-				duration = -1
-			}
-		} 
-	}
+# 		effect = { 
+# 			add_country_modifier = {
+# 				name = th_gensokyo_danmaku_new_rule
+# 				duration = -1
+# 			}
+# 		} 
+# 	}
 	
 	
-	th_gen_gensokyo_new_visitor = {
-		icon = mission_touhou_shrines
-		position = 6
-		provinces_to_highlight = {
-			province_id = 4955
-		}
+# 	th_gen_gensokyo_new_visitor = {
+# 		icon = mission_touhou_shrines
+# 		position = 6
+# 		provinces_to_highlight = {
+# 			province_id = 4955
+# 		}
 		
-		trigger = { 
-			NOT = { tag = HKR }
-			4955 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		} 
+# 		trigger = { 
+# 			NOT = { tag = HKR }
+# 			4955 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 		} 
 		
-		effect = { 
-			add_estate_loyalty = {
-				estate = estate_church
-				loyalty = 10
-			}	
-			4955 = {
-				add_base_tax = 3 
-				add_base_production = 3 
-				add_base_manpower = 3
-			}
-			if = {
-				limit = { has_dlc = "Leviathan" } 
-				4955 = { 
-					add_great_project_tier = {
-						type = th_monument_hakurei_shrine
-						tier = 1 
-					}
-				}
-			}
-			else = {
-				4955 = {
-					add_base_tax = 3 
-					add_base_production = 3 
-					add_base_manpower = 3
-				}
-			} 
-		}
-	}
+# 		effect = { 
+# 			add_estate_loyalty = {
+# 				estate = estate_church
+# 				loyalty = 10
+# 			}	
+# 			4955 = {
+# 				add_base_tax = 3 
+# 				add_base_production = 3 
+# 				add_base_manpower = 3
+# 			}
+# 			if = {
+# 				limit = { has_dlc = "Leviathan" } 
+# 				4955 = { 
+# 					add_great_project_tier = {
+# 						type = th_monument_hakurei_shrine
+# 						tier = 1 
+# 					}
+# 				}
+# 			}
+# 			else = {
+# 				4955 = {
+# 					add_base_tax = 3 
+# 					add_base_production = 3 
+# 					add_base_manpower = 3
+# 				}
+# 			} 
+# 		}
+# 	}
 	
-	th_gen_gensokyo_in_byakurens = {
-		icon = mission_touhou_byakurens_scroll
-		position = 7
-		provinces_to_highlight = {
-			province_id = 4987
-		}
+# 	th_gen_gensokyo_in_byakurens = {
+# 		icon = mission_touhou_byakurens_scroll
+# 		position = 7
+# 		provinces_to_highlight = {
+# 			province_id = 4987
+# 		}
 		
-		trigger = { 
-			NOT = { tag = MYO }
-			4987 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		} 
+# 		trigger = { 
+# 			NOT = { tag = MYO }
+# 			4987 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 		} 
 		
-		effect = { 
-			add_country_modifier = {
-				name = touhou_gensokyo_religious_harmony
-				duration = -1
-			}
-			if = {
-				limit = { has_dlc = "Leviathan" } 
-				4987 = { 
-					add_great_project_tier = {
-						type = th_monument_myouren_temple
-						tier = 1 
-					}
-				}
-			}
-			else = {
-				4987 = {
-					add_base_tax = 3 
-					add_base_production = 3 
-					add_base_manpower = 3
-				}
-			} 
-		}
-	}
+# 		effect = { 
+# 			add_country_modifier = {
+# 				name = touhou_gensokyo_religious_harmony
+# 				duration = -1
+# 			}
+# 			if = {
+# 				limit = { has_dlc = "Leviathan" } 
+# 				4987 = { 
+# 					add_great_project_tier = {
+# 						type = th_monument_myouren_temple
+# 						tier = 1 
+# 					}
+# 				}
+# 			}
+# 			else = {
+# 				4987 = {
+# 					add_base_tax = 3 
+# 					add_base_production = 3 
+# 					add_base_manpower = 3
+# 				}
+# 			} 
+# 		}
+# 	}
 	
-	th_gen_gensokyo_tengu_boss = {
-		icon = mission_touhou_tengu_news_delivery
-		position = 8
-		provinces_to_highlight = {
-			province_id = 4964
-		}
+# 	th_gen_gensokyo_tengu_boss = {
+# 		icon = mission_touhou_tengu_news_delivery
+# 		position = 8
+# 		provinces_to_highlight = {
+# 			province_id = 4964
+# 		}
 		
-		trigger = { 
-			NOT = { tag = TGU }
-			4964 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		} 
+# 		trigger = { 
+# 			NOT = { tag = TGU }
+# 			4964 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 		} 
 		
-		effect = { 
-			add_country_modifier = {
-				name = touhou_gensokyo_tengu_scouts
-				duration = -1
-			}
-			if = {
-				limit = { has_dlc = "Leviathan" } 
-				4964 = { 
-					add_great_project_tier = {
-						type = th_monument_tengu_village
-						tier = 1 
-					}
-				}
-			}
-			else = {
-				4964 = {
-					add_base_tax = 3 
-					add_base_production = 3 
-					add_base_manpower = 3
-				}
-			} 
-		}
-	}
-	th_gen_gensokyo_heaven = {
-		icon = mission_tenshi_empire
-		position = 9
-		provinces_to_highlight = {
-			province_id = 5032
-		}
+# 		effect = { 
+# 			add_country_modifier = {
+# 				name = touhou_gensokyo_tengu_scouts
+# 				duration = -1
+# 			}
+# 			if = {
+# 				limit = { has_dlc = "Leviathan" } 
+# 				4964 = { 
+# 					add_great_project_tier = {
+# 						type = th_monument_tengu_village
+# 						tier = 1 
+# 					}
+# 				}
+# 			}
+# 			else = {
+# 				4964 = {
+# 					add_base_tax = 3 
+# 					add_base_production = 3 
+# 					add_base_manpower = 3
+# 				}
+# 			} 
+# 		}
+# 	}
+# 	th_gen_gensokyo_heaven = {
+# 		icon = mission_tenshi_empire
+# 		position = 9
+# 		provinces_to_highlight = {
+# 			province_id = 5032
+# 		}
 		
-		trigger = { 
-			NOT = { tag = HVR }
-			5032 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		} 
+# 		trigger = { 
+# 			NOT = { tag = HVR }
+# 			5032 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 		} 
 		
-		effect = { 
-			add_country_modifier = {
-				name = touhou_gensokyo_celestial_navy
-				duration = -1
-			}
-			if = {
-				limit = { has_dlc = "Leviathan" } 
-				5032 = { 
-					add_great_project_tier = {
-						type = th_monument_dragons_palace
-						tier = 1 
-					}
-				}
-			}
-			else = {
-				5032 = {
-					add_base_tax = 3 
-					add_base_production = 3 
-					add_base_manpower = 3
-				}
-			} 
-		}
-	}
-}
+# 		effect = { 
+# 			add_country_modifier = {
+# 				name = touhou_gensokyo_celestial_navy
+# 				duration = -1
+# 			}
+# 			if = {
+# 				limit = { has_dlc = "Leviathan" } 
+# 				5032 = { 
+# 					add_great_project_tier = {
+# 						type = th_monument_dragons_palace
+# 						tier = 1 
+# 					}
+# 				}
+# 			}
+# 			else = {
+# 				5032 = {
+# 					add_base_tax = 3 
+# 					add_base_production = 3 
+# 					add_base_manpower = 3
+# 				}
+# 			} 
+# 		}
+# 	}
+# }
 
-th_gen_gensokyo_colonization = {
-	slot = 5
-	generic = yes
-	ai = yes
+# th_gen_gensokyo_colonization = {
+# 	slot = 5
+# 	generic = yes
+# 	ai = yes
 	
-	potential = {
-		culture_group = Gensokyan_culture
-		NOT = { map_setup = map_setup_random }
-	}
-	has_country_shield = yes
+# 	potential = {
+# 		culture_group = Gensokyan_culture
+# 		NOT = { map_setup = map_setup_random }
+# 	}
+# 	has_country_shield = yes
 	
-	th_gen_gensokyo_form_navy = {
-		icon = mission_rb_a_mighty_fleet
-		position = 1
-		trigger = {
-			num_of_total_ports = 10
-			navy_size_percentage = 0.9
-		}
-		effect = {
-			add_prestige = 15
-			create_explorer = { tradition = 30 }
-		}
-	}
+# 	th_gen_gensokyo_form_navy = {
+# 		icon = mission_rb_a_mighty_fleet
+# 		position = 1
+# 		trigger = {
+# 			num_of_total_ports = 10
+# 			navy_size_percentage = 0.9
+# 		}
+# 		effect = {
+# 			add_prestige = 15
+# 			create_explorer = { tradition = 30 }
+# 		}
+# 	}
 	
-	th_gen_gensokyo_break_the_barrier = {
-		icon = mission_establish_high_seas_navy
-		position = 2
-		required_missions = { th_gen_gensokyo_form_navy } 
-		provinces_to_highlight = {
-			OR = {
-				region = moluccas_region
-				region = australia_region
-				region = indonesia_region
-			}
-			NOT = { has_discovered = ROOT }
-		}
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = th_break_the_barrier_tt
-				OR = {
-					moluccas_region = { has_discovered = ROOT }
-					australia_region = { has_discovered = ROOT }
-					indonesia_region = { has_discovered = ROOT }
-				}
-			}
-		}
-		effect = {
-			add_dip_power = 75
-			add_navy_tradition = 35
-		}
-	}
+# 	th_gen_gensokyo_break_the_barrier = {
+# 		icon = mission_establish_high_seas_navy
+# 		position = 2
+# 		required_missions = { th_gen_gensokyo_form_navy } 
+# 		provinces_to_highlight = {
+# 			OR = {
+# 				region = moluccas_region
+# 				region = australia_region
+# 				region = indonesia_region
+# 			}
+# 			NOT = { has_discovered = ROOT }
+# 		}
+# 		trigger = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = th_break_the_barrier_tt
+# 				OR = {
+# 					moluccas_region = { has_discovered = ROOT }
+# 					australia_region = { has_discovered = ROOT }
+# 					indonesia_region = { has_discovered = ROOT }
+# 				}
+# 			}
+# 		}
+# 		effect = {
+# 			add_dip_power = 75
+# 			add_navy_tradition = 35
+# 		}
+# 	}
 	
-	th_gen_gensokyo_America = {
-		icon = mission_iberian_conquistador
-		position = 3
-		required_missions = { th_gen_gensokyo_break_the_barrier } 
-		provinces_to_highlight = {
-			OR = {
-				colonial_region = colonial_alaska
-				colonial_region = colonial_california
-				colonial_region = colonial_mexico
-			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
+# 	th_gen_gensokyo_America = {
+# 		icon = mission_iberian_conquistador
+# 		position = 3
+# 		required_missions = { th_gen_gensokyo_break_the_barrier } 
+# 		provinces_to_highlight = {
+# 			OR = {
+# 				colonial_region = colonial_alaska
+# 				colonial_region = colonial_california
+# 				colonial_region = colonial_mexico
+# 			}
+# 			NOT = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 		}
 		
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = MHG_colonize_north_america.tooltip
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 5
-					OR = {
-						colonial_region = colonial_alaska
-						colonial_region = colonial_california
-						colonial_region = colonial_mexico
-					}
-					is_city = yes
-				}
-			}
-		}
+# 		trigger = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = MHG_colonize_north_america.tooltip
+# 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+# 					value = 5
+# 					OR = {
+# 						colonial_region = colonial_alaska
+# 						colonial_region = colonial_california
+# 						colonial_region = colonial_mexico
+# 					}
+# 					is_city = yes
+# 				}
+# 			}
+# 		}
 		
-		effect = {
-			add_country_modifier = {
-				name = th_gen_gensokyo_America_world
-				duration = 7300
-			}
-			central_america_region = {
-				add_permanent_claim = ROOT
-			}
-		}
-	}
+# 		effect = {
+# 			add_country_modifier = {
+# 				name = th_gen_gensokyo_America_world
+# 				duration = 7300
+# 			}
+# 			central_america_region = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 		}
+# 	}
 	
-	th_gen_training_ocean_navy = {
-		icon = mission_corsairs_of_the_north_sea
-		position = 4
-		required_missions = { th_gen_gensokyo_America } 
-		trigger = {
-			num_of_total_ports = 20
-			sailors_percentage = 0.6
-			OR = {
-				num_of_heavy_ship = 30
-				num_of_light_ship = 50
-			}
-			if = {
-				limit = {
-					has_dlc = "Golden Century"
-				}
-				has_flagship = yes
-			}
-			else = {
-				navy_tradition = 40
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = touhou_ocean_navy
-				duration = 9125
-			}
-			create_explorer = { tradition = 50 }
-		}
-	}
+# 	th_gen_training_ocean_navy = {
+# 		icon = mission_corsairs_of_the_north_sea
+# 		position = 4
+# 		required_missions = { th_gen_gensokyo_America } 
+# 		trigger = {
+# 			num_of_total_ports = 20
+# 			sailors_percentage = 0.6
+# 			OR = {
+# 				num_of_heavy_ship = 30
+# 				num_of_light_ship = 50
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_dlc = "Golden Century"
+# 				}
+# 				has_flagship = yes
+# 			}
+# 			else = {
+# 				navy_tradition = 40
+# 			}
+# 		}
+# 		effect = {
+# 			add_country_modifier = {
+# 				name = touhou_ocean_navy
+# 				duration = 9125
+# 			}
+# 			create_explorer = { tradition = 50 }
+# 		}
+# 	}
 	
-	th_gen_gensokyo_discover_europe = {
-		icon = mission_invade_england
-		position = 5
-		required_missions = { th_gen_training_ocean_navy } 
-		provinces_to_highlight = {
-			OR = {
-				region = iberia_region
-				region = france_region
-				region = low_countries_region
-				region = british_isles_region
-			}
-			NOT = { has_discovered = ROOT }
-		}
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = th_discovers_europe.tooltip
-				OR = {
-					iberia_region = { has_discovered = ROOT }
-					france_region = { has_discovered = ROOT }
-					low_countries_region = { has_discovered = ROOT }
-					british_isles_region = { has_discovered = ROOT }
-				}
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = "touhou_discovery_of_europe"
-				duration = 7300
-			}
-			country_event = { id = TH_mission_events.4 }			
-		}
-	}
+# 	th_gen_gensokyo_discover_europe = {
+# 		icon = mission_invade_england
+# 		position = 5
+# 		required_missions = { th_gen_training_ocean_navy } 
+# 		provinces_to_highlight = {
+# 			OR = {
+# 				region = iberia_region
+# 				region = france_region
+# 				region = low_countries_region
+# 				region = british_isles_region
+# 			}
+# 			NOT = { has_discovered = ROOT }
+# 		}
+# 		trigger = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = th_discovers_europe.tooltip
+# 				OR = {
+# 					iberia_region = { has_discovered = ROOT }
+# 					france_region = { has_discovered = ROOT }
+# 					low_countries_region = { has_discovered = ROOT }
+# 					british_isles_region = { has_discovered = ROOT }
+# 				}
+# 			}
+# 		}
+# 		effect = {
+# 			add_country_modifier = {
+# 				name = "touhou_discovery_of_europe"
+# 				duration = 7300
+# 			}
+# 			country_event = { id = TH_mission_events.4 }			
+# 		}
+# 	}
 	
 	
 	
-	th_gen_gensokyo_one_day = {
-		icon = mission_touhou_sakuya
-		position = 6
-		provinces_to_highlight = {
-			province_id = 4968
-		}
+# 	th_gen_gensokyo_one_day = {
+# 		icon = mission_touhou_sakuya
+# 		position = 6
+# 		provinces_to_highlight = {
+# 			province_id = 4968
+# 		}
 		
-		trigger = { 
-			NOT = { tag = SCR }
-			4968 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		} 
+# 		trigger = { 
+# 			NOT = { tag = SCR }
+# 			4968 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 		} 
 		
-		effect = { 
-			add_adm_power = 75
-			add_dip_power = 75
-			add_mil_power = 75
-			4968 = {
-				add_base_tax = 2
-				add_base_production = 2
-				add_base_manpower = 2
-			}
-			if = {
-				limit = { has_dlc = "Leviathan" } 
-				4968 = { 
-					add_great_project_tier = {
-						type = th_monument_koumakan
-						tier = 1 
-					}
-				}
-			}
-			else = {
-				4968 = {
-					add_base_tax = 3 
-					add_base_production = 3 
-					add_base_manpower = 3
-				}
-			} 
-		}
-	}
+# 		effect = { 
+# 			add_adm_power = 75
+# 			add_dip_power = 75
+# 			add_mil_power = 75
+# 			4968 = {
+# 				add_base_tax = 2
+# 				add_base_production = 2
+# 				add_base_manpower = 2
+# 			}
+# 			if = {
+# 				limit = { has_dlc = "Leviathan" } 
+# 				4968 = { 
+# 					add_great_project_tier = {
+# 						type = th_monument_koumakan
+# 						tier = 1 
+# 					}
+# 				}
+# 			}
+# 			else = {
+# 				4968 = {
+# 					add_base_tax = 3 
+# 					add_base_production = 3 
+# 					add_base_manpower = 3
+# 				}
+# 			} 
+# 		}
+# 	}
 	
-	th_gen_gensokyo_full_book = {
-		icon = mission_touhou_scarlet_library
-		position = 7
-		provinces_to_highlight = {
-			province_id = 5094
-		}
+# 	th_gen_gensokyo_full_book = {
+# 		icon = mission_touhou_scarlet_library
+# 		position = 7
+# 		provinces_to_highlight = {
+# 			province_id = 5094
+# 		}
 		
-		trigger = { 
-			NOT = { tag = FOM }
-			5094 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			5072 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		} 
+# 		trigger = { 
+# 			NOT = { tag = FOM }
+# 			5094 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 			5072 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 		} 
 		
-		effect = { 
-			add_country_modifier = {
-				name = touhou_gensokyo_more_magical_materials
-				duration = -1
-			}
-			5072 = {
-				add_base_tax = -6
-			}
-			if = {
-				limit = { has_dlc = "Leviathan" } 
-				5094 = { 
-					add_great_project_tier = {
-						type = th_monument_forest_of_magic
-						tier = 1 
-					}
-				}
-			}
-			else = {
-				5094 = {
-					add_base_tax = 3 
-					add_base_production = 3 
-					add_base_manpower = 3
-				}
-			} 
-		}
-	}
+# 		effect = { 
+# 			add_country_modifier = {
+# 				name = touhou_gensokyo_more_magical_materials
+# 				duration = -1
+# 			}
+# 			5072 = {
+# 				add_base_tax = -6
+# 			}
+# 			if = {
+# 				limit = { has_dlc = "Leviathan" } 
+# 				5094 = { 
+# 					add_great_project_tier = {
+# 						type = th_monument_forest_of_magic
+# 						tier = 1 
+# 					}
+# 				}
+# 			}
+# 			else = {
+# 				5094 = {
+# 					add_base_tax = 3 
+# 					add_base_production = 3 
+# 					add_base_manpower = 3
+# 				}
+# 			} 
+# 		}
+# 	}
 	
-	th_gen_gensokyo_in_senkai = {
-		icon = mission_touhou_senkai
-		position = 8
-		provinces_to_highlight = {
-			province_id = 5025
-		}
+# 	th_gen_gensokyo_in_senkai = {
+# 		icon = mission_touhou_senkai
+# 		position = 8
+# 		provinces_to_highlight = {
+# 			province_id = 5025
+# 		}
 		
-		trigger = { 
-			NOT = { tag = SNK }
-			5025 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		} 
+# 		trigger = { 
+# 			NOT = { tag = SNK }
+# 			5025 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 		} 
 		
-		effect = { 
-			add_country_modifier = {
-				name = touhou_gensokyo_alchemist_support
-				duration = -1
-			}
-			if = {
-				limit = { has_dlc = "Leviathan" } 
-				5025 = { 
-					add_great_project_tier = {
-						type = th_monument_divine_spirit_mausoleum
-						tier = 1 
-					}
-				}
-			}
-			else = {
-				5025 = {
-					add_base_tax = 3 
-					add_base_production = 3 
-					add_base_manpower = 3
-				}
-			} 
-		}
-	}
+# 		effect = { 
+# 			add_country_modifier = {
+# 				name = touhou_gensokyo_alchemist_support
+# 				duration = -1
+# 			}
+# 			if = {
+# 				limit = { has_dlc = "Leviathan" } 
+# 				5025 = { 
+# 					add_great_project_tier = {
+# 						type = th_monument_divine_spirit_mausoleum
+# 						tier = 1 
+# 					}
+# 				}
+# 			}
+# 			else = {
+# 				5025 = {
+# 					add_base_tax = 3 
+# 					add_base_production = 3 
+# 					add_base_manpower = 3
+# 				}
+# 			} 
+# 		}
+# 	}
 	
-	th_gen_gensokyo_help_erin = {
-		icon = mission_touhou_chemicals
-		position = 9
-		provinces_to_highlight = {
-			province_id = 4991
-		}
+# 	th_gen_gensokyo_help_erin = {
+# 		icon = mission_touhou_chemicals
+# 		position = 9
+# 		provinces_to_highlight = {
+# 			province_id = 4991
+# 		}
 		
-		trigger = { 
-			NOT = { tag = EIT }
-			4991 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		} 
+# 		trigger = { 
+# 			NOT = { tag = EIT }
+# 			4991 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 		} 
 		
-		effect = { 
-			add_yearly_manpower = 2
-			4991 = {
-				add_base_tax = 1
-				add_base_production = 1
-				add_base_manpower = 1
-			}
-			if = {
-				limit = { has_dlc = "Leviathan" } 
-				4991 = { 
-					add_great_project_tier = {
-						type = th_monument_eientei 
-						tier = 1 
-					}
-				}
-			}
-			else = {
-				4991 = {
-					add_base_tax = 3 
-					add_base_production = 3 
-					add_base_manpower = 3
-				}
-			} 
-		}
-	}
-}
+# 		effect = { 
+# 			add_yearly_manpower = 2
+# 			4991 = {
+# 				add_base_tax = 1
+# 				add_base_production = 1
+# 				add_base_manpower = 1
+# 			}
+# 			if = {
+# 				limit = { has_dlc = "Leviathan" } 
+# 				4991 = { 
+# 					add_great_project_tier = {
+# 						type = th_monument_eientei 
+# 						tier = 1 
+# 					}
+# 				}
+# 			}
+# 			else = {
+# 				4991 = {
+# 					add_base_tax = 3 
+# 					add_base_production = 3 
+# 					add_base_manpower = 3
+# 				}
+# 			} 
+# 		}
+# 	}
+# }

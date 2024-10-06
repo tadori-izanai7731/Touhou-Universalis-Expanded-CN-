@@ -8,6 +8,10 @@ spriteTypes = {
 		name = "GFX_text_hakurei_religion_icon"
 		texturefile = "gfx//icons//THE_ROD_icon//THE_ROD_hakurei_religion_icon.dds"
 	}
+	spriteType = {
+		name = "GFX_text_THE_papal_influence_icon"
+		texturefile = "gfx//interface//cross_papal.dds"
+	}
 
 	###GUI
 	spriteType = {

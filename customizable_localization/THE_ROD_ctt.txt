@@ -67,3 +67,20 @@ defined_text = {
 		}
 	}
 }
+
+defined_text = {
+	name = THE_ROD_hakureishinto_extra_ctt
+	random = no
+	text = {
+		localisation_key = THE_ROD_hakureishinto_extra_tt
+		trigger = {
+			has_country_flag = THE_ROD_hakureishinto_reform_extra_flag
+		}
+	}
+	text = {
+		localisation_key = THE_ROD_hakureishinto_extra_tt_empty
+		trigger = {
+			NOT = { has_country_flag = THE_ROD_hakureishinto_reform_extra_flag }
+		}
+	}
+}

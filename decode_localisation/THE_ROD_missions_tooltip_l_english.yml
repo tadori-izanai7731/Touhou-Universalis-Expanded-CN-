@@ -6,7 +6,7 @@ l_english:
  THE_ROD_burghers_influence_no_tt: "£no£如果完成任务时§Y[Root.Get市民Name]§!阶层至少有§Y30§!影响力，获得如下效果:"
  THE_ROD_create_fort_yes_tt: "£yes£如果§Y[43.GetName]§!没有任何要塞建筑："
  THE_ROD_create_fort_no_tt: "£no£如果§Y[43.GetName]§!没有任何要塞建筑："
- THE_ROD_gain_point_base_on_emperor_opinion_tt: "@[Emperor.GetTag]§Y[Emperor.GetName]§!对@[Root.GetTag]§Y[Root.GetName]§!每有§G1§!点好感度,获得§G1§!点随机君主点数"
+ THE_ROD_gain_point_base_on_emperor_opinion_tt: "@[Emperor.GetTag]§Y[Emperor.GetName]§!对@[Root.GetTag]§Y[Root.GetName]§!每有§G1§!点好感度,获得§G1§!点随机§Y君主点数§!"
  THE_ROD_alliance_hsa_yes_tt: "£yes£如果@HSA§Y[HSA.GetName]§!对我们的好感度达到§G50§!，获得如下效果："
  THE_ROD_alliance_hsa_no_tt: "£no£如果@HSA§Y[HSA.GetName]§!对我们的好感度达到§G50§!，获得如下效果："
  THE_ROD_unlock_rug_pirate_tt: "解锁§J吕根海盗§!佣兵团\n该佣兵团不消耗陆军职业度且不占用陆军上限"
@@ -19,7 +19,7 @@ l_english:
  THE_ROD_1_7_case1_tt: "「§Y边境藩侯§!」的持续时间改为§G永久§!"
  THE_ROD_unlock_personal_union_bra_decision_tt: "解锁决议「§Y建立[BRA.GetName]共主联邦§!」\n允许我们将@BRA§Y[BRA.GetName]§!转化为§Y一体化被联统国§!，并减少@[Root.GetTag]§Y[Root.GetName]§!造成的侵略扩张。"
  THE_ROD_unlock_personal_union_boh_sax_decision_tt: "解锁决议「§Y建立[BOH.GetName]共主联邦§!」\n解锁决议「§Y建立[SAX.GetName]共主联邦§!」\n允许我们将@BOH§Y[BOH.GetName]§!和@SAX§Y[SAX.GetName]§!转化为§Y一体化被联统国§!，并减少@[Root.GetTag]§Y[Root.GetName]§!造成的侵略扩张。"
- THE_ROD_hre_elector_modifier_extra_effect_tt: "新皇帝登基时，§Y皇帝§!对@[Root.GetTag]§Y[Root.GetName]§!每有§G1§!点好感度,获得§G1§!点随机君主点数"
+ THE_ROD_hre_elector_modifier_extra_effect_tt: "新皇帝登基时，§Y皇帝§!对@[Root.GetTag]§Y[Root.GetName]§!每有§G1§!点好感度,获得§G1§!点随机§Y君主点数§!"
  THE_ROD_decrease_every_country_ae_50_tt: "所有国家对@[Root.GetTag]§Y[Root.GetName]§!减少§G50§!点侵略扩张"
  THE_ROD_change_color_to_colony_tt: "国家颜色转变为与@[Root.GetTag]§Y[Root.GetName]§!相近的颜色"
  THE_ROD_unlock_noble_privilege_knight_tradition_tt: "解锁§Y[Root.Get贵族Name]§!阶层特权「§Y骑士团传统§!」，授予该特权将获得如下效果:"
@@ -83,7 +83,7 @@ l_english:
  THE_ROD_1_19_hakurei_tt: "「§Y新手巫女§!」的持续时间改为§G永久§!。"
  THE_ROD_2_18_hakurei_tt_yes: "£yes£如果已完成§Y宗教理念组§!，获得如下效果:"
  THE_ROD_2_18_hakurei_tt_no: "£no£如果已完成§Y宗教理念组§!，获得如下效果:"
- THE_ROD_2_18_hakurei_tt: "§Y[Root.Get教士Name]§!阶层每拥有§Y1§!个特权，获得§G100§!£adm£行政点数。"
+ THE_ROD_2_18_hakurei_tt: "§Y[Root.Get教士Name]§!阶层每拥有§Y1§!个特权，获得§G100§!£adm£§Y行政点数§!。"
  THE_ROD_unlock_spread_hakurei_message_reform_tt: "解锁第§Y4§!级政府改革「§Y传播博丽神旨§!」，实行该改革将获得如下效果:"
  THE_ROD_no_effect_tt: "无效果。"
  THE_ROD_2_19_catholic_tt_yes: "£yes£如果治下任意省份有「§Y但泽教皇宫§!」修正，获得如下效果:"
@@ -125,7 +125,7 @@ l_english:
  THE_ROD_unlock_rod_hsa_decision_tt: "解锁决议「§Y宵暗-汉萨领域§!」\n允许我们将汉萨加入国家名称。"
  THE_ROD_upgrade_trade_center_add_or_upgrade_trade_building_tt: "升级§M贸易中心§!将在当地和相邻省份§Y添加§!或§Y升级§!§M贸易建筑§!。"
  THE_ROD_unlock_fall_into_world_port_reform_tt: "解锁第§Y8§!级政府改革「§Y坠入世界港§!」，实行该改革将获得如下效果:"
- THE_ROD_add_mil_and_manpower_from_noblle_influence_tt: "§Y[Root.Get贵族Name]§!阶层每拥有§Y10%§!影响力，获得§G50§!£mil£军事点数和§G5000§!后备兵员。"
+ THE_ROD_add_mil_and_manpower_from_noblle_influence_tt: "§Y[Root.Get贵族Name]§!阶层每拥有§Y10%§!影响力，获得§G50§!£mil£§Y军事点数§!和§G5000§!£icon_manpower£§Y后备兵员§!。"
  THE_ROD_modifier_from_mil_advisor_tt: "根据当前雇佣的£mil£§Y军事顾问§!类型，获得如下效果:"
  THE_ROD_every_has_coast_defense_building_tt: "治下每个拥有§Y岸防工事§!或§Y海防炮台§!的省份:"
  THE_ROD_is_border_province_ttt: "是边境省份"
@@ -145,7 +145,7 @@ l_english:
  THE_ROD_has_general_rumia_ttt: "有§Y露米娅§!陆军将领"
  THE_ROD_rumia_general_1_tt: "§Y露米娅§!领导的战役胜利有§G15%§!概率获得能力提升。"
  THE_ROD_rumia_general_2_tt: "§Y露米娅§!领导的战役胜利有§G30%§!概率获得能力提升。"
- THE_ROD_rumia_general_add_all_ability_tt: "§Y露米娅§!的所有能力提升§G1§!，超过上限转化为§G100§!£mil£军事点数。"
+ THE_ROD_rumia_general_add_all_ability_tt: "§Y露米娅§!的所有能力提升§G1§!，超过上限转化为§G100§!£mil£§Y军事点数§!。"
  THE_ROD_more_darkness_manipulation_form_battle_tt: "从战役胜利获得的§Y操控黑暗程度的能力§!增加§G30%§!。"
  THE_ROD_add_general_ability_max_tt: "§Y露米娅§!的所有能力上限提升至§G6§!。"
  THE_ROD_4_15_case1_tt_yes: "£yes£如果拥有§Y船具§!的贸易奖励，获得如下效果:"
@@ -223,7 +223,7 @@ l_english:
  THE_ROD_all_livestock_province_tt: "治下每个生产§Y牲畜§!的省份:"
  THE_ROD_estate_cossacks_influence_less_than_50_tt: "维持低于§Y50%§!的哥萨克影响力将有可能对哥萨克进行改革。"
  THE_ROD_cossack_rebel_tt: "§R哥萨克将发动叛乱§!。"
- THE_ROD_rumia_add_2_shock_tt: "§Y露米娅§!的£icon_shock£冲击提升§G2§!，超过上限转化为§G100§!£mil£军事点数。"
+ THE_ROD_rumia_add_2_shock_tt: "§Y露米娅§!的£icon_shock£冲击提升§G2§!，超过上限转化为§G100§!£mil£§Y军事点数§!。"
  THE_ROD_4_14_complete_by_event_ttt: "已通过「§Y沙恩霍斯特陆军改革§!」完成该任务。"
  THE_ROD_diplomatic_mission_complete_by_event_ttt: "已通过「§Y哈布斯堡联姻§!」完成该任务。"
  THE_ROD_unitl_heir_die_tt: "持续到继承人被废黜或死亡"
@@ -258,10 +258,14 @@ l_english:
  THE_ROD_add_unity_german_culture_power_from_accepted_culture_tt: "当前每个已接纳的§Y日耳曼§!文化提供§G5.00§!§M德意志文化统一§!进度。"
  THE_ROD_german_coal_or_iron_province_effect_tt: "每个§Y北德意志§!或§Y南德意志§!地区且生产§Y煤炭§!或§Y铁矿§!的省份获得如下效果:"
  THE_ROD_assimilate_boh_tt: "治下随机§Y10§!个省份:"
+ THE_ROD_decrease_1_18_trigger_tt: "降低任务「§Y皈依天主教§!」的条件，如果已完成任务则获得100£adm£§Y行政点数§!。"
+ THE_ROD_catholic_great_project_decrease_decision_cost_tt: "「§Y影响教廷监护选举§!」决议获得如下效果:\n每拥有一个雄伟壮丽等级的的基督教伟大工程，获得§G10§!§Y£THE_papal_influence_icon£§!§Y教廷影响力§!"
+ THE_ROD_every_hakureishinto_with_temple_province_tt: "治下每个拥有§Y寺庙§!或§Y教堂§!的§Y博丽神道§!省份获得如下效果:"
+ THE_ROD_hakureishinto_reform_extra_tt: "升级「§Y传播博丽神旨§!」的政府机制，完成传教额外获得§G5§!£dip£§Y外交点数§!和§G5§!£mil£§Y军事点数§!"
  THE_ROD_not_complete_event_ttt: "没做完"
 ###TOOLTIP_END
 
-###MODIFIER
+###MODIFIER§Y
  THE_ROD_food_in_dark_province_modiffier: "黑暗中的食物"
  THE_ROD_empire_mercenary_modifier: "帝国佣兵"
  THE_ROD_alliance_hsa_modifier: "与吕贝克结盟"
@@ -406,7 +410,8 @@ l_english:
  THE_ROD_government_mechanic_interaction_1_desc: ""
  THE_ROD_government_mechanic_interaction_2_desc: ""
  mechanic_THE_ROD_court_banquet_attribute_yes: "启用「§Y晚间宫廷宴会§!」决议"
- mechanic_THE_ROD_convert_religion_add_church_loyalty_or_adm_yes: "完成传教增加§Y教士§!阶层§G1%§!忠诚度并获得§G5§!£adm£行政点数"
+ mechanic_THE_ROD_convert_religion_add_church_loyalty_or_adm_yes: "完成传教增加§Y教士§!阶层§G1%§!忠诚度并获得§G5§!£adm£§Y行政点数§!"
+ mechanic_THE_ROD_convert_religion_add_church_loyalty_or_adm_dip_mil_yes: "完成传教增加§Y教士§!阶层§G1%§!忠诚度并获得§G5§!£adm£§Y行政点数§!、§G5§!£dip£§Y外交点数§!和§G5§!£mil£§Y军事点数§!"
  mechanic_THE_ROD_become_papal_controller_attribute_yes: "启用「§Y影响教廷监护选举§!」决议"
  mechanic_THE_ROD_darkness_trade_war_without_trigger_yes: "可以对任何国家使用「§Y宵岸战争§!」宣战理由"
  mechanic_THE_ROD_enable_peasants_privilege_attributes_yes: "启用各阶层农民特权"
@@ -684,6 +689,14 @@ l_english:
  THE_ROD_events.40.desc: "作为曾经神圣罗马帝国的选帝侯，这个由捷克人统治的波希米亚王国曾令无数公爵国王趋之若鹜。但今非昔比，帝国解散和民族主义的背景下，尽管我们对外族的态度是和平共处，日耳曼人统治的德意志帝国与曾经亦为统治者的西斯拉夫人依然出现了难以调和的矛盾。针对这一问题召开的内阁会议上，正在编纂德意志史的历史学家提出的民族平等方案得到了在场大多数的认可，一些更加激进者认为所谓的西斯拉夫民族早已不能被称为民族，这些生活在德意志土地上的就是正统的日耳曼人。"
  THE_ROD_events.40.a: "列入主要卷。"
  THE_ROD_events.40.a: "列入附加卷。"
+
+ THE_ROD_events.41.title: "教宗来访"
+ THE_ROD_events.41.desc: "在神圣罗马帝国内部，邦国的合并与分裂是十分常见的事，或许是出于神授这一象征身份的礼节，教宗在这次神圣罗马帝国的出行中访问了从条顿骑士团独立不久的宵暗领域。见到继承[43.GetName]公爵之位的是一个看上去年幼的女孩，教宗感叹这个新生国家被黑暗遮蔽的命运，愿天主之光照耀于此。"
+ THE_ROD_events.41.a: "「什么暗的光的，教士们说信了天主就有好处。」"
+
+ THE_ROD_events.42.title: "教堂收集"
+ THE_ROD_events.42.desc: "最近令露米娅非常不解的是，自从信了天主教，为了解决信徒的宗教活动场所问题修建了许多教堂，但也听说有些国家将教堂修建得非常巨大，远远超过了实际使用需求的大小。宫廷牧师对此的解释是，那些宏伟的教堂是为了留下丰功伟绩或对外宣扬，但归根结底还是由于信徒们对天主教的虔诚信仰。如果我们拥有那样一座教堂，教士们也会用虔诚的信仰回报。"
+ THE_ROD_events.42.a: "信仰，真是古怪的东西。"
 ###EVENT_END
 
 ###VARIABLE
@@ -696,6 +709,8 @@ l_english:
  THE_ROD_mechanic_stage_2: "无光之夜"
  THE_ROD_mechanic_stage_3: "寂静之夜"
  THE_ROD_mechanic_stage_4: "暗月之夜"
+ THE_ROD_hakureishinto_extra_tt: "、§G5§!£dip£§Y外交点数§!和§G5§!£mil£§Y军事点数§!"
+ THE_ROD_hakureishinto_extra_tt_empty: ""
 ###CUSTOM_LOCALISATION_END
 
 ###CULTURE
