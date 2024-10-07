@@ -2266,9 +2266,9 @@ country_event = {
 	}
 }
 
+
 ### God And Saint Event Group!
 ### 神与圣事件组
-
 country_event = {
 	id = THE_ROD_events.41
 	title = THE_ROD_events.41.title
@@ -2358,9 +2358,22 @@ country_event = {
 			}
 			change_religion = th_hakureishinto
 		}
+		custom_tooltip = empty_line_tt
 		custom_tooltip = THE_ROD_every_hakureishinto_with_temple_province_tt
-		tooltip = {
-			add_base_tax = 1
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					religion = th_hakureishinto
+				}
+				add_base_tax = 1
+			}
+			every_owned_province = {
+				limit = {
+					religion = th_hakureishinto
+					has_tax_building_trigger = yes
+				}
+				add_base_tax = 1
+			}
 		}
 	}
 }
@@ -2378,7 +2391,7 @@ country_event = {
 	trigger = {
 		OR = { tag = ROD was_tag = ROD }
 		has_government_attribute = THE_ROD_convert_religion_add_church_loyalty_or_adm
-		religion = catholic
+		religion = th_hakureishinto
 	}
 	
 	option = {
