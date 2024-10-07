@@ -258,6 +258,16 @@ declarewar = {
                 country_event = { id = flavor_ita.7 }
             }
         }
+
+		### THE
+		if = {
+			limit = { has_country_flag = THE_ROD_cannot_call_ally_TEU_flag FROM = { tag = TEU } }
+			set_country_flag = THE_ROD_once_declarewar_TEU_flag
+		}
+		if = {
+			limit = { has_country_flag = THE_ROD_cannot_call_ally_WOL_flag FROM = { tag = WOL } }
+			set_country_flag = THE_ROD_once_declarewar_WOL_flag
+		}
 	}
 }
 support_independence_action = {
@@ -1314,6 +1324,23 @@ claim_states = {
 				tooltip = th_is_not_claim_immune_tt
 				FROM = { NOT = { has_government_attribute = enables_claim_immunity } }
 			}
+		}
+	}
+}
+
+### THE
+
+callaction = {
+	condition = {
+		potential = { tag = TEU any_country = { has_country_flag = THE_ROD_cannot_call_ally_TEU_flag war_with = ROOT } }
+		allow = {
+			always = no
+		}
+	}
+	condition = {
+		potential = { tag = WOL any_country = { has_country_flag = THE_ROD_cannot_call_ally_WOL_flag war_with = ROOT } }
+		allow = {
+			always = no
 		}
 	}
 }

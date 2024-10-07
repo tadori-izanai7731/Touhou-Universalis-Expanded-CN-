@@ -868,19 +868,16 @@ THE_ROD_branch_2 = {
 			vorpommern_area = { add_permanent_claim = ROOT } 
 			25 = { add_permanent_claim = ROOT } 
 			custom_tooltip = empty_line_tt
-			add_splendor = 100
-			define_advisor = {
-				type = army_reformer
-				skill = 1
-				culture = ROOT
-				religion = ROOT
-				cost_multiplier = 0.25
-			}
-			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = "THE_ROD_expand_in_darkness_modifier"
 				duration = 10950
 			}
+			custom_tooltip = THE_ROD_cannot_call_ally_TEU_WOL_tt
+			hidden_effect = {
+				set_country_flag = THE_ROD_cannot_call_ally_TEU_flag
+				set_country_flag = THE_ROD_cannot_call_ally_WOL_flag
+			}
+			custom_tooltip = empty_line_tt
 			custom_tooltip = THE_ROD_dark_moon_night_stage1_extra_tt
 			custom_tooltip = THE_ROD_dark_moon_night_2_4_tt
 			custom_tooltip = empty_line_tt
@@ -2430,8 +2427,14 @@ THE_ROD_branch_4 = {
 				limit = { exists = HSA } 
 				HSA = { remove_rival = ROOT } 
 				remove_rival = HSA
-				HSA = { add_historical_friend = ROOT } 
+				HSA = {
+					add_historical_friend = ROOT
+				} 
 				add_historical_friend = HSA
+				add_favors = {
+					who = HSA
+					amount = 10
+				}
 				custom_tooltip = empty_line_tt
 				if = {
 					limit = {

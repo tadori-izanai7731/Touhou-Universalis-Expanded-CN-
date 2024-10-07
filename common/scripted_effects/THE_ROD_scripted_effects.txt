@@ -302,6 +302,26 @@ THE_ROD_on_war_ended_scripted_effect = {
 		}
 		remove_country_modifier = THE_ROD_blockade_from_rod_modifier
 	}
+	if = {
+		limit = {
+			OR = {
+				AND = { has_country_flag = THE_ROD_cannot_call_ally_TEU_flag has_country_flag = THE_ROD_once_declarewar_TEU_flag NOT = { war_with = TEU } }
+				FROM = { AND = { has_country_flag = THE_ROD_cannot_call_ally_TEU_flag has_country_flag = THE_ROD_once_declarewar_TEU_flag NOT = { war_with = TEU } } }
+			}
+		}
+		ROOT = { clr_country_flag  = THE_ROD_cannot_call_ally_TEU_flag }
+		FROM = { clr_country_flag  = THE_ROD_cannot_call_ally_TEU_flag }
+	}
+	if = {
+		limit = {
+			OR = {
+				AND = { has_country_flag = THE_ROD_cannot_call_ally_WOL_flag has_country_flag = THE_ROD_once_declarewar_WOL_flag NOT = { war_with = WOL } }
+				FROM = { AND = { has_country_flag = THE_ROD_cannot_call_ally_WOL_flag has_country_flag = THE_ROD_once_declarewar_WOL_flag NOT = { war_with = WOL } } }
+			}
+		}
+		ROOT = { clr_country_flag  = THE_ROD_cannot_call_ally_WOL_flag }
+		FROM = { clr_country_flag  = THE_ROD_cannot_call_ally_WOL_flag }
+	}
 }
 
 THE_ROD_on_heir_death_scripted_effect = {
