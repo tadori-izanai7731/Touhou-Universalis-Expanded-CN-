@@ -1,5 +1,5 @@
 THE_ROD_estate_nobles_knight_tradition = {
-	icon = privilege_raise_host
+	icon = privilege_war_exhaustion
 	max_absolutism = 0
 	loyalty = 0.1
 	influence = 0.0
@@ -13,18 +13,47 @@ THE_ROD_estate_nobles_knight_tradition = {
 	benefits = {
 		general_cost = -0.1
 		nobles_privilege_slots = 1
+		establish_order_cost = -0.25
 	}
-	influence_scaled_conditional_modifier = {
-		modifier = {
-			establish_order_cost = -0.5
-			cavalry_power = 0.2
-		}
+	conditional_modifier = {
+		trigger = { has_country_flag = THE_ROD_strategy_and_arm_1_flag } modifier = { army_tradition = 1 }
+	}
+	conditional_modifier = {
+		trigger = { has_country_flag = THE_ROD_strategy_and_arm_2_flag } modifier = { infantry_fire = 0.2 }
+	}
+	conditional_modifier = {
+		trigger = { has_country_flag = THE_ROD_strategy_and_arm_3_flag } modifier = { land_attrition = -0.15 }
+	}
+	conditional_modifier = {
+		trigger = { has_country_flag = THE_ROD_strategy_and_arm_4_flag } modifier = { leader_siege = 1 }
+	}
+	conditional_modifier = {
+		trigger = { has_country_flag = THE_ROD_strategy_and_arm_5_flag } modifier = { global_attacker_dice_roll_bonus = 1 }
+	}
+	conditional_modifier = {
+		trigger = { has_country_flag = THE_ROD_strategy_and_arm_6_flag } modifier = { global_defender_dice_roll_bonus = 1 }
+	}
+	conditional_modifier = {
+		trigger = { has_country_flag = THE_ROD_strategy_and_arm_7_flag } modifier = { reinforce_speed = 0.15 }
+	}
+	conditional_modifier = {
+		trigger = { has_country_flag = THE_ROD_strategy_and_arm_8_flag } modifier = { free_leader_pool = 2 }
+	}
+	conditional_modifier = {
+		trigger = { has_country_flag = THE_ROD_strategy_and_arm_9_flag } modifier = { artillery_barrage_cost = -0.1 }
+	}
+	conditional_modifier = {
+		trigger = { has_country_flag = THE_ROD_strategy_and_arm_10_flag } modifier = { global_garrison_growth = 0.25 }
 	}
 	on_granted = {
 		custom_tooltip = THE_ROD_estate_nobles_knight_tradition_effect_tt
+		if = {
+			limit = { has_country_flag = THE_ROD_strategy_and_arm_department_flag }
+			custom_tooltip = THE_ROD_strategy_and_arm_department_effect_tt
+		}
 	}
 	ai_will_do = {
-		factor = -1000
+		factor = 0
 	}
 }
 

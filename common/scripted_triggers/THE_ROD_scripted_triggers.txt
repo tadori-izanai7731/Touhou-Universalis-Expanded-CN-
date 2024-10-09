@@ -21,3 +21,45 @@ THE_ROD_have_not_unity_german_culture_event_scripted_trigger = {
 	# 	culture = $culture$
 	# }
 }
+
+THE_ROD_has_test_flag_amount = {
+	AND = {
+		calc_true_if = {
+			amount = $amount_1$
+			has_country_flag = THE_ROD_test_1_flag
+			has_country_flag = THE_ROD_test_2_flag
+			has_country_flag = THE_ROD_test_3_flag
+			has_country_flag = THE_ROD_test_4_flag
+			has_country_flag = THE_ROD_test_5_flag
+			has_country_flag = THE_ROD_test_6_flag
+			has_country_flag = THE_ROD_test_7_flag
+		}
+		NOT = {
+			calc_true_if = {
+				amount = $amount_2$
+				has_country_flag = THE_ROD_test_1_flag
+				has_country_flag = THE_ROD_test_2_flag
+				has_country_flag = THE_ROD_test_3_flag
+				has_country_flag = THE_ROD_test_4_flag
+				has_country_flag = THE_ROD_test_5_flag
+				has_country_flag = THE_ROD_test_6_flag
+				has_country_flag = THE_ROD_test_7_flag
+			}
+		}
+	}
+}
+
+THE_ROD_has_test_flag_amount_while = {
+	NOT = {
+		calc_true_if = {
+			amount = $amount$
+			has_country_flag = THE_ROD_test_1_flag
+			has_country_flag = THE_ROD_test_2_flag
+			has_country_flag = THE_ROD_test_3_flag
+			has_country_flag = THE_ROD_test_4_flag
+			has_country_flag = THE_ROD_test_5_flag
+			has_country_flag = THE_ROD_test_6_flag
+			has_country_flag = THE_ROD_test_7_flag
+		}
+	}
+}

@@ -84,3 +84,20 @@ defined_text = {
 		}
 	}
 }
+
+defined_text = {
+	name = THE_ROD_darkness_order_name_ctt
+	random = no
+	text = {
+		localisation_key = THE_ROD_darkness_order_name_tt
+		trigger = {
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_department_flag }
+		}
+	}
+	text = {
+		localisation_key = THE_ROD_strategy_and_arm_department_name_tt
+		trigger = {
+			has_country_flag = THE_ROD_strategy_and_arm_department_flag
+		}
+	}
+}

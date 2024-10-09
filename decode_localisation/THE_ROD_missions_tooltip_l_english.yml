@@ -9,7 +9,7 @@ l_english:
  THE_ROD_gain_point_base_on_emperor_opinion_tt: "@[Emperor.GetTag]§Y[Emperor.GetName]§!对@[Root.GetTag]§Y[Root.GetName]§!每有§G1§!点好感度,获得§G1§!点随机§Y君主点数§!"
  THE_ROD_alliance_hsa_yes_tt: "£yes£如果@HSA§Y[HSA.GetName]§!对我们的好感度达到§G50§!，获得如下效果："
  THE_ROD_alliance_hsa_no_tt: "£no£如果@HSA§Y[HSA.GetName]§!对我们的好感度达到§G50§!，获得如下效果："
- THE_ROD_unlock_rug_pirate_tt: "解锁§J吕根海盗§!佣兵团\n该佣兵团不消耗陆军职业度且不占用陆军上限"
+ THE_ROD_unlock_rug_pirate_tt: "解锁§O吕根海盗§!佣兵团\n该佣兵团不消耗陆军职业度且不占用陆军上限"
  THE_ROD_gain_1000_manpower_from_hre_country_tt: "从每个好感度达到§Y0§!的神圣罗马帝国成员获得§G500§!后备兵员和§G1§!金币。"
  THE_ROD_1_5_case1_tt_yes: "£yes£如果@POL§Y[POL.GetName]§!或@PLC§Y[PLC.GetName]§!不是我们的宿敌或敌人，获得如下效果："
  THE_ROD_1_5_case1_tt_no: "£no£如果@POL§Y[POL.GetName]§!或@PLC§Y[PLC.GetName]§!不是我们的宿敌或敌人，获得如下效果："
@@ -263,6 +263,11 @@ l_english:
  THE_ROD_every_hakureishinto_with_temple_province_tt: "治下每个信仰§Y博丽神道§!省份获得§G1§!¤§Y基础税收§!；如果拥有§Y神社§!或§Y神宫§!，额外获得§G1§!¤§Y基础税收§!。"
  THE_ROD_hakureishinto_reform_extra_tt: "升级「§Y传播博丽神旨§!」的政府机制，完成传教额外获得§G5§!£dip£§Y外交点数§!和§G5§!£mil£§Y军事点数§!"
  THE_ROD_cannot_call_ally_TEU_WOL_tt: "当我们第一次对@TEU§Y[TEU.GetName]§!或@WOL§Y[WOL.GetName]§!宣战时，对方无法召集盟友。"
+ THE_ROD_spy_action_add_darkness_manipulation_tt: "对其他国家的§Y间谍行动§!将获得§Y操控黑暗程度的能力§!。"
+ THE_ROD_unlock_tactic_mercenary_tt: "解锁§J「锤砧」§!、§J「桁架」§!、§J「天青」§!佣兵团，雇佣这些佣兵团不消耗§Y陆军职业度§!。"
+ THE_ROD_contingency_management_tt: "建造§Y要塞§!建筑将使自身和相邻省份获得如下效果:"
+ THE_ROD_strategy_and_arm_department_change_name_tt: "[Root.Get贵族Name]阶层特权「§Y宵暗骑士团§!」更名为「§Y军事战略和军用装备部§!」。"
+ THE_ROD_strategy_and_arm_department_effect_tt: "升级£mil£§Y军事科技§!将使该特权获得额外效果。"
  THE_ROD_not_complete_event_ttt: "没做完"
 ###TOOLTIP_END
 
@@ -376,7 +381,7 @@ l_english:
 ###MODIFIER_END
 
 ###MERC
- THE_ROD_rug_pirate_company: "§J吕根海盗§!"
+ THE_ROD_rug_pirate_company: "§O吕根海盗§!"
 ###MERC_END
 
 ###GOVERNMENT
@@ -459,7 +464,7 @@ l_english:
 ###DECISION_END
 
 ###PRIVILEGE
- THE_ROD_estate_nobles_knight_tradition: "骑士团传统"
+ THE_ROD_estate_nobles_knight_tradition: "[Root.THE_ROD_darkness_order_name_ctt]"
  THE_ROD_estate_nobles_knight_tradition_desc: "<特权描述>"
  THE_ROD_estate_church_peasants_privilege: "农民特权：普及教会学校"
  THE_ROD_estate_church_peasants_privilege_desc: ""
@@ -720,6 +725,8 @@ l_english:
  THE_ROD_mechanic_stage_4: "暗月之夜"
  THE_ROD_hakureishinto_extra_tt: "、§G5§!£dip£§Y外交点数§!和§G5§!£mil£§Y军事点数§!"
  THE_ROD_hakureishinto_extra_tt_empty: ""
+ THE_ROD_darkness_order_name_tt: "宵暗骑士团"
+ THE_ROD_strategy_and_arm_department_name_tt: "军事战略和军用装备部"
 ###CUSTOM_LOCALISATION_END
 
 ###CULTURE

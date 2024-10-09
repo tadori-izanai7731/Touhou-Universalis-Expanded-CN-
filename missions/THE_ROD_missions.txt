@@ -1789,10 +1789,10 @@ THE_ROD_branch_3 = {
 		effect = {
 			add_army_tradition = 20
 			add_army_professionalism = 0.05
-			add_country_modifier = {
-				name = "THE_ROD_darkness_knight_modifier"
-				duration = -1
-			}
+			# add_country_modifier = {
+			# 	name = "THE_ROD_darkness_knight_modifier"
+			# 	duration = -1
+			# }
 			custom_tooltip = THE_ROD_unlock_noble_privilege_knight_tradition_tt
 			hidden_effect = { set_country_flag = THE_ROD_unlock_noble_privilege_knight_tradition_flag } 
 			tooltip = { set_estate_privilege = THE_ROD_estate_nobles_knight_tradition } 

@@ -1,6 +1,6 @@
 #吕根海盗
 THE_ROD_rug_pirate_company = {
-	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+	mercenary_desc_key = THE_NOT_COUNT_TO_FORCE_LIMIT_AND_FREE_OF_ARMY_PROFESSIONALISM_COST
 	regiments_per_development = 0.06
 	cost_modifier = 0.5
 	home_province = 4745
@@ -16,5 +16,50 @@ THE_ROD_rug_pirate_company = {
 	modifier = { 
 		shock_damage = 0.1
 		fire_damage_received = 0.1
+	}
+}
+
+#「锤砧」
+THE_ROD_hammer_anvil_company = {
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+	regiments_per_development = 0.04
+	cost_modifier = 1.0
+	max_size = 60
+	sprites = { dlc056_mlo_sprite_pack sav_base_sprite_pack westerngfx_sprite_pack }
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		always = no
+	}
+	modifier = {
+	}
+}
+
+#「桁架」
+THE_ROD_truss_company = {
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+	regiments_per_development = 0.04
+	cost_modifier = 1.0
+	max_size = 60
+	sprites = { dlc056_mlo_sprite_pack sav_base_sprite_pack westerngfx_sprite_pack }
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		always = no
+	}
+	modifier = {
+	}
+}
+
+#「天青」
+THE_ROD_azure_company = {
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+	regiments_per_development = 0.04
+	cost_modifier = 1.0
+	max_size = 60
+	sprites = { dlc056_mlo_sprite_pack sav_base_sprite_pack westerngfx_sprite_pack }
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		always = no
+	}
+	modifier = {
 	}
 }

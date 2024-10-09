@@ -715,6 +715,19 @@ THE_ROD_upgrade_global_culture_scripted_effect = {
 	}
 }
 
+THE_ROD_set_random_test_flag = {
+	random_list = {
+		1 = { set_country_flag = THE_ROD_test_1_flag }
+		1 = { set_country_flag = THE_ROD_test_2_flag }
+		1 = { set_country_flag = THE_ROD_test_3_flag }
+		1 = { set_country_flag = THE_ROD_test_4_flag }
+		1 = { set_country_flag = THE_ROD_test_5_flag }
+		1 = { set_country_flag = THE_ROD_test_6_flag }
+		1 = { set_country_flag = THE_ROD_test_7_flag }
+	}
+}
+
+
 #$the_rumia_fire_var
 #$the_rumia_shock_var
 #$the_rumia_manuever_var
