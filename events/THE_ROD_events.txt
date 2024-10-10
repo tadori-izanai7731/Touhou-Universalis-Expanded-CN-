@@ -2676,60 +2676,60 @@ country_event = {
 
 ### Test Event
 
-country_event = {
-	id = THE_ROD_events.108
-	title = THE_ROD_events.108.title
-	desc = THE_ROD_events.108.desc
+# country_event = {
+# 	id = THE_ROD_events.108
+# 	title = THE_ROD_events.108.title
+# 	desc = THE_ROD_events.108.desc
 
-	fire_only_once = yes
-	is_triggered_only = yes
+# 	fire_only_once = yes
+# 	is_triggered_only = yes
 
-	trigger = {
-		always = no
-	}
+# 	trigger = {
+# 		always = no
+# 	}
 	
-	option = {
-		name = THE_ROD_events.108.a
-		random_list = {
-			1 = { set_country_flag = THE_ROD_test_1_flag }
-			1 = { set_country_flag = THE_ROD_test_2_flag }
-			1 = { set_country_flag = THE_ROD_test_3_flag }
-			1 = { set_country_flag = THE_ROD_test_4_flag }
-			1 = { set_country_flag = THE_ROD_test_5_flag }
-			1 = { set_country_flag = THE_ROD_test_6_flag }
-			1 = { set_country_flag = THE_ROD_test_7_flag }
-		}
-	}
+# 	option = {
+# 		name = THE_ROD_events.108.a
+# 		random_list = {
+# 			1 = { set_country_flag = THE_ROD_test_1_flag }
+# 			1 = { set_country_flag = THE_ROD_test_2_flag }
+# 			1 = { set_country_flag = THE_ROD_test_3_flag }
+# 			1 = { set_country_flag = THE_ROD_test_4_flag }
+# 			1 = { set_country_flag = THE_ROD_test_5_flag }
+# 			1 = { set_country_flag = THE_ROD_test_6_flag }
+# 			1 = { set_country_flag = THE_ROD_test_7_flag }
+# 		}
+# 	}
 
-	option = {
-		name = THE_ROD_events.108.b
-		if = {
-			limit = { THE_ROD_has_test_flag_amount = { amount_1 = 6 amount_2 = 7 } }
-			while = { limit = { THE_ROD_has_test_flag_amount_while = { amount = 7 } } THE_ROD_set_random_test_flag = yes }
-		}
-		if = {
-			limit = { THE_ROD_has_test_flag_amount = { amount_1 = 5 amount_2 = 6 } }
-			while = { limit = { THE_ROD_has_test_flag_amount_while = { amount = 6 } } THE_ROD_set_random_test_flag = yes }
-		}
-		if = {
-			limit = { THE_ROD_has_test_flag_amount = { amount_1 = 4 amount_2 = 5 } }
-			while = { limit = { THE_ROD_has_test_flag_amount_while = { amount = 5 } } THE_ROD_set_random_test_flag = yes }
-		}
-		if = {
-			limit = { THE_ROD_has_test_flag_amount = { amount_1 = 3 amount_2 = 4 } }
-			while = { limit = { THE_ROD_has_test_flag_amount_while = { amount = 4 } } THE_ROD_set_random_test_flag = yes }
-		}
-		if = {
-			limit = { THE_ROD_has_test_flag_amount = { amount_1 = 2 amount_2 = 3 } }
-			while = { limit = { THE_ROD_has_test_flag_amount_while = { amount = 3 } } THE_ROD_set_random_test_flag = yes }
-		}
-		if = {
-			limit = { THE_ROD_has_test_flag_amount = { amount_1 = 1 amount_2 = 2 } }
-			while = { limit = { THE_ROD_has_test_flag_amount_while = { amount = 2 } } THE_ROD_set_random_test_flag = yes }
-		}
-		if = {
-			limit = { THE_ROD_has_test_flag_amount_while = { amount = 1 } }
-			THE_ROD_set_random_test_flag = yes
-		}
-	}
-}
+# 	option = {
+# 		name = THE_ROD_events.108.b
+# 		if = {
+# 			limit = { THE_ROD_has_test_flag_amount = { amount_1 = 6 amount_2 = 7 } }
+# 			while = { limit = { THE_ROD_has_test_flag_amount_while = { amount = 7 } } THE_ROD_set_random_test_flag = yes }
+# 		}
+# 		if = {
+# 			limit = { THE_ROD_has_test_flag_amount = { amount_1 = 5 amount_2 = 6 } }
+# 			while = { limit = { THE_ROD_has_test_flag_amount_while = { amount = 6 } } THE_ROD_set_random_test_flag = yes }
+# 		}
+# 		if = {
+# 			limit = { THE_ROD_has_test_flag_amount = { amount_1 = 4 amount_2 = 5 } }
+# 			while = { limit = { THE_ROD_has_test_flag_amount_while = { amount = 5 } } THE_ROD_set_random_test_flag = yes }
+# 		}
+# 		if = {
+# 			limit = { THE_ROD_has_test_flag_amount = { amount_1 = 3 amount_2 = 4 } }
+# 			while = { limit = { THE_ROD_has_test_flag_amount_while = { amount = 4 } } THE_ROD_set_random_test_flag = yes }
+# 		}
+# 		if = {
+# 			limit = { THE_ROD_has_test_flag_amount = { amount_1 = 2 amount_2 = 3 } }
+# 			while = { limit = { THE_ROD_has_test_flag_amount_while = { amount = 3 } } THE_ROD_set_random_test_flag = yes }
+# 		}
+# 		if = {
+# 			limit = { THE_ROD_has_test_flag_amount = { amount_1 = 1 amount_2 = 2 } }
+# 			while = { limit = { THE_ROD_has_test_flag_amount_while = { amount = 2 } } THE_ROD_set_random_test_flag = yes }
+# 		}
+# 		if = {
+# 			limit = { THE_ROD_has_test_flag_amount_while = { amount = 1 } }
+# 			THE_ROD_set_random_test_flag = yes
+# 		}
+# 	}
+# }

@@ -28,9 +28,11 @@ THE_ROD_hammer_anvil_company = {
 	sprites = { dlc056_mlo_sprite_pack sav_base_sprite_pack westerngfx_sprite_pack }
 	trigger = {
 		is_allowed_to_recruit_mercenaries = yes
-		always = no
+		has_country_flag = THE_ROD_unlock_tactic_mercenary_flag
 	}
 	modifier = {
+		shock_damage_received = -0.2
+		infantry_power = 0.2
 	}
 }
 
@@ -43,9 +45,11 @@ THE_ROD_truss_company = {
 	sprites = { dlc056_mlo_sprite_pack sav_base_sprite_pack westerngfx_sprite_pack }
 	trigger = {
 		is_allowed_to_recruit_mercenaries = yes
-		always = no
+		has_country_flag = THE_ROD_unlock_tactic_mercenary_flag
 	}
 	modifier = {
+		assault_fort_ability = 0.33
+		land_morale = 0.15
 	}
 }
 
@@ -58,8 +62,10 @@ THE_ROD_azure_company = {
 	sprites = { dlc056_mlo_sprite_pack sav_base_sprite_pack westerngfx_sprite_pack }
 	trigger = {
 		is_allowed_to_recruit_mercenaries = yes
-		always = no
+		has_country_flag = THE_ROD_unlock_tactic_mercenary_flag
 	}
 	modifier = {
+		movement_speed_onto_off_boat_modifier = 1.0
+		land_attrition = -0.2
 	}
 }

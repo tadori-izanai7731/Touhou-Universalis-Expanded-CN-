@@ -605,6 +605,13 @@ THE_ROD_blood_and_bone_province_modifier = {
 	trade_goods_size = 2
 }
 
+#军乐队
+THE_ROD_military_band_modifier = {
+	recover_army_morale_speed = 0.05
+	recover_navy_morale_speed = 0.05
+	monthly_splendor = 1
+}
+
 ###EXTRA_HAKUREI_DEITY
 THE_ROD_extra_hakurei_modifier_Hakurei_God = {
 	defensiveness = 0.1

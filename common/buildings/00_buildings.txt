@@ -362,28 +362,28 @@ barracks = {
 	on_obsolete = {
 	}
 
-#	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
-#	on_built = {
-#		FROM = {
-#			add_army_professionalism = 0.005
-#		}
-#	}
-#
-#	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
-#	on_destroyed = {
-#		FROM = {
-#			add_army_professionalism = -0.01
-#		}
-#	}
-#
-#	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
-#	on_obsolete = {
-#		hidden_effect = {
-#			FROM = {
-#				add_army_professionalism = -0.005
-#			}
-#		}
-#	}
+	# # THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
+	# on_built = {
+	# 	FROM = {
+	# 		add_army_professionalism = 0.005
+	# 	}
+	# }
+
+	# # THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
+	# on_destroyed = {
+	# 	FROM = {
+	# 		add_army_professionalism = -0.01
+	# 	}
+	# }
+
+	# # THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
+	# on_obsolete = {
+	# 	hidden_effect = {
+	# 		FROM = {
+	# 			add_army_professionalism = -0.005
+	# 		}
+	# 	}
+	# }
 
 	ai_will_do = {
 		factor = 1
@@ -567,6 +567,8 @@ fort_15th = {
 				duration = -1
 			}
 		}
+		### THE
+		THE_ROD_fort_build_effect = yes
 	}
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
@@ -845,28 +847,28 @@ regimental_camp = {
 		land_forcelimit = 1
 	}
 
-#	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
-#	on_built = {
-#		FROM = {
-#			add_army_professionalism = 0.005
-#		}
-#	}
-#
-#	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
-#	on_destroyed = {
-#		FROM = {
-#			add_army_professionalism = -0.01
-#		}
-#	}
-#
-#	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
-#	on_obsolete = {
-#		hidden_effect = {
-#			FROM = {
-#				add_army_professionalism = -0.005
-#			}
-#		}
-#	}
+	# # THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
+	# on_built = {
+	# 	FROM = {
+	# 		add_army_professionalism = 0.005
+	# 	}
+	# }
+
+	# # THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
+	# on_destroyed = {
+	# 	FROM = {
+	# 		add_army_professionalism = -0.01
+	# 	}
+	# }
+
+	# # THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
+	# on_obsolete = {
+	# 	hidden_effect = {
+	# 		FROM = {
+	# 			add_army_professionalism = -0.005
+	# 		}
+	# 	}
+	# }
 	on_built = {
 		add_development_from_building = {
 			building = regimental_camp
@@ -1051,6 +1053,8 @@ fort_16th = {
 				duration = -1
 			}
 		}
+		### THE
+		THE_ROD_fort_build_effect = yes
 	}
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
@@ -1448,28 +1452,28 @@ training_fields = {
 
 	make_obsolete = barracks
 
-#	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
-#	on_built = {
-#		FROM = {
-#			add_army_professionalism = 0.01
-#		}
-#	}
-#
-#	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
-#	on_destroyed = {
-#		FROM = {
-#			add_army_professionalism = -0.02
-#		}
-#	}
-#
-#	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
-#	on_obsolete = {
-#		hidden_effect = {
-#			FROM = {
-#				add_army_professionalism = -0.01
-#			}
-#		}
-#	}
+	# # THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
+	# on_built = {
+	# 	FROM = {
+	# 		add_army_professionalism = 0.01
+	# 	}
+	# }
+
+	# # THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
+	# on_destroyed = {
+	# 	FROM = {
+	# 		add_army_professionalism = -0.02
+	# 	}
+	# }
+
+	# # THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
+	# on_obsolete = {
+	# 	hidden_effect = {
+	# 		FROM = {
+	# 			add_army_professionalism = -0.01
+	# 		}
+	# 	}
+	# }
 
 	modifier = {
 		local_manpower_modifier = 1
@@ -1676,6 +1680,8 @@ fort_17th = {
 				duration = -1
 			}
 		}
+		### THE
+		THE_ROD_fort_build_effect = yes
 	}
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
@@ -1997,28 +2003,28 @@ conscription_center = {
 
 	make_obsolete = regimental_camp
 
-#	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
-#	on_built = {
-#		FROM = {
-#			add_army_professionalism = 0.01
-#		}
-#	}
-#
-#	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
-#	on_destroyed = {
-#		FROM = {
-#			add_army_professionalism = -0.02
-#		}
-#	}
-#
-#	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
-#	on_obsolete = {
-#		hidden_effect = {
-#			FROM = {
-#				add_army_professionalism = -0.01
-#			}
-#		}
-#	}
+	# # THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
+	# on_built = {
+	# 	FROM = {
+	# 		add_army_professionalism = 0.01
+	# 	}
+	# }
+
+	# # THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
+	# on_destroyed = {
+	# 	FROM = {
+	# 		add_army_professionalism = -0.02
+	# 	}
+	# }
+
+	# # THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
+	# on_obsolete = {
+	# 	hidden_effect = {
+	# 		FROM = {
+	# 			add_army_professionalism = -0.01
+	# 		}
+	# 	}
+	# }
 
 	modifier = {
 		land_forcelimit = 2
@@ -2214,6 +2220,8 @@ fort_18th = {
 				duration = -1
 			}
 		}
+		### THE
+		THE_ROD_fort_build_effect = yes
 	}
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
