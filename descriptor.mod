@@ -15,4 +15,4 @@ dependencies={
 name="东方风云拓展 Touhou Universalis Expanded (CN)"
 picture="thumbnail.png"
 supported_version="v1.37.2.0"
-remote_file_id="3295892261"
+remote_file_id="3347334533"

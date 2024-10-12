@@ -1,0 +1,278 @@
+THE_TFR_shadow_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = TFR
+		has_country_flag = THE_TFR_shadow_mission_flag
+	} 
+
+	THE_TFR_shadow_1_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_TFR_shadow_2_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_TFR_shadow_1_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { THE_TFR_shadow_1_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_TFR_shadow_1_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = { THE_TFR_shadow_1_5 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_TFR_shadow_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = TFR
+		has_country_flag = THE_TFR_shadow_mission_flag
+	} 
+
+	THE_TFR_shadow_2_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_TFR_shadow_3_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_TFR_shadow_2_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_TFR_shadow_2_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_TFR_shadow_2_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = {
+			THE_TFR_shadow_2_3
+			THE_TFR_shadow_3_3
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_TFR_shadow_2_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { THE_TFR_shadow_2_4 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_TFR_shadow_2_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = {
+			THE_TFR_shadow_1_5
+			THE_TFR_shadow_2_5
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_TFR_shadow_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = TFR
+		has_country_flag = THE_TFR_shadow_mission_flag
+	} 
+
+	THE_TFR_shadow_3_1 = {
+		icon = mission_unknown_mission
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_TFR_shadow_3_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = {
+			THE_TFR_shadow_2_2
+			THE_TFR_shadow_4_2
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_TFR_shadow_3_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { THE_TFR_shadow_3_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_TFR_shadow_3_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_TFR_shadow_3_7 = {
+		icon = mission_unknown_mission
+		position = 7
+		required_missions = {
+			THE_TFR_shadow_1_6
+			THE_TFR_shadow_2_6
+			THE_TFR_shadow_3_6
+			THE_TFR_shadow_4_6
+			THE_TFR_shadow_5_6
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_TFR_shadow_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = TFR
+		has_country_flag = THE_TFR_shadow_mission_flag
+	} 
+
+	THE_TFR_shadow_4_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_TFR_shadow_3_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_TFR_shadow_4_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { THE_TFR_shadow_4_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_TFR_shadow_4_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = { THE_TFR_shadow_3_5 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_TFR_shadow_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = TFR
+		has_country_flag = THE_TFR_shadow_mission_flag
+	} 
+
+	THE_TFR_shadow_5_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_TFR_shadow_3_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_TFR_shadow_5_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = {
+			THE_TFR_shadow_4_4
+			THE_TFR_shadow_5_2
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_TFR_shadow_5_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = {
+			THE_TFR_shadow_3_5
+			THE_TFR_shadow_5_5
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
