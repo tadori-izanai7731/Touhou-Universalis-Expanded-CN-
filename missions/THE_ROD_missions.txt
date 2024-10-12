@@ -3826,10 +3826,14 @@ THE_ROD_branch_5 = {
 				tooltip = THE_ROD_has_general_rumia_ttt
 				THE_ROD_has_rumia_general = yes
 			}
-			monthly_mil = 12
+			monthly_mil = 10
 			OR = {
-				national_focus = MIL
-				has_mil_advisor_of_level = { level = 5 } 
+				army_size = 30
+				has_government_power = {
+					mechanic_type = THE_ROD_dark_moon_night_mechanic
+					power_type = THE_ROD_government_mechanic_power
+					value = 25
+				}
 			}
 		}
 
