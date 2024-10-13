@@ -1,0 +1,60 @@
+namespace = THE_TFR_shadow_events
+
+country_event = {
+	id = THE_TFR_shadow_events.1
+	title = THE_TFR_shadow_events.1.title
+	desc = THE_TFR_shadow_events.1.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { primary_culture = Fairy } }
+				change_primary_culture = Fairy
+			}
+		}
+	}
+
+	option = {
+		name = THE_TFR_shadow_events.1.a
+		change_government = monarchy
+		add_government_reform = THE_TFR_shadow_monarchy_reform
+	}
+
+	option = {
+		name = THE_TFR_shadow_events.1.b
+		change_government = republic
+		add_government_reform = THE_TFR_shadow_republic_reform
+	}
+
+	option = {
+		name = THE_TFR_shadow_events.1.c
+		change_government = theocracy
+		add_government_reform = THE_TFR_shadow_theocracy_reform
+	}
+
+	option = {
+		name = THE_TFR_shadow_events.1.d
+		change_government = tribal
+		add_government_reform = THE_TFR_shadow_tribal_reform
+	}
+}
+
+province_event = {
+	id = THE_TFR_shadow_events.2
+	title = NONE
+	desc = NONE
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = NONE
+	}
+
+	after = {
+		owner = { add_core = ROOT }
+	}
+}

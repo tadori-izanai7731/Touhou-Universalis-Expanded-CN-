@@ -1,0 +1,40 @@
+THE_TFR_shadow_government_name = {
+	rank = {
+		1 = TOUHOU_DOMAIN
+		2 = TOUHOU_REALM
+		3 = TOUHOU_EMPIRE
+	}
+	
+	ruler_male = {
+		3 = THE_TFR_SHADOW_FAIRY_NAME
+		2 = THE_TFR_SHADOW_FAIRY_NAME
+		1 = THE_TFR_SHADOW_FAIRY_NAME
+	}
+	
+	ruler_female = {
+		3 = THE_TFR_SHADOW_FAIRY_NAME
+		2 = THE_TFR_SHADOW_FAIRY_NAME
+		1 = THE_TFR_SHADOW_FAIRY_NAME
+	}
+	
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	trigger = {
+		OR = {
+			has_reform = THE_TFR_shadow_monarchy_reform
+			has_reform = THE_TFR_shadow_republic_reform
+			has_reform = THE_TFR_shadow_theocracy_reform
+			has_reform = THE_TFR_shadow_tribal_reform
+		}
+	}
+}

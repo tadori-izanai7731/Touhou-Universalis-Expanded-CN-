@@ -127,9 +127,30 @@ THE_TFR_shadow_branch_3 = {
 		position = 1
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_TFR_shadow_interact_ttt
+				has_country_flag = THE_TFR_shadow_mission_flag
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			custom_tooltip = THE_TFR_shadow_add_permanent_claim_tt
+			hidden_effect = {
+				gensokyo_continent = { add_permanent_claim = ROOT }
+				moon_continent = { add_permanent_claim = ROOT }
+			}
+			add_country_modifier = {
+				name = THE_TFR_shadow_call_fairy_modifier
+				duration = -1
+			}
+			country_event = {
+				id = THE_TFR_shadow_events.1
+			}
+		} 
 	}
 
 	THE_TFR_shadow_3_3 = {

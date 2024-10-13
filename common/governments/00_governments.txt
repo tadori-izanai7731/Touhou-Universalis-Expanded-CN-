@@ -184,6 +184,7 @@ monarchy = {
 				THE_ROD_apparitions_stalk_the_night_monarchy
 				THE_HNG_red_dragon_celestial_empire
 				THE_HNG_red_dragon_steppe_celestial_empire
+				THE_TFR_shadow_monarchy_reform
 			}
 		}
 		hereditary_vs_nobility = {
@@ -992,6 +993,7 @@ republic = {
 				THE_LIL_fairy_grand_federation_reform
 				THE_LIL_fairy_great_federation_reform
 				THE_HMC_human_capital_four_name_reform
+				THE_TFR_shadow_republic_reform
 			}
 		}
 		republican_virtues = {
@@ -1521,6 +1523,8 @@ tribal = {
 				#TOUHOU
 				Gensokyan_fairy_government
 				Gensokyan_clownpiece_tribal_government
+				###THE
+				THE_TFR_shadow_tribal_reform
 			}
 		}
 		tribal_cultural_values = {
@@ -1741,6 +1745,8 @@ theocracy = {
 				#TOUHOU
 				Gensokyan_shrine_theocracy
 				Gensokyan_myo_monastery
+				###THE
+				THE_TFR_shadow_theocracy_reform
 			}
 		}
 		internal_vs_external_mission = {

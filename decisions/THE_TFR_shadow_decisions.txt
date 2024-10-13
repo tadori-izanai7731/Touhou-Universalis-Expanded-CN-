@@ -1,0 +1,20 @@
+country_decisions = {
+	THE_TFR_shadow_rebirth_decision = {
+		major = yes
+		color = { 248 31 255 }
+		potential = {
+			ai = no
+			NOT = { is_year = 1445 }
+			tag = TFR
+			NOT = { has_country_flag = THE_TFR_shadow_mission_flag }
+		}
+		allow = {
+			NOT = { is_year = 1445 }
+			tag = TFR
+		}
+		effect = {
+			set_country_flag = THE_TFR_shadow_mission_flag
+			swap_non_generic_missions = yes
+		}
+	}
+}

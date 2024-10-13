@@ -1,0 +1,118 @@
+THE_TFR_shadow_monarchy_reform = {
+	icon = "THE_TFR_shadow_reform"
+	potential = {
+		OR = {
+			have_had_reform = THE_TFR_shadow_monarchy_reform
+			has_reform = THE_TFR_shadow_monarchy_reform
+		}
+	}
+
+	lock_level_when_selected = yes
+	valid_for_new_country = no
+	valid_for_nation_designer = no
+	allow_normal_conversion = yes
+	can_change_primary_culture = no
+
+	custom_attributes = {
+		locked_government_type = yes
+		THE_TFR_shadow_core_creation_add_state_core_custom_attributes = yes
+	}
+
+	modifiers = {
+		discipline = 0.05
+		manpower_recovery_speed = 0.2
+		core_creation = -0.1
+		danmaku_power_constant = 500
+		state_governing_cost = -0.1
+		state_maintenance_modifier = -0.5
+	}
+}
+
+THE_TFR_shadow_republic_reform = {
+	icon = "THE_TFR_shadow_reform"
+	potential = {
+		OR = {
+			have_had_reform = THE_TFR_shadow_republic_reform
+			has_reform = THE_TFR_shadow_republic_reform
+		}
+	}
+	lock_level_when_selected = yes
+	valid_for_new_country = no
+	valid_for_nation_designer = no
+	allow_normal_conversion = yes
+	can_change_primary_culture = no
+	republican_name = no
+
+	custom_attributes = {
+		locked_government_type = yes
+		THE_TFR_shadow_core_creation_add_state_core_custom_attributes = yes
+	}
+
+	modifiers = {
+		discipline = 0.05
+		manpower_recovery_speed = 0.2
+		core_creation = -0.1
+		danmaku_power_constant = 500
+		state_governing_cost = -0.1
+		state_maintenance_modifier = -0.5
+	}
+}
+
+THE_TFR_shadow_theocracy_reform = {
+	icon = "THE_TFR_shadow_reform"
+	potential = {
+		OR = {
+			have_had_reform = THE_TFR_shadow_theocracy_reform
+			has_reform = THE_TFR_shadow_theocracy_reform
+		}
+	}
+	lock_level_when_selected = yes
+	valid_for_new_country = no
+	valid_for_nation_designer = no
+	allow_normal_conversion = yes
+	can_change_primary_culture = no
+
+	custom_attributes = {
+		election_on_death = yes
+		locked_government_type = yes
+		THE_TFR_shadow_core_creation_add_state_core_custom_attributes = yes
+	}
+
+	modifiers = {
+		discipline = 0.05
+		manpower_recovery_speed = 0.2
+		core_creation = -0.1
+		danmaku_power_constant = 500
+		state_governing_cost = -0.1
+		state_maintenance_modifier = -0.5
+	}
+}
+
+THE_TFR_shadow_tribal_reform = {
+	icon = "THE_TFR_shadow_reform"
+	potential = {
+		OR = {
+			have_had_reform = THE_TFR_shadow_tribal_reform
+			has_reform = THE_TFR_shadow_tribal_reform
+		}
+	}
+	lock_level_when_selected = yes
+	valid_for_new_country = no
+	valid_for_nation_designer = no
+	allow_normal_conversion = yes
+	can_change_primary_culture = no
+
+	custom_attributes = {
+		locked_government_type = yes
+		THE_TFR_shadow_core_creation_add_state_core_custom_attributes = yes
+	}
+
+	modifiers = {
+		discipline = 0.05
+		manpower_recovery_speed = 0.2
+		core_creation = -0.1
+		danmaku_power_constant = 500
+		state_governing_cost = -0.1
+		state_maintenance_modifier = -0.5
+	}
+}

@@ -1,0 +1,8 @@
+THE_TFR_shadow_on_core_scripted_effect = {
+	if = {
+		limit = { FROM = { has_government_attribute = THE_TFR_shadow_core_creation_add_state_core_custom_attributes } }
+		province_event = {
+			id = THE_TFR_shadow_events.2
+		}
+	}
+}
