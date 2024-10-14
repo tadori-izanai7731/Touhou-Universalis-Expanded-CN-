@@ -5,4 +5,14 @@ THE_TFR_shadow_on_core_scripted_effect = {
 			id = THE_TFR_shadow_events.2
 		}
 	}
+	if = {
+		limit = {
+			FROM = {
+				has_country_flag = THE_TFR_shadow_core_creation_add_courthouse_flag
+				NOT = { has_country_flag = THE_TFR_shadow_core_creation_add_town_hall_flag }
+			}
+			NOT = { has_building = town_hall }
+		}
+		add_building = courthouse
+	}
 }
