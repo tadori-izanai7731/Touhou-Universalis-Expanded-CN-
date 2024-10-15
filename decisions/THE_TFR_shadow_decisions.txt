@@ -3,18 +3,55 @@ country_decisions = {
 		major = yes
 		color = { 248 31 255 }
 		potential = {
-			ai = no
 			NOT = { is_year = 1445 }
 			tag = TFR
-			NOT = { has_country_flag = THE_TFR_shadow_mission_flag }
+			NOT = { has_country_flag = THE_TFR_shadow_has_execute_rebirth_decision_flag }
 		}
 		allow = {
 			NOT = { is_year = 1445 }
 			tag = TFR
 		}
 		effect = {
-			set_country_flag = THE_TFR_shadow_mission_flag
-			swap_non_generic_missions = yes
+			if = {
+				limit = { ai = no }
+				set_country_flag = THE_TFR_shadow_mission_flag
+				swap_non_generic_missions = yes
+			}
+			else = {
+				random = {
+					chance = 1
+					set_country_flag = THE_TFR_shadow_mission_flag
+					swap_non_generic_missions = yes
+				}
+			}
+			set_country_flag = THE_TFR_shadow_has_execute_rebirth_decision_flag
+		}
+	}
+
+	THE_TFR_shadow_switch_ruler_decision = {
+		major = yes
+		color = { 248 31 255 }
+		potential = {
+			ai = no
+			tag = TFR
+			OR = {
+				has_reform = THE_TFR_shadow_monarchy_reform
+				has_reform = THE_TFR_shadow_republic_reform
+				has_reform = THE_TFR_shadow_theocracy_reform
+				has_reform = THE_TFR_shadow_tribal_reform
+			}
+		}
+		allow = {
+			legitimacy_equivalent = 20
+		}
+		effect = {
+			add_legitimacy = -20
+			add_republican_tradition = -20
+			add_devotion = -20
+			add_horde_unity = -20
+			country_event = {
+				id = THE_TFR_shadow_events.3
+			}
 		}
 	}
 }

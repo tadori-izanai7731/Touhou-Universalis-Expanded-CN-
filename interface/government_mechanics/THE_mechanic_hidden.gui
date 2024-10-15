@@ -1,0 +1,23 @@
+guiTypes = {
+	windowType = { # Copied and adjusted from government_interaction_type
+		name = "THE_mechanic_power_hidden_gui"
+		size = { x = 0 y = 0 }
+		moveable = 0
+
+		# Frame
+		iconType = {
+			name = "THE_mechanic_bar_frame_hidden"
+			spriteType = "GFX_THE_mechanic_hidden_progressbar"
+			position = { x = 0 y = -1000 }
+			alwaystransparent = yes
+		}
+
+		# Frame
+		iconType = {
+			name = "THE_mechanic_frame_hidden"
+			spriteType = "GFX_THE_mechanic_hidden_progressbar"
+			position = { x = 0 y = -1000 }
+			alwaystransparent = yes
+		}
+	}
+}

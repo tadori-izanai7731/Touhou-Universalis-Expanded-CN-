@@ -57,7 +57,13 @@ THE_TFR_shadow_branch_2 = {
 		required_missions = { THE_TFR_shadow_3_1 } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			OR = {
+				mil_tech = 4
+				army_size_percentage = 1.0
+				army_size = 30
+			}
+		} 
 
 		effect = {
 			4996 = { add_core = ROOT }
@@ -117,6 +123,17 @@ THE_TFR_shadow_branch_2 = {
 				custom_tooltip = empty_line_tt
 				custom_tooltip = THE_otherwise_tt_yes
 				5083 = { add_core = ROOT }
+			}
+			hidden_effect = {
+				if = {
+					limit = { mission_completed = THE_TFR_shadow_4_2 }
+					every_owned_province = {
+						limit = {
+							NOT = { has_building = courthouse }
+						}
+						add_building = town_hall
+					}
+				}
 			}
 		} 
 	}
@@ -280,7 +297,24 @@ THE_TFR_shadow_branch_4 = {
 		required_missions = { THE_TFR_shadow_3_1 } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				OR = {
+					area = Forest_coast_state
+					area = Forest_edge_state
+					area = Forest_of_magic
+				}
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 8
+				OR = {
+					area = Hakurei_state
+					area = Hakurei_peninsula_state
+					area = Hakurei_western_coast
+				}
+			}
+		} 
 
 		effect = {
 			add_country_modifier = {
@@ -354,9 +388,27 @@ THE_TFR_shadow_branch_5 = {
 		required_missions = { THE_TFR_shadow_3_1 } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 6
+				OR = {
+					area = Mayohiga_state
+					area = Ran_state
+					area = Eastern_mountains
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = THE_TFR_shadow_confusion_prelude_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_TFR_shadow_core_creation_add_5_capacity_tt
+			hidden_effect = {
+				set_country_flag = THE_TFR_shadow_core_creation_add_5_capacity_flag
+			}
+		} 
 	}
 
 	THE_TFR_shadow_5_5 = {

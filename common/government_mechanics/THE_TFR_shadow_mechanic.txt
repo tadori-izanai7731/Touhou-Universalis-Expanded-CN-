@@ -1,0 +1,27 @@
+THE_TFR_shadow_mechanic = {
+	available = {
+		OR = {
+			has_reform = THE_TFR_shadow_monarchy_reform
+			has_reform = THE_TFR_shadow_republic_reform
+			has_reform = THE_TFR_shadow_theocracy_reform
+			has_reform = THE_TFR_shadow_tribal_reform
+		}
+	}
+
+	powers = {
+		THE_TFR_shadow_mechanic_power = {
+			gui = THE_mechanic_power_hidden_gui
+			max = 10000
+			min = 0
+			base_monthly_growth = 0
+			increases_with_global = no
+			scaled_modifier = {
+				modifier = {
+					governing_capacity = 1000000
+				}
+				start_value = 0
+				end_value = 1000
+			}
+		}
+	}
+}

@@ -20,3 +20,11 @@ THE_TFR_shadow_eternal_disaster_modifier = {
 	movement_speed = 0.2
 	global_unrest = -2
 }
+
+#混乱序幕
+THE_TFR_shadow_confusion_prelude_modifier = {
+	global_autonomy = -0.2
+	country_admin_power = 1
+	idea_cost = -0.1
+	envoy_travel_time = -0.5
+}

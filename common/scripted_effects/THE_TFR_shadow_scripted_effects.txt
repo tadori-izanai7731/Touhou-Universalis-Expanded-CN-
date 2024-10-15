@@ -16,3 +16,7 @@ THE_TFR_shadow_on_core_scripted_effect = {
 		add_building = courthouse
 	}
 }
+
+THE_TFR_shadow_switch_ruler = {
+	THE_TFR_shadow_switch_ruler_to_$ruler$ = yes
+}

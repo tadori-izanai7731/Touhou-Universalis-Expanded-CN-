@@ -10,18 +10,27 @@
  THE_TFR_shadow_danmaku_fight_LRV_effect_tt: "触发与@LRV§Y[LRV.GetName]§!的弹幕对决，胜利将继承@LRV§Y[LRV.GetName]§!。"
  THE_TFR_shadow_every_province_add_courthouse_tt: "治下所有省份添加§Y法院§!建筑。"
  THE_TFR_shadow_core_creation_add_courthouse_tt: "省份§Y核心化§!完成时添加§Y法院§!建筑。"
+ THE_TFR_shadow_core_creation_add_5_capacity_tt: "省份§Y核心化§!完成时获得§G5§!行政容量。"
 ### TOOLTIP_END
 
 ### EVENT
- THE_TFR_shadow_events.1.title: "影的开端"
+ THE_TFR_shadow_events.1.title: "影之开端"
  THE_TFR_shadow_events.1.desc: "桑尼：「落后的妖精政权已经不适合影之三妖精了，我们需要新的政权来宣扬影之三妖精的名号。」\n露娜：「影之三妖精不也是妖精吗。」\n斯塔：「当然不一样，影之三妖精才有复仇的能力，不要再怀念曾经弱小的光之三妖精了。」\n桑尼：「没错，露娜果然是小孩（Child）,影之三妖精怎么能和其他妖精一样。」\n露娜：「不过『妖精』的名称还是保留吧。」"
  THE_TFR_shadow_events.1.a: "君主制才能体现影之三妖精的强大。"
  THE_TFR_shadow_events.1.b: "三妖精当然是共和制。"
  THE_TFR_shadow_events.1.c: "神权制才能带来权威。"
  THE_TFR_shadow_events.1.d: "妖精更适合传统的部落制。"
+
+ THE_TFR_shadow_events.3.title: "影之更替"
+ THE_TFR_shadow_events.3.desc: "即使可以复生的妖精也需要时间来恢复自己的力量，特别是消耗另一个世界的「影」改变曾经的「光」。而三妖精可以轮流维持领域的统治，在更替中恢复「影」的力量。"
+ THE_TFR_shadow_events.3.sunny: "影之妖精-桑尼米尔克。"
+ THE_TFR_shadow_events.3.luna: "影之妖精-露娜切露德。"
+ THE_TFR_shadow_events.3.star: "影之妖精-斯塔萨菲雅。"
 ### EVENT_END
 
 ### GOVERNMENT
+ THE_TFR_shadow_mechanic_power: "§g阴影行政§!"
+
  mechanic_THE_TFR_shadow_core_creation_add_state_core_custom_attributes_yes: "省份§Y核心化§!完成时添加§Y直属州核心§!。"
 
  THE_TFR_shadow_monarchy_reform: "影之三妖精"
@@ -40,9 +49,13 @@
  THE_TFR_shadow_call_fairy_modifier: "唤醒领地妖精"
  THE_TFR_shadow_rebuild_harmony_modifier: "重构和谐"
  THE_TFR_shadow_eternal_disaster_modifier: "异变叠奏"
+ THE_TFR_shadow_confusion_prelude_modifier: "混乱序幕"
 ### MODIFIER_END
 
 ### DECISION
  THE_TFR_shadow_rebirth_decision_title: "@TFR影之复生"
  THE_TFR_shadow_rebirth_decision_desc: "被影之三妖精击败后，光之三妖精将不复存在，光与影的平衡已被打破。\n\n§R警告§!：本路线内容极少，包含严重的角色形象崩坏和攻击性描述，如有不适请勿游玩。"
+
+ THE_TFR_shadow_switch_ruler_decision_title: "@TFR影之更替"
+ THE_TFR_shadow_switch_ruler_decision_desc: "对于影之妖精，统治领域是枯燥的，破坏才是她们的享乐。「影」会驱使她们主动进行破坏并在其中输出「影」的力量，或是在战争中死亡等待复生，更替制就是为了应对这种情况。"
 ### DECISION_END

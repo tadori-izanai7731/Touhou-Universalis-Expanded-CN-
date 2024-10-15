@@ -10,18 +10,27 @@
  THE_TFR_shadow_danmaku_fight_LRV_effect_tt: "æ‰ÑSN@LRV§Y[LRV.GetName]§!„v9VU^ùR³QÿÜw)RSçub@LRV§Y[LRV.GetName]§!0"
  THE_TFR_shadow_every_province_add_courthouse_tt: "»lNNb	gwýNûm R§YÕlb–§!ú^Qr0"
  THE_TFR_shadow_core_creation_add_courthouse_tt: "wýN§Y8hÃVS§!ŒRböeûm R§YÕlb–§!ú^Qr0"
+ THE_TFR_shadow_core_creation_add_5_capacity_tt: "wýN§Y8hÃVS§!ŒRböe·ƒ—V§G5§!Lˆ?e¹RÏ‘0"
 ### TOOLTIP_END
 
 ### EVENT
- THE_TFR_shadow_events.1.title: "qV„vVïz"
+ THE_TFR_shadow_events.1.title: "qVKNVïz"
  THE_TFR_shadow_events.1.desc: "Qh<Sÿ0K„T„v–Y¾|?eCgòTÏuNTqVKN	N–Y¾|†NÿbìN—‰°e„v?eCgeg±RlbqVKN	N–Y¾|„vT÷S00\n2—Zÿ0qVKN	N–Y¾|NmN=f–Y¾|T00\n¯eTXÿ0SV6qNN7hÿqVKN	N–Y¾|Mb	gYÇN„výw›RÿN‰Q`õVþfÏu1VS„vIQKN	N–Y¾|†N00\nQh<Sÿ0¡l•ÿ2—Zœg6q=fSiRÿChild	ÿ,qVKN	N–Y¾|`HNýwŒTvQÖN–Y¾|N7h00\n2—Zÿ0NÇ0–Y¾|0„vTðyØ=fÝOYu'T00"
  THE_TFR_shadow_events.1.a: "TIN6RMbýwSO°sqVKN	N–Y¾|„v:V'Y0"
  THE_TFR_shadow_events.1.b: "	N–Y¾|SV6q=fqQŒT6R0"
  THE_TFR_shadow_events.1.c: "^yCg6RMbýw&^egCgZ0"
  THE_TFR_shadow_events.1.d: "–Y¾|ôfT.Oßu„vèK„6R0"
+
+ THE_TFR_shadow_events.3.title: "qVKNôfÿf"
+ THE_TFR_shadow_events.3.desc: "sSOïSåNYu„v–Y¾|mN—‰öeô•egb`YêñT„v›RÏ‘ÿyr+R=fˆmwæSN*NNLu„v0qV09eØSþfÏu„v0IQ00w	N–Y¾|ïSåNnAmôuc†˜ßW„vßu»lÿ(Wôfÿf-Nb`Y0qV0„v›RÏ‘0"
+ THE_TFR_shadow_events.3.sunny: "qVKN–Y¾|-Qh<Ss|SKQ0"
+ THE_TFR_shadow_events.3.luna: "qVKN–Y¾|-2—ZR2—·V0"
+ THE_TFR_shadow_events.3.star: "qVKN–Y¾|-¯eTX(„òƒÅ–0"
 ### EVENT_END
 
 ### GOVERNMENT
+ THE_TFR_shadow_mechanic_power: "§g4–qVLˆ?e§!"
+
  mechanic_THE_TFR_shadow_core_creation_add_state_core_custom_attributes_yes: "wýN§Y8hÃVS§!ŒRböeûm R§Yôv^SÞT8hÃV§!0"
 
  THE_TFR_shadow_monarchy_reform: "qVKN	N–Y¾|"
@@ -40,9 +49,13 @@
  THE_TFR_shadow_call_fairy_modifier: "2U’‘†˜0W–Y¾|"
  THE_TFR_shadow_rebuild_harmony_modifier: "Í‘„gŒTŒ"
  THE_TFR_shadow_eternal_disaster_modifier: "VØSàSOY"
+ THE_TFR_shadow_confusion_prelude_modifier: "÷mqN^U^"
 ### MODIFIER_END
 
 ### DECISION
  THE_TFR_shadow_rebirth_decision_title: "@TFRqVKNYu"
  THE_TFR_shadow_rebirth_decision_desc: "«ˆqVKN	N–Y¾|ûQ%TÿIQKN	N–Y¾|SNYXR(WÿIQNqV„vs^aˆòT«ˆSb4x0\n\n§Rf‹JT§!ÿ,gï¿u…Q¹RgSÿS+T%NÍ‘„vÒ‰r‚bVaŒ)TOWŒTIeûQ'`Ïcðÿ‚Y	gN÷‹ÿR8n©s0"
+
+ THE_TFR_shadow_switch_ruler_decision_title: "@TFRqVKNôfÿf"
+ THE_TFR_shadow_switch_ruler_decision_desc: "ùRŽNqVKN–Y¾|ÿßu»l†˜ßW=f¯gåq„vÿ4xOWMb=fyYìN„v«NPN00qV0OqšOyYìNIN¨RÛLˆ4xOWv^(WvQ-N“úQ0qV0„v›RÏ‘ÿb=f(Wb‰N-N‰k¡NIr…VYuÿôfÿf6R1S=f:N†N”^ùRÙÍyÅ`µQ0"
 ### DECISION_END

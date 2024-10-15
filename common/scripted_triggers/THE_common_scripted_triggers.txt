@@ -10,6 +10,7 @@ THE_is_free_merc_company = {
 
 THE_use_common_election_scripted_trigger = {
 	NOT = { has_government_attribute = THE_HMC_use_human_capital_election }
+	NOT = { has_reform = THE_TFR_shadow_republic_reform }
 }
 
 THE_can_use_special_culture_ideas_scripted_trigger = {

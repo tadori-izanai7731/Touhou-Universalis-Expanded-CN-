@@ -58,3 +58,53 @@ province_event = {
 		owner = { add_core = ROOT }
 	}
 }
+
+country_event = {
+	id = THE_TFR_shadow_events.3
+	title = THE_TFR_shadow_events.3.title
+	desc = THE_TFR_shadow_events.3.desc
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			has_reform = THE_TFR_shadow_monarchy_reform
+			has_reform = THE_TFR_shadow_republic_reform
+			has_reform = THE_TFR_shadow_theocracy_reform
+			has_reform = THE_TFR_shadow_tribal_reform
+		}
+	}
+
+	option = {
+		name = THE_TFR_shadow_events.3.sunny
+		trigger = {
+			NOT = { has_country_flag = THE_TFR_shadow_ruler_sunny_flag }
+		}
+		THE_TFR_shadow_switch_ruler = { ruler = sunny }
+		set_ruler_flag = THE_TFR_shadow_ruler_sunny_flag
+	}
+
+	option = {
+		name = THE_TFR_shadow_events.3.luna
+		trigger = {
+			NOT = { has_country_flag = THE_TFR_shadow_ruler_luna_flag }
+		}
+		THE_TFR_shadow_switch_ruler = { ruler = luna }
+		set_ruler_flag = THE_TFR_shadow_ruler_luna_flag
+	}
+
+	option = {
+		name = THE_TFR_shadow_events.3.star
+		trigger = {
+			NOT = { has_country_flag = THE_TFR_shadow_ruler_star_flag }
+		}
+		THE_TFR_shadow_switch_ruler = { ruler = star }
+		set_ruler_flag = THE_TFR_shadow_ruler_star_flag
+	}
+
+	after = {
+		hidden_effect = {
+			add_ruler_personality = immortal_personality
+		}
+	}
+}

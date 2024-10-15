@@ -12,6 +12,7 @@ THE_TFR_shadow_monarchy_reform = {
 	valid_for_nation_designer = no
 	allow_normal_conversion = yes
 	can_change_primary_culture = no
+	heir = no
 
 	custom_attributes = {
 		locked_government_type = yes
@@ -41,10 +42,14 @@ THE_TFR_shadow_republic_reform = {
 	valid_for_nation_designer = no
 	allow_normal_conversion = yes
 	can_change_primary_culture = no
+	duration = 1000
+	royal_marriage = yes
 	republican_name = no
+	heir = no
 
 	custom_attributes = {
 		locked_government_type = yes
+		election_on_death = yes
 		THE_TFR_shadow_core_creation_add_state_core_custom_attributes = yes
 	}
 
@@ -71,9 +76,9 @@ THE_TFR_shadow_theocracy_reform = {
 	valid_for_nation_designer = no
 	allow_normal_conversion = yes
 	can_change_primary_culture = no
+	heir = no
 
 	custom_attributes = {
-		election_on_death = yes
 		locked_government_type = yes
 		THE_TFR_shadow_core_creation_add_state_core_custom_attributes = yes
 	}
@@ -101,6 +106,7 @@ THE_TFR_shadow_tribal_reform = {
 	valid_for_nation_designer = no
 	allow_normal_conversion = yes
 	can_change_primary_culture = no
+	heir = no
 
 	custom_attributes = {
 		locked_government_type = yes
