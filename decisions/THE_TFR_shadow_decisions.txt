@@ -26,6 +26,9 @@ country_decisions = {
 			}
 			set_country_flag = THE_TFR_shadow_has_execute_rebirth_decision_flag
 		}
+		ai_will_do = {
+			factor = 1000
+		}
 	}
 
 	THE_TFR_shadow_switch_ruler_decision = {
@@ -52,6 +55,9 @@ country_decisions = {
 			country_event = {
 				id = THE_TFR_shadow_events.3
 			}
+		}
+		ai_will_do = {
+			factor = 0
 		}
 	}
 }

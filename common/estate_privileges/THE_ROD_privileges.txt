@@ -15,33 +15,43 @@ THE_ROD_estate_nobles_knight_tradition = {
 		nobles_privilege_slots = 1
 		establish_order_cost = -0.25
 	}
+	#军事历史研究所
 	conditional_modifier = {
 		trigger = { has_country_flag = THE_ROD_strategy_and_arm_1_flag } modifier = { army_tradition = 1 }
 	}
+	#火药武器研究所
 	conditional_modifier = {
 		trigger = { has_country_flag = THE_ROD_strategy_and_arm_2_flag } modifier = { infantry_fire = 0.2 }
 	}
+	#后勤供给研究所
 	conditional_modifier = {
 		trigger = { has_country_flag = THE_ROD_strategy_and_arm_3_flag } modifier = { land_attrition = -0.15 }
 	}
+	#优势计划研究所
 	conditional_modifier = {
 		trigger = { has_country_flag = THE_ROD_strategy_and_arm_4_flag } modifier = { leader_siege = 1 }
 	}
+	#战术第一研究所
 	conditional_modifier = {
 		trigger = { has_country_flag = THE_ROD_strategy_and_arm_5_flag } modifier = { global_attacker_dice_roll_bonus = 1 }
 	}
+	#战术第二研究所
 	conditional_modifier = {
 		trigger = { has_country_flag = THE_ROD_strategy_and_arm_6_flag } modifier = { global_defender_dice_roll_bonus = 1 }
 	}
+	#战略支援研究所
 	conditional_modifier = {
 		trigger = { has_country_flag = THE_ROD_strategy_and_arm_7_flag } modifier = { reinforce_speed = 0.15 }
 	}
+	#战略指挥研究所
 	conditional_modifier = {
 		trigger = { has_country_flag = THE_ROD_strategy_and_arm_8_flag } modifier = { free_leader_pool = 2 }
 	}
+	#炮兵装备研究所
 	conditional_modifier = {
 		trigger = { has_country_flag = THE_ROD_strategy_and_arm_9_flag } modifier = { artillery_barrage_cost = -0.1 }
 	}
+	#防御工事研究所
 	conditional_modifier = {
 		trigger = { has_country_flag = THE_ROD_strategy_and_arm_10_flag } modifier = { global_garrison_growth = 0.25 }
 	}

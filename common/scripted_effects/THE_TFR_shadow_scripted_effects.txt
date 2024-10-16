@@ -15,6 +15,26 @@ THE_TFR_shadow_on_core_scripted_effect = {
 		}
 		add_building = courthouse
 	}
+	if = {
+		limit = {
+			FROM = { has_country_flag = THE_TFR_shadow_core_creation_add_5_capacity_flag }
+		}
+		FROM = {
+			add_government_power = {
+				mechanic_type = THE_TFR_shadow_mechanic
+				power_type = THE_TFR_shadow_mechanic_power
+				value = 0.05
+			}
+		}
+	}
+	if = {
+		limit = {
+			FROM = { has_country_flag = THE_TFR_shadow_core_creation_add_2000_manpower_flag }
+		}
+		FROM = {
+			add_manpower = 2
+		}
+	}
 }
 
 THE_TFR_shadow_switch_ruler = {

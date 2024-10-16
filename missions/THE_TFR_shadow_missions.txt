@@ -12,11 +12,33 @@ THE_TFR_shadow_branch_1 = {
 		icon = mission_unknown_mission
 		position = 3
 		required_missions = { THE_TFR_shadow_2_2 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			area = Scarlet_island
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {
+			Scarlet_island = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = THE_TFR_shadow_red_solidify_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_TFR_shadow_every_SCR_core_add_100_cash_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						is_core = SCR
+					}
+					ROOT = { add_treasury = 250 }
+				}
+			}
+		} 
 	}
 
 	THE_TFR_shadow_1_5 = {
@@ -142,11 +164,38 @@ THE_TFR_shadow_branch_2 = {
 		icon = mission_unknown_mission
 		position = 3
 		required_missions = { THE_TFR_shadow_2_2 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				area = Land_of_the_black_doors
+				area = Shinkirou_state
+				area = Eastern_youkai_forest
+				area = Great_youkai_forest
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				OR = {
+					area = Land_of_the_black_doors
+					area = Shinkirou_state
+					area = Eastern_youkai_forest
+					area = Great_youkai_forest
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = THE_TFR_shadow_culture_clear_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_TFR_shadow_core_creation_add_2000_manpower_tt
+			hidden_effect = {
+				set_country_flag = THE_TFR_shadow_core_creation_add_2000_manpower_flag
+			}
+		} 
 	}
 
 	THE_TFR_shadow_2_4 = {
@@ -295,7 +344,17 @@ THE_TFR_shadow_branch_4 = {
 		icon = mission_unknown_mission
 		position = 2
 		required_missions = { THE_TFR_shadow_3_1 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				area = Forest_coast_state
+				area = Forest_edge_state
+				area = Forest_of_magic
+				area = Hakurei_state
+				area = Hakurei_peninsula_state
+				area = Hakurei_western_coast
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -386,7 +445,14 @@ THE_TFR_shadow_branch_5 = {
 		icon = mission_unknown_mission
 		position = 2
 		required_missions = { THE_TFR_shadow_3_1 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				area = Mayohiga_state
+				area = Ran_state
+				area = Eastern_mountains
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {

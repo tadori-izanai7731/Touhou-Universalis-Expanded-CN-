@@ -11,6 +11,8 @@
  THE_TFR_shadow_every_province_add_courthouse_tt: "治下所有省份添加§Y法院§!建筑。"
  THE_TFR_shadow_core_creation_add_courthouse_tt: "省份§Y核心化§!完成时添加§Y法院§!建筑。"
  THE_TFR_shadow_core_creation_add_5_capacity_tt: "省份§Y核心化§!完成时获得§G5§!行政容量。"
+ THE_TFR_shadow_every_SCR_core_add_100_cash_tt: "治下每拥有1个@SCR§Y[SCR.GetName]§!的核心省份，获得§G250§!¤。"
+ THE_TFR_shadow_core_creation_add_2000_manpower_tt: "省份§Y核心化§!完成时获得§G2000§!£icon_manpower£人力。"
 ### TOOLTIP_END
 
 ### EVENT
@@ -50,6 +52,8 @@
  THE_TFR_shadow_rebuild_harmony_modifier: "重构和谐"
  THE_TFR_shadow_eternal_disaster_modifier: "异变叠奏"
  THE_TFR_shadow_confusion_prelude_modifier: "混乱序幕"
+ THE_TFR_shadow_red_solidify_modifier: "赤红凝固"
+ THE_TFR_shadow_culture_clear_modifier: "种族清除"
 ### MODIFIER_END
 
 ### DECISION

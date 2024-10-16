@@ -28,3 +28,19 @@ THE_TFR_shadow_confusion_prelude_modifier = {
 	idea_cost = -0.1
 	envoy_travel_time = -0.5
 }
+
+#赤色凝固
+THE_TFR_shadow_red_solidify_modifier = {
+	core_creation = -0.15
+	infantry_shock = 0.25
+	land_maintenance_modifier = -0.25
+	monthly_reform_progress = 0.5
+}
+
+#种族清除
+THE_TFR_shadow_culture_clear_modifier = {
+	culture_conversion_time = -0.5
+	culture_conversion_cost = -0.5
+	all_estate_loyalty_equilibrium = 0.2
+	allow_free_estate_privilege_revocation = yes
+}
