@@ -23,5 +23,20 @@ THE_TFR_shadow_mechanic = {
 				end_value = 10000
 			}
 		}
+		THE_TFR_shadow_mechanic_power_1 = {
+			gui = THE_mechanic_power_hidden_gui
+			max = 100
+			min = 0
+			base_monthly_growth = 0
+			increases_with_global = no
+			scaled_modifier = {
+				modifier = {
+					global_manpower_modifier = 1.0
+					global_unrest = -10
+				}
+				start_value = 0
+				end_value = 100
+			}
+		}
 	}
 }

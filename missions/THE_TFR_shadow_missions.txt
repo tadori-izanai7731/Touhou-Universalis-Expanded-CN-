@@ -285,11 +285,47 @@ THE_TFR_shadow_branch_3 = {
 			THE_TFR_shadow_2_2
 			THE_TFR_shadow_4_2
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				area = Myouren_state
+				area = Eastern_myouren_state
+				area = Northern_myouren_state
+				area = Eastern_senkai
+				area = Northern_senkai
+				area = Senkai_state
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				OR = {
+					area = Myouren_state
+					area = Eastern_myouren_state
+					area = Northern_myouren_state
+				}
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				OR = {
+					area = Eastern_senkai
+					area = Northern_senkai
+					area = Senkai_state
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = THE_TFR_shadow_nevermore_dream_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_TFR_shadow_core_creation_add_10_adm_tt
+			hidden_effect = {
+				set_country_flag = THE_TFR_shadow_core_creation_add_10_adm_flag
+			}
+		} 
 	}
 
 	THE_TFR_shadow_3_5 = {
@@ -413,11 +449,75 @@ THE_TFR_shadow_branch_4 = {
 		icon = mission_unknown_mission
 		position = 4
 		required_missions = { THE_TFR_shadow_4_2 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				area = Eientei_state
+				area = Fujiwara_state
+				area = Bamboo_forest_of_the_lost
+				area = Human_state
+				area = Kourindou_state
+				area = Raiko_Seki_state
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				OR = {
+					area = Eientei_state
+					area = Fujiwara_state
+					area = Bamboo_forest_of_the_lost
+				}
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				OR = {
+					area = Human_state
+					area = Kourindou_state
+					area = Raiko_Seki_state
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = THE_TFR_shadow_estate_expropriation_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_TFR_shadow_fire_bamboo_and_village_tt
+			tooltip = {
+				add_devastation = 100
+				custom_tooltip = THE_TFR_shadow_add_5_capacity_tt
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = Eientei_state
+							area = Fujiwara_state
+							area = Bamboo_forest_of_the_lost
+							area = Human_state
+							area = Kourindou_state
+							area = Raiko_Seki_state
+						}
+					}
+					add_devastation = 100
+					ROOT = {
+						add_government_power = {
+							mechanic_type = THE_TFR_shadow_mechanic
+							power_type = THE_TFR_shadow_mechanic_power
+							value = 0.05
+						}
+						add_government_power = {
+							mechanic_type = THE_TFR_shadow_mechanic
+							power_type = THE_TFR_shadow_mechanic_power_1
+							value = 1
+						}
+					}
+				}
+			}
+		} 
 	}
 
 	THE_TFR_shadow_4_6 = {

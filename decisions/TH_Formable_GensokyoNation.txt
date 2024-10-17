@@ -11,6 +11,7 @@ country_decisions = {
 			culture_group = Gensokyan_culture
 			NOT = { tag = LCU }
 			NOT = { has_country_flag = th_formed_gensokyo_flag }
+			NOT = { has_government_attribute = THE_forbid_form_gensokyan_decision_custom_attributes }
 		}
 		provinces_to_highlight = {
 			continent = gensokyo_continent

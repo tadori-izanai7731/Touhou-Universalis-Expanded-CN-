@@ -44,3 +44,19 @@ THE_TFR_shadow_culture_clear_modifier = {
 	all_estate_loyalty_equilibrium = 0.2
 	allow_free_estate_privilege_revocation = yes
 }
+
+#不再有梦
+THE_TFR_shadow_nevermore_dream_modifier = {
+	missionaries = 2
+	global_missionary_strength = 0.03
+	build_cost = -0.25
+	development_cost = -0.2
+}
+
+#地产征收
+THE_TFR_shadow_estate_expropriation_modifier = {
+	diplomats = 2
+	spy_action_cost_modifier = -0.5
+	diplomatic_annexation_cost = -0.2
+	global_monthly_devastation = -1.0
+}
