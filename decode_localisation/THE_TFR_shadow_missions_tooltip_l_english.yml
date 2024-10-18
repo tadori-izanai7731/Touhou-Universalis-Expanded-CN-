@@ -16,6 +16,10 @@
  THE_TFR_shadow_core_creation_add_10_adm_tt: "省份§Y核心化§!完成时获得§G10§!£adm£行政点数。"
  THE_TFR_shadow_fire_bamboo_and_village_tt: "§R焚毁§!治下每个位于§Y迷途竹林西部§!、§Y迷途竹林南部§!、§Y迷途竹林东部§!、§Y人类村落§!、§Y阡陌田野§!、§Y村落远郊§!区域的省份\n每个被§R焚毁§!的省份给予如下效果:"
  THE_TFR_shadow_add_5_capacity_tt: "获得§G5§!行政容量。\n获得§G+1.0%§!国家人力修正。\n获得§G-0.10§!全国叛乱度。"
+ THE_TFR_shadow_core_creation_add_10_dip_tt: "省份§Y核心化§!完成时获得§G10§!£dip£外交点数。"
+ THE_TFR_shadow_core_creation_add_10_mil_tt: "省份§Y核心化§!完成时获得§G10§!£mil£军事点数。"
+ THE_TFR_shadow_bury_old_hell_tt: "§R填埋§!治下每个位于§Y地狱之道§!、§Y运河河岸§!、§Y地灵殿§!、§Y鬼之国§!、§Y灼热地狱§!、§Y鬼族飞地§!区域的省份\n每个被§R填埋§!的省份给予如下效果:"
+ THE_TFR_shadow_add_5_capacity_1_tt: "获得§G5§!行政容量。\n获得§G-1.0%§!陆军损耗。\n获得§G+0.10§!外交声誉。"
 ### TOOLTIP_END
 
 ### EVENT
@@ -36,6 +40,7 @@
 ### GOVERNMENT
  THE_TFR_shadow_mechanic_power: "§g阴影行政§!"
  THE_TFR_shadow_mechanic_power_1: "§g复归自然§!"
+ THE_TFR_shadow_mechanic_power_2: "§g平整沟壑§!"
 
  mechanic_THE_TFR_shadow_core_creation_add_state_core_custom_attributes_yes: "省份§Y核心化§!完成时添加§Y直属州核心§!。"
 
@@ -60,6 +65,9 @@
  THE_TFR_shadow_culture_clear_modifier: "种族清除"
  THE_TFR_shadow_nevermore_dream_modifier: "不再有梦"
  THE_TFR_shadow_estate_expropriation_modifier: "地产征收"
+ THE_TFR_shadow_inverse_entropy_modifier: "逆熵动力"
+ THE_TFR_shadow_ugly_qualia_modifier: "惧魂寄所"
+ THE_TFR_feedforward_control_modifier: "前馈控制"
 ### MODIFIER_END
 
 ### DECISION

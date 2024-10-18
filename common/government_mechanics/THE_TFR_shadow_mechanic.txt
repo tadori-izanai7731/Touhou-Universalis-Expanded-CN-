@@ -38,5 +38,20 @@ THE_TFR_shadow_mechanic = {
 				end_value = 100
 			}
 		}
+		THE_TFR_shadow_mechanic_power_2 = {
+			gui = THE_mechanic_power_hidden_gui
+			max = 100
+			min = 0
+			base_monthly_growth = 0
+			increases_with_global = no
+			scaled_modifier = {
+				modifier = {
+					land_attrition = -1.0
+					diplomatic_reputation = 10
+				}
+				start_value = 0
+				end_value = 100
+			}
+		}
 	}
 }

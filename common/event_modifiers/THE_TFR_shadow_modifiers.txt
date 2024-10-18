@@ -60,3 +60,27 @@ THE_TFR_shadow_estate_expropriation_modifier = {
 	diplomatic_annexation_cost = -0.2
 	global_monthly_devastation = -1.0
 }
+
+#逆熵动力
+THE_TFR_shadow_inverse_entropy_modifier = {
+	global_ship_recruit_speed = -0.5
+	global_naval_engagement_modifier = 0.25
+	country_diplomatic_power = 1
+	ae_impact = -0.2
+}
+
+#惧魂归宿
+THE_TFR_shadow_ugly_qualia_modifier = {
+	improve_relation_modifier = 0.5
+	global_institution_spread = 1.0
+	free_policy = 1
+	global_tax_modifier = 0.25
+}
+
+#前馈控制
+THE_TFR_feedforward_control_modifier = {
+	national_focus_years = -20
+	movement_speed = 0.2
+	spy_offence = 0.5
+	province_warscore_cost = -0.15
+}

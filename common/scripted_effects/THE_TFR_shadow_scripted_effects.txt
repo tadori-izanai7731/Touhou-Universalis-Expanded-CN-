@@ -43,6 +43,22 @@ THE_TFR_shadow_on_core_scripted_effect = {
 			add_adm_power = 10
 		}
 	}
+	if = {
+		limit = {
+			FROM = { has_country_flag = THE_TFR_shadow_core_creation_add_10_dip_flag }
+		}
+		FROM = {
+			add_dip_power = 10
+		}
+	}
+	if = {
+		limit = {
+			FROM = { has_country_flag = THE_TFR_shadow_core_creation_add_10_mil_flag }
+		}
+		FROM = {
+			add_mil_power = 10
+		}
+	}
 }
 
 THE_TFR_shadow_switch_ruler = {

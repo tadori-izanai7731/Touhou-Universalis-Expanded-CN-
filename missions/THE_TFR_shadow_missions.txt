@@ -45,11 +45,70 @@ THE_TFR_shadow_branch_1 = {
 		icon = mission_unknown_mission
 		position = 5
 		required_missions = { THE_TFR_shadow_1_3 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				area = Road_to_hell_state
+				area = Chireiden_canal_state
+				area = Chireiden_state
+				area = Yuugi_state
+				area = Blazing_hell_state
+				area = Oni_exclave_state
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				OR = {
+					area = Road_to_hell_state
+					area = Chireiden_canal_state
+					area = Chireiden_state
+					area = Yuugi_state
+					area = Blazing_hell_state
+					area = Oni_exclave_state
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = THE_TFR_shadow_ugly_qualia_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_TFR_shadow_bury_old_hell_tt
+			tooltip = {
+				add_devastation = 100
+				custom_tooltip = THE_TFR_shadow_add_5_capacity_1_tt
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = Road_to_hell_state
+							area = Chireiden_canal_state
+							area = Chireiden_state
+							area = Yuugi_state
+							area = Blazing_hell_state
+							area = Oni_exclave_state
+						}
+					}
+					add_devastation = 100
+					ROOT = {
+						add_government_power = {
+							mechanic_type = THE_TFR_shadow_mechanic
+							power_type = THE_TFR_shadow_mechanic_power
+							value = 0.05
+						}
+						add_government_power = {
+							mechanic_type = THE_TFR_shadow_mechanic
+							power_type = THE_TFR_shadow_mechanic_power_2
+							value = 1
+						}
+					}
+				}
+			}
+		} 
 	}
 
 	THE_TFR_shadow_1_6 = {
@@ -205,11 +264,40 @@ THE_TFR_shadow_branch_2 = {
 			THE_TFR_shadow_2_3
 			THE_TFR_shadow_3_3
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				area = Foot_of_youkai_mountains
+				area = North_tengu_plains
+				area = Youkai_Mountains
+				area = Northern_youkai_mountains
+				area = Southern_youkai_mountains
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 16
+				OR = {
+					area = Foot_of_youkai_mountains
+					area = North_tengu_plains
+					area = Youkai_Mountains
+					area = Northern_youkai_mountains
+					area = Southern_youkai_mountains
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = THE_TFR_feedforward_control_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_TFR_shadow_core_creation_add_10_mil_tt
+			hidden_effect = {
+				set_country_flag = THE_TFR_shadow_core_creation_add_10_mil_flag
+			}
+		} 
 	}
 
 	THE_TFR_shadow_2_5 = {
@@ -584,11 +672,40 @@ THE_TFR_shadow_branch_5 = {
 			THE_TFR_shadow_4_4
 			THE_TFR_shadow_5_2
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				area = Western_netherworld
+				area = Northern_netherworld
+				area = Netherworld_state
+				area = Southern_netherworld
+				area = Eastern_netherworld
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 13
+				OR = {
+					area = Western_netherworld
+					area = Northern_netherworld
+					area = Netherworld_state
+					area = Southern_netherworld
+					area = Eastern_netherworld
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = THE_TFR_shadow_inverse_entropy_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_TFR_shadow_core_creation_add_10_dip_tt
+			hidden_effect = {
+				set_country_flag = THE_TFR_shadow_core_creation_add_10_dip_flag
+			}
+		} 
 	}
 
 	THE_TFR_shadow_5_6 = {
