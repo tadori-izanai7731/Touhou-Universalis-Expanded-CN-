@@ -105,6 +105,12 @@ country_event = {
 	after = {
 		hidden_effect = {
 			add_ruler_personality = immortal_personality
+			if = {
+				limit = { has_country_flag = THE_TFR_shadow_light_fairy_flag }
+				change_adm = 1
+				change_dip = 1
+				change_mil = 1
+			}
 		}
 	}
 }

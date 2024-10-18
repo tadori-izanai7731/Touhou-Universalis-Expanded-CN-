@@ -84,3 +84,13 @@ THE_TFR_feedforward_control_modifier = {
 	spy_offence = 0.5
 	province_warscore_cost = -0.15
 }
+
+#############################################
+
+#『光之三妖精』
+THE_TFR_shadow_light_fairy_modifier = {
+	country_admin_power = 2
+	country_diplomatic_power = 2
+	country_military_power = 2
+	max_absolutism = 50
+}

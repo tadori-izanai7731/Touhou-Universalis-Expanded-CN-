@@ -432,9 +432,32 @@ THE_TFR_shadow_branch_3 = {
 		position = 6
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			OR = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 200
+					OR = {
+						continent = gensokyo_continent
+						continent = moon_continent
+					}
+				}
+				AND = {
+					government_rank = 3
+					NOT = { great_power_rank = 2 }
+					absolutism = 80
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = THE_TFR_shadow_light_fairy_modifier
+				duration = -1
+			}
+			hidden_effect = {
+				set_country_flag = THE_TFR_shadow_light_fairy_flag
+			}
+		} 
 	}
 
 	THE_TFR_shadow_3_7 = {
