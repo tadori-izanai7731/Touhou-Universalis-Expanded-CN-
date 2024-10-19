@@ -10,6 +10,8 @@
  THE_TFR_shadow_danmaku_fight_LRV_effect_tt: "æ‰ÑSN@LRV§Y[LRV.GetName]§!„v9VU^ùR³QÿÜw)RSçub@LRV§Y[LRV.GetName]§!0"
  THE_TFR_shadow_every_province_add_courthouse_tt: "»lNNb	gwýNûm R§YÕlb–§!ú^Qr0"
  THE_TFR_shadow_core_creation_add_courthouse_tt: "wýN§Y8hÃVS§!ŒRböeûm R§YÕlb–§!ú^Qr0"
+ THE_TFR_shadow_every_province_add_town_hall_tt: "»lNNb	gwýNûm R§Y^?e…S§!ú^Qr0"
+ THE_TFR_shadow_core_creation_add_town_hall_tt: "wýN§Y8hÃVS§!ŒRböeûm R§Y^?e…S§!ú^Qr0"
  THE_TFR_shadow_core_creation_add_5_capacity_tt: "wýN§Y8hÃVS§!ŒRböe·ƒ—V§G5§!Lˆ?e¹RÏ‘0"
  THE_TFR_shadow_every_SCR_core_add_100_cash_tt: "»lNÏkåb	g1*N@SCR§Y[SCR.GetName]§!„v8hÃVwýNÿ·ƒ—V§G250§!¤0"
  THE_TFR_shadow_core_creation_add_2000_manpower_tt: "wýN§Y8hÃVS§!ŒRböe·ƒ—V§G2000§!£icon_manpower£ºN›R0"
@@ -20,6 +22,14 @@
  THE_TFR_shadow_core_creation_add_10_mil_tt: "wýN§Y8hÃVS§!ŒRböe·ƒ—V§G10§!£mil£›Q‹N¹ppe0"
  THE_TFR_shadow_bury_old_hell_tt: "§RkXËW§!»lNÏk*NMOŽN§Y0WñrKNS§!0§YÐ³l³l¸S§!0§Y0Wup¿k§!0§Y<›KNýV§!0§Y|píp0Wñr§!0§Y<›ÏeÞ˜0W§!:SßW„vwýN\nÏk*N«ˆ§RkXËW§!„vwýNÙuˆN‚YNHeœg:"
  THE_TFR_shadow_add_5_capacity_1_tt: "·ƒ—V§G5§!Lˆ?e¹RÏ‘0\n·ƒ—V§G-1.0%§!F–›Qmcw0\n·ƒ—V§G+0.10§!Y²NðX‰Š0"
+ THE_TFR_shadow_core_creation_add_2_army_tradition_tt: "wýN§Y8hÃVS§!ŒRböe·ƒ—V§G2§!F–›Q.Oßu0"
+ THE_TFR_shadow_core_creation_add_2_navy_tradition_tt: "wýN§Y8hÃVS§!ŒRböe·ƒ—V§G2§!wm›Q.Oßu0"
+ THE_TFR_shadow_core_creation_decrease_10_rebel_tt: "wýN§Y8hÃVS§!ŒRböeÏQS§G10§!Nb	gÛS›QÛ¦^0"
+ THE_TFR_shadow_core_creation_add_1_powerprojection_tt: "wýN§Y8hÃVS§!ŒRböe·ƒ—V§G+1§!›RÏ‘•bS0"
+ THE_TFR_shadow_core_creation_add_income_tt: "wýN§Y8hÃVS§!ŒRböe·ƒ—V§G0.1§!t^6eeQ0"
+
+ THE_TFR_shadow_end_tt: "a0Œ8n©sN¹eÎ˜‘NÓbUS^—ckV…Q¹R@TFR§Y	Ng¾|-qV§!ÿckV…Q¹R@TFR§Y	Ng¾|-Tw§!ck(W6RjO-N0\n\nsoon~"
+ ### sQŽN0Tw0ÿ0Tw0v^N=fN*NN0qV0øvÍS„vŒTŒŽ‹YEe‹Nÿw=fÎN	Ng¾|,g«ŽúQÑSÿsQŽN–Y¾|„v0ýV¦^ÿGenso	ÿ0ŒT…QY²‹T„vEe‹N0
 ### TOOLTIP_END
 
 ### EVENT
@@ -35,6 +45,10 @@
  THE_TFR_shadow_events.3.sunny: "qVKN–Y¾|-Qh<Ss|SKQ0"
  THE_TFR_shadow_events.3.luna: "qVKN–Y¾|-2—ZR2—·V0"
  THE_TFR_shadow_events.3.star: "qVKN–Y¾|-¯eTX(„òƒÅ–0"
+
+ THE_TFR_shadow_events.4.title: "qVKNÓu>S"
+ THE_TFR_shadow_events.4.desc: "0qV0Qh<Sÿ&&\n0qV02—Zÿ&&\n0qV0¯eTXÿ&&"
+ THE_TFR_shadow_events.4.end: "&&"
 ### EVENT_END
 
 ### GOVERNMENT
@@ -68,7 +82,12 @@
  THE_TFR_shadow_inverse_entropy_modifier: "µq¨R›R"
  THE_TFR_shadow_ugly_qualia_modifier: "ç`B›ÄRNb"
  THE_TFR_feedforward_control_modifier: "MRˆ™µc6R"
-
+ THE_TFR_shadow_fairy_bestow_modifier: "–Y¾|i`P"
+ THE_TFR_shadow_farewell_ceremony_modifier: "0kêNV"
+ THE_TFR_shadow_manage_system_modifier: "¡rtû|ßu"
+ THE_TFR_shadow_ecological_invasion_modifier: "u`eQµO"
+ THE_TFR_shadow_tue_world_modifier: "‹vTQúQm"
+ THE_TFR_shadow_fading_stars_modifier: "*‰r‚Auf"
  THE_TFR_shadow_light_fairy_modifier: "0IQKN	N–Y¾|0"
 ### MODIFIER_END
 
@@ -79,3 +98,7 @@
  THE_TFR_shadow_switch_ruler_decision_title: "@TFRqVKNôfÿf"
  THE_TFR_shadow_switch_ruler_decision_desc: "ùRŽNqVKN–Y¾|ÿßu»l†˜ßW=f¯gåq„vÿ4xOWMb=fyYìN„v«NPN00qV0OqšOyYìNIN¨RÛLˆ4xOWv^(WvQ-N“úQ0qV0„v›RÏ‘ÿb=f(Wb‰N-N‰k¡NIr…VYuÿôfÿf6R1S=f:N†N”^ùRÙÍyÅ`µQ0"
 ### DECISION_END
+
+### POWERPROJECTION
+ THE_TFR_shadow_arrive_powerprojection: "§gqVKNM–4N§!"
+### POWERPROJECTION_END

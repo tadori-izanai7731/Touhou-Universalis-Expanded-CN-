@@ -10,6 +10,8 @@
  THE_TFR_shadow_danmaku_fight_LRV_effect_tt: "触发与@LRV§Y[LRV.GetName]§!的弹幕对决，胜利将继承@LRV§Y[LRV.GetName]§!。"
  THE_TFR_shadow_every_province_add_courthouse_tt: "治下所有省份添加§Y法院§!建筑。"
  THE_TFR_shadow_core_creation_add_courthouse_tt: "省份§Y核心化§!完成时添加§Y法院§!建筑。"
+ THE_TFR_shadow_every_province_add_town_hall_tt: "治下所有省份添加§Y市政厅§!建筑。"
+ THE_TFR_shadow_core_creation_add_town_hall_tt: "省份§Y核心化§!完成时添加§Y市政厅§!建筑。"
  THE_TFR_shadow_core_creation_add_5_capacity_tt: "省份§Y核心化§!完成时获得§G5§!行政容量。"
  THE_TFR_shadow_every_SCR_core_add_100_cash_tt: "治下每拥有1个@SCR§Y[SCR.GetName]§!的核心省份，获得§G250§!¤。"
  THE_TFR_shadow_core_creation_add_2000_manpower_tt: "省份§Y核心化§!完成时获得§G2000§!£icon_manpower£人力。"
@@ -20,6 +22,14 @@
  THE_TFR_shadow_core_creation_add_10_mil_tt: "省份§Y核心化§!完成时获得§G10§!£mil£军事点数。"
  THE_TFR_shadow_bury_old_hell_tt: "§R填埋§!治下每个位于§Y地狱之道§!、§Y运河河岸§!、§Y地灵殿§!、§Y鬼之国§!、§Y灼热地狱§!、§Y鬼族飞地§!区域的省份\n每个被§R填埋§!的省份给予如下效果:"
  THE_TFR_shadow_add_5_capacity_1_tt: "获得§G5§!行政容量。\n获得§G-1.0%§!陆军损耗。\n获得§G+0.10§!外交声誉。"
+ THE_TFR_shadow_core_creation_add_2_army_tradition_tt: "省份§Y核心化§!完成时获得§G2§!陆军传统。"
+ THE_TFR_shadow_core_creation_add_2_navy_tradition_tt: "省份§Y核心化§!完成时获得§G2§!海军传统。"
+ THE_TFR_shadow_core_creation_decrease_10_rebel_tt: "省份§Y核心化§!完成时减少§G10§!所有叛军进度。"
+ THE_TFR_shadow_core_creation_add_1_powerprojection_tt: "省份§Y核心化§!完成时获得§G+1§!力量投射。"
+ THE_TFR_shadow_core_creation_add_income_tt: "省份§Y核心化§!完成时获得§G0.1§!年收入。"
+
+ THE_TFR_shadow_end_tt: "感谢游玩东方风云拓展非正式内容@TFR§Y三月精-影§!，正式内容@TFR§Y三月精-联§!正在制作中。\n\nsoon~"
+ ### 关于「联」：「联」并不是一个与「影」相反的和谐美好故事，而是从三月精本身出发，关于妖精的「国度（Genso）」和内外认同的故事。
 ### TOOLTIP_END
 
 ### EVENT
@@ -35,6 +45,10 @@
  THE_TFR_shadow_events.3.sunny: "影之妖精-桑尼米尔克。"
  THE_TFR_shadow_events.3.luna: "影之妖精-露娜切露德。"
  THE_TFR_shadow_events.3.star: "影之妖精-斯塔萨菲雅。"
+
+ THE_TFR_shadow_events.4.title: "影之结尾"
+ THE_TFR_shadow_events.4.desc: "「影」桑尼：……\n「影」露娜：……\n「影」斯塔：……"
+ THE_TFR_shadow_events.4.end: "……"
 ### EVENT_END
 
 ### GOVERNMENT
@@ -68,7 +82,12 @@
  THE_TFR_shadow_inverse_entropy_modifier: "逆熵动力"
  THE_TFR_shadow_ugly_qualia_modifier: "惧魂寄所"
  THE_TFR_feedforward_control_modifier: "前馈控制"
-
+ THE_TFR_shadow_fairy_bestow_modifier: "妖精恩赐"
+ THE_TFR_shadow_farewell_ceremony_modifier: "欢送仪式"
+ THE_TFR_shadow_manage_system_modifier: "管理系统"
+ THE_TFR_shadow_ecological_invasion_modifier: "生态入侵"
+ THE_TFR_shadow_tue_world_modifier: "白兔出洞"
+ THE_TFR_shadow_fading_stars_modifier: "褪色繁星"
  THE_TFR_shadow_light_fairy_modifier: "『光之三妖精』"
 ### MODIFIER_END
 
@@ -79,3 +98,7 @@
  THE_TFR_shadow_switch_ruler_decision_title: "@TFR影之更替"
  THE_TFR_shadow_switch_ruler_decision_desc: "对于影之妖精，统治领域是枯燥的，破坏才是她们的享乐。「影」会驱使她们主动进行破坏并在其中输出「影」的力量，或是在战争中死亡等待复生，更替制就是为了应对这种情况。"
 ### DECISION_END
+
+### POWERPROJECTION
+ THE_TFR_shadow_arrive_powerprojection: "§g影之降临§!"
+### POWERPROJECTION_END

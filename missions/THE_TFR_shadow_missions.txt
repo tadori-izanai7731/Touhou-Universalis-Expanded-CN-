@@ -53,6 +53,7 @@ THE_TFR_shadow_branch_1 = {
 				area = Yuugi_state
 				area = Blazing_hell_state
 				area = Oni_exclave_state
+				area = Gate_to_the_dead
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		} 
@@ -67,6 +68,7 @@ THE_TFR_shadow_branch_1 = {
 					area = Yuugi_state
 					area = Blazing_hell_state
 					area = Oni_exclave_state
+					area = Gate_to_the_dead
 				}
 			}
 		} 
@@ -91,6 +93,7 @@ THE_TFR_shadow_branch_1 = {
 							area = Yuugi_state
 							area = Blazing_hell_state
 							area = Oni_exclave_state
+							area = Gate_to_the_dead
 						}
 					}
 					add_devastation = 100
@@ -115,11 +118,40 @@ THE_TFR_shadow_branch_1 = {
 		icon = mission_unknown_mission
 		position = 6
 		required_missions = { THE_TFR_shadow_1_5 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				area = Land_of_the_dead
+				area = Higan_southern_coast
+				area = Higan_state
+				area = Eastern_higan
+				area = Western_higan
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				OR = {
+					area = Land_of_the_dead
+					area = Higan_southern_coast
+					area = Higan_state
+					area = Eastern_higan
+					area = Western_higan
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = THE_TFR_shadow_manage_system_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_TFR_shadow_core_creation_decrease_10_rebel_tt
+			hidden_effect = {
+				set_country_flag = THE_TFR_shadow_core_creation_decrease_10_rebel_flag
+			}
+		} 
 	}
 }
 THE_TFR_shadow_branch_2 = {
@@ -304,11 +336,54 @@ THE_TFR_shadow_branch_2 = {
 		icon = mission_unknown_mission
 		position = 5
 		required_missions = { THE_TFR_shadow_2_4 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				area = Moriya_state
+				area = Moriya_coast_state
+				area = Southern_moriya
+				area = Shining_needle_state
+				area = Mountain_kappa_land
+				area = Genbu_ravine_state
+				area = Kappa_state
+				area = Kappa_delta
+			}
+			religion = th_moriyashinto
+		} 
 
-		trigger = {  } 
+		trigger = {
+			calc_true_if = {
+				amount = 20
+				all_province = {
+					OR = {
+						area = Moriya_state
+						area = Moriya_coast_state
+						area = Southern_moriya
+						area = Shining_needle_state
+						area = Mountain_kappa_land
+						area = Genbu_ravine_state
+						area = Kappa_state
+						area = Kappa_delta
+					}
+					NOT = { religion = th_moriyashinto }
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = THE_TFR_shadow_fairy_bestow_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_TFR_shadow_every_province_add_town_hall_tt
+			custom_tooltip = THE_TFR_shadow_core_creation_add_town_hall_tt
+			hidden_effect = {
+				every_owned_province = {
+					add_building = town_hall
+				}
+				clr_country_flag = THE_TFR_shadow_core_creation_add_courthouse_flag
+				set_country_flag = THE_TFR_shadow_core_creation_add_town_hall_flag
+			}
+		} 
 	}
 
 	THE_TFR_shadow_2_6 = {
@@ -318,11 +393,46 @@ THE_TFR_shadow_branch_2 = {
 			THE_TFR_shadow_1_5
 			THE_TFR_shadow_2_5
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {	
+				area = Sea_of_petroleum
+				area = Hifuu_club
+				area = Sanzu_upstream
+				area = Saki_state
+				area = Yachie_state
+				area = Western_great_border
+				area = Keiki_state
+				area = Great_border
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 25
+				OR = {	
+					area = Sea_of_petroleum
+					area = Hifuu_club
+					area = Sanzu_upstream
+					area = Saki_state
+					area = Yachie_state
+					area = Western_great_border
+					area = Keiki_state
+					area = Great_border
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = THE_TFR_shadow_ecological_invasion_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_TFR_shadow_core_creation_add_1_powerprojection_tt
+			hidden_effect = {
+				set_country_flag = THE_TFR_shadow_core_creation_add_1_powerprojection_flag
+			}
+		} 
 	}
 }
 THE_TFR_shadow_branch_3 = {
@@ -420,17 +530,58 @@ THE_TFR_shadow_branch_3 = {
 		icon = mission_unknown_mission
 		position = 5
 		required_missions = { THE_TFR_shadow_3_3 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				area = Perfect_cut_coast
+				area = Sunny_plains
+				area = Gengetsu_state
+				area = Rika_state
+				area = World_of_fantasies
+				area = Konngaras_state
+				area = Old_hakurei_shrine_state
+				area = Eastern_old_hakurei_shrine_state
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 30
+				OR = {
+					area = Perfect_cut_coast
+					area = Sunny_plains
+					area = Gengetsu_state
+					area = Rika_state
+					area = World_of_fantasies
+					area = Konngaras_state
+					area = Old_hakurei_shrine_state
+					area = Eastern_old_hakurei_shrine_state
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			add_country_modifier = {
+				name = THE_TFR_shadow_farewell_ceremony_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_TFR_shadow_core_creation_add_2_army_tradition_tt
+			hidden_effect = {
+				set_country_flag = THE_TFR_shadow_core_creation_add_2_army_tradition_flag
+			}
+		} 
 	}
 
 	THE_TFR_shadow_3_6 = {
 		icon = mission_unknown_mission
 		position = 6
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				continent = gensokyo_continent
+				continent = moon_continent
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
 		trigger = {
 			OR = {
@@ -474,7 +625,11 @@ THE_TFR_shadow_branch_3 = {
 
 		trigger = {  } 
 
-		effect = {  } 
+		effect = {
+			country_event = {
+				id = THE_TFR_shadow_events.4
+			}
+		} 
 	}
 }
 THE_TFR_shadow_branch_4 = {
@@ -635,11 +790,38 @@ THE_TFR_shadow_branch_4 = {
 		icon = mission_unknown_mission
 		position = 6
 		required_missions = { THE_TFR_shadow_3_5 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				area = Makai_area
+				area = Makai_coast_state
+				area = Makai_peninsula_state
+				area = Western_makai_state
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				OR = {
+					area = Makai_area
+					area = Makai_coast_state
+					area = Makai_peninsula_state
+					area = Western_makai_state
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = THE_TFR_shadow_tue_world_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_TFR_shadow_core_creation_add_income_tt
+			hidden_effect = {
+				set_country_flag = THE_TFR_shadow_core_creation_add_income_flag
+			}
+		} 
 	}
 }
 THE_TFR_shadow_branch_5 = {
@@ -738,10 +920,50 @@ THE_TFR_shadow_branch_5 = {
 			THE_TFR_shadow_3_5
 			THE_TFR_shadow_5_5
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				area = Eastern_dragon_islands
+				area = Western_dragon_islands
+				area = Dragon_islands
+				area = Uncolonized_moon_state
+				area = Southern_moon_state
+				area = Northern_moon_state
+				area = Western_moon_state
+				area = Hecetias_colony
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				OR = {
+					area = Eastern_dragon_islands
+					area = Western_dragon_islands
+					area = Dragon_islands
+				}
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 18
+				OR = {
+					area = Uncolonized_moon_state
+					area = Southern_moon_state
+					area = Northern_moon_state
+					area = Western_moon_state
+					area = Hecetias_colony
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = THE_TFR_shadow_fading_stars_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_TFR_shadow_core_creation_add_2_navy_tradition_tt
+			hidden_effect = {
+				set_country_flag = THE_TFR_shadow_core_creation_add_2_navy_tradition_flag
+			}
+		} 
 	}
 }

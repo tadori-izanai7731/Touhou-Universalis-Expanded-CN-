@@ -17,6 +17,15 @@ THE_TFR_shadow_on_core_scripted_effect = {
 	}
 	if = {
 		limit = {
+			FROM = {
+				has_country_flag = THE_TFR_shadow_core_creation_add_town_hall_flag
+			}
+			NOT = { has_building = town_hall }
+		}
+		add_building = town_hall
+	}
+	if = {
+		limit = {
 			FROM = { has_country_flag = THE_TFR_shadow_core_creation_add_5_capacity_flag }
 		}
 		FROM = {
@@ -57,6 +66,51 @@ THE_TFR_shadow_on_core_scripted_effect = {
 		}
 		FROM = {
 			add_mil_power = 10
+		}
+	}
+	if = {
+		limit = {
+			FROM = { has_country_flag = THE_TFR_shadow_core_creation_add_2_army_tradition_flag }
+		}
+		FROM = {
+			add_army_tradition = 2
+		}
+	}
+	if = {
+		limit = {
+			FROM = { has_country_flag = THE_TFR_shadow_core_creation_add_2_navy_tradition_flag }
+		}
+		FROM = {
+			add_navy_tradition = 2
+		}
+	}
+	if = {
+		limit = {
+			FROM = { has_country_flag = THE_TFR_shadow_core_creation_decrease_10_rebel_flag }
+		}
+		FROM = {
+			add_rebel_progress = {
+				value = -10
+			}
+		}
+	}
+	if = {
+		limit = {
+			FROM = { has_country_flag = THE_TFR_shadow_core_creation_add_1_powerprojection_flag }
+		}
+		FROM = {
+			add_power_projection = {
+				type = THE_TFR_shadow_arrive_powerprojection
+				amount = 1
+			}
+		}
+	}
+	if = {
+		limit = {
+			FROM = { has_country_flag = THE_TFR_shadow_core_creation_add_income_flag }
+		}
+		FROM = {
+			add_years_of_income = 0.1
 		}
 	}
 }

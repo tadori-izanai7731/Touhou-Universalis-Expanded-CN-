@@ -69,7 +69,7 @@ THE_TFR_shadow_inverse_entropy_modifier = {
 	ae_impact = -0.2
 }
 
-#惧魂归宿
+#惧魂归所
 THE_TFR_shadow_ugly_qualia_modifier = {
 	improve_relation_modifier = 0.5
 	global_institution_spread = 1.0
@@ -83,6 +83,54 @@ THE_TFR_feedforward_control_modifier = {
 	movement_speed = 0.2
 	spy_offence = 0.5
 	province_warscore_cost = -0.15
+}
+
+#妖精恩赐
+THE_TFR_shadow_fairy_bestow_modifier = {
+	morale_damage_received = -0.2
+	global_trade_goods_size_modifier = 0.1
+	tolerance_own = 3
+	advisor_cost = -0.25
+}
+
+#欢送仪式
+THE_TFR_shadow_farewell_ceremony_modifier = {
+	discipline = 0.05
+	land_forcelimit_modifier = 0.25
+	global_trade_power = 1.0
+	defensiveness = 0.25
+}
+
+#管理系统
+THE_TFR_shadow_manage_system_modifier = {
+	core_creation = -0.1
+	global_prosperity_growth = 1.0
+	years_of_nationalism = -10
+	global_allowed_num_of_buildings = 2
+}
+
+#生态入侵
+THE_TFR_shadow_ecological_invasion_modifier = {
+	country_military_power = 1
+	siege_ability = 0.15
+	land_morale = 0.15
+	administrative_efficiency = 0.05
+}
+
+#真实世界
+THE_TFR_shadow_tue_world_modifier = {
+	all_power_cost = -0.1
+	inflation_reduction = 0.25
+	yearly_corruption = -0.5
+	prestige = 5
+}
+
+#褪色繁星
+THE_TFR_shadow_fading_stars_modifier = {
+	global_ship_repair = 1.0
+	province_warscore_cost = -0.1
+	unjustified_demands = -1.0
+	ignore_coring_distance = yes
 }
 
 #############################################
