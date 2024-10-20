@@ -17,9 +17,72 @@ THE_TFR_shadow_mechanic = {
 			increases_with_global = no
 			scaled_modifier = {
 				modifier = {
-					governing_capacity = 1000000
+					governing_capacity = 5000
 				}
 				start_value = 0
+				end_value = 1000
+			}
+			scaled_modifier = {
+				modifier = {
+					governing_capacity = 5000
+				}
+				start_value = 1000
+				end_value = 2000
+			}
+			scaled_modifier = {
+				modifier = {
+					governing_capacity = 5000
+				}
+				start_value = 2000
+				end_value = 3000
+			}
+			scaled_modifier = {
+				modifier = {
+					governing_capacity = 5000
+				}
+				start_value = 3000
+				end_value = 4000
+			}
+			scaled_modifier = {
+				modifier = {
+					governing_capacity = 5000
+				}
+				start_value = 4000
+				end_value = 5000
+			}
+			scaled_modifier = {
+				modifier = {
+					governing_capacity = 5000
+				}
+				start_value = 5000
+				end_value = 6000
+			}
+			scaled_modifier = {
+				modifier = {
+					governing_capacity = 5000
+				}
+				start_value = 6000
+				end_value = 7000
+			}
+			scaled_modifier = {
+				modifier = {
+					governing_capacity = 5000
+				}
+				start_value = 7000
+				end_value = 8000
+			}
+			scaled_modifier = {
+				modifier = {
+					governing_capacity = 5000
+				}
+				start_value = 8000
+				end_value = 9000
+			}
+			scaled_modifier = {
+				modifier = {
+					governing_capacity = 5000
+				}
+				start_value = 9000
 				end_value = 10000
 			}
 		}

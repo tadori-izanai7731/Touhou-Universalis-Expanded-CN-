@@ -32,7 +32,7 @@ THE_TFR_shadow_on_core_scripted_effect = {
 			add_government_power = {
 				mechanic_type = THE_TFR_shadow_mechanic
 				power_type = THE_TFR_shadow_mechanic_power
-				value = 0.05
+				value = 1
 			}
 		}
 	}
