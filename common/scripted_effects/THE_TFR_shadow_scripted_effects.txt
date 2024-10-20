@@ -113,6 +113,17 @@ THE_TFR_shadow_on_core_scripted_effect = {
 			add_years_of_income = 0.1
 		}
 	}
+	if = {
+		limit = {
+			FROM = { has_country_flag = THE_TFR_shadow_core_creation_decrease_1_ae_flag }
+		}
+		every_country = {
+			add_aggressive_expansion = {
+				who = FROM
+				value = -1
+			}
+		}
+	}
 }
 
 THE_TFR_shadow_switch_ruler = {

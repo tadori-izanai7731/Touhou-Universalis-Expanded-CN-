@@ -126,5 +126,10 @@ country_event = {
 	option = {
 		name = THE_TFR_shadow_events.4.end
 		custom_tooltip = THE_TFR_shadow_end_tt
+		hidden_effect = {
+			change_country_color = {
+				color = { 7 224 0 }
+			}
+		}
 	}
 }
