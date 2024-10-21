@@ -178,8 +178,7 @@ THE_TFR_shadow_branch_2 = {
 		trigger = {
 			OR = {
 				mil_tech = 4
-				army_size_percentage = 1.0
-				army_size = 30
+				army_size = 20
 			}
 		} 
 
@@ -463,9 +462,10 @@ THE_TFR_shadow_branch_3 = {
 		} 
 
 		effect = {
-			add_adm_power = 100
-			add_dip_power = 100
-			add_mil_power = 100
+			add_adm_power = 200
+			add_dip_power = 200
+			add_mil_power = 200
+			add_treasury = 300
 			custom_tooltip = THE_TFR_shadow_add_permanent_claim_tt
 			hidden_effect = {
 				gensokyo_continent = { add_permanent_claim = ROOT }
@@ -475,6 +475,12 @@ THE_TFR_shadow_branch_3 = {
 				name = THE_TFR_shadow_call_fairy_modifier
 				duration = -1
 			}
+			add_country_modifier = {
+				name = THE_TFR_shadow_conquer_modifier
+				duration = 7300
+			}
+			custom_tooltip = THE_TFR_shadow_declare_war_refersh_duration_tt
+			custom_tooltip = empty_line_tt
 			country_event = {
 				id = THE_TFR_shadow_events.1
 			}

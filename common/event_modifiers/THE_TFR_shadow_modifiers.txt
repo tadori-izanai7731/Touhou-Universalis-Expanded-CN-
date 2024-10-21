@@ -134,6 +134,16 @@ THE_TFR_shadow_fading_stars_modifier = {
 	ignore_coring_distance = yes
 }
 
+#影之征服
+THE_TFR_shadow_conquer_modifier = {
+	infantry_cost = -0.5
+	siege_ability = 0.2
+	leader_cost = -0.5
+	administrative_efficiency = 0.05
+	province_warscore_cost = -0.1
+	core_creation = -0.1
+}
+
 #############################################
 
 #『光之三妖精』

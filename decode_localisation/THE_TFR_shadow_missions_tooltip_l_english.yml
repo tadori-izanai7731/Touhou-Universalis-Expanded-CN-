@@ -28,7 +28,7 @@
  THE_TFR_shadow_core_creation_add_1_powerprojection_tt: "省份§Y核心化§!完成时获得§G+1§!力量投射。"
  THE_TFR_shadow_core_creation_decrease_1_ae_tt: "省份§Y核心化§!完成时所有国家对@[Root.GetTag]§Y[Root.GetName]§!减少§G1§!侵略扩张。"
  THE_TFR_shadow_core_creation_add_income_tt: "省份§Y核心化§!完成时获得§G0.1§!年收入。"
-
+ THE_TFR_shadow_declare_war_refersh_duration_tt: "对其他国家宣战时，§Y「影之征服」§!的持续时间重置为§Y20§!年。"
  THE_TFR_shadow_end_tt: "感谢游玩东方风云拓展非正式内容@TFR§Y三月精-影§!，正式内容@TFR§Y三月精-联§!正在制作中。\n\nsoon~"
  ### 关于「联」：「联」并不是一个与「影」相反的和谐美好故事，而是从三月精本身出发，关于妖精的「国度（Genso）」和内外认同的故事。
 ### TOOLTIP_END
@@ -89,6 +89,7 @@
  THE_TFR_shadow_ecological_invasion_modifier: "生态入侵"
  THE_TFR_shadow_tue_world_modifier: "白兔出洞"
  THE_TFR_shadow_fading_stars_modifier: "褪色繁星"
+ THE_TFR_shadow_conquer_modifier: "影之征服"
  THE_TFR_shadow_light_fairy_modifier: "『光之三妖精』"
 ### MODIFIER_END
 
