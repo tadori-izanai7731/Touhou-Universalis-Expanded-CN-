@@ -268,6 +268,18 @@ l_english:
  THE_ROD_contingency_management_tt: "建造§Y要塞§!建筑将使自身和相邻省份获得如下效果:"
  THE_ROD_strategy_and_arm_department_change_name_tt: "[Root.Get贵族Name]阶层特权「§Y宵暗骑士团§!」更名为「§Y军事战略和军用装备部§!」。"
  THE_ROD_strategy_and_arm_department_effect_tt: "提升£mil£§Y军事科技§!将使该特权获得额外效果。"
+ THE_ROD_strategy_and_arm_department_extra_modifier_tt: "「§Y军事战略和军用装备部§!」额外获得如下效果:"
+ THE_ROD_strategy_and_arm_department_tt_1: "每年陆军传统: §G+1.00§!"
+ THE_ROD_strategy_and_arm_department_tt_2: "步兵火力: §G+0.20§!"
+ THE_ROD_strategy_and_arm_department_tt_3: "陆军损耗: §G-15.0%§!"
+ THE_ROD_strategy_and_arm_department_tt_4: "陆军将领围城: §G+1.00§!"
+ THE_ROD_strategy_and_arm_department_tt_5: "全局进攻方骰子数值奖励: §G+1§!"
+ THE_ROD_strategy_and_arm_department_tt_6: "全局防御方骰子数值奖励: §G+1§!"
+ THE_ROD_strategy_and_arm_department_tt_7: "补员速度: §G+15.0%§!"
+ THE_ROD_strategy_and_arm_department_tt_8: "免维护点数将领: §G+2§!"
+ THE_ROD_strategy_and_arm_department_tt_9: "炮兵轰击花费: §G-10.0%§!"
+ THE_ROD_strategy_and_arm_department_tt_10: "国家要塞驻军增长: §G+25.0%§!"
+ THE_ROD_strategy_and_arm_department_tt_error: "如果看到这个选项，说明已经拿到了所有额外效果，由于BUG或控制台导致再次触发了该事件"
  THE_ROD_not_complete_event_ttt: "没做完"
 ###TOOLTIP_END
 
@@ -715,6 +727,19 @@ l_english:
  THE_ROD_events.44.title: "记忆中的巫女"
  THE_ROD_events.44.desc: "在幻想乡的某次异变中，路边无辜的露米娅成为了红白巫女的第一个受害者，如今宵暗领域的巫女服饰也沿用了露米娅记忆中的巫女。在阶层和分工明确的欧洲，神社的巫女只负责基本的神职工作而不需要完成保护人类和退治妖怪的工作，这与露米娅所想的巫女完全不一样。随着宵暗领域的扩张，博丽神道的影响力也随之扩大，即使没有弹幕战的环境，巫女这一职位进行改革，分担基层的生产和治安活动。"
  THE_ROD_events.44.a: "「果然那位巫女是独一无二的。」"
+
+
+ THE_ROD_events.108.1: "军事历史研究所"
+ THE_ROD_events.108.2: "火药武器研究所"
+ THE_ROD_events.108.3: "后勤供给研究所"
+ THE_ROD_events.108.4: "优势计划研究所"
+ THE_ROD_events.108.5: "战术第一研究所"
+ THE_ROD_events.108.6: "战术第二研究所"
+ THE_ROD_events.108.7: "战略支援研究所"
+ THE_ROD_events.108.8: "战略指挥研究所"
+ THE_ROD_events.108.9: "炮兵装备研究所"
+ THE_ROD_events.108.10: "防御工事研究所"
+ THE_ROD_events.108.error: "已经没有更多研究所了"
 ###EVENT_END
 
 ###VARIABLE

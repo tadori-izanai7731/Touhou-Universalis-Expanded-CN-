@@ -2674,62 +2674,143 @@ country_event = {
 	}
 }
 
-### Test Event
+country_event = {
+	id = THE_ROD_events.108
+	title = THE_ROD_events.108.title
+	desc = THE_ROD_events.108.desc
 
-# country_event = {
-# 	id = THE_ROD_events.108
-# 	title = THE_ROD_events.108.title
-# 	desc = THE_ROD_events.108.desc
+	is_triggered_only = yes
 
-# 	fire_only_once = yes
-# 	is_triggered_only = yes
-
-# 	trigger = {
-# 		always = no
-# 	}
+	trigger = {
+		has_country_flag = THE_ROD_strategy_and_arm_department_flag
+		OR = {
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_1_flag }
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_2_flag }
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_3_flag }
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_4_flag }
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_5_flag }
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_6_flag }
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_7_flag }
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_8_flag }
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_9_flag }
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_10_flag }
+		}
+	}
 	
-# 	option = {
-# 		name = THE_ROD_events.108.a
-# 		random_list = {
-# 			1 = { set_country_flag = THE_ROD_test_1_flag }
-# 			1 = { set_country_flag = THE_ROD_test_2_flag }
-# 			1 = { set_country_flag = THE_ROD_test_3_flag }
-# 			1 = { set_country_flag = THE_ROD_test_4_flag }
-# 			1 = { set_country_flag = THE_ROD_test_5_flag }
-# 			1 = { set_country_flag = THE_ROD_test_6_flag }
-# 			1 = { set_country_flag = THE_ROD_test_7_flag }
-# 		}
-# 	}
+	option = {
+		name = THE_ROD_events.108.1
+		trigger = {
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_1_flag }
+		}
+		set_country_flag = THE_ROD_strategy_and_arm_1_flag
+		custom_tooltip = THE_ROD_strategy_and_arm_department_extra_modifier_tt
+		custom_tooltip = THE_ROD_strategy_and_arm_department_tt_1
+	}
 
-# 	option = {
-# 		name = THE_ROD_events.108.b
-# 		if = {
-# 			limit = { THE_ROD_has_test_flag_amount = { amount_1 = 6 amount_2 = 7 } }
-# 			while = { limit = { THE_ROD_has_test_flag_amount_while = { amount = 7 } } THE_ROD_set_random_test_flag = yes }
-# 		}
-# 		if = {
-# 			limit = { THE_ROD_has_test_flag_amount = { amount_1 = 5 amount_2 = 6 } }
-# 			while = { limit = { THE_ROD_has_test_flag_amount_while = { amount = 6 } } THE_ROD_set_random_test_flag = yes }
-# 		}
-# 		if = {
-# 			limit = { THE_ROD_has_test_flag_amount = { amount_1 = 4 amount_2 = 5 } }
-# 			while = { limit = { THE_ROD_has_test_flag_amount_while = { amount = 5 } } THE_ROD_set_random_test_flag = yes }
-# 		}
-# 		if = {
-# 			limit = { THE_ROD_has_test_flag_amount = { amount_1 = 3 amount_2 = 4 } }
-# 			while = { limit = { THE_ROD_has_test_flag_amount_while = { amount = 4 } } THE_ROD_set_random_test_flag = yes }
-# 		}
-# 		if = {
-# 			limit = { THE_ROD_has_test_flag_amount = { amount_1 = 2 amount_2 = 3 } }
-# 			while = { limit = { THE_ROD_has_test_flag_amount_while = { amount = 3 } } THE_ROD_set_random_test_flag = yes }
-# 		}
-# 		if = {
-# 			limit = { THE_ROD_has_test_flag_amount = { amount_1 = 1 amount_2 = 2 } }
-# 			while = { limit = { THE_ROD_has_test_flag_amount_while = { amount = 2 } } THE_ROD_set_random_test_flag = yes }
-# 		}
-# 		if = {
-# 			limit = { THE_ROD_has_test_flag_amount_while = { amount = 1 } }
-# 			THE_ROD_set_random_test_flag = yes
-# 		}
-# 	}
-# }
+	option = {
+		name = THE_ROD_events.108.2
+		trigger = {
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_2_flag }
+		}
+		set_country_flag = THE_ROD_strategy_and_arm_2_flag
+		custom_tooltip = THE_ROD_strategy_and_arm_department_extra_modifier_tt
+		custom_tooltip = THE_ROD_strategy_and_arm_department_tt_2
+	}
+
+	option = {
+		name = THE_ROD_events.108.3
+		trigger = {
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_3_flag }
+		}
+		set_country_flag = THE_ROD_strategy_and_arm_3_flag
+		custom_tooltip = THE_ROD_strategy_and_arm_department_extra_modifier_tt
+		custom_tooltip = THE_ROD_strategy_and_arm_department_tt_3
+	}
+
+	option = {
+		name = THE_ROD_events.108.4
+		trigger = {
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_4_flag }
+		}
+		set_country_flag = THE_ROD_strategy_and_arm_4_flag
+		custom_tooltip = THE_ROD_strategy_and_arm_department_extra_modifier_tt
+		custom_tooltip = THE_ROD_strategy_and_arm_department_tt_4
+	}
+
+	option = {
+		name = THE_ROD_events.108.5
+		trigger = {
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_5_flag }
+		}
+		set_country_flag = THE_ROD_strategy_and_arm_5_flag
+		custom_tooltip = THE_ROD_strategy_and_arm_department_extra_modifier_tt
+		custom_tooltip = THE_ROD_strategy_and_arm_department_tt_5
+	}
+
+	option = {
+		name = THE_ROD_events.108.6
+		trigger = {
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_6_flag }
+		}
+		set_country_flag = THE_ROD_strategy_and_arm_6_flag
+		custom_tooltip = THE_ROD_strategy_and_arm_department_extra_modifier_tt
+		custom_tooltip = THE_ROD_strategy_and_arm_department_tt_6
+	}
+
+	option = {
+		name = THE_ROD_events.108.7
+		trigger = {
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_7_flag }
+		}
+		set_country_flag = THE_ROD_strategy_and_arm_7_flag
+		custom_tooltip = THE_ROD_strategy_and_arm_department_extra_modifier_tt
+		custom_tooltip = THE_ROD_strategy_and_arm_department_tt_7
+	}
+
+	option = {
+		name = THE_ROD_events.108.8
+		trigger = {
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_8_flag }
+		}
+		set_country_flag = THE_ROD_strategy_and_arm_8_flag
+		custom_tooltip = THE_ROD_strategy_and_arm_department_extra_modifier_tt
+		custom_tooltip = THE_ROD_strategy_and_arm_department_tt_8
+	}
+
+	option = {
+		name = THE_ROD_events.108.9
+		trigger = {
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_9_flag }
+		}
+		set_country_flag = THE_ROD_strategy_and_arm_9_flag
+		custom_tooltip = THE_ROD_strategy_and_arm_department_extra_modifier_tt
+		custom_tooltip = THE_ROD_strategy_and_arm_department_tt_9
+	}
+
+	option = {
+		name = THE_ROD_events.108.10
+		trigger = {
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_10_flag }
+		}
+		set_country_flag = THE_ROD_strategy_and_arm_10_flag
+		custom_tooltip = THE_ROD_strategy_and_arm_department_extra_modifier_tt
+		custom_tooltip = THE_ROD_strategy_and_arm_department_tt_10
+	}
+
+	option = {
+		name = THE_ROD_events.108.error
+		trigger = {
+			has_country_flag = THE_ROD_strategy_and_arm_1_flag
+			has_country_flag = THE_ROD_strategy_and_arm_2_flag
+			has_country_flag = THE_ROD_strategy_and_arm_3_flag
+			has_country_flag = THE_ROD_strategy_and_arm_4_flag
+			has_country_flag = THE_ROD_strategy_and_arm_5_flag
+			has_country_flag = THE_ROD_strategy_and_arm_6_flag
+			has_country_flag = THE_ROD_strategy_and_arm_7_flag
+			has_country_flag = THE_ROD_strategy_and_arm_8_flag
+			has_country_flag = THE_ROD_strategy_and_arm_9_flag
+			has_country_flag = THE_ROD_strategy_and_arm_10_flag
+		}
+		custom_tooltip = THE_ROD_strategy_and_arm_department_tt_error
+	}
+}

@@ -429,45 +429,8 @@ THE_ROD_on_core_scripted_effect = {
 THE_ROD_on_mil_tech_taken_scripted_effect = {
 	if = {
 		limit = { has_country_flag = THE_ROD_strategy_and_arm_department_flag }
-		if = {
-			limit = { THE_ROD_has_strategy_and_arm_flag_amount = { amount_1 = 9 amount_2 = 10 } }
-			while = { limit = { THE_ROD_has_strategy_and_arm_flag_amount_while = { amount = 10 } } THE_ROD_set_random_strategy_and_arm_flag = yes }
-		}
-		if = {
-			limit = { THE_ROD_has_strategy_and_arm_flag_amount = { amount_1 = 8 amount_2 = 9 } }
-			while = { limit = { THE_ROD_has_strategy_and_arm_flag_amount_while = { amount = 9 } } THE_ROD_set_random_strategy_and_arm_flag = yes }
-		}
-		if = {
-			limit = { THE_ROD_has_strategy_and_arm_flag_amount = { amount_1 = 7 amount_2 = 8 } }
-			while = { limit = { THE_ROD_has_strategy_and_arm_flag_amount_while = { amount = 8 } } THE_ROD_set_random_strategy_and_arm_flag = yes }
-		}
-		if = {
-			limit = { THE_ROD_has_strategy_and_arm_flag_amount = { amount_1 = 6 amount_2 = 7 } }
-			while = { limit = { THE_ROD_has_strategy_and_arm_flag_amount_while = { amount = 7 } } THE_ROD_set_random_strategy_and_arm_flag = yes }
-		}
-		if = {
-			limit = { THE_ROD_has_strategy_and_arm_flag_amount = { amount_1 = 5 amount_2 = 6 } }
-			while = { limit = { THE_ROD_has_strategy_and_arm_flag_amount_while = { amount = 6 } } THE_ROD_set_random_strategy_and_arm_flag = yes }
-		}
-		if = {
-			limit = { THE_ROD_has_strategy_and_arm_flag_amount = { amount_1 = 4 amount_2 = 5 } }
-			while = { limit = { THE_ROD_has_strategy_and_arm_flag_amount_while = { amount = 5 } } THE_ROD_set_random_strategy_and_arm_flag = yes }
-		}
-		if = {
-			limit = { THE_ROD_has_strategy_and_arm_flag_amount = { amount_1 = 3 amount_2 = 4 } }
-			while = { limit = { THE_ROD_has_strategy_and_arm_flag_amount_while = { amount = 4 } } THE_ROD_set_random_strategy_and_arm_flag = yes }
-		}
-		if = {
-			limit = { THE_ROD_has_strategy_and_arm_flag_amount = { amount_1 = 2 amount_2 = 3 } }
-			while = { limit = { THE_ROD_has_strategy_and_arm_flag_amount_while = { amount = 3 } } THE_ROD_set_random_strategy_and_arm_flag = yes }
-		}
-		if = {
-			limit = { THE_ROD_has_strategy_and_arm_flag_amount = { amount_1 = 1 amount_2 = 2 } }
-			while = { limit = { THE_ROD_has_strategy_and_arm_flag_amount_while = { amount = 2 } } THE_ROD_set_random_strategy_and_arm_flag = yes }
-		}
-		if = {
-			limit = { THE_ROD_has_strategy_and_arm_flag_amount_while = { amount = 1 } }
-			THE_ROD_set_random_strategy_and_arm_flag = yes
+		country_event = {
+			id = THE_ROD_events.108
 		}
 	}
 }
