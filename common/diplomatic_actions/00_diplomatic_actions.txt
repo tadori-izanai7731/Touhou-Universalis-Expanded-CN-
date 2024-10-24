@@ -1351,4 +1351,15 @@ callaction = {
 			always = no
 		}
 	}
+	condition = {
+		potential = { any_country = { has_country_modifier = THE_TFR_shadow_conquer_modifier war_with = ROOT } }
+		allow = {
+			FROM = {
+				trust = {
+					who = ROOT
+					value = 100
+				}
+			}
+		}
+	}
 }
