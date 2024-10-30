@@ -1,0 +1,17 @@
+country_decisions = {
+	THE_HVR_start_supreme_heaven_decision = {
+		major = yes
+		color = { 0 137 253 }
+		potential = {
+			tag = HVR
+			ai = no
+			NOT = { has_country_flag = THE_HVR_had_start_supreme_heaven_flag }
+		}
+		allow = {
+			NOT = { is_year = 1445 }
+		}
+		effect = {
+			set_country_flag = THE_HVR_had_start_supreme_heaven_flag
+		}
+	}
+}
