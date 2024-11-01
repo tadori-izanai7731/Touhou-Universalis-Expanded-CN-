@@ -17,70 +17,70 @@ THE_TFR_shadow_mechanic = {
 			increases_with_global = no
 			scaled_modifier = {
 				modifier = {
-					governing_capacity = 5000
+					governing_capacity = 10000
 				}
 				start_value = 0
 				end_value = 1000
 			}
 			scaled_modifier = {
 				modifier = {
-					governing_capacity = 5000
+					governing_capacity = 10000
 				}
 				start_value = 1000
 				end_value = 2000
 			}
 			scaled_modifier = {
 				modifier = {
-					governing_capacity = 5000
+					governing_capacity = 10000
 				}
 				start_value = 2000
 				end_value = 3000
 			}
 			scaled_modifier = {
 				modifier = {
-					governing_capacity = 5000
+					governing_capacity = 10000
 				}
 				start_value = 3000
 				end_value = 4000
 			}
 			scaled_modifier = {
 				modifier = {
-					governing_capacity = 5000
+					governing_capacity = 10000
 				}
 				start_value = 4000
 				end_value = 5000
 			}
 			scaled_modifier = {
 				modifier = {
-					governing_capacity = 5000
+					governing_capacity = 10000
 				}
 				start_value = 5000
 				end_value = 6000
 			}
 			scaled_modifier = {
 				modifier = {
-					governing_capacity = 5000
+					governing_capacity = 10000
 				}
 				start_value = 6000
 				end_value = 7000
 			}
 			scaled_modifier = {
 				modifier = {
-					governing_capacity = 5000
+					governing_capacity = 10000
 				}
 				start_value = 7000
 				end_value = 8000
 			}
 			scaled_modifier = {
 				modifier = {
-					governing_capacity = 5000
+					governing_capacity = 10000
 				}
 				start_value = 8000
 				end_value = 9000
 			}
 			scaled_modifier = {
 				modifier = {
-					governing_capacity = 5000
+					governing_capacity = 10000
 				}
 				start_value = 9000
 				end_value = 10000
@@ -94,8 +94,8 @@ THE_TFR_shadow_mechanic = {
 			increases_with_global = no
 			scaled_modifier = {
 				modifier = {
-					global_manpower_modifier = 1.0
-					global_unrest = -10
+					global_manpower_modifier = 2.0
+					global_unrest = -20
 				}
 				start_value = 0
 				end_value = 100
@@ -109,8 +109,8 @@ THE_TFR_shadow_mechanic = {
 			increases_with_global = no
 			scaled_modifier = {
 				modifier = {
-					land_attrition = -1.0
-					diplomatic_reputation = 10
+					land_attrition = -2.0
+					diplomatic_reputation = 20
 				}
 				start_value = 0
 				end_value = 100

@@ -17,6 +17,7 @@ THE_TFR_shadow_monarchy_reform = {
 	custom_attributes = {
 		locked_government_type = yes
 		THE_TFR_shadow_core_creation_add_state_core_custom_attributes = yes
+		THE_TFR_shadow_can_use_sacrifice_diplomatic_action_custom_attributes = yes
 		THE_forbid_form_gensokyan_decision_custom_attributes = yes
 		THE_forbid_form_fairy_utopia_decision_custom_attributes = yes
 	}
@@ -53,6 +54,7 @@ THE_TFR_shadow_republic_reform = {
 		locked_government_type = yes
 		election_on_death = yes
 		THE_TFR_shadow_core_creation_add_state_core_custom_attributes = yes
+		THE_TFR_shadow_can_use_sacrifice_diplomatic_action_custom_attributes = yes
 		THE_forbid_form_gensokyan_decision_custom_attributes = yes
 		THE_forbid_form_fairy_utopia_decision_custom_attributes = yes
 	}
@@ -85,6 +87,7 @@ THE_TFR_shadow_theocracy_reform = {
 	custom_attributes = {
 		locked_government_type = yes
 		THE_TFR_shadow_core_creation_add_state_core_custom_attributes = yes
+		THE_TFR_shadow_can_use_sacrifice_diplomatic_action_custom_attributes = yes
 		THE_forbid_form_gensokyan_decision_custom_attributes = yes
 		THE_forbid_form_fairy_utopia_decision_custom_attributes = yes
 	}
@@ -117,6 +120,7 @@ THE_TFR_shadow_tribal_reform = {
 	custom_attributes = {
 		locked_government_type = yes
 		THE_TFR_shadow_core_creation_add_state_core_custom_attributes = yes
+		THE_TFR_shadow_can_use_sacrifice_diplomatic_action_custom_attributes = yes
 		THE_forbid_form_gensokyan_decision_custom_attributes = yes
 		THE_forbid_form_fairy_utopia_decision_custom_attributes = yes
 	}

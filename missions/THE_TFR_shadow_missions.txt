@@ -25,6 +25,9 @@ THE_TFR_shadow_branch_1 = {
 		} 
 
 		effect = {
+			add_adm_power = 200
+			add_dip_power = 200
+			add_mil_power = 200
 			add_country_modifier = {
 				name = THE_TFR_shadow_red_solidify_modifier
 				duration = -1
@@ -79,6 +82,9 @@ THE_TFR_shadow_branch_1 = {
 		} 
 
 		effect = {
+			add_adm_power = 200
+			add_dip_power = 200
+			add_mil_power = 200
 			add_country_modifier = {
 				name = THE_TFR_shadow_ugly_qualia_modifier
 				duration = -1
@@ -148,6 +154,9 @@ THE_TFR_shadow_branch_1 = {
 		} 
 
 		effect = {
+			add_adm_power = 200
+			add_dip_power = 200
+			add_mil_power = 200
 			add_country_modifier = {
 				name = THE_TFR_shadow_manage_system_modifier
 				duration = -1
@@ -183,6 +192,9 @@ THE_TFR_shadow_branch_2 = {
 		} 
 
 		effect = {
+			add_adm_power = 200
+			add_dip_power = 200
+			add_mil_power = 200
 			4996 = { add_core = ROOT }
 			5080 = { add_core = ROOT }
 			add_country_modifier = {
@@ -282,6 +294,9 @@ THE_TFR_shadow_branch_2 = {
 		} 
 
 		effect = {
+			add_adm_power = 200
+			add_dip_power = 200
+			add_mil_power = 200
 			add_country_modifier = {
 				name = THE_TFR_shadow_culture_clear_modifier
 				duration = -1
@@ -325,6 +340,9 @@ THE_TFR_shadow_branch_2 = {
 		} 
 
 		effect = {
+			add_adm_power = 200
+			add_dip_power = 200
+			add_mil_power = 200
 			add_country_modifier = {
 				name = THE_TFR_feedforward_control_modifier
 				duration = -1
@@ -374,6 +392,9 @@ THE_TFR_shadow_branch_2 = {
 		} 
 
 		effect = {
+			add_adm_power = 200
+			add_dip_power = 200
+			add_mil_power = 200
 			add_country_modifier = {
 				name = THE_TFR_shadow_fairy_bestow_modifier
 				duration = -1
@@ -428,6 +449,9 @@ THE_TFR_shadow_branch_2 = {
 		} 
 
 		effect = {
+			add_adm_power = 200
+			add_dip_power = 200
+			add_mil_power = 200
 			add_country_modifier = {
 				name = THE_TFR_shadow_ecological_invasion_modifier
 				duration = -1
@@ -526,10 +550,15 @@ THE_TFR_shadow_branch_3 = {
 		} 
 
 		effect = {
+			add_adm_power = 200
+			add_dip_power = 200
+			add_mil_power = 200
 			add_country_modifier = {
 				name = THE_TFR_shadow_nevermore_dream_modifier
 				duration = -1
 			}
+			custom_tooltip = THE_TFR_shadow_sacrifice_no_longer_need_time_tt
+			custom_tooltip = empty_line_tt
 			custom_tooltip = THE_TFR_shadow_core_creation_add_10_adm_tt
 			hidden_effect = {
 				set_country_flag = THE_TFR_shadow_core_creation_add_10_adm_flag
@@ -572,10 +601,15 @@ THE_TFR_shadow_branch_3 = {
 		} 
 
 		effect = { 
+			add_adm_power = 200
+			add_dip_power = 200
+			add_mil_power = 200
 			add_country_modifier = {
 				name = THE_TFR_shadow_farewell_ceremony_modifier
 				duration = -1
 			}
+			custom_tooltip = THE_TFR_shadow_sacrifice_no_longer_need_spy_tt
+			custom_tooltip = empty_line_tt
 			custom_tooltip = THE_TFR_shadow_core_creation_add_2_army_tradition_tt
 			hidden_effect = {
 				set_country_flag = THE_TFR_shadow_core_creation_add_2_army_tradition_flag
@@ -612,6 +646,9 @@ THE_TFR_shadow_branch_3 = {
 		} 
 
 		effect = {
+			add_adm_power = 200
+			add_dip_power = 200
+			add_mil_power = 200
 			add_country_modifier = {
 				name = THE_TFR_shadow_light_fairy_modifier
 				duration = -1
@@ -689,6 +726,9 @@ THE_TFR_shadow_branch_4 = {
 		} 
 
 		effect = {
+			add_adm_power = 200
+			add_dip_power = 200
+			add_mil_power = 200
 			add_country_modifier = {
 				name = THE_TFR_shadow_eternal_disaster_modifier
 				duration = -1
@@ -758,6 +798,9 @@ THE_TFR_shadow_branch_4 = {
 		} 
 
 		effect = {
+			add_adm_power = 200
+			add_dip_power = 200
+			add_mil_power = 200
 			add_country_modifier = {
 				name = THE_TFR_shadow_estate_expropriation_modifier
 				duration = -1
@@ -824,6 +867,9 @@ THE_TFR_shadow_branch_4 = {
 		} 
 
 		effect = {
+			add_adm_power = 200
+			add_dip_power = 200
+			add_mil_power = 200
 			add_country_modifier = {
 				name = THE_TFR_shadow_tue_world_modifier
 				duration = -1
@@ -870,6 +916,9 @@ THE_TFR_shadow_branch_5 = {
 		} 
 
 		effect = {
+			add_adm_power = 200
+			add_dip_power = 200
+			add_mil_power = 200
 			add_country_modifier = {
 				name = THE_TFR_shadow_confusion_prelude_modifier
 				duration = -1
@@ -913,6 +962,9 @@ THE_TFR_shadow_branch_5 = {
 		} 
 
 		effect = {
+			add_adm_power = 200
+			add_dip_power = 200
+			add_mil_power = 200
 			add_country_modifier = {
 				name = THE_TFR_shadow_inverse_entropy_modifier
 				duration = -1
@@ -967,6 +1019,9 @@ THE_TFR_shadow_branch_5 = {
 		} 
 
 		effect = {
+			add_adm_power = 200
+			add_dip_power = 200
+			add_mil_power = 200
 			add_country_modifier = {
 				name = THE_TFR_shadow_fading_stars_modifier
 				duration = -1
