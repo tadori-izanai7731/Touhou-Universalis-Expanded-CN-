@@ -23,12 +23,12 @@ THE_TFR_shadow_monarchy_reform = {
 	}
 
 	modifiers = {
-		discipline = 0.05
-		manpower_recovery_speed = 0.2
+		discipline = 0.1
+		manpower_recovery_speed = 0.25
 		core_creation = -0.1
 		danmaku_power_constant = 500
-		state_governing_cost = -0.1
-		state_maintenance_modifier = -0.5
+		state_governing_cost = -0.2
+		state_maintenance_modifier = -1.0
 	}
 }
 
@@ -60,12 +60,12 @@ THE_TFR_shadow_republic_reform = {
 	}
 
 	modifiers = {
-		discipline = 0.05
-		manpower_recovery_speed = 0.2
+		discipline = 0.1
+		manpower_recovery_speed = 0.25
 		core_creation = -0.1
 		danmaku_power_constant = 500
-		state_governing_cost = -0.1
-		state_maintenance_modifier = -0.5
+		state_governing_cost = -0.2
+		state_maintenance_modifier = -1.0
 	}
 }
 
@@ -93,12 +93,12 @@ THE_TFR_shadow_theocracy_reform = {
 	}
 
 	modifiers = {
-		discipline = 0.05
-		manpower_recovery_speed = 0.2
+		discipline = 0.1
+		manpower_recovery_speed = 0.25
 		core_creation = -0.1
 		danmaku_power_constant = 500
-		state_governing_cost = -0.1
-		state_maintenance_modifier = -0.5
+		state_governing_cost = -0.2
+		state_maintenance_modifier = -1.0
 	}
 }
 
@@ -126,11 +126,11 @@ THE_TFR_shadow_tribal_reform = {
 	}
 
 	modifiers = {
-		discipline = 0.05
-		manpower_recovery_speed = 0.2
+		discipline = 0.1
+		manpower_recovery_speed = 0.25
 		core_creation = -0.1
 		danmaku_power_constant = 500
-		state_governing_cost = -0.1
-		state_maintenance_modifier = -0.5
+		state_governing_cost = -0.2
+		state_maintenance_modifier = -1.0
 	}
 }

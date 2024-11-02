@@ -9,7 +9,7 @@ THE_TFR_shadow_branch_1 = {
 	} 
 
 	THE_TFR_shadow_1_3 = {
-		icon = mission_unknown_mission
+		icon = THE_TFR_shadow_mission_icon_05
 		position = 3
 		required_missions = { THE_TFR_shadow_2_2 } 
 		provinces_to_highlight = {
@@ -50,7 +50,7 @@ THE_TFR_shadow_branch_1 = {
 	}
 
 	THE_TFR_shadow_1_5 = {
-		icon = mission_unknown_mission
+		icon = THE_TFR_shadow_mission_icon_10
 		position = 5
 		required_missions = { THE_TFR_shadow_1_3 } 
 		provinces_to_highlight = {
@@ -126,7 +126,7 @@ THE_TFR_shadow_branch_1 = {
 	}
 
 	THE_TFR_shadow_1_6 = {
-		icon = mission_unknown_mission
+		icon = THE_TFR_shadow_mission_icon_14
 		position = 6
 		required_missions = { THE_TFR_shadow_1_5 } 
 		provinces_to_highlight = {
@@ -179,7 +179,7 @@ THE_TFR_shadow_branch_2 = {
 	} 
 
 	THE_TFR_shadow_2_2 = {
-		icon = mission_unknown_mission
+		icon = THE_TFR_shadow_mission_icon_02
 		position = 2
 		required_missions = { THE_TFR_shadow_3_1 } 
 		provinces_to_highlight = {  } 
@@ -268,7 +268,7 @@ THE_TFR_shadow_branch_2 = {
 	}
 
 	THE_TFR_shadow_2_3 = {
-		icon = mission_unknown_mission
+		icon = THE_TFR_shadow_mission_icon_06
 		position = 3
 		required_missions = { THE_TFR_shadow_2_2 } 
 		provinces_to_highlight = {
@@ -309,7 +309,7 @@ THE_TFR_shadow_branch_2 = {
 	}
 
 	THE_TFR_shadow_2_4 = {
-		icon = mission_unknown_mission
+		icon = THE_TFR_shadow_mission_icon_08
 		position = 4
 		required_missions = {
 			THE_TFR_shadow_2_3
@@ -355,7 +355,7 @@ THE_TFR_shadow_branch_2 = {
 	}
 
 	THE_TFR_shadow_2_5 = {
-		icon = mission_unknown_mission
+		icon = THE_TFR_shadow_mission_icon_11
 		position = 5
 		required_missions = { THE_TFR_shadow_2_4 } 
 		provinces_to_highlight = {
@@ -412,7 +412,7 @@ THE_TFR_shadow_branch_2 = {
 	}
 
 	THE_TFR_shadow_2_6 = {
-		icon = mission_unknown_mission
+		icon = THE_TFR_shadow_mission_icon_15
 		position = 6
 		required_missions = {
 			THE_TFR_shadow_1_5
@@ -474,7 +474,7 @@ THE_TFR_shadow_branch_3 = {
 	} 
 
 	THE_TFR_shadow_3_1 = {
-		icon = mission_unknown_mission
+		icon = THE_TFR_shadow_mission_icon_01
 		position = 1
 		provinces_to_highlight = {  } 
 
@@ -490,6 +490,7 @@ THE_TFR_shadow_branch_3 = {
 			add_dip_power = 200
 			add_mil_power = 200
 			add_treasury = 300
+			add_manpower = 50
 			custom_tooltip = THE_TFR_shadow_add_permanent_claim_tt
 			hidden_effect = {
 				gensokyo_continent = { add_permanent_claim = ROOT }
@@ -512,7 +513,7 @@ THE_TFR_shadow_branch_3 = {
 	}
 
 	THE_TFR_shadow_3_3 = {
-		icon = mission_unknown_mission
+		icon = THE_TFR_shadow_mission_icon_07
 		position = 3
 		required_missions = {
 			THE_TFR_shadow_2_2
@@ -567,7 +568,7 @@ THE_TFR_shadow_branch_3 = {
 	}
 
 	THE_TFR_shadow_3_5 = {
-		icon = mission_unknown_mission
+		icon = THE_TFR_shadow_mission_icon_12
 		position = 5
 		required_missions = { THE_TFR_shadow_3_3 } 
 		provinces_to_highlight = {
@@ -618,7 +619,7 @@ THE_TFR_shadow_branch_3 = {
 	}
 
 	THE_TFR_shadow_3_6 = {
-		icon = mission_unknown_mission
+		icon = mission_touhou_three_fairies
 		position = 6
 		provinces_to_highlight = {
 			OR = {
@@ -660,7 +661,7 @@ THE_TFR_shadow_branch_3 = {
 	}
 
 	THE_TFR_shadow_3_7 = {
-		icon = mission_unknown_mission
+		icon = THE_TFR_shadow_mission_icon_18
 		position = 7
 		required_missions = {
 			THE_TFR_shadow_1_6
@@ -691,7 +692,7 @@ THE_TFR_shadow_branch_4 = {
 	} 
 
 	THE_TFR_shadow_4_2 = {
-		icon = mission_unknown_mission
+		icon = THE_TFR_shadow_mission_icon_03
 		position = 2
 		required_missions = { THE_TFR_shadow_3_1 } 
 		provinces_to_highlight = {
@@ -763,7 +764,7 @@ THE_TFR_shadow_branch_4 = {
 	}
 
 	THE_TFR_shadow_4_4 = {
-		icon = mission_unknown_mission
+		icon = THE_TFR_shadow_mission_icon_09
 		position = 4
 		required_missions = { THE_TFR_shadow_4_2 } 
 		provinces_to_highlight = {
@@ -841,7 +842,7 @@ THE_TFR_shadow_branch_4 = {
 	}
 
 	THE_TFR_shadow_4_6 = {
-		icon = mission_unknown_mission
+		icon = THE_TFR_shadow_mission_icon_16
 		position = 6
 		required_missions = { THE_TFR_shadow_3_5 } 
 		provinces_to_highlight = {
@@ -892,7 +893,7 @@ THE_TFR_shadow_branch_5 = {
 	} 
 
 	THE_TFR_shadow_5_2 = {
-		icon = mission_unknown_mission
+		icon = THE_TFR_shadow_mission_icon_04
 		position = 2
 		required_missions = { THE_TFR_shadow_3_1 } 
 		provinces_to_highlight = {
@@ -931,7 +932,7 @@ THE_TFR_shadow_branch_5 = {
 	}
 
 	THE_TFR_shadow_5_5 = {
-		icon = mission_unknown_mission
+		icon = THE_TFR_shadow_mission_icon_13
 		position = 5
 		required_missions = {
 			THE_TFR_shadow_4_4
@@ -977,7 +978,7 @@ THE_TFR_shadow_branch_5 = {
 	}
 
 	THE_TFR_shadow_5_6 = {
-		icon = mission_unknown_mission
+		icon = THE_TFR_shadow_mission_icon_17
 		position = 6
 		required_missions = {
 			THE_TFR_shadow_3_5

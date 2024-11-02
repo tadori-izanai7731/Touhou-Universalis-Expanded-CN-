@@ -1,0 +1,74 @@
+can_improve_tax = {
+	condition = {
+		tooltip = THE_forbid_ai_improve_province_tt
+		potential = {
+			OR = {
+				continent = gensokyo_continent
+				continent = moon_continent
+			}
+			owner = {
+				ai = yes
+			}
+			has_global_flag = THE_forbid_ai_improve_province_global_flag
+		}
+		allow = {
+			has_global_flag = THE_forbid_ai_improve_province_except_player_subject_global_flag
+			owner = {
+				is_subject = yes
+				overlord = {
+					ai = no
+				}
+			}
+		}
+	}
+}
+
+can_improve_production = {
+	condition = {
+		tooltip = THE_forbid_ai_improve_province_tt
+		potential = {
+			OR = {
+				continent = gensokyo_continent
+				continent = moon_continent
+			}
+			owner = {
+				ai = yes
+			}
+			has_global_flag = THE_forbid_ai_improve_province_global_flag
+		}
+		allow = {
+			has_global_flag = THE_forbid_ai_improve_province_except_player_subject_global_flag
+			owner = {
+				is_subject = yes
+				overlord = {
+					ai = no
+				}
+			}
+		}
+	}
+}
+
+can_improve_manpower = {
+	condition = {
+		tooltip = THE_forbid_ai_improve_province_tt
+		potential = {
+			OR = {
+				continent = gensokyo_continent
+				continent = moon_continent
+			}
+			owner = {
+				ai = yes
+			}
+			has_global_flag = THE_forbid_ai_improve_province_global_flag
+		}
+		allow = {
+			has_global_flag = THE_forbid_ai_improve_province_except_player_subject_global_flag
+			owner = {
+				is_subject = yes
+				overlord = {
+					ai = no
+				}
+			}
+		}
+	}
+}
