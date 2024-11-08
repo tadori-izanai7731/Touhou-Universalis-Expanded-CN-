@@ -2420,9 +2420,9 @@ country_event = {
 		months = 60
 	}
 	trigger = {
-		always = no
+		mission_completed = THE_ROD_2_5
 		OR = { tag = ROD was_tag = ROD }
-		has_estate_privilege = THE_ROD_estate_nobles_knight_tradition
+		# has_estate_privilege = THE_ROD_estate_nobles_knight_tradition
 		any_owned_province = {
 			NOT = { is_capital_of = ROOT }
 			culture = prussian
@@ -2431,8 +2431,8 @@ country_event = {
 	
 	option = {
 		name = THE_ROD_events.101.a
-		custom_tooltip = THE_ROD_darkness_order_event_tt
-		custom_tooltip = empty_line_tt
+		# custom_tooltip = THE_ROD_darkness_order_event_tt
+		# custom_tooltip = empty_line_tt
 		random_owned_province = {
 			limit = {
 				NOT = { is_capital_of = ROOT }
