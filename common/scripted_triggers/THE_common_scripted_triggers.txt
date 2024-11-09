@@ -28,3 +28,7 @@ THE_forbid_special_culture_ideas_scripted_trigger = {
 		has_government_attribute = THE_forbid_$type$_ideas_government_attribute
 	}
 }
+
+THE_disable_ai_call_touhou_characters_back = {
+	NOT = { has_country_flag = THE_TFR_shadow_mission_flag }
+}
