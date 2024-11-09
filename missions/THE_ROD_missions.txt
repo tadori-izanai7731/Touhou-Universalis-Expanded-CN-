@@ -711,6 +711,7 @@ THE_ROD_branch_1 = {
 		}
 
 		effect = {
+			4751 = { add_permanent_claim = ROOT }
 			add_estate_loyalty = {
 				estate = estate_church
 				loyalty = 10
