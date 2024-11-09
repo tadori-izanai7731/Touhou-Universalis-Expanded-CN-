@@ -280,6 +280,7 @@ l_english:
  THE_ROD_strategy_and_arm_department_tt_9: "炮兵轰击花费: §G-10.0%§!"
  THE_ROD_strategy_and_arm_department_tt_10: "国家要塞驻军增长: §G+25.0%§!"
  THE_ROD_strategy_and_arm_department_tt_error: "如果看到这个选项，说明已经拿到了所有额外效果，由于BUG或控制台导致再次触发了该事件"
+ THE_ROD_battle_win_effect_tt: "战役胜利将使对方获得§R0.5§!§Y厌战度§!。\n战役全歼敌军将使对方获得§R2§!§Y厌战度§!和§R-1§!§Y稳定度§!。"
  THE_ROD_not_complete_event_ttt: "没做完"
 ###TOOLTIP_END
 
@@ -390,7 +391,9 @@ l_english:
  THE_ROD_out_of_peasants_war_modifier: "置身农民战争以外"
  THE_ROD_unity_wish_modifier: "共同体愿景"
  THE_ROD_blood_and_bone_province_modifier: "血与骨"
- THE_ROD_military_band_modifier: "军乐队"
+ THE_ROD_military_band_modifier: "情绪对抗"
+ THE_ROD_saint_sariel_church_province_modifier: "圣萨丽爱尔教堂"
+ THE_ROD_sariel_great_church_province_modifier: "萨丽爱尔大教堂"
 ###MODIFIER_END
 
 ###MERC
@@ -728,9 +731,18 @@ l_english:
  THE_ROD_events.44.desc: "在幻想乡的某次异变中，路边无辜的露米娅成为了红白巫女的第一个受害者，如今宵暗领域的巫女服饰也沿用了露米娅记忆中的巫女。在阶层和分工明确的欧洲，神社的巫女只负责基本的神职工作而不需要完成保护人类和退治妖怪的工作，这与露米娅所想的巫女完全不一样。随着宵暗领域的扩张，博丽神道的影响力也随之扩大，即使没有弹幕战的环境，巫女这一职位进行改革，分担基层的生产和治安活动。"
  THE_ROD_events.44.a: "「果然那位巫女是独一无二的。」"
 
+ THE_ROD_events.45.title: "天使传说"
+ THE_ROD_events.45.desc: "在西欧绝大多数人信仰的基督教，「天使」一词被描述为上帝的使者，它们是没有血肉之躯的灵体，必要时将化为带翼的人形向信徒传达上帝的旨意。但是在遥远的幻想之地，被称为「死之天使」的萨丽爱尔，六翼与月之魔法为其带来一丝地狱色彩。作为露米娅唯一知道的天使，决定以萨丽爱尔的形象修建一座教堂，不管宵暗领域如今的正统信仰是什么，教堂都可以提高我们在基督教中的地位。"
+ THE_ROD_events.45.a: "上帝高于人"
+ THE_ROD_events.45.b: "天使即是妖"
+
  THE_ROD_events.101.title: "余波"
  THE_ROD_events.101.desc: "作为继承但泽自由市正统的宵暗领域，我们对普鲁士地区的宣称是完全合法且正统的。或许是将战败的原因归咎于大意轻敌，条顿骑士团的残余势力企图重新集结力量夺回普鲁士地区。现在这股势力的叛乱行动已经不可避免，不过还有部分曾属于条顿骑士团的战士愿意向我们效忠，参与此次叛乱的平定。"
  THE_ROD_events.101.a: "结束了？"
+
+ THE_ROD_events.102.title: "士气与训练"
+ THE_ROD_events.102.desc: "宵暗骑士团中不少人来自曾经的条顿骑士团，作为天主教的三大骑士团之一，条顿骑士团是神圣罗马帝国向东开拓的重要军事力量。当谈及军队中士气和装备训练的重要性时，他们认为士气才是战役的决定因素，骑兵的一两次冲锋往往能耗尽步兵的士气，而装备的普及速度很快，训练也能被简单的战术替代。"
+ THE_ROD_events.102.a: "「好像很有道理。」"
 
 
  THE_ROD_events.108.1: "军事历史研究所"
@@ -754,7 +766,7 @@ l_english:
  THE_ROD_events.108.h7: "海岸工事研究所"
  THE_ROD_events.108.h8: "舰体设计研究所"
  THE_ROD_events.108.h9: "舰载武器研究所"
- THE_ROD_events.108.h10: "热能动力研究所"
+ THE_ROD_events.108.h10: "能源动力研究所"
  THE_ROD_events.108.h11: "军事经济研究所"
  THE_ROD_events.108.h12: "境界统一研究所"
  THE_ROD_events.108.h13: "勘探测绘研究所"

@@ -77,3 +77,11 @@ on_core = {
 on_mil_tech_taken = {
 	THE_ROD_on_mil_tech_taken_scripted_effect = yes
 }
+
+on_battle_won_country = {
+	THE_ROD_on_battle_won_country_scripted_effect = yes
+}
+
+on_overrun = {
+	THE_ROD_on_overrun_scripted_effect = yes
+}

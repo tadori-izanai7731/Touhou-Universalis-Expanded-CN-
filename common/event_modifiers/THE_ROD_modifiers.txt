@@ -605,11 +605,23 @@ THE_ROD_blood_and_bone_province_modifier = {
 	trade_goods_size = 2
 }
 
-#军乐队
+#情绪对抗
 THE_ROD_military_band_modifier = {
 	recover_army_morale_speed = 0.05
 	recover_navy_morale_speed = 0.05
-	monthly_splendor = 1
+	morale_damage = 0.05
+}
+
+#圣萨丽爱尔教堂
+THE_ROD_saint_sariel_church_province_modifier = {
+	papal_influence = 1
+	same_religion_advisor_cost = -0.1
+}
+
+#萨丽爱尔大教堂
+THE_ROD_sariel_great_church_province_modifier = {
+	tolerance_heathen = 2
+	tolerance_of_heathens_capacity = 2
 }
 
 ###EXTRA_HAKUREI_DEITY

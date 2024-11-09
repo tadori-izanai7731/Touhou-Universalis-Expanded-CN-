@@ -435,6 +435,23 @@ THE_ROD_on_mil_tech_taken_scripted_effect = {
 	}
 }
 
+THE_ROD_on_battle_won_country_scripted_effect = {
+	if = {
+		limit = { has_country_flag = THE_ROD_battle_win_effect_flag }
+		FROM = { add_war_exhaustion = 0.5 }
+	}
+}
+
+THE_ROD_on_overrun_scripted_effect = {
+	if = {
+		limit = { has_country_flag = THE_ROD_battle_win_effect_flag }
+		FROM = {
+			add_war_exhaustion = 1.5
+			add_stability = -1
+		}
+	}
+}
+
 ### NOT on_actions scripted effects
 
 THE_change_color_to_colony = {
