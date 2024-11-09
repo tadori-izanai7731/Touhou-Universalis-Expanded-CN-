@@ -2465,6 +2465,49 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = THE_ROD_events.46
+	title = THE_ROD_events.46.title
+	desc = THE_ROD_events.46.desc
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		absolutism = 80
+		NOT = {
+			estate_influence = {
+				estate = estate_church
+				influence = 50
+			}
+		}
+		4141 = { country_or_non_sovereign_subject_holds = ROOT }
+	}
+	
+	option = {
+		name = THE_ROD_events.46.a
+		custom_tooltip = THE_ROD_god_and_saint_event_tt
+		custom_tooltip = empty_line_tt
+		if = {
+			limit = {
+				4141 = { NOT = { has_building = town_hall } }
+			}
+			4141 = { add_building = town_hall }
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = -100
+		}
+		add_country_modifier = {
+			name = THE_ROD_dithmarschen_law_modifier
+			duration = -1
+		}
+	}
+}
+
 
 ### Darkness Order Event Group!
 ### 宵暗骑士团事件组
@@ -2525,7 +2568,6 @@ country_event = {
 		months = 360
 	}
 	trigger = {
-		always = no
 		OR = { tag = ROD was_tag = ROD }
 		has_estate_privilege = THE_ROD_estate_nobles_knight_tradition
 		has_country_flag = THE_ROD_darkness_order_event_available_flag

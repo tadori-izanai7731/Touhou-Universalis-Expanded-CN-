@@ -394,6 +394,7 @@ l_english:
  THE_ROD_military_band_modifier: "情绪对抗"
  THE_ROD_saint_sariel_church_province_modifier: "圣萨丽爱尔教堂"
  THE_ROD_sariel_great_church_province_modifier: "萨丽爱尔大教堂"
+ THE_ROD_dithmarschen_law_modifier: "迪特马尔申法案"
 ###MODIFIER_END
 
 ###MERC
@@ -733,8 +734,12 @@ l_english:
 
  THE_ROD_events.45.title: "天使传说"
  THE_ROD_events.45.desc: "在西欧绝大多数人信仰的基督教，「天使」一词被描述为上帝的使者，它们是没有血肉之躯的灵体，必要时将化为带翼的人形向信徒传达上帝的旨意。但是在遥远的幻想之地，被称为「死之天使」的萨丽爱尔，六翼与月之魔法为其带来一丝地狱色彩。作为露米娅唯一知道的天使，决定以萨丽爱尔的形象修建一座教堂，不管宵暗领域如今的正统信仰是什么，教堂都可以提高我们在基督教中的地位。"
- THE_ROD_events.45.a: "上帝高于人"
- THE_ROD_events.45.b: "天使即是妖"
+ THE_ROD_events.45.a: "上帝高于人。"
+ THE_ROD_events.45.b: "天使即是妖。"
+
+ THE_ROD_events.46.title: "迪特马尔申会议"
+ THE_ROD_events.46.desc: "宵暗领域于$YEAR$在迪特马尔申召开关于[Root.Get教士Name]阶层的会议。本次会议由露米娅主持召开，各阶层、城市、政府机关代表共同参与，经过为期十天的协商讨论，所有参会代表一致同意撤销[Root.Get教士Name]特权，最终签署迪特马尔申法案，并由露米娅宣布该法案正式实行。宵暗时报记者为您报道。"
+ THE_ROD_events.46.a: "宵暗领域政治的新时代。"
 
  THE_ROD_events.101.title: "余波"
  THE_ROD_events.101.desc: "作为继承但泽自由市正统的宵暗领域，我们对普鲁士地区的宣称是完全合法且正统的。或许是将战败的原因归咎于大意轻敌，条顿骑士团的残余势力企图重新集结力量夺回普鲁士地区。现在这股势力的叛乱行动已经不可避免，不过还有部分曾属于条顿骑士团的战士愿意向我们效忠，参与此次叛乱的平定。"

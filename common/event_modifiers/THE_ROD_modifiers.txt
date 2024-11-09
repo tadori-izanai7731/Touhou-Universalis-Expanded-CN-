@@ -624,6 +624,17 @@ THE_ROD_sariel_great_church_province_modifier = {
 	tolerance_of_heathens_capacity = 2
 }
 
+#迪特马尔申法案
+THE_ROD_dithmarschen_law_modifier = {
+	church_influence_modifier = -2.0
+	global_tax_modifier = 0.2
+	papal_influence = 1
+	devotion = 0.5
+	church_power_modifier = 0.1
+	monthly_fervor_increase = 1
+	stability_cost_modifier = -0.1
+}
+
 ###EXTRA_HAKUREI_DEITY
 THE_ROD_extra_hakurei_modifier_Hakurei_God = {
 	defensiveness = 0.1
