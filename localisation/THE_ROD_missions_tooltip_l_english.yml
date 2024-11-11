@@ -395,6 +395,9 @@
  THE_ROD_saint_sariel_church_province_modifier: "1W(„KN1rSYeX"
  THE_ROD_sariel_great_church_province_modifier: "(„KN1rS'YYeX"
  THE_ROD_dithmarschen_law_modifier: "êyrlšS3uÕlHh"
+ THE_ROD_cologne_college_province_modifier: "Ñy†–i—°e—RYefRb–"
+ THE_ROD_mainz_college_province_modifier: "ŽàV(ƒ°sãN—RYefRb–"
+ THE_ROD_trier_college_province_modifier: "yrÌ‘SÑSUS—RYefRb–"
 ###MODIFIER_END
 
 ###MERC
@@ -664,7 +667,7 @@
  THE_ROD_events.29.title: "ÁýÏg—g"
  THE_ROD_events.29.desc: "MOŽN^y1WWlš^ýVgS¹e„v	^¯OýV@BRAÃRpQ‰v!XÿvQ–™ý[50.GetName]=fS·Va×VÍ‘‰„vLˆ?eŒT‡eS-NÃVÿÁý[50.GetName]àe‘uOÙu[Root.GetName]&^egôf‹Y„vÑSUSÿmN	g)RŽNåe3wüf‡eS„vßuN‹NN0"
  THE_ROD_events.29.a: "ÃRpQ‰v!Xè•Sb:Nåe3wüf‡eS„vaŒV0"
- THE_ROD_events.29.b: "(W[Capital.GetName]òTÏuOO`Nï`†N0"
+ THE_ROD_events.29.b: "(W[Root.Capital.GetName]òTÏuOO`Nï`†N0"
 
  THE_ROD_events.30.title: "é…¯OýV"
  THE_ROD_events.30.desc: "é…¯OýV=f^y1WWlš^ýV‡v^T«ŽY^ýV¹ƒX„v¦ýVˆcˆN„vyrŠk4YTˆÿ(W^y1WWlš^ýVéegIN‰1¹ƒXVÓbŒT2–kSÿ^ýV3zúVTnoSbNÍy¦ýV«ŽýN0WMO„v4YTˆÿ@BRAÃRpQ‰v!Xôf=fíQPé…¯OýV«ŽýNb:N	^¯OýV0êÎN[Root.GetName] ReQ^y1WWlš^ýVÿ(W0WtMOnN=fwck„v^y1WWlš^ýV¹ƒXÿ·ƒ—Vé…¯OýV4YTˆmN=fz˜tbàz0"
@@ -741,6 +744,16 @@
  THE_ROD_events.46.desc: "µR—f†˜ßWŽN$YEAR$(WêyrlšS3uìSVsQŽN[Root.GetYeëXName]6–BS„vO®‹0,g!kO®‹1u2—s|ZINcìSVÿT6–BS0ÎW^0?eœ^:gsQãNhˆqQTÂSNÿÏuÇ:NgAS)Y„vOSFU¨‹º‹ÿNb	gÂSOãNhˆNôTa²d•[Root.GetYeëXName]yrCgÿgÈuŒrrêyrlšS3uÕlHhÿv^1u2—s|Z±R^å‹ÕlHhckVžRLˆ0µR—föe¥b°‹w:N¨`¥bS0"
  THE_ROD_events.46.a: "µR—f†˜ßW?e»l„v°eöeãN0"
 
+ THE_ROD_events.47.title: "—RYe>yOfR"
+ THE_ROD_events.47.desc: "•ENåNegÿ—RYexvz„v‹NirŽVŽVZ†àe%ÿ^yLwºNXTTºNìN±R.O^yØyININ„v‹NirÿKS¡r¡l	gºNýw»SŒšÁ‹0)YINYeNôv=f-NNªu'k2m„vINAmáOðNÿÏuÇöeô•„vÑSUSòTÏuåb	g%NÆR„vÄuÇubVVÿ(W‡e.sûÑ‹ŒT^yfRYe²wwQ	g^ÛlaINÿ¦NSb—4NYeCgRÂˆ)TLX„vÓuNS0KS¡r†SòSNXR(W¸‹Y?eYeTN„v‡v^ÿSÖNìN„vCg›R¨cóv˜ðSÿFOYeCgÍN=fNÍy8n»yŽNN×O„vqVÍT0°s(WbìNNb‰ZP„vÿ1S=fS—RYe„vaINÎN^yfRxvzlTæSNagSïÿR.NÍy:S+RŽNz‚=g„v¾|^yNLuú^¾‹ÿNQ=fNÍyßu»l„vCg›RåTwQ0"
+ THE_ROD_events.47.a: "¾‹ËzÑy†–i—°e—RYefRb–0"
+ THE_ROD_events.47.b: "¾‹ËzŽàV(ƒ°sãN—RYefRb–0"
+ THE_ROD_events.47.c: "¾‹ËzyrÌ‘SÑSUS—RYefRb–0"
+
+ THE_ROD_events.48.title: "çeNW"
+ THE_ROD_events.48.desc: "˜VŠVŽN[Root.Capital.GetName]„vWˆ4YÿSï„vKS4Y=fNµ^4x%„v[Root.THE_ROD_religion_building]0êÎNµR—f†˜ßWžRLˆêyrlšS3uÕlHhÿD–^SŽN—RYe„vCg›RòT«ˆŒRhQeR»y0°e¾‹Ëz„v—RYefRb–›bV†Nçe	g„v—RYeÄuÇu!jVÿô›RŽN—RYeùRºN„vjO(uÿR¾‹KNöemN8TV†NOYfRwŒTfRu0NRpTŽ‹Y„vùaŒtSgÈub:N‚YÊN„vÓuœgÿ—RYefR„vxvzôfYêS=fN¢SÅ`?aÿÍSw=f°eŽb=gg¡RŽN—RYeÿR.†NôfY„v[Root.THE_ROD_religion_building]ÿ.O­d†NôfY„váOðNÿùR—RYe„vÂrípmNNÏQSVt^0Ù=fþfÏu„v•ï‹³QšRÿØ=f—RYeN>yO„v,g(0"
+ THE_ROD_events.48.a: "=fÿÙ7hTÿ"
+
  THE_ROD_events.101.title: "YOâl"
  THE_ROD_events.101.desc: "jO:NçubFOýlê1u^ckßu„vµR—f†˜ßWÿbìNùRnfœëX0W:S„v±Rðy=fŒRhQTÕlNckßu„v0b¸‹=fSb%„vŸSàVRVŽTŽN'Ya‰Leÿag˜‘šëXâV„v‹kYO¿R›ROþVÍ‘°eÆ–Óu›RÏ‘:YÞVnfœëX0W:S0°s(WÙ¡w¿R›R„vÛSqNLˆ¨RòTÏuNïSMQÿNÇØ	gèRþf^SŽNag˜‘šëXâV„vbëX?aaTbìNHeàVÿÂSNdk!kÛSqN„vs^šR0"
  THE_ROD_events.101.a: "Óumg†Nÿ"
@@ -778,7 +791,7 @@
  THE_ROD_events.108.h14: "›Q(uIS—uxvzNb"
  THE_ROD_events.108.h15: "áOo`.O­dxvzNb"
  THE_ROD_events.108.h16: "r4xýwHexvzNb"
- THE_ROD_events.108.h17: "luQfkÅˆxvzNb"
+ THE_ROD_events.108.h17: "úWBSfkÅˆxvzNb"
  THE_ROD_events.108.h18: "°sãN‘šuQxvzNb"
  THE_ROD_events.108.h19: "f‹ßR¡rtxvzNb"
  THE_ROD_events.108.h20: "tº‹ŒšÁ‹xvzNb"
@@ -798,6 +811,8 @@
  THE_ROD_hakureishinto_extra_tt_empty: ""
  THE_ROD_darkness_order_name_tt: "µR—f‘šëXâV"
  THE_ROD_strategy_and_arm_department_name_tt: "›Q‹NbeuŒT›Q(uÅˆYè"
+ THE_ROD_church_tt: "YeX"
+ THE_ROD_shrine_tt: "^y>y"
 ###CUSTOM_LOCALISATION_END
 
 ###CULTURE

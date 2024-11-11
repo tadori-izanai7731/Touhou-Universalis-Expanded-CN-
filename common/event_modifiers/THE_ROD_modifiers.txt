@@ -635,6 +635,21 @@ THE_ROD_dithmarschen_law_modifier = {
 	stability_cost_modifier = -0.1
 }
 
+#科隆革新宗教学院
+THE_ROD_cologne_college_province_modifier = {
+	adm_tech_cost_modifier = -0.05
+}
+
+#美因茨现代宗教学院
+THE_ROD_mainz_college_province_modifier = {
+	dip_tech_cost_modifier = -0.05
+}
+
+#特里尔发展宗教学院
+THE_ROD_trier_college_province_modifier = {
+	mil_tech_cost_modifier = -0.05
+}
+
 ###EXTRA_HAKUREI_DEITY
 THE_ROD_extra_hakurei_modifier_Hakurei_God = {
 	defensiveness = 0.1

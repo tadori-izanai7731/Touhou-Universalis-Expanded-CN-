@@ -101,3 +101,20 @@ defined_text = {
 		}
 	}
 }
+
+defined_text = {
+	name = THE_ROD_religion_building
+	random = no
+	text = {
+		localisation_key = THE_ROD_church_tt
+		trigger = {
+			religion = catholic
+		}
+	}
+	text = {
+		localisation_key = THE_ROD_shrine_tt
+		trigger = {
+			religion = th_hakureishinto
+		}
+	}
+}

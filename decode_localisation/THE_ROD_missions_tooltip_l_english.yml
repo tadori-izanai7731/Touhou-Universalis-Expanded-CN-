@@ -395,6 +395,9 @@ l_english:
  THE_ROD_saint_sariel_church_province_modifier: "圣萨丽爱尔教堂"
  THE_ROD_sariel_great_church_province_modifier: "萨丽爱尔大教堂"
  THE_ROD_dithmarschen_law_modifier: "迪特马尔申法案"
+ THE_ROD_cologne_college_province_modifier: "科隆革新宗教学院"
+ THE_ROD_mainz_college_province_modifier: "美因茨现代宗教学院"
+ THE_ROD_trier_college_province_modifier: "特里尔发展宗教学院"
 ###MODIFIER_END
 
 ###MERC
@@ -664,7 +667,7 @@ l_english:
  THE_ROD_events.29.title: "迁都柏林"
  THE_ROD_events.29.desc: "位于神圣罗马帝国最北方的选帝侯国@BRA勃兰登堡，其首都[50.GetName]是北德意志重要的行政和文化中心，迁都[50.GetName]无疑会给[Root.GetName]带来更好的发展，也有利于日耳曼文化的统一事业。"
  THE_ROD_events.29.a: "勃兰登堡门将成为日耳曼文化的象征。"
- THE_ROD_events.29.b: "在[Capital.GetName]已经住习惯了。"
+ THE_ROD_events.29.b: "在[Root.Capital.GetName]已经住习惯了。"
 
  THE_ROD_events.30.title: "藩侯国"
  THE_ROD_events.30.desc: "藩侯国是神圣罗马帝国皇帝向身处帝国边境的邦国授予的特殊头衔，在神圣罗马帝国早期主要负责边境开拓和防卫，帝国稳固后逐渐演化成一种邦国身份地位的头衔，@BRA勃兰登堡更是凭借藩侯国身份成为选帝侯国。自从[Root.GetName]加入神圣罗马帝国，在地理位置上是真正的神圣罗马帝国边境，获得藩侯国头衔也是顺理成章。"
@@ -741,6 +744,16 @@ l_english:
  THE_ROD_events.46.desc: "宵暗领域于$YEAR$在迪特马尔申召开关于[Root.Get教士Name]阶层的会议。本次会议由露米娅主持召开，各阶层、城市、政府机关代表共同参与，经过为期十天的协商讨论，所有参会代表一致同意撤销[Root.Get教士Name]特权，最终签署迪特马尔申法案，并由露米娅宣布该法案正式实行。宵暗时报记者为您报道。"
  THE_ROD_events.46.a: "宵暗领域政治的新时代。"
 
+ THE_ROD_events.47.title: "宗教社会学"
+ THE_ROD_events.47.desc: "长久以来，宗教研究的事物往往虚无缥缈，神职人员向人们宣传神秘主义的事物，尽管没有人能去验证。天主教一直是中世纪欧洲的主流信仰，经过时间的发展已经拥有严密的组织形式，在文献翻译和神学教育具有广泛意义，亦将面临教权分裂崩塌的结局。尽管历史上存在许多政教合一的皇帝，将他们的权力推至顶峰，但教权仍是一种游离于世俗的影响。现在我们所要做的，就是将宗教的意义从神学研究转向另一条道路，创造一种区别于艺术的精神世界建设，不再是一种统治的权力工具。"
+ THE_ROD_events.47.a: "设立科隆革新宗教学院。"
+ THE_ROD_events.47.b: "设立美因茨现代宗教学院。"
+ THE_ROD_events.47.c: "设立特里尔发展宗教学院。"
+
+ THE_ROD_events.48.title: "旧址"
+ THE_ROD_events.48.desc: "徘徊于[Root.Capital.GetName]的街头，道路的尽头是一座破败的[Root.THE_ROD_religion_building]。自从宵暗领域实行迪特马尔申法案，附属于宗教的权力已被完全剥离。新设立的宗教学院抛弃了旧有的宗教组织模式，致力于宗教对人的作用，初设之时也吸引了众多学者和学生。一切走向美好的迹象却最终成为如今的结果，宗教学的研究更多只是一厢情愿，反而是新技术服务于宗教，创造了更多的[Root.THE_ROD_religion_building]，传播了更多的信仰，对宗教的狂热也不减当年。这是曾经的错误决定，还是宗教与社会的本质。"
+ THE_ROD_events.48.a: "是，这样吗？"
+
  THE_ROD_events.101.title: "余波"
  THE_ROD_events.101.desc: "作为继承但泽自由市正统的宵暗领域，我们对普鲁士地区的宣称是完全合法且正统的。或许是将战败的原因归咎于大意轻敌，条顿骑士团的残余势力企图重新集结力量夺回普鲁士地区。现在这股势力的叛乱行动已经不可避免，不过还有部分曾属于条顿骑士团的战士愿意向我们效忠，参与此次叛乱的平定。"
  THE_ROD_events.101.a: "结束了？"
@@ -778,7 +791,7 @@ l_english:
  THE_ROD_events.108.h14: "军用医疗研究所"
  THE_ROD_events.108.h15: "信息传播研究所"
  THE_ROD_events.108.h16: "爆破能效研究所"
- THE_ROD_events.108.h17: "民兵武装研究所"
+ THE_ROD_events.108.h17: "基层武装研究所"
  THE_ROD_events.108.h18: "现代骑兵研究所"
  THE_ROD_events.108.h19: "警察管理研究所"
  THE_ROD_events.108.h20: "理论验证研究所"
@@ -798,6 +811,8 @@ l_english:
  THE_ROD_hakureishinto_extra_tt_empty: ""
  THE_ROD_darkness_order_name_tt: "宵暗骑士团"
  THE_ROD_strategy_and_arm_department_name_tt: "军事战略和军用装备部"
+ THE_ROD_church_tt: "教堂"
+ THE_ROD_shrine_tt: "神社"
 ###CUSTOM_LOCALISATION_END
 
 ###CULTURE

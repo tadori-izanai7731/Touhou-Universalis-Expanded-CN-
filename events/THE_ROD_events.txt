@@ -2485,6 +2485,10 @@ country_event = {
 			}
 		}
 		4141 = { country_or_non_sovereign_subject_holds = ROOT }
+		OR = {
+			religion = catholic
+			religion = th_hakureishinto
+		}
 	}
 	
 	option = {
@@ -2508,6 +2512,108 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = THE_ROD_events.47
+	title = THE_ROD_events.47.title
+	desc = THE_ROD_events.47.desc
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		NOT = { current_age = age_of_discovery }
+		OR = {
+			owns_core_province = 85
+			owns_core_province = 78
+			owns_core_province = 80
+		}
+		OR = {
+			religion = catholic
+			religion = th_hakureishinto
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.47.a
+		trigger = {
+			owns_core_province = 85
+		}
+		custom_tooltip = THE_ROD_god_and_saint_event_tt
+		custom_tooltip = empty_line_tt
+		85 = {
+			add_province_modifier = {
+				name = THE_ROD_cologne_college_province_modifier
+				duration = 7300
+			}
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.47.b
+		trigger = {
+			owns_core_province = 78
+		}
+		custom_tooltip = THE_ROD_god_and_saint_event_tt
+		custom_tooltip = empty_line_tt
+		78 = {
+			add_province_modifier = {
+				name = THE_ROD_mainz_college_province_modifier
+				duration = 7300
+			}
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.47.c
+		trigger = {
+			owns_core_province = 80
+		}
+		custom_tooltip = THE_ROD_god_and_saint_event_tt
+		custom_tooltip = empty_line_tt
+		80 = {
+			add_province_modifier = {
+				name = THE_ROD_trier_college_province_modifier
+				duration = 7300
+			}
+		}
+	}
+	
+	after = {
+		set_country_flag = THE_ROD_can_trigger_religion_end_event_flag
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.48
+	title = THE_ROD_events.48.title
+	desc = THE_ROD_events.48.desc
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		has_country_flag = THE_ROD_can_trigger_religion_end_event_flag
+		has_country_modifier = THE_ROD_dithmarschen_law_modifier
+		OR = {
+			religion = catholic
+			religion = th_hakureishinto
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.48.a
+		custom_tooltip = THE_ROD_god_and_saint_event_tt
+		custom_tooltip = empty_line_tt
+		add_splendor = -100
+		add_prestige = -10
+	}
+}
 
 ### Darkness Order Event Group!
 ### 宵暗骑士团事件组
