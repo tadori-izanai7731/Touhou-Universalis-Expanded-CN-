@@ -263,7 +263,7 @@ l_english:
  THE_ROD_every_hakureishinto_with_temple_province_tt: "治下每个信仰§Y博丽神道§!省份获得§G1§!¤§Y基础税收§!；如果拥有§Y神社§!或§Y神宫§!，额外获得§G1§!¤§Y基础税收§!。"
  THE_ROD_hakureishinto_reform_extra_tt: "升级「§Y传播博丽神旨§!」的政府机制，完成传教额外获得§G5§!£dip£§Y外交点数§!和§G5§!£mil£§Y军事点数§!"
  THE_ROD_cannot_call_ally_TEU_WOL_tt: "当我们第一次对@TEU§Y[TEU.GetName]§!或@WOL§Y[WOL.GetName]§!宣战时，对方无法召集盟友。"
- THE_ROD_spy_action_add_darkness_manipulation_tt: "对其他国家的§Y间谍行动§!将获得§Y操控黑暗程度的能力§!。"
+ THE_ROD_spy_action_add_darkness_manipulation_tt: "§M月符「Moonlight Ray」§!额外获得以下效果:\n解除所有正在与我们交战国家的战争迷雾，持续§Y60§!月。"
  THE_ROD_unlock_tactic_mercenary_tt: "解锁§J「锤砧」§!、§J「桁架」§!、§J「天青」§!佣兵团，雇佣这些佣兵团不消耗§Y陆军职业度§!。"
  THE_ROD_contingency_management_tt: "建造§Y要塞§!建筑将使自身和相邻省份获得如下效果:"
  THE_ROD_strategy_and_arm_department_change_name_tt: "[Root.Get贵族Name]阶层特权「§Y宵暗骑士团§!」更名为「§Y军事战略和军用装备部§!」。"
@@ -761,6 +761,10 @@ l_english:
  THE_ROD_events.102.title: "士气与训练"
  THE_ROD_events.102.desc: "宵暗骑士团中不少人来自曾经的条顿骑士团，作为天主教的三大骑士团之一，条顿骑士团是神圣罗马帝国向东开拓的重要军事力量。当谈及军队中士气和装备训练的重要性时，他们认为士气才是战役的决定因素，骑兵的一两次冲锋往往能耗尽步兵的士气，而装备的普及速度很快，训练也能被简单的战术替代。"
  THE_ROD_events.102.a: "「好像很有道理。」"
+
+ THE_ROD_events.103.title: "宵暗渗透"
+ THE_ROD_events.103.desc: "情报一直是战略的重要因素，结合骑士团旧部的情报技巧和露米娅的宵暗能力，简单的渗透行动，甚至对敌方将领的刺杀也十分轻易，不过这需要一些敌人的「帮助」。一切都顺理成章，吗？这与宵暗的能力有什么关联，简单的造出一个黑球难道不是更容易被发现，宵暗能力的本质又是什么，这是我所恐惧的。"
+ THE_ROD_events.103.a: "「妖怪可不能被常识束缚。」"
 
 
  THE_ROD_events.108.1: "军事历史研究所"

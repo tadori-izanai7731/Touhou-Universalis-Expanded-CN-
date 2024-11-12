@@ -321,6 +321,14 @@ THE_ROD_dark_moon_night_mechanic = {
 						}
 					}
 				}
+				if = {
+					limit = { has_country_flag = THE_ROD_spy_action_add_darkness_manipulation_flag }
+					custom_tooltip = empty_line_tt
+					every_country = {
+						limit = { war_with = ROOT }
+						remove_fow = 60
+					}
+				}
 			}
 			cooldown_years = 5
 			ai_chance = {
