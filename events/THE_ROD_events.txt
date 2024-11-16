@@ -2713,7 +2713,6 @@ country_event = {
 		}
 	}
 	trigger = {
-		always = no
 		OR = { tag = ROD was_tag = ROD }
 		has_estate_privilege = THE_ROD_estate_nobles_knight_tradition
 		has_country_flag = THE_ROD_darkness_order_event_available_flag
@@ -2739,10 +2738,9 @@ country_event = {
 	fire_only_once = yes
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 60
 	}
 	trigger = {
-		always = no
 		OR = { tag = ROD was_tag = ROD }
 		has_estate_privilege = THE_ROD_estate_nobles_knight_tradition
 		has_country_flag = THE_ROD_darkness_order_event_available_flag
@@ -2754,6 +2752,10 @@ country_event = {
 		custom_tooltip = THE_ROD_darkness_order_event_tt
 		custom_tooltip = empty_line_tt
 		add_dip_power = -100
+		add_estate_loyalty = {
+			estate = all
+			loyalty = -10
+		}
 		inherit = LIV
 	}
 
@@ -2780,7 +2782,6 @@ country_event = {
 		months = 360
 	}
 	trigger = {
-		always = no
 		OR = { tag = ROD was_tag = ROD }
 		has_estate_privilege = THE_ROD_estate_nobles_knight_tradition
 		has_country_flag = THE_ROD_darkness_order_event_available_flag
@@ -2808,7 +2809,6 @@ country_event = {
 		months = 240
 	}
 	trigger = {
-		always = no
 		OR = { tag = ROD was_tag = ROD }
 		has_estate_privilege = THE_ROD_estate_nobles_knight_tradition
 		has_country_flag = THE_ROD_darkness_order_event_available_flag
@@ -2825,7 +2825,7 @@ country_event = {
 		custom_tooltip = THE_ROD_contingency_management_tt
 		tooltip = {
 			add_devastation = -100
-			add_local_autonomy = 25
+			add_local_autonomy = -25
 			add_nationalism = -10
 		}
 		hidden_effect = {
@@ -2865,7 +2865,6 @@ country_event = {
 		}
 	}
 	trigger = {
-		always = no
 		OR = { tag = ROD was_tag = ROD }
 		has_estate_privilege = THE_ROD_estate_nobles_knight_tradition
 		has_country_flag = THE_ROD_unlock_tactic_mercenary_flag

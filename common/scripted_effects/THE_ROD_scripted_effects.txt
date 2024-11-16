@@ -759,7 +759,7 @@ THE_ROD_fort_build_effect = {
 	if = {
 		limit = { owner = { has_country_flag = THE_ROD_contingency_management_flag } }
 		add_devastation = -100
-		add_local_autonomy = 25
+		add_local_autonomy = -25
 		add_nationalism = -10
 		every_neighbor_province = {
 			limit = {
@@ -768,7 +768,7 @@ THE_ROD_fort_build_effect = {
 				}
 			}
 			add_devastation = -100
-			add_local_autonomy = 25
+			add_local_autonomy = -25
 			add_nationalism = -10
 		}
 	}
