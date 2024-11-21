@@ -281,6 +281,7 @@ l_english:
  THE_ROD_strategy_and_arm_department_tt_10: "国家要塞驻军增长: §G+25.0%§!"
  THE_ROD_strategy_and_arm_department_tt_error: "如果看到这个选项，说明已经拿到了所有额外效果，由于BUG或控制台导致再次触发了该事件"
  THE_ROD_battle_win_effect_tt: "战役胜利将使对方获得§R0.5§!§Y厌战度§!。\n战役全歼敌军将使对方获得§R2§!§Y厌战度§!和§R-1§!§Y稳定度§!。"
+ THE_ROD_end_event_tt: "原作:\n东方Project\n蒐\n\n感谢游玩宵暗领域，感谢你为世界做出的选择。"
  THE_ROD_not_complete_event_ttt: "没做完"
 ###TOOLTIP_END
 
@@ -817,6 +818,10 @@ l_english:
  THE_ROD_events.108.h18: "现代骑兵研究所"
  THE_ROD_events.108.h19: "警察管理研究所"
  THE_ROD_events.108.h20: "理论验证研究所"
+
+ THE_ROD_events.0.title: "暗色灯火"
+ THE_ROD_events.0.desc: "西班牙的殖民者曾在玛雅人口中听过一个传说，一艘巨大的船飘在空中而不是浮于水面，从中走出的动物与人完全不同，却能使用当地的语言并态度友善，『我们要向这里传播基因，这是所有生物生存的意义。』这是唯一有记录的交流。基因和生物是什么，没有人知道它们的含义，但露米娅有生存的意义。恢复与幻想乡的交流后，这里也有露米娅以外的妖怪，人们将他们称为东之国的异族，也不会因为缺少恐惧而消失。\n\n今天，露米娅放飞暗色的灯火，按照计算它将在空气的顶点破裂并释放宵暗能量，笼罩世界一秒后消散。由此向世界传递灯火（希望），意识（文化）流动的涡流并非由机械决定，最终构成人类（妖怪）生存的意义。"
+ THE_ROD_events.0.end: "我们选择了世界。"
 ###EVENT_END
 
 ###VARIABLE
