@@ -1,0 +1,158 @@
+THE_CRD_chaos_stage1_1_branch = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = CRD
+		always = no
+	}
+
+	THE_CRD_chaos_1_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_CRD_chaos_3_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_CRD_chaos_stage1_2_branch = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = CRD
+		always = no
+	}
+
+	THE_CRD_chaos_2_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_CRD_chaos_3_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_CRD_chaos_2_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = {
+			THE_CRD_chaos_1_2
+			THE_CRD_chaos_2_2
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_CRD_chaos_stage1_3_branch = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = CRD
+		always = no
+	}
+
+	THE_CRD_chaos_3_1 = {
+		icon = mission_unknown_mission
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_CRD_chaos_3_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_CRD_chaos_3_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_CRD_chaos_3_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = {
+			THE_CRD_chaos_2_3
+			THE_CRD_chaos_3_2
+			THE_CRD_chaos_4_3
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_CRD_chaos_stage1_4_branch = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = CRD
+		always = no
+	}
+
+	THE_CRD_chaos_4_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_CRD_chaos_3_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_CRD_chaos_4_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = {
+			THE_CRD_chaos_4_2
+			THE_CRD_chaos_5_2
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_CRD_chaos_stage1_5_branch = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = CRD
+		always = no
+	}
+
+	THE_CRD_chaos_5_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_CRD_chaos_3_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
