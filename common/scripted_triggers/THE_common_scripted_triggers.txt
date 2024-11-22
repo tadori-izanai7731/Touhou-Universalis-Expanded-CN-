@@ -4,6 +4,9 @@ THE_is_free_merc_company = {
 	ROOT = {
 		OR = {
 			mercenary_company = THE_ROD_rug_pirate_company
+			mercenary_company = THE_ROD_hammer_anvil_company
+			mercenary_company = THE_ROD_truss_company
+			mercenary_company = THE_ROD_azure_company
 		}
 	}
 }
