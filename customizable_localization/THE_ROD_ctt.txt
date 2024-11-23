@@ -119,26 +119,26 @@ defined_text = {
 	}
 }
 
-defined_text = {
-	name = THE_ROD_final_mission_desc
-	random = no
-	text = {
-		localisation_key = THE_ROD_final_mission_desc_complete
-		trigger = {
-			mission_completed = THE_ROD_4_20
-			has_country_flag = THE_ROD_complete_mission_THE_ROD_4_20_flag
-			NOT = {
-				had_country_flag = {
-					flag = THE_ROD_complete_mission_THE_ROD_4_20_flag
-					days = 2
-				}
-			}
-		}
-	}
-	text = {
-		localisation_key = THE_ROD_final_mission_desc_not_complete
-		trigger = {
-			always = yes
-		}
-	}
-}
+# defined_text = {
+# 	name = THE_ROD_final_mission_desc
+# 	random = no
+# 	text = {
+# 		localisation_key = THE_ROD_final_mission_desc_complete
+# 		trigger = {
+# 			mission_completed = THE_ROD_4_20
+# 			has_country_flag = THE_ROD_complete_mission_THE_ROD_4_20_flag
+# 			NOT = {
+# 				had_country_flag = {
+# 					flag = THE_ROD_complete_mission_THE_ROD_4_20_flag
+# 					days = 2
+# 				}
+# 			}
+# 		}
+# 	}
+# 	text = {
+# 		localisation_key = THE_ROD_final_mission_desc_not_complete
+# 		trigger = {
+# 			always = yes
+# 		}
+# 	}
+# }

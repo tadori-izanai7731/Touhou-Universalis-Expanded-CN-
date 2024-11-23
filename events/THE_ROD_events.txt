@@ -4,6 +4,7 @@ country_event = {
 	id = THE_ROD_events.0
 	title = THE_ROD_events.0.title
 	desc = THE_ROD_events.0.desc
+	picture = COMET_SIGHTED_eventPicture
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -19,12 +20,11 @@ country_event = {
 	id = THE_ROD_events.1
 	title = THE_ROD_events.1.title
 	desc = THE_ROD_events.1.desc
-	picture = DECLARATION_INDEPENDENCE_eventPicture
+	picture = TRADEGOODS_eventPicture
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
 	major = yes
-	
 	goto = 12
 	
 	option = {
@@ -64,6 +64,8 @@ country_event = {
 	id = THE_ROD_events.2
 	title = THE_ROD_events.2.title
 	desc = THE_ROD_events.2.desc
+	picture = CIVIL_WAR_eventPicture
+
 	is_triggered_only = yes
 	
 	trigger = {
@@ -155,7 +157,7 @@ country_event = {
 	id = THE_ROD_events.3
 	title = THE_ROD_events.3.title
 	desc = THE_ROD_events.3.desc
-	picture = DECLARATION_INDEPENDENCE_eventPicture
+	picture = HRE_eventPicture
 	is_triggered_only = yes
 
 	
@@ -287,6 +289,8 @@ country_event = {
 	id = THE_ROD_events.4
 	title = THE_ROD_events.4.title
 	desc = THE_ROD_events.4.desc
+	picture = COMET_SIGHTED_eventPicture
+
 	fire_only_once = yes
 	trigger = {
 		OR = { tag = ROD was_tag = ROD }
@@ -319,6 +323,8 @@ country_event = {
 	id = THE_ROD_events.5
 	title = THE_ROD_events.5.title
 	desc = THE_ROD_events.5.desc
+	picture = AB_ECLIPSE_eventPicture	# need gfx
+
 	fire_only_once = yes
 	trigger = {
 		OR = { tag = ROD was_tag = ROD }
@@ -343,6 +349,8 @@ country_event = {
 	id = THE_ROD_events.6
 	title = THE_ROD_events.6.title
 	desc = THE_ROD_events.6.desc
+	picture = ADVISOR_eventPicture
+
 	fire_only_once = yes
 	trigger = {
 		OR = { tag = ROD was_tag = ROD }
@@ -374,6 +382,8 @@ country_event = {
 	id = THE_ROD_events.7
 	title = THE_ROD_events.7.title
 	desc = THE_ROD_events.7.desc
+	picture = north_sea_maps_eventPicture
+
 	fire_only_once = yes
 	trigger = {
 		OR = { tag = ROD was_tag = ROD }
@@ -518,6 +528,8 @@ country_event = {
 	id = THE_ROD_events.8
 	title = THE_ROD_events.8.title
 	desc = THE_ROD_events.8.desc
+	picture = COSSACK_ESTATE_RAIDERS_eventPicture
+
 	fire_only_once = yes
 	trigger = {
 		OR = { tag = ROD was_tag = ROD }
@@ -593,6 +605,8 @@ country_event = {
 	id = THE_ROD_events.9
 	title = THE_ROD_events.9.title
 	desc = THE_ROD_events.9.desc
+	picture = COSSACK_ESTATE_eventPicture
+
 	fire_only_once = yes
 	trigger = {
 		OR = { tag = ROD was_tag = ROD }
@@ -662,6 +676,7 @@ country_event = {
 	id = THE_ROD_events.10
 	title = THE_ROD_events.10.title
 	desc = THE_ROD_events.10.desc
+	picture = AB_ECLIPSE_eventPicture	# need gfx
 	fire_only_once = yes
 	
 	trigger = {
@@ -691,6 +706,7 @@ country_event = {
 	id = THE_ROD_events.11
 	title = THE_ROD_events.11.title
 	desc = THE_ROD_events.11.desc
+	picture = REFORM_eventPicture
 	
 	fire_only_once = yes
 	
@@ -735,6 +751,7 @@ country_event = {
 	id = THE_ROD_events.12
 	title = THE_ROD_events.12.title
 	desc = THE_ROD_events.12.desc
+	picture = CIVIL_WAR_eventPicture
 	
 	fire_only_once = yes
 	
@@ -761,6 +778,7 @@ country_event = {
 	id = THE_ROD_events.13
 	title = THE_ROD_events.13.title
 	desc = THE_ROD_events.13.desc
+	picture = GREAT_BUILDING_eventPicture
 	
 	fire_only_once = yes
 	
@@ -806,6 +824,7 @@ country_event = {
 	id = THE_ROD_events.14
 	title = THE_ROD_events.14.title
 	desc = THE_ROD_events.14.desc
+	picture = IMPALED_SOLDIERS_eventPicture
 	
 	fire_only_once = yes
 	
@@ -841,6 +860,7 @@ country_event = {
 	id = THE_ROD_events.15
 	title = THE_ROD_events.15.title
 	desc = THE_ROD_events.15.desc
+	picture = PRUSSIA_eventPicture
 	
 	fire_only_once = yes
 	
@@ -894,6 +914,7 @@ country_event = {
 	id = THE_ROD_events.16
 	title = THE_ROD_events.16.title
 	desc = THE_ROD_events.16.desc
+	picture = DECLARATION_INDEPENDENCE_eventPicture
 	
 	fire_only_once = yes
 	
@@ -909,15 +930,15 @@ country_event = {
 		}
 	}
 	
-	immediate = {
-		hidden_effect = {
-			clr_country_flag = THE_ROD_can_trigger_event_16_flag
-		}
-	}
-	
 	option = {
 		name = THE_ROD_events.16.a
 		custom_tooltip = THE_ROD_colorful_egg_tt
+	}
+	
+	after = {
+		hidden_effect = {
+			clr_country_flag = THE_ROD_can_trigger_event_16_flag
+		}
 	}
 }
 
@@ -928,6 +949,7 @@ country_event = {
 	id = THE_ROD_events.17
 	title = THE_ROD_events.17.title
 	desc = THE_ROD_events.17.desc
+	picture = HARBOUR_eventPicture
 	
 	fire_only_once = yes
 	
@@ -968,6 +990,7 @@ country_event = {
 	id = THE_ROD_events.18
 	title = THE_ROD_events.18.title
 	desc = THE_ROD_events.18.desc
+	picture = HARBOUR_eventPicture
 	
 	fire_only_once = yes
 	
@@ -1008,6 +1031,7 @@ country_event = {
 	id = THE_ROD_events.19
 	title = THE_ROD_events.19.title
 	desc = THE_ROD_events.19.desc
+	picture = HARBOUR_eventPicture
 	
 	fire_only_once = yes
 	
@@ -1048,6 +1072,7 @@ country_event = {
 	id = THE_ROD_events.20
 	title = THE_ROD_events.20.title
 	desc = THE_ROD_events.20.desc
+	picture = HARBOUR_eventPicture
 	
 	fire_only_once = yes
 	
@@ -1088,6 +1113,7 @@ country_event = {
 	id = THE_ROD_events.21
 	title = THE_ROD_events.21.title
 	desc = THE_ROD_events.21.desc
+	picture = HARBOUR_eventPicture
 	
 	fire_only_once = yes
 	
@@ -1128,6 +1154,7 @@ country_event = {
 	id = THE_ROD_events.22
 	title = THE_ROD_events.22.title
 	desc = THE_ROD_events.22.desc
+	picture = HARBOUR_eventPicture
 	
 	fire_only_once = yes
 	
@@ -1168,6 +1195,7 @@ country_event = {
 	id = THE_ROD_events.23
 	title = THE_ROD_events.23.title
 	desc = THE_ROD_events.23.desc
+	picture = CARIBBEAN_PIRATE_FORT_eventPicture
 	
 	fire_only_once = yes
 	
@@ -1205,6 +1233,7 @@ country_event = {
 	id = THE_ROD_events.24
 	title = THE_ROD_events.24.title
 	desc = THE_ROD_events.24.desc
+	picture = ATMOSPHERIC_ENGINE_eventPicture
 	
 	fire_only_once = yes
 	
@@ -1249,6 +1278,7 @@ country_event = {
 	id = THE_ROD_events.25
 	title = THE_ROD_events.25.title
 	desc = THE_ROD_events.25.desc
+	picture = FEAST_eventPicture
 	
 	fire_only_once = yes
 	
@@ -1311,6 +1341,7 @@ country_event = {
 	id = THE_ROD_events.26
 	title = THE_ROD_events.26.title
 	desc = THE_ROD_events.26.desc
+	picture = FALUN_COPPER_MINE_eventPicture
 	
 	fire_only_once = yes
 	
@@ -1420,6 +1451,7 @@ country_event = {
 	id = THE_ROD_events.27
 	title = THE_ROD_events.27.title
 	desc = THE_ROD_events.27.desc
+	picture = NORTH_SEA_MAPS_eventPicture
 	
 	fire_only_once = yes
 	
@@ -1467,10 +1499,10 @@ country_event = {
 			add_building = drydock
 			add_building = wharf
 		}
-		custom_tooltip = THE_ROD_subarctic_islands_area_extra_improve_bonus_tt
-		hidden_effect = {
-			set_country_flag = THE_ROD_subarctic_islands_area_extra_improve_bonus_flag
-		}
+		# custom_tooltip = THE_ROD_subarctic_islands_area_extra_improve_bonus_tt
+		# hidden_effect = {
+		# 	set_country_flag = THE_ROD_subarctic_islands_area_extra_improve_bonus_flag
+		# }
 	}
 
 	option = {
@@ -1495,6 +1527,7 @@ country_event = {
 	id = THE_ROD_events.28
 	title = THE_ROD_events.28.title
 	desc = THE_ROD_events.28.desc
+	picture = BATTLE_eventPicture
 	
 	fire_only_once = yes
 	
@@ -1536,6 +1569,7 @@ country_event = {
 	id = THE_ROD_events.29
 	title = THE_ROD_events.29.title
 	desc = THE_ROD_events.29.desc
+	picture = GREAT_BUILDING_eventPicture
 	
 	fire_only_once = yes
 	
@@ -1593,6 +1627,7 @@ country_event = {
 	id = THE_ROD_events.30
 	title = THE_ROD_events.30.title
 	desc = THE_ROD_events.30.desc
+	picture = HRE_eventPicture
 	
 	fire_only_once = yes
 	
@@ -1627,6 +1662,7 @@ country_event = {
 	id = THE_ROD_events.31
 	title = THE_ROD_events.31.title
 	desc = THE_ROD_events.31.desc
+	picture = HABSBURG_eventPicture
 	
 	fire_only_once = yes
 	
@@ -1690,6 +1726,7 @@ country_event = {
 	id = THE_ROD_events.32
 	title = THE_ROD_events.32.title
 	desc = THE_ROD_events.32.desc
+	picture = REFUGEES_ESCAPING_eventPicture
 	
 	fire_only_once = yes
 	
@@ -1764,6 +1801,7 @@ country_event = {
 	id = THE_ROD_events.33
 	title = THE_ROD_events.33.title
 	desc = THE_ROD_events.33.desc
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
 	
 	fire_only_once = yes
 	
@@ -1833,6 +1871,7 @@ country_event = {
 	id = THE_ROD_events.34
 	title = THE_ROD_events.34.title
 	desc = THE_ROD_events.34.desc
+	picture = TRADEGOODS_eventPicture
 	
 	fire_only_once = yes
 	
@@ -1872,6 +1911,7 @@ country_event = {
 	id = THE_ROD_events.35
 	title = THE_ROD_events.35.title
 	desc = THE_ROD_events.35.desc
+	picture = CITY_VIEW_eventPicture
 	
 	fire_only_once = yes
 	
@@ -1970,6 +2010,7 @@ country_event = {
 	id = THE_ROD_events.36
 	title = THE_ROD_events.36.title
 	desc = THE_ROD_events.36.desc
+	picture = BATTLE_eventPicture
 	
 	mean_time_to_happen = {
 		months = 240
@@ -2035,6 +2076,7 @@ country_event = {
 	id = THE_ROD_events.37
 	title = THE_ROD_events.37.title
 	desc = THE_ROD_events.37.desc
+	picture = COUNCIL_TRENT_eventPicture
 
 	fire_only_once = yes
 	
@@ -2082,6 +2124,7 @@ country_event = {
 	id = THE_ROD_events.38
 	title = THE_ROD_events.38.title
 	desc = THE_ROD_events.38.desc
+	picture = ATMOSPHERIC_ENGINE_eventPicture
 
 	fire_only_once = yes
 	
@@ -2165,6 +2208,7 @@ country_event = {
 	id = THE_ROD_events.39
 	title = THE_ROD_events.39.title
 	desc = THE_ROD_events.39.desc
+	picture = DIPLOMACY_SIGNING_eventPicture
 
 	fire_only_once = yes
 	
@@ -2196,6 +2240,7 @@ country_event = {
 	id = THE_ROD_events.40
 	title = THE_ROD_events.40.title
 	desc = THE_ROD_events.40.desc
+	picture = BIG_BOOK_eventPicture
 
 	fire_only_once = yes
 	
@@ -2261,7 +2306,7 @@ country_event = {
 		name = THE_ROD_events.40.b
 		custom_tooltip = THE_ROD_german_empire_event_tt
 		custom_tooltip = empty_line_tt
-		add_dip_power = -300
+		# add_dip_power = -300
 		add_accepted_culture_or_dip_power = {
 			culture = czech
 			dip_reward = yes
