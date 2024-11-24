@@ -281,7 +281,7 @@ l_english:
  THE_ROD_strategy_and_arm_department_tt_10: "国家要塞驻军增长: §G+25.0%§!"
  THE_ROD_strategy_and_arm_department_tt_error: "如果看到这个选项，说明已经拿到了所有额外效果，由于BUG或控制台导致再次触发了该事件"
  THE_ROD_battle_win_effect_tt: "战役胜利将使对方获得§R0.5§!§Y厌战度§!。\n战役全歼敌军将使对方获得§R2§!§Y厌战度§!和§R-1§!§Y稳定度§!。"
- THE_ROD_end_event_tt: "原作:\n东方Project\n蒐\n\n感谢游玩宵暗领域，感谢你为世界做出的选择。"
+ THE_ROD_end_event_tt: "原作:\n东方Project\n蒐（娶）\n\n感谢游玩@ROD§Y宵暗领域§!，感谢你为世界做出的选择。"
  THE_ROD_not_complete_event_ttt: "没做完"
 ###TOOLTIP_END
 
@@ -489,7 +489,7 @@ l_english:
 
 ###PRIVILEGE
  THE_ROD_estate_nobles_knight_tradition: "[Root.THE_ROD_darkness_order_name_ctt]"
- THE_ROD_estate_nobles_knight_tradition_desc: "<特权描述>"
+ THE_ROD_estate_nobles_knight_tradition_desc: "[Root.THE_ROD_darkness_order_desc_ctt]"
  THE_ROD_estate_church_peasants_privilege: "农民特权：普及教会学校"
  THE_ROD_estate_church_peasants_privilege_desc: ""
  THE_ROD_estate_nobles_peasants_privilege: "农民特权：完善民兵训练"

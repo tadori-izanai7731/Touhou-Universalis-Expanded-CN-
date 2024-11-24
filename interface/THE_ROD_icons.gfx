@@ -88,4 +88,10 @@ spriteTypes = {
 		name = "THE_ROD_privilege_institution"
 		texturefile = "gfx/interface/privilege/THE_ROD_privilege_institution.dds"
 	}
+
+	### event picture
+	spriteType = {
+		name = "AB_ECLIPSE_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_AB/AB_ECLIPSE_eventPicture.dds"
+	}
 }

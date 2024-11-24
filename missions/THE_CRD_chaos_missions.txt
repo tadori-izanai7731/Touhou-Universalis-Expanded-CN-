@@ -1,4 +1,6 @@
-THE_CRD_chaos_stage1_1_branch = {
+### Base Mission Branch
+
+THE_CRD_chaos_stage1_branch_1 = {
 	slot = 1
 	generic = no
 	ai = yes
@@ -19,7 +21,7 @@ THE_CRD_chaos_stage1_1_branch = {
 		effect = {  } 
 	}
 }
-THE_CRD_chaos_stage1_2_branch = {
+THE_CRD_chaos_stage1_branch_2 = {
 	slot = 2
 	generic = no
 	ai = yes
@@ -54,7 +56,7 @@ THE_CRD_chaos_stage1_2_branch = {
 		effect = {  } 
 	}
 }
-THE_CRD_chaos_stage1_3_branch = {
+THE_CRD_chaos_stage1_branch_3 = {
 	slot = 3
 	generic = no
 	ai = yes
@@ -100,7 +102,7 @@ THE_CRD_chaos_stage1_3_branch = {
 		effect = {  } 
 	}
 }
-THE_CRD_chaos_stage1_4_branch = {
+THE_CRD_chaos_stage1_branch_4 = {
 	slot = 4
 	generic = no
 	ai = yes
@@ -135,7 +137,7 @@ THE_CRD_chaos_stage1_4_branch = {
 		effect = {  } 
 	}
 }
-THE_CRD_chaos_stage1_5_branch = {
+THE_CRD_chaos_stage1_branch_5 = {
 	slot = 5
 	generic = no
 	ai = yes
@@ -155,4 +157,120 @@ THE_CRD_chaos_stage1_5_branch = {
 
 		effect = {  } 
 	}
+}
+
+### Satori Mission Branch
+
+THE_CRD_chaos_stage2_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = CRD
+		always = no
+	}
+
+}
+THE_CRD_chaos_stage2_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = CRD
+		always = no
+	}
+
+}
+THE_CRD_chaos_stage2_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = CRD
+		always = no
+	}
+
+}
+THE_CRD_chaos_stage2_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = CRD
+		always = no
+	}
+
+}
+THE_CRD_chaos_stage2_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = CRD
+		always = no
+	}
+
+}
+
+### Koishi Mission Branch
+
+THE_CRD_chaos_stage3_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = CRD
+		always = no
+	}
+
+}
+THE_CRD_chaos_stage3_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = CRD
+		always = no
+	}
+
+}
+THE_CRD_chaos_stage3_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = CRD
+		always = no
+	}
+
+}
+THE_CRD_chaos_stage3_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = CRD
+		always = no
+	}
+
+}
+THE_CRD_chaos_stage3_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = CRD
+		always = no
+	}
+
 }
