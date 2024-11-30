@@ -25,3 +25,7 @@ on_mercenary_recruited = {
 		}
 	}
 }
+
+on_government_change = {
+	THE_on_government_change_scripted_effect = yes
+}

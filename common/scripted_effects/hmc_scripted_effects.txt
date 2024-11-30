@@ -1,22 +1,22 @@
-hmc_inherit_cb_scripted_effect = {
-	export_to_variable = {
-		which = hmc_sub_time_var
-		value = total_development
-		who = FROM
-	}
-	while = {
-		limit = {
-			check_variable = {
-				which = hmc_sub_time_var
-				value = 1
-			}
-		}
+# hmc_inherit_cb_scripted_effect = {
+# 	export_to_variable = {
+# 		which = hmc_sub_time_var
+# 		value = total_development
+# 		who = FROM
+# 	}
+# 	while = {
+# 		limit = {
+# 			check_variable = {
+# 				which = hmc_sub_time_var
+# 				value = 1
+# 			}
+# 		}
 		
-		add_treasury = -100
-		subtract_variable = {            
-			which = hmc_sub_time_var
-			value = 1
-		}
-	}
-}
+# 		add_treasury = -100
+# 		subtract_variable = {            
+# 			which = hmc_sub_time_var
+# 			value = 1
+# 		}
+# 	}
+# }
 

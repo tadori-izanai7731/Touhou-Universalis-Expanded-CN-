@@ -1,0 +1,12 @@
+THE_on_government_change_scripted_effect = {
+	if = {
+		limit = { NOT = { has_government_attribute = th_can_overload_provinces } }
+		remove_country_modifier = th_hellfairy_provinces_to_overload
+		every_owned_province = {
+			limit = {
+				has_province_modifier = th_province_overload
+			}
+			remove_province_modifier = th_province_overload
+		}
+	}
+}
