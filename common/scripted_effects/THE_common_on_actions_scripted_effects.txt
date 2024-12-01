@@ -1,4 +1,10 @@
 THE_on_government_change_scripted_effect = {
+	country_event = {
+		id = THE_common_events.1
+	}
+}
+
+THE_on_government_change_scripted_effect_effects = {
 	if = {
 		limit = { NOT = { has_government_attribute = th_can_overload_provinces } }
 		remove_country_modifier = th_hellfairy_provinces_to_overload

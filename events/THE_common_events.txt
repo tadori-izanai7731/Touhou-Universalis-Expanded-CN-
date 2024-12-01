@@ -22,3 +22,21 @@ country_event = {
 		custom_tooltip = THE_display_the_country_content_tt
 	}
 }
+
+country_event = {
+	id = THE_common_events.1
+	title = NONE
+	desc = NONE
+	picture = GENSOKYOSGUARDIAN_eventPicture
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = NONE
+	}
+
+	after = {
+		THE_on_government_change_scripted_effect_effects = yes
+	}
+}
