@@ -1,0 +1,76 @@
+THE_CRD_mental_net_center_reform_name = {
+	rank = {
+		1 = THE_ROOT
+		2 = THE_ROOT
+		3 = THE_ROOT
+	}
+	
+	ruler_male = {
+		1 = TOUHOU_MISTER
+		2 = TOUHOU_LORD
+		3 = EMPEROR
+	}
+	
+	ruler_female = {
+		1 = TOUHOU_MISTRESS
+		2 = TOUHOU_LADY
+		3 = EMPRESS
+	}
+	
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	trigger = {
+		OR = {
+			has_reform = THE_CRD_mental_net_center_reform
+			has_reform = THE_TFR_shadow_republic_reform
+			has_reform = THE_TFR_shadow_theocracy_reform
+			has_reform = THE_TFR_shadow_tribal_reform
+		}
+	}
+}
+
+THE_ROD_apparitions_stalk_the_night_monarchy_name = {
+	rank = {
+		1 = TOUHOU_DOMAIN
+		2 = TOUHOU_REALM
+		3 = TOUHOU_EMPIRE
+	}
+	
+	ruler_male = {
+		1 = TOUHOU_MISTER
+		2 = TOUHOU_LORD
+		3 = EMPEROR
+	}
+	
+	ruler_female = {
+		1 = TOUHOU_MISTRESS
+		2 = TOUHOU_LADY
+		3 = EMPRESS
+	}
+	
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	trigger = {
+		has_reform = THE_ROD_apparitions_stalk_the_night_monarchy
+	}
+}

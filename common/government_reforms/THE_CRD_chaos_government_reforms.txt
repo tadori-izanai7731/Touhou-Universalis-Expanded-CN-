@@ -1,0 +1,31 @@
+THE_CRD_mental_net_center_reform = {
+	#icon = ""
+	potential = {
+		OR = {
+			has_reform = THE_CRD_mental_net_center_reform
+			have_had_reform = THE_CRD_mental_net_center_reform
+			has_country_flag = THE_CRD_chaos_unlock_mental_net_center_reform_flag
+		}
+	}
+	allow_normal_conversion = yes
+
+	custom_attributes = {
+		THE_CRD_chaos_can_create_mental_net_node_custom_attributes = yes
+	}
+
+	modifiers = {
+		prestige = 1
+	}
+}
+
+THE_CRD_mental_net_node_reform = {
+	#icon = ""
+	potential = {
+		is_subject_of_type = THE_CRD_chaos_mental_net_node
+	}
+	allow_normal_conversion = yes
+
+	modifiers = {
+		prestige = 1
+	}
+}
