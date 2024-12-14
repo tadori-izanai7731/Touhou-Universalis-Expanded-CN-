@@ -1,10 +1,35 @@
-THE_CRD_mental_net_center_reform = {
+THE_CRD_chireiden_pace_reform = {
 	#icon = ""
 	potential = {
 		OR = {
-			has_reform = THE_CRD_mental_net_center_reform
-			have_had_reform = THE_CRD_mental_net_center_reform
-			has_country_flag = THE_CRD_chaos_unlock_mental_net_center_reform_flag
+			has_reform = THE_CRD_chireiden_pace_reform
+			have_had_reform = THE_CRD_chireiden_pace_reform
+			has_country_flag = THE_CRD_chaos_unlock_chireiden_pace_reform_flag
+		}
+	}
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+
+	custom_attributes = {
+		locked_government_type = yes
+	}
+
+	modifiers = {
+		can_not_declare_war = yes
+		global_unrest = -10
+		all_estate_loyalty_equilibrium = 0.25
+		build_time = -0.5
+		build_cost = -0.25
+		global_allowed_num_of_buildings = 2
+	}
+}
+
+THE_CRD_mental_net_center_reform_1 = {
+	#icon = ""
+	potential = {
+		OR = {
+			has_reform = THE_CRD_mental_net_center_reform_1
+			have_had_reform = THE_CRD_mental_net_center_reform_1
 		}
 	}
 	allow_normal_conversion = yes
@@ -13,8 +38,30 @@ THE_CRD_mental_net_center_reform = {
 		THE_CRD_chaos_can_create_mental_net_node_custom_attributes = yes
 	}
 
+	government_abilities = {
+		THE_CRD_mental_net_stage1_government_mechanic
+	}
+
 	modifiers = {
-		prestige = 1
+		governing_capacity = 500
+		allow_client_states = yes
+		improve_relation_modifier = 0.25
+		THE_mental_net_node_limit_custom_modifier = 1
+	}
+
+	effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = THE_CRD_chaos_have_not_input_modifier
+				duration = -1
+				hidden = yes
+			}
+			add_country_modifier = {
+				name = THE_CRD_chaos_have_not_process_modifier
+				duration = -1
+				hidden = yes
+			}
+		}
 	}
 }
 
@@ -23,9 +70,34 @@ THE_CRD_mental_net_node_reform = {
 	potential = {
 		is_subject_of_type = THE_CRD_chaos_mental_net_node
 	}
+	trigger = {
+		NOT = { num_of_cities = 2 }
+		NOT = { is_subject = yes }
+	}
 	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+
+	custom_attributes = {
+		locked_government_type = yes
+		THE_CRD_chaos_unable_declared = yes
+	}
 
 	modifiers = {
 		prestige = 1
+	}
+
+	removed_effect = {
+		if = {
+			limit = {
+				is_subject = yes
+				is_subject_of_type = THE_CRD_chaos_mental_net_node
+			}
+			overlord = {
+				create_subject = {
+					subject_type = vassal
+					who = ROOT
+				}
+			}
+		}
 	}
 }

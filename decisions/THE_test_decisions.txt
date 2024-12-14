@@ -16,13 +16,13 @@ country_decisions = {
 	THE_testtest_decision = {
 		potential = {
 			ai = no
-			has_country_flag = THE_testtest_avliable_flag
+			has_country_flag = THE_debug_flag
 		}
 		allow = {
-			# Test Trigger
+			always = yes
 		}
 		effect = {
-			add_government_reform = THE_CRD_mental_net_center_reform
+			add_government_reform = THE_CRD_mental_net_center_reform_1
 		}
 	}
 }

@@ -1,0 +1,14 @@
+# 服务器容量不足
+THE_CRD_chaos_insufficient_server_capacity_modifier = {
+	monthly_THE_CRD_chaos_mental_net_input = -100
+}
+
+# 未完全输入
+THE_CRD_chaos_have_not_input_modifier = {
+	monthly_THE_CRD_chaos_mental_net_process = -100
+}
+
+# 未完全处理
+THE_CRD_chaos_have_not_process_modifier = {
+	monthly_THE_CRD_chaos_mental_net_output = -100
+}

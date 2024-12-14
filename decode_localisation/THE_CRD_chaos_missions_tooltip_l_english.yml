@@ -1,6 +1,53 @@
 ﻿l_english:
+### TOOLTIP
+ THE_CRD_chaos_government_mechanic_start_process_tt: "开始数据处理"
+ THE_CRD_chaos_government_mechanic_start_output_tt: "开始数据输出"
+ THE_CRD_chaos_government_mechanic_start_input_tt: "还不能停止…"
+ THE_CRD_chaos_gain_mental_gift_tt: "随机获得一项来自「心灵」的礼物"
+### TOOLTIP_END
+
 ### GOVERNMENT
- THE_CRD_mental_net_center_reform: "心灵网络中心"
+ THE_CRD_chireiden_pace_reform: "地灵殿的安息"
+ THE_CRD_chireiden_pace_reform_desc: "这世界有太多无法解决的事，包括一处安息之所。"
+ THE_CRD_mental_net_center_reform_1: "心灵网络中心"
+ THE_CRD_mental_net_center_reform_1_desc: ""
  mechanic_THE_CRD_chaos_can_create_mental_net_node_custom_attributes_yes: "可以创建心灵网络节点"
+ mechanic_THE_CRD_chaos_unable_declared_yes: "无法被其他国家宣战"
  THE_ROOT: "根服务器"
+ THE_mental_net_node_limit_custom_modifier: "心灵网络节点上限"
+ ability_THE_CRD_mental_net_stage1_government_mechanic: "心灵网络"
+ ability_THE_CRD_mental_net_stage2_government_mechanic: "心灵网络"
+ ability_THE_CRD_mental_net_stage3_government_mechanic: "心灵网络"
+ ability_THE_CRD_mental_net_stage4_government_mechanic: "心灵网络"
+ THE_CRD_chaos_mental_net_input: "心灵网络：数据输入"
+ THE_CRD_chaos_mental_net_process: "心灵网络：数据处理"
+ THE_CRD_chaos_mental_net_output: "心灵网络：数据输出"
+ monthly_THE_CRD_chaos_mental_net_input: "月度心灵网络输入速度"
+ monthly_THE_CRD_chaos_mental_net_input: "月度心灵网络处理速度"
+ monthly_THE_CRD_chaos_mental_net_input: "月度心灵网络输出速度"
 ### GOVERNMENT_END
+
+### DECISION
+ THE_CRD_chaos_display_mechanic_decision_title: "混乱观测和心灵网络"
+ THE_CRD_chaos_display_mechanic_decision_desc: "查看@CRD地灵殿的相关机制说明。"
+### DECISION_END
+
+### EVENT
+ THE_CRD_chaos_events.1.title: "混乱观测和心灵网络"
+ THE_CRD_chaos_events.1.desc: "欢迎游玩东方风云拓展（以下简称拓展），拓展中的地灵殿并不是一个对外扩张的TAG，在绝大多数情况下没有发动战争的能力，当然其他国家也不能随意地对地灵殿发动战争。\n\n在拓展中，地灵殿的机制分为§Y混乱观测§!和§Y心灵网络§!，其中§Y混乱观测§!的内容为全球性的负面事件，§Y心灵网络§!则是应对此次危机的工具，可将光标移动到选项上查看机制的具体内容，单击任意选项关闭该事件。"
+ THE_CRD_chaos_events.1.a: "查看§Y混乱观测§!的具体内容。"
+ THE_CRD_chaos_events.1.b: "查看§Y心灵网络§!的具体内容。"
+### EVENT_END
+
+### SPECIAL
+ THE_CRD_chaos_reject_mind_event_group_tt: "该事件属于§R无眼无心§!事件组。"
+ THE_CRD_chaos_komeiji_remembrance_event_group_tt: "该事件属于§V古明地回忆§!事件组。"
+ THE_CRD_chaos_crossing_world_event_group_tt: "该事件属于§J世界交联§!事件组。"
+ THE_CRD_chaos_distant_future_event_group_tt: "该事件属于§T遥远的明天§!事件组。"
+### SPECIAL_END
+
+### MODIFIER
+ THE_CRD_chaos_insufficient_server_capacity_modifier: "服务器容量不足"
+ THE_CRD_chaos_have_not_input_modifier: "未完全输入"
+ THE_CRD_chaos_have_not_process_modifier: "未完全处理"
+### MODIFIER_END

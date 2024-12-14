@@ -1,6 +1,53 @@
 ﻿l_english:
+### TOOLTIP
+ THE_CRD_chaos_government_mechanic_start_process_tt: "VËYpencYt"
+ THE_CRD_chaos_government_mechanic_start_output_tt: "VËYpenc“úQ"
+ THE_CRD_chaos_government_mechanic_start_input_tt: "ØNýwjPbk&"
+ THE_CRD_chaos_gain_mental_gift_tt: "–:g·ƒ—VNy˜egê0ÃVup0„v<yir"
+### TOOLTIP_END
+
 ### GOVERNMENT
- THE_CRD_mental_net_center_reform: "ÃVupQÜu-NÃV"
+ THE_CRD_chireiden_pace_reform: "0Wup¿k„v‰Ro`"
+ THE_CRD_chireiden_pace_reform_desc: "ÙNLu	g*YYàeÕlã‰³Q„v‹NÿSìbNY‰Ro`KNNb0"
+ THE_CRD_mental_net_center_reform_1: "ÃVupQÜu-NÃV"
+ THE_CRD_mental_net_center_reform_1_desc: ""
  mechanic_THE_CRD_chaos_can_create_mental_net_node_custom_attributes_yes: "ïSåNRú^ÃVupQÜu‚‚¹p"
+ mechanic_THE_CRD_chaos_unable_declared_yes: "àeÕl«ˆvQÖNýV¶R±Rb"
  THE_ROOT: "9hg¡RhV"
+ THE_mental_net_node_limit_custom_modifier: "ÃVupQÜu‚‚¹pNP–"
+ ability_THE_CRD_mental_net_stage1_government_mechanic: "ÃVupQÜu"
+ ability_THE_CRD_mental_net_stage2_government_mechanic: "ÃVupQÜu"
+ ability_THE_CRD_mental_net_stage3_government_mechanic: "ÃVupQÜu"
+ ability_THE_CRD_mental_net_stage4_government_mechanic: "ÃVupQÜu"
+ THE_CRD_chaos_mental_net_input: "ÃVupQÜuÿpenc“eQ"
+ THE_CRD_chaos_mental_net_process: "ÃVupQÜuÿpencYt"
+ THE_CRD_chaos_mental_net_output: "ÃVupQÜuÿpenc“úQ"
+ monthly_THE_CRD_chaos_mental_net_input: "g¦^ÃVupQÜu“eQ¦^"
+ monthly_THE_CRD_chaos_mental_net_input: "g¦^ÃVupQÜuYt¦^"
+ monthly_THE_CRD_chaos_mental_net_input: "g¦^ÃVupQÜu“úQ¦^"
 ### GOVERNMENT_END
+
+### DECISION
+ THE_CRD_chaos_display_mechanic_decision_title: "÷mqNÂ‰KmŒTÃVupQÜu"
+ THE_CRD_chaos_display_mechanic_decision_desc: "ågw@CRD0Wup¿k„vøvsQ:g6Rô‹f0"
+### DECISION_END
+
+### EVENT
+ THE_CRD_chaos_events.1.title: "÷mqNÂ‰KmŒTÃVupQÜu"
+ THE_CRD_chaos_events.1.desc: "0kÎ8n©sN¹eÎ˜‘NÓbUSÿåNNŽrðyÓbUS	ÿÿÓbUS-N„v0Wup¿kv^N=fN*NùRYib.V„vTAGÿ(WÝu'YYpeÅ`µQN¡l	gÑS¨Rb‰N„výw›RÿSV6qvQÖNýV¶RmNNýw–a0WùR0Wup¿kÑS¨Rb‰N0\n\n(WÓbUS-Nÿ0Wup¿k„v:g6RR:N§Y÷mqNÂ‰Km§!ŒT§YÃVupQÜu§!ÿvQ-N§Y÷mqNÂ‰Km§!„v…Q¹R:NhQt'`„vb—‹NöNÿ§YÃVupQÜu§!R=f”^ùRdk!kqS:g„våTwQÿïSSIQhûy¨R0R	y˜Någw:g6R„vwQSO…Q¹RÿUSûQûNa	y˜sQí•å‹‹NöN0"
+ THE_CRD_chaos_events.1.a: "ågw§Y÷mqNÂ‰Km§!„vwQSO…Q¹R0"
+ THE_CRD_chaos_events.1.b: "ågw§YÃVupQÜu§!„vwQSO…Q¹R0"
+### EVENT_END
+
+### SPECIAL
+ THE_CRD_chaos_reject_mind_event_group_tt: "å‹‹NöN^SŽN§Ràe<wàeÃV§!‹NöNÄu0"
+ THE_CRD_chaos_komeiji_remembrance_event_group_tt: "å‹‹NöN^SŽN§VäSf0WÞVÆV§!‹NöNÄu0"
+ THE_CRD_chaos_crossing_world_event_group_tt: "å‹‹NöN^SŽN§JNLu²NTw§!‹NöNÄu0"
+ THE_CRD_chaos_distant_future_event_group_tt: "å‹‹NöN^SŽN§TeÜ„vf)Y§!‹NöNÄu0"
+### SPECIAL_END
+
+### MODIFIER
+ THE_CRD_chaos_insufficient_server_capacity_modifier: "g¡RhV¹RÏ‘N³"
+ THE_CRD_chaos_have_not_input_modifier: "*gŒRhQ“eQ"
+ THE_CRD_chaos_have_not_process_modifier: "*gŒRhQYt"
+### MODIFIER_END

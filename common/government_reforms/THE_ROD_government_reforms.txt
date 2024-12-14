@@ -75,6 +75,7 @@ THE_ROD_spread_hakurei_message_reform = {
 			have_had_reform = THE_ROD_spread_hakurei_message_reform
 			has_country_flag = THE_ROD_unlock_spread_hakurei_message_reform_flag
 		}
+		NOT = { has_country_flag = THE_ROD_hakureishinto_reform_extra_flag }
 	}
 	trigger = {
 		religion = th_hakureishinto
@@ -91,18 +92,41 @@ THE_ROD_spread_hakurei_message_reform = {
 	custom_attributes = {
 		gain_monarch_power_from_force_converting = yes
 		enables_divine_idea_group = yes
-	}
-	conditional = {
-		allow = { NOT = { has_country_flag = THE_ROD_hakureishinto_reform_extra_flag } }
-		custom_attributes = {
-			THE_ROD_convert_religion_add_church_loyalty_or_adm = yes
-		}
+		THE_ROD_convert_religion_add_church_loyalty_or_adm = yes
 	}
 	conditional = {
 		allow = { has_country_flag = THE_ROD_hakureishinto_reform_extra_flag }
 		custom_attributes = {
 			THE_ROD_convert_religion_add_church_loyalty_or_adm_dip_mil = yes
 		}
+	}
+}
+
+THE_ROD_spread_hakurei_message_reform_x = {
+	icon = "connection_to_hakurei_reform"
+	potential = {
+		OR = {
+			has_reform = THE_ROD_spread_hakurei_message_reform_x
+			have_had_reform = THE_ROD_spread_hakurei_message_reform_x
+		}
+		has_country_flag = THE_ROD_hakureishinto_reform_extra_flag
+	}
+	trigger = {
+		religion = th_hakureishinto
+	}
+	allow_normal_conversion = yes
+	modifiers = {
+		reverse_relation_with_same_religion = 25
+		# reverse_relation_with_heathen_religion = -25
+		prestige_per_development_from_conversion = 0.5
+		enforce_religion_cost = -0.5
+		church_loyalty_modifier = 0.1
+		manpower_in_true_faith_provinces = 0.2
+	}
+	custom_attributes = {
+		gain_monarch_power_from_force_converting = yes
+		enables_divine_idea_group = yes
+		THE_ROD_convert_religion_add_church_loyalty_or_adm_dip_mil = yes
 	}
 }
 

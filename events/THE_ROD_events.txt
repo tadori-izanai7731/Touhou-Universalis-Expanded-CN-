@@ -2453,7 +2453,7 @@ country_event = {
 	}
 	trigger = {
 		OR = { tag = ROD was_tag = ROD }
-		has_government_attribute = THE_ROD_convert_religion_add_church_loyalty_or_adm
+		has_reform = THE_ROD_spread_hakurei_message_reform
 		religion = th_hakureishinto
 	}
 	
@@ -2464,6 +2464,7 @@ country_event = {
 		custom_tooltip = THE_ROD_hakureishinto_reform_extra_tt
 		hidden_effect = {
 			set_country_flag = THE_ROD_hakureishinto_reform_extra_flag
+			add_government_reform = THE_ROD_spread_hakurei_message_reform
 		}
 	}
 }
