@@ -3,6 +3,7 @@ country_decisions = {
 		potential = {
 			ai = no
 			mission_completed = THE_CRD_chaos_3_4
+			NOT = { has_country_flag = THE_CRD_chaos_view_mechanic_flag }
 		}
 		allow = {
 			always = yes

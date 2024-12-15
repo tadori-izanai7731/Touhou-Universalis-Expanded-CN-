@@ -25,6 +25,12 @@ country_event = {
 
 	is_triggered_only = yes
 
+	immediate = {
+		hidden_effect = {
+			set_country_flag = THE_CRD_chaos_view_mechanic_flag
+		}
+	}
+
 	option = {
 		name = THE_CRD_chaos_events.1.a
 		custom_tooltip = TEH_CRD_chaos_observation_mechanic_tt_1
@@ -32,5 +38,11 @@ country_event = {
 	option = {
 		name = THE_CRD_chaos_events.1.b
 		custom_tooltip = TEH_CRD_chaos_net_mechanic_tt_1
+	}
+
+	after = {
+		hidden_effect = {
+			clr_country_flag = THE_CRD_chaos_view_mechanic_flag
+		}
 	}
 }
