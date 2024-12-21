@@ -48,36 +48,12 @@ THE_kko_missions_first_slot = {
 			}
 			add_mil_power = 50
 			Eastern_myouren_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			Myouren_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			Northern_myouren_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			complete_mission = KKO_foism_change
@@ -631,7 +607,6 @@ THE_kko_missions_first_slot = {
 		trigger = {
 			mission_completed = KKO_qinggan_xiuxing
 			AND = {
-				is_in_deficit = yes
 				war_exhaustion = 4
 				NOT = {
 					army_size_percentage = 0.75
@@ -708,14 +683,6 @@ THE_THE_kko_missions_second_slot = {
 				duration = 7300
 			}
 			Northern_youkai_mountains = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 		}
@@ -759,36 +726,12 @@ THE_THE_kko_missions_second_slot = {
 			}
 			add_mil_power = 50
 			Eastern_senkai = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			Senkai_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			Northern_senkai = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			complete_mission = KKO_taoism_change
@@ -979,7 +922,7 @@ THE_THE_kko_missions_second_slot = {
 					war_score = 45
 				}
 				num_of_loans = 4
-				is_in_deficit = yes
+				inflation = 5
 			}
 		}
 		effect = {
@@ -1074,69 +1017,21 @@ THE_kko_missions_third_slot = {
 		}
 		effect = {
 			Myouren_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			Eastern_myouren_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			Northern_myouren_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			Senkai_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			Eastern_senkai = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			Northern_senkai = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 		}
@@ -1322,30 +1217,25 @@ THE_kko_missions_third_slot = {
 			owned_by = CRD
 		}
 		trigger = {
-			if = {
-				limit = {
-					overlord_of = CRD
-				}
-				NOT = {
-					CRD = {
-						liberty_desire = 50
-					}
-				}
-			}
-			else = {
+			OR = {
 				NOT = {
 					exists = CRD
+				}
+				AND = {
+					CRD = { is_subject_of = ROOT }
+					NOT = {
+						CRD = {
+							liberty_desire = 50
+						}
+					}
 				}
 			}
 		}
 		effect = {
 			add_stability = 1
-			custom_tooltip = KKO_zuiqiang_juedou_tooltip1
 			if = {
 				limit = {
-					KKO = {
-						overlord_of = CRD
-					}
+					CRD = { is_subject_of = ROOT }
 				}
 				CRD = {
 					add_country_modifier = {
@@ -1493,25 +1383,9 @@ THE_kko_missions_test_slot = {
 				value = 20
 			}
 			Great_youkai_forest = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			Eastern_youkai_forest = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 		}
@@ -1548,69 +1422,21 @@ THE_kko_missions_test_slot = {
 			add_dip_power = 30
 			add_mil_power = 30
 			Road_to_hell_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			Chireiden_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			Chireiden_canal_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			Yuugi_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			Oni_exclave_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			Blazing_hell_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			add_country_modifier = {
@@ -1636,7 +1462,7 @@ THE_kko_missions_test_slot = {
 					alliance_with = CRD
 					CRD = {
 						has_opinion = {
-							who = KKO
+							who = ROOT
 							value = 200
 						}
 					}
@@ -1644,7 +1470,7 @@ THE_kko_missions_test_slot = {
 				}
 				AND = {
 					5007 = {
-						owned_by = KKO
+						owned_by = ROOT
 					}
 				}
 				overlord_of = CRD
@@ -1660,8 +1486,8 @@ THE_kko_missions_test_slot = {
 			# custom_tooltip = koishi_advisor_unlock
 			if = {
 				limit = {
-					KKO = {
-						overlord_of = CRD
+					CRD = {
+						is_subject_of = ROOT
 					}
 				}
 				custom_tooltip = THE_KKO_koishi_advisor_tt_yes
@@ -1675,8 +1501,8 @@ THE_kko_missions_test_slot = {
 			hidden_effect = {
 				if = {
 					limit = {
-						KKO = {
-							overlord_of = CRD
+						CRD = {
+							is_subject_of = ROOT
 						}
 					}
 					THE_KKO_define_advisor_koishi_scripted_effect = yes
@@ -1751,47 +1577,15 @@ THE_kko_missions_test_slot = {
 		effect = {
 			add_dip_power = 200
 			Mountain_kappa_land = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			Genbu_ravine_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			Kappa_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			Kappa_delta = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			add_country_modifier = {
@@ -1825,36 +1619,12 @@ THE_kko_missions_test_slot = {
 			complete_mission = KKO_shantong
 			custom_tooltip = empty_line_tt
 			Moriya_coast_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			Moriya_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			Southern_moriya = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			add_country_modifier = {
@@ -1950,31 +1720,18 @@ THE_kko_missions_fith_slot = {
 		required_missions = { KKO_free_sentiment }
 		position = 2
 		trigger = {
-			army_size_percentage = 0.9
+			OR = {
+				army_size_percentage = 0.9
+				army_size = 30
+			}
 			has_mil_advisor = yes
 		}
 		effect = {
 			THE_KKO_define_advisor_kokoro_scripted_effect = yes
 			Land_of_the_black_doors = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			Shinkirou_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 		}
@@ -2009,49 +1766,19 @@ THE_kko_missions_fith_slot = {
 				name = nengyue_biaoyan_buff
 				duration = 10950
 			}
+			custom_tooltip = KKO_nengmian_biaoyan_mission_effect_tt
+			custom_tooltip = empty_line_tt
 			set_country_flag = nengyue_biaoyan_down
 			North_tengu_plains = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			Youkai_Mountains = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			Southern_youkai_mountains = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			Foot_of_youkai_mountains= {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 		}
@@ -2119,17 +1846,7 @@ THE_kko_missions_fith_slot = {
 				change_culture = Tsukumogami_culture
 			}
 			4974 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-						}
-						NOT = {
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -2157,26 +1874,12 @@ THE_kko_missions_fith_slot = {
 			}
 		}
 		effect = {
+			custom_tooltip = KKO_saoling_mission_effect_tt
+			custom_tooltip = empty_line_tt
 			Human_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			Kourindou_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 		}
@@ -2234,16 +1937,10 @@ THE_kko_missions_fith_slot = {
 		effect = {
 			set_country_flag = kko_xinjumu
 			# custom_tooltip = kko_xinjumu1
+			custom_tooltip = KKO_xin_jumu_mission_effect_tt
+			custom_tooltip = empty_line_tt
 			add_prestige = 25
 			Raiko_Seki_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 		}
@@ -2294,36 +1991,12 @@ THE_kko_missions_fith_slot = {
 			complete_mission = KKO_hetong
 			custom_tooltip = empty_line_tt
 			Moriya_coast_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			Moriya_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			Southern_moriya = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 			add_country_modifier = {
@@ -2346,47 +2019,35 @@ THE_kko_missions_fith_slot = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			AND = {
+			4998 = { country_or_non_sovereign_subject_holds = ROOT }
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = Moriya_state
+			}
+			OR = {
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 4
-					area = Moriya_state
+					value = 2
+					area = Southern_moriya
 				}
-				OR = {
-					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						value = 2
-						area = Southern_moriya
-					}
-					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						value = 2
-						area = Moriya_coast_state
-					}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 2
+					area = Moriya_coast_state
 				}
 			}
 		}
 		effect = {
-			add_adm_power = 50
-			add_dip_power = 50
-			add_mil_power = 50
-			Great_border = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
+			4998 = {
+				add_great_project_tier = {
+					type = th_monument_moriya_shrine
+					tier = 1
 				}
+			}
+			custom_tooltip = KKO_shoushi_mission_effect_tt
+			custom_tooltip = empty_line_tt
+			Great_border = {
 				add_permanent_claim = ROOT
 			}
 			Western_great_border = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
 				add_permanent_claim = ROOT
 			}
 		}

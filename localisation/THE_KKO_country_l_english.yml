@@ -152,8 +152,8 @@
  kko_chuanjiao_buff: "ibUSáOðN"
  KKO_dark_nengyue_buff1: "'NÃV„vÑž—fýwPN‚"
  KKO_dark_nengyue_buff2: "'NÃV„vÑž—fýwPN‚"
- nengyue_biaoyan_buff: "ÛLˆÇýwPNhˆo"
- nengyue_biaoyan_buff2: "ÛLˆÇýwPNhˆo"
+ nengyue_biaoyan_buff: "ýwPNhˆo"
+ nengyue_biaoyan_buff2: "ýwPNhˆo"
  kko_xinqilou_buff: "‚w0ÃVîu|i0"
  xinqilou_on_buff: "1kOÃVîu|i"
  kko_xin_yang_buff: "ìrê³Q­eáOðN"
@@ -268,7 +268,7 @@
  KKO_zuiqiang_juedou_desc: "(WNK`b:NgËSTÿK`?aaRVØæyÃV„v^gKNb—0NÇÿK`K`‹YÏPØV°‹>e(WêTÌ‘0ô‹=fêñT„vRiregNwÿNÇnxžRN°‹—+
  KKO_guihuan_xiwang_title: "RVØ^gKNb—"
  KKO_guihuan_xiwang_desc: "^gKNb—„vRVØ‹†6qNOËzIR©‹æyÃVEQán^gÿFO–Nwöeô•„v¨cûyÿNRýSnekeQckh0"
- KKO_xinqilou_title: "ÈuU^0ÃVîu|i0"
+ KKO_xinqilou_title: "ÈuU^\n0ÃVîu|i0"
  KKO_xinqilou_desc: "ZSKN^y>yÿN*NŸS,g1SS	gºNî•%m„v0W¹eÿ(W³Q—eípno»STôf=fè•ïSWÀ–0FOÊN)YÿÙÌ‘tS	gNbNT0°e„v^gKNb—bŸRµc6R†NæyÃV„vÅ`êu0(WNR¨Raƒs^o`KNTÿæyÃV(WÙÌ‘No†NNúQ°egR0ÃVîu|i0"
  KKO_wuyishi_pailian_title: "àeaÆ‹’cÃu"
  KKO_wuyishi_pailian_desc: "(WK`K`&^eg„vYLuz‚=gfNM|„v=TÑSNÿÃVNK`ÛLˆ†NNZfN„væ‚bÿS^ySiOKNô•„v—RYe‰NïzçT™Y0W9eb†N°e„vgRîvÿTðfÃVîu|i0"
@@ -303,7 +303,7 @@
  KKO_weng_xiuxing_title: "Á„veyy"
  KKO_weng_xiuxing_desc: "ÎNËSŒN²NÅ`„v)n–f-NaŸ`†Nx^y0"
  KKO_xiaomian_xiuxing_title: "SsY„vs^Y—"
- KKO_xiaomian_xiuxing_desc: "(WµU±V„v>yO-NèxÃu†NØšS0 "
+ KKO_xiaomian_xiuxing_desc: "(WµU±V„v>yO-NèxÃu†NØšS0"
  KKO_tiangou_xiuxing_title: ")Y×r„v²Pba"
  KKO_tiangou_xiuxing_desc: "(WqR1Vwb—MRfRO†NSÍ‘0"
  KKO_done_xiuxing_title: "«Ž:N–Y*`„vêb"
@@ -336,7 +336,7 @@
  xinqilou_on: "ÝNN!kO(uÃVîu|iòTÏuÇ»S5t^"
  xinqilou_on_ok: "ã‰•Y²NLˆ¨R§YÃVîu|i§!"
  th_dark_nengyue_tooltip: "ÃVS(WùR”^ýV¶RhˆoÑž—fýwPN"
- th_dark_nengyue_desc: "ýw=fˆNºNaÅ`„voz‚ÿFOæyÃV„výw=fïSåN:YÖSºN„vaÅ`0Ù1S«ˆðyjONbŒ„vÑž—fýwPN0\n(WÃVîu|iŒRbÅ`aîOLˆMRÿùR”^hˆo„výV¶RTaSO·ƒ—Vÿ§R hQýVÛSqN¦^ +1ÿg¦^‰Lq¹ppe -1§!cbd–3*Ng6eeQÿÃVîu|iSO§G3*Ng6eeQ§!0\n·ƒ—V‚YœgùR”^ýV¶RÒbÝuSO·ƒ—Vÿ§R t^¦^Zg -1ÿg¦^‰Lq¹ppe -0.5§!0\n‚YœgÃVîu|iŒRb†NÅ`aîOLˆÿRdebuffNOuHe0\n"
+ th_dark_nengyue_desc: "ýw=fˆNºNaÅ`„voz‚ÿFOæyÃV„výw=fïSåN:YÖSºN„vaÅ`0Ù1S«ˆðyjONbŒ„vÑž—fýwPN0\n\n§Y[Root.GetName]§!(W§Y[From.GetName]§!„vô•ŒQÄ‰!jÏQS§R15§!\n§Y[Root.GetName]§!·ƒ—V§G1§!t^6eeQŒT0§YýwPNhˆo§!0cíu§Y10§!t^ÿÙuˆN‚YNHeœg:\nÏkt^Zg: §G+1.00§!\nÏkg‰Lq¹ppe: §G+2.00§!\nY²NðX‰Š: §G+1.00§!\n\n§Y[From.GetName]§!1Y»S§R1§!t^6eeQv^·ƒ—V0§Y'NÃV„vÑž—fýwPN‚§!0cíu§Y10§!t^ÿÙuˆN‚YNHeœg:\nhQýVÛSqN¦^: §R+1.00§!\nÏkg‰Lq¹ppe: §R-2.00§!"
  th_xinqilou_tooltip: "ÃVS(WùR”^ýV¶RhˆoÃVîu|i"
  th_xinqilou_desc: "ÃVîu|i:NÃVNK`•beQ†NNteZf„vp‚æ‚b—eÿS^ySiOKNô•„v—RYe·u‰NçT™Y0W9eb„vNúQ°egRîv0\nùR”^hˆo„výV¶RTaSO·ƒ—Vÿ§GhQýVÛSqN¦^ -2ÿuµNHe‡s +15%ÿz6eîOck +15%0§!§Rcbd–6*Ng6eeQ§!ÿÃVîu|iSO§G12*Ng6eeQ§!0\n·ƒ—V‚YœgùR”^ýV¶RÒbÝuSO·ƒ—Vÿ§G! 3zšR¦^ +1§!0\n‚YœgÃVîu|iŒRb†Nåe,gáT8nÿRhˆoýV¶R„vbuffO9hncAm>mNT˜YžX R0\n"
  #ûN¡Rh‰Bl
@@ -536,9 +536,9 @@
  ####ûN¡R‰Bl eˆEQô‹f
  kko_daojiaoxian_nowdown1: "ÇN!Ñ‘NáOðN RñmNÙNLu„vTwû|"
  kko_fojiaoxian_nowdown1: "ÇN!Ñ‘NáOðN RñmN‹T²ƒúR„vTwû|"
- hopeless_masquerader_incident_start34: "‹NöN0Å`a„vVØS0æ‰ÑS,Ðc:y:§YÅ`a1YaˆŒp¾–ÑSu30t^Tæ‰ÑS§!"
+ hopeless_masquerader_incident_start34: "‹NöN0§Y'N1YÅ`aVØS„vVËY§!0òTÏuÑSuÿå‹‹NöNS(W§RÅ`a1Yaˆ§!Œp¾–VËYT§Y10~20§!t^…Qæ‰ÑS	ÿ"
  th_kko_emotion_seventh_stage_extra_complete123: "(WVØSŒågöemGjA›xy–™"
- th_kko_emotion_stage_extra_complete123: "NäSf0W K`ÛLˆgT„vb—e"
+ th_kko_emotion_stage_extra_complete123: "N§YäSf0WK`§!ÛLˆgT„vb—e"
  kko_xiwang_reget123: "Í‘þb^g"
  dark_nengyue12: "O(uY²NLˆ¨R§YÑž—fýwPNhˆo§!óS§Y12§!!k"
  koishi_advisor_technical1234: "K`K`(WYLuÅeLˆv^VeQYLu‡eSbœg4!k"
@@ -585,3 +585,8 @@
  THE_KKO_DOMAIN: "†˜ßW"
  THE_KKO_REALM: "ýV¦^"
  THE_KKO_EMPIRE: "^ýV"
+
+ KKO_nengmian_biaoyan_mission_effect_tt: "ûyd–§YçV§!0§YœU§!0§Y`§!NOŽN§Y5§!öe.b„vb—Heœg0"
+ KKO_saoling_mission_effect_tt: "ûyd–§YçV§!0§YœU§!0§Y`§!ØšŽN§Y45§!öe.b„vb—Heœg0"
+ KKO_xin_jumu_mission_effect_tt: "ûyd–§YçV§!0§YœU§!0§Y`§!–Û¦^ØSS„vb—Heœg0"
+ KKO_shoushi_mission_effect_tt: "O'YåTz0§YˆRâw^y>y§!0„v˜YHeœgNQ—‰ýVYe:N§YˆRâw^yS§!0"

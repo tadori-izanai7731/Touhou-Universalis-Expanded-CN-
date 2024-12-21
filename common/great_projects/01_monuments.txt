@@ -7984,6 +7984,20 @@ fire_temple_of_ateshgah = {
 		#what effects happen when this tier is achieved
 		on_upgraded = {	
 		}
+
+		###THE
+
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					has_government_mechanic = THE_OKU_eternal_combustion_mechanic
+				}
+			}
+			modifier = {
+				THE_OKU_permanent_power_gain_modifier = 0.25
+				monthly_THE_OKU_fading_power = -0.25
+			}
+		}
 	}
 }
 

@@ -1,6 +1,6 @@
 th_kko_you_buff = {
     culture_conversion_time = -0.30
-    harmonization_speed = 0.075
+    harmonization_speed = 0.1
     #monthly_kko_xi_dip_power = 1.5
 }
 th_kko_xi_buff = {
@@ -125,7 +125,7 @@ kko_chuanjiao_buff = {
 #黑暗能乐
 KKO_dark_nengyue_buff1 = {
     global_unrest = 1
-    monthly_splendor = -1
+    monthly_splendor = -2
 }
 KKO_dark_nengyue_buff2 = {
     prestige = -1
@@ -137,8 +137,8 @@ nengyue_biaoyan_buff = {
 }
 nengyue_biaoyan_buff2 = {
     prestige = 1
-    monthly_splendor = 1
-    idea_cost = -0.10
+    monthly_splendor = 2
+    diplomatic_reputation = 1
 }
 #心绮楼
 kko_xinqilou_buff = {

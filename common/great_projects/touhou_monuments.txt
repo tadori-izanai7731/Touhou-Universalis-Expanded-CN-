@@ -1841,8 +1841,20 @@ th_monument_moriya_shrine = {
 		}
 		conditional_modifier = {
 			trigger = {
-				religion = th_moriyashinto
-				has_owner_religion = yes
+				if = {
+					limit = { owner = { NOT = { mission_completed = KKO_shoushi } } }
+					religion = th_moriyashinto
+					has_owner_religion = yes
+				}
+				else = {
+					OR = {
+						owner = { mission_completed = KKO_shoushi }
+						AND = {
+							religion = th_moriyashinto
+							has_owner_religion = yes
+						}
+					}
+				}
 			}
 			modifier = {
 				global_missionary_strength = 0.01
@@ -1875,8 +1887,20 @@ th_monument_moriya_shrine = {
 		}
 		conditional_modifier = {
 			trigger = {
-				religion = th_moriyashinto
-				has_owner_religion = yes
+				if = {
+					limit = { owner = { NOT = { mission_completed = KKO_shoushi } } }
+					religion = th_moriyashinto
+					has_owner_religion = yes
+				}
+				else = {
+					OR = {
+						owner = { mission_completed = KKO_shoushi }
+						AND = {
+							religion = th_moriyashinto
+							has_owner_religion = yes
+						}
+					}
+				}
 			}
 			modifier = {
 				global_missionary_strength = 0.01
@@ -1908,8 +1932,20 @@ th_monument_moriya_shrine = {
 		}
 		conditional_modifier = {
 			trigger = {
-				religion = th_moriyashinto
-				has_owner_religion = yes
+				if = {
+					limit = { owner = { NOT = { mission_completed = KKO_shoushi } } }
+					religion = th_moriyashinto
+					has_owner_religion = yes
+				}
+				else = {
+					OR = {
+						owner = { mission_completed = KKO_shoushi }
+						AND = {
+							religion = th_moriyashinto
+							has_owner_religion = yes
+						}
+					}
+				}
 			}
 			modifier = {
 				global_missionary_strength = 0.02

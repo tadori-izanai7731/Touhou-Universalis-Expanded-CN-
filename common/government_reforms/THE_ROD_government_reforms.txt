@@ -94,12 +94,6 @@ THE_ROD_spread_hakurei_message_reform = {
 		enables_divine_idea_group = yes
 		THE_ROD_convert_religion_add_church_loyalty_or_adm = yes
 	}
-	conditional = {
-		allow = { has_country_flag = THE_ROD_hakureishinto_reform_extra_flag }
-		custom_attributes = {
-			THE_ROD_convert_religion_add_church_loyalty_or_adm_dip_mil = yes
-		}
-	}
 }
 
 THE_ROD_spread_hakurei_message_reform_x = {

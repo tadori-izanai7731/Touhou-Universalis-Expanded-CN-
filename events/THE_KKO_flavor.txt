@@ -76,6 +76,16 @@ country_event = {
 		custom_tooltip = KKO_disaster_start1234
 		custom_tooltip = KKO_disaster_start1234_tt
 	}
+
+	after = {
+		hidden_effect = {
+			country_event = {
+				id = KKO_flavor.4
+				days = 3650
+				random = 3650
+			}
+		}
+	}
 }
 country_event = {
 	id = KKO_flavor.3
@@ -102,21 +112,12 @@ country_event = {
 	desc = "KKO_flavor.4.desc"
 	picture = kko_mission_11
 	fire_only_once = yes
+	is_triggered_only = yes
 	trigger = {
 		OR = {
 			tag = KKO
 			was_tag = KKO
 		}
-		had_country_flag = {
-			flag = kko_disaster_started
-			days = 10950
-		}
-		NOT = {
-			has_country_flag = kko_xiwang_lose
-		}
-	}
-	mean_time_to_happen = {
-		days = 100
 	}
 	option = {
 		name = KKO_flavor.4.a
@@ -126,6 +127,19 @@ country_event = {
 			duration = -1
 		}
 		set_country_flag = kko_xiwang_lose
+		set_global_flag = hopeless_masquerader_incident_start
+		set_country_flag = hopeless_masquerader_incident_start2
+	}
+
+	after = {
+		hidden_effect = {
+			every_neighbor_country = {
+				country_event = {
+					id = KKO_flavor.39
+					days = 30
+				}
+			}
+		}
 	}
 }
 #宗教抉择
@@ -273,14 +287,10 @@ country_event = {
 			tag = KKO
 			was_tag = KKO
 		}
-		had_country_flag = {
-			flag = kko_daojiaoxian
-			days = 50
-		}
-	}
-	immediate = {
-		hidden_effect = {
-		}
+		has_country_flag = kko_daojiaoxian
+		exists = MYO
+		exists = SNK
+		NOT = { truce_with = MYO }
 	}
 	option = {
 		name = KKO_flavor.6.a
@@ -335,18 +345,19 @@ country_event = {
 		hidden_effect = {
 			MYO = {
 				add_country_modifier = {
-					name = kko_religions_hegemony1
+					name = kko_religions_hegemony2
+					duration = -1
 				}
 			}
 			SNK = {
 				add_country_modifier = {
-					name = kko_religions_hegemony2
+					name = kko_religions_hegemony1
+					duration = -1
 				}
 			}
-			ROOT = {
-				add_country_modifier = {
-					name = kko_religions_hegemony2
-				}
+			add_country_modifier = {
+				name = kko_religions_hegemony1
+				duration = -1
 			}
 			5140 = {
 				cede_province = ROOT
@@ -381,24 +392,6 @@ country_event = {
 	}
 	option = {
 		name = KKO_flavor.7.a
-		tooltip = {
-			add_country_modifier = {
-				name = kko_religions_hegemony2
-				duration = 7300
-			}
-			SNK = {
-				add_country_modifier = {
-					name = kko_religions_hegemony2
-					duration = 7300
-				}
-			}
-			MYO = {
-				add_country_modifier = {
-					name = kko_religions_hegemony1
-					duration = 7300
-				}
-			}
-		}
 	}
 }
 #佛教战争触发
@@ -413,10 +406,10 @@ country_event = {
 			tag = KKO
 			was_tag = KKO
 		}
-		had_country_flag = {
-			flag = kko_fojiaoxian
-			days = 50
-		}
+		has_country_flag = kko_fojiaoxian
+		exists = MYO
+		exists = SNK
+		NOT = { truce_with = SNK }
 	}
 	option = {
 		name = KKO_flavor.8.a
@@ -449,9 +442,6 @@ country_event = {
 	picture = WUXING_eventPicture
 	fire_only_once = yes
 	hidden = yes
-	mean_time_to_happen = {
-		days = 1
-	}
 	trigger = {
 		OR = {
 			tag = KKO
@@ -469,18 +459,19 @@ country_event = {
 		hidden_effect = {
 			MYO = {
 				add_country_modifier = {
-					name = kko_religions_hegemony2
+					name = kko_religions_hegemony1
+					duration = -1
 				}
 			}
 			SNK = {
 				add_country_modifier = {
-					name = kko_religions_hegemony1
+					name = kko_religions_hegemony2
+					duration = -1
 				}
 			}
-			KKO = {
-				add_country_modifier = {
-					name = kko_religions_hegemony2
-				}
+			add_country_modifier = {
+				name = kko_religions_hegemony1
+				duration = -1
 			}
 			5028 = {
 				cede_province = KKO
@@ -515,23 +506,6 @@ country_event = {
 	}
 	option = {
 		name = KKO_flavor.9.a
-		tooltip = {
-			MYO = {
-				add_country_modifier = {
-					name = kko_religions_hegemony2
-				}
-			}
-			SNK = {
-				add_country_modifier = {
-					name = kko_religions_hegemony1
-				}
-			}
-			KKO = {
-				add_country_modifier = {
-					name = kko_religions_hegemony2
-				}
-			}
-		}
 	}
 }
 #与仙界联盟
@@ -794,6 +768,15 @@ country_event = {
 			}
 		}
 	}
+
+	after = {
+		hidden_effect = {
+			country_event = {
+				id = KKO_flavor.16
+				days = 1825
+			}
+		}
+	}
 }
 #情感异变 stage extra ##古明地恋
 country_event = {
@@ -801,18 +784,12 @@ country_event = {
 	title = "KKO_flavor.16.t"
 	desc = "KKO_flavor.16.desc"
 	picture = event_qin_flavor_15
+	is_triggered_only = yes
 	trigger = {
-		had_country_flag = {
-			flag = th_kko_emotion_seventh_stage_extra_complete
-			days = 1825
-		}
 		NOT = {
 			has_country_flag = kko_xiwang_reget
 		}
 		has_global_flag = hopeless_masquerader_incident_start
-	}
-	mean_time_to_happen = {
-		months = 2
 	}
 	immediate = {
 		hidden_effect = {
@@ -828,7 +805,6 @@ country_event = {
 				variable = th_kko_emotion_stage_extra
 				type = incident
 			}
-			clr_country_flag = th_kko_emotion_seventh_stage_extra_complete
 		}
 	}
 	option = {
@@ -1716,50 +1692,54 @@ country_event = {
 		remove_country_modifier = kko_xiwang_lose_buff
 		set_country_flag = kko_xiwang_reget
 	}
+
+	after = {
+		clr_global_flag = hopeless_masquerader_incident_start
+		hidden_effect = {
+			every_country = {
+				remove_country_modifier = kko_hopless_neighbours_buff
+			}
+		}
+	}
 }
 ##丧失的情感异变 已经开始
-country_event = {
-	id = KKO_flavor.38
-	title = "KKO_flavor.38.t"
-	desc = "KKO_flavor.38.desc"
-	picture = kko_mission_11
-	hidden = yes
-	fire_only_once = yes
-	trigger = {
-		has_country_flag = kko_xiwang_lose
-		NOT = {
-			has_country_flag = kko_xiwang_reget
-		}
-	}
-	mean_time_to_happen = {
-		months = 2
-	}
-	immediate = {
-		hidden_effect = {
-			every_neighbor_country = {
-				country_event = {
-					id = KKO_flavor.39
-				}
-			}
-			set_country_flag = hopeless_masquerader_incident_start2
-		}
-	}
-	option = {
-		name = "KKO_flavor.38.a"
-		custom_tooltip = KKO_flavor.38.a.tt
-	}
-}
+# country_event = {
+# 	id = KKO_flavor.38
+# 	title = "KKO_flavor.38.t"
+# 	desc = "KKO_flavor.38.desc"
+# 	picture = kko_mission_11
+# 	fire_only_once = yes
+# 	trigger = {
+# 		has_country_flag = kko_xiwang_lose
+# 		NOT = {
+# 			has_country_flag = kko_xiwang_reget
+# 		}
+# 	}
+# 	mean_time_to_happen = {
+# 		months = 2
+# 	}
+# 	immediate = {
+# 		hidden_effect = {
+# 			every_neighbor_country = {
+# 				country_event = {
+# 					id = KKO_flavor.39
+# 				}
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = "KKO_flavor.38.a"
+# 		custom_tooltip = KKO_flavor.38.a.tt
+# 	}
+# }
 ##丧失的情感异变 已经开始 全局
 country_event = {
 	id = KKO_flavor.39
 	title = "KKO_flavor.39.t"
 	desc = "KKO_flavor.39.desc"
 	picture = kko_mission_11
-	fire_only_once = yes
+	major = yes
 	is_triggered_only = yes
-	immediate = {
-		set_global_flag = hopeless_masquerader_incident_start
-	}
 	option = {
 		name = "KKO_flavor.39.a"
 		custom_tooltip = KKO_flavor.38.a.tt
@@ -1770,21 +1750,21 @@ country_event = {
 	}
 }
 #情感异变 已经得到退治 全局
-country_event = {
-	id = KKO_flavor.40
-	title = "KKO_flavor.40.t"
-	desc = "KKO_flavor.40.desc"
-	picture = kko_mission_10
-	is_triggered_only = yes
-	fire_only_once = yes
-	immediate = {
-		clr_global_flag = hopeless_masquerader_incident_start
-	}
-	option = {
-		name = "KKO_flavor.40.a"
-		remove_country_modifier = kko_hopless_neighbours_buff
-	}
-}
+# country_event = {
+# 	id = KKO_flavor.40
+# 	title = "KKO_flavor.40.t"
+# 	desc = "KKO_flavor.40.desc"
+# 	picture = kko_mission_10
+# 	is_triggered_only = yes
+# 	fire_only_once = yes
+# 	immediate = {
+# 		clr_global_flag = hopeless_masquerader_incident_start
+# 	}
+# 	option = {
+# 		name = "KKO_flavor.40.a"
+# 		remove_country_modifier = kko_hopless_neighbours_buff
+# 	}
+# }
 ##恋恋离开事件
 country_event = {
 	id = KKO_flavor.41
