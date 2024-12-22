@@ -64,9 +64,12 @@ th_dark_nengyue = {
 }
 th_xinqilou = {
 	category = th_diplo_action
-	require_acceptance = yes
+	require_acceptance = no
 	is_visible = {
-		tag = KKO
+		OR = {
+			tag = KKO
+			was_tag = KKO
+		}
 		has_government_mechanic = th_kokoro_mechanic
 		has_country_flag = xinqilou_ok
 	}
@@ -83,16 +86,12 @@ th_xinqilou = {
 				NOT = { has_country_flag = xinqilou_on }
 				had_country_flag = {
 					flag = xinqilou_on 
-					days = 3650
+					days = 1825
 				}
 			}
 		}
 	}
 	on_accept = {
-		add_years_of_income = 1
-		FROM = {
-			add_years_of_income = -0.5
-		}
 		change_variable = {
 			which = kko_nengyue_action
 			value = 1
@@ -101,7 +100,13 @@ th_xinqilou = {
 			limit = {
 				has_country_flag = kko_guanshi_on
 			}
-			from = {
+			remove_country_modifier = kko_guanshi_buff2
+			add_country_modifier = {
+				name = kko_guanshi_buff2
+				duration = 3650
+			}
+			FROM = {
+				remove_country_modifier = kko_guanshi_buff2
 				add_country_modifier = {
 					name = kko_guanshi_buff2
 					duration = 3650
@@ -112,7 +117,13 @@ th_xinqilou = {
 			limit = {
 				has_country_flag = kko_jingang_on
 			}
-			from = {
+			remove_country_modifier = kko_jingang_buff2
+			add_country_modifier = {
+				name = kko_jingang_buff2
+				duration = 3650
+			}
+			FROM = {
+				remove_country_modifier = kko_jingang_buff2
 				add_country_modifier = {
 					name = kko_jingang_buff2
 					duration = 3650
@@ -123,7 +134,13 @@ th_xinqilou = {
 			limit = {
 				has_country_flag = kko_xiduo_on
 			}
-			from = {
+			remove_country_modifier = kko_xiduo_buff2
+			add_country_modifier = {
+				name = kko_xiduo_buff2
+				duration = 3650
+			}
+			FROM = {
+				remove_country_modifier = kko_xiduo_buff2
 				add_country_modifier = {
 					name = kko_xiduo_buff2
 					duration = 3650
@@ -134,7 +151,13 @@ th_xinqilou = {
 			limit = {
 				has_country_flag = kko_jinchun_on
 			}
-			from = {
+			remove_country_modifier = kko_jinchun_buff2
+			add_country_modifier = {
+				name = kko_jinchun_buff2
+				duration = 3650
+			}
+			FROM = {
+				remove_country_modifier = kko_jinchun_buff2
 				add_country_modifier = {
 					name = kko_jinchun_buff2
 					duration = 3650
@@ -145,7 +168,13 @@ th_xinqilou = {
 			limit = {
 				has_country_flag = kko_baosheng_on
 			}
-			from = {
+			remove_country_modifier = kko_baosheng_buff2
+			add_country_modifier = {
+				name = kko_baosheng_buff2
+				duration = 3650
+			}
+			FROM = {
+				remove_country_modifier = kko_baosheng_buff2
 				add_country_modifier = {
 					name = kko_baosheng_buff2
 					duration = 3650
@@ -153,228 +182,24 @@ th_xinqilou = {
 			}
 		}
 		else = {
-			from = {
+			remove_country_modifier = xinqilou_on_buff
+			add_country_modifier = {
+				name = xinqilou_on_buff
+				duration = 3650
+			}
+			FROM = {
+				remove_country_modifier = xinqilou_on_buff
 				add_country_modifier = {
 					name = xinqilou_on_buff
-					duration = 1825
+					duration = 3650
 				}
 			}
-		}
-		add_country_modifier = {
-			name = change_of_government_you_buff
-			duration = 730
 		}
 		clr_country_flag = xinqilou_on
 		set_country_flag = xinqilou_on
 		change_variable = {
 			which = kko_xinqilou_num
 			value = 1
-		}
-	}
-	on_decline = {
-		FROM = {
-			add_stability = 1
-		}
-	}
-	ai_acceptance = {
-		add_entry = {
-			name = TH_DIPLO_OPPINION
-			export_to_variable = {
-				variable_name = ai_value
-				value = opinion
-				who = FROM
-				with = ROOT
-			}
-			multiply_variable = {
-				which = ai_value 
-				value = 0.2
-			}
-		}
-		add_entry = {
-			name = DIPLO_WANT_WAR
-			limit = {
-				FROM = {
-					ai_attitude = {
-						who = ROOT
-						attitude = attitude_hostile
-					}
-				}
-			}
-			export_to_variable = {
-				variable_name = ai_value
-				value = 1
-			}
-			
-			multiply_variable = {
-				which = ai_value
-				value = -50
-			}
-		}
-		add_entry = {
-			name = DIPLO_WANT_WAR
-			limit = {
-				FROM = {
-					ai_attitude = {
-						who = ROOT
-						attitude = attitude_outraged
-					}
-				}
-			}
-			export_to_variable = {
-				variable_name = ai_value
-				value = 1
-			}
-			
-			multiply_variable = {
-				which = ai_value
-				value = -50
-			}
-		}
-		add_entry = {
-			name = DIPLO_IS_RIVAL
-			limit = {
-				FROM = {
-					ai_attitude = {
-						who = ROOT
-						attitude = attitude_rivalry
-					}
-				}
-			}
-			export_to_variable = {
-				variable_name = ai_value
-				value = 1
-			}
-			
-			multiply_variable = {
-				which = ai_value
-				value = -1000
-			}
-		}
-		add_entry = {
-			name = DIPLO_FRIENDLINESS
-			limit = {
-				FROM = {
-					ai_attitude = {
-						who = ROOT
-						attitude = attitude_friendly
-					}
-				}
-			}
-			export_to_variable = {
-				variable_name = ai_value
-				value = 1
-			}
-			
-			multiply_variable = {
-				which = ai_value
-				value = 10
-			}
-		}
-		add_entry = {
-			name = DIPLO_DIPLOMATIC_REPUTATION
-			limit = { }
-			export_to_variable = {
-				variable_name = ai_value
-				value = trigger_value:diplomatic_reputation
-			}
-			#1 rep = 4
-			multiply_variable = {
-				which = ai_value
-				value = 4
-			}
-		}
-		add_entry = {
-			name = DIPLO_HISTORICAL_RIVAL
-			
-			limit = {
-				OR = { 
-					historical_rival_with = FROM
-					FROM = { historical_rival_with = ROOT }
-				}
-			}
-			
-			export_to_variable = {
-				variable_name = ai_value
-				value = 1
-			}
-			
-			multiply_variable = {
-				which = ai_value
-				value = -100
-			}
-		}
-		add_entry = {
-			name = TH_WOULD_GET_IT_FOR_FREE
-			limit = {
-				FROM = { NOT = { years_of_income = 0.1 } }
-			}
-			
-			export_to_variable = {
-				variable_name = ai_value
-				value = -3
-			}
-			
-			multiply_variable = {
-				which = ai_value
-				value = 100
-			}
-		}
-		add_entry = {
-			name = TH_WOULD_GET_IT_CHEAPER
-			limit = {
-				FROM = { 
-					years_of_income = 0.2
-					NOT = { years_of_income = 0.3 } 
-				}
-			}
-			
-			export_to_variable = {
-				variable_name = ai_value
-				value = -2
-			}
-			
-			multiply_variable = {
-				which = ai_value
-				value = 60
-			}
-		}
-		add_entry = {
-			name = TH_WOULD_GET_IT_CHEAPER
-			limit = {
-				FROM = { 
-					years_of_income = 0.3
-					NOT = { years_of_income = 0.4 } 
-				}
-			}
-			
-			export_to_variable = {
-				variable_name = ai_value
-				value = 1
-			}
-			
-			multiply_variable = {
-				which = ai_value
-				value = 40
-			}
-		}
-		add_entry = {
-			name = TH_WOULD_GET_IT_CHEAPER
-			limit = {
-				FROM = { 
-					years_of_income = 0.4
-					NOT = { years_of_income = 0.5 } 
-				}
-			}
-			
-			export_to_variable = {
-				variable_name = ai_value
-				value = 1
-			}
-			
-			multiply_variable = {
-				which = ai_value
-				value = 20
-			}
 		}
 	}
 	ai_will_do = {

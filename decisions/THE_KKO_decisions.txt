@@ -123,7 +123,7 @@ country_decisions = {
 				was_tag = KKO
 			}
 			has_country_flag = kko_xiwang_reget_create
-			not = {
+			NOT = {
 				check_variable = {
 					which = kko_xiwang_create_num
 					value = 5
@@ -132,7 +132,7 @@ country_decisions = {
 		}
 		allow = {
 			custom_trigger_tooltip = {
-				tooltip = kko_xiwang_create_cd123	#？123 = 730 ？
+				tooltip = kko_xiwang_create_cd123
 				OR = {
 					NOT = { has_country_flag = kko_xiwang_create_cd }
 					had_country_flag = {
@@ -143,54 +143,40 @@ country_decisions = {
 			}
 			is_at_war = no
 			any_country = {
-				root = {
-					has_won_war_against = {
-						who = prev
-						max_years_since = 10
+				OR = {
+					ROOT = {
+						has_won_war_against = {
+							who = PREV
+							max_years_since = 5
+						}
 					}
+					th_has_lost_danmaku_duel_against_root = yes
 				}
-			}
-			any_country = {
-				th_has_lost_danmaku_duel_against_root = yes
 			}
 		}
 		effect = {
+			custom_tooltip = THE_kko_gather_mircle_show_var_tt
+			custom_tooltip = empty_line_tt
 			change_variable = {
 				which = kko_xiwang_create_num
 				value = 1
 			}
 			clr_country_flag = kko_xiwang_create_cd
 			set_country_flag = kko_xiwang_create_cd
-		}
-	}
-}
-
-##重铸希望之面
-country_decisions = {
-	the_kko_recreate_mircle = {
-		color = {
-			269
-			76
-			168
-		}
-		potential = {
-			OR = {
-				tag = KKO
-				was_tag = KKO
-			}
-			has_country_flag = kko_xiwang_reget_create
-		}
-		allow = {
-			check_variable = {
-				which = kko_xiwang_create_num
-				value = 5
-			}
-		}
-		effect = {
-			clr_country_flag = kko_xiwang_reget_create
-			set_country_flag = kko_xiwang_reget
-			country_event = {
-				id = KKO_flavor.43
+			hidden_effect = {
+				if = {
+					limit = {
+						check_variable = {
+							which = kko_xiwang_create_num
+							value = 5
+						}
+					}
+					clr_country_flag = kko_xiwang_reget_create
+					set_country_flag = kko_xiwang_reget
+					country_event = {
+						id = KKO_flavor.43
+					}
+				}
 			}
 		}
 	}
@@ -210,7 +196,7 @@ country_decisions = {
 				was_tag = KKO
 			}
 			has_country_flag = kko_disaster_started
-			not = {
+			NOT = {
 				check_variable = {
 					which = kko_emotion_disaster_num
 					value = 5
@@ -236,13 +222,13 @@ country_decisions = {
 				value = 25
 			}
 			custom_trigger_tooltip = {
-				tooltip = kko_qinggan_pingheng_cd123
-				or = {
+				tooltip = kko_xiwang_create_cd123
+				OR = {
 					had_country_flag = {
 						flag = kko_qinggan_pingheng_cd
 						days = 730
 					}
-					not = {
+					NOT = {
 						has_country_flag = kko_qinggan_pingheng_cd
 					}
 				}
@@ -290,19 +276,21 @@ country_decisions = {
 				tag = KKO
 				was_tag = KKO
 			}
-			ROOT = {
-				overlord_of = CRD
+			CRD = {
+				is_subject_of = ROOT 
 			}
-			not = {
+			NOT = {
 				has_country_flag = kko_crd_allience_complete
 			}
 		}
 		allow = {
-			prestige = 40
+			prestige = 50
 		}
 		effect = {
-			add_prestige = -40
+			add_prestige = -50
+			add_historical_friend = CRD
 			CRD = {
+				add_historical_friend = ROOT
 				add_country_modifier = {
 					name = kko_crd_allience_buff1
 					duration = 18250
@@ -312,6 +300,7 @@ country_decisions = {
 		}
 	}
 }
+
 ##秦心日本巡演
 country_decisions = {
 	the_kko_tour_japan = {
@@ -334,9 +323,6 @@ country_decisions = {
 				has_country_flag = kko_japan_tour_1
 			}
 			treasury = 2500
-			adm_power = 300
-			dip_power = 300
-			mil_power = 300
 		}
 		effect = {
 			hidden_effect = {
@@ -346,13 +332,11 @@ country_decisions = {
 				id = KKO_flavor.45
 			}
 			add_treasury = -2500
-			add_adm_power = -300
-			add_dip_power = -300
-			add_mil_power = -300
 		}
 	}
 }
-##
+
+
 country_decisions = {
 	the_kko_xinqilou_rechange = {
 		color = {
@@ -370,7 +354,6 @@ country_decisions = {
 		}
 		allow = {
 			splendor = 50
-			prestige = 25
 			custom_trigger_tooltip = {
 				tooltip = the_kko_xinqilou_rechange_cd1243	#?1243
 				had_country_flag = {
@@ -381,7 +364,6 @@ country_decisions = {
 		}
 		effect = {
 			add_splendor = -50
-			add_prestige = -25
 			country_event = {
 				id = KKO_flavor.50
 			}

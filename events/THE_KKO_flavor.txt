@@ -102,7 +102,8 @@ country_event = {
 	}
 	option = {
 		name = KKO_flavor.3.a
-		custom_tooltip = kko_flavor_3tt
+		custom_tooltip = THE_KKO_government_interaction_extra_effect_tt
+		set_country_flag = THE_KKO_government_interaction_extra_effect_flag
 	}
 }
 #希望之面丢失

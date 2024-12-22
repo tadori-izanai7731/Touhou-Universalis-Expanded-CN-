@@ -1,5 +1,5 @@
 th_kko_you_buff = {
-    culture_conversion_time = -0.30
+    culture_conversion_cost = -0.25
     harmonization_speed = 0.1
     #monthly_kko_xi_dip_power = 1.5
 }
@@ -157,8 +157,7 @@ xinqilou_on_buff = {
 #确立新信仰
 kko_xin_yang_buff = {
     global_missionary_strength = 0.02
-    prestige = 5
-    prestige_decay = -0.05
+    prestige = 1
 }
 #宗教和谐
 kko_zhongli_buff12 = {
@@ -182,7 +181,7 @@ mission_chanwan_buff = {
     core_creation = -0.1
 }
 mission_lao_buff = {
-    idea_cost = -0.05
+    idea_cost = -0.1
 }
 mission_weng_buff = {
     development_cost = -0.1

@@ -132,14 +132,34 @@ th_kokoro_mechanic = {
 			gui = russian_mechanics_interaction_gui
 			icon = GFX_th_kokoro_you
 			cost_type = kko_you_adm_power
-			cost = 5
+			cost = 10
 			effect = {
 				add_country_modifier = {
 					name = th_kko_you_buff
-					duration = 730
+					duration = 1825
+				}
+
+				if = {
+					limit = {
+						OR = {
+							has_country_flag = THE_KKO_government_interaction_extra_effect_flag
+							has_country_flag = THE_debug_flag
+						}
+					}
+					custom_tooltip = empty_line_tt
+					custom_tooltip = THE_KKO_hope_extra_effect_tt
+					custom_tooltip = THE_KKO_complete_all_change_culture_action
+					hidden_effect = {
+						every_owned_province = {
+							limit = {
+								has_construction = culture
+							}
+							add_construction_progress = 1
+						}
+					}
 				}
 			}
-			cooldown_years = 2
+			cooldown_years = 5
 			cooldown_token = th_kokoro_mechanic
 			cooldown_desc = THE_KKO_mechanic_cooldown_desc_tt
 			ai_chance = {
@@ -150,14 +170,32 @@ th_kokoro_mechanic = {
 			gui = russian_mechanics_interaction_gui
 			icon = GFX_th_kokoro_xi
 			cost_type = kko_xi_dip_power
-			cost = 5
+			cost = 10
 			effect = {
 				add_country_modifier = {
 					name = th_kko_xi_buff
-					duration = 730
+					duration = 1825
+				}
+
+				if = {
+					limit = {
+						OR = {
+							has_country_flag = THE_KKO_government_interaction_extra_effect_flag
+							has_country_flag = THE_debug_flag
+						}
+					}
+					custom_tooltip = empty_line_tt
+					custom_tooltip = THE_KKO_hope_extra_effect_tt
+					add_years_of_owned_provinces_production_income = {
+						years = 5
+						trigger = {
+							culture = ROOT
+						}
+						custom_tooltip = THE_KKO_add_5_production_income_from_own_culture
+					}
 				}
 			}
-			cooldown_years = 2
+			cooldown_years = 5
 			cooldown_token = th_kokoro_mechanic
 			cooldown_desc = THE_KKO_mechanic_cooldown_desc_tt
 			ai_chance = {
@@ -168,17 +206,16 @@ th_kokoro_mechanic = {
 			gui = russian_mechanics_interaction_gui
 			icon = GFX_th_kokoro_nu
 			cost_type = kko_nu_mil_power
-			cost = 5
+			cost = 10
 			effect = {
 				add_country_modifier = {
 					name = th_kko_nu_buff
-					duration = 730
+					duration = 1825
 				}
 				if = {
 					limit = {
 						is_at_war = yes
 					}
-					add_war_exhaustion = 2
 					add_yearly_manpower = 2.5
 					add_army_professionalism = -0.05
 				}
@@ -187,10 +224,30 @@ th_kokoro_mechanic = {
 						is_at_war = no
 					}
 					add_war_exhaustion = -2
-					add_army_professionalism = 0.02
+					add_army_professionalism = 0.05
+				}
+
+				if = {
+					limit = {
+						OR = {
+							has_country_flag = THE_KKO_government_interaction_extra_effect_flag
+							has_country_flag = THE_debug_flag
+						}
+					}
+					custom_tooltip = empty_line_tt
+					custom_tooltip = THE_KKO_hope_extra_effect_tt
+					custom_tooltip = THE_KKO_remove_culture_change_relation_modifier_tt
+					hidden_effect = {
+						every_country = {
+							remove_opinion = {
+								who = ROOT
+								modifier = converted_our_culture
+							}
+						}
+					}
 				}
 			}
-			cooldown_years = 2
+			cooldown_years = 5
 			cooldown_token = th_kokoro_mechanic
 			cooldown_desc = THE_KKO_mechanic_cooldown_desc_tt
 			ai_chance = {

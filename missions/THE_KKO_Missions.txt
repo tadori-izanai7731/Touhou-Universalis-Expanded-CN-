@@ -95,8 +95,8 @@ THE_kko_missions_first_slot = {
 			}
 		}
 		effect = {
-			add_mil_power = 50
-			add_adm_power = 50
+			add_mil_power = 100
+			add_adm_power = 100
 			if = {
 				limit = { has_country_flag = kko_daojiaoxian }
 				custom_tooltip = THE_KKO_daojiaoxian_tt_yes
@@ -459,8 +459,6 @@ THE_kko_missions_first_slot = {
 				duration = -1
 			}
 			add_treasury = -500
-			add_prestige = 15
-			add_adm_power = 50
 			1021 = {
 				every_country = {
 					limit = {
@@ -538,9 +536,9 @@ THE_kko_missions_first_slot = {
 		}
 		effect = {
 			# custom_tooltip = KKO_genre_change1234
-			add_adm_power = 50
-			add_dip_power = 50
-			add_mil_power = 50
+			add_adm_power = 200
+			add_dip_power = 200
+			add_mil_power = 200
 			custom_tooltip = empty_line_tt
 			if = {
 				limit = { mission_completed = KKO_wuyishi_pailian }
@@ -601,6 +599,17 @@ THE_kko_missions_first_slot = {
 			custom_tooltip = KKO_japan_tooltip_12
 		}
 	}
+}
+
+THE_KKO_emotion_practice_mission_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = KKO
+		has_country_flag = THE_KKO_unlock_emotion_practice_mission_flag
+	}
 	KKO_chanwan_xiuxing = {
 		icon = mission_touhou_moriya_temple
 		position = 14
@@ -618,11 +627,11 @@ THE_kko_missions_first_slot = {
 			set_country_flag = qin_chanwan_ok
 			add_country_modifier = {
 				name = mission_chanwan_buff
-				duration = 18250
+				duration = -1
 			}
-			add_adm_power = 50
-			add_dip_power = 50
-			add_mil_power = 50
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
 		}
 	}
 	KKO_huli_xiuxing = {
@@ -632,7 +641,6 @@ THE_kko_missions_first_slot = {
 			mission_completed = KKO_qinggan_xiuxing
 			AND = {
 				manpower_percentage = 0.80
-				army_professionalism = 0.20
 				army_tradition = 40
 				has_commanding_three_star = yes
 			}
@@ -642,11 +650,11 @@ THE_kko_missions_first_slot = {
 			set_country_flag = qin_huli_ok
 			add_country_modifier = {
 				name = mission_huli_buff
-				duration = 18250
+				duration = -1
 			}
-			add_adm_power = 50
-			add_dip_power = 50
-			add_mil_power = 50
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
 		}
 	}
 }
@@ -666,7 +674,6 @@ THE_THE_kko_missions_second_slot = {
 		required_missions = { KKO_free_sentiment }
 		position = 2
 		trigger = {
-			adm_power = 100
 			custom_trigger_tooltip = {
 				tooltip = kko_religious_chance_complete1
 				has_country_flag = kko_religious_chance_complete
@@ -677,7 +684,8 @@ THE_THE_kko_missions_second_slot = {
 			}
 		}
 		effect = {
-			add_adm_power = -75
+			add_manpower = 20
+			add_adm_power = 100
 			add_country_modifier = {
 				name = kko_ae_impact_buff
 				duration = 7300
@@ -887,13 +895,14 @@ THE_THE_kko_missions_second_slot = {
 		}
 		effect = {
 			custom_tooltip = KKO_mircle_create_tooltip
-			add_adm_power = 50
-			add_dip_power = 50
-			add_mil_power = 50
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
 			hidden_effect = {
 				set_country_flag = kko_xiwang_reget_create
 				set_variable = {
 					which = kko_xiwang_create_num
+					value = 0
 				}
 			}
 		}
@@ -910,7 +919,22 @@ THE_THE_kko_missions_second_slot = {
 		effect = {
 			set_country_flag = qin_xiuxing
 			add_stability = 1
+			custom_tooltip = THE_KKO_unlock_emotion_practice_mission_tt
+			set_country_flag = THE_KKO_unlock_emotion_practice_mission_flag
+			hidden_effect = {
+				swap_non_generic_missions = yes
+			}
 		}
+	}
+}
+THE_KKO_emotion_practice_mission_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = KKO
+		has_country_flag = THE_KKO_unlock_emotion_practice_mission_flag
 	}
 	KKO_bore_xiuxing = {
 		icon = mission_touhou_twilight
@@ -930,11 +954,11 @@ THE_THE_kko_missions_second_slot = {
 			set_country_flag = qin_bore_ok
 			add_country_modifier = {
 				name = mission_bore_buff
-				duration = 18250
+				duration = -1
 			}
-			add_adm_power = 50
-			add_dip_power = 50
-			add_mil_power = 50
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
 		}
 	}
 	KKO_huonan_xiuxing = {
@@ -957,11 +981,11 @@ THE_THE_kko_missions_second_slot = {
 			set_country_flag = qin_huonan_ok
 			add_country_modifier = {
 				name = mission_huonan_buff
-				duration = 18250
+				duration = -1
 			}
-			add_adm_power = 50
-			add_dip_power = 50
-			add_mil_power = 50
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
 		}
 	}
 }
@@ -989,7 +1013,8 @@ THE_kko_missions_third_slot = {
 		}
 		effect = {
 			add_stability = 1
-			add_mil_power = 50
+			add_mil_power = 100
+			add_treasury = 50
 		}
 	}
 	KKO_free_reilgious = {
@@ -1376,12 +1401,12 @@ THE_kko_missions_test_slot = {
 		}
 		effect = {
 			add_stability = 1
-			add_adm_power = 150
-			add_government_power = {
-				mechanic_type = th_kokoro_mechanic
-				power_type = kko_you_adm_power
-				value = 20
+			random_list = {
+				1 = { add_government_power = { mechanic_type = th_kokoro_mechanic power_type = kko_you_adm_power value = 20 } }
+				1 = { add_government_power = { mechanic_type = th_kokoro_mechanic power_type = kko_xi_dip_power value = 20 } }
+				1 = { add_government_power = { mechanic_type = th_kokoro_mechanic power_type = kko_nu_mil_power value = 20 } }
 			}
+			add_government_power = { mechanic_type = th_kokoro_mechanic power_type = kko_you_adm_power value = 20 }
 			Great_youkai_forest = {
 				add_permanent_claim = ROOT
 			}
@@ -1401,9 +1426,9 @@ THE_kko_missions_test_slot = {
 			}
 		}
 		effect = {
-			add_adm_power = 50
-			add_mil_power = 50
-			add_dip_power = 50
+			add_adm_power = 100
+			add_mil_power = 100
+			add_dip_power = 100
 			add_prestige = 25
 		}
 	}
@@ -1418,9 +1443,6 @@ THE_kko_missions_test_slot = {
 			}
 		}
 		effect = {
-			add_adm_power = 30
-			add_dip_power = 30
-			add_mil_power = 30
 			Road_to_hell_state = {
 				add_permanent_claim = ROOT
 			}
@@ -1477,7 +1499,6 @@ THE_kko_missions_test_slot = {
 			}
 		}
 		effect = {
-			add_adm_power = 50
 			add_government_power = {
 				mechanic_type = th_kokoro_mechanic
 				power_type = kko_xi_dip_power
@@ -1546,9 +1567,6 @@ THE_kko_missions_test_slot = {
 				name = kko_tianxiegui_buff
 				duration = 18250
 			}
-			add_adm_power = 50
-			add_mil_power = 50
-			add_dip_power = 75
 		}
 	}
 	KKO_tiangou = {
@@ -1651,10 +1669,20 @@ THE_kko_missions_test_slot = {
 		}
 		effect = {
 			set_country_flag = qin_xiuxing_ok
-			add_adm_power = 300
-			add_mil_power = 300
-			add_dip_power = 300
+			add_adm_tech = 1
+			add_dip_tech = 1
+			add_mil_tech = 1
 		}
+	}
+}
+THE_KKO_emotion_practice_mission_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = KKO
+		has_country_flag = THE_KKO_unlock_emotion_practice_mission_flag
 	}
 	KKO_tiangou_xiuxing = {
 		icon = mission_touhou_youkai_mountain
@@ -1673,11 +1701,11 @@ THE_kko_missions_test_slot = {
 			set_country_flag = qin_tiangou_ok
 			add_country_modifier = {
 				name = mission_tiangou_buff
-				duration = 18250
+				duration = -1
 			}
-			add_adm_power = 50
-			add_dip_power = 50
-			add_mil_power = 50
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
 		}
 	}
 	KKO_weng_xiuxing = {
@@ -1696,11 +1724,11 @@ THE_kko_missions_test_slot = {
 			set_country_flag = qin_weng_ok
 			add_country_modifier = {
 				name = mission_weng_buff
-				duration = 18250
+				duration = -1
 			}
-			add_adm_power = 50
-			add_dip_power = 50
-			add_mil_power = 50
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
 		}
 	}
 }
@@ -1727,6 +1755,7 @@ THE_kko_missions_fith_slot = {
 			has_mil_advisor = yes
 		}
 		effect = {
+			add_manpower = 20
 			THE_KKO_define_advisor_kokoro_scripted_effect = yes
 			Land_of_the_black_doors = {
 				add_permanent_claim = ROOT
@@ -1835,7 +1864,6 @@ THE_kko_missions_fith_slot = {
 		}
 		effect = {
 			set_government_rank = 2
-			add_mil_power = 25
 			add_government_power = {
 				mechanic_type = th_kokoro_mechanic
 				power_type = kko_nu_mil_power
@@ -2073,6 +2101,16 @@ THE_kko_missions_fith_slot = {
 			}
 		}
 	}
+}
+THE_KKO_emotion_practice_mission_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = KKO
+		has_country_flag = THE_KKO_unlock_emotion_practice_mission_flag
+	}
 	KKO_lao_xiuxing = {
 		icon = mission_touhou_agni
 		position = 14
@@ -2089,11 +2127,11 @@ THE_kko_missions_fith_slot = {
 			set_country_flag = qin_lao_ok
 			add_country_modifier = {
 				name = mission_lao_buff
-				duration = 18250
+				duration = -1
 			}
-			add_adm_power = 50
-			add_dip_power = 50
-			add_mil_power = 50
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
 		}
 	}
 	KKO_xiaomian_xiuxing = {
@@ -2112,11 +2150,11 @@ THE_kko_missions_fith_slot = {
 			set_country_flag = qin_xiaomian_ok
 			add_country_modifier = {
 				name = mission_xiaomian_buff
-				duration = 18250
+				duration = -1
 			}
-			add_adm_power = 50
-			add_dip_power = 50
-			add_mil_power = 50
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
 		}
 	}
 } 
