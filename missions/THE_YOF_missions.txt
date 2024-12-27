@@ -387,14 +387,18 @@ THE_yof_slot_2 = {
 		} 
 		
 		effect = {
-			add_adm_power = 20
-			add_dip_power = 20
-			add_mil_power = 20
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
 			add_country_modifier = {
 				name = yof_identity_from_people_buff
 				duration = -1
 			}
 			remove_country_modifier = yof_start_game_buff
+			if = {
+				limit = { has_country_modifier = yof_dirt_river_flowed_upon_own_buff }
+				remove_country_modifier = yof_dirt_river_flowed_upon_own_buff
+			}
 			if = {
 				limit = { ai = no }
 				custom_tooltip = THE_yof_not_river_flowed_own_either_tt
@@ -436,9 +440,9 @@ THE_yof_slot_2 = {
 		} 
 		
 		effect = { 
-			add_adm_power = 45
-			add_dip_power = 45
-			add_mil_power = 45
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
 			add_country_modifier = {
 				name = yof_rotate_of_doom_buff
 				duration = 10950
@@ -1049,6 +1053,10 @@ THE_yof_slot_3 = {
 					value = 40
 				}
 			}
+			custom_trigger_tooltip = {
+				tooltip = THE_YOF_doom_saved_mission_trigger_tip_tt
+				always = yes
+			}
 		} 
 		
 		effect = {
@@ -1123,6 +1131,7 @@ THE_yof_slot_3 = {
 		} 
 		
 		trigger = { 
+			religion = th_kagiyama
 			num_of_aspects = 2
 			Great_youkai_forest = {
 				type = all
@@ -1132,12 +1141,11 @@ THE_yof_slot_3 = {
 				type = all
 				religion = th_kagiyama
 			}
-			religion = th_kagiyama
 		} 
 		
 		effect = {
 			custom_tooltip = change_to_kagiyama_religions_allow_flag_tt
-			add_adm_power = 75
+			add_adm_power = 150
 			hidden_effect = {
 				set_country_flag = change_to_kagiyama_religions_allow_flag
 			}
@@ -1404,7 +1412,7 @@ THE_yof_slot_4 = {
 						add_base_production = 3
 						add_base_manpower = 1
 					}
-					every_neighbor_country = {
+					every_country = {
 						add_aggressive_expansion = {
 							who = ROOT
 							value = -50
@@ -1444,7 +1452,7 @@ THE_yof_slot_4 = {
 			5191 = {
 				add_permanent_claim = ROOT
 			}  
-			add_adm_power = 50
+			add_adm_power = 100
 			if = {
 				limit = { 
 					5187 = {
@@ -1940,9 +1948,9 @@ THE_yof_slot_5 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			add_adm_power = 20
-			add_dip_power = 20
-			add_mil_power = 20
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
 		} 
 	}
 	yof_wonderland_full = {
@@ -2161,9 +2169,9 @@ THE_yof_slot_5 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			add_adm_power = 50
-			add_mil_power = 50
-			add_dip_power = 50
+			add_adm_power = 100
+			add_mil_power = 100
+			add_dip_power = 100
 		} 
 	}
 	yof_starry_with_lucky = {

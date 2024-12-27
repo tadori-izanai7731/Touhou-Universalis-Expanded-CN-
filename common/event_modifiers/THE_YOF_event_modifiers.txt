@@ -86,8 +86,9 @@ yof_aki_alliance_buff = {
 #######厄运之山麓
 doom_shrouted_hillsfoot_buff = {
 	local_fort_maintenance_modifier = -1
-	local_development_cost = -0.15
-	local_hostile_attrition = 1
+	local_defender_dice_roll_bonus = 1
+	local_hostile_attrition = 2
+	fort_level = 2
 }
 ###山中仙境
 sages_in_wonderland_buff = {

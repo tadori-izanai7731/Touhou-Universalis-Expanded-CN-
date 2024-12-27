@@ -2,7 +2,7 @@ l_english:
  ##补充说明
  yof_religions_lose_with_change_t1: "在信仰的危机中做出选择"
  yof_identity_from_people_tt: "妖怪的树海的6个地块都拥有修正§Y散布雏人偶§!"
- yof_neighbour_aeimpact_tt: "所有相邻国家对@[Root.GetTag]§Y[Root.GetName]§!减少§G50§!点侵略扩张"
+ yof_neighbour_aeimpact_tt: "所有国家对@[Root.GetTag]§Y[Root.GetName]§!减少§G50§!点侵略扩张"
  yof_eastern_neighbourhood_t1: "§T如果我们以外交手段联盟丰饶之祠将获得§!"
  yof_eastern_neighbourhood_t2: "§T如果我们以军事手段占领丰饶之祠将获得§!"
  any_neighbour_country_doom_flowed_inwar_tt: "在战争中爆发禊川的泛滥"
@@ -270,3 +270,4 @@ l_english:
  THE_YOF_kagiyama_crown_reform: "神之冠"
  THE_YOF_kagiyama_crown_reform_desc: "雏神秘教，源自雏神她那温柔与友好的光辉，由一群虔诚的信徒自发汇聚而成，如同涓涓细流汇聚成海，形成了一股不可阻挡的信仰洪流，这点不可改变。"
  mechanic_THE_YOF_improve_develpopment_extra_bonus_15_yes: "提升发展度有§G15%§!概率额外提升1点。"
+ THE_YOF_doom_saved_mission_trigger_tip_tt: "事件「§Y禊川的泛滥§!」将降低该任务的厄运值要求，高厄运值会提高该事件的触发频率。"

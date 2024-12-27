@@ -224,7 +224,23 @@ country_event = {
 			has_government_power = {
 				mechanic_type = yokari_forest_mechanic
 				power_type = yokari_forest_doom_power
-				value = 50
+				value = 20
+			}
+		}
+		modifier = {
+			factor = 0.6
+			has_government_power = {
+				mechanic_type = yokari_forest_mechanic
+				power_type = yokari_forest_doom_power
+				value = 40
+			}
+		}
+		modifier = {
+			factor = 0.6
+			has_government_power = {
+				mechanic_type = yokari_forest_mechanic
+				power_type = yokari_forest_doom_power
+				value = 60
 			}
 		}
 		modifier = {
@@ -240,7 +256,7 @@ country_event = {
 			has_government_power = {
 				mechanic_type = yokari_forest_mechanic
 				power_type = yokari_forest_doom_power
-				value = 110
+				value = 100
 			}
 		}
 		modifier = {
@@ -248,15 +264,7 @@ country_event = {
 			has_government_power = {
 				mechanic_type = yokari_forest_mechanic
 				power_type = yokari_forest_doom_power
-				value = 140
-			}
-		}
-		modifier = {
-			factor = 0.4
-			has_government_power = {
-				mechanic_type = yokari_forest_mechanic
-				power_type = yokari_forest_doom_power
-				value = 170
+				value = 150
 			}
 		}
 		modifier = {
@@ -375,61 +383,10 @@ country_event = {
 	option = {
 		name = flavor_yof.3.a
 		# custom_tooltip = yof_t
-		if = {
-			limit = { 
-				has_government_power = {
-					mechanic_type = yokari_forest_mechanic
-					power_type = yokari_forest_doom_power
-					value = 0
-				}
-				NOT = {
-					has_government_power = {
-						mechanic_type = yokari_forest_mechanic
-						power_type = yokari_forest_doom_power
-						value = 100
-					}
-				}
-			}
-			add_government_power = {
-				mechanic_type = yokari_forest_mechanic
-				power_type = yokari_forest_doom_power
-				value = -100
-			}
-		}
-		else_if = {
-			limit = {
-				has_government_power = {
-					mechanic_type = yokari_forest_mechanic
-					power_type = yokari_forest_doom_power
-					value = 100
-				}
-				NOT = {
-					has_government_power = {
-						mechanic_type = yokari_forest_mechanic
-						power_type = yokari_forest_doom_power
-						value = 150
-					}
-				}
-			}
-			add_government_power = {
-				mechanic_type = yokari_forest_mechanic
-				power_type = yokari_forest_doom_power
-				value = -120
-			}
-		}
-		else_if = {
-			limit = {
-				has_government_power = {
-					mechanic_type = yokari_forest_mechanic
-					power_type = yokari_forest_doom_power
-					value = 150
-				}
-			}
-			add_government_power = {
-				mechanic_type = yokari_forest_mechanic
-				power_type = yokari_forest_doom_power
-				value = -150
-			}
+		add_government_power = {
+			mechanic_type = yokari_forest_mechanic
+			power_type = yokari_forest_doom_power
+			value = -50
 		}
 		if = {
 			limit = { 
