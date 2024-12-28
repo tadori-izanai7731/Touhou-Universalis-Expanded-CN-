@@ -5,18 +5,41 @@ THE_CRD_chaos_stage1_branch_1 = {
 	has_country_shield = yes
 	potential = {
 		tag = CRD
-		always = no
 	}
 
 	THE_CRD_chaos_1_2 = {
 		icon = mission_unknown_mission
 		position = 2
 		required_missions = { THE_CRD_chaos_3_1 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5051
+				province_id = 5273
+				province_id = 5280
+				province_id = 5285
+				province_id = 5284
+				province_id = 5009
+				province_id = 5290
+			}
+			NOT = { has_fort_building_trigger = yes }
+		} 
 
-		trigger = {  } 
+		trigger = {
+			5051 = { has_fort_building_trigger = yes }
+			5273 = { has_fort_building_trigger = yes }
+			5280 = { has_fort_building_trigger = yes }
+			5285 = { has_fort_building_trigger = yes }
+			5284 = { has_fort_building_trigger = yes }
+			5009 = { has_fort_building_trigger = yes }
+			5290 = { has_fort_building_trigger = yes }
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = THE_CRD_chaos_genso_border_modifier
+				duration = -1
+			}
+		} 
 	}
 }
 THE_CRD_chaos_stage1_branch_2 = {
@@ -26,18 +49,35 @@ THE_CRD_chaos_stage1_branch_2 = {
 	has_country_shield = yes
 	potential = {
 		tag = CRD
-		always = no
 	}
 
 	THE_CRD_chaos_2_2 = {
 		icon = mission_unknown_mission
 		position = 2
 		required_missions = { THE_CRD_chaos_3_1 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			province_id = 5295
+		} 
 
-		trigger = {  } 
+		trigger = {
+			5295 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				num_of_times_improved = 5
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			5295 = {
+				add_base_tax = 10
+				add_base_production = 10
+				add_base_manpower = 10
+				add_permanent_province_modifier = {
+					name = THE_CRD_chaos_energy_radiation_province_modifier
+					duration = -1
+				}
+				custom_tooltip = THE_CRD_chaos_energy_radiation_province_modifier_desc
+			}
+		} 
 	}
 
 	THE_CRD_chaos_2_3 = {
@@ -47,11 +87,31 @@ THE_CRD_chaos_stage1_branch_2 = {
 			THE_CRD_chaos_1_2
 			THE_CRD_chaos_2_2
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			is_capital = yes
+			owner = { alliance_with = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {
+			all_country = {
+				NOT = { alliance_with = ROOT }
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			every_country = {
+				limit = {
+					is_rival = ROOT
+				}
+				remove_rival = ROOT
+			}
+			every_rival_country = {
+				ROOT = {
+					remove_rival = PREV
+				}
+			}
+			add_stability = 3
+		} 
 	}
 }
 THE_CRD_chaos_stage1_branch_3 = {
@@ -61,7 +121,6 @@ THE_CRD_chaos_stage1_branch_3 = {
 	has_country_shield = yes
 	potential = {
 		tag = CRD
-		always = no
 	}
 
 	THE_CRD_chaos_3_1 = {
@@ -69,9 +128,17 @@ THE_CRD_chaos_stage1_branch_3 = {
 		position = 1
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_CRD_death_not_end_tt
+				always = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_treasury = 1000
+			add_government_reform = THE_CRD_chireiden_pace_reform
+		} 
 	}
 
 	THE_CRD_chaos_3_2 = {
@@ -80,9 +147,18 @@ THE_CRD_chaos_stage1_branch_3 = {
 		required_missions = { THE_CRD_chaos_3_1 } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			has_reform = THE_CRD_chireiden_pace_reform
+			NOT = { land_maintenance = 0.01 }
+			NOT = { naval_maintenance = 0.01 }
+		} 
 
-		effect = {  } 
+		effect = {
+			custom_tooltip = THE_CRD_chaos_pace_for_peace_tt
+			hidden_effect = {
+				set_country_flag =THE_CRD_chaos_pace_for_peace_flag
+			}
+		} 
 	}
 
 	THE_CRD_chaos_3_4 = {
@@ -95,9 +171,27 @@ THE_CRD_chaos_stage1_branch_3 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_CRD_chaos_there_is_eternal_tt
+				always = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			if = {
+				limit = {
+					ONI = {
+						is_subject_other_than_tributary_trigger = yes
+						is_subject_of = ROOT
+					}
+				}
+				inherit = ONI
+			}
+			country_event = {
+				id = THE_CRD_chaos_events.2
+			}
+		} 
 	}
 }
 THE_CRD_chaos_stage1_branch_4 = {
@@ -107,18 +201,34 @@ THE_CRD_chaos_stage1_branch_4 = {
 	has_country_shield = yes
 	potential = {
 		tag = CRD
-		always = no
 	}
 
 	THE_CRD_chaos_4_2 = {
 		icon = mission_unknown_mission
 		position = 2
 		required_missions = { THE_CRD_chaos_3_1 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			OR = {
+				has_building = marketplace
+				has_building = trade_depot
+				has_building = stock_exchange
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {
+			NOT = { trade_income_percentage = 0.2 }
+			NOT = { marketplace = 1 }
+			NOT = { trade_depot = 1 }
+			NOT = { stock_exchange = 1 }
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = THE_CRD_chaos_friendly_diplomacy_modifier
+				duration = -1
+			}
+		} 
 	}
 
 	THE_CRD_chaos_4_3 = {
@@ -130,9 +240,30 @@ THE_CRD_chaos_stage1_branch_4 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			OR = {
+				crown_land_share = 0.5
+				NOT = {
+					estate_influence = {
+						estate = all
+						influence = 30
+					}
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_estate_loyalty = {
+				estate = all
+				loyalty = -20
+			}
+			5007 = {
+				add_great_project_tier = {
+					type = th_monument_chireiden
+					tier = 2
+				}
+			}
+		} 
 	}
 }
 THE_CRD_chaos_stage1_branch_5 = {
@@ -142,18 +273,70 @@ THE_CRD_chaos_stage1_branch_5 = {
 	has_country_shield = yes
 	potential = {
 		tag = CRD
-		always = no
 	}
 
 	THE_CRD_chaos_5_2 = {
 		icon = mission_unknown_mission
 		position = 2
 		required_missions = { THE_CRD_chaos_3_1 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			if = {
+				limit = { exists = ONI }
+				owned_by = ONI
+			}
+			else = {
+				culture = Oni_culture
+				continent = gensokyo_superregion
+				OR = {
+					NOT = { owned_by = ROOT }
+					local_autonomy = 1
+				}
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {
+			if = {
+				limit = { exists = ONI }
+				ONI = {
+					is_subject_of = ROOT
+					OR = {
+						is_subject_other_than_tributary_trigger = ROOT
+						AND = {
+							is_subject_of_type = tributary_state
+							has_opinion = {
+								who = ROOT
+								value = 200
+							}
+						}
+					}
+				}
+			}
+			else = {
+				owns_all_provinces = {
+					culture = Oni_culture
+					continent = gensokyo_superregion
+				}
+				all_owned_province = {
+					OR = {
+						NOT = { culture = Oni_culture }
+						NOT = { local_autonomy = 1 }
+					}
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			vassalize = ONI
+			add_historical_friend = ONI
+			ONI = {
+				add_historical_friend = ROOT
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_CRD_chaos_seize_land_add_10_loyalty_tt
+			hidden_effect = {
+				set_country_flag = THE_CRD_chaos_seize_land_add_10_loyalty_flag
+			}
+		} 
 	}
 }
 THE_CRD_chaos_stage2_branch_1 = {

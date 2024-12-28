@@ -4,6 +4,11 @@
  THE_CRD_chaos_government_mechanic_start_output_tt: "开始数据输出"
  THE_CRD_chaos_government_mechanic_start_input_tt: "还不能停止…"
  THE_CRD_chaos_gain_mental_gift_tt: "随机获得一项来自「心灵」的礼物"
+ THE_CRD_death_not_end_tt: "死亡不是终结"
+ THE_CRD_chaos_pace_for_peace_tt: "只要我们仍实施「§Y地灵殿的安息§!」改革，其他国家无法对我们宣战。"
+ THE_CRD_chaos_pace_for_peace_diplomatic_tt: " 基于@[From.GetTag]§Y[From.GetName]§!与幻想乡签订的「和平条约」，我们无法对@[From.GetTag]§Y[From.GetName]§!宣战。"
+ THE_CRD_chaos_seize_land_add_10_loyalty_tt: "只要@ONI§Y[ONI.GetName]§!是我们的非朝贡属国，§Y没收领地§!导致的阶层忠诚度变化减少§G10%§!。"
+ THE_CRD_chaos_there_is_eternal_tt: "此处将是被厌恶者的幻想"
 ### TOOLTIP_END
 
 ### GOVERNMENT
@@ -50,4 +55,8 @@
  THE_CRD_chaos_insufficient_server_capacity_modifier: "服务器容量不足"
  THE_CRD_chaos_have_not_input_modifier: "未完全输入"
  THE_CRD_chaos_have_not_process_modifier: "未完全处理"
+ THE_CRD_chaos_genso_border_modifier: "幻想边境"
+ THE_CRD_chaos_energy_radiation_province_modifier: "能源辐射"
+ THE_CRD_chaos_energy_radiation_province_modifier_desc: "在§Y[5295.GetName]§!提升发展度会将提升的发展度转移到治下随机省份。"
+ THE_CRD_chaos_friendly_diplomacy_modifier: "友好外交"
 ### MODIFIER_END

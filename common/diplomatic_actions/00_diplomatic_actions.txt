@@ -180,6 +180,20 @@ declarewar = {
 			}
 		}
 	}
+
+	### THE
+	condition = {
+		tooltip = THE_CRD_chaos_pace_for_peace_diplomatic_tt
+		potential = {
+			FROM = {
+				has_country_flag = THE_CRD_chaos_pace_for_peace_flag
+			}
+		}
+		allow = {
+			FROM = { NOT = { has_reform = THE_CRD_chireiden_pace_reform } }
+		}
+	}
+	### THE_END
 	effect = {
 		on_war_declaration_effect = yes
 		th_on_war_declaration_effect = yes

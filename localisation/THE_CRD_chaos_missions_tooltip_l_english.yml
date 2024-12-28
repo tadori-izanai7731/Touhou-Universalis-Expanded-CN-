@@ -4,6 +4,10 @@
  THE_CRD_chaos_government_mechanic_start_output_tt: "VËYpenc“úQ"
  THE_CRD_chaos_government_mechanic_start_input_tt: "ØNýwjPbk&"
  THE_CRD_chaos_gain_mental_gift_tt: "–:g·ƒ—VNy˜egê0ÃVup0„v<yir"
+ THE_CRD_death_not_end_tt: "‰k¡NN=fÈuÓu"
+ THE_CRD_chaos_pace_for_peace_tt: "êS‰bìNÍNžRËe0§Y0Wup¿k„v‰Ro`§!09ei—ÿvQÖNýV¶RàeÕlùRbìN±Rb0"
+ THE_CRD_chaos_pace_for_peace_diplomatic_tt: " úWŽN@[From.GetTag]§Y[From.GetName]§!N‰^ó`aNŒr¢‹„v0ŒTs^ag¦u0ÿbìNàeÕlùR@[From.GetTag]§Y[From.GetName]§!±Rb0"
+ THE_CRD_chaos_seize_land_add_10_loyalty_tt: "êS‰@ONI§Y[ONI.GetName]§!=fbìN„v^—g!^SýVÿ§Y¡l6e†˜0W§!üRô„v6–BSàVÚ‹¦^ØSSÏQS§G10%§!0"
 ### TOOLTIP_END
 
 ### GOVERNMENT
@@ -34,7 +38,7 @@
 
 ### EVENT
  THE_CRD_chaos_events.1.title: "÷mqNÂ‰KmŒTÃVupQÜu"
- THE_CRD_chaos_events.1.desc: "0kÎ8n©sN¹eÎ˜‘NÓbUSÿåNNŽrðyÓbUS	ÿÿÓbUS-N„v0Wup¿kv^N=fN*NùRYib.V„vTAGÿ(WÝu'YYpeÅ`µQN¡l	gÑS¨Rb‰N„výw›RÿSV6qvQÖNýV¶RmNNýw–a0WùR0Wup¿kÑS¨Rb‰N0\n\n(WÓbUS-Nÿ0Wup¿k„v:g6RR:N§Y÷mqNÂ‰Km§!ŒT§YÃVupQÜu§!ÿvQ-N§Y÷mqNÂ‰Km§!„v…Q¹R:NhQt'`„vb—‹NöNÿ§YÃVupQÜu§!R=f”^ùRdk!kqS:g„våTwQÿïSSIQhûy¨R0R	y˜Någw:g6R„vwQSO…Q¹RÿUSûQûNa	y˜sQí•å‹‹NöN0"
+ THE_CRD_chaos_events.1.desc: "0kÎ8n©sN¹eÎ˜‘NÓbUSÿåNNŽrðyÓbUS	ÿÿ0Wup¿k„vIN˜˜:N÷mqNŒTQÜu0ÓbUS-N„v0Wup¿kv^N=fN*NùRYib.V„vTAGÿ(WÝu'YYpeÅ`µQN¡l	gÑS¨Rb‰N„výw›RÿSV6qvQÖNýV¶RmNNýw–a0WùR0Wup¿kÑS¨Rb‰N0\n\n(WÓbUS-Nÿ0Wup¿k„v:g6RR:N§Y÷mqNÂ‰Km§!ŒT§YÃVupQÜu§!ÿvQ-N§Y÷mqNÂ‰Km§!„v…Q¹R:NhQt'`„vb—‹NöNÿ§YÃVupQÜu§!R=f”^ùRdk!kqS:g„våTwQÿïSSIQhûy¨R0R	y˜Någw:g6R„vwQSO…Q¹RÿUSûQûNa	y˜sQí•å‹‹NöN0"
  THE_CRD_chaos_events.1.a: "ågw§Y÷mqNÂ‰Km§!„vwQSO…Q¹R0"
  THE_CRD_chaos_events.1.b: "ågw§YÃVupQÜu§!„vwQSO…Q¹R0"
 ### EVENT_END
@@ -50,4 +54,8 @@
  THE_CRD_chaos_insufficient_server_capacity_modifier: "g¡RhV¹RÏ‘N³"
  THE_CRD_chaos_have_not_input_modifier: "*gŒRhQ“eQ"
  THE_CRD_chaos_have_not_process_modifier: "*gŒRhQYt"
+ THE_CRD_chaos_genso_border_modifier: "‰^ó`¹ƒX"
+ THE_CRD_chaos_energy_radiation_province_modifier: "ýwnS"
+ THE_CRD_chaos_energy_radiation_province_modifier_desc: "(W§Y[5295.GetName]§!ÐcGSÑSUS¦^OSÐcGS„vÑSUS¦^lûy0R»lN–:gwýN0"
+ THE_CRD_chaos_friendly_diplomacy_modifier: "ËS‹YY²N"
 ### MODIFIER_END

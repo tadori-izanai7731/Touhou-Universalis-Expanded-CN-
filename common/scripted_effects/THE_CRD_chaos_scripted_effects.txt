@@ -1,0 +1,44 @@
+THE_CRD_chaos_on_adm_development_scripted_effect = {
+	if = {
+		limit = { has_province_modifier = THE_CRD_chaos_energy_radiation_province_modifier }
+		add_base_tax = -1
+		owner = {
+			random_owned_province = {
+				limit = {
+					NOT = { has_province_modifier = THE_CRD_chaos_energy_radiation_province_modifier }
+				}
+				add_base_tax = 1
+			}
+		}
+	}
+}
+
+THE_CRD_chaos_on_dip_development_scripted_effect = {
+	if = {
+		limit = { has_province_modifier = THE_CRD_chaos_energy_radiation_province_modifier }
+		add_base_production = -1
+		owner = {
+			random_owned_province = {
+				limit = {
+					NOT = { has_province_modifier = THE_CRD_chaos_energy_radiation_province_modifier }
+				}
+				add_base_production = 1
+			}
+		}
+	}
+}
+
+THE_CRD_chaos_on_mil_development_scripted_effect = {
+	if = {
+		limit = { has_province_modifier = THE_CRD_chaos_energy_radiation_province_modifier }
+		add_base_manpower = -1
+		owner = {
+			random_owned_province = {
+				limit = {
+					NOT = { has_province_modifier = THE_CRD_chaos_energy_radiation_province_modifier }
+				}
+				add_base_manpower = 1
+			}
+		}
+	}
+}

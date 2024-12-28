@@ -12,3 +12,21 @@ THE_CRD_chaos_have_not_input_modifier = {
 THE_CRD_chaos_have_not_process_modifier = {
 	monthly_THE_CRD_chaos_mental_net_output = -100
 }
+
+# 幻想边境
+THE_CRD_chaos_genso_border_modifier = {
+	fort_maintenance_modifier = -0.99
+}
+
+# 能源辐射
+THE_CRD_chaos_energy_radiation_province_modifier = {
+	local_development_cost_modifier = -0.5
+	local_development_cost = -3.0
+}
+
+# 友好外交
+THE_CRD_chaos_friendly_diplomacy_modifier = {
+	reverse_relation_with_same_religion = 50
+	reverse_relation_with_heathen_religion = 50
+	reverse_relation_with_heretic_religion = 50
+}
