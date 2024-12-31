@@ -46,3 +46,21 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = THE_CRD_chaos_events.2
+	title = THE_CRD_chaos_events.2.title
+	desc = THE_CRD_chaos_events.2.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = THE_CRD_chaos_events.2.a
+	}
+
+	after = {
+		hidden_effect = {
+			###
+		}
+	}
+}
