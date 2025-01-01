@@ -96,6 +96,10 @@ THE_CRD_chaos_stage1_branch_2 = {
 			all_country = {
 				NOT = { alliance_with = ROOT }
 			}
+			custom_trigger_tooltip = {
+				tooltip = THE_CRD_chaos_has_chosen_religious_path_tt
+				has_country_flag = crd_has_chosen_religious_path
+			}
 		} 
 
 		effect = {
@@ -109,6 +113,10 @@ THE_CRD_chaos_stage1_branch_2 = {
 				ROOT = {
 					remove_rival = PREV
 				}
+			}
+			custom_tooltip = empty_line_tt
+			every_owned_province = {
+				change_religion = ROOT
 			}
 			add_stability = 3
 		} 
@@ -242,7 +250,7 @@ THE_CRD_chaos_stage1_branch_4 = {
 
 		trigger = {
 			OR = {
-				crown_land_share = 0.5
+				crown_land_share = 50
 				NOT = {
 					estate_influence = {
 						estate = all

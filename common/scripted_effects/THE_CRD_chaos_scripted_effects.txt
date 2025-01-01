@@ -42,3 +42,28 @@ THE_CRD_chaos_on_mil_development_scripted_effect = {
 		}
 	}
 }
+
+THE_CRD_chaos_add_reject_mind_progress = {
+	hidden_effect = {
+		random_country = {
+			limit = {
+				has_country_flag = THE_CRD_chaos_start_reject_mind_event_group_flag
+			}
+			change_variable = {
+				which = the_crd_chaos_reject_mind_process_var
+				value = $value$
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = the_crd_chaos_reject_mind_process_var
+						value = 1000
+					}
+				}
+				country_event = {
+					id = THE_CRD_chaos_events.A
+				}
+			}
+		}
+	}
+}

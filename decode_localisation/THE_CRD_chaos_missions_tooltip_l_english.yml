@@ -9,6 +9,7 @@
  THE_CRD_chaos_pace_for_peace_diplomatic_tt: " 基于@[From.GetTag]§Y[From.GetName]§!与幻想乡签订的「和平条约」，我们无法对@[From.GetTag]§Y[From.GetName]§!宣战。"
  THE_CRD_chaos_seize_land_add_10_loyalty_tt: "只要@ONI§Y[ONI.GetName]§!是我们的非朝贡属国，§Y没收领地§!导致的阶层忠诚度变化减少§G10%§!。"
  THE_CRD_chaos_there_is_eternal_tt: "此处将是被厌恶者的幻想"
+ THE_CRD_chaos_has_chosen_religious_path_tt: "已在事件「§Y正道之惑§!」中做出选择"
 ### TOOLTIP_END
 
 ### GOVERNMENT
@@ -46,6 +47,14 @@
  THE_CRD_chaos_events.2.title: "归魂寄所"
  THE_CRD_chaos_events.2.desc: "那些外界、战争、扩张的事对于我们被厌恶的妖怪有什么意义呢，我相信你们也不愿去参与那些争端，最后仍无法改变被厌恶的现状，无论是敌人还是盟友。在旧地狱各位妖怪的帮助下，我们已经完成了「安息计划」，只要我们对外界没有诉求，一切惹人厌烦的人、妖、事、物都不会出现在地灵殿的领土。"
  THE_CRD_chaos_events.2.a: "我们属于妖怪的「夜晚」。"
+
+ THE_CRD_chaos_events.3.title: "大臣离世"
+ THE_CRD_chaos_events.3.desc: "[Root.Monarch.GetTitle]身边一位重要的大臣最近在国事会议上多次请假，[Root.Monarch.GetTitle]亲自看望后，得知大臣整日待在家中，不愿意外出和交流。宫廷中的医师对这种症状也无从下手，最终这位大臣死在自己家中，这件事对宫廷造成了严重的负面影响。"
+ THE_CRD_chaos_events.3.a: "把他的房子一起烧了。"
+
+ THE_CRD_chaos_events.4.title: "个人丑闻"
+ THE_CRD_chaos_events.4.desc: "国内最近流传着一些关于[Root.Monarch.GetTitle]的丑闻，这些丑闻的内容都非常奇怪以至于没有人会相信，因此放任了这件事。数日后，这些莫名其妙的丑闻竟不可思议地在民间广泛流传，甚至宫廷和军队中也有不少人相信，即使[Root.Monarch.GetTitle]拿出充分的证据也难以平息。"
+ THE_CRD_chaos_events.4.a: "这件事太奇怪了。"
 ### EVENT_END
 
 ### SPECIAL
@@ -62,5 +71,14 @@
  THE_CRD_chaos_genso_border_modifier: "幻想边境"
  THE_CRD_chaos_energy_radiation_province_modifier: "能源辐射"
  THE_CRD_chaos_energy_radiation_province_modifier_desc: "在§Y[5295.GetName]§!提升发展度会将提升的发展度转移到治下随机省份。"
- THE_CRD_chaos_friendly_diplomacy_modifier: "友好外交"
+ THE_CRD_chaos_friendly_diplomacy_modifier: "善意外交"
 ### MODIFIER_END
+
+### FLAG_TIP
+ THE_CRD_chaos_view_mechanic_flag: "国家标志：正在浏览@CRD地灵殿特殊机制"
+ THE_CRD_chaos_start_reject_mind_event_group_global_flag: "全局标志：可以触发§R无眼无心§!事件组"
+ THE_CRD_chaos_start_reject_mind_event_group_flag: "国家标志（将在后续移除）：自身不会触发§R无眼无心§!事件组"
+ THE_CRD_chaos_event3_adm_flag: "国家标志（临时）：该事件将扣除行政点"
+ THE_CRD_chaos_event3_dip_flag: "国家标志（临时）：该事件将扣除外交点"
+ THE_CRD_chaos_event3_mil_flag: "国家标志（临时）：该事件将扣除军事点"
+### FLAG_TIP_END

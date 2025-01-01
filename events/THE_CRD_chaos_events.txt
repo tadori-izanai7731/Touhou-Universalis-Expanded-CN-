@@ -60,7 +60,98 @@ country_event = {
 
 	after = {
 		hidden_effect = {
-			###
+			set_country_flag = THE_CRD_chaos_start_reject_mind_event_group_flag
+			set_global_flag = THE_CRD_chaos_start_reject_mind_event_group_global_flag
 		}
 	}
 }
+
+# Reject mind event group
+# 无眼无心事件组
+
+# 2年脉冲:1
+country_event = {
+	id = THE_CRD_chaos_events.3
+	title = THE_CRD_chaos_events.3.title
+	desc = THE_CRD_chaos_events.3.desc
+
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = THE_CRD_chaos_start_reject_mind_event_group_global_flag
+		NOT = { has_country_flag = THE_CRD_chaos_start_reject_mind_event_group_flag }
+	}
+	major = yes
+	major_trigger = {
+		has_country_flag = THE_CRD_chaos_start_reject_mind_event_group_flag
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_list = {
+				1 = { set_country_flag = THE_CRD_chaos_event3_adm_flag }
+				1 = { set_country_flag = THE_CRD_chaos_event3_dip_flag }
+				1 = { set_country_flag = THE_CRD_chaos_event3_mil_flag }
+			}
+		}
+	}
+
+	option = {
+		name = THE_CRD_chaos_events.3.a
+		custom_tooltip = THE_CRD_chaos_reject_mind_event_group_tt
+		if = {
+			limit = { has_country_flag = THE_CRD_chaos_event3_adm_flag }
+			add_adm_power = -300
+		}
+		if = {
+			limit = { has_country_flag = THE_CRD_chaos_event3_dip_flag }
+			add_dip_power = -300
+		}
+		if = {
+			limit = { has_country_flag = THE_CRD_chaos_event3_mil_flag }
+			add_mil_power = -300
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			clr_country_flag = THE_CRD_chaos_event3_adm_flag
+			clr_country_flag = THE_CRD_chaos_event3_dip_flag
+			clr_country_flag = THE_CRD_chaos_event3_mil_flag
+		}
+		THE_CRD_chaos_add_reject_mind_progress = { value = 1 }
+	}
+}
+
+country_event = {
+	id = THE_CRD_chaos_events.4
+	title = THE_CRD_chaos_events.4.title
+	desc = THE_CRD_chaos_events.4.desc
+
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = THE_CRD_chaos_start_reject_mind_event_group_global_flag
+		NOT = { has_country_flag = THE_CRD_chaos_start_reject_mind_event_group_flag }
+	}
+	major = yes
+	major_trigger = {
+		has_country_flag = THE_CRD_chaos_start_reject_mind_event_group_flag
+	}
+
+	option = {
+		name = THE_CRD_chaos_events.4.a
+		custom_tooltip = THE_CRD_chaos_reject_mind_event_group_tt
+		add_legitimacy_equivalent = { amount = -25 republican_tradition = -25 }
+	}
+
+	after = {
+		THE_CRD_chaos_add_reject_mind_progress = { value = 1 }
+	}
+}
+
+# 2年脉冲:2
+
+# 2年脉冲:3
+
+# 2年脉冲:4
+
+# 2年脉冲:5

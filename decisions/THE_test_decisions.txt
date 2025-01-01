@@ -19,10 +19,12 @@ country_decisions = {
 			has_country_flag = THE_debug_flag
 		}
 		allow = {
-			always = yes
+			check_variable = {
+				which = the_crd_chaos_reject_mind_process_var
+				value = 1000
+			}
 		}
 		effect = {
-			add_government_reform = THE_CRD_mental_net_center_reform_1
 		}
 	}
 }
