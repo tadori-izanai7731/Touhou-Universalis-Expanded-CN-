@@ -159,6 +159,16 @@ THE_CRD_chaos_stage1_branch_3 = {
 			has_reform = THE_CRD_chireiden_pace_reform
 			NOT = { land_maintenance = 0.01 }
 			NOT = { naval_maintenance = 0.01 }
+			if = {
+				limit = { ai = yes }
+				NOT = { army_size = 1 }
+				NOT = { navy_size = 1 }
+				NOT = { num_of_generals = 1 }
+				NOT = { num_of_admirals = 1 }
+				all_owned_province = {
+					NOT = { has_fort_building_trigger = yes }
+				}
+			}
 		} 
 
 		effect = {

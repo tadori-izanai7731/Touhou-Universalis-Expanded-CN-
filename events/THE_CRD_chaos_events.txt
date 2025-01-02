@@ -82,7 +82,7 @@ country_event = {
 	}
 	major = yes
 	major_trigger = {
-		has_country_flag = THE_CRD_chaos_start_reject_mind_event_group_flag
+		has_country_flag = THE_CRD_chaos_show_reject_mind_event_test_flag
 	}
 
 	immediate = {
@@ -134,7 +134,7 @@ country_event = {
 	}
 	major = yes
 	major_trigger = {
-		has_country_flag = THE_CRD_chaos_start_reject_mind_event_group_flag
+		has_country_flag = THE_CRD_chaos_show_reject_mind_event_test_flag
 	}
 
 	option = {
@@ -149,6 +149,67 @@ country_event = {
 }
 
 # 2年脉冲:2
+country_event = {
+	id = THE_CRD_chaos_events.5
+	title = THE_CRD_chaos_events.5.title
+	desc = THE_CRD_chaos_events.5.desc
+
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = THE_CRD_chaos_start_reject_mind_event_group_global_flag
+		NOT = { has_country_flag = THE_CRD_chaos_start_reject_mind_event_group_flag }
+	}
+	major = yes
+	major_trigger = {
+		has_country_flag = THE_CRD_chaos_show_reject_mind_event_test_flag
+	}
+
+	option = {
+		name = THE_CRD_chaos_events.5.a
+		custom_tooltip = THE_CRD_chaos_reject_mind_event_group_tt
+		add_stability = -3
+		every_owned_province = {
+			limit = {
+				development = 10
+			}
+			add_devastation = 25
+		}
+	}
+
+	after = {
+		THE_CRD_chaos_add_reject_mind_progress = { value = 1 }
+	}
+}
+
+country_event = {
+	id = THE_CRD_chaos_events.6
+	title = THE_CRD_chaos_events.6.title
+	desc = THE_CRD_chaos_events.6.desc
+
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = THE_CRD_chaos_start_reject_mind_event_group_global_flag
+		NOT = { has_country_flag = THE_CRD_chaos_start_reject_mind_event_group_flag }
+	}
+	major = yes
+	major_trigger = {
+		has_country_flag = THE_CRD_chaos_show_reject_mind_event_test_flag
+	}
+
+	option = {
+		name = THE_CRD_chaos_events.6.a
+		custom_tooltip = THE_CRD_chaos_reject_mind_event_group_tt
+		add_army_professionalism = -0.2
+		while = {
+			limit = { num_of_generals = 1 }
+			kill_leader = { type = general }
+		}
+	}
+
+	after = {
+		THE_CRD_chaos_add_reject_mind_progress = { value = 1 }
+	}
+}
 
 # 2年脉冲:3
 
