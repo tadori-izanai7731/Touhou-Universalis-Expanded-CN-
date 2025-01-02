@@ -20,3 +20,11 @@ on_bi_yearly_pulse = {
 		8 = { }
 	}
 }
+
+on_bi_yearly_pulse_2 = {
+	random_list = {
+		1 = { country_event = { id = THE_CRD_chaos_events.5 } }
+		1 = { country_event = { id = THE_CRD_chaos_events.6 } }
+		8 = { }
+	}
+}
