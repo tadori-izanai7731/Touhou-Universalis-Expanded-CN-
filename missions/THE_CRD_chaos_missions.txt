@@ -103,6 +103,7 @@ THE_CRD_chaos_stage1_branch_2 = {
 		} 
 
 		effect = {
+			add_stability = 3
 			every_country = {
 				limit = {
 					is_rival = ROOT
@@ -115,10 +116,7 @@ THE_CRD_chaos_stage1_branch_2 = {
 				}
 			}
 			custom_tooltip = empty_line_tt
-			every_owned_province = {
-				change_religion = ROOT
-			}
-			add_stability = 3
+			custom_tooltip = THE_CRD_chaos_every_province_religion_change_to_country_tt
 		} 
 	}
 }

@@ -98,6 +98,7 @@ country_event = {
 	option = {
 		name = THE_CRD_chaos_events.3.a
 		custom_tooltip = THE_CRD_chaos_reject_mind_event_group_tt
+		custom_tooltip = empty_line_tt
 		if = {
 			limit = { has_country_flag = THE_CRD_chaos_event3_adm_flag }
 			add_adm_power = -300
@@ -140,6 +141,7 @@ country_event = {
 	option = {
 		name = THE_CRD_chaos_events.4.a
 		custom_tooltip = THE_CRD_chaos_reject_mind_event_group_tt
+		custom_tooltip = empty_line_tt
 		add_legitimacy_equivalent = { amount = -25 republican_tradition = -25 }
 	}
 
@@ -167,12 +169,19 @@ country_event = {
 	option = {
 		name = THE_CRD_chaos_events.5.a
 		custom_tooltip = THE_CRD_chaos_reject_mind_event_group_tt
+		custom_tooltip = empty_line_tt
 		add_stability = -3
-		every_owned_province = {
-			limit = {
-				development = 10
-			}
+		custom_tooltip = THE_CRD_chaos_all_10_development_province_tt
+		tooltip = {
 			add_devastation = 25
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					development = 10
+				}
+				add_devastation = 25
+			}
 		}
 	}
 
@@ -199,7 +208,9 @@ country_event = {
 	option = {
 		name = THE_CRD_chaos_events.6.a
 		custom_tooltip = THE_CRD_chaos_reject_mind_event_group_tt
+		custom_tooltip = empty_line_tt
 		add_army_professionalism = -0.2
+		custom_tooltip = THE_ROD_chaos_remove_every_general_tt
 		while = {
 			limit = { num_of_generals = 1 }
 			kill_leader = { type = general }
@@ -212,7 +223,235 @@ country_event = {
 }
 
 # 2年脉冲:3
+country_event = {
+	id = THE_CRD_chaos_events.7
+	title = THE_CRD_chaos_events.7.title
+	desc = THE_CRD_chaos_events.7.desc
+
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = THE_CRD_chaos_start_reject_mind_event_group_global_flag
+		NOT = { has_country_flag = THE_CRD_chaos_start_reject_mind_event_group_flag }
+	}
+	major = yes
+	major_trigger = {
+		has_country_flag = THE_CRD_chaos_show_reject_mind_event_test_flag
+	}
+
+	option = {
+		name = THE_CRD_chaos_events.7.a
+		custom_tooltip = THE_CRD_chaos_reject_mind_event_group_tt
+		custom_tooltip = empty_line_tt
+		add_yearly_manpower = -10
+		add_yearly_sailors = -10
+		add_war_exhaustion = 20
+	}
+
+	after = {
+		THE_CRD_chaos_add_reject_mind_progress = { value = 1 }
+	}
+}
+
+country_event = {
+	id = THE_CRD_chaos_events.8
+	title = THE_CRD_chaos_events.8.title
+	desc = THE_CRD_chaos_events.8.desc
+
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = THE_CRD_chaos_start_reject_mind_event_group_global_flag
+		NOT = { has_country_flag = THE_CRD_chaos_start_reject_mind_event_group_flag }
+	}
+	major = yes
+	major_trigger = {
+		has_country_flag = THE_CRD_chaos_show_reject_mind_event_test_flag
+	}
+
+	option = {
+		name = THE_CRD_chaos_events.8.a
+		custom_tooltip = THE_CRD_chaos_reject_mind_event_group_tt
+		custom_tooltip = empty_line_tt
+		add_mercantilism = -100
+		add_navy_tradition = -100
+		every_owned_province = {
+			limit = {
+				has_trade_building_trigger = yes
+			}
+			remove_building = marketplace
+			remove_building = trade_depot
+			remove_building = stock_exchange
+		}
+		custom_tooltip = THE_CRD_chaos_every_trade_center_degrade_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					province_has_center_of_trade_of_level = 1
+				}
+				add_center_of_trade_level = -3
+			}
+		}
+	}
+
+	after = {
+		THE_CRD_chaos_add_reject_mind_progress = { value = 1 }
+	}
+}
 
 # 2年脉冲:4
+country_event = {
+	id = THE_CRD_chaos_events.9
+	title = THE_CRD_chaos_events.9.title
+	desc = THE_CRD_chaos_events.9.desc
+
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = THE_CRD_chaos_start_reject_mind_event_group_global_flag
+		NOT = { has_country_flag = THE_CRD_chaos_start_reject_mind_event_group_flag }
+	}
+	major = yes
+	major_trigger = {
+		has_country_flag = THE_CRD_chaos_show_reject_mind_event_test_flag
+	}
+
+	option = {
+		name = THE_CRD_chaos_events.9.a
+		custom_tooltip = THE_CRD_chaos_reject_mind_event_group_tt
+		custom_tooltip = empty_line_tt
+		custom_tooltip = THE_CRD_chaos_remove_every_alliance_and_marriage_tt
+		hidden_effect = {
+			every_ally = {
+				limit = {
+					NOT = { has_country_flag = THE_CRD_chaos_start_reject_mind_event_group_flag }
+				}
+				add_trust = {
+					who = ROOT
+					value = -20
+				}
+				break_alliance = ROOT
+			}
+			every_subject_country = {
+				add_liberty_desire = 50
+			}
+		}
+	}
+
+	after = {
+		THE_CRD_chaos_add_reject_mind_progress = { value = 1 }
+	}
+}
+
+country_event = {
+	id = THE_CRD_chaos_events.10
+	title = THE_CRD_chaos_events.10.title
+	desc = THE_CRD_chaos_events.10.desc
+
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = THE_CRD_chaos_start_reject_mind_event_group_global_flag
+		NOT = { has_country_flag = THE_CRD_chaos_start_reject_mind_event_group_flag }
+	}
+	major = yes
+	major_trigger = {
+		has_country_flag = THE_CRD_chaos_show_reject_mind_event_test_flag
+	}
+
+	option = {
+		name = THE_CRD_chaos_events.10.a
+		custom_tooltip = THE_CRD_chaos_reject_mind_event_group_tt
+		custom_tooltip = empty_line_tt
+		add_inflation = 20
+		add_corruption = 10
+		custom_tooltip = THE_CRD_add_5_loan_with_10_interest_tt
+		for = {
+			amount = 10
+			effect = "
+				add_loan = {
+					fixed_interest = 20
+					duration = 60
+				}
+			"
+		}
+	}
+
+	after = {
+		THE_CRD_chaos_add_reject_mind_progress = { value = 1 }
+	}
+}
 
 # 2年脉冲:5
+country_event = {
+	id = THE_CRD_chaos_events.11
+	title = THE_CRD_chaos_events.11.title
+	desc = THE_CRD_chaos_events.11.desc
+
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = THE_CRD_chaos_start_reject_mind_event_group_global_flag
+		NOT = { has_country_flag = THE_CRD_chaos_start_reject_mind_event_group_flag }
+		any_country = {
+			OR = {
+				is_rival = ROOT
+				is_enemy = ROOT
+			}
+		}
+	}
+	major = yes
+	major_trigger = {
+		has_country_flag = THE_CRD_chaos_show_reject_mind_event_test_flag
+	}
+
+	option = {
+		name = THE_CRD_chaos_events.11.a
+		custom_tooltip = THE_CRD_chaos_reject_mind_event_group_tt
+		custom_tooltip = empty_line_tt
+		every_country = {
+			limit = {
+				OR = {
+					is_rival = ROOT
+					is_enemy = ROOT
+				}
+				NOT = { has_country_flag = THE_CRD_chaos_start_reject_mind_event_group_flag }
+			}
+			ROOT = {
+				declare_war_with_cb = {
+					casus_belli = cb_humiliate_rotw
+					who = PREV
+				}
+			}
+		}
+	}
+
+	after = {
+		THE_CRD_chaos_add_reject_mind_progress = { value = 1 }
+	}
+}
+
+country_event = {
+	id = THE_CRD_chaos_events.12
+	title = THE_CRD_chaos_events.12.title
+	desc = THE_CRD_chaos_events.12.desc
+
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = THE_CRD_chaos_start_reject_mind_event_group_global_flag
+		NOT = { has_country_flag = THE_CRD_chaos_start_reject_mind_event_group_flag }
+	}
+	major = yes
+	major_trigger = {
+		has_country_flag = THE_CRD_chaos_show_reject_mind_event_test_flag
+	}
+
+	option = {
+		name = THE_CRD_chaos_events.12.a
+		custom_tooltip = THE_CRD_chaos_reject_mind_event_group_tt
+		custom_tooltip = empty_line_tt
+		custom_tooltip = THE_CRD_remove_all_idea_groups_tt
+		hidden_effect = {
+			THE_remove_every_idea_groups_scripted_effect = yes
+		}
+	}
+
+	after = {
+		THE_CRD_chaos_add_reject_mind_progress = { value = 1 }
+	}
+}

@@ -10,6 +10,13 @@
  THE_CRD_chaos_seize_land_add_10_loyalty_tt: "只要@ONI§Y[ONI.GetName]§!是我们的非朝贡属国，§Y没收领地§!导致的阶层忠诚度变化减少§G10%§!。"
  THE_CRD_chaos_there_is_eternal_tt: "此处将是被厌恶者的幻想"
  THE_CRD_chaos_has_chosen_religious_path_tt: "已在事件「§Y正道之惑§!」中做出选择"
+ THE_CRD_chaos_all_10_development_province_tt: "治下所有发展度达到§Y10§!的省份:"
+ THE_ROD_chaos_remove_every_general_tt: "移除所有§Y陆军将领§!"
+ THE_CRD_add_5_loan_with_10_interest_tt: "获得§Y10§!笔利息固定为§Y20%§!贷款，这些贷款将在§Y60§!月后到期"
+ THE_CRD_chaos_remove_every_alliance_and_marriage_tt: "所有§Y盟友§!与§Y[Root.GetName]§!断绝盟约并失去§R20§!信任\n所有§Y属国§!获得§R50%§!独立倾向"
+ THE_CRD_chaos_every_trade_center_degrade_tt: "治下所有§Y贸易中心§!等级降级为§Y1§!"
+ THE_CRD_chaos_every_province_religion_change_to_country_tt: "治下所有省份的宗教转变为§Y[Root.Religion.GetName]§!"
+ THE_CRD_remove_all_idea_groups_tt: "移除所有已启用的§Y理念组§!"
 ### TOOLTIP_END
 
 ### GOVERNMENT
@@ -55,6 +62,38 @@
  THE_CRD_chaos_events.4.title: "个人丑闻"
  THE_CRD_chaos_events.4.desc: "国内最近流传着一些关于[Root.Monarch.GetTitle]的丑闻，这些丑闻的内容都非常奇怪以至于没有人会相信，因此放任了这件事。数日后，这些莫名其妙的丑闻竟不可思议地在民间广泛流传，甚至宫廷和军队中也有不少人相信，即使[Root.Monarch.GetTitle]拿出充分的证据也难以平息。"
  THE_CRD_chaos_events.4.a: "这件事太奇怪了。"
+
+ THE_CRD_chaos_events.5.title: "城市混乱"
+ THE_CRD_chaos_events.5.desc: "一种奇怪的思想袭击了我们的重要城市，人们不再从事自己的工作而是涌上街头，如此大规模的聚集却并不是为了发动叛乱，也没有发现敌国间谍的痕迹。很快人群自发地分为多个派系，声称自己的思想是最先进的，其中包括个人的绝对自由，集体组织形成的乌托邦，甚至有人提出由机器代替人类的异端邪说。这些行为虽然没有动摇国家的统治，也对当地生产活动造成了严重破坏。"
+ THE_CRD_chaos_events.5.a: "某些说法还挺有想象力的。"
+
+ THE_CRD_chaos_events.6.title: "将领隐退"
+ THE_CRD_chaos_events.6.desc: "军队中作战经验丰富的将领一直是我国战争的主要指挥力量，在国内也拥有丰厚的待遇。最近的一次边境冲突结束后，回到[Root.Capital.GetName]的将领们完全不记得自己的国家，也不知道为什么要回到这里，遗忘了所有人和事，除了最近经历的战争。最后的结果是将领们全部隐退，我们的军队建设也变得落后。"
+ THE_CRD_chaos_events.6.a: "难道是异教的神迹。"
+
+ THE_CRD_chaos_events.7.title: "厌战情绪"
+ THE_CRD_chaos_events.7.desc: "从士兵到农民，从上层到下层，所有人都表现出强烈的厌战情绪。人们不愿意加入军队，士兵不愿意参与战争，所有人对于战争之事都闭口不谈。实际上，我们的征兵政策和对外战争最近并没有变动，战争的规模和烈度也也没有扩大，这次突如其来的厌战情绪让我们在军事和外交非常被动。"
+ THE_CRD_chaos_events.7.a: "战争不是我们想要的。"
+
+ THE_CRD_chaos_events.8.title: "贸易荒废"
+ THE_CRD_chaos_events.8.desc: "在最近的[Root.GetName]会议上，财政大臣提出的建议在表决和[Root.Monarch.GetTitle]的授意通过。数日内，[Root.GetName]的贸易就被全面取缔，商人不必再从事危险的境外贸易，而是回到农田和工坊中工作。相比毫无意义甚至产生损耗的贸易转运，这才是提高国内生产的方法。"
+ THE_CRD_chaos_events.8.a: "[Root.GetName]的经济稳中向好。"
+
+ THE_CRD_chaos_events.9.title: "背弃盟约"
+ THE_CRD_chaos_events.9.desc: "我们的盟友最近在战争中获得了大量土地和财富，其中本该有一部分是属于我们的利益，却没有经过协商就私自占领。国内对此事非常不满，逐渐上升为外交事件以致军事同盟破裂，在其他方面的合作也岌岌可危。没有我们的帮助，那些战争就不可能进行得如此顺利，包括贸易和外交上的孤立。"
+ THE_CRD_chaos_events.9.a: "结盟是出卖自身利益的行为。"
+
+ THE_CRD_chaos_events.10.title: "经济狂热"
+ THE_CRD_chaos_events.10.desc: "经历短暂的经济停滞，相信不就的将来必然是[Root.GetName]经济蓬勃发展的时期，不仅国库不需要保留资金，所有的税收也将用于投资，还要从其他国家借取发展所需的资金。所有通胀和腐败都是暂时的，经济才是所有问题的根源，这样的机会不仅能解决经济问题，还能给投资者带来远超工作的收益。"
+ THE_CRD_chaos_events.10.a: "所有人都来投资吧。"
+
+ THE_CRD_chaos_events.11.title: "战争寻趣"
+ THE_CRD_chaos_events.11.desc: "由于很久没有经历过战争，[Root.GetName]的人都对战争抱有寻求乐趣的看法，上层想要寻求羞辱敌国的乐趣，下层想要寻求战争中破坏的体验。仅仅只是一些对其他国家的羞辱，这种原因发动的战争想必也不会在外交上遭到过多谴责，我们只是想借助战争寻求一些丢失的乐趣。"
+ THE_CRD_chaos_events.11.a: "就从宿敌开始。"
+
+ THE_CRD_chaos_events.12.title: "社会崩溃"
+ THE_CRD_chaos_events.12.desc: "我们的社会崩溃了，产生这一切的原因要从「心中眼」说起，凡是居住在[Root.GetName]的人都会想起自己的心脏中拥有一只眼，寻找无果后就会感到怅然若失。从此那些人不在意自己的生活，认为没有「心中眼」所有的交流都变得毫无意义。这种影响逐渐扩大导致了社会的崩溃。"
+ THE_CRD_chaos_events.12.a: "再见，我也要去寻找「心中眼」了。"
 ### EVENT_END
 
 ### SPECIAL

@@ -462,3 +462,37 @@ THE_unlock_special_culture_ideas_scripted_effect = {
 	set_country_flag = THE_can_use_$type$_ideas_flag
 	custom_tooltip = THE_unlock_$type$_ideas_tt
 }
+
+THE_remove_every_idea_groups_scripted_effect = {
+	remove_idea_group = innovativeness_ideas
+	remove_idea_group = religious_ideas
+	remove_idea_group = economic_ideas
+	remove_idea_group = expansion_ideas
+	remove_idea_group = administrative_ideas
+	remove_idea_group = humanist_ideas
+	remove_idea_group = infrastructure_ideas
+	remove_idea_group = spy_ideas
+	remove_idea_group = diplomatic_ideas
+	remove_idea_group = trade_ideas
+	remove_idea_group = exploration_ideas
+	remove_idea_group = maritime_ideas
+	remove_idea_group = influence_ideas
+	remove_idea_group = court_ideas
+	remove_idea_group = aristocracy_ideas
+	remove_idea_group = plutocracy_ideas
+	remove_idea_group = horde_gov_ideas
+	remove_idea_group = theocracy_gov_ideas
+	remove_idea_group = indigenous_ideas
+	remove_idea_group = offensive_ideas
+	remove_idea_group = defensive_ideas
+	remove_idea_group = quality_ideas
+	remove_idea_group = quantity_ideas
+	remove_idea_group = naval_ideas
+	remove_idea_group = mercenary_ideas
+	remove_idea_group = THE_youkai_ideas
+	remove_idea_group = THE_kami_ideas
+	remove_idea_group = THE_human_ideas
+	remove_idea_group = THE_fairy_ideas
+	remove_idea_group = THE_lunarian_ideas
+	remove_idea_group = THE_gensokyan_ideas
+}

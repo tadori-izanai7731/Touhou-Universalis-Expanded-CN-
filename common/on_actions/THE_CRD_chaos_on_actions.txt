@@ -28,3 +28,27 @@ on_bi_yearly_pulse_2 = {
 		8 = { }
 	}
 }
+
+on_bi_yearly_pulse_3 = {
+	random_list = {
+		1 = { country_event = { id = THE_CRD_chaos_events.7 } }
+		1 = { country_event = { id = THE_CRD_chaos_events.8 } }
+		8 = { }
+	}
+}
+
+on_bi_yearly_pulse_4 = {
+	random_list = {
+		1 = { country_event = { id = THE_CRD_chaos_events.9 } }
+		1 = { country_event = { id = THE_CRD_chaos_events.10 } }
+		8 = { }
+	}
+}
+
+on_bi_yearly_pulse_5 = {
+	random_list = {
+		1 = { country_event = { id = THE_CRD_chaos_events.11 } }
+		1 = { country_event = { id = THE_CRD_chaos_events.12 } }
+		8 = { }
+	}
+}
