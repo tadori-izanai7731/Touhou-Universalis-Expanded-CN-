@@ -1,0 +1,76 @@
+THE_CLP_star_hellfall_mechanic = {
+	available = {
+		always = yes
+	}
+
+	powers = {
+		THE_CLP_star_hellfall_explorer_power = {
+			gui = THE_mechanic_power_hidden_gui
+			max = 5
+			min = 0
+			base_monthly_growth = 0
+			increases_with_global = no
+			scaled_modifier = {
+				modifier = {
+					monthly_THE_CLP_star_hellfall_explorer_power = -100
+					global_colonial_growth = 1000
+					trade_efficiency = 5
+				}
+			}
+			range_modifier = {
+				trigger = { num_of_explorers = 1 }
+				modifier = { monthly_THE_CLP_star_hellfall_explorer_power = 1 }
+			}
+			range_modifier = {
+				trigger = { num_of_explorers = 2 }
+				modifier = { monthly_THE_CLP_star_hellfall_explorer_power = 1 }
+			}
+			range_modifier = {
+				trigger = { num_of_explorers = 3 }
+				modifier = { monthly_THE_CLP_star_hellfall_explorer_power = 1 }
+			}
+			range_modifier = {
+				trigger = { num_of_explorers = 4 }
+				modifier = { monthly_THE_CLP_star_hellfall_explorer_power = 1 }
+			}
+			range_modifier = {
+				trigger = { num_of_explorers = 5 }
+				modifier = { monthly_THE_CLP_star_hellfall_explorer_power = 1 }
+			}
+		}
+		THE_CLP_star_hellfall_conquistador_power = {
+			gui = THE_mechanic_power_hidden_gui
+			max = 5
+			min = 0
+			base_monthly_growth = 0
+			increases_with_global = no
+			scaled_modifier = {
+				modifier = {
+					monthly_THE_CLP_star_hellfall_conquistador_power = -100
+					movement_speed = 5
+					colonist_placement_chance = 5
+				}
+			}
+			range_modifier = {
+				trigger = { num_of_conquistadors = 1 }
+				modifier = { monthly_THE_CLP_star_hellfall_conquistador_power = 1 }
+			}
+			range_modifier = {
+				trigger = { num_of_conquistadors = 2 }
+				modifier = { monthly_THE_CLP_star_hellfall_conquistador_power = 1 }
+			}
+			range_modifier = {
+				trigger = { num_of_conquistadors = 3 }
+				modifier = { monthly_THE_CLP_star_hellfall_conquistador_power = 1 }
+			}
+			range_modifier = {
+				trigger = { num_of_conquistadors = 4 }
+				modifier = { monthly_THE_CLP_star_hellfall_conquistador_power = 1 }
+			}
+			range_modifier = {
+				trigger = { num_of_conquistadors = 5 }
+				modifier = { monthly_THE_CLP_star_hellfall_conquistador_power = 1 }
+			}
+		}
+	}
+}

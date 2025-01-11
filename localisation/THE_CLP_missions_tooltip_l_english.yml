@@ -1,0 +1,60 @@
+﻿l_english:
+### TOOLTIP
+ THE_CLP_events_1_insight_tt: "bìNýwY÷‹Bl[JNK.GetName]ÙuˆNbìNìrËz0WMOÿb=f(Wgb—b‰NÓumgTìrËz0"
+ THE_CLP_events_2_option3_trigger_tt: "å‹	y˜ÅNTöeŒRbNb	gûN¡RagöNöeïS(u"
+ THE_CLP_every_owned_province_neighbor_cjh_tt: "»lNNb	gN@CLP§Y[CLP.GetName]§!0@JNK§Y[JNK.GetName]§!b@HEC§Y[HEC.GetName]§!øv»„vwýN·ƒ—V‚YNHeœg:"
+ THE_CLP_every_owned_province_neighbor_clp_tt: "»lNNb	gN@CLP§Y[CLP.GetName]§!øv»„vwýN·ƒ—V‚YNHeœg:"
+ THE_CLP_noble_every_10_loyalty_add_10_army_tradition_tt: "§Y[Root.Get5ÏeName]§!6–BSÏkåb	g§Y10§!àVÚ‹¦^ÿ·ƒ—V§G10§!F–›Q.Oßu"
+ THE_CLP_every_gensokyo_country_with_25_opinion_tt: "Ïk	g1*Nán³agöN„výV¶Rÿ·ƒ—V§G25§!¤"
+ THE_CLP_mission_5_2_case1_tt_yes: "£yes£‚YœgóS	g2*Nán³agöNNINAm‡eS=f§Y–Y¾|§!„výV¶Rÿ·ƒ—V‚YNHeœg:"
+ THE_CLP_mission_5_2_case1_tt_no: "£no£‚Yœg	g2*Nán³agöNNINAm‡eS=f§Y–Y¾|§!„výV¶Rÿ·ƒ—V‚YNHeœg:"
+ THE_CLP_unlock_moon_war_cb_cjh_tt: "@CLP§Y[CLP.GetName]§!0@JNK§Y[JNK.GetName]§!ŒT@HEC§Y[HEC.GetName]§!=T(u0§Ygb—b‰N§!0±Rbt1u"
+ THE_CLP_unlock_moon_war_cb_clp_tt: "=T(u0§Ygb—b‰N§!0±Rbt1u"
+ THE_CLP_independent_after_moon_war_tt: "bìNS(WŒRbûN¡R0§Ygb—b‰N§!0TìrËz"
+ THE_CLP_moon_mission_add_extra_effect_tt: "ûN¡R0§YngºN§!0ŒT0§Ygb—b‰N§!0·ƒ—V˜YHeœg"
+ THE_CLP_complete_moon_war_tt: "ôv0RŒRbûN¡R0§Ygb—b‰N§!0"
+### TOOLTIP_END
+
+### MODIFIER
+ THE_CLP_army_is_infiltrated_modifier: "F–›Q«ˆn"
+ THE_CLP_navy_is_infiltrated_modifier: "wm›Q«ˆn"
+ THE_CLP_temporary_recruitment_modifier: "4NöeVìS"
+ THE_CLP_vibrant_fairies_modifier: "EQánu‹T›R„v–Y¾|"
+ THE_CLP_star_exploration_modifier: "f°¢ci––"
+### MODIFIER_END
+
+### EVENT
+ THE_CLP_events.1.title: "ŒT¯uÐrQOSFU"
+#THE_CLP_events.1.desc: ""
+#THE_CLP_events.1.a: ""
+#THE_CLP_events.1.b: ""
+
+ THE_CLP_events.2.title: "ngKNý"
+#THE_CLP_events.2.desc: ""
+#THE_CLP_events.2.a: ""
+#THE_CLP_events.2.b: ""
+#THE_CLP_events.2.c: ""
+
+ THE_CLP_events.3.title: "ûRŒbf°"
+#THE_CLP_events.3.desc: ""
+#THE_CLP_events.3.a: ""
+
+ THE_CLP_events.4.title: "ÜtRgKNý"
+#THE_CLP_events.4.desc: ""
+#THE_CLP_events.4.a: ""
+#THE_CLP_events.4.b: ""
+### EVENT_END
+
+### POWER_PROJECTION
+ THE_CLP_carve_up_moon_capital_projection: "ÜtRgKNý"
+### POWER_PROJECTION_END
+
+### GOVERNMENT
+ THE_CLP_star_hellfall_reform: "f°ïžK„"
+ ability_THE_CLP_star_hellfall_mechanic: "0Wñr„v¢ci–¶RŒTVgw"
+ THE_CLP_star_hellfall_explorer_power: "åb	g„v¢ci–¶RpeÏ‘"
+ THE_CLP_star_hellfall_conquistador_power: "åb	g„vVgwpeÏ‘"
+ monthly_THE_CLP_star_hellfall_explorer_power: "¢ci–¶R RbžX•"
+ monthly_THE_CLP_star_hellfall_conquistador_power: "Vgw RbžX•"
+ mechanic_THE_CLP_hellfall_explorer_conquistador_custom_attributes_yes: "Ïkåb	g§Y1§!*N¢ci–¶Rÿ·ƒ—V§G10.00§!hQNSûylžX•ŒT§G5.0%§!8fHe‡sÿgY§Y5§!*N	ÿ\nÏkåb	g§Y1§!*NVgwÿ·ƒ—V§G5.0%§!ûy¨R¦^ŒT§G5.0%§!–klàQ‡sÿgY§Y5§!*N	ÿ"
+### GOVERNMENT_END

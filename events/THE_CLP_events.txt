@@ -1,0 +1,229 @@
+namespace = THE_CLP_events
+
+country_event = {
+	id = THE_CLP_events.1
+	title = "THE_CLP_events.1.title"
+	desc = "THE_CLP_events.1.desc"
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "THE_CLP_events.1.a"
+		grant_independence = yes
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "THE_CLP_events.1.b"
+		custom_tooltip = THE_CLP_independent_after_moon_war_tt
+		custom_tooltip = THE_CLP_moon_mission_add_extra_effect_tt
+		JNK = {
+			add_country_modifier = {
+				name = THE_CLP_vibrant_fairies_modifier
+				duration = 1825
+			}
+		}
+		HEC = {
+			add_country_modifier = {
+				name = THE_CLP_vibrant_fairies_modifier
+				duration = 1825
+			}
+		}
+		hidden_effect = {
+			set_country_flag = THE_CLP_have_select_independent_after_moon_war_flag
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			add_historical_friend = JNK
+			add_historical_friend = HEC
+			JNK = { add_historical_friend = ROOT }
+			HEC = { add_historical_friend = ROOT }
+		}
+	}
+}
+
+country_event = {
+	id = THE_CLP_events.2
+	title = "THE_CLP_events.2.title"
+	desc = "THE_CLP_events.2.desc"
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		exists = LCU
+	}
+
+	option = {
+		name = "THE_CLP_events.2.a"
+		LCU = {
+			add_country_modifier = {
+				name = THE_CLP_army_is_infiltrated_modifier
+				duration = 1825
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_spy_network_in = {
+					who = LCU
+					value = 20
+				}
+				advisor = spymaster
+				factor = 0
+			}
+		}
+	}
+
+	option = {
+		name = "THE_CLP_events.2.b"
+		LCU = {
+			add_country_modifier = {
+				name = THE_CLP_navy_is_infiltrated_modifier
+				duration = 1825
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "THE_CLP_events.2.c"
+		highlight = yes
+		trigger = {
+			has_spy_network_in = {
+				who = LCU
+				value = 20
+			}
+			advisor = spymaster
+		}
+		LCU = {
+			add_country_modifier = {
+				name = THE_CLP_army_is_infiltrated_modifier
+				duration = 1825
+			}
+			add_country_modifier = {
+				name = THE_CLP_navy_is_infiltrated_modifier
+				duration = 1825
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = {
+	id = THE_CLP_events.3
+	title = "THE_CLP_events.3.title"
+	desc = "THE_CLP_events.3.desc"
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "THE_CLP_events.3.a"
+		create_explorer = {
+			tradition = 60
+		}
+		add_country_modifier = {
+			name = THE_CLP_star_exploration_modifier
+			duration = -1
+		}
+		if = {
+			limit = {
+				NOT = { government = monarchy }
+			}
+			change_government = monarchy
+		}
+		add_government_reform = THE_CLP_hell_fairy_government_reform
+	}
+}
+
+country_event = {
+	id = THE_CLP_events.4
+	title = "THE_CLP_events.4.title"
+	desc = "THE_CLP_events.4.desc"
+
+	mean_time_to_happen = {
+		days = 30
+	}
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			tag = CLP
+			was_tag = CLP
+		}
+		moon_continent = {
+			type = all
+			OR = {
+				owned_by = ROOT
+				owned_by = JNK
+				owned_by = HEC
+			}
+		}
+	}
+
+	option = {
+		name = "THE_CLP_events.4.a"
+		Southern_moon_state = {
+			limit = {
+				NOT = { owned_by = ROOT }
+			}
+			cede_province = ROOT
+		}
+		if = {
+			limit = { exists = JNK }
+			Western_moon_state = {
+				limit = {
+					NOT = { owned_by = JNK }
+				}
+				cede_province = JNK
+			}
+		}
+		5320 = {
+			add_base_tax = -5
+			add_base_production = -5
+			add_base_manpower = -5
+		}
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_power_projection = {
+			type = THE_CLP_carve_up_moon_capital_projection
+			amount = 50
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "THE_CLP_events.4.b"
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_power_projection = {
+			type = THE_CLP_carve_up_moon_capital_projection
+			amount = 50
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			JNK = { remove_country_modifier = THE_CLP_vibrant_fairies_modifier }
+			HEC = { remove_country_modifier = THE_CLP_vibrant_fairies_modifier }
+		}
+	}
+}

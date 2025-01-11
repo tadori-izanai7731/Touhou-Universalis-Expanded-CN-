@@ -1,0 +1,25 @@
+THE_CLP_star_hellfall_reform = {
+	icon = "THE_CLP_star_hellfall_reform_icon"
+	potential = {
+		OR = {
+			have_had_reform = THE_CLP_star_hellfall_reform
+			has_reform = THE_CLP_star_hellfall_reform
+		}
+	}
+
+	allow_normal_conversion = yes
+
+	government_abilities = {
+		THE_CLP_star_hellfall_mechanic
+	}
+	custom_attributes = {
+		THE_CLP_hellfall_explorer_conquistador_custom_attributes = yes
+	}
+
+	modifiers = {
+		free_land_leader_pool = 2
+		free_navy_leader_pool = 2
+		dip_tech_cost_modifier = -0.1
+		range = 0.25
+	}
+}

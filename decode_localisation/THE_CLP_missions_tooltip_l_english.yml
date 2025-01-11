@@ -1,0 +1,60 @@
+﻿l_english:
+### TOOLTIP
+ THE_CLP_events_1_insight_tt: "我们能够请求[JNK.GetName]给予我们独立地位，或是在月面战争结束后独立。"
+ THE_CLP_events_2_option3_trigger_tt: "该选项仅同时完成所有任务条件时可用"
+ THE_CLP_every_owned_province_neighbor_cjh_tt: "治下所有与@CLP§Y[CLP.GetName]§!、@JNK§Y[JNK.GetName]§!或@HEC§Y[HEC.GetName]§!相邻的省份获得如下效果:"
+ THE_CLP_every_owned_province_neighbor_clp_tt: "治下所有与@CLP§Y[CLP.GetName]§!相邻的省份获得如下效果:"
+ THE_CLP_noble_every_10_loyalty_add_10_army_tradition_tt: "§Y[Root.Get贵族Name]§!阶层每拥有§Y10§!忠诚度，获得§G10§!陆军传统"
+ THE_CLP_every_gensokyo_country_with_25_opinion_tt: "每有1个满足条件的国家，获得§G25§!¤"
+ THE_CLP_mission_5_2_case1_tt_yes: "£yes£如果至少有2个满足条件且主流文化是§Y妖精§!的国家，获得如下效果:"
+ THE_CLP_mission_5_2_case1_tt_no: "£no£如果有2个满足条件且主流文化是§Y妖精§!的国家，获得如下效果:"
+ THE_CLP_unlock_moon_war_cb_cjh_tt: "@CLP§Y[CLP.GetName]§!、@JNK§Y[JNK.GetName]§!和@HEC§Y[HEC.GetName]§!启用「§Y月面战争§!」宣战理由"
+ THE_CLP_unlock_moon_war_cb_clp_tt: "启用「§Y月面战争§!」宣战理由"
+ THE_CLP_independent_after_moon_war_tt: "我们将在完成任务「§Y月面战争§!」后独立"
+ THE_CLP_moon_mission_add_extra_effect_tt: "任务「§Y渗透月人§!」和「§Y月面战争§!」获得额外效果"
+ THE_CLP_complete_moon_war_tt: "直到完成任务「§Y月面战争§!」"
+### TOOLTIP_END
+
+### MODIFIER
+ THE_CLP_army_is_infiltrated_modifier: "陆军被渗透"
+ THE_CLP_navy_is_infiltrated_modifier: "海军被渗透"
+ THE_CLP_temporary_recruitment_modifier: "临时征召"
+ THE_CLP_vibrant_fairies_modifier: "充满生命力的妖精"
+ THE_CLP_star_exploration_modifier: "星辰探险队"
+### MODIFIER_END
+
+### EVENT
+ THE_CLP_events.1.title: "和纯狐再协商"
+#THE_CLP_events.1.desc: ""
+#THE_CLP_events.1.a: ""
+#THE_CLP_events.1.b: ""
+
+ THE_CLP_events.2.title: "渗透月之都"
+#THE_CLP_events.2.desc: ""
+#THE_CLP_events.2.a: ""
+#THE_CLP_events.2.b: ""
+#THE_CLP_events.2.c: ""
+
+ THE_CLP_events.3.title: "寻找星辰"
+#THE_CLP_events.3.desc: ""
+#THE_CLP_events.3.a: ""
+
+ THE_CLP_events.4.title: "瓜分月之都"
+#THE_CLP_events.4.desc: ""
+#THE_CLP_events.4.a: ""
+#THE_CLP_events.4.b: ""
+### EVENT_END
+
+### POWER_PROJECTION
+ THE_CLP_carve_up_moon_capital_projection: "瓜分月之都"
+### POWER_PROJECTION_END
+
+### GOVERNMENT
+ THE_CLP_star_hellfall_reform: "星辰黯落"
+ ability_THE_CLP_star_hellfall_mechanic: "地狱的探险家和征服者"
+ THE_CLP_star_hellfall_explorer_power: "拥有的探险家数量"
+ THE_CLP_star_hellfall_conquistador_power: "拥有的征服者数量"
+ monthly_THE_CLP_star_hellfall_explorer_power: "探险家加成增长"
+ monthly_THE_CLP_star_hellfall_conquistador_power: "征服者加成增长"
+ mechanic_THE_CLP_hellfall_explorer_conquistador_custom_attributes_yes: "每拥有§Y1§!个探险家，获得§G10.00§!全局移民增长和§G5.0%§!贸易效率（最多§Y5§!个）\n每拥有§Y1§!个征服者，获得§G5.0%§!移动速度和§G5.0%§!殖民几率（最多§Y5§!个）"
+### GOVERNMENT_END

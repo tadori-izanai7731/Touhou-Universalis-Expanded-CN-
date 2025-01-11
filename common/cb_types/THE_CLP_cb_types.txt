@@ -1,0 +1,22 @@
+# Napoleonic era imperialism
+cb_THE_CLP_moon_war = {
+	valid_for_subject = no
+
+	prerequisites_self = {
+		has_country_flag = THE_CLP_unlock_moon_war_cb_flag
+	}
+
+	prerequisites = {
+		FROM = {
+			OR = {
+				tag = LCU
+				was_tag = LCU
+			}
+			any_owned_province = {
+				continent = moon_continent
+			}
+		}
+	}
+
+	war_goal = THE_CLP_moon_war_goal
+}

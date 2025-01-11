@@ -17,6 +17,7 @@ country_decisions = {
 			NOT = { th_is_or_was_tag = { tag = EIT } }
 			NOT = { th_is_or_was_tag = { tag = FUJ } }
 			NOT = { th_is_or_was_tag = { tag = MHG } }
+			THE_disable_ai_call_touhou_characters_back = yes
 		}
 		
 		allow = {
@@ -136,6 +137,7 @@ country_decisions = {
 			th_has_not_original_heir_as_ruler = yes	#You shouldn't have an heir as heir AND ruler at the same time
 			NOT = { has_country_flag = th_has_respawning_event }
 			NOT = { government = republic }
+			THE_disable_ai_call_touhou_characters_back = yes
 		}
 		
 		allow = {
@@ -238,6 +240,7 @@ country_decisions = {
 			th_has_not_original_ruler = yes
 			NOT = { has_country_flag = th_has_respawning_event }
 			NOT = { government = republic }
+			THE_disable_ai_call_touhou_characters_back = yes
 		}
 		
 		allow = {
@@ -359,6 +362,7 @@ country_decisions = {
 				}
 			}
 			NOT = { government = republic }
+			THE_disable_ai_call_touhou_characters_back = yes
 		}
 		
 		allow = {

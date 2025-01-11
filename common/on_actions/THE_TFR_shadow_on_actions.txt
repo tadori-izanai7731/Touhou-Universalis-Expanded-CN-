@@ -2,14 +2,14 @@ on_core = {
 	THE_TFR_shadow_on_core_scripted_effect = yes
 }
 
-on_monarch_death = {
-	events = {
-		THE_TFR_shadow_events.3
-	}
-}
+# on_monarch_death = {
+# 	events = {
+# 		THE_TFR_shadow_events.3
+# 	}
+# }
 
-on_death_election = {
-	events = {
-		THE_TFR_shadow_events.3
-	}
-}
+# on_death_election = {
+# 	events = {
+# 		THE_TFR_shadow_events.3
+# 	}
+# }

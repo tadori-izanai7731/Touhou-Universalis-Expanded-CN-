@@ -1,0 +1,28 @@
+#陆军被渗透
+THE_CLP_army_is_infiltrated_modifier = {
+	military_tactics = -0.1
+	morale_damage_received = 0.1
+}
+
+#海军被渗透
+THE_CLP_navy_is_infiltrated_modifier = {
+	hull_size_modifier = -0.2
+	number_of_cannons_modifier = -0.2
+}
+
+#临时征召
+THE_CLP_temporary_recruitment_modifier = {
+	land_forcelimit = 5
+	mercenary_cost = -0.25
+}
+
+#充满生命力的妖精
+THE_CLP_vibrant_fairies_modifier = {
+	morale_damage = 0.1
+	war_exhaustion = -0.05
+}
+
+#星辰探险队
+THE_CLP_star_exploration_modifier = {
+	may_explore = yes
+}

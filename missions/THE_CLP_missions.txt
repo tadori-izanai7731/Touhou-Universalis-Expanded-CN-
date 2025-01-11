@@ -1,0 +1,540 @@
+THE_CLP_mission_stage1_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = CLP
+	} 
+
+	THE_CLP_mission_1_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_CLP_mission_2_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			manpower = 3
+			treasury = 15
+		} 
+
+		effect = {
+			add_dip_power = 100
+			5336 = {
+				if = {
+					limit = {
+						is_empty = yes
+					}
+					change_culture = Fairy
+					add_siberian_construction = 500
+				}
+			}
+			5337 = {
+				if = {
+					limit = {
+						is_empty = yes
+					}
+					change_culture = Fairy
+					add_siberian_construction = 500
+				}
+			}
+			5338 = {
+				if = {
+					limit = {
+						is_empty = yes
+					}
+					change_culture = Fairy
+					add_siberian_construction = 500
+				}
+			}
+		} 
+	}
+}
+THE_CLP_mission_stage1_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = CLP
+	} 
+
+	THE_CLP_mission_2_1 = {
+		icon = mission_unknown_mission
+		position = 1
+		provinces_to_highlight = {
+			is_capital_of = JNK
+		} 
+
+		trigger = {
+			OR = {
+				is_free_or_tributary_trigger = yes
+				AND = {
+					is_subject_of = JNK
+					JNK = {
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
+					}
+				}
+			}
+		} 
+
+		effect = {
+			add_adm_power = 100
+			if = {
+				limit = {
+					is_free_or_tributary_trigger = no
+					is_subject_of = JNK
+				}
+				THE_country_event_with_insight = {
+					id = THE_CLP_events.1
+					insight_tooltip = THE_CLP_events_1_insight_tt
+				}
+			}
+			else = {
+				add_prestige_or_monarch_power = {
+					amount = 10
+				}
+			}
+		} 
+	}
+
+	THE_CLP_mission_2_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_CLP_mission_2_1 } 
+		provinces_to_highlight = {
+			is_capital_of = LCU
+		} 
+
+		trigger = {
+			OR = {
+				LCU = {
+					OR = {
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = insulted
+						}
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = scornfully_insulted
+						}
+					}
+				}
+				war_with = LCU
+				NOT = { exists = LCU }
+			}
+		} 
+
+		effect = {
+			moon_continent = {
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = { exists = LCU }
+				if = {
+					limit = { has_country_flag = THE_CLP_have_select_independent_after_moon_war_flag }
+					if = {
+						limit = { ai = no }
+						grant_independence = yes
+					}
+					custom_tooltip = THE_CLP_unlock_moon_war_cb_cjh_tt
+					hidden_effect = {
+						set_country_flag = THE_CLP_unlock_moon_war_cb_flag
+						JNK = {
+							set_country_flag = THE_CLP_unlock_moon_war_cb_flag
+						}
+						HEC = {
+							set_country_flag = THE_CLP_unlock_moon_war_cb_flag
+						}
+					}
+				}
+				else = {
+					custom_tooltip = THE_CLP_unlock_moon_war_cb_clp_tt
+					hidden_effect = {
+						set_country_flag = THE_CLP_unlock_moon_war_cb_flag
+					}
+				}
+			}
+			else = {
+				add_prestige_or_monarch_power = {
+					amount = 100
+				}
+			}
+		} 
+	}
+}
+THE_CLP_mission_stage1_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = CLP
+	} 
+
+	THE_CLP_mission_3_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = {
+			THE_CLP_mission_2_1
+			THE_CLP_mission_4_1
+		}
+		provinces_to_highlight = {
+			is_capital_of = LCU
+		} 
+
+		trigger = {
+			OR = {
+				has_spy_network_in = {
+					who = LCU
+					value = 20
+				}
+				advisor = spymaster
+			}
+		} 
+
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = THE_CLP_have_select_independent_after_moon_war_flag
+				}
+				LCU = {
+					custom_tooltip = THE_CLP_every_owned_province_neighbor_cjh_tt
+					tooltip = {
+						change_culture = Fairy
+						remove_province_modifier = th_pure_land
+						remove_province_modifier = th_lunarian_accepted_culture
+						add_province_modifier = {
+							name = th_impure_land
+							duration = -1
+						}
+					}
+					hidden_effect = {
+						every_owned_province = {
+							limit = {
+								any_neighbor_province = {
+									owner = {
+										OR = {
+											tag = CLP
+											tag = JNK
+											tag = HEC
+										}
+									}
+								}
+							}
+							change_culture = Fairy
+							remove_province_modifier = th_pure_land
+							remove_province_modifier = th_lunarian_accepted_culture
+							add_province_modifier = {
+								name = th_impure_land
+								duration = -1
+							}
+						}
+					}
+				}
+			}
+			else = {
+				LCU = {
+					custom_tooltip = THE_CLP_every_owned_province_neighbor_clp_tt
+					tooltip = {
+						change_culture = Fairy
+						remove_province_modifier = th_pure_land
+						remove_province_modifier = th_lunarian_accepted_culture
+						add_province_modifier = {
+							name = th_impure_land
+							duration = -1
+						}
+					}
+					hidden_effect = {
+						every_owned_province = {
+							limit = {
+								any_neighbor_province = {
+									owner = {
+										tag = CLP
+									}
+								}
+							}
+							change_culture = Fairy
+							remove_province_modifier = th_pure_land
+							remove_province_modifier = th_lunarian_accepted_culture
+							add_province_modifier = {
+								name = th_impure_land
+								duration = -1
+							}
+						}
+					}
+				}
+			}
+			custom_tooltip = empty_line_tt
+			THE_country_event_with_insight = {
+				id = THE_CLP_events.2
+				option_1 = "
+					LCU = {
+						add_country_modifier = {
+							name = THE_CLP_army_is_infiltrated_modifier
+							duration = 1825
+						}
+					}
+				"
+				option_2 = "
+					LCU = {
+						add_country_modifier = {
+							name = THE_CLP_navy_is_infiltrated_modifier
+							duration = 1825
+						}
+					}
+				"
+				option_3 = "
+					custom_tooltip = THE_CLP_events_2_option3_trigger_tt
+					LCU = {
+						add_country_modifier = {
+							name = THE_CLP_army_is_infiltrated_modifier
+							duration = 1825
+						}
+					}
+					LCU = {
+						add_country_modifier = {
+							name = THE_CLP_navy_is_infiltrated_modifier
+							duration = 1825
+						}
+					}
+				"
+			}
+		} 
+	}
+}
+THE_CLP_mission_stage1_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = CLP
+	} 
+
+	THE_CLP_mission_4_1 = {
+		icon = mission_unknown_mission
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				monthly_mil = 10
+				has_estate_privilege = estate_nobles_levies
+			}
+		} 
+
+		effect = {
+			add_mil_power = 100
+			add_manpower = 10
+			custom_tooltip = THE_CLP_noble_every_10_loyalty_add_10_army_tradition_tt
+			hidden_effect = {
+				if = {
+					limit = { estate_loyalty = { estate = estate_nobles loyalty = 100 } }
+					add_army_tradition = 100
+				}
+				else_if = {
+					limit = { estate_loyalty = { estate = estate_nobles loyalty = 90 } }
+					add_army_tradition = 90
+				}
+				else_if = {
+					limit = { estate_loyalty = { estate = estate_nobles loyalty = 80 } }
+					add_army_tradition = 80
+				}
+				else_if = {
+					limit = { estate_loyalty = { estate = estate_nobles loyalty = 70 } }
+					add_army_tradition = 70
+				}
+				else_if = {
+					limit = { estate_loyalty = { estate = estate_nobles loyalty = 60 } }
+					add_army_tradition = 60
+				}
+				else_if = {
+					limit = { estate_loyalty = { estate = estate_nobles loyalty = 50 } }
+					add_army_tradition = 50
+				}
+				else_if = {
+					limit = { estate_loyalty = { estate = estate_nobles loyalty = 40 } }
+					add_army_tradition = 40
+				}
+				else_if = {
+					limit = { estate_loyalty = { estate = estate_nobles loyalty = 30 } }
+					add_army_tradition = 30
+				}
+				else_if = {
+					limit = { estate_loyalty = { estate = estate_nobles loyalty = 20 } }
+					add_army_tradition = 20
+				}
+				else_if = {
+					limit = { estate_loyalty = { estate = estate_nobles loyalty = 10 } }
+					add_army_tradition = 10
+				}
+			}
+			add_country_modifier = {
+				name = THE_CLP_temporary_recruitment_modifier
+				duration = 3650
+			}
+		} 
+	}
+
+	THE_CLP_mission_4_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_CLP_mission_4_1 } 
+		provinces_to_highlight = {
+			continent = moon_continent
+			NOT = { owned_by = ROOT }
+			NOT = { owned_by = JNK }
+			NOT = { owned_by = HEC }
+		} 
+
+		trigger = {
+			OR = {
+				moon_continent = {
+					type = all
+					OR = {
+						owned_by = ROOT
+						owned_by = JNK
+						owned_by = HEC
+					}
+				}
+				LCU = {
+					OR = {
+						is_subject_of = ROOT
+						is_subject_of = JNK
+						is_subject_of = HEC
+					}
+				}
+				AND = {
+					total_development = LCU
+					has_won_war_against = { max_years_since = 20 who = LCU }
+				}
+			}
+		} 
+
+		effect = {
+			THE_country_event_with_insight = {
+				id = THE_CLP_events.3
+			}
+			custom_tooltip = EVENT_INSIGHT_INTRO
+			tooltip = { 
+				create_explorer = {
+					tradition = 60
+				}
+				add_country_modifier = {
+					name = THE_CLP_star_exploration_modifier
+					duration = -1
+				}
+				if = {
+					limit = {
+						NOT = { government = monarchy }
+					}
+					change_government = monarchy
+				}
+				add_government_reform = THE_CLP_hell_fairy_government_reform
+			}
+		} 
+	}
+}
+THE_CLP_mission_stage1_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = CLP
+	} 
+
+	THE_CLP_mission_5_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_CLP_mission_4_1 } 
+		provinces_to_highlight = {
+			is_capital = yes
+			continent = gensokyo_continent
+			owner = {
+				culture = Fairy
+			}
+		} 
+
+		trigger = {
+			calc_true_if = {
+				amount = 2
+				all_country = {
+					capital_scope = { continent = gensokyo_continent }
+					has_opinion = {
+						who = ROOT
+						value = 25
+					}
+				}
+			}
+		} 
+
+		effect = {
+			custom_tooltip = THE_CLP_every_gensokyo_country_with_25_opinion_tt
+			hidden_effect = {
+				every_country = {
+					limit = {
+						capital_scope = { continent = gensokyo_continent }
+						has_opinion = {
+							who = ROOT
+							value = 25
+						}
+					}
+					ROOT = { add_treasury = 25 }
+				}
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					calc_true_if = {
+						amount = 2
+						all_country = {
+							capital_scope = { continent = gensokyo_continent }
+							culture = Fairy
+							has_opinion = {
+								who = ROOT
+								value = 25
+							}
+						}
+					}
+				}
+				custom_tooltip = THE_CLP_mission_5_2_case1_tt_yes
+				hidden_effect = {
+					5334 = {
+						change_culture = Fairy
+						add_base_tax = 2
+						add_base_production = 2
+						add_base_manpower = 2
+					}
+					5335 = {
+						change_culture = Fairy
+						add_base_tax = 2
+						add_base_production = 2
+						add_base_manpower = 2
+					}
+				}
+			}
+			else = {
+				custom_tooltip = THE_CLP_mission_5_2_case1_tt_no
+			}
+			tooltip = {
+				5334 = {
+					change_culture = Fairy
+					add_base_tax = 2
+					add_base_production = 2
+					add_base_manpower = 2
+				}
+				5335 = {
+					change_culture = Fairy
+					add_base_tax = 2
+					add_base_production = 2
+					add_base_manpower = 2
+				}
+			}
+		} 
+	}
+}

@@ -1,0 +1,12 @@
+#########################################################################
+# POWER PROJECTION IMPACT
+##########################################################################
+
+#Use this one when adding power projection when via add_power_projection, unless you have a specific reason to use another
+
+THE_CLP_carve_up_moon_capital_projection = {
+	max = 50
+	power = 1
+	yearly_decay = 2
+}
+

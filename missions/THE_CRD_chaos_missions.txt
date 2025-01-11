@@ -163,6 +163,9 @@ THE_CRD_chaos_stage1_branch_3 = {
 				NOT = { navy_size = 1 }
 				NOT = { num_of_generals = 1 }
 				NOT = { num_of_admirals = 1 }
+				NOT = { num_of_cities = 2 }
+				NOT = { num_of_allies = 1 }
+				total_development = 300
 				all_owned_province = {
 					NOT = { has_fort_building_trigger = yes }
 				}
