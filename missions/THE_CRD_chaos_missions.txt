@@ -335,7 +335,7 @@ THE_CRD_chaos_stage2_branch_1 = {
 	has_country_shield = yes
 	potential = {
 		tag = CRD
-		always = no
+		has_country_flag = THE_CRD_chaos_new_stage_mission_1_flag
 	}
 
 	THE_CRD_chaos_1_4 = {
@@ -366,7 +366,7 @@ THE_CRD_chaos_stage2_branch_2 = {
 	has_country_shield = yes
 	potential = {
 		tag = CRD
-		always = no
+		has_country_flag = THE_CRD_chaos_new_stage_mission_1_flag
 	}
 
 	THE_CRD_chaos_2_5 = {
@@ -398,7 +398,7 @@ THE_CRD_chaos_stage2_branch_3 = {
 	has_country_shield = yes
 	potential = {
 		tag = CRD
-		always = no
+		has_country_flag = THE_CRD_chaos_new_stage_mission_1_flag
 	}
 
 	THE_CRD_chaos_3_7 = {
@@ -422,7 +422,7 @@ THE_CRD_chaos_stage2_branch_3_lock = {
 	has_country_shield = yes
 	potential = {
 		tag = CRD
-		always = no
+		has_country_flag = THE_CRD_chaos_new_stage_mission_1_flag
 	}
 
 	THE_CRD_chaos_3_8_lock = {
@@ -435,7 +435,12 @@ THE_CRD_chaos_stage2_branch_3_lock = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_CED_stage2_lock_mission_ttt
+				always = no
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -472,7 +477,7 @@ THE_CRD_chaos_stage2_branch_4_lock = {
 	has_country_shield = yes
 	potential = {
 		tag = CRD
-		always = no
+		has_country_flag = THE_CRD_chaos_new_stage_mission_1_flag
 	}
 
 	THE_CRD_chaos_4_5_lock = {
@@ -481,7 +486,12 @@ THE_CRD_chaos_stage2_branch_4_lock = {
 		required_missions = { THE_CRD_chaos_5_4_lock } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_CED_stage2_lock_mission_ttt
+				always = no
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -492,7 +502,12 @@ THE_CRD_chaos_stage2_branch_4_lock = {
 		required_missions = { THE_CRD_chaos_4_5_lock } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_CED_stage2_lock_mission_ttt
+				always = no
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -503,7 +518,12 @@ THE_CRD_chaos_stage2_branch_4_lock = {
 		required_missions = { THE_CRD_chaos_4_6_lock } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_CED_stage2_lock_mission_ttt
+				always = no
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -558,7 +578,7 @@ THE_CRD_chaos_stage2_branch_5_lock = {
 	has_country_shield = yes
 	potential = {
 		tag = CRD
-		always = no
+		has_country_flag = THE_CRD_chaos_new_stage_mission_1_flag
 	}
 
 	THE_CRD_chaos_5_4_lock = {
@@ -566,7 +586,12 @@ THE_CRD_chaos_stage2_branch_5_lock = {
 		position = 4
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_CED_stage2_lock_mission_ttt
+				always = no
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -577,7 +602,12 @@ THE_CRD_chaos_stage2_branch_5_lock = {
 		required_missions = { THE_CRD_chaos_4_5_lock } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_CED_stage2_lock_mission_ttt
+				always = no
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -588,7 +618,12 @@ THE_CRD_chaos_stage2_branch_5_lock = {
 		required_missions = { THE_CRD_chaos_5_6_lock } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_CED_stage2_lock_mission_ttt
+				always = no
+			}
+		} 
 
 		effect = {  } 
 	}

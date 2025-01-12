@@ -57,12 +57,48 @@ THE_CRD_chaos_add_reject_mind_progress = {
 				limit = {
 					check_variable = {
 						which = the_crd_chaos_reject_mind_process_var
-						value = 1000
+						value = 500
 					}
 				}
 				country_event = {
-					id = THE_CRD_chaos_events.END
+					id = THE_CRD_chaos_events.13
 				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = the_crd_chaos_reject_mind_process_var
+						value = 400
+					}
+				}
+				set_global_flag = THE_CRD_chaos_reject_mind_event_5_global_flag
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = the_crd_chaos_reject_mind_process_var
+						value = 300
+					}
+				}
+				set_global_flag = THE_CRD_chaos_reject_mind_event_4_global_flag
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = the_crd_chaos_reject_mind_process_var
+						value = 200
+					}
+				}
+				set_global_flag = THE_CRD_chaos_reject_mind_event_3_global_flag
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = the_crd_chaos_reject_mind_process_var
+						value = 100
+					}
+				}
+				set_global_flag = THE_CRD_chaos_reject_mind_event_2_global_flag
 			}
 		}
 	}

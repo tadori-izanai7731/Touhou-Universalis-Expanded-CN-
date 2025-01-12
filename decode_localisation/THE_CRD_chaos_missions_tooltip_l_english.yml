@@ -17,6 +17,7 @@
  THE_CRD_chaos_every_trade_center_degrade_tt: "治下所有§Y贸易中心§!等级降级为§Y1§!"
  THE_CRD_chaos_every_province_religion_change_to_country_tt: "治下所有省份的宗教转变为§Y[Root.Religion.GetName]§!"
  THE_CRD_remove_all_idea_groups_tt: "移除所有已启用的§Y理念组§!"
+ THE_CED_stage2_lock_mission_ttt: "这是一个§Y锁定任务§!，完成「§Y终结世界的妖怪§!」后解锁"
 ### TOOLTIP_END
 
 ### GOVERNMENT
@@ -94,6 +95,10 @@
  THE_CRD_chaos_events.12.title: "社会崩溃"
  THE_CRD_chaos_events.12.desc: "我们的社会崩溃了，产生这一切的原因要从「心中眼」说起，凡是居住在[Root.GetName]的人都会想起自己的心脏中拥有一只眼，寻找无果后就会感到怅然若失。从此那些人不在意自己的生活，认为没有「心中眼」所有的交流都变得毫无意义。这种影响逐渐扩大导致了社会的崩溃。"
  THE_CRD_chaos_events.12.a: "再见，我也要去寻找「心中眼」了。"
+
+ THE_CRD_chaos_events.13.title: "「安息计划」后记"
+ THE_CRD_chaos_events.13.desc: "数年前，由我主导并完成了「安息计划」，到目前为止「安息计划」仍在发挥它应有的作用，无论是幻想乡还是外界的人类都没有影响到我们。直到今天，我不得不向旧地狱的各位做出澄清，「安息计划」在另一个方面已经失败了。基于觉妖怪的特殊能力，外界异常的混乱一定与「安息计划」有关，继续演变可能会导致妖怪的消失。"
+ THE_CRD_chaos_events.13.a: "「至少还有…」"
 ### EVENT_END
 
 ### SPECIAL
