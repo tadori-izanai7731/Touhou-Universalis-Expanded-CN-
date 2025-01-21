@@ -387,17 +387,15 @@ the_ask_for_change_to_religions_subject_of_kagiyama = {
 		FROM = {
 			NOT = {
 				is_subject_of = ROOT
+			}
+			NOT = {
 				is_vassal = yes
 			}
 			religion = ROOT
 		}
 	}
 	is_allowed = {
-		FROM = {
-			NOT = {
-				is_subject_of = ROOT
-			}
-		}
+		
 	}
 	on_accept = {
 		ROOT = {
