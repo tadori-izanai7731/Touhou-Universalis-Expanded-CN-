@@ -23,3 +23,27 @@ THE_CLP_star_hellfall_reform = {
 		range = 0.25
 	}
 }
+
+THE_CLP_far_lunatic_reform = {
+	icon = "THE_CLP_far_lunatic_reform_icon"
+	potential = {
+		OR = {
+			have_had_reform = THE_CLP_far_lunatic_reform
+			has_reform = THE_CLP_far_lunatic_reform
+		}
+	}
+
+	allow_normal_conversion = yes
+
+	custom_attributes = {
+		THE_CLP_development_fairy_savage_custom_attributes = yes
+	}
+
+	modifiers = {
+		envoy_travel_time = -0.2
+		global_monthly_devastation = 0.01
+		global_prosperity_growth = 1.0
+		reduced_liberty_desire_on_other_continent = 25
+		development_cost_modifier = -0.1
+	}
+}
