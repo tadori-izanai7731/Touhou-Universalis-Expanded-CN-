@@ -1145,6 +1145,8 @@ THE_yof_slot_3 = {
 		
 		effect = {
 			custom_tooltip = change_to_kagiyama_religions_allow_flag_tt
+			custom_tooltip = THE_YOF_can_convert_200_development_tribute_tt
+			custom_tooltip = empty_line_tt
 			add_adm_power = 150
 			hidden_effect = {
 				set_country_flag = change_to_kagiyama_religions_allow_flag
@@ -1229,8 +1231,9 @@ THE_yof_slot_3 = {
 		trigger = {  } 
 		
 		effect = { 
-			custom_tooltip = yof_change_religions_subject_to_vasstal_allow_tt
+			custom_tooltip = THE_YOF_can_convert_400_development_tribute_tt
 			custom_tooltip = yof_change_religions_subject_to_vasstal_allow_t2
+			custom_tooltip = empty_line_tt
 			add_adm_power = 150
 			add_dip_power = 150
 			add_mil_power = 150
@@ -1277,6 +1280,8 @@ THE_yof_slot_3 = {
 		} 
 		
 		effect = { 
+			custom_tooltip = THE_YOF_can_convert_1000_development_tribute_tt
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = yof_kagiyama_with_flower_crownd_buff
 				duration = -1

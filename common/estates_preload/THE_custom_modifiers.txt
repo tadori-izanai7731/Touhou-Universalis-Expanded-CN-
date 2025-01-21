@@ -8,5 +8,13 @@ estate_danmaku = {
 			has_government_attribute = THE_CRD_chaos_can_create_mental_net_node_custom_attributes
 		}
 	}
+	
+	modifier_definition = {
+		type = privileges
+		key = THE_YOF_convert_tribute_custom_modifier
+		trigger = {
+			always = yes
+		}
+	}
 }
 

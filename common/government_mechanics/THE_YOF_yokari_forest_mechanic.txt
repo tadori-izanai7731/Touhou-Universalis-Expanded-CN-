@@ -82,6 +82,30 @@ yokari_forest_mechanic = {
 				end_value = 100
 				start_value = 25
 			}
+			scaled_modifier = {
+				trigger = {
+					has_country_flag = change_to_kagiyama_religions_allow_flag
+				}
+				modifier = {
+					THE_YOF_convert_tribute_custom_modifier = 200
+				}
+			}
+			scaled_modifier = {
+				trigger = {
+					has_country_flag = yof_change_religions_subject_to_vasstal_allow_flag
+				}
+				modifier = {
+					THE_YOF_convert_tribute_custom_modifier = 200
+				}
+			}
+			scaled_modifier = {
+				trigger = {
+					mission_completed = yof_crown_of_doom_goddness
+				}
+				modifier = {
+					THE_YOF_convert_tribute_custom_modifier = 600
+				}
+			}
 			range_modifier = {
 				trigger = {
 					not = {

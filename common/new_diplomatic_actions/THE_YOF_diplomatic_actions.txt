@@ -551,277 +551,179 @@ the_dirt_river_dip_action = {
 ##转化为附庸国
 the_change_religions_subject_to_vasstal_action = {
 	category = th_diplo_action
-	require_acceptance = yes
+	require_acceptance = no
 	is_visible = {
 		OR = {
 			tag = YOF
 			was_tag = YOF
 		}
-		has_country_flag = yof_change_religions_subject_to_vasstal_allow_flag
+		has_country_flag = change_to_kagiyama_religions_allow_flag
 		FROM = {
+			is_subject_of = ROOT
 			is_subject_of_type = th_religious_kagiyama_subject
 		}
 	}
 	is_allowed = {
 		FROM = {
-			NOT = {
-				total_development = 250
-			}
-			years_in_vassalage_under = {
-				who = ROOT
-				years = 10
-			}
-		}
-		FROM = {
 			has_opinion = {
-				who = root
-				value = 190
+				who = ROOT
+				value = 180
 			}
 		}
-		if = {
-			limit = {
-				FROM = {
-					total_development = 3
-					not = {
-						total_development = 50
-					}
-				}
+		variable_arithmetic_trigger = {
+			custom_tooltip = THE_YOF_convert_tribute_custom_modifier_over_from_development_tt
+			export_to_variable = {
+				which = the_yof_convert_tribute_max
+				value = modifier:THE_YOF_convert_tribute_custom_modifier
 			}
-			root = {
-				has_government_power = {
-					mechanic_type = yokari_forest_mechanic
-					power_type = yokari_forest_doom_power
-					value = 50
-				}
+			export_to_variable = {
+				which = the_yof_from_development
+				value = trigger_value:total_development
+				who = FROM
 			}
-		}
-		else_if = {
-			limit = {
-				FROM = {
-					total_development = 50
-					not = {
-						total_development = 100
-					}
-				}
-			}
-			has_government_power = {
-				mechanic_type = yokari_forest_mechanic
-				power_type = yokari_forest_doom_power
-				value = 75
-			}
-		}
-		else_if = {
-			limit = {
-				FROM = {
-					total_development = 100
-					not = {
-						total_development = 150
-					}
-				}
-			}
-			has_government_power = {
-				mechanic_type = yokari_forest_mechanic
-				power_type = yokari_forest_doom_power
-				value = 125
-			}
-		}
-		else_if = {
-			limit = {
-				FROM = {
-					total_development = 150
-					not = {
-						total_development = 200
-					}
-				}
-			}
-			has_government_power = {
-				mechanic_type = yokari_forest_mechanic
-				power_type = yokari_forest_doom_power
-				value = 150
-			}
-		}
-		else_if = {
-			limit = {
-				FROM = {
-					total_development = 200
-					not = {
-						total_development = 250
-					}
-				}
-			}
-			has_government_power = {
-				mechanic_type = yokari_forest_mechanic
-				power_type = yokari_forest_doom_power
-				value = 175
-			}
+			check_variable = { which = the_yof_convert_tribute_max which = the_yof_from_development }
 		}
 	}
 	on_accept = {
 		vassalize = FROM
-		if = {
-			limit = {
-				FROM = {
-					total_development = 3
-					not = {
-						total_development = 50
-					}
-				}
-			}
-			add_government_power = {
-				mechanic_type = yokari_forest_mechanic
-				power_type = yokari_forest_doom_power
-				value = -50
-			}
+		export_to_variable = {
+			which = the_yof_from_development
+			value = trigger_value:total_development
+			who = FROM
 		}
-		else_if = {
+		while = {
 			limit = {
-				FROM = {
-					total_development = 50
-					not = {
-						total_development = 100
-					}
+				check_variable = {
+					which = the_yof_from_development
+					value = 1
 				}
 			}
-			add_government_power = {
-				mechanic_type = yokari_forest_mechanic
-				power_type = yokari_forest_doom_power
-				value = -75
-			}
-		}
-		else_if = {
-			limit = {
-				FROM = {
-					total_development = 100
-					not = {
-						total_development = 150
-					}
+			if = {
+				limit = { mission_completed = yof_crown_of_doom_goddness }
+				subtract_variable = {
+					which = the_yof_from_development
+					value = 1
+				}
+				add_government_power = {
+					mechanic_type = yokari_forest_mechanic
+					power_type = yokari_forest_doom_power
+					value = -0.2
 				}
 			}
-			add_government_power = {
-				mechanic_type = yokari_forest_mechanic
-				power_type = yokari_forest_doom_power
-				value = -125
-			}
-		}
-		else_if = {
-			limit = {
-				FROM = {
-					total_development = 150
-					not = {
-						total_development = 200
-					}
+			else_if = {
+				limit = { has_country_flag = yof_change_religions_subject_to_vasstal_allow_flag }
+				subtract_variable = {
+					which = the_yof_from_development
+					value = 1
+				}
+				add_government_power = {
+					mechanic_type = yokari_forest_mechanic
+					power_type = yokari_forest_doom_power
+					value = -0.5
 				}
 			}
-			add_government_power = {
-				mechanic_type = yokari_forest_mechanic
-				power_type = yokari_forest_doom_power
-				value = -150
-			}
-		}
-		else_if = {
-			limit = {
-				FROM = {
-					total_development = 200
-					not = {
-						total_development = 250
-					}
+			else = {
+				limit = { has_country_flag = yof_change_religions_subject_to_vasstal_allow_flag }
+				subtract_variable = {
+					which = the_yof_from_development
+					value = 1
 				}
-			}
-			add_government_power = {
-				mechanic_type = yokari_forest_mechanic
-				power_type = yokari_forest_doom_power
-				value = -175
+				add_government_power = {
+					mechanic_type = yokari_forest_mechanic
+					power_type = yokari_forest_doom_power
+					value = -1
+				}
 			}
 		}
 	}
-	ai_acceptance = {
-		#<localisation_key>
-		#TH_DIPLO_OPPINION
-		#基础-30
-		add_entry = {
-			name = TH_DIPENDENCE
-			export_to_variable = {
-				variable_name = ai_value
-				value = -30
-			}
-		}
-		#同盟+50
-		add_entry = {
-			name = TH_DIPLO_ALLIENCE
-			limit = {
-				alliance_with = FROM
-			}
-			export_to_variable = {
-				variable_name = ai_value
-				value = 0
-			}
-		}
-		#外交关系+0.2*value
-		add_entry = {
-			name = TH_DIPLO_OPPINION
-			export_to_variable = {
-				variable_name = ai_value
-				value = opinion
-				who = FROM
-				with = ROOT
-			}
-			multiply_variable = {
-				which = ai_value 
-				value = 0.2
-			}
-		}
-		#宿敌或敌意-50
-		add_entry = {
-			name = TH_DIPLO_ENERMY
-			limit = {
-				FROM = {
-					OR = {
-						ai_attitude = {
-							who = ROOT
-							attitude = attitude_rivalry
-						}
-						ai_attitude = {
-							who = ROOT
-							attitude = attitude_hostile
-						}
-					}
-				}
-			}
-			export_to_variable = {
-				variable_name = ai_value
-				value = -100
-			}
-		}
-		#友好+20
-		add_entry = {
-			name = TH_DIPLO_FRI
-			limit = {
-				FROM = {
-					ai_attitude = {
-						who = ROOT
-						attitude = attitude_friendly
-					}
-				}
-			}
-			export_to_variable = {
-				variable_name = ai_value
-				value = 20
-			}
-		}
-		#外交声誉+5*value
-		add_entry = {
-			name = TH_DIPLO_OPPINION
-			export_to_variable = {
-				variable_name = ai_value
-				value = trigger_value:diplomatic_reputation
-				who = ROOT
-			}
-			multiply_variable = {
-				which = ai_value 
-				value = 5
-			}
-		}
-	}
+	# ai_acceptance = {
+	# 	#<localisation_key>
+	# 	#TH_DIPLO_OPPINION
+	# 	#基础-30
+	# 	add_entry = {
+	# 		name = TH_DIPENDENCE
+	# 		export_to_variable = {
+	# 			variable_name = ai_value
+	# 			value = -30
+	# 		}
+	# 	}
+	# 	#同盟+50
+	# 	add_entry = {
+	# 		name = TH_DIPLO_ALLIENCE
+	# 		limit = {
+	# 			alliance_with = FROM
+	# 		}
+	# 		export_to_variable = {
+	# 			variable_name = ai_value
+	# 			value = 0
+	# 		}
+	# 	}
+	# 	#外交关系+0.2*value
+	# 	add_entry = {
+	# 		name = TH_DIPLO_OPPINION
+	# 		export_to_variable = {
+	# 			variable_name = ai_value
+	# 			value = opinion
+	# 			who = FROM
+	# 			with = ROOT
+	# 		}
+	# 		multiply_variable = {
+	# 			which = ai_value 
+	# 			value = 0.2
+	# 		}
+	# 	}
+	# 	#宿敌或敌意-50
+	# 	add_entry = {
+	# 		name = TH_DIPLO_ENERMY
+	# 		limit = {
+	# 			FROM = {
+	# 				OR = {
+	# 					ai_attitude = {
+	# 						who = ROOT
+	# 						attitude = attitude_rivalry
+	# 					}
+	# 					ai_attitude = {
+	# 						who = ROOT
+	# 						attitude = attitude_hostile
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 		export_to_variable = {
+	# 			variable_name = ai_value
+	# 			value = -100
+	# 		}
+	# 	}
+	# 	#友好+20
+	# 	add_entry = {
+	# 		name = TH_DIPLO_FRI
+	# 		limit = {
+	# 			FROM = {
+	# 				ai_attitude = {
+	# 					who = ROOT
+	# 					attitude = attitude_friendly
+	# 				}
+	# 			}
+	# 		}
+	# 		export_to_variable = {
+	# 			variable_name = ai_value
+	# 			value = 20
+	# 		}
+	# 	}
+	# 	#外交声誉+5*value
+	# 	add_entry = {
+	# 		name = TH_DIPLO_OPPINION
+	# 		export_to_variable = {
+	# 			variable_name = ai_value
+	# 			value = trigger_value:diplomatic_reputation
+	# 			who = ROOT
+	# 		}
+	# 		multiply_variable = {
+	# 			which = ai_value 
+	# 			value = 5
+	# 		}
+	# 	}
+	# }
 }
 ##赎罪券
 the_ask_for_shinto_remove_modifier = {
