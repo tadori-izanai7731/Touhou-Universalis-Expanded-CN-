@@ -343,9 +343,17 @@ THE_CRD_chaos_stage2_branch_1 = {
 		position = 4
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			land_maintenance = 1
+			naval_maintenance = 1
+			num_of_generals = 2
+			num_of_admirals = 1
+		 } 
 
-		effect = {  } 
+		effect = {
+			add_stability = 1
+			remove_country_modifier = THE_CRD_chaos_genso_border_modifier
+		} 
 	}
 
 	THE_CRD_chaos_1_6 = {

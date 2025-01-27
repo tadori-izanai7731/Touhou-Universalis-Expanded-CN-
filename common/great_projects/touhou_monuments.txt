@@ -1881,7 +1881,6 @@ th_monument_moriya_shrine = {
 		country_modifiers = {
 			governing_capacity = 200
 			missionary_maintenance_cost = -0.1
-			global_missionary_strength = 0.01
 		}
 		on_upgraded = {
 		}
