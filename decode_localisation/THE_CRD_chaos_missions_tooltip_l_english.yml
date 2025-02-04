@@ -18,11 +18,15 @@
  THE_CRD_chaos_every_province_religion_change_to_country_tt: "治下所有省份的宗教转变为§Y[Root.Religion.GetName]§!"
  THE_CRD_remove_all_idea_groups_tt: "移除所有已启用的§Y理念组§!"
  THE_CED_stage2_lock_mission_ttt: "这是一个§Y锁定任务§!，完成「§Y终结世界的妖怪§!」后解锁"
+ THE_CRD_chaos_own_all_oni_core_province_ttt: "拥有所有@ONI§Y[ONI.GetName]§!的核心省份"
+ THE_CRD_chaos_develop_5295_10_times_ttt: "在§Y[5295.GetName]§!提升§Y10§!次发展度（§Y[Root.the_crd_chaos_develop_5295_var.GetValue]§!/§Y10§!）"
 ### TOOLTIP_END
 
 ### GOVERNMENT
  THE_CRD_chireiden_pace_reform: "地灵殿的安息"
- THE_CRD_chireiden_pace_reform_desc: "这世界有太多无法解决的事，包括一处安息之所。"
+ THE_CRD_chireiden_pace_reform_desc: "这里将是一处安息之所。"
+ THE_CRD_chaos_disgust_youkai_reform: "令人厌恶"
+ THE_CRD_chaos_disgust_youkai_reform_desc: "她成为旧地狱里最被惧怕，最被讨厌的妖怪，连怨灵都对她避之不及。"
  THE_CRD_mental_net_center_reform_1: "心灵网络中心"
  THE_CRD_mental_net_center_reform_1_desc: ""
  mechanic_THE_CRD_chaos_can_create_mental_net_node_custom_attributes_yes: "可以创建心灵网络节点"

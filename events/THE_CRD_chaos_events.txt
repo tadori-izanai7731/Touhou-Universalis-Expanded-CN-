@@ -474,5 +474,11 @@ country_event = {
 		custom_tooltip = empty_line_tt
 		set_country_flag = THE_CRD_chaos_new_stage_mission_1_flag
 		swap_non_generic_missions = yes
+		hidden_effect = {
+			set_variable = {
+				which = the_crd_chaos_develop_5295_var
+				value = 0
+			}
+		}
 	}
 }

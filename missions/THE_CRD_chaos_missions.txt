@@ -360,11 +360,98 @@ THE_CRD_chaos_stage2_branch_1 = {
 		icon = mission_unknown_mission
 		position = 6
 		required_missions = { THE_CRD_chaos_1_4 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			is_core = ONI
+			NOT = { owned_by = ROOT }
+		} 
 
-		trigger = {  } 
+		trigger = {
+			OR = {
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 60
+				}
+				NOT = {
+					estate_influence = {
+						estate = estate_church
+						influence = 30
+					}
+				}
+			}
+			OR = {
+				estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 60
+				}
+				NOT = {
+					estate_influence = {
+						estate = estate_burghers
+						influence = 30
+					}
+				}
+			}
+			OR = {
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 60
+				}
+				NOT = {
+					estate_influence = {
+						estate = estate_nobles
+						influence = 30
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_province = {
+						is_core = ONI
+						NOT = { owned_by = ROOT }
+					}
+				}
+				OR = {
+					AND = {
+						exists = ONI
+						ONI = {
+							NOT = { num_of_cities = 8 }
+							has_opinion = {
+								who = ROOT
+								value = 150
+							}
+						}
+					}
+					
+					custom_trigger_tooltip = {
+						tooltip = THE_CRD_chaos_own_all_oni_core_province_ttt
+						all_province = {
+							OR = {
+								NOT = { is_core = ONI }
+								owned_by = ROOT
+							}
+						}
+					}
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			if = {
+				limit = {
+					NOT = { exists = ONI }
+				}
+				release = ONI
+				hidden_effect = {
+					ONI = {
+						change_government = monarchy
+						add_government_reform = Gensokyan_oni_underworld_clan
+					}
+				}
+			}
+			create_subject = {
+				subject_type = march
+				who = ONI
+			}
+		} 
 	}
 }
 THE_CRD_chaos_stage2_branch_2 = {
@@ -383,20 +470,51 @@ THE_CRD_chaos_stage2_branch_2 = {
 		required_missions = { THE_CRD_chaos_1_4 } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			stability = 1
+			num_of_allies = 2
+		} 
 
-		effect = {  } 
+		effect = {
+			define_advisor = {
+				type = spymaster
+				skill = 5
+				cost_multiplier = -1
+				culture = ROOT
+				religion = ROOT
+			}
+			remove_country_modifier = THE_CRD_chaos_friendly_diplomacy_modifier
+		} 
 	}
 
 	THE_CRD_chaos_2_6 = {
 		icon = mission_unknown_mission
 		position = 6
 		required_missions = { THE_CRD_chaos_2_5 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			province_id = 5295
+		} 
 
-		trigger = {  } 
+		trigger = {
+			if = {
+				limit = { 5295 = { NOT = { country_or_non_sovereign_subject_holds = ROOT } } }
+				5295 = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+			custom_trigger_tooltip = {
+				tooltip = THE_CRD_chaos_develop_5295_10_times_ttt
+				check_variable = {
+					which = the_crd_chaos_develop_5295_var
+					value = 10
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			5295 = { remove_province_modifier = THE_CRD_chaos_energy_radiation_province_modifier }
+			add_adm_power = 999
+			add_dip_power = 999
+			add_mil_power = 999
+		} 
 	}
 }
 THE_CRD_chaos_stage2_branch_3 = {
@@ -418,9 +536,24 @@ THE_CRD_chaos_stage2_branch_3 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			OR = {
+				is_at_war = yes
+				power_projection = 75
+				any_country = {
+					NOT = {
+						has_opinion = {
+							who = ROOT
+							value = -199
+						}
+					}
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_government_reform = THE_CRD_chaos_disgust_youkai_reform
+		} 
 	}
 }
 THE_CRD_chaos_stage2_branch_3_lock = {

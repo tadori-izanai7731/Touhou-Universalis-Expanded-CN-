@@ -1,3 +1,20 @@
+THE_CRD_chaos_on_development_scripted_effect = {
+	if = {
+		limit = {
+			province_id = 5295
+			owner = {
+				has_country_flag = THE_CRD_chaos_new_stage_mission_1_flag
+			}
+		}
+		owner = {
+			change_variable = {
+				which = the_crd_chaos_develop_5295_var
+				value = 1
+			}
+		}
+	}
+}
+
 THE_CRD_chaos_on_adm_development_scripted_effect = {
 	if = {
 		limit = { has_province_modifier = THE_CRD_chaos_energy_radiation_province_modifier }

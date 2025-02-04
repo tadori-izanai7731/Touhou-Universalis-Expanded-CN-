@@ -9,9 +9,11 @@ THE_CRD_chireiden_pace_reform = {
 	}
 	allow_normal_conversion = yes
 	lock_level_when_selected = yes
-
+	valid_for_nation_designer = no
+	can_change_primary_culture = no
 	custom_attributes = {
 		locked_government_type = yes
+		rulers_can_be_generals = no
 	}
 
 	modifiers = {
@@ -21,6 +23,33 @@ THE_CRD_chireiden_pace_reform = {
 		build_time = -0.5
 		build_cost = -0.25
 		global_allowed_num_of_buildings = 2
+	}
+}
+
+THE_CRD_chaos_disgust_youkai_reform = {
+	icon = "THE_CRD_chireiden_pace_reform_icon"
+	potential = {
+		OR = {
+			has_reform = THE_CRD_chaos_disgust_youkai_reform
+			have_had_reform = THE_CRD_chaos_disgust_youkai_reform
+		}
+	}
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	valid_for_nation_designer = no
+	can_change_primary_culture = no
+	custom_attributes = {
+		locked_government_type = yes
+		rulers_can_be_generals = no
+	}
+
+	modifiers = {
+		power_projection_from_insults = 1.0
+		monthly_favor_modifier = -0.5
+		diplomatic_reputation = -1
+		same_culture_advisor_cost = -0.25
+		relation_with_same_culture = 100
+		can_not_declare_war = yes
 	}
 }
 
