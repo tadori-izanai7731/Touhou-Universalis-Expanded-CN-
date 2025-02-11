@@ -1,0 +1,26 @@
+THE_test_reform = {
+	icon = "THE_ROD_nightingale"
+	potential = {
+		has_country_flag = THE_debug_flag
+	}
+	trigger = { }
+	allow_normal_conversion = yes
+	modifiers = {
+		diplomats = 1
+	}
+	conditional = {
+		allow = { ROOT = { has_country_flag = THE_debug_flag } }
+		modifiers = {
+			diplomats = 1
+		}
+		custom_attributes = {
+			enables_divine_idea_group = yes
+		}
+	}
+	conditional = {
+		allow = { ROOT = { NOT = { has_country_flag = THE_debug_flag } } }
+		custom_attributes = {
+			THE_ROD_court_banquet_attribute = yes
+		}
+	}
+}
