@@ -118,7 +118,7 @@ THE_AKI_branch_1 = {
 			add_army_tradition = 35
 			custom_tooltip = THE_AKI_yof_god_c_tt1
 			tooltip = {
-				add_province_modifier = {
+				add_country_modifier = {
 					name = THE_AKI_youkai_forest_mission_buff
 					duration = 7300
 				}
@@ -130,6 +130,7 @@ THE_AKI_branch_1 = {
 							area = Eastern_youkai_forest
 							area = Great_youkai_forest
 						}
+						owned_by = ROOT
 					}
 					add_province_modifier = {
 						name = THE_AKI_youkai_forest_mission_buff
@@ -157,7 +158,9 @@ THE_AKI_branch_1 = {
 					area = Eastern_youkai_forest
 					area = Great_youkai_forest
 				}
+				is_prosperous = yes
 				development = 25
+				owned_by = ROOT
 			}
 		 } 
 
@@ -257,7 +260,11 @@ THE_AKI_branch_2 = {
 		icon = mission_unknown_mission
 		position = 3
 		required_missions = { THE_AKI_lily_white } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			OR = {
+				area = Land_of_the_black_doors
+			}
+		 } 
 
 		trigger = { 
 			Land_of_the_black_doors = {
@@ -349,11 +356,6 @@ THE_AKI_branch_2 = {
 		position = 6
 		required_missions = { THE_AKI_with_scr_mission } 
 		provinces_to_highlight = { 
-			OR = {
-				area = Scarlet_island
-				area = Scarlet_mountain
-				area = Scarlett_domain
-			}
 		 } 
 
 		trigger = { 
@@ -364,6 +366,8 @@ THE_AKI_branch_2 = {
 					area = Scarlett_domain
 				}
 				development = 25
+				owned_by = ROOT
+				is_prosperous = yes
 			}
 		 } 
 
@@ -371,6 +375,9 @@ THE_AKI_branch_2 = {
 			add_country_modifier = {
 				name = THE_AKI_tech_and_agriculture_mission_buff
 				duration = -1
+			}
+			5072 = {
+				center_of_trade = 2
 			}
 		 } 
 	}
@@ -396,22 +403,49 @@ THE_AKI_branch_3 = {
 	THE_AKI_bloom_of_rice_ears = {
 		icon = mission_unknown_mission
 		position = 1
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			OR = {
+				province_id = 5134
+			}
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			monthly_income = 15
+		 } 
 
-		effect = {  } 
+		effect = { 
+			add_adm_power = 100
+			add_government_reform = THE_AKI_harvest_and_autumn_reform
+		 } 
 	}
 
 	THE_AKI_sprouts_and_rebirths = {
 		icon = mission_unknown_mission
 		position = 3
 		required_missions = { THE_AKI_lily_white } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			OR = {
+				province_id = 5084
+			}
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			5084 = {
+				owned_by = ROOT
+				development = 23
+				has_production_building_trigger = yes	
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			add_country_modifier = {
+				name = THE_AKI_sprouts_and_rebirths_mission_buff
+				duration = 7300
+			}
+			5084 = {
+				center_of_trade = 2
+			}
+		 } 
 	}
 
 	THE_AKI_divine_virtue = {
@@ -496,12 +530,13 @@ THE_AKI_branch_4 = {
 
 		trigger = { 
 			OR = {
+				diplomatic_reputation = 3
 				num_of_allies = 2
-				diplomatic_reputation = 4
 			}
 		 } 
 
 		effect = { 
+			custom_tooltip = THE_AKI_unlock_sell_potato_tt
 			add_adm_power = 75
 			add_dip_power = 75
 			add_mil_power = 75
@@ -534,11 +569,42 @@ THE_AKI_branch_4 = {
 		icon = mission_unknown_mission
 		position = 3
 		required_missions = { THE_AKI_reset_faith } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			OR = {
+				area = Human_state
+				area = Kourindou_state
+			}
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			OR = {
+				AND = {
+					num_of_provinces_owned_or_owned_by_subjects_with = {
+						value = 5
+						OR = {
+							area = Human_state
+							area = Kourindou_state
+						}
+					}
+					calc_true_if = {
+						all_country = {
+							has_country_modifier = THE_AKI_build_shrine_diplo_buff
+						}
+						amount = 2
+					}
+				}
+				AND = {
+					alliance_with = HMC
+					HMC = {
+						has_country_modifier = THE_AKI_build_shrine_diplo_buff
+					}
+				}
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_AKI_mission_potato_covenant_c_tt
+		 } 
 	}
 
 	THE_AKI_harvest_festival = {

@@ -7,8 +7,7 @@ THE_AKI_youkai_forest_mission_buff = {
 	local_monthly_devastation = -2
 	local_tax_modifier = 0.50
 	local_unrest = -3
-	local_autonomy = 0.10
-	local_prosperity_growth = -1.0
+	local_prosperity_growth = 1.0
 }
 #流转之厄
 THE_AKI_youkai_forest_mission_2_buff = {
@@ -30,4 +29,62 @@ THE_AKI_consequer_scarlet_mission_buff = {
 THE_AKI_tech_and_agriculture_mission_buff = {
 	development_cost = -0.20
 	idea_cost = -0.10
+}
+#春之祝福
+THE_AKI_sprouts_and_rebirths_mission_buff = {
+	diplomatic_reputation = 1
+	improve_relation_modifier = 0.2
+}
+#
+THE_AKI_build_shrine_diplo_buff = {
+	production_efficiency = 0.15
+	development_cost = -0.10
+}
+
+#初穗之佑
+THE_AKI_province_religions_v1_buff = {
+	local_development_cost_modifier = -0.10
+	local_tax_modifier = 0.10
+	trade_goods_size_modifier = 0.05
+	local_production_efficiency = 0.05
+}
+#穰穰满家
+THE_AKI_province_religions_v2_buff = {
+	local_development_cost_modifier = -0.10
+	province_trade_power_modifier = 0.10
+	local_development_cost = -0.10
+	local_tax_modifier = 0.15
+	trade_goods_size_modifier = 0.05
+	local_production_efficiency = 0.05
+}
+#千仓万箱
+THE_AKI_province_religions_v3_buff = {
+	local_development_cost_modifier = -0.10
+	province_trade_power_modifier = 0.15
+	local_development_cost = -0.15
+	local_tax_modifier = 0.15
+	trade_goods_size_modifier = 0.10
+	local_production_efficiency = 0.10
+	allowed_num_of_buildings = 1
+}
+#神穗垂恩
+THE_AKI_province_religions_v4_buff = {
+	local_development_cost_modifier = -0.10
+	province_trade_power_modifier = 0.20
+	local_development_cost = -0.25
+	local_tax_modifier = 0.25
+	trade_goods_size_modifier = 0.20
+	local_production_efficiency = 0.15
+	allowed_num_of_buildings = 1
+}
+#天稻神授
+THE_AKI_province_religions_v5_buff = {
+	local_development_cost_modifier = -0.10
+	province_trade_power_modifier = 0.50
+	local_development_cost = -0.50
+	local_tax_modifier = 0.50
+	trade_goods_size_modifier = 0.50
+	local_production_efficiency = 0.50
+	allowed_num_of_buildings = 2
+	allowed_num_of_manufactories = 1
 }
