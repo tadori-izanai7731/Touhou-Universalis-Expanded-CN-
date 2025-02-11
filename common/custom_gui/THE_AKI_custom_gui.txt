@@ -1,0 +1,52 @@
+custom_button = {
+	name = THE_AKI_province_button1_gui
+	tooltip = THE_AKI_province_button1_gui_tt
+	potential = {
+		owner = {
+			has_government_attribute = THE_AKI_harvest_autumn_province_buff_abilities
+		}
+		owned_by = FROM
+	}
+	trigger = {
+	}
+	effect = {
+		
+	}
+}
+
+custom_button = {
+	name = THE_AKI_province_button2_gui
+	tooltip = THE_AKI_province_button2_gui_tt
+	potential = {
+		owner = {
+			has_government_attribute = THE_AKI_harvest_autumn_province_buff_abilities
+		}
+		owned_by = FROM
+	}
+	trigger = {
+		all_state_province = {
+			owned_by = FROM
+			is_prosperous = yes
+			religion = FROM
+			culture_group = FROM
+			development = 20
+		}
+	}
+	effect = {
+	}
+}
+
+custom_button = {
+	name = THE_AKI_province_button3_gui
+	tooltip = THE_AKI_province_button3_gui_tt
+	potential = {
+		owner = {
+			has_government_attribute = THE_AKI_harvest_autumn_province_buff_abilities
+		}
+		owned_by = FROM
+	}
+	trigger = {
+	}
+	effect = {
+	}
+}

@@ -1,0 +1,36 @@
+THE_AKI_harvest_autumn_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 10
+	available = {
+		always = yes
+	}
+	powers = {
+		THE_AKI_harvest_autumn_mechanic_power = {
+			gui = THE_AKI_harvest_autumn_mechanic_gui
+			show_before_interactions = yes
+			min = -100
+			max = 100
+			base_monthly_growth = 0
+			scaled_modifier = {
+				modifier = { 
+					production_efficiency = 0.20
+					global_trade_goods_size_modifier = 0.10
+					global_prosperity_growth = 0.5
+				}
+				start_value = 0
+				end_value = 100
+			}
+			reverse_scaled_modifier = {
+				modifier = { 
+					modifier = { 
+						development_cost = -0.15
+						build_cost = -0.15
+						build_time = -0.15
+					}
+					start_value = 0
+					end_value = -100
+				}
+			}
+		}
+	}
+}

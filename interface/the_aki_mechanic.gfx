@@ -1,0 +1,56 @@
+spriteTypes = {
+	##省份UI
+	spriteType = {
+		name = "GFX_the_aki_harvest_province_1_button"
+		texturefile = "gfx\\interface\\government_mechanics\\the_aki\\THE_AKI_province_1.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_the_aki_harvest_province_2_button"
+		texturefile = "gfx\\interface\\government_mechanics\\the_aki\\THE_AKI_province_2.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_the_aki_harvest_province_3_button"
+		texturefile = "gfx\\interface\\government_mechanics\\the_aki\\THE_AKI_province_3.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	#政府UI
+	spriteType = {
+		name = "GFX_THE_AKI_mechanic_black"
+		texturefile = "gfx\\interface\\government_mechanics\\the_aki\\THE_AKI_mechanic_black.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_THE_AKI_mechanic_flame"
+		texturefile = "gfx\\interface\\government_mechanics\\the_aki\\THE_AKI_mechanic_flame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_THE_AKI_mechanic_bar_full"
+		texturefile = "gfx\\interface\\government_mechanics\\the_aki\\THE_AKI_mechanic_full.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	#改革ui
+	spriteType = {
+		name = "government_reform_THE_AKI_government_reform_1"
+		texturefile = "gfx\\interface\\government_mechanics\\the_aki\\THE_AKI_government_reform.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	progressbartype = {
+		name = "GFX_THE_AKI_reform_mechanic_bar_and_frame"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx\\interface\\government_mechanics\\the_aki\\THE_AKI_mechanic_full.dds"
+		textureFile2 = "gfx\\interface\\government_mechanics\\the_aki\\THE_AKI_mechanic_black.dds"
+		size = { x = 230 y = 30 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+}

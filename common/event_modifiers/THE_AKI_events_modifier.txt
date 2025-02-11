@@ -1,0 +1,33 @@
+THE_AKI_recruit_army_buff = {
+	land_morale = 0.10
+	land_maintenance_modifier = -0.10
+}
+#除厄
+THE_AKI_youkai_forest_mission_buff = {
+	local_monthly_devastation = -2
+	local_tax_modifier = 0.50
+	local_unrest = -3
+	local_autonomy = 0.10
+	local_prosperity_growth = -1.0
+}
+#流转之厄
+THE_AKI_youkai_forest_mission_2_buff = {
+	core_creation = -0.05
+	years_of_nationalism = -5
+	development_cost = -0.05
+}
+#丰壤之祝
+THE_AKI_build_shrine_mission_buff = {
+	global_tax_modifier = 0.50
+	production_efficiency = 0.10
+}
+#退却红雾
+THE_AKI_consequer_scarlet_mission_buff = {
+	land_morale = 0.10
+	manpower_recovery_speed = 0.15
+}
+#魔法农业
+THE_AKI_tech_and_agriculture_mission_buff = {
+	development_cost = -0.20
+	idea_cost = -0.10
+}

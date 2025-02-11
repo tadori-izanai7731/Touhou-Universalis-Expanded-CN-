@@ -1,0 +1,27 @@
+#秋姐妹
+THE_AKI_harvest_and_autumn_reform = {
+	lock_level_when_selected = yes
+	icon = "THE_AKI_government_reform_1"
+	potential = {
+		OR = {
+			has_reform = THE_AKI_harvest_and_autumn_reform
+			tag	= AKI
+		}
+	}
+	valid_for_new_country = no
+	valid_for_nation_designer = yes
+	rulers_can_be_generals = no
+	nation_designer_cost = 40
+	can_change_primary_culture = no
+	modifiers = {
+		governing_capacity = 100
+		global_unrest = -2
+		production_efficiency = 0.10
+	}
+	government_abilities = {
+		THE_AKI_harvest_autumn_mechanic
+	}
+	custom_attributes = {
+		THE_AKI_harvest_autumn_province_buff_abilities = yes
+	}
+}
