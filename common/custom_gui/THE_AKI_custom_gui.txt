@@ -1,0 +1,79 @@
+custom_button = {
+	name = THE_AKI_province_button1_gui
+	tooltip = THE_AKI_province_button1_gui_tt
+	potential = {
+		owner = {
+			has_government_attribute = THE_AKI_harvest_autumn_province_buff_abilities
+		}
+		owned_by = FROM
+	}
+	trigger = {
+	}
+	effect = {
+		
+	}
+}
+
+custom_button = {
+	name = THE_AKI_province_button2_gui
+	tooltip = THE_AKI_province_button2_gui_tt
+	potential = {
+		owner = {
+			has_government_attribute = THE_AKI_harvest_autumn_province_buff_abilities
+		}
+		owned_by = FROM
+		AKI = {
+			mission_completed = THE_AKI_potato_covenant
+		}
+	}
+	trigger = {
+		if = {
+			limit = { 
+				all_state_province = {
+					owned_by = FROM
+					OR = {
+						NOT = {
+							has_country_modifier = THE_AKI_province_religions_v1_buff
+						}
+						NOT = {
+							has_country_modifier = THE_AKI_province_religions_v2_buff
+						}
+						NOT = {
+							has_country_modifier = THE_AKI_province_religions_v3_buff
+						}
+						NOT = {
+							has_country_modifier = THE_AKI_province_religions_v4_buff
+						}
+						NOT = {
+							has_country_modifier = THE_AKI_province_religions_v5_buff
+						}
+					}
+				}
+			}
+			all_state_province = {
+				owned_by = FROM
+				is_prosperous = yes
+				religion = FROM
+				culture_group = FROM
+				development = 20
+			}
+		}
+	}
+	effect = {
+	}
+}
+
+custom_button = {
+	name = THE_AKI_province_button3_gui
+	tooltip = THE_AKI_province_button3_gui_tt
+	potential = {
+		owner = {
+			has_government_attribute = THE_AKI_harvest_autumn_province_buff_abilities
+		}
+		owned_by = FROM
+	}
+	trigger = {
+	}
+	effect = {
+	}
+}

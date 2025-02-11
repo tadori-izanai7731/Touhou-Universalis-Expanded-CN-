@@ -2584,6 +2584,35 @@ guiTypes = {
 				clicksound = "click"
 				scripted = yes
 			}
+			##AKI
+			##THE_AKI
+			guiButtonType = {
+				name = THE_AKI_province_button1_gui
+				position = { x = 317 y = 200 }
+				quadTextureSprite = "GFX_the_aki_harvest_province_1_button"
+				# buttonText = THE_ALC_province_button1_gui_tt
+				buttonFont = "vic_18"
+				clicksound = "click"
+				scripted = yes
+			}
+			guiButtonType = {
+				name = THE_AKI_province_button2_gui
+				position = { x = 372 y = 200 }
+				quadTextureSprite = "GFX_the_aki_harvest_province_2_button"
+				# buttonText = THE_ALC_province_button1_gui_tt
+				buttonFont = "vic_18"
+				clicksound = "click"
+				scripted = yes
+			}
+			guiButtonType = {
+				name = THE_AKI_province_button3_gui
+				position = { x = 427 y = 200 }
+				quadTextureSprite = "GFX_the_aki_harvest_province_3_button"
+				# buttonText = THE_ALC_province_button1_gui_tt
+				buttonFont = "vic_18"
+				clicksound = "click"
+				scripted = yes
+			}
 		}
 
 
