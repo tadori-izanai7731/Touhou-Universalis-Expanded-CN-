@@ -1,5 +1,5 @@
 Touhou = {
-	th_kagiyama = {	#kagiyama
+	th_kagiyama = {
 		color = { 80 178 142 }
 		heretic = { th_heretic_lunar th_heretic_anime th_heretic_manga_elitists }
 		icon = 42
@@ -8,8 +8,8 @@ Touhou = {
 			tolerance_own = 1
 			fire_damage_received = -0.10
 			fire_damage = 0.1
-			rival_border_fort_maintenance = -0.15
-			development_cost = -0.05
+			hostile_attrition = 1
+			fort_maintenance_modifier = -0.15
 		}
 		
 		province = {
@@ -26,16 +26,16 @@ Touhou = {
 			th_shinkism
 			th_scientistic
 		}
-
-		will_get_center = { #Refered to even for initial CoR Spawn
+		
+		will_get_center = {
 			always = yes
 		}
-
+		
 		country_as_secondary = {
 			defensiveness = 0.1
 			development_cost = -0.1
 		}
-
+		
 		uses_church_power = yes
 		aspects = {
 			kagiyama_epidemic_aspect
@@ -58,53 +58,85 @@ Touhou = {
 		
 		harmonized_modifier = THE_harmonized_kagiyama
 	}
-
-	#秋教
-	Touhou = {
-		the_minoriko = {	#minoriko
-			color = { 255 157 61 }
-			heretic = { th_heretic_lunar th_heretic_anime th_heretic_manga_elitists }
-			icon = 34
-			allow_female_defenders_of_the_faith = yes
-			country = {
-				tolerance_heretic = 2
-				fire_damage = 0.1
-				fire_damage_received = -0.1
-				development_cost = -0.10
-				production_efficiency = 0.05
-			}
-			
-			province = {
-			}
-			
-			#Center of religions are always for the religion group as a whole
-			#center_of_religion = 4998
-			
-			allowed_center_conversion = {
-				th_hakureishinto
-				th_taoist
-				th_buddhist
-				th_oldhakurei
-				th_shinkism
-				th_scientistic
-			}
 	
-			will_get_center = { #Refered to even for initial CoR Spawn
-				always = yes
-			}
-	
-			country_as_secondary = {
-				global_trade_goods_size_modifier = 0.1
-				development_cost = -0.1
-			}
-	
-			has_patriarchs = yes
-	
-			orthodox_icons = {
-	
-			}
-			
-			harmonized_modifier = THE_harmonized_kagiyama
+	the_minoriko = {
+		color = { 255 157 61 }
+		heretic = { th_heretic_lunar th_heretic_anime th_heretic_manga_elitists }
+		icon = 34
+		allow_female_defenders_of_the_faith = yes
+		country = {
+			tolerance_heretic = 2
+			fire_damage = 0.1
+			fire_damage_received = -0.1
+			production_efficiency = 0.1
+			development_cost = -0.1
 		}
+		
+		province = {
+		}
+		
+		#Center of religions are always for the religion group as a whole
+		#center_of_religion = 4998
+		
+		allowed_center_conversion = {
+			th_hakureishinto
+			th_taoist
+			th_buddhist
+			th_oldhakurei
+			th_shinkism
+			th_scientistic
+		}
+		
+		will_get_center = {
+			always = yes
+		}
+		
+		country_as_secondary = {
+			global_trade_goods_size_modifier = 0.1
+			development_cost = -0.1
+		}
+		
+		has_patriarchs = yes
+		
+		orthodox_icons = {
+			THE_minoriko_orthodox_icon_empty_1 = { allow = { always = no } visible = { always = no } ai_will_do = { factor = 0 } }
+			THE_minoriko_orthodox_icon_empty_2 = { allow = { always = no } visible = { always = no } ai_will_do = { factor = 0 } }
+			THE_minoriko_orthodox_icon_empty_3 = { allow = { always = no } visible = { always = no } ai_will_do = { factor = 0 } }
+			THE_minoriko_orthodox_icon_empty_4 = { allow = { always = no } visible = { always = no } ai_will_do = { factor = 0 } }
+			THE_minoriko_orthodox_icon_empty_5 = { allow = { always = no } visible = { always = no } ai_will_do = { factor = 0 } }
+			THE_minoriko_orthodox_icon_empty_6 = { allow = { always = no } visible = { always = no } ai_will_do = { factor = 0 } }
+			THE_minoriko_orthodox_icon_empty_7 = { allow = { always = no } visible = { always = no } ai_will_do = { factor = 0 } }
+			THE_minoriko_orthodox_icon_empty_8 = { allow = { always = no } visible = { always = no } ai_will_do = { factor = 0 } }
+			THE_minoriko_orthodox_icon_empty_9 = { allow = { always = no } visible = { always = no } ai_will_do = { factor = 0 } }
+			THE_minoriko_orthodox_icon_empty_10 = { allow = { always = no } visible = { always = no } ai_will_do = { factor = 0 } }
+			THE_minoriko_orthodox_icon_sizuha = {
+				land_attrition = -0.25
+				stability_cost_modifier = -0.15
+				allow = { always = yes }
+				visible = { }
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						factor = 0
+						is_at_war = no
+					}
+				}
+			}
+			THE_minoriko_orthodox_icon_minoriko = {
+				production_efficiency = 0.2
+				development_cost = -0.2
+				allow = { always = yes }
+				visible = { }
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						factor = 0
+						is_at_war = yes
+					}
+				}
+			}
+		}
+		
+		harmonized_modifier = THE_harmonized_kagiyama
 	}
 }
