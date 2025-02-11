@@ -725,13 +725,12 @@ THE_AKI_branch_4 = {
 		 } 
 
 		trigger = { 
-			calc_true_if = {
-				amount = 12
-				all_province = {
-					owned_by = ROOT
-					has_province_modifier = THE_AKI_province_religions_v2_buff
+			custom_trigger_tooltip = {
+				tooltip = the_aki_pick_province_buttom_3_im_var_c_tt
+				check_variable = {
+					which = the_aki_pick_province_buttom_3_im_var
+					value = 8
 				}
-				
 			}
 		 } 
 
@@ -749,9 +748,41 @@ THE_AKI_branch_4 = {
 		required_missions = { THE_AKI_harvest_festival } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			calc_true_if = {
+				amount = 1
+				all_province = {
+					owned_by = ROOT
+					has_province_modifier = THE_AKI_province_religions_v3_buff
+				}
+				
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_AKI_tour_in_autumn_mission_tt
+			tooltip = {
+				add_province_modifier = {
+					name = THE_AKI_with_autumn_tour_mission_buff
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				random_province = {
+					limit = {
+						has_province_modifier = THE_AKI_province_religions_v3_buff
+					}
+					add_province_modifier = {
+						name = THE_AKI_with_autumn_tour_mission_buff
+						duration = -1
+					}
+				}
+			}
+			
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+		 } 
 	}
 
 	THE_AKI_autumn_of_abundance = {

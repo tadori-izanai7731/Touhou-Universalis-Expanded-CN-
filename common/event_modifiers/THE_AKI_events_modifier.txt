@@ -56,6 +56,12 @@ THE_AKI_with_army_gather_in_autumn_mission_buff = {
 	global_supply_limit_modifier = 0.50
 	land_attrition = -0.1
 }
+#秋之神社
+THE_AKI_with_autumn_tour_mission_buff = {
+	trade_goods_size = 1.0
+	local_development_cost_modifier = -0.10
+	global_tax_income = 120
+}
 #初穗之佑
 THE_AKI_province_religions_v1_buff = {
 	local_development_cost_modifier = -0.10

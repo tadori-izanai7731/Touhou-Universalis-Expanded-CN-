@@ -10,6 +10,7 @@ l_english:
  THE_AKI_harvest_festvial_mission_buff: "丰收祭典"
  THE_AKI_with_myo_mission_buff: "秾华灼灼"
  THE_AKI_with_army_gather_in_autumn_mission_buff: "仓廪流金"
+ THE_AKI_with_autumn_tour_mission_buff: "秋之神社"
  THE_AKI_province_religions_v1_buff: "初穗之佑「1级」"
  THE_AKI_province_religions_v2_buff: "穰穰满家「2级」"
  THE_AKI_province_religions_v3_buff: "千仓万箱「3级」"
@@ -21,9 +22,22 @@ l_english:
  THE_AKI_unlock_sell_potato_tt: "解锁§Y幻想乡外交行动§!「贩卖红薯」"
  THE_AKI_mission_potato_covenant_c_tt: "解锁省份机制「§Y秋之祝祠§!」"
  THE_AKI_mission_divine_virtue_c_tt1: "解锁决议改变宗教为「§Y丰穰之秋§!」"
+ the_aki_pick_province_buttom_3_im_var_c_tt: "至少使用「§Y双秋华筵§!」（[Root.the_aki_pick_province_buttom_3_im_var.GetValue]/8）"
+ THE_AKI_tour_in_autumn_mission_tt: "该省份获得修正："
  #外交行动
  THE_AKI_sell_potatos_to_human_title: "贩卖红薯"
  #宗教
  the_minoriko: "丰穰之秋"
+ THE_minoriko_orthodox_icon_sizuha: "秋静叶"
+ THE_minoriko_orthodox_icon_minoriko: "秋穰子"
  #宗教GUI
  THE_AKI_province_button2_gui_tt2: "§O秋之祝祠§!\n- - - - - - - - - - - - - - - -\n- -当前省份拥有§O[Root.the_aki_religions_monoriko_province_im_var.GetValue]§!点§O丰饶§!- -\n- - - - - - - - - - - - - - - -\n\n效果:\n - -对当前直属州进行祝圣"
+ THE_AKI_province_button3_gui_tt: "§O双秋华筵§!\n- - - - - - - - - - - - - - - -\n- -当前省份拥有§O[Root.the_aki_religions_monoriko_province_im_var.GetValue]§!点§O丰饶§!- -\n- - - - - - - - - - - - - - - -\n\n效果:\n - -该省份§O丰饶§!进程增加20点"
+ the_aki_province_prosperou_change_10_tt1: "该省份§O丰饶§!进程增加20点"
+ THE_AKI_province_button1_gui_tt: "§O落叶之哀§!"
+ #政府
+ THE_AKI_harvest_and_autumn_reform: "五谷丰登"
+ ability_THE_AKI_harvest_autumn_mechanic: "丰饶与飘零"
+ mechanic_THE_AKI_harvest_autumn_province_buff_abilities_yes: "启用省份机制「秋实」"
+ THE_AKI_harvest_autumn_mechanic_power: "凋零"
+ THE_AKI_harvest_autumn_mechanic_power_desc: ""
