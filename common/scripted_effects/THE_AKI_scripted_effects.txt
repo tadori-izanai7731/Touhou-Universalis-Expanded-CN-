@@ -1,0 +1,23 @@
+THE_AKI_monoriko_monthly_effects = {
+	if = {
+		limit = { 
+			OR = {
+				ROOT = {
+					has_government_attribute = THE_AKI_harvest_autumn_province_buff_abilities
+				}
+				ROOT = {
+					religion = the_minoriko
+				}
+			}
+		}
+		every_province = {
+			limit = {
+				owned_by = ROOT
+			}
+			change_variable = {
+				which = the_aki_religions_monoriko_province_im_var
+				value = 0.1
+			}
+		}
+	}
+}

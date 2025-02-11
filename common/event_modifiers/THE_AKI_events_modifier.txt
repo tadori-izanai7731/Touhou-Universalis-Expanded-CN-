@@ -40,7 +40,22 @@ THE_AKI_build_shrine_diplo_buff = {
 	production_efficiency = 0.15
 	development_cost = -0.10
 }
-
+#丰收祭典
+THE_AKI_harvest_festvial_mission_buff = {
+	all_estate_loyalty_equilibrium = 0.1
+	global_monthly_devastation = -1.0
+}
+#
+THE_AKI_with_myo_mission_buff = {
+	tolerance_own = 1
+	missionaries = 1
+	yearly_patriarch_authority = 0.5
+}
+#仓廪流金
+THE_AKI_with_army_gather_in_autumn_mission_buff = {
+	global_supply_limit_modifier = 0.50
+	land_attrition = -0.1
+}
 #初穗之佑
 THE_AKI_province_religions_v1_buff = {
 	local_development_cost_modifier = -0.10

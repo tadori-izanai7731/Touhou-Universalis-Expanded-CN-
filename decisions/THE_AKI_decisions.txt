@@ -1,0 +1,39 @@
+country_decisions = {
+	THE_AKI_create_own_religions_the_monoriko = {
+		color = { 255 186 39 }
+		potential = {
+			OR = {
+				tag = AKI
+				was_tag = AKI
+			}
+			mission_completed = THE_AKI_divine_virtue
+			NOT = {
+				religion = the_minoriko
+			}
+		}
+		allow = {
+			stability = 1
+			treasury = 100
+		}
+		effect = {
+			add_stability = -1
+			add_treasury = -100
+			change_religion = the_minoriko
+			
+			hidden_effect = {
+				every_province = {
+					limit = {
+						owned_by = ROOT	
+					}
+					change_religion = ROOT
+				}
+			}
+			THE_unlock_special_culture_ideas_scripted_effect = {
+				type = kami
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}
