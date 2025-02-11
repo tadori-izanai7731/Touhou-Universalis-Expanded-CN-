@@ -58,4 +58,53 @@ Touhou = {
 		
 		harmonized_modifier = THE_harmonized_kagiyama
 	}
+
+	#秋教
+	Touhou = {
+		the_minoriko = {	#minoriko
+			color = { 255 157 61 }
+			heretic = { th_heretic_lunar th_heretic_anime th_heretic_manga_elitists }
+			icon = 34
+			allow_female_defenders_of_the_faith = yes
+			country = {
+				tolerance_heretic = 2
+				fire_damage = 0.1
+				fire_damage_received = -0.1
+				development_cost = -0.10
+				production_efficiency = 0.05
+			}
+			
+			province = {
+			}
+			
+			#Center of religions are always for the religion group as a whole
+			#center_of_religion = 4998
+			
+			allowed_center_conversion = {
+				th_hakureishinto
+				th_taoist
+				th_buddhist
+				th_oldhakurei
+				th_shinkism
+				th_scientistic
+			}
+	
+			will_get_center = { #Refered to even for initial CoR Spawn
+				always = yes
+			}
+	
+			country_as_secondary = {
+				global_trade_goods_size_modifier = 0.1
+				development_cost = -0.1
+			}
+	
+			has_patriarchs = yes
+	
+			orthodox_icons = {
+	
+			}
+			
+			harmonized_modifier = THE_harmonized_kagiyama
+		}
+	}
 }
