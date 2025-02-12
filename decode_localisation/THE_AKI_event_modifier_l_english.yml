@@ -44,9 +44,9 @@ l_english:
  THE_AKI_province_button2_gui_tt2: "§O秋之祝祠§!\n- - - - - - - - - - - - - - - -\n- -当前省份拥有§O[Root.the_aki_religions_monoriko_province_im_var.GetValue]§!点§O丰饶§!- -\n- - - - - - - - - - - - - - - -\n\n效果:\n - -消耗50点§O丰饶§!进程为当前直属州进行祝圣，获得5%的牧首权威"
  THE_AKI_province_button3_gui_tt: "§O双秋华筵§!\n- - - - - - - - - - - - - - - -\n- -当前省份拥有§O[Root.the_aki_religions_monoriko_province_im_var.GetValue]§!点§O丰饶§!- -\n- - - - - - - - - - - - - - - -\n\n效果:\n - -该省份§O丰饶§!进程增加20点"
  the_aki_province_prosperou_change_10_tt1: "该省份§O丰饶§!进程增加20点"
- THE_AKI_province_button1_gui_tt: "§O落叶之哀§!\n- - - - - - - - - - - - - - - -\n- -当前省份拥有§O[Root.the_aki_religions_monoriko_province_im_var.GetValue]§!点§O丰饶§!- -\n- - - - - - - - - - - - - - - -\n\n效果:\n - -该省份§O丰饶§!进程减少25点\n - -根据该省份的基础人力获得x500的人力"
- the_aki_check_province_im_var_25_t: "当前省份§O丰饶§!进程至少为25点"
- the_aki_check_province_im_var_50_t: "当前省份§O丰饶§!进程至少为50点"
+ THE_AKI_province_button1_gui_tt: "§O落叶之哀§!\n- - - - - - - - - - - - - - - -\n- -当前省份拥有§O[Root.the_aki_religions_monoriko_province_im_var.GetValue]§!点§O丰饶§!- -\n- - - - - - - - - - - - - - - -\n\n效果:\n - -该省份§O丰饶§!进程减少25点\n - -省份每拥有§Y1§!点基础人力，获得§G500§!人力"
+ the_aki_check_province_im_var_25_t: "省份至少有25点§O丰饶§!"
+ the_aki_check_province_im_var_50_t: "省份至少有50点§O丰饶§!"
  #政府
  THE_AKI_harvest_and_autumn_reform: "五谷丰登"
  ability_THE_AKI_harvest_autumn_mechanic: "丰饶与飘零"
