@@ -74,4 +74,25 @@ THE_AKI_monoriko_monthly_effects = {
 		}
 	}
 	
-}                                                
+}
+THE_AKI_monoriko_won_war_var_effects = {
+	if = {
+		limit = {
+			OR = {
+				tag = AKI
+				was_tag = AKI
+			}
+		 }
+		 change_variable = {
+			which = the_aki_won_war_im_var
+			value = 1
+		 }
+	}
+}
+THE_AKI_clr_all_province_buff_effects = {
+	remove_province_modifier = THE_AKI_province_religions_v1_buff
+	remove_province_modifier = THE_AKI_province_religions_v2_buff
+	remove_province_modifier = THE_AKI_province_religions_v3_buff
+	remove_province_modifier = THE_AKI_province_religions_v4_buff
+	remove_province_modifier = THE_AKI_province_religions_v5_buff
+}

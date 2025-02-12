@@ -5,7 +5,6 @@ THE_AKI_harvest_and_autumn_reform = {
 	potential = {
 		OR = {
 			has_reform = THE_AKI_harvest_and_autumn_reform
-			tag	= AKI
 		}
 	}
 	valid_for_new_country = no
@@ -14,9 +13,11 @@ THE_AKI_harvest_and_autumn_reform = {
 	nation_designer_cost = 40
 	can_change_primary_culture = no
 	modifiers = {
-		governing_capacity = 100
+		governing_capacity = 150
+		tolerance_own = 2
 		global_unrest = -2
 		production_efficiency = 0.10
+		global_tax_modifier = 0.15
 	}
 	government_abilities = {
 		THE_AKI_harvest_autumn_mechanic

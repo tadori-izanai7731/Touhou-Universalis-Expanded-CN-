@@ -62,6 +62,33 @@ THE_AKI_with_autumn_tour_mission_buff = {
 	local_development_cost_modifier = -0.10
 	global_tax_income = 120
 }
+#沃野开耕
+THE_AKI_fertle_fields_mission_buff = {
+	development_cost_modifier = -0.10
+	idea_cost = -0.05
+}
+#巫女
+THE_AKI_hoho_fields_mission_buff = {
+	missionary_maintenance_cost = -0.33
+	tolerance_own = 1
+	global_missionary_strength = 0.02
+}
+#阡陌之国
+THE_AKI_land_of_field_buff = {
+	governing_cost = -0.25
+	reform_progress_growth = 0.15
+}
+THE_AKI_aut_of_abundance_mission_buff = {
+	THE_AKI_is_prosperous_province_custom_modifier = 0.20
+	development_cost = -0.20
+	governing_capacity_modifier = 0.25
+}
+#凋零之秋
+THE_AKI_with_wither_autumn_2_mission_buff = {
+	global_supply_limit_modifier = 0.33
+	fort_maintenance_modifier = -0.
+	global_monthly_devastation = -1.0
+}
 #初穗之佑
 THE_AKI_province_religions_v1_buff = {
 	local_development_cost_modifier = -0.10

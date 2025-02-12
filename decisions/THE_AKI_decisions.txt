@@ -3,10 +3,20 @@ country_decisions = {
 		color = { 255 186 39 }
 		potential = {
 			OR = {
-				tag = AKI
-				was_tag = AKI
+				AND = {
+					OR = {
+						tag = AKI
+						was_tag = AKI
+					}
+					mission_completed = THE_AKI_divine_virtue
+				}
+				AND = {
+					any_province = {
+						owned_by = ROOT
+						religion = the_minoriko
+					}
+				}
 			}
-			mission_completed = THE_AKI_divine_virtue
 			NOT = {
 				religion = the_minoriko
 			}
@@ -28,12 +38,83 @@ country_decisions = {
 					change_religion = ROOT
 				}
 			}
-			THE_unlock_special_culture_ideas_scripted_effect = {
-				type = kami
+			if = {
+				limit = {
+					OR = {
+						tag = AKI
+						was_tag = AKI
+					}
+				 }
+				 THE_unlock_special_culture_ideas_scripted_effect = {
+					type = kami
+				}
 			}
 		}
 		ai_will_do = {
 			factor = 1000
+			modifier = {
+				factor = 0
+				NOT = {
+					tag = AKI
+				}
+			}
+		}
+	}
+	THE_AKI_creat_sizuha_advisor_decisions = {
+		color = { 255 186 39 }
+		potential = {
+			OR = {
+				tag = AKI
+				was_tag = AKI
+			}
+			mission_completed = THE_AKI_wither_autunm_1
+		}
+		allow = {
+			mil_power = 100
+			custom_trigger_tooltip = {
+				tooltip = THE_AKI_creat_sizuha_advisor_cd_ctt1
+				OR = {
+					NOT = {
+						has_country_flag = THE_AKI_creat_sizuha_advisor_cd_flag
+					}
+					had_country_flag = {
+						flag = THE_AKI_creat_sizuha_advisor_cd_flag
+						days = 9125
+					}
+				}
+			}
+		}
+		effect = {
+			add_mil_power = -100
+			THE_AKI_create_sizuha_advisor_effects = yes
+			hidden_effect = {
+				clr_country_flag = THE_AKI_creat_sizuha_advisor_cd_flag
+				set_country_flag = THE_AKI_creat_sizuha_advisor_cd_flag
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	THE_AKI_religions_province_buff_description_decisions = {
+		color = { 255 186 39 }
+		potential = {
+			OR = {
+				religion = the_minoriko
+				has_government_attribute = THE_AKI_harvest_autumn_province_buff_abilities
+			}
+			ai = no
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			country_event = {
+				id = THE_AKI_flavor_events.1
+			}
+		}
+		ai_will_do = {
+			factor = 0
 		}
 	}
 }

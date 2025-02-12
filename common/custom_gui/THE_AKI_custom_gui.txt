@@ -17,15 +17,127 @@ custom_button = {
 		}
 		else = {
 			FROM = {
+				NOT = {
+					has_government_attribute = THE_AKI_harvest_autumn_province_buff_abilities
+				}
 				religion = the_minoriko
 			}
 		}
 		owned_by = FROM
 	}
 	trigger = {
+		if = {
+			limit = { 
+				FROM = {
+					has_government_attribute = THE_AKI_harvest_autumn_province_buff_abilities
+				}
+			}
+			religion = ROOT
+			custom_trigger_tooltip = {
+				tooltip = the_aki_check_province_im_var_25_t
+				check_variable = {
+					which = the_aki_religions_monoriko_province_im_var
+					value = 25
+				}
+			}
+			FROM = {
+				mil_power = 50
+			}
+		}
+		else_if = {
+			limit = { 
+				FROM = {
+					NOT = {
+						has_government_attribute = THE_AKI_harvest_autumn_province_buff_abilities
+					}
+					religion = the_minoriko
+				}
+			}
+			religion = the_minoriko
+			custom_trigger_tooltip = {
+				tooltip = the_aki_check_province_im_var_25_t
+				check_variable = {
+					which = the_aki_religions_monoriko_province_im_var
+					value = 25
+				}
+			}
+			FROM = {
+				patriarch_authority = 0.05
+				mil_power = 50
+			}
+		}
 	}
 	effect = {
-		
+		if = {
+			limit = { 
+				FROM = {
+					has_government_attribute = THE_AKI_harvest_autumn_province_buff_abilities
+				}
+			}
+			add_devastation = 20
+			FROM = {
+				add_mil_power = -50
+				add_government_power = {
+					mechanic_type = THE_AKI_harvest_autumn_mechanic
+					power_type = THE_AKI_harvest_autumn_mechanic_power
+					value = 10
+				}
+			}
+			hidden_effect = {
+				change_variable = {
+					which = the_aki_religions_monoriko_province_im_var
+					value = -25
+				}
+			}
+		}
+		else_if = {
+			limit = { 
+				FROM = {
+					NOT = {
+						has_government_attribute = THE_AKI_harvest_autumn_province_buff_abilities
+					}
+					religion = the_minoriko
+				}
+			}
+			add_devastation = 20
+			FROM = {
+				add_mil_power = -50
+				add_patriarch_authority = -0.05
+			}
+			hidden_effect = {
+				change_variable = {
+					which = the_aki_religions_monoriko_province_im_var
+					value = -25
+				}
+			}
+		}
+		hidden_effect = {
+			#导出省份人力
+			export_to_variable = {
+				which = the_aki_province_base_manpower_export_var
+				value = base_manpower
+			}
+			# /2
+			divide_variable = {
+				which = the_aki_province_base_manpower_export_var
+				value = 2
+			}
+			while = {
+				limit = { 
+					check_variable = {
+						which = the_aki_province_base_manpower_export_var
+						value = 1
+					}
+				}
+				FROM = {
+					add_manpower = 1
+				}
+				change_variable = {
+					which = the_aki_province_base_manpower_export_var
+					value = -1
+				}
+			}
+		}
 	}
 }
 
@@ -52,8 +164,14 @@ custom_button = {
 		else = {
 			FROM = {
 				religion = the_minoriko
+				NOT = {
+					OR = {
+						tag = AKI
+						was_tag = AKI
+					}
+				}
 			}
-			
+			always = yes
 		}
 		owned_by = FROM
 	}
@@ -89,25 +207,33 @@ custom_button = {
 				culture_group = FROM
 				development = 20
 			}
+			custom_trigger_tooltip = {
+				tooltip = the_aki_check_province_im_var_50_t
+				check_variable = {
+					which = the_aki_religions_monoriko_province_im_var
+					value = 50
+				}
+			}
 		}
 		else_if = {
 			limit = { 
-				all_state_province = {
+				ROOT = {
 					owned_by = FROM
-					AND = {
-						has_province_modifier = THE_AKI_province_religions_v1_buff
-						NOT = {
-							has_province_modifier = THE_AKI_province_religions_v2_buff
-						}
-						NOT = {
-							has_province_modifier = THE_AKI_province_religions_v3_buff
-						}
-						NOT = {
-							has_province_modifier = THE_AKI_province_religions_v4_buff
-						}
-						NOT = {
-							has_province_modifier = THE_AKI_province_religions_v5_buff
-						}
+				}
+				all_province_in_state = {
+					owned_by = FROM
+					has_province_modifier = THE_AKI_province_religions_v1_buff
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v2_buff
+					}
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v3_buff
+					}
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v4_buff
+					}
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v5_buff
 					}
 				}
 			}
@@ -118,25 +244,33 @@ custom_button = {
 				culture_group = FROM
 				development = 30
 			}
+			custom_trigger_tooltip = {
+				tooltip = the_aki_check_province_im_var_50_t
+				check_variable = {
+					which = the_aki_religions_monoriko_province_im_var
+					value = 50
+				}
+			}
 		}
 		else_if = {
 			limit = { 
-				all_state_province = {
+				ROOT = {
 					owned_by = FROM
-					AND = {
-						has_province_modifier = THE_AKI_province_religions_v2_buff
-						NOT = {
-							has_province_modifier = THE_AKI_province_religions_v1_buff
-						}
-						NOT = {
-							has_province_modifier = THE_AKI_province_religions_v3_buff
-						}
-						NOT = {
-							has_province_modifier = THE_AKI_province_religions_v4_buff
-						}
-						NOT = {
-							has_province_modifier = THE_AKI_province_religions_v5_buff
-						}
+				}
+				all_province_in_state = {
+					owned_by = FROM
+					has_province_modifier = THE_AKI_province_religions_v2_buff
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v1_buff
+					}
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v3_buff
+					}
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v4_buff
+					}
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v5_buff
 					}
 				}
 			}
@@ -147,25 +281,33 @@ custom_button = {
 				culture_group = FROM
 				development = 40
 			}
+			custom_trigger_tooltip = {
+				tooltip = the_aki_check_province_im_var_50_t
+				check_variable = {
+					which = the_aki_religions_monoriko_province_im_var
+					value = 50
+				}
+			}
 		}
 		else_if = {
 			limit = { 
-				all_state_province = {
+				ROOT = {
 					owned_by = FROM
-					AND = {
-						has_province_modifier = THE_AKI_province_religions_v3_buff
-						NOT = {
-							has_province_modifier = THE_AKI_province_religions_v2_buff
-						}
-						NOT = {
-							has_province_modifier = THE_AKI_province_religions_v1_buff
-						}
-						NOT = {
-							has_province_modifier = THE_AKI_province_religions_v4_buff
-						}
-						NOT = {
-							has_province_modifier = THE_AKI_province_religions_v5_buff
-						}
+				}
+				all_province_in_state = {
+					owned_by = FROM
+					has_province_modifier = THE_AKI_province_religions_v3_buff
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v2_buff
+					}
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v1_buff
+					}
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v4_buff
+					}
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v5_buff
 					}
 				}
 			}
@@ -176,26 +318,37 @@ custom_button = {
 				culture_group = FROM
 				development = 50
 			}
+			custom_trigger_tooltip = {
+				tooltip = the_aki_check_province_im_var_50_t
+				check_variable = {
+					which = the_aki_religions_monoriko_province_im_var
+					value = 50
+				}
+			}
 		}
 		else_if = {
 			limit = { 
-				all_state_province = {
+				ROOT = {
 					owned_by = FROM
-					AND = {
-						has_province_modifier = THE_AKI_province_religions_v4_buff
-						NOT = {
-							has_province_modifier = THE_AKI_province_religions_v1_buff
-						}
-						NOT = {
-							has_province_modifier = THE_AKI_province_religions_v2_buff
-						}
-						NOT = {
-							has_province_modifier = THE_AKI_province_religions_v3_buff
-						}
-						NOT = {
-							has_province_modifier = THE_AKI_province_religions_v5_buff
-						}
+				}
+				all_province_in_state = {
+					owned_by = FROM
+					has_province_modifier = THE_AKI_province_religions_v4_buff
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v2_buff
 					}
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v3_buff
+					}
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v1_buff
+					}
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v5_buff
+					}
+				}
+				AKI = {
+					mission_completed = THE_AKI_autumn_of_abundance
 				}
 			}
 			all_state_province = {
@@ -205,8 +358,68 @@ custom_button = {
 				culture_group = FROM
 				development = 60
 			}
+			custom_trigger_tooltip = {
+				tooltip = the_aki_check_province_im_var_50_t
+				check_variable = {
+					which = the_aki_religions_monoriko_province_im_var
+					value = 50
+				}
+			}
 		}
-	}
+		else_if = {
+			limit = { 
+				ROOT = {
+					owned_by = FROM
+				}
+				all_province_in_state = {
+					owned_by = FROM
+					has_province_modifier = THE_AKI_province_religions_v4_buff
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v2_buff
+					}
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v3_buff
+					}
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v1_buff
+					}
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v5_buff
+					}
+				}
+				NOT = {
+					AKI = {
+						mission_completed = THE_AKI_autumn_of_abundance
+					}
+				}
+			}
+			always = no
+		}
+		else_if = {
+			limit = { 
+				ROOT = {
+					owned_by = FROM
+				}
+				all_province_in_state = {
+					owned_by = FROM
+					has_province_modifier = THE_AKI_province_religions_v5_buff
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v2_buff
+					}
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v3_buff
+					}
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v4_buff
+					}
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v1_buff
+					}
+				}
+			}
+			always = no
+		}
+	} 
 	effect = {
 		if = {
 			limit = { 
@@ -232,13 +445,289 @@ custom_button = {
 					}
 				}
 			}
-			FROM = {
-				add_patriarch_authority = 0.05
-			}
 			every_province_in_state = {
+				limit = {
+					owned_by = ROOT
+				}
+				THE_AKI_clr_all_province_buff_effects = yes
 				add_province_modifier = {
 					name = THE_AKI_province_religions_v1_buff
 					duration = -1
+				}
+				add_prosperity = 100
+				hidden_effect = {
+					change_variable = {
+						which = the_aki_religions_monoriko_province_im_var
+						value = -50
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						religion = the_minoriko
+					}
+				}
+				add_patriarch_authority = 0.05
+			}
+			if = {
+				limit = { 
+					OR = {
+						tag = AKI
+						was_tag = AKI
+					}
+				}
+				add_government_power = {
+					mechanic_type = THE_AKI_harvest_autumn_mechanic
+					power_type = THE_AKI_harvest_autumn_mechanic_power
+					value = -5
+				}
+			}
+		}
+		else_if = {
+			limit = { 
+				ROOT = {
+					owned_by = FROM
+				}
+				all_province_in_state = {
+					owned_by = FROM
+					has_province_modifier = THE_AKI_province_religions_v1_buff
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v2_buff
+					}
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v3_buff
+					}
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v4_buff
+					}
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v5_buff
+					}
+				}
+			}
+			every_province_in_state = {
+				limit = {
+					owned_by = ROOT
+				}
+				THE_AKI_clr_all_province_buff_effects = yes
+				add_province_modifier = {
+					name = THE_AKI_province_religions_v2_buff
+					duration = -1
+				}
+				add_prosperity = 100
+				hidden_effect = {
+					change_variable = {
+						which = the_aki_religions_monoriko_province_im_var
+						value = -50
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						religion = the_minoriko
+					}
+				}
+				add_patriarch_authority = 0.05
+			}
+			if = {
+				limit = { 
+					OR = {
+						tag = AKI
+						was_tag = AKI
+					}
+				}
+				add_government_power = {
+					mechanic_type = THE_AKI_harvest_autumn_mechanic
+					power_type = THE_AKI_harvest_autumn_mechanic_power
+					value = -5
+				}
+			}
+		}
+		else_if = {
+			limit = { 
+				ROOT = {
+					owned_by = FROM
+				}
+				all_province_in_state = {
+					owned_by = FROM
+					has_province_modifier = THE_AKI_province_religions_v2_buff
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v1_buff
+					}
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v3_buff
+					}
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v4_buff
+					}
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v5_buff
+					}
+				}
+			}
+			every_province_in_state = {
+				limit = {
+					owned_by = ROOT
+				}
+				THE_AKI_clr_all_province_buff_effects = yes
+				add_province_modifier = {
+					name = THE_AKI_province_religions_v3_buff
+					duration = -1
+				}
+				add_prosperity = 100
+				hidden_effect = {
+					change_variable = {
+						which = the_aki_religions_monoriko_province_im_var
+						value = -50
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						religion = the_minoriko
+					}
+				}
+				add_patriarch_authority = 0.05
+			}
+			if = {
+				limit = { 
+					OR = {
+						tag = AKI
+						was_tag = AKI
+					}
+				}
+				add_government_power = {
+					mechanic_type = THE_AKI_harvest_autumn_mechanic
+					power_type = THE_AKI_harvest_autumn_mechanic_power
+					value = -5
+				}
+			}
+		}
+		else_if = {
+			limit = { 
+				ROOT = {
+					owned_by = FROM
+				}
+				all_province_in_state = {
+					owned_by = FROM
+					has_province_modifier = THE_AKI_province_religions_v3_buff
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v2_buff
+					}
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v1_buff
+					}
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v4_buff
+					}
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v5_buff
+					}
+				}
+			}
+			every_province_in_state = {
+				limit = {
+					owned_by = ROOT
+				}
+				THE_AKI_clr_all_province_buff_effects = yes
+				add_province_modifier = {
+					name = THE_AKI_province_religions_v4_buff
+					duration = -1
+				}
+				add_prosperity = 100
+				hidden_effect = {
+					change_variable = {
+						which = the_aki_religions_monoriko_province_im_var
+						value = -50
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						religion = the_minoriko
+					}
+				}
+				add_patriarch_authority = 0.05
+			}
+			if = {
+				limit = { 
+					OR = {
+						tag = AKI
+						was_tag = AKI
+					}
+				}
+				add_government_power = {
+					mechanic_type = THE_AKI_harvest_autumn_mechanic
+					power_type = THE_AKI_harvest_autumn_mechanic_power
+					value = -5
+				}
+			}
+		}
+		else_if = {
+			limit = { 
+				ROOT = {
+					owned_by = FROM
+				}
+				all_province_in_state = {
+					owned_by = FROM
+					has_province_modifier = THE_AKI_province_religions_v4_buff
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v2_buff
+					}
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v3_buff
+					}
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v1_buff
+					}
+					NOT = {
+						has_province_modifier = THE_AKI_province_religions_v5_buff
+					}
+				}
+				AKI = {
+					mission_completed = THE_AKI_autumn_of_abundance
+				}
+			}
+			every_province_in_state = {
+				limit = {
+					owned_by = ROOT
+				}
+				THE_AKI_clr_all_province_buff_effects = yes
+				add_province_modifier = {
+					name = THE_AKI_province_religions_v5_buff
+					duration = -1
+				}
+				add_prosperity = 100
+				hidden_effect = {
+					change_variable = {
+						which = the_aki_religions_monoriko_province_im_var
+						value = -50
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						religion = the_minoriko
+					}
+				}
+				add_patriarch_authority = 0.05
+			}
+			if = {
+				limit = { 
+					OR = {
+						tag = AKI
+						was_tag = AKI
+					}
+				}
+				add_government_power = {
+					mechanic_type = THE_AKI_harvest_autumn_mechanic
+					power_type = THE_AKI_harvest_autumn_mechanic_power
+					value = -5
 				}
 			}
 		}
@@ -279,8 +768,13 @@ custom_button = {
 					has_government_attribute = THE_AKI_harvest_autumn_province_buff_abilities
 				}
 			}
-			religion = the_minoriko
+			religion = ROOT
 			FROM = {
+				has_government_power = {
+					mechanic_type = THE_AKI_harvest_autumn_mechanic
+					power_type = THE_AKI_harvest_autumn_mechanic_power
+					value = -100
+				}
 				adm_power = 50
 				dip_power = 50
 				mil_power = 50
@@ -297,7 +791,7 @@ custom_button = {
 			}
 			religion = the_minoriko
 			FROM = {
-				patriarch_authority = 0.05
+				patriarch_authority = 0.10
 				adm_power = 50
 				dip_power = 50
 				mil_power = 50
@@ -339,7 +833,7 @@ custom_button = {
 				}
 			}
 			FROM = {
-				add_patriarch_authority = -0.05
+				add_patriarch_authority = -0.10
 				add_adm_power = -50
 				add_dip_power = -50
 				add_mil_power = -50

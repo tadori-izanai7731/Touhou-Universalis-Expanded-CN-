@@ -1,4 +1,106 @@
 Touhou = {
+	religious_schools = {
+		the_hina_school = {
+			potential_invite_scholar = {
+				religion = the_minoriko
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+				adm_power = 50
+				NOT = { has_country_modifier = th_hina_scholar_modifier }
+				OR = {
+					th_can_invite_scholar_diplomatically = {
+						school_country = YOF
+						school_province = 5187
+					}
+					owns_or_non_sovereign_subject_of = 5187
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = th_ai_picked_scholar }
+				}
+			}
+
+			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
+			on_invite_scholar = {
+				if = {
+					limit = {
+						ai = no
+					}
+					add_adm_power = -50
+				}
+				else = {
+					add_country_modifier = { name = th_ai_picked_scholar duration = 7300 hidden = yes }
+				}
+				th_clear_religious_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = th_hina_scholar_modifier duration = 7300 }
+			}
+
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = th_hina_scholar_modifier
+
+			picture = "GFX_icon_touhou_school_hina"
+
+			# religion_sub_modifier = no is possible, will hide icon in religious screen
+			# adm_tech_cost_modifier = -0.05
+		}
+		aki_school = {
+			potential_invite_scholar = {
+				religion = the_minoriko
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+				adm_power = 50
+				NOT = { has_country_modifier = th_okina_scholar_modifier }
+				OR = {
+					th_can_invite_scholar_diplomatically = {
+						school_country = AKI
+						school_province = 5134
+					}
+					owns_or_non_sovereign_subject_of = 5134
+				}
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = th_ai_picked_scholar }
+				}
+			}
+
+			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
+			on_invite_scholar = {
+				if = {
+					limit = {
+						ai = no
+					}
+					add_adm_power = -50
+				}
+				else = {
+					add_country_modifier = { name = th_ai_picked_scholar duration = 7300 hidden = yes }
+				}
+				th_clear_religious_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = th_aki_scholar_modifier duration = 7300 }
+			}
+
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = th_aki_scholar_modifier
+
+			picture = "GFX_icon_touhou_school_aki"
+
+			# religion_sub_modifier = no is possible, will hide icon in religious screen
+			# adm_tech_cost_modifier = -0.05
+		}
+	}
+
+
+
+
 	th_kagiyama = {
 		color = { 80 178 142 }
 		heretic = { th_heretic_lunar th_heretic_anime th_heretic_manga_elitists }
