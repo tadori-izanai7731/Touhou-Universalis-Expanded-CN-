@@ -3,13 +3,7 @@ country_decisions = {
 		color = { 255 186 39 }
 		potential = {
 			OR = {
-				AND = {
-					OR = {
-						tag = AKI
-						was_tag = AKI
-					}
-					mission_completed = THE_AKI_divine_virtue
-				}
+				mission_completed = THE_AKI_divine_virtue
 				AND = {
 					any_province = {
 						owned_by = ROOT
@@ -17,9 +11,7 @@ country_decisions = {
 					}
 				}
 			}
-			NOT = {
-				religion = the_minoriko
-			}
+			NOT = { religion = the_minoriko }
 		}
 		allow = {
 			stability = 1
@@ -31,10 +23,7 @@ country_decisions = {
 			change_religion = the_minoriko
 			
 			hidden_effect = {
-				every_province = {
-					limit = {
-						owned_by = ROOT	
-					}
+				every_owned_province = {
 					change_religion = ROOT
 				}
 			}
@@ -44,8 +33,8 @@ country_decisions = {
 						tag = AKI
 						was_tag = AKI
 					}
-				 }
-				 THE_unlock_special_culture_ideas_scripted_effect = {
+				}
+				THE_unlock_special_culture_ideas_scripted_effect = {
 					type = kami
 				}
 			}
@@ -60,42 +49,26 @@ country_decisions = {
 			}
 		}
 	}
+
 	THE_AKI_creat_sizuha_advisor_decisions = {
 		color = { 255 186 39 }
 		potential = {
-			OR = {
-				tag = AKI
-				was_tag = AKI
-			}
 			mission_completed = THE_AKI_wither_autunm_1
 		}
 		allow = {
 			mil_power = 100
-			custom_trigger_tooltip = {
-				tooltip = THE_AKI_creat_sizuha_advisor_cd_ctt1
-				OR = {
-					NOT = {
-						has_country_flag = THE_AKI_creat_sizuha_advisor_cd_flag
-					}
-					had_country_flag = {
-						flag = THE_AKI_creat_sizuha_advisor_cd_flag
-						days = 9125
-					}
-				}
-			}
+			NOT = { has_advisor_type_in_pool = the_sizuha }
+			NOT = { employed_advisor = { type = the_sizuha } }
 		}
 		effect = {
 			add_mil_power = -100
 			THE_AKI_create_sizuha_advisor_effects = yes
-			hidden_effect = {
-				clr_country_flag = THE_AKI_creat_sizuha_advisor_cd_flag
-				set_country_flag = THE_AKI_creat_sizuha_advisor_cd_flag
-			}
 		}
 		ai_will_do = {
 			factor = 100
 		}
 	}
+	
 	THE_AKI_religions_province_buff_description_decisions = {
 		color = { 255 186 39 }
 		potential = {

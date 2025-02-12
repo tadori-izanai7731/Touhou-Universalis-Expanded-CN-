@@ -14,7 +14,7 @@ THE_AKI_harvest_autumn_mechanic = {
 			scaled_modifier = {
 				modifier = { 
 					land_morale = 0.10
-					land_forcelimit_modifier = 0.50
+					global_manpower_modifier = 0.50
 					global_supply_limit_modifier = 0.50
 				}
 				start_value = 0

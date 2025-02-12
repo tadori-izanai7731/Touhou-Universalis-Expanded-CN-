@@ -1,33 +1,49 @@
-THE_AKI_monoriko_monthly_effects = {
+THE_AKI_on_startup_scripted_effects = {
+	if = {
+		limit = {
+			OR = {
+				tag = AKI
+				was_tag = AKI
+			}
+			NOT = { has_country_flag = THE_AKI_on_startup_flag }
+		}
+		set_variable = {
+			which = the_aki_won_war_im_var
+			value = 0
+		}
+		set_variable = {
+			which = the_aki_pick_province_buttom_3_im_var
+			value = 0
+		}
+		set_country_flag = THE_AKI_on_startup_flag
+	}
+}
+
+THE_AKI_on_yearly_pulse_scripted_effects = {
 	#丰饶年度增长
 	if = {
 		limit = { 
 			OR = {
-				ROOT = {
-					has_government_attribute = THE_AKI_harvest_autumn_province_buff_abilities
-				}
-				ROOT = {
-					religion = the_minoriko
-				}
+				has_government_attribute = THE_AKI_harvest_autumn_province_buff_abilities
+				religion = the_minoriko
 			}
 		}
-		every_province = {
+		every_owned_province = {
 			limit = {
-				owned_by = ROOT
 				religion = the_minoriko
 			}
 			#导出省份发展度
-				#此变量
+			#此变量
 			export_to_variable = {
 				variable_name = the_aki_religions_province_development_var
 				value = development
 			}
-				#x-2
+			#x-2
 			subtract_variable = {
 				which = the_aki_religions_province_development_var
 				value = 2
 			}
-				#98/x
+			#98/x
 			set_variable = {
 				which = the_aki_religions_province_development_var_2
 				value = 98
@@ -42,22 +58,8 @@ THE_AKI_monoriko_monthly_effects = {
 				which = the_aki_religions_province_development_var_2
 			}
 		}
-	}
-	#年度丰饶检测100 
-	if = {
-		limit = { 
-			OR = {
-				ROOT = {
-					has_government_attribute = THE_AKI_harvest_autumn_province_buff_abilities
-				}
-				ROOT = {
-					religion = the_minoriko
-				}
-			}
-		}
-		every_province = {
+		every_owned_province = {
 			limit = {
-				owned_by = ROOT
 				religion = the_minoriko
 				check_variable = {
 					which = the_aki_religions_monoriko_province_im_var
@@ -73,22 +75,25 @@ THE_AKI_monoriko_monthly_effects = {
 			}
 		}
 	}
-	
 }
-THE_AKI_monoriko_won_war_var_effects = {
+
+THE_AKI_on_war_won_scripted_effects = {
 	if = {
 		limit = {
 			OR = {
 				tag = AKI
 				was_tag = AKI
 			}
-		 }
-		 change_variable = {
+		}
+		change_variable = {
 			which = the_aki_won_war_im_var
 			value = 1
-		 }
+		}
 	}
 }
+
+
+
 THE_AKI_clr_all_province_buff_effects = {
 	remove_province_modifier = THE_AKI_province_religions_v1_buff
 	remove_province_modifier = THE_AKI_province_religions_v2_buff

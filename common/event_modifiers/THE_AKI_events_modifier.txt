@@ -49,7 +49,7 @@ THE_AKI_harvest_festvial_mission_buff = {
 THE_AKI_with_myo_mission_buff = {
 	tolerance_own = 1
 	missionaries = 1
-	yearly_patriarch_authority = 0.5
+	yearly_patriarch_authority = 0.01
 }
 #仓廪流金
 THE_AKI_with_army_gather_in_autumn_mission_buff = {
@@ -65,7 +65,7 @@ THE_AKI_with_autumn_tour_mission_buff = {
 #沃野开耕
 THE_AKI_fertle_fields_mission_buff = {
 	development_cost_modifier = -0.10
-	idea_cost = -0.05
+	idea_cost = -0.15
 }
 #巫女
 THE_AKI_hoho_fields_mission_buff = {
@@ -79,7 +79,7 @@ THE_AKI_land_of_field_buff = {
 	reform_progress_growth = 0.15
 }
 THE_AKI_aut_of_abundance_mission_buff = {
-	THE_AKI_is_prosperous_province_custom_modifier = 0.20
+	THE_AKI_is_prosperous_province_custom_modifier = 0.5
 	development_cost = -0.20
 	governing_capacity_modifier = 0.25
 }

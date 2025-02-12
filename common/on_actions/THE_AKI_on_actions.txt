@@ -1,6 +1,11 @@
-on_yearly_pulse = {
-	THE_AKI_monoriko_monthly_effects = yes        
+on_startup = {
+	THE_AKI_on_startup_scripted_effects = yes
 }
+
+on_yearly_pulse = {
+	THE_AKI_on_yearly_pulse_scripted_effects = yes        
+}
+
 on_war_won = {
-	THE_AKI_monoriko_won_war_var_effects = yes
+	THE_AKI_on_war_won_scripted_effects = yes
 }

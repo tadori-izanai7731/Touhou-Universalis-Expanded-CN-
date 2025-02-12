@@ -4,7 +4,7 @@ THE_AKI_branch_1 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = AKI } 
-
+	
 	THE_AKI_army_and_leaves = {
 		icon = mission_unknown_mission
 		position = 1
@@ -12,16 +12,16 @@ THE_AKI_branch_1 = {
 			OR = {
 				province_id = 5134
 			}
-		 } 
-
+		} 
+		
 		trigger = { 
 			OR = {
 				army_size = 15
 				army_size_percentage = 1.00
 			}
 			has_mil_advisor = yes
-		 } 
-
+		} 
+		
 		effect = { 
 			Northern_fairy_land = {
 				limit = {
@@ -38,9 +38,9 @@ THE_AKI_branch_1 = {
 				name = THE_AKI_recruit_army_buff
 				duration = 7300
 			}
-		 } 
+		} 
 	}
-
+	
 	THE_AKI_sao_ling = {
 		icon = mission_unknown_mission
 		position = 2
@@ -49,14 +49,14 @@ THE_AKI_branch_1 = {
 			OR = {
 				province_id = 4974
 			}
-		 } 
-
+		} 
+		
 		trigger = { 
 			4974 = {
 				owned_by = ROOT
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			capital_scope = {
 				add_base_production = 2
@@ -66,33 +66,13 @@ THE_AKI_branch_1 = {
 			add_casus_belli = {
 				target = YOF
 				type = cb_vassalize_mission
-				month = 600
+				months = 600
 			}
-			Eastern_youkai_forest = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			Great_youkai_forest = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-		 } 
+			Eastern_youkai_forest = { add_permanent_claim = ROOT }
+			Great_youkai_forest = { add_permanent_claim = ROOT }
+		} 
 	}
-
+	
 	THE_AKI_yof_god_in_forest = {
 		icon = mission_unknown_mission
 		position = 4
@@ -102,8 +82,13 @@ THE_AKI_branch_1 = {
 				area = Eastern_youkai_forest
 				area = Great_youkai_forest
 			}
-		 } 
-
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = { development = 25 }
+				NOT = { is_prosperous = yes }
+			}
+		} 
+		
 		trigger = { 
 			num_of_provinces_owned_or_owned_by_subjects_with = {
 				value = 8
@@ -112,13 +97,13 @@ THE_AKI_branch_1 = {
 					area = Great_youkai_forest
 				}
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			add_army_tradition = 35
 			custom_tooltip = THE_AKI_yof_god_c_tt1
 			tooltip = {
-				add_country_modifier = {
+				add_province_modifier = {
 					name = THE_AKI_youkai_forest_mission_buff
 					duration = 7300
 				}
@@ -130,7 +115,7 @@ THE_AKI_branch_1 = {
 							area = Eastern_youkai_forest
 							area = Great_youkai_forest
 						}
-						owned_by = ROOT
+						country_or_non_sovereign_subject_holds = ROOT
 					}
 					add_province_modifier = {
 						name = THE_AKI_youkai_forest_mission_buff
@@ -138,9 +123,9 @@ THE_AKI_branch_1 = {
 					}
 				}
 			}
-		 } 
+		} 
 	}
-
+	
 	THE_AKI_leaves_with_alliance = {
 		icon = mission_unknown_mission
 		position = 5
@@ -150,20 +135,23 @@ THE_AKI_branch_1 = {
 				area = Eastern_youkai_forest
 				area = Great_youkai_forest
 			}
-		 } 
-
+		} 
+		
 		trigger = { 
-			all_province = {
-				OR = {
-					area = Eastern_youkai_forest
-					area = Great_youkai_forest
-				}
-				is_prosperous = yes
+			Eastern_youkai_forest = {
+				type = all
 				development = 25
-				owned_by = ROOT
+				is_prosperous = yes
+				country_or_non_sovereign_subject_holds = ROOT
 			}
-		 } 
-
+			Great_youkai_forest = {
+				type = all
+				development = 25
+				is_prosperous = yes
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+		
 		effect = { 
 			add_country_modifier = {
 				name = THE_AKI_youkai_forest_mission_2_buff
@@ -172,45 +160,39 @@ THE_AKI_branch_1 = {
 			add_adm_power = 100
 			add_dip_power = 100
 			add_mil_power = 100
-		 } 
+		} 
 	}
-
+	
 	THE_AKI_army_in_wither_winter = {
 		icon = mission_unknown_mission
 		position = 6
-		provinces_to_highlight = { 
-			OR = {
-				owned_by = ROOT
-			}
-		 } 
-
+		provinces_to_highlight = { } 
+		
 		trigger = { 
-			calc_true_if = {
-				all_province = {
-					owned_by = ROOT
-					has_fort_building_trigger = yes
-				}
-				amount = 4
+			num_of_owned_provinces_with = {
+				value = 4
+				has_fort_building_trigger = yes
 			}
 			has_government_power = {
 				mechanic_type = THE_AKI_harvest_autumn_mechanic
 				power_type = THE_AKI_harvest_autumn_mechanic_power
 				value = 10
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			create_general = { tradition = 60 add_siege = 1 culture = ROOT }
-			add_army_tradition = 15
-		 } 
+			add_army_tradition = 20
+			add_army_professionalism = 0.1
+		} 
 	}
-
+	
 	THE_AKI_wither_autunm_1 = {
 		icon = mission_unknown_mission
 		position = 7
 		required_missions = { THE_AKI_army_in_wither_winter } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = { 
 			monthly_mil = 10
 			custom_trigger_tooltip = {
@@ -225,12 +207,13 @@ THE_AKI_branch_1 = {
 				power_type = THE_AKI_harvest_autumn_mechanic_power
 				value = 50
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			custom_tooltip = THE_AKI_wither_autunm_mission_c_tt
-			add_army_professionalism = 0.10
-		 } 
+			add_army_tradition = 30
+			add_army_professionalism = 0.2
+		} 
 	}
 }
 THE_AKI_branch_2 = {
@@ -239,29 +222,25 @@ THE_AKI_branch_2 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = AKI } 
-
+	
 	THE_AKI_army_gather_in_autumn = {
 		icon = mission_unknown_mission
 		position = 1
-		provinces_to_highlight = { 
-			OR = {
-				owned_by = ROOT
-			}
-		 } 
-
+		provinces_to_highlight = { } 
+		
 		trigger = { 
-			army_size = 250
-			total_development = 1000
-		 } 
-
+			army_size = 150
+			total_development = 500
+		} 
+		
 		effect = { 
 			add_country_modifier = {
 				name = THE_AKI_with_army_gather_in_autumn_mission_buff
 				duration = -1
 			}
-		 } 
+		} 
 	}
-
+	
 	THE_AKI_lily_white = {
 		icon = mission_unknown_mission
 		position = 2
@@ -270,95 +249,54 @@ THE_AKI_branch_2 = {
 			OR = {
 				province_id = 5084
 			}
-		 } 
-
+		} 
+		
 		trigger = { 
 			5084 = {
-				owned_by = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			capital_scope = {
-				add_base_production = 2
-				add_base_tax = 2
-				add_base_manpower = 2
+				add_base_production = 3
+				add_base_tax = 3
+				add_base_manpower = 3
 			}
-			Land_of_the_black_doors = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-		 } 
+			Land_of_the_black_doors = { add_permanent_claim = ROOT }
+		} 
 	}
-
+	
 	THE_AKI_with_okina_oki = {
 		icon = mission_unknown_mission
 		position = 3
 		required_missions = { THE_AKI_lily_white } 
 		provinces_to_highlight = { 
-			OR = {
-				area = Land_of_the_black_doors
-			}
-		 } 
-
+			area = Land_of_the_black_doors
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+		
 		trigger = { 
 			Land_of_the_black_doors = {
 				type = all
-				owned_by = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			change_dip = 1
 			add_adm_power = 100
 			add_dip_power = 100
 			add_mil_power = 100
-			Scarlett_domain = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			Scarlet_island = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			Scarlet_mountain = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
+			Scarlett_domain = { add_permanent_claim = ROOT }
+			Scarlet_island = { add_permanent_claim = ROOT }
+			Scarlet_mountain = { add_permanent_claim = ROOT }
 			hidden_effect = {
 				change_heir_dip = 1
 			}
-		 } 
+		} 
 	}
-
+	
 	THE_AKI_with_scr_mission = {
 		icon = mission_unknown_mission
 		position = 5
@@ -369,8 +307,8 @@ THE_AKI_branch_2 = {
 				area = Scarlet_mountain
 				area = Scarlett_domain
 			}
-		 } 
-
+		} 
+		
 		trigger = { 
 			num_of_provinces_owned_or_owned_by_subjects_with = {
 				value = 8
@@ -380,8 +318,8 @@ THE_AKI_branch_2 = {
 					area = Scarlett_domain
 				}
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			add_country_modifier = {
 				name = THE_AKI_consequer_scarlet_mission_buff
@@ -390,9 +328,9 @@ THE_AKI_branch_2 = {
 			add_adm_power = 100
 			add_dip_power = 100
 			add_mil_power = 100
-		 } 
+		} 
 	}
-
+	
 	THE_AKI_tech_and_agriculture = {
 		icon = mission_unknown_mission
 		position = 6
@@ -403,21 +341,34 @@ THE_AKI_branch_2 = {
 				area = Scarlet_mountain
 				area = Scarlett_domain
 			}
-		 } 
-
-		trigger = { 
-			all_province = {
-				OR = {
-					area = Scarlet_island
-					area = Scarlet_mountain
-					area = Scarlett_domain
-				}
-				development = 25
-				owned_by = ROOT
-				is_prosperous = yes
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = { development = 25 }
+				NOT = { is_prosperous = yes }
 			}
-		 } 
-
+		} 
+		
+		trigger = { 
+			Scarlet_island = {
+				type = all
+				development = 25
+				is_prosperous = yes
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			Scarlet_mountain = {
+				type = all
+				development = 25
+				is_prosperous = yes
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			Scarlett_domain = {
+				type = all
+				development = 25
+				is_prosperous = yes
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+		
 		effect = { 
 			add_country_modifier = {
 				name = THE_AKI_tech_and_agriculture_mission_buff
@@ -426,31 +377,47 @@ THE_AKI_branch_2 = {
 			5072 = {
 				center_of_trade = 2
 			}
-		 } 
+		} 
 	}
-
+	
 	THE_AKI_with_wither_autumn_2 = {
 		icon = mission_unknown_mission
 		position = 8
 		required_missions = { THE_AKI_wither_autunm_1 } 
-		provinces_to_highlight = { 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			has_fort_building_trigger = yes
 			OR = {
-				owned_by = ROOT
+				NOT = { is_prosperous = yes }
+				AND = {
+					NOT = { has_province_modifier = THE_AKI_province_religions_v2_buff }
+					NOT = { has_province_modifier = THE_AKI_province_religions_v3_buff }
+					NOT = { has_province_modifier = THE_AKI_province_religions_v4_buff }
+					NOT = { has_province_modifier = THE_AKI_province_religions_v5_buff }
+				}
 			}
-		 } 
-
+		} 
+		
 		trigger = { 
-			calc_true_if = {
+			num_of_owned_provinces_with = {
+				value = 20
 				all_province = {
 					owned_by = ROOT
 					has_fort_building_trigger = yes
-					is_prosperous = yes
-					has_province_modifier = THE_AKI_province_religions_v2_buff
+					is_prosperous = yes	
+					custom_trigger_tooltip = {
+						tooltip = THE_AKI_province_has_level_2_or_higher_modifier_ttt
+						OR = {
+							has_province_modifier = THE_AKI_province_religions_v2_buff
+							has_province_modifier = THE_AKI_province_religions_v3_buff
+							has_province_modifier = THE_AKI_province_religions_v4_buff
+							has_province_modifier = THE_AKI_province_religions_v5_buff
+						}
+					}
 				}
-				amount = 20
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			change_mil = 1
 			add_country_modifier = {
@@ -460,7 +427,7 @@ THE_AKI_branch_2 = {
 			hidden_effect = {
 				change_heir_mil = 1
 			}
-		 } 
+		} 
 	}
 }
 THE_AKI_branch_3 = {
@@ -469,44 +436,39 @@ THE_AKI_branch_3 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = AKI } 
-
+	
 	THE_AKI_bloom_of_rice_ears = {
 		icon = mission_unknown_mission
 		position = 1
-		provinces_to_highlight = { 
-			OR = {
-				province_id = 5134
-			}
-		 } 
-
+		provinces_to_highlight = { } 
+		
 		trigger = { 
 			monthly_income = 15
-		 } 
-
+		} 
+		
 		effect = { 
 			add_adm_power = 100
 			add_government_reform = THE_AKI_harvest_and_autumn_reform
-		 } 
+		} 
 	}
-
+	
 	THE_AKI_sprouts_and_rebirths = {
 		icon = mission_unknown_mission
 		position = 3
 		required_missions = { THE_AKI_lily_white } 
 		provinces_to_highlight = { 
-			OR = {
-				province_id = 5084
-			}
-		 } 
-
+			province_id = 5084
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+		
 		trigger = { 
 			5084 = {
-				owned_by = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 				development = 23
 				has_production_building_trigger = yes	
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			add_country_modifier = {
 				name = THE_AKI_sprouts_and_rebirths_mission_buff
@@ -515,9 +477,9 @@ THE_AKI_branch_3 = {
 			5084 = {
 				center_of_trade = 2
 			}
-		 } 
+		} 
 	}
-
+	
 	THE_AKI_divine_virtue = {
 		icon = mission_unknown_mission
 		position = 5
@@ -526,34 +488,31 @@ THE_AKI_branch_3 = {
 			THE_AKI_sprouts_and_rebirths
 		}
 		provinces_to_highlight = { 
-			OR = {
-				owned_by = ROOT
-			}
-		 } 
-
+			province_id = 5134
+		} 
+		
 		trigger = { 
 			5134 = {
 				development = 50
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			custom_tooltip = THE_AKI_mission_divine_virtue_c_tt1
 			add_prestige = 50
-			add_splendor = 100
-		 } 
+			add_splendor = 300
+		} 
 	}
-
+	
 	THE_AKI_faith_on_earth = {
 		icon = mission_unknown_mission
 		position = 6
 		required_missions = { THE_AKI_divine_virtue } 
 		provinces_to_highlight = { 
-			OR = {
-				owned_by = ROOT
-			}
-		 } 
-
+			country_or_non_sovereign_subject_holds = ROOT
+			NOT = { religion = the_minoriko }
+		} 
+		
 		trigger = { 
 			calc_true_if = {
 				all_province = {
@@ -561,45 +520,15 @@ THE_AKI_branch_3 = {
 				}
 				amount = 25
 			}
-		 } 
-
+		}
+		
 		effect = { 
-			Myouren_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			Northern_myouren_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			Eastern_myouren_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-		 } 
+			Myouren_state = { add_permanent_claim = ROOT }
+			Northern_myouren_state = { add_permanent_claim = ROOT }
+			Eastern_myouren_state = { add_permanent_claim = ROOT }
+		} 
 	}
-
+	
 	THE_AKI_with_myo_mission = {
 		icon = mission_unknown_mission
 		position = 7
@@ -610,11 +539,9 @@ THE_AKI_branch_3 = {
 				area = Eastern_myouren_state
 				area = Northern_myouren_state
 			}
-			NOT = {
-				owned_by = ROOT
-			}
-		 } 
-
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+		
 		trigger = { 
 			num_of_provinces_owned_or_owned_by_subjects_with = {
 				value = 6
@@ -627,16 +554,16 @@ THE_AKI_branch_3 = {
 			4987 = {
 				owned_by = ROOT
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			add_country_modifier = {
 				name = THE_AKI_with_myo_mission_buff 
 				duration = -1
 			}
-			add_adm_power = 100
-			add_dip_power = 100
-			add_mil_power = 100
+			add_adm_power = 200
+			add_dip_power = 200
+			add_mil_power = 200
 			hidden_effect = {
 				every_province = {
 					limit = {
@@ -645,7 +572,7 @@ THE_AKI_branch_3 = {
 					change_religion = the_minoriko
 				}
 			}
-		 } 
+		} 
 	}
 }
 THE_AKI_branch_4 = {
@@ -654,21 +581,21 @@ THE_AKI_branch_4 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = AKI } 
-
+	
 	THE_AKI_build_shrine = {
 		icon = mission_unknown_mission
 		position = 1
 		provinces_to_highlight = { 
 			owned_by = ROOT
-		 } 
-
+		} 
+		
 		trigger = { 
 			num_of_provinces_owned_or_owned_by_subjects_with = {
 				value = 8
 				has_tax_building_trigger = yes
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			add_years_of_income = 0.5
 			add_dip_power = 100
@@ -680,9 +607,9 @@ THE_AKI_branch_4 = {
 			hidden_effect = {
 				change_heir_mil = 1
 			}
-		 } 
+		} 
 	}
-
+	
 	THE_AKI_reset_faith = {
 		icon = mission_unknown_mission
 		position = 2
@@ -691,44 +618,24 @@ THE_AKI_branch_4 = {
 			THE_AKI_bloom_of_rice_ears
 		}
 		provinces_to_highlight = {  } 
-
+		
 		trigger = { 
 			OR = {
 				diplomatic_reputation = 3
 				num_of_allies = 2
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			custom_tooltip = THE_AKI_unlock_sell_potato_tt
-			add_adm_power = 75
-			add_dip_power = 75
-			add_mil_power = 75
-			Human_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			Kourindou_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-		 } 
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			Human_state = { add_permanent_claim = ROOT }
+			Kourindou_state = { add_permanent_claim = ROOT }
+		} 
 	}
-
+	
 	THE_AKI_potato_covenant = {
 		icon = mission_unknown_mission
 		position = 3
@@ -738,8 +645,9 @@ THE_AKI_branch_4 = {
 				area = Human_state
 				area = Kourindou_state
 			}
-		 } 
-
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+		
 		trigger = { 
 			OR = {
 				AND = {
@@ -764,16 +672,16 @@ THE_AKI_branch_4 = {
 					}
 				}
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			custom_tooltip = THE_AKI_mission_potato_covenant_c_tt
-			add_adm_power = 50
-			add_dip_power = 50
-			add_mil_power = 50
-		 } 
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+		} 
 	}
-
+	
 	THE_AKI_harvest_festival = {
 		icon = mission_unknown_mission
 		position = 4
@@ -782,8 +690,8 @@ THE_AKI_branch_4 = {
 			OR = {
 				owned_by = ROOT
 			}
-		 } 
-
+		} 
+		
 		trigger = { 
 			custom_trigger_tooltip = {
 				tooltip = the_aki_pick_province_buttom_3_im_var_c_tt
@@ -792,88 +700,70 @@ THE_AKI_branch_4 = {
 					value = 8
 				}
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			add_country_modifier = {
 				name = THE_AKI_harvest_festvial_mission_buff
 				duration = 7300
 			}
-		 } 
+		} 
 	}
-
+	
 	THE_AKI_tour_in_autumn = {
 		icon = mission_unknown_mission
 		position = 6
 		required_missions = { THE_AKI_harvest_festival } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = { 
-			calc_true_if = {
-				amount = 1
-				all_province = {
-					owned_by = ROOT
-					has_province_modifier = THE_AKI_province_religions_v3_buff
+			capital_scope = {
+				custom_trigger_tooltip = {
+					tooltip = THE_AKI_province_has_level_3_or_higher_modifier_ttt
+					OR = {
+						has_province_modifier = THE_AKI_province_religions_v3_buff
+						has_province_modifier = THE_AKI_province_religions_v4_buff
+						has_province_modifier = THE_AKI_province_religions_v5_buff
+					}
 				}
-				
 			}
-		 } 
-
+		} 
+		
 		effect = { 
-			custom_tooltip = THE_AKI_tour_in_autumn_mission_tt
-			tooltip = {
+			capital_scope = {
 				add_province_modifier = {
 					name = THE_AKI_with_autumn_tour_mission_buff
 					duration = -1
 				}
 			}
-			hidden_effect = {
-				random_province = {
-					limit = {
-						has_province_modifier = THE_AKI_province_religions_v3_buff
-					}
-					add_province_modifier = {
-						name = THE_AKI_with_autumn_tour_mission_buff
-						duration = -1
-					}
-				}
-			}
-			
+			add_patriarch_authority = 20
 			add_adm_power = 100
 			add_dip_power = 100
 			add_mil_power = 100
-		 } 
+		} 
 	}
-
+	
 	THE_AKI_autumn_of_abundance = {
 		icon = mission_unknown_mission
 		position = 8
 		required_missions = { THE_AKI_land_of_field } 
-		provinces_to_highlight = { 
-			OR = {
-				owned_by = ROOT
-			}
-		 } 
-
+		provinces_to_highlight = { } 
+		
 		trigger = { 
-			calc_true_if = {
-				all_province = {
-					owned_by = ROOT
-					development = 60
-					has_production_building_trigger = yes
-					has_province_modifier = THE_AKI_province_religions_v4_buff
-				}
-				amount = 1
+			any_owned_province = {
+				development = 60
+				has_production_building_trigger = yes
+				has_province_modifier = THE_AKI_province_religions_v4_buff
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			custom_tooltip = THE_AKI_autumn_of_abundance_mission_c_tt
 			add_country_modifier = {
 				name = THE_AKI_aut_of_abundance_mission_buff
 				duration = -1
 			}
-		 } 
+		} 
 	}
 }
 THE_AKI_branch_5 = {
@@ -882,7 +772,7 @@ THE_AKI_branch_5 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = AKI } 
-
+	
 	THE_AKI_wild_field = {
 		icon = mission_unknown_mission
 		position = 1
@@ -890,93 +780,62 @@ THE_AKI_branch_5 = {
 			OR = {
 				owned_by = ROOT
 			}
-		 } 
-
+		} 
+		
 		trigger = { 
-			calc_true_if = {
-				all_province = {
-					owned_by = ROOT
-					development = 10
-				}
-				amount = 10
-			} 
-		 } 
-
+			num_of_owned_provinces_with = {
+				value = 10
+				development = 10
+			}
+		} 
+		
 		effect = { 
 			add_years_of_income = 1
 			add_stability = 1
 			add_splendor = 200
-		 } 
+		} 
 	}
-
+	
 	THE_AKI_fertle_fields = {
 		icon = mission_unknown_mission
 		position = 3
 		required_missions = { THE_AKI_wild_field } 
 		provinces_to_highlight = { 
-			OR = {
-				owned_by = ROOT
-			}
-		 } 
-
+			owned_by = ROOT
+			NOT = { development = 20 }
+		} 
+		
 		trigger = { 
-			calc_true_if = {
-				all_province = {
-					owned_by = ROOT
-					development = 20
+			num_of_owned_provinces_with = {
+				value = 10
+				development = 20
+			}
+			num_of_owned_provinces_with = {
+				value = 5
+				custom_trigger_tooltip = {
+					tooltip = THE_AKI_province_has_level_1_or_higher_modifier_ttt
+					OR = {
+						has_province_modifier = THE_AKI_province_religions_v1_buff
+						has_province_modifier = THE_AKI_province_religions_v2_buff
+						has_province_modifier = THE_AKI_province_religions_v3_buff
+						has_province_modifier = THE_AKI_province_religions_v4_buff
+						has_province_modifier = THE_AKI_province_religions_v5_buff
+					}
 				}
-				amount = 10
-			} 
-			calc_true_if = {
-				all_province = {
-					owned_by = ROOT
-					has_province_modifier = THE_AKI_province_religions_v1_buff
-				}
-				amount = 5
-			} 
-		 } 
-
+			}
+		} 
+		
 		effect = { 
 			add_country_modifier = {
 				name = THE_AKI_fertle_fields_mission_buff
-				duration = 3650
+				duration = 7300
 			}
-			Hakurei_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			Hakurei_peninsula_state = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			Hakurei_western_coast = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-		 } 
+			Hakurei_state = { add_permanent_claim = ROOT }
+			Hakurei_peninsula_state = { add_permanent_claim = ROOT }
+			Hakurei_western_coast = { add_permanent_claim = ROOT }
+		} 
 	}
-
+	
 	THE_AKI_hoho_field = {
 		icon = mission_unknown_mission
 		position = 4
@@ -987,11 +846,9 @@ THE_AKI_branch_5 = {
 				area = Hakurei_state
 				area = Hakurei_western_coast
 			}
-			NOT = {
-				owned_by = ROOT
-			}
-		 } 
-
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+		
 		trigger = { 
 			num_of_provinces_owned_or_owned_by_subjects_with = {
 				value = 8
@@ -1001,15 +858,15 @@ THE_AKI_branch_5 = {
 					area = Hakurei_western_coast
 				}
 			}
-		 } 
-
+		} 
+		
 		effect = { 
-			add_adm_power = 150
-			add_dip_power = 150
-			add_mil_power = 150
-		 } 
+			add_adm_power = 200
+			add_dip_power = 200
+			add_mil_power = 200
+		} 
 	}
-
+	
 	THE_AKI_abundant_fields = {
 		icon = mission_unknown_mission
 		position = 5
@@ -1020,81 +877,107 @@ THE_AKI_branch_5 = {
 				area = Hakurei_state
 				area = Hakurei_western_coast
 			}
-			owned_by = ROOT
-		 } 
-
-		trigger = { 
-			calc_true_if = {
-				all_province = {
-					OR = {
-						area = Hakurei_peninsula_state
-						area = Hakurei_state
-						area = Hakurei_western_coast
-					}
-					owned_by = ROOT
-					development = 30
-					is_prosperous = yes
-					has_province_modifier = THE_AKI_province_religions_v2_buff
-				}
-				amount = 5
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { development = 30 }
+				NOT = { is_prosperous = yes }
 			}
-		 } 
-
+			
+		} 
+		
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 5
+				OR = {
+					area = Hakurei_peninsula_state
+					area = Hakurei_state
+					area = Hakurei_western_coast
+				}
+				development = 30
+				is_prosperous = yes
+				custom_trigger_tooltip = {
+					tooltip = THE_AKI_province_has_level_2_or_higher_modifier_ttt
+					OR = {
+						has_province_modifier = THE_AKI_province_religions_v2_buff
+						has_province_modifier = THE_AKI_province_religions_v3_buff
+						has_province_modifier = THE_AKI_province_religions_v4_buff
+						has_province_modifier = THE_AKI_province_religions_v5_buff
+					}
+				}
+			}
+		} 
+		
 		effect = { 
 			add_country_modifier = {
 				name = THE_AKI_hoho_fields_mission_buff
 				duration = -1
 			}
-		 } 
+		} 
 	}
-
+	
 	THE_AKI_jin_tao_mi_lang = {
 		icon = mission_unknown_mission
 		position = 6
 		provinces_to_highlight = { 
+			owned_by = ROOT
 			OR = {
-				owned_by = ROOT
+				NOT = { development = 40 }
+				NOT = { is_prosperous = yes }
 			}
-		 } 
-
+		} 
+		
 		trigger = { 
-			calc_true_if = {
-				all_province = {
-					owned_by = ROOT
-					is_prosperous = yes
-					development = 40
-					has_province_modifier = THE_AKI_province_religions_v3_buff
+			num_of_owned_provinces_with = {
+				value = 5
+				development = 40
+				is_prosperous = yes
+				custom_trigger_tooltip = {
+					tooltip = THE_AKI_province_has_level_3_or_higher_modifier_ttt
+					OR = {
+						has_province_modifier = THE_AKI_province_religions_v3_buff
+						has_province_modifier = THE_AKI_province_religions_v4_buff
+						has_province_modifier = THE_AKI_province_religions_v5_buff
+					}
 				}
-				amount = 5
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			add_prestige = 200
-			add_splendor = 200
-		 } 
+			add_splendor = 800
+		} 
 	}
-
+	
 	THE_AKI_land_of_field = {
 		icon = mission_unknown_mission
 		position = 7
 		required_missions = { THE_AKI_jin_tao_mi_lang } 
-		provinces_to_highlight = {  } 
-
+		provinces_to_highlight = {
+			area = Kourindou_state
+		} 
+		
 		trigger = { 
 			Kourindou_state = {
 				type = all
-				has_production_building_trigger = yes
+				owned_by = ROOT
 				development = 40
-				has_country_modifier = THE_AKI_province_religions_v3_buff
+				has_production_building_trigger = yes
+				custom_trigger_tooltip = {
+					tooltip = THE_AKI_province_has_level_3_or_higher_modifier_ttt
+					OR = {
+						has_province_modifier = THE_AKI_province_religions_v3_buff
+						has_province_modifier = THE_AKI_province_religions_v4_buff
+						has_province_modifier = THE_AKI_province_religions_v5_buff
+					}
+				}
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			add_country_modifier = {
 				name = THE_AKI_land_of_field_buff 
 				duration = -1
 			}
-		 } 
+		} 
 	}
 }
