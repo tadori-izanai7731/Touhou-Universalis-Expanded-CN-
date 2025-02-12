@@ -852,9 +852,11 @@ custom_button = {
 					was_tag = AKI
 				}
 			}
-			change_variable = {
-				which = the_aki_pick_province_buttom_3_im_var
-				value = 1
+			FROM = {
+				change_variable = {
+					which = the_aki_pick_province_buttom_3_im_var
+					value = 1
+				}
 			}
 		}
 	}
