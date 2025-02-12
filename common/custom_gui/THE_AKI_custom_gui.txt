@@ -468,19 +468,25 @@ custom_button = {
 						religion = the_minoriko
 					}
 				}
-				add_patriarch_authority = 0.05
+				FROM = {
+					add_patriarch_authority = 0.05
+				}
 			}
 			if = {
 				limit = { 
-					OR = {
-						tag = AKI
-						was_tag = AKI
-					}
+					FROM = {
+						OR = {
+							tag = AKI
+							was_tag = AKI
+						}
+					}	
 				}
-				add_government_power = {
-					mechanic_type = THE_AKI_harvest_autumn_mechanic
-					power_type = THE_AKI_harvest_autumn_mechanic_power
-					value = -5
+				FROM = {
+					add_government_power = {
+						mechanic_type = THE_AKI_harvest_autumn_mechanic
+						power_type = THE_AKI_harvest_autumn_mechanic_power
+						value = -5
+					}
 				}
 			}
 		}
@@ -529,19 +535,25 @@ custom_button = {
 						religion = the_minoriko
 					}
 				}
-				add_patriarch_authority = 0.05
+				FROM = {
+					add_patriarch_authority = 0.05
+				}
 			}
 			if = {
 				limit = { 
-					OR = {
-						tag = AKI
-						was_tag = AKI
-					}
+					FROM = {
+						OR = {
+							tag = AKI
+							was_tag = AKI
+						}
+					}	
 				}
-				add_government_power = {
-					mechanic_type = THE_AKI_harvest_autumn_mechanic
-					power_type = THE_AKI_harvest_autumn_mechanic_power
-					value = -5
+				FROM = {
+					add_government_power = {
+						mechanic_type = THE_AKI_harvest_autumn_mechanic
+						power_type = THE_AKI_harvest_autumn_mechanic_power
+						value = -5
+					}
 				}
 			}
 		}
@@ -590,19 +602,25 @@ custom_button = {
 						religion = the_minoriko
 					}
 				}
-				add_patriarch_authority = 0.05
+				FROM = {
+					add_patriarch_authority = 0.05
+				}
 			}
 			if = {
 				limit = { 
-					OR = {
-						tag = AKI
-						was_tag = AKI
-					}
+					FROM = {
+						OR = {
+							tag = AKI
+							was_tag = AKI
+						}
+					}	
 				}
-				add_government_power = {
-					mechanic_type = THE_AKI_harvest_autumn_mechanic
-					power_type = THE_AKI_harvest_autumn_mechanic_power
-					value = -5
+				FROM = {
+					add_government_power = {
+						mechanic_type = THE_AKI_harvest_autumn_mechanic
+						power_type = THE_AKI_harvest_autumn_mechanic_power
+						value = -5
+					}
 				}
 			}
 		}
@@ -651,19 +669,25 @@ custom_button = {
 						religion = the_minoriko
 					}
 				}
-				add_patriarch_authority = 0.05
+				FROM = {
+					add_patriarch_authority = 0.05
+				}
 			}
 			if = {
 				limit = { 
-					OR = {
-						tag = AKI
-						was_tag = AKI
-					}
+					FROM = {
+						OR = {
+							tag = AKI
+							was_tag = AKI
+						}
+					}	
 				}
-				add_government_power = {
-					mechanic_type = THE_AKI_harvest_autumn_mechanic
-					power_type = THE_AKI_harvest_autumn_mechanic_power
-					value = -5
+				FROM = {
+					add_government_power = {
+						mechanic_type = THE_AKI_harvest_autumn_mechanic
+						power_type = THE_AKI_harvest_autumn_mechanic_power
+						value = -5
+					}
 				}
 			}
 		}
@@ -715,19 +739,25 @@ custom_button = {
 						religion = the_minoriko
 					}
 				}
-				add_patriarch_authority = 0.05
+				FROM = {
+					add_patriarch_authority = 0.05
+				}
 			}
 			if = {
 				limit = { 
-					OR = {
-						tag = AKI
-						was_tag = AKI
-					}
+					FROM = {
+						OR = {
+							tag = AKI
+							was_tag = AKI
+						}
+					}	
 				}
-				add_government_power = {
-					mechanic_type = THE_AKI_harvest_autumn_mechanic
-					power_type = THE_AKI_harvest_autumn_mechanic_power
-					value = -5
+				FROM = {
+					add_government_power = {
+						mechanic_type = THE_AKI_harvest_autumn_mechanic
+						power_type = THE_AKI_harvest_autumn_mechanic_power
+						value = -5
+					}
 				}
 			}
 		}
@@ -847,9 +877,11 @@ custom_button = {
 		}
 		if = {
 			limit = { 
-				OR = {
-					tag = AKI
-					was_tag = AKI
+				FROM = {
+					OR = {
+						tag = AKI
+						was_tag = AKI
+					}
 				}
 			}
 			FROM = {
