@@ -569,6 +569,69 @@ guiTypes = {
 			moveable = 0
 			Orientation = "UPPER_LEFT"
 
+			#####
+			#THE
+			#####
+			guiButtonType = {
+				name = THE_ROD_province_button_gui
+				position = { x = 155 y = 280 }
+				quadTextureSprite = "GFX_THE_ROD_province_button"
+				# buttonText = SKC_neo_super_express_move_to_province_button_tt
+				# buttonFont = "vic_18"
+				clicksound = "click"
+				scripted = yes
+			}
+
+			guiButtonType = {
+				name = THE_YOF_distribute_hina_dolls_province_button
+				position = { x = 319 y = 187 }
+				quadTextureSprite = "GFX_button_straight_148_46"
+				buttonText = THE_YOF_distribute_hina_dolls_province_button_tt
+				buttonFont = "vic_18"
+				clicksound = "click"
+				scripted = yes
+			}
+
+			guiButtonType = {
+				name = THE_YOF_memorialize_of_hina_province_button
+				position = { x = 319 y = 187 }
+				quadTextureSprite = "GFX_button_straight_148_46"
+				buttonText = THE_YOF_memorialize_of_hina_province_button_tt
+				buttonFont = "vic_18"
+				clicksound = "click"
+				scripted = yes
+			}
+			##AKI
+			##THE_AKI
+			guiButtonType = {
+				name = THE_AKI_province_button1_gui
+				position = { x = 317 y = 200 }
+				quadTextureSprite = "GFX_the_aki_harvest_province_1_button"
+				# buttonText = THE_ALC_province_button1_gui_tt
+				buttonFont = "vic_18"
+				clicksound = "click"
+				scripted = yes
+			}
+			guiButtonType = {
+				name = THE_AKI_province_button2_gui
+				position = { x = 372 y = 200 }
+				quadTextureSprite = "GFX_the_aki_harvest_province_2_button"
+				# buttonText = THE_ALC_province_button1_gui_tt
+				buttonFont = "vic_18"
+				clicksound = "click"
+				scripted = yes
+			}
+			guiButtonType = {
+				name = THE_AKI_province_button3_gui
+				position = { x = 427 y = 200 }
+				quadTextureSprite = "GFX_the_aki_harvest_province_3_button"
+				# buttonText = THE_ALC_province_button1_gui_tt
+				buttonFont = "vic_18"
+				clicksound = "click"
+				scripted = yes
+			}
+
+
 			### Core
 
 
@@ -2550,68 +2613,6 @@ guiTypes = {
 				name = "buildings_button"
 				position = { x=478 y=144}
 				quadTextureSprite ="GFX_build_interface_building_tab"
-			}
-
-			#####
-			#THE
-			#####
-			guiButtonType = {
-				name = THE_ROD_province_button_gui
-				position = { x = 155 y = 280 }
-				quadTextureSprite = "GFX_THE_ROD_province_button"
-				# buttonText = SKC_neo_super_express_move_to_province_button_tt
-				# buttonFont = "vic_18"
-				clicksound = "click"
-				scripted = yes
-			}
-
-			guiButtonType = {
-				name = THE_YOF_distribute_hina_dolls_province_button
-				position = { x = 319 y = 187 }
-				quadTextureSprite = "GFX_button_straight_148_46"
-				buttonText = THE_YOF_distribute_hina_dolls_province_button_tt
-				buttonFont = "vic_18"
-				clicksound = "click"
-				scripted = yes
-			}
-
-			guiButtonType = {
-				name = THE_YOF_memorialize_of_hina_province_button
-				position = { x = 319 y = 187 }
-				quadTextureSprite = "GFX_button_straight_148_46"
-				buttonText = THE_YOF_memorialize_of_hina_province_button_tt
-				buttonFont = "vic_18"
-				clicksound = "click"
-				scripted = yes
-			}
-			##AKI
-			##THE_AKI
-			guiButtonType = {
-				name = THE_AKI_province_button1_gui
-				position = { x = 317 y = 200 }
-				quadTextureSprite = "GFX_the_aki_harvest_province_1_button"
-				# buttonText = THE_ALC_province_button1_gui_tt
-				buttonFont = "vic_18"
-				clicksound = "click"
-				scripted = yes
-			}
-			guiButtonType = {
-				name = THE_AKI_province_button2_gui
-				position = { x = 372 y = 200 }
-				quadTextureSprite = "GFX_the_aki_harvest_province_2_button"
-				# buttonText = THE_ALC_province_button1_gui_tt
-				buttonFont = "vic_18"
-				clicksound = "click"
-				scripted = yes
-			}
-			guiButtonType = {
-				name = THE_AKI_province_button3_gui
-				position = { x = 427 y = 200 }
-				quadTextureSprite = "GFX_the_aki_harvest_province_3_button"
-				# buttonText = THE_ALC_province_button1_gui_tt
-				buttonFont = "vic_18"
-				clicksound = "click"
-				scripted = yes
 			}
 		}
 

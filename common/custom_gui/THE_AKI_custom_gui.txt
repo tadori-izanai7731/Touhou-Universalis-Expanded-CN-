@@ -111,19 +111,19 @@ custom_button = {
 					mission_completed = THE_AKI_autumn_of_abundance
 				}
 			}
-			all_state_province = { 	development = 40 }
+			all_province_in_state = { development = 40 }
 		}
 		else_if = {
 			limit = { any_province_in_state = { has_province_modifier = THE_AKI_province_religions_v3_buff } }
-			all_state_province = { development = 30 }
+			all_province_in_state = { development = 30 }
 		}
 		else_if = {
 			limit = { any_province_in_state = { has_province_modifier = THE_AKI_province_religions_v2_buff } }
-			all_state_province = { development = 20 }
+			all_province_in_state = { development = 20 }
 		}
 		else_if = {
 			limit = { any_province_in_state = { has_province_modifier = THE_AKI_province_religions_v1_buff } }
-			all_state_province = { development = 10 }
+			all_province_in_state = { development = 10 }
 		}
 	} 
 	effect = {
