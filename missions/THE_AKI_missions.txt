@@ -84,8 +84,6 @@ THE_AKI_branch_1 = {
 			}
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				NOT = { development = 25 }
-				NOT = { is_prosperous = yes }
 			}
 		} 
 		
@@ -134,6 +132,11 @@ THE_AKI_branch_1 = {
 			OR = {
 				area = Eastern_youkai_forest
 				area = Great_youkai_forest
+			}
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = { development = 25 }
+				NOT = { is_prosperous = yes }
 			}
 		} 
 		
@@ -753,7 +756,7 @@ THE_AKI_branch_4 = {
 		
 		trigger = { 
 			any_owned_province = {
-				development = 60
+				development = 40
 				has_production_building_trigger = yes
 				has_province_modifier = THE_AKI_province_religions_v4_buff
 			}
@@ -804,13 +807,13 @@ THE_AKI_branch_5 = {
 		required_missions = { THE_AKI_wild_field } 
 		provinces_to_highlight = { 
 			owned_by = ROOT
-			NOT = { development = 20 }
+			NOT = { development = 10 }
 		} 
 		
 		trigger = { 
 			num_of_owned_provinces_with = {
 				value = 10
-				development = 20
+				development = 10
 			}
 			num_of_owned_provinces_with = {
 				value = 5
@@ -885,7 +888,7 @@ THE_AKI_branch_5 = {
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
-				NOT = { development = 30 }
+				NOT = { development = 10 }
 				NOT = { is_prosperous = yes }
 			}
 			
@@ -899,7 +902,7 @@ THE_AKI_branch_5 = {
 					area = Hakurei_state
 					area = Hakurei_western_coast
 				}
-				development = 30
+				development = 10
 				is_prosperous = yes
 				custom_trigger_tooltip = {
 					tooltip = THE_AKI_province_has_level_2_or_higher_modifier_ttt
@@ -927,7 +930,7 @@ THE_AKI_branch_5 = {
 		provinces_to_highlight = { 
 			owned_by = ROOT
 			OR = {
-				NOT = { development = 40 }
+				NOT = { development = 20 }
 				NOT = { is_prosperous = yes }
 			}
 		} 
@@ -935,7 +938,7 @@ THE_AKI_branch_5 = {
 		trigger = { 
 			num_of_owned_provinces_with = {
 				value = 5
-				development = 40
+				development = 20
 				is_prosperous = yes
 				custom_trigger_tooltip = {
 					tooltip = THE_AKI_province_has_level_3_or_higher_modifier_ttt
@@ -966,7 +969,7 @@ THE_AKI_branch_5 = {
 			Kourindou_state = {
 				type = all
 				owned_by = ROOT
-				development = 40
+				development = 20
 				has_production_building_trigger = yes
 				custom_trigger_tooltip = {
 					tooltip = THE_AKI_province_has_level_3_or_higher_modifier_ttt
