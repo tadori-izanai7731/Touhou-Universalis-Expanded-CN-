@@ -3,20 +3,14 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_the_aki_harvest_province_1_button"
 		texturefile = "gfx\\interface\\government_mechanics\\the_aki\\THE_AKI_province_1.dds"
-		loadType = "INGAME"
-		transparencecheck = yes
 	}
 	spriteType = {
 		name = "GFX_the_aki_harvest_province_2_button"
 		texturefile = "gfx\\interface\\government_mechanics\\the_aki\\THE_AKI_province_2.dds"
-		loadType = "INGAME"
-		transparencecheck = yes
 	}
 	spriteType = {
 		name = "GFX_the_aki_harvest_province_3_button"
 		texturefile = "gfx\\interface\\government_mechanics\\the_aki\\THE_AKI_province_3.dds"
-		loadType = "INGAME"
-		transparencecheck = yes
 	}
 	#政府UI
 	spriteType = {
