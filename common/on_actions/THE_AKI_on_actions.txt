@@ -1,3 +1,5 @@
+### _scripted_effects = yes
+
 on_startup = {
 	THE_AKI_on_startup_scripted_effects = yes
 }
@@ -8,4 +10,16 @@ on_yearly_pulse = {
 
 on_war_won = {
 	THE_AKI_on_war_won_scripted_effects = yes
+}
+
+on_adm_development = {
+	THE_AKI_on_adm_development_scripted_effects = yes
+}
+
+on_dip_development = {
+	THE_AKI_on_dip_development_scripted_effects = yes
+}
+
+on_mil_development = {
+	THE_AKI_on_mil_development_scripted_effects = yes
 }

@@ -1,0 +1,24 @@
+defined_text = {
+	name = THE_AKI_province_var_displat_ctt
+	random = no
+	text = {
+		localisation_key = THE_AKI_province_var_display_ctt_0
+		trigger = {
+			NOT = {
+				check_variable = {
+					which = the_aki_religions_monoriko_province_im_var
+					value = 0.01
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = THE_AKI_province_var_display_ctt_x
+		trigger = {
+			check_variable = {
+				which = the_aki_religions_monoriko_province_im_var
+				value = 0.01
+			}
+		}
+	}
+}

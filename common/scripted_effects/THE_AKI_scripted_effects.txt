@@ -58,6 +58,25 @@ THE_AKI_on_yearly_pulse_scripted_effects = {
 				which = the_aki_religions_province_development_var_2
 			}
 		}
+		if = {
+			limit = {
+				has_global_modifier_value = {
+					which = THE_AKI_is_prosperous_province_custom_modifier
+					value = 0.01
+				}
+			}
+			every_owned_province = {
+				export_to_variable = {
+					variable_name = the_aki_modifier_add_monoriko_province_var
+					value = modifier:THE_AKI_is_prosperous_province_custom_modifier
+					who = owner
+				}
+				change_variable = {
+					which = the_aki_religions_monoriko_province_im_var
+					which = the_aki_modifier_add_monoriko_province_var
+				}
+			}
+		}
 		every_owned_province = {
 			limit = {
 				religion = the_minoriko
@@ -92,7 +111,47 @@ THE_AKI_on_war_won_scripted_effects = {
 	}
 }
 
+THE_AKI_on_adm_development_scripted_effects = {
+	if = {
+		limit = { owner = { mission_completed = THE_AKI_tech_and_agriculture } }
+		random = {
+			chance = 50
+			add_base_tax = 1
+		}
+	}
+	if = {
+		limit = { owner = { mission_completed = THE_AKI_sprouts_and_rebirths } }
+		add_prosperity = 5
+	}
+}
 
+THE_AKI_on_dip_development_scripted_effects = {
+	if = {
+		limit = { owner = { mission_completed = THE_AKI_tech_and_agriculture } }
+		random = {
+			chance = 50
+			add_base_production = 1
+		}
+	}
+	if = {
+		limit = { owner = { mission_completed = THE_AKI_sprouts_and_rebirths } }
+		add_prosperity = 5
+	}
+}
+
+THE_AKI_on_mil_development_scripted_effects = {
+	if = {
+		limit = { owner = { mission_completed = THE_AKI_tech_and_agriculture } }
+		random = {
+			chance = 50
+			add_base_manpower = 1
+		}
+	}
+	if = {
+		limit = { owner = { mission_completed = THE_AKI_sprouts_and_rebirths } }
+		add_prosperity = 5
+	}
+}
 
 THE_AKI_clr_all_province_buff_effects = {
 	remove_province_modifier = THE_AKI_province_religions_v1_buff
@@ -100,4 +159,36 @@ THE_AKI_clr_all_province_buff_effects = {
 	remove_province_modifier = THE_AKI_province_religions_v3_buff
 	remove_province_modifier = THE_AKI_province_religions_v4_buff
 	remove_province_modifier = THE_AKI_province_religions_v5_buff
+}
+
+THE_AKI_province_button2_tooltip_scripted_effect = {
+	custom_tooltip = THE_AKI_state_province_tt
+	tooltip = {
+		add_prosperity = 100
+		add_province_modifier = {
+			name = THE_AKI_province_religions_v$level$_buff
+			duration = -1
+		}
+		change_variable = {
+			which = the_aki_religions_monoriko_province_im_var
+			value = -50
+		}
+	}
+}
+
+THE_AKI_province_button2_hidden_scripted_effect = {
+	hidden_effect = {
+		every_province_in_state = {
+			THE_AKI_clr_all_province_buff_effects = yes
+			add_prosperity = 100
+			add_province_modifier = {
+				name = THE_AKI_province_religions_v$level$_buff
+				duration = -1
+			}
+			change_variable = {
+				which = the_aki_religions_monoriko_province_im_var
+				value = -50
+			}
+		}
+	}
 }

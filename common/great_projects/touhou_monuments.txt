@@ -189,8 +189,17 @@ th_monument_hakurei_shrine = {
 		}
 		conditional_modifier = {
 			trigger = {
-				religion = th_hakureishinto
-				has_owner_religion = yes
+				if = {
+					limit = { owner = { NOT = { has_country_flag = THE_hakurei_shrine_extra_modifier_flag } }}
+					religion = th_hakureishinto
+					has_owner_religion = yes
+				}
+				else = {
+					custom_trigger_tooltip = {
+						tooltip = THE_accord_great_project_extra_modifier_by_other_way_tt
+						always = yes
+					}
+				}
 			}
 			modifier = {
 				devotion = 0.5
@@ -219,8 +228,17 @@ th_monument_hakurei_shrine = {
 		}
 		conditional_modifier = {
 			trigger = {
-				religion = th_hakureishinto
-				has_owner_religion = yes
+				if = {
+					limit = { owner = { NOT = { has_country_flag = THE_hakurei_shrine_extra_modifier_flag } }}
+					religion = th_hakureishinto
+					has_owner_religion = yes
+				}
+				else = {
+					custom_trigger_tooltip = {
+						tooltip = THE_accord_great_project_extra_modifier_by_other_way_tt
+						always = yes
+					}
+				}
 			}
 			modifier = {
 				devotion = 1
@@ -249,8 +267,17 @@ th_monument_hakurei_shrine = {
 		}
 		conditional_modifier = {
 			trigger = {
-				religion = th_hakureishinto
-				has_owner_religion = yes
+				if = {
+					limit = { owner = { NOT = { has_country_flag = THE_hakurei_shrine_extra_modifier_flag } }}
+					religion = th_hakureishinto
+					has_owner_religion = yes
+				}
+				else = {
+					custom_trigger_tooltip = {
+						tooltip = THE_accord_great_project_extra_modifier_by_other_way_tt
+						always = yes
+					}
+				}
 			}
 			modifier = {
 				devotion = 1
