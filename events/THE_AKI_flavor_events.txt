@@ -102,9 +102,10 @@ country_event = {
 		name = THE_AKI_flavor_events.3.a
 		random_owned_area = {
 			add_province_modifier = {
-				name = mam_disc_troops_modifier
-				duration = x
+				name = THE_AKI_religion_events_3_province_buff
+				duration = 3650
 			}
+			add_prosperity = 100
 		}
 	}
 }
@@ -181,7 +182,7 @@ country_event = {
 		name = THE_AKI_flavor_events.5.a
 	}
 }
-#秋静叶事件
+#秋静叶--事件
 country_event = {
 	id = THE_AKI_flavor_events.6
 	title = "THE_AKI_flavor_events.6.t"
