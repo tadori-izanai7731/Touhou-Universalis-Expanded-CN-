@@ -136,3 +136,8 @@ THE_AKI_province_religions_v5_buff = {
 	allowed_num_of_buildings = 2
 	allowed_num_of_manufactories = 1
 }
+#作物祝福
+THE_AKI_religion_events_3_province_buff = {
+	trade_goods_size = 0.5
+	local_monthly_devastation = -0.2
+}
