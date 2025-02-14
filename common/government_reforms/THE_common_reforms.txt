@@ -24,23 +24,23 @@ THE_season_secret_power_reform = {
 	}
 	conditional = {
 		allow = { ROOT = { has_country_modifier = THE_common_season_secret_power_spring_modifier } }
-		THE_season_secret_power_spring_custom_attributes = yes
+		custom_attributes = { THE_season_secret_power_spring_custom_attributes = yes }
 	}
 	conditional = {
 		allow = { ROOT = { has_country_modifier = THE_common_season_secret_power_summer_modifier } }
-		THE_season_secret_power_summer_custom_attributes = yes
+		custom_attributes = { THE_season_secret_power_summer_custom_attributes = yes }
 	}
 	conditional = {
 		allow = { ROOT = { has_country_modifier = THE_common_season_secret_power_autumn_modifier } }
-		THE_season_secret_power_autumn_custom_attributes = yes
+		custom_attributes = { THE_season_secret_power_autumn_custom_attributes = yes }
 	}
 	conditional = {
 		allow = { ROOT = { has_country_modifier = THE_common_season_secret_power_winter_modifier } }
-		THE_season_secret_power_winter_custom_attributes = yes
+		custom_attributes = { THE_season_secret_power_winter_custom_attributes = yes }
 	}
 	conditional = {
 		allow = { ROOT = { has_country_modifier = THE_common_season_secret_power_soil_modifier } }
-		THE_season_secret_power_soil_custom_attributes = yes
+		custom_attributes = { THE_season_secret_power_soil_custom_attributes = yes }
 	}
 	modifiers = {
 		morale_damage_received = -0.1

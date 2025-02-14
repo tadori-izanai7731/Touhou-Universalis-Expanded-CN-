@@ -1,4 +1,4 @@
-THE_on_government_change_scripted_effect = {
+THE_on_government_change_scripted_effects = {
 	country_event = {
 		id = THE_common_events.1
 	}
@@ -13,6 +13,36 @@ THE_on_government_change_scripted_effect_effects = {
 				has_province_modifier = th_province_overload
 			}
 			remove_province_modifier = th_province_overload
+		}
+	}
+}
+
+THE_on_battle_won_country_scripted_effects = {
+	if = {
+		limit = { has_country_modifier = THE_common_season_secret_power_spring_modifier }
+		change_innovativeness = 0.3
+	}
+	if = {
+		limit = { has_country_modifier = THE_common_season_secret_power_summer_modifier }
+		add_army_professionalism = 0.5
+	}
+	if = {
+		limit = { has_country_modifier = THE_common_season_secret_power_autumn_modifier }
+		add_adm_power = 5
+		add_dip_power = 5
+		add_mil_power = 5
+	}
+	if = {
+		limit = { has_country_modifier = THE_common_season_secret_power_winter_modifier }
+		add_estate_loyalty = {
+			estate = all
+			loyalty = 1
+		}
+	}
+	if = {
+		limit = { has_country_modifier = THE_common_season_secret_power_soil_modifier }
+		FROM = {
+			add_corruption = 1
 		}
 	}
 }

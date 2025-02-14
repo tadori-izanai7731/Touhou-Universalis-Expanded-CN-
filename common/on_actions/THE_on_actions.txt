@@ -27,5 +27,9 @@ on_mercenary_recruited = {
 }
 
 on_government_change = {
-	THE_on_government_change_scripted_effect = yes
+	THE_on_government_change_scripted_effects = yes
+}
+
+on_battle_won_country = {
+	THE_on_battle_won_country_scripted_effect = yes
 }
