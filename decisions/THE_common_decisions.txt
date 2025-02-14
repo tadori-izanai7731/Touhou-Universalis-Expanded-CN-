@@ -1,0 +1,22 @@
+country_decisions = {
+	THE_common_season_secret_power_decision = {
+		potential = {
+			has_government_attribute = THE_season_secret_power_custom_attributes
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = THE_have_no_seasen_equipment_ttt
+				NOT = { has_country_modifier = THE_common_season_secret_power_spring_modifier }
+				NOT = { has_country_modifier = THE_common_season_secret_power_summer_modifier }
+				NOT = { has_country_modifier = THE_common_season_secret_power_autumn_modifier }
+				NOT = { has_country_modifier = THE_common_season_secret_power_winter_modifier }
+				NOT = { has_country_modifier = THE_common_season_secret_power_soil_modifier }
+			}
+		}
+		effect = {
+			country_event = {
+				id = THE_common_events.2
+			}
+		}
+	}
+}

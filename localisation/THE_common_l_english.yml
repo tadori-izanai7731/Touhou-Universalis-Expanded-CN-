@@ -16,6 +16,15 @@
  mechanic_THE_forbid_form_gensokyan_decision_custom_attributes_yes: "NAQ¸‹§Y0‰^ó`aNw0§!³Q®‹0"
  mechanic_THE_forbid_form_fairy_utopia_decision_custom_attributes_yes: "NAQ¸‹§Y0ú^b–Y¾|LNXb¦0§!³Q®‹0"
  yokari_forest_mechanic: "„SÐ„v.Ï…"
+ THE_season_secret_power_reform: "cR‚‚KNØy›R"
+ THE_season_secret_power_reform_desc: "vzg„vØy^yidYWåb	gÑS¨RÛVcRVØS„v:V'Y›RÏ‘ÿÊ‘>eÙÍy›RÏ‘ïSåN‰wf>N0WŠb‰^ó`aN¨cPÍ‘ú^0"
+ mechanic_THE_season_secret_power_custom_attributes_yes: "=T(u³Q®‹0cR‚‚ã‰>e0"
+ mechanic_THE_season_secret_power_spring_custom_attributes_yes: "u‹T„vcR‚‚: byVÜw)R·ƒ—V§G0.3§!R°e¦^"
+ mechanic_THE_season_secret_power_summer_custom_attributes_yes: "ípÅ`„vcR‚‚: byVÜw)R·ƒ—V§G0.5%§!F–›QLwN¦^"
+ mechanic_THE_season_secret_power_autumn_custom_attributes_yes: "bœg„vcR‚‚: byVÜw)R·ƒ—V§G5§!£adm£Lˆ?e¹ppe0§G5§!£dip£Y²N¹ppe0§G5§!£mil£›Q‹N¹ppe"
+ mechanic_THE_season_secret_power_winter_custom_attributes_yes: "O.w„vcR‚‚: byVÜw)RžX R§G1%§!Nb	g6–BSàVÚ‹¦^"
+ mechanic_THE_season_secret_power_soil_custom_attributes_yes: "U^T„vcR‚‚: byVÜw)RžX RLe¹e§R0.5§!P%¦^"
+ THE_have_no_seasen_equipment_ttt: "SVMR¡l	g§YcR‚‚ÅˆY§!"
 ###GOVERNMENT_END
 
 
@@ -34,6 +43,12 @@
  THE_hr_tt: "------HeœgR”–¿u------"
  THE_otherwise_tt_yes: "£yes£&TR:"
  THE_otherwise_tt_no: "£no£&TR:"
+ THE_accord_great_project_extra_modifier_by_other_way_tt: "òTÇvQÖN¹eVán³O'YåTz„v˜YHeœgagöN"
+ THE_season_secret_power_reform_change_mode_tt_spring: "0§YcR‚‚KNØy›R§!0lØS:N§Yu‹T„vcR‚‚§!"
+ THE_season_secret_power_reform_change_mode_tt_summer: "0§YcR‚‚KNØy›R§!0lØS:N§YípÅ`„vcR‚‚§!"
+ THE_season_secret_power_reform_change_mode_tt_autumn: "0§YcR‚‚KNØy›R§!0lØS:N§Ybœg„vcR‚‚§!"
+ THE_season_secret_power_reform_change_mode_tt_winter: "0§YcR‚‚KNØy›R§!0lØS:N§YO.w„vcR‚‚§!"
+ THE_season_secret_power_reform_change_mode_tt_soil: "0§YcR‚‚KNØy›R§!0lØS:N§YU^T„vcR‚‚§!"
 ###CUSTOM_TOOLTIP_END
 
 ### MERC_DESC
@@ -51,11 +66,21 @@
  THE_common_events.0.desc: ",g!jÄu=f0N¹eÎ˜‘N/Touhou Universalis Updated (CN)0„vÓbUS!jÄuÿ:NèRtag6RjO†NhQ°e„vûN¡RŒT:g6RÿSIQhûy¨R0R‹NöN	y˜sSïSågwòT6RjO„vtag0\n§Rèla§!:,g!jÄuNvQÖNN¹eÎ˜‘NÓbUS!jÄuv^N|Q¹R0\n\n‚YœgG0Rbugb	gó`‰6RjO„vtagÿ0kÎMRŽVN¹eÎ˜‘NÓbUS²NAm²10211990280"
  THE_common_events.0.option: "ky¨`8n©s	aëV0"
  touhou_setting.13.d: "©s¶R„vD–^SýVïSåNÑSUS"
+
+ THE_common_events.2.title: "cR‚‚ã‰>e"
+ THE_common_events.2.desc: "T7b-N‹kXR„v›RÏ‘òTN³åNÑS¨RVØS ˜†‰‰^ó`aNÿêSýw(uŽNR.4Nöe„vcR‚‚ÅˆY00§YcR‚‚KNØy›R§!0mNO9hncã‰>e„vcR‚‚KN›R9eØSØy›R„vHeœg"
+ THE_common_events.2.a: "ã‰>e%fKN›R"
+ THE_common_events.2.b: "ã‰>eYKN›R"
+ THE_common_events.2.c: "ã‰>eËyKN›R"
+ THE_common_events.2.d: "ã‰>e¬QKN›R"
+ THE_common_events.2.e: "ã‰>eW(uKN›R"
 ###EVENT_END
 
 ###DECISION
  THE_unlock_special_culture_ideas_for_player_decision_title: "0§YN¹eÎ˜‘NÓbUS§!0tõVÄuKmÕ‹³Q®‹"
  THE_unlock_special_culture_ideas_for_player_decision_desc: ""
+ THE_common_season_secret_power_decision_title: "cR‚‚ã‰>e"
+ THE_common_season_secret_power_decision_desc: "ã‰>eT7b-N„vcR‚‚KN›R"
 ###DECISION_END
 
 ###IDEA
@@ -402,3 +427,11 @@
 ###CTT
  THE_MHG_gskidea1_1_ctt_1: "ýV¶RºN›RîOck: §R-40.0%§!"
 ###CTT_END
+
+###MODIFIER
+ THE_common_season_secret_power_spring_modifier: "9TÂb1j±‚"
+ THE_common_season_secret_power_summer_modifier: "ŒRŽY°Q"
+ THE_common_season_secret_power_autumn_modifier: "¯uÂrËyÎ˜"
+ THE_common_season_secret_power_winter_modifier: "gïzÒR¬Q"
+ THE_common_season_secret_power_soil_modifier: "àe^WAm"
+###MODIFIER_END

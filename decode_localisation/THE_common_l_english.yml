@@ -16,6 +16,15 @@ l_english:
  mechanic_THE_forbid_form_gensokyan_decision_custom_attributes_yes: "不允许§Y「幻想乡缘起」§!决议。"
  mechanic_THE_forbid_form_fairy_utopia_decision_custom_attributes_yes: "不允许§Y「建成妖精乌托邦」§!决议。"
  yokari_forest_mechanic: "厄运的贮藏"
+ THE_season_secret_power_reform: "季节之秘力"
+ THE_season_secret_power_reform_desc: "究极的秘神摩多罗拥有发动四季异变的强大力量，释放这种力量可以轻而易举地把幻想乡推倒重建。"
+ mechanic_THE_season_secret_power_custom_attributes_yes: "启用决议「季节解放」"
+ mechanic_THE_season_secret_power_spring_custom_attributes_yes: "生命的季节: 战役胜利获得§G0.3§!创新度"
+ mechanic_THE_season_secret_power_summer_custom_attributes_yes: "热情的季节: 战役胜利获得§G0.5%§!陆军职业度"
+ mechanic_THE_season_secret_power_autumn_custom_attributes_yes: "成果的季节: 战役胜利获得§G5§!£adm£行政点数、§G5§!£dip£外交点数、§G5§!£mil£军事点数"
+ mechanic_THE_season_secret_power_winter_custom_attributes_yes: "休眠的季节: 战役胜利增加§G1%§!所有阶层忠诚度"
+ mechanic_THE_season_secret_power_soil_custom_attributes_yes: "幕后的季节: 战役胜利增加敌方§R0.5§!腐败度"
+ THE_have_no_seasen_equipment_ttt: "当前没有§Y季节装备§!"
 ###GOVERNMENT_END
 
 
@@ -35,6 +44,11 @@ l_english:
  THE_otherwise_tt_yes: "£yes£否则:"
  THE_otherwise_tt_no: "£no£否则:"
  THE_accord_great_project_extra_modifier_by_other_way_tt: "已通过其他方式满足伟大工程的额外效果条件"
+ THE_season_secret_power_reform_change_mode_tt_spring: "「§Y季节之秘力§!」转变为§Y生命的季节§!"
+ THE_season_secret_power_reform_change_mode_tt_summer: "「§Y季节之秘力§!」转变为§Y热情的季节§!"
+ THE_season_secret_power_reform_change_mode_tt_autumn: "「§Y季节之秘力§!」转变为§Y成果的季节§!"
+ THE_season_secret_power_reform_change_mode_tt_winter: "「§Y季节之秘力§!」转变为§Y休眠的季节§!"
+ THE_season_secret_power_reform_change_mode_tt_soil: "「§Y季节之秘力§!」转变为§Y幕后的季节§!"
 ###CUSTOM_TOOLTIP_END
 
 ### MERC_DESC
@@ -52,11 +66,21 @@ l_english:
  THE_common_events.0.desc: "本模组是「东方风云/Touhou Universalis Updated (CN)」的拓展模组，为部分tag制作了全新的任务和机制，将光标移动到事件选项即可查看已制作的tag。\n§R注意§!:本模组与其他东方风云拓展模组并不兼容。\n\n如果遇到bug或有想要制作的tag，欢迎前往东方风云拓展交流群1021199028。"
  THE_common_events.0.option: "祝您游玩愉快。"
  touhou_setting.13.d: "玩家的附属国可以发展"
+
+ THE_common_events.2.title: "季节解放"
+ THE_common_events.2.desc: "后户中残存的力量已不足以发动异变颠覆幻想乡，只能用于创造临时的季节装备。「§Y季节之秘力§!」也会根据解放的季节之力改变秘力的效果"
+ THE_common_events.2.a: "解放春之力"
+ THE_common_events.2.b: "解放夏之力"
+ THE_common_events.2.c: "解放秋之力"
+ THE_common_events.2.d: "解放冬之力"
+ THE_common_events.2.e: "解放土用之力"
 ###EVENT_END
 
 ###DECISION
  THE_unlock_special_culture_ideas_for_player_decision_title: "「§Y东方风云拓展§!」理念组测试决议"
  THE_unlock_special_culture_ideas_for_player_decision_desc: ""
+ THE_common_season_secret_power_decision_title: "季节解放"
+ THE_common_season_secret_power_decision_desc: "解放后户中的季节之力"
 ###DECISION_END
 
 ###IDEA
@@ -403,3 +427,11 @@ l_english:
 ###CTT
  THE_MHG_gskidea1_1_ctt_1: "国家人力修正: §R-40.0%§!"
 ###CTT_END
+
+###MODIFIER
+ THE_common_season_secret_power_spring_modifier: "吹拂樱花"
+ THE_common_season_secret_power_summer_modifier: "完美夏冰"
+ THE_common_season_secret_power_autumn_modifier: "疯狂秋风"
+ THE_common_season_secret_power_winter_modifier: "极端寒冬"
+ THE_common_season_secret_power_soil_modifier: "无序土流"
+###MODIFIER_END

@@ -40,3 +40,76 @@ country_event = {
 		THE_on_government_change_scripted_effect_effects = yes
 	}
 }
+
+country_event = {
+	id = THE_common_events.2
+	title = THE_common_events.2.title
+	desc = THE_common_events.2.desc
+	picture = GENSOKYOSGUARDIAN_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = THE_common_events.2.a
+		add_country_modifier = {
+			name = THE_common_season_secret_power_spring_modifier
+			duration = 7300
+		}
+		custom_tooltip = THE_season_secret_power_reform_change_mode_tt_spring
+		hidden_effect = {
+			set_country_flag = THE_common_season_secret_power_spring_flag
+		}
+	}
+
+	option = {
+		name = THE_common_events.2.b
+		add_country_modifier = {
+			name = THE_common_season_secret_power_summer_modifier
+			duration = 7300
+		}
+		custom_tooltip = THE_season_secret_power_reform_change_mode_tt_summer
+		hidden_effect = {
+			set_country_flag = THE_common_season_secret_power_summer_flag
+		}
+	}
+
+	option = {
+		name = THE_common_events.2.c
+		add_country_modifier = {
+			name = THE_common_season_secret_power_autumn_modifier
+			duration = 7300
+		}
+		custom_tooltip = THE_season_secret_power_reform_change_mode_tt_autumn
+		hidden_effect = {
+			set_country_flag = THE_common_season_secret_power_autumn_flag
+		}
+	}
+
+	option = {
+		name = THE_common_events.2.d
+		add_country_modifier = {
+			name = THE_common_season_secret_power_winter_modifier
+			duration = 7300
+		}
+		custom_tooltip = THE_season_secret_power_reform_change_mode_tt_winter
+		hidden_effect = {
+			set_country_flag = THE_common_season_secret_power_winter_flag
+		}
+	}
+
+	option = {
+		name = THE_common_events.2.e
+		trigger = {
+			has_country_flag = THE_common_season_secret_power_spring_flag
+			has_country_flag = THE_common_season_secret_power_summer_flag
+			has_country_flag = THE_common_season_secret_power_autumn_flag
+			has_country_flag = THE_common_season_secret_power_winter_flag
+		}
+		add_country_modifier = {
+			name = THE_common_season_secret_power_soil_modifier
+			duration = 7300
+		}
+		custom_tooltip = THE_season_secret_power_reform_change_mode_tt_soil
+	}
+
+}

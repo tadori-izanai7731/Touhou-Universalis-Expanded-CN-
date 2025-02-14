@@ -1,0 +1,50 @@
+THE_season_secret_power_reform = {
+	potential = {
+		OR = {
+			has_reform = THE_season_secret_power_reform
+			have_had_reform = THE_season_secret_power_reform
+			tag = HKR
+			tag = CIN
+			tag = TGU
+			tag = FOM
+			tag = AKI
+			tag = LRV
+			tag = LIL
+			tag = SFF
+		}
+	}
+	trigger = {
+		NOT = { exists = OKI }
+		5132 = { country_or_non_sovereign_subject_holds = ROOT }
+	}
+	allow_normal_conversion = yes
+	custom_attributes = {
+		THE_season_secret_power_custom_attributes = yes
+	}
+	conditional = {
+		allow = { ROOT = { has_country_modifier = THE_common_season_secret_power_spring_modifier } }
+		THE_season_secret_power_spring_custom_attributes = yes
+	}
+	conditional = {
+		allow = { ROOT = { has_country_modifier = THE_common_season_secret_power_summer_modifier } }
+		THE_season_secret_power_summer_custom_attributes = yes
+	}
+	conditional = {
+		allow = { ROOT = { has_country_modifier = THE_common_season_secret_power_autumn_modifier } }
+		THE_season_secret_power_autumn_custom_attributes = yes
+	}
+	conditional = {
+		allow = { ROOT = { has_country_modifier = THE_common_season_secret_power_winter_modifier } }
+		THE_season_secret_power_winter_custom_attributes = yes
+	}
+	conditional = {
+		allow = { ROOT = { has_country_modifier = THE_common_season_secret_power_soil_modifier } }
+		THE_season_secret_power_soil_custom_attributes = yes
+	}
+	modifiers = {
+		morale_damage_received = -0.1
+		reinforce_speed = 0.2
+		movement_speed = 0.1
+		backrow_artillery_damage = 0.1
+	}
+}
