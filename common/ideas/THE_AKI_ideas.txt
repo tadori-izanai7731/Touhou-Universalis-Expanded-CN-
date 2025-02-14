@@ -30,7 +30,7 @@ THE_AKI_ideas = {
 	
 	THE_AKI_idea_4 = {
 		improve_relation_modifier = 0.25
-		diplomatic_reputation = 1
+		diplomatic_reputation = 2
 	}
 	
 	THE_AKI_idea_5 = {
@@ -46,5 +46,6 @@ THE_AKI_ideas = {
 	
 	THE_AKI_idea_7= {
 		land_attrition = -0.25 
+		land_forcelimit_modifier = 0.20
 	}
 }
