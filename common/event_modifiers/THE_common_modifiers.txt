@@ -1,19 +1,24 @@
 THE_common_season_secret_power_spring_modifier = {
-
+	global_institution_spread = 0.5
+	technology_cost = -0.05
 }
 
 THE_common_season_secret_power_summer_modifier = {
-
+	manpower_recovery_speed = 0.1
+	army_tradition_from_battle = 0.5
 }
 
 THE_common_season_secret_power_autumn_modifier = {
-
+	development_cost_modifier = -0.1
+	advisor_pool = 3
 }
 
 THE_common_season_secret_power_winter_modifier = {
-
+	global_autonomy = -0.05
+	state_maintenance_modifier = -0.25
 }
 
 THE_common_season_secret_power_soil_modifier = {
-	
+	ae_impact = -0.1
+	defensiveness = 0.2
 }
