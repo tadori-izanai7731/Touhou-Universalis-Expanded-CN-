@@ -34,6 +34,10 @@ THE_AKI_branch_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			create_general = {
+				tradition = 60
+				add_manuever = 2
+			}
 			add_country_modifier = {
 				name = THE_AKI_recruit_army_buff
 				duration = 7300
@@ -447,7 +451,7 @@ THE_AKI_branch_3 = {
 		provinces_to_highlight = { } 
 		
 		trigger = { 
-			monthly_income = 15
+			monthly_income = 10
 		} 
 		
 		effect = { 
@@ -596,7 +600,7 @@ THE_AKI_branch_4 = {
 		
 		trigger = { 
 			num_of_provinces_owned_or_owned_by_subjects_with = {
-				value = 8
+				value = 3
 				has_tax_building_trigger = yes
 			}
 		} 
