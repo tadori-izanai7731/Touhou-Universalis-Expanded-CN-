@@ -13,3 +13,224 @@ country_event = {
 		name = THE_AKI_flavor_events.1.a
 	}
 }
+#秋教事件
+#秋穰子
+#送礼物事件
+country_event = {
+	id = THE_AKI_flavor_events.2
+	title = "THE_AKI_flavor_events.2.t"
+	desc = "THE_AKI_flavor_events.2.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		religion = the_minoriko
+		OR = {
+			NOT = { has_country_flag = th_had_deity_event }
+			had_country_flag = {
+				flag = th_had_deity_event
+				days = 1460
+			}
+		}
+		NOT = { has_country_flag = th_deity_penalty_active }
+		NOT = { has_country_flag = th_having_a_deity_event }
+	}
+
+	immediate = {
+		clr_country_flag = th_had_deity_event
+		set_country_flag = th_having_a_deity_event
+	}
+
+	after = {
+		set_country_flag = th_had_deity_event
+		clr_country_flag = th_having_a_deity_event
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = THE_AKI_flavor_events.2.a
+		if = {
+			limit = {
+				OR = {
+					tag = AKI
+					was_tag = AKI
+				}
+			 }
+			 add_years_of_income = 1.5
+		}
+		else = {
+			add_years_of_income = 1.2
+		}
+	}
+}
+#祝福作物
+country_event = {
+	id = THE_AKI_flavor_events.3
+	title = "THE_AKI_flavor_events.3.t"
+	desc = "THE_AKI_flavor_events.3.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		religion = the_minoriko
+		OR = {
+			NOT = { has_country_flag = th_had_deity_event }
+			had_country_flag = {
+				flag = th_had_deity_event
+				days = 1460
+			}
+		}
+		NOT = { has_country_flag = th_deity_penalty_active }
+		NOT = { has_country_flag = th_having_a_deity_event }
+	}
+
+	immediate = {
+		clr_country_flag = th_had_deity_event
+		set_country_flag = th_having_a_deity_event
+	}
+
+	after = {
+		set_country_flag = th_had_deity_event
+		clr_country_flag = th_having_a_deity_event
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+	option = {
+		name = THE_AKI_flavor_events.3.a
+		random_owned_area = {
+			add_province_modifier = {
+				name = mam_disc_troops_modifier
+				duration = x
+			}
+		}
+	}
+}
+country_event = {
+	id = THE_AKI_flavor_events.4
+	title = "THE_AKI_flavor_events.4.t"
+	desc = "THE_AKI_flavor_events.4.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		religion = the_minoriko
+		OR = {
+			NOT = { has_country_flag = th_had_deity_event }
+			had_country_flag = {
+				flag = th_had_deity_event
+				days = 1460
+			}
+		}
+		NOT = { has_country_flag = th_deity_penalty_active }
+		NOT = { has_country_flag = th_having_a_deity_event }
+	}
+
+	immediate = {
+		clr_country_flag = th_had_deity_event
+		set_country_flag = th_having_a_deity_event
+	}
+
+	after = {
+		set_country_flag = th_had_deity_event
+		clr_country_flag = th_having_a_deity_event
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+	option = {
+		name = THE_AKI_flavor_events.4.a
+	}
+}
+
+country_event = {
+	id = THE_AKI_flavor_events.5
+	title = "THE_AKI_flavor_events.5.t"
+	desc = "THE_AKI_flavor_events.5.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		religion = the_minoriko
+		OR = {
+			NOT = { has_country_flag = th_had_deity_event }
+			had_country_flag = {
+				flag = th_had_deity_event
+				days = 1460
+			}
+		}
+		NOT = { has_country_flag = th_deity_penalty_active }
+		NOT = { has_country_flag = th_having_a_deity_event }
+	}
+
+	immediate = {
+		clr_country_flag = th_had_deity_event
+		set_country_flag = th_having_a_deity_event
+	}
+
+	after = {
+		set_country_flag = th_had_deity_event
+		clr_country_flag = th_having_a_deity_event
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+	option = {
+		name = THE_AKI_flavor_events.5.a
+	}
+}
+#秋静叶事件
+country_event = {
+	id = THE_AKI_flavor_events.6
+	title = "THE_AKI_flavor_events.6.t"
+	desc = "THE_AKI_flavor_events.6.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	option = {
+		name = THE_AKI_flavor_events.6.a
+	}
+}
+country_event = {
+	id = THE_AKI_flavor_events.7
+	title = "THE_AKI_flavor_events.7.t"
+	desc = "THE_AKI_flavor_events.7.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	option = {
+		name = THE_AKI_flavor_events.7.a
+	}
+}
+country_event = {
+	id = THE_AKI_flavor_events.8
+	title = "THE_AKI_flavor_events.8.t"
+	desc = "THE_AKI_flavor_events.8.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	option = {
+		name = THE_AKI_flavor_events.8.a
+	}
+}
+country_event = {
+	id = THE_AKI_flavor_events.9
+	title = "THE_AKI_flavor_events.9.t"
+	desc = "THE_AKI_flavor_events.9.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	option = {
+		name = THE_AKI_flavor_events.9.a
+	}
+}
