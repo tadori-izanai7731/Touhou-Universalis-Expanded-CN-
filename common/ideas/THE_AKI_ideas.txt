@@ -1,0 +1,50 @@
+THE_AKI_ideas = {
+	start = {
+		land_maintenance_modifier = -0.15
+		ae_impact = -0.15
+	}
+
+	bonus = {
+		global_supply_limit_modifier = 0.50
+	}
+
+	trigger = {
+		tag = AKI
+	}
+	free = yes
+	
+	THE_AKI_idea_1 = {
+		global_tax_modifier = 0.33
+		tolerance_own = 2
+	}
+
+	THE_AKI_idea_2 = {
+		infantry_power = 0.10
+		land_morale = 0.10
+	}
+	
+	THE_AKI_idea_3 = {
+		development_cost = -0.30
+		global_prov_trade_power_modifier = 0.30
+	}	
+	
+	THE_AKI_idea_4 = {
+		improve_relation_modifier = 0.25
+		diplomatic_reputation = 1
+	}
+	
+	THE_AKI_idea_5 = {
+		global_trade_goods_size_modifier = 0.30
+		production_efficiency = 0.30
+	}
+	
+	THE_AKI_idea_6 = {
+		global_missionary_strength = 0.02
+		global_unrest = -2
+		global_prosperity_growth = 1.0
+	}
+	
+	THE_AKI_idea_7= {
+		land_attrition = -0.25 
+	}
+}
