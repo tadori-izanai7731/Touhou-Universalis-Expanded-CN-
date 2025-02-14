@@ -451,7 +451,7 @@ THE_AKI_branch_3 = {
 		provinces_to_highlight = { } 
 		
 		trigger = { 
-			monthly_income = 10
+			monthly_income = 15
 		} 
 		
 		effect = { 
@@ -523,11 +523,9 @@ THE_AKI_branch_3 = {
 		} 
 		
 		trigger = { 
-			calc_true_if = {
-				all_province = {
-					religion = the_minoriko
-				}
-				amount = 25
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 25
+				religion = the_minoriko
 			}
 		}
 		
@@ -808,7 +806,10 @@ THE_AKI_branch_5 = {
 	THE_AKI_fertle_fields = {
 		icon = mission_unknown_mission
 		position = 3
-		required_missions = { THE_AKI_wild_field } 
+		required_missions = {
+			THE_AKI_reset_faith
+			THE_AKI_wild_field
+		} 
 		provinces_to_highlight = { 
 			owned_by = ROOT
 			NOT = { development = 10 }
