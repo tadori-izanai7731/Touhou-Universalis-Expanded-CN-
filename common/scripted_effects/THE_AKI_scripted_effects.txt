@@ -30,6 +30,20 @@ THE_AKI_on_yearly_pulse_scripted_effects = {
 		}
 		every_owned_province = {
 			limit = {
+				NOT = {
+					check_variable = {
+						which = the_aki_religions_monoriko_province_im_var
+						value = 0.001
+					}
+				}
+			}
+			set_variable = {
+				which = the_aki_religions_monoriko_province_im_var
+				value = 0
+			}
+		}
+		every_owned_province = {
+			limit = {
 				religion = the_minoriko
 			}
 			#导出省份发展度
@@ -164,7 +178,6 @@ THE_AKI_clr_all_province_buff_effects = {
 THE_AKI_province_button2_tooltip_scripted_effect = {
 	custom_tooltip = THE_AKI_state_province_tt
 	tooltip = {
-		add_prosperity = 100
 		add_province_modifier = {
 			name = THE_AKI_province_religions_v$level$_buff
 			duration = -1
@@ -180,7 +193,6 @@ THE_AKI_province_button2_hidden_scripted_effect = {
 	hidden_effect = {
 		every_province_in_state = {
 			THE_AKI_clr_all_province_buff_effects = yes
-			add_prosperity = 100
 			add_province_modifier = {
 				name = THE_AKI_province_religions_v$level$_buff
 				duration = -1

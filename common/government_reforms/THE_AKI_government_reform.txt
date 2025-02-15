@@ -31,3 +31,30 @@ THE_AKI_harvest_and_autumn_reform = {
 		THE_AKI_harvest_autumn_province_buff_abilities = yes
 	}
 }
+
+
+### LEVEL 6
+THE_AKI_marrage_with_kanako_x3f_reform = {
+	icon = "THE_AKI_government_reform_1"
+	potential = {
+		has_government_attribute = THE_AKI_harvest_autumn_province_buff_abilities
+		OR = {
+			4999 = { country_or_non_sovereign_subject_holds = ROOT }
+			marriage_with = MRY
+		}
+	}
+
+	trigger = {
+		any_owned_province = {
+			has_manufactory_trigger = yes
+		}
+	}
+
+	modifiers = {
+		
+	}
+
+	custom_attributes = {
+		THE_AKI_manufactory_porvince_add_more_monoriko_var_custom_attributes = yes
+	}
+}
