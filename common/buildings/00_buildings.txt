@@ -198,6 +198,14 @@ temple = {
 				hidden = yes
 			}
 		}
+		### THE
+		if = {
+			limit = { FROM = { has_country_flag = THE_AKI_build_tax_building_add_monoriko_var_flag } }
+			change_variable = {
+				which = the_aki_religions_monoriko_province_im_var
+				value = 25
+			}
+		}
 	}
 	on_destroyed = {
 		on_province_tax_building_destroyed_estate_privileges_effect = yes
@@ -1199,6 +1207,14 @@ cathedral = {
 			name = azt_religious_classes
 			duration = -1
 			hidden = yes
+		}
+		### THE
+		if = {
+			limit = { FROM = { has_country_flag = THE_AKI_build_tax_building_add_monoriko_var_flag } }
+			change_variable = {
+				which = the_aki_religions_monoriko_province_im_var
+				value = 50
+			}
 		}
 	}
 	on_destroyed = {

@@ -98,11 +98,20 @@ THE_AKI_branch_1 = {
 					area = Eastern_youkai_forest
 					area = Great_youkai_forest
 				}
+				NOT = { devastation = 0.01 }
 			}
 		} 
 		
 		effect = { 
 			add_army_tradition = 35
+			if = {
+				limit = { YOF = { is_subject_of = ROOT } }
+				YOF = {
+					add_liberty_desire = -50
+					add_historical_friend = ROOT
+				}
+				add_historical_friend = YOF
+			}
 			custom_tooltip = THE_AKI_yof_god_c_tt1
 			tooltip = {
 				add_province_modifier = {
@@ -160,6 +169,26 @@ THE_AKI_branch_1 = {
 		} 
 		
 		effect = { 
+			if = {
+				limit = { YOF = { is_subject_of = ROOT } }
+				if = {
+					limit = {
+						YOF = {
+							has_opinion = {
+								who = ROOT
+								value = 190
+							}
+						}
+					}
+					custom_tooltip = THE_AKI_leaves_with_alliance_effect_case1_tt_yes
+					inherit = YOF
+				}
+				else = {
+					custom_tooltip = THE_AKI_leaves_with_alliance_effect_case1_tt_no
+					tooltip = { inherit = YOF }
+				}
+			}
+
 			add_country_modifier = {
 				name = THE_AKI_youkai_forest_mission_2_buff
 				duration = -1
@@ -530,6 +559,10 @@ THE_AKI_branch_3 = {
 		}
 		
 		effect = { 
+			custom_tooltip = THE_AKI_build_tax_building_add_monoriko_var_tt
+			hidden_effect = {
+				set_country_flag = THE_AKI_build_tax_building_add_monoriko_var_flag
+			}
 			Myouren_state = { add_permanent_claim = ROOT }
 			Northern_myouren_state = { add_permanent_claim = ROOT }
 			Eastern_myouren_state = { add_permanent_claim = ROOT }
