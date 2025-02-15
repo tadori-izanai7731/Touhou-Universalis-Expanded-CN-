@@ -109,7 +109,7 @@ country_event = {
 		}
 	}
 }
-#
+#丰收
 country_event = {
 	id = THE_AKI_flavor_events.4
 	title = "THE_AKI_flavor_events.4.t"
@@ -144,9 +144,46 @@ country_event = {
 	}
 	option = {
 		name = THE_AKI_flavor_events.4.a
+		if = {
+			limit = {
+				OR = {
+					tag = AKI
+					was_tag = AKI
+				}
+			 }
+			 add_government_power = {
+				mechanic_type = THE_AKI_harvest_autumn_mechanic
+				power_type = THE_AKI_harvest_autumn_mechanic_power
+				value = -10
+			 }
+			 random_owned_province = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				random_list = {
+					33 = {
+						add_base_tax = 1
+					}
+					33 = {
+						add_base_production = 1
+					}
+					33 = {
+						add_base_manpower = 1
+					}
+				}
+			 }
+		}
+		else = {
+			random_owned_province = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
 	}
 }
 #秋静叶--事件
+#秋姐妹的经验
 country_event = {
 	id = THE_AKI_flavor_events.5
 	title = "THE_AKI_flavor_events.5.t"
@@ -181,6 +218,33 @@ country_event = {
 	}
 	option = {
 		name = THE_AKI_flavor_events.5.a
+		if = {
+			limit = {
+				OR = {
+					tag = AKI
+					was_tag = AKI
+				}
+			 }
+			 add_adm_power = 50
+			 add_dip_power = 50
+			 add_mil_power = 50
+			 random_list = {
+				10 = {
+					add_adm_power = 50
+				}
+				10 = {
+					add_dip_power = 50
+				}
+				10 = {
+					add_mil_power = 50
+				}
+			 }
+		}
+		else = {
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+		}
 	}
 }
 country_event = {
