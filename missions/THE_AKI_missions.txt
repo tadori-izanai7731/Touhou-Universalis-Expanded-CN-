@@ -111,6 +111,7 @@ THE_AKI_branch_1 = {
 					add_historical_friend = ROOT
 				}
 				add_historical_friend = YOF
+				custom_tooltip = empty_line_tt
 			}
 			custom_tooltip = THE_AKI_yof_god_c_tt1
 			tooltip = {
@@ -187,6 +188,7 @@ THE_AKI_branch_1 = {
 					custom_tooltip = THE_AKI_leaves_with_alliance_effect_case1_tt_no
 					tooltip = { inherit = YOF }
 				}
+				custom_tooltip = empty_line_tt
 			}
 
 			add_country_modifier = {
@@ -294,12 +296,17 @@ THE_AKI_branch_2 = {
 		} 
 		
 		effect = { 
+			custom_tooltip = THE_AKI_unlock_seasen_war_decision_tt
+			custom_tooltip = empty_line_tt
 			capital_scope = {
 				add_base_production = 3
 				add_base_tax = 3
 				add_base_manpower = 3
 			}
 			Land_of_the_black_doors = { add_permanent_claim = ROOT }
+			hidden_effect = {
+				set_country_flag = THE_AKI_unlock_seasen_war_decision_flag
+			}
 		} 
 	}
 	
@@ -407,6 +414,7 @@ THE_AKI_branch_2 = {
 		
 		effect = { 
 			custom_tooltip = THE_AKI_develop_province_50_chance_add_1_more_tt
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = THE_AKI_tech_and_agriculture_mission_buff
 				duration = -1
@@ -508,6 +516,7 @@ THE_AKI_branch_3 = {
 		
 		effect = { 
 			custom_tooltip = THE_AKI_develop_province_5_prosperous_tt
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = THE_AKI_sprouts_and_rebirths_mission_buff
 				duration = 7300
@@ -537,6 +546,7 @@ THE_AKI_branch_3 = {
 		
 		effect = { 
 			custom_tooltip = THE_AKI_mission_divine_virtue_c_tt1
+			custom_tooltip = empty_line_tt
 			add_prestige = 50
 			add_splendor = 300
 		} 
@@ -560,6 +570,7 @@ THE_AKI_branch_3 = {
 		
 		effect = { 
 			custom_tooltip = THE_AKI_build_tax_building_add_monoriko_var_tt
+			custom_tooltip = empty_line_tt
 			hidden_effect = {
 				set_country_flag = THE_AKI_build_tax_building_add_monoriko_var_flag
 			}
@@ -668,6 +679,7 @@ THE_AKI_branch_4 = {
 		
 		effect = { 
 			custom_tooltip = THE_AKI_unlock_sell_potato_tt
+			custom_tooltip = empty_line_tt
 			add_adm_power = 100
 			add_dip_power = 100
 			add_mil_power = 100
@@ -716,6 +728,7 @@ THE_AKI_branch_4 = {
 		
 		effect = { 
 			custom_tooltip = THE_AKI_mission_potato_covenant_c_tt
+			custom_tooltip = empty_line_tt
 			add_adm_power = 100
 			add_dip_power = 100
 			add_mil_power = 100
@@ -799,6 +812,7 @@ THE_AKI_branch_4 = {
 		
 		effect = { 
 			custom_tooltip = THE_AKI_autumn_of_abundance_mission_c_tt
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = THE_AKI_aut_of_abundance_mission_buff
 				duration = -1
@@ -905,6 +919,7 @@ THE_AKI_branch_5 = {
 		
 		effect = { 
 			custom_tooltip = THE_AKI_reduce_hakurei_shrine_extra_trigger_tt
+			custom_tooltip = empty_line_tt
 			add_adm_power = 200
 			add_dip_power = 200
 			add_mil_power = 200

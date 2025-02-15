@@ -90,4 +90,30 @@ country_decisions = {
 			factor = 0
 		}
 	}
+	
+	THE_AKI_season_war_decisions = {
+		color = { 255 186 39 }
+		potential = {
+			has_country_flag = THE_AKI_unlock_seasen_war_decision_flag
+			exists = OKI
+			ai = no
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+		}
+		effect = {
+			declare_war_with_cb = {
+				casus_belli = THE_AKI_season_war_cb
+				who = OKI
+			}
+			custom_tooltip = THE_AKI_season_war_effect_tt
+			hidden_effect = {
+				clr_country_flag = THE_AKI_unlock_seasen_war_decision_flag
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
 }

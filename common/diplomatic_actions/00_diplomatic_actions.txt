@@ -1376,4 +1376,14 @@ callaction = {
 			}
 		}
 	}
+	condition = {
+		potential = {
+			is_in_war = {
+				casus_belli = THE_AKI_season_war_cb
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
 }

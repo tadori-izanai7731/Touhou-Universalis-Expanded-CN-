@@ -1,0 +1,9 @@
+THE_AKI_season_war_cb = {
+	valid_for_subject = no
+
+	### ONLY FOR EFFECT
+	prerequisites_self = { always = no }
+	prerequisites = { always = no }
+
+	war_goal = THE_AKI_season_war_war_goal
+}
