@@ -109,6 +109,7 @@ country_event = {
 		}
 	}
 }
+#
 country_event = {
 	id = THE_AKI_flavor_events.4
 	title = "THE_AKI_flavor_events.4.t"
@@ -145,7 +146,7 @@ country_event = {
 		name = THE_AKI_flavor_events.4.a
 	}
 }
-
+#秋静叶--事件
 country_event = {
 	id = THE_AKI_flavor_events.5
 	title = "THE_AKI_flavor_events.5.t"
@@ -182,7 +183,6 @@ country_event = {
 		name = THE_AKI_flavor_events.5.a
 	}
 }
-#秋静叶--事件
 country_event = {
 	id = THE_AKI_flavor_events.6
 	title = "THE_AKI_flavor_events.6.t"
@@ -207,31 +207,5 @@ country_event = {
 	}
 	option = {
 		name = THE_AKI_flavor_events.7.a
-	}
-}
-country_event = {
-	id = THE_AKI_flavor_events.8
-	title = "THE_AKI_flavor_events.8.t"
-	desc = "THE_AKI_flavor_events.8.desc"
-	picture = ""
-	is_triggered_only = yes
-	trigger = {
-		
-	}
-	option = {
-		name = THE_AKI_flavor_events.8.a
-	}
-}
-country_event = {
-	id = THE_AKI_flavor_events.9
-	title = "THE_AKI_flavor_events.9.t"
-	desc = "THE_AKI_flavor_events.9.desc"
-	picture = ""
-	is_triggered_only = yes
-	trigger = {
-		
-	}
-	option = {
-		name = THE_AKI_flavor_events.9.a
 	}
 }

@@ -1,0 +1,37 @@
+THE_KEI_government_names = {
+	rank = {
+		1 = TOUHOU_DOMAIN
+		2 = TOUHOU_REALM
+		3 = TOUHOU_EMPIRE
+	}
+	
+	ruler_male = {
+		3 = TOUHOU_EXECUTOR
+		2 = TOUHOU_EXECUTOR
+		1 = TOUHOU_EXECUTOR
+	}
+	
+	ruler_female = {
+		3 = THE_KEI_RULER
+		2 = THE_KEI_RULER
+		1 = THE_KEI_RULER
+	}
+	
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = THE_KEI_HEIR
+		2 = THE_KEI_HEIR
+		3 = THE_KEI_HEIR
+	}
+
+	trigger = {
+		OR = {
+			has_government_attribute = THE_KEI_lonely_create_hana_wheel_abilities
+		}
+	}
+}

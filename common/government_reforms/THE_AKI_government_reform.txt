@@ -13,6 +13,9 @@ THE_AKI_harvest_and_autumn_reform = {
 	rulers_can_be_generals = no
 	nation_designer_cost = 40
 	can_change_primary_culture = no
+	enables_aristocratic_idea_group = no
+	enables_divine_idea_group = yes
+	
 	modifiers = {
 		governing_capacity = 150
 		tolerance_own = 2
