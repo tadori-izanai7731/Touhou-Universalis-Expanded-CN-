@@ -465,6 +465,24 @@ allianceaction = {
 			}
 		}
 	}
+	#THE
+	condition = {
+		tooltip = THE_KEI_lonely_gods_can_not_alliance_c_tooltip
+		potential = {
+			OR = {
+				FROM = {
+					has_reform = THE_KEI_lonely_creation_government_reform
+				}
+				ROOT = {
+					has_reform = THE_KEI_lonely_creation_government_reform
+				}
+			}
+			
+		}
+		allow = {
+			always = no
+		}
+	}
 	effect = {
 		change_asha_vahishta = { value = 2 }
 	}

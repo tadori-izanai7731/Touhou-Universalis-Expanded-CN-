@@ -1,0 +1,42 @@
+estate_nobles = {
+	custom_name = {
+		desc = THE_KEI_noble_name
+		trigger = {
+			OR = {
+				tag = KEI
+				was_tag = KEI
+			}
+		}
+	}
+	privileges = {
+	}
+}
+estate_burghers = {
+	custom_name = {
+		desc = THE_KEI_burghers_name
+		trigger = {
+			OR = {
+				tag = KEI
+				was_tag = KEI
+			}
+		 }
+	}
+	
+	privileges = {
+	}
+}
+estate_janissaries = {
+	custom_name = {
+		desc = THE_KEI_janissaries_name
+		trigger = {
+			OR = {
+				tag = KEI
+				was_tag = KEI
+			}
+		 }
+	}
+	privileges = {
+		THE_KEI_janissaries_warrior_1_privileges
+		THE_KEI_janissaries_warrior_2_privileges
+	}
+}
