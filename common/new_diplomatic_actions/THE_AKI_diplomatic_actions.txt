@@ -48,8 +48,7 @@ THE_AKI_sell_potatos_to_human = {
 				export_to_variable = {
 					which = th_money_to_transfer
 					value = monthly_income
-					who = THIS
-				}            
+				}
 				multiply_variable = {
 					which = th_money_to_transfer
 					value = 6

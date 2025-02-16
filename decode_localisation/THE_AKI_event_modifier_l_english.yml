@@ -24,9 +24,9 @@ l_english:
  #任务补充
  THE_AKI_yof_god_c_tt1: "所有§Y妖怪的树海§!与§Y妖怪的树海东部§!区域的省份:"
  THE_AKI_sell_potatos_dip_c_tt: "自上一次贩卖已超过5年"
- THE_AKI_unlock_sell_potato_tt: "解锁幻想乡外交行动「§Y贩卖红薯§!」"
- THE_AKI_mission_potato_covenant_c_tt: "解锁省份行动「§Y秋之祝祠§!」"
- THE_AKI_mission_divine_virtue_c_tt1: "解锁决议「§Y改信丰穰之秋§!」"
+ THE_AKI_unlock_sell_potato_tt: "启用幻想乡外交行动「§Y贩卖红薯§!」"
+ THE_AKI_mission_potato_covenant_c_tt: "启用省份行动「§Y秋之祝祠§!」"
+ THE_AKI_mission_divine_virtue_c_tt1: "启用决议「§Y改信丰穰之秋§!」"
  the_aki_pick_province_buttom_3_im_var_c_tt: "至少使用§Y8§!次「§Y双秋华筵§!」(§Y[Root.the_aki_pick_province_buttom_3_im_var.GetValue]§!/§Y8§!)"
  THE_AKI_tour_in_autumn_mission_tt: "该省份获得修正:"
  THE_AKI_autumn_of_abundance_mission_c_tt: "解锁「§Y秋之祝祠§!」第5级修正"
@@ -37,7 +37,7 @@ l_english:
  #外交行动
  THE_AKI_sell_potatos_to_human_title: "贩卖红薯"
  THE_AKI_sell_potatos_to_human_tooltip: "我们的神明将会前往对方国家贩卖红薯，播撒香味与祝福。"
- THE_AKI_sell_potatos_to_human_desc: "目标国家将会获得修正:\n    生产效率§G+15%§!\n    发展成本§G-10%§!\n我方将会获得:\n 目标国家的§G6个月收入§!"
+ THE_AKI_sell_potatos_to_human_desc: "[From.GetName]获得「§Y丰稔之祝§!」持续§Y20年§!，给予如下效果: \n生产效率: §G+15.0%§!\n发展成本: §G-10.0%§!\n\n[Root.GetName]获得[From.GetName]的§G6§!个月收入"
  #宗教
  the_minoriko: "丰穰之秋"
  the_minoriko_desc: "「丰穰之秋」是幻想乡的新兴宗教，信徒尊奉象征秋季的双生神明——「丰收之神」秋穰子与「红叶之神」秋静叶。两姐妹分别掌管丰收与红叶凋落，共同维系季秋天的丰收与自然的平衡。"
@@ -92,7 +92,7 @@ l_english:
  THE_AKI_season_war_name: "$ORDER$$FIRST$-$SECOND$夺取季节战争"
  THE_AKI_season_war_decisions_title: "对[OKI.GetName]的夺取季节战争"
  THE_AKI_season_war_decisions_desc: ""
- mechanic_THE_AKI_manufactory_porvince_add_more_monoriko_var_custom_attributes_yes: "拥有§Y工场§!的省份获得的§O丰饶§!增加§G25%§!，接纳工场生产思潮后增加§G50%§!"
+ mechanic_THE_AKI_manufactory_porvince_add_more_monoriko_var_custom_attributes_yes: "拥有§Y工场§!的省份获得的§O丰饶§!增加§G25%§!，接纳§Y工场生产§!思潮后增加§G50%§!"
  THE_AKI_marrage_with_kanako_x3f_reform: "信仰革新之缘"
  THE_AKI_marrage_with_kanako_x3f_reform_desc: "农业一直是依赖天地的产业，如果在人类足以改变天地的未来，我们的信仰能否完成与时俱进的革新。"
  mechanic_THE_AKI_available_use_patriarch_authority_replace_points_custom_attributes_yes: "允许使用§Y牧首权威§!代替「§O落叶之哀§!」和「§O双秋华筵§!」的§Y君主点数§!消耗（通过决议切换）"
