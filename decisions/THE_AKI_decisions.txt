@@ -21,7 +21,6 @@ country_decisions = {
 			add_stability = -1
 			add_treasury = -100
 			change_religion = the_minoriko
-			
 			hidden_effect = {
 				every_owned_province = {
 					change_religion = ROOT

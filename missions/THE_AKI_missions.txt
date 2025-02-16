@@ -8,11 +8,6 @@ THE_AKI_branch_1 = {
 	THE_AKI_army_and_leaves = {
 		icon = mission_unknown_mission
 		position = 1
-		provinces_to_highlight = { 
-			OR = {
-				province_id = 5134
-			}
-		} 
 		
 		trigger = { 
 			OR = {
