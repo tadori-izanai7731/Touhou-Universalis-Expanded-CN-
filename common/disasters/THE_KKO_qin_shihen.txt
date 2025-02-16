@@ -4,6 +4,7 @@ qin_shihen = {
 			tag = KKO
 			was_tag = KKO
 		}
+		NOT = { has_country_flag = THE_KKO_government_interaction_extra_effect_flag }
 	}
 	can_start = {
 		OR = {
@@ -135,6 +136,9 @@ qin_shihen = {
 				tooltip = kko_religions_divergence1
 				has_country_flag = kko_divergence_first_12
 			}
+		}
+		hidden_trigger = {
+			NOT = { has_country_flag = THE_KKO_government_interaction_extra_effect_flag }
 		}
 	}
 	can_stop = {
