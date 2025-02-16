@@ -42,42 +42,17 @@ THE_AKI_sell_potatos_to_human = {
 				duration = 7300
 			}
 		}
-		ROOT = {
-			set_country_flag = THE_AKI_sell_potatos_dip_c_flag
-		}
+		set_country_flag = THE_AKI_sell_potatos_dip_c_flag
 		hidden_effect = {
 			FROM = {
 				export_to_variable = {
 					which = th_money_to_transfer
 					value = monthly_income
-					who = ROOT
+					who = THIS
 				}            
-				export_to_variable = {
-					which = th_money_available
-					value = treasury
-					who = ROOT
-				}
 				multiply_variable = {
 					which = th_money_to_transfer
 					value = 6
-				}
-				if = {
-					limit = {
-						# Is th_money_to_transfer greater than th_money_available
-						check_variable = {
-							which = th_money_to_transfer
-							which = th_money_available
-						}
-					}                
-					# Set th_money_to_transfer to th_money_available's value, as th_money_to_transfer was greater than th_money_available
-					set_variable = {
-						which = th_money_to_transfer 
-						which = th_money_available 
-					}
-				}
-				set_variable = {
-					which = th_money_report
-					which = th_money_to_transfer 
 				}
 			}
 			while = {
@@ -89,9 +64,7 @@ THE_AKI_sell_potatos_to_human = {
 						}
 					}
 				}
-				ROOT = {
-					add_treasury = 1
-				}
+				add_treasury = 1
 				FROM = {
 					change_variable = {
 						which = th_money_to_transfer
@@ -104,12 +77,12 @@ THE_AKI_sell_potatos_to_human = {
 	on_decline = {
 	}
 	ai_acceptance = {
-		#基础0
+		#基础-20
 		add_entry = {
 			name = TH_DIPENDENCE
 			export_to_variable = {
 				variable_name = ai_value
-				value = 20
+				value = -20
 			}
 		}
 		#外交关系+0.2*value
@@ -158,7 +131,7 @@ THE_AKI_sell_potatos_to_human = {
 			}
 			multiply_variable = {
 				which = ai_value 
-				value = 2
+				value = 5
 			}
 		}
 	}

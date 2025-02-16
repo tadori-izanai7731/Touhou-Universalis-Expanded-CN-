@@ -367,6 +367,7 @@ monarchy = {
 				THE_ROD_darknedd_diocese_reform
 				THE_YOF_strengthen_kagiyama_influence_reform
 				THE_YOF_comprehensive_religion_reform
+				THE_AKI_abundance_patriarch_reform
 			}
 		}
 		military_doctrines = {
@@ -483,6 +484,7 @@ monarchy = {
 				#THE
 				THE_YOF_doom_whirlpool_reform
 				THE_ROD_peasants_parliament_reform
+				THE_AKI_marrage_with_kanako_x3f_reform
 			}
 		}
 		growth_of_administration = {
@@ -1140,6 +1142,7 @@ republic = {
 				#THE
 				THE_HMC_history_reform
 				THE_YOF_comprehensive_religion_reform
+				THE_AKI_abundance_patriarch_reform
 			}
 		}
 		military_doctrines = {
@@ -1550,6 +1553,8 @@ tribal = {
 			reforms = {
 				religious_societies_reform
 				lip_service_reform
+				###THE
+				THE_AKI_abundance_patriarch_reform
 			}
 		}
 		tribal_military_doctrines = {
@@ -1847,6 +1852,7 @@ theocracy = {
 				legacy_of_the_safavid_reform
 				#THE
 				THE_YOF_devotion_reform
+				THE_AKI_abundance_patriarch_reform
 			}
 		}
 		military_doctrines = {

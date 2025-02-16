@@ -66,29 +66,47 @@ THE_AKI_on_yearly_pulse_scripted_effects = {
 				which = the_aki_religions_province_development_var_2
 				which = the_aki_religions_province_development_var
 			}
+			export_to_variable = {
+				variable_name = the_aki_modifier_add_monoriko_province_var
+				value = modifier:THE_AKI_is_prosperous_province_custom_modifier
+				who = owner
+			}
+			change_variable = {
+				which = the_aki_religions_province_development_var_2
+				which = the_aki_modifier_add_monoriko_province_var
+			}
+			if = {
+				limit = {
+					has_manufactory_no_custom_tooltip_trigger = yes
+				}
+				if = {
+					limit = {
+						owner = {
+							has_government_attribute = THE_AKI_manufactory_porvince_add_more_monoriko_var_custom_attributes
+							has_institution = manufactories
+						}
+					}
+					multiply_variable = {
+						which = the_aki_religions_province_development_var_2
+						value = 1.5
+					}
+				}
+				else_if = {
+					limit = {
+						owner = {
+							has_government_attribute = THE_AKI_manufactory_porvince_add_more_monoriko_var_custom_attributes
+						}
+					}
+					multiply_variable = {
+						which = the_aki_religions_province_development_var_2
+						value = 1.25
+					}
+				}
+			}
 			#改变丰饶增长
 			change_variable = {
 				which = the_aki_religions_monoriko_province_im_var
 				which = the_aki_religions_province_development_var_2
-			}
-		}
-		if = {
-			limit = {
-				has_global_modifier_value = {
-					which = THE_AKI_is_prosperous_province_custom_modifier
-					value = 0.01
-				}
-			}
-			every_owned_province = {
-				export_to_variable = {
-					variable_name = the_aki_modifier_add_monoriko_province_var
-					value = modifier:THE_AKI_is_prosperous_province_custom_modifier
-					who = owner
-				}
-				change_variable = {
-					which = the_aki_religions_monoriko_province_im_var
-					which = the_aki_modifier_add_monoriko_province_var
-				}
 			}
 		}
 		every_owned_province = {

@@ -47,4 +47,11 @@ spriteTypes = {
 		size = { x = 230 y = 30 }
 		effectFile = "gfx/FX/progress.lua"
 	}
+
+	### GOVERNMENT_REFORM
+	
+	spriteType = {
+		name = "government_reform_THE_AKI_marrage_with_kanako_x3f_reform_icon"
+		texturefile = "gfx/interface/government_reform_icons/THE_common/THE_AKI_marrage_with_kanako_x3f_reform.dds"
+	}
 }

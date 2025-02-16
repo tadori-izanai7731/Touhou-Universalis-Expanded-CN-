@@ -32,10 +32,28 @@ THE_AKI_harvest_and_autumn_reform = {
 	}
 }
 
+### LEVEL 4
+THE_AKI_abundance_patriarch_reform = {
+	icon = "warrior_monks_reform"
+	potential = {
+		religion = the_minoriko
+	}
+
+	modifiers = {
+		yearly_patriarch_authority = 0.01
+		THE_AKI_is_prosperous_province_custom_modifier = 0.5
+		church_loyalty_modifier = 0.1
+		global_heretic_missionary_strength = 0.02
+	}
+
+	custom_attributes = {
+		THE_AKI_available_use_patriarch_authority_replace_points_custom_attributes = yes
+	}
+}
 
 ### LEVEL 6
 THE_AKI_marrage_with_kanako_x3f_reform = {
-	icon = "THE_AKI_government_reform_1"
+	icon = "THE_AKI_marrage_with_kanako_x3f_reform_icon"
 	potential = {
 		has_government_attribute = THE_AKI_harvest_autumn_province_buff_abilities
 		OR = {
@@ -45,13 +63,17 @@ THE_AKI_marrage_with_kanako_x3f_reform = {
 	}
 
 	trigger = {
-		any_owned_province = {
-			has_manufactory_trigger = yes
+		OR = {
+			4999 = { country_or_non_sovereign_subject_holds = ROOT }
+			marriage_with = MRY
 		}
 	}
 
 	modifiers = {
-		
+		build_time = -0.25
+		yearly_innovativeness = 0.5
+		reverse_relation_with_heretic_religion = 20
+		free_policy = 1
 	}
 
 	custom_attributes = {

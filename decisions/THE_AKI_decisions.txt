@@ -116,4 +116,24 @@ country_decisions = {
 			factor = 0
 		}
 	}
+
+	THE_AKI_switch_points_and_pa_decisions = {
+		color = { 255 186 39 }
+		potential = {
+			has_government_attribute = THE_AKI_available_use_patriarch_authority_replace_points_custom_attributes
+		}
+		effect = {
+			if = {
+				limit = { has_country_flag = THE_AKI_province_interaction_use_pa_flag }
+				custom_tooltip = THE_AKI_switch_points_and_pa_tt_points
+				hidden_effect = {
+					clr_country_flag = THE_AKI_province_interaction_use_pa_flag
+				}
+			}
+			else = {
+				custom_tooltip = THE_AKI_switch_points_and_pa_tt_pa
+				set_country_flag = THE_AKI_province_interaction_use_pa_flag
+			}
+		}
+	}
 }
