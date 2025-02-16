@@ -446,18 +446,15 @@ THE_AKI_branch_2 = {
 		trigger = { 
 			num_of_owned_provinces_with = {
 				value = 20
-				all_province = {
-					owned_by = ROOT
-					has_fort_building_trigger = yes
-					is_prosperous = yes	
-					custom_trigger_tooltip = {
-						tooltip = THE_AKI_province_has_level_2_or_higher_modifier_ttt
-						OR = {
-							has_province_modifier = THE_AKI_province_religions_v2_buff
-							has_province_modifier = THE_AKI_province_religions_v3_buff
-							has_province_modifier = THE_AKI_province_religions_v4_buff
-							has_province_modifier = THE_AKI_province_religions_v5_buff
-						}
+				has_fort_building_trigger = yes
+				is_prosperous = yes	
+				custom_trigger_tooltip = {
+					tooltip = THE_AKI_province_has_level_2_or_higher_modifier_ttt
+					OR = {
+						has_province_modifier = THE_AKI_province_religions_v2_buff
+						has_province_modifier = THE_AKI_province_religions_v3_buff
+						has_province_modifier = THE_AKI_province_religions_v4_buff
+						has_province_modifier = THE_AKI_province_religions_v5_buff
 					}
 				}
 			}
