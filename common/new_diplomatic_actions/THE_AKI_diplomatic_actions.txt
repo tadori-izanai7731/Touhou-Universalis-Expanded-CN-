@@ -31,8 +31,7 @@ THE_AKI_sell_potatos_to_human = {
 					}
 				}
 			}
-		}	
-		dip_power = 75	
+		}
 	}
 
 	on_accept = {
@@ -44,15 +43,6 @@ THE_AKI_sell_potatos_to_human = {
 			}
 		}
 		ROOT = {
-			if = {
-				limit = { 
-					ai = no
-				}
-				add_dip_power = -75
-			}
-			else = {
-				add_dip_power = -25
-			}
 			set_country_flag = THE_AKI_sell_potatos_dip_c_flag
 		}
 		hidden_effect = {
@@ -114,12 +104,12 @@ THE_AKI_sell_potatos_to_human = {
 	on_decline = {
 	}
 	ai_acceptance = {
-		#基础-30
+		#基础0
 		add_entry = {
 			name = TH_DIPENDENCE
 			export_to_variable = {
 				variable_name = ai_value
-				value = -30
+				value = 20
 			}
 		}
 		#外交关系+0.2*value
