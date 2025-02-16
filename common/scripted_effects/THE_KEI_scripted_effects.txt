@@ -1,0 +1,29 @@
+THE_KEI_annex_ski_yac_province_in_war_effects = {
+	if = {
+		limit = {
+			ROOT = {
+				OR = {
+					tag = KEI
+					was_tag = KEI
+				}
+				
+				is_in_war = {
+					attacker_leader = ROOT
+				}
+				FROM = {
+					OR = {
+						owned_by = SKI
+						owned_by = YAC
+						owned_by = GYK
+					}
+					is_capital = no
+				}
+			}
+		 }
+		 FROM = {
+			cede_province = ROOT
+			add_core = ROOT
+			change_religion = ROOT
+		 }
+	}
+}
