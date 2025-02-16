@@ -141,3 +141,14 @@ THE_AKI_religion_events_3_province_buff = {
 	trade_goods_size = 0.5
 	local_monthly_devastation = -0.2
 }
+#红叶之美
+THE_AKI_religion_events_5_buff = {
+	global_unrest = -2
+	yearly_corruption = -1.0
+}
+#
+THE_AKI_religion_events_6_buff = {
+	discipline = 0.05
+	morale_damage = 0.1
+	leader_land_shock = 1
+}
