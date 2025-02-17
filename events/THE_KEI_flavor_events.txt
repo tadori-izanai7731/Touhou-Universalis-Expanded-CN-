@@ -11,6 +11,40 @@ country_event = {
 	}
 	option = {
 		name = THE_KEI_flavor_events.1.a
+		country_event = {
+			id = THE_KEI_flavor_events.2
+		}
+		hidden_effect = {
+			set_variable = {
+				which = the_mayumi_fire_var
+				value = 1
+			}
+			set_variable = {
+				which = the_mayumi_shock_var
+				value = 1
+			}
+			set_variable = {
+				which = the_mayumi_manuever_var
+				value = 1
+			}
+			set_variable = {
+				which = the_mayumi_siege_var
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = THE_KEI_flavor_events.1.b
+		add_government_power = {
+			mechanic_type = THE_KEI_lonely_creation_mechanic
+			power_type = THE_KEI_lonely_creation_mechanic_power
+			value = -5
+		}
+		add_yearly_manpower = 2.0
+	}
+	option = {
+		name = THE_KEI_flavor_events.1.e
+		highlight = yes
 	}
 }
 #埴轮兵长
@@ -23,8 +57,164 @@ country_event = {
 	trigger = {
 		
 	}
+	immediate = {
+		hidden_effect = {
+			THE_KEI_define_general_mayumi = yes 
+		}
+	}
 	option = {
 		name = THE_KEI_flavor_events.2.a
+		add_government_power = {
+			mechanic_type = THE_KEI_lonely_creation_mechanic
+			power_type = THE_KEI_lonely_creation_mechanic_power
+			value = -2
+		}
+		add_mil_power = -20
+		hidden_effect = {
+			change_variable = {
+				which = the_mayumi_fire_var
+				value = 1
+			}
+			country_event = {
+				id = THE_KEI_flavor_events.3
+			}
+		}
+	}
+	option = {
+		name = THE_KEI_flavor_events.2.b
+		add_government_power = {
+			mechanic_type = THE_KEI_lonely_creation_mechanic
+			power_type = THE_KEI_lonely_creation_mechanic_power
+			value = -2
+		}
+		add_mil_power = -20
+		hidden_effect = {
+			change_variable = {
+				which = the_mayumi_shock_var
+				value = 1
+			}
+			country_event = {
+				id = THE_KEI_flavor_events.3
+			}
+		}
+	}
+	option = {
+		name = THE_KEI_flavor_events.2.c
+		add_government_power = {
+			mechanic_type = THE_KEI_lonely_creation_mechanic
+			power_type = THE_KEI_lonely_creation_mechanic_power
+			value = -2
+		}
+		add_mil_power = -20
+		hidden_effect = {
+			change_variable = {
+				which = the_mayumi_manuever_var
+				value = 1
+			}
+			country_event = {
+				id = THE_KEI_flavor_events.3
+			}
+		}
+	}
+	option = {
+		name = THE_KEI_flavor_events.2.d
+		add_government_power = {
+			mechanic_type = THE_KEI_lonely_creation_mechanic
+			power_type = THE_KEI_lonely_creation_mechanic_power
+			value = -2
+		}
+		add_mil_power = -20
+		hidden_effect = {
+			change_variable = {
+				which = the_mayumi_siege_var
+				value = 1
+			}
+			country_event = {
+				id = THE_KEI_flavor_events.3
+			}
+		}
+	}
+	option = {
+		name = THE_KEI_flavor_events.2.e
+		THE_KEI_define_general_mayumi_siege_script = yes
+	}
+	option = {
+		name = THE_KEI_flavor_events.2.f
+		highlight = yes
+		hidden_effect = {
+			while = {
+				limit = { 
+					check_variable = {
+						which = the_mayumi_fire_var
+						value = 1
+					}
+				}
+				change_variable = {
+					which = the_mayumi_fire_var
+					value = -1
+				}
+				add_mil_power = 20
+				add_government_power = {
+					mechanic_type = THE_KEI_lonely_creation_mechanic
+					power_type = THE_KEI_lonely_creation_mechanic_power
+					value = 2
+				}
+			}
+			while = {
+				limit = { 
+					check_variable = {
+						which = the_mayumi_shock_var
+						value = 1
+					}
+				}
+				change_variable = {
+					which = the_mayumi_shock_var
+					value = -1
+				}
+				add_mil_power = 20
+				add_government_power = {
+					mechanic_type = THE_KEI_lonely_creation_mechanic
+					power_type = THE_KEI_lonely_creation_mechanic_power
+					value = 2
+				}
+			}
+			while = {
+				limit = { 
+					check_variable = {
+						which = the_mayumi_manuever_var
+						value = 1
+					}
+				}
+				change_variable = {
+					which = the_mayumi_manuever_var
+					value = -1
+				}
+				add_mil_power = 20
+				add_government_power = {
+					mechanic_type = THE_KEI_lonely_creation_mechanic
+					power_type = THE_KEI_lonely_creation_mechanic_power
+					value = 2
+				}
+			}
+			while = {
+				limit = { 
+					check_variable = {
+						which = the_mayumi_siege_var
+						value = 1
+					}
+				}
+				change_variable = {
+					which = the_mayumi_siege_var
+					value = -1
+				}
+				add_mil_power = 20
+				add_government_power = {
+					mechanic_type = THE_KEI_lonely_creation_mechanic
+					power_type = THE_KEI_lonely_creation_mechanic_power
+					value = 2
+				}
+			}
+		}
 	}
 }
 country_event = {
@@ -36,7 +226,163 @@ country_event = {
 	trigger = {
 		
 	}
+	immediate = {
+		hidden_effect = {
+			THE_KEI_define_general_mayumi = yes
+		}
+	}
 	option = {
-		name = THE_KEI_flavor_events.3.a
+		name = THE_KEI_flavor_events.2.a
+		add_government_power = {
+			mechanic_type = THE_KEI_lonely_creation_mechanic
+			power_type = THE_KEI_lonely_creation_mechanic_power
+			value = -2
+		}
+		add_mil_power = -20
+		hidden_effect = {
+			change_variable = {
+				which = the_mayumi_fire_var
+				value = 1
+			}
+			country_event = {
+				id = THE_KEI_flavor_events.2
+			}
+		}
+	}
+	option = {
+		name = THE_KEI_flavor_events.2.b
+		add_government_power = {
+			mechanic_type = THE_KEI_lonely_creation_mechanic
+			power_type = THE_KEI_lonely_creation_mechanic_power
+			value = -2
+		}
+		add_mil_power = -20
+		hidden_effect = {
+			change_variable = {
+				which = the_mayumi_shock_var
+				value = 1
+			}
+			country_event = {
+				id = THE_KEI_flavor_events.2
+			}
+		}
+	}
+	option = {
+		name = THE_KEI_flavor_events.2.c
+		add_government_power = {
+			mechanic_type = THE_KEI_lonely_creation_mechanic
+			power_type = THE_KEI_lonely_creation_mechanic_power
+			value = -2
+		}
+		add_mil_power = -20
+		hidden_effect = {
+			change_variable = {
+				which = the_mayumi_manuever_var
+				value = 1
+			}
+			country_event = {
+				id = THE_KEI_flavor_events.2
+			}
+		}
+	}
+	option = {
+		name = THE_KEI_flavor_events.2.d
+		add_government_power = {
+			mechanic_type = THE_KEI_lonely_creation_mechanic
+			power_type = THE_KEI_lonely_creation_mechanic_power
+			value = -2
+		}
+		add_mil_power = -20
+		hidden_effect = {
+			change_variable = {
+				which = the_mayumi_siege_var
+				value = 1
+			}
+			country_event = {
+				id = THE_KEI_flavor_events.2
+			}
+		}
+	}
+	option = {
+		name = THE_KEI_flavor_events.2.e
+		THE_KEI_define_general_mayumi_siege_script = yes
+	}
+	option = {
+		name = THE_KEI_flavor_events.2.f
+		highlight = yes
+		hidden_effect = {
+			while = {
+				limit = { 
+					check_variable = {
+						which = the_mayumi_fire_var
+						value = 1
+					}
+				}
+				change_variable = {
+					which = the_mayumi_fire_var
+					value = -1
+				}
+				add_mil_power = 20
+				add_government_power = {
+					mechanic_type = THE_KEI_lonely_creation_mechanic
+					power_type = THE_KEI_lonely_creation_mechanic_power
+					value = 2
+				}
+			}
+			while = {
+				limit = { 
+					check_variable = {
+						which = the_mayumi_shock_var
+						value = 1
+					}
+				}
+				change_variable = {
+					which = the_mayumi_shock_var
+					value = -1
+				}
+				add_mil_power = 20
+				add_government_power = {
+					mechanic_type = THE_KEI_lonely_creation_mechanic
+					power_type = THE_KEI_lonely_creation_mechanic_power
+					value = 2
+				}
+			}
+			while = {
+				limit = { 
+					check_variable = {
+						which = the_mayumi_manuever_var
+						value = 1
+					}
+				}
+				change_variable = {
+					which = the_mayumi_manuever_var
+					value = -1
+				}
+				add_mil_power = 20
+				add_government_power = {
+					mechanic_type = THE_KEI_lonely_creation_mechanic
+					power_type = THE_KEI_lonely_creation_mechanic_power
+					value = 2
+				}
+			}
+			while = {
+				limit = { 
+					check_variable = {
+						which = the_mayumi_siege_var
+						value = 1
+					}
+				}
+				change_variable = {
+					which = the_mayumi_siege_var
+					value = -1
+				}
+				add_mil_power = 20
+				add_government_power = {
+					mechanic_type = THE_KEI_lonely_creation_mechanic
+					power_type = THE_KEI_lonely_creation_mechanic_power
+					value = 2
+				}
+			}
+		}
 	}
 }

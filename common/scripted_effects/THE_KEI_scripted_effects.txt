@@ -60,3 +60,89 @@ the_kei_gain_effect_mechanic_power_2_effect = {
 		}
 	}
 }
+
+##
+
+THE_KEI_define_general_mayumi = {
+	THE_MRS_define_general_mayumi_fire = yes
+}
+
+THE_KEI_define_general_mayumi_fire = {
+	THE_KEI_define_general_mayumi_fire_script = { mayumi_fire = 1 }
+	THE_KEI_define_general_mayumi_fire_script = { mayumi_fire = 2 }
+	THE_KEI_define_general_mayumi_fire_script = { mayumi_fire = 3 }
+	THE_KEI_define_general_mayumi_fire_script = { mayumi_fire = 4 }
+	THE_KEI_define_general_mayumi_fire_script = { mayumi_fire = 5 }
+	THE_KEI_define_general_mayumi_fire_script = { mayumi_fire = 6 }
+	THE_KEI_define_general_mayumi_fire_script = { mayumi_fire = 7 }
+	THE_KEI_define_general_mayumi_fire_script = { mayumi_fire = 8 }
+}
+
+THE_KEI_define_general_mayumi_fire_script = {
+	if = {
+		limit = {
+			is_variable_equal = {
+				which = the_mayumi_fire_var
+				value = $mayumi_fire$
+			}
+		}
+		THE_KEI_define_general_mayumi_shock = { mayumi_fire = $mayumi_fire$ }
+	}
+}
+
+THE_KEI_define_general_mayumi_shock = {
+	THE_KEI_define_general_mayumi_shock_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = 1 }
+	THE_KEI_define_general_mayumi_shock_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = 2 }
+	THE_KEI_define_general_mayumi_shock_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = 3 }
+	THE_KEI_define_general_mayumi_shock_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = 4 }
+	THE_KEI_define_general_mayumi_shock_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = 5 }
+	THE_KEI_define_general_mayumi_shock_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = 6 }
+	THE_KEI_define_general_mayumi_shock_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = 7 }
+	THE_KEI_define_general_mayumi_shock_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = 8 }
+}
+
+THE_KEI_define_general_mayumi_shock_script = {
+	if = {
+		limit = {
+			is_variable_equal = {
+				which = the_mayumi_shock_var
+				value = $mayumi_shock$
+			}
+		}
+		THE_KEI_define_general_mayumi_manuever = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ }
+	}
+}
+
+THE_KEI_define_general_mayumi_manuever = {
+	THE_KEI_define_general_mayumi_manuever_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = 1 }
+	THE_KEI_define_general_mayumi_manuever_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = 2 }
+	THE_KEI_define_general_mayumi_manuever_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = 3 }
+	THE_KEI_define_general_mayumi_manuever_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = 4 }
+	THE_KEI_define_general_mayumi_manuever_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = 5 }
+	THE_KEI_define_general_mayumi_manuever_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = 6 }
+	THE_KEI_define_general_mayumi_manuever_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = 7 }
+	THE_KEI_define_general_mayumi_manuever_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = 8 }
+}
+
+THE_KEI_define_general_mayumi_manuever_script = {
+	if = {
+		limit = {
+			is_variable_equal = {
+				which = the_mayumi_manuever_var
+				value = $mayumi_manuever$
+			}
+		}
+		THE_KEI_define_general_mayumi_siege = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = $mayumi_manuever$ }
+	}
+}
+
+THE_KEI_define_general_mayumi_siege = {
+	THE_KEI_define_general_mayumi_siege_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = $mayumi_manuever$ mayumi_siege = 1 }
+	THE_KEI_define_general_mayumi_siege_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = $mayumi_manuever$ mayumi_siege = 2 }
+	THE_KEI_define_general_mayumi_siege_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = $mayumi_manuever$ mayumi_siege = 3 }
+	THE_KEI_define_general_mayumi_siege_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = $mayumi_manuever$ mayumi_siege = 4 }
+	THE_KEI_define_general_mayumi_siege_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = $mayumi_manuever$ mayumi_siege = 5 }
+	THE_KEI_define_general_mayumi_siege_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = $mayumi_manuever$ mayumi_siege = 6 }
+	THE_KEI_define_general_mayumi_siege_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = $mayumi_manuever$ mayumi_siege = 7 }
+	THE_KEI_define_general_mayumi_siege_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = $mayumi_manuever$ mayumi_siege = 8 }
+}

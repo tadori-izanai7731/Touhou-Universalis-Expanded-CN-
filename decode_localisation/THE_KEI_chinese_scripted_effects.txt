@@ -1,0 +1,10 @@
+THE_KEI_define_general_mayumi_siege_script = {
+	define_general = {
+		name = "埴轮兵长"
+		female = yes
+		fire = $mayumi_fire$
+		shock = $mayumi_shock$
+		manuever = $mayumi_manuever$
+		siege = $mayumi_siege$
+	}
+}
