@@ -1,3 +1,23 @@
 on_siege_won_country = {
 	THE_KEI_annex_ski_yac_province_in_war_effects = yes
 }
+on_mil_development = {
+	the_kei_gain_effect_mechanic_power_1_effect = {
+		value = 5
+	}
+}
+on_war_won = {
+	the_kei_gain_effect_mechanic_power_2_effect = {
+		value = 10
+	}
+}
+on_province_culture_converted = {
+	the_kei_gain_effect_mechanic_power_1_effect = {
+		value = 5
+	}
+}
+on_janissaries_raised = {
+	the_kei_gain_effect_mechanic_power_1_effect = {
+		value = 1
+	}
+}

@@ -1,0 +1,47 @@
+guiTypes = {
+	windowType = {
+		name = "THE_KEI_government_interface_gui"
+		position = { x = 0 y = 0 }
+		size = { x = 300 y = 117 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+		iconType = {
+			name = "government_background"
+			spriteType = "GFX_THE_KEI_lonely_creation_interface_back"
+			position = { x = 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_THE_KEI_lonely_creation_interface_1"
+			position = { x = 0 y = 40 }
+			buttonFont = "vic_18"
+			clicksound = back_click
+		}
+	}
+
+	windowType = {
+		name = "THE_KEI_lonely_government_power_gui"
+		position = { x = 0 y = 0 }
+		size = { x = 300 y = 37 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+		iconType = {
+			name = "government_power_bar"
+			spriteType = "GFX_THE_KEI_lonely_creation_government_power_bar"
+			position = { x = 37 y = 5 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType = {
+			name = "government_power_bar_frame"
+			spriteType = "GFX_THE_KEI_lonely_creation_government_power_bar_frame"
+			position = { x = 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+	}
+}

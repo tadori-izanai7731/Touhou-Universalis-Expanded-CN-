@@ -1,0 +1,87 @@
+THE_KEI_lonely_creation_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 10
+	available = {
+		always = yes
+	}
+	interactions = {
+		THE_KEI_lonely_creation_do = {
+			gui = "THE_KEI_government_interface_gui"
+			icon = GFX_THE_FOM_alice_dolls_start
+			effect = {
+				country_event = {
+					id = THE_KEI_flavor_events.1
+				}
+			}
+		}
+	}
+	powers = {
+		THE_KEI_lonely_creation_mechanic_power = {
+			gui = THE_KEI_lonely_government_power_gui
+			min = 0
+			max = 100
+			base_monthly_growth = 0
+			range_modifier = {
+				modifier = { 
+					land_morale = 0.05
+				}
+				start_value = 0
+				end_value = 25
+			}
+			range_modifier = {
+				modifier = { 
+					land_morale = 0.10
+					manpower_recovery_speed = 0.15
+					global_manpower_modifier = 0.30
+					#
+					fire_damage_received = -0.05
+					shock_damage_received = -0.05
+				}
+				start_value = 25
+				end_value = 50
+			}
+			range_modifier = {
+				modifier = { 
+					idea_cost = -0.05
+					technology_cost = -0.05
+					innovativeness_gain = 0.75
+					#
+					land_morale = 0.10
+					manpower_recovery_speed = 0.33
+					global_manpower_modifier = 0.50
+					#任务树升级
+					fire_damage_received = -0.05
+					shock_damage_received = -0.05
+					discipline = 0.025
+					country_admin_power = 1
+					country_diplomatic_power = 1
+					country_military_power = 1
+				}
+				start_value = 50
+				end_value = 75
+			}
+			range_modifier = {
+				modifier = { 
+					#初始/不升级
+					idea_cost = -0.05
+					technology_cost = -0.05
+					innovativeness_gain = 0.75
+					#升级后
+					land_morale = 0.20
+					manpower_recovery_speed = 0.50
+					global_manpower_modifier = 1.00
+					#任务树额外
+					discipline = 0.05
+					infantry_fire = 0.5
+					fire_damage_received = -0.1
+					shock_damage_received = -0.1
+					country_admin_power = 1
+					country_diplomatic_power = 1
+					country_military_power = 1
+				}
+				start_value = 75
+				end_value = 100
+			}
+		}
+	}
+}

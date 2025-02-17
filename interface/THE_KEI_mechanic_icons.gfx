@@ -1,0 +1,32 @@
+spriteTypes = {
+	progressbartype = {
+		name = "GFX_THE_KEI_lonely_creation_government_power_bar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx\\interface\\government_mechanics\\the_kei\\THE_KEI_government_power_full.dds"
+		textureFile2 = "gfx\\interface\\provinceView_progressbar_w92_h11_black.dds"
+		size = { x = 230 y = 30 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	spriteType = {
+		name = "GFX_THE_KEI_lonely_creation_government_power_bar_frame"
+		texturefile = "gfx\\interface\\government_mechanics\\the_kei\\THE_KEI_power_bar_background.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_THE_KEI_lonely_creation_interface_1"
+		texturefile = "gfx\\interface\\government_mechanics\\the_kei\\THE_KEI_government_interface.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_THE_KEI_lonely_creation_interface_back"
+		texturefile = "gfx\\interface\\government_mechanics\\the_kei\\THE_KEI_interface_background.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+}

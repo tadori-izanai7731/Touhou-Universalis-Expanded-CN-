@@ -27,3 +27,36 @@ THE_KEI_annex_ski_yac_province_in_war_effects = {
 		 }
 	}
 }
+#获得化生
+the_kei_gain_effect_mechanic_power_1_effect = {
+	if = {
+		limit = {
+			owner = {
+				has_government_mechanic = THE_KEI_lonely_creation_mechanic
+			}
+		 }
+		 owner = {
+			add_government_power = {
+				mechanic_type = THE_KEI_lonely_creation_mechanic
+				power_type = THE_KEI_lonely_creation_mechanic_power
+				value = $value$
+			}
+		}
+	}
+}
+the_kei_gain_effect_mechanic_power_2_effect = {
+	if = {
+		limit = {
+			ROOT = {
+				has_government_mechanic = THE_KEI_lonely_creation_mechanic
+			}
+		 }
+		 ROOT = {
+			add_government_power = {
+				mechanic_type = THE_KEI_lonely_creation_mechanic
+				power_type = THE_KEI_lonely_creation_mechanic_power
+				value = $value$
+			}
+		}
+	}
+}

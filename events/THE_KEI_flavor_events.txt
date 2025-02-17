@@ -1,0 +1,42 @@
+namespace = THE_KEI_flavor_events
+#创形创生
+country_event = {
+	id = THE_KEI_flavor_events.1
+	title = "THE_KEI_flavor_events.1.t"
+	desc = "THE_KEI_flavor_events.1.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	option = {
+		name = THE_KEI_flavor_events.1.a
+	}
+}
+#埴轮兵长
+country_event = {
+	id = THE_KEI_flavor_events.2
+	title = "THE_KEI_flavor_events.2.t"
+	desc = "THE_KEI_flavor_events.2.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	option = {
+		name = THE_KEI_flavor_events.2.a
+	}
+}
+country_event = {
+	id = THE_KEI_flavor_events.3
+	title = "THE_KEI_flavor_events.3.t"
+	desc = "THE_KEI_flavor_events.3.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	option = {
+		name = THE_KEI_flavor_events.3.a
+	}
+}
