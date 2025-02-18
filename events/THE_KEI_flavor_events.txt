@@ -17,19 +17,19 @@ country_event = {
 		hidden_effect = {
 			set_variable = {
 				which = the_mayumi_fire_var
-				value = 1
+				value = 0
 			}
 			set_variable = {
 				which = the_mayumi_shock_var
-				value = 1
+				value = 0
 			}
 			set_variable = {
 				which = the_mayumi_manuever_var
-				value = 1
+				value = 0
 			}
 			set_variable = {
 				which = the_mayumi_siege_var
-				value = 1
+				value = 0
 			}
 		}
 	}
@@ -58,9 +58,9 @@ country_event = {
 		
 	}
 	immediate = {
-		hidden_effect = {
-			THE_KEI_define_general_mayumi = yes 
-		}
+		
+	}
+	after = {
 	}
 	option = {
 		name = THE_KEI_flavor_events.2.a
@@ -136,7 +136,10 @@ country_event = {
 	}
 	option = {
 		name = THE_KEI_flavor_events.2.e
-		THE_KEI_define_general_mayumi_siege_script = yes
+		custom_tooltip = THE_KEI_flavor_2_event_c_tt1
+		hidden_effect = {
+			THE_KEI_define_general_mayumi = yes 
+		}
 	}
 	option = {
 		name = THE_KEI_flavor_events.2.f
@@ -226,10 +229,10 @@ country_event = {
 	trigger = {
 		
 	}
+	
 	immediate = {
-		hidden_effect = {
-			THE_KEI_define_general_mayumi = yes
-		}
+	}
+	after = {
 	}
 	option = {
 		name = THE_KEI_flavor_events.2.a
@@ -305,7 +308,10 @@ country_event = {
 	}
 	option = {
 		name = THE_KEI_flavor_events.2.e
-		THE_KEI_define_general_mayumi_siege_script = yes
+		custom_tooltip = THE_KEI_flavor_2_event_c_tt1
+		hidden_effect = {
+			THE_KEI_define_general_mayumi = yes 
+		}
 	}
 	option = {
 		name = THE_KEI_flavor_events.2.f

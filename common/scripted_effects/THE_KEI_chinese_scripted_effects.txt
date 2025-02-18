@@ -1,10 +1,18 @@
 THE_KEI_define_general_mayumi_siege_script = {
-	define_general = {
-		name = "ÙWnèuQï"
-		female = yes
-		fire = $mayumi_fire$
-		shock = $mayumi_shock$
-		manuever = $mayumi_manuever$
-		siege = $mayumi_siege$
+	if ={
+		limit = {
+			is_variable_equal = {
+				which = the_mayumi_siege_var
+				value = $mayumi_siege$
+			}
+		}
+		define_general = {
+			name = "ÙWnèuQï"
+			female = yes
+			fire = $mayumi_fire$
+			shock = $mayumi_shock$
+			manuever = $mayumi_manuever$
+			siege = $mayumi_siege$
+		}
 	}
 }

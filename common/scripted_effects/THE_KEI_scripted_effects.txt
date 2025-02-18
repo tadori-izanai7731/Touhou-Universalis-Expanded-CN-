@@ -64,10 +64,11 @@ the_kei_gain_effect_mechanic_power_2_effect = {
 ##
 
 THE_KEI_define_general_mayumi = {
-	THE_MRS_define_general_mayumi_fire = yes
+	THE_KEI_define_general_mayumi_fire = yes
 }
 
 THE_KEI_define_general_mayumi_fire = {
+	THE_KEI_define_general_mayumi_fire_script = { mayumi_fire = 0 }
 	THE_KEI_define_general_mayumi_fire_script = { mayumi_fire = 1 }
 	THE_KEI_define_general_mayumi_fire_script = { mayumi_fire = 2 }
 	THE_KEI_define_general_mayumi_fire_script = { mayumi_fire = 3 }
@@ -91,6 +92,7 @@ THE_KEI_define_general_mayumi_fire_script = {
 }
 
 THE_KEI_define_general_mayumi_shock = {
+	THE_KEI_define_general_mayumi_shock_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = 0 }
 	THE_KEI_define_general_mayumi_shock_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = 1 }
 	THE_KEI_define_general_mayumi_shock_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = 2 }
 	THE_KEI_define_general_mayumi_shock_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = 3 }
@@ -114,6 +116,7 @@ THE_KEI_define_general_mayumi_shock_script = {
 }
 
 THE_KEI_define_general_mayumi_manuever = {
+	THE_KEI_define_general_mayumi_manuever_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = 0 }
 	THE_KEI_define_general_mayumi_manuever_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = 1 }
 	THE_KEI_define_general_mayumi_manuever_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = 2 }
 	THE_KEI_define_general_mayumi_manuever_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = 3 }
@@ -137,6 +140,7 @@ THE_KEI_define_general_mayumi_manuever_script = {
 }
 
 THE_KEI_define_general_mayumi_siege = {
+	THE_KEI_define_general_mayumi_siege_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = $mayumi_manuever$ mayumi_siege = 0 }
 	THE_KEI_define_general_mayumi_siege_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = $mayumi_manuever$ mayumi_siege = 1 }
 	THE_KEI_define_general_mayumi_siege_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = $mayumi_manuever$ mayumi_siege = 2 }
 	THE_KEI_define_general_mayumi_siege_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = $mayumi_manuever$ mayumi_siege = 3 }
