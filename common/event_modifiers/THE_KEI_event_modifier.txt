@@ -3,3 +3,11 @@ THE_KEI_estate_hina_wheel_buff = {
 	reinforce_cost_modifier = -1.00
 	is_janissary_modifier = yes
 }
+#救赎之光
+THE_KEI_savtor_light_1_buff = {
+	land_morale = 0.10
+	reinforce_speed = 1.00
+	reinforce_cost_modifier = -1.0
+	land_maintenance_modifier = -0.50
+	land_forcelimit = 30
+}

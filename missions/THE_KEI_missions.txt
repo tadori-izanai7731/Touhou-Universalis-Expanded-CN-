@@ -37,6 +37,38 @@ THE_KEI_main_branch_1 = {
 
 		effect = {  } 
 	}
+
+	THE_KEI_1_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_1_7 = {
+		icon = mission_unknown_mission
+		position = 7
+		required_missions = { THE_KEI_1_6 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_1_8 = {
+		icon = mission_unknown_mission
+		position = 8
+		required_missions = { THE_KEI_1_7 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
 }
 THE_KEI_main_branch_2 = {
 	slot = 2
@@ -94,9 +126,10 @@ THE_KEI_main_branch_2 = {
 		effect = {  } 
 	}
 
-	THE_KEI_2_10 = {
+	THE_KEI_2_7 = {
 		icon = mission_unknown_mission
-		position = 10
+		position = 7
+		required_missions = { THE_KEI_1_6 } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -104,21 +137,10 @@ THE_KEI_main_branch_2 = {
 		effect = {  } 
 	}
 
-	THE_KEI_2_11 = {
+	THE_KEI_2_8 = {
 		icon = mission_unknown_mission
-		position = 11
-		required_missions = { THE_KEI_2_10 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_KEI_2_12 = {
-		icon = mission_unknown_mission
-		position = 12
-		required_missions = { THE_KEI_2_11 } 
+		position = 8
+		required_missions = { THE_KEI_2_7 } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -196,28 +218,6 @@ THE_KEI_main_branch_3 = {
 
 		effect = {  } 
 	}
-
-	THE_KEI_3_11 = {
-		icon = mission_unknown_mission
-		position = 11
-		required_missions = { THE_KEI_2_10 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_KEI_3_12 = {
-		icon = mission_unknown_mission
-		position = 12
-		required_missions = { THE_KEI_3_11 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
 }
 THE_KEI_main_branch_4 = {
 	slot = 4
@@ -233,7 +233,17 @@ THE_KEI_main_branch_4 = {
 
 		trigger = {  } 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_KEI_4_1_c_tt1
+			add_country_modifier = {
+				name = THE_KEI_savtor_light_1_buff
+				duration = 3650
+			}
+			custom_tooltip = THE_KEI_4_1_c_tt2
+			hidden_effect = {
+				
+			}
+		} 
 	}
 
 	THE_KEI_4_3 = {
@@ -458,34 +468,9 @@ THE_KEI_minor_branch_1_lock = {
 	has_country_shield = yes
 	potential = { tag = KEI } 
 
-	THE_KEI_lock_1_6 = {
-		icon = mission_unknown_mission
-		position = 6
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_KEI_lock_1_7 = {
-		icon = mission_unknown_mission
-		position = 7
-		required_missions = { THE_KEI_lock_1_6 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_KEI_lock_1_9 = {
+	THE_KEI_1_9_lock = {
 		icon = mission_unknown_mission
 		position = 9
-		required_missions = {
-			THE_KEI_lock_1_7
-			THE_KEI_lock_2_8
-		}
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -493,10 +478,24 @@ THE_KEI_minor_branch_1_lock = {
 		effect = {  } 
 	}
 
-	THE_KEI_lock_1_11 = {
+	THE_KEI_1_10_lock = {
 		icon = mission_unknown_mission
-		position = 11
-		required_missions = { THE_KEI_lock_1_9 } 
+		position = 10
+		required_missions = { THE_KEI_1_9_lock } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_1_12_lock = {
+		icon = mission_unknown_mission
+		position = 12
+		required_missions = {
+			THE_KEI_2_11_lock
+			THE_KEI_1_10_lock
+		}
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -511,10 +510,10 @@ THE_KEI_minor_branch_2_lock = {
 	has_country_shield = yes
 	potential = { tag = KEI } 
 
-	THE_KEI_lock_2_7 = {
+	THE_KEI_2_10_lock = {
 		icon = mission_unknown_mission
-		position = 7
-		required_missions = { THE_KEI_lock_1_6 } 
+		position = 10
+		required_missions = { THE_KEI_1_9_lock } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -522,10 +521,10 @@ THE_KEI_minor_branch_2_lock = {
 		effect = {  } 
 	}
 
-	THE_KEI_lock_2_8 = {
+	THE_KEI_2_11_lock = {
 		icon = mission_unknown_mission
-		position = 8
-		required_missions = { THE_KEI_lock_2_7 } 
+		position = 11
+		required_missions = { THE_KEI_2_10_lock } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -533,10 +532,10 @@ THE_KEI_minor_branch_2_lock = {
 		effect = {  } 
 	}
 
-	THE_KEI_lock_2_9 = {
+	THE_KEI_2_12_lock = {
 		icon = mission_unknown_mission
-		position = 9
-		required_missions = { THE_KEI_lock_2_8 } 
+		position = 12
+		required_missions = { THE_KEI_2_11_lock } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
