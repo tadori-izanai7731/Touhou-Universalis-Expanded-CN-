@@ -1,0 +1,546 @@
+THE_KEI_main_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = KEI } 
+
+	THE_KEI_1_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_KEI_2_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_1_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { THE_KEI_1_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_1_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { THE_KEI_1_4 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_KEI_main_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = KEI } 
+
+	THE_KEI_2_1 = {
+		icon = mission_unknown_mission
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_2_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = {
+			THE_KEI_3_2
+			THE_KEI_1_2
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_2_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = {
+			THE_KEI_2_3
+			THE_KEI_3_4
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_2_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = { THE_KEI_2_5 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_2_10 = {
+		icon = mission_unknown_mission
+		position = 10
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_2_11 = {
+		icon = mission_unknown_mission
+		position = 11
+		required_missions = { THE_KEI_2_10 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_2_12 = {
+		icon = mission_unknown_mission
+		position = 12
+		required_missions = { THE_KEI_2_11 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_KEI_main_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = KEI } 
+
+	THE_KEI_3_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_KEI_2_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_3_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { THE_KEI_3_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_3_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_3_7 = {
+		icon = mission_unknown_mission
+		position = 7
+		required_missions = { THE_KEI_4_6 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_3_9 = {
+		icon = mission_unknown_mission
+		position = 9
+		required_missions = { THE_KEI_3_7 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_3_10 = {
+		icon = mission_unknown_mission
+		position = 10
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_3_11 = {
+		icon = mission_unknown_mission
+		position = 11
+		required_missions = { THE_KEI_2_10 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_3_12 = {
+		icon = mission_unknown_mission
+		position = 12
+		required_missions = { THE_KEI_3_11 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_KEI_main_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = KEI } 
+
+	THE_KEI_4_1 = {
+		icon = mission_unknown_mission
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_4_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_KEI_4_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_4_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { THE_KEI_4_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_4_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { THE_KEI_4_4 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_4_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_4_7 = {
+		icon = mission_unknown_mission
+		position = 7
+		required_missions = { THE_KEI_4_6 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_4_8 = {
+		icon = mission_unknown_mission
+		position = 8
+		required_missions = { THE_KEI_4_7 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_4_9 = {
+		icon = mission_unknown_mission
+		position = 9
+		required_missions = { THE_KEI_4_8 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_4_10 = {
+		icon = mission_unknown_mission
+		position = 10
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_4_11 = {
+		icon = mission_unknown_mission
+		position = 11
+		required_missions = {
+			THE_KEI_4_10
+			THE_KEI_3_10
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_4_12 = {
+		icon = mission_unknown_mission
+		position = 12
+		required_missions = { THE_KEI_4_11 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_KEI_main_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = KEI } 
+
+	THE_KEI_5_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_5_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_KEI_5_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_5_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { THE_KEI_5_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_5_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = { THE_KEI_5_5 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_5_7 = {
+		icon = mission_unknown_mission
+		position = 7
+		required_missions = { THE_KEI_4_6 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_5_9 = {
+		icon = mission_unknown_mission
+		position = 9
+		required_missions = { THE_KEI_5_7 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_5_10 = {
+		icon = mission_unknown_mission
+		position = 10
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_5_11 = {
+		icon = mission_unknown_mission
+		position = 11
+		required_missions = { THE_KEI_5_10 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_5_12 = {
+		icon = mission_unknown_mission
+		position = 12
+		required_missions = { THE_KEI_5_11 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_KEI_minor_branch_1_lock = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = KEI } 
+
+	THE_KEI_lock_1_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_lock_1_7 = {
+		icon = mission_unknown_mission
+		position = 7
+		required_missions = { THE_KEI_lock_1_6 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_lock_1_9 = {
+		icon = mission_unknown_mission
+		position = 9
+		required_missions = {
+			THE_KEI_lock_1_7
+			THE_KEI_lock_2_8
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_lock_1_11 = {
+		icon = mission_unknown_mission
+		position = 11
+		required_missions = { THE_KEI_lock_1_9 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_KEI_minor_branch_2_lock = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = KEI } 
+
+	THE_KEI_lock_2_7 = {
+		icon = mission_unknown_mission
+		position = 7
+		required_missions = { THE_KEI_lock_1_6 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_lock_2_8 = {
+		icon = mission_unknown_mission
+		position = 8
+		required_missions = { THE_KEI_lock_2_7 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_KEI_lock_2_9 = {
+		icon = mission_unknown_mission
+		position = 9
+		required_missions = { THE_KEI_lock_2_8 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
