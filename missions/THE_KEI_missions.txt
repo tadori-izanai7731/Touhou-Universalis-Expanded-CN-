@@ -231,7 +231,9 @@ THE_KEI_main_branch_4 = {
 		position = 1
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			always = no
+		 } 
 
 		effect = { 
 			custom_tooltip = THE_KEI_4_1_c_tt1
