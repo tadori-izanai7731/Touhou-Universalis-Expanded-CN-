@@ -50,6 +50,7 @@ country_event = {
 	
 	option = {
 		name = THE_AKI_flavor_events.2.a
+		add_patriarch_authority = 0.05
 		if = {
 			limit = {
 				OR = {
@@ -108,6 +109,7 @@ country_event = {
 	}
 	option = {
 		name = THE_AKI_flavor_events.3.b
+		add_patriarch_authority = 0.05
 		add_mercantilism = 2
 		add_inflation = -1
 		add_dip_power = 50
@@ -147,6 +149,7 @@ country_event = {
 	}
 	option = {
 		name = THE_AKI_flavor_events.4.a
+		add_patriarch_authority = 0.05
 		if = {
 			limit = {
 				OR = {
@@ -214,6 +217,7 @@ country_event = {
 	}
 	option = {
 		name = THE_AKI_flavor_events.5.a
+		add_patriarch_authority = 0.05
 		if = {
 			limit = {
 				OR = {
@@ -267,6 +271,7 @@ country_event = {
 	}
 	option = {
 		name = THE_AKI_flavor_events.6.a
+		add_patriarch_authority = 0.05
 		add_mil_power = 100
 		add_yearly_manpower = 1
 		add_country_modifier = {
@@ -326,6 +331,6 @@ country_event = {
 		name = THE_AKI_flavor_events.7.b
 		add_mil_power = 50
 		add_war_exhaustion = -2
-		add_yearly_manpower = 1.0
+		add_yearly_manpower = 1.5
 	}
 }
