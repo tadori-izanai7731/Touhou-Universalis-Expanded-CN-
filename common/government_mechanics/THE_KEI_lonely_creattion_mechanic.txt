@@ -8,6 +8,9 @@ THE_KEI_lonely_creation_mechanic = {
 		THE_KEI_lonely_creation_do = {
 			gui = "THE_KEI_government_interface_gui"
 			icon = GFX_THE_FOM_alice_dolls_start
+			trigger = {
+				ai = no
+			}
 			effect = {
 				country_event = {
 					id = THE_KEI_flavor_events.1
