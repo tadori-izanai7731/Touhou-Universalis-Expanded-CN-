@@ -113,6 +113,9 @@ technology = { #Renaissance Thought
 		renaissance = 0.5
 	}
 	
+	courthouse = yes
+	governing_capacity = 100
+
 	#Noble Republic
 }
 
@@ -123,9 +126,6 @@ technology = { #Courthouse
 		feudalism = 0.5
 		renaissance = 0.5
 	}
-
-	courthouse = yes
-	governing_capacity = 100
 
 	allowed_idea_groups = 3
 }

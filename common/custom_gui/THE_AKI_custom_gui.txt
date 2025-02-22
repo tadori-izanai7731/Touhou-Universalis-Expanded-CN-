@@ -30,7 +30,6 @@ custom_button = {
 		else = { FROM = { mil_power = 50 } }
 	}
 	effect = {
-		add_devastation = 20
 		if = {
 			limit = {
 				FROM = {
@@ -41,7 +40,6 @@ custom_button = {
 			FROM = { add_patriarch_authority = -0.05 }
 		}
 		else = { FROM = { add_mil_power = -50 } }
-		custom_tooltip = THE_AKI_add_manpower_base_province_manpower_tt
 		if = {
 			limit = { 
 				FROM = { has_government_attribute = THE_AKI_harvest_autumn_province_buff_abilities }
@@ -54,10 +52,12 @@ custom_button = {
 				}
 			}
 		}
+		add_devastation = 20
 		change_variable = {
 			which = the_aki_religions_monoriko_province_im_var
 			value = -25
 		}
+		custom_tooltip = THE_AKI_add_manpower_base_province_manpower_tt
 		hidden_effect = {
 			#导出省份人力
 			export_to_variable = {
@@ -96,7 +96,8 @@ custom_button = {
 		}
 	}
 	trigger = {
-		all_province_in_state = {
+		area_for_scope_province = {
+			type = all
 			owned_by = FROM
 			religion = FROM
 			is_prosperous = yes
