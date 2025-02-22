@@ -1,0 +1,136 @@
+THE_WRG_government_mechanic = {
+	# alert_icon_gfx = GFX_alerticons_government_mechanics
+	# alert_icon_index = 5
+	available = {
+		always = yes
+	}
+
+	powers = {
+		THE_WRG_government_mechanic_power = {
+			max = 100
+			min = -100
+			scaled_modifier = {
+				modifier = {
+					discipline = -1
+				}
+				trigger = {
+					has_government_power = {
+						mechanic_type = THE_WRG_government_mechanic
+						power_type = THE_WRG_government_mechanic_power
+						value = 0
+					}
+				}
+			}
+			reverse_scaled_modifier = {
+				modifier = {
+					discipline = 1
+				}
+				trigger = {
+					NOT  = {
+						has_government_power = {
+							mechanic_type = THE_WRG_government_mechanic
+							power_type = THE_WRG_government_mechanic_power
+							value = 0
+						}
+					}
+				}
+			}
+			range_modifier = {
+				modifier = {
+					monthly_THE_WRG_government_mechanic_power = 0.1
+				}
+				trigger = {
+					has_global_modifier_value = {
+						which = discipline
+						value = 0.001
+					}
+				}
+			}
+			range_modifier = {
+				modifier = {
+					monthly_THE_WRG_government_mechanic_power = 0.4
+				}
+				trigger = {
+					has_global_modifier_value = {
+						which = discipline
+						value = 0.005
+					}
+				}
+			}
+			range_modifier = {
+				modifier = {
+					monthly_THE_WRG_government_mechanic_power = 0.5
+				}
+				trigger = {
+					has_global_modifier_value = {
+						which = discipline
+						value = 0.01
+					}
+				}
+			}
+			range_modifier = {
+				modifier = {
+					monthly_THE_WRG_government_mechanic_power = 4
+				}
+				trigger = {
+					has_global_modifier_value = {
+						which = discipline
+						value = 0.05
+					}
+				}
+			}
+			range_modifier = {
+				modifier = {
+					monthly_THE_WRG_government_mechanic_power = -0.1
+				}
+				trigger = {
+					NOT = {
+						has_global_modifier_value = {
+							which = discipline
+							value = -0.0009
+						}
+					}
+				}
+			}
+			range_modifier = {
+				modifier = {
+					monthly_THE_WRG_government_mechanic_power = -0.4
+				}
+				trigger = {
+					NOT = {
+						has_global_modifier_value = {
+							which = discipline
+							value = -0.0049
+						}
+					}
+				}
+			}
+			range_modifier = {
+				modifier = {
+					monthly_THE_WRG_government_mechanic_power = -0.5
+				}
+				trigger = {
+					NOT = {
+						has_global_modifier_value = {
+							which = discipline
+							value = -0.0099
+						}
+					}
+				}
+			}
+			range_modifier = {
+				modifier = {
+					monthly_THE_WRG_government_mechanic_power = -4
+				}
+				trigger = {
+					NOT = {
+						has_global_modifier_value = {
+							which = discipline
+							value = -0.0499
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+THE_WRG_test_reform = {
+	icon = "crown"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		has_country_flag = THE_debug_flag
+	}
+	modifiers = {
+		prestige = 1
+	}
+	government_abilities = {
+		THE_WRG_government_mechanic
+	}
+	ai = {
+		factor = 0
+	}
+}

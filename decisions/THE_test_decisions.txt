@@ -14,15 +14,17 @@ country_decisions = {
 		}
 	}
 	THE_testtest_decision = {
+		provinces_to_highlight = {
+			owner = {
+				is_defender_of_faith = yes
+			}
+		}
 		potential = {
 			ai = no
 			has_country_flag = THE_debug_flag
 		}
 		allow = {
-			check_variable = {
-				which = the_crd_chaos_reject_mind_process_var
-				value = 1000
-			}
+			always = no
 		}
 		effect = {
 		}
