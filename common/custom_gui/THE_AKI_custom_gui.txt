@@ -101,6 +101,7 @@ custom_button = {
 			owned_by = FROM
 			religion = FROM
 			is_prosperous = yes
+			NOT = { has_province_modifier = THE_AKI_province_religions_v5_buff }
 		}
 		custom_trigger_tooltip = {
 			tooltip = the_aki_check_province_im_var_50_t
@@ -134,7 +135,14 @@ custom_button = {
 	} 
 	effect = {
 		if = {
-			limit = { any_province_in_state = { has_province_modifier = THE_AKI_province_religions_v4_buff } }
+			limit = {
+				any_province_in_state = {
+					OR = {
+						has_province_modifier = THE_AKI_province_religions_v4_buff
+						has_province_modifier = THE_AKI_province_religions_v5_buff
+					}
+				}
+			}
 			THE_AKI_province_button2_tooltip_scripted_effect = { level = 5 }
 			THE_AKI_province_button2_hidden_scripted_effect = { level = 5 }
 		}
