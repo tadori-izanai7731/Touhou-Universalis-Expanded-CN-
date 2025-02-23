@@ -6,7 +6,7 @@ THE_AKI_branch_1 = {
 	potential = { tag = AKI } 
 	
 	THE_AKI_army_and_leaves = {
-		icon = mission_unknown_mission
+		icon = the_aki_mission_2
 		position = 1
 		
 		trigger = { 
@@ -41,7 +41,7 @@ THE_AKI_branch_1 = {
 	}
 	
 	THE_AKI_sao_ling = {
-		icon = mission_unknown_mission
+		icon = kko_event_6
 		position = 2
 		required_missions = { THE_AKI_army_and_leaves } 
 		provinces_to_highlight = { 
@@ -73,7 +73,7 @@ THE_AKI_branch_1 = {
 	}
 	
 	THE_AKI_yof_god_in_forest = {
-		icon = mission_unknown_mission
+		icon = yof_mission_9
 		position = 4
 		required_missions = { THE_AKI_sao_ling } 
 		provinces_to_highlight = { 
@@ -134,7 +134,7 @@ THE_AKI_branch_1 = {
 	}
 	
 	THE_AKI_leaves_with_alliance = {
-		icon = mission_unknown_mission
+		icon = yof_mission_26
 		position = 5
 		required_missions = { THE_AKI_yof_god_in_forest } 
 		provinces_to_highlight = { 
@@ -197,7 +197,7 @@ THE_AKI_branch_1 = {
 	}
 	
 	THE_AKI_army_in_wither_winter = {
-		icon = mission_unknown_mission
+		icon = yof_mission_4
 		position = 6
 		provinces_to_highlight = { } 
 		
@@ -221,7 +221,7 @@ THE_AKI_branch_1 = {
 	}
 	
 	THE_AKI_wither_autunm_1 = {
-		icon = mission_unknown_mission
+		icon = yof_mission_12
 		position = 7
 		required_missions = { THE_AKI_army_in_wither_winter } 
 		provinces_to_highlight = {  } 
@@ -257,7 +257,7 @@ THE_AKI_branch_2 = {
 	potential = { tag = AKI } 
 	
 	THE_AKI_army_gather_in_autumn = {
-		icon = mission_unknown_mission
+		icon = the_aki_mission_9
 		position = 1
 		provinces_to_highlight = { } 
 		
@@ -275,7 +275,7 @@ THE_AKI_branch_2 = {
 	}
 	
 	THE_AKI_lily_white = {
-		icon = mission_unknown_mission
+		icon = mission_THE_LIL_icon_2
 		position = 2
 		required_missions = { THE_AKI_army_and_leaves } 
 		provinces_to_highlight = { 
@@ -306,7 +306,7 @@ THE_AKI_branch_2 = {
 	}
 	
 	THE_AKI_with_okina_oki = {
-		icon = mission_unknown_mission
+		icon = kko_event_3
 		position = 3
 		required_missions = { THE_AKI_lily_white } 
 		provinces_to_highlight = { 
@@ -336,7 +336,7 @@ THE_AKI_branch_2 = {
 	}
 	
 	THE_AKI_with_scr_mission = {
-		icon = mission_unknown_mission
+		icon = mission_touhou_scarlet_interior
 		position = 5
 		required_missions = { THE_AKI_with_okina_oki } 
 		provinces_to_highlight = { 
@@ -370,7 +370,7 @@ THE_AKI_branch_2 = {
 	}
 	
 	THE_AKI_tech_and_agriculture = {
-		icon = mission_unknown_mission
+		icon = mission_touhou_scarlet_library
 		position = 6
 		required_missions = { THE_AKI_with_scr_mission } 
 		provinces_to_highlight = { 
@@ -421,7 +421,7 @@ THE_AKI_branch_2 = {
 	}
 	
 	THE_AKI_with_wither_autumn_2 = {
-		icon = mission_unknown_mission
+		icon = the_aki_mission_5
 		position = 8
 		required_missions = { THE_AKI_wither_autunm_1 } 
 		provinces_to_highlight = {
@@ -475,7 +475,7 @@ THE_AKI_branch_3 = {
 	potential = { tag = AKI } 
 	
 	THE_AKI_bloom_of_rice_ears = {
-		icon = mission_unknown_mission
+		icon = the_aki_mission_1
 		position = 1
 		provinces_to_highlight = { } 
 		
@@ -490,7 +490,7 @@ THE_AKI_branch_3 = {
 	}
 	
 	THE_AKI_sprouts_and_rebirths = {
-		icon = mission_unknown_mission
+		icon = mission_THE_LIL_icon_4
 		position = 3
 		required_missions = { THE_AKI_lily_white } 
 		provinces_to_highlight = { 
@@ -520,7 +520,7 @@ THE_AKI_branch_3 = {
 	}
 	
 	THE_AKI_divine_virtue = {
-		icon = mission_unknown_mission
+		icon = the_aki_mission_8
 		position = 5
 		required_missions = {
 			THE_AKI_harvest_festival
@@ -545,7 +545,7 @@ THE_AKI_branch_3 = {
 	}
 	
 	THE_AKI_faith_on_earth = {
-		icon = mission_unknown_mission
+		icon = mission_touhou_th_more_shrines
 		position = 6
 		required_missions = { THE_AKI_divine_virtue } 
 		provinces_to_highlight = { 
@@ -573,7 +573,7 @@ THE_AKI_branch_3 = {
 	}
 	
 	THE_AKI_with_myo_mission = {
-		icon = mission_unknown_mission
+		icon = mission_touhou_myouren_temple
 		position = 7
 		required_missions = { THE_AKI_faith_on_earth } 
 		provinces_to_highlight = { 
@@ -626,7 +626,7 @@ THE_AKI_branch_4 = {
 	potential = { tag = AKI } 
 	
 	THE_AKI_build_shrine = {
-		icon = mission_unknown_mission
+		icon = mission_touhou_shrines
 		position = 1
 		provinces_to_highlight = { 
 			owned_by = ROOT
@@ -654,7 +654,7 @@ THE_AKI_branch_4 = {
 	}
 	
 	THE_AKI_reset_faith = {
-		icon = mission_unknown_mission
+		icon = mission_touhou_th_shintoism
 		position = 2
 		required_missions = {
 			THE_AKI_build_shrine
@@ -681,7 +681,7 @@ THE_AKI_branch_4 = {
 	}
 	
 	THE_AKI_potato_covenant = {
-		icon = mission_unknown_mission
+		icon = mission_touhou_human_capital
 		position = 3
 		required_missions = { THE_AKI_reset_faith } 
 		provinces_to_highlight = { 
@@ -728,7 +728,7 @@ THE_AKI_branch_4 = {
 	}
 	
 	THE_AKI_harvest_festival = {
-		icon = mission_unknown_mission
+		icon = the_aki_mission_3
 		position = 4
 		required_missions = { THE_AKI_potato_covenant } 
 		provinces_to_highlight = { 
@@ -756,7 +756,7 @@ THE_AKI_branch_4 = {
 	}
 	
 	THE_AKI_tour_in_autumn = {
-		icon = mission_unknown_mission
+		icon = yof_mission_13
 		position = 6
 		required_missions = { THE_AKI_harvest_festival } 
 		provinces_to_highlight = {  } 
@@ -789,7 +789,7 @@ THE_AKI_branch_4 = {
 	}
 	
 	THE_AKI_autumn_of_abundance = {
-		icon = mission_unknown_mission
+		icon = yof_mission_12
 		position = 8
 		required_missions = { THE_AKI_land_of_field } 
 		provinces_to_highlight = { } 
@@ -820,7 +820,7 @@ THE_AKI_branch_5 = {
 	potential = { tag = AKI } 
 	
 	THE_AKI_wild_field = {
-		icon = mission_unknown_mission
+		icon = mission_THE_HNG_mission2
 		position = 1
 		provinces_to_highlight = { 
 			OR = {
@@ -843,7 +843,7 @@ THE_AKI_branch_5 = {
 	}
 	
 	THE_AKI_fertle_fields = {
-		icon = mission_unknown_mission
+		icon = mission_THE_HNG_mission1
 		position = 3
 		required_missions = {
 			THE_AKI_reset_faith
@@ -886,7 +886,7 @@ THE_AKI_branch_5 = {
 	}
 	
 	THE_AKI_hoho_field = {
-		icon = mission_unknown_mission
+		icon = the_aki_mission_4
 		position = 4
 		required_missions = { THE_AKI_fertle_fields } 
 		provinces_to_highlight = { 
@@ -922,7 +922,7 @@ THE_AKI_branch_5 = {
 	}
 	
 	THE_AKI_abundant_fields = {
-		icon = mission_unknown_mission
+		icon = the_aki_mission_10
 		position = 5
 		required_missions = { THE_AKI_hoho_field } 
 		provinces_to_highlight = { 
@@ -970,7 +970,7 @@ THE_AKI_branch_5 = {
 	}
 	
 	THE_AKI_jin_tao_mi_lang = {
-		icon = mission_unknown_mission
+		icon = the_aki_mission_6
 		position = 6
 		provinces_to_highlight = { 
 			owned_by = ROOT
@@ -1003,7 +1003,7 @@ THE_AKI_branch_5 = {
 	}
 	
 	THE_AKI_land_of_field = {
-		icon = mission_unknown_mission
+		icon = the_aki_mission_11
 		position = 7
 		required_missions = { THE_AKI_jin_tao_mi_lang } 
 		provinces_to_highlight = {
