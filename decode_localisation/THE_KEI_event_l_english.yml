@@ -31,5 +31,11 @@ l_english:
  THE_KEI_flavor_events.2.e: "决定"
  THE_KEI_flavor_2_event_c_tt1: "埴轮兵长当前点数(火力：[Root.the_mayumi_fire_var.GetValue]冲击：[Root.the_mayumi_shock_var.GetValue]机动：[Root.the_mayumi_manuever_var.GetValue]围城：[Root.the_mayumi_siege_var.GetValue])"
  THE_KEI_flavor_events.2.f: "返回"
+ ##buff_name
+ THE_KEI_savtor_light_1_buff: "救赎之光"
+
+ 
  ##MISSION EXTRA
- THE_KEI_4_1_c_tt1: "持有此效果时，在战争占领@SKI劲牙组@YAC鬼杰组@GYK刚欲同盟的省份将会立即割让并获得核心。"
+ THE_KEI_4_1_c_tt1: "持有此效果时:\n--在战争占领@SKI劲牙组@YAC鬼杰组的省份将会立即割让并获得核心。\n--对@SKI劲牙组@YAC鬼杰组宣战，对方仅能召唤动物灵盟友。"
+ THE_KEI_4_1_c_tt2: "在首都生成§Y30支「耶尼切里」§!部队"
+ THE_KEI_4_3_custom_tt1: "§Y所有我们在畜生界的省份获得核心，并转变为我们的宗教。§!"

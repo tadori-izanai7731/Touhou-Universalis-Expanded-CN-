@@ -229,21 +229,46 @@ THE_KEI_main_branch_4 = {
 	THE_KEI_4_1 = {
 		icon = mission_unknown_mission
 		position = 1
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			OR = {
+				owned_by = ROOT
+			}
+		 } 
 
 		trigger = { 
-			always = no
+			has_mil_advisor = yes
+			land_maintenance = 1.00
 		 } 
 
 		effect = { 
-			custom_tooltip = THE_KEI_4_1_c_tt1
 			add_country_modifier = {
 				name = THE_KEI_savtor_light_1_buff
-				duration = -1
+				duration = 3650
 			}
+			custom_tooltip = THE_KEI_4_1_c_tt1
 			custom_tooltip = THE_KEI_4_1_c_tt2
+			add_manpower = 50
+			Yachie_state = {
+				add_permanent_claim = ROOT
+			}
+			Saki_state = {
+				add_permanent_claim = ROOT
+			}
+			Sanzu_upstream = {
+				add_permanent_claim = ROOT
+			}
+			Hifuu_club = {
+				add_permanent_claim = ROOT
+			}
 			hidden_effect = {
-				
+				capital_scope = {
+					for = {
+						amount = 30
+						effect = "
+						janissary_infantry = ROOT
+						"
+					}
+				}
 			}
 		} 
 	}
@@ -252,20 +277,74 @@ THE_KEI_main_branch_4 = {
 		icon = mission_unknown_mission
 		position = 3
 		required_missions = { THE_KEI_4_1 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			OR = {
+				area = Yachie_state
+				area = Saki_state 
+			}
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			Yachie_state = {
+				type = all
+				owned_by = ROOT
+			}
+			Saki_state = {
+				type = all
+				owned_by = ROOT
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_KEI_4_3_custom_tt1
+			add_adm_power = 75
+			add_dip_power = 75
+			add_mil_power = 75
+			Sea_of_petroleum = {
+				add_permanent_claim = ROOT
+			}
+			Gate_to_the_dead = {
+				add_permanent_claim = ROOT
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = Yachie_state
+							area = Saki_state
+							area = Sanzu_upstream
+							area = Hifuu_club
+						}
+					}
+					add_core = ROOT
+					change_culture = ROOT
+					change_religion = ROOT
+				}
+			}
+		 } 
 	}
 
 	THE_KEI_4_4 = {
 		icon = mission_unknown_mission
 		position = 4
 		required_missions = { THE_KEI_4_3 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			OR = {
+				area = Sea_of_petroleum
+				area = Gate_to_the_dead
+			}
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 6
+				OR = {
+					area = Sea_of_petroleum
+					area = Gate_to_the_dead
+				}
+				owned_by = ROOT
+			}
+		 } 
 
 		effect = {  } 
 	}
