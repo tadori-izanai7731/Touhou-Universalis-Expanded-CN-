@@ -445,15 +445,6 @@ the_hng_disasters_four = {
 					was_tag = HNG
 				}
 			}
-			AND = {
-				is_year = 1550
-				NOT = { army_professionalism = 0.6 }
-			}
-			AND = {
-				NOT = { is_year = 1550 }
-				NOT = { army_tradition = 85	 }
-				
-			}
 		}
 	}	
 	can_stop = {
@@ -463,18 +454,12 @@ the_hng_disasters_four = {
 				army_tradition = 85			
 			}
 			AND = {
-				NOT = { tag = HNG }
-				NOT = { was_tag  = HNG }		
-				army_professionalism = 0.5
-			}
-			AND = {
 				NOT = { army_size = 150	 }
 				OR = {
 					tag = HNG
 					was_tag = HNG
 				}
 			}
-			army_professionalism = 0.75
 		}
 	}
 	progress = {
@@ -483,84 +468,36 @@ the_hng_disasters_four = {
 			has_government_power = {
 				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
 				power_type = THE_HNG_Army_corruption_mil_power
+				value = 10
+			}
+		}
+		modifier = {
+			factor = 5
+			has_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Army_corruption_mil_power
+				value = 20
+			}
+		}
+		modifier = {
+			factor = 10
+			has_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Army_corruption_mil_power
 				value = 30
 			}
 		}
 		modifier = {
-			factor = 2
-			has_government_power = {
-				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
-				power_type = THE_HNG_Army_corruption_mil_power
-				value = 40
-			}
-		}
-		modifier = {
-			factor = 3
-			has_government_power = {
-				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
-				power_type = THE_HNG_Army_corruption_mil_power
-				value = 50
-			}
-		}
-		modifier = {
-			factor = -1
-			adm = 5
-		}
-		modifier = {
-			factor = -1
-			adm = 6
-		}
-		modifier = {
-			factor = -1
-			mil = 4
-		}
-		modifier = {
-			factor = -1
-			mil = 5
-		}
-		modifier = {
-			factor = -1
-			mil = 6
-		}
-		modifier = {
-			factor = 30
-			is_bankrupt = yes
-		}
-		modifier = {
-			factor = 2
-			corruption = 3
-		}
-		modifier = {
-			factor = 2
-			corruption = 5
+			factor = 5
+			corruption = 1
 		}
 		modifier = {
 			factor = 5
-			has_any_disaster = yes
-		}
-		modifier = {
-			factor = 1
 			inflation = 1
 		}
 		modifier = {
-			factor = 2
-			inflation = 3
-		}
-		modifier = {
-			factor = 2
-			inflation = 5
-		}
-		modifier = {
-			factor = 2
+			factor = 10
 			NOT ={ imperial_mandate = 50 }
-		}
-		modifier = {
-			factor = -1
-			imperial_mandate = 80
-		}
-		modifier = {
-			factor = -1
-			has_mil_advisor_3 = yes
 		}
 		modifier = {
 			factor = 100
@@ -579,7 +516,7 @@ the_hng_disasters_four = {
 			}
 			AND = {
 				NOT = { tag = HNG }
-				NOT = { was_tag  = HNG }
+				NOT = { was_tag = HNG }
 				OR = {
 					army_professionalism = 0.5
 					army_tradition = 85
