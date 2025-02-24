@@ -1395,6 +1395,27 @@ callaction = {
 		}
 	}
 	condition = {
+		potential = { 
+			any_country = { has_country_modifier = THE_KEI_savtor_light_1_buff war_with = ROOT } 
+			ROOT = {
+				OR = {
+					tag = GYK
+					tag = SKI
+					tag = YAC
+				}
+			}
+		}
+		allow = {
+			FROM = {
+				OR = {
+					tag = GYK
+					tag = SKI
+					tag = YAC
+				}
+			}
+		}
+	}
+	condition = {
 		potential = {
 			is_in_war = {
 				casus_belli = THE_AKI_season_war_cb
