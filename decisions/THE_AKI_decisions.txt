@@ -135,4 +135,64 @@ country_decisions = {
 			}
 		}
 	}
+
+	### Quality Of Life Decisions
+
+	THE_AKI_diaplay_all_province_availably_to_use_action_2_decision = {
+		color = { 255 186 39 }
+		potential = {
+			ai = no
+			OR = {
+				mission_completed = THE_AKI_potato_covenant
+				religion = the_minoriko
+			}
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = THE_AKI_this_decision_only_for_diaplaying_province
+				always = no
+			}
+		}
+		provinces_to_highlight = {
+			area_for_scope_province = {
+				type = all
+				owned_by = FROM
+				religion = FROM
+				is_prosperous = yes
+				NOT = { has_province_modifier = THE_AKI_province_religions_v5_buff }
+			}
+			custom_trigger_tooltip = {
+				tooltip = the_aki_check_province_im_var_50_t
+				check_variable = {
+					which = the_aki_religions_monoriko_province_im_var
+					value = 50
+				}
+			}
+			if = {
+				limit = { any_province_in_state = { has_province_modifier = THE_AKI_province_religions_v4_buff } }
+				custom_trigger_tooltip = {
+					tooltip = THE_AKI_has_unlock_level_5_province_modifier_ctt
+					any_country = {
+						mission_completed = THE_AKI_autumn_of_abundance
+					}
+				}
+				all_province_in_state = { development = 40 }
+			}
+			else_if = {
+				limit = { any_province_in_state = { has_province_modifier = THE_AKI_province_religions_v3_buff } }
+				all_province_in_state = { development = 30 }
+			}
+			else_if = {
+				limit = { any_province_in_state = { has_province_modifier = THE_AKI_province_religions_v2_buff } }
+				all_province_in_state = { development = 20 }
+			}
+			else_if = {
+				limit = { any_province_in_state = { has_province_modifier = THE_AKI_province_religions_v1_buff } }
+				all_province_in_state = { development = 10 }
+			}
+		}
+		effect = {
+			custom_tooltip = THE_AKI_diaplay_all_province_availably_to_use_action_2_tt
+		}
+	}
 }

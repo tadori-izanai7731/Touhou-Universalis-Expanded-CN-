@@ -96,41 +96,46 @@ custom_button = {
 		}
 	}
 	trigger = {
-		area_for_scope_province = {
-			type = all
-			owned_by = FROM
-			religion = FROM
-			is_prosperous = yes
+		if = {
+			limit = { has_province_modifier = THE_AKI_province_religions_v5_buff }
 			NOT = { has_province_modifier = THE_AKI_province_religions_v5_buff }
 		}
-		custom_trigger_tooltip = {
-			tooltip = the_aki_check_province_im_var_50_t
-			check_variable = {
-				which = the_aki_religions_monoriko_province_im_var
-				value = 50
+		else = {
+			area_for_scope_province = {
+				type = all
+				owned_by = FROM
+				religion = FROM
+				is_prosperous = yes
 			}
-		}
-		if = {
-			limit = { any_province_in_state = { has_province_modifier = THE_AKI_province_religions_v4_buff } }
 			custom_trigger_tooltip = {
-				tooltip = THE_AKI_has_unlock_level_5_province_modifier_ctt
-				any_country = {
-					mission_completed = THE_AKI_autumn_of_abundance
+				tooltip = the_aki_check_province_im_var_50_t
+				check_variable = {
+					which = the_aki_religions_monoriko_province_im_var
+					value = 50
 				}
 			}
-			all_province_in_state = { development = 40 }
-		}
-		else_if = {
-			limit = { any_province_in_state = { has_province_modifier = THE_AKI_province_religions_v3_buff } }
-			all_province_in_state = { development = 30 }
-		}
-		else_if = {
-			limit = { any_province_in_state = { has_province_modifier = THE_AKI_province_religions_v2_buff } }
-			all_province_in_state = { development = 20 }
-		}
-		else_if = {
-			limit = { any_province_in_state = { has_province_modifier = THE_AKI_province_religions_v1_buff } }
-			all_province_in_state = { development = 10 }
+			if = {
+				limit = { any_province_in_state = { has_province_modifier = THE_AKI_province_religions_v4_buff } }
+				custom_trigger_tooltip = {
+					tooltip = THE_AKI_has_unlock_level_5_province_modifier_ctt
+					any_country = {
+						mission_completed = THE_AKI_autumn_of_abundance
+					}
+				}
+				all_province_in_state = { development = 40 }
+			}
+			else_if = {
+				limit = { any_province_in_state = { has_province_modifier = THE_AKI_province_religions_v3_buff } }
+				all_province_in_state = { development = 30 }
+			}
+			else_if = {
+				limit = { any_province_in_state = { has_province_modifier = THE_AKI_province_religions_v2_buff } }
+				all_province_in_state = { development = 20 }
+			}
+			else_if = {
+				limit = { any_province_in_state = { has_province_modifier = THE_AKI_province_religions_v1_buff } }
+				all_province_in_state = { development = 10 }
+			}
 		}
 	} 
 	effect = {

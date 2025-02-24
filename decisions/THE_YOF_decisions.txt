@@ -82,11 +82,11 @@ country_decisions = {
 			}
 		}
 		potential = {
+			ai = no
 			OR = {
 				tag = YOF
 				was_tag = YOF
 			}
-			ai = no
 		}
 		allow = {
 			custom_trigger_tooltip = {

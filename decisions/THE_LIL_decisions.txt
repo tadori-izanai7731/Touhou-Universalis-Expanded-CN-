@@ -25,6 +25,7 @@ country_decisions = {
 	THE_LIL_view_pranked_country_decision = {
 		color = { 255 255 255 }
 		potential = {
+			ai = no
 			OR = {
 				th_is_or_was_tag = { tag = LIL }
 				th_has_copied_from_target = {
