@@ -1,0 +1,14 @@
+THE_CH2_respawn_ruler_effects = {
+	define_ruler = {
+		name = "CS¦N"
+		dynasty = ")Y«R"
+		adm = 4
+		dip = 6
+		mil = 4
+		age = 1100
+		claim = 95
+		female = yes
+	}
+	add_ruler_personality = immortal_personality
+	set_ruler_flag = THE_CH2_respawn_ruler_ruler_flag
+}
