@@ -6,7 +6,7 @@ THE_KEI_annex_ski_yac_province_in_war_effects = {
 					tag = KEI
 					was_tag = KEI
 				}
-				
+				has_country_modifier = THE_KEI_savtor_light_1_buff
 				is_in_war = {
 					attacker_leader = ROOT
 				}
