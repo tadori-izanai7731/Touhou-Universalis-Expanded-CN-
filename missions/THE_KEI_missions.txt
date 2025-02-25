@@ -9,11 +9,51 @@ THE_KEI_main_branch_1 = {
 		icon = mission_unknown_mission
 		position = 2
 		required_missions = { THE_KEI_2_1 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			if = {
+				limit = {
+					ai = no
+				}
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 50
+				}
+				estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 50
+				}
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 50
+				}
+			}
+			else = {
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 30
+				}
+				estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 30
+				}
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 30
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			add_stability = 1
+			add_country_modifier = {
+				name = THE_KEI_savtor_all_power_buff
+				duration = -1
+			}
+		 } 
 	}
 
 	THE_KEI_1_4 = {
@@ -80,11 +120,37 @@ THE_KEI_main_branch_2 = {
 	THE_KEI_2_1 = {
 		icon = mission_unknown_mission
 		position = 1
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			province_id = 5045
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			5045 = {
+				owned_by = ROOT
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			add_prestige = 20
+			add_treasury = 200
+			5045 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			Yachie_state = {
+				add_permanent_claim = ROOT
+			}
+			Saki_state = {
+				add_permanent_claim = ROOT
+			}
+			Sanzu_upstream = {
+				add_permanent_claim = ROOT
+			}
+			Hifuu_club = {
+				add_permanent_claim = ROOT
+			}
+		 } 
 	}
 
 	THE_KEI_2_3 = {
@@ -94,11 +160,62 @@ THE_KEI_main_branch_2 = {
 			THE_KEI_3_2
 			THE_KEI_1_2
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			5045 = {
+				development = 30
+			}
+			if = {
+				limit = {
+					ai = no
+				 }
+				 OR = {
+					num_of_estate_agendas_completed = {
+						estate = estate_church
+						value = 1
+					}
+					num_of_estate_agendas_completed = {
+						estate = estate_burghers
+						value = 1
+					}
+					num_of_estate_agendas_completed = {
+						estate = estate_nobles
+						value = 1
+					}
+				}
+			}
+			else = {
+				
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			add_government_reform = THE_KEI_lonely_creation_government_reform
+			add_government_power = {
+				mechanic_type = THE_KEI_lonely_creation_mechanic
+				power_type = THE_KEI_lonely_creation_mechanic_power
+				value = 20
+			}
+			add_army_tradition = 25
+			add_army_professionalism = 0.20
+			5045 = {
+				add_province_modifier = {
+					name = THE_KEI_the_captial_of_KEI_buff
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						alliance_with = ROOT
+					}
+					break_alliance = ROOT
+				}
+			}
+		 } 
 	}
 
 	THE_KEI_2_5 = {
@@ -159,11 +276,31 @@ THE_KEI_main_branch_3 = {
 		icon = mission_unknown_mission
 		position = 2
 		required_missions = { THE_KEI_2_1 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			if = {
+				limit = {
+					ai = no
+				}
+				5045 = {
+					has_fort_building_trigger = yes
+				}
+			}
+			else = {
+				total_development = 300
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			add_mil_power = 150
+			5045 = {
+				add_or_upgrade_fort_building = yes
+			}
+			create_general = { tradition = 80 culture = Higanean }
+		 } 
 	}
 
 	THE_KEI_3_4 = {
@@ -248,18 +385,6 @@ THE_KEI_main_branch_4 = {
 			custom_tooltip = THE_KEI_4_1_c_tt1
 			custom_tooltip = THE_KEI_4_1_c_tt2
 			add_manpower = 50
-			Yachie_state = {
-				add_permanent_claim = ROOT
-			}
-			Saki_state = {
-				add_permanent_claim = ROOT
-			}
-			Sanzu_upstream = {
-				add_permanent_claim = ROOT
-			}
-			Hifuu_club = {
-				add_permanent_claim = ROOT
-			}
 			hidden_effect = {
 				capital_scope = {
 					for = {

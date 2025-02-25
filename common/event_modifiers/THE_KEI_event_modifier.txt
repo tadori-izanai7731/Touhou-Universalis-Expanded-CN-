@@ -11,3 +11,14 @@ THE_KEI_savtor_light_1_buff = {
 	land_maintenance_modifier = -0.50
 	land_forcelimit = 30
 }
+#奉献一切
+THE_KEI_savtor_all_power_buff = {
+	all_estate_possible_privileges = 1
+	global_tax_income = 120
+}
+#信仰之地
+THE_KEI_the_captial_of_KEI_buff = {
+	local_religious_unity_contribution = 0.50
+	local_tax_modifier = 0.50
+	province_trade_power_value = 50
+}
