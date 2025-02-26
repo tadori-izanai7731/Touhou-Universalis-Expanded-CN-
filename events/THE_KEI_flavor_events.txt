@@ -35,6 +35,9 @@ country_event = {
 	}
 	option = {
 		name = THE_KEI_flavor_events.1.b
+		trigger = {
+			mission_completed = THE_KEI_4_7
+		}
 		add_government_power = {
 			mechanic_type = THE_KEI_lonely_creation_mechanic
 			power_type = THE_KEI_lonely_creation_mechanic_power
