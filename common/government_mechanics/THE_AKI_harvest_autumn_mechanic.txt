@@ -11,6 +11,7 @@ THE_AKI_harvest_autumn_mechanic = {
 			min = -100
 			max = 100
 			base_monthly_growth = 0
+			increases_with_global = no
 			scaled_modifier = {
 				modifier = { 
 					land_morale = 0.10
@@ -40,7 +41,6 @@ THE_AKI_harvest_autumn_mechanic = {
 					end_value = 0
 				}
 			}
-			increases_with_global = no
 		}
 	}
 }

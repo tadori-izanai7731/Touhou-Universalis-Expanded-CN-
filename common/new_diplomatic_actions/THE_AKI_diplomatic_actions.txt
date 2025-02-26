@@ -44,6 +44,10 @@ THE_AKI_sell_potatos_to_human = {
 		}
 		set_country_flag = THE_AKI_sell_potatos_dip_c_flag
 		hidden_effect = {
+			change_variable = {
+				which = the_aki_sell_potatos_var
+				value = 1
+			}
 			FROM = {
 				export_to_variable = {
 					which = th_money_to_transfer

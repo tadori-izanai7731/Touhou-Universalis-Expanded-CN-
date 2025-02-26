@@ -1,11 +1,11 @@
 THE_AKI_ideas = {
 	start = {
-		land_maintenance_modifier = -0.15
-		ae_impact = -0.15
+		land_maintenance_modifier = -0.1
+		ae_impact = -0.1
 	}
 
 	bonus = {
-		global_supply_limit_modifier = 0.50
+		global_supply_limit_modifier = 1.0
 	}
 
 	trigger = {
@@ -24,9 +24,9 @@ THE_AKI_ideas = {
 	}
 	
 	THE_AKI_idea_3 = {
-		development_cost = -0.30
+		development_cost = -0.2
 		global_prov_trade_power_modifier = 0.30
-	}	
+	}
 	
 	THE_AKI_idea_4 = {
 		improve_relation_modifier = 0.25

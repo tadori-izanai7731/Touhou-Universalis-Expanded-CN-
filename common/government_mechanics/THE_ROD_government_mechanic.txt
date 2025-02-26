@@ -10,6 +10,8 @@ THE_ROD_dark_moon_night_mechanic = {
 			gui = THE_ROD_government_mechanic_power_gui
 			show_before_interactions = yes
 			max = 100
+			base_monthly_growth = 0
+			increases_with_global = no
 			range_modifier = {
 				modifier = {
 					improve_relation_modifier = 0.1
@@ -202,7 +204,6 @@ THE_ROD_dark_moon_night_mechanic = {
 					has_country_flag = THE_ROD_decrease_mechanic_debuff_flag
 				}
 			}
-			increases_with_global = no
 		}
 	}
 	interactions = {

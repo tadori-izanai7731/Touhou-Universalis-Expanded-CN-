@@ -95,6 +95,7 @@ THE_AKI_province_religions_v1_buff = {
 	local_tax_modifier = 0.10
 	trade_goods_size_modifier = 0.05
 	local_production_efficiency = 0.05
+	supply_limit = 5
 }
 #穰穰满家
 THE_AKI_province_religions_v2_buff = {
@@ -104,6 +105,7 @@ THE_AKI_province_religions_v2_buff = {
 	local_tax_modifier = 0.15
 	trade_goods_size_modifier = 0.05
 	local_production_efficiency = 0.05
+	supply_limit = 5
 }
 #千仓万箱
 THE_AKI_province_religions_v3_buff = {
@@ -114,6 +116,7 @@ THE_AKI_province_religions_v3_buff = {
 	trade_goods_size_modifier = 0.10
 	local_production_efficiency = 0.10
 	allowed_num_of_buildings = 1
+	supply_limit = 10
 }
 #神穗垂恩
 THE_AKI_province_religions_v4_buff = {
@@ -124,6 +127,7 @@ THE_AKI_province_religions_v4_buff = {
 	trade_goods_size_modifier = 0.20
 	local_production_efficiency = 0.15
 	allowed_num_of_buildings = 1
+	supply_limit = 10
 }
 #天稻神授
 THE_AKI_province_religions_v5_buff = {
@@ -135,6 +139,7 @@ THE_AKI_province_religions_v5_buff = {
 	local_production_efficiency = 0.50
 	allowed_num_of_buildings = 2
 	allowed_num_of_manufactories = 1
+	supply_limit = 15
 }
 #作物祝福
 THE_AKI_religion_events_3_province_buff = {
@@ -151,4 +156,20 @@ THE_AKI_religion_events_6_buff = {
 	discipline = 0.05
 	morale_damage = 0.1
 	leader_land_shock = 1
+}
+#秋季之音
+THE_AKI_autumn_music_modifier = {
+	ae_impact = -0.1
+	land_maintenance_modifier = -0.1
+}
+#撒向澄空
+THE_AKI_declare_spring_modifier = {
+	development_cost = -0.2
+	merchants = 1
+}
+#甘储如饴
+THE_AKI_ipomoea_batatas_modifier = {
+	global_trade_goods_size_modifier = 0.2
+	unjustified_demands = -0.2
+	all_estate_loyalty_equilibrium = 0.05
 }
