@@ -769,11 +769,28 @@ THE_KEI_main_branch_4 = {
 		icon = mission_unknown_mission
 		position = 8
 		required_missions = { THE_KEI_4_7 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			province_id = 4987
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			4987 = {
+				owned_by = ROOT
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_KEI_4_8_c_tt1
+			add_country_modifier = {
+				name = THE_KEI_rebuild_oder_buff
+				duration = -1
+			}
+			4987 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+		 } 
 	}
 
 	THE_KEI_4_9 = {

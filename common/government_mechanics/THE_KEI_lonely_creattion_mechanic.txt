@@ -59,6 +59,15 @@ THE_KEI_lonely_creation_mechanic = {
 				start_value = 75
 				end_value = 100
 			}
+			#任务
+			range_modifier = {
+				modifier = { 
+					idea_cost = -0.05
+					technology_cost = -0.05
+				}
+				start_value = 75
+				end_value = 100
+			}
 		}
 	}
 }
