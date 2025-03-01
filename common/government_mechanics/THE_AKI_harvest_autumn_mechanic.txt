@@ -18,28 +18,17 @@ THE_AKI_harvest_autumn_mechanic = {
 					global_manpower_modifier = 0.50
 					global_supply_limit_modifier = 0.50
 				}
-				start_value = 0
+				start_value = -100
 				end_value = 100
 			}
 			reverse_scaled_modifier = {
-				trigger = {
-					NOT = {
-						has_government_power = {
-							mechanic_type = THE_AKI_harvest_autumn_mechanic
-							power_type = THE_AKI_harvest_autumn_mechanic_power
-							value = 0
-						}
-					}
-				}
 				modifier = { 
-					modifier = { 
-						development_cost_modifier = -0.20
-						global_trade_goods_size_modifier = 0.20
-						build_cost = -0.20
-					}
-					start_value = -100
-					end_value = 0
+					development_cost_modifier = -0.20
+					global_trade_goods_size_modifier = 0.20
+					build_cost = -0.20
 				}
+				start_value = -100
+				end_value = 100
 			}
 		}
 	}
