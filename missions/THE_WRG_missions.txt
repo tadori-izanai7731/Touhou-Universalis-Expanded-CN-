@@ -77,6 +77,39 @@ THE_WRG_mission_branch_1 = {
 
 		effect = {  } 
 	}
+
+	THE_WRG_mission_1_8 = {
+		icon = mission_unknown_mission
+		position = 8
+		required_missions = { THE_WRG_mission_1_7 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_WRG_mission_1_9 = {
+		icon = mission_unknown_mission
+		position = 9
+		required_missions = { THE_WRG_mission_4_8 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_WRG_mission_1_10 = {
+		icon = mission_unknown_mission
+		position = 10
+		required_missions = { THE_WRG_mission_1_9 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
 }
 THE_WRG_mission_branch_2 = {
 	slot = 2
@@ -140,6 +173,39 @@ THE_WRG_mission_branch_2 = {
 		icon = mission_unknown_mission
 		position = 7
 		required_missions = { THE_WRG_mission_1_6 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_WRG_mission_2_8 = {
+		icon = mission_unknown_mission
+		position = 8
+		required_missions = { THE_WRG_mission_1_7 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_WRG_mission_2_9 = {
+		icon = mission_unknown_mission
+		position = 9
+		required_missions = { THE_WRG_mission_4_8 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_WRG_mission_2_10 = {
+		icon = mission_unknown_mission
+		position = 10
+		required_missions = { THE_WRG_mission_1_9 } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -227,6 +293,46 @@ THE_WRG_mission_branch_3 = {
 
 		effect = {  } 
 	}
+
+	THE_WRG_mission_3_8 = {
+		icon = mission_unknown_mission
+		position = 8
+		required_missions = { THE_WRG_mission_1_7 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_WRG_mission_3_10 = {
+		icon = mission_unknown_mission
+		position = 10
+		required_missions = {
+			THE_WRG_mission_2_9
+			THE_WRG_mission_4_9
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_WRG_mission_3_11 = {
+		icon = mission_unknown_mission
+		position = 11
+		required_missions = {
+			THE_WRG_mission_1_10
+			THE_WRG_mission_3_10
+			THE_WRG_mission_5_10
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
 }
 THE_WRG_mission_branch_4 = {
 	slot = 4
@@ -297,6 +403,49 @@ THE_WRG_mission_branch_4 = {
 
 		effect = {  } 
 	}
+
+	THE_WRG_mission_4_7 = {
+		icon = mission_unknown_mission
+		position = 7
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_WRG_mission_4_8 = {
+		icon = mission_unknown_mission
+		position = 8
+		required_missions = { THE_WRG_mission_4_7 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_WRG_mission_4_9 = {
+		icon = mission_unknown_mission
+		position = 9
+		required_missions = { THE_WRG_mission_4_8 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_WRG_mission_4_10 = {
+		icon = mission_unknown_mission
+		position = 10
+		required_missions = { THE_WRG_mission_4_9 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
 }
 THE_WRG_mission_branch_5 = {
 	slot = 5
@@ -354,6 +503,39 @@ THE_WRG_mission_branch_5 = {
 		icon = mission_unknown_mission
 		position = 7
 		required_missions = { THE_WRG_mission_5_6 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_WRG_mission_5_8 = {
+		icon = mission_unknown_mission
+		position = 8
+		required_missions = { THE_WRG_mission_4_7 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_WRG_mission_5_9 = {
+		icon = mission_unknown_mission
+		position = 9
+		required_missions = { THE_WRG_mission_5_8 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_WRG_mission_5_10 = {
+		icon = mission_unknown_mission
+		position = 10
+		required_missions = { THE_WRG_mission_5_9 } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
