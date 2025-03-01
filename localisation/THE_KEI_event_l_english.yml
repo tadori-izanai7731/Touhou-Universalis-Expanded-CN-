@@ -18,11 +18,12 @@
  ability_enables_estate_the_haniwa_yes: "=T(u§Y0ôWn0§!6–BS"
  THE_KEI_lonely_creation_do_desc: "P©RbIN¿ˆìY„v^y›RÿKˆNàeu‹TKNiråNu:g0"
  THE_KEI_estate_hina_wheel_buff: "ôWnfkëX"
- THE_KEI_flavor_events.1.t: "Ru"
+ THE_KEI_flavor_events.1.t: "R."
  THE_KEI_flavor_events.1.desc: ""
- THE_KEI_flavor_events.1.a: "R.NMOàVÚ‹ôWnuQ•"
- THE_KEI_flavor_events.1.b: "R.ôWn›Q–"
- THE_KEI_flavor_events.1.e: "ÔÞV"
+ THE_KEI_flavor_events.1.a: "QXB›"
+ THE_KEI_flavor_events.1.b: "Ru"
+ THE_KEI_flavor_events.1.d: "Ue‹T"
+ THE_KEI_flavor_events.1.f: "ÔÞV"
  THE_KEI_flavor_events.3.t: "ôWnuQ•"
  THE_KEI_flavor_events.2.t: "ôWnuQ•"
  THE_KEI_flavor_events.2.a: "žX Rkp›R¹ppe"
@@ -32,12 +33,20 @@
  THE_KEI_flavor_events.2.e: "³QšR"
  THE_KEI_flavor_2_event_c_tt1: "ôWnuQ•SVMR¹ppe(kp›Rÿ[Root.the_mayumi_fire_var.GetValue]²QûQÿ[Root.the_mayumi_shock_var.GetValue]:g¨Rÿ[Root.the_mayumi_manuever_var.GetValue]ôVÎWÿ[Root.the_mayumi_siege_var.GetValue])"
  THE_KEI_flavor_events.2.f: "ÔÞV"
+ THE_KEI_flavor_event_2_c_tt: "ÔØ§G[Root.the_mayumi_define_var.GetValue]§!¹p§OSu§!"
+ THE_KEI_flavor_events.4.t: "Ue‹T"
+ THE_KEI_flavor_events.4.desc: ""
+ THE_KEI_flavor_events.4.a: "Ue‹T0ÛV¹e0"
  ##buff_name
  THE_KEI_savtor_light_1_buff: "QeNKNIQ"
  THE_KEI_savtor_all_power_buff: "IY.sNR"
  THE_KEI_the_captial_of_KEI_buff: "áOðNKN0W"
  THE_KEI_save_the_world_buff: "Í‘QX‹TÐ"
  THE_KEI_save_the_sai_kawara_buff: "QeN4lup"
+ THE_KEI_rebuild_oder_buff: "éy^Ns^Ir"
+ THE_KEI_the_wonder_buff: ".bV^y?a"
+ THE_KEI_decree_sifang_buff: "Ue‹T0ÛV¹e0"
+ THE_KEI_the_captial_of_KEI_v2_buff: "QrwPNíV"
  
  ##MISSION EXTRA
  THE_KEI_4_1_c_tt1: "c	gdkHeœgöe:\n--(Wb‰N`S†˜@SKI²RYrÄu@YAC<›pgÄu„vwýNSOËzsSrR©‹v^·ƒ—V8hÃV0\n--ùR@SKI²RYrÄu@YAC<›pgÄu±RbÿùR¹eÅNýwìS2U¨RirupßvËS0"
@@ -48,4 +57,11 @@
  THE_KEI_4_6_C_tt2_no: "£no£å‚bìNÇY²Nž±@HKR§YZSKN§!ŒRbûN¡R"
  THE_KEI_4_6_C_tt1_yes: "£yes£å‚bìNÇN@HKR§YZSKN§!ÐcGSsQû|ŒRbûN¡R"
  THE_KEI_4_6_C_tt2_yes: "£yes£å‚bìNÇY²Nž±@HKR§YZSKN§!ŒRbûN¡R"
- THE_KEI_4_7_c_tt1: "ã‰•0Ru0:g6R0§YR.ôWn§!0"
+ THE_KEI_4_7_c_tt1: "ã‰•?eœ^:g6R0§YRu§!0"
+ THE_KEI_4_8_c_tt1: "SuØšŽN50öeÿ˜Y·ƒ—V:\n- -ÑyŽb±‚9§G-5%§!\n- -tõV±‚9§G-5%§!"
+ THE_KEI_5_2_c_tt1: "òTÏuÛbßRÿ[Root.the_kei_haniwa_recruit_im_var.GetValue]/20	ÿ=e6w<SRÌ‘è–"
+ THE_KEI_5_2_c_tt2: "ã‰•?eœ^:g6R0§YUe‹T§!0\nã‰•§O,rN0Ue‹Týi0§!"
+ THE_KEI_5_2_c_tt3: "ã‰•§YUe‹T0ÛV¹e0§!"
+ THE_KEI_5_3_c_tt1: "ã‰•?eœ^:g6R0§YQXB›§!0\n - -S†˜üuT¹ppeNP–:N8ÿUSy˜NP–:N4"
+ THE_KEI_5_3_c_tt2: "§gdk:g6RýwYêšRINú^ËzS†˜ÿæ‹Å`ågw?eœ^	c®”§!"
+ THE_KEI_5_3_c_tt3: "(Wc	gîOck§OUe‹T0ÛV¹e0§!öeÿ6w<SRÌ‘óSb—Vÿ[Root.the_kei_win_battle_count_im_var.GetValue]/15	ÿ:Wb—e0"

@@ -1,0 +1,13 @@
+THE_KEI_not_can_define_mayumi_var_trigger = {
+	has_government_power = {
+		mechanic_type = THE_KEI_lonely_creation_mechanic
+		power_type = THE_KEI_lonely_creation_mechanic_power
+		value = 2
+	}
+	NOT = {
+		check_variable = {
+			which = the_mayumi_define_var
+			which = the_mayumi_max_var
+		}
+	}
+}

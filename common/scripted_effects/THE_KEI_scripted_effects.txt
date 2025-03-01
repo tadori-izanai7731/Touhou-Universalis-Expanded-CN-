@@ -150,3 +150,53 @@ THE_KEI_define_general_mayumi_siege = {
 	THE_KEI_define_general_mayumi_siege_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = $mayumi_manuever$ mayumi_siege = 7 }
 	THE_KEI_define_general_mayumi_siege_script = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = $mayumi_manuever$ mayumi_siege = 8 }
 }
+
+#耶尼切里计数
+THE_KEI_amount_haniwa_recruit_effect = {
+	change_variable = {
+		which = the_kei_haniwa_recruit_im_var
+		value = 1
+	}
+}
+
+#战斗胜利计数
+THE_KEI_win_battle_count_1_effect = {
+	if = {
+		limit = { 
+			FROM = {
+				OR = {
+					tag = KEI
+					was_tag = KEI
+				}
+				has_country_modifier = THE_KEI_decree_sifang_buff
+			}
+		}
+		change_variable = {
+			which = the_kei_win_battle_count_im_var
+			value = 1
+		}
+	}
+}
+
+THE_KEI_define_mayumi_set_var_0_effects = {
+	set_variable = {
+		which = the_mayumi_fire_var
+		value = 0
+	}
+	set_variable = {
+		which = the_mayumi_shock_var
+		value = 0
+	}
+	set_variable = {
+		which = the_mayumi_manuever_var
+		value = 0
+	}
+	set_variable = {
+		which = the_mayumi_siege_var
+		value = 0
+	}
+	set_variable = {
+		which = the_mayumi_define_var
+		value = 0
+	}
+}

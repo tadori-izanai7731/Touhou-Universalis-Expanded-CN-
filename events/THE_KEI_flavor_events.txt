@@ -11,26 +11,14 @@ country_event = {
 	}
 	option = {
 		name = THE_KEI_flavor_events.1.a
+		trigger = {
+			mission_completed = THE_KEI_5_3
+		}
 		country_event = {
 			id = THE_KEI_flavor_events.2
 		}
 		hidden_effect = {
-			set_variable = {
-				which = the_mayumi_fire_var
-				value = 0
-			}
-			set_variable = {
-				which = the_mayumi_shock_var
-				value = 0
-			}
-			set_variable = {
-				which = the_mayumi_manuever_var
-				value = 0
-			}
-			set_variable = {
-				which = the_mayumi_siege_var
-				value = 0
-			}
+			THE_KEI_define_mayumi_set_var_0_effects = yes
 		}
 	}
 	option = {
@@ -46,7 +34,16 @@ country_event = {
 		add_yearly_manpower = 2.0
 	}
 	option = {
-		name = THE_KEI_flavor_events.1.e
+		name = THE_KEI_flavor_events.1.d
+		trigger = {
+			mission_completed = THE_KEI_5_2
+		}
+		country_event = {
+			id = THE_KEI_flavor_events.4
+		}
+	}
+	option = {
+		name = THE_KEI_flavor_events.1.f
 		highlight = yes
 	}
 }
@@ -67,15 +64,27 @@ country_event = {
 	}
 	option = {
 		name = THE_KEI_flavor_events.2.a
+		trigger = {
+			THE_KEI_not_can_define_mayumi_var_trigger = yes
+			NOT = {
+				check_variable = {
+					which = the_mayumi_fire_var
+					which = the_mayumi_fire_max_var
+				}
+			}
+		}
 		add_government_power = {
 			mechanic_type = THE_KEI_lonely_creation_mechanic
 			power_type = THE_KEI_lonely_creation_mechanic_power
-			value = -2
+			value = -1
 		}
-		add_mil_power = -20
 		hidden_effect = {
 			change_variable = {
 				which = the_mayumi_fire_var
+				value = 1
+			}
+			change_variable = {
+				which = the_mayumi_define_var
 				value = 1
 			}
 			country_event = {
@@ -85,15 +94,27 @@ country_event = {
 	}
 	option = {
 		name = THE_KEI_flavor_events.2.b
+		trigger = {
+			THE_KEI_not_can_define_mayumi_var_trigger = yes
+			NOT = {
+				check_variable = {
+					which = the_mayumi_shock_var
+					which = the_mayumi_shock_max_var
+				}
+			}
+		}
 		add_government_power = {
 			mechanic_type = THE_KEI_lonely_creation_mechanic
 			power_type = THE_KEI_lonely_creation_mechanic_power
-			value = -2
+			value = -1
 		}
-		add_mil_power = -20
 		hidden_effect = {
 			change_variable = {
 				which = the_mayumi_shock_var
+				value = 1
+			}
+			change_variable = {
+				which = the_mayumi_define_var
 				value = 1
 			}
 			country_event = {
@@ -103,15 +124,27 @@ country_event = {
 	}
 	option = {
 		name = THE_KEI_flavor_events.2.c
+		trigger = {
+			THE_KEI_not_can_define_mayumi_var_trigger = yes
+			NOT = {
+				check_variable = {
+					which = the_mayumi_manuever_var
+					which = the_mayumi_manuever_max_var
+				}
+			}
+		}
 		add_government_power = {
 			mechanic_type = THE_KEI_lonely_creation_mechanic
 			power_type = THE_KEI_lonely_creation_mechanic_power
-			value = -2
+			value = -1
 		}
-		add_mil_power = -20
 		hidden_effect = {
 			change_variable = {
 				which = the_mayumi_manuever_var
+				value = 1
+			}
+			change_variable = {
+				which = the_mayumi_define_var
 				value = 1
 			}
 			country_event = {
@@ -121,15 +154,27 @@ country_event = {
 	}
 	option = {
 		name = THE_KEI_flavor_events.2.d
+		trigger = {
+			THE_KEI_not_can_define_mayumi_var_trigger = yes
+			NOT = {
+				check_variable = {
+					which = the_mayumi_seige_var
+					which = the_mayumi_seige_max_var
+				}
+			}
+		}
 		add_government_power = {
 			mechanic_type = THE_KEI_lonely_creation_mechanic
 			power_type = THE_KEI_lonely_creation_mechanic_power
-			value = -2
+			value = -1
 		}
-		add_mil_power = -20
 		hidden_effect = {
 			change_variable = {
 				which = the_mayumi_siege_var
+				value = 1
+			}
+			change_variable = {
+				which = the_mayumi_define_var
 				value = 1
 			}
 			country_event = {
@@ -147,82 +192,25 @@ country_event = {
 	option = {
 		name = THE_KEI_flavor_events.2.f
 		highlight = yes
+		custom_tooltip = THE_KEI_flavor_event_2_c_tt
 		hidden_effect = {
 			while = {
-				limit = { 
+				limit = {
 					check_variable = {
-						which = the_mayumi_fire_var
+						which = the_mayumi_define_var
 						value = 1
 					}
-				}
-				change_variable = {
-					which = the_mayumi_fire_var
-					value = -1
-				}
-				add_mil_power = 20
-				add_government_power = {
+				 }
+				 add_government_power = {
 					mechanic_type = THE_KEI_lonely_creation_mechanic
 					power_type = THE_KEI_lonely_creation_mechanic_power
-					value = 2
-				}
-			}
-			while = {
-				limit = { 
-					check_variable = {
-						which = the_mayumi_shock_var
-						value = 1
-					}
-				}
-				change_variable = {
-					which = the_mayumi_shock_var
-					value = -1
-				}
-				add_mil_power = 20
-				add_government_power = {
-					mechanic_type = THE_KEI_lonely_creation_mechanic
-					power_type = THE_KEI_lonely_creation_mechanic_power
-					value = 2
-				}
-			}
-			while = {
-				limit = { 
-					check_variable = {
-						which = the_mayumi_manuever_var
-						value = 1
-					}
-				}
-				change_variable = {
-					which = the_mayumi_manuever_var
-					value = -1
-				}
-				add_mil_power = 20
-				add_government_power = {
-					mechanic_type = THE_KEI_lonely_creation_mechanic
-					power_type = THE_KEI_lonely_creation_mechanic_power
-					value = 2
-				}
-			}
-			while = {
-				limit = { 
-					check_variable = {
-						which = the_mayumi_siege_var
-						value = 1
-					}
-				}
-				change_variable = {
-					which = the_mayumi_siege_var
-					value = -1
-				}
-				add_mil_power = 20
-				add_government_power = {
-					mechanic_type = THE_KEI_lonely_creation_mechanic
-					power_type = THE_KEI_lonely_creation_mechanic_power
-					value = 2
-				}
+					value = 1
+				 }
 			}
 		}
 	}
 }
+#埴轮兵长 2
 country_event = {
 	id = THE_KEI_flavor_events.3
 	title = "THE_KEI_flavor_events.3.t"
@@ -394,4 +382,44 @@ country_event = {
 			}
 		}
 	}
+}
+#Haniwa敕命 （1槽）
+country_event = {
+	id = THE_KEI_flavor_events.4
+	title = "THE_KEI_flavor_events.4.t"
+	desc = "THE_KEI_flavor_events.4.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	#立即发生 Decree
+	immediate = {
+	}
+	#「四方」
+	option = {
+		name = THE_KEI_flavor_events.4.a
+		trigger = {
+			mission_completed = THE_KEI_5_2
+		}
+		add_country_modifier = {
+			name = THE_KEI_decree_sifang_buff
+			duration = -1
+		}
+	}
+	option = {
+		name = THE_KEI_flavor_events.4.b
+	}
+}
+#Haniwa敕命 （2槽）
+country_event = {
+	id = THE_KEI_flavor_events.5
+	title = "THE_KEI_flavor_events.5.t"
+	desc = "THE_KEI_flavor_events.5.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+
 }

@@ -22,6 +22,16 @@ THE_KEI_the_captial_of_KEI_buff = {
 	local_tax_modifier = 0.50
 	province_trade_power_value = 50
 }
+THE_KEI_the_captial_of_KEI_v2_buff = {
+	local_religious_unity_contribution = 0.50
+	local_tax_modifier = 1.00
+	trade_goods_size = 0.5
+	local_garrison_size = 5.00
+	local_garrison_damage = 1.00
+	local_defender_dice_roll_bonus = 1
+	fort_level = 4
+	province_trade_power_value = 50
+}
 #重塑命运
 THE_KEI_save_the_world_buff = {
 	core_creation = -0.10
@@ -36,8 +46,19 @@ THE_KEI_save_the_sai_kawara_buff = {
 }
 #秩序与平等
 THE_KEI_rebuild_oder_buff = {
-	yearly_corruption = -0.5
-	tolerance_own = 2
-	global_regiment_cost = -0.1
+	yearly_corruption = -0.75
+	global_prosperity_growth = 0.75
+}
+#造型神愿
+THE_KEI_the_wonder_buff = {
+	global_tax_modifier = 0.50
+	global_unrest = -2
+	land_forcelimit_modifier = 0.50
 	land_forcelimit = 10
+}
+#敕命「四方」
+THE_KEI_decree_sifang_buff = {
+	fire_damage_received = -0.10
+	shock_damage_received = -0.10
+	is_janissary_modifier = yes
 }

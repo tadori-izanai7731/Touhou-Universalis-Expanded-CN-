@@ -81,11 +81,32 @@ THE_KEI_main_branch_1 = {
 	THE_KEI_1_6 = {
 		icon = mission_unknown_mission
 		position = 6
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			is_capital_of = ROOT
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			5045 = {
+				development = 40
+				has_tax_building_trigger = yes
+				has_manpower_building_trigger = yes
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			5045 = {
+				add_building = university
+				add_province_modifier = {
+					name = THE_KEI_the_captial_of_KEI_v2_buff
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				5045 = {
+					remove_province_modifier = THE_KEI_the_captial_of_KEI_buff
+				}
+			}
+		 } 
 	}
 
 	THE_KEI_1_7 = {
@@ -317,24 +338,13 @@ THE_KEI_main_branch_3 = {
 		position = 4
 		required_missions = { THE_KEI_3_2 } 
 		provinces_to_highlight = { 
-			province_id = 5252
 		 } 
 
 		trigger = { 
-			5252 = {
-				owned_by = ROOT
-				has_tax_building_trigger = yes
-				has_fort_building_trigger = yes	
-			}
+			
 		 } 
 
 		effect = { 
-			5252 = {
-				add_base_tax = 1
-				add_base_production = 3
-				add_base_manpower = 2
-			}
-			add_or_upgrade_tax_building = yes
 		 } 
 	}
 
@@ -352,11 +362,26 @@ THE_KEI_main_branch_3 = {
 		icon = mission_unknown_mission
 		position = 7
 		required_missions = { THE_KEI_4_6 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			province_id = 5252
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			5252 = {
+				owned_by = ROOT
+				has_tax_building_trigger = yes
+				has_fort_building_trigger = yes	
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			5252 = {
+				add_base_tax = 1
+				add_base_production = 3
+				add_base_manpower = 2
+				add_or_upgrade_tax_building = yes
+			}
+		 } 
 	}
 
 	THE_KEI_3_9 = {
@@ -409,7 +434,12 @@ THE_KEI_main_branch_4 = {
 			custom_tooltip = THE_KEI_4_1_c_tt1
 			custom_tooltip = THE_KEI_4_1_c_tt2
 			add_manpower = 50
+			
 			hidden_effect = {
+				set_variable = {
+					which = the_kei_haniwa_recruit_im_var
+					value = -30
+				}
 				capital_scope = {
 					for = {
 						amount = 30
@@ -418,6 +448,7 @@ THE_KEI_main_branch_4 = {
 						"
 					}
 				}
+				
 			}
 		} 
 	}
@@ -770,11 +801,19 @@ THE_KEI_main_branch_4 = {
 		position = 8
 		required_missions = { THE_KEI_4_7 } 
 		provinces_to_highlight = { 
-			province_id = 4987
+			province_id = 4983
+			province_id = 5268
+			province_id = 5267
 		 } 
 
 		trigger = { 
-			4987 = {
+			4983 = {
+				owned_by = ROOT
+			}
+			5268 = {
+				owned_by = ROOT
+			}
+			5267 = {
 				owned_by = ROOT
 			}
 		 } 
@@ -785,7 +824,7 @@ THE_KEI_main_branch_4 = {
 				name = THE_KEI_rebuild_oder_buff
 				duration = -1
 			}
-			4987 = {
+			4983 = {
 				add_base_tax = 2
 				add_base_production = 2
 				add_base_manpower = 2
@@ -797,11 +836,23 @@ THE_KEI_main_branch_4 = {
 		icon = mission_unknown_mission
 		position = 9
 		required_missions = { THE_KEI_4_8 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			region = hell_region
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 55
+				region = hell_region
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			add_country_modifier = {
+				name = THE_KEI_the_wonder_buff
+				duration = -1
+			}
+		 } 
 	}
 
 	THE_KEI_4_10 = {
@@ -849,11 +900,26 @@ THE_KEI_main_branch_5 = {
 	THE_KEI_5_2 = {
 		icon = mission_unknown_mission
 		position = 2
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			is_capital_of = ROOT
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = THE_KEI_5_2_c_tt1
+				check_variable = {
+					which = the_kei_haniwa_recruit_im_var
+					value = 20
+				}
+			}
+			army_size = 40
+		 } 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_KEI_5_2_c_tt2
+			custom_tooltip = THE_KEI_5_2_c_tt3
+			add_mil_power = 100
+		 } 
 	}
 
 	THE_KEI_5_3 = {
@@ -862,9 +928,47 @@ THE_KEI_main_branch_5 = {
 		required_missions = { THE_KEI_5_2 } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = THE_KEI_5_3_c_tt3
+				check_variable = {
+					which = the_kei_win_battle_count_im_var
+					value = 15
+				}
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_KEI_5_3_c_tt1
+			custom_tooltip = THE_KEI_5_3_c_tt2
+			add_government_power = {
+				mechanic_type = THE_KEI_lonely_creation_mechanic
+				power_type = THE_KEI_lonely_creation_mechanic_power
+				value = 15
+			}
+			hidden_effect = {
+				set_variable = {
+					which = the_mayumi_fire_max_var
+					value = 4
+				}
+				set_variable = {
+					which = the_mayumi_shock_max_var
+					value = 4
+				}
+				set_variable = {
+					which = the_mayumi_manuever_max_var
+					value = 4
+				}
+				set_variable = {
+					which = the_mayumi_siege_max_var
+					value = 4
+				}
+				set_variable = {
+					which = the_mayumi_max_var
+					value = 8
+				}
+			}
+		 } 
 	}
 
 	THE_KEI_5_5 = {
