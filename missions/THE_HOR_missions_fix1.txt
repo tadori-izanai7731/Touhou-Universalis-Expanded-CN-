@@ -1,0 +1,755 @@
+# ### 初始任务
+# HOR_mission_branch_1 = {
+# 	slot = 1
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 	potential = { tag = KMC } 
+	
+# 	HOR_mission_11 = {
+# 		icon = mission_unknown_mission
+# 		position = 1
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+	
+# 	HOR_mission_3 = {
+# 		icon = mission_assemble_an_army
+# 		position = 3
+# 		required_missions = { HOR_mission_2 } 
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {
+# 			army_size_percentage = 0.6
+# 			army_size = 15
+# 		}
+		
+# 		effect = {
+# 			british_isles_region = { add_permanent_claim = ROOT } 
+# 			every_country = {
+# 				limit = { capital_scope = { region = british_isles_region }  } 
+# 				add_opinion = {
+# 					who = ROOT
+# 					modifier = HOR_opinion_modifier.1
+# 				}
+# 			}
+# 		}
+# 	}
+	
+# 	HOR_mission_4 = {
+# 		icon = mission_unknown_mission
+# 		position = 4
+# 		required_missions = { HOR_mission_3 } 
+# 		provinces_to_highlight = {
+# 			OR = {
+# 				area = east_anglia_area
+# 				area = wessex_area
+# 				area = yorkshire_area
+# 				area = west_midlands_area
+# 				area = east_midlands_area
+# 				area = home_counties_area
+# 				area = scottish_marches_area
+# 			}
+# 			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+# 		}
+		
+# 		trigger = {
+# 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+# 				OR = {
+# 					area = east_anglia_area
+# 					area = wessex_area
+# 					area = yorkshire_area
+# 					area = west_midlands_area
+# 					area = east_midlands_area
+# 					area = home_counties_area
+# 					area = scottish_marches_area
+# 				}
+# 				value = 9
+# 			}
+# 		}
+		
+# 		effect = {  } 
+# 	}
+# }
+
+# HOR_mission_branch_2 = {
+# 	slot = 2
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 	potential = { tag = KMC } 
+	
+# 	HOR_mission_7 = {
+# 		icon = mission_unknown_mission
+# 		position = 3
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {
+# 			OR = {
+# 				has_reform = The_HOR_holy_leviathan_monarchy
+# 				has_reform = The_HOR_theocracy
+# 			}
+# 			OR = {
+# 				stability = 1
+# 				stability = 2
+# 				stability = 3
+# 			}
+# 		}
+		
+# 		effect = {
+# 			add_country_modifier = {
+# 				name = "HOR_angeli_guard"
+# 				duration = -1
+# 			}
+# 			add_country_modifier = {
+# 				name = "HOR_angeli_guard.2"
+# 				duration = -1
+# 			}
+# 		}
+# 	}
+	
+# 	HOR_mission_5 = {
+# 		icon = mission_unknown_mission
+# 		position = 4
+# 		required_missions = { HOR_mission_3 } 
+# 		provinces_to_highlight = {
+# 			OR = {
+# 				area = lowlands_area
+# 				area = highlands_area
+# 				area = kingdom_of_the_isles_area
+# 			}
+# 			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+# 		}
+		
+# 		trigger = {
+# 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+# 				OR = {
+# 					area = lowlands_area
+# 					area = highlands_area
+# 					area = kingdom_of_the_isles_area
+# 				}
+# 				value = 5
+# 			}
+# 		}
+		
+# 		effect = {  } 
+# 	}
+	
+# 	HOR_mission_10 = {
+# 		icon = fra_great_britain
+# 		position = 5
+# 		required_missions = {
+# 			HOR_mission_4
+# 			HOR_mission_5
+# 			HOR_mission_6
+# 		}
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+
+# 	HOR_mission_soc = {
+# 		icon = mission_unknown_mission
+# 		position = 6
+# 		required_missions = { HOR_mission_10 } 
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+# }
+
+# HOR_mission_branch_3 = {
+# 	slot = 3
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 	potential = { tag = KMC } 
+	
+# 	HOR_mission_1 = {
+# 		icon = mission_unknown_mission
+# 		position = 1
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = { ROOT = { is_free_or_tributary_trigger = yes }  } 
+		
+# 		effect = {
+# 			country_event = { id = flavor_hor.3 } 
+# 			ENG = {
+# 				declare_war_with_cb = {
+# 					who = ROOT
+# 					casus_belli = cb_houraijin_revolt
+# 				}
+# 			}
+# 		}
+# 	}
+	
+# 	HOR_mission_2 = {
+# 		icon = mission_unknown_mission
+# 		position = 2
+# 		required_missions = { HOR_mission_1 } 
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = { accepted_culture = Houraijin } 
+		
+# 		effect = {
+# 			add_country_modifier = {
+# 				name = "HOR_houraijin_kuangre.1"
+# 				duration = 1825
+# 			}
+# 		}
+# 	}
+	
+# 	HOR_mission_9 = {
+# 		icon = mission_unknown_mission
+# 		position = 3
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {
+# 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+# 				OR = { region = british_isles_region } 
+# 				value = 30
+# 			}
+# 		}
+		
+# 		effect = {  } 
+# 	}
+	
+# 	HOR_mission_6 = {
+# 		icon = mission_unknown_mission
+# 		position = 4
+# 		required_missions = { HOR_mission_3 } 
+# 		provinces_to_highlight = {
+# 			OR = {
+# 				area = munster_area
+# 				area = connacht_area
+# 				area = leinster_area
+# 				area = ulster_area
+# 			}
+# 			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+# 		}
+		
+# 		trigger = {
+# 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+# 				OR = {
+# 					area = munster_area
+# 					area = connacht_area
+# 					area = leinster_area
+# 					area = ulster_area
+# 				}
+# 				value = 6
+# 			}
+# 		}
+		
+# 		effect = {  } 
+# 	}
+
+# 	HOR_mission_start_1 = {
+# 		icon = mission_rb_empire
+# 		position = 5
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = { defensive_war_with = ENG } 
+		
+# 		effect = {
+# 			add_country_modifier = {
+# 				name = "HOR_anti_eng"
+# 				duration = 720
+# 			}
+# 		}
+# 	}
+	
+# 	HOR_mission_start_2 = {
+# 		icon = fra_appease_the_princes
+# 		position = 6
+# 		required_missions = { HOR_mission_start_1 } 
+# 		provinces_to_highlight = {
+# 			is_capital_of = FRA
+# 		} 
+		
+# 		trigger = {
+# 			FRA = {
+# 				has_opinion = {
+# 					who = ROOT
+# 					value = 80
+# 				}
+# 			}
+# 		}
+		
+# 		effect = {
+# 			add_adm_power = 100
+# 			add_dip_power = 100
+# 			add_mil_power = 150
+# 			add_treasury = 1000
+# 		}
+# 	}
+# }
+
+# HOR_mission_branch_4 = {
+# 	slot = 4
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 	potential = { tag = KMC } 
+	
+# 	HOR_mission_13 = {
+# 		icon = mission_arabian_ports
+# 		position = 4
+# 		required_missions = { HOR_mission_8 } 
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+
+# 	HOR_mission_start_3 = {
+# 		icon = mission_build_up_to_force_limit
+# 		position = 5
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+	
+# 	HOR_mission_start_4 = {
+# 		icon = mission_the_austrian_succession
+# 		position = 6
+# 		required_missions = { HOR_mission_start_1 } 
+# 		provinces_to_highlight = {
+# 			is_capital_of = SCO
+# 		} 
+		
+# 		trigger = {
+# 			SCO = {
+# 				has_opinion = {
+# 					who = ROOT
+# 					value = 60
+# 				}
+# 			}
+# 		}
+		
+# 		effect = {
+# 			add_adm_power = 100
+# 			add_dip_power = 100
+# 			add_mil_power = 150
+# 			add_treasury = 1000
+# 		}
+# 	}
+	
+# 	HOR_mission_start_5 = {
+# 		icon = mission_conquer_50_development
+# 		position = 7
+# 		required_missions = {
+# 			HOR_mission_start_4
+# 			HOR_mission_start_2
+# 		}
+# 		provinces_to_highlight = { province_id = 236 } 
+		
+# 		trigger = {
+# 			is_at_war = yes
+# 			236 = { controlled_by = ROOT } 
+# 		}
+		
+# 		effect = {
+# 			add_prestige_or_monarch_power = { amount = 20 } 
+# 			add_army_tradition = 20
+# 			country_event = { id = flavor_hor_london.1 } 
+# 		}
+# 	}
+# }
+
+# HOR_mission_branch_5 = {
+# 	slot = 5
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 	potential = { tag = KMC } 
+	
+# 	HOR_mission_8 = {
+# 		icon = mission_junk_boat
+# 		position = 3
+# 		required_missions = { HOR_mission_2 } 
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+	
+# 	HOR_mission_12 = {
+# 		icon = mission_junk_boat
+# 		position = 4
+# 		required_missions = { HOR_mission_8 } 
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+	
+# 	HOR_mission_14 = {
+# 		icon = settle_austrialasia
+# 		position = 5
+# 		required_missions = { HOR_mission_12 } 
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+	
+# 	HOR_mission_col = {
+# 		icon = mission_unknown_mission
+# 		position = 6
+# 		required_missions = { HOR_mission_14 } 
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+# }
+
+# ### 隐藏任务
+# HOR_mission_branch_h1 = {
+# 	slot = 1
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 	potential = { tag = KMC }
+	
+# 	HOR_mission_h_1 = {
+# 		icon = mission_unknown_mission
+# 		position = 5
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+	
+# 	HOR_mission_h_2 = {
+# 		icon = mission_unknown_mission
+# 		position = 6
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+# }
+
+# ### 分支任务:holy leviathan monarchy路线
+# HOR_mission_branch_m_1 = {
+# 	slot = 1
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 	potential = {
+# 		tag = KMC
+# 		has_country_flag = HOR_holy_leviathan_monarchy_flag
+# 		NOT = { has_country_flag = The_HOR_theocracy_flag }
+# 	}
+	
+# 	HOR_mission_m_3 = {
+# 		icon = mission_unknown_mission
+# 		position = 8
+# 		required_missions = { HOR_mission_m_1 } 
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+	
+# 	HOR_mission_m_11 = {
+# 		icon = mission_unknown_mission
+# 		position = 11
+# 		required_missions = { HOR_mission_m_10 } 
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+# }
+
+# HOR_mission_branch_m_2 = {
+# 	slot = 2
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 	potential = {
+# 		tag = KMC
+# 		has_country_flag = HOR_holy_leviathan_monarchy_flag
+# 		NOT = { has_country_flag = The_HOR_theocracy_flag }
+# 	}
+	
+# 	HOR_mission_m_1 = {
+# 		icon = mission_unknown_mission
+# 		position = 7
+# 		required_missions = { HOR_mission_soc } 
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+	
+# 	HOR_mission_m_2 = {
+# 		icon = mission_unknown_mission
+# 		position = 8
+# 		required_missions = { HOR_mission_m_1 } 
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+	
+# 	HOR_mission_m_6 = {
+# 		icon = mission_unknown_mission
+# 		position = 9
+# 		required_missions = { HOR_mission_m_2 } 
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+	
+# 	HOR_mission_m_10 = {
+# 		icon = mission_unknown_mission
+# 		position = 10
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+	
+# 	HOR_mission_m_12 = {
+# 		icon = mission_unknown_mission
+# 		position = 11
+# 		required_missions = { HOR_mission_m_10 } 
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+	
+# 	HOR_mission_m_18 = {
+# 		icon = mission_unknown_mission
+# 		position = 12
+# 		required_missions = {
+# 			HOR_mission_m_11
+# 			HOR_mission_m_12
+# 		}
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+# }
+
+# HOR_mission_branch_m_3 = {
+# 	slot = 3
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 	potential = {
+# 		tag = KMC
+# 		has_country_flag = HOR_holy_leviathan_monarchy_flag
+# 		NOT = { has_country_flag = The_HOR_theocracy_flag }
+# 	}
+	
+# 	HOR_mission_m_7 = {
+# 		icon = mission_unknown_mission
+# 		position = 10
+# 		required_missions = { HOR_mission_m_5 } 
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+	
+# 	HOR_mission_m_16 = {
+# 		icon = mission_unknown_mission
+# 		position = 11
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+	
+# 	HOR_mission_m_17 = {
+# 		icon = mission_unknown_mission
+# 		position = 12
+# 		required_missions = { HOR_mission_m_16 } 
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+	
+# 	HOR_mission_m_20 = {
+# 		icon = mission_unknown_mission
+# 		position = 13
+# 		required_missions = {
+# 			HOR_mission_m_18
+# 			HOR_mission_m_17
+# 			HOR_mission_m_19
+# 		}
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+	
+# 	HOR_mission_m_end = {
+# 		icon = mission_unknown_mission
+# 		position = 14
+# 		required_missions = { HOR_mission_m_20 } 
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+# }
+
+# HOR_mission_branch_m_4 = {
+# 	slot = 4
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 	potential = {
+# 		tag = KMC
+# 		has_country_flag = HOR_holy_leviathan_monarchy_flag
+# 		NOT = { has_country_flag = The_HOR_theocracy_flag }
+# 	}
+	
+# 	HOR_mission_m_4 = {
+# 		icon = mission_unknown_mission
+# 		position = 8
+# 		required_missions = { HOR_mission_m_1 } 
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+	
+# 	HOR_mission_m_5 = {
+# 		icon = mission_unknown_mission
+# 		position = 9
+# 		required_missions = {
+# 			HOR_mission_m_4
+# 			HOR_mission_m_2
+# 		}
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+	
+# 	HOR_mission_m_8 = {
+# 		icon = mission_unknown_mission
+# 		position = 10
+# 		required_missions = { HOR_mission_m_5 } 
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+	
+# 	HOR_mission_m_15 = {
+# 		icon = mission_unknown_mission
+# 		position = 11
+# 		required_missions = { HOR_mission_m_14 } 
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+	
+# 	HOR_mission_m_19 = {
+# 		icon = mission_unknown_mission
+# 		position = 12
+# 		required_missions = {
+# 			HOR_mission_m_15
+# 			HOR_mission_m_22
+# 		}
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+# }
+
+# HOR_mission_branch_m_5 = {
+# 	slot = 5
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 	potential = {
+# 		tag = KMC
+# 		has_country_flag = HOR_holy_leviathan_monarchy_flag
+# 		NOT = { has_country_flag = The_HOR_theocracy_flag }
+# 	}
+	
+# 	HOR_mission_m_13 = {
+# 		icon = mission_unknown_mission
+# 		position = 9
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+	
+# 	HOR_mission_m_14 = {
+# 		icon = mission_unknown_mission
+# 		position = 10
+# 		required_missions = {
+# 			HOR_mission_m_6
+# 			HOR_mission_m_13
+# 		}
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+	
+# 	HOR_mission_m_22 = {
+# 		icon = mission_unknown_mission
+# 		position = 11
+# 		required_missions = { HOR_mission_m_14 } 
+# 		provinces_to_highlight = {  } 
+		
+# 		trigger = {  } 
+		
+# 		effect = {  } 
+# 	}
+# }
+
+# ### 分支任务:htheocracy路线
