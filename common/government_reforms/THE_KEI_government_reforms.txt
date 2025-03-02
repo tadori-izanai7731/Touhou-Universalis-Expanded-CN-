@@ -8,9 +8,8 @@ THE_KEI_lonely_creation_government_reform = {
 		}
 	}
 	valid_for_new_country = no
-	valid_for_nation_designer = yes
+	valid_for_nation_designer = no
 	rulers_can_be_generals = no
-	nation_designer_cost = 40
 	can_change_primary_culture = no
 	modifiers = {
 		governing_capacity = 250
