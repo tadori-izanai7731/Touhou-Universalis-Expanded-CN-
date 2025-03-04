@@ -472,13 +472,13 @@ THE_yof_slot_2 = {
 					}
 				}
 				custom_trigger_tooltip = {
-					tooltip = yof_distribute_kami_num_tt_0
+					tooltip = yof_distribute_kami_num_less_tt_0
 					always = no
 				}
 			}
 			else = {
 				custom_trigger_tooltip = {
-					tooltip = yof_distribute_kami_num_tt
+					tooltip = yof_distribute_kami_num_less_tt
 					check_variable = {
 						which = yof_distribute_kami_num
 						value = 1000

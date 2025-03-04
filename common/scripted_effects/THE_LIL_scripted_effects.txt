@@ -308,9 +308,6 @@ THE_LIL_special_spring_territory_create_scripted_effect = {
 	}
 	$tag$ = {
 		hidden_effect = {
-			change_country_color = {
-				country = overlord
-			}
 			change_government = monarchy
 			change_religion = capital
 			change_primary_culture = capital
