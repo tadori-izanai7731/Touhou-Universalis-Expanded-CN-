@@ -200,3 +200,9 @@ THE_KEI_define_mayumi_set_var_0_effects = {
 		value = 0
 	}
 }
+#清除所有敕命
+THE_KEI_clr_all_decrese_buff_effects = {
+	remove_country_modifier = THE_KEI_decree_sifang_buff
+	remove_country_modifier = THE_KEI_decree_work_buff
+}
+

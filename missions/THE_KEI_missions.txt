@@ -187,13 +187,13 @@ THE_KEI_main_branch_2 = {
 		 } 
 
 		trigger = { 
-			5045 = {
-				development = 30
-			}
 			if = {
 				limit = {
 					ai = no
 				 }
+				 5045 = {
+					development = 30
+				}
 				 OR = {
 					num_of_estate_agendas_completed = {
 						estate = estate_church
@@ -210,7 +210,7 @@ THE_KEI_main_branch_2 = {
 				}
 			}
 			else = {
-				
+				always = yes
 			}
 		 } 
 
@@ -269,11 +269,59 @@ THE_KEI_main_branch_2 = {
 		icon = mission_unknown_mission
 		position = 7
 		required_missions = { THE_KEI_1_6 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			province_id = 5045
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			gems = 2
+			num_of_owned_provinces_with = {
+				value = 2
+				trade_goods = gems
+				base_production = 7
+				has_production_building_trigger = yes
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_KEI_2_6_c_tt2
+			custom_tooltip = THE_KEI_2_6_c_tt3
+			custom_tooltip = THE_KEI_2_6_c_tt1
+			add_province_modifier = {
+				name = THE_KEI_zaoxing_haniwa_art_buff
+				duration = -1
+			}
+			hidden_effect = {
+				5045 = {
+					add_province_modifier = {
+						name = THE_KEI_zaoxing_haniwa_art_buff
+						duration = -1
+					}
+				}
+				random_province = {
+					limit = {
+						trade_goods = gems
+						is_core = yes	
+					}
+					add_province_modifier = {
+						name = THE_KEI_zaoxing_haniwa_art_buff
+						duration = -1
+					}
+				}
+				for = {
+					amount = 15
+					effect = "
+						random_province = {
+							limit = {
+								is_core = yes	
+							}
+							add_base_production = 1
+						}
+					
+					"
+				}
+			}
+		 } 
 	}
 
 	THE_KEI_2_8 = {
@@ -312,14 +360,29 @@ THE_KEI_main_branch_3 = {
 				}
 			}
 			else = {
-				total_development = 550
-				num_of_provinces_owned_or_owned_by_subjects_with = {
-					value = 15
-					OR = {
-						area = Yachie_state
-						area = Saki_state
-						area = Sanzu_upstream
-						area = Hifuu_club
+				if = {
+					limit = { 
+						is_year = 1500
+					}
+					total_development = 350
+					num_of_provinces_owned_or_owned_by_subjects_with = {
+						value = 8
+						OR = {
+							area = Yachie_state
+							area = Saki_state
+						}
+					}
+				}
+				else = {
+					total_development = 550
+					num_of_provinces_owned_or_owned_by_subjects_with = {
+						value = 10
+						OR = {
+							area = Yachie_state
+							area = Saki_state
+							area = Sanzu_upstream
+							area = Hifuu_club
+						}
 					}
 				}
 			}
@@ -612,11 +675,19 @@ THE_KEI_main_branch_4 = {
 						who = ROOT
 						value = -100
 					}
-					humiliated_by = ROOT
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = scornfully_insulted
+					}
 				}
 				hidden_trigger = {
-					NOT = {
-						exists = HKR
+					OR = {
+						NOT = {
+							exists = HKR
+						}
+						HKR = {
+							is_subject = yes
+						}
 					}
 				}
 			}
@@ -640,7 +711,10 @@ THE_KEI_main_branch_4 = {
 								who = ROOT
 								value = -100
 							}
-							humiliated_by = ROOT
+							has_opinion_modifier = {
+								who = ROOT
+								modifier = scornfully_insulted
+							}
 						}
 					}
 					exists = HKR
@@ -725,7 +799,10 @@ THE_KEI_main_branch_4 = {
 							who = ROOT
 							value = -100
 						}
-						humiliated_by = ROOT
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = scornfully_insulted
+						}
 					}
 					exists = HKR
 				}
@@ -760,11 +837,27 @@ THE_KEI_main_branch_4 = {
 			}
 			else_if = {
 				limit = { 
-					NOT = {
-						exists = HKR
+					OR = {
+						NOT = {
+							exists = HKR
+						}
+						HKR = {
+							is_subject = yes	
+						}
 					}
 				}
 				add_stability = 1
+				if = {
+					limit = {
+						ai = yes
+					 }
+					 ROOT = {
+						add_historical_rival = HIG
+					 }
+					 HIG = {
+						add_historical_rival = ROOT
+					 }
+				}
 			}
 			Eastern_higan = {
 				add_permanent_claim = ROOT
@@ -802,18 +895,18 @@ THE_KEI_main_branch_4 = {
 		required_missions = { THE_KEI_4_7 } 
 		provinces_to_highlight = { 
 			province_id = 4983
+			province_id = 5258
 			province_id = 5268
-			province_id = 5267
 		 } 
 
 		trigger = { 
 			4983 = {
 				owned_by = ROOT
 			}
-			5268 = {
+			5258 = {
 				owned_by = ROOT
 			}
-			5267 = {
+			5268 = {
 				owned_by = ROOT
 			}
 		 } 
@@ -825,7 +918,12 @@ THE_KEI_main_branch_4 = {
 				duration = -1
 			}
 			4983 = {
-				add_base_tax = 2
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			5045 = {
+				add_base_tax = 1
 				add_base_production = 2
 				add_base_manpower = 2
 			}

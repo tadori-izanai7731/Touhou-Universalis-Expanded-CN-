@@ -62,3 +62,14 @@ THE_KEI_decree_sifang_buff = {
 	shock_damage_received = -0.10
 	is_janissary_modifier = yes
 }
+#敕命「天工」
+THE_KEI_decree_work_buff = {
+	build_cost = -0.25
+	build_time = -0.10
+}
+THE_KEI_zaoxing_haniwa_art_buff = {
+	trade_goods_size = 1.0
+	local_prosperity_growth = 0.5
+	allowed_num_of_buildings = 1
+	local_monthly_devastation = -1.0
+}

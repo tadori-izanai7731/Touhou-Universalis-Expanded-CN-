@@ -31,7 +31,7 @@ country_event = {
 			power_type = THE_KEI_lonely_creation_mechanic_power
 			value = -5
 		}
-		add_yearly_manpower = 2.0
+		add_yearly_manpower = 5.0
 	}
 	option = {
 		name = THE_KEI_flavor_events.1.d
@@ -406,9 +406,23 @@ country_event = {
 			name = THE_KEI_decree_sifang_buff
 			duration = -1
 		}
+		hidden_effect = {
+			THE_KEI_clr_all_decrese_buff_effects = yes
+		}
 	}
+	#「天工」
 	option = {
 		name = THE_KEI_flavor_events.4.b
+		trigger = {
+			mission_completed = THE_KEI_2_7
+		}
+		add_country_modifier = {
+			name = THE_KEI_decree_work_buff
+			duration = -1
+		}
+		hidden_effect = {
+			THE_KEI_clr_all_decrese_buff_effects = yes
+		}
 	}
 }
 #Haniwa敕命 （2槽）
@@ -422,4 +436,64 @@ country_event = {
 		
 	}
 
+}
+#天工决议）
+country_event = {
+	id = THE_KEI_flavor_events.6
+	title = "THE_KEI_flavor_events.6.t"
+	desc = "THE_KEI_flavor_events.6.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	#集市/贸易类
+	option = {
+		name = THE_KEI_flavor_events.6.a
+		hidden_effect = {
+			set_country_flag = THE_KEI_workman_flag_1
+		}
+	}
+	#工坊/生产类
+	option = {
+		name = THE_KEI_flavor_events.6.b
+		hidden_effect = {
+			set_country_flag = THE_KEI_workman_flag_2
+		}
+	}
+	#要塞/
+	option = {
+		name = THE_KEI_flavor_events.6.c
+		hidden_effect = {
+			set_country_flag = THE_KEI_workman_flag_3
+		}
+	}
+	#兵营
+	option = {
+		name = THE_KEI_flavor_events.6.d
+		hidden_effect = {
+			set_country_flag = THE_KEI_workman_flag_4
+		}
+	}
+	#军营
+	option = {
+		name = THE_KEI_flavor_events.6.e
+		hidden_effect = {
+			set_country_flag = THE_KEI_workman_flag_5
+		}
+	}
+	#寺庙
+	option = {
+		name = THE_KEI_flavor_events.6.f
+		hidden_effect = {
+			set_country_flag = THE_KEI_workman_flag_6
+		}
+	}
+	#法院
+	option = {
+		name = THE_KEI_flavor_events.6.g
+		hidden_effect = {
+			set_country_flag = THE_KEI_workman_flag_7
+		}
+	}
 }

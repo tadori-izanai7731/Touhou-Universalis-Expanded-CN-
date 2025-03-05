@@ -1,0 +1,119 @@
+custom_button = {
+	name = THE_KEI_decrese_workman_gui
+	tooltip = THE_KEI_decrese_workman_gui_tt
+	potential = {
+		owned_by = FROM
+		FROM = {
+			has_country_modifier = THE_KEI_decree_work_buff
+			has_government_mechanic = THE_KEI_lonely_creation_mechanic
+		}
+	}
+	trigger = {
+		if = {
+			limit = { 
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_1
+				}
+				NOT = {
+					has_building = marketplace
+				}
+				NOT = {
+					has_building = trade_depot
+				}
+				NOT = {
+					has_building = stock_exchange
+				}
+			}
+			FROM = {
+				treasury = 80
+			}
+		}
+		else_if = {
+			limit = { 
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_1
+				}
+				has_building = marketplace
+				NOT = {
+					has_building = trade_depot
+				}
+				NOT = {
+					has_building = stock_exchange
+				}
+			}
+			FROM = {
+				treasury = 120
+			}
+		}
+		else_if = {
+			limit = { 
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_1
+				}
+				has_building = trade_depot
+				NOT = {
+					has_building = stock_exchange
+				}
+			}
+			FROM = {
+				treasury = 160
+			}
+		}
+	}
+	effect = {
+		#集市1
+		if = {
+			limit = { 
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_1
+				}
+				NOT = {
+					has_building = marketplace
+				}
+				NOT = {
+					has_building = trade_depot
+				}
+				NOT = {
+					has_building = stock_exchange
+				}
+			}
+			FROM = {
+				add_treasury = -80
+			}
+			add_building = marketplace
+		}
+		else_if = {
+			limit = { 
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_1
+				}
+				has_building = marketplace
+				NOT = {
+					has_building = trade_depot
+				}
+				NOT = {
+					has_building = stock_exchange
+				}
+			}
+			FROM = {
+				add_treasury = -120
+			}
+			add_building = trade_depot
+		}
+		else_if = {
+			limit = { 
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_1
+				}
+				has_building = trade_depot
+				NOT = {
+					has_building = stock_exchange
+				}
+			}
+			FROM = {
+				add_treasury = -160
+			}
+			add_building = stock_exchange
+		}
+	}
+}

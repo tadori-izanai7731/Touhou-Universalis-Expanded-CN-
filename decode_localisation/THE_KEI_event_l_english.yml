@@ -37,6 +37,11 @@ l_english:
  THE_KEI_flavor_events.4.t: "敕命"
  THE_KEI_flavor_events.4.desc: ""
  THE_KEI_flavor_events.4.a: "敕命「四方」"
+ THE_KEI_flavor_events.4.b: "敕命「天工」"
+ THE_KEI_flavor_events.6.t: "天工"
+ THE_KEI_flavor_events.6.a: "集市建筑"
+ THE_KEI_flavor_events.6.b: "工坊建筑"
+ THE_KEI_flavor_events.6.c: "要塞建筑"
  ##buff_name
  THE_KEI_savtor_light_1_buff: "救赎之光"
  THE_KEI_savtor_all_power_buff: "奉献一切"
@@ -46,8 +51,12 @@ l_english:
  THE_KEI_rebuild_oder_buff: "秩序与平等"
  THE_KEI_the_wonder_buff: "造形神愿"
  THE_KEI_decree_sifang_buff: "敕命「四方」"
+ THE_KEI_decree_work_buff: "敕命「天工」"
  THE_KEI_the_captial_of_KEI_v2_buff: "筑起乐园"
- 
+ THE_KEI_zaoxing_haniwa_art_buff: "造型艺术"
+ ##decisions
+ THE_AKI_create_own_religions_the_monoriko_title: "改变「天工」建筑目标"
+ THE_AKI_create_own_religions_the_monoriko_desc: ""
  ##MISSION EXTRA
  THE_KEI_4_1_c_tt1: "持有此效果时:\n--在战争占领@SKI劲牙组@YAC鬼杰组的省份将会立即割让并获得核心。\n--对@SKI劲牙组@YAC鬼杰组宣战，对方仅能召唤动物灵盟友。"
  THE_KEI_4_1_c_tt2: "在首都生成§Y30支「耶尼切里」§!部队"
@@ -65,3 +74,6 @@ l_english:
  THE_KEI_5_3_c_tt1: "解锁政府机制「§Y塑魂§!」\n - -将领综合点数上限为8，单项上限为4"
  THE_KEI_5_3_c_tt2: "§g此机制能够自定义建立将领，详情查看政府按钮§!"
  THE_KEI_5_3_c_tt3: "在持有修正§O敕命「四方」§!时，耶尼切里至少赢得（[Root.the_kei_win_battle_count_im_var.GetValue]/15）场战斗。"
+ THE_KEI_2_6_c_tt1: "为我们2个生产§Y宝石§!的核心省份添加效果："
+ THE_KEI_2_6_c_tt2: "解锁§Y敕命「天工」§!\n - -§g此效果解锁省份GUI能够建设建筑§!"
+ THE_KEI_2_6_c_tt3: "在我们的核心省份随机分配15点£dip£§Y生产发展度§!"
