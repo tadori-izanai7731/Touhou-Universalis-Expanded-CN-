@@ -451,49 +451,64 @@ country_event = {
 	option = {
 		name = THE_KEI_flavor_events.6.a
 		hidden_effect = {
-			set_country_flag = THE_KEI_workman_flag_1
+			set_country_flag = THE_KEI_workman_flag_trade
+			THE_KEI_clr_all_workman_flag_effects = yes
 		}
 	}
 	#工坊/生产类
 	option = {
 		name = THE_KEI_flavor_events.6.b
 		hidden_effect = {
-			set_country_flag = THE_KEI_workman_flag_2
+			set_country_flag = THE_KEI_workman_flag_workshop
+			THE_KEI_clr_all_workman_flag_effects = yes
 		}
 	}
 	#要塞/
 	option = {
 		name = THE_KEI_flavor_events.6.c
 		hidden_effect = {
-			set_country_flag = THE_KEI_workman_flag_3
+			set_country_flag = THE_KEI_workman_flag_fort
+			THE_KEI_clr_all_workman_flag_effects = yes
 		}
 	}
 	#兵营
 	option = {
 		name = THE_KEI_flavor_events.6.d
 		hidden_effect = {
-			set_country_flag = THE_KEI_workman_flag_4
+			set_country_flag = THE_KEI_workman_flag_barracks
+			THE_KEI_clr_all_workman_flag_effects = yes
 		}
 	}
 	#军营
 	option = {
 		name = THE_KEI_flavor_events.6.e
 		hidden_effect = {
-			set_country_flag = THE_KEI_workman_flag_5
+			set_country_flag = THE_KEI_workman_flag_camp
+			THE_KEI_clr_all_workman_flag_effects = yes
 		}
 	}
 	#寺庙
 	option = {
 		name = THE_KEI_flavor_events.6.f
 		hidden_effect = {
-			set_country_flag = THE_KEI_workman_flag_6
+			set_country_flag = THE_KEI_workman_flag_temple
+			THE_KEI_clr_all_workman_flag_effects = yes
 		}
 	}
 	#法院
 	option = {
 		name = THE_KEI_flavor_events.6.g
 		hidden_effect = {
-			set_country_flag = THE_KEI_workman_flag_7
+			set_country_flag = THE_KEI_workman_flag_court
+			THE_KEI_clr_all_workman_flag_effects = yes
+		}
+	}
+	#大学
+	option = {
+		name = THE_KEI_flavor_events.6.h
+		hidden_effect = {
+			set_country_flag = THE_KEI_workman_flag_university
+			THE_KEI_clr_all_workman_flag_effects = yes
 		}
 	}
 }

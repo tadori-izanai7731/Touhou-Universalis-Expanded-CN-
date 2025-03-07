@@ -9,10 +9,11 @@ custom_button = {
 		}
 	}
 	trigger = {
+		#集市
 		if = {
 			limit = { 
 				FROM = {
-					has_country_flag = THE_KEI_workman_flag_1
+					has_country_flag = THE_KEI_workman_flag_trade
 				}
 				NOT = {
 					has_building = marketplace
@@ -31,7 +32,7 @@ custom_button = {
 		else_if = {
 			limit = { 
 				FROM = {
-					has_country_flag = THE_KEI_workman_flag_1
+					has_country_flag = THE_KEI_workman_flag_trade
 				}
 				has_building = marketplace
 				NOT = {
@@ -48,7 +49,7 @@ custom_button = {
 		else_if = {
 			limit = { 
 				FROM = {
-					has_country_flag = THE_KEI_workman_flag_1
+					has_country_flag = THE_KEI_workman_flag_trade
 				}
 				has_building = trade_depot
 				NOT = {
@@ -59,13 +60,268 @@ custom_button = {
 				treasury = 160
 			}
 		}
+		#工坊
+		if = {
+			limit = { 
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_workshop
+				}
+				NOT = {
+					has_building = workshop
+				}
+				NOT = {
+					has_building = counting_house
+				}
+			}
+			FROM = {
+				treasury = 80
+			}
+		}
+		else_if = {
+			limit = { 
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_workshop
+				}
+				has_building = workshop
+				NOT = {
+					has_building = counting_house
+				}
+			}
+			FROM = {
+				treasury = 240
+			}
+		}
+		#要塞建筑
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_fort
+				}
+				NOT = {
+					has_building = fort_15th
+				}
+				NOT = {
+					has_building = fort_16th
+				}
+				NOT = {
+					has_building = fort_17th
+				}
+				NOT = {
+					has_building = fort_18th
+				}
+			}
+			FROM = {
+				treasury = 160
+			}
+		}
+		else_if = {
+			limit = {
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_fort
+				}
+				has_building = fort_15th
+				NOT = {
+					has_building = fort_16th
+				}
+				NOT = {
+					has_building = fort_17th
+				}
+				NOT = {
+					has_building = fort_18th
+				}
+			 }
+			 FROM = {
+				treasury = 160
+			}
+			add_building = fort_16th
+		}
+		else_if = {
+			limit = {
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_fort
+				}
+				has_building = fort_16th
+				NOT = {
+					has_building = fort_15th
+				}
+				NOT = {
+					has_building = fort_17th
+				}
+				NOT = {
+					has_building = fort_18th
+				}
+			 }
+			 FROM = {
+				treasury = 160
+			}
+			add_building = fort_17th
+		}
+		else_if = {
+			limit = {
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_fort
+				}
+				has_building = fort_17th
+				NOT = {
+					has_building = fort_15th
+				}
+				NOT = {
+					has_building = fort_16th
+				}
+				NOT = {
+					has_building = fort_18th
+				}
+			 }
+			 FROM = {
+				treasury = 160
+			}
+			add_building = fort_18th
+		}
+		#兵营
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_barracks
+				}
+				NOT = {
+					has_building = barracks
+				}
+				NOT = {
+					has_building = training_fields
+				}
+			 }
+			 FROM = {
+				treasury = 80
+			}
+		}
+		else_if = {
+			limit = { 
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_barracks
+				}
+				has_building = barracks
+				NOT = {
+					has_building = training_fields
+				}
+			}
+			FROM = {
+				treasury = 160
+			}
+		}
+		#军营
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_camp
+				}
+				NOT = {
+					has_building = regimental_camp
+				}
+				NOT = {
+					has_building = conscription_center
+				}
+			 }
+			 FROM = {
+				treasury = 160
+			}
+		}
+		else_if = {
+			limit = {
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_camp
+				}
+				has_building = regimental_camp
+				NOT = {
+					has_building = conscription_center
+				}
+			}
+			FROM = {
+				treasury = 160
+			}
+		}
+		#寺庙
+		if = {
+			limit = { 
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_temple
+				}
+				NOT = {
+					has_building = temple
+				}
+				NOT = {
+					has_building = cathedral
+				}
+			}
+			FROM = {
+				treasury = 80
+			 }
+		}
+		else_if = {
+			limit = { 
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_temple
+				}
+				has_building = temple
+				NOT = {
+					has_building = cathedral
+				}
+			}
+			FROM = {
+				treasury = 160
+			 }
+		}
+		#法院
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_court
+				}
+				NOT = {
+					has_building = courthouse
+				}
+				NOT = {
+					has_building = town_hall
+				}
+			 }
+			 FROM = {
+				treasury = 80
+			 }
+		}
+		else_if = {
+			limit = {
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_court
+				}
+				has_building = courthouse
+				NOT = {
+					has_building = town_hall
+				}
+			 }
+			 FROM = {
+				treasury = 80
+			 }
+		}
+		#大学
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_university
+				}
+				NOT = {
+					has_building = university
+				}
+			 }
+			 FROM = {
+				treasury = 240
+			 }
+		}
 	}
 	effect = {
 		#集市1
 		if = {
 			limit = { 
 				FROM = {
-					has_country_flag = THE_KEI_workman_flag_1
+					has_country_flag = THE_KEI_workman_flag_trade
 				}
 				NOT = {
 					has_building = marketplace
@@ -85,7 +341,7 @@ custom_button = {
 		else_if = {
 			limit = { 
 				FROM = {
-					has_country_flag = THE_KEI_workman_flag_1
+					has_country_flag = THE_KEI_workman_flag_trade
 				}
 				has_building = marketplace
 				NOT = {
@@ -103,7 +359,7 @@ custom_button = {
 		else_if = {
 			limit = { 
 				FROM = {
-					has_country_flag = THE_KEI_workman_flag_1
+					has_country_flag = THE_KEI_workman_flag_trade
 				}
 				has_building = trade_depot
 				NOT = {
@@ -114,6 +370,273 @@ custom_button = {
 				add_treasury = -160
 			}
 			add_building = stock_exchange
+		}
+		#工坊
+		if = {
+			limit = { 
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_workshop
+				}
+				NOT = {
+					has_building = workshop
+				}
+				NOT = {
+					has_building = counting_house
+				}
+			}
+			FROM = {
+				add_treasury = -80
+			}
+			add_building = workshop
+		}
+		else_if = {
+			limit = { 
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_workshop
+				}
+				has_building = workshop
+				NOT = {
+					has_building = counting_house
+				}
+			}
+			FROM = {
+				add_treasury = -240
+			}
+			add_building = counting_house
+		}
+		#要塞建筑
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_fort
+				}
+				NOT = {
+					has_building = fort_15th
+				}
+				NOT = {
+					has_building = fort_16th
+				}
+				NOT = {
+					has_building = fort_17th
+				}
+				NOT = {
+					has_building = fort_18th
+				}
+			}
+			FROM = {
+				add_treasury = -160
+			}
+			add_building = fort_15th
+		}
+		else_if = {
+			limit = {
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_fort
+				}
+				has_building = fort_15th
+				NOT = {
+					has_building = fort_16th
+				}
+				NOT = {
+					has_building = fort_17th
+				}
+				NOT = {
+					has_building = fort_18th
+				}
+			 }
+			 FROM = {
+				add_treasury = -160
+			}
+			add_building = fort_16th
+		}
+		else_if = {
+			limit = {
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_fort
+				}
+				has_building = fort_16th
+				NOT = {
+					has_building = fort_15th
+				}
+				NOT = {
+					has_building = fort_17th
+				}
+				NOT = {
+					has_building = fort_18th
+				}
+			 }
+			 FROM = {
+				add_treasury = -160
+			}
+			add_building = fort_17th
+		}
+		else_if = {
+			limit = {
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_fort
+				}
+				has_building = fort_17th
+				NOT = {
+					has_building = fort_15th
+				}
+				NOT = {
+					has_building = fort_16th
+				}
+				NOT = {
+					has_building = fort_18th
+				}
+			 }
+			 FROM = {
+				add_treasury = -160
+			}
+			add_building = fort_18th
+		}
+		#兵营
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_barracks
+				}
+				NOT = {
+					has_building = barracks
+				}
+				NOT = {
+					has_building = training_fields
+				}
+			 }
+			 FROM = {
+				add_treasury = -80
+			}
+			add_building = barracks
+		}
+		else_if = {
+			limit = { 
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_barracks
+				}
+				has_building = barracks
+				NOT = {
+					has_building = training_fields
+				}
+			}
+			FROM = {
+				add_treasury = -160
+			}
+			add_building = training_fields
+		}
+		#军营
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_camp
+				}
+				NOT = {
+					has_building = regimental_camp
+				}
+				NOT = {
+					has_building = conscription_center
+				}
+			 }
+			 FROM = {
+				add_treasury = -160
+			}
+			add_building = regimental_camp
+		}
+		else_if = {
+			limit = {
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_camp
+				}
+				has_building = regimental_camp
+				NOT = {
+					has_building = conscription_center
+				}
+			}
+			FROM = {
+				add_treasury = -160
+			}
+			add_building = conscription_center
+		}
+		#寺庙
+		if = {
+			limit = { 
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_temple
+				}
+				NOT = {
+					has_building = temple
+				}
+				NOT = {
+					has_building = cathedral
+				}
+			}
+			FROM = {
+				add_treasury = -80
+			}
+			add_building = temple
+		}
+		else_if = {
+			limit = { 
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_temple
+				}
+				has_building = temple
+				NOT = {
+					has_building = cathedral
+				}
+			}
+			FROM = {
+				add_treasury = -160
+			}
+			add_building = cathedral
+		}
+		#法院
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_court
+				}
+				NOT = {
+					has_building = courthouse
+				}
+				NOT = {
+					has_building = town_hall
+				}
+			 }
+			 FROM = {
+				add_treasury = -80
+			}
+			add_building = courthouse
+		}
+		else_if = {
+			limit = {
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_court
+				}
+				has_building = courthouse
+				NOT = {
+					has_building = town_hall
+				}
+			 }
+			 FROM = {
+				add_treasury = -80
+			}
+			add_building = town_hall
+		}
+		#大学
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = THE_KEI_workman_flag_university
+				}
+				NOT = {
+					has_building = university
+				}
+			 }
+			 FROM = {
+				add_treasury = -240
+			 }
+			 add_building = university
 		}
 	}
 }
