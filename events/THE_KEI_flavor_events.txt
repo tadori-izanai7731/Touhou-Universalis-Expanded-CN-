@@ -451,64 +451,87 @@ country_event = {
 	option = {
 		name = THE_KEI_flavor_events.6.a
 		hidden_effect = {
-			set_country_flag = THE_KEI_workman_flag_trade
 			THE_KEI_clr_all_workman_flag_effects = yes
+			set_country_flag = THE_KEI_workman_flag_trade
 		}
 	}
 	#工坊/生产类
 	option = {
 		name = THE_KEI_flavor_events.6.b
 		hidden_effect = {
-			set_country_flag = THE_KEI_workman_flag_workshop
 			THE_KEI_clr_all_workman_flag_effects = yes
+			set_country_flag = THE_KEI_workman_flag_workshop
 		}
 	}
 	#要塞/
 	option = {
 		name = THE_KEI_flavor_events.6.c
 		hidden_effect = {
-			set_country_flag = THE_KEI_workman_flag_fort
 			THE_KEI_clr_all_workman_flag_effects = yes
+			set_country_flag = THE_KEI_workman_flag_fort
 		}
 	}
 	#兵营
 	option = {
 		name = THE_KEI_flavor_events.6.d
 		hidden_effect = {
-			set_country_flag = THE_KEI_workman_flag_barracks
 			THE_KEI_clr_all_workman_flag_effects = yes
+			set_country_flag = THE_KEI_workman_flag_barracks
 		}
 	}
 	#军营
 	option = {
 		name = THE_KEI_flavor_events.6.e
 		hidden_effect = {
-			set_country_flag = THE_KEI_workman_flag_camp
 			THE_KEI_clr_all_workman_flag_effects = yes
+			set_country_flag = THE_KEI_workman_flag_camp
 		}
 	}
 	#寺庙
 	option = {
 		name = THE_KEI_flavor_events.6.f
 		hidden_effect = {
-			set_country_flag = THE_KEI_workman_flag_temple
 			THE_KEI_clr_all_workman_flag_effects = yes
+			set_country_flag = THE_KEI_workman_flag_temple
 		}
 	}
 	#法院
 	option = {
 		name = THE_KEI_flavor_events.6.g
 		hidden_effect = {
-			set_country_flag = THE_KEI_workman_flag_court
 			THE_KEI_clr_all_workman_flag_effects = yes
+			set_country_flag = THE_KEI_workman_flag_court
 		}
 	}
 	#大学
 	option = {
 		name = THE_KEI_flavor_events.6.h
 		hidden_effect = {
-			set_country_flag = THE_KEI_workman_flag_university
 			THE_KEI_clr_all_workman_flag_effects = yes
+			set_country_flag = THE_KEI_workman_flag_university
 		}
+	}
+}
+
+country_event = {
+	id = THE_KEI_flavor_events.7
+	title = "THE_KEI_flavor_events.7.t"
+	desc = "THE_KEI_flavor_events.7.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	option = {
+		name = THE_KEI_flavor_events.7.a
+		change_national_focus = ADM
+	}
+	option = {
+		name = THE_KEI_flavor_events.7.b
+		change_national_focus = DIP
+	}
+	option = {
+		name = THE_KEI_flavor_events.7.c
+		change_national_focus = MIL
 	}
 }

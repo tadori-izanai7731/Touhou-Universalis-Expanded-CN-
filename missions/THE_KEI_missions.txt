@@ -251,7 +251,9 @@ THE_KEI_main_branch_2 = {
 
 		trigger = {  } 
 
-		effect = {  } 
+		effect = { 
+			add_government_reform = THE_KEI_dedicate_ourselves_government_reform
+		 } 
 	}
 
 	THE_KEI_2_6 = {
@@ -401,13 +403,25 @@ THE_KEI_main_branch_3 = {
 		position = 4
 		required_missions = { THE_KEI_3_2 } 
 		provinces_to_highlight = { 
+			owned_by = ROOT
 		 } 
 
 		trigger = { 
-			
+			num_of_owned_provinces_with = {
+				value = 30
+				has_tax_building_trigger = yes
+			}
 		 } 
 
 		effect = { 
+			custom_tooltip = THE_KEI_3_4_c_tt1
+			add_prestige = 100
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			hidden_effect = {
+				set_country_flag = THE_KEI_can_build_add_government_power_flag
+			}
 		 } 
 	}
 
@@ -1073,6 +1087,7 @@ THE_KEI_main_branch_5 = {
 		icon = mission_unknown_mission
 		position = 5
 		required_missions = { THE_KEI_5_3 } 
+		required_missions = { THE_KEI_4_4 } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 

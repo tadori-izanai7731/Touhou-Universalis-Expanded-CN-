@@ -448,6 +448,20 @@ interaction = {
 					loyalty = 10
 				}
 			}
+			if = {
+				limit = {
+					has_government_attribute = THE_KEI_dedicate_ourselves_governemnt_reform
+				 }
+				 add_years_of_income = 0.6
+				 add_government_power = {
+					mechanic_type = THE_KEI_lonely_creation_mechanic
+					power_type = THE_KEI_lonely_creation_mechanic_power
+					value = 15
+				 }
+				 country_event = {
+					id = THE_KEI_flavor_events.7
+				 }
+			}
 			### THE_BEFORE_EFFECT_END
 			
 			if = {

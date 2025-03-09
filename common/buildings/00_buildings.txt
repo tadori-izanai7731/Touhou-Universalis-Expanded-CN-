@@ -206,6 +206,16 @@ temple = {
 				value = 25
 			}
 		}
+		if = {
+			limit = { FROM = { has_country_flag = THE_KEI_can_build_add_government_power_flag } }
+			FROM = {
+				add_government_power = {
+					mechanic_type = THE_KEI_lonely_creation_mechanic
+					power_type = THE_KEI_lonely_creation_mechanic_power
+					value = 2.5
+				}
+			}
+		}
 	}
 	on_destroyed = {
 		on_province_tax_building_destroyed_estate_privileges_effect = yes
@@ -1214,6 +1224,16 @@ cathedral = {
 			change_variable = {
 				which = the_aki_religions_monoriko_province_im_var
 				value = 50
+			}
+		}
+		if = {
+			limit = { FROM = { has_country_flag = THE_KEI_can_build_add_government_power_flag } }
+			FROM = {
+				add_government_power = {
+					mechanic_type = THE_KEI_lonely_creation_mechanic
+					power_type = THE_KEI_lonely_creation_mechanic_power
+					value = 5.0
+				}
 			}
 		}
 	}
