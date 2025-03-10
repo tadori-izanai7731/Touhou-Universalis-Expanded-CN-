@@ -67,9 +67,21 @@ THE_KEI_decree_work_buff = {
 	build_cost = -0.25
 	build_time = -0.10
 }
+##敕命「造物」
+THE_KEI_decree_work_V2_buff = {
+	build_cost = -0.25
+	build_time = -0.25
+	global_prosperity_growth = 1.0
+}
 THE_KEI_zaoxing_haniwa_art_buff = {
 	trade_goods_size = 1.0
 	local_prosperity_growth = 0.5
 	allowed_num_of_buildings = 1
 	local_monthly_devastation = -1.0
+}
+#完美艺术
+THE_KEI_perfect_art_buff = {
+	global_allowed_num_of_buildings = 1
+	same_religion_advisor_cost = -0.25
+	global_trade_goods_size_modifier = 0.20
 }

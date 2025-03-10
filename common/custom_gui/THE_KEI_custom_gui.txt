@@ -4,8 +4,13 @@ custom_button = {
 	potential = {
 		owned_by = FROM
 		FROM = {
-			has_country_modifier = THE_KEI_decree_work_buff
 			has_government_mechanic = THE_KEI_lonely_creation_mechanic
+		}
+		FROM = {
+			OR = {
+				has_country_modifier = THE_KEI_decree_work_V2_buff
+				has_country_modifier = THE_KEI_decree_work_buff
+			}
 		}
 	}
 	trigger = {
@@ -28,6 +33,14 @@ custom_button = {
 			FROM = {
 				treasury = 80
 			}
+			if = {
+				limit = {
+					FROM = {
+						has_country_modifier = THE_KEI_decree_work_buff
+					}
+				 }
+				 dip_tech = 4
+			}
 		}
 		else_if = {
 			limit = { 
@@ -45,6 +58,14 @@ custom_button = {
 			FROM = {
 				treasury = 120
 			}
+			if = {
+				limit = {
+					FROM = {
+						has_country_modifier = THE_KEI_decree_work_buff
+					}
+				 }
+				 dip_tech = 17
+			}
 		}
 		else_if = {
 			limit = { 
@@ -58,6 +79,14 @@ custom_button = {
 			}
 			FROM = {
 				treasury = 160
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_country_modifier = THE_KEI_decree_work_buff
+					}
+				 }
+				 dip_tech = 22
 			}
 		}
 		#工坊
@@ -76,6 +105,14 @@ custom_button = {
 			FROM = {
 				treasury = 80
 			}
+			if = {
+				limit = {
+					FROM = {
+						has_country_modifier = THE_KEI_decree_work_buff
+					}
+				 }
+				 adm_tech = 6
+			}
 		}
 		else_if = {
 			limit = { 
@@ -89,6 +126,14 @@ custom_button = {
 			}
 			FROM = {
 				treasury = 240
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_country_modifier = THE_KEI_decree_work_buff
+					}
+				 }
+				 adm_tech = 24
 			}
 		}
 		#要塞建筑
@@ -112,7 +157,7 @@ custom_button = {
 			}
 			FROM = {
 				treasury = 160
-			}
+			} 
 		}
 		else_if = {
 			limit = {
@@ -133,7 +178,14 @@ custom_button = {
 			 FROM = {
 				treasury = 160
 			}
-			add_building = fort_16th
+			if = {
+				limit = {
+					FROM = {
+						has_country_modifier = THE_KEI_decree_work_buff
+					}
+				 }
+				 mil_tech = 14
+			}
 		}
 		else_if = {
 			limit = {
@@ -154,7 +206,14 @@ custom_button = {
 			 FROM = {
 				treasury = 160
 			}
-			add_building = fort_17th
+			if = {
+				limit = {
+					FROM = {
+						has_country_modifier = THE_KEI_decree_work_buff
+					}
+				 }
+				 adm_tech = 19
+			}
 		}
 		else_if = {
 			limit = {
@@ -175,7 +234,14 @@ custom_button = {
 			 FROM = {
 				treasury = 160
 			}
-			add_building = fort_18th
+			if = {
+				limit = {
+					FROM = {
+						has_country_modifier = THE_KEI_decree_work_buff
+					}
+				 }
+				 adm_tech = 24
+			}
 		}
 		#兵营
 		if = {
@@ -193,6 +259,14 @@ custom_button = {
 			 FROM = {
 				treasury = 80
 			}
+			if = {
+				limit = {
+					FROM = {
+						has_country_modifier = THE_KEI_decree_work_buff
+					}
+				 }
+				 mil_tech = 6
+			}
 		}
 		else_if = {
 			limit = { 
@@ -206,6 +280,14 @@ custom_button = {
 			}
 			FROM = {
 				treasury = 160
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_country_modifier = THE_KEI_decree_work_buff
+					}
+				 }
+				 mil_tech = 16
 			}
 		}
 		#军营
@@ -224,6 +306,14 @@ custom_button = {
 			 FROM = {
 				treasury = 160
 			}
+			if = {
+				limit = {
+					FROM = {
+						has_country_modifier = THE_KEI_decree_work_buff
+					}
+				 }
+				mil_tech = 8
+			}
 		}
 		else_if = {
 			limit = {
@@ -237,6 +327,14 @@ custom_button = {
 			}
 			FROM = {
 				treasury = 160
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_country_modifier = THE_KEI_decree_work_buff
+					}
+				 }
+				mil_tech = 24
 			}
 		}
 		#寺庙
@@ -255,6 +353,14 @@ custom_button = {
 			FROM = {
 				treasury = 80
 			 }
+			 if = {
+				limit = {
+					FROM = {
+						has_country_modifier = THE_KEI_decree_work_buff
+					}
+				 }
+				adm_tech = 4
+			}
 		}
 		else_if = {
 			limit = { 
@@ -269,6 +375,14 @@ custom_button = {
 			FROM = {
 				treasury = 160
 			 }
+			 if = {
+				limit = {
+					FROM = {
+						has_country_modifier = THE_KEI_decree_work_buff
+					}
+				 }
+				adm_tech = 12
+			}
 		}
 		#法院
 		if = {
@@ -286,6 +400,14 @@ custom_button = {
 			 FROM = {
 				treasury = 80
 			 }
+			 if = {
+				limit = {
+					FROM = {
+						has_country_modifier = THE_KEI_decree_work_buff
+					}
+				 }
+				adm_tech = 7
+			}
 		}
 		else_if = {
 			limit = {
@@ -300,6 +422,14 @@ custom_button = {
 			 FROM = {
 				treasury = 80
 			 }
+			 if = {
+				limit = {
+					FROM = {
+						has_country_modifier = THE_KEI_decree_work_buff
+					}
+				 }
+				adm_tech = 22
+			}
 		}
 		#大学
 		if = {
@@ -314,6 +444,14 @@ custom_button = {
 			 FROM = {
 				treasury = 240
 			 }
+			 if = {
+				limit = {
+					FROM = {
+						has_country_modifier = THE_KEI_decree_work_buff
+					}
+				 }
+				adm_tech = 16
+			}
 		}
 	}
 	effect = {

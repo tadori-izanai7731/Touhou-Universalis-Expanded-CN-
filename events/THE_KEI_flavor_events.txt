@@ -415,9 +415,27 @@ country_event = {
 		name = THE_KEI_flavor_events.4.b
 		trigger = {
 			mission_completed = THE_KEI_2_7
+			NOT = {
+				mission_completed = THE_KEI_2_9
+			}
 		}
 		add_country_modifier = {
 			name = THE_KEI_decree_work_buff
+			duration = -1
+		}
+		hidden_effect = {
+			THE_KEI_clr_all_decrese_buff_effects = yes
+		}
+	}
+	#「造物」
+	option = {
+		name = THE_KEI_flavor_events.4.c
+		trigger = {
+			mission_completed = THE_KEI_2_7
+			mission_completed = THE_KEI_2_9
+		}
+		add_country_modifier = {
+			name = THE_KEI_decree_work_V2_buff
 			duration = -1
 		}
 		hidden_effect = {
