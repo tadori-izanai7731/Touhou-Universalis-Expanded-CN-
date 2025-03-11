@@ -5,7 +5,7 @@
  THE_KEI_RULER: ".bV^y"
  mechanic_THE_KEI_lonely_create_hana_wheel_abilities_yes: "=T(u0RbVRu0:g6R"
  mechanic_THE_KEI_can_not_create_allianece_yes: "ybkÓußv"
- mechanic_THE_KEI_dedicate_ourselves_governemnt_reform_yes: "SVbìNÞV6e†˜0Wöeÿ\n - -·ƒ—V6*Ng§G6eeQ§!\n - -·ƒ—V1!kôf9eýV¶R&q¹p„v:gO\n - -·ƒ—V10¹pSu"
+ mechanic_THE_KEI_dedicate_ourselves_governemnt_reform_yes: "SVbìNÞV6e†˜0Wöeÿ\n -·ƒ—V6*Ng§G6eeQ§!\n -·ƒ—V1!kôf9eýV¶R&q¹p„v:gO\n - -·ƒ—V10¹pSu"
  THE_KEI_lonely_gods_can_not_alliance_c_tooltip: "dRËzàeôc„v.bV^y"
  THE_KEI_noble_name: "¨Rirup"
  THE_KEI_burghers_name: "ºN‰|up"
@@ -40,6 +40,8 @@
  THE_KEI_flavor_events.4.desc: ""
  THE_KEI_flavor_events.4.a: "Ue‹T0ÛV¹e0"
  THE_KEI_flavor_events.4.b: "Ue‹T0)YåT0"
+ THE_KEI_flavor_events.4.c: "Ue‹T0.ir0"
+ THE_KEI_flavor_events.4.d: "Ue‹T0qu0"
  THE_KEI_flavor_events.6.t: ")YåT"
  THE_KEI_flavor_events.6.a: "Æ–^ú^Qr"
  THE_KEI_flavor_events.6.b: "åTJWú^Qr"
@@ -63,9 +65,13 @@
  THE_KEI_the_wonder_buff: ".bV^y?a"
  THE_KEI_decree_sifang_buff: "Ue‹T0ÛV¹e0"
  THE_KEI_decree_work_buff: "Ue‹T0)YåT0"
+ THE_KEI_decree_work_V2_buff: "Ue‹T0.ir0"
+ THE_KEI_rejuvenate_buff: "Ue‹T0qu0"
  THE_KEI_the_captial_of_KEI_v2_buff: "QrwPNíV"
  THE_KEI_zaoxing_haniwa_art_buff: ".‹Wz‚=g"
  THE_KEI_perfect_art_buff: "NaŒQXbV"
+ ##religion
+ the_keiki: "¦hó`.‹W"
  ##decisions
  THE_KEI_change_workman_duixiang_decoisions_title: "9eØS0)YåT0ú^Qrîvh"
  THE_KEI_change_workman_duixiang_decoisions_desc: ""
@@ -91,3 +97,7 @@
  THE_KEI_2_6_c_tt3: "(WbìN„v8hÃVwýN–:gRM‘15¹p£dip£§YuµNÑSUS¦^§!"
  THE_KEI_3_4_c_tt1: "SVbìNú^¾‹^y>yöe·ƒ—V§G2.5§!§OSu§!ÿú^¾‹^y«Röe·ƒ—V§G5.0§!§OSu§!"
  THE_KEI_2_9_c_tt1: "GSµu§YUe‹T0.ir0§!\n - -§gO—V0)YåT0R.ú^QràeÆ‰ÑyŽbP–6R§!"
+ THE_KEI_1_7_c_tt1: "ã‰•§YUe‹T0qu0§!\n - -§gSVbìNÑSUSNOŽN30ÑSUS¦^„vwýNöeÿïSˆmw5¹p§OSu§!O(uwýNUIÐcGS	Nôu§!"
+ THE_KEI_1_8_c_tt1: "óSO(uÿ[Root.the_kei_rejuvenate_devlop_im_var.GetValue]/10	ÿ!k0qu0’N¨R"
+ THE_KEI_1_8_c_tt2: "GSµu§YUe‹T0qu0§!\n - -§g0qu0’N¨R„vÑSUSýP–6RÐcØš0R60ÑSUS¦^§!"
+ THE_KEI_1_9_c_tt1: "ã‰•³Q®‹9eáO—RYe0§Y¦hó`.‹W§!0"

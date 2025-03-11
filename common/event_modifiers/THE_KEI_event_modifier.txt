@@ -85,3 +85,9 @@ THE_KEI_perfect_art_buff = {
 	same_religion_advisor_cost = -0.25
 	global_trade_goods_size_modifier = 0.20
 }
+#敕命「焕生」
+THE_KEI_rejuvenate_buff = {
+	development_cost = -0.20
+	development_cost_modifier = -0.10
+	global_monthly_devastation = -0.5
+}

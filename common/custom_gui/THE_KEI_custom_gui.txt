@@ -778,3 +778,79 @@ custom_button = {
 		}
 	}
 }
+
+custom_button = {
+	name = THE_KEI_rejuvenate_development_gui
+	tooltip = THE_KEI_rejuvenate_development_gui_tt
+	potential = {
+		owned_by = FROM
+		FROM = {
+			has_government_mechanic = THE_KEI_lonely_creation_mechanic
+		}
+		FROM = {
+			has_country_modifier = THE_KEI_rejuvenate_buff
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = THE_KEI_1_7
+					NOT = {
+						mission_completed = THE_KEI_1_8
+					}
+				}
+			}
+			ROOT = {
+				NOT = {
+					development = 30
+				}
+				has_government_power = {
+					mechanic_type = THE_KEI_lonely_creation_mechanic
+					power_type = THE_KEI_lonely_creation_mechanic_power
+					value = 5
+				}
+			}
+		}
+		else_if = {
+			limit = { 
+				FROM = {
+					mission_completed = THE_KEI_1_7
+					mission_completed = THE_KEI_1_8
+				}
+			}
+			ROOT = {
+				NOT = {
+					development = 60
+				}
+				FROM = {
+					has_government_power = {
+						mechanic_type = THE_KEI_lonely_creation_mechanic
+						power_type = THE_KEI_lonely_creation_mechanic_power
+						value = 5
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		FROM = {
+			add_government_power = {
+				mechanic_type = THE_KEI_lonely_creation_mechanic
+				power_type = THE_KEI_lonely_creation_mechanic_power
+				value = -5
+			}
+		}
+		ROOT = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+		hidden_effect = {
+			change_variable = {
+				which = the_kei_rejuvenate_devlop_im_var
+				value = 1
+			}
+		}
+	}
+}

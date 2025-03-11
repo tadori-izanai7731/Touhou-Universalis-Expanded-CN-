@@ -21,4 +21,29 @@ country_decisions = {
 			factor = 0
 		}
 	}
+
+	THE_KEI_change_religion_to_the_keiki_decoisions = {
+		color = { 70 222 219 }
+		potential = {
+			has_country_flag = THE_KEI_can_change_religion_to_the_keiki
+		}
+		allow = {
+			stability = 1
+		}
+		effect = {
+			add_stability = -1
+			change_religion = the_keiki
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						is_core = ROOT
+					}
+					change_religion = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
 }

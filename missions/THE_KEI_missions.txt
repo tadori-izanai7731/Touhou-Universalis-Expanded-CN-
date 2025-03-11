@@ -87,9 +87,8 @@ THE_KEI_main_branch_1 = {
 
 		trigger = { 
 			5045 = {
-				development = 40
+				development = 30
 				has_tax_building_trigger = yes
-				has_manpower_building_trigger = yes
 			}
 		 } 
 
@@ -113,23 +112,72 @@ THE_KEI_main_branch_1 = {
 		icon = mission_unknown_mission
 		position = 7
 		required_missions = { THE_KEI_1_6 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			is_capital_of = ROOT
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			5045 = {
+				development = 40
+				has_manpower_building_trigger = yes
+				has_production_building_trigger = yes
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_KEI_1_7_c_tt1
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+		 } 
 	}
 
 	THE_KEI_1_8 = {
 		icon = mission_unknown_mission
 		position = 8
 		required_missions = { THE_KEI_1_7 } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			NOT = {
+				development = 30
+			}
+		 } 
+
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 15
+				development = 30
+			}
+			custom_trigger_tooltip = {
+				tooltip = THE_KEI_1_8_c_tt1
+				check_variable = {
+					which = the_kei_rejuvenate_devlop_im_var
+					value = 10
+				}
+			}
+		} 
+
+		effect = { 
+			custom_tooltip = THE_KEI_1_8_c_tt2
+		 } 
+	}
+
+	THE_KEI_1_9_lock = {
+		icon = mission_unknown_mission
+		position = 9
+		required_missions = { THE_KEI_1_8 } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_KEI_1_9_c_tt1
+			hidden_effect = {
+				set_country_flag = THE_KEI_can_change_religion_to_the_keiki
+			}
+		 } 
 	}
+
 }
 THE_KEI_main_branch_2 = {
 	slot = 2
@@ -1211,16 +1259,6 @@ THE_KEI_minor_branch_1_lock = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = KEI } 
-
-	THE_KEI_1_9_lock = {
-		icon = mission_unknown_mission
-		position = 9
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
 
 	THE_KEI_1_10_lock = {
 		icon = mission_unknown_mission

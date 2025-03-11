@@ -442,6 +442,20 @@ country_event = {
 			THE_KEI_clr_all_decrese_buff_effects = yes
 		}
 	}
+	#「焕生」
+	option = {
+		name = THE_KEI_flavor_events.4.d
+		trigger = {
+			mission_completed = THE_KEI_1_7
+		}
+		add_country_modifier = {
+			name = THE_KEI_rejuvenate_buff
+			duration = -1
+		}
+		hidden_effect = {
+			THE_KEI_clr_all_decrese_buff_effects = yes
+		}
+	}
 }
 #Haniwa敕命 （2槽）
 country_event = {
