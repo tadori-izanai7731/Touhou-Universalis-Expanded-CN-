@@ -241,6 +241,10 @@ Touhou = {
 		}
 		
 		fervor = yes
+		the_keiki_empty_fervor_1 = { allow = { always = no } visible = { always = no } ai_will_do = { factor = 0 } }
+		the_keiki_empty_fervor_2 = { allow = { always = no } visible = { always = no } ai_will_do = { factor = 0 } }
+		the_keiki_empty_fervor_3 = { allow = { always = no } visible = { always = no } ai_will_do = { factor = 0 } }
+		the_keiki_empty_fervor_4 = { allow = { always = no } visible = { always = no } ai_will_do = { factor = 0 } }
 
 		harmonized_modifier = THE_harmonized_kagiyama
 	}

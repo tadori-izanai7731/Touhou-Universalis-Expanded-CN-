@@ -402,12 +402,12 @@ country_event = {
 		trigger = {
 			mission_completed = THE_KEI_5_2
 		}
+		hidden_effect = {
+			THE_KEI_clr_all_decrese_buff_effects = yes
+		}
 		add_country_modifier = {
 			name = THE_KEI_decree_sifang_buff
 			duration = -1
-		}
-		hidden_effect = {
-			THE_KEI_clr_all_decrese_buff_effects = yes
 		}
 	}
 	#「天工」
@@ -419,12 +419,12 @@ country_event = {
 				mission_completed = THE_KEI_2_9
 			}
 		}
+		hidden_effect = {
+			THE_KEI_clr_all_decrese_buff_effects = yes
+		}
 		add_country_modifier = {
 			name = THE_KEI_decree_work_buff
 			duration = -1
-		}
-		hidden_effect = {
-			THE_KEI_clr_all_decrese_buff_effects = yes
 		}
 	}
 	#「造物」
@@ -434,12 +434,12 @@ country_event = {
 			mission_completed = THE_KEI_2_7
 			mission_completed = THE_KEI_2_9
 		}
+		hidden_effect = {
+			THE_KEI_clr_all_decrese_buff_effects = yes
+		}
 		add_country_modifier = {
 			name = THE_KEI_decree_work_V2_buff
 			duration = -1
-		}
-		hidden_effect = {
-			THE_KEI_clr_all_decrese_buff_effects = yes
 		}
 	}
 	#「焕生」
@@ -448,12 +448,12 @@ country_event = {
 		trigger = {
 			mission_completed = THE_KEI_1_7
 		}
+		hidden_effect = {
+			THE_KEI_clr_all_decrese_buff_effects = yes
+		}
 		add_country_modifier = {
 			name = THE_KEI_rejuvenate_buff
 			duration = -1
-		}
-		hidden_effect = {
-			THE_KEI_clr_all_decrese_buff_effects = yes
 		}
 	}
 }
