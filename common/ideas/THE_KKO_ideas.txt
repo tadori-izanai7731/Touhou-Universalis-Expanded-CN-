@@ -1,0 +1,50 @@
+KKO_ideas = {
+	start = {
+		diplomatic_reputation = 1
+        num_accepted_cultures = -10
+	}
+
+	bonus = {
+		drill_decay_modifier = -0.33
+        army_tradition_decay = -0.01
+	}
+
+	trigger = {
+		tag = KKO
+	}
+	free = yes
+	
+	KKO_emotional_poker_face = {
+		stability_cost_modifier = -0.25
+		production_efficiency = 0.15
+	}
+
+	KKO_ruler_of_emotions = {
+		siege_ability = 0.15
+		ae_impact = -0.15
+	}
+	
+	KKO_studying_menreiki = {
+		idea_cost = -0.10
+		embracement_cost = -0.15
+	}	
+	
+	KKO_nohgaku_concert = {
+		global_trade_power = 0.15
+	}
+	
+	KKO_concert_dedicated_to_god = {
+		missionary_maintenance_cost = -0.15
+		same_culture_advisor_cost = -0.15
+	}
+	
+	KKO_arbitrator_in_religious_dispute = {
+		army_tradition_from_battle = 1
+        warscore_cost_vs_other_religion = -0.15
+	}
+	
+	KKO_mask_of_hope = {
+		land_morale = 0.15
+        global_prosperity_growth = 0.05
+	}
+}
