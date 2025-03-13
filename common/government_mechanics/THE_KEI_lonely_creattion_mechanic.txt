@@ -1,6 +1,6 @@
 THE_KEI_lonely_creation_mechanic = {
-	alert_icon_gfx = GFX_alerticons_government_mechanics
-	alert_icon_index = 10
+	# alert_icon_gfx = GFX_alerticons_government_mechanics
+	# alert_icon_index = 10
 	available = {
 		always = yes
 	}
@@ -67,6 +67,30 @@ THE_KEI_lonely_creation_mechanic = {
 				}
 				start_value = 75
 				end_value = 100
+			}
+		}
+	}
+}
+
+THE_KEI_save_the_masses_government_mechanic = {
+	# alert_icon_gfx = GFX_alerticons_government_mechanics
+	# alert_icon_index = 10
+	available = {
+		always = yes
+	}
+	powers = {
+		THE_KEI_masses_var_power = {
+			max = 100
+			min = 0
+			#变化
+			scaled_modifier = {
+				modifier = { 
+					infantry_power = 0.20
+					cavalry_power = 0.20
+					artillery_power = 0.20
+					reinforce_speed = 0.50
+					global_regiment_recruit_speed = -0.25
+				}
 			}
 		}
 	}

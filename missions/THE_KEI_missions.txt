@@ -159,6 +159,9 @@ THE_KEI_main_branch_1 = {
 
 		effect = { 
 			custom_tooltip = THE_KEI_1_8_c_tt2
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
 		 } 
 	}
 
@@ -167,15 +170,16 @@ THE_KEI_main_branch_1 = {
 		position = 9
 		required_missions = { THE_KEI_1_8 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = { 
 			custom_tooltip = THE_KEI_1_9_c_tt1
+			add_stability = 1
 			hidden_effect = {
 				set_country_flag = THE_KEI_can_change_religion_to_the_keiki
 			}
-		 } 
+		} 
 	}
 
 }
@@ -1183,9 +1187,41 @@ THE_KEI_main_branch_5 = {
 		required_missions = { THE_KEI_4_4 } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = THE_KEI_5_5_c_tt2
+			}
+			has_global_modifier_value = {
+				which = discipline
+				value = 0.10
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_KEI_5_5_c_tt1
+			hidden_effect = {
+				set_variable = {
+					which = the_mayumi_fire_max_var
+					value = 6
+				}
+				set_variable = {
+					which = the_mayumi_shock_max_var
+					value = 6
+				}
+				set_variable = {
+					which = the_mayumi_manuever_max_var
+					value = 6
+				}
+				set_variable = {
+					which = the_mayumi_siege_max_var
+					value = 6
+				}
+				set_variable = {
+					which = the_mayumi_max_var
+					value = 16
+				}
+			}
+		 } 
 	}
 
 	THE_KEI_5_6 = {
@@ -1203,9 +1239,16 @@ THE_KEI_main_branch_5 = {
 		icon = mission_unknown_mission
 		position = 7
 		required_missions = { THE_KEI_4_6 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			province_id = 5262
+			province_id = 5051
+			province_id = 5005
+			province_id = 5273
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			
+		 } 
 
 		effect = {  } 
 	}

@@ -153,9 +153,11 @@ THE_KEI_define_general_mayumi_siege = {
 
 #耶尼切里计数
 THE_KEI_amount_haniwa_recruit_effect = {
-	change_variable = {
-		which = the_kei_haniwa_recruit_im_var
-		value = 1
+	owner = {
+		change_variable = {
+			which = the_kei_haniwa_recruit_im_var
+			value = 1
+		}
 	}
 }
 
@@ -218,4 +220,25 @@ THE_KEI_clr_all_workman_flag_effects = {
 	clr_country_flag = THE_KEI_workman_flag_temple
 	clr_country_flag = THE_KEI_workman_flag_court
 	clr_country_flag = THE_KEI_workman_flag_university
+}
+
+#添加 救赎
+THE_KEI_add_save_the_masses_power_effects = {
+	if = {
+		limit = { 
+			FROM = {
+				culture_group = Gensokyan_culture
+			}
+			KEI = {
+				has_government_mechanic = THE_KEI_save_the_masses_government_mechanic
+			}
+		}
+		KEI = {
+			add_government_power = {
+				mechanic_type = THE_KEI_save_the_masses_government_mechanic
+				power_type = THE_KEI_masses_var_power
+				value = 2
+			}
+		}
+	}
 }
