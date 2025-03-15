@@ -649,6 +649,15 @@ guiTypes = {
 				clicksound = "click"
 				scripted = yes
 			}
+			guiButtonType = {
+				name = THE_KEI_province_create_army_gui
+				position = { x = 372 y = 200 }
+				quadTextureSprite = "GFX_the_aki_harvest_province_2_button"
+				# buttonText = THE_ALC_province_button1_gui_tt
+				buttonFont = "vic_18"
+				clicksound = "click"
+				scripted = yes
+			}
 
 
 			### Core

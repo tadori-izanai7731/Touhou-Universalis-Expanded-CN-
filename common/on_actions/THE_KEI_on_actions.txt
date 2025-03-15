@@ -2,9 +2,13 @@ on_siege_won_country = {
 	THE_KEI_annex_ski_yac_province_in_war_effects = yes
 }
 on_mil_development = {
-	the_kei_gain_effect_mechanic_power_1_effect = {
-		value = 5
-	}
+	THE_KEI_develop_province_add_power_effects = yes
+}
+on_adm_development = {
+	THE_KEI_develop_province_add_power_effects = yes
+}
+on_dip_development = {
+	THE_KEI_develop_province_add_power_effects = yes
 }
 on_war_won = {
 	the_kei_gain_effect_mechanic_power_2_effect = {
@@ -27,4 +31,7 @@ on_battle_lost_country = {
 }
 on_annexed = {
 	THE_KEI_add_save_the_masses_power_effects = yes
+}
+on_core = {
+	
 }

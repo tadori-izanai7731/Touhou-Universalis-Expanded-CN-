@@ -562,21 +562,51 @@ THE_KEI_main_branch_3 = {
 		icon = mission_unknown_mission
 		position = 9
 		required_missions = { THE_KEI_3_7 } 
-		provinces_to_highlight = {  } 
+		required_missions = { THE_KEI_4_8 } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			inflation = 0
+			corruption = 0
+			overextension_percentage = 0
+			monthly_income = 50
+		 } 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_KEI_3_9_c_tt1
+		 } 
 	}
 
 	THE_KEI_3_10 = {
 		icon = mission_unknown_mission
 		position = 10
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			OR = {
+				NOT = {
+					base_manpower = 7
+				}
+				NOT = {
+					has_manpower_building_trigger = yes
+				}
+			}
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 10
+				base_manpower = 7
+				has_manpower_building_trigger = yes
+			}
+			max_manpower = 80
+		 } 
 
-		effect = {  } 
+		effect = { 
+			add_yearly_manpower = 5.0
+			custom_tooltip = THE_KEI_3_10_c_tt1
+		 } 
 	}
 }
 THE_KEI_main_branch_4 = {
@@ -1195,6 +1225,7 @@ THE_KEI_main_branch_5 = {
 				which = discipline
 				value = 0.10
 			}
+			has_mil_advisor = yes
 		 } 
 
 		effect = { 
@@ -1240,17 +1271,35 @@ THE_KEI_main_branch_5 = {
 		position = 7
 		required_missions = { THE_KEI_4_6 } 
 		provinces_to_highlight = { 
-			province_id = 5262
-			province_id = 5051
-			province_id = 5005
-			province_id = 5273
-		 } 
+			area = Gate_to_the_dead
+		} 
 
 		trigger = { 
-			
+			Gate_to_the_dead = {
+				type = all
+				owned_by = ROOT
+			}
+			5051 = {
+				has_fort_building_trigger = yes	
+			}
 		 } 
 
-		effect = {  } 
+		effect = { 
+			5051 = {
+				add_province_modifier = {
+					name = THE_KEI_the_gate_of_hell_buff
+					duration = -1
+				}
+			}
+			add_adm_power = 75
+			add_dip_power = 75
+			add_mil_power = 75
+			hidden_effect = {
+				5051 = {
+					add_or_upgrade_fort_building = yes
+				}
+			}
+		 } 
 	}
 
 	THE_KEI_5_9 = {
@@ -1259,9 +1308,43 @@ THE_KEI_main_branch_5 = {
 		required_missions = { THE_KEI_5_7 } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			4982 = { #Antwerpen
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			5244 = { #Antwerpen
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 10
+				province_has_center_of_trade_of_level = 2
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_KEI_5_9_c_tt1
+			add_country_modifier = {
+				name = THE_KEI_restore_contact_buff
+				duration = -1
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							region = hell_region
+						}
+					}
+					add_local_autonomy = -30
+					add_nationalism = -10
+				}
+			}
+		} 
 	}
 
 	THE_KEI_5_10 = {

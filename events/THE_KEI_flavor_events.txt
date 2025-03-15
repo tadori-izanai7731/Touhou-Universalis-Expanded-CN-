@@ -456,6 +456,20 @@ country_event = {
 			duration = -1
 		}
 	}
+	#「雷行」
+	option = {
+		name = THE_KEI_flavor_events.4.e
+		trigger = {
+			mission_completed = THE_KEI_3_10
+		}
+		hidden_effect = {
+			THE_KEI_clr_all_decrese_buff_effects = yes
+		}
+		add_country_modifier = {
+			name = THE_KEI_create_army_province_buff
+			duration = -1
+		}
+	}
 }
 #Haniwa敕命 （2槽）
 country_event = {

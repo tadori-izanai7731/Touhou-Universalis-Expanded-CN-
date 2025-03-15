@@ -778,7 +778,7 @@ custom_button = {
 		}
 	}
 }
-
+#焕生
 custom_button = {
 	name = THE_KEI_rejuvenate_development_gui
 	tooltip = THE_KEI_rejuvenate_development_gui_tt
@@ -851,6 +851,34 @@ custom_button = {
 				which = the_kei_rejuvenate_devlop_im_var
 				value = 1
 			}
+		}
+	}
+}
+
+custom_button = {
+	name = THE_KEI_province_create_army_gui
+	tooltip = THE_KEI_province_create_army_gui_tt
+	potential = {
+		owned_by = FROM
+		is_core = FROM
+		FROM = {
+			has_government_mechanic = THE_KEI_lonely_creation_mechanic
+		}
+		FROM = {
+			has_country_modifier = THE_KEI_create_army_province_buff
+		}
+	}
+	trigger = {
+		FROM = {
+			manpower = 2
+		}
+	}
+	effect = {
+		ROOT = {
+			infantry = FROM
+		}
+		FROM = {
+			add_manpower = 2
 		}
 	}
 }

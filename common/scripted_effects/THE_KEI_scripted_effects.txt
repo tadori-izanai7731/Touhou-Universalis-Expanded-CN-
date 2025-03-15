@@ -208,6 +208,7 @@ THE_KEI_clr_all_decrese_buff_effects = {
 	remove_country_modifier = THE_KEI_decree_work_buff
 	remove_country_modifier = THE_KEI_decree_work_V2_buff
 	remove_country_modifier = THE_KEI_rejuvenate_buff
+	remove_country_modifier = THE_KEI_create_army_province_buff
 }
 
 #清除所有「天工」flag
@@ -240,5 +241,26 @@ THE_KEI_add_save_the_masses_power_effects = {
 				value = 2
 			}
 		}
+	}
+}
+
+#发展省份提升化生
+THE_KEI_develop_province_add_power_effects = {
+	if = {
+		limit = {
+			owner = {
+				has_government_mechanic = THE_KEI_lonely_creation_mechanic
+			}
+			owner = {
+				mission_completed = THE_KEI_3_9
+			}
+		 }
+		 owner = {
+			add_government_power = {
+				mechanic_type = THE_KEI_lonely_creation_mechanic
+				power_type = THE_KEI_lonely_creation_mechanic_power
+				value = 2.5
+			}
+		 }
 	}
 }
