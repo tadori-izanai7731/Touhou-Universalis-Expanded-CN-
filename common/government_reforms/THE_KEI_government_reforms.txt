@@ -53,3 +53,26 @@ THE_KEI_dedicate_ourselves_government_reform = {
 	government_abilities = {
 	}
 }
+
+THE_KEI_save_the_masses_government_reform = {
+	lock_level_when_selected = yes
+	icon = "THE_KEI_government_1_reform"
+	potential = {
+		OR = {
+			has_reform = THE_KEI_save_the_masses_government_reform
+			have_had_reform = THE_KEI_save_the_masses_government_reform
+		}
+	}
+	valid_for_new_country = no
+	valid_for_nation_designer = no
+	modifiers = {
+		infantry_power = 0.10
+		improve_relation_modifier = 0.20
+		can_transfer_vassal_wargoal = yes
+	}
+	custom_attributes = {
+	}
+	government_abilities = {
+		THE_KEI_save_the_masses_government_mechanic
+	}
+}

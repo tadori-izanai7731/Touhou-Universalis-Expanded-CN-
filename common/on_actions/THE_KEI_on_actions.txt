@@ -17,11 +17,14 @@ on_province_culture_converted = {
 	}
 }
 on_janissaries_raised = {
-	THE_KEI_amount_haniwa_recruit_effect = yes
 	the_kei_gain_effect_mechanic_power_1_effect = {
 		value = 1
 	}
+	THE_KEI_amount_haniwa_recruit_effect = yes
 }
 on_battle_lost_country = {
 	THE_KEI_win_battle_count_1_effect = yes
+}
+on_annexed = {
+	THE_KEI_add_save_the_masses_power_effects = yes
 }
