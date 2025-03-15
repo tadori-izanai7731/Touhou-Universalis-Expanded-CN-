@@ -3639,95 +3639,95 @@ RAN_ideas = {
 	}
 }
 
-KNE_ideas = {
-	start = {
-		yearly_innovativeness = 0.25
-		technology_cost = -0.1
-	}
-	bonus = {
-		discipline = 0.05
-	}
-	trigger = {
-		tag = KNE
-	}
-	free = yes
-	KNE_Protector_of_Humans = {
-		defensiveness = 0.33
-		global_unrest = -2
-	}
-	KNE_Bai_Ze_Tu = {
-		imperial_mandate = 0.15
-		advisor_cost = -0.25
-		advisor_pool = 1
-	}
-	KNE_Studies_of_Ancient_History = {
-		idea_cost = -0.1
-		global_institution_spread = 0.25
-	}
-	KNE_Integrating_Other_Humans = {
-		core_creation = -0.25
-		num_accepted_cultures = 2
-	}
-	KNE_Cultivate_Lands = {
-		development_cost_modifier = -0.1
-		production_efficiency = 0.1
-	}
-	KNE_Architecture_of_the_Ancient_Artisans = {
-		global_allowed_num_of_buildings = 1
-		global_allowed_num_of_manufactories = 1
-		build_cost = -0.2
-	}
-	KNE_Art_of_War = {
-		military_tactics = 0.25
-	}
-}
+# KNE_ideas = {
+# 	start = {
+# 		yearly_innovativeness = 0.25
+# 		technology_cost = -0.1
+# 	}
+# 	bonus = {
+# 		discipline = 0.05
+# 	}
+# 	trigger = {
+# 		tag = KNE
+# 	}
+# 	free = yes
+# 	KNE_Protector_of_Humans = {
+# 		defensiveness = 0.33
+# 		global_unrest = -2
+# 	}
+# 	KNE_Bai_Ze_Tu = {
+# 		imperial_mandate = 0.15
+# 		advisor_cost = -0.25
+# 		advisor_pool = 1
+# 	}
+# 	KNE_Studies_of_Ancient_History = {
+# 		idea_cost = -0.1
+# 		global_institution_spread = 0.25
+# 	}
+# 	KNE_Integrating_Other_Humans = {
+# 		core_creation = -0.25
+# 		num_accepted_cultures = 2
+# 	}
+# 	KNE_Cultivate_Lands = {
+# 		development_cost_modifier = -0.1
+# 		production_efficiency = 0.1
+# 	}
+# 	KNE_Architecture_of_the_Ancient_Artisans = {
+# 		global_allowed_num_of_buildings = 1
+# 		global_allowed_num_of_manufactories = 1
+# 		build_cost = -0.2
+# 	}
+# 	KNE_Art_of_War = {
+# 		military_tactics = 0.25
+# 	}
+# }
 
-KN2_ideas = {
-	start = {
-		cav_to_inf_ratio = 0.30
-		cavalry_power = 0.33
-	}
-	bonus = {
-		has_banners = yes
-		amount_of_banners = 0.5
-	}
-	trigger = {
-		tag = KN2
-	}
-	free = yes
+# KN2_ideas = {
+# 	start = {
+# 		cav_to_inf_ratio = 0.30
+# 		cavalry_power = 0.33
+# 	}
+# 	bonus = {
+# 		has_banners = yes
+# 		amount_of_banners = 0.5
+# 	}
+# 	trigger = {
+# 		tag = KN2
+# 	}
+# 	free = yes
 
-	KN2_Loot_and_Plunder = {
-		raze_power_gain = 0.33
-		loot_amount = 0.5
-		available_province_loot = 0.5
-		imperial_mandate = -0.07
-	}
-	KN2_Steppe_Warriors = {
-		land_morale = 0.15
-		siege_ability = 0.15
-		max_general_shock = 1
-	}
-	KN2_Create_New_History = {
-		province_warscore_cost = -0.25
-		years_of_nationalism = -5
-	}
-	KN2_Wild_Beast = {
-		movement_speed = 0.2
-		cavalry_flanking = 0.5
-	}
-	KN2_Endless_War = {
-		war_exhaustion = -0.1
-		general_cost = -0.1
-		country_military_power = 1
-	}
-	KN2_Fierce_Defenders = {
-		garrison_damage = 1
-		garrison_size = 0.25
-	}
-	KN2_The_Horde = {
-		morale_damage = 0.2
-	}
-}
+# 	KN2_Loot_and_Plunder = {
+# 		raze_power_gain = 0.33
+# 		loot_amount = 0.5
+# 		available_province_loot = 0.5
+# 		imperial_mandate = -0.07
+# 	}
+# 	KN2_Steppe_Warriors = {
+# 		land_morale = 0.15
+# 		siege_ability = 0.15
+# 		max_general_shock = 1
+# 	}
+# 	KN2_Create_New_History = {
+# 		province_warscore_cost = -0.25
+# 		years_of_nationalism = -5
+# 	}
+# 	KN2_Wild_Beast = {
+# 		movement_speed = 0.2
+# 		cavalry_flanking = 0.5
+# 	}
+# 	KN2_Endless_War = {
+# 		war_exhaustion = -0.1
+# 		general_cost = -0.1
+# 		country_military_power = 1
+# 	}
+# 	KN2_Fierce_Defenders = {
+# 		garrison_damage = 1
+# 		garrison_size = 0.25
+# 	}
+# 	KN2_The_Horde = {
+# 		morale_damage = 0.2
+# 	}
+# }
 
 #GBD_ideas = {
 #    start = {

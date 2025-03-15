@@ -1,0 +1,75 @@
+country_decisions = {
+	THE_KNE_hakutaku_swap_to_hakutaku_shape_decision = {
+		major = yes
+		color = { 246 196 24 }
+		potential = {
+			tag = KNE
+			has_government_attribute = THE_KNE_hakutaku_swap_custom_attributes
+			NOT = { has_country_flag = THE_KNE_hakutaku_shape_flag }
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = THE_KNE_available_for_every_20_years_ttt
+				OR = {
+					NOT = { has_country_flag = THE_KNE_hakutaku_swap_decision_flag }
+					had_country_flag = {
+						flag = THE_KNE_hakutaku_swap_decision_flag
+						days = 7300
+					}
+				}
+			}
+		}
+		effect = {
+			# custom_tooltip = THE_KNE_now_is_human_shape_tt
+			# custom_tooltip = empty_line_tt
+			set_country_flag = THE_KNE_hakutaku_shape_flag
+			if = {
+				limit = { NOT = { has_country_flag = th_formed_gensokyo_flag } }
+				override_country_name = KN2
+			}
+			change_country_color = { color = { 49  185  191 } }
+			swap_free_idea_group = yes
+			hidden_effect = {
+				clr_country_flag = THE_KNE_hakutaku_swap_decision_flag
+				set_country_flag = THE_KNE_hakutaku_swap_decision_flag
+			}
+		}
+	}
+
+	THE_KNE_hakutaku_swap_to_human_shape_decision = {
+		major = yes
+		color = { 49  185  191 }
+		potential = {
+			tag = KNE
+			has_government_attribute = THE_KNE_hakutaku_swap_custom_attributes
+			has_country_flag = THE_KNE_hakutaku_shape_flag
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = THE_KNE_available_for_every_20_years_ttt
+				OR = {
+					NOT = { has_country_flag = THE_KNE_hakutaku_swap_decision_flag }
+					had_country_flag = {
+						flag = THE_KNE_hakutaku_swap_decision_flag
+						days = 7300
+					}
+				}
+			}
+		}
+		effect = {
+			# custom_tooltip = THE_KNE_now_is_shape_shape_tt
+			# custom_tooltip = empty_line_tt
+			clr_country_flag = THE_KNE_hakutaku_shape_flag
+			if = {
+				limit = { NOT = { has_country_flag = th_formed_gensokyo_flag } }
+				override_country_name = KNE
+			}
+			change_country_color = { color = { 246 196 24 } }
+			swap_free_idea_group = yes
+			hidden_effect = {
+				clr_country_flag = THE_KNE_hakutaku_swap_decision_flag
+				set_country_flag = THE_KNE_hakutaku_swap_decision_flag
+			}
+		}
+	}
+}

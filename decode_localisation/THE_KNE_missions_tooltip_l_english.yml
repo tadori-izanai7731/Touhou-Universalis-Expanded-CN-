@@ -1,0 +1,19 @@
+l_english:
+ ### CUSTOM_TOOLTIP
+ THE_KNE_available_for_every_20_years_ttt: "每§Y20§!年只能使用一次转换形态"
+ THE_KNE_now_is_human_shape_tt: "当前是§Y人类形态§!，执行决议转换为§Y白泽形态§!"
+ THE_KNE_now_is_shape_shape_tt: "当前是§Y白泽形态§!，执行决议转换为§Y人类形态§!"
+ ### CUSTOM_TOOLTIP_END
+
+ ### DECISION
+ THE_KNE_hakutaku_swap_to_hakutaku_shape_decision_title: "@[Root.GetTag]知识与历史的半兽 - 转换至白泽形态"
+ THE_KNE_hakutaku_swap_to_hakutaku_shape_decision_desc: "上白泽慧音是半白泽兽人，能够在人类形态和白泽形态间转换。\n\n当我们转换形态时，当前的§Y国家名称§!、§Y国家颜色§!、§Y国家理念§!将随形态改变"
+ THE_KNE_hakutaku_swap_to_human_shape_decision_title: "@[Root.GetTag]知识与历史的半兽 - 转换至人类形态"
+ THE_KNE_hakutaku_swap_to_human_shape_decision_desc: "上白泽慧音是半白泽兽人，能够在人类形态和白泽形态间转换。\n\n当我们转换形态时，当前的§Y国家名称§!、§Y国家颜色§!、§Y国家理念§!将随形态改变"
+ ### DECISION_END
+
+ ### GOVERNMENT
+ THE_KNE_monarchy_reform: "白泽君主制"
+ THE_KNE_monarchy_reform_desc: "一种政策多变的君主制，因慧音的形态亦时常变化。当慧音的形态变化时，她的特质亦会改变，使得我国的方针政策全然变更！"
+ mechanic_THE_KNE_hakutaku_swap_custom_attributes_yes: "允许在§Y人类形态§!和§Y白泽形态§!间转换"
+ ### GOVERNMENT_END
