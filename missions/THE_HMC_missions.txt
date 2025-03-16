@@ -1,3376 +1,3376 @@
-THE_HMC_f_branch_1 = {
-	slot = 1
-	generic = no
-	ai = yes
-	has_country_shield = yes
-	potential = { 
-		tag = HMC
-		NOT = { has_country_flag = THE_HMC_use_true_missions_flag }
-	} 
+# THE_HMC_f_branch_1 = {
+# 	slot = 1
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 	potential = { 
+# 		tag = HMC
+# 		NOT = { has_country_flag = THE_HMC_use_true_missions_flag }
+# 	} 
 
-	THE_HMC_fake_1_3 = {
-		icon = mission_unknown_mission
-		position = 3
-		required_missions = { THE_HMC_fake_2_2 } 
-		provinces_to_highlight = {
-			area = Forest_of_magic
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		} 
+# 	THE_HMC_fake_1_3 = {
+# 		icon = mission_unknown_mission
+# 		position = 3
+# 		required_missions = { THE_HMC_fake_2_2 } 
+# 		provinces_to_highlight = {
+# 			area = Forest_of_magic
+# 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+# 		} 
 
-		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 4
-				area = Forest_of_magic
-			}
-			5094 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		} 
+# 		trigger = {
+# 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+# 				value = 4
+# 				area = Forest_of_magic
+# 			}
+# 			5094 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 		} 
 
-		effect = {
-			add_adm_power = 50
-			Ran_state = {
-				add_permanent_claim = ROOT
-			}
-			Mayohiga_state = {
-				add_permanent_claim = ROOT
-			}
-			Eastern_mountains = {
-				add_permanent_claim = ROOT
-			}
-			Hakurei_state = {
-				add_permanent_claim = ROOT
-			}
-			Hakurei_peninsula_state = {
-				add_permanent_claim = ROOT
-			}
-			Hakurei_western_coast = {
-				add_permanent_claim = ROOT
-			}
-			add_country_modifier = {
-				name = THE_HMC_tumultuous_humanity_2_modifier
-				duration = 1825
-			}
-		} 
-	}
+# 		effect = {
+# 			add_adm_power = 50
+# 			Ran_state = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 			Mayohiga_state = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 			Eastern_mountains = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 			Hakurei_state = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 			Hakurei_peninsula_state = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 			Hakurei_western_coast = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 			add_country_modifier = {
+# 				name = THE_HMC_tumultuous_humanity_2_modifier
+# 				duration = 1825
+# 			}
+# 		} 
+# 	}
 
-	THE_HMC_fake_1_4 = {
-		icon = mission_unknown_mission
-		position = 4
-		required_missions = { THE_HMC_fake_1_3 } 
-		provinces_to_highlight = {
-			OR = {
-				area = Ran_state
-				area = Mayohiga_state
-				area = Eastern_mountains
-				area = Hakurei_state
-				area = Hakurei_peninsula_state
-				area = Hakurei_western_coast
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		} 
+# 	THE_HMC_fake_1_4 = {
+# 		icon = mission_unknown_mission
+# 		position = 4
+# 		required_missions = { THE_HMC_fake_1_3 } 
+# 		provinces_to_highlight = {
+# 			OR = {
+# 				area = Ran_state
+# 				area = Mayohiga_state
+# 				area = Eastern_mountains
+# 				area = Hakurei_state
+# 				area = Hakurei_peninsula_state
+# 				area = Hakurei_western_coast
+# 			}
+# 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+# 		} 
 
-		trigger = {
-			Ran_state = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			Mayohiga_state = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			Eastern_mountains = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			Hakurei_state = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			Hakurei_peninsula_state = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			Hakurei_western_coast = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		} 
+# 		trigger = {
+# 			Ran_state = {
+# 				type = all
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 			Mayohiga_state = {
+# 				type = all
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 			Eastern_mountains = {
+# 				type = all
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 			Hakurei_state = {
+# 				type = all
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 			Hakurei_peninsula_state = {
+# 				type = all
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 			Hakurei_western_coast = {
+# 				type = all
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 		} 
 
-		effect = {
-			custom_tooltip = THE_HMC_fix_great_boundary_tt
-			country_event = {
-				id = THE_HMC_events.4
-				days = 21900
-			}
-			custom_tooltip = empty_line_tt
-			Scarlet_mountain = {
-				add_permanent_claim = ROOT
-			}
-			Scarlett_domain = {
-				add_permanent_claim = ROOT
-			}
-			Scarlet_island = {
-				add_permanent_claim = ROOT
-			}
-			add_country_modifier = {
-				name = THE_HMC_tumultuous_humanity_3_modifier
-				duration = 1825
-			}
-		} 
-	}
+# 		effect = {
+# 			custom_tooltip = THE_HMC_fix_great_boundary_tt
+# 			country_event = {
+# 				id = THE_HMC_events.4
+# 				days = 21900
+# 			}
+# 			custom_tooltip = empty_line_tt
+# 			Scarlet_mountain = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 			Scarlett_domain = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 			Scarlet_island = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 			add_country_modifier = {
+# 				name = THE_HMC_tumultuous_humanity_3_modifier
+# 				duration = 1825
+# 			}
+# 		} 
+# 	}
 
-	THE_HMC_fake_1_5 = {
-		icon = mission_unknown_mission
-		position = 5
-		required_missions = { THE_HMC_fake_1_4 } 
-		provinces_to_highlight = {
-			OR = {
-				area = Scarlet_mountain
-				area = Scarlett_domain
-				area = Scarlet_island
-			}
-		} 
+# 	THE_HMC_fake_1_5 = {
+# 		icon = mission_unknown_mission
+# 		position = 5
+# 		required_missions = { THE_HMC_fake_1_4 } 
+# 		provinces_to_highlight = {
+# 			OR = {
+# 				area = Scarlet_mountain
+# 				area = Scarlett_domain
+# 				area = Scarlet_island
+# 			}
+# 		} 
 
-		trigger = {
-			Scarlet_mountain = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			Scarlett_domain = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			Scarlet_island = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			4968 = {
-				owned_by = ROOT
-			}
-		} 
+# 		trigger = {
+# 			Scarlet_mountain = {
+# 				type = all
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 			Scarlett_domain = {
+# 				type = all
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 			Scarlet_island = {
+# 				type = all
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 			4968 = {
+# 				owned_by = ROOT
+# 			}
+# 		} 
 
-		effect = {
-			add_country_modifier = {
-				name = THE_HMC_no_scarlet_mist_modifier
-				duration = -1
-			}
-			add_country_modifier = {
-				name = THE_HMC_tumultuous_humanity_4_modifier
-				duration = 1825
-			}
-			if = {
-				limit = {
-					4968 = {
-						owned_by = ROOT
-						has_great_project = {
-							type = th_monument_koumakan
-							tier = 2
-						}
-					}
-				}
-				custom_tooltip = THE_HMC_fake_scr_yes_tt
-			}
-			else = {
-				custom_tooltip = THE_HMC_fake_scr_no_tt
-			}
-			tooltip = {
-				4968 = {
-					add_great_project_tier = {
-						type = th_monument_koumakan
-						tier = 1
-					}
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						4968 = {
-							has_great_project = {
-								type = th_monument_koumakan
-								tier = 2
-							}
-						}
-					}
-					4968 = {
-						add_great_project_tier = {
-							type = th_monument_koumakan
-							tier = 1
-						}
-					}
-				}
-			}
-		} 
-	}
-}
-THE_HMC_f_branch_2 = {
-	slot = 2
-	generic = no
-	ai = yes
-	has_country_shield = yes
-		potential = { 
-		tag = HMC
-		NOT = { has_country_flag = THE_HMC_use_true_missions_flag }
-	}  
+# 		effect = {
+# 			add_country_modifier = {
+# 				name = THE_HMC_no_scarlet_mist_modifier
+# 				duration = -1
+# 			}
+# 			add_country_modifier = {
+# 				name = THE_HMC_tumultuous_humanity_4_modifier
+# 				duration = 1825
+# 			}
+# 			if = {
+# 				limit = {
+# 					4968 = {
+# 						owned_by = ROOT
+# 						has_great_project = {
+# 							type = th_monument_koumakan
+# 							tier = 2
+# 						}
+# 					}
+# 				}
+# 				custom_tooltip = THE_HMC_fake_scr_yes_tt
+# 			}
+# 			else = {
+# 				custom_tooltip = THE_HMC_fake_scr_no_tt
+# 			}
+# 			tooltip = {
+# 				4968 = {
+# 					add_great_project_tier = {
+# 						type = th_monument_koumakan
+# 						tier = 1
+# 					}
+# 				}
+# 			}
+# 			hidden_effect = {
+# 				if = {
+# 					limit = {
+# 						4968 = {
+# 							has_great_project = {
+# 								type = th_monument_koumakan
+# 								tier = 2
+# 							}
+# 						}
+# 					}
+# 					4968 = {
+# 						add_great_project_tier = {
+# 							type = th_monument_koumakan
+# 							tier = 1
+# 						}
+# 					}
+# 				}
+# 			}
+# 		} 
+# 	}
+# }
+# THE_HMC_f_branch_2 = {
+# 	slot = 2
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 		potential = { 
+# 		tag = HMC
+# 		NOT = { has_country_flag = THE_HMC_use_true_missions_flag }
+# 	}  
 
-	THE_HMC_fake_2_2 = {
-		icon = mission_unknown_mission
-		position = 2
-		required_missions = { THE_HMC_fake_3_1 } 
-		provinces_to_highlight = {
-			OR = {
-				owned_by = RAI
-				owned_by = SEK
-				AND = {
-					area = Raiko_Seki_state
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				}
-			}
-		} 
+# 	THE_HMC_fake_2_2 = {
+# 		icon = mission_unknown_mission
+# 		position = 2
+# 		required_missions = { THE_HMC_fake_3_1 } 
+# 		provinces_to_highlight = {
+# 			OR = {
+# 				owned_by = RAI
+# 				owned_by = SEK
+# 				AND = {
+# 					area = Raiko_Seki_state
+# 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+# 				}
+# 			}
+# 		} 
 
-		trigger = {
-			NOT = { exists = RAI }
-			NOT = { exists = SEK }
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				area = Raiko_Seki_state
-				value = 3
-			}
-		} 
+# 		trigger = {
+# 			NOT = { exists = RAI }
+# 			NOT = { exists = SEK }
+# 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+# 				area = Raiko_Seki_state
+# 				value = 3
+# 			}
+# 		} 
 
-		effect = {
-			add_prestige = 10
-			add_adm_power = 50
-			Forest_of_magic = {
-				add_permanent_claim = ROOT
-			}
-			Forest_edge_state = {
-				add_permanent_claim = ROOT
-			}
-			Forest_coast_state = {
-				add_permanent_claim = ROOT
-			}
-			add_country_modifier = {
-				name = THE_HMC_tumultuous_humanity_1_modifier
-				duration = 1825
-			}
-		} 
-	}
+# 		effect = {
+# 			add_prestige = 10
+# 			add_adm_power = 50
+# 			Forest_of_magic = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 			Forest_edge_state = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 			Forest_coast_state = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 			add_country_modifier = {
+# 				name = THE_HMC_tumultuous_humanity_1_modifier
+# 				duration = 1825
+# 			}
+# 		} 
+# 	}
 
-	THE_HMC_fake_2_3 = {
-		icon = mission_unknown_mission
-		position = 3
-		required_missions = { THE_HMC_fake_2_2 } 
-		provinces_to_highlight = {
-			OR = {
-				area = Eastern_myouren_state
-				area = Myouren_state
-				area = Northern_myouren_state
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		} 
+# 	THE_HMC_fake_2_3 = {
+# 		icon = mission_unknown_mission
+# 		position = 3
+# 		required_missions = { THE_HMC_fake_2_2 } 
+# 		provinces_to_highlight = {
+# 			OR = {
+# 				area = Eastern_myouren_state
+# 				area = Myouren_state
+# 				area = Northern_myouren_state
+# 			}
+# 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+# 		} 
 
-		trigger = {
-			OR = {
-				AND = {
-					alliance_with = MYO
-					MYO = { has_opinion = { who = ROOT value = 150 } }
-				}
-				AND = {
-					MYO = {
-						is_subject_of = ROOT
-						NOT = { liberty_desire = 50 }
-					}
-				}
-				AND = {
-					NOT = { exists = MYO }
-					4987 = {
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						value = 8
-						OR = {
-							area = Eastern_myouren_state
-							area = Myouren_state
-							area = Northern_myouren_state
-						}
-					}
-				}
-			}
-		} 
+# 		trigger = {
+# 			OR = {
+# 				AND = {
+# 					alliance_with = MYO
+# 					MYO = { has_opinion = { who = ROOT value = 150 } }
+# 				}
+# 				AND = {
+# 					MYO = {
+# 						is_subject_of = ROOT
+# 						NOT = { liberty_desire = 50 }
+# 					}
+# 				}
+# 				AND = {
+# 					NOT = { exists = MYO }
+# 					4987 = {
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 					}
+# 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+# 						value = 8
+# 						OR = {
+# 							area = Eastern_myouren_state
+# 							area = Myouren_state
+# 							area = Northern_myouren_state
+# 						}
+# 					}
+# 				}
+# 			}
+# 		} 
 
-		effect = {
-			if = {
-				limit = {
-					alliance_with = MYO
-					MYO = { has_opinion = { who = ROOT value = 150 } }
-				}
-				custom_tooltip = THE_HMC_fake_myo_case1_yes_tt
-			}
-			else = {
-				custom_tooltip = THE_HMC_fake_myo_case1_no_tt
-			}
-			tooltip = {
-				add_country_modifier = {
-					name = THE_HMC_learn_buddhist_teachings_modifier
-					duration = -1
-				}
-			}
-			if = {
-				limit = {
-					MYO = {
-						is_subject_of = ROOT
-						NOT = { liberty_desire = 50 }
-					}
-				}
-				custom_tooltip = THE_HMC_fake_myo_case2_yes_tt
-			}
-			else = {
-				custom_tooltip = THE_HMC_fake_myo_case2_no_tt
-			}
-			tooltip = {
-				add_country_modifier = {
-					name = THE_HMC_understanding_buddhist_teachings_modifier
-					duration = -1
-				}
-			}
-			if = {
-				limit = {
-					NOT = { exists = MYO }
-					4987 = {
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						value = 8
-						OR = {
-							area = Eastern_myouren_state
-							area = Myouren_state
-							area = Northern_myouren_state
-						}
-					}
-				}
-				custom_tooltip = THE_HMC_fake_myo_case3_yes_tt
-			}
-			else = {
-				custom_tooltip = THE_HMC_fake_myo_case3_no_tt
-			}
-			tooltip = {
-				add_country_modifier = {
-					name = THE_HMC_buddha_laughs_modifier
-					duration = -1
-				}
-				add_country_modifier = {
-					name = THE_HMC_tumultuous_humanity_2_modifier
-					duration = 1825
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						alliance_with = MYO
-						MYO = { has_opinion = { who = ROOT value = 150 } }
+# 		effect = {
+# 			if = {
+# 				limit = {
+# 					alliance_with = MYO
+# 					MYO = { has_opinion = { who = ROOT value = 150 } }
+# 				}
+# 				custom_tooltip = THE_HMC_fake_myo_case1_yes_tt
+# 			}
+# 			else = {
+# 				custom_tooltip = THE_HMC_fake_myo_case1_no_tt
+# 			}
+# 			tooltip = {
+# 				add_country_modifier = {
+# 					name = THE_HMC_learn_buddhist_teachings_modifier
+# 					duration = -1
+# 				}
+# 			}
+# 			if = {
+# 				limit = {
+# 					MYO = {
+# 						is_subject_of = ROOT
+# 						NOT = { liberty_desire = 50 }
+# 					}
+# 				}
+# 				custom_tooltip = THE_HMC_fake_myo_case2_yes_tt
+# 			}
+# 			else = {
+# 				custom_tooltip = THE_HMC_fake_myo_case2_no_tt
+# 			}
+# 			tooltip = {
+# 				add_country_modifier = {
+# 					name = THE_HMC_understanding_buddhist_teachings_modifier
+# 					duration = -1
+# 				}
+# 			}
+# 			if = {
+# 				limit = {
+# 					NOT = { exists = MYO }
+# 					4987 = {
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 					}
+# 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+# 						value = 8
+# 						OR = {
+# 							area = Eastern_myouren_state
+# 							area = Myouren_state
+# 							area = Northern_myouren_state
+# 						}
+# 					}
+# 				}
+# 				custom_tooltip = THE_HMC_fake_myo_case3_yes_tt
+# 			}
+# 			else = {
+# 				custom_tooltip = THE_HMC_fake_myo_case3_no_tt
+# 			}
+# 			tooltip = {
+# 				add_country_modifier = {
+# 					name = THE_HMC_buddha_laughs_modifier
+# 					duration = -1
+# 				}
+# 				add_country_modifier = {
+# 					name = THE_HMC_tumultuous_humanity_2_modifier
+# 					duration = 1825
+# 				}
+# 			}
+# 			hidden_effect = {
+# 				if = {
+# 					limit = {
+# 						alliance_with = MYO
+# 						MYO = { has_opinion = { who = ROOT value = 150 } }
 	
-					}
-					add_country_modifier = {
-						name = THE_HMC_learn_buddhist_teachings_modifier
-						duration = -1
-					}
-				}
-				if = {
-					limit = {
-						MYO = {
-							is_subject_of = ROOT
-							NOT = { liberty_desire = 50 }
-						}	
-					}
-					add_country_modifier = {
-						name = THE_HMC_understanding_buddhist_teachings_modifier
-						duration = -1
-					}
-				}
-				if = {
-					limit = {
-						NOT = { exists = MYO }
-						4987 = {
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-							value = 8
-							OR = {
-								area = Eastern_myouren_state
-								area = Myouren_state
-								area = Northern_myouren_state
-							}
-						}	
-					}
-					add_country_modifier = {
-						name = THE_HMC_buddha_laughs_modifier
-						duration = -1
-					}
-					add_country_modifier = {
-						name = THE_HMC_tumultuous_humanity_2_modifier
-						duration = 1825
-					}
-				}
-			}
-		} 
-	}
-
-	THE_HMC_fake_2_4 = {
-		icon = mission_unknown_mission
-		position = 4
-		required_missions = { THE_HMC_fake_2_3 } 
-		provinces_to_highlight = {
-			OR = {
-				area = Eastern_senkai
-				area = Northern_senkai
-				area = Senkai_state
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		} 
-
-		trigger = {
-			OR = {
-				AND = {
-					alliance_with = SNK
-					SNK = { has_opinion = { who = ROOT value = 150 } }
-				}
-				AND = {
-					SNK = {
-						is_subject_of = ROOT
-						NOT = { liberty_desire = 50 }
-					}
-				}
-				AND = {
-					NOT = { exists = SNK }
-					5025 = {
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						value = 8
-						OR = {
-							area = Eastern_senkai
-							area = Northern_senkai
-							area = Senkai_state
-						}
-					}
-				}
-			}
-		}
-
-		effect = {
-			if = {
-				limit = {
-					alliance_with = SNK
-					SNK = { has_opinion = { who = ROOT value = 150 } }
-				}
-				custom_tooltip = THE_HMC_fake_snk_case1_yes_tt
-			}
-			else = {
-				custom_tooltip = THE_HMC_fake_snk_case1_no_tt
-			}
-			tooltip = {
-				add_country_modifier = {
-					name = THE_HMC_regimen_modifier
-					duration = -1
-				}
-			}
-			if = {
-				limit = {
-					SNK = {
-						is_subject_of = ROOT
-						NOT = { liberty_desire = 50 }
-					}
-				}
-				custom_tooltip = THE_HMC_fake_snk_case2_yes_tt
-			}
-			else = {
-				custom_tooltip = THE_HMC_fake_snk_case2_no_tt
-			}
-			tooltip = {
-				add_country_modifier = {
-					name = THE_HMC_alchemy_modifier
-					duration = -1
-				}
-			}
-			if = {
-				limit = {
-					NOT = { exists = SNK }
-					5025 = {
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						value = 8
-						OR = {
-							area = Eastern_senkai
-							area = Northern_senkai
-							area = Senkai_state
-						}
-					}
-				}
-				custom_tooltip = THE_HMC_fake_snk_case3_yes_tt
-			}
-			else = {
-				custom_tooltip = THE_HMC_fake_snk_case3_no_tt
-			}
-			tooltip = {
-				add_country_modifier = {
-					name = THE_HMC_fitness_modifier
-					duration = -1
-				}
-				add_country_modifier = {
-					name = THE_HMC_tumultuous_humanity_3_modifier
-					duration = 1825
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						alliance_with = SNK
-						SNK = { has_opinion = { who = ROOT value = 150 } }
-					}
-					add_country_modifier = {
-						name = THE_HMC_regimen_modifier
-						duration = -1
-					}
-				}
-				if = {
-					limit = {
-						SNK = {
-							is_subject_of = ROOT
-							NOT = { liberty_desire = 50 }
-						}
-					}
-					add_country_modifier = {
-						name = THE_HMC_alchemy_modifier
-						duration = -1
-					}
-				}
-				if = {
-					limit = {
-						NOT = { exists = SNK }
-						5025 = {
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-							value = 8
-							OR = {
-								area = Eastern_senkai
-								area = Northern_senkai
-								area = Senkai_state
-							}
-						}
-					}
-					add_country_modifier = {
-						name = THE_HMC_fitness_modifier
-						duration = -1
-					}
-					add_country_modifier = {
-						name = THE_HMC_tumultuous_humanity_3_modifier
-						duration = 1825
-					}
-				}
-			}
-		} 
-	}
-}
-THE_HMC_f_branch_3 = {
-	slot = 3
-	generic = no
-	ai = yes
-	has_country_shield = yes
-		potential = { 
-		tag = HMC
-		NOT = { has_country_flag = THE_HMC_use_true_missions_flag }
-	}  
-
-	THE_HMC_fake_3_1 = {
-		icon = mission_unknown_mission
-		position = 1
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			stability = 1
-			army_size_percentage = 1.0
-			num_of_generals = 1
-		} 
-
-		effect = {
-			Raiko_Seki_state = {
-				add_permanent_claim = ROOT
-			}
-			if = {
-				limit = {
-					exists = RAI
-				}
-				add_casus_belli = {
-					type = cb_annex
-					target = RAI
-					months = 240
-				}
-			}
-			if = {
-				limit = {
-					exists = SEK
-				}
-				add_casus_belli = {
-					type = cb_annex
-					target = SEK
-					months = 240
-				}
-			}
-		} 
-	}
-
-	THE_HMC_fake_3_3 = {
-		icon = mission_unknown_mission
-		position = 3
-		required_missions = { THE_HMC_fake_2_2 } 
-		provinces_to_highlight = {
-			OR = {
-				area = Bamboo_forest_of_the_lost
-				area = Eientei_state
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		} 
-
-		trigger = {
-			OR = {
-				AND = {
-					alliance_with = FUJ
-					NOT = { exists = EIT }
-					FUJ = { has_opinion = { who = ROOT value = 100 } }
-					Bamboo_forest_of_the_lost = {
-						type = all
-						OR = {
-							owned_by = FUJ
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					Eientei_state = {
-						type = all
-						OR = {
-							owned_by = FUJ
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-				}
-				AND = {
-					OR = {
-						NOT = { alliance_with = FUJ }
-						NOT = { FUJ = { has_opinion = { who = ROOT value = 100 } }					}
-					}
-					Bamboo_forest_of_the_lost = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					Eientei_state = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-			}
-		} 
-
-		effect = {
-			if = {
-				limit = {
-					FUJ = {
-						OR = {
-							alliance_with = ROOT
-							AND = {
-								is_subject_of = owner
-								NOT = { is_subject_of_type = tributary_state }
-							}
-						}
-					}
-					NOT = { exists = EIT }
-					FUJ = { has_opinion = { who = ROOT value = 100 } }
-					Bamboo_forest_of_the_lost = {
-						type = all
-						OR = {
-							owned_by = FUJ
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					Eientei_state = {
-						type = all
-						OR = {
-							owned_by = FUJ
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-				}
-				custom_tooltip = THE_HMC_fake_eit_case1_yes_tt
-			}
-			else = {
-				custom_tooltip = THE_HMC_fake_eit_case1_no_tt
-			}
-			tooltip = {
-				Bamboo_forest_of_the_lost = {
-					limit = {
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					remove_core = ROOT
-					remove_claim = ROOT
-					cede_province = FUJ
-					add_core = FUJ
-				}
-				Eientei_state = {
-					limit = {
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					remove_core = ROOT
-					remove_claim = ROOT
-					cede_province = FUJ
-					add_core = FUJ
-				}
-				ROOT = {
-					remove_rival = FUJ
-					add_historical_friend = FUJ
-				}
-				FUJ = {
-					remove_rival = ROOT
-					add_historical_friend = ROOT
-				}
-				add_trust = {
-					who = FUJ
-					value = 20
-					mutual = yes
-				}
-				capital_scope = {
-					add_province_triggered_modifier = THE_HMC_huziwara_fire_triggered_modifier
-				}
-			}
-			if = {
-				limit = {
-					OR = {
-						NOT = { alliance_with = FUJ }
-						NOT = { FUJ = { has_opinion = { who = ROOT value = 100 } }					}
-					}
-					Bamboo_forest_of_the_lost = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					Eientei_state = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-				custom_tooltip = THE_HMC_fake_eit_case2_yes_tt
-			}
-			else = {
-				custom_tooltip = THE_HMC_fake_eit_case2_no_tt
-			}
-			tooltip = {
-				Fujiwara_state = {
-					add_permanent_claim = ROOT
-				}
-				change_innovativeness = 20
-				add_country_modifier = {
-					name = THE_HMC_future_come_modifier
-					duration = -1
-				}
-				add_country_modifier = {
-					name = THE_HMC_tumultuous_humanity_2_modifier
-					duration = 1825
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						alliance_with = FUJ
-						NOT = { exists = EIT }
-						FUJ = { has_opinion = { who = ROOT value = 100 } }
-						Bamboo_forest_of_the_lost = {
-							type = all
-							OR = {
-								owned_by = FUJ
-								country_or_non_sovereign_subject_holds = ROOT
-							}
-						}
-						Eientei_state = {
-							type = all
-							OR = {
-								owned_by = FUJ
-								country_or_non_sovereign_subject_holds = ROOT
-							}
-						}	
-					}
-					Bamboo_forest_of_the_lost = {
-						limit = {
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						remove_core = ROOT
-						remove_claim = ROOT
-						cede_province = FUJ
-						add_core = FUJ
-					}
-					Eientei_state = {
-						limit = {
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						remove_core = ROOT
-						remove_claim = ROOT
-						cede_province = FUJ
-						add_core = FUJ
-					}
-					ROOT = {
-						remove_rival = FUJ
-						add_historical_friend = FUJ
-					}
-					FUJ = {
-						remove_rival = ROOT
-						add_historical_friend = ROOT
-					}
-					add_trust = {
-						who = FUJ
-						value = 20
-						mutual = yes
-					}
-					capital_scope = {
-						add_province_triggered_modifier = THE_HMC_huziwara_fire_triggered_modifier
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							NOT = { alliance_with = FUJ }
-							NOT = { FUJ = { has_opinion = { who = ROOT value = 100 } }					}
-						}
-						Bamboo_forest_of_the_lost = {
-							type = all
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						Eientei_state = {
-							type = all
-							country_or_non_sovereign_subject_holds = ROOT
-						}	
-					}
-					Fujiwara_state = {
-						add_permanent_claim = ROOT
-					}
-					change_innovativeness = 20
-					add_country_modifier = {
-						name = THE_HMC_future_come_modifier
-						duration = -1
-					}
-					add_country_modifier = {
-						name = THE_HMC_tumultuous_humanity_2_modifier
-						duration = 1825
-					}
-				}
-			}
-		} 
-	}
-
-	THE_HMC_fake_3_4 = {
-		icon = mission_unknown_mission
-		position = 4
-		required_missions = { THE_HMC_fake_3_3 } 
-		provinces_to_highlight = {
-			OR = {
-				area = Bamboo_forest_of_the_lost
-				area = Eientei_state
-				area = Fujiwara_state
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		} 
-
-		trigger = {
-			OR = {
-				AND = {
-					Bamboo_forest_of_the_lost = {
-						type = all
-						owned_by = FUJ
-					}
-					Eientei_state = {
-						type = all
-						owned_by = FUJ
-					}
-					Fujiwara_state = {
-						type = all
-						owned_by = FUJ
-					}
-					alliance_with = FUJ
-					army_size = FUJ
-					FUJ = {
-						has_opinion_modifier = {
-							who = ROOT
-							modifier = sent_gift
-						}
-						trust = {
-							who = ROOT
-							value = 80
-						}
-					}
-				}
-				AND = {
-					Bamboo_forest_of_the_lost = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					Eientei_state = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					Fujiwara_state = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-			}
-		} 
-
-		effect = {
-			if = {
-				limit = {
-					Bamboo_forest_of_the_lost = {
-						type = all
-						owned_by = FUJ
-					}
-					Eientei_state = {
-						type = all
-						owned_by = FUJ
-					}
-					Fujiwara_state = {
-						type = all
-						owned_by = FUJ
-					}
-					alliance_with = FUJ
-					army_size = FUJ
-					FUJ = {
-						has_opinion_modifier = {
-							who = ROOT
-							modifier = sent_gift
-						}
-						trust = {
-							who = ROOT
-							value = 80
-						}
-					}
-				}
-				custom_tooltip = THE_HMC_fake_fuj_case1_yes_tt
-			}
-			else = {
-				custom_tooltip = THE_HMC_fake_fuj_case1_no_tt
-			}
-			tooltip = {
-				create_subject = {
-					subject_type = march
-					who = FUJ
-				}
-				custom_tooltip = empty_line_tt
-			}
-			if = {
-				limit = {
-					Bamboo_forest_of_the_lost = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					Eientei_state = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					Fujiwara_state = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-				custom_tooltip = THE_HMC_fake_fuj_case2_yes_tt
-			}
-			else = {
-				custom_tooltip = THE_HMC_fake_fuj_case2_no_tt
-			}
-			tooltip = {
-				netherworld_region = {
-					add_permanent_claim = ROOT
-				}
-				add_country_modifier = {
-					name = THE_HMC_fire_heart_modifier
-					duration = -1
-				}
-				add_country_modifier = {
-					name = THE_HMC_tumultuous_humanity_3_modifier
-					duration = 1825
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						Bamboo_forest_of_the_lost = {
-							type = all
-							owned_by = FUJ
-						}
-						Eientei_state = {
-							type = all
-							owned_by = FUJ
-						}
-						Fujiwara_state = {
-							type = all
-							owned_by = FUJ
-						}
-						alliance_with = FUJ
-						army_size = FUJ
-						FUJ = {
-							has_opinion_modifier = {
-								who = ROOT
-								modifier = sent_gift
-							}
-							trust = {
-								who = ROOT
-								value = 80
-							}
-						}
-					}
-					create_subject = {
-						subject_type = march
-						who = FUJ
-					}
-				}
-				if = {
-					limit = {
-						Bamboo_forest_of_the_lost = {
-							type = all
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						Eientei_state = {
-							type = all
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						Fujiwara_state = {
-							type = all
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-					netherworld_region = {
-						add_permanent_claim = ROOT
-					}
-					add_country_modifier = {
-						name = THE_HMC_fire_heart_modifier
-						duration = -1
-					}
-					add_country_modifier = {
-						name = THE_HMC_tumultuous_humanity_3_modifier
-						duration = 1825
-					}
-				}
-			}
-		} 
-	}
-
-	THE_HMC_fake_3_5 = {
-		icon = mission_unknown_mission
-		position = 5
-		required_missions = { THE_HMC_fake_3_4 } 
-		provinces_to_highlight = {
-			region = netherworld_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		} 
-
-		trigger = {
-			OR = {
-				war_score_against = {
-					who = NET
-					value = 80
-				}
-				netherworld_region = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-			}
-		} 
-
-		effect = {
-			add_country_modifier = {
-				name = THE_HMC_view_cherry_modifier
-				duration = -1
-			}
-			if = {
-				limit = {
-					war_score_against = {
-						who = NET
-						value = 80
-					}
-				}
-				custom_tooltip = THE_HMC_fake_net_yes_tt
-			}
-			else = {
-				custom_tooltip = THE_HMC_fake_net_no_tt
-			}
-			tooltip = {
-				white_peace = NET
-				if = {
-					limit = {
-						FUJ = {
-							is_subject_of = ROOT
-							NOT = { is_subject_of_type = tributary_state }
-						}
-					}
-					Western_netherworld = {
-						limit = {
-							country_or_non_sovereign_subject_holds = NET
-						}
-						remove_core = NET
-						remove_claim = NET
-						cede_province = FUJ
-						add_core = FUJ
-					}
-				}
-				else = {
-					Western_netherworld = {
-						limit = {
-							country_or_non_sovereign_subject_holds = NET
-						}
-						remove_core = NET
-						remove_claim = NET
-						cede_province = ROOT
-						add_core = ROOT
-					}
-				}
-				Eastern_netherworld = {
-					limit = {
-						country_or_non_sovereign_subject_holds = NET
-					}
-					remove_core = NET
-					remove_claim = NET
-					cede_province = YMU
-					add_core = YMU
-				}
-				Southern_netherworld = {
-					limit = {
-						country_or_non_sovereign_subject_holds = NET
-					}
-					remove_core = NET
-					remove_claim = NET
-					cede_province = YMU
-					add_core = YMU
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						war_score_against = {
-							who = NET
-							value = 80
-						}
-					}
-					white_peace = NET
-					if = {
-						limit = {
-							FUJ = {
-								is_subject_of = ROOT
-								NOT = { is_subject_of_type = tributary_state }
-							}
-						}
-						Western_netherworld = {
-							limit = {
-								country_or_non_sovereign_subject_holds = NET
-							}
-							remove_core = NET
-							remove_claim = NET
-							cede_province = FUJ
-							add_core = FUJ
-						}
-					}
-					else = {
-						Western_netherworld = {
-							limit = {
-								country_or_non_sovereign_subject_holds = NET
-							}
-							remove_core = NET
-							remove_claim = NET
-							cede_province = ROOT
-							add_core = ROOT
-						}
-					}
-					Eastern_netherworld = {
-						limit = {
-							country_or_non_sovereign_subject_holds = NET
-						}
-						remove_core = NET
-						remove_claim = NET
-						cede_province = YMU
-						add_core = YMU
-					}
-					Southern_netherworld = {
-						limit = {
-							country_or_non_sovereign_subject_holds = NET
-						}
-						remove_core = NET
-						remove_claim = NET
-						cede_province = YMU
-						add_core = YMU
-					}
-				}
-			}
-		} 
-	}
-}
-THE_HMC_f_branch_4 = {
-	slot = 4
-	generic = no
-	ai = yes
-	has_country_shield = yes
-		potential = { 
-		tag = HMC
-		NOT = { has_country_flag = THE_HMC_use_true_missions_flag }
-	}  
-
-	THE_HMC_fake_4_3 = {
-		icon = mission_unknown_mission
-		position = 3
-		required_missions = { THE_HMC_fake_2_2 } 
-		provinces_to_highlight = {
-			owned_by = ROOT
-			any_neighbor_country = {
-				tag = SFF
-			}
-		} 
-
-		trigger = {
-			OR = {
-				NOT = { exists = SFF }
-				num_of_owned_provinces_with = {
-					value = 2
-					any_neighbor_country = {
-						tag = SFF
-					}
-					province_has_current_tech_fort_trigger = yes
-				}
-			}
-		} 
-
-		effect = {
-			custom_tooltip = THE_LIL_every_province_meet_trigger_tt
-			tooltip = {
-				add_province_modifier = {
-					name = THE_HMC_golden_wall_province_modifier
-					duration = -1
-				}
-			}
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
-						any_neighbor_country = {
-							tag = SFF
-						}
-						province_has_current_tech_fort_trigger = yes
-					}
-					add_province_modifier = {
-						name = THE_HMC_golden_wall_province_modifier
-						duration = -1
-					}
-				}
-			}
-			capital_scope = {
-				add_province_modifier = {
-					name = THE_HMC_last_wall_province_modifier
-					duration = -1
-				}
-			}
-		} 
-	}
-}
-THE_HMC_f_branch_5 = {
-	slot = 5
-	generic = no
-	ai = yes
-	has_country_shield = yes
-		potential = { 
-		tag = HMC
-		NOT = { has_country_flag = THE_HMC_use_true_missions_flag }
-	}  
-
-	THE_HMC_fake_5_2 = {
-		icon = mission_unknown_mission
-		position = 2
-		required_missions = { THE_HMC_fake_3_1 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			treasury = 200
-			monthly_income = 20
-			trade_income_percentage = 0.5
-		} 
-
-		effect = {
-			add_country_modifier = {
-				name = THE_HMC_trade_activation_modifier
-				duration = -1
-			}
-		} 
-	}
-
-	THE_HMC_fake_5_3 = {
-		icon = mission_unknown_mission
-		position = 3
-		required_missions = { THE_HMC_fake_5_2 } 
-		provinces_to_highlight = {
-			OR = {
-				province_id = 5351
-				province_id = 5126
-				province_id = 4977
-			}
-			OR = {
-				NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				NOT = { base_production = 10 }
-				NOT = { has_production_building_trigger = yes }
-			}
-		} 
-
-		trigger = {
-			5351 = {
-				country_or_non_sovereign_subject_holds = ROOT
-				base_production = 10
-				has_production_building_trigger = yes
-			}
-			5126 = {
-				country_or_non_sovereign_subject_holds = ROOT
-				base_production = 10
-				has_production_building_trigger = yes
-			}
-			4977 = {
-				country_or_non_sovereign_subject_holds = ROOT
-				base_production = 10
-				has_production_building_trigger = yes
-			}
-		} 
-
-		effect = {
-			add_years_of_income = 1
-			add_country_modifier = {
-				name = THE_HMC_full_eat_and_wear_modifier
-				duration = -1
-			}
-		} 
-	}
-
-	THE_HMC_fake_5_4 = {
-		icon = mission_unknown_mission
-		position = 4
-		required_missions = { THE_HMC_fake_5_3 } 
-		provinces_to_highlight = {
-			is_capital = yes
-			owner = {
-				is_neighbor_of = ROOT
-				army_size = ROOT
-			}
-		} 
-
-		trigger = {
-			all_neighbor_country = {
-				NOT = { army_size = ROOT }
-			}
-			num_of_generals = 3
-			army_professionalism = 0.5
-		} 
-
-		effect = {
-			THE_HMC_define_general_rinnosuke_scripted_effect = yes
-			THE_HMC_define_general_keine_scripted_effect = yes
-		} 
-	}
-
-	THE_HMC_fake_5_5 = {
-		icon = mission_unknown_mission
-		position = 5
-		provinces_to_highlight = {
-			OR = {
-				area = Human_state
-				area = Kourindou_state
-			}
-			OR = {
-				NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				NOT = { has_tax_building_trigger = yes }
-				NOT = { has_production_building_trigger = yes }
-				NOT = { has_trade_building_trigger = yes }
-				NOT = { has_manpower_building_trigger = yes }
-				NOT = { development = 20 }
-			}
-		} 
-
-		trigger = {
-			Human_state = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-				has_tax_building_trigger = yes
-				has_production_building_trigger = yes
-				has_trade_building_trigger = yes
-				has_manpower_building_trigger = yes
-				development = 20
-			}
-			Kourindou_state = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-				has_tax_building_trigger = yes
-				has_production_building_trigger = yes
-				has_trade_building_trigger = yes
-				has_manpower_building_trigger = yes
-				development = 20
-			}
-		} 
-
-		effect = {
-			if = {
-				limit = {
-					has_idea_group = THE_HMC_ideas
-				}
-				custom_tooltip = THE_HMC_upgrade_country_idea_tt
-			}
-			else = {
-				add_prestige_or_monarch_power = {
-					amount = 50
-				}
-			}
-			hidden_effect = {
-				set_country_flag = THE_HMC_upgrade_country_idea_flag
-				if = {
-					limit = {
-						has_idea_group = THE_HMC_ideas
-					}
-					swap_free_idea_group = yes
-				}
-			}
-		} 
-	}
-}
-THE_HMC_branch_1 = {
-	slot = 1
-	generic = no
-	ai = yes
-	has_country_shield = yes
-		potential = { 
-		tag = HMC
-		has_country_flag = THE_HMC_use_true_missions_flag
-	}  
-
-	THE_HMC_1_2 = {
-		icon = mission_unknown_mission
-		position = 2
-		required_missions = { THE_HMC_3_1 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			THE_HMC_ruler_is_akyuu = yes
-		} 
-
-		effect = { 
-			custom_tooltip = THE_HMC_akyuu_add_scholar_personality_tt
-			hidden_effect = {
-				set_country_flag = THE_HMC_akyuu_add_scholar_personality_flag
-				add_ruler_personality = scholar_personality
-			}
-			add_republican_tradition = 15
-			add_prestige = 10
-		} 
-	}
-
-	THE_HMC_1_3 = {
-		icon = mission_unknown_mission
-		position = 3
-		required_missions = { THE_HMC_2_2 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			THE_HMC_ruler_is_kosuzu = yes
-			OR = {
-				army_size_percentage = 1.0
-				army_size = 30
-			}
-			num_of_generals = 1
-		} 
-
-		effect = {
-			Raiko_Seki_state = {
-				add_permanent_claim = ROOT
-			}
-			if = {
-				limit = {
-					exists = RAI
-				}
-				add_casus_belli = {
-					type = cb_annex
-					target = RAI
-					months = 240
-				}
-			}
-			if = {
-				limit = {
-					exists = SEK
-				}
-				add_casus_belli = {
-					type = cb_annex
-					target = SEK
-					months = 240
-				}
-			}
-		} 
-	}
-
-	THE_HMC_1_4 = {
-		icon = mission_unknown_mission
-		position = 4
-		required_missions = { THE_HMC_2_3 } 
-		provinces_to_highlight = {
-			area = Raiko_Seki_state
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		} 
-
-		trigger = {
-			THE_HMC_ruler_is_akyuu = yes
-			NOT = { exists = RAI }
-			NOT = { exists = SEK }
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 3
-				area = Raiko_Seki_state
-			}
-		} 
-
-		effect = {
-			Bamboo_forest_of_the_lost = {
-				add_permanent_claim = ROOT
-			}
-			Eientei_state = {
-				add_permanent_claim = ROOT
-			}
-			add_country_modifier = {
-				name = THE_HMC_strengthen_wall_modifier
-				duration = -1
-			}
-		} 
-	}
-
-	THE_HMC_1_5 = {
-		icon = mission_unknown_mission
-		position = 5
-		required_missions = { THE_HMC_2_4 } 
-		provinces_to_highlight = {
-			OR = {
-				area = Forest_of_magic
-				area = Forest_edge_state
-				area = Forest_coast_state
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		} 
-
-		trigger = {
-			THE_HMC_ruler_is_kosuzu = yes
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 10
-				OR = {
-					area = Forest_of_magic
-					area = Forest_edge_state
-					area = Forest_coast_state
-				}
-			}
-		} 
-
-		effect = {
-			human_region = {
-				add_permanent_claim = ROOT
-			}
-			5090 = {
-				add_trade_modifier = {
-					who = ROOT
-					duration = -1
-					power = 25
-					key = THE_HMC_human_exist_trade_modifier
-				}
-			}
-			add_country_modifier = {
-				name = THE_HMC_kirisame_chain_modifier
-				duration = -1
-			}
-		} 
-	}
-
-	THE_HMC_1_6 = {
-		icon = mission_unknown_mission
-		position = 6
-		required_missions = { THE_HMC_2_5 } 
-		provinces_to_highlight = {
-			OR = {
-				area = Eientei_state
-				area = Bamboo_forest_of_the_lost
-				area = Fujiwara_state
-			}
-			NOT = {
-				OR = {
-					country_or_non_sovereign_subject_holds = ROOT
-					owned_by = FUJ
-				}
-			}
-		} 
-
-		trigger = {
-			THE_HMC_ruler_is_akyuu = yes
-			Eientei_state = {
-				type = all
-				OR = {
-					country_or_non_sovereign_subject_holds = ROOT
-					owned_by = FUJ
-				}
-			}
-			Bamboo_forest_of_the_lost = {
-				type = all
-				OR = {
-					country_or_non_sovereign_subject_holds = ROOT
-					owned_by = FUJ
-				}
-			}
-			Fujiwara_state = {
-				type = all
-				OR = {
-					country_or_non_sovereign_subject_holds = ROOT
-					owned_by = FUJ
-				}
-			}
-		} 
-
-		effect = {
-			custom_tooltip = THE_HMC_akyuu_add_1_mil_tt
-			hidden_effect = {
-				set_country_flag = THE_HMC_akyuu_add_1_mil_flag
-				change_mil = 1
-			}
-			custom_tooltip = THE_HMC_akyuu_add_righteous_personality_tt
-			hidden_effect = {
-				set_country_flag = THE_HMC_akyuu_add_righteous_personality_flag
-				add_ruler_personality = righteous_personality
-			}
-			add_country_modifier = {
-				name = THE_utter_devotion_modifier
-				duration = -1
-			}
-			if = {
-				limit = {
-					mission_completed = THE_HMC_4_5
-					alliance_with = FUJ
-				}
-				custom_tooltip = THE_HMC_1_6_case1_tt_yes
-				hidden_effect = {
-					create_march = FUJ
-				}
-			}
-			else = {
-				custom_tooltip = THE_HMC_1_6_case1_tt_no
-			}
-			tooltip = {
-				create_march = FUJ
-			}
-		} 
-	}
-
-	THE_HMC_1_8 = {
-		icon = mission_unknown_mission
-		position = 8
-		required_missions = { THE_HMC_3_7 } 
-		provinces_to_highlight = {
-			area = Rika_state
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		} 
-
-		trigger = {
-			THE_HMC_ruler_is_kosuzu = yes
-			OR = {
-				NOT = { exists = THR }
-				THR = {
-					is_subject_of = ROOT
-					NOT = { is_subject_of_type = tributary_state }
-				}
-			}
-			Rika_state = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		} 
-
-		effect = {
-			if = {
-				limit = { exists = THR }
-				inherit = THR
-			}
-			hidden_effect = {
-				every_province = {
-					remove_core = THR
-					remove_claim = THR
-				}
-			}
-			hidden_effect = {
-				Rika_state = {
-					limit = {
-						NOT = { owned_by = ROOT }
-					}
-					cede_province = ROOT
-				}
-			}
-			Rika_state = {
-				add_core = THR
-			}
-			release = THR
-			create_subject = {
-				subject_type = THE_HMC_human_trade_league
-				who = THR
-			}
-			custom_tooltip = empty_line_tt
-			North_tengu_plains = {
-				add_permanent_claim = ROOT
-			}
-			Foot_of_youkai_mountains = {
-				add_permanent_claim = ROOT
-			}
-			Youkai_Mountains = {
-				add_permanent_claim = ROOT
-			}
-			Southern_youkai_mountains = {
-				add_permanent_claim = ROOT
-			}
-		} 
-	}
-
-	THE_HMC_1_9 = {
-		icon = mission_unknown_mission
-		position = 9
-		required_missions = { THE_HMC_2_8 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_HMC_1_10 = {
-		icon = mission_unknown_mission
-		position = 10
-		required_missions = { THE_HMC_2_9 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_HMC_1_11 = {
-		icon = mission_unknown_mission
-		position = 11
-		required_missions = { THE_HMC_2_10 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-}
-THE_HMC_branch_2 = {
-	slot = 2
-	generic = no
-	ai = yes
-	has_country_shield = yes
-		potential = { 
-		tag = HMC
-		has_country_flag = THE_HMC_use_true_missions_flag
-	}  
-
-	THE_HMC_2_2 = {
-		icon = mission_unknown_mission
-		position = 2
-		required_missions = { THE_HMC_3_1 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			THE_HMC_ruler_is_kosuzu = yes
-		} 
-
-		effect = { 
-			custom_tooltip = THE_HMC_kosuzu_add_kind_hearted_personality_tt
-			hidden_effect = {
-				set_country_flag = THE_HMC_kosuzu_add_kind_hearted_personality_flag
-				add_ruler_personality = kind_hearted_personality
-			}
-			add_republican_tradition = 15
-			add_prestige = 10
-		} 
-	}
-
-	THE_HMC_2_3 = {
-		icon = mission_unknown_mission
-		position = 3
-		required_missions = { THE_HMC_1_2 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			THE_HMC_ruler_is_akyuu = yes
-			OR = {
-				army_size_percentage = 1.0
-				army_size = 30
-			}
-			num_of_generals = 1
-		} 
-
-		effect = {
-			Raiko_Seki_state = {
-				add_permanent_claim = ROOT
-			}
-			if = {
-				limit = {
-					exists = RAI
-				}
-				add_casus_belli = {
-					type = cb_annex
-					target = RAI
-					months = 240
-				}
-			}
-			if = {
-				limit = {
-					exists = SEK
-				}
-				add_casus_belli = {
-					type = cb_annex
-					target = SEK
-					months = 240
-				}
-			}
-		} 
-	}
-
-	THE_HMC_2_4 = {
-		icon = mission_unknown_mission
-		position = 4
-		required_missions = { THE_HMC_1_3 } 
-		provinces_to_highlight = {
-			area = Raiko_Seki_state
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		} 
-
-		trigger = {
-			THE_HMC_ruler_is_kosuzu = yes
-			NOT = { exists = RAI }
-			NOT = { exists = SEK }
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 3
-				area = Raiko_Seki_state
-			}
-		} 
-
-		effect = {
-			Forest_of_magic = {
-				add_permanent_claim = ROOT
-			}
-			Forest_edge_state = {
-				add_permanent_claim = ROOT
-			}
-			Forest_coast_state = {
-				add_permanent_claim = ROOT
-			}
-			add_country_modifier = {
-				name = THE_HMC_quite_countryside_modifier
-				duration = -1
-			}
-		} 
-	}
-
-	THE_HMC_2_5 = {
-		icon = mission_unknown_mission
-		position = 5
-		required_missions = { THE_HMC_1_4 } 
-		provinces_to_highlight = {
-			OR = {
-				area = Bamboo_forest_of_the_lost
-				area = Eientei_state
-			}
-			NOT = {
-				OR = {
-					country_or_non_sovereign_subject_holds = ROOT
-					owner = { tag = FUJ }
-				}
-			}
-		} 
-
-		trigger = {
-			THE_HMC_ruler_is_akyuu = yes
-			Bamboo_forest_of_the_lost = {
-				type = all
-				OR = {
-					country_or_non_sovereign_subject_holds = ROOT
-					owner = { tag = FUJ }
-				}
-			}
-			Eientei_state = {
-				type = all
-				OR = {
-					country_or_non_sovereign_subject_holds = ROOT
-					owner = { tag = FUJ }
-				}
-			}
-		} 
-
-		effect = {
-			add_country_modifier = {
-				name = THE_HMC_ice_mountain_part_modifier
-				duration = -1
-			}
-			if = {
-				limit = {
-					mission_completed = THE_HMC_5_4
-					alliance_with = FUJ
-				}
-				custom_tooltip = THE_HMC_2_5_case1_tt_yes
-				hidden_effect = {
-					Eientei_state = {
-						limit = {
-							country_or_non_sovereign_subject_holds = ROOT
-							NOT = { owned_by = FUJ }
-						}
-						remove_claim = ROOT
-						remove_core = ROOT
-						cede_province = FUJ
-						add_core = FUJ
-					}
-					Bamboo_forest_of_the_lost = {
-						limit = {
-							country_or_non_sovereign_subject_holds = ROOT
-							NOT = { owned_by = FUJ }
-						}
-						remove_claim = ROOT
-						remove_core = ROOT
-						cede_province = FUJ
-						add_core = FUJ
-					}
-					Fujiwara_state = {
-						limit = {
-							country_or_non_sovereign_subject_holds = ROOT
-							NOT = { owned_by = FUJ }
-						}
-						remove_claim = ROOT
-						remove_core = ROOT
-						cede_province = FUJ
-						add_core = FUJ
-					}
-					FUJ = {
-						add_trust = {
-							who = ROOT
-							value = 10
-						}
-					}
-				}
-			}
-			else = {
-				custom_tooltip = THE_HMC_2_5_case1_tt_no
-			}
-			tooltip = {
-				Eientei_state = {
-					limit = {
-						country_or_non_sovereign_subject_holds = ROOT
-						NOT = { owned_by = FUJ }
-					}
-					remove_claim = ROOT
-					remove_core = ROOT
-					cede_province = FUJ
-					add_core = FUJ
-				}
-				Bamboo_forest_of_the_lost = {
-					limit = {
-						country_or_non_sovereign_subject_holds = ROOT
-						NOT = { owned_by = FUJ }
-					}
-					remove_claim = ROOT
-					remove_core = ROOT
-					cede_province = FUJ
-					add_core = FUJ
-				}
-				Fujiwara_state = {
-					limit = {
-						country_or_non_sovereign_subject_holds = ROOT
-						NOT = { owned_by = FUJ }
-					}
-					remove_claim = ROOT
-					remove_core = ROOT
-					cede_province = FUJ
-					add_core = FUJ
-				}
-				FUJ = {
-					add_trust = {
-						who = ROOT
-						value = 10
-					}
-				}
-			}
-		} 
-	}
-
-	THE_HMC_2_6 = {
-		icon = mission_unknown_mission
-		position = 6
-		required_missions = { THE_HMC_1_5 } 
-		provinces_to_highlight = {
-			OR = {
-				area = Eastern_myouren_state
-				area = Myouren_state
-				area = Northern_myouren_state
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		} 
-
-		trigger = {
-			THE_HMC_ruler_is_kosuzu = yes
-			OR = {
-				AND = {
-					alliance_with = MYO
-					MYO = { has_opinion = { who = ROOT value = 150 } }
-				}
-				AND = {
-					MYO = {
-						is_subject_of = ROOT
-						NOT = { liberty_desire = 50 }
-					}
-				}
-				AND = {
-					NOT = { exists = MYO }
-					4987 = {
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						value = 8
-						OR = {
-							area = Eastern_myouren_state
-							area = Myouren_state
-							area = Northern_myouren_state
-						}
-					}
-				}
-			}
-		} 
-
-		effect = {
-			custom_tooltip = THE_HMC_kosuzu_add_free_thinker_personality_tt
-			custom_tooltip = empty_line_tt
-			hidden_effect = {
-				set_country_flag = THE_HMC_kosuzu_add_free_thinker_personality_flag
-				add_ruler_personality = free_thinker_personality
-			}
-			if = {
-				limit = {
-					alliance_with = MYO
-					MYO = { has_opinion = { who = ROOT value = 150 } }
-				}
-				custom_tooltip = THE_HMC_2_6_case1_yes_tt
-			}
-			else = {
-				custom_tooltip = THE_HMC_2_6_case1_no_tt
-			}
-			tooltip = {
-				add_country_modifier = {
-					name = THE_HMC_learn_buddhist_teachings_true_modifier
-					duration = -1
-				}
-				custom_tooltip = THE_HMC_kosuzu_add_1_dip_tt
-				custom_tooltip = empty_line_tt
-				hidden_effect = {
-					set_country_flag = THE_HMC_kosuzu_add_1_dip_flag
-					change_dip = 1
-				}
-			}
-			if = {
-				limit = {
-					MYO = {
-						is_subject_of = ROOT
-						NOT = { liberty_desire = 50 }
-					}
-				}
-				custom_tooltip = THE_HMC_2_6_case2_yes_tt
-			}
-			else = {
-				custom_tooltip = THE_HMC_2_6_case2_no_tt
-			}
-			tooltip = {
-				add_country_modifier = {
-					name = THE_HMC_understanding_buddhist_teachings_true_modifier
-					duration = -1
-				}
-				custom_tooltip = THE_HMC_kosuzu_add_1_dip_tt
-				custom_tooltip = empty_line_tt
-				hidden_effect = {
-					set_country_flag = THE_HMC_kosuzu_add_1_dip_flag
-					change_dip = 1
-				}
-			}
-			if = {
-				limit = {
-					NOT = { exists = MYO }
-					4987 = {
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						value = 8
-						OR = {
-							area = Eastern_myouren_state
-							area = Myouren_state
-							area = Northern_myouren_state
-						}
-					}
-				}
-				custom_tooltip = THE_HMC_2_6_case3_yes_tt
-			}
-			else = {
-				custom_tooltip = THE_HMC_2_6_case3_no_tt
-			}
-			tooltip = {
-				add_country_modifier = {
-					name = THE_HMC_buddha_laughs_true_modifier
-					duration = -1
-				}
-				custom_tooltip = THE_HMC_kosuzu_add_1_mil_tt
-				custom_tooltip = empty_line_tt
-				hidden_effect = {
-					set_country_flag = THE_HMC_kosuzu_add_1_mil_flag
-					change_mil = 1
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						alliance_with = MYO
-						MYO = { has_opinion = { who = ROOT value = 150 } }
-
-					}
-					add_country_modifier = {
-						name = THE_HMC_learn_buddhist_teachings_true_modifier
-						duration = -1
-					}
-				}
-				if = {
-					limit = {
-						MYO = {
-							is_subject_of = ROOT
-							NOT = { liberty_desire = 50 }
-						}	
-					}
-					add_country_modifier = {
-						name = THE_HMC_understanding_buddhist_teachings_true_modifier
-						duration = -1
-					}
-				}
-				if = {
-					limit = {
-						NOT = { exists = MYO }
-						4987 = {
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-							value = 8
-							OR = {
-								area = Eastern_myouren_state
-								area = Myouren_state
-								area = Northern_myouren_state
-							}
-						}	
-					}
-					add_country_modifier = {
-						name = THE_HMC_buddha_laughs_true_modifier
-						duration = -1
-					}
-				}
-			}
-		} 
-	}
-
-	THE_HMC_2_8 = {
-		icon = mission_unknown_mission
-		position = 8
-		required_missions = { THE_HMC_3_7 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			THE_HMC_ruler_is_akyuu = yes
-			OR = {
-				AND = {
-					SCR = {
-						OR = {
-							has_opinion_modifier = {
-								who = ROOT
-								modifier = insulted
-							}
-							has_opinion_modifier = {
-								who = ROOT
-								modifier = scornfully_insulted
-							}
-							is_enemy = ROOT
-							is_rival = ROOT
-						}
-					}
-					is_in_war = {
-						attacker_leader = ROOT
-						defender_leader = SCR
-						war_score = 85
-					}
-				}
-				AND = {
-					OR = {
-						NOT = { exists = SCR }
-						SCR = {
-							all_owned_province = {
-								NOT = { continent = gensokyo_continent }
-								NOT = { continent = moon_continent }
-							}
-						}
-					}
-				}
-			}
-		} 
-
-		effect = {  } 
-	}
-
-	THE_HMC_2_9 = {
-		icon = mission_unknown_mission
-		position = 9
-		required_missions = { THE_HMC_1_8 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_HMC_2_10 = {
-		icon = mission_unknown_mission
-		position = 10
-		required_missions = { THE_HMC_1_9 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_HMC_2_11 = {
-		icon = mission_unknown_mission
-		position = 11
-		required_missions = { THE_HMC_1_10 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_HMC_2_13 = {
-		icon = mission_unknown_mission
-		position = 13
-		required_missions = { THE_HMC_3_12 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_HMC_2_14 = {
-		icon = mission_unknown_mission
-		position = 14
-		required_missions = { THE_HMC_4_13 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_HMC_2_15 = {
-		icon = mission_unknown_mission
-		position = 15
-		required_missions = { THE_HMC_4_14 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_HMC_2_16 = {
-		icon = mission_unknown_mission
-		position = 16
-		required_missions = { THE_HMC_4_15 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_HMC_2_17 = {
-		icon = mission_unknown_mission
-		position = 17
-		required_missions = { THE_HMC_4_16 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_HMC_2_18 = {
-		icon = mission_unknown_mission
-		position = 18
-		required_missions = { THE_HMC_4_17 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_HMC_2_19 = {
-		icon = mission_unknown_mission
-		position = 19
-		required_missions = { THE_HMC_4_18 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-}
-THE_HMC_branch_3 = {
-	slot = 3
-	generic = no
-	ai = yes
-	has_country_shield = yes
-		potential = { 
-		tag = HMC
-		has_country_flag = THE_HMC_use_true_missions_flag
-	}  
-
-	THE_HMC_3_1 = {
-		icon = mission_unknown_mission
-		position = 1
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			ai = no
-		} 
-
-		effect = {
-			THE_country_event_with_insight = {
-				id = THE_HMC_events.5
-			}
-			add_republican_tradition = 100
-			custom_tooltip = THE_HMC_republic_tradition_alert_tt
-		} 
-	}
-
-	THE_HMC_3_4 = {
-		icon = mission_unknown_mission
-		position = 4
-		required_missions = { THE_HMC_3_1 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			num_of_mercenaries = 35
-			treasury = 500
-		} 
-
-		effect = {
-			add_treasury = -500
-			custom_tooltip = THE_HMC_unlock_more_merc_tt
-			custom_tooltip = THE_HMC_3_4_effect_1_tt
-			tooltip = {
-				add_country_modifier = {
-					name = THE_HMC_gold_armour_modifier
-					duration = -1
-				}
-			}
-			custom_tooltip = THE_HMC_3_4_effect_2_tt
-			tooltip = {
-				add_country_modifier = {
-					name = THE_HMC_gold_army_modifier
-					duration = -1
-				}
-			}
-			hidden_effect = {
-				set_country_flag = THE_HMC_mercenary_idea_extra_effect_flag
-				if = {
-					limit = { has_idea = organised_mercenary_payment }
-					add_country_modifier = {
-						name = THE_HMC_gold_armour_modifier
-						duration = -1
-					}
-				}
-				if = {
-					limit = { full_idea_group = mercenary_ideas }
-					add_country_modifier = {
-						name = THE_HMC_gold_army_modifier
-						duration = -1
-					}
-				}
-			}
-		} 
-	}
-
-	THE_HMC_3_7 = {
-		icon = mission_unknown_mission
-		position = 7
-		required_missions = {
-			THE_HMC_1_6
-			THE_HMC_2_6
-			THE_HMC_4_6
-			THE_HMC_5_6
-		}
-		provinces_to_highlight = {  } 
-
-		trigger = { } 
-
-		effect = {
-			add_republican_tradition = 100
-			add_prestige_or_monarch_power = {
-				amount = 20
-			}
-			if = {
-				limit = { government = republic }
-				add_government_reform = THE_HMC_wealth_password_reform
-			}
-			else = {
-				custom_tooltip = THE_HMC_unlock_wealth_password_reform_tt
-			}
-			custom_tooltip = empty_line_tt
-			custom_tooltip = THE_HMC_unlock_other_unique_reform_tt
-			hidden_effect = {
-				set_country_flag = THE_HMC_unlock_wealth_password_reform_flag
-				set_country_flag = THE_HMC_unlock_other_unique_reform_flag
-			}
-		} 
-	}
-
-	THE_HMC_3_9 = {
-		icon = mission_unknown_mission
-		position = 9
-		required_missions = { THE_HMC_3_7 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			treasury = 1000
-			num_of_mercenaries = 80
-		} 
-
-		effect = {
-			add_treasury = -500
-			custom_tooltip = THE_HMC_unlock_more_merc_tt
-			add_country_modifier = {
-				name = THE_HMC_pure_golden_soldier_modifier
-				duration = -1
-			}
-			custom_tooltip = THE_HMC_unlock_sign_contract_reform_tt
-			hidden_effect = {
-				set_country_flag = THE_HMC_unlock_sign_contract_reform_flag
-			}
-			tooltip = {
-				add_government_reform = THE_HMC_sign_contract_reform
-			}
-		} 
-	}
-
-	THE_HMC_3_12 = {
-		icon = mission_unknown_mission
-		position = 12
-		required_missions = {
-			THE_HMC_1_11
-			THE_HMC_2_11
-			THE_HMC_4_11
-			THE_HMC_5_11
-		}
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_HMC_3_20 = {
-		icon = mission_unknown_mission
-		position = 20
-		required_missions = {
-			THE_HMC_2_19
-			THE_HMC_4_19
-		}
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-}
-THE_HMC_branch_4 = {
-	slot = 4
-	generic = no
-	ai = yes
-	has_country_shield = yes
-		potential = { 
-		tag = HMC
-		has_country_flag = THE_HMC_use_true_missions_flag
-	}  
-
-	THE_HMC_4_2 = {
-		icon = mission_unknown_mission
-		position = 2
-		required_missions = { THE_HMC_3_1 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			THE_HMC_ruler_is_rinnosuke = yes
-		} 
-
-		effect = { 
-			custom_tooltip = THE_HMC_rinnosuke_add_entrepreneur_personality_tt
-			hidden_effect = {
-				set_country_flag = THE_HMC_rinnosuke_add_entrepreneur_personality_flag
-				add_ruler_personality = entrepreneur_personality
-			}
-			add_republican_tradition = 15
-			add_prestige = 10
-		} 
-	}
-
-	THE_HMC_4_3 = {
-		icon = mission_unknown_mission
-		position = 3
-		required_missions = { THE_HMC_5_2 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			THE_HMC_ruler_is_keine = yes
-			has_institution = renaissance
-		} 
-
-		effect = {
-			add_country_modifier = {
-				name = THE_HMC_establish_school_0_modifier
-				duration = 2190
-			}
-			hidden_effect = {
-				country_event = {
-					id = THE_HMC_events.6
-					days = 2190
-				}
-				country_event = {
-					id = THE_HMC_events.7
-					days = 4380
-				}
-				country_event = {
-					id = THE_HMC_events.8
-					days = 6570
-				}
-				country_event = {
-					id = THE_HMC_events.9
-					days = 8760
-				}
-			}
-		} 
-	}
-
-	THE_HMC_4_4 = {
-		icon = mission_unknown_mission
-		position = 4
-		required_missions = { THE_HMC_5_3 } 
-		provinces_to_highlight = {
-			is_capital_of = KPP
-		} 
-
-		trigger = {
-			THE_HMC_ruler_is_rinnosuke = yes
-			if = {
-				limit = { exists = KPP }
-				KPP = {
-					has_opinion = {
-						who = ROOT
-						value = 100
-					}
-				}
-			}
-		} 
-
-		effect = {
-			if = {
-				limit = {
-					exists = KPP
-				}
-				KPP = {
-					add_opinion = {
-						who = ROOT
-						modifier = THE_HMC_mission_opinion_modifier
-					}
-				}
-				add_country_modifier = {
-					name = THE_HMC_ally_support_modifier
-					duration = 7300
-				}
-			}
-		} 
-	}
-
-	THE_HMC_4_5 = {
-		icon = mission_unknown_mission
-		position = 5
-		required_missions = { THE_HMC_5_4 } 
-		provinces_to_highlight = {
-			OR = {
-				AND = {
-					exists = FUJ
-					is_capital_of = FUJ
-				}
-				AND = {
-					NOT = { exists = FUJ }
-					OR = {
-						area = Eientei_state
-						area = Bamboo_forest_of_the_lost
-						area = Fujiwara_state
-					}
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				}
-			}
-		} 
-
-		trigger = {
-			THE_HMC_ruler_is_keine = yes
-			OR = {
-				AND = {
-					alliance_with = FUJ
-					army_size = FUJ
-					FUJ = {
-						has_opinion_modifier = {
-							who = ROOT
-							modifier = sent_gift
-						}
-						trust = {
-							who = ROOT
-							value = 75
-						}
-					}
-				}
-				AND = {
-					NOT = { exists = FUJ }
-					Eientei_state = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					Bamboo_forest_of_the_lost = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					Fujiwara_state = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-			}
-		} 
-
-		effect = {
-			if = {
-				limit = {
-					alliance_with = FUJ
-					army_size = FUJ
-					FUJ = {
-						has_opinion_modifier = {
-							who = ROOT
-							modifier = sent_gift
-						}
-						trust = {
-							who = ROOT
-							value = 75
-						}
-					}
-				}
-				custom_tooltip = THE_HMC_4_5_case1_tt_yes
-				hidden_effect = {
-					create_march = FUJ
-				}
-			}
-			else = {
-				custom_tooltip = THE_HMC_4_5_case1_tt_no
-			}
-			tooltip = {
-				create_march = FUJ
-			}
-			custom_tooltip = empty_line_tt
-			if = {
-				limit = {
-					NOT = { exists = FUJ }
-					Eientei_state = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					Bamboo_forest_of_the_lost = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					Fujiwara_state = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-				custom_tooltip = THE_HMC_4_5_case2_tt_yes
-				hidden_effect = {
-					Eientei_state = {
-						limit = {
-							country_or_non_sovereign_subject_holds = ROOT
-							NOT = { owned_by = FUJ }
-						}
-						remove_claim = ROOT
-						remove_core = ROOT
-						cede_province = FUJ
-						add_core = FUJ
-					}
-					Bamboo_forest_of_the_lost = {
-						limit = {
-							country_or_non_sovereign_subject_holds = ROOT
-							NOT = { owned_by = FUJ }
-						}
-						remove_claim = ROOT
-						remove_core = ROOT
-						cede_province = FUJ
-						add_core = FUJ
-					}
-					Fujiwara_state = {
-						limit = {
-							country_or_non_sovereign_subject_holds = ROOT
-							NOT = { owned_by = FUJ }
-						}
-						remove_claim = ROOT
-						remove_core = ROOT
-						cede_province = FUJ
-						add_core = FUJ
-					}
-					create_alliance = FUJ
-					add_country_modifier = {
-						name = THE_HMC_phoenix_protection_modifier
-						duration = -1
-					}
-					FUJ = {
-						add_country_modifier = {
-							name = THE_HMC_phoenix_protection_modifier
-							duration = -1
-						}
-					}
-				}
-			}
-			else = {
-				custom_tooltip = THE_HMC_4_5_case2_tt_no
-			}
-			tooltip = {
-				Eientei_state = {
-					limit = {
-						country_or_non_sovereign_subject_holds = ROOT
-						NOT = { owned_by = FUJ }
-					}
-					remove_claim = ROOT
-					remove_core = ROOT
-					cede_province = FUJ
-					add_core = FUJ
-				}
-				Bamboo_forest_of_the_lost = {
-					limit = {
-						country_or_non_sovereign_subject_holds = ROOT
-						NOT = { owned_by = FUJ }
-					}
-					remove_claim = ROOT
-					remove_core = ROOT
-					cede_province = FUJ
-					add_core = FUJ
-				}
-				Fujiwara_state = {
-					limit = {
-						country_or_non_sovereign_subject_holds = ROOT
-						NOT = { owned_by = FUJ }
-					}
-					remove_claim = ROOT
-					remove_core = ROOT
-					cede_province = FUJ
-					add_core = FUJ
-				}
-				create_alliance = FUJ
-				add_country_modifier = {
-					name = THE_HMC_phoenix_protection_modifier
-					duration = -1
-				}
-				FUJ = {
-					add_country_modifier = {
-						name = THE_HMC_phoenix_protection_modifier
-						duration = -1
-					}
-				}
-			}
-		} 
-	}
-
-	THE_HMC_4_6 = {
-		icon = mission_unknown_mission
-		position = 6
-		required_missions = { THE_HMC_5_5 } 
-		provinces_to_highlight = {
-			owned_by = ROOT
-			any_neighbor_province = {
-				owned_by = SFF
-			}
-			NOT = { province_has_current_tech_fort_trigger = yes }
-		} 
-
-		trigger = {
-			THE_HMC_ruler_is_rinnosuke = yes
-			4978 = {
-				owned_by = ROOT
-				province_has_current_tech_fort_trigger = yes
-			}
-			OR = {
-				NOT = { exists = SFF }
-				num_of_owned_provinces_with = {
-					value = 2
-					any_neighbor_province = {
-						owned_by = SFF
-					}
-					province_has_current_tech_fort_trigger = yes
-				}
-			}
-		} 
-
-		effect = {
-			custom_tooltip = THE_HMC_rinnosuke_add_1_adm_tt
-			hidden_effect = {
-				set_country_flag = THE_HMC_rinnosuke_add_1_adm_flag
-				change_adm = 1
-			}
-			custom_tooltip = THE_HMC_rinnosuke_add_architectural_visionary_personality_tt
-			hidden_effect = {
-				set_country_flag = THE_HMC_rinnosuke_add_architectural_visionary_personality_flag
-				add_ruler_personality = architectural_visionary_personality
-			}
-			custom_tooltip = THE_LIL_every_province_meet_trigger_tt
-			tooltip = {
-				add_province_modifier = {
-					name = THE_HMC_golden_wall_true_province_modifier
-					duration = -1
-				}
-			}
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
-						any_neighbor_country = {
-							tag = SFF
-						}
-						province_has_current_tech_fort_trigger = yes
-					}
-					add_province_modifier = {
-						name = THE_HMC_golden_wall_true_province_modifier
-						duration = -1
-					}
-				}
-			}
-			capital_scope = {
-				add_province_modifier = {
-					name = THE_HMC_last_wall_province_modifier
-					duration = -1
-				}
-			}
-		} 
-	}
-
-	THE_HMC_4_8 = {
-		icon = mission_unknown_mission
-		position = 8
-		required_missions = { THE_HMC_3_7 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_HMC_4_9 = {
-		icon = mission_unknown_mission
-		position = 9
-		required_missions = { THE_HMC_5_8 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_HMC_4_10 = {
-		icon = mission_unknown_mission
-		position = 10
-		required_missions = { THE_HMC_5_9 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_HMC_4_11 = {
-		icon = mission_unknown_mission
-		position = 11
-		required_missions = { THE_HMC_5_10 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_HMC_4_13 = {
-		icon = mission_unknown_mission
-		position = 13
-		required_missions = { THE_HMC_3_12 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_HMC_4_14 = {
-		icon = mission_unknown_mission
-		position = 14
-		required_missions = { THE_HMC_2_13 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_HMC_4_15 = {
-		icon = mission_unknown_mission
-		position = 15
-		required_missions = { THE_HMC_2_14 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_HMC_4_16 = {
-		icon = mission_unknown_mission
-		position = 16
-		required_missions = { THE_HMC_2_15 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_HMC_4_17 = {
-		icon = mission_unknown_mission
-		position = 17
-		required_missions = { THE_HMC_2_16 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_HMC_4_18 = {
-		icon = mission_unknown_mission
-		position = 18
-		required_missions = { THE_HMC_2_17 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_HMC_4_19 = {
-		icon = mission_unknown_mission
-		position = 19
-		required_missions = { THE_HMC_2_18 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-}
-THE_HMC_branch_5 = {
-	slot = 5
-	generic = no
-	ai = yes
-	has_country_shield = yes
-		potential = { 
-		tag = HMC
-		has_country_flag = THE_HMC_use_true_missions_flag
-	}  
-
-	THE_HMC_5_2 = {
-		icon = mission_unknown_mission
-		position = 2
-		required_missions = { THE_HMC_3_1 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			THE_HMC_ruler_is_keine = yes
-		} 
-
-		effect = { 
-			custom_tooltip = THE_HMC_keine_add_well_connected_personality_tt
-			hidden_effect = {
-				set_country_flag = THE_HMC_keine_add_well_connected_personality_flag
-				add_ruler_personality = well_connected_personality
-			}
-			add_republican_tradition = 15
-			add_prestige = 10
-		} 
-	}
-
-	THE_HMC_5_3 = {
-		icon = mission_unknown_mission
-		position = 3
-		required_missions = { THE_HMC_4_2 } 
-		provinces_to_highlight = {
-			province_id = 5005
-			OR = {
-				NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				NOT = {
-					owner = {
-						has_spy_network_from = {
-							who = ROOT
-							value = 20
-						}
-					}
-				}
-			}
-		} 
-
-		trigger = {
-			THE_HMC_ruler_is_rinnosuke = yes
-			5005 = {
-				OR = {
-					country_or_non_sovereign_subject_holds = ROOT
-					owner = {
-						has_spy_network_from = {
-							who = ROOT
-							value = 20
-						}
-					}
-				}
-			}
-		} 
-
-		effect = {
-			add_country_modifier = {
-				name = THE_HMC_wondering_object_0_modifier
-				duration = 3650
-			}
-			hidden_effect = {
-				country_event = {
-					id = THE_HMC_events.10
-					days = 3650
-				}
-			}
-		} 
-	}
-
-	THE_HMC_5_4 = {
-		icon = mission_unknown_mission
-		position = 4
-		required_missions = { THE_HMC_4_3 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			THE_HMC_ruler_is_keine = yes
-			OR = {
-				AND = {
-					alliance_with = FUJ
-					FUJ = {
-						has_opinion = {
-							who = ROOT
-							value = 100
-						}
-					}
-				}
-				AND = {
-					NOT = { exists = FUJ }
-					Fujiwara_state = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-			}
-		} 
-
-		effect = {
-			if = {
-				limit = { exists = FUJ }
-				add_country_modifier = {
-					name = THE_HMC_phoenix_protection_modifier
-					duration = -1
-				}
-				FUJ = {
-					add_country_modifier = {
-						name = THE_HMC_phoenix_protection_modifier
-						duration = -1
-					}
-				}
-			}
-			else = {
-				Eientei_state = {
-					add_permanent_claim = ROOT
-				}
-				Bamboo_forest_of_the_lost = {
-					add_permanent_claim = ROOT
-				}
-				Fujiwara_state = {
-					add_permanent_claim = ROOT
-				}
-			}
-			custom_tooltip = empty_line_tt
-			if = {
-				limit = { mission_completed = THE_HMC_2_5 }
-				custom_tooltip = THE_HMC_5_4_case1_tt_yes
-				hidden_effect = {
-					Eientei_state = {
-						limit = {
-							country_or_non_sovereign_subject_holds = ROOT
-							NOT = { owned_by = FUJ }
-						}
-						remove_claim = ROOT
-						remove_core = ROOT
-						cede_province = FUJ
-						add_core = FUJ
-					}
-					Bamboo_forest_of_the_lost = {
-						limit = {
-							country_or_non_sovereign_subject_holds = ROOT
-							NOT = { owned_by = FUJ }
-						}
-						remove_claim = ROOT
-						remove_core = ROOT
-						cede_province = FUJ
-						add_core = FUJ
-					}
-					Fujiwara_state = {
-						limit = {
-							country_or_non_sovereign_subject_holds = ROOT
-							NOT = { owned_by = FUJ }
-						}
-						remove_claim = ROOT
-						remove_core = ROOT
-						cede_province = FUJ
-						add_core = FUJ
-					}
-					FUJ = {
-						add_trust = {
-							who = ROOT
-							value = 10
-						}
-					}
-				}
-			}
-			else = {
-				custom_tooltip = THE_HMC_5_4_case1_tt_no
-			}
-			tooltip = {
-				Eientei_state = {
-					limit = {
-						country_or_non_sovereign_subject_holds = ROOT
-						NOT = { owned_by = FUJ }
-					}
-					remove_claim = ROOT
-					remove_core = ROOT
-					cede_province = FUJ
-					add_core = FUJ
-				}
-				Bamboo_forest_of_the_lost = {
-					limit = {
-						country_or_non_sovereign_subject_holds = ROOT
-						NOT = { owned_by = FUJ }
-					}
-					remove_claim = ROOT
-					remove_core = ROOT
-					cede_province = FUJ
-					add_core = FUJ
-				}
-				Fujiwara_state = {
-					limit = {
-						country_or_non_sovereign_subject_holds = ROOT
-						NOT = { owned_by = FUJ }
-					}
-					remove_claim = ROOT
-					remove_core = ROOT
-					cede_province = FUJ
-					add_core = FUJ
-				}
-				FUJ = {
-					add_trust = {
-						who = ROOT
-						value = 10
-					}
-				}
-			}
-		} 
-	}
-
-	THE_HMC_5_5 = {
-		icon = mission_unknown_mission
-		position = 5
-		required_missions = { THE_HMC_4_4 } 
-		provinces_to_highlight = {
-			is_capital_of = KPP
-		} 
-
-		trigger = {
-			THE_HMC_ruler_is_rinnosuke = yes
-			OR = {
-				AND = {
-					alliance_with = KPP
-					KPP = {
-						owes_favors = { who = ROOT value = 20 }
-					}
-				}
-				NOT = { exists = KPP }
-			}
-		} 
-
-		effect = {
-			if = {
-				limit = {
-					exists = KPP
-				}
-				add_historical_friend = KPP
-				add_favors = {
-					who = KPP
-					amount = -20
-				}
-				KPP = {
-					add_trust = {
-						who = ROOT
-						value = 20
-					}
-					add_historical_friend = ROOT
-				}
-				add_country_modifier = {
-					name = THE_HMC_kappa_arcane_modifier
-					duration = -1
-				}
-				if = {
-					limit = { has_country_modifier = THE_HMC_ally_support_modifier }
-					custom_tooltip = THE_HMC_5_5_case1_tt_yes
-					hidden_effect = {
-						remove_country_modifier = THE_HMC_ally_support_modifier
-						add_country_modifier = {
-							name = THE_HMC_ally_support_modifier
-							duration = -1
-						}
-					}
-				}
-				else = {
-					custom_tooltip = THE_HMC_5_5_case1_tt_no
-				}
-				custom_tooltip = THE_HMC_5_5_case1_tt
-			}
-		} 
-	}
-
-	THE_HMC_5_6 = {
-		icon = mission_unknown_mission
-		position = 6
-		required_missions = { THE_HMC_4_5 } 
-		provinces_to_highlight = {
-			owned_by = ROOT
-			OR = {
-				devastation = 1
-				local_autonomy = 30
-			}
-		} 
-
-		trigger = {
-			THE_HMC_ruler_is_keine = yes
-			all_owned_province = {
-				OR = {
-					NOT = { devastation = 1 }
-					NOT = { local_autonomy = 30 }
-				}
-			}
-			stability = 1
-		} 
-
-		effect = {
-			custom_tooltip = THE_HMC_keine_add_1_dip_tt
-			hidden_effect = {
-				set_country_flag = THE_HMC_keine_add_1_dip_flag
-				change_dip = 1
-			}
-			custom_tooltip = THE_HMC_keine_add_industrious_personality_tt
-			hidden_effect = {
-				set_country_flag = THE_HMC_keine_add_industrious_personality_flag
-				add_ruler_personality = industrious_personality
-			}
-			custom_tooltip = THE_HMC_every_owned_province_tt
-			custom_tooltip = THE_HMC_add_prosperity_100_tt
-			custom_tooltip = empty_line_tt
-			hidden_effect = {
-				every_owned_province = {
-					add_prosperity = 100
-				}
-			}
-			Kourindou_state = {
-				add_base_tax = 1
-				add_base_production = 1
-				add_base_manpower = 1
-			}
-			Human_state = {
-				add_base_tax = 1
-				add_base_production = 1
-				add_base_manpower = 1
-			}
-		} 
-	}
-
-	THE_HMC_5_8 = {
-		icon = mission_unknown_mission
-		position = 8
-		required_missions = { THE_HMC_3_88} 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_HMC_5_9 = {
-		icon = mission_unknown_mission
-		position = 9
-		required_missions = { THE_HMC_4_8 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_HMC_5_10 = {
-		icon = mission_unknown_mission
-		position = 10
-		required_missions = { THE_HMC_4_9 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_HMC_5_11 = {
-		icon = mission_unknown_mission
-		position = 11
-		required_missions = { THE_HMC_4_10 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-}
+# 					}
+# 					add_country_modifier = {
+# 						name = THE_HMC_learn_buddhist_teachings_modifier
+# 						duration = -1
+# 					}
+# 				}
+# 				if = {
+# 					limit = {
+# 						MYO = {
+# 							is_subject_of = ROOT
+# 							NOT = { liberty_desire = 50 }
+# 						}	
+# 					}
+# 					add_country_modifier = {
+# 						name = THE_HMC_understanding_buddhist_teachings_modifier
+# 						duration = -1
+# 					}
+# 				}
+# 				if = {
+# 					limit = {
+# 						NOT = { exists = MYO }
+# 						4987 = {
+# 							country_or_non_sovereign_subject_holds = ROOT
+# 						}
+# 						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+# 							value = 8
+# 							OR = {
+# 								area = Eastern_myouren_state
+# 								area = Myouren_state
+# 								area = Northern_myouren_state
+# 							}
+# 						}	
+# 					}
+# 					add_country_modifier = {
+# 						name = THE_HMC_buddha_laughs_modifier
+# 						duration = -1
+# 					}
+# 					add_country_modifier = {
+# 						name = THE_HMC_tumultuous_humanity_2_modifier
+# 						duration = 1825
+# 					}
+# 				}
+# 			}
+# 		} 
+# 	}
+
+# 	THE_HMC_fake_2_4 = {
+# 		icon = mission_unknown_mission
+# 		position = 4
+# 		required_missions = { THE_HMC_fake_2_3 } 
+# 		provinces_to_highlight = {
+# 			OR = {
+# 				area = Eastern_senkai
+# 				area = Northern_senkai
+# 				area = Senkai_state
+# 			}
+# 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+# 		} 
+
+# 		trigger = {
+# 			OR = {
+# 				AND = {
+# 					alliance_with = SNK
+# 					SNK = { has_opinion = { who = ROOT value = 150 } }
+# 				}
+# 				AND = {
+# 					SNK = {
+# 						is_subject_of = ROOT
+# 						NOT = { liberty_desire = 50 }
+# 					}
+# 				}
+# 				AND = {
+# 					NOT = { exists = SNK }
+# 					5025 = {
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 					}
+# 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+# 						value = 8
+# 						OR = {
+# 							area = Eastern_senkai
+# 							area = Northern_senkai
+# 							area = Senkai_state
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+
+# 		effect = {
+# 			if = {
+# 				limit = {
+# 					alliance_with = SNK
+# 					SNK = { has_opinion = { who = ROOT value = 150 } }
+# 				}
+# 				custom_tooltip = THE_HMC_fake_snk_case1_yes_tt
+# 			}
+# 			else = {
+# 				custom_tooltip = THE_HMC_fake_snk_case1_no_tt
+# 			}
+# 			tooltip = {
+# 				add_country_modifier = {
+# 					name = THE_HMC_regimen_modifier
+# 					duration = -1
+# 				}
+# 			}
+# 			if = {
+# 				limit = {
+# 					SNK = {
+# 						is_subject_of = ROOT
+# 						NOT = { liberty_desire = 50 }
+# 					}
+# 				}
+# 				custom_tooltip = THE_HMC_fake_snk_case2_yes_tt
+# 			}
+# 			else = {
+# 				custom_tooltip = THE_HMC_fake_snk_case2_no_tt
+# 			}
+# 			tooltip = {
+# 				add_country_modifier = {
+# 					name = THE_HMC_alchemy_modifier
+# 					duration = -1
+# 				}
+# 			}
+# 			if = {
+# 				limit = {
+# 					NOT = { exists = SNK }
+# 					5025 = {
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 					}
+# 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+# 						value = 8
+# 						OR = {
+# 							area = Eastern_senkai
+# 							area = Northern_senkai
+# 							area = Senkai_state
+# 						}
+# 					}
+# 				}
+# 				custom_tooltip = THE_HMC_fake_snk_case3_yes_tt
+# 			}
+# 			else = {
+# 				custom_tooltip = THE_HMC_fake_snk_case3_no_tt
+# 			}
+# 			tooltip = {
+# 				add_country_modifier = {
+# 					name = THE_HMC_fitness_modifier
+# 					duration = -1
+# 				}
+# 				add_country_modifier = {
+# 					name = THE_HMC_tumultuous_humanity_3_modifier
+# 					duration = 1825
+# 				}
+# 			}
+# 			hidden_effect = {
+# 				if = {
+# 					limit = {
+# 						alliance_with = SNK
+# 						SNK = { has_opinion = { who = ROOT value = 150 } }
+# 					}
+# 					add_country_modifier = {
+# 						name = THE_HMC_regimen_modifier
+# 						duration = -1
+# 					}
+# 				}
+# 				if = {
+# 					limit = {
+# 						SNK = {
+# 							is_subject_of = ROOT
+# 							NOT = { liberty_desire = 50 }
+# 						}
+# 					}
+# 					add_country_modifier = {
+# 						name = THE_HMC_alchemy_modifier
+# 						duration = -1
+# 					}
+# 				}
+# 				if = {
+# 					limit = {
+# 						NOT = { exists = SNK }
+# 						5025 = {
+# 							country_or_non_sovereign_subject_holds = ROOT
+# 						}
+# 						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+# 							value = 8
+# 							OR = {
+# 								area = Eastern_senkai
+# 								area = Northern_senkai
+# 								area = Senkai_state
+# 							}
+# 						}
+# 					}
+# 					add_country_modifier = {
+# 						name = THE_HMC_fitness_modifier
+# 						duration = -1
+# 					}
+# 					add_country_modifier = {
+# 						name = THE_HMC_tumultuous_humanity_3_modifier
+# 						duration = 1825
+# 					}
+# 				}
+# 			}
+# 		} 
+# 	}
+# }
+# THE_HMC_f_branch_3 = {
+# 	slot = 3
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 		potential = { 
+# 		tag = HMC
+# 		NOT = { has_country_flag = THE_HMC_use_true_missions_flag }
+# 	}  
+
+# 	THE_HMC_fake_3_1 = {
+# 		icon = mission_unknown_mission
+# 		position = 1
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {
+# 			stability = 1
+# 			army_size_percentage = 1.0
+# 			num_of_generals = 1
+# 		} 
+
+# 		effect = {
+# 			Raiko_Seki_state = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 			if = {
+# 				limit = {
+# 					exists = RAI
+# 				}
+# 				add_casus_belli = {
+# 					type = cb_annex
+# 					target = RAI
+# 					months = 240
+# 				}
+# 			}
+# 			if = {
+# 				limit = {
+# 					exists = SEK
+# 				}
+# 				add_casus_belli = {
+# 					type = cb_annex
+# 					target = SEK
+# 					months = 240
+# 				}
+# 			}
+# 		} 
+# 	}
+
+# 	THE_HMC_fake_3_3 = {
+# 		icon = mission_unknown_mission
+# 		position = 3
+# 		required_missions = { THE_HMC_fake_2_2 } 
+# 		provinces_to_highlight = {
+# 			OR = {
+# 				area = Bamboo_forest_of_the_lost
+# 				area = Eientei_state
+# 			}
+# 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+# 		} 
+
+# 		trigger = {
+# 			OR = {
+# 				AND = {
+# 					alliance_with = FUJ
+# 					NOT = { exists = EIT }
+# 					FUJ = { has_opinion = { who = ROOT value = 100 } }
+# 					Bamboo_forest_of_the_lost = {
+# 						type = all
+# 						OR = {
+# 							owned_by = FUJ
+# 							country_or_non_sovereign_subject_holds = ROOT
+# 						}
+# 					}
+# 					Eientei_state = {
+# 						type = all
+# 						OR = {
+# 							owned_by = FUJ
+# 							country_or_non_sovereign_subject_holds = ROOT
+# 						}
+# 					}
+# 				}
+# 				AND = {
+# 					OR = {
+# 						NOT = { alliance_with = FUJ }
+# 						NOT = { FUJ = { has_opinion = { who = ROOT value = 100 } }					}
+# 					}
+# 					Bamboo_forest_of_the_lost = {
+# 						type = all
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 					}
+# 					Eientei_state = {
+# 						type = all
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 					}
+# 				}
+# 			}
+# 		} 
+
+# 		effect = {
+# 			if = {
+# 				limit = {
+# 					FUJ = {
+# 						OR = {
+# 							alliance_with = ROOT
+# 							AND = {
+# 								is_subject_of = owner
+# 								NOT = { is_subject_of_type = tributary_state }
+# 							}
+# 						}
+# 					}
+# 					NOT = { exists = EIT }
+# 					FUJ = { has_opinion = { who = ROOT value = 100 } }
+# 					Bamboo_forest_of_the_lost = {
+# 						type = all
+# 						OR = {
+# 							owned_by = FUJ
+# 							country_or_non_sovereign_subject_holds = ROOT
+# 						}
+# 					}
+# 					Eientei_state = {
+# 						type = all
+# 						OR = {
+# 							owned_by = FUJ
+# 							country_or_non_sovereign_subject_holds = ROOT
+# 						}
+# 					}
+# 				}
+# 				custom_tooltip = THE_HMC_fake_eit_case1_yes_tt
+# 			}
+# 			else = {
+# 				custom_tooltip = THE_HMC_fake_eit_case1_no_tt
+# 			}
+# 			tooltip = {
+# 				Bamboo_forest_of_the_lost = {
+# 					limit = {
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 					}
+# 					remove_core = ROOT
+# 					remove_claim = ROOT
+# 					cede_province = FUJ
+# 					add_core = FUJ
+# 				}
+# 				Eientei_state = {
+# 					limit = {
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 					}
+# 					remove_core = ROOT
+# 					remove_claim = ROOT
+# 					cede_province = FUJ
+# 					add_core = FUJ
+# 				}
+# 				ROOT = {
+# 					remove_rival = FUJ
+# 					add_historical_friend = FUJ
+# 				}
+# 				FUJ = {
+# 					remove_rival = ROOT
+# 					add_historical_friend = ROOT
+# 				}
+# 				add_trust = {
+# 					who = FUJ
+# 					value = 20
+# 					mutual = yes
+# 				}
+# 				capital_scope = {
+# 					add_province_triggered_modifier = THE_HMC_huziwara_fire_triggered_modifier
+# 				}
+# 			}
+# 			if = {
+# 				limit = {
+# 					OR = {
+# 						NOT = { alliance_with = FUJ }
+# 						NOT = { FUJ = { has_opinion = { who = ROOT value = 100 } }					}
+# 					}
+# 					Bamboo_forest_of_the_lost = {
+# 						type = all
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 					}
+# 					Eientei_state = {
+# 						type = all
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 					}
+# 				}
+# 				custom_tooltip = THE_HMC_fake_eit_case2_yes_tt
+# 			}
+# 			else = {
+# 				custom_tooltip = THE_HMC_fake_eit_case2_no_tt
+# 			}
+# 			tooltip = {
+# 				Fujiwara_state = {
+# 					add_permanent_claim = ROOT
+# 				}
+# 				change_innovativeness = 20
+# 				add_country_modifier = {
+# 					name = THE_HMC_future_come_modifier
+# 					duration = -1
+# 				}
+# 				add_country_modifier = {
+# 					name = THE_HMC_tumultuous_humanity_2_modifier
+# 					duration = 1825
+# 				}
+# 			}
+# 			hidden_effect = {
+# 				if = {
+# 					limit = {
+# 						alliance_with = FUJ
+# 						NOT = { exists = EIT }
+# 						FUJ = { has_opinion = { who = ROOT value = 100 } }
+# 						Bamboo_forest_of_the_lost = {
+# 							type = all
+# 							OR = {
+# 								owned_by = FUJ
+# 								country_or_non_sovereign_subject_holds = ROOT
+# 							}
+# 						}
+# 						Eientei_state = {
+# 							type = all
+# 							OR = {
+# 								owned_by = FUJ
+# 								country_or_non_sovereign_subject_holds = ROOT
+# 							}
+# 						}	
+# 					}
+# 					Bamboo_forest_of_the_lost = {
+# 						limit = {
+# 							country_or_non_sovereign_subject_holds = ROOT
+# 						}
+# 						remove_core = ROOT
+# 						remove_claim = ROOT
+# 						cede_province = FUJ
+# 						add_core = FUJ
+# 					}
+# 					Eientei_state = {
+# 						limit = {
+# 							country_or_non_sovereign_subject_holds = ROOT
+# 						}
+# 						remove_core = ROOT
+# 						remove_claim = ROOT
+# 						cede_province = FUJ
+# 						add_core = FUJ
+# 					}
+# 					ROOT = {
+# 						remove_rival = FUJ
+# 						add_historical_friend = FUJ
+# 					}
+# 					FUJ = {
+# 						remove_rival = ROOT
+# 						add_historical_friend = ROOT
+# 					}
+# 					add_trust = {
+# 						who = FUJ
+# 						value = 20
+# 						mutual = yes
+# 					}
+# 					capital_scope = {
+# 						add_province_triggered_modifier = THE_HMC_huziwara_fire_triggered_modifier
+# 					}
+# 				}
+# 				if = {
+# 					limit = {
+# 						OR = {
+# 							NOT = { alliance_with = FUJ }
+# 							NOT = { FUJ = { has_opinion = { who = ROOT value = 100 } }					}
+# 						}
+# 						Bamboo_forest_of_the_lost = {
+# 							type = all
+# 							country_or_non_sovereign_subject_holds = ROOT
+# 						}
+# 						Eientei_state = {
+# 							type = all
+# 							country_or_non_sovereign_subject_holds = ROOT
+# 						}	
+# 					}
+# 					Fujiwara_state = {
+# 						add_permanent_claim = ROOT
+# 					}
+# 					change_innovativeness = 20
+# 					add_country_modifier = {
+# 						name = THE_HMC_future_come_modifier
+# 						duration = -1
+# 					}
+# 					add_country_modifier = {
+# 						name = THE_HMC_tumultuous_humanity_2_modifier
+# 						duration = 1825
+# 					}
+# 				}
+# 			}
+# 		} 
+# 	}
+
+# 	THE_HMC_fake_3_4 = {
+# 		icon = mission_unknown_mission
+# 		position = 4
+# 		required_missions = { THE_HMC_fake_3_3 } 
+# 		provinces_to_highlight = {
+# 			OR = {
+# 				area = Bamboo_forest_of_the_lost
+# 				area = Eientei_state
+# 				area = Fujiwara_state
+# 			}
+# 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+# 		} 
+
+# 		trigger = {
+# 			OR = {
+# 				AND = {
+# 					Bamboo_forest_of_the_lost = {
+# 						type = all
+# 						owned_by = FUJ
+# 					}
+# 					Eientei_state = {
+# 						type = all
+# 						owned_by = FUJ
+# 					}
+# 					Fujiwara_state = {
+# 						type = all
+# 						owned_by = FUJ
+# 					}
+# 					alliance_with = FUJ
+# 					army_size = FUJ
+# 					FUJ = {
+# 						has_opinion_modifier = {
+# 							who = ROOT
+# 							modifier = sent_gift
+# 						}
+# 						trust = {
+# 							who = ROOT
+# 							value = 80
+# 						}
+# 					}
+# 				}
+# 				AND = {
+# 					Bamboo_forest_of_the_lost = {
+# 						type = all
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 					}
+# 					Eientei_state = {
+# 						type = all
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 					}
+# 					Fujiwara_state = {
+# 						type = all
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 					}
+# 				}
+# 			}
+# 		} 
+
+# 		effect = {
+# 			if = {
+# 				limit = {
+# 					Bamboo_forest_of_the_lost = {
+# 						type = all
+# 						owned_by = FUJ
+# 					}
+# 					Eientei_state = {
+# 						type = all
+# 						owned_by = FUJ
+# 					}
+# 					Fujiwara_state = {
+# 						type = all
+# 						owned_by = FUJ
+# 					}
+# 					alliance_with = FUJ
+# 					army_size = FUJ
+# 					FUJ = {
+# 						has_opinion_modifier = {
+# 							who = ROOT
+# 							modifier = sent_gift
+# 						}
+# 						trust = {
+# 							who = ROOT
+# 							value = 80
+# 						}
+# 					}
+# 				}
+# 				custom_tooltip = THE_HMC_fake_fuj_case1_yes_tt
+# 			}
+# 			else = {
+# 				custom_tooltip = THE_HMC_fake_fuj_case1_no_tt
+# 			}
+# 			tooltip = {
+# 				create_subject = {
+# 					subject_type = march
+# 					who = FUJ
+# 				}
+# 				custom_tooltip = empty_line_tt
+# 			}
+# 			if = {
+# 				limit = {
+# 					Bamboo_forest_of_the_lost = {
+# 						type = all
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 					}
+# 					Eientei_state = {
+# 						type = all
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 					}
+# 					Fujiwara_state = {
+# 						type = all
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 					}
+# 				}
+# 				custom_tooltip = THE_HMC_fake_fuj_case2_yes_tt
+# 			}
+# 			else = {
+# 				custom_tooltip = THE_HMC_fake_fuj_case2_no_tt
+# 			}
+# 			tooltip = {
+# 				netherworld_region = {
+# 					add_permanent_claim = ROOT
+# 				}
+# 				add_country_modifier = {
+# 					name = THE_HMC_fire_heart_modifier
+# 					duration = -1
+# 				}
+# 				add_country_modifier = {
+# 					name = THE_HMC_tumultuous_humanity_3_modifier
+# 					duration = 1825
+# 				}
+# 			}
+# 			hidden_effect = {
+# 				if = {
+# 					limit = {
+# 						Bamboo_forest_of_the_lost = {
+# 							type = all
+# 							owned_by = FUJ
+# 						}
+# 						Eientei_state = {
+# 							type = all
+# 							owned_by = FUJ
+# 						}
+# 						Fujiwara_state = {
+# 							type = all
+# 							owned_by = FUJ
+# 						}
+# 						alliance_with = FUJ
+# 						army_size = FUJ
+# 						FUJ = {
+# 							has_opinion_modifier = {
+# 								who = ROOT
+# 								modifier = sent_gift
+# 							}
+# 							trust = {
+# 								who = ROOT
+# 								value = 80
+# 							}
+# 						}
+# 					}
+# 					create_subject = {
+# 						subject_type = march
+# 						who = FUJ
+# 					}
+# 				}
+# 				if = {
+# 					limit = {
+# 						Bamboo_forest_of_the_lost = {
+# 							type = all
+# 							country_or_non_sovereign_subject_holds = ROOT
+# 						}
+# 						Eientei_state = {
+# 							type = all
+# 							country_or_non_sovereign_subject_holds = ROOT
+# 						}
+# 						Fujiwara_state = {
+# 							type = all
+# 							country_or_non_sovereign_subject_holds = ROOT
+# 						}
+# 					}
+# 					netherworld_region = {
+# 						add_permanent_claim = ROOT
+# 					}
+# 					add_country_modifier = {
+# 						name = THE_HMC_fire_heart_modifier
+# 						duration = -1
+# 					}
+# 					add_country_modifier = {
+# 						name = THE_HMC_tumultuous_humanity_3_modifier
+# 						duration = 1825
+# 					}
+# 				}
+# 			}
+# 		} 
+# 	}
+
+# 	THE_HMC_fake_3_5 = {
+# 		icon = mission_unknown_mission
+# 		position = 5
+# 		required_missions = { THE_HMC_fake_3_4 } 
+# 		provinces_to_highlight = {
+# 			region = netherworld_region
+# 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+# 		} 
+
+# 		trigger = {
+# 			OR = {
+# 				war_score_against = {
+# 					who = NET
+# 					value = 80
+# 				}
+# 				netherworld_region = {
+# 					type = all
+# 					country_or_non_sovereign_subject_holds = ROOT
+# 				}
+# 			}
+# 		} 
+
+# 		effect = {
+# 			add_country_modifier = {
+# 				name = THE_HMC_view_cherry_modifier
+# 				duration = -1
+# 			}
+# 			if = {
+# 				limit = {
+# 					war_score_against = {
+# 						who = NET
+# 						value = 80
+# 					}
+# 				}
+# 				custom_tooltip = THE_HMC_fake_net_yes_tt
+# 			}
+# 			else = {
+# 				custom_tooltip = THE_HMC_fake_net_no_tt
+# 			}
+# 			tooltip = {
+# 				white_peace = NET
+# 				if = {
+# 					limit = {
+# 						FUJ = {
+# 							is_subject_of = ROOT
+# 							NOT = { is_subject_of_type = tributary_state }
+# 						}
+# 					}
+# 					Western_netherworld = {
+# 						limit = {
+# 							country_or_non_sovereign_subject_holds = NET
+# 						}
+# 						remove_core = NET
+# 						remove_claim = NET
+# 						cede_province = FUJ
+# 						add_core = FUJ
+# 					}
+# 				}
+# 				else = {
+# 					Western_netherworld = {
+# 						limit = {
+# 							country_or_non_sovereign_subject_holds = NET
+# 						}
+# 						remove_core = NET
+# 						remove_claim = NET
+# 						cede_province = ROOT
+# 						add_core = ROOT
+# 					}
+# 				}
+# 				Eastern_netherworld = {
+# 					limit = {
+# 						country_or_non_sovereign_subject_holds = NET
+# 					}
+# 					remove_core = NET
+# 					remove_claim = NET
+# 					cede_province = YMU
+# 					add_core = YMU
+# 				}
+# 				Southern_netherworld = {
+# 					limit = {
+# 						country_or_non_sovereign_subject_holds = NET
+# 					}
+# 					remove_core = NET
+# 					remove_claim = NET
+# 					cede_province = YMU
+# 					add_core = YMU
+# 				}
+# 			}
+# 			hidden_effect = {
+# 				if = {
+# 					limit = {
+# 						war_score_against = {
+# 							who = NET
+# 							value = 80
+# 						}
+# 					}
+# 					white_peace = NET
+# 					if = {
+# 						limit = {
+# 							FUJ = {
+# 								is_subject_of = ROOT
+# 								NOT = { is_subject_of_type = tributary_state }
+# 							}
+# 						}
+# 						Western_netherworld = {
+# 							limit = {
+# 								country_or_non_sovereign_subject_holds = NET
+# 							}
+# 							remove_core = NET
+# 							remove_claim = NET
+# 							cede_province = FUJ
+# 							add_core = FUJ
+# 						}
+# 					}
+# 					else = {
+# 						Western_netherworld = {
+# 							limit = {
+# 								country_or_non_sovereign_subject_holds = NET
+# 							}
+# 							remove_core = NET
+# 							remove_claim = NET
+# 							cede_province = ROOT
+# 							add_core = ROOT
+# 						}
+# 					}
+# 					Eastern_netherworld = {
+# 						limit = {
+# 							country_or_non_sovereign_subject_holds = NET
+# 						}
+# 						remove_core = NET
+# 						remove_claim = NET
+# 						cede_province = YMU
+# 						add_core = YMU
+# 					}
+# 					Southern_netherworld = {
+# 						limit = {
+# 							country_or_non_sovereign_subject_holds = NET
+# 						}
+# 						remove_core = NET
+# 						remove_claim = NET
+# 						cede_province = YMU
+# 						add_core = YMU
+# 					}
+# 				}
+# 			}
+# 		} 
+# 	}
+# }
+# THE_HMC_f_branch_4 = {
+# 	slot = 4
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 		potential = { 
+# 		tag = HMC
+# 		NOT = { has_country_flag = THE_HMC_use_true_missions_flag }
+# 	}  
+
+# 	THE_HMC_fake_4_3 = {
+# 		icon = mission_unknown_mission
+# 		position = 3
+# 		required_missions = { THE_HMC_fake_2_2 } 
+# 		provinces_to_highlight = {
+# 			owned_by = ROOT
+# 			any_neighbor_country = {
+# 				tag = SFF
+# 			}
+# 		} 
+
+# 		trigger = {
+# 			OR = {
+# 				NOT = { exists = SFF }
+# 				num_of_owned_provinces_with = {
+# 					value = 2
+# 					any_neighbor_country = {
+# 						tag = SFF
+# 					}
+# 					province_has_current_tech_fort_trigger = yes
+# 				}
+# 			}
+# 		} 
+
+# 		effect = {
+# 			custom_tooltip = THE_LIL_every_province_meet_trigger_tt
+# 			tooltip = {
+# 				add_province_modifier = {
+# 					name = THE_HMC_golden_wall_province_modifier
+# 					duration = -1
+# 				}
+# 			}
+# 			hidden_effect = {
+# 				every_owned_province = {
+# 					limit = {
+# 						any_neighbor_country = {
+# 							tag = SFF
+# 						}
+# 						province_has_current_tech_fort_trigger = yes
+# 					}
+# 					add_province_modifier = {
+# 						name = THE_HMC_golden_wall_province_modifier
+# 						duration = -1
+# 					}
+# 				}
+# 			}
+# 			capital_scope = {
+# 				add_province_modifier = {
+# 					name = THE_HMC_last_wall_province_modifier
+# 					duration = -1
+# 				}
+# 			}
+# 		} 
+# 	}
+# }
+# THE_HMC_f_branch_5 = {
+# 	slot = 5
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 		potential = { 
+# 		tag = HMC
+# 		NOT = { has_country_flag = THE_HMC_use_true_missions_flag }
+# 	}  
+
+# 	THE_HMC_fake_5_2 = {
+# 		icon = mission_unknown_mission
+# 		position = 2
+# 		required_missions = { THE_HMC_fake_3_1 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {
+# 			treasury = 200
+# 			monthly_income = 20
+# 			trade_income_percentage = 0.5
+# 		} 
+
+# 		effect = {
+# 			add_country_modifier = {
+# 				name = THE_HMC_trade_activation_modifier
+# 				duration = -1
+# 			}
+# 		} 
+# 	}
+
+# 	THE_HMC_fake_5_3 = {
+# 		icon = mission_unknown_mission
+# 		position = 3
+# 		required_missions = { THE_HMC_fake_5_2 } 
+# 		provinces_to_highlight = {
+# 			OR = {
+# 				province_id = 5351
+# 				province_id = 5126
+# 				province_id = 4977
+# 			}
+# 			OR = {
+# 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+# 				NOT = { base_production = 10 }
+# 				NOT = { has_production_building_trigger = yes }
+# 			}
+# 		} 
+
+# 		trigger = {
+# 			5351 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 				base_production = 10
+# 				has_production_building_trigger = yes
+# 			}
+# 			5126 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 				base_production = 10
+# 				has_production_building_trigger = yes
+# 			}
+# 			4977 = {
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 				base_production = 10
+# 				has_production_building_trigger = yes
+# 			}
+# 		} 
+
+# 		effect = {
+# 			add_years_of_income = 1
+# 			add_country_modifier = {
+# 				name = THE_HMC_full_eat_and_wear_modifier
+# 				duration = -1
+# 			}
+# 		} 
+# 	}
+
+# 	THE_HMC_fake_5_4 = {
+# 		icon = mission_unknown_mission
+# 		position = 4
+# 		required_missions = { THE_HMC_fake_5_3 } 
+# 		provinces_to_highlight = {
+# 			is_capital = yes
+# 			owner = {
+# 				is_neighbor_of = ROOT
+# 				army_size = ROOT
+# 			}
+# 		} 
+
+# 		trigger = {
+# 			all_neighbor_country = {
+# 				NOT = { army_size = ROOT }
+# 			}
+# 			num_of_generals = 3
+# 			army_professionalism = 0.5
+# 		} 
+
+# 		effect = {
+# 			THE_HMC_define_general_rinnosuke_scripted_effect = yes
+# 			THE_HMC_define_general_keine_scripted_effect = yes
+# 		} 
+# 	}
+
+# 	THE_HMC_fake_5_5 = {
+# 		icon = mission_unknown_mission
+# 		position = 5
+# 		provinces_to_highlight = {
+# 			OR = {
+# 				area = Human_state
+# 				area = Kourindou_state
+# 			}
+# 			OR = {
+# 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+# 				NOT = { has_tax_building_trigger = yes }
+# 				NOT = { has_production_building_trigger = yes }
+# 				NOT = { has_trade_building_trigger = yes }
+# 				NOT = { has_manpower_building_trigger = yes }
+# 				NOT = { development = 20 }
+# 			}
+# 		} 
+
+# 		trigger = {
+# 			Human_state = {
+# 				type = all
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 				has_tax_building_trigger = yes
+# 				has_production_building_trigger = yes
+# 				has_trade_building_trigger = yes
+# 				has_manpower_building_trigger = yes
+# 				development = 20
+# 			}
+# 			Kourindou_state = {
+# 				type = all
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 				has_tax_building_trigger = yes
+# 				has_production_building_trigger = yes
+# 				has_trade_building_trigger = yes
+# 				has_manpower_building_trigger = yes
+# 				development = 20
+# 			}
+# 		} 
+
+# 		effect = {
+# 			if = {
+# 				limit = {
+# 					has_idea_group = THE_HMC_ideas
+# 				}
+# 				custom_tooltip = THE_HMC_upgrade_country_idea_tt
+# 			}
+# 			else = {
+# 				add_prestige_or_monarch_power = {
+# 					amount = 50
+# 				}
+# 			}
+# 			hidden_effect = {
+# 				set_country_flag = THE_HMC_upgrade_country_idea_flag
+# 				if = {
+# 					limit = {
+# 						has_idea_group = THE_HMC_ideas
+# 					}
+# 					swap_free_idea_group = yes
+# 				}
+# 			}
+# 		} 
+# 	}
+# }
+# THE_HMC_branch_1 = {
+# 	slot = 1
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 		potential = { 
+# 		tag = HMC
+# 		has_country_flag = THE_HMC_use_true_missions_flag
+# 	}  
+
+# 	THE_HMC_1_2 = {
+# 		icon = mission_unknown_mission
+# 		position = 2
+# 		required_missions = { THE_HMC_3_1 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {
+# 			THE_HMC_ruler_is_akyuu = yes
+# 		} 
+
+# 		effect = { 
+# 			custom_tooltip = THE_HMC_akyuu_add_scholar_personality_tt
+# 			hidden_effect = {
+# 				set_country_flag = THE_HMC_akyuu_add_scholar_personality_flag
+# 				add_ruler_personality = scholar_personality
+# 			}
+# 			add_republican_tradition = 15
+# 			add_prestige = 10
+# 		} 
+# 	}
+
+# 	THE_HMC_1_3 = {
+# 		icon = mission_unknown_mission
+# 		position = 3
+# 		required_missions = { THE_HMC_2_2 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {
+# 			THE_HMC_ruler_is_kosuzu = yes
+# 			OR = {
+# 				army_size_percentage = 1.0
+# 				army_size = 30
+# 			}
+# 			num_of_generals = 1
+# 		} 
+
+# 		effect = {
+# 			Raiko_Seki_state = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 			if = {
+# 				limit = {
+# 					exists = RAI
+# 				}
+# 				add_casus_belli = {
+# 					type = cb_annex
+# 					target = RAI
+# 					months = 240
+# 				}
+# 			}
+# 			if = {
+# 				limit = {
+# 					exists = SEK
+# 				}
+# 				add_casus_belli = {
+# 					type = cb_annex
+# 					target = SEK
+# 					months = 240
+# 				}
+# 			}
+# 		} 
+# 	}
+
+# 	THE_HMC_1_4 = {
+# 		icon = mission_unknown_mission
+# 		position = 4
+# 		required_missions = { THE_HMC_2_3 } 
+# 		provinces_to_highlight = {
+# 			area = Raiko_Seki_state
+# 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+# 		} 
+
+# 		trigger = {
+# 			THE_HMC_ruler_is_akyuu = yes
+# 			NOT = { exists = RAI }
+# 			NOT = { exists = SEK }
+# 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+# 				value = 3
+# 				area = Raiko_Seki_state
+# 			}
+# 		} 
+
+# 		effect = {
+# 			Bamboo_forest_of_the_lost = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 			Eientei_state = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 			add_country_modifier = {
+# 				name = THE_HMC_strengthen_wall_modifier
+# 				duration = -1
+# 			}
+# 		} 
+# 	}
+
+# 	THE_HMC_1_5 = {
+# 		icon = mission_unknown_mission
+# 		position = 5
+# 		required_missions = { THE_HMC_2_4 } 
+# 		provinces_to_highlight = {
+# 			OR = {
+# 				area = Forest_of_magic
+# 				area = Forest_edge_state
+# 				area = Forest_coast_state
+# 			}
+# 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+# 		} 
+
+# 		trigger = {
+# 			THE_HMC_ruler_is_kosuzu = yes
+# 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+# 				value = 10
+# 				OR = {
+# 					area = Forest_of_magic
+# 					area = Forest_edge_state
+# 					area = Forest_coast_state
+# 				}
+# 			}
+# 		} 
+
+# 		effect = {
+# 			human_region = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 			5090 = {
+# 				add_trade_modifier = {
+# 					who = ROOT
+# 					duration = -1
+# 					power = 25
+# 					key = THE_HMC_human_exist_trade_modifier
+# 				}
+# 			}
+# 			add_country_modifier = {
+# 				name = THE_HMC_kirisame_chain_modifier
+# 				duration = -1
+# 			}
+# 		} 
+# 	}
+
+# 	THE_HMC_1_6 = {
+# 		icon = mission_unknown_mission
+# 		position = 6
+# 		required_missions = { THE_HMC_2_5 } 
+# 		provinces_to_highlight = {
+# 			OR = {
+# 				area = Eientei_state
+# 				area = Bamboo_forest_of_the_lost
+# 				area = Fujiwara_state
+# 			}
+# 			NOT = {
+# 				OR = {
+# 					country_or_non_sovereign_subject_holds = ROOT
+# 					owned_by = FUJ
+# 				}
+# 			}
+# 		} 
+
+# 		trigger = {
+# 			THE_HMC_ruler_is_akyuu = yes
+# 			Eientei_state = {
+# 				type = all
+# 				OR = {
+# 					country_or_non_sovereign_subject_holds = ROOT
+# 					owned_by = FUJ
+# 				}
+# 			}
+# 			Bamboo_forest_of_the_lost = {
+# 				type = all
+# 				OR = {
+# 					country_or_non_sovereign_subject_holds = ROOT
+# 					owned_by = FUJ
+# 				}
+# 			}
+# 			Fujiwara_state = {
+# 				type = all
+# 				OR = {
+# 					country_or_non_sovereign_subject_holds = ROOT
+# 					owned_by = FUJ
+# 				}
+# 			}
+# 		} 
+
+# 		effect = {
+# 			custom_tooltip = THE_HMC_akyuu_add_1_mil_tt
+# 			hidden_effect = {
+# 				set_country_flag = THE_HMC_akyuu_add_1_mil_flag
+# 				change_mil = 1
+# 			}
+# 			custom_tooltip = THE_HMC_akyuu_add_righteous_personality_tt
+# 			hidden_effect = {
+# 				set_country_flag = THE_HMC_akyuu_add_righteous_personality_flag
+# 				add_ruler_personality = righteous_personality
+# 			}
+# 			add_country_modifier = {
+# 				name = THE_utter_devotion_modifier
+# 				duration = -1
+# 			}
+# 			if = {
+# 				limit = {
+# 					mission_completed = THE_HMC_4_5
+# 					alliance_with = FUJ
+# 				}
+# 				custom_tooltip = THE_HMC_1_6_case1_tt_yes
+# 				hidden_effect = {
+# 					create_march = FUJ
+# 				}
+# 			}
+# 			else = {
+# 				custom_tooltip = THE_HMC_1_6_case1_tt_no
+# 			}
+# 			tooltip = {
+# 				create_march = FUJ
+# 			}
+# 		} 
+# 	}
+
+# 	THE_HMC_1_8 = {
+# 		icon = mission_unknown_mission
+# 		position = 8
+# 		required_missions = { THE_HMC_3_7 } 
+# 		provinces_to_highlight = {
+# 			area = Rika_state
+# 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+# 		} 
+
+# 		trigger = {
+# 			THE_HMC_ruler_is_kosuzu = yes
+# 			OR = {
+# 				NOT = { exists = THR }
+# 				THR = {
+# 					is_subject_of = ROOT
+# 					NOT = { is_subject_of_type = tributary_state }
+# 				}
+# 			}
+# 			Rika_state = {
+# 				type = all
+# 				country_or_non_sovereign_subject_holds = ROOT
+# 			}
+# 		} 
+
+# 		effect = {
+# 			if = {
+# 				limit = { exists = THR }
+# 				inherit = THR
+# 			}
+# 			hidden_effect = {
+# 				every_province = {
+# 					remove_core = THR
+# 					remove_claim = THR
+# 				}
+# 			}
+# 			hidden_effect = {
+# 				Rika_state = {
+# 					limit = {
+# 						NOT = { owned_by = ROOT }
+# 					}
+# 					cede_province = ROOT
+# 				}
+# 			}
+# 			Rika_state = {
+# 				add_core = THR
+# 			}
+# 			release = THR
+# 			create_subject = {
+# 				subject_type = THE_HMC_human_trade_league
+# 				who = THR
+# 			}
+# 			custom_tooltip = empty_line_tt
+# 			North_tengu_plains = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 			Foot_of_youkai_mountains = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 			Youkai_Mountains = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 			Southern_youkai_mountains = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 		} 
+# 	}
+
+# 	THE_HMC_1_9 = {
+# 		icon = mission_unknown_mission
+# 		position = 9
+# 		required_missions = { THE_HMC_2_8 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_HMC_1_10 = {
+# 		icon = mission_unknown_mission
+# 		position = 10
+# 		required_missions = { THE_HMC_2_9 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_HMC_1_11 = {
+# 		icon = mission_unknown_mission
+# 		position = 11
+# 		required_missions = { THE_HMC_2_10 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+# }
+# THE_HMC_branch_2 = {
+# 	slot = 2
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 		potential = { 
+# 		tag = HMC
+# 		has_country_flag = THE_HMC_use_true_missions_flag
+# 	}  
+
+# 	THE_HMC_2_2 = {
+# 		icon = mission_unknown_mission
+# 		position = 2
+# 		required_missions = { THE_HMC_3_1 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {
+# 			THE_HMC_ruler_is_kosuzu = yes
+# 		} 
+
+# 		effect = { 
+# 			custom_tooltip = THE_HMC_kosuzu_add_kind_hearted_personality_tt
+# 			hidden_effect = {
+# 				set_country_flag = THE_HMC_kosuzu_add_kind_hearted_personality_flag
+# 				add_ruler_personality = kind_hearted_personality
+# 			}
+# 			add_republican_tradition = 15
+# 			add_prestige = 10
+# 		} 
+# 	}
+
+# 	THE_HMC_2_3 = {
+# 		icon = mission_unknown_mission
+# 		position = 3
+# 		required_missions = { THE_HMC_1_2 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {
+# 			THE_HMC_ruler_is_akyuu = yes
+# 			OR = {
+# 				army_size_percentage = 1.0
+# 				army_size = 30
+# 			}
+# 			num_of_generals = 1
+# 		} 
+
+# 		effect = {
+# 			Raiko_Seki_state = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 			if = {
+# 				limit = {
+# 					exists = RAI
+# 				}
+# 				add_casus_belli = {
+# 					type = cb_annex
+# 					target = RAI
+# 					months = 240
+# 				}
+# 			}
+# 			if = {
+# 				limit = {
+# 					exists = SEK
+# 				}
+# 				add_casus_belli = {
+# 					type = cb_annex
+# 					target = SEK
+# 					months = 240
+# 				}
+# 			}
+# 		} 
+# 	}
+
+# 	THE_HMC_2_4 = {
+# 		icon = mission_unknown_mission
+# 		position = 4
+# 		required_missions = { THE_HMC_1_3 } 
+# 		provinces_to_highlight = {
+# 			area = Raiko_Seki_state
+# 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+# 		} 
+
+# 		trigger = {
+# 			THE_HMC_ruler_is_kosuzu = yes
+# 			NOT = { exists = RAI }
+# 			NOT = { exists = SEK }
+# 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+# 				value = 3
+# 				area = Raiko_Seki_state
+# 			}
+# 		} 
+
+# 		effect = {
+# 			Forest_of_magic = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 			Forest_edge_state = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 			Forest_coast_state = {
+# 				add_permanent_claim = ROOT
+# 			}
+# 			add_country_modifier = {
+# 				name = THE_HMC_quite_countryside_modifier
+# 				duration = -1
+# 			}
+# 		} 
+# 	}
+
+# 	THE_HMC_2_5 = {
+# 		icon = mission_unknown_mission
+# 		position = 5
+# 		required_missions = { THE_HMC_1_4 } 
+# 		provinces_to_highlight = {
+# 			OR = {
+# 				area = Bamboo_forest_of_the_lost
+# 				area = Eientei_state
+# 			}
+# 			NOT = {
+# 				OR = {
+# 					country_or_non_sovereign_subject_holds = ROOT
+# 					owner = { tag = FUJ }
+# 				}
+# 			}
+# 		} 
+
+# 		trigger = {
+# 			THE_HMC_ruler_is_akyuu = yes
+# 			Bamboo_forest_of_the_lost = {
+# 				type = all
+# 				OR = {
+# 					country_or_non_sovereign_subject_holds = ROOT
+# 					owner = { tag = FUJ }
+# 				}
+# 			}
+# 			Eientei_state = {
+# 				type = all
+# 				OR = {
+# 					country_or_non_sovereign_subject_holds = ROOT
+# 					owner = { tag = FUJ }
+# 				}
+# 			}
+# 		} 
+
+# 		effect = {
+# 			add_country_modifier = {
+# 				name = THE_HMC_ice_mountain_part_modifier
+# 				duration = -1
+# 			}
+# 			if = {
+# 				limit = {
+# 					mission_completed = THE_HMC_5_4
+# 					alliance_with = FUJ
+# 				}
+# 				custom_tooltip = THE_HMC_2_5_case1_tt_yes
+# 				hidden_effect = {
+# 					Eientei_state = {
+# 						limit = {
+# 							country_or_non_sovereign_subject_holds = ROOT
+# 							NOT = { owned_by = FUJ }
+# 						}
+# 						remove_claim = ROOT
+# 						remove_core = ROOT
+# 						cede_province = FUJ
+# 						add_core = FUJ
+# 					}
+# 					Bamboo_forest_of_the_lost = {
+# 						limit = {
+# 							country_or_non_sovereign_subject_holds = ROOT
+# 							NOT = { owned_by = FUJ }
+# 						}
+# 						remove_claim = ROOT
+# 						remove_core = ROOT
+# 						cede_province = FUJ
+# 						add_core = FUJ
+# 					}
+# 					Fujiwara_state = {
+# 						limit = {
+# 							country_or_non_sovereign_subject_holds = ROOT
+# 							NOT = { owned_by = FUJ }
+# 						}
+# 						remove_claim = ROOT
+# 						remove_core = ROOT
+# 						cede_province = FUJ
+# 						add_core = FUJ
+# 					}
+# 					FUJ = {
+# 						add_trust = {
+# 							who = ROOT
+# 							value = 10
+# 						}
+# 					}
+# 				}
+# 			}
+# 			else = {
+# 				custom_tooltip = THE_HMC_2_5_case1_tt_no
+# 			}
+# 			tooltip = {
+# 				Eientei_state = {
+# 					limit = {
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 						NOT = { owned_by = FUJ }
+# 					}
+# 					remove_claim = ROOT
+# 					remove_core = ROOT
+# 					cede_province = FUJ
+# 					add_core = FUJ
+# 				}
+# 				Bamboo_forest_of_the_lost = {
+# 					limit = {
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 						NOT = { owned_by = FUJ }
+# 					}
+# 					remove_claim = ROOT
+# 					remove_core = ROOT
+# 					cede_province = FUJ
+# 					add_core = FUJ
+# 				}
+# 				Fujiwara_state = {
+# 					limit = {
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 						NOT = { owned_by = FUJ }
+# 					}
+# 					remove_claim = ROOT
+# 					remove_core = ROOT
+# 					cede_province = FUJ
+# 					add_core = FUJ
+# 				}
+# 				FUJ = {
+# 					add_trust = {
+# 						who = ROOT
+# 						value = 10
+# 					}
+# 				}
+# 			}
+# 		} 
+# 	}
+
+# 	THE_HMC_2_6 = {
+# 		icon = mission_unknown_mission
+# 		position = 6
+# 		required_missions = { THE_HMC_1_5 } 
+# 		provinces_to_highlight = {
+# 			OR = {
+# 				area = Eastern_myouren_state
+# 				area = Myouren_state
+# 				area = Northern_myouren_state
+# 			}
+# 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+# 		} 
+
+# 		trigger = {
+# 			THE_HMC_ruler_is_kosuzu = yes
+# 			OR = {
+# 				AND = {
+# 					alliance_with = MYO
+# 					MYO = { has_opinion = { who = ROOT value = 150 } }
+# 				}
+# 				AND = {
+# 					MYO = {
+# 						is_subject_of = ROOT
+# 						NOT = { liberty_desire = 50 }
+# 					}
+# 				}
+# 				AND = {
+# 					NOT = { exists = MYO }
+# 					4987 = {
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 					}
+# 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+# 						value = 8
+# 						OR = {
+# 							area = Eastern_myouren_state
+# 							area = Myouren_state
+# 							area = Northern_myouren_state
+# 						}
+# 					}
+# 				}
+# 			}
+# 		} 
+
+# 		effect = {
+# 			custom_tooltip = THE_HMC_kosuzu_add_free_thinker_personality_tt
+# 			custom_tooltip = empty_line_tt
+# 			hidden_effect = {
+# 				set_country_flag = THE_HMC_kosuzu_add_free_thinker_personality_flag
+# 				add_ruler_personality = free_thinker_personality
+# 			}
+# 			if = {
+# 				limit = {
+# 					alliance_with = MYO
+# 					MYO = { has_opinion = { who = ROOT value = 150 } }
+# 				}
+# 				custom_tooltip = THE_HMC_2_6_case1_yes_tt
+# 			}
+# 			else = {
+# 				custom_tooltip = THE_HMC_2_6_case1_no_tt
+# 			}
+# 			tooltip = {
+# 				add_country_modifier = {
+# 					name = THE_HMC_learn_buddhist_teachings_true_modifier
+# 					duration = -1
+# 				}
+# 				custom_tooltip = THE_HMC_kosuzu_add_1_dip_tt
+# 				custom_tooltip = empty_line_tt
+# 				hidden_effect = {
+# 					set_country_flag = THE_HMC_kosuzu_add_1_dip_flag
+# 					change_dip = 1
+# 				}
+# 			}
+# 			if = {
+# 				limit = {
+# 					MYO = {
+# 						is_subject_of = ROOT
+# 						NOT = { liberty_desire = 50 }
+# 					}
+# 				}
+# 				custom_tooltip = THE_HMC_2_6_case2_yes_tt
+# 			}
+# 			else = {
+# 				custom_tooltip = THE_HMC_2_6_case2_no_tt
+# 			}
+# 			tooltip = {
+# 				add_country_modifier = {
+# 					name = THE_HMC_understanding_buddhist_teachings_true_modifier
+# 					duration = -1
+# 				}
+# 				custom_tooltip = THE_HMC_kosuzu_add_1_dip_tt
+# 				custom_tooltip = empty_line_tt
+# 				hidden_effect = {
+# 					set_country_flag = THE_HMC_kosuzu_add_1_dip_flag
+# 					change_dip = 1
+# 				}
+# 			}
+# 			if = {
+# 				limit = {
+# 					NOT = { exists = MYO }
+# 					4987 = {
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 					}
+# 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+# 						value = 8
+# 						OR = {
+# 							area = Eastern_myouren_state
+# 							area = Myouren_state
+# 							area = Northern_myouren_state
+# 						}
+# 					}
+# 				}
+# 				custom_tooltip = THE_HMC_2_6_case3_yes_tt
+# 			}
+# 			else = {
+# 				custom_tooltip = THE_HMC_2_6_case3_no_tt
+# 			}
+# 			tooltip = {
+# 				add_country_modifier = {
+# 					name = THE_HMC_buddha_laughs_true_modifier
+# 					duration = -1
+# 				}
+# 				custom_tooltip = THE_HMC_kosuzu_add_1_mil_tt
+# 				custom_tooltip = empty_line_tt
+# 				hidden_effect = {
+# 					set_country_flag = THE_HMC_kosuzu_add_1_mil_flag
+# 					change_mil = 1
+# 				}
+# 			}
+# 			hidden_effect = {
+# 				if = {
+# 					limit = {
+# 						alliance_with = MYO
+# 						MYO = { has_opinion = { who = ROOT value = 150 } }
+
+# 					}
+# 					add_country_modifier = {
+# 						name = THE_HMC_learn_buddhist_teachings_true_modifier
+# 						duration = -1
+# 					}
+# 				}
+# 				if = {
+# 					limit = {
+# 						MYO = {
+# 							is_subject_of = ROOT
+# 							NOT = { liberty_desire = 50 }
+# 						}	
+# 					}
+# 					add_country_modifier = {
+# 						name = THE_HMC_understanding_buddhist_teachings_true_modifier
+# 						duration = -1
+# 					}
+# 				}
+# 				if = {
+# 					limit = {
+# 						NOT = { exists = MYO }
+# 						4987 = {
+# 							country_or_non_sovereign_subject_holds = ROOT
+# 						}
+# 						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+# 							value = 8
+# 							OR = {
+# 								area = Eastern_myouren_state
+# 								area = Myouren_state
+# 								area = Northern_myouren_state
+# 							}
+# 						}	
+# 					}
+# 					add_country_modifier = {
+# 						name = THE_HMC_buddha_laughs_true_modifier
+# 						duration = -1
+# 					}
+# 				}
+# 			}
+# 		} 
+# 	}
+
+# 	THE_HMC_2_8 = {
+# 		icon = mission_unknown_mission
+# 		position = 8
+# 		required_missions = { THE_HMC_3_7 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {
+# 			THE_HMC_ruler_is_akyuu = yes
+# 			OR = {
+# 				AND = {
+# 					SCR = {
+# 						OR = {
+# 							has_opinion_modifier = {
+# 								who = ROOT
+# 								modifier = insulted
+# 							}
+# 							has_opinion_modifier = {
+# 								who = ROOT
+# 								modifier = scornfully_insulted
+# 							}
+# 							is_enemy = ROOT
+# 							is_rival = ROOT
+# 						}
+# 					}
+# 					is_in_war = {
+# 						attacker_leader = ROOT
+# 						defender_leader = SCR
+# 						war_score = 85
+# 					}
+# 				}
+# 				AND = {
+# 					OR = {
+# 						NOT = { exists = SCR }
+# 						SCR = {
+# 							all_owned_province = {
+# 								NOT = { continent = gensokyo_continent }
+# 								NOT = { continent = moon_continent }
+# 							}
+# 						}
+# 					}
+# 				}
+# 			}
+# 		} 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_HMC_2_9 = {
+# 		icon = mission_unknown_mission
+# 		position = 9
+# 		required_missions = { THE_HMC_1_8 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_HMC_2_10 = {
+# 		icon = mission_unknown_mission
+# 		position = 10
+# 		required_missions = { THE_HMC_1_9 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_HMC_2_11 = {
+# 		icon = mission_unknown_mission
+# 		position = 11
+# 		required_missions = { THE_HMC_1_10 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_HMC_2_13 = {
+# 		icon = mission_unknown_mission
+# 		position = 13
+# 		required_missions = { THE_HMC_3_12 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_HMC_2_14 = {
+# 		icon = mission_unknown_mission
+# 		position = 14
+# 		required_missions = { THE_HMC_4_13 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_HMC_2_15 = {
+# 		icon = mission_unknown_mission
+# 		position = 15
+# 		required_missions = { THE_HMC_4_14 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_HMC_2_16 = {
+# 		icon = mission_unknown_mission
+# 		position = 16
+# 		required_missions = { THE_HMC_4_15 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_HMC_2_17 = {
+# 		icon = mission_unknown_mission
+# 		position = 17
+# 		required_missions = { THE_HMC_4_16 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_HMC_2_18 = {
+# 		icon = mission_unknown_mission
+# 		position = 18
+# 		required_missions = { THE_HMC_4_17 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_HMC_2_19 = {
+# 		icon = mission_unknown_mission
+# 		position = 19
+# 		required_missions = { THE_HMC_4_18 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+# }
+# THE_HMC_branch_3 = {
+# 	slot = 3
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 		potential = { 
+# 		tag = HMC
+# 		has_country_flag = THE_HMC_use_true_missions_flag
+# 	}  
+
+# 	THE_HMC_3_1 = {
+# 		icon = mission_unknown_mission
+# 		position = 1
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {
+# 			ai = no
+# 		} 
+
+# 		effect = {
+# 			THE_country_event_with_insight = {
+# 				id = THE_HMC_events.5
+# 			}
+# 			add_republican_tradition = 100
+# 			custom_tooltip = THE_HMC_republic_tradition_alert_tt
+# 		} 
+# 	}
+
+# 	THE_HMC_3_4 = {
+# 		icon = mission_unknown_mission
+# 		position = 4
+# 		required_missions = { THE_HMC_3_1 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {
+# 			num_of_mercenaries = 35
+# 			treasury = 500
+# 		} 
+
+# 		effect = {
+# 			add_treasury = -500
+# 			custom_tooltip = THE_HMC_unlock_more_merc_tt
+# 			custom_tooltip = THE_HMC_3_4_effect_1_tt
+# 			tooltip = {
+# 				add_country_modifier = {
+# 					name = THE_HMC_gold_armour_modifier
+# 					duration = -1
+# 				}
+# 			}
+# 			custom_tooltip = THE_HMC_3_4_effect_2_tt
+# 			tooltip = {
+# 				add_country_modifier = {
+# 					name = THE_HMC_gold_army_modifier
+# 					duration = -1
+# 				}
+# 			}
+# 			hidden_effect = {
+# 				set_country_flag = THE_HMC_mercenary_idea_extra_effect_flag
+# 				if = {
+# 					limit = { has_idea = organised_mercenary_payment }
+# 					add_country_modifier = {
+# 						name = THE_HMC_gold_armour_modifier
+# 						duration = -1
+# 					}
+# 				}
+# 				if = {
+# 					limit = { full_idea_group = mercenary_ideas }
+# 					add_country_modifier = {
+# 						name = THE_HMC_gold_army_modifier
+# 						duration = -1
+# 					}
+# 				}
+# 			}
+# 		} 
+# 	}
+
+# 	THE_HMC_3_7 = {
+# 		icon = mission_unknown_mission
+# 		position = 7
+# 		required_missions = {
+# 			THE_HMC_1_6
+# 			THE_HMC_2_6
+# 			THE_HMC_4_6
+# 			THE_HMC_5_6
+# 		}
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = { } 
+
+# 		effect = {
+# 			add_republican_tradition = 100
+# 			add_prestige_or_monarch_power = {
+# 				amount = 20
+# 			}
+# 			if = {
+# 				limit = { government = republic }
+# 				add_government_reform = THE_HMC_wealth_password_reform
+# 			}
+# 			else = {
+# 				custom_tooltip = THE_HMC_unlock_wealth_password_reform_tt
+# 			}
+# 			custom_tooltip = empty_line_tt
+# 			custom_tooltip = THE_HMC_unlock_other_unique_reform_tt
+# 			hidden_effect = {
+# 				set_country_flag = THE_HMC_unlock_wealth_password_reform_flag
+# 				set_country_flag = THE_HMC_unlock_other_unique_reform_flag
+# 			}
+# 		} 
+# 	}
+
+# 	THE_HMC_3_9 = {
+# 		icon = mission_unknown_mission
+# 		position = 9
+# 		required_missions = { THE_HMC_3_7 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {
+# 			treasury = 1000
+# 			num_of_mercenaries = 80
+# 		} 
+
+# 		effect = {
+# 			add_treasury = -500
+# 			custom_tooltip = THE_HMC_unlock_more_merc_tt
+# 			add_country_modifier = {
+# 				name = THE_HMC_pure_golden_soldier_modifier
+# 				duration = -1
+# 			}
+# 			custom_tooltip = THE_HMC_unlock_sign_contract_reform_tt
+# 			hidden_effect = {
+# 				set_country_flag = THE_HMC_unlock_sign_contract_reform_flag
+# 			}
+# 			tooltip = {
+# 				add_government_reform = THE_HMC_sign_contract_reform
+# 			}
+# 		} 
+# 	}
+
+# 	THE_HMC_3_12 = {
+# 		icon = mission_unknown_mission
+# 		position = 12
+# 		required_missions = {
+# 			THE_HMC_1_11
+# 			THE_HMC_2_11
+# 			THE_HMC_4_11
+# 			THE_HMC_5_11
+# 		}
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_HMC_3_20 = {
+# 		icon = mission_unknown_mission
+# 		position = 20
+# 		required_missions = {
+# 			THE_HMC_2_19
+# 			THE_HMC_4_19
+# 		}
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+# }
+# THE_HMC_branch_4 = {
+# 	slot = 4
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 		potential = { 
+# 		tag = HMC
+# 		has_country_flag = THE_HMC_use_true_missions_flag
+# 	}  
+
+# 	THE_HMC_4_2 = {
+# 		icon = mission_unknown_mission
+# 		position = 2
+# 		required_missions = { THE_HMC_3_1 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {
+# 			THE_HMC_ruler_is_rinnosuke = yes
+# 		} 
+
+# 		effect = { 
+# 			custom_tooltip = THE_HMC_rinnosuke_add_entrepreneur_personality_tt
+# 			hidden_effect = {
+# 				set_country_flag = THE_HMC_rinnosuke_add_entrepreneur_personality_flag
+# 				add_ruler_personality = entrepreneur_personality
+# 			}
+# 			add_republican_tradition = 15
+# 			add_prestige = 10
+# 		} 
+# 	}
+
+# 	THE_HMC_4_3 = {
+# 		icon = mission_unknown_mission
+# 		position = 3
+# 		required_missions = { THE_HMC_5_2 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {
+# 			THE_HMC_ruler_is_keine = yes
+# 			has_institution = renaissance
+# 		} 
+
+# 		effect = {
+# 			add_country_modifier = {
+# 				name = THE_HMC_establish_school_0_modifier
+# 				duration = 2190
+# 			}
+# 			hidden_effect = {
+# 				country_event = {
+# 					id = THE_HMC_events.6
+# 					days = 2190
+# 				}
+# 				country_event = {
+# 					id = THE_HMC_events.7
+# 					days = 4380
+# 				}
+# 				country_event = {
+# 					id = THE_HMC_events.8
+# 					days = 6570
+# 				}
+# 				country_event = {
+# 					id = THE_HMC_events.9
+# 					days = 8760
+# 				}
+# 			}
+# 		} 
+# 	}
+
+# 	THE_HMC_4_4 = {
+# 		icon = mission_unknown_mission
+# 		position = 4
+# 		required_missions = { THE_HMC_5_3 } 
+# 		provinces_to_highlight = {
+# 			is_capital_of = KPP
+# 		} 
+
+# 		trigger = {
+# 			THE_HMC_ruler_is_rinnosuke = yes
+# 			if = {
+# 				limit = { exists = KPP }
+# 				KPP = {
+# 					has_opinion = {
+# 						who = ROOT
+# 						value = 100
+# 					}
+# 				}
+# 			}
+# 		} 
+
+# 		effect = {
+# 			if = {
+# 				limit = {
+# 					exists = KPP
+# 				}
+# 				KPP = {
+# 					add_opinion = {
+# 						who = ROOT
+# 						modifier = THE_HMC_mission_opinion_modifier
+# 					}
+# 				}
+# 				add_country_modifier = {
+# 					name = THE_HMC_ally_support_modifier
+# 					duration = 7300
+# 				}
+# 			}
+# 		} 
+# 	}
+
+# 	THE_HMC_4_5 = {
+# 		icon = mission_unknown_mission
+# 		position = 5
+# 		required_missions = { THE_HMC_5_4 } 
+# 		provinces_to_highlight = {
+# 			OR = {
+# 				AND = {
+# 					exists = FUJ
+# 					is_capital_of = FUJ
+# 				}
+# 				AND = {
+# 					NOT = { exists = FUJ }
+# 					OR = {
+# 						area = Eientei_state
+# 						area = Bamboo_forest_of_the_lost
+# 						area = Fujiwara_state
+# 					}
+# 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+# 				}
+# 			}
+# 		} 
+
+# 		trigger = {
+# 			THE_HMC_ruler_is_keine = yes
+# 			OR = {
+# 				AND = {
+# 					alliance_with = FUJ
+# 					army_size = FUJ
+# 					FUJ = {
+# 						has_opinion_modifier = {
+# 							who = ROOT
+# 							modifier = sent_gift
+# 						}
+# 						trust = {
+# 							who = ROOT
+# 							value = 75
+# 						}
+# 					}
+# 				}
+# 				AND = {
+# 					NOT = { exists = FUJ }
+# 					Eientei_state = {
+# 						type = all
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 					}
+# 					Bamboo_forest_of_the_lost = {
+# 						type = all
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 					}
+# 					Fujiwara_state = {
+# 						type = all
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 					}
+# 				}
+# 			}
+# 		} 
+
+# 		effect = {
+# 			if = {
+# 				limit = {
+# 					alliance_with = FUJ
+# 					army_size = FUJ
+# 					FUJ = {
+# 						has_opinion_modifier = {
+# 							who = ROOT
+# 							modifier = sent_gift
+# 						}
+# 						trust = {
+# 							who = ROOT
+# 							value = 75
+# 						}
+# 					}
+# 				}
+# 				custom_tooltip = THE_HMC_4_5_case1_tt_yes
+# 				hidden_effect = {
+# 					create_march = FUJ
+# 				}
+# 			}
+# 			else = {
+# 				custom_tooltip = THE_HMC_4_5_case1_tt_no
+# 			}
+# 			tooltip = {
+# 				create_march = FUJ
+# 			}
+# 			custom_tooltip = empty_line_tt
+# 			if = {
+# 				limit = {
+# 					NOT = { exists = FUJ }
+# 					Eientei_state = {
+# 						type = all
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 					}
+# 					Bamboo_forest_of_the_lost = {
+# 						type = all
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 					}
+# 					Fujiwara_state = {
+# 						type = all
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 					}
+# 				}
+# 				custom_tooltip = THE_HMC_4_5_case2_tt_yes
+# 				hidden_effect = {
+# 					Eientei_state = {
+# 						limit = {
+# 							country_or_non_sovereign_subject_holds = ROOT
+# 							NOT = { owned_by = FUJ }
+# 						}
+# 						remove_claim = ROOT
+# 						remove_core = ROOT
+# 						cede_province = FUJ
+# 						add_core = FUJ
+# 					}
+# 					Bamboo_forest_of_the_lost = {
+# 						limit = {
+# 							country_or_non_sovereign_subject_holds = ROOT
+# 							NOT = { owned_by = FUJ }
+# 						}
+# 						remove_claim = ROOT
+# 						remove_core = ROOT
+# 						cede_province = FUJ
+# 						add_core = FUJ
+# 					}
+# 					Fujiwara_state = {
+# 						limit = {
+# 							country_or_non_sovereign_subject_holds = ROOT
+# 							NOT = { owned_by = FUJ }
+# 						}
+# 						remove_claim = ROOT
+# 						remove_core = ROOT
+# 						cede_province = FUJ
+# 						add_core = FUJ
+# 					}
+# 					create_alliance = FUJ
+# 					add_country_modifier = {
+# 						name = THE_HMC_phoenix_protection_modifier
+# 						duration = -1
+# 					}
+# 					FUJ = {
+# 						add_country_modifier = {
+# 							name = THE_HMC_phoenix_protection_modifier
+# 							duration = -1
+# 						}
+# 					}
+# 				}
+# 			}
+# 			else = {
+# 				custom_tooltip = THE_HMC_4_5_case2_tt_no
+# 			}
+# 			tooltip = {
+# 				Eientei_state = {
+# 					limit = {
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 						NOT = { owned_by = FUJ }
+# 					}
+# 					remove_claim = ROOT
+# 					remove_core = ROOT
+# 					cede_province = FUJ
+# 					add_core = FUJ
+# 				}
+# 				Bamboo_forest_of_the_lost = {
+# 					limit = {
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 						NOT = { owned_by = FUJ }
+# 					}
+# 					remove_claim = ROOT
+# 					remove_core = ROOT
+# 					cede_province = FUJ
+# 					add_core = FUJ
+# 				}
+# 				Fujiwara_state = {
+# 					limit = {
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 						NOT = { owned_by = FUJ }
+# 					}
+# 					remove_claim = ROOT
+# 					remove_core = ROOT
+# 					cede_province = FUJ
+# 					add_core = FUJ
+# 				}
+# 				create_alliance = FUJ
+# 				add_country_modifier = {
+# 					name = THE_HMC_phoenix_protection_modifier
+# 					duration = -1
+# 				}
+# 				FUJ = {
+# 					add_country_modifier = {
+# 						name = THE_HMC_phoenix_protection_modifier
+# 						duration = -1
+# 					}
+# 				}
+# 			}
+# 		} 
+# 	}
+
+# 	THE_HMC_4_6 = {
+# 		icon = mission_unknown_mission
+# 		position = 6
+# 		required_missions = { THE_HMC_5_5 } 
+# 		provinces_to_highlight = {
+# 			owned_by = ROOT
+# 			any_neighbor_province = {
+# 				owned_by = SFF
+# 			}
+# 			NOT = { province_has_current_tech_fort_trigger = yes }
+# 		} 
+
+# 		trigger = {
+# 			THE_HMC_ruler_is_rinnosuke = yes
+# 			4978 = {
+# 				owned_by = ROOT
+# 				province_has_current_tech_fort_trigger = yes
+# 			}
+# 			OR = {
+# 				NOT = { exists = SFF }
+# 				num_of_owned_provinces_with = {
+# 					value = 2
+# 					any_neighbor_province = {
+# 						owned_by = SFF
+# 					}
+# 					province_has_current_tech_fort_trigger = yes
+# 				}
+# 			}
+# 		} 
+
+# 		effect = {
+# 			custom_tooltip = THE_HMC_rinnosuke_add_1_adm_tt
+# 			hidden_effect = {
+# 				set_country_flag = THE_HMC_rinnosuke_add_1_adm_flag
+# 				change_adm = 1
+# 			}
+# 			custom_tooltip = THE_HMC_rinnosuke_add_architectural_visionary_personality_tt
+# 			hidden_effect = {
+# 				set_country_flag = THE_HMC_rinnosuke_add_architectural_visionary_personality_flag
+# 				add_ruler_personality = architectural_visionary_personality
+# 			}
+# 			custom_tooltip = THE_LIL_every_province_meet_trigger_tt
+# 			tooltip = {
+# 				add_province_modifier = {
+# 					name = THE_HMC_golden_wall_true_province_modifier
+# 					duration = -1
+# 				}
+# 			}
+# 			hidden_effect = {
+# 				every_owned_province = {
+# 					limit = {
+# 						any_neighbor_country = {
+# 							tag = SFF
+# 						}
+# 						province_has_current_tech_fort_trigger = yes
+# 					}
+# 					add_province_modifier = {
+# 						name = THE_HMC_golden_wall_true_province_modifier
+# 						duration = -1
+# 					}
+# 				}
+# 			}
+# 			capital_scope = {
+# 				add_province_modifier = {
+# 					name = THE_HMC_last_wall_province_modifier
+# 					duration = -1
+# 				}
+# 			}
+# 		} 
+# 	}
+
+# 	THE_HMC_4_8 = {
+# 		icon = mission_unknown_mission
+# 		position = 8
+# 		required_missions = { THE_HMC_3_7 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_HMC_4_9 = {
+# 		icon = mission_unknown_mission
+# 		position = 9
+# 		required_missions = { THE_HMC_5_8 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_HMC_4_10 = {
+# 		icon = mission_unknown_mission
+# 		position = 10
+# 		required_missions = { THE_HMC_5_9 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_HMC_4_11 = {
+# 		icon = mission_unknown_mission
+# 		position = 11
+# 		required_missions = { THE_HMC_5_10 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_HMC_4_13 = {
+# 		icon = mission_unknown_mission
+# 		position = 13
+# 		required_missions = { THE_HMC_3_12 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_HMC_4_14 = {
+# 		icon = mission_unknown_mission
+# 		position = 14
+# 		required_missions = { THE_HMC_2_13 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_HMC_4_15 = {
+# 		icon = mission_unknown_mission
+# 		position = 15
+# 		required_missions = { THE_HMC_2_14 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_HMC_4_16 = {
+# 		icon = mission_unknown_mission
+# 		position = 16
+# 		required_missions = { THE_HMC_2_15 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_HMC_4_17 = {
+# 		icon = mission_unknown_mission
+# 		position = 17
+# 		required_missions = { THE_HMC_2_16 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_HMC_4_18 = {
+# 		icon = mission_unknown_mission
+# 		position = 18
+# 		required_missions = { THE_HMC_2_17 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_HMC_4_19 = {
+# 		icon = mission_unknown_mission
+# 		position = 19
+# 		required_missions = { THE_HMC_2_18 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+# }
+# THE_HMC_branch_5 = {
+# 	slot = 5
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 		potential = { 
+# 		tag = HMC
+# 		has_country_flag = THE_HMC_use_true_missions_flag
+# 	}  
+
+# 	THE_HMC_5_2 = {
+# 		icon = mission_unknown_mission
+# 		position = 2
+# 		required_missions = { THE_HMC_3_1 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {
+# 			THE_HMC_ruler_is_keine = yes
+# 		} 
+
+# 		effect = { 
+# 			custom_tooltip = THE_HMC_keine_add_well_connected_personality_tt
+# 			hidden_effect = {
+# 				set_country_flag = THE_HMC_keine_add_well_connected_personality_flag
+# 				add_ruler_personality = well_connected_personality
+# 			}
+# 			add_republican_tradition = 15
+# 			add_prestige = 10
+# 		} 
+# 	}
+
+# 	THE_HMC_5_3 = {
+# 		icon = mission_unknown_mission
+# 		position = 3
+# 		required_missions = { THE_HMC_4_2 } 
+# 		provinces_to_highlight = {
+# 			province_id = 5005
+# 			OR = {
+# 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+# 				NOT = {
+# 					owner = {
+# 						has_spy_network_from = {
+# 							who = ROOT
+# 							value = 20
+# 						}
+# 					}
+# 				}
+# 			}
+# 		} 
+
+# 		trigger = {
+# 			THE_HMC_ruler_is_rinnosuke = yes
+# 			5005 = {
+# 				OR = {
+# 					country_or_non_sovereign_subject_holds = ROOT
+# 					owner = {
+# 						has_spy_network_from = {
+# 							who = ROOT
+# 							value = 20
+# 						}
+# 					}
+# 				}
+# 			}
+# 		} 
+
+# 		effect = {
+# 			add_country_modifier = {
+# 				name = THE_HMC_wondering_object_0_modifier
+# 				duration = 3650
+# 			}
+# 			hidden_effect = {
+# 				country_event = {
+# 					id = THE_HMC_events.10
+# 					days = 3650
+# 				}
+# 			}
+# 		} 
+# 	}
+
+# 	THE_HMC_5_4 = {
+# 		icon = mission_unknown_mission
+# 		position = 4
+# 		required_missions = { THE_HMC_4_3 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {
+# 			THE_HMC_ruler_is_keine = yes
+# 			OR = {
+# 				AND = {
+# 					alliance_with = FUJ
+# 					FUJ = {
+# 						has_opinion = {
+# 							who = ROOT
+# 							value = 100
+# 						}
+# 					}
+# 				}
+# 				AND = {
+# 					NOT = { exists = FUJ }
+# 					Fujiwara_state = {
+# 						type = all
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 					}
+# 				}
+# 			}
+# 		} 
+
+# 		effect = {
+# 			if = {
+# 				limit = { exists = FUJ }
+# 				add_country_modifier = {
+# 					name = THE_HMC_phoenix_protection_modifier
+# 					duration = -1
+# 				}
+# 				FUJ = {
+# 					add_country_modifier = {
+# 						name = THE_HMC_phoenix_protection_modifier
+# 						duration = -1
+# 					}
+# 				}
+# 			}
+# 			else = {
+# 				Eientei_state = {
+# 					add_permanent_claim = ROOT
+# 				}
+# 				Bamboo_forest_of_the_lost = {
+# 					add_permanent_claim = ROOT
+# 				}
+# 				Fujiwara_state = {
+# 					add_permanent_claim = ROOT
+# 				}
+# 			}
+# 			custom_tooltip = empty_line_tt
+# 			if = {
+# 				limit = { mission_completed = THE_HMC_2_5 }
+# 				custom_tooltip = THE_HMC_5_4_case1_tt_yes
+# 				hidden_effect = {
+# 					Eientei_state = {
+# 						limit = {
+# 							country_or_non_sovereign_subject_holds = ROOT
+# 							NOT = { owned_by = FUJ }
+# 						}
+# 						remove_claim = ROOT
+# 						remove_core = ROOT
+# 						cede_province = FUJ
+# 						add_core = FUJ
+# 					}
+# 					Bamboo_forest_of_the_lost = {
+# 						limit = {
+# 							country_or_non_sovereign_subject_holds = ROOT
+# 							NOT = { owned_by = FUJ }
+# 						}
+# 						remove_claim = ROOT
+# 						remove_core = ROOT
+# 						cede_province = FUJ
+# 						add_core = FUJ
+# 					}
+# 					Fujiwara_state = {
+# 						limit = {
+# 							country_or_non_sovereign_subject_holds = ROOT
+# 							NOT = { owned_by = FUJ }
+# 						}
+# 						remove_claim = ROOT
+# 						remove_core = ROOT
+# 						cede_province = FUJ
+# 						add_core = FUJ
+# 					}
+# 					FUJ = {
+# 						add_trust = {
+# 							who = ROOT
+# 							value = 10
+# 						}
+# 					}
+# 				}
+# 			}
+# 			else = {
+# 				custom_tooltip = THE_HMC_5_4_case1_tt_no
+# 			}
+# 			tooltip = {
+# 				Eientei_state = {
+# 					limit = {
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 						NOT = { owned_by = FUJ }
+# 					}
+# 					remove_claim = ROOT
+# 					remove_core = ROOT
+# 					cede_province = FUJ
+# 					add_core = FUJ
+# 				}
+# 				Bamboo_forest_of_the_lost = {
+# 					limit = {
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 						NOT = { owned_by = FUJ }
+# 					}
+# 					remove_claim = ROOT
+# 					remove_core = ROOT
+# 					cede_province = FUJ
+# 					add_core = FUJ
+# 				}
+# 				Fujiwara_state = {
+# 					limit = {
+# 						country_or_non_sovereign_subject_holds = ROOT
+# 						NOT = { owned_by = FUJ }
+# 					}
+# 					remove_claim = ROOT
+# 					remove_core = ROOT
+# 					cede_province = FUJ
+# 					add_core = FUJ
+# 				}
+# 				FUJ = {
+# 					add_trust = {
+# 						who = ROOT
+# 						value = 10
+# 					}
+# 				}
+# 			}
+# 		} 
+# 	}
+
+# 	THE_HMC_5_5 = {
+# 		icon = mission_unknown_mission
+# 		position = 5
+# 		required_missions = { THE_HMC_4_4 } 
+# 		provinces_to_highlight = {
+# 			is_capital_of = KPP
+# 		} 
+
+# 		trigger = {
+# 			THE_HMC_ruler_is_rinnosuke = yes
+# 			OR = {
+# 				AND = {
+# 					alliance_with = KPP
+# 					KPP = {
+# 						owes_favors = { who = ROOT value = 20 }
+# 					}
+# 				}
+# 				NOT = { exists = KPP }
+# 			}
+# 		} 
+
+# 		effect = {
+# 			if = {
+# 				limit = {
+# 					exists = KPP
+# 				}
+# 				add_historical_friend = KPP
+# 				add_favors = {
+# 					who = KPP
+# 					amount = -20
+# 				}
+# 				KPP = {
+# 					add_trust = {
+# 						who = ROOT
+# 						value = 20
+# 					}
+# 					add_historical_friend = ROOT
+# 				}
+# 				add_country_modifier = {
+# 					name = THE_HMC_kappa_arcane_modifier
+# 					duration = -1
+# 				}
+# 				if = {
+# 					limit = { has_country_modifier = THE_HMC_ally_support_modifier }
+# 					custom_tooltip = THE_HMC_5_5_case1_tt_yes
+# 					hidden_effect = {
+# 						remove_country_modifier = THE_HMC_ally_support_modifier
+# 						add_country_modifier = {
+# 							name = THE_HMC_ally_support_modifier
+# 							duration = -1
+# 						}
+# 					}
+# 				}
+# 				else = {
+# 					custom_tooltip = THE_HMC_5_5_case1_tt_no
+# 				}
+# 				custom_tooltip = THE_HMC_5_5_case1_tt
+# 			}
+# 		} 
+# 	}
+
+# 	THE_HMC_5_6 = {
+# 		icon = mission_unknown_mission
+# 		position = 6
+# 		required_missions = { THE_HMC_4_5 } 
+# 		provinces_to_highlight = {
+# 			owned_by = ROOT
+# 			OR = {
+# 				devastation = 1
+# 				local_autonomy = 30
+# 			}
+# 		} 
+
+# 		trigger = {
+# 			THE_HMC_ruler_is_keine = yes
+# 			all_owned_province = {
+# 				OR = {
+# 					NOT = { devastation = 1 }
+# 					NOT = { local_autonomy = 30 }
+# 				}
+# 			}
+# 			stability = 1
+# 		} 
+
+# 		effect = {
+# 			custom_tooltip = THE_HMC_keine_add_1_dip_tt
+# 			hidden_effect = {
+# 				set_country_flag = THE_HMC_keine_add_1_dip_flag
+# 				change_dip = 1
+# 			}
+# 			custom_tooltip = THE_HMC_keine_add_industrious_personality_tt
+# 			hidden_effect = {
+# 				set_country_flag = THE_HMC_keine_add_industrious_personality_flag
+# 				add_ruler_personality = industrious_personality
+# 			}
+# 			custom_tooltip = THE_HMC_every_owned_province_tt
+# 			custom_tooltip = THE_HMC_add_prosperity_100_tt
+# 			custom_tooltip = empty_line_tt
+# 			hidden_effect = {
+# 				every_owned_province = {
+# 					add_prosperity = 100
+# 				}
+# 			}
+# 			Kourindou_state = {
+# 				add_base_tax = 1
+# 				add_base_production = 1
+# 				add_base_manpower = 1
+# 			}
+# 			Human_state = {
+# 				add_base_tax = 1
+# 				add_base_production = 1
+# 				add_base_manpower = 1
+# 			}
+# 		} 
+# 	}
+
+# 	THE_HMC_5_8 = {
+# 		icon = mission_unknown_mission
+# 		position = 8
+# 		required_missions = { THE_HMC_3_88} 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_HMC_5_9 = {
+# 		icon = mission_unknown_mission
+# 		position = 9
+# 		required_missions = { THE_HMC_4_8 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_HMC_5_10 = {
+# 		icon = mission_unknown_mission
+# 		position = 10
+# 		required_missions = { THE_HMC_4_9 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_HMC_5_11 = {
+# 		icon = mission_unknown_mission
+# 		position = 11
+# 		required_missions = { THE_HMC_4_10 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+# }

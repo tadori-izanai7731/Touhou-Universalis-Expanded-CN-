@@ -1,66 +1,66 @@
-THE_LIL_suzunaan_fire_disaster = {
-	potential = {
-		OR = {
-			th_is_or_was_tag = { tag = HMC }
-			th_has_copied_from_target = {
-				target = HMC
-			}
-		}
-		has_country_flag = THE_HMC_ramoant_rumor_flag
-		5122 = { owned_by = ROOT }
-	}
-	can_start = {
-		always = yes
-	}
-	can_stop = {
-		always = no
-	}
-	progress = {
-		modifier = {
-			factor = 50
-			custom_trigger_tooltip = {
-				tooltip = THE_HMC_ramoant_rumor_tt
-				has_country_flag = THE_HMC_ramoant_rumor_flag
-			}
-		}
-	}
-	can_end = {
-		custom_trigger_tooltip = {
-			tooltip = THE_HMC_disaster_akyuu_tt
-			has_country_flag = THE_HMC_disaster_akyuu_flag
-		}
-		custom_trigger_tooltip = {
-			tooltip = THE_HMC_disaster_kosuzu_tt
-			has_country_flag = THE_HMC_disaster_kosuzu_flag
-		}
-		custom_trigger_tooltip = {
-			tooltip = THE_HMC_disaster_rinnosuke_tt
-			has_country_flag = THE_HMC_disaster_rinnosuke_flag
-		}
-		custom_trigger_tooltip = {
-			tooltip = THE_HMC_disaster_keine_tt
-			has_country_flag = THE_HMC_disaster_keine_flag
-		}
-	}
-	modifier = {
-		stability_cost_modifier = 0.5
-		country_admin_power = -1
-		country_diplomatic_power = -1
-		country_military_power = -1
-		manpower_recovery_speed = -0.2
-		global_manpower_modifier = -0.2
-	}
+# THE_LIL_suzunaan_fire_disaster = {
+# 	potential = {
+# 		OR = {
+# 			th_is_or_was_tag = { tag = HMC }
+# 			th_has_copied_from_target = {
+# 				target = HMC
+# 			}
+# 		}
+# 		has_country_flag = THE_HMC_ramoant_rumor_flag
+# 		5122 = { owned_by = ROOT }
+# 	}
+# 	can_start = {
+# 		always = yes
+# 	}
+# 	can_stop = {
+# 		always = no
+# 	}
+# 	progress = {
+# 		modifier = {
+# 			factor = 50
+# 			custom_trigger_tooltip = {
+# 				tooltip = THE_HMC_ramoant_rumor_tt
+# 				has_country_flag = THE_HMC_ramoant_rumor_flag
+# 			}
+# 		}
+# 	}
+# 	can_end = {
+# 		custom_trigger_tooltip = {
+# 			tooltip = THE_HMC_disaster_akyuu_tt
+# 			has_country_flag = THE_HMC_disaster_akyuu_flag
+# 		}
+# 		custom_trigger_tooltip = {
+# 			tooltip = THE_HMC_disaster_kosuzu_tt
+# 			has_country_flag = THE_HMC_disaster_kosuzu_flag
+# 		}
+# 		custom_trigger_tooltip = {
+# 			tooltip = THE_HMC_disaster_rinnosuke_tt
+# 			has_country_flag = THE_HMC_disaster_rinnosuke_flag
+# 		}
+# 		custom_trigger_tooltip = {
+# 			tooltip = THE_HMC_disaster_keine_tt
+# 			has_country_flag = THE_HMC_disaster_keine_flag
+# 		}
+# 	}
+# 	modifier = {
+# 		stability_cost_modifier = 0.5
+# 		country_admin_power = -1
+# 		country_diplomatic_power = -1
+# 		country_military_power = -1
+# 		manpower_recovery_speed = -0.2
+# 		global_manpower_modifier = -0.2
+# 	}
 
-	on_monthly = {
-		random_events = {
-			1 = 0
-			1 = THE_HMC_disaster_events.2
-		}
-		random_events = {
-			5 = 0
-			1 = THE_HMC_disaster_events.3
-		}
-	}
-	on_start = THE_HMC_disaster_events.1
-	on_end = THE_HMC_disaster_events.8
-}
+# 	on_monthly = {
+# 		random_events = {
+# 			1 = 0
+# 			1 = THE_HMC_disaster_events.2
+# 		}
+# 		random_events = {
+# 			5 = 0
+# 			1 = THE_HMC_disaster_events.3
+# 		}
+# 	}
+# 	on_start = THE_HMC_disaster_events.1
+# 	on_end = THE_HMC_disaster_events.8
+# }
