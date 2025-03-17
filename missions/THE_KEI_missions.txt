@@ -1350,22 +1350,218 @@ THE_KEI_main_branch_5 = {
 	THE_KEI_5_10 = {
 		icon = mission_unknown_mission
 		position = 10
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			province_id = 5251
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			5251 = {
+				owned_by = ROOT
+				province_has_center_of_trade_of_level = 2
+				base_production = 10
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			5251 = {
+				change_trade_goods = gold
+				add_country_modifier = {
+					name = THE_KEI_oil_province_buff 
+					duration = -1
+				}
+			}
+			Blazing_hell_state = {
+				add_permanent_claim = ROOT
+			}
+			Oni_exclave_state = {
+				add_permanent_claim = ROOT
+			}
+			Yuugi_state = {
+				add_permanent_claim = ROOT
+			}
+		 } 
 	}
 
 	THE_KEI_5_11 = {
 		icon = mission_unknown_mission
 		position = 11
 		required_missions = { THE_KEI_5_10 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			OR = {
+				area = Blazing_hell_state
+				area = Oni_exclave_state
+				area = Yuugi_state
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			OR = {
+				AND = {
+					num_of_provinces_owned_or_owned_by_subjects_with = {
+						value = 8
+						OR = {
+							area = Blazing_hell_state
+							area = Oni_exclave_state
+							area = Yuugi_state
+						}
+					}
+					5008 = {
+						is_core = ROOT
+						province_has_center_of_trade_of_level = 2
+					}
+				}
+				AND = {
+					any_country = {
+						owns = 5008
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+				}
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			if = {
+				limit = {
+					num_of_provinces_owned_or_owned_by_subjects_with = {
+						value = 8
+						OR = {
+							area = Blazing_hell_state
+							area = Oni_exclave_state
+							area = Yuugi_state
+						}
+					}
+					5008 = {
+						is_core = ROOT
+						province_has_center_of_trade_of_level = 2
+					}
+				 }
+				 custom_tooltip = THE_KEI_5_11_c_tt1
+				 #发展都
+				 custom_tooltip = THE_KEI_5_11_c_tt6
+				 5008 = {
+					add_center_of_trade_level = 1
+					add_or_upgrade_fort_building = yes	
+					add_building = barracks
+				}
+				hidden_effect = {
+					for = {
+						amount = 20
+						effect = "
+							random_owned_province = {
+						limit = {
+							is_core = ROOT
+						}
+						add_base_manpower = 1
+							}
+						
+						
+						"
+					}
+				}
+				custom_tooltip = THE_KEI_5_11_c_tt4
+				tooltip = {
+					custom_tooltip = THE_KEI_5_11_c_tt3
+					hidden_effect = {
+						ONI = {
+							change_religion = ROOT
+						}
+						ROOT = {
+							vassalize = ONI
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					ONI = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+				 }
+				 custom_tooltip = THE_KEI_5_11_c_tt5
+				  custom_tooltip = THE_KEI_5_11_c_tt6
+				 tooltip = {
+					5008 = {
+						add_center_of_trade_level = 1
+						add_or_upgrade_fort_building = yes	
+						add_building = barracks
+					}
+				 }
+				 hidden_effect = {
+					for = {
+						amount = 20
+						effect = "
+							random_owned_province = {
+						limit = {
+							is_core = ROOT
+						}
+						add_base_manpower = 1
+							}
+						
+						
+						"
+					}
+				}
+				 custom_tooltip = THE_KEI_5_11_c_tt2
+
+				 custom_tooltip = THE_KEI_5_11_c_tt3
+				 hidden_effect = {
+					ONI = {
+						change_religion = ROOT
+					}
+					ROOT = {
+						vassalize = ONI
+					}
+				 }
+			}
+			else = {
+				custom_tooltip = THE_KEI_5_11_c_tt5
+
+				custom_tooltip = THE_KEI_5_11_c_tt6
+				tooltip = {
+					5008 = {
+						add_center_of_trade_level = 1
+						add_or_upgrade_fort_building = yes	
+						add_building = barracks
+					}
+				}
+				hidden_effect = {
+					for = {
+						amount = 20
+						effect = "
+							random_owned_province = {
+						limit = {
+							is_core = ROOT
+						}
+						add_base_manpower = 1
+							}
+						
+						
+						"
+					}
+				}
+				custom_tooltip = THE_KEI_5_11_c_tt4
+				tooltip = {
+					custom_tooltip = THE_KEI_5_11_c_tt3
+					hidden_effect = {
+						ONI = {
+							change_religion = ROOT
+						}
+						ROOT = {
+							vassalize = ONI
+						}
+					}
+				}
+			}
+		} 
 	}
 
 	THE_KEI_5_12 = {
@@ -1374,7 +1570,9 @@ THE_KEI_main_branch_5 = {
 		required_missions = { THE_KEI_5_11 } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+
+		 } 
 
 		effect = {  } 
 	}
