@@ -1,37 +1,60 @@
 ### 使用焦点功能后缀代替数字
 
-the_keiki_fervor_1 = {
+the_keiki_fervor_shapping = {
 	cost = 8
 	potential = {
 		FROM = { religion = the_keiki }
 	}
 	trigger = {
+	}
+	effect = {
+		global_manpower_modifier = 0.33
+		manpower_recovery_speed = 0.33
+		global_regiment_recruit_speed = -0.20
 	}
 }
 
-the_keiki_fervor_2 = {
+the_keiki_fervor_ruin = {
 	cost = 8
 	potential = {
 		FROM = { religion = the_keiki }
 	}
 	trigger = {
+	}
+	effect = {
+		land_morale = 0.20
+		morale_damage = 0.10
+		regiment_manpower_usage = -0.10
 	}
 }
 
-the_keiki_fervor_3 = {
+the_keiki_fervor_vibrant = {
 	cost = 8
 	potential = {
 		FROM = { religion = the_keiki }
 	}
 	trigger = {
+		
+
+	}
+	effect = {
+		development_cost = -0.20
+		global_unrest = -2
+		production_efficiency = 0.20
 	}
 }
 
-the_keiki_fervor_4 = {
+the_keiki_fervor_mercy = {
 	cost = 8
 	potential = {
 		FROM = { religion = the_keiki }
 	}
 	trigger = {
+
+	}
+	effect = {
+		reform_progress_growth = 0.20
+		all_estate_loyalty_equilibrium = 0.1
+		yearly_corruption = -1.0
 	}
 }

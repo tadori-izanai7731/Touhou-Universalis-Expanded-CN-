@@ -854,7 +854,7 @@ custom_button = {
 		}
 	}
 }
-
+#雷行
 custom_button = {
 	name = THE_KEI_province_create_army_gui
 	tooltip = THE_KEI_province_create_army_gui_tt
@@ -869,16 +869,78 @@ custom_button = {
 		}
 	}
 	trigger = {
-		FROM = {
-			manpower = 2
+		#判定铁矿对征兵要求的影响
+		if = {
+			limit = { 
+				NOT = {
+					trade_goods_produced_amount = { trade_goods = iron amount = 15 }
+				}
+				NOT = {
+					mission_completed = THE_KEI_4_11
+				}
+			}
+			FROM = {
+				manpower = 2
+			}
+		}
+		else_if = {
+			limit = { 
+				NOT = {
+					trade_goods_produced_amount = { trade_goods = iron amount = 15 }
+				}
+				mission_completed = THE_KEI_4_11
+			}
+			FROM = {
+				manpower = 2
+			}
+		}
+		else_if = {
+			limit = { 
+				trade_goods_produced_amount = { trade_goods = iron amount = 15 }
+				mission_completed = THE_KEI_4_11
+			}
+			FROM = {
+				manpower = 0.5
+			}
 		}
 	}
 	effect = {
 		ROOT = {
 			infantry = FROM
 		}
-		FROM = {
-			add_manpower = 2
+		#判定铁矿对征兵要求的影响
+		if = {
+			limit = { 
+				NOT = {
+					trade_goods_produced_amount = { trade_goods = iron amount = 15 }
+				}
+				NOT = {
+					mission_completed = THE_KEI_4_11
+				}
+			}
+			FROM = {
+				add_manpower = -2
+			}
+		}
+		else_if = {
+			limit = { 
+				NOT = {
+					trade_goods_produced_amount = { trade_goods = iron amount = 15 }
+				}
+				mission_completed = THE_KEI_4_11
+			}
+			FROM = {
+				add_manpower = -2
+			}
+		}
+		else_if = {
+			limit = { 
+				trade_goods_produced_amount = { trade_goods = iron amount = 15 }
+				mission_completed = THE_KEI_4_11
+			}
+			FROM = {
+				add_manpower = -0.5
+			}
 		}
 	}
 }

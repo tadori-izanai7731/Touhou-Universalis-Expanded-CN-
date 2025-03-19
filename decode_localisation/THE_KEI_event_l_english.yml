@@ -75,8 +75,18 @@ l_english:
  THE_KEI_the_gate_of_hell_buff: "地狱门扉"
  THE_KEI_restore_contact_buff: "恢复联系"
  THE_KEI_create_army_province_buff: "敕命「雷行」"
+ THE_KEI_prepare_army_weapon_buff: "兴造"
  ##religion
  the_keiki: "梦想造型"
+ the_keiki_fervor_shapping: "塑形"
+ the_keiki_fervor_ruin: "崩殛"
+ the_keiki_fervor_vibrant: "焕生"
+ the_keiki_fervor_mercy: "垂悯"
+ the_keiki_fervor_shapping_short: "塑形"
+ the_keiki_fervor_ruin_short: "崩殛"
+ the_keiki_fervor_vibrant_short: "焕生"
+ the_keiki_fervor_mercy_short: "垂悯"
+ 
  ##decisions
  THE_KEI_change_workman_duixiang_decoisions_title: "改变「天工」建筑目标"
  THE_KEI_change_workman_duixiang_decoisions_desc: ""
@@ -109,7 +119,7 @@ l_english:
  THE_KEI_1_8_c_tt2: "升级§Y敕命「焕生」§!\n - -§g「焕生」互动的发展都限制提高到60发展度§!"
  THE_KEI_1_9_c_tt1: "解锁决议改信宗教「§Y梦想造型§!」"
  THE_KEI_5_5_c_tt1: "升级政府机制「§Y塑魂§!」\n - -将领综合点数上限为16，单项上限为6"
- THE_KEI_5_9_c_tt1: "我们所有位于地狱的省份自治度减少§G30%§!并减少10年分离主义"
+ THE_KEI_5_9_c_tt1: "我们所有位于地狱的省份自治度减少§G30%§!并减少§G10年§!分离主义"
  THE_KEI_3_9_c_tt1: "每次提升发展都将获得2.5§O化生§!"
  THE_KEI_3_10_c_tt1: "解锁§Y敕命「雷行」§!\n - -§g此效果允许我们在任意我们的核心省份立即生成1支部队§!"
  THE_KEI_5_11_c_tt1: "£yes£§M如果我们通过征服完成任务§!"
@@ -117,5 +127,5 @@ l_english:
  THE_KEI_5_11_c_tt3: "将改变放逐之鬼为我们的附庸国并改变为我们的宗教"
  THE_KEI_5_11_c_tt4: "£no£§M如果我们通过改善关系完成任务§!"
  THE_KEI_5_11_c_tt5: "£no£§M如果我们通过征服完成任务§!"
- THE_KEI_5_11_c_tt6: "将20点£mil£§Y人力§!发展分配到我们的核心省份"
- 
+ THE_KEI_5_11_c_tt6: "将15点£mil£§Y人力§!发展分配到我们的核心省份"
+ THE_KEI_4_11_c_tt1: "只要我们保持拥有15%的§Y铁矿§!市场，§O敕命「雷行」§!的征召花费减少为§Y500点人力§!"

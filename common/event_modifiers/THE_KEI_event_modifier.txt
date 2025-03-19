@@ -114,3 +114,7 @@ THE_KEI_oil_province_buff = {
 	inflation_reduction_local = 0.20
 	trade_goods_size = 0.5
 }
+#兴造
+THE_KEI_prepare_army_weapon_buff = {
+	general_cost = -0.33
+}

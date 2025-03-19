@@ -608,6 +608,21 @@ THE_KEI_main_branch_3 = {
 			custom_tooltip = THE_KEI_3_10_c_tt1
 		 } 
 	}
+	
+	THE_KEI_3_11 = {
+		icon = mission_unknown_mission
+		position = 10
+		required_missions = { THE_KEI_3_10 } 
+		provinces_to_highlight = {
+			
+		}
+		trigger = {
+			
+		}
+		effect = {
+			
+		}
+	}
 }
 THE_KEI_main_branch_4 = {
 	slot = 4
@@ -768,6 +783,7 @@ THE_KEI_main_branch_4 = {
 			NOT = {
 				owned_by = ROOT
 			}
+
 		 } 
 
 		trigger = { 
@@ -1097,11 +1113,26 @@ THE_KEI_main_branch_4 = {
 	THE_KEI_4_10 = {
 		icon = mission_unknown_mission
 		position = 10
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			is_capital_of = ROOT
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			army_size = 100
+			army_professionalism = 0.10
+		 } 
 
-		effect = {  } 
+		effect = { 
+			add_country_modifier = {
+				name = THE_KEI_prepare_army_weapon_buff
+				duration = -1
+			}
+			Southern_moriya = { add_permanent_claim = ROOT }
+			Moriya_coast_state = { add_permanent_claim = ROOT }
+			Moriya_state = { add_permanent_claim = ROOT }
+			Southern_youkai_mountains = { add_permanent_claim = ROOT }
+			Youkai_Mountains = { add_permanent_claim = ROOT }
+		 } 
 	}
 
 	THE_KEI_4_11 = {
@@ -1111,11 +1142,28 @@ THE_KEI_main_branch_4 = {
 			THE_KEI_4_10
 			THE_KEI_3_10
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			trade_goods = iron
+			NOT = {
+				base_manpower = 10
+			}
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 4
+				owned_by = ROOT
+				trade_goods = iron
+				base_manpower = 10
+				has_manpower_building_trigger = yes
+			}
+			trade_goods_produced_amount = { trade_goods = iron amount = 15 }
+		 } 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_KEI_4_11_c_tt1
+		 } 
 	}
 
 	THE_KEI_4_12 = {
@@ -1497,7 +1545,7 @@ THE_KEI_main_branch_5 = {
 				 }
 				 hidden_effect = {
 					for = {
-						amount = 20
+						amount = 15
 						effect = "
 							random_owned_province = {
 						limit = {
