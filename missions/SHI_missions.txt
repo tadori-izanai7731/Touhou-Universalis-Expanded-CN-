@@ -12,45 +12,45 @@ SHI_missions_1 = {
 		position = 1
 		provinces_to_highlight = {   
 			or = {
-				province_id = 2452
-				province_id = 2451
-				
-			} 
+			province_id = 2452
+			province_id = 2451
+
 		} 
-		
+	} 
+
 		trigger = {  
-			or = {
+			or={
 				ai=yes
-				and={
-					
-					treasury = 200
-					2452={
-						development=4
-						owned_by = ROOT
-					}
-					2451={
-						development=4
-						owned_by = ROOT
-					}
-				}
-				
+and={
+
+	treasury = 200
+	2452={
+		development=4
+		owned_by = ROOT
+	}
+	2451={
+		development=4
+		 owned_by = ROOT
+	}
+}
+
 			}
 			
-			
+
 		} 
 
 		effect = { 
 			add_treasury = -200
 			2452={
-					add_base_tax = 4
-					add_base_production = 4
-					add_base_manpower = 4
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 					change_trade_goods = gold
 				}
 				2451={
-					add_base_tax = 4
-					add_base_production = 4
-					add_base_manpower = 4
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
 				
 					
@@ -81,9 +81,9 @@ SHI_missions_1 = {
 			}
 			add_treasury = -200
 			354={
-			add_base_tax = 4
-			add_base_production = 4
-			add_base_manpower = 4
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
 			change_trade_goods = cloves
 			center_of_trade = 3
 		}
@@ -130,7 +130,7 @@ SHI_missions_1 = {
 
 			or={
 				and={
-        NOT={exists = por}
+        NOT={exists = POR}
 		alentejo_area={ 
 			owned_by = ROOT
 				}
@@ -157,12 +157,12 @@ limit = {
 		value = 75
 	}
 	POR={
-		total_development > 260
+		NOT={total_development = 260}
 	} 
 }   inherit = POR 
 add_permanent_province_modifier = {
 	name = THE_hng_mission_modifier134
-	duration = 3650
+	duration = 9125
 }
 
 			}
@@ -173,9 +173,9 @@ add_permanent_province_modifier = {
 						owned_by = ROOT
 							}add_adm_power = 200
 							227= {
-								add_base_tax = 3
-								add_base_production = 3
-								add_base_manpower = 3
+								add_base_tax = 2
+								add_base_production = 2
+								add_base_manpower = 2
 								center_of_trade = 2
 									change_trade_goods = cloth
 							}
@@ -693,7 +693,7 @@ SHI_missions_3 = {
 				}
 				AND = {
 					NOT = { exists = TLC }
-					336 = { country_or_non_sovereign_subject_holds = ROOT }
+					336={ country_or_non_sovereign_subject_holds = ROOT }
 					4562= { country_or_non_sovereign_subject_holds = ROOT }
 					349 = { country_or_non_sovereign_subject_holds = ROOT }
 					2465= { country_or_non_sovereign_subject_holds = ROOT }
@@ -1006,33 +1006,33 @@ SHI_missions_3 = {
 		} 
 		effect = { 
 			341={
-				add_base_tax = 2
-				add_base_production = 2
-				add_base_manpower = 2
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
 				change_trade_goods = paper
 			}
 			2454={
-				add_base_tax = 2
-				add_base_production = 2
-				add_base_manpower = 2
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
 				change_trade_goods = cocoa
 			}
 			2455={
-				add_base_tax = 2
-				add_base_production = 2
-				add_base_manpower = 2
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
 				change_trade_goods = gems
 			}
 			4566={
-				add_base_tax = 2
-				add_base_production = 2
-				add_base_manpower = 2
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
 				change_trade_goods = spices
 			}
 			2473={
-				add_base_tax = 2
-				add_base_production = 2
-				add_base_manpower = 2
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
 			
 			}
 		 } 
@@ -1249,7 +1249,7 @@ SHI_missions_4 = {
 
 		trigger = {  } 
 
-		effect = { add_treasury = 1000  } 
+		effect = { add_treasury = 500  } 
 	}
 	#战时经济
 	SHI_missions_4_7 = {
@@ -1693,9 +1693,9 @@ country_or_non_sovereign_subject_holds = ROOT
 		effect = { 
             
 			338= {
-					add_base_tax = 4
-					add_base_production = 4
-					add_base_manpower = 4
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 					change_trade_goods = cloth
 			
 			add_institution_embracement = {
@@ -2382,22 +2382,70 @@ trigger = {  }
 					NOT={exists=JOO}
 
 				}
+					SHI={
+						define_heir = {
+							name ="Joon"
+							monarch_name ="Joon"
+		             dynasty = "Yorigami"
+		              adm = 4
+		           dip = 3
+		             mil = 6
+		                female = yes
+				
+		
+	}
+	add_heir_personality = immortal_personality
+}	
+
+	
+	
+					
+
+				2340={
+
+					add_core = JOO
+				
+				
 					cede_province = JOO
+			}
+			394={add_core = JOO
+				cede_province = JOO
+				
+			}
+			2347={add_core = JOO
+				
+					cede_province = JOO
+			}
+			395={add_core = JOO
+					
+				cede_province = JOO
+			}
+			396={add_core = JOO
+				
+					cede_province = JOO
+			}
 				JOO={
-					cede_province = 2340
-					cede_province = 394
-					cede_province = 2347
-					cede_province = 395
-					cede_province = 396
-				}
-				JOO={
-					add_treasury = 10000
+					define_ruler = {
+							
+							name = "Joon"
+						   dynasty = "Yorigami"
+						   birth_date = 142.6.8
+							adm = 4
+						 dip = 3
+						   mil = 6
+							  female = yes
+			  
+		  }
+					add_treasury = 5000
 					country_event = { 
 						id = THE_SHI_events.2
 					}
 					country_event = { 
 						id = THE_SHI_events.3
 					}
+					add_ruler_personality = immortal_personality
+	set_ruler_flag = touhou_character_ruler
+	set_ruler_flag = touhou_original_ruler
 				}
 				create_subject = {
 					subject_type = 	SHI_ERCIYUANFUYONG_countries1
@@ -2411,28 +2459,62 @@ trigger = {  }
 				   exists=JOO
 				   JOO={AI=YES}
 			 }
+			 SHI={
+						define_heir = {
+							name ="Joon"
+							monarch_name ="Joon"
+		             dynasty = "Yorigami"
+		              adm = 4
+		           dip = 3
+		             mil = 6
+		                female = yes
+				
+		
+	}
+		add_heir_personality = immortal_personality
+
+}
 			 JOO={
-				 add_treasury = 10000
+				 add_treasury = 5000
 				 country_event = { 
 					id = THE_SHI_events.2
 				}
 				country_event = { 
 					id = THE_SHI_events.3
 				}
-			 }
-			 create_subject = {
+			 
+			
+}
+	
+			 
+			 
+			 
+		 
+		 create_subject = {
 				 subject_type = SHI_ERCIYUANFUYONG_countries1
 				 subject = JOO
-			 }
-			 
 		 }
+		}
 		 IF={
 			limit = {
 			   exists=JOO
 			   JOO={AI=NO}
 			  	
 		 }
-		 	
+		 SHI={
+						define_heir = {
+							name ="Joon"
+							monarch_name ="Joon"
+		             dynasty = "Yorigami"
+		              adm = 4
+		           dip = 3
+		             mil = 6
+		                female = yes
+					add_heir_personality = immortal_personality
+		
+	}
+
+}
 		 JOO={
 			 add_treasury = 1000
 			 country_event = { 
