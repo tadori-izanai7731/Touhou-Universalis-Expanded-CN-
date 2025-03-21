@@ -4836,94 +4836,30 @@ THE_HNG_2_4 = {
 		}
 		
 		trigger = {
-			if = {
-				limit = { has_dlc = "Leviathan" } 
-				684 = {
-					OR = {
-						has_great_project = {
-							type = grand_canal_1
-							tier = 2
-						}
-						AND = {
-							num_of_buildings_in_province = 3
-							has_production_building_trigger = yes
-							num_of_times_expanded_infrastructure = 1
-						}
-					}
-				}
+			684 = {
+				num_of_buildings_in_province = 3
+				has_production_building_trigger = yes
+				num_of_times_expanded_infrastructure = 1
+				NOT = { devastation = 1 }
 			}
-			else = { 684 = { num_of_times_improved = 5 }  } 
-			if = {
-				limit = { has_dlc = "Mandate of Heaven" } 
-				684 = { NOT = { devastation = 1 }  } 
+			1822 = {
+				num_of_buildings_in_province = 3
+				has_production_building_trigger = yes
+				num_of_times_expanded_infrastructure = 1
+				NOT = { devastation = 1 }
 			}
-			else = { 684 = { NOT = { local_autonomy_above_min = 5 }  }  } 
-			if = {
-				limit = { has_dlc = "Leviathan" } 
-				1822 = {
-					OR = {
-						has_great_project = {
-							type = grand_canal_2
-							tier = 2
-						}
-						AND = {
-							num_of_buildings_in_province = 3
-							has_production_building_trigger = yes
-							num_of_times_expanded_infrastructure = 1
-						}
-					}
-				}
+			2145 = {
+				num_of_buildings_in_province = 3
+				has_production_building_trigger = yes
+				num_of_times_expanded_infrastructure = 1
+				NOT = { devastation = 1 }
 			}
-			else = { 1822 = { num_of_times_improved = 5 }  } 
-			if = {
-				limit = { has_dlc = "Mandate of Heaven" } 
-				1822 = { NOT = { devastation = 1 }  } 
+			1821 = {
+				num_of_buildings_in_province = 3
+				has_production_building_trigger = yes
+				num_of_times_expanded_infrastructure = 1
+				NOT = { devastation = 1 }
 			}
-			else = { 1822 = { NOT = { local_autonomy_above_min = 5 }  }  } 
-			if = {
-				limit = { has_dlc = "Leviathan" } 
-				2145 = {
-					OR = {
-						has_great_project = {
-							type = grand_canal_3
-							tier = 2
-						}
-						AND = {
-							num_of_buildings_in_province = 3
-							has_production_building_trigger = yes
-							num_of_times_expanded_infrastructure = 1
-						}
-					}
-				}
-			}
-			else = { 2145 = { num_of_times_improved = 5 }  } 
-			if = {
-				limit = { has_dlc = "Mandate of Heaven" } 
-				2145 = { NOT = { devastation = 1 }  } 
-			}
-			else = { 2145 = { NOT = { local_autonomy_above_min = 5 }  }  } 
-			if = {
-				limit = { has_dlc = "Leviathan" } 
-				1821 = {
-					OR = {
-						has_great_project = {
-							type = grand_canal_4
-							tier = 2
-						}
-						AND = {
-							num_of_buildings_in_province = 3
-							has_production_building_trigger = yes
-							num_of_times_expanded_infrastructure = 1
-						}
-					}
-				}
-			}
-			else = { 1821 = { num_of_times_improved = 5 }  } 
-			if = {
-				limit = { has_dlc = "Mandate of Heaven" } 
-				1821 = { NOT = { devastation = 1 }  } 
-			}
-			else = { 1821 = { NOT = { local_autonomy_above_min = 5 }  }  } 
 		}
 		
 		effect = {
