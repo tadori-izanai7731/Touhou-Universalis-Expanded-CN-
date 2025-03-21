@@ -16,6 +16,7 @@
  mechanic_THE_forbid_form_gensokyan_decision_custom_attributes_yes: "NAQ¸‹0§Y‰^ó`aNw§!0³Q®‹0"
  mechanic_THE_forbid_form_fairy_utopia_decision_custom_attributes_yes: "NAQ¸‹0§Yú^b–Y¾|LNXb¦§!0³Q®‹0"
  yokari_forest_mechanic: "„SÐ„v.Ï…"
+
  THE_season_secret_power_reform: "cR‚‚KNØy›R"
  THE_season_secret_power_reform_desc: "vzg„vØy^yidYWåb	gÑS¨RÛVcRVØS„v:V'Y›RÏ‘ÿÊ‘>eÙÍy›RÏ‘ïSåN‰wf>N0WŠb‰^ó`aN¨cPÍ‘ú^0"
  mechanic_THE_season_secret_power_custom_attributes_yes: "=T(u³Q®‹0§YcR‚‚ã‰>e§!0"
@@ -25,6 +26,20 @@
  mechanic_THE_season_secret_power_winter_custom_attributes_yes: "O.w„vcR‚‚: byVÜw)RžX R§G1%§!Nb	g6–BSàVÚ‹¦^"
  mechanic_THE_season_secret_power_soil_custom_attributes_yes: "U^T„vcR‚‚: byVÜw)RžX RLe¹e§R0.5§!P%¦^"
  THE_have_no_seasen_equipment_ttt: "SVMR¡l	g§YcR‚‚ÅˆY§!"
+
+ THE_check_grand_canel_flag_amount_ttt: "òTS§Y[Root.the_grand_canel_amount_var.GetValue]§!µk'YÐ³lGSµuó§YÄ–OîXKN§!µu+R"
+ THE_check_grand_canel_flag_amount_ttt_0: "òTS§Y1§!µk'YÐ³lGSµuó§YÄ–OîXKN§!µu+R"
+ THE_common_grand_canel_modifier_upgrade_tt_default: "GSµu0§Y¬Nmg'YÐ³l§!0îOckÿ˜Y·ƒ—VåNNHeœg:"
+ THE_common_grand_canel_modifier_upgrade_tt_0: ")Y‹TžX•îOck: §G+0.02§!\n¦R˜RàVÚ‹GWaˆ¹p: §G+2.0%§!"
+ THE_common_grand_canel_modifier_upgrade_tt_1: "ÑSUSb,g: §G-5.0%§!"
+ THE_common_grand_canel_modifier_upgrade_tt_2: "ýV¶Rz6eîOck: §G+5.0%§!"
+ THE_common_grand_canel_modifier_upgrade_tt_3: "ýV…Q8fÞz‰N›R: §G+10.0%§!"
+ THE_common_grand_canel_modifier_upgrade_tt_4: "O'YåTzGSµuöeô•: §G-5.0%§!"
+ THE_common_grand_canel_modifier_upgrade_tt_5: "uµNHe‡s: §G+5.0%§!"
+ THE_common_grand_canel_modifier_upgrade_tt_6: "8f-NÃVGSµu±‚9: §G-10.0%§!"
+ THE_common_grand_canel_modifier_upgrade_tt_7: "8fHe‡s: §G+5.0%§!"
+ THE_common_grand_canel_modifier_upgrade_tt_8: "FUÁTµNúQîOck: §G+5.0%§!"
+ THE_common_grand_canel_modifier_upgrade_tt_9: "8fVüR: §G+10.0%§!"
 ###GOVERNMENT_END
 
 
@@ -82,6 +97,9 @@
  THE_unlock_special_culture_ideas_for_player_decision_desc: ""
  THE_common_season_secret_power_decision_title: "cR‚‚ã‰>e"
  THE_common_season_secret_power_decision_desc: "ã‰>eT7b-N„vcR‚‚KN›R"
+
+ THE_common_rebuild_grand_canel_decision_title: "Í‘îO¬Nmg'YÐ³l"
+ THE_common_rebuild_grand_canel_decision_desc: "¬Nmg'YÐ³lê‹–gw=WSSÿ=f R:VWS¹e¡rtŒTWSSÏuNmTwû|„vÍ‘‰Ð³lÿTöewQ	gJR1VmlWS0W¹e¿R›RŒTÐ›Q–®|w™Ir?e»l›Q‹NŸRýw0‚YÊN¬Nmg'YÐ³l„vÐÏ‘òTÏuàeÕlán³býV„v4lÐ—BlÿùRvQÛLˆuÍ‘îO=fSVÊN„vÅV‰>Nªc0"
 ###DECISION_END
 
 ###IDEA
@@ -435,6 +453,17 @@
  THE_common_season_secret_power_autumn_modifier: "¯uÂrËyÎ˜"
  THE_common_season_secret_power_winter_modifier: "gïzÒR¬Q"
  THE_common_season_secret_power_soil_modifier: "àe^WAm"
+
+ THE_common_grand_canel_modifier_1: "¬Nmg'YÐ³l"
+ THE_common_grand_canel_modifier_2: "¬Nmg'YÐ³l"
+ THE_common_grand_canel_modifier_3: "¬Nmg'YÐ³l"
+ THE_common_grand_canel_modifier_4: "¬Nmg'YÐ³l"
+ THE_common_grand_canel_modifier_5: "¬Nmg'YÐ³l"
+ THE_common_grand_canel_modifier_6: "¬Nmg'YÐ³l"
+ THE_common_grand_canel_modifier_7: "¬Nmg'YÐ³l"
+ THE_common_grand_canel_modifier_8: "¬Nmg'YÐ³l"
+ THE_common_grand_canel_modifier_9: "¬Nmg'YÐ³l"
+ THE_common_grand_canel_modifier_10: "¬Nmg'YÐ³l"
 ###MODIFIER_END
 
 ###GREAT_PROJECT

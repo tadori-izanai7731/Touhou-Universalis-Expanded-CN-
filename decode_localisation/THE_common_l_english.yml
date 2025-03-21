@@ -16,6 +16,7 @@ l_english:
  mechanic_THE_forbid_form_gensokyan_decision_custom_attributes_yes: "不允许「§Y幻想乡缘起§!」决议。"
  mechanic_THE_forbid_form_fairy_utopia_decision_custom_attributes_yes: "不允许「§Y建成妖精乌托邦§!」决议。"
  yokari_forest_mechanic: "厄运的贮藏"
+
  THE_season_secret_power_reform: "季节之秘力"
  THE_season_secret_power_reform_desc: "究极的秘神摩多罗拥有发动四季异变的强大力量，释放这种力量可以轻而易举地把幻想乡推倒重建。"
  mechanic_THE_season_secret_power_custom_attributes_yes: "启用决议「§Y季节解放§!」"
@@ -25,6 +26,20 @@ l_english:
  mechanic_THE_season_secret_power_winter_custom_attributes_yes: "休眠的季节: 战役胜利增加§G1%§!所有阶层忠诚度"
  mechanic_THE_season_secret_power_soil_custom_attributes_yes: "幕后的季节: 战役胜利增加敌方§R0.5§!腐败度"
  THE_have_no_seasen_equipment_ttt: "当前没有§Y季节装备§!"
+
+ THE_check_grand_canel_flag_amount_ttt: "已将§Y[Root.the_grand_canel_amount_var.GetValue]§!段大运河升级至§Y雄伟壮丽§!级别"
+ THE_check_grand_canel_flag_amount_ttt_0: "已将§Y1§!段大运河升级至§Y雄伟壮丽§!级别"
+ THE_common_grand_canel_modifier_upgrade_tt_default: "升级「§Y京杭大运河§!」修正，额外获得以下效果:"
+ THE_common_grand_canel_modifier_upgrade_tt_0: "天命增长修正: §G+0.02§!\n宦官忠诚均衡点: §G+2.0%§!"
+ THE_common_grand_canel_modifier_upgrade_tt_1: "发展成本: §G-5.0%§!"
+ THE_common_grand_canel_modifier_upgrade_tt_2: "国家税收修正: §G+5.0%§!"
+ THE_common_grand_canel_modifier_upgrade_tt_3: "国内贸易竞争力: §G+10.0%§!"
+ THE_common_grand_canel_modifier_upgrade_tt_4: "伟大工程升级时间: §G-5.0%§!"
+ THE_common_grand_canel_modifier_upgrade_tt_5: "生产效率: §G+5.0%§!"
+ THE_common_grand_canel_modifier_upgrade_tt_6: "贸易中心升级花费: §G-10.0%§!"
+ THE_common_grand_canel_modifier_upgrade_tt_7: "贸易效率: §G+5.0%§!"
+ THE_common_grand_canel_modifier_upgrade_tt_8: "商品产出修正: §G+5.0%§!"
+ THE_common_grand_canel_modifier_upgrade_tt_9: "贸易引导: §G+10.0%§!"
 ###GOVERNMENT_END
 
 
@@ -82,6 +97,9 @@ l_english:
  THE_unlock_special_culture_ideas_for_player_decision_desc: ""
  THE_common_season_secret_power_decision_title: "季节解放"
  THE_common_season_secret_power_decision_desc: "解放后户中的季节之力"
+
+ THE_common_rebuild_grand_canel_decision_title: "重修京杭大运河"
+ THE_common_rebuild_grand_canel_decision_desc: "京杭大运河自隋朝起贯通南北，是加强南方管理和南北经济联系的重要运河，同时具有削弱江南地方势力和运送军队粮饷等政治军事功能。如今京杭大运河的运量已经无法满足我国的水运需求，对其进行疏通重修是当今的必要举措。"
 ###DECISION_END
 
 ###IDEA
@@ -435,6 +453,17 @@ l_english:
  THE_common_season_secret_power_autumn_modifier: "疯狂秋风"
  THE_common_season_secret_power_winter_modifier: "极端寒冬"
  THE_common_season_secret_power_soil_modifier: "无序土流"
+
+ THE_common_grand_canel_modifier_1: "京杭大运河"
+ THE_common_grand_canel_modifier_2: "京杭大运河"
+ THE_common_grand_canel_modifier_3: "京杭大运河"
+ THE_common_grand_canel_modifier_4: "京杭大运河"
+ THE_common_grand_canel_modifier_5: "京杭大运河"
+ THE_common_grand_canel_modifier_6: "京杭大运河"
+ THE_common_grand_canel_modifier_7: "京杭大运河"
+ THE_common_grand_canel_modifier_8: "京杭大运河"
+ THE_common_grand_canel_modifier_9: "京杭大运河"
+ THE_common_grand_canel_modifier_10: "京杭大运河"
 ###MODIFIER_END
 
 ###GREAT_PROJECT

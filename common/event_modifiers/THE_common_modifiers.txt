@@ -22,3 +22,108 @@ THE_common_season_secret_power_soil_modifier = {
 	ae_impact = -0.1
 	defensiveness = 0.2
 }
+
+THE_common_grand_canel_modifier_1 = {
+	imperial_mandate = 0.02
+	eunuchs_loyalty_modifier = 0.02
+	great_project_upgrade_cost = -0.05
+}
+
+THE_common_grand_canel_modifier_2 = {
+	imperial_mandate = 0.04
+	eunuchs_loyalty_modifier = 0.04
+	great_project_upgrade_cost = -0.05
+	development_cost = -0.05
+}
+
+THE_common_grand_canel_modifier_3 = {
+	imperial_mandate = 0.06
+	eunuchs_loyalty_modifier = 0.06
+	great_project_upgrade_cost = -0.05
+	development_cost = -0.05
+	global_tax_modifier = 0.05
+}
+
+THE_common_grand_canel_modifier_4 = {
+	imperial_mandate = 0.08
+	eunuchs_loyalty_modifier = 0.08
+	great_project_upgrade_cost = -0.05
+	development_cost = -0.05
+	global_tax_modifier = 0.05
+	province_trade_power_global_own_trade_power = 0.1
+}
+
+THE_common_grand_canel_modifier_5 = {
+	imperial_mandate = 0.12
+	eunuchs_loyalty_modifier = 0.12
+	great_project_upgrade_cost = -0.05
+	development_cost = -0.05
+	global_tax_modifier = 0.05
+	province_trade_power_global_own_trade_power = 0.1
+	great_project_upgrade_time = -0.05
+}
+
+THE_common_grand_canel_modifier_6 = {
+	imperial_mandate = 0.12
+	eunuchs_loyalty_modifier = 0.12
+	great_project_upgrade_cost = -0.05
+	development_cost = -0.05
+	global_tax_modifier = 0.05
+	province_trade_power_global_own_trade_power = 0.1
+	great_project_upgrade_time = -0.05
+	production_efficiency = 0.05
+}
+
+THE_common_grand_canel_modifier_7 = {
+	imperial_mandate = 0.14
+	eunuchs_loyalty_modifier = 0.14
+	great_project_upgrade_cost = -0.05
+	development_cost = -0.05
+	global_tax_modifier = 0.05
+	province_trade_power_global_own_trade_power = 0.1
+	great_project_upgrade_time = -0.05
+	production_efficiency = 0.05
+	center_of_trade_upgrade_cost = -0.1
+}
+
+THE_common_grand_canel_modifier_8 = {
+	imperial_mandate = 0.16
+	eunuchs_loyalty_modifier = 0.16
+	great_project_upgrade_cost = -0.05
+	development_cost = -0.05
+	global_tax_modifier = 0.05
+	province_trade_power_global_own_trade_power = 0.1
+	great_project_upgrade_time = -0.05
+	production_efficiency = 0.05
+	center_of_trade_upgrade_cost = -0.1
+	trade_efficiency = 0.05
+}
+
+THE_common_grand_canel_modifier_9 = {
+	imperial_mandate = 0.18
+	eunuchs_loyalty_modifier = 0.18
+	great_project_upgrade_cost = -0.05
+	development_cost = -0.05
+	global_tax_modifier = 0.05
+	province_trade_power_global_own_trade_power = 0.1
+	great_project_upgrade_time = -0.05
+	production_efficiency = 0.05
+	center_of_trade_upgrade_cost = -0.1
+	trade_efficiency = 0.05
+	global_trade_goods_size_modifier = 0.05
+}
+
+THE_common_grand_canel_modifier_10 = {
+	imperial_mandate = 0.2
+	eunuchs_loyalty_modifier = 0.2
+	great_project_upgrade_cost = -0.05
+	development_cost = -0.05
+	global_tax_modifier = 0.05
+	province_trade_power_global_own_trade_power = 0.1
+	great_project_upgrade_time = -0.05
+	production_efficiency = 0.05
+	center_of_trade_upgrade_cost = -0.1
+	trade_efficiency = 0.05
+	global_trade_goods_size_modifier = 0.05
+	trade_steering = 0.1
+}

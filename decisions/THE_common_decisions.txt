@@ -1,6 +1,7 @@
 country_decisions = {
 	THE_common_season_secret_power_decision = {
 		potential = {
+			ai = no
 			has_government_attribute = THE_season_secret_power_custom_attributes
 		}
 		allow = {
@@ -16,6 +17,190 @@ country_decisions = {
 		effect = {
 			country_event = {
 				id = THE_common_events.2
+			}
+		}
+	}
+	
+	THE_common_rebuild_grand_canel_decision = {
+		potential = {
+			ai = no
+			NOT = { has_country_modifier = THE_common_grand_canel_modifier_10 }
+			any_owned_province = {
+				OR = {
+					province_id = 1816
+					province_id = 695
+					province_id = 691
+					province_id = 2140
+					province_id = 2141
+					province_id = 2142
+					province_id = 685
+					province_id = 2145
+					province_id = 1822
+					province_id = 684
+				}
+			}
+		}
+		allow = {
+			if = {
+				limit = { has_country_modifier = THE_common_grand_canel_modifier_9 }
+				THE_check_grand_canel_flag_amount_scripted_trigger = { amount = 10 }
+			}
+			else_if = {
+				limit = { has_country_modifier = THE_common_grand_canel_modifier_8 }
+				THE_check_grand_canel_flag_amount_scripted_trigger = { amount = 9 }
+			}
+			else_if = {
+				limit = { has_country_modifier = THE_common_grand_canel_modifier_7 }
+				THE_check_grand_canel_flag_amount_scripted_trigger = { amount = 8 }
+			}
+			else_if = {
+				limit = { has_country_modifier = THE_common_grand_canel_modifier_6 }
+				THE_check_grand_canel_flag_amount_scripted_trigger = { amount = 7 }
+			}
+			else_if = {
+				limit = { has_country_modifier = THE_common_grand_canel_modifier_5 }
+				THE_check_grand_canel_flag_amount_scripted_trigger = { amount = 6 }
+			}
+			else_if = {
+				limit = { has_country_modifier = THE_common_grand_canel_modifier_4 }
+				THE_check_grand_canel_flag_amount_scripted_trigger = { amount = 5 }
+			}
+			else_if = {
+				limit = { has_country_modifier = THE_common_grand_canel_modifier_3 }
+				THE_check_grand_canel_flag_amount_scripted_trigger = { amount = 4 }
+			}
+			else_if = {
+				limit = { has_country_modifier = THE_common_grand_canel_modifier_2 }
+				THE_check_grand_canel_flag_amount_scripted_trigger = { amount = 3 }
+			}
+			else_if = {
+				limit = { has_country_modifier = THE_common_grand_canel_modifier_1 }
+				THE_check_grand_canel_flag_amount_scripted_trigger = { amount = 2 }
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = THE_check_grand_canel_flag_amount_ttt_0
+					OR = {
+						has_country_flag = THE_common_grand_canal_flag_beijin
+						has_country_flag = THE_common_grand_canal_flag_hejian
+						has_country_flag = THE_common_grand_canal_flag_jinan
+						has_country_flag = THE_common_grand_canal_flag_yanzhou
+						has_country_flag = THE_common_grand_canal_flag_xuzhou
+						has_country_flag = THE_common_grand_canal_flag_huaian
+						has_country_flag = THE_common_grand_canal_flag_yangzhou
+						has_country_flag = THE_common_grand_canal_flag_zhenjiang
+						has_country_flag = THE_common_grand_canal_flag_suzhou
+						has_country_flag = THE_common_grand_canal_flag_hangzhou
+					}
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				if = {
+					limit = { NOT = { check_variable = { which = the_grand_canel_amount_var value = 1 } } }
+					set_variable = { which = the_grand_canel_amount_var value = 2 }
+				}
+				else = {
+					change_variable = { which = the_grand_canel_amount_var value = 1 }
+				}
+				if = {
+					limit = { has_country_modifier = THE_common_grand_canel_modifier_9 }
+					remove_country_modifier = THE_common_grand_canel_modifier_9
+					add_country_modifier = { name = THE_common_grand_canel_modifier_10 duration = -1 }
+				}
+				else_if = {
+					limit = { has_country_modifier = THE_common_grand_canel_modifier_8 }
+					remove_country_modifier = THE_common_grand_canel_modifier_8
+					add_country_modifier = { name = THE_common_grand_canel_modifier_9 duration = -1 }
+				}
+				else_if = {
+					limit = { has_country_modifier = THE_common_grand_canel_modifier_7 }
+					remove_country_modifier = THE_common_grand_canel_modifier_7
+					add_country_modifier = { name = THE_common_grand_canel_modifier_8 duration = -1 }
+				}
+				else_if = {
+					limit = { has_country_modifier = THE_common_grand_canel_modifier_6 }
+					remove_country_modifier = THE_common_grand_canel_modifier_6
+					add_country_modifier = { name = THE_common_grand_canel_modifier_7 duration = -1 }
+				}
+				else_if = {
+					limit = { has_country_modifier = THE_common_grand_canel_modifier_5 }
+					remove_country_modifier = THE_common_grand_canel_modifier_5
+					add_country_modifier = { name = THE_common_grand_canel_modifier_6 duration = -1 }
+				}
+				else_if = {
+					limit = { has_country_modifier = THE_common_grand_canel_modifier_4 }
+					remove_country_modifier = THE_common_grand_canel_modifier_4
+					add_country_modifier = { name = THE_common_grand_canel_modifier_5 duration = -1 }
+				}
+				else_if = {
+					limit = { has_country_modifier = THE_common_grand_canel_modifier_3 }
+					remove_country_modifier = THE_common_grand_canel_modifier_3
+					add_country_modifier = { name = THE_common_grand_canel_modifier_4 duration = -1 }
+				}
+				else_if = {
+					limit = { has_country_modifier = THE_common_grand_canel_modifier_2 }
+					remove_country_modifier = THE_common_grand_canel_modifier_2
+					add_country_modifier = { name = THE_common_grand_canel_modifier_3 duration = -1 }
+				}
+				else_if = {
+					limit = { has_country_modifier = THE_common_grand_canel_modifier_1 }
+					remove_country_modifier = THE_common_grand_canel_modifier_1
+					add_country_modifier = { name = THE_common_grand_canel_modifier_2 duration = -1 }
+				}
+				else = {
+					add_country_modifier = { name = THE_common_grand_canel_modifier_1 duration = -1 }
+				}
+			}
+			if = {
+				limit = { check_variable = { which = the_grand_canel_amount_var value = 2 } } 
+				custom_tooltip = THE_common_grand_canel_modifier_upgrade_tt_default
+			}
+			if = {
+				limit = { has_country_modifier = THE_common_grand_canel_modifier_9 }
+				custom_tooltip = THE_common_grand_canel_modifier_upgrade_tt_9
+			}
+			else_if = {
+				limit = { has_country_modifier = THE_common_grand_canel_modifier_8 }
+				custom_tooltip = THE_common_grand_canel_modifier_upgrade_tt_8
+			}
+			else_if = {
+				limit = { has_country_modifier = THE_common_grand_canel_modifier_7 }
+				custom_tooltip = THE_common_grand_canel_modifier_upgrade_tt_7
+			}
+			else_if = {
+				limit = { has_country_modifier = THE_common_grand_canel_modifier_6 }
+				custom_tooltip = THE_common_grand_canel_modifier_upgrade_tt_6
+			}
+			else_if = {
+				limit = { has_country_modifier = THE_common_grand_canel_modifier_5 }
+				custom_tooltip = THE_common_grand_canel_modifier_upgrade_tt_5
+			}
+			else_if = {
+				limit = { has_country_modifier = THE_common_grand_canel_modifier_4 }
+				custom_tooltip = THE_common_grand_canel_modifier_upgrade_tt_4
+			}
+			else_if = {
+				limit = { has_country_modifier = THE_common_grand_canel_modifier_3 }
+				custom_tooltip = THE_common_grand_canel_modifier_upgrade_tt_3
+			}
+			else_if = {
+				limit = { has_country_modifier = THE_common_grand_canel_modifier_2 }
+				custom_tooltip = THE_common_grand_canel_modifier_upgrade_tt_2
+			}
+			else_if = {
+				limit = { has_country_modifier = THE_common_grand_canel_modifier_1 }
+				custom_tooltip = THE_common_grand_canel_modifier_upgrade_tt_1
+			}
+			else = {
+				tooltip = {
+					add_country_modifier = { name = THE_common_grand_canel_modifier_1 duration = -1 }
+				}
+			}
+			if = {
+				limit = { check_variable = { which = the_grand_canel_amount_var value = 2 } } 
+				custom_tooltip = THE_common_grand_canel_modifier_upgrade_tt_0
 			}
 		}
 	}

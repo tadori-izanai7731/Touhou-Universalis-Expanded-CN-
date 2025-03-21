@@ -35,3 +35,23 @@ THE_forbid_special_culture_ideas_scripted_trigger = {
 THE_disable_ai_call_touhou_characters_back = {
 	NOT = { has_country_flag = THE_TFR_shadow_mission_flag }
 }
+
+# $amount$
+THE_check_grand_canel_flag_amount_scripted_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = THE_check_grand_canel_flag_amount_ttt
+		calc_true_if = {
+			amount = $amount$
+			has_country_flag = THE_common_grand_canal_flag_beijin
+			has_country_flag = THE_common_grand_canal_flag_hejian
+			has_country_flag = THE_common_grand_canal_flag_jinan
+			has_country_flag = THE_common_grand_canal_flag_yanzhou
+			has_country_flag = THE_common_grand_canal_flag_xuzhou
+			has_country_flag = THE_common_grand_canal_flag_huaian
+			has_country_flag = THE_common_grand_canal_flag_yangzhou
+			has_country_flag = THE_common_grand_canal_flag_zhenjiang
+			has_country_flag = THE_common_grand_canal_flag_suzhou
+			has_country_flag = THE_common_grand_canal_flag_hangzhou
+		}
+	}
+}
