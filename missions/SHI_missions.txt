@@ -693,7 +693,7 @@ SHI_missions_3 = {
 				}
 				AND = {
 					NOT = { exists = TLC }
-					336 { country_or_non_sovereign_subject_holds = ROOT }
+					336 = { country_or_non_sovereign_subject_holds = ROOT }
 					4562= { country_or_non_sovereign_subject_holds = ROOT }
 					349 = { country_or_non_sovereign_subject_holds = ROOT }
 					2465= { country_or_non_sovereign_subject_holds = ROOT }

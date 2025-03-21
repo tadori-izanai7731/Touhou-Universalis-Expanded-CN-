@@ -205,6 +205,9 @@ THE_KEI_main_branch_1 = {
 		effect = { 
 			custom_tooltip = THE_KEI_1_9_c_tt1
 			add_stability = 1
+			country_event = {
+				id = THE_KEI_flavor_events.8
+			}
 			hidden_effect = {
 				set_country_flag = THE_KEI_can_change_religion_to_the_keiki
 			}
