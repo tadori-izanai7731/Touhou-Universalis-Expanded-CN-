@@ -2,10 +2,12 @@ SHI_AI_LUCK={
 potential={
 	ai=yes
 	TAG = SHI
+	date>1445
 }
 trigger={
 	ai = yes
 	TAG = SHI
+	date>1445
 }
 global_tax_income = 240
 ae_impact=-0.4
@@ -29,10 +31,12 @@ JOO_AI_LUCK={
 	potential={
 		ai=yes
 		TAG = JOO
+		date>1445
 	}
 	trigger={
 		ai = yes
 		TAG = JOO
+		date>1445
 	}
 	land_forcelimit = 30
 	global_tax_income = 400
