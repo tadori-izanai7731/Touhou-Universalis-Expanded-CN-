@@ -764,8 +764,6 @@ Touhou = {
 		country = {
 			tolerance_heretic = 2
 			tolerance_own = 2
-			fire_damage = 0.1
-			fire_damage_received = -0.1
 		}
 		
 		province = {
@@ -790,8 +788,6 @@ Touhou = {
 		country = {
 			tolerance_heretic = 2
 			monthly_fervor_increase = 2
-			fire_damage = 0.1
-			fire_damage_received = -0.1
 		}
 		
 		province = {
@@ -819,8 +815,6 @@ Touhou = {
 		country = {
 			tolerance_heretic = 2
 			yearly_harmony = 1
-			fire_damage = 0.1
-			fire_damage_received = -0.1
 		}
 		
 		province = {
@@ -846,8 +840,6 @@ Touhou = {
 		country = {
 			tolerance_heretic = 1
 			global_missionary_strength = 0.02
-			fire_damage = 0.1
-			fire_damage_received = -0.1
 		}
 		
 		province = {
@@ -888,8 +880,6 @@ Touhou = {
 		country = {
 			army_tradition_from_battle = 0.5
 			stability_cost_modifier = -0.15
-			fire_damage = 0.1
-			fire_damage_received = -0.1
 		}
 		
 		#Center of religions are always for the religion group as a whole
@@ -1039,8 +1029,6 @@ Touhou = {
 		country = {
 			technology_cost = -0.1 
 			idea_cost = -0.1
-			fire_damage = 0.1
-			fire_damage_received = -0.1
 		}
 		
 		#Center of religions are always for the religion group as a whole
@@ -1079,8 +1067,6 @@ Touhou = {
 		country = {
 			range = 0.5
 			technology_cost = -0.1
-			fire_damage = 0.1
-			fire_damage_received = -0.1
 		}
 		
 		flags_with_emblem_percentage = 20
@@ -1119,8 +1105,6 @@ Touhou = {
 		country = {
 			same_religion_advisor_cost = -0.15
 			shock_damage_received = -0.1
-			fire_damage = 0.1
-			fire_damage_received = -0.1
 		}
 		
 		province = {
@@ -1244,8 +1228,6 @@ lunarian_religion_g = {
 		country = {
 			warscore_cost_vs_other_religion = -0.2
 			tolerance_of_heathens_capacity = -2
-			fire_damage = 0.1
-			fire_damage_received = -0.1
 		}
 		
 		province = {
