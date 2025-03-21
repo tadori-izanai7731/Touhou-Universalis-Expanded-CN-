@@ -1,0 +1,244 @@
+country_decisions = {
+	THE_SHI_court_banquet_decision = {
+		color = { 95 95 95 }
+		potential = {
+			has_government_attribute = THE_SHI_court_banquet_attribute
+		}
+		allow = {
+			if = {
+				limit = { NOT = { full_idea_group = court_ideas } }
+				adm_power_cost = 50
+				dip_power_cost = 50
+				mil_power_cost = 50
+				custom_trigger_tooltip = {
+					tooltip = THE_ROD_decision_every_10_years_ttt
+					OR = {
+						NOT = { has_country_flag = THE_SHI_ERCIYUAN_flag }
+						had_country_flag = {
+							flag = THE_SHI_ERCIYUAN_flag
+							days = 3650
+						}
+					}
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = THE_ROD_decision_every_5_years_ttt
+					OR = {
+						NOT = { has_country_flag = THE_SHI_ERCIYUAN_flag }
+						had_country_flag = {
+							flag = THE_SHI_ERCIYUAN_flag 
+							days = 1825
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = { NOT = { full_idea_group = court_ideas } }
+				adm_power_cost = 50
+				dip_power_cost = 50
+				mil_power_cost = 50
+			}
+			custom_tooltip = THE_SHI_add_20_trust_all_ally_and_subject_tt
+			hidden_effect = {
+			
+				every_subject_country = {
+					add_trust = {
+						who = ROOT
+						value = 20
+						mutual = yes
+					}
+				}
+			}
+			add_estate_loyalty = {
+				estate = all
+				loyalty = 10
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_SHI_court_banquet_decision_extra_effect_tt
+			THE_SHI_court_banquet_decision_extra_scripted_effect = { idea_group = spy_ideas }
+			custom_tooltip = empty_line_tt
+			THE_SHI_court_banquet_decision_extra_scripted_effect = { idea_group = diplomatic_ideas }
+			custom_tooltip = empty_line_tt
+			THE_SHI_court_banquet_decision_extra_scripted_effect = { idea_group = trade_ideas }
+			custom_tooltip = empty_line_tt
+			THE_SHI_court_banquet_decision_extra_scripted_effect = { idea_group = exploration_ideas }
+			custom_tooltip = empty_line_tt
+			THE_SHI_court_banquet_decision_extra_scripted_effect = { idea_group = theocracy_gov_ideas }
+			custom_tooltip = empty_line_tt
+			THE_SHI_court_banquet_decision_extra_scripted_effect = { idea_group =  THE_kami_ideas }
+			custom_tooltip = empty_line_tt
+			THE_SHI_court_banquet_decision_extra_scripted_effect = { idea_group = influence_ideas }
+			custom_tooltip = empty_line_tt
+			THE_SHI_court_banquet_decision_extra_scripted_effect = { idea_group = mercenary_ideas }
+			custom_tooltip = empty_line_tt
+			THE_SHI_court_banquet_decision_extra_scripted_effect = { idea_group = quantity_ideas }
+			custom_tooltip = empty_line_tt
+			THE_SHI_court_banquet_decision_extra_scripted_effect = { idea_group = court_ideas }
+			custom_tooltip = empty_line_tt
+			THE_SHI_court_banquet_decision_extra_scripted_effect = { idea_group = infrastructure_ideas }
+			
+			
+			hidden_effect = {
+				clr_country_flag = THE_SHI_ERCIYUAN_flag
+				set_country_flag = THE_SHI_ERCIYUAN_flag
+				if = {
+					limit = { full_idea_group = spy_ideas }
+					every_country = {
+						add_aggressive_expansion = {
+							who = ROOT
+							value = -20
+						}
+					}
+				}
+				if = {
+					limit = { full_idea_group = diplomatic_ideas }
+					every_ally = {
+						ROOT = {
+							add_prestige_or_monarch_power = {
+								amount = 10
+							}
+						}
+					}
+					every_subject_country = {
+						ROOT = {
+							add_prestige_or_monarch_power = {
+								amount = 10
+							}
+						}
+					}
+				}
+				if = {
+					limit = { full_idea_group = trade_ideas }
+					home_trade_node_effect_scope = {
+						add_trade_node_income = 60
+					}
+				}
+				if = {
+					limit = { full_idea_group = exploration_ideas }
+					every_province = {
+						limit = {
+							NOT = { has_discovered = ROOT }
+							OR = {
+								any_ally = {
+									has_discovered = PREV
+								}
+								any_subject_country = {
+									has_discovered = PREV
+								}
+							}
+						}
+						discover_country = ROOT
+					}
+				}
+				if = {
+					limit = { full_idea_group = theocracy_gov_ideas }
+					add_country_modifier = {
+						name = SHI_SHENQUAN1111
+						duration = 1825
+					}
+				}
+				if = {
+					limit = { full_idea_group = influence_ideas }
+					every_subject_country = {
+						add_liberty_desire = -20
+						overlord = {
+							change_government_reform_progress = 10
+						}
+					}
+				}
+				if = {
+					limit = { full_idea_group = THE_kami_ideas }
+					add_treasury = 200
+					add_years_of_income = 10
+
+				}
+				if = {
+					limit = { full_idea_group = mercenary_ideas }
+					add_country_modifier = {
+						name = SHI_yongbing
+						duration = 1825
+					}
+				}
+				if = {
+					limit = { full_idea_group = quantity_ideas }
+					
+					add_yearly_manpower = 10
+						
+					}
+				if = {
+						limit = { full_idea_group = infrastructure_ideas }
+						random_owned_province = { 
+							limit = {
+								controlled_by = SHI
+								is_core = SHI
+							}
+							add_base_tax = 1
+							add_base_production = 1
+							add_base_manpower = 1
+						}
+						random_owned_province = { 
+							limit = {
+								controlled_by = SHI
+								is_core = SHI
+							}
+							add_base_tax = 1
+							add_base_production = 1
+							add_base_manpower = 1
+						}
+						random_owned_province = { 
+							limit = {
+								controlled_by = SHI
+								is_core = SHI
+							}
+							add_base_tax = 1
+							add_base_production = 1
+							add_base_manpower = 1
+						}
+						random_owned_province = { 
+							limit = {
+								controlled_by = SHI
+								is_core = SHI
+							}
+							add_base_tax = 1
+							add_base_production = 1
+							add_base_manpower = 1
+						}
+						random_owned_province = { 
+							limit = {
+								controlled_by = SHI
+								is_core = SHI
+							}
+							add_base_tax = 1
+							add_base_production = 1
+							add_base_manpower = 1
+						}
+									}
+							
+								}
+								ai_will_do = {
+									factor = 10
+								}
+							
+						}
+
+
+
+
+
+						}
+					
+			}
+			
+		
+				
+						
+			
+			
+	
+		
+
+
+

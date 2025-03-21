@@ -1,0 +1,51 @@
+THE_SHI_ideas = {
+	start = {
+		global_unrest=-3
+		land_morale=0.15
+	}
+	bonus = {
+		province_warscore_cost=-0.15
+	}
+	trigger = {
+		tag = SHI
+		NOT={has_country_flag = SHI2_ideas_flag}
+		NOT={has_country_flag = SHI4_ideas_flag}
+		NOT={has_country_flag = SHI3_ideas_flag}
+	}
+	free = yes
+
+	SHI_Devastated_Land = {
+		morale_damage_received=-0.15
+		
+	}
+
+	SHI_Poverty_is_not_a_Sin = {
+		tolerance_own = 3
+		core_creation=-0.15
+	}
+
+	SHI_Instigate_the_Poor = {
+		manpower_in_accepted_culture_provinces=0.3
+		years_of_nationalism=-5
+	}
+
+	SHI_Defender_of_Poor = {
+		global_missionary_strength = 0.03
+		missionaries = 1
+	}
+
+	SHI_Share_your_Misfortune = {
+		siege_ability = 0.15
+		artillery_levels_available_vs_fort= 1
+	}
+
+	SHI_Really_Unlucky = {
+		 
+		own_territory_dice_roll_bonus = 2 
+	}
+	
+	SHI_Embracing_Asceticism = {
+		ae_impact=-0.15
+	}
+
+}

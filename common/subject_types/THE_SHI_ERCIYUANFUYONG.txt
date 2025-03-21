@@ -1,0 +1,243 @@
+
+
+	
+	SHI_ERCIYUANFUYONG_countries = {}
+	SHI_ERCIYUANFUYONG_countries = {
+	copy_from = default
+	can_have_great_projects_moved_by_overlord = no
+
+	# Triggers:
+	is_potential_overlord = {
+		tag = SHI
+	}
+	
+	# Graphics:
+	sprite = GFX_icon_lunar_guards
+	diplomacy_overlord_sprite = GFX_icon_lunar_guards
+	diplomacy_subject_sprite = GFX_icon_lunar_guards
+        
+
+	# Properties:
+	max_government_rank = 0
+	can_fight = {
+		independent_nations = yes
+		same_overlord = th_religious_taofo
+		other_overlord = all
+	}
+	can_rival = {
+		independent_nations = yes
+		same_overlord = th_religious_taofo
+		other_overlord = all
+	}
+	can_ally = {
+		independent_nations = yes
+		same_overlord = th_religious_taofo
+		other_overlord = all
+	}
+	can_marry = {
+		independent_nations = yes
+		same_overlord = th_religious_taofo
+		other_overlord = all
+	}
+	overlord_can_fabricate_for = yes
+	can_union_break = yes
+	gets_help_with_rebels = no
+	can_send_missionary_to_subject = yes
+	can_release_in_peace = no
+	can_have_subjects_of_other_types = yes
+	overlord_can_be_subject = yes
+	uses_tariffs = yes
+	can_be_annexed = yes
+	forms_trade_companies = no
+	can_fight_independence_war = no
+	joins_overlords_wars = yes
+	joins_colonial_wars = no
+	opinion_on_subject_integration = 0 #Determines how much opinion they actually lose when a fellow subject gets integrated.
+	overlord_can_attack = no
+	base_liberty_desire = -300
+	relative_power_class = 1
+	should_quit_wars_on_activation = yes
+	uses_military_focus = yes
+	overlord_protects_external = yes
+	counts_for_borders = yes
+	counts_as_overlord_holding = yes
+	can_use_claims = yes
+	share_rebel_popup = yes
+	can_transfer_in_peace = yes
+	can_set_mil_focus = yes
+	can_concentrate_development = yes
+	transfer_trade_power = yes
+	transfer_trade_if_merchant_republic = yes
+	extend_trading_range = yes
+	gives_daimyo_bonuses = yes
+	eats_overlords_colonies = yes
+	can_gain_favors = yes
+	support_loyalists = yes
+	enforce_culture = yes
+	start_colonial_war = yes
+	seize_territory = yes	
+	liberty_desire_negative_prestige = -20
+	liberty_desire_development_ratio = -50
+	takes_diplo_slot = yes
+	is_voluntary = no
+	liberty_desire_same_dynasty = -20
+	forcelimit_bonus= 5
+	forcelimit_to_overlord = 1
+	trust_on_start = 100
+	replace_governor = yes
+	divert_trade= yes
+	send_officers = yes
+	scutage = yes
+	subsidize_armies = yes
+	siphon_income = no
+	fortify_march = yes
+	send_additional_troops = yes
+	bestow_gifts = yes
+	decrease_tariffs = yes
+	increase_tariffs = yes
+
+
+	overlord_opinion_modifier = is_trade_protectorate
+	subject_opinion_modifier = is_trade_protectorate
+
+	# Subject Interactions:
+	# (immediate)
+	block_settlement_growth = no
+	allow_settlement_growth = no
+	divert_trade = yes
+
+	# Modifiers:
+	modifier_subject = clear 
+	modifier_subject = { modifier = subject_nation }
+
+	
+	# Trade Protectorate don't get the ordinary subject_nation penalty 
+	modifier_overlord = {
+		trigger = {
+			always = yes
+		}
+	}
+}
+SHI_ERCIYUANFUYONG_countries1= {}
+	SHI_ERCIYUANFUYONG_countries1= {
+	copy_from = default
+	can_have_great_projects_moved_by_overlord = no
+
+	# Triggers:
+	is_potential_overlord = {
+		tag = SHI
+	}
+	
+	# Graphics:
+	sprite = GFX_icon_THE_LIL_icon_spring_territory
+	diplomacy_overlord_sprite = GFX_icon_THE_LIL_icon_spring_territory
+	diplomacy_subject_sprite = GFX_icon_THE_LIL_icon_spring_territory
+        
+
+	# Properties:
+	max_government_rank = 0
+	can_fight = {
+		independent_nations = yes
+		same_overlord = th_religious_taofo
+		other_overlord = all
+	}
+	can_rival = {
+		independent_nations = yes
+		same_overlord = th_religious_taofo
+		other_overlord = all
+	}
+	can_ally = {
+		independent_nations = yes
+		same_overlord = th_religious_taofo
+		other_overlord = all
+	}
+	can_marry = {
+		independent_nations = yes
+		same_overlord = th_religious_taofo
+		other_overlord = all
+	}
+	overlord_can_fabricate_for = yes
+	can_union_break = yes
+	gets_help_with_rebels = no
+	can_send_missionary_to_subject = yes
+	can_release_in_peace = no
+	can_have_subjects_of_other_types = yes
+	overlord_can_be_subject = yes
+	uses_tariffs = yes
+	can_be_annexed = yes
+	forms_trade_companies = no
+	can_fight_independence_war = no
+	joins_overlords_wars = yes
+	joins_colonial_wars = no
+	opinion_on_subject_integration = 0 #Determines how much opinion they actually lose when a fellow subject gets integrated.
+	overlord_can_attack = no
+	base_liberty_desire = -300
+	relative_power_class = 1
+	should_quit_wars_on_activation = yes
+	uses_military_focus = yes
+	overlord_protects_external = yes
+	counts_for_borders = yes
+	counts_as_overlord_holding = yes
+	can_use_claims = yes
+	share_rebel_popup = yes
+	can_transfer_in_peace = yes
+	can_set_mil_focus = yes
+	can_concentrate_development = yes
+	transfer_trade_power = yes
+	transfer_trade_if_merchant_republic = yes
+	extend_trading_range = yes
+	gives_daimyo_bonuses = yes
+	eats_overlords_colonies = yes
+	can_gain_favors = yes
+	support_loyalists = yes
+	enforce_culture = yes
+	start_colonial_war = yes
+	seize_territory = yes	
+	liberty_desire_negative_prestige = -20
+	liberty_desire_development_ratio = -50
+	takes_diplo_slot = yes
+	is_voluntary = no
+	liberty_desire_same_dynasty = -20
+	forcelimit_bonus= 1
+	forcelimit_to_overlord = 1
+	
+	replace_governor = yes
+	divert_trade= yes
+	send_officers = yes
+	scutage = yes
+	subsidize_armies = yes
+	siphon_income = no
+	fortify_march = yes
+	send_additional_troops = yes
+	bestow_gifts = yes
+	decrease_tariffs = yes
+	increase_tariffs = yes
+	can_be_integrated = no
+	can_be_annexed = no
+	dynamically_created_during_history = yes
+
+
+	overlord_opinion_modifier = is_trade_protectorate
+	subject_opinion_modifier = is_trade_protectorate
+
+	# Subject Interactions:
+	# (immediate)
+	block_settlement_growth = no
+	allow_settlement_growth = no
+	divert_trade = yes
+
+	# Modifiers:
+	modifier_subject = clear 
+	modifier_subject = {
+		modifier = subject_nation
+	}
+	
+
+	
+	# Trade Protectorate don't get the ordinary subject_nation penalty 
+	modifier_overlord = {
+		trigger = {
+			always = yes
+		}
+	}
+}

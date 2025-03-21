@@ -1,0 +1,213 @@
+namespace = THE_SHI_events
+
+country_event = {
+	id = THE_SHI_events.0
+	title = THE_SHI_events.0.t
+	desc = THE_SHI_events.0.d
+	picture =  "SHION_eventPicture"
+is_triggered_only = yes
+	option = {
+		name =  THE_SHI_events.0.a
+		354={
+				infantry = SHI
+					infantry = SHI
+			infantry = SHI
+			infantry = SHI
+			infantry = SHI
+			infantry = SHI
+			infantry = SHI
+			infantry = SHI
+			infantry = SHI
+			infantry = SHI
+			infantry = SHI
+			infantry = SHI
+			large_cast_bronze_mortar = SHI
+			large_cast_bronze_mortar = SHI
+			large_cast_bronze_mortar = SHI
+			large_cast_bronze_mortar = SHI
+	}
+}
+}
+country_event = {
+	id = THE_SHI_events.1
+	title = THE_SHI_events.1.t
+	desc = THE_SHI_events.1.d
+	picture =  "SHION_eventPicture"
+	is_triggered_only = yes
+
+	option = {
+		name =  THE_SHI_events.1.a
+		354={
+			heavy_ship = SHI
+			heavy_ship = SHI
+			heavy_ship = SHI
+			heavy_ship = SHI
+			heavy_ship = SHI
+			heavy_ship = SHI
+			heavy_ship = SHI
+			heavy_ship = SHI
+			heavy_ship = SHI
+			heavy_ship = SHI
+			heavy_ship = SHI
+	}
+}
+}
+country_event = {
+	id = THE_SHI_events.2
+	title = THE_SHI_events.2.t
+	desc = THE_SHI_events.2.d
+	picture =  "SHION_eventPicture"
+	is_triggered_only = yes
+	
+	option = {
+		name =  THE_SHI_events.2.a
+		2347={
+			heavy_ship = JOO
+			heavy_ship = JOO
+			heavy_ship = JOO
+			heavy_ship = JOO
+			heavy_ship = JOO
+			heavy_ship = JOO
+			heavy_ship = JOO
+			heavy_ship = JOO
+			heavy_ship = JOO
+			heavy_ship = JOO
+			heavy_ship = JOO
+	}
+}
+}
+country_event = {
+	id = THE_SHI_events.3
+	title = THE_SHI_events.3.t
+	desc = THE_SHI_events.3.d
+	picture =  "SHION_eventPicture"
+	is_triggered_only = yes
+	
+	option = {
+		name =  THE_SHI_events.3.a
+		2347={
+			infantry = JOO
+			infantry = JOO
+			infantry = JOO
+			infantry = JOO
+			infantry = JOO
+			infantry = JOO
+			infantry = JOO
+			infantry = JOO
+			infantry = JOO
+			infantry = JOO
+			infantry = JOO
+			infantry = JOO
+			large_cast_bronze_mortar = JOO
+			large_cast_bronze_mortar = JOO
+			large_cast_bronze_mortar = JOO
+			large_cast_bronze_mortar = JOO
+	}
+	}
+}
+
+	
+		country_event = {
+			id = THE_SHI_events.6
+			title = THE_SHI_events.6.t
+			desc = THE_SHI_events.6.d
+			picture =  "SHION_eventPicture"
+			trigger = {
+				and={
+				OR = {
+					tag = JOO
+					was_tag = JOO
+				}
+				OR = {
+					has_reform = SHI_forest_monarchy
+					have_had_reform = SHI_forest_monarchy
+				}
+			}
+			}
+			mean_time_to_happen = {
+				days = 3650
+			}
+			
+			option = {
+				name =  THE_SHI_events.6.a
+				add_loan = {
+					fixed_interest = 0
+					duration =360
+					estate_loan = no
+				}
+				add_loan = {
+					fixed_interest = 0
+					duration =360
+					estate_loan = no
+				}
+				add_loan = {
+					fixed_interest = 0
+					duration =360
+					estate_loan = no
+				}
+				add_loan = {
+					fixed_interest = 0
+					duration =360
+					estate_loan = no
+				}
+				add_loan = {
+					fixed_interest = 0
+					duration =360
+					estate_loan = no
+				}
+			}
+			}
+			country_event = {
+				id = THE_SHI_events.7
+				title = THE_SHI_events.7.t
+				desc = THE_SHI_events.7.d
+				picture =  "SHION_eventPicture"
+				trigger = {
+				
+					OR = {
+						tag = JOO
+						was_tag = JOO
+					}
+					
+				}
+				
+				mean_time_to_happen = {
+					days = 3650
+				}
+				
+				option = {
+					name =  THE_SHI_events.7.a
+					adm_power=50
+					dip_power=50
+					mil_power=50
+				}
+				}
+				country_event = {
+					id = THE_SHI_events.8
+					title = THE_SHI_events.8.t
+					desc = THE_SHI_events.8.d
+					picture =  ""
+					trigger = {
+					
+						OR = {
+							tag = JOO
+							was_tag = JOO
+						}
+						
+					}
+					
+					mean_time_to_happen = {
+						days = 5475
+					}
+					
+					option = {
+						name =  THE_SHI_events.8.a
+						add_yearly_manpower = 10
+					}
+					}
+			
+					
+								
+							
+	
+
