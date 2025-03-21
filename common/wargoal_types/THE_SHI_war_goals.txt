@@ -1,0 +1,190 @@
+THE_SHI_QIANGPOERCIYUANHUA = {
+	type = superiority
+	
+	attacker = {
+		badboy_factor =  0.5
+		prestige_factor = 2
+		peace_cost_factor =  0.5
+		required_treaty_to_take_provinces = {
+			PO_SHI_ERCIYUAN 
+		 }
+		peace_options = {
+			PO_SHI_ERCIYUAN
+			po_subjugate_tributary_state
+			po_demand_provinces
+			po_become_vassal
+			po_become_tributary_state
+			po_gold
+			po_revoke_cores
+			po_concede_defeat
+			po_trade_power
+			po_steer_trade
+			po_humiliate
+		}
+	}
+	
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1		
+
+	
+		allowed_provinces_are_eligible = yes
+        
+		peace_options = {
+			po_demand_provinces
+			po_become_tributary_state
+			po_gold
+			po_revoke_cores
+			po_concede_defeat
+			po_trade_power
+			po_steer_trade
+			po_humiliate
+		}
+	}
+	
+	war_name = THE_SHI_QIANGPOERCIYUANHUA_NAME1
+}
+THE_SHI_QIANGPOERCIYUANHUA1= {
+	type = superiority
+	
+	attacker = {
+		badboy_factor =  0.5
+		prestige_factor = 2
+		peace_cost_factor =  0.5
+		required_treaty_to_take_provinces = {
+			PO_SHI_ERCIYUAN2
+		 }
+		peace_options = {
+			PO_SHI_ERCIYUAN2
+			po_subjugate_tributary_state
+			po_demand_provinces
+			po_become_vassal
+			po_become_tributary_state
+			po_gold
+			po_revoke_cores
+			po_concede_defeat
+			po_trade_power
+			po_steer_trade
+			po_humiliate
+		}
+	}
+	
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1		
+
+	
+		allowed_provinces_are_eligible = yes
+        
+		peace_options = {
+			po_demand_provinces
+			po_become_tributary_state
+			po_gold
+			po_revoke_cores
+			po_concede_defeat
+			po_trade_power
+			po_steer_trade
+			po_humiliate
+		}
+	}
+	
+	war_name = THE_SHI_QIANGPOERCIYUANHUA_NAME1
+}
+THE_SHI_QIANGPOERCIYUANHUA2= {
+	type = superiority
+	
+	attacker = {
+		badboy_factor =  0.5
+		prestige_factor = 2
+		peace_cost_factor =  0.5
+		required_treaty_to_take_provinces = {
+			PO_SHI_ERCIYUAN3
+		 }
+		peace_options = {
+			PO_SHI_ERCIYUAN3
+			po_subjugate_tributary_state
+			po_demand_provinces
+			po_become_vassal
+			po_become_tributary_state
+			po_gold
+			po_revoke_cores
+			po_concede_defeat
+			po_trade_power
+			po_steer_trade
+			po_humiliate
+		}
+	}
+	
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1		
+
+	
+		allowed_provinces_are_eligible = yes
+        
+		peace_options = {
+			po_demand_provinces
+			po_become_tributary_state
+			po_gold
+			po_revoke_cores
+			po_concede_defeat
+			po_trade_power
+			po_steer_trade
+			po_humiliate
+		}
+	}
+	
+	war_name = THE_SHI_QIANGPOERCIYUANHUA_NAME1
+}
+THE_SHI_QIANGPOERCIYUANHUA3= {
+	type = superiority
+	
+	attacker = {
+		badboy_factor =  0.75
+		prestige_factor = 1.2
+		peace_cost_factor =  0.75
+		
+		peace_options = {
+			
+			po_demand_provinces
+			po_become_vassal
+			po_become_tributary_state
+			po_gold
+			po_revoke_cores
+			po_concede_defeat
+			po_trade_power
+			po_steer_trade
+			po_humiliate
+		
+		}
+	}
+	
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1		
+
+		allowed_provinces = {
+			is_core = FROM
+		}
+		allowed_provinces_are_eligible = yes
+        
+		peace_options = {
+			po_gold
+			po_demand_provinces
+			po_become_vassal
+			po_become_tributary_state
+			po_gold
+			po_revoke_cores
+			po_concede_defeat
+			po_trade_power
+			po_steer_trade
+			po_humiliate
+		}
+	}
+	
+	war_name = THE_SHI_QIANGPOERCIYUANHUA_NAME2
+}

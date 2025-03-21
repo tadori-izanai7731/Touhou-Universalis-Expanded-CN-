@@ -1,0 +1,24 @@
+
+
+#$idea_group$
+THE_SHI_court_banquet_decision_extra_scripted_effect = {
+	if = {
+		limit = { full_idea_group = $idea_group$ }
+		custom_tooltip = THE_SHI_court_banquet_decision_extra_effect_tt_yes_$idea_group$
+	}
+	else = {
+		custom_tooltip = THE_SHI_court_banquet_decision_extra_effect_tt_no_$idea_group$
+	}
+}
+THE_SHI_mission11_scripted_effect = {
+	for = {
+		amount = $amount$
+		effect = "
+			add_mil_power = 50
+			add_manpower = 5
+			"
+	}
+}
+
+
+

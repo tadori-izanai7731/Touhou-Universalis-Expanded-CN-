@@ -3326,59 +3326,59 @@ JOO_ideas = {
 	}
 }
 
-SHI_ideas = {
-	start = {
-		stability_cost_to_declare_war = -1 
-		defensiveness = 0.33
-	}
-	bonus = {
-		can_bypass_forts = yes 
-	}
-	trigger = {
-		tag = SHI
-	}
-	free = yes
+# SHI_ideas = {
+# 	start = {
+# 		stability_cost_to_declare_war = -1 
+# 		defensiveness = 0.33
+# 	}
+# 	bonus = {
+# 		can_bypass_forts = yes 
+# 	}
+# 	trigger = {
+# 		tag = SHI
+# 	}
+# 	free = yes
 
-	SHI_Devastated_Land = {
-		hostile_attrition = 3
-		max_hostile_attrition = 3
-		global_monthly_devastation = 0.05
-	}
+# 	SHI_Devastated_Land = {
+# 		hostile_attrition = 3
+# 		max_hostile_attrition = 3
+# 		global_monthly_devastation = 0.05
+# 	}
 
-	SHI_Poverty_is_not_a_Sin = {
-		global_tax_modifier = -0.1
-		no_religion_penalty = yes
-		manpower_in_accepted_culture_provinces = 0.33
-		num_accepted_cultures = 3
-	}
+# 	SHI_Poverty_is_not_a_Sin = {
+# 		global_tax_modifier = -0.1
+# 		no_religion_penalty = yes
+# 		manpower_in_accepted_culture_provinces = 0.33
+# 		num_accepted_cultures = 3
+# 	}
 
-	SHI_Instigate_the_Poor = {
-		core_creation = -0.2
-		land_morale = 0.2
-	}
+# 	SHI_Instigate_the_Poor = {
+# 		core_creation = -0.2
+# 		land_morale = 0.2
+# 	}
 
-	SHI_Defender_of_Poor = {
-		diplomatic_reputation = -2
-		years_of_nationalism = -20
-	}
+# 	SHI_Defender_of_Poor = {
+# 		diplomatic_reputation = -2
+# 		years_of_nationalism = -20
+# 	}
 
-	SHI_Share_your_Misfortune = {
-		siege_ability = 0.25
-		leader_siege = 1 
-	}
+# 	SHI_Share_your_Misfortune = {
+# 		siege_ability = 0.25
+# 		leader_siege = 1 
+# 	}
 
-	SHI_Really_Unlucky = {
-		global_attacker_dice_roll_bonus = -1 
-		own_territory_dice_roll_bonus = 2 
-	}
+# 	SHI_Really_Unlucky = {
+# 		global_attacker_dice_roll_bonus = -1 
+# 		own_territory_dice_roll_bonus = 2 
+# 	}
 	
-	SHI_Embracing_Asceticism = {
-		development_cost = 0.1
-		possible_policy = 2
-		free_policy = 2
-	}
+# 	SHI_Embracing_Asceticism = {
+# 		development_cost = 0.1
+# 		possible_policy = 2
+# 		free_policy = 2
+# 	}
 
-}
+# }
 
 PRS_ideas = {
 	start = {

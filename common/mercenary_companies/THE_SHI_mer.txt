@@ -1,0 +1,237 @@
+SHI_free_company = {
+    regiments_per_development = 0.07
+
+    infantry_weight = 0.1
+    artillery_weight = 0.1
+    cavalry_cap = 4
+    cost_modifier = 0
+	home_province = 354
+	sprites = {
+		westerngfx_sprite_pack
+	}
+    trigger = {
+        total_development = 150
+		tag = SHI   
+    }
+    modifier = {
+		discipline=0.1
+		morale_damage_received=-0.1
+		morale_damage=0.1
+}
+}
+SHI_small_company = {
+    regiments_per_development = 0.05
+	infantry_weight = 0.1
+    artillery_weight = 0.1
+	home_province = 354
+	cavalry_cap = 4
+	sprites = {
+		westerngfx_sprite_pack
+	}
+    trigger = {
+        NOT = { total_development = 150 }
+		tag = SHI  
+    }
+    cost_modifier = 0
+	modifier = {
+		discipline=0.1
+		morale_damage_received=-0.1
+		morale_damage=0.1
+}
+   
+}
+
+SHI_company = {
+    regiments_per_development = 0.07
+	mercenary_desc_key = FREE_OF_FORCELIMIT_COST
+mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+    infantry_weight = 0.1
+    artillery_weight = 0.1
+	home_province = 354
+	cavalry_cap = 4
+	sprites = {
+		westerngfx_sprite_pack
+	}
+	trigger = {
+        
+		has_country_flag= SHI_ssst
+    }
+    cost_modifier = 0.05
+    modifier = {
+		movement_speed=0.15
+		fire_damage_received=-0.15
+}
+    
+}
+SHI_good_men = {
+    regiments_per_development = 0.1
+	mercenary_desc_key = FREE_OF_FORCELIMIT_COST
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+	home_province = 354
+    infantry_weight = 0.2
+	artillery_weight = 0.05
+	cavalry_cap = 4
+	cost_modifier = 0.25
+	max_size = 100
+	max_size = 200
+	manpower_pool = 500	
+	
+	sprites = {
+		westerngfx_sprite_pack
+	}
+	trigger = {
+        
+		has_country_flag= SHI_ssst
+    }
+	modifier = {
+		land_morale = 0.2
+	}
+}
+SHI_good_men1= {
+    regiments_per_development = 0.1
+	mercenary_desc_key = FREE_OF_FORCELIMIT_COST
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+	home_province = 354
+    infantry_weight = 0.2
+	artillery_weight = 0.1
+	cavalry_cap = 4
+	cost_modifier = 0.25
+	max_size = 100
+	max_size = 200
+	manpower_pool = 500	
+	
+	sprites = {
+		westerngfx_sprite_pack
+	}
+	trigger = {
+        
+		has_country_flag= SHI_ssst1
+    }
+	modifier = {
+		infantry_power = 0.2
+	}
+}
+SHI_good_men2= {
+    regiments_per_development = 0.1
+	mercenary_desc_key = FREE_OF_FORCELIMIT_COST
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+	home_province = 354
+    infantry_weight = 0.2
+	artillery_weight = 0.1
+	cavalry_cap = 4
+	cost_modifier = 0.25
+	max_size = 100
+	max_size = 200
+	manpower_pool = 100	
+	
+	sprites = {
+		westerngfx_sprite_pack
+	}
+	
+	trigger = {
+		has_country_flag= SHI_ssst1
+    }
+	modifier = {
+		infantry_fire = 1
+	}
+}
+SHI_good_men3= {
+    regiments_per_development = 0.1
+	mercenary_desc_key = FREE_OF_FORCELIMIT_COST
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+	home_province = 354
+    infantry_weight = 0.2
+	artillery_weight = 0.1
+	cavalry_cap = 4
+	cost_modifier = 0.25
+	max_size = 100
+	max_size = 200
+	manpower_pool = 100	
+	
+	sprites = {
+		westerngfx_sprite_pack
+	}
+	
+	trigger = {
+		tag = SHI  
+    }
+	modifier = {
+		reserves_organisation = -0.2
+
+	}
+}
+SHI_good_men4= {
+    regiments_per_development = 0.1
+	mercenary_desc_key = FREE_OF_FORCELIMIT_COST
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+	home_province = 354
+    infantry_weight = 0.2
+	artillery_weight = 0.1
+	cavalry_cap = 4
+	cost_modifier = 0.25
+	max_size = 100
+	max_size = 200
+	manpower_pool = 100	
+	
+	sprites = {
+		westerngfx_sprite_pack
+	}
+	
+	trigger = {
+		has_country_flag= SHI_ssst333
+    }
+	modifier = {
+		fire_damage = 0.1
+		fire_damage_received = -0.1
+		
+	}
+}
+SHI_good_men5= {
+    regiments_per_development = 0.1
+	mercenary_desc_key = FREE_OF_FORCELIMIT_COST
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+    infantry_weight = 0.2
+	artillery_weight = 0.1
+	cavalry_cap = 4
+	cost_modifier = 0.25
+	max_size = 100
+	max_size = 200
+	manpower_pool = 100	
+	
+	sprites = {
+		westerngfx_sprite_pack
+	}
+	
+	trigger = {
+		has_country_flag= SHI_ssst222
+    }
+	modifier = {
+		military_tactics = 0.25
+		
+	}
+}
+SHI_good_men6= {
+    regiments_per_development = 0.1
+	mercenary_desc_key = FREE_OF_FORCELIMIT_COST
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+    infantry_weight = 0.2
+	artillery_weight = 0.1
+	cavalry_cap = 4
+	cost_modifier = 0.25
+	max_size = 100
+	max_size = 200
+	manpower_pool = 100	
+	
+	sprites = {
+		westerngfx_sprite_pack
+	}
+	
+	trigger = { 
+			has_country_flag= SHI_ssst111
+		
+    }
+	modifier = {
+		global_attacker_dice_roll_bonus = 1
+		
+	}
+}

@@ -1,0 +1,181 @@
+#贫穷神政府
+SHI_forest_monarchy = {
+	alert_icon_gfx = GFX_th_scarlet_charisma_progress_bar
+	alert_icon_index = 1
+	available = {
+		
+	}
+	
+
+
+	
+	powers = {
+		SHI_PINQIONG_power = {
+			max = 100
+		
+			base_monthly_growth = 0.1
+			
+	range_modifier = {
+		
+		modifier = {
+		
+			
+			discipline = 0
+			artillery_fire=0
+			shock_damage=0
+			inflation_reduction = 0
+			
+		}
+		start_value = 0
+		end_value = 100
+	}
+	range_modifier = {
+		modifier = {
+		
+			inflation_reduction = 1
+			monthly_church_power = 0.25
+			discipline = 0.05
+			artillery_fire=0.1
+			shock_damage=0.05
+			fire_damage_received=-0.05
+		}
+		start_value = 25
+		end_value = 100
+	}
+	range_modifier = {
+		modifier = {
+	
+			inflation_reduction = 2
+			monthly_church_power = 0.5
+			discipline = 0.1
+			artillery_fire=0.25
+			shock_damage=0.1
+			fire_damage_received=-0.1
+	
+		}
+		start_value = 50
+		end_value = 100
+		}
+	
+	
+	range_modifier = {
+		modifier = {
+		
+			inflation_reduction = 3
+			monthly_church_power = 0.75
+			discipline = 0.15
+			artillery_fire=0.4
+			shock_damage=0.15
+			fire_damage_received=-0.15
+			
+		}
+		start_value = 75
+		end_value = 100
+	}
+}
+	}
+	
+		
+}
+
+		
+SHI_charisma_11= {
+	alert_icon_gfx = GFX_th_scarlet_charisma_progress_bar
+	alert_icon_index = 1
+	available = {
+	}
+	powers = {
+		SHI_DEDSADSAX_power = {
+			max = 150
+			monarch_power = ADM
+			base_monthly_growth = 0.25
+		}
+		SHI_DEDSADSAA_power = {
+			max = 150
+			monarch_power = DIP
+			base_monthly_growth = 0.25
+		}
+		SHI_DEDSADSAD_power= {
+			max = 150
+			monarch_power = MIL
+			base_monthly_growth = 0.25
+		}
+	}
+	interactions = {
+		THE_SHI_CREAS_TO3={
+			icon = GFX_kmj_shadow_city
+			cost_type = SHI_DEDSADSAX_power
+			cost = 50
+			trigger = {
+			}
+		effect = {
+			custom_tooltip = kmj_shadow_city_tt
+			add_country_modifier = {
+				name = kmj_shadow_city_modifier
+				duration = 365
+			}
+	}
+	ai_chance = {
+		factor = 100	
+		}
+		cooldown_years = 15
+		}
+	
+	
+		
+
+
+	THE_SHI_CREAS_TO2={
+
+		icon = GFX_THE_THE_ROD_interface_1
+		cost_type = SHI_DEDSADSAA_power
+		cost = 100
+	_
+	effect = {
+		custom_tooltip = kmj_sub_manipulation_tt
+		every_known_country = {
+			limit = {
+				is_in_war = {
+				defender_leader = ROOT
+				}
+			}
+			white_peace = ROOT
+		}
+	}
+		
+		
+
+ai_chance = {
+	factor = 100	
+	}
+	cooldown_years = 15
+	}
+
+
+	
+
+
+	THE_SHI_CREAS_TO1={
+		
+		icon = GFX_THE_FOM_THE_ROD_interface_1
+		cost_type = SHI_DEDSADSAD_power
+		cost = 50
+	_
+	effect = {
+		country_event=THE_KEI_flavor_events.1
+		
+}
+ai_chance = {
+	factor = 100	
+	}
+	cooldown_years = 15
+	}
+
+
+	
+}
+
+
+
+
+}
