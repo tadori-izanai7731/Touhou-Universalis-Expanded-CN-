@@ -168,10 +168,31 @@ THE_KEI_main_branch_1 = {
 	THE_KEI_1_9_lock = {
 		icon = mission_unknown_mission
 		position = 9
-		required_missions = { THE_KEI_1_8 } 
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = { 
+			if = {
+				limit = { 
+					ai = no
+				}
+				religious_unity = 1.00
+				has_reform = THE_KEI_lonely_creation_government_reform
+				has_government_power = {
+					mechanic_type = THE_KEI_lonely_creation_mechanic
+					power_type = THE_KEI_lonely_creation_mechanic_power
+					value = 50
+				}
+			}
+			else = {
+				religious_unity = 1.00
+				is_year = 1490
+				has_government_power = {
+					mechanic_type = THE_KEI_lonely_creation_mechanic
+					power_type = THE_KEI_lonely_creation_mechanic_power
+					value = 25
+				}
+			}
+		 } 
 		
 		effect = { 
 			custom_tooltip = THE_KEI_1_9_c_tt1
@@ -316,7 +337,9 @@ THE_KEI_main_branch_2 = {
 
 		trigger = {  } 
 
-		effect = {  } 
+		effect = { 
+			add_government_reform = THE_KEI_save_the_masses_government_reform
+		 } 
 	}
 
 	THE_KEI_2_7 = {
@@ -525,11 +548,56 @@ THE_KEI_main_branch_3 = {
 	THE_KEI_3_6 = {
 		icon = mission_unknown_mission
 		position = 6
-		provinces_to_highlight = {  } 
+		required_missions = { THE_KEI_3_4 } 
+		provinces_to_highlight = { 
+			OR = {
+				province_id = 4983
+				province_id = 5048
+				province_id = 5241
+				province_id = 5049
+				province_id = 5075
+				province_id = 5247
+				province_id = 5005
+			}
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			4983 = {
+				owned_by = ROOT
+				has_fort_building_trigger = yes
+			}
+			5048 = {
+				owned_by = ROOT
+				has_fort_building_trigger = yes
+			}
+			5241 = {
+				owned_by = ROOT
+				has_fort_building_trigger = yes
+			}
+			5049 = {
+				owned_by = ROOT
+				has_fort_building_trigger = yes
+			}
+			5075 = {
+				owned_by = ROOT
+				has_fort_building_trigger = yes
+			}
+			5247 = {
+				owned_by = ROOT
+				has_fort_building_trigger = yes
+			}
+			5005 = {
+				owned_by = ROOT
+				has_fort_building_trigger = yes
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			add_country_modifier = {
+				name = THE_KEI_create_fort_buff
+				duration = -1
+			}
+		 } 
 	}
 
 	THE_KEI_3_7 = {
@@ -595,12 +663,12 @@ THE_KEI_main_branch_3 = {
 		 } 
 
 		trigger = { 
-			num_of_provinces_owned_or_owned_by_subjects_with = {
+			num_of_owned_provinces_with = {
 				value = 10
 				base_manpower = 7
 				has_manpower_building_trigger = yes
 			}
-			max_manpower = 80
+			max_manpower = 40
 		 } 
 
 		effect = { 
@@ -611,16 +679,55 @@ THE_KEI_main_branch_3 = {
 	
 	THE_KEI_3_11 = {
 		icon = mission_unknown_mission
-		position = 10
+		position = 11
 		required_missions = { THE_KEI_3_10 } 
 		provinces_to_highlight = {
-			
+			owned_by = ROOT
+			NOT = {
+				has_manpower_building_trigger = yes
+			}
 		}
 		trigger = {
-			
+			num_of_owned_provinces_with = {
+				value = 25
+				has_manpower_building_trigger = yes
+			}
+			max_manpower = 80
+			is_in_war = {
+				OR = {
+					defender_leader = ROOT
+					attacker_leader = ROOT
+				}
+				war_score = 50
+			}
 		}
 		effect = {
-			
+			custom_tooltip = THE_KEI_3_11_c_tt1
+			add_adm_power = 100
+			add_mil_power = 100
+			add_dip_power = 100
+		}
+	}
+
+	THE_KEI_3_12 = {
+		icon = mission_unknown_mission
+		position = 12
+		required_missions = { THE_KEI_3_11 } 
+		provinces_to_highlight = {
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				has_building = university
+			}
+			has_adm_advisor_2 = yes
+			has_dip_advisor_2 = yes
+			has_mil_advisor_2 = yes
+		}
+		effect = {
+			custom_tooltip = THE_KEI_3_12_c_t11
+			change_government_reform_progress = 100
+			add_adm_power = 200
 		}
 	}
 }
@@ -1158,7 +1265,10 @@ THE_KEI_main_branch_4 = {
 				base_manpower = 10
 				has_manpower_building_trigger = yes
 			}
-			trade_goods_produced_amount = { trade_goods = iron amount = 15 }
+			trading_part = {
+				trade_goods = iron
+				value = 0.15
+			}
 		 } 
 
 		effect = { 
@@ -1170,11 +1280,23 @@ THE_KEI_main_branch_4 = {
 		icon = mission_unknown_mission
 		position = 12
 		required_missions = { THE_KEI_4_11 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 10
+				has_building = conscription_center
+				has_building = training_fields
+				base_manpower = 10
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_KEI_4_12_c_tt1
+			add_yearly_manpower = 2.0
+		 } 
 	}
 }
 THE_KEI_main_branch_5 = {

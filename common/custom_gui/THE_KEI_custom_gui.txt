@@ -859,8 +859,20 @@ custom_button = {
 	name = THE_KEI_province_create_army_gui
 	tooltip = THE_KEI_province_create_army_gui_tt
 	potential = {
-		owned_by = FROM
-		is_core = FROM
+		#判断升级
+		if = {
+			limit = { 
+				mission_completed = THE_KEI_3_11
+			}
+			OR = {
+				owned_by = ROOT
+				controlled_by = ROOT
+			}
+		}
+		else = {
+			owned_by = FROM
+			is_core = FROM
+		}
 		FROM = {
 			has_government_mechanic = THE_KEI_lonely_creation_mechanic
 		}
@@ -873,7 +885,10 @@ custom_button = {
 		if = {
 			limit = { 
 				NOT = {
-					trade_goods_produced_amount = { trade_goods = iron amount = 15 }
+					trading_part = {
+						trade_goods = iron
+						value = 0.15
+					}
 				}
 				NOT = {
 					mission_completed = THE_KEI_4_11
@@ -886,7 +901,10 @@ custom_button = {
 		else_if = {
 			limit = { 
 				NOT = {
-					trade_goods_produced_amount = { trade_goods = iron amount = 15 }
+					trading_part = {
+						trade_goods = iron
+						value = 0.15
+					}
 				}
 				mission_completed = THE_KEI_4_11
 			}
@@ -896,7 +914,10 @@ custom_button = {
 		}
 		else_if = {
 			limit = { 
-				trade_goods_produced_amount = { trade_goods = iron amount = 15 }
+				trading_part = {
+					trade_goods = iron
+					value = 0.15
+				}
 				mission_completed = THE_KEI_4_11
 			}
 			FROM = {
@@ -912,7 +933,10 @@ custom_button = {
 		if = {
 			limit = { 
 				NOT = {
-					trade_goods_produced_amount = { trade_goods = iron amount = 15 }
+					trading_part = {
+						trade_goods = iron
+						value = 0.15
+					}
 				}
 				NOT = {
 					mission_completed = THE_KEI_4_11
@@ -925,7 +949,10 @@ custom_button = {
 		else_if = {
 			limit = { 
 				NOT = {
-					trade_goods_produced_amount = { trade_goods = iron amount = 15 }
+					trading_part = {
+						trade_goods = iron
+						value = 0.15
+					}
 				}
 				mission_completed = THE_KEI_4_11
 			}
@@ -935,7 +962,10 @@ custom_button = {
 		}
 		else_if = {
 			limit = { 
-				trade_goods_produced_amount = { trade_goods = iron amount = 15 }
+				trading_part = {
+					trade_goods = iron
+					value = 0.15
+				}
 				mission_completed = THE_KEI_4_11
 			}
 			FROM = {

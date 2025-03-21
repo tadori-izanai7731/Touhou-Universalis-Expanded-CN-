@@ -104,7 +104,7 @@ THE_KEI_the_gate_of_hell_buff = {
 #恢复联系
 THE_KEI_restore_contact_buff = {
 	merchants = 2
-	diplomats = 2
+	diplomats = 1
 	ae_impact = -0.10
 	trade_efficiency = 0.10
 }
@@ -117,4 +117,9 @@ THE_KEI_oil_province_buff = {
 #兴造
 THE_KEI_prepare_army_weapon_buff = {
 	general_cost = -0.33
+}
+#八衢封镇
+THE_KEI_create_fort_buff = {
+	fort_maintenance_modifier = -0.33
+	garrison_size = 0.33
 }

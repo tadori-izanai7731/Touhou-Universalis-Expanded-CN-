@@ -581,3 +581,23 @@ country_event = {
 		change_national_focus = MIL
 	}
 }
+
+#宗教的选择
+country_event = {
+	id = THE_KEI_flavor_events.8
+	title = "THE_KEI_flavor_events.8.t"
+	desc = "THE_KEI_flavor_events.8.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	#孤独
+	option = {
+		name = THE_KEI_flavor_events.8.a
+	}
+	#创生
+	option = {
+		name = THE_KEI_flavor_events.8.a
+	}
+}
