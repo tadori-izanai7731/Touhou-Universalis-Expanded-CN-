@@ -264,3 +264,35 @@ THE_KEI_develop_province_add_power_effects = {
 		 }
 	}
 }
+
+#狂热
+THE_KEI_change_province_religion_effects = {
+	if = {
+		limit = { 
+			owner = {
+				mission_completed = THE_KEI_1_10_alone
+			}
+		}
+		ROOT = {
+			change_religion = the_keiki
+		}
+	}
+}
+
+#计数
+THE_KEI_add_create_army_mission_1_12_im_var_effect = {
+	if = {
+		limit = {
+			FROM = {
+				tag = KEI
+				has_government_mechanic = THE_KEI_lonely_creation_mechanic
+			}
+		 }
+		 FROM = {
+			change_variable = {
+				which = the_kei_create_normal_army_create_im_var
+				value = 1
+			 }
+		 }
+	}
+}

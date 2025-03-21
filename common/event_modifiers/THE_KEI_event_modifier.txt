@@ -123,3 +123,15 @@ THE_KEI_create_fort_buff = {
 	fort_maintenance_modifier = -0.33
 	garrison_size = 0.33
 }
+#蒙尘
+THE_KEI_stupid_human_buff = {
+	cb_on_religious_enemies = yes
+	enforce_religion_cost = -0.5
+	shock_damage_received = -0.10
+	fire_damage_received = -0.10
+}
+#畜生之道
+THE_KEI_the_animal_road_buff = {
+	min_autonomy_in_territories = -0.30
+	manpower_in_true_faith_provinces = 0.20
+}

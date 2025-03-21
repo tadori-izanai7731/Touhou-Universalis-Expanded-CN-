@@ -182,6 +182,14 @@ THE_KEI_main_branch_1 = {
 					power_type = THE_KEI_lonely_creation_mechanic_power
 					value = 50
 				}
+				estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 60
+				}
+				estate_loyalty = {
+					estate = estate_the_haniwa
+					loyalty = 60
+				}
 			}
 			else = {
 				religious_unity = 1.00
@@ -1738,7 +1746,9 @@ THE_KEI_main_branch_5 = {
 		icon = mission_unknown_mission
 		position = 12
 		required_missions = { THE_KEI_5_11 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			province_id = 5297
+		 } 
 
 		trigger = { 
 
@@ -1752,7 +1762,15 @@ THE_KEI_minor_branch_1_lock = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = KEI } 
+	potential = {
+		tag = KEI
+		NOT = {
+			has_country_flag = THE_KEI_branch_chose_alone_branch_flag
+		}
+		NOT = {
+			has_country_flag = THE_KEI_branch_chose_create_branch_flag
+		}
+	}
 
 	THE_KEI_1_10_lock = {
 		icon = mission_unknown_mission
@@ -1784,7 +1802,15 @@ THE_KEI_minor_branch_2_lock = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = KEI } 
+	potential = {
+		tag = KEI
+		NOT = {
+			has_country_flag = THE_KEI_branch_chose_alone_branch_flag
+		}
+		NOT = {
+			has_country_flag = THE_KEI_branch_chose_create_branch_flag
+		}
+	}
 
 	THE_KEI_2_10_lock = {
 		icon = mission_unknown_mission
@@ -1812,6 +1838,209 @@ THE_KEI_minor_branch_2_lock = {
 		icon = mission_unknown_mission
 		position = 12
 		required_missions = { THE_KEI_2_11_lock } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+#分支路线 孤独
+THE_KEI_minor_branch_1_alone = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = KEI 
+		has_country_flag = THE_KEI_branch_chose_alone_branch_flag
+	} 
+
+	THE_KEI_1_10_alone = {
+		icon = mission_unknown_mission
+		position = 10
+		required_missions = { THE_KEI_1_9_lock } 
+		provinces_to_highlight = { 
+			all_province = {
+				superregion = gensokyo_superregion
+				is_capital = yes
+				owner = {
+					NOT = {
+						religion = the_keiki
+					}
+				}
+			}
+		 } 
+
+		trigger = { 
+			religion = the_keiki
+			calc_true_if = {
+				amount = 5
+				all_country = {
+					religion = the_keiki
+				}
+			}
+		 } 
+
+		effect = { 
+			custom_tooltip = THE_KEI_1_10_alone_c_1
+			custom_tooltip = THE_KEI_1_10_alone_c_2
+			add_adm_power = 300
+			add_dip_power = 300
+			add_mil_power = 300
+		 } 
+	}
+
+	THE_KEI_1_12_alone = {
+		icon = mission_unknown_mission
+		position = 12
+		required_missions = {
+			THE_KEI_2_11_alone
+			THE_KEI_1_10_alone
+		}
+		provinces_to_highlight = { 
+			all_province = {
+				is_capital = yes
+				superregion = gensokyo_superregion
+				owner = {
+					OR = {
+						is_rival = ROOT
+						is_threat = ROOT
+						is_subject_of = ROOT
+						alliance_with = ROOT
+					}
+				}
+			}
+		 } 
+
+		trigger = { 
+			NOT = {
+				any_country = {
+					superregion = gensokyo_superregion
+					NOT = {
+						is_rival = ROOT
+					}
+					NOT = {
+						is_threat = ROOT
+					}
+					NOT = {
+						is_subject_of = ROOT
+					}
+					NOT = {
+						alliance_with = ROOT
+					}
+				}
+			}
+		 } 
+
+		effect = { 
+			custom_tooltip = THE_KEI_1_12_alone_c_tt1
+			#buff
+			
+		 } 
+	}
+}
+THE_KEI_minor_branch_2_alone = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = KEI 
+		has_country_flag = THE_KEI_branch_chose_alone_branch_flag
+	} 
+
+	THE_KEI_2_10_alone = {
+		icon = mission_unknown_mission
+		position = 10
+		required_missions = { THE_KEI_1_9_lock } 
+		provinces_to_highlight = { 
+			all_province = {
+				superregion = gensokyo_superregion
+				is_capital = yes
+				NOT = {
+					is_capital_of = ROOT
+				}
+			}
+		 } 
+
+		trigger = { 
+			all_country = {
+				capital_scope = { superregion = gensokyo_superregion }
+				ROOT = {
+					military_strength = {
+						who = PREV
+						value = 2.0
+					}
+				}
+			}
+			total_development = 1000
+		 } 
+
+		effect = { 
+			custom_tooltip = THE_KEI_2_10_alone_c_tt1
+			add_prestige = 100
+			add_army_professionalism = 0.20
+			hidden_effect = {
+				for = {
+					amount = 3
+					effect = "
+						random_province = {
+					limit = {
+						superregion = gensokyo_superregion
+					}
+					add_reform_center = the_keiki
+						}
+					
+					"
+				}
+			}
+		 } 
+	}
+
+	THE_KEI_2_11_alone = {
+		icon = mission_unknown_mission
+		position = 11
+		required_missions = { THE_KEI_2_10_alone } 
+		provinces_to_highlight = { 
+			is_capital_of = ROOT
+		 } 
+
+		trigger = { 
+			#拥有特权xxxx
+
+			#忠诚度
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 50
+			}
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 50
+			}
+			has_global_modifier_value = {
+				which = tolerance_own
+				value = 5
+			}
+		 } 
+
+		effect = { 
+			#拔地
+			custom_tooltip = THE_KEI_2_11_alone_c_tt1
+			add_country_modifier = {
+				name = THE_KEI_the_animal_road_buff
+				duration = -1
+			}
+			hidden_effect = {
+				
+			}
+		 } 
+	}
+
+	THE_KEI_2_12_alone = {
+		icon = mission_unknown_mission
+		position = 12
+		required_missions = { THE_KEI_2_11_alone } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 

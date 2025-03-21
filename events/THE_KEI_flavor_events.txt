@@ -595,9 +595,39 @@ country_event = {
 	#孤独
 	option = {
 		name = THE_KEI_flavor_events.8.a
+		trigger = {
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 80
+			}
+		}
+		add_country_modifier = {
+			name = THE_KEI_stupid_human_buff
+			duration = -1
+		}
+		hidden_effect = {
+			set_country_flag = THE_KEI_branch_chose_alone_branch_flag
+			swap_non_generic_missions = yes
+		}
 	}
 	#创生
 	option = {
-		name = THE_KEI_flavor_events.8.a
+		name = THE_KEI_flavor_events.8.b
+		trigger = {
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 60
+			}
+			NOT = {
+				estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 80 
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = THE_KEI_branch_chose_create_branch_flag
+			swap_non_generic_missions = yes
+		}
 	}
 }
