@@ -631,3 +631,159 @@ country_event = {
 		}
 	}
 }
+#愿力介绍
+country_event = {
+	id = THE_KEI_flavor_events.9
+	title = "THE_KEI_flavor_events.9.t"
+	desc = "THE_KEI_flavor_events.9.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = { 
+	}
+	option = {
+		name = THE_KEI_flavor_events.9.a
+	}
+}
+#恩赐
+country_event = {
+	id = THE_KEI_flavor_events.10
+	title = "THE_KEI_flavor_events.10.t"
+	desc = "THE_KEI_flavor_events.10.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = { 
+	}
+	#钱
+	option = {
+		name = THE_KEI_flavor_events.10.a
+		add_treasury = -200
+		hidden_effect = {
+			random_country = {
+				limit = {
+					has_country_flag = THE_KEI_the_aims_of_blessing_flag
+				}
+				change_variable = {
+					which = the_kei_the_blessing_of_the_keiki
+					value = 25
+				}
+				add_treasury = 200
+			}
+		}
+	}
+	#人力
+	option = {
+		name = THE_KEI_flavor_events.10.b
+		add_manpower = -50
+		hidden_effect = {
+			random_country = {
+				limit = {
+					has_country_flag = THE_KEI_the_aims_of_blessing_flag
+				}
+				change_variable = {
+					which = the_kei_the_blessing_of_the_keiki
+					value = 50
+				}
+				add_manpower = 50
+			}
+		}
+	}
+	#点数
+	option = {
+		name = THE_KEI_flavor_events.10.c
+		add_adm_power = -50
+		add_dip_power = -50
+		add_mil_power = -50
+		hidden_effect = {
+			random_country = {
+				limit = {
+					has_country_flag = THE_KEI_the_aims_of_blessing_flag
+				}
+				change_variable = {
+					which = the_kei_the_blessing_of_the_keiki
+					value = 50
+				}
+				add_adm_power = 50
+				add_dip_power = 50
+				add_mil_power = 50
+			}
+		}
+	}
+	#返回
+	option = {
+		name = THE_KEI_flavor_events.10.d
+	}
+	after = {
+		random_country = {
+			limit = {
+				has_country_flag = THE_KEI_the_aims_of_blessing_flag
+			}
+			clr_country_flag = THE_KEI_the_aims_of_blessing_flag
+		}
+	}
+}
+#愿力buff
+country_event = {
+	id = THE_KEI_flavor_events.11
+	title = "THE_KEI_flavor_events.11.t"
+	desc = "THE_KEI_flavor_events.11.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = { 
+
+	}
+	option = {
+		name = THE_KEI_flavor_events.11.a
+		custom_tooltip = THE_KEI_add_blessing_50_keiki_c_tt1
+		add_country_modifier = {
+			name = THE_KEI_decree_work_V2_buff
+			duration = 1825
+		}
+		hidden_effect = {
+			change_variable = {
+				which = the_kei_the_blessing_of_the_keiki
+				value = 50
+			}
+		}
+		ai_chance = {
+			factor = 20
+		}
+	}
+	option = {
+		name = THE_KEI_flavor_events.11.b
+		custom_tooltip = THE_KEI_add_blessing_50_keiki_c_tt1
+		add_country_modifier = {
+			name = THE_KEI_subject_buff_add_idea_cost_buff 
+			duration = -1
+		}
+		add_adm_power = 200
+		add_dip_power = 200
+		add_mil_power = 200
+		hidden_effect = {
+			change_variable = {
+				which = the_kei_the_blessing_of_the_keiki
+				value = 50
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = THE_KEI_flavor_events.11.c
+		custom_tooltip = THE_KEI_add_blessing_50_keiki_c_tt1
+		add_yearly_manpower = 2.0
+		hidden_effect = {
+			change_variable = {
+				which = the_kei_the_blessing_of_the_keiki
+				value = 50
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = THE_KEI_flavor_events.11.d
+	}
+
+}

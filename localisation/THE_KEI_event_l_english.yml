@@ -11,7 +11,7 @@
  THE_KEI_noble_name: "¨Rirup"
  THE_KEI_burghers_name: "ºN‰|up"
  THE_KEI_janissaries_name: "ôWn"
- THE_KEI_janissaries_warrior_1_privileges: "ôWnfkëX"
+ THE_KEI_janissaries_warrior_privileges: "ôWnfkëX"
  THE_KEI_janissaries_warrior_2_privileges: "ÝuùRàVÚ‹"
  THE_KEI_lonely_creation_mechanic_power: "Su"
  ability_THE_KEI_lonely_creation_mechanic: "0Su0"
@@ -57,6 +57,9 @@
  THE_KEI_flavor_events.7.a: "ôf9e:NLˆ?e"
  THE_KEI_flavor_events.7.b: "ôf9e:NY²N"
  THE_KEI_flavor_events.7.c: "ôf9e:N›Q‹N"
+ THE_KEI_add_blessing_50_keiki_c_tt1: "?a›RžX•50¹p"
+ THE_KEI_add_blessing_100_keiki_c_tt1: "?a›RžX•100¹p"
+ THE_KEI_flavor_events.11.a: ""
  ##buff_name
  THE_KEI_savtor_light_1_buff: "QeNKNIQ"
  THE_KEI_savtor_all_power_buff: "IY.sNR"
@@ -82,6 +85,7 @@
  monthly_THE_KEI_lonely_creation_mechanic_power: "ÏkgSužX•"
  THE_KEI_eternal_joy_land_buff: "R`PN8^W"
  THE_KEI_impure_consumables_buff: "bIrÅN:NwPg"
+ THE_KEI_subject_buff_add_idea_cost_buff: "Ue‹T0qu0"
  ##religion
  the_keiki: "¦hó`.‹W"
  the_keiki_fervor_shapping: "QXbV"
@@ -98,6 +102,11 @@
  THE_KEI_change_workman_duixiang_decoisions_desc: ""
  THE_KEI_check_save_the_masses_im_var_decosions_title: "ågw0‰^ó`aN0iRYOýV¶RåNÊSSVMRbuffÿ"
  THE_KEI_check_save_the_masses_im_var_decosions_desc: ""
+ THE_KEI_the_subject_of_keiki_decosions_title: "ågwSVMR?a›R§Mÿ[From.the_kei_the_blessing_of_the_keiki.GetValue])§!"
+ THE_KEI_the_subject_of_keiki_decosions_desc: ""
+ THE_KEI_the_subject_of_keiki_decosions_c_tt1: "5t^…Q*gO(uÇdkLˆ¨R"
+ THE_KEI_the_subject_of_keiki_decosions_c_tt2: "Nb	g0¦hó`.‹W0ýV¶R„v?a›RSO×S0RåNNqVÍT9eØSÿ\n -VgVYewýNöe +10\n -b‰N1Y%öe +50\n -b‰NÜw)Röe +10\n -VgVYewýNöe +10\n -ÑSUSD–¸^ýVwýNÑSUS¦^öe +10\n -lØSwýNáOðNöe +10\n -4xµNöe +1000"
+
  ##MISSION EXTRA
  THE_KEI_4_1_c_tt1: "c	gdkHeœgöe:\n--(Wb‰N`S†˜@SKI²RYrÄu@YAC<›pgÄu„vwýNSOËzsSrR©‹v^·ƒ—V8hÃV0\n--ùR@SKI²RYrÄu@YAC<›pgÄu±RbÿùR¹eÅNýwìS2U¨RirupßvËS0"
  THE_KEI_4_1_c_tt2: "(W–™ýub§Y30=e06w<SRÌ‘0§!è–"
@@ -146,3 +155,14 @@
  THE_KEI_2_11_alone_c_tt2: "óSåb	g5¹p§YckßuáOðN¹RÍV§!"
  THE_KEI_2_12_alone_c_tt1: "§Måb	gdkHeœgöeÿNb	gýV¶RGWàeÕlùRbìN±Rb§!"
  THE_KEI_2_12_alone_c_tt2: "GSµu§YUe‹T0qu0§!\n -§g0qu0’N¨R„vÑSUS¦^P–6RÐcØš0R120ÑSUS¦^v^N±‚9ÏQJS§!"
+ THE_KEI_the_eternal_land_declare_tt: "1uŽN@KEI§YvPÏPKNƒX§!åb	gîOck§MR`PN8^W§!bìNàeÕlùRvQ±Rb"
+ 
+ #DIP_action_EXTRA
+ THE_KEI_grant_a_blessing_dip_action_title: "i`P"
+ THE_KEI_grant_a_blessing_dip_action_desc: ""
+ THE_KEI_grant_a_blessing_dip_action_tooltip: "SVMRîvhýV¶R„v?a›R:N[From.the_kei_the_blessing_of_the_keiki.GetValue]"
+ THE_KEI_change_to_vasssalize_dip_action_title: "lS:ND–¸^"
+ THE_KEI_change_to_vasssalize_dip_action_desc: ""
+ THE_KEI_change_to_vasssalize_dip_action_tooltip: "SVMRîvhýV¶R„v?a›R:N[From.the_kei_the_blessing_of_the_keiki.GetValue]"
+ THE_KEI_inherit_us_subject_dip_action: "OKNRVD–"
+ THE_KEI_dip_ac_grant_a_blessing_c_tt1: "îvhýV¶RóSåb	g?a›Rÿ[From.the_kei_the_blessing_of_the_keiki.GetValue]/1000)"

@@ -317,3 +317,54 @@ THE_KEI_explot_the_province_effect = {
 		add_local_autonomy = -30
 	}
 }
+
+#添加愿力效果
+THE_KEI_add_subject_country_blessing_effect = {
+	if = {
+		limit = {
+			religion = the_keiki
+		 }
+		 change_variable = {
+			which = the_kei_the_blessing_of_the_keiki
+			value = $value$
+		}
+	}
+}
+
+THE_KEI_add_subject_country_blessing_2_effect = {
+	if = {
+		limit = {
+			owner = {
+				religion = the_keiki
+				is_subject_of = KEI
+			}
+			FROM = {
+				tag = KEI
+			}
+		 }
+		 owner = {
+			change_variable = {
+				which = the_kei_the_blessing_of_the_keiki
+				value = 10
+			}
+		 }
+	}
+}
+THE_KEI_add_subject_country_blessing_3_effect = {
+	if = {
+		limit = { 
+			owner = {
+				religion = the_keiki
+			}
+			NOT = {
+				religion = the_keiki
+			}
+		}
+		owner = {
+			change_variable = {
+				which = the_kei_the_blessing_of_the_keiki
+				value = 10
+			}
+		 }
+	}
+}

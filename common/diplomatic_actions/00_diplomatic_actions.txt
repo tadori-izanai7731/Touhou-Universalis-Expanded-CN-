@@ -193,6 +193,17 @@ declarewar = {
 			FROM = { NOT = { has_reform = THE_CRD_chireiden_pace_reform } }
 		}
 	}
+	condition = {
+		tooltip = THE_KEI_the_eternal_land_declare_tt
+		potential = { 
+			FROM = {
+				has_country_modifier = THE_KEI_eternal_joy_land_buff
+			}
+		}
+		allow = {
+			FROM = { NOT = { has_reform = THE_KEI_lonely_creation_government_reform } }
+		 }
+	}
 	### THE_END
 	effect = {
 		on_war_declaration_effect = yes

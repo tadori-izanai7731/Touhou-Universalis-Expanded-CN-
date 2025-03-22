@@ -11,7 +11,7 @@ l_english:
  THE_KEI_noble_name: "动物灵"
  THE_KEI_burghers_name: "人类灵"
  THE_KEI_janissaries_name: "埴轮"
- THE_KEI_janissaries_warrior_1_privileges: "埴轮武士"
+ THE_KEI_janissaries_warrior_privileges: "埴轮武士"
  THE_KEI_janissaries_warrior_2_privileges: "绝对忠诚"
  THE_KEI_lonely_creation_mechanic_power: "化生"
  ability_THE_KEI_lonely_creation_mechanic: "「化生」"
@@ -57,6 +57,9 @@ l_english:
  THE_KEI_flavor_events.7.a: "更改为行政"
  THE_KEI_flavor_events.7.b: "更改为外交"
  THE_KEI_flavor_events.7.c: "更改为军事"
+ THE_KEI_add_blessing_50_keiki_c_tt1: "§M愿力§!增长50点"
+ THE_KEI_add_blessing_100_keiki_c_tt1: "§M愿力§!增长100点"
+ THE_KEI_flavor_events.11.a: ""
  ##buff_name
  THE_KEI_savtor_light_1_buff: "救赎之光"
  THE_KEI_savtor_all_power_buff: "奉献一切"
@@ -82,6 +85,7 @@ l_english:
  monthly_THE_KEI_lonely_creation_mechanic_power: "每月化生增长"
  THE_KEI_eternal_joy_land_buff: "恒乐常土"
  THE_KEI_impure_consumables_buff: "我等仅为耗材"
+ THE_KEI_subject_buff_add_idea_cost_buff: "敕命「焕生」"
  ##religion
  the_keiki: "梦想造型"
  the_keiki_fervor_shapping: "塑形"
@@ -98,6 +102,11 @@ l_english:
  THE_KEI_change_workman_duixiang_decoisions_desc: ""
  THE_KEI_check_save_the_masses_im_var_decosions_title: "查看「幻想乡」剩余国家以及当前buff："
  THE_KEI_check_save_the_masses_im_var_decosions_desc: ""
+ THE_KEI_the_subject_of_keiki_decosions_title: "查看当前愿力§M（[From.the_kei_the_blessing_of_the_keiki.GetValue])§!"
+ THE_KEI_the_subject_of_keiki_decosions_desc: ""
+ THE_KEI_the_subject_of_keiki_decosions_c_tt1: "5年内未使用过此行动"
+ THE_KEI_the_subject_of_keiki_decosions_c_tt2: "所有「梦想造型」国家的愿力将会受到以下影响改变：\n -征服异教省份时 +10\n -战争失败时 +50\n -战争胜利时 +10\n -征服异教省份时 +10\n -发展附庸国省份发展度时 +10\n -转变省份信仰时 +10\n -破产时 +1000"
+
  ##MISSION EXTRA
  THE_KEI_4_1_c_tt1: "持有此效果时:\n--在战争占领@SKI劲牙组@YAC鬼杰组的省份将会立即割让并获得核心。\n--对@SKI劲牙组@YAC鬼杰组宣战，对方仅能召唤动物灵盟友。"
  THE_KEI_4_1_c_tt2: "在首都生成§Y30支「耶尼切里」§!部队"
@@ -146,3 +155,16 @@ l_english:
  THE_KEI_2_11_alone_c_tt2: "至少拥有5点§Y正统信仰容忍§!"
  THE_KEI_2_12_alone_c_tt1: "§M拥有此效果时，所有国家均无法对我们宣战§!"
  THE_KEI_2_12_alone_c_tt2: "升级§Y敕命「焕生」§!\n -§g「焕生」互动的发展度限制提高到120发展度并且花费减半§!"
+ THE_KEI_the_eternal_land_declare_tt: "由于@KEI§Y偶像之境§!拥有修正§M恒乐常土§!我们无法对其宣战"
+ 
+ #DIP_action_EXTRA
+ THE_KEI_grant_a_blessing_dip_action_title: "恩赐"
+ THE_KEI_grant_a_blessing_dip_action_desc: ""
+ THE_KEI_grant_a_blessing_dip_action_tooltip: "当前目标国家的§M愿力§!为§O[From.the_kei_the_blessing_of_the_keiki.GetValue]§!"
+ THE_KEI_change_to_vasssalize_dip_action_title: "转化为附庸"
+ THE_KEI_change_to_vasssalize_dip_action_desc: ""
+ THE_KEI_change_to_vasssalize_dip_action_tooltip: "当前目标国家的§M愿力§!为§O[From.the_kei_the_blessing_of_the_keiki.GetValue]§!"
+ THE_KEI_inherit_us_subject_dip_action_title: "使之归附"
+ THE_KEI_inherit_us_subject_dip_action_desc: ""
+ THE_KEI_inherit_us_subject_dip_action_tooltip: "当前目标国家的§M愿力§!为§O[From.the_kei_the_blessing_of_the_keiki.GetValue]§!"
+ THE_KEI_dip_ac_grant_a_blessing_c_tt1: "目标国家至少拥有§M愿力§!（[From.the_kei_the_blessing_of_the_keiki.GetValue]/1000)"

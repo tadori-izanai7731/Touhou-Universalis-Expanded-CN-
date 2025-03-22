@@ -894,6 +894,7 @@ custom_button = {
 			OR = {
 				owned_by = ROOT
 				controlled_by = ROOT
+				owned_by_subject_of = ROOT
 			}
 		}
 		else = {

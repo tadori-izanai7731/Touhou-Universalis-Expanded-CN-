@@ -1891,6 +1891,9 @@ THE_KEI_minor_branch_1_alone = {
 			add_adm_power = 300
 			add_dip_power = 300
 			add_mil_power = 300
+			hidden_effect = {
+				set_country_flag = THE_KEI_force_of_desire_unlock_flag
+			}
 		 } 
 	}
 
@@ -1937,6 +1940,9 @@ THE_KEI_minor_branch_1_alone = {
 				name = THE_KEI_impure_consumables_buff
 				duration = -1
 			}
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
 		 } 
 	}
 }
@@ -1987,15 +1993,17 @@ THE_KEI_minor_branch_2_alone = {
 			hidden_effect = {
 				for = {
 					amount = 3
-					effect = "
-						random_province = {
+					effect = ""
+				}
+				random_province = {
 					limit = {
 						superregion = gensokyo_superregion
-					}
-					add_reform_center = the_keiki
+						OR = {
+							religion = th_hakureishinto
+							religion = the_keiki
 						}
-					
-					"
+					}
+					add_reform_center = the_keiki_center_of_reformation
 				}
 			}
 		 } 

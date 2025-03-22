@@ -145,3 +145,8 @@ THE_KEI_impure_consumables_buff = {
 	global_regiment_recruit_speed = -0.10
 	infantry_cost = -0.20
 }
+#焕生
+THE_KEI_subject_buff_add_idea_cost_buff = {
+	idea_cost = -0.05
+	technology_cost = -0.05
+}

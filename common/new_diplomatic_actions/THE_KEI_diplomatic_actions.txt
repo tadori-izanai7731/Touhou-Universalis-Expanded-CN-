@@ -1,0 +1,386 @@
+#恩赐
+THE_KEI_grant_a_blessing_dip_action = {
+	category = th_diplo_action
+	# require_acceptance = yes
+	is_visible = {
+		ROOT = {
+			mission_completed = THE_KEI_1_10_alone
+			has_government_mechanic = THE_KEI_lonely_creation_mechanic
+			religion = the_keiki
+		}
+		FROM = {
+			religion = the_keiki
+		}
+		ai = no
+	}
+	is_allowed = {
+	}
+	on_accept = {
+		ROOT = {
+			country_event = {
+				id = THE_KEI_flavor_events.10
+			}
+		}
+		FROM = {
+			set_country_flag = THE_KEI_the_aims_of_blessing_flag
+		}
+	}
+	on_decline = {
+
+	}
+	ai_acceptance = {
+		# #基础-30
+		# add_entry = {
+		# 	name = TH_DIPENDENCE
+		# 	export_to_variable = {
+		# 		variable_name = ai_value
+		# 		value = -15
+		# 	}
+		# }
+		# #同盟+50
+		# add_entry = {
+		# 	name = TH_DIPLO_ALLIENCE
+		# 	limit = {
+		# 		alliance_with = FROM
+		# 	}
+		# 	export_to_variable = {
+		# 		variable_name = ai_value
+		# 		value = 50
+		# 	}
+		# }
+		# #外交关系+0.2*value
+		# add_entry = {
+		# 	name = TH_DIPLO_OPPINION
+		# 	export_to_variable = {
+		# 		variable_name = ai_value
+		# 		value = opinion
+		# 		who = FROM
+		# 		with = ROOT
+		# 	}
+		# 	multiply_variable = {
+		# 		which = ai_value 
+		# 		value = 0.2
+		# 	}
+		# }
+		# #宿敌或敌意-50
+		# add_entry = {
+		# 	name = TH_DIPLO_ENERMY
+		# 	limit = {
+		# 		FROM = {
+		# 			OR = {
+		# 				ai_attitude = {
+		# 					who = ROOT
+		# 					attitude = attitude_rivalry
+		# 				}
+		# 				ai_attitude = {
+		# 					who = ROOT
+		# 					attitude = attitude_hostile
+		# 				}
+		# 			}
+		# 		}
+		# 	}
+		# 	export_to_variable = {
+		# 		variable_name = ai_value
+		# 		value = -50
+		# 	}
+		# }
+		# #友好+20
+		# add_entry = {
+		# 	name = TH_DIPLO_FRI
+		# 	limit = {
+		# 		FROM = {
+		# 			ai_attitude = {
+		# 				who = ROOT
+		# 				attitude = attitude_friendly
+		# 			}
+		# 		}
+		# 	}
+		# 	export_to_variable = {
+		# 		variable_name = ai_value
+		# 		value = 20
+		# 	}
+		# }
+		# #外交声誉+5*value
+		# add_entry = {
+		# 	name = TH_DIPLO_REPULATION
+		# 	export_to_variable = {
+		# 		variable_name = ai_value
+		# 		value = trigger_value:diplomatic_reputation
+		# 		who = ROOT
+		# 	}
+		# 	multiply_variable = {
+		# 		which = ai_value 
+		# 		value = 5
+		# 	}
+		# }
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+#转化附庸
+THE_KEI_change_to_vasssalize_dip_action = {
+	category = th_diplo_action
+	# require_acceptance = yes
+	is_visible = {
+		ROOT = {
+			mission_completed = THE_KEI_1_10_alone
+			has_government_mechanic = THE_KEI_lonely_creation_mechanic
+			religion = the_keiki
+		}
+		FROM = {
+			religion = the_keiki
+			NOT = {
+				is_subject_of = ROOT
+			}
+		}
+		ai = no
+	}
+	is_allowed = {
+		custom_trigger_tooltip = {
+			tooltip = THE_KEI_dip_ac_grant_a_blessing_c_tt1
+			FROM = {
+				check_variable = {
+					which = the_kei_the_blessing_of_the_keiki
+					value = 1000
+				}
+			}
+		}
+	}
+	on_accept = {
+		vassalize = FROM
+		hidden_effect = {
+			create_subject = {
+				subject_type = crown_colony
+				subject = CLR
+			}
+			FROM = {
+				change_country_color = {
+					country = CLR
+				}
+				change_variable = {
+					which = the_kei_the_blessing_of_the_keiki
+					value = -1000
+				}
+			}
+			CLR = { grant_independence = yes }
+		}
+	}
+	ai_acceptance = {
+		# #基础-30
+		# add_entry = {
+		# 	name = TH_DIPENDENCE
+		# 	export_to_variable = {
+		# 		variable_name = ai_value
+		# 		value = -15
+		# 	}
+		# }
+		# #同盟+50
+		# add_entry = {
+		# 	name = TH_DIPLO_ALLIENCE
+		# 	limit = {
+		# 		alliance_with = FROM
+		# 	}
+		# 	export_to_variable = {
+		# 		variable_name = ai_value
+		# 		value = 50
+		# 	}
+		# }
+		# #外交关系+0.2*value
+		# add_entry = {
+		# 	name = TH_DIPLO_OPPINION
+		# 	export_to_variable = {
+		# 		variable_name = ai_value
+		# 		value = opinion
+		# 		who = FROM
+		# 		with = ROOT
+		# 	}
+		# 	multiply_variable = {
+		# 		which = ai_value 
+		# 		value = 0.2
+		# 	}
+		# }
+		# #宿敌或敌意-50
+		# add_entry = {
+		# 	name = TH_DIPLO_ENERMY
+		# 	limit = {
+		# 		FROM = {
+		# 			OR = {
+		# 				ai_attitude = {
+		# 					who = ROOT
+		# 					attitude = attitude_rivalry
+		# 				}
+		# 				ai_attitude = {
+		# 					who = ROOT
+		# 					attitude = attitude_hostile
+		# 				}
+		# 			}
+		# 		}
+		# 	}
+		# 	export_to_variable = {
+		# 		variable_name = ai_value
+		# 		value = -50
+		# 	}
+		# }
+		# #友好+20
+		# add_entry = {
+		# 	name = TH_DIPLO_FRI
+		# 	limit = {
+		# 		FROM = {
+		# 			ai_attitude = {
+		# 				who = ROOT
+		# 				attitude = attitude_friendly
+		# 			}
+		# 		}
+		# 	}
+		# 	export_to_variable = {
+		# 		variable_name = ai_value
+		# 		value = 20
+		# 	}
+		# }
+		# #外交声誉+5*value
+		# add_entry = {
+		# 	name = TH_DIPLO_REPULATION
+		# 	export_to_variable = {
+		# 		variable_name = ai_value
+		# 		value = trigger_value:diplomatic_reputation
+		# 		who = ROOT
+		# 	}
+		# 	multiply_variable = {
+		# 		which = ai_value 
+		# 		value = 5
+		# 	}
+		# }
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+#直接吞并
+THE_KEI_inherit_us_subject_dip_action = {
+	category = th_diplo_action
+	# require_acceptance = yes
+	is_visible = {
+		ROOT = {
+			mission_completed = THE_KEI_1_10_alone
+			has_government_mechanic = THE_KEI_lonely_creation_mechanic
+			religion = the_keiki
+		}
+		FROM = {
+			religion = the_keiki
+			is_subject_of = ROOT
+		}
+		ai = no
+	}
+	is_allowed = {
+		custom_trigger_tooltip = {
+			tooltip = THE_KEI_dip_ac_grant_a_blessing_c_tt1
+			FROM = {
+				check_variable = {
+					which = the_kei_the_blessing_of_the_keiki
+					value = 1000
+				}
+			}
+		}
+	}
+	on_accept = {
+		inherit = FROM
+		hidden_effect = {
+			FROM = {
+				change_variable = {
+					which = the_kei_the_blessing_of_the_keiki
+					value = -1000
+				}
+			}
+		}
+	}
+	ai_acceptance = {
+		# #基础-30
+		# add_entry = {
+		# 	name = TH_DIPENDENCE
+		# 	export_to_variable = {
+		# 		variable_name = ai_value
+		# 		value = -15
+		# 	}
+		# }
+		# #同盟+50
+		# add_entry = {
+		# 	name = TH_DIPLO_ALLIENCE
+		# 	limit = {
+		# 		alliance_with = FROM
+		# 	}
+		# 	export_to_variable = {
+		# 		variable_name = ai_value
+		# 		value = 50
+		# 	}
+		# }
+		# #外交关系+0.2*value
+		# add_entry = {
+		# 	name = TH_DIPLO_OPPINION
+		# 	export_to_variable = {
+		# 		variable_name = ai_value
+		# 		value = opinion
+		# 		who = FROM
+		# 		with = ROOT
+		# 	}
+		# 	multiply_variable = {
+		# 		which = ai_value 
+		# 		value = 0.2
+		# 	}
+		# }
+		# #宿敌或敌意-50
+		# add_entry = {
+		# 	name = TH_DIPLO_ENERMY
+		# 	limit = {
+		# 		FROM = {
+		# 			OR = {
+		# 				ai_attitude = {
+		# 					who = ROOT
+		# 					attitude = attitude_rivalry
+		# 				}
+		# 				ai_attitude = {
+		# 					who = ROOT
+		# 					attitude = attitude_hostile
+		# 				}
+		# 			}
+		# 		}
+		# 	}
+		# 	export_to_variable = {
+		# 		variable_name = ai_value
+		# 		value = -50
+		# 	}
+		# }
+		# #友好+20
+		# add_entry = {
+		# 	name = TH_DIPLO_FRI
+		# 	limit = {
+		# 		FROM = {
+		# 			ai_attitude = {
+		# 				who = ROOT
+		# 				attitude = attitude_friendly
+		# 			}
+		# 		}
+		# 	}
+		# 	export_to_variable = {
+		# 		variable_name = ai_value
+		# 		value = 20
+		# 	}
+		# }
+		# #外交声誉+5*value
+		# add_entry = {
+		# 	name = TH_DIPLO_REPULATION
+		# 	export_to_variable = {
+		# 		variable_name = ai_value
+		# 		value = trigger_value:diplomatic_reputation
+		# 		who = ROOT
+		# 	}
+		# 	multiply_variable = {
+		# 		which = ai_value 
+		# 		value = 5
+		# 	}
+		# }
+	}
+	ai_will_do = {
+		always = no
+	}
+}
