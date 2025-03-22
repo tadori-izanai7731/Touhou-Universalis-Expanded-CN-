@@ -799,6 +799,9 @@ custom_button = {
 					NOT = {
 						mission_completed = THE_KEI_1_8
 					}
+					NOT = {
+						mission_completed = THE_KEI_2_12_alone
+					}
 				}
 			}
 			ROOT = {
@@ -817,6 +820,9 @@ custom_button = {
 				FROM = {
 					mission_completed = THE_KEI_1_7
 					mission_completed = THE_KEI_1_8
+					NOT = {
+						mission_completed = THE_KEI_2_12_alone
+					}
 				}
 			}
 			ROOT = {
@@ -828,6 +834,27 @@ custom_button = {
 						mechanic_type = THE_KEI_lonely_creation_mechanic
 						power_type = THE_KEI_lonely_creation_mechanic_power
 						value = 5
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { 
+				FROM = {
+					mission_completed = THE_KEI_1_7
+					mission_completed = THE_KEI_1_8
+					mission_completed = THE_KEI_2_12_alone
+				}
+			}
+			ROOT = {
+				NOT = {
+					development = 120
+				}
+				FROM = {
+					has_government_power = {
+						mechanic_type = THE_KEI_lonely_creation_mechanic
+						power_type = THE_KEI_lonely_creation_mechanic_power
+						value = 2.5
 					}
 				}
 			}

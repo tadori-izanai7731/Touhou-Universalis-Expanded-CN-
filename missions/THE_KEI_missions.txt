@@ -1918,7 +1918,9 @@ THE_KEI_minor_branch_1_alone = {
 
 		trigger = { 
 			all_country = {
-				superregion = gensokyo_superregion
+				capital_scope = {
+					superregion = gensokyo_superregion
+				}
 				OR = {
 					is_rival = ROOT
 					is_threat = ROOT
@@ -1931,7 +1933,10 @@ THE_KEI_minor_branch_1_alone = {
 		effect = { 
 			custom_tooltip = THE_KEI_1_12_alone_c_tt1
 			#buff
-			
+			add_country_modifier = {
+				name = THE_KEI_impure_consumables_buff
+				duration = -1
+			}
 		 } 
 	}
 }
@@ -2018,10 +2023,10 @@ THE_KEI_minor_branch_2_alone = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = THE_KEI_2_11_alone_c_tt2
-			}
-			has_global_modifier_value = {
-				which = tolerance_own
-				value = 5
+				has_global_modifier_value = {
+					which = tolerance_own
+					value = 5
+				}
 			}
 		 } 
 
@@ -2057,6 +2062,7 @@ THE_KEI_minor_branch_2_alone = {
 		 } 
 
 		effect = { 
+			custom_tooltip = THE_KEI_2_12_alone_c_tt2
 			add_country_modifier = {
 				name = THE_KEI_eternal_joy_land_buff
 				duration = -1

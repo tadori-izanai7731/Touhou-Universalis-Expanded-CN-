@@ -139,7 +139,9 @@ THE_KEI_the_animal_road_buff = {
 THE_KEI_eternal_joy_land_buff = {
 	can_not_declare_war = yes
 	monthly_THE_KEI_lonely_creation_mechanic_power = 0.5
-	country_admin_power = 1
-	country_diplomatic_power = 1
-	country_military_power = 1
+}
+#我等仅为耗材
+THE_KEI_impure_consumables_buff = {
+	global_regiment_recruit_speed = -0.10
+	infantry_cost = -0.20
 }
