@@ -36,3 +36,12 @@ on_annexed = {
 on_regiment_recruited = {
 	THE_KEI_add_create_army_mission_1_12_im_var_effect = yes
 }
+on_adm_exploited = {
+	THE_KEI_explot_the_province_effect = yes
+}
+on_dip_exploited = {
+	THE_KEI_explot_the_province_effect = yes
+}
+on_mil_exploited = {
+	THE_KEI_explot_the_province_effect = yes
+}

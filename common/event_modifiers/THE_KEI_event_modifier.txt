@@ -135,3 +135,11 @@ THE_KEI_the_animal_road_buff = {
 	min_autonomy_in_territories = -0.30
 	manpower_in_true_faith_provinces = 0.20
 }
+#恒乐常土
+THE_KEI_eternal_joy_land_buff = {
+	can_not_declare_war = yes
+	monthly_THE_KEI_lonely_creation_mechanic_power = 0.5
+	country_admin_power = 1
+	country_diplomatic_power = 1
+	country_military_power = 1
+}

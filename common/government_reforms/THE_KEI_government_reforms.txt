@@ -1,3 +1,4 @@
+#1级
 THE_KEI_lonely_creation_government_reform = {
 	lock_level_when_selected = yes
 	icon = "THE_KEI_government_1_reform"
@@ -30,7 +31,7 @@ THE_KEI_lonely_creation_government_reform = {
 		THE_KEI_lonely_creation_mechanic
 	}
 }
-
+#2级
 THE_KEI_dedicate_ourselves_government_reform = {
 	lock_level_when_selected = yes
 	icon = "THE_KEI_government_1_reform"
@@ -53,7 +54,7 @@ THE_KEI_dedicate_ourselves_government_reform = {
 	government_abilities = {
 	}
 }
-
+#3级
 THE_KEI_save_the_masses_government_reform = {
 	lock_level_when_selected = yes
 	icon = "THE_KEI_government_1_reform"
