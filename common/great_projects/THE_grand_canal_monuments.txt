@@ -7,25 +7,31 @@ THE_grand_canal_beijin = {
 	move_days_per_unit_distance = 10
 	starting_tier = 1
 	type = monument
-
+	
 	build_trigger = {
 	}
-
+	
 	on_built = {
 	}
-
+	
 	on_destroyed = {
 	}
-
+	
 	can_use_modifiers_trigger = {
 	}
-
+	
 	can_upgrade_trigger = {
+		if = {
+			limit = { owner = { ai = yes } }
+			num_of_times_expanded_infrastructure = 3
+			has_building = counting_house
+			has_building = fort_18th
+		}
 	}
-
+	
 	keep_trigger = {
 	}
-
+	
 	tier_0 = {
 		upgrade_time = {
 			months = 0
@@ -42,7 +48,7 @@ THE_grand_canal_beijin = {
 		on_upgraded = {
 		}
 	}
-
+	
 	tier_1 = {
 		upgrade_time = {
 			months = 120
@@ -62,7 +68,7 @@ THE_grand_canal_beijin = {
 			owner = { add_treasury = 1000 }
 		}
 	}
-
+	
 	tier_2 = {
 		upgrade_time = {
 			months = 240
@@ -86,7 +92,7 @@ THE_grand_canal_beijin = {
 			owner = { add_treasury = 2500 }
 		}
 	}
-
+	
 	tier_3 = {
 		upgrade_time = {
 			months = 480
@@ -126,25 +132,32 @@ THE_grand_canal_hejian = {
 	move_days_per_unit_distance = 10
 	starting_tier = 1
 	type = monument
-
+	
 	build_trigger = {
 	}
-
+	
 	on_built = {
 	}
-
+	
 	on_destroyed = {
 	}
-
+	
 	can_use_modifiers_trigger = {
 	}
-
+	
 	can_upgrade_trigger = {
+		if = {
+			limit = { owner = { ai = yes } }
+			num_of_times_expanded_infrastructure = 3
+			has_building = counting_house
+			has_building = fort_18th
+			owner = { NOT = { is_subject = yes } }
+		}
 	}
-
+	
 	keep_trigger = {
 	}
-
+	
 	tier_0 = {
 		upgrade_time = {
 			months = 0
@@ -161,7 +174,7 @@ THE_grand_canal_hejian = {
 		on_upgraded = {
 		}
 	}
-
+	
 	tier_1 = {
 		upgrade_time = {
 			months = 120
@@ -181,7 +194,7 @@ THE_grand_canal_hejian = {
 			owner = { add_treasury = 1000 }
 		}
 	}
-
+	
 	tier_2 = {
 		upgrade_time = {
 			months = 240
@@ -205,7 +218,7 @@ THE_grand_canal_hejian = {
 			owner = { add_treasury = 2500 }
 		}
 	}
-
+	
 	tier_3 = {
 		upgrade_time = {
 			months = 480
@@ -245,25 +258,31 @@ THE_grand_canal_jinan = {
 	move_days_per_unit_distance = 10
 	starting_tier = 1
 	type = monument
-
+	
 	build_trigger = {
 	}
-
+	
 	on_built = {
 	}
-
+	
 	on_destroyed = {
 	}
-
+	
 	can_use_modifiers_trigger = {
 	}
-
+	
 	can_upgrade_trigger = {
+		if = {
+			limit = { owner = { ai = yes } }
+			num_of_times_expanded_infrastructure = 3
+			has_building = counting_house
+			has_building = fort_18th
+		}
 	}
-
+	
 	keep_trigger = {
 	}
-
+	
 	tier_0 = {
 		upgrade_time = {
 			months = 0
@@ -280,7 +299,7 @@ THE_grand_canal_jinan = {
 		on_upgraded = {
 		}
 	}
-
+	
 	tier_1 = {
 		upgrade_time = {
 			months = 120
@@ -300,7 +319,7 @@ THE_grand_canal_jinan = {
 			owner = { add_treasury = 1000 }
 		}
 	}
-
+	
 	tier_2 = {
 		upgrade_time = {
 			months = 240
@@ -324,7 +343,7 @@ THE_grand_canal_jinan = {
 			owner = { add_treasury = 2500 }
 		}
 	}
-
+	
 	tier_3 = {
 		upgrade_time = {
 			months = 480
@@ -364,25 +383,31 @@ THE_grand_canal_yanzhou = {
 	move_days_per_unit_distance = 10
 	starting_tier = 1
 	type = monument
-
+	
 	build_trigger = {
 	}
-
+	
 	on_built = {
 	}
-
+	
 	on_destroyed = {
 	}
-
+	
 	can_use_modifiers_trigger = {
 	}
-
+	
 	can_upgrade_trigger = {
+		if = {
+			limit = { owner = { ai = yes } }
+			num_of_times_expanded_infrastructure = 3
+			has_building = counting_house
+			has_building = fort_18th
+		}
 	}
-
+	
 	keep_trigger = {
 	}
-
+	
 	tier_0 = {
 		upgrade_time = {
 			months = 0
@@ -399,7 +424,7 @@ THE_grand_canal_yanzhou = {
 		on_upgraded = {
 		}
 	}
-
+	
 	tier_1 = {
 		upgrade_time = {
 			months = 120
@@ -419,7 +444,7 @@ THE_grand_canal_yanzhou = {
 			owner = { add_treasury = 1000 }
 		}
 	}
-
+	
 	tier_2 = {
 		upgrade_time = {
 			months = 240
@@ -443,7 +468,7 @@ THE_grand_canal_yanzhou = {
 			owner = { add_treasury = 2500 }
 		}
 	}
-
+	
 	tier_3 = {
 		upgrade_time = {
 			months = 480
@@ -484,25 +509,31 @@ THE_grand_canal_xuzhou = {
 	move_days_per_unit_distance = 10
 	starting_tier = 1
 	type = monument
-
+	
 	build_trigger = {
 	}
-
+	
 	on_built = {
 	}
-
+	
 	on_destroyed = {
 	}
-
+	
 	can_use_modifiers_trigger = {
 	}
-
+	
 	can_upgrade_trigger = {
+		if = {
+			limit = { owner = { ai = yes } }
+			num_of_times_expanded_infrastructure = 3
+			has_building = counting_house
+			has_building = fort_18th
+		}
 	}
-
+	
 	keep_trigger = {
 	}
-
+	
 	tier_0 = {
 		upgrade_time = {
 			months = 0
@@ -519,7 +550,7 @@ THE_grand_canal_xuzhou = {
 		on_upgraded = {
 		}
 	}
-
+	
 	tier_1 = {
 		upgrade_time = {
 			months = 120
@@ -539,7 +570,7 @@ THE_grand_canal_xuzhou = {
 			owner = { add_treasury = 1000 }
 		}
 	}
-
+	
 	tier_2 = {
 		upgrade_time = {
 			months = 240
@@ -563,7 +594,7 @@ THE_grand_canal_xuzhou = {
 			owner = { add_treasury = 2500 }
 		}
 	}
-
+	
 	tier_3 = {
 		upgrade_time = {
 			months = 480
@@ -603,25 +634,31 @@ THE_grand_canal_huaian = {
 	move_days_per_unit_distance = 10
 	starting_tier = 1
 	type = monument
-
+	
 	build_trigger = {
 	}
-
+	
 	on_built = {
 	}
-
+	
 	on_destroyed = {
 	}
-
+	
 	can_use_modifiers_trigger = {
 	}
-
+	
 	can_upgrade_trigger = {
+		if = {
+			limit = { owner = { ai = yes } }
+			num_of_times_expanded_infrastructure = 3
+			has_building = counting_house
+			has_building = fort_18th
+		}
 	}
-
+	
 	keep_trigger = {
 	}
-
+	
 	tier_0 = {
 		upgrade_time = {
 			months = 0
@@ -638,7 +675,7 @@ THE_grand_canal_huaian = {
 		on_upgraded = {
 		}
 	}
-
+	
 	tier_1 = {
 		upgrade_time = {
 			months = 120
@@ -658,7 +695,7 @@ THE_grand_canal_huaian = {
 			owner = { add_treasury = 1000 }
 		}
 	}
-
+	
 	tier_2 = {
 		upgrade_time = {
 			months = 240
@@ -682,7 +719,7 @@ THE_grand_canal_huaian = {
 			owner = { add_treasury = 2500 }
 		}
 	}
-
+	
 	tier_3 = {
 		upgrade_time = {
 			months = 480
@@ -722,25 +759,31 @@ THE_grand_canal_yangzhou = {
 	move_days_per_unit_distance = 10
 	starting_tier = 1
 	type = monument
-
+	
 	build_trigger = {
 	}
-
+	
 	on_built = {
 	}
-
+	
 	on_destroyed = {
 	}
-
+	
 	can_use_modifiers_trigger = {
 	}
-
+	
 	can_upgrade_trigger = {
+		if = {
+			limit = { owner = { ai = yes } }
+			num_of_times_expanded_infrastructure = 3
+			has_building = counting_house
+			has_building = fort_18th
+		}
 	}
-
+	
 	keep_trigger = {
 	}
-
+	
 	tier_0 = {
 		upgrade_time = {
 			months = 0
@@ -757,7 +800,7 @@ THE_grand_canal_yangzhou = {
 		on_upgraded = {
 		}
 	}
-
+	
 	tier_1 = {
 		upgrade_time = {
 			months = 120
@@ -777,7 +820,7 @@ THE_grand_canal_yangzhou = {
 			owner = { add_treasury = 1000 }
 		}
 	}
-
+	
 	tier_2 = {
 		upgrade_time = {
 			months = 240
@@ -801,7 +844,7 @@ THE_grand_canal_yangzhou = {
 			owner = { add_treasury = 2500 }
 		}
 	}
-
+	
 	tier_3 = {
 		upgrade_time = {
 			months = 480
@@ -841,25 +884,31 @@ THE_grand_canal_zhenjiang = {
 	move_days_per_unit_distance = 10
 	starting_tier = 1
 	type = monument
-
+	
 	build_trigger = {
 	}
-
+	
 	on_built = {
 	}
-
+	
 	on_destroyed = {
 	}
-
+	
 	can_use_modifiers_trigger = {
 	}
-
+	
 	can_upgrade_trigger = {
+		if = {
+			limit = { owner = { ai = yes } }
+			num_of_times_expanded_infrastructure = 3
+			has_building = counting_house
+			has_building = fort_18th
+		}
 	}
-
+	
 	keep_trigger = {
 	}
-
+	
 	tier_0 = {
 		upgrade_time = {
 			months = 0
@@ -876,7 +925,7 @@ THE_grand_canal_zhenjiang = {
 		on_upgraded = {
 		}
 	}
-
+	
 	tier_1 = {
 		upgrade_time = {
 			months = 120
@@ -896,7 +945,7 @@ THE_grand_canal_zhenjiang = {
 			owner = { add_treasury = 1000 }
 		}
 	}
-
+	
 	tier_2 = {
 		upgrade_time = {
 			months = 240
@@ -920,7 +969,7 @@ THE_grand_canal_zhenjiang = {
 			owner = { add_treasury = 2500 }
 		}
 	}
-
+	
 	tier_3 = {
 		upgrade_time = {
 			months = 480
@@ -960,25 +1009,31 @@ THE_grand_canal_suzhou = {
 	move_days_per_unit_distance = 10
 	starting_tier = 1
 	type = monument
-
+	
 	build_trigger = {
 	}
-
+	
 	on_built = {
 	}
-
+	
 	on_destroyed = {
 	}
-
+	
 	can_use_modifiers_trigger = {
 	}
-
+	
 	can_upgrade_trigger = {
+		if = {
+			limit = { owner = { ai = yes } }
+			num_of_times_expanded_infrastructure = 3
+			has_building = counting_house
+			has_building = fort_18th
+		}
 	}
-
+	
 	keep_trigger = {
 	}
-
+	
 	tier_0 = {
 		upgrade_time = {
 			months = 0
@@ -995,7 +1050,7 @@ THE_grand_canal_suzhou = {
 		on_upgraded = {
 		}
 	}
-
+	
 	tier_1 = {
 		upgrade_time = {
 			months = 120
@@ -1015,7 +1070,7 @@ THE_grand_canal_suzhou = {
 			owner = { add_treasury = 1000 }
 		}
 	}
-
+	
 	tier_2 = {
 		upgrade_time = {
 			months = 240
@@ -1039,7 +1094,7 @@ THE_grand_canal_suzhou = {
 			owner = { add_treasury = 2500 }
 		}
 	}
-
+	
 	tier_3 = {
 		upgrade_time = {
 			months = 480
@@ -1079,25 +1134,31 @@ THE_grand_canal_hangzhou = {
 	move_days_per_unit_distance = 10
 	starting_tier = 1
 	type = monument
-
+	
 	build_trigger = {
 	}
-
+	
 	on_built = {
 	}
-
+	
 	on_destroyed = {
 	}
-
+	
 	can_use_modifiers_trigger = {
 	}
-
+	
 	can_upgrade_trigger = {
+		if = {
+			limit = { owner = { ai = yes } }
+			num_of_times_expanded_infrastructure = 3
+			has_building = counting_house
+			has_building = fort_18th
+		}
 	}
-
+	
 	keep_trigger = {
 	}
-
+	
 	tier_0 = {
 		upgrade_time = {
 			months = 0
@@ -1114,7 +1175,7 @@ THE_grand_canal_hangzhou = {
 		on_upgraded = {
 		}
 	}
-
+	
 	tier_1 = {
 		upgrade_time = {
 			months = 120
@@ -1134,7 +1195,7 @@ THE_grand_canal_hangzhou = {
 			owner = { add_treasury = 1000 }
 		}
 	}
-
+	
 	tier_2 = {
 		upgrade_time = {
 			months = 240
@@ -1158,7 +1219,7 @@ THE_grand_canal_hangzhou = {
 			owner = { add_treasury = 2500 }
 		}
 	}
-
+	
 	tier_3 = {
 		upgrade_time = {
 			months = 480
