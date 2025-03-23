@@ -24,7 +24,7 @@ THE_KNE_mongolia_horse_modifier = {
 # 战争召唤
 THE_KNE_call_of_war_province_modifier = {
 	land_forcelimit = 0.5
-	local_manpower = 800
+	local_manpower = 0.8
 	tax_income = 12
 	local_friendly_movement_speed = 0.2
 	local_hostile_movement_speed = -0.2
