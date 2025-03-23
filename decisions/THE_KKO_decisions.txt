@@ -314,14 +314,9 @@ country_decisions = {
 				tag = KKO
 				was_tag = KKO
 			}
-			has_country_flag = kko_xiwang_reget_create
 			has_country_flag = kko_japan_tour_1
 		}
 		allow = {
-			custom_trigger_tooltip = {
-				tooltip = kko_japan_tour124
-				has_country_flag = kko_japan_tour_1
-			}
 			treasury = 2500
 		}
 		effect = {

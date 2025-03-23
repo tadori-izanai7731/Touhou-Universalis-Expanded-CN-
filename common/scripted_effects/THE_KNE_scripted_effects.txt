@@ -1,0 +1,34 @@
+### on_action scripted effects
+THE_KNE_on_province_owner_change_scripted_effect = {
+	if = {
+		limit = {
+			owner = { has_country_modifier = THE_KNE_remove_tribe_modifier }
+			OR = {
+				culture_group = altaic
+				culture_group = evenks
+			}
+		}
+		owner = {
+			every_country = {
+				add_aggressive_expansion = {
+					who = PREV
+					value = -2
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			owner = { mission_completed = THE_KNE_mission_2_3 }
+			culture_group = altaic
+		}
+		if = {
+			limit = { owner = { mission_completed = THE_KNE_mission_3_3 } }
+			change_culture = manchu_new
+		}
+		else = {
+			change_culture = manchu
+		}
+	}
+}

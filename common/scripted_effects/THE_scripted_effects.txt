@@ -496,3 +496,13 @@ THE_remove_every_idea_groups_scripted_effect = {
 	remove_idea_group = THE_lunarian_ideas
 	remove_idea_group = THE_gensokyan_ideas
 }
+
+# $tag$
+THE_add_historical_friend_and_reverse_scripted_effect = {
+	hidden_effect = {
+		remove_historical_rival = $tag$
+		$tag$ = { remove_historical_rival = ROOT }
+	}
+	$tag$ = { add_historical_friend = ROOT }
+	add_historical_friend = $tag$
+}

@@ -1,15 +1,37 @@
 l_english:
  ### CUSTOM_TOOLTIP
+ THE_KNE_ROOT_TT: "@[Root.GetTag]§Y[Root.GetName]§!"
  THE_KNE_available_for_every_20_years_ttt: "每§Y20§!年只能使用一次转换形态"
  THE_KNE_now_is_human_shape_tt: "当前是§Y人类形态§!，执行决议转换为§Y白泽形态§!"
- THE_KNE_now_is_shape_shape_tt: "当前是§Y白泽形态§!，执行决议转换为§Y人类形态§!"
+ THE_KNE_now_is_hakutaku_shape_tt: "当前是§Y白泽形态§!，执行决议转换为§Y人类形态§!"
+ THE_KNE_is_human_shape_ttt: "是§Y人类形态§!"
+ THE_KNE_is_hakutaku_shape_ttt: "是§Y白泽形态§!"
+ THE_KNE_creat_tributary_HMC_after_take_mandate_tt: "@HMC§Y[HMC.GetName]§!将在完成任务「§Y白泽天命§!」后成为我们的§Y朝贡国§!"
+ THE_KNE_remove_tribe_modifier_extra_effect_tt: "在「§Y为时除害§!」持续时间内，获得§Y鄂温克§!或§Y阿尔泰§!文化组的省份将减少其他国家对@[Root.GetTag][Root.GetName]的§G2§!点£THE_ae_icon£侵略扩张"
+ THE_KNE_mission_4_1_effect_case0_tt: "根据已完成的任务条件获得以下额外效果:"
+ THE_KNE_mission_4_1_effect_case1_tt_yes: "£yes£§M陆军数量上限或陆军规模:§!"
+ THE_KNE_mission_4_1_effect_case1_tt_no: "£no£§M陆军数量上限或陆军规模:§!"
+ THE_KNE_mission_4_1_effect_case2_tt_yes: "£yes£§M军事科技:§!"
+ THE_KNE_mission_4_1_effect_case2_tt_no: "£no£§M军事科技:§!"
+ THE_KNE_mission_4_1_effect_case3_tt_yes: "£yes£§M骑兵数量:§!"
+ THE_KNE_mission_4_1_effect_case3_tt_no: "£no£§M骑兵数量:§!"
+ THE_KNE_mission_4_1_effect_case3_tt: "每拥有§Y1000§!£cavalry_icon_small£骑兵，获得§G500§!£icon_manpower£人力和§G20§!¤金币"
+ THE_KNE_mission_3_2_effect_case1_tt_yes: "£yes£§M省份自治度:§!"
+ THE_KNE_mission_3_2_effect_case1_tt_no: "£no£§M省份自治度:§!"
+ THE_KNE_mission_3_2_effect_case1_tt: "从治下每个§Y鄂温克文化组§!的省份获得§G10§!威望，溢出的威望将转化成三类§Y君主点数§!"
+ THE_KNE_mission_3_2_effect_case2_tt_yes: "£yes£§M省份发展度:§!"
+ THE_KNE_mission_3_2_effect_case2_tt_no: "£no£§M省份发展度:§!"
+ THE_KNE_mission_3_2_effect_case2_tt: "从治下每个§Y鄂温克文化组§!的省份获得§G10§!改革进度"
+ THE_KNE_mission_2_3_effect_tt: "治下所有§Y阿尔泰文化组§!的省份转变为§Y女真§!文化；如果任务「§Y统一女真部落§!」已完成，则转变为§Y满洲§!文化\n\n之后获得的§Y阿尔泰文化组§!省份也会触发该效果"
+ THE_KNE_mission_3_3_effect_tt: "治下所有§Y女真§!文化的省份转变为§Y满洲§!文化，获得以下效果:"
+ THE_KNE_mission_4_3_effect_tt: "治下所有§Y朝鲜§!地区的§Y沿海§!省份:\n开始建造§Y1§!重型战舰，花费§Y0.0%§!，耗时§Y25.0%§!"
  ### CUSTOM_TOOLTIP_END
 
  ### DECISION
  THE_KNE_hakutaku_swap_to_hakutaku_shape_decision_title: "@[Root.GetTag]知识与历史的半兽 - 转换至白泽形态"
- THE_KNE_hakutaku_swap_to_hakutaku_shape_decision_desc: "上白泽慧音是半白泽兽人，能够在人类形态和白泽形态间转换。\n\n当我们转换形态时，当前的§Y国家名称§!、§Y国家颜色§!、§Y国家理念§!将随形态改变"
+ THE_KNE_hakutaku_swap_to_hakutaku_shape_decision_desc: "上白泽慧音是半白泽兽人，能够在人类形态和白泽形态间转换。\n\n当我们转换形态时，§Y国家名称§!、§Y国家颜色§!、§Y国家理念§!也将随形态改变"
  THE_KNE_hakutaku_swap_to_human_shape_decision_title: "@[Root.GetTag]知识与历史的半兽 - 转换至人类形态"
- THE_KNE_hakutaku_swap_to_human_shape_decision_desc: "上白泽慧音是半白泽兽人，能够在人类形态和白泽形态间转换。\n\n当我们转换形态时，当前的§Y国家名称§!、§Y国家颜色§!、§Y国家理念§!将随形态改变"
+ THE_KNE_hakutaku_swap_to_human_shape_decision_desc: "上白泽慧音是半白泽兽人，能够在人类形态和白泽形态间转换。\n\n当我们转换形态时，§Y国家名称§!、§Y国家颜色§!、§Y国家理念§!也将随形态改变"
  ### DECISION_END
 
  ### GOVERNMENT
@@ -17,3 +39,11 @@ l_english:
  THE_KNE_monarchy_reform_desc: "一种政策多变的君主制，因慧音的形态亦时常变化。当慧音的形态变化时，她的特质亦会改变，使得我国的方针政策全然变更！"
  mechanic_THE_KNE_hakutaku_swap_custom_attributes_yes: "允许在§Y人类形态§!和§Y白泽形态§!间转换"
  ### GOVERNMENT_END
+
+ ### MODIFIER
+ THE_KNE_remove_tribe_modifier: "为时除害"
+ THE_KNE_againstholy_modifier: "对抗圣兽"
+ THE_KNE_mongolia_horse_modifier: "北原牧马"
+ THE_KNE_call_of_war_province_modifier: "战争召唤"
+ THE_KNE_dominate_east_sea_modifier: "巡狩东海"
+ ### MODIFIER_END

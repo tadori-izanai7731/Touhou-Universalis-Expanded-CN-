@@ -1,15 +1,37 @@
 ﻿l_english:
  ### CUSTOM_TOOLTIP
+ THE_KNE_ROOT_TT: "@[Root.GetTag]§Y[Root.GetName]§!"
  THE_KNE_available_for_every_20_years_ttt: "Ïk§Y20§!t^êSýwO(uN!klbcbV`"
  THE_KNE_now_is_human_shape_tt: "SVMR=f§YºN‰|bV`§!ÿgbLˆ³Q®‹lbc:N§Y‹výlbV`§!"
- THE_KNE_now_is_shape_shape_tt: "SVMR=f§Y‹výlbV`§!ÿgbLˆ³Q®‹lbc:N§YºN‰|bV`§!"
+ THE_KNE_now_is_hakutaku_shape_tt: "SVMR=f§Y‹výlbV`§!ÿgbLˆ³Q®‹lbc:N§YºN‰|bV`§!"
+ THE_KNE_is_human_shape_ttt: "=f§YºN‰|bV`§!"
+ THE_KNE_is_hakutaku_shape_ttt: "=f§Y‹výlbV`§!"
+ THE_KNE_creat_tributary_HMC_after_take_mandate_tt: "@HMC§Y[HMC.GetName]§!S(WŒRbûN¡R0§Y‹výl)Y‹T§!0Tb:NbìN„v§Yg!ýV§!"
+ THE_KNE_remove_tribe_modifier_extra_effect_tt: "(W0§Y:Nöed–³R§!0cíuöeô•…Qÿ·ƒ—V§Y‘)nKQ§!b§Y?–Sðl§!‡eSÄu„vwýNSÏQSvQÖNýV¶RùR@[Root.GetTag][Root.GetName]„v§G2§!¹p£THE_ae_icon£µOeuib.V"
+ THE_KNE_mission_4_1_effect_case0_tt: "9hncòTŒRb„vûN¡RagöN·ƒ—VåNN˜YHeœg:"
+ THE_KNE_mission_4_1_effect_case1_tt_yes: "£yes£§MF–›QpeÏ‘NP–bF–›QÄ‰!j:§!"
+ THE_KNE_mission_4_1_effect_case1_tt_no: "£no£§MF–›QpeÏ‘NP–bF–›QÄ‰!j:§!"
+ THE_KNE_mission_4_1_effect_case2_tt_yes: "£yes£§M›Q‹NÑyŽb:§!"
+ THE_KNE_mission_4_1_effect_case2_tt_no: "£no£§M›Q‹NÑyŽb:§!"
+ THE_KNE_mission_4_1_effect_case3_tt_yes: "£yes£§M‘šuQpeÏ‘:§!"
+ THE_KNE_mission_4_1_effect_case3_tt_no: "£no£§M‘šuQpeÏ‘:§!"
+ THE_KNE_mission_4_1_effect_case3_tt: "Ïkåb	g§Y1000§!£cavalry_icon_small£‘šuQÿ·ƒ—V§G500§!£icon_manpower£ºN›RŒT§G20§!¤Ñ‘^"
+ THE_KNE_mission_3_2_effect_case1_tt_yes: "£yes£§MwýNê»l¦^:§!"
+ THE_KNE_mission_3_2_effect_case1_tt_no: "£no£§MwýNê»l¦^:§!"
+ THE_KNE_mission_3_2_effect_case1_tt: "ÎN»lNÏk*N§Y‘)nKQ‡eSÄu§!„vwýN·ƒ—V§G10§!Zgÿ¢núQ„vZgSlSb	N‰|§YTIN¹ppe§!"
+ THE_KNE_mission_3_2_effect_case2_tt_yes: "£yes£§MwýNÑSUS¦^:§!"
+ THE_KNE_mission_3_2_effect_case2_tt_no: "£no£§MwýNÑSUS¦^:§!"
+ THE_KNE_mission_3_2_effect_case2_tt: "ÎN»lNÏk*N§Y‘)nKQ‡eSÄu§!„vwýN·ƒ—V§G10§!9ei—Û¦^"
+ THE_KNE_mission_2_3_effect_tt: "»lNNb	g§Y?–Sðl‡eSÄu§!„vwýNlØS:N§YsYw§!‡eSÿ‚YœgûN¡R0§YßuNsYwèK„§!0òTŒRbÿRlØS:N§Yán2m§!‡eS\n\nKNT·ƒ—V„v§Y?–Sðl‡eSÄu§!wýNmNOæ‰ÑSå‹Heœg"
+ THE_KNE_mission_3_3_effect_tt: "»lNNb	g§YsYw§!‡eS„vwýNlØS:N§Yán2m§!‡eSÿ·ƒ—VåNNHeœg:"
+ THE_KNE_mission_4_3_effect_tt: "»lNNb	g§Ygœœ§!0W:S„v§Y¿lwm§!wýN:"
  ### CUSTOM_TOOLTIP_END
 
  ### DECISION
  THE_KNE_hakutaku_swap_to_hakutaku_shape_decision_title: "@[Root.GetTag]åwÆ‹N†SòS„vJS‹Q - lbcó‹výlbV`"
- THE_KNE_hakutaku_swap_to_hakutaku_shape_decision_desc: "N‹výlgaó—=fJS‹výl‹QºNÿýwY(WºN‰|bV`ŒT‹výlbV`ô•lbc0\n\nSVbìNlbcbV`öeÿSVMR„v§YýV¶RTðy§!0§YýV¶Rœ˜r‚§!0§YýV¶RtõV§!S–bV`9eØS"
+ THE_KNE_hakutaku_swap_to_hakutaku_shape_decision_desc: "N‹výlgaó—=fJS‹výl‹QºNÿýwY(WºN‰|bV`ŒT‹výlbV`ô•lbc0\n\nSVbìNlbcbV`öeÿ§YýV¶RTðy§!0§YýV¶Rœ˜r‚§!0§YýV¶RtõV§!mNS–bV`9eØS"
  THE_KNE_hakutaku_swap_to_human_shape_decision_title: "@[Root.GetTag]åwÆ‹N†SòS„vJS‹Q - lbcóºN‰|bV`"
- THE_KNE_hakutaku_swap_to_human_shape_decision_desc: "N‹výlgaó—=fJS‹výl‹QºNÿýwY(WºN‰|bV`ŒT‹výlbV`ô•lbc0\n\nSVbìNlbcbV`öeÿSVMR„v§YýV¶RTðy§!0§YýV¶Rœ˜r‚§!0§YýV¶RtõV§!S–bV`9eØS"
+ THE_KNE_hakutaku_swap_to_human_shape_decision_desc: "N‹výlgaó—=fJS‹výl‹QºNÿýwY(WºN‰|bV`ŒT‹výlbV`ô•lbc0\n\nSVbìNlbcbV`öeÿ§YýV¶RTðy§!0§YýV¶Rœ˜r‚§!0§YýV¶RtõV§!mNS–bV`9eØS"
  ### DECISION_END
 
  ### GOVERNMENT
@@ -17,3 +39,11 @@
  THE_KNE_monarchy_reform_desc: "NÍy?eVrYØS„vTIN6RÿàVgaó—„vbV`¦Nöe8^ØSS0SVgaó—„vbV`ØSSöeÿyY„vyr(¦NO9eØSÿO—VbýV„v¹eˆ”?eVrhQ6qØSôfÿ"
  mechanic_THE_KNE_hakutaku_swap_custom_attributes_yes: "AQ¸‹(W§YºN‰|bV`§!ŒT§Y‹výlbV`§!ô•lbc"
  ### GOVERNMENT_END
+
+ ### MODIFIER
+ THE_KNE_remove_tribe_modifier: ":Nöed–³R"
+ THE_KNE_againstholy_modifier: "ùR—b1W‹Q"
+ THE_KNE_mongolia_horse_modifier: "SŸSgrlš"
+ THE_KNE_call_of_war_province_modifier: "b‰NìS2U"
+ THE_KNE_dominate_east_sea_modifier: "áTérNwm"
+ ### MODIFIER_END

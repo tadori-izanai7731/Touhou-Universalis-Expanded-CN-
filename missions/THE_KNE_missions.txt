@@ -4,28 +4,28 @@ THE_KNE_mission_branch_1 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = KNE } 
-
+	
 	THE_KNE_mission_1_1 = {
 		icon = mission_unknown_mission
 		position = 1
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_KNE_mission_1_2 = {
 		icon = mission_unknown_mission
 		position = 2
 		required_missions = { THE_KNE_mission_1_1 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_KNE_mission_1_3 = {
 		icon = mission_unknown_mission
 		position = 3
@@ -34,44 +34,44 @@ THE_KNE_mission_branch_1 = {
 			THE_KNE_mission_2_2
 		}
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_KNE_mission_1_4 = {
 		icon = mission_unknown_mission
 		position = 4
 		required_missions = { THE_KNE_mission_1_3 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_KNE_mission_1_5 = {
 		icon = mission_unknown_mission
 		position = 5
 		required_missions = { THE_KNE_mission_3_4 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_KNE_mission_1_6 = {
 		icon = mission_unknown_mission
 		position = 6
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_KNE_mission_1_7 = {
 		icon = mission_unknown_mission
 		position = 7
@@ -80,9 +80,9 @@ THE_KNE_mission_branch_1 = {
 			THE_KNE_mission_2_6
 		}
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
 }
@@ -92,79 +92,192 @@ THE_KNE_mission_branch_2 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = KNE } 
-
+	
 	THE_KNE_mission_2_1 = {
 		icon = mission_unknown_mission
 		position = 1
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
+		provinces_to_highlight = {
+			if = {
+				limit = {
+					NOT = { is_year = 1450 }
+					exists = SOL
+				}
+				is_capital_of = SOL
+			}
+			else = {
+				OR = {
+					area = east_heilongjiang_area
+					area = heilongjiang_area
+				}
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		} 
+		
+		trigger = {
+			if = {
+				limit = {
+					NOT = { is_year = 1450 }
+					exists = SOL
+				}
+				SOL = {
+					OR = {
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = scornfully_insulted
+						}
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = insulted
+						}
+					}
+				}
+			}
+			else = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 6
+					OR = {
+						area = east_heilongjiang_area
+						area = heilongjiang_area
+					}
+				}
+			}
+		} 
+		
+		effect = {
+			add_mil_power = 200
+			add_country_modifier = {
+				name = THE_KNE_remove_tribe_modifier
+				duration = 10950
+			}
+			custom_tooltip = THE_KNE_remove_tribe_modifier_extra_effect_tt
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					NOT = { is_year = 1450 }
+					exists = SOL
+				}
+				SOL = {
+					hidden_effect = {
+						every_ally = { add_trust = { who = SOL value = -20 } }
+					}
+					add_country_modifier = {
+						name = THE_KNE_againstholy_modifier
+						duration = 3650
+					}
+					declare_war_with_cb = {
+						casus_belli = cb_insult
+						who = ROOT
+					}
+				}
+			}
+		} 
 	}
-
+	
 	THE_KNE_mission_2_2 = {
 		icon = mission_unknown_mission
 		position = 2
 		required_missions = { THE_KNE_mission_1_1 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_KNE_mission_2_3 = {
 		icon = mission_unknown_mission
 		position = 3
 		required_missions = { THE_KNE_mission_3_2 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
+		provinces_to_highlight = {
+			region = mongolia_region
+			OR = {
+				has_terrain = steppe
+				has_terrain = mountain
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+		
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				region = mongolia_region
+				has_terrain = steppe
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				region = mongolia_region
+				has_terrain = mountain
+			}
+		} 
+		
+		effect = {
+			add_country_modifier = {
+				name = THE_KNE_mongolia_horse_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_KNE_mission_2_3_effect_tt
+			hidden_effect = {
+				if = {
+					limit = { mission_completed = THE_KNE_mission_3_3 }
+					every_owned_province = {
+						limit = {
+							culture_group = altaic
+						}
+						change_culture = manchu_new
+					}
+				}
+				else = {
+					every_owned_province = {
+						limit = {
+							culture_group = altaic
+						}
+						change_culture = manchu
+					}
+				}
+			}
+		} 
 	}
-
+	
 	THE_KNE_mission_2_4 = {
 		icon = mission_unknown_mission
 		position = 4
 		required_missions = { THE_KNE_mission_1_3 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_KNE_mission_2_5 = {
 		icon = mission_unknown_mission
 		position = 5
 		required_missions = { THE_KNE_mission_3_4 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_KNE_mission_2_6 = {
 		icon = mission_unknown_mission
 		position = 6
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_KNE_mission_2_7 = {
 		icon = mission_unknown_mission
 		position = 7
 		required_missions = { THE_KNE_mission_3_6 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
 }
@@ -174,17 +287,74 @@ THE_KNE_mission_branch_3 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = KNE } 
-
+	
 	THE_KNE_mission_3_1 = {
 		icon = mission_unknown_mission
 		position = 1
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
+		provinces_to_highlight = {
+			if = {
+				limit = { exists = HMC }
+				owned_by = HMC
+			}
+			else = {
+				OR = {
+					area = Human_state
+					area = Kourindou_state
+				}
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		} 
+		
+		trigger = {
+			if = {
+				limit = { exists = HMC }
+				OR = {
+					alliance_with = HMC
+					reverse_has_opinion_modifier = {
+						who = HMC
+						modifier = improved_relation
+						value = 100
+					}
+				}
+			}
+			else = {
+				Human_state = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				Kourindou_state = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		} 
+		
+		effect = {
+			if = {
+				limit = {
+					exists = HMC
+				}
+				if = {
+					limit = { NOT = { alliance_with = HMC } }
+					create_alliance = HMC
+				}
+				THE_add_historical_friend_and_reverse_scripted_effect = { tag = HMC }
+				THE_unlock_special_culture_ideas_scripted_effect = {
+					type = human
+				}
+				custom_tooltip = empty_line_tt
+				custom_tooltip = THE_KNE_creat_tributary_HMC_after_take_mandate_tt
+			}
+			else = {
+				add_adm_power = 300
+				if = {
+					limit = { is_emperor_of_china = yes }
+					add_mandate = 20
+				}
+			}
+		} 
 	}
-
+	
 	THE_KNE_mission_3_2 = {
 		icon = mission_unknown_mission
 		position = 2
@@ -192,45 +362,211 @@ THE_KNE_mission_branch_3 = {
 			THE_KNE_mission_2_1
 			THE_KNE_mission_4_1
 		}
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
+		provinces_to_highlight = {
+			culture_group = evenks
+			OR = {
+				NOT = { owned_by = ROOT }
+				local_autonomy = 25
+				NOT = { development = 10 }
+			}
+		} 
+		
+		trigger = {
+			OR = {
+				num_of_owned_provinces_with = {
+					value = 10
+					culture_group = evenks
+					NOT = { local_autonomy = 25 }
+				}
+				num_of_owned_provinces_with = {
+					value = 10
+					culture_group = evenks
+					development = 10
+				}
+			}
+		} 
+		
+		effect = {
+			add_adm_power = 200
+			mongolia_region = {
+				add_permanent_claim = ROOT
+			}
+			korea_region = {
+				add_permanent_claim = ROOT
+			}
+			add_accepted_culture_or_dip_power = {
+				culture = evenk
+				free = yes
+			}
+			add_accepted_culture_or_dip_power = {
+				culture = yakut
+				free = yes
+			}
+			add_accepted_culture_or_dip_power = {
+				culture = yukagyr
+				free = yes
+			}
+			add_accepted_culture_or_dip_power = {
+				culture = buryat
+				free = yes
+			}
+			add_accepted_culture_or_dip_power = {
+				culture = tungus
+				free = yes
+			}
+			add_accepted_culture_or_dip_power = {
+				culture = manchu
+				free = yes
+			}
+			hidden_effect = {
+				728 = { change_culture = manchu }
+				remove_country_modifier = mjz_dominance_of_the_horselords_modifier
+			}
+			set_country_flag = enables_estate_nomadic_tribes_flag
+			custom_tooltip = mng_enable_tribes_estate_tt
+			add_country_modifier = {
+				name = mjz_dominance_of_the_horselords_modifier
+				duration = 10950
+			}
+			custom_tooltip = THE_KNE_mission_4_1_effect_case0_tt
+			if = {
+				limit = {
+					num_of_owned_provinces_with = {
+						value = 10
+						culture_group = evenks
+						NOT = { local_autonomy = 25 }
+					}
+				}
+				custom_tooltip = THE_KNE_mission_3_2_effect_case1_tt_yes
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							culture_group = evenks
+						}
+						ROOT = {
+							add_prestige_or_monarch_power = {
+								amount = 10
+							}
+						}
+					}
+				}
+			}
+			else = {
+				custom_tooltip = THE_KNE_mission_3_2_effect_case1_tt_no
+			}
+			tooltip = {
+				custom_tooltip = THE_KNE_mission_3_2_effect_case1_tt
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					num_of_owned_provinces_with = {
+						value = 10
+						culture_group = evenks
+						NOT = { local_autonomy = 25 }
+					}
+				}
+				custom_tooltip = THE_KNE_mission_3_2_effect_case2_tt_yes
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							culture_group = evenks
+						}
+						ROOT = {
+							change_government_reform_progress = 10
+						}
+					}
+				}
+			}
+			else = {
+				custom_tooltip = THE_KNE_mission_3_2_effect_case2_tt_no
+			}
+			tooltip = {
+				custom_tooltip = THE_KNE_mission_3_2_effect_case2_tt
+			}
+		} 
 	}
-
+	
 	THE_KNE_mission_3_3 = {
 		icon = mission_unknown_mission
 		position = 3
 		required_missions = { THE_KNE_mission_3_2 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
+		provinces_to_highlight = {
+			region = manchuria_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+		
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				region = manchuria_region
+			}
+			2108 = { country_or_non_sovereign_subject_holds = ROOT }
+			730 = { country_or_non_sovereign_subject_holds = ROOT }
+			4201 = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+		
+		effect = {
+			china_superregion = {
+				add_permanent_claim = ROOT
+			}
+			custom_tooltip = THE_KNE_mission_3_3_effect_tt
+			tooltip = {
+				add_province_modifier = {
+					name = THE_KNE_call_of_war_province_modifier
+					duration = 7300
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = manchu
+					}
+					change_culture = manchu_new
+				}
+				every_owned_province = {
+					limit = {
+						culture = manchu_new
+					}
+					add_province_modifier = {
+						name = THE_KNE_call_of_war_province_modifier
+						duration = 7300
+					}
+				}
+				remove_country_modifier = mjz_dominance_of_the_horselords_modifier
+			}
+			add_accepted_culture_or_dip_power = {
+				culture = manchu_new
+				free = yes
+			}
+			add_country_modifier = {
+				name = mjz_dominance_of_the_horselords_modifier
+				duration = 18250
+			}
+		} 
 	}
-
+	
 	THE_KNE_mission_3_4 = {
 		icon = mission_unknown_mission
 		position = 4
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_KNE_mission_3_5 = {
 		icon = mission_unknown_mission
 		position = 5
 		required_missions = { THE_KNE_mission_3_4 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_KNE_mission_3_6 = {
 		icon = mission_unknown_mission
 		position = 6
@@ -240,20 +576,20 @@ THE_KNE_mission_branch_3 = {
 			THE_KNE_mission_5_5
 		}
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_KNE_mission_3_7 = {
 		icon = mission_unknown_mission
 		position = 7
 		required_missions = { THE_KNE_mission_4_6 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
 }
@@ -263,90 +599,224 @@ THE_KNE_mission_branch_4 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = KNE } 
-
+	
 	THE_KNE_mission_4_1 = {
 		icon = mission_unknown_mission
 		position = 1
 		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
+		
+		trigger = {
+			OR = {
+				army_size_percentage = 0.9
+				army_size = 20
+				mil_tech = 4
+				num_of_cavalry = 5
+			}
+		} 
+		
+		effect = {
+			add_army_tradition = 25
+			manchuria_region = {
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = mjz_dominance_of_the_horselords_modifier
+				duration = 3650 
+			}
+			custom_tooltip = THE_KNE_mission_4_1_effect_case0_tt
+			if = {
+				limit = {
+					army_size_percentage = 0.9
+					army_size = 20
+				}
+				custom_tooltip = THE_KNE_mission_4_1_effect_case1_tt_yes
+				hidden_effect = {
+					capital_scope = {
+						area = {
+							limit = {
+								owned_by = ROOT
+							}
+							add_building = regimental_camp
+						}
+					}
+				}
+			}
+			else = {
+				custom_tooltip = THE_KNE_mission_4_1_effect_case1_tt_no
+			}
+			tooltip = {
+				capital_scope = {
+					area = {
+						limit = {
+							owned_by = ROOT
+						}
+						add_building = regimental_camp
+					}
+				}
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = { mil_tech = 4 }
+				custom_tooltip = THE_KNE_mission_4_1_effect_case2_tt_yes
+				hidden_effect = {
+					create_general = {
+						tradition = 80
+					}
+					define_advisor = {
+						type = army_reformer
+						cost_multiplier = 0.1
+						culture = ROOT
+						religion = ROOT
+						skill = 3
+					}
+				}
+			}
+			else = {
+				custom_tooltip = THE_KNE_mission_4_1_effect_case2_tt_no
+			}
+			tooltip = {
+				create_general = {
+					tradition = 80
+				}
+				define_advisor = {
+					type = army_reformer
+					cost_multiplier = 0.1
+					culture = ROOT
+					religion = ROOT
+					skill = 3
+				}
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = { mil_tech = 4 }
+				custom_tooltip = THE_KNE_mission_4_1_effect_case3_tt_yes
+				hidden_effect = {
+					export_to_variable = {
+						which = the_kne_cavalry_num_var
+						value = trigger_value:num_of_cavalry
+					}
+					for_variable_amount = {
+						variable = the_kne_cavalry_num_var
+						effect = "
+							add_manpower = 0.5
+							add_treasury = 20
+						"
+					}
+				}
+			}
+			else = {
+				custom_tooltip = THE_KNE_mission_4_1_effect_case3_tt_no
+			}
+			custom_tooltip = THE_KNE_mission_4_1_effect_case3_tt
+		} 
 	}
-
+	
 	THE_KNE_mission_4_2 = {
 		icon = mission_unknown_mission
 		position = 2
 		required_missions = { THE_KNE_mission_5_1 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_KNE_mission_4_3 = {
 		icon = mission_unknown_mission
 		position = 3
 		required_missions = { THE_KNE_mission_3_2 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
+		provinces_to_highlight = {
+			region = korea_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+		
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				region = korea_region
+			}
+			1845 = { country_or_non_sovereign_subject_holds = ROOT }
+			735 = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+		
+		effect = {
+			japan_region = {
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = THE_KNE_dominate_east_sea_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_KNE_mission_4_3_effect_tt
+			hidden_effect = {
+				korea_region = {
+					limit = {
+						has_port = yes
+						owned_by = ROOT
+					}
+					add_unit_construction = {
+						type = heavy_ship
+						amount = 1
+						speed = 0.25
+						cost = 0
+					}
+				}
+			}
+		} 
 	}
-
+	
 	THE_KNE_mission_4_4 = {
 		icon = mission_unknown_mission
 		position = 4
 		required_missions = { THE_KNE_mission_5_3 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_KNE_mission_4_5 = {
 		icon = mission_unknown_mission
 		position = 5
 		required_missions = { THE_KNE_mission_3_4 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_KNE_mission_4_6 = {
 		icon = mission_unknown_mission
 		position = 6
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_KNE_mission_4_7 = {
 		icon = mission_unknown_mission
 		position = 7
 		required_missions = { THE_KNE_mission_4_6 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_KNE_mission_4_8 = {
 		icon = mission_unknown_mission
 		position = 8
 		required_missions = { THE_KNE_mission_4_7 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
 }
@@ -356,28 +826,28 @@ THE_KNE_mission_branch_5 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = KNE } 
-
+	
 	THE_KNE_mission_5_1 = {
 		icon = mission_unknown_mission
 		position = 1
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_KNE_mission_5_2 = {
 		icon = mission_unknown_mission
 		position = 2
 		required_missions = { THE_KNE_mission_5_1 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_KNE_mission_5_3 = {
 		icon = mission_unknown_mission
 		position = 3
@@ -386,42 +856,42 @@ THE_KNE_mission_branch_5 = {
 			THE_KNE_mission_5_2
 		}
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_KNE_mission_5_4 = {
 		icon = mission_unknown_mission
 		position = 4
 		required_missions = { THE_KNE_mission_5_3 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_KNE_mission_5_5 = {
 		icon = mission_unknown_mission
 		position = 5
 		required_missions = { THE_KNE_mission_3_4 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_KNE_mission_5_7 = {
 		icon = mission_unknown_mission
 		position = 7
 		required_missions = { THE_KNE_mission_4_6 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
 }

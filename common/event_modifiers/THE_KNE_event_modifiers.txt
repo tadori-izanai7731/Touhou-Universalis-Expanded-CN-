@@ -1,0 +1,38 @@
+# 为时除害
+THE_KNE_remove_tribe_modifier = {
+	recover_army_morale_speed = 0.1
+	land_maintenance_modifier = -0.2
+	morale_damage = 0.1
+}
+
+# 对抗圣兽
+THE_KNE_againstholy_modifier = {
+	military_tactics = -0.1
+	land_morale_constant = -0.3
+	defensiveness = -0.3
+	siege_ability = -0.15
+}
+
+# 北原牧马
+THE_KNE_mongolia_horse_modifier = {
+	nomadic_tribes_loyalty_modifier = 0.1
+	amount_of_banners = 0.25
+	special_unit_manpower_cost_modifier = -0.1
+	loot_amount = 0.5
+}
+
+# 战争召唤
+THE_KNE_call_of_war_province_modifier = {
+	land_forcelimit = 0.5
+	local_manpower = 800
+	tax_income = 12
+	local_friendly_movement_speed = 0.2
+	local_hostile_movement_speed = -0.2
+}
+
+# 巡狩东海
+THE_KNE_dominate_east_sea_modifier = {
+	prestige = 1
+	monthly_splendor = 2
+	stability_cost_modifier = -0.1
+}
