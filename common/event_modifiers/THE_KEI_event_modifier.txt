@@ -150,3 +150,13 @@ THE_KEI_subject_buff_add_idea_cost_buff = {
 	idea_cost = -0.05
 	technology_cost = -0.05
 }
+#神佑
+THE_KEI_the_subject_of_keiki_powerpoints_buff = {
+	innovativeness_gain = 0.25
+	idea_cost = -0.05
+}
+#神威
+THE_KEI_the_subject_of_keiki_religion_war_buff = {
+	warscore_cost_vs_other_religion = -0.10
+	global_tax_modifier = 0.25
+}

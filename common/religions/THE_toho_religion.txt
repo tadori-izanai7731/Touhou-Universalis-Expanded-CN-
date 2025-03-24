@@ -218,9 +218,11 @@ Touhou = {
 			th_oldhakurei
 			th_shinkism
 			th_scientistic
+			the_minoriko
+			th_kagiyama
 		}
-		
-		will_get_center = {
+
+		will_get_center = { #Refered to even for initial CoR Spawn
 			always = yes
 		}
 		

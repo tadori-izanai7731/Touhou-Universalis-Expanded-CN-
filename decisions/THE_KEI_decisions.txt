@@ -71,11 +71,55 @@ country_decisions = {
 			factor = 0
 		}
 	}
-	#附属国愿力
-	THE_KEI_the_subject_of_keiki_decosions = {
+	#梦想造型决议展开
+	THE_KEI_the_keiki_religions_decosions_open = {
 		color = { 70 222 219 }
 		potential = {
 			religion = the_keiki
+			has_country_flag = THE_KEI_the_keiki_religions_close_flag
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			hidden_effect = {
+				clr_country_flag = THE_KEI_the_keiki_religions_close_flag
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	#梦想造型决议关闭
+	THE_KEI_the_keiki_religions_decosions_close = {
+		color = { 70 222 219 }
+		potential = {
+			religion = the_keiki
+			ai = no
+			NOT = {
+				set_country_flag = THE_KEI_the_keiki_religions_close_flag
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			hidden_effect = {
+				set_country_flag = THE_KEI_the_keiki_religions_close_flag
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	#附属国愿力 #将军
+	THE_KEI_the_subject_of_keiki_decosions_army_tradition = {
+		color = { 70 222 219 }
+		potential = {
+			religion = the_keiki
+			NOT = {
+				has_country_flag = THE_KEI_the_keiki_religions_close_flag
+			}
 		}
 		allow = {
 			custom_trigger_tooltip = {
@@ -93,12 +137,206 @@ country_decisions = {
 		}
 		effect = {
 			custom_tooltip = THE_KEI_the_subject_of_keiki_decosions_c_tt2
-			country_event = {
-				id = THE_KEI_flavor_events.11
+			if = {
+				limit = { 
+					NOT = {
+						army_tradition = 60
+					}
+
+				}
+				create_general = { tradition = 60 add_fire = 1 add_shock = 1 culture = Higanean }
+			}
+			else_if = {
+				limit = { 
+					NOT = {
+						army_tradition = 70
+					}
+					army_tradition = 60
+				}
+				create_general = { tradition = 80 add_fire = 1 add_shock = 1 culture = Higanean }
+			}
+			else_if = {
+				limit = { 
+					NOT = {
+						army_tradition = 80
+					}
+					army_tradition = 70
+				}
+				create_general = { tradition = 90 add_fire = 1 add_shock = 1 culture = Higanean }
+			}
+			else_if = {
+				limit = { 
+					army_tradition = 80
+				}
+				create_general = { tradition = 100 add_fire = 1 add_shock = 1 culture = Higanean }
 			}
 			hidden_effect = {
 				clr_country_flag = THE_KEI_the_subject_of_keiki_special_flag
 				set_country_flag = THE_KEI_the_subject_of_keiki_special_flag
+				change_variable = {
+					which = the_kei_the_blessing_of_the_keiki
+					value = 50
+				}
+			}
+		}
+	}
+	#附属国愿力 #点数
+	THE_KEI_the_subject_of_keiki_decosions_powerpoints = {
+		color = { 70 222 219 }
+		potential = {
+			religion = the_keiki
+			NOT = {
+				has_country_flag = THE_KEI_the_keiki_religions_close_flag
+			}
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = THE_KEI_the_subject_of_keiki_decosions_c_tt1
+				OR = {
+					NOT = {
+						has_country_flag = THE_KEI_the_subject_of_keiki_special_flag
+					}
+					had_country_flag = {
+						flag = THE_KEI_the_subject_of_keiki_special_flag
+						days = 1825
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = THE_KEI_the_subject_of_keiki_decosions_c_tt2
+			add_adm_power = 200
+			add_dip_power = 200
+			add_mil_power = 200
+			add_country_modifier = {
+				name = THE_KEI_the_subject_of_keiki_powerpoints_buff
+				duration = -1
+			}
+			hidden_effect = {
+				clr_country_flag = THE_KEI_the_subject_of_keiki_special_flag
+				set_country_flag = THE_KEI_the_subject_of_keiki_special_flag
+				change_variable = {
+					which = the_kei_the_blessing_of_the_keiki
+					value = 50
+				}
+			}
+		}
+	}
+	#附属国 #建筑
+	THE_KEI_the_subject_of_keiki_decosions_powerpoints = {
+		color = { 70 222 219 }
+		potential = {
+			religion = the_keiki
+			NOT = {
+				has_country_flag = THE_KEI_the_keiki_religions_close_flag
+			}
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = THE_KEI_the_subject_of_keiki_decosions_c_tt1
+				OR = {
+					NOT = {
+						has_country_flag = THE_KEI_the_subject_of_keiki_special_flag
+					}
+					had_country_flag = {
+						flag = THE_KEI_the_subject_of_keiki_special_flag
+						days = 1825
+					}
+				}
+			}
+			treasury = 500
+		}
+		effect = {
+			custom_tooltip = THE_KEI_the_subject_of_keiki_decosions_c_tt2
+			add_treasury = -500
+			add_country_modifier = {
+				name = THE_KEI_decree_work_buff
+				duration = -1
+			}
+			hidden_effect = {
+				clr_country_flag = THE_KEI_the_subject_of_keiki_special_flag
+				set_country_flag = THE_KEI_the_subject_of_keiki_special_flag
+				change_variable = {
+					which = the_kei_the_blessing_of_the_keiki
+					value = 50
+				}
+			}
+		}
+	}
+	#附属国 #顾问
+	THE_KEI_the_subject_of_keiki_decosions_advisor = {
+		color = { 70 222 219 }
+		potential = {
+			religion = the_keiki
+			NOT = {
+				has_country_flag = THE_KEI_the_keiki_religions_close_flag
+			}
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = THE_KEI_the_subject_of_keiki_decosions_c_tt1
+				OR = {
+					NOT = {
+						has_country_flag = THE_KEI_the_subject_of_keiki_special_flag
+					}
+					had_country_flag = {
+						flag = THE_KEI_the_subject_of_keiki_special_flag
+						days = 1825
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = THE_KEI_the_subject_of_keiki_decosions_c_tt2
+			#加顾问事件
+			hidden_effect = {
+				clr_country_flag = THE_KEI_the_subject_of_keiki_special_flag
+				set_country_flag = THE_KEI_the_subject_of_keiki_special_flag
+				change_variable = {
+					which = the_kei_the_blessing_of_the_keiki
+					value = 50
+				}
+			}
+		}
+	}
+	#附属国决议 #圣战
+	THE_KEI_the_subject_of_keiki_decosions_religion_war = {
+		color = { 70 222 219 }
+		potential = {
+			religion = the_keiki
+			NOT = {
+				has_country_flag = THE_KEI_the_keiki_religions_close_flag
+			}
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = THE_KEI_the_subject_of_keiki_decosions_c_tt1
+				OR = {
+					NOT = {
+						has_country_flag = THE_KEI_the_subject_of_keiki_special_flag
+					}
+					had_country_flag = {
+						flag = THE_KEI_the_subject_of_keiki_special_flag
+						days = 1825
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = THE_KEI_the_subject_of_keiki_decosions_c_tt2
+			#
+			add_country_modifier = {
+				name = THE_KEI_the_subject_of_keiki_religion_war_buff 
+				duration = -1
+			}
+			#
+			hidden_effect = {
+				clr_country_flag = THE_KEI_the_subject_of_keiki_special_flag
+				set_country_flag = THE_KEI_the_subject_of_keiki_special_flag
+				change_variable = {
+					which = the_kei_the_blessing_of_the_keiki
+					value = 50
+				}
 			}
 		}
 	}

@@ -1,7 +1,5 @@
-the_keiki_center_of_reformation = {
-	
+keiki_center_of_reformation = {
 	religion = the_keiki
-
 	map_icon = GFX_religious_conversion_center_protestant
 
 	max_distance = 500.0 # From Center of Reformation center province (default is NDefines::NReligion::MAX_RELIGIOUS_CENTER_SPREAD_DISTANCE).
@@ -21,6 +19,10 @@ the_keiki_center_of_reformation = {
 		modifier = {
 			factor = 0
 			province_id = 118 # Rome, seat of Papacy
+		}
+		modifier = {
+			factor = 1.5
+			religion = th_hakureishinto
 		}
 		modifier = {
 			factor = 0

@@ -57,8 +57,8 @@
  THE_KEI_flavor_events.7.a: "ôf9e:NLˆ?e"
  THE_KEI_flavor_events.7.b: "ôf9e:NY²N"
  THE_KEI_flavor_events.7.c: "ôf9e:N›Q‹N"
- THE_KEI_add_blessing_50_keiki_c_tt1: "?a›RžX•50¹p"
- THE_KEI_add_blessing_100_keiki_c_tt1: "?a›RžX•100¹p"
+ THE_KEI_add_blessing_50_keiki_c_tt1: "§M?a›R§!žX•50¹p"
+ THE_KEI_add_blessing_100_keiki_c_tt1: "§M?a›R§!žX•100¹p"
  THE_KEI_flavor_events.11.a: ""
  ##buff_name
  THE_KEI_savtor_light_1_buff: "QeNKNIQ"
@@ -96,7 +96,7 @@
  the_keiki_fervor_ruin_short: ")T›k"
  the_keiki_fervor_vibrant_short: "qu"
  the_keiki_fervor_mercy_short: "‚W¯`"
- 
+ keiki_center_of_reformation: "9ei—-NÃV"
  ##decisions
  THE_KEI_change_workman_duixiang_decoisions_title: "9eØS0)YåT0ú^Qrîvh"
  THE_KEI_change_workman_duixiang_decoisions_desc: ""
@@ -160,9 +160,11 @@
  #DIP_action_EXTRA
  THE_KEI_grant_a_blessing_dip_action_title: "i`P"
  THE_KEI_grant_a_blessing_dip_action_desc: ""
- THE_KEI_grant_a_blessing_dip_action_tooltip: "SVMRîvhýV¶R„v?a›R:N[From.the_kei_the_blessing_of_the_keiki.GetValue]"
+ THE_KEI_grant_a_blessing_dip_action_tooltip: "SVMRîvhýV¶R„v§M?a›R§!:N§O[From.the_kei_the_blessing_of_the_keiki.GetValue]§!"
  THE_KEI_change_to_vasssalize_dip_action_title: "lS:ND–¸^"
  THE_KEI_change_to_vasssalize_dip_action_desc: ""
- THE_KEI_change_to_vasssalize_dip_action_tooltip: "SVMRîvhýV¶R„v?a›R:N[From.the_kei_the_blessing_of_the_keiki.GetValue]"
- THE_KEI_inherit_us_subject_dip_action: "OKNRVD–"
- THE_KEI_dip_ac_grant_a_blessing_c_tt1: "îvhýV¶RóSåb	g?a›Rÿ[From.the_kei_the_blessing_of_the_keiki.GetValue]/1000)"
+ THE_KEI_change_to_vasssalize_dip_action_tooltip: "SVMRîvhýV¶R„v§M?a›R§!:N§O[From.the_kei_the_blessing_of_the_keiki.GetValue]§!"
+ THE_KEI_inherit_us_subject_dip_action_title: "OKNRVD–"
+ THE_KEI_inherit_us_subject_dip_action_desc: ""
+ THE_KEI_inherit_us_subject_dip_action_tooltip: "SVMRîvhýV¶R„v§M?a›R§!:N§O[From.the_kei_the_blessing_of_the_keiki.GetValue]§!"
+ THE_KEI_dip_ac_grant_a_blessing_c_tt1: "îvhýV¶RóSåb	g§M?a›R§!ÿ[From.the_kei_the_blessing_of_the_keiki.GetValue]/1000)"
