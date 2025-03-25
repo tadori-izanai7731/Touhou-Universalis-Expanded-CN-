@@ -4,8 +4,8 @@ l_english:
  THE_KNE_available_for_every_20_years_ttt: "每§Y20§!年只能使用一次转换形态"
  THE_KNE_now_is_human_shape_tt: "当前是§Y人类形态§!，执行决议转换为§Y白泽形态§!"
  THE_KNE_now_is_hakutaku_shape_tt: "当前是§Y白泽形态§!，执行决议转换为§Y人类形态§!"
- THE_KNE_is_human_shape_ttt: "是§Y人类形态§!"
- THE_KNE_is_hakutaku_shape_ttt: "是§Y白泽形态§!"
+ THE_KNE_is_human_shape_ttt: "是§Y人类形态§!(使用决议转换形态)"
+ THE_KNE_is_hakutaku_shape_ttt: "是§Y白泽形态§!(使用决议转换形态)"
  THE_KNE_creat_tributary_HMC_after_take_mandate_tt: "@HMC§Y[HMC.GetName]§!将在完成任务「§Y白泽天命§!」后成为我们的§Y朝贡国§!"
  THE_KNE_remove_tribe_modifier_extra_effect_tt: "在「§Y为时除害§!」持续时间内，获得§Y鄂温克§!或§Y阿尔泰§!文化组的省份将减少所有国家对@[Root.GetTag][Root.GetName]的§G2§!点£THE_ae_icon£侵略扩张"
  THE_KNE_mission_4_1_effect_case0_tt: "根据已完成的任务条件获得以下额外效果:"
@@ -25,6 +25,7 @@ l_english:
  THE_KNE_mission_2_3_effect_tt: "治下所有§Y阿尔泰§!文化组的省份转变为§Y女真§!文化；如果任务「§Y统一女真部落§!」已完成，则转变为§Y满洲§!文化\n\n之后获得的§Y阿尔泰§!文化组省份也会触发该效果"
  THE_KNE_mission_3_3_effect_tt: "治下所有§Y女真§!文化的省份转变为§Y满洲§!文化，获得以下效果:"
  THE_KNE_mission_4_3_effect_tt: "治下所有§Y朝鲜§!地区的§Y沿海§!省份:\n开始建造§Y1§!重型战舰，花费§Y0.0%§!，耗时§Y25.0%§!"
+ THE_KNE_every_owned_iron_province_tt: "治下每个生产§Y铁矿§!的省份:"
  ### CUSTOM_TOOLTIP_END
 
  ### DECISION
@@ -46,4 +47,11 @@ l_english:
  THE_KNE_mongolia_horse_modifier: "北原牧马"
  THE_KNE_call_of_war_province_modifier: "战争召唤"
  THE_KNE_dominate_east_sea_modifier: "巡狩东海"
+ THE_KNE_grand_furnace_province_modifier: "大熔炉"
+ THE_KNE_train_banners_modifier: "整训八旗"
  ### MODIFIER_END
+
+ ### ESTATE
+ THE_KNE_estate_nobles_train_banners_privilege: "整训八旗"
+ THE_KNE_estate_nobles_train_banners_privilege_desc: ""
+ ### ESTATE_END

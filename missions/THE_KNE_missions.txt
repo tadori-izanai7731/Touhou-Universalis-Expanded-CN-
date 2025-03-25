@@ -8,22 +8,110 @@ THE_KNE_mission_branch_1 = {
 	THE_KNE_mission_1_1 = {
 		icon = mission_unknown_mission
 		position = 1
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			province_id = 4233
+		} 
 		
-		trigger = {  } 
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_KNE_is_hakutaku_shape_ttt
+				has_country_flag = THE_KNE_hakutaku_shape_flag
+			}
+			if = {
+				limit = {
+					NOT = { is_emperor_of_china = yes }
+					any_country = {
+						is_emperor_of_china = yes
+					}
+				}
+				4233 = {
+					has_trader = ROOT
+				}
+				NOT = { is_at_war = yes }
+			}
+			else = {
+				4233 = {
+					trade_share = {
+						country = ROOT
+						share = 20
+					}
+				}
+			}
+		} 
 		
-		effect = {  } 
+		effect = {
+			if = {
+				limit = {
+					NOT = { is_emperor_of_china = yes }
+					any_country = {
+						is_emperor_of_china = yes
+					}
+				}
+				random_country = {
+					limit = {
+						is_emperor_of_china = yes
+					}
+					create_subject = {
+						subject_type = tributary_state
+						who = ROOT
+					}
+					white_peace = ROOT
+				}
+			}
+			else = {
+				add_dip_power = 100
+			}
+		} 
 	}
 	
 	THE_KNE_mission_1_2 = {
 		icon = mission_unknown_mission
 		position = 2
 		required_missions = { THE_KNE_mission_1_1 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			trade_goods = iron
+			owned_by = ROOT
+			NOT = { base_production = 8 }
+		} 
 		
-		trigger = {  } 
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_KNE_is_hakutaku_shape_ttt
+				has_country_flag = THE_KNE_hakutaku_shape_flag
+			}
+			any_owned_province = {
+				trade_goods = iron
+				base_production = 8
+			}
+			if = {
+				limit = { has_estate = estate_nobles }
+				has_estate_privilege = estate_nobles_monopoly_of_metals
+			}
+		} 
 		
-		effect = {  } 
+		effect = {
+			remove_estate_privilege = estate_nobles_monopoly_of_metals
+			custom_tooltip = THE_KNE_every_owned_iron_province_tt
+			tooltip = {
+				add_building = weapons
+				add_province_modifier = {
+					name = THE_KNE_grand_furnace_province_modifier
+					duration = 7300
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						trade_goods = iron
+					}
+					add_building = weapons
+				}
+				add_province_modifier = {
+					name = THE_KNE_grand_furnace_province_modifier
+					duration = 7300
+				}
+			}
+		} 
 	}
 	
 	THE_KNE_mission_1_3 = {
@@ -35,7 +123,12 @@ THE_KNE_mission_branch_1 = {
 		}
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_KNE_is_hakutaku_shape_ttt
+				has_country_flag = THE_KNE_hakutaku_shape_flag
+			}
+		} 
 		
 		effect = {  } 
 	}
@@ -46,7 +139,12 @@ THE_KNE_mission_branch_1 = {
 		required_missions = { THE_KNE_mission_1_3 } 
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_KNE_is_hakutaku_shape_ttt
+				has_country_flag = THE_KNE_hakutaku_shape_flag
+			}
+		} 
 		
 		effect = {  } 
 	}
@@ -179,9 +277,35 @@ THE_KNE_mission_branch_2 = {
 		required_missions = { THE_KNE_mission_1_1 } 
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_KNE_is_hakutaku_shape_ttt
+				has_country_flag = THE_KNE_hakutaku_shape_flag
+			}
+			cavalry_fraction = 0.5
+			if = {
+				limit = { has_estate = estate_nobles }
+				has_estate_privilege = estate_nobles_levies
+			}
+		} 
 		
-		effect = {  } 
+		effect = {
+			add_army_professionalism = 0.1
+			remove_estate_privilege = estate_nobles_levies
+			hidden_effect = {
+				set_country_flag = THE_KNE_train_banners_privilege_flag
+			}
+			if = {
+				limit = { has_estate = estate_nobles }
+				hidden_effect = {
+					add_country_modifier = {
+						name = THE_KNE_train_banners_modifier
+						duration = -1
+					}
+				}
+				set_estate_privilege = THE_KNE_estate_nobles_train_banners_privilege
+			}
+		} 
 	}
 	
 	THE_KNE_mission_2_3 = {
@@ -244,7 +368,12 @@ THE_KNE_mission_branch_2 = {
 		required_missions = { THE_KNE_mission_1_3 } 
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_KNE_is_hakutaku_shape_ttt
+				has_country_flag = THE_KNE_hakutaku_shape_flag
+			}
+		} 
 		
 		effect = {  } 
 	}
@@ -626,8 +755,10 @@ THE_KNE_mission_branch_4 = {
 			custom_tooltip = THE_KNE_mission_4_1_effect_case0_tt
 			if = {
 				limit = {
-					army_size_percentage = 0.9
-					army_size = 20
+					OR = {
+						army_size_percentage = 0.9
+						army_size = 20
+					}
 				}
 				custom_tooltip = THE_KNE_mission_4_1_effect_case1_tt_yes
 				hidden_effect = {
@@ -717,7 +848,12 @@ THE_KNE_mission_branch_4 = {
 		required_missions = { THE_KNE_mission_5_1 } 
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_KNE_is_human_shape_ttt
+				NOT = { has_country_flag = THE_KNE_hakutaku_shape_flag }
+			}
+		} 
 		
 		effect = {  } 
 	}
@@ -772,7 +908,12 @@ THE_KNE_mission_branch_4 = {
 		required_missions = { THE_KNE_mission_5_3 } 
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_KNE_is_human_shape_ttt
+				NOT = { has_country_flag = THE_KNE_hakutaku_shape_flag }
+			}
+		} 
 		
 		effect = {  } 
 	}
@@ -832,7 +973,12 @@ THE_KNE_mission_branch_5 = {
 		position = 1
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_KNE_is_human_shape_ttt
+				NOT = { has_country_flag = THE_KNE_hakutaku_shape_flag }
+			}
+		} 
 		
 		effect = {  } 
 	}
@@ -843,7 +989,12 @@ THE_KNE_mission_branch_5 = {
 		required_missions = { THE_KNE_mission_5_1 } 
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_KNE_is_human_shape_ttt
+				NOT = { has_country_flag = THE_KNE_hakutaku_shape_flag }
+			}
+		} 
 		
 		effect = {  } 
 	}
@@ -857,7 +1008,12 @@ THE_KNE_mission_branch_5 = {
 		}
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_KNE_is_human_shape_ttt
+				NOT = { has_country_flag = THE_KNE_hakutaku_shape_flag }
+			}
+		} 
 		
 		effect = {  } 
 	}
@@ -868,7 +1024,12 @@ THE_KNE_mission_branch_5 = {
 		required_missions = { THE_KNE_mission_5_3 } 
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_KNE_is_human_shape_ttt
+				NOT = { has_country_flag = THE_KNE_hakutaku_shape_flag }
+			}
+		} 
 		
 		effect = {  } 
 	}

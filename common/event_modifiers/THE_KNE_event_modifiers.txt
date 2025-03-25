@@ -36,3 +36,22 @@ THE_KNE_dominate_east_sea_modifier = {
 	monthly_splendor = 2
 	stability_cost_modifier = -0.1
 }
+
+# 大熔炉
+THE_KNE_grand_furnace_province_modifier = {
+	local_development_cost = -0.2
+	local_regiment_cost = -0.3
+	regiment_recruit_speed = -0.3
+	amount_of_banners = 0.1
+	shock_damage = 0.05
+	shock_damage_received = -0.05
+}
+
+# 整训八旗
+THE_KNE_train_banners_modifier = {
+	reinforce_speed = 0.5
+	shock_damage = 0.1
+	fire_damage = 0.1
+	drill_gain_modifier = 0.5
+	is_banner_modifier = yes
+}

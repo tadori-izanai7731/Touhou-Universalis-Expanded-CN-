@@ -1,0 +1,39 @@
+THE_KNE_estate_nobles_train_banners_privilege = {
+	icon = THE_KNE_privilege_banners
+	max_absolutism = 0
+	loyalty = 0.1
+	influence = 0.2
+	is_valid = {
+		OR = {
+			has_estate_privilege = THE_KNE_estate_nobles_train_banners_privilege
+			has_country_flag = THE_KNE_train_banners_privilege_flag
+		}
+	}
+	can_select = {
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	on_granted = {
+		add_country_modifier = {
+			name = THE_KNE_train_banners_modifier
+			duration = -1
+		}
+	}
+	on_invalid = {
+		add_stability = -3
+		add_mil_power = -300
+		add_army_tradition = -30
+		remove_country_modifier = THE_KNE_train_banners_modifier
+	}
+	on_revoked = {
+		add_stability = -3
+		add_mil_power = -300
+		add_army_tradition = -30
+		remove_country_modifier = THE_KNE_train_banners_modifier
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
