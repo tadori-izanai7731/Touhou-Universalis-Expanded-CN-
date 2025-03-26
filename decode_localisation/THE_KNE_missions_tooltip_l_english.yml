@@ -2,6 +2,7 @@ l_english:
  ### CUSTOM_TOOLTIP
  THE_KNE_ROOT_TT: "@[Root.GetTag]§Y[Root.GetName]§!"
  THE_KNE_available_for_every_20_years_ttt: "每§Y20§!年只能使用一次转换形态"
+ THE_KNE_available_for_every_10_years_ttt: "每§Y10§!年只能训练一次火炮旗军"
  THE_KNE_now_is_human_shape_tt: "当前是§Y人类形态§!，执行决议转换为§Y白泽形态§!"
  THE_KNE_now_is_hakutaku_shape_tt: "当前是§Y白泽形态§!，执行决议转换为§Y人类形态§!"
  THE_KNE_is_human_shape_ttt: "是§Y人类形态§!(使用决议转换形态)"
@@ -26,6 +27,14 @@ l_english:
  THE_KNE_mission_3_3_effect_tt: "治下所有§Y女真§!文化的省份转变为§Y满洲§!文化，获得以下效果:"
  THE_KNE_mission_4_3_effect_tt: "治下所有§Y朝鲜§!地区的§Y沿海§!省份:\n开始建造§Y1§!重型战舰，花费§Y0.0%§!，耗时§Y25.0%§!"
  THE_KNE_every_owned_iron_province_tt: "治下每个生产§Y铁矿§!的省份:"
+ THE_KNE_unlock_all_country_ideas_ttt: "已解锁全部@[Root.GetTag]§Y噬史白泽§!理念"
+ THE_KNE_hakutaku_ideas_n1_modifier_tt: "当我们转换为§Y人类形态§!时，获得等同于@[Root.GetTag]§Y噬史白泽§!理念的修正"
+ THE_KEN_enable_outside_danmaku_duel_tt: "对外界国家启用「§Y挑战弹幕决斗§!」外交行动\n赢得弹幕决斗的胜利将使目标国家获得所受火力伤害§R+10%§!持续§Y10§!年"
+ THE_KNE_enable_train_artillery_banners_decision_tt: "启用决议「§Y训练火炮旗军§!」"
+ THE_KNE_train_artillery_banners_500_tt: "在§Y[Root.Capital.GetName]§!生成§Y30§!队§P八旗炮兵§!"
+ THE_KNE_train_artillery_banners_250_tt: "在§Y[Root.Capital.GetName]§!生成§Y20§!队§P八旗炮兵§!"
+ THE_KNE_train_artillery_banners_0_tt: "在§Y[Root.Capital.GetName]§!生成§Y10§!队§P八旗炮兵§!"
+ THE_KNE_train_artillery_banners_more_tt: "提高陆军规模上限将生成更多§P八旗炮兵§!"
  ### CUSTOM_TOOLTIP_END
 
  ### DECISION
@@ -33,6 +42,8 @@ l_english:
  THE_KNE_hakutaku_swap_to_hakutaku_shape_decision_desc: "上白泽慧音是半白泽兽人，能够在人类形态和白泽形态间转换。\n\n当我们转换形态时，§Y国家名称§!、§Y国家颜色§!、§Y国家理念§!也将随形态改变"
  THE_KNE_hakutaku_swap_to_human_shape_decision_title: "@[Root.GetTag]知识与历史的半兽 - 转换至人类形态"
  THE_KNE_hakutaku_swap_to_human_shape_decision_desc: "上白泽慧音是半白泽兽人，能够在人类形态和白泽形态间转换。\n\n当我们转换形态时，§Y国家名称§!、§Y国家颜色§!、§Y国家理念§!也将随形态改变"
+ THE_KNE_train_artillery_banners_decision_title: "@KNE训练火炮旗军"
+ THE_KNE_train_artillery_banners_decision_desc: ""
  ### DECISION_END
 
  ### GOVERNMENT
@@ -49,9 +60,26 @@ l_english:
  THE_KNE_dominate_east_sea_modifier: "巡狩东海"
  THE_KNE_grand_furnace_province_modifier: "大熔炉"
  THE_KNE_train_banners_modifier: "整训八旗"
+ THE_KNE_create_danmaku_history_modifier: "创造弹幕历史"
+ THE_KNE_removed_danmaku_history_modifier: "弹幕历史被吞噬"
+ THE_KNE_dashx21_modifier: "猛冲！"
+
+  ### COUNTRY_IDEA_MODIFIER
+ THE_KNE_hakutaku_ideas_modifier: "噬史白泽"
+ THE_KNE_human_ideas_modifier: "存史白泽"
  ### MODIFIER_END
 
  ### ESTATE
  THE_KNE_estate_nobles_train_banners_privilege: "整训八旗"
  THE_KNE_estate_nobles_train_banners_privilege_desc: ""
  ### ESTATE_END
+
+ ### VARIABLE
+ the_kne_barrage_var: "轰击城墙次数"
+ ### VARIABLE_END
+
+ ### FLAG
+ THE_KNE_enable_outside_danmaku_duel_flag: "来自@KNE存史白泽: 启用对外界国家的弹幕对决"
+ ### FLAG_END
+
+ 

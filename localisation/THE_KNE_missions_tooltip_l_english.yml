@@ -2,6 +2,7 @@
  ### CUSTOM_TOOLTIP
  THE_KNE_ROOT_TT: "@[Root.GetTag]§Y[Root.GetName]§!"
  THE_KNE_available_for_every_20_years_ttt: "Ïk§Y20§!t^êSýwO(uN!klbcbV`"
+ THE_KNE_available_for_every_10_years_ttt: "Ïk§Y10§!t^êSýw­‹ÃuN!kkp®p×e›Q"
  THE_KNE_now_is_human_shape_tt: "SVMR=f§YºN‰|bV`§!ÿgbLˆ³Q®‹lbc:N§Y‹výlbV`§!"
  THE_KNE_now_is_hakutaku_shape_tt: "SVMR=f§Y‹výlbV`§!ÿgbLˆ³Q®‹lbc:N§YºN‰|bV`§!"
  THE_KNE_is_human_shape_ttt: "=f§YºN‰|bV`§!(O(u³Q®‹lbcbV`)"
@@ -26,6 +27,14 @@
  THE_KNE_mission_3_3_effect_tt: "»lNNb	g§YsYw§!‡eS„vwýNlØS:N§Yán2m§!‡eSÿ·ƒ—VåNNHeœg:"
  THE_KNE_mission_4_3_effect_tt: "»lNNb	g§Ygœœ§!0W:S„v§Y¿lwm§!wýN:\nVËYú^.§Y1§!Í‘‹Wb0‚ÿ±‚9§Y0.0%§!ÿwöe§Y25.0%§!"
  THE_KNE_every_owned_iron_province_tt: "»lNÏk*NuµN§YÁ”ÿw§!„vwýN:"
+ THE_KNE_unlock_all_country_ideas_ttt: "òTã‰•hQè@[Root.GetTag]§YlVòS‹výl§!tõV"
+ THE_KNE_hakutaku_ideas_n1_modifier_tt: "SVbìNlbc:N§YºN‰|bV`§!öeÿ·ƒ—VIrTŽN@[Root.GetTag]§YlVòS‹výl§!tõV„vîOck"
+ THE_KEN_enable_outside_danmaku_duel_tt: "ùRYLuýV¶R=T(u0§Ycb9VU^³Q—e§!0Y²NLˆ¨R\nb—V9VU^³Q—e„vÜw)RSOîvhýV¶R·ƒ—VNb×Skp›R2O³R§R+10%§!cíu§Y10§!t^"
+ THE_KNE_enable_train_artillery_banners_decision_tt: "=T(u³Q®‹0§Y­‹Ãukp®p×e›Q§!0"
+ THE_KNE_train_artillery_banners_500_tt: "(W§Y[Root.Capital.GetName]§!ub§Y30§!–§PkQ×e®puQ§!"
+ THE_KNE_train_artillery_banners_250_tt: "(W§Y[Root.Capital.GetName]§!ub§Y20§!–§PkQ×e®puQ§!"
+ THE_KNE_train_artillery_banners_0_tt: "(W§Y[Root.Capital.GetName]§!ub§Y10§!–§PkQ×e®puQ§!"
+ THE_KNE_train_artillery_banners_more_tt: "ÐcØšF–›QÄ‰!jNP–SubôfY§PkQ×e®puQ§!"
  ### CUSTOM_TOOLTIP_END
 
  ### DECISION
@@ -33,6 +42,8 @@
  THE_KNE_hakutaku_swap_to_hakutaku_shape_decision_desc: "N‹výlgaó—=fJS‹výl‹QºNÿýwY(WºN‰|bV`ŒT‹výlbV`ô•lbc0\n\nSVbìNlbcbV`öeÿ§YýV¶RTðy§!0§YýV¶Rœ˜r‚§!0§YýV¶RtõV§!mNS–bV`9eØS"
  THE_KNE_hakutaku_swap_to_human_shape_decision_title: "@[Root.GetTag]åwÆ‹N†SòS„vJS‹Q - lbcóºN‰|bV`"
  THE_KNE_hakutaku_swap_to_human_shape_decision_desc: "N‹výlgaó—=fJS‹výl‹QºNÿýwY(WºN‰|bV`ŒT‹výlbV`ô•lbc0\n\nSVbìNlbcbV`öeÿ§YýV¶RTðy§!0§YýV¶Rœ˜r‚§!0§YýV¶RtõV§!mNS–bV`9eØS"
+ THE_KNE_train_artillery_banners_decision_title: "@KNE­‹Ãukp®p×e›Q"
+ THE_KNE_train_artillery_banners_decision_desc: ""
  ### DECISION_END
 
  ### GOVERNMENT
@@ -49,9 +60,26 @@
  THE_KNE_dominate_east_sea_modifier: "áTérNwm"
  THE_KNE_grand_furnace_province_modifier: "'Y”q‰p"
  THE_KNE_train_banners_modifier: "te­‹kQ×e"
+ THE_KNE_create_danmaku_history_modifier: "R.9VU^†SòS"
+ THE_KNE_removed_danmaku_history_modifier: "9VU^†SòS«ˆTlV"
+ THE_KNE_dashx21_modifier: "s²Qÿ"
+
+  ### COUNTRY_IDEA_MODIFIER
+ THE_KNE_hakutaku_ideas_modifier: "lVòS‹výl"
+ THE_KNE_human_ideas_modifier: "XRòS‹výl"
  ### MODIFIER_END
 
  ### ESTATE
  THE_KNE_estate_nobles_train_banners_privilege: "te­‹kQ×e"
  THE_KNE_estate_nobles_train_banners_privilege_desc: ""
  ### ESTATE_END
+
+ ### VARIABLE
+ the_kne_barrage_var: "pûQÎW™X!kpe"
+ ### VARIABLE_END
+
+ ### FLAG
+ THE_KNE_enable_outside_danmaku_duel_flag: "egê@KNEXRòS‹výl: =T(uùRYLuýV¶R„v9VU^ùR³Q"
+ ### FLAG_END
+
+ 

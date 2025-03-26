@@ -33,6 +33,17 @@ country_decisions = {
 				clr_country_flag = THE_KNE_hakutaku_swap_decision_flag
 				set_country_flag = THE_KNE_hakutaku_swap_decision_flag
 			}
+			if = {
+				limit = { has_country_flag = THE_KNE_human_ideas_n1_modifier_flag }
+				custom_tooltip = empty_line_tt
+				hidden_effect = {
+					remove_country_modifier = THE_KNE_hakutaku_ideas_modifier
+				}
+				add_country_modifier = {
+					name = THE_KNE_human_ideas_modifier
+					duration = -1
+				}
+			}
 		}
 	}
 
@@ -69,6 +80,92 @@ country_decisions = {
 			hidden_effect = {
 				clr_country_flag = THE_KNE_hakutaku_swap_decision_flag
 				set_country_flag = THE_KNE_hakutaku_swap_decision_flag
+			}
+			if = {
+				limit = { has_country_flag = THE_KNE_hakutaku_ideas_n1_modifier_flag }
+				custom_tooltip = empty_line_tt
+				hidden_effect = {
+					remove_country_modifier = THE_KNE_human_ideas_modifier
+				}
+				add_country_modifier = {
+					name = THE_KNE_hakutaku_ideas_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+
+	THE_KNE_train_artillery_banners_decision = {
+		potential = {
+			tag = KNE
+			mission_completed = THE_KNE_mission_2_4
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = THE_KNE_available_for_every_10_years_ttt
+				OR = {
+					NOT = { has_country_flag = THE_KNE_train_artillery_banners_decision_flag }
+					had_country_flag = {
+						flag = THE_KNE_train_artillery_banners_decision_flag
+						days = 3650
+					}
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				clr_country_flag = THE_KNE_train_artillery_banners_decision_flag
+				set_country_flag = THE_KNE_train_artillery_banners_decision_flag
+			}
+			add_corruption = 2
+			if = {
+				limit = { land_forcelimit = 500 }
+				custom_tooltip = THE_KNE_train_artillery_banners_500_tt
+				hidden_effect = {
+					for = {
+						amount = 30
+						effect = "
+							create_unit_forcelimit_percentage = {
+								type = artillery
+								special_unit_category = banner
+								force_limit_percentage = 0.00000001
+							}
+						"
+					}
+				}
+			}
+			else_if = {
+				limit = { land_forcelimit = 250 }
+				custom_tooltip = THE_KNE_train_artillery_banners_250_tt
+				hidden_effect = {
+					for = {
+						amount = 20
+						effect = "
+							create_unit_forcelimit_percentage = {
+								type = artillery
+								special_unit_category = banner
+								force_limit_percentage = 0.00000001
+							}
+						"
+					}
+				}
+				custom_tooltip = THE_KNE_train_artillery_banners_more_tt
+			}
+			else = {
+				custom_tooltip = THE_KNE_train_artillery_banners_0_tt
+				hidden_effect = {
+					for = {
+						amount = 10
+						effect = "
+							create_unit_forcelimit_percentage = {
+								type = artillery
+								special_unit_category = banner
+								force_limit_percentage = 0.00000001
+							}
+						"
+					}
+				}
+				custom_tooltip = THE_KNE_train_artillery_banners_more_tt
 			}
 		}
 	}

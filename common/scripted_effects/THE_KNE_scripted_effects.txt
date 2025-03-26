@@ -32,3 +32,15 @@ THE_KNE_on_province_owner_change_scripted_effect = {
 		}
 	}
 }
+
+THE_KNE_on_barrage_scripted_effect = {
+	hidden_effect = {
+		if = {
+			limit = { tag = KNE }
+			change_variable = {
+				which = the_kne_barrage_var
+				value = 1
+			}
+		}
+	}
+}

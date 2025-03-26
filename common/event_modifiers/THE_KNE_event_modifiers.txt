@@ -55,3 +55,74 @@ THE_KNE_train_banners_modifier = {
 	drill_gain_modifier = 0.5
 	is_banner_modifier = yes
 }
+
+# 创造弹幕历史
+THE_KNE_create_danmaku_history_modifier = {
+	danmaku_power_constant = 200
+	danmaku_power_factor = 0.1
+	fire_damage = 0.05
+	artillery_barrage_cost = -0.1
+}
+
+# 弹幕历史被吞噬
+THE_KNE_removed_danmaku_history_modifier = {
+	fire_damage_received = 0.1
+}
+
+# 猛冲！
+THE_KNE_dashx21_modifier = {
+	infantry_shock = 0.5
+	cavalry_shock = 0.5
+	max_general_shock = 2
+	max_admiral_shock = 2
+	leader_land_shock = 2
+	leader_naval_shock = 2
+}
+
+##### COUNTRY_IDEA_MODIFIER
+
+# @KN2噬史白泽
+THE_KNE_hakutaku_ideas_modifier = {
+	cav_to_inf_ratio = 0.30
+	cavalry_power = 0.33
+	has_banners = yes
+	amount_of_banners = 0.5
+	raze_power_gain = 0.33
+	loot_amount = 0.5
+	available_province_loot = 0.5
+	land_morale = 0.15
+	siege_ability = 0.15
+	max_general_shock = 1
+	province_warscore_cost = -0.25
+	years_of_nationalism = -5
+	movement_speed = 0.2
+	cavalry_flanking = 0.5
+	war_exhaustion = -0.1
+	general_cost = -0.1
+	country_military_power = 1
+	garrison_damage = 1
+	garrison_size = 0.25
+	morale_damage = 0.2
+}
+
+# @KNE存史白泽
+THE_KNE_human_ideas_modifier = {
+	yearly_innovativeness = 0.25
+	technology_cost = -0.1
+	discipline = 0.05
+	defensiveness = 0.33
+	global_unrest = -2
+	imperial_mandate = 0.15
+	advisor_cost = -0.25
+	advisor_pool = 1
+	idea_cost = -0.1
+	global_institution_spread = 0.25
+	core_creation = -0.25
+	num_accepted_cultures = 2
+	development_cost_modifier = -0.1
+	production_efficiency = 0.1
+	global_allowed_num_of_buildings = 1
+	global_allowed_num_of_manufactories = 1
+	build_cost = -0.2
+	military_tactics = 0.25
+}

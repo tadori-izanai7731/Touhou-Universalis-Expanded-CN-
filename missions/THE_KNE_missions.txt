@@ -90,6 +90,7 @@ THE_KNE_mission_branch_1 = {
 		} 
 		
 		effect = {
+			add_mil_power = 100
 			remove_estate_privilege = estate_nobles_monopoly_of_metals
 			custom_tooltip = THE_KNE_every_owned_iron_province_tt
 			tooltip = {
@@ -128,9 +129,135 @@ THE_KNE_mission_branch_1 = {
 				tooltip = THE_KNE_is_hakutaku_shape_ttt
 				has_country_flag = THE_KNE_hakutaku_shape_flag
 			}
+			num_of_banners = 50
+			num_of_regiments_at_full_drill = 50
+			OR = {
+				army_tradition = 60
+				army_professionalism = 0.3
+			}
+			OR = {
+				army_organiser = 3
+				army_reformer = 3
+				commandant = 3
+				grand_captain = 3
+				recruitmaster = 3
+				fortification_expert = 3
+				quartermaster = 3
+			}
+			custom_trigger_tooltip = {
+				tooltip = THE_KNE_unlock_all_country_ideas_ttt
+				has_idea = KN2_The_Horde
+			}
 		} 
 		
-		effect = {  } 
+		effect = {
+			custom_tooltip = THE_KNE_hakutaku_ideas_n1_modifier_tt
+			hidden_effect = {
+				set_country_flag = THE_KNE_hakutaku_ideas_n1_modifier_flag
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_ROD_modifier_from_mil_advisor_tt
+			custom_tooltip = hsa_army_reformer_tt
+			tooltip = {
+				add_country_modifier = {
+					name = "hsa_general_army_reform_modifier"
+					duration = -1
+				}
+			}
+			custom_tooltip = hsa_army_organiser_tt
+			tooltip = {
+				add_country_modifier = {
+					name = "hsa_general_army_organization_modifier"
+					duration = -1
+				}
+			}
+			custom_tooltip = hsa_commandant_tt
+			tooltip = {
+				add_country_modifier = {
+					name = "hsa_military_excellence_modifier"
+					duration = -1
+				}
+			}
+			custom_tooltip = hsa_quartermaster_tt
+			tooltip = {
+				add_country_modifier = {
+					name = "hsa_modernized_supply_lines_modifier"
+					duration = -1
+				}
+			}
+			custom_tooltip = hsa_recruitmaster_tt
+			tooltip = {
+				add_country_modifier = {
+					name = "hsa_zealous_recruitment_modifier"
+					duration = -1
+				}
+			}
+			custom_tooltip = hsa_grandcaptain_tt
+			tooltip = {
+				add_country_modifier = {
+					name = "hsa_improved_military_administration_modifier"
+					duration = -1
+				}
+			}
+			custom_tooltip = hsa_fortification_expert_tt
+			tooltip = {
+				add_country_modifier = {
+					name = "hsa_fortification_efforts_modifier"
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { army_reformer = 1 } 
+					add_country_modifier = {
+						name = "hsa_general_army_reform_modifier"
+						duration = -1
+					}
+				}
+				else_if = {
+					limit = { army_organiser = 1 } 
+					add_country_modifier = {
+						name = "hsa_general_army_organization_modifier"
+						duration = -1
+					}
+				}
+				else_if = {
+					limit = { commandant = 1 } 
+					add_country_modifier = {
+						name = "hsa_military_excellence_modifier"
+						duration = -1
+					}
+				}
+				else_if = {
+					limit = { quartermaster = 1 } 
+					add_country_modifier = {
+						name = "hsa_modernized_supply_lines_modifier"
+						duration = -1
+					}
+				}
+				else_if = {
+					limit = { recruitmaster = 1 } 
+					add_country_modifier = {
+						name = "hsa_zealous_recruitment_modifier"
+						duration = -1
+					}
+				}
+				else_if = {
+					limit = { grand_captain = 1 } 
+					add_country_modifier = {
+						name = "hsa_improved_military_administration_modifier"
+						duration = -1
+					}
+				}
+				else_if = {
+					limit = { fortification_expert = 1 } 
+					add_country_modifier = {
+						name = "hsa_fortification_efforts_modifier"
+						duration = -1
+					}
+				}
+			}
+		} 
 	}
 	
 	THE_KNE_mission_1_4 = {
@@ -144,9 +271,31 @@ THE_KNE_mission_branch_1 = {
 				tooltip = THE_KNE_is_hakutaku_shape_ttt
 				has_country_flag = THE_KNE_hakutaku_shape_flag
 			}
+			OR = {
+				full_idea_group = THE_youkai_ideas
+				full_idea_group = THE_kami_ideas
+				full_idea_group = THE_human_ideas
+				full_idea_group = THE_fairy_ideas
+				full_idea_group = THE_lunarian_ideas
+				full_idea_group = THE_gensokyan_ideas
+			}
+			has_global_modifier_value = {
+				which = danmaku_power_constant
+				value = 1500
+			}
 		} 
 		
-		effect = {  } 
+		effect = {
+			change_mil = 1
+			add_country_modifier = {
+				name = THE_KNE_create_danmaku_history_modifier
+				duration = -1
+			}
+			hidden_effect = {
+				set_country_flag = THE_KNE_enable_outside_danmaku_duel_flag
+			}
+			custom_tooltip = THE_KEN_enable_outside_danmaku_duel_tt
+		} 
 	}
 	
 	THE_KNE_mission_1_5 = {
@@ -373,9 +522,30 @@ THE_KNE_mission_branch_2 = {
 				tooltip = THE_KNE_is_hakutaku_shape_ttt
 				has_country_flag = THE_KNE_hakutaku_shape_flag
 			}
+			check_variable = {
+				which = the_kne_barrage_var
+				value = 10
+			}
+			OR = {
+				artillery_fraction = 0.3
+				num_of_artillery = 100
+			}
 		} 
 		
-		effect = {  } 
+		effect = {
+			define_general = {
+				shock = 5
+				fire = 2
+				manuever = 3
+				siege = 5
+				trait = siege_specialist_personality
+			}
+			add_country_modifier = {
+				name = THE_KNE_dashx21_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_KNE_enable_train_artillery_banners_decision_tt
+		} 
 	}
 	
 	THE_KNE_mission_2_5 = {

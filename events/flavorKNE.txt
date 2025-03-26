@@ -114,9 +114,9 @@ country_event = {
 						id = th_religion_events.4
 						days = 7
 					}
-					country_event = {
-						id = flavor_kne.2
-						days = 3650
+					set_variable = {
+						which = the_kne_barrage_var
+						value = 0
 					}
 				}
 			}
