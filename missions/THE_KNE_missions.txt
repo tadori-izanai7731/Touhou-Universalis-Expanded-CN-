@@ -1023,9 +1023,29 @@ THE_KNE_mission_branch_4 = {
 				tooltip = THE_KNE_is_human_shape_ttt
 				NOT = { has_country_flag = THE_KNE_hakutaku_shape_flag }
 			}
+			num_of_owned_provinces_with = {
+				value = 10
+				NOT = { nationalism = 1 }
+			}
+			treasury = 200
+			innovativeness = 10
 		} 
 		
-		effect = {  } 
+		effect = {
+			add_treasury = -200
+			change_innovativeness = 5
+			capital_scope = {
+				add_building = university
+				add_province_modifier = {
+					name = THE_KNE_grand_university_province_modifier
+					duration = -1
+				}
+			}
+			custom_tooltip = THE_KNE_enable_province_action_2_tt
+			hidden_effect = {
+				set_country_flag = THE_KNE_enable_province_action_2_flag
+			}
+		} 
 	}
 	
 	THE_KNE_mission_4_3 = {
@@ -1148,9 +1168,17 @@ THE_KNE_mission_branch_5 = {
 				tooltip = THE_KNE_is_human_shape_ttt
 				NOT = { has_country_flag = THE_KNE_hakutaku_shape_flag }
 			}
+			capital_scope = {
+				grown_by_development = 5
+			}
 		} 
 		
-		effect = {  } 
+		effect = {
+			custom_tooltip = THE_KNE_enable_province_action_1_3_tt
+			hidden_effect = {
+				set_country_flag = THE_KNE_enable_province_action_1_3_flag
+			}
+		} 
 	}
 	
 	THE_KNE_mission_5_2 = {

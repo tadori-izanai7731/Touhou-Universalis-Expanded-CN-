@@ -35,6 +35,8 @@ l_english:
  THE_KNE_train_artillery_banners_250_tt: "在§Y[Root.Capital.GetName]§!生成§Y20§!队§P八旗炮兵§!"
  THE_KNE_train_artillery_banners_0_tt: "在§Y[Root.Capital.GetName]§!生成§Y10§!队§P八旗炮兵§!"
  THE_KNE_train_artillery_banners_more_tt: "提高陆军规模上限将生成更多§P八旗炮兵§!"
+ THE_KNE_enable_province_action_1_3_tt: "启用省份行动「§Y吞噬历史§!」、「§Y创造历史§!」"
+ THE_KNE_enable_province_action_2_tt: "启用省份行动「§Y传授知识§!」"
  ### CUSTOM_TOOLTIP_END
 
  ### DECISION
@@ -63,6 +65,7 @@ l_english:
  THE_KNE_create_danmaku_history_modifier: "创造弹幕历史"
  THE_KNE_removed_danmaku_history_modifier: "弹幕历史被吞噬"
  THE_KNE_dashx21_modifier: "猛冲！"
+ THE_KNE_grand_university_province_modifier: "大学堂"
 
   ### COUNTRY_IDEA_MODIFIER
  THE_KNE_hakutaku_ideas_modifier: "噬史白泽"

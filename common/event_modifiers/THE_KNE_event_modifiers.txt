@@ -79,6 +79,14 @@ THE_KNE_dashx21_modifier = {
 	leader_naval_shock = 2
 }
 
+# 大学堂
+THE_KNE_grand_university_province_modifier = {
+	local_development_cost = -0.1
+	local_institution_spread = 0.5
+	local_build_cost = -0.1
+	advisor_cost = -0.1
+}
+
 ##### COUNTRY_IDEA_MODIFIER
 
 # @KN2噬史白泽
