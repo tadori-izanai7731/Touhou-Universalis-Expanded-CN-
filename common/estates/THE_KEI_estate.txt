@@ -23,6 +23,7 @@ estate_burghers = {
 	}
 	
 	privileges = {
+		#堕入畜道
 	}
 }
 # estate_the_haniwa = {
@@ -41,7 +42,7 @@ estate_burghers = {
 # 	}
 # }
 estate_the_haniwa = {
-	icon = 23
+	icon = 24
 	base_influence = 10
 	custom_name = {
 		desc = THE_KEI_janissaries_name
@@ -57,6 +58,7 @@ estate_the_haniwa = {
 	trigger = { 
 		OR = {
 			has_government_mechanic = THE_KEI_lonely_creation_mechanic
+			tag = KEI
 		}
 	}
 	country_modifier_happy = { 

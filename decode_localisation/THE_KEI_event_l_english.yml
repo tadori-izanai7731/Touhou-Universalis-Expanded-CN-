@@ -87,6 +87,7 @@ l_english:
  THE_KEI_impure_consumables_buff: "我等仅为耗材"
  THE_KEI_subject_buff_add_idea_cost_buff: "敕命「焕生」"
  THE_KEI_the_subject_of_keiki_powerpoints_buff: "神佑"
+ THE_KEI_save_the_ghost_buff: "解放的灵魂"
  ##religion
  the_keiki: "梦想造型"
  the_keiki_fervor_shapping: "塑形"
@@ -107,7 +108,22 @@ l_english:
  THE_KEI_the_subject_of_keiki_decosions_desc: ""
  THE_KEI_the_subject_of_keiki_decosions_c_tt1: "5年内未使用过此行动"
  THE_KEI_the_subject_of_keiki_decosions_c_tt2: "所有「梦想造型」国家的愿力将会受到以下影响改变：\n -征服异教省份时 +10\n -战争失败时 +50\n -战争胜利时 +10\n -征服异教省份时 +10\n -发展附庸国省份发展度时 +10\n -转变省份信仰时 +10\n -破产时 +1000"
-
+ the_kei_the_religions_subject_power_var_check_tt: "查看当前愿力§M（[From.the_kei_the_blessing_of_the_keiki.GetValue])§!"
+ the_kei_the_religions_subject_power_var_change_50_tt1: "当前愿力改变§M50点§!"
+ THE_KEI_the_keiki_religions_decosions_open_title: "@KEI§Y展开「梦想造型」宗教决议§M"
+ THE_KEI_the_keiki_religions_decosions_open_desc: ""
+ THE_KEI_the_keiki_religions_decosions_close_title: "@KEI§Y关闭「梦想造型」宗教决议§M"
+ THE_KEI_the_keiki_religions_decosions_close_desc: ""
+ THE_KEI_the_subject_of_keiki_decosions_army_tradition_title: "以§M「愿力」§!创造将领"
+ THE_KEI_the_subject_of_keiki_decosions_army_tradition_desc: ""
+ THE_KEI_the_subject_of_keiki_decosions_powerpoints_title: "以§M「愿力」§!换取点数"
+ THE_KEI_the_subject_of_keiki_decosions_powerpoints_desc: ""
+ THE_KEI_the_subject_of_keiki_decosions_powerpoints_title: "以§M「愿力」§!创造建筑"
+ THE_KEI_the_subject_of_keiki_decosions_powerpoints_desc: ""
+ THE_KEI_the_subject_of_keiki_decosions_advisor_title: "以§M「愿力」§!获得顾问"
+ THE_KEI_the_subject_of_keiki_decosions_advisor_desc: ""
+ THE_KEI_the_subject_of_keiki_decosions_religion_war_title: "以§M「愿力」§!号召圣战"
+ THE_KEI_the_subject_of_keiki_decosions_religion_war_desc: ""
  ##MISSION EXTRA
  THE_KEI_4_1_c_tt1: "持有此效果时:\n--在战争占领@SKI劲牙组@YAC鬼杰组的省份将会立即割让并获得核心。\n--对@SKI劲牙组@YAC鬼杰组宣战，对方仅能召唤动物灵盟友。"
  THE_KEI_4_1_c_tt2: "在首都生成§Y30支「耶尼切里」§!部队"
@@ -157,6 +173,11 @@ l_english:
  THE_KEI_2_12_alone_c_tt1: "§M拥有此效果时，所有国家均无法对我们宣战§!"
  THE_KEI_2_12_alone_c_tt2: "升级§Y敕命「焕生」§!\n -§g「焕生」互动的发展度限制提高到120发展度并且花费减半§!"
  THE_KEI_the_eternal_land_declare_tt: "由于@KEI§Y偶像之境§!拥有修正§M恒乐常土§!我们无法对其宣战"
+ THE_KEI_5_12_c_tt1_yes: "£yes£§M如果我们以附庸@CRD地灵殿完成任务§!"
+ THE_KEI_5_12_c_tt1_no: "£no£§M如果我们以附庸@CRD地灵殿完成任务§!"
+ THE_KEI_5_12_c_tt2_yes: "£yes£§M如果我们以征服@CRD地灵殿完成任务§!"
+ THE_KEI_5_12_c_tt2_no: "£no£§M如果我们以征服@CRD地灵殿完成任务§!"
+ THE_KEI_5_12_c_tt3: "只要地灵殿仍为我们的附庸，我们将会获得效果：\n -附庸提供的陆军上限 §G+100%§! 外交合并花费 §G-25%§!"
  
  #DIP_action_EXTRA
  THE_KEI_grant_a_blessing_dip_action_title: "恩赐"

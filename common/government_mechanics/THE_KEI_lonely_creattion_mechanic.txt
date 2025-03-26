@@ -95,6 +95,20 @@ THE_KEI_lonely_creation_mechanic = {
 				 start_value = 0
 				 end_value = 100
 			}
+			range_modifier = {
+				modifier = {
+					vassal_forcelimit_bonus = 1.0
+					diplomatic_annexation_cost = -0.25
+				 }
+				 trigger = {
+					has_country_flag = THE_KEI_complete_5_12_mission_flag_with_vassal
+					CRD = {
+						is_subject_of = ROOT
+					}
+				 }
+				 start_value = 0
+				 end_value = 100
+			}
 		}
 	}
 }

@@ -721,7 +721,7 @@ country_event = {
 		}
 	}
 }
-#愿力buff
+#愿力顾问选择
 country_event = {
 	id = THE_KEI_flavor_events.11
 	title = "THE_KEI_flavor_events.11.t"
@@ -733,15 +733,42 @@ country_event = {
 	}
 	option = {
 		name = THE_KEI_flavor_events.11.a
-		custom_tooltip = THE_KEI_add_blessing_50_keiki_c_tt1
-		add_country_modifier = {
-			name = THE_KEI_decree_work_V2_buff
-			duration = 1825
-		}
-		hidden_effect = {
-			change_variable = {
-				which = the_kei_the_blessing_of_the_keiki
-				value = 50
+		random_list = {
+			100 = {
+				define_advisor = {
+					type = natural_scientist
+					skill = 4
+					culture = ROOT
+					religion = the_keiki
+					cost_multiplier = 0.25
+				}
+			}
+			100 = {
+				define_advisor = {
+					type = theologian
+					skill = 4
+					culture = ROOT
+					religion = the_keiki
+					cost_multiplier = 0.25
+				}
+			}
+			100 = {
+				define_advisor = {
+					type = inquisitor
+					skill = 4
+					culture = ROOT
+					religion = the_keiki
+					cost_multiplier = 0.25
+				}
+			}
+			100 = {
+				define_advisor = {
+					type = artist
+					skill = 4
+					culture = ROOT
+					religion = the_keiki
+					cost_multiplier = 0.25
+				}
 			}
 		}
 		ai_chance = {
@@ -750,18 +777,42 @@ country_event = {
 	}
 	option = {
 		name = THE_KEI_flavor_events.11.b
-		custom_tooltip = THE_KEI_add_blessing_50_keiki_c_tt1
-		add_country_modifier = {
-			name = THE_KEI_subject_buff_add_idea_cost_buff 
-			duration = -1
-		}
-		add_adm_power = 200
-		add_dip_power = 200
-		add_mil_power = 200
-		hidden_effect = {
-			change_variable = {
-				which = the_kei_the_blessing_of_the_keiki
-				value = 50
+		random_list = {
+			100 = {
+				define_advisor = {
+					type = statesman
+					skill = 4
+					culture = ROOT
+					religion = the_keiki
+					cost_multiplier = 0.25
+				}
+			}
+			100 = {
+				define_advisor = {
+					type = trader
+					skill = 4
+					culture = ROOT
+					religion = the_keiki
+					cost_multiplier = 0.25
+				}
+			}
+			100 = {
+				define_advisor = {
+					type = diplomat
+					skill = 4
+					culture = ROOT
+					religion = the_keiki
+					cost_multiplier = 0.25
+				}
+			}
+			100 = {
+				define_advisor = {
+					type = spymaster
+					skill = 4
+					culture = ROOT
+					religion = the_keiki
+					cost_multiplier = 0.25
+				}
 			}
 		}
 		ai_chance = {
@@ -770,20 +821,46 @@ country_event = {
 	}
 	option = {
 		name = THE_KEI_flavor_events.11.c
-		custom_tooltip = THE_KEI_add_blessing_50_keiki_c_tt1
-		add_yearly_manpower = 2.0
-		hidden_effect = {
-			change_variable = {
-				which = the_kei_the_blessing_of_the_keiki
-				value = 50
+		random_list = {
+			100 = {
+				define_advisor = {
+					type = army_reformer
+					skill = 4
+					culture = ROOT
+					religion = the_keiki
+					cost_multiplier = 0.25
+				}
+			}
+			100 = {
+				define_advisor = {
+					type = commandant
+					skill = 4
+					culture = ROOT
+					religion = the_keiki
+					cost_multiplier = 0.25
+				}
+			}
+			100 = {
+				define_advisor = {
+					type = quartermaster
+					skill = 4
+					culture = ROOT
+					religion = the_keiki
+					cost_multiplier = 0.25
+				}
+			}
+			100 = {
+				define_advisor = {
+					type = recruitmaster
+					skill = 4
+					culture = ROOT
+					religion = the_keiki
+					cost_multiplier = 0.25
+				}
 			}
 		}
 		ai_chance = {
 			factor = 100
 		}
 	}
-	option = {
-		name = THE_KEI_flavor_events.11.d
-	}
-
 }

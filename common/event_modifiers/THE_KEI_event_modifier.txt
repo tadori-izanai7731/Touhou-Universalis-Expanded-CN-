@@ -160,3 +160,8 @@ THE_KEI_the_subject_of_keiki_religion_war_buff = {
 	warscore_cost_vs_other_religion = -0.10
 	global_tax_modifier = 0.25
 }
+#救赎怨灵
+THE_KEI_save_the_ghost_buff = {
+	infantry_cost = -0.10
+	movement_speed = 0.10
+}

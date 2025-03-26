@@ -1607,10 +1607,18 @@ THE_KEI_main_branch_5 = {
 		 } 
 
 		effect = { 
+			add_casus_belli = {
+				target = CRD
+				type = cb_vassalize_mission
+				months = 240
+			}
+			Road_to_hell_state = { add_permanent_claim = ROOT }
+			Chireiden_state = { add_permanent_claim = ROOT }
+			Chireiden_canal_state = { add_permanent_claim = ROOT }
 			if = {
 				limit = {
 					num_of_provinces_owned_or_owned_by_subjects_with = {
-						value = 8
+						value = 4
 						OR = {
 							area = Blazing_hell_state
 							area = Oni_exclave_state
@@ -1750,14 +1758,98 @@ THE_KEI_main_branch_5 = {
 		position = 12
 		required_missions = { THE_KEI_5_11 } 
 		provinces_to_highlight = { 
-			province_id = 5297
+			OR = {
+				area = Chireiden_state
+			}
+			NOT = {
+				owned_by = ROOT
+			}
 		 } 
 
 		trigger = { 
-
+			5297 = {
+				has_trader = ROOT
+				trade_share = {
+					country = NED
+					share = 25
+				}
+			}
+			OR = {
+				Chireiden_canal_state = {
+					type = all
+					owned_by = ROOT
+				}
+				CRD = {
+					is_subject_of = ROOT
+					religion = the_keiki
+					Chireiden_canal_state = {
+						type = all
+						owned_by = CRD
+					}
+				}
+			}
 		 } 
 
-		effect = {  } 
+		effect = { 
+			if = {
+				limit = {
+					CRD = {
+						is_subject_of = ROOT
+						religion = the_keiki
+						Chireiden_canal_state = {
+							type = all
+							owned_by = CRD
+						}
+					}
+				 }
+				 custom_tooltip = THE_KEI_5_12_c_tt1_yes
+				 add_prestige_or_monarch_power = 200
+				 add_country_modifier = {
+					name = THE_KEI_save_the_ghost_buff
+					duration = -1
+				 }
+			}
+			else = {
+				custom_tooltip = THE_KEI_5_12_c_tt1_no
+				tooltip = {
+					add_prestige_or_monarch_power = 200
+					add_country_modifier = {
+						name = THE_KEI_save_the_ghost_buff
+						duration = -1
+					}
+				}
+			}
+			if = {
+				limit = {
+					Chireiden_canal_state = {
+						type = all
+						owned_by = ROOT
+					}
+				 }
+				 custom_tooltip = THE_KEI_5_12_c_tt2_yes
+				 CRD = {
+					add_historical_friend = ROOT
+				 }
+				 add_historical_friend = CRD
+				 custom_tooltip = THE_KEI_5_12_c_tt3
+				 hidden_effect = {
+					set_country_flag = THE_KEI_complete_5_12_mission_flag_with_vassal
+				 }
+			}
+			else = {
+				custom_tooltip = THE_KEI_5_12_c_tt2_no
+				tooltip = {
+					CRD = {
+						add_historical_friend = ROOT
+					 }
+					 add_historical_friend = CRD
+					 custom_tooltip = THE_KEI_5_12_c_tt3
+					 hidden_effect = {
+						set_country_flag = THE_KEI_complete_5_12_mission_flag_with_vassal
+					 }
+				}
+			}
+		 } 
 	}
 }
 THE_KEI_minor_branch_1_lock = {
