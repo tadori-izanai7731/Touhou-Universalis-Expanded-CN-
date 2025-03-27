@@ -145,7 +145,7 @@ THE_KNE_mission_branch_1 = {
 				quartermaster = 3
 			}
 			custom_trigger_tooltip = {
-				tooltip = THE_KNE_unlock_all_country_ideas_ttt
+				tooltip = THE_KNE_hakutaku_unlock_all_country_ideas_ttt
 				has_idea = KN2_The_Horde
 			}
 		} 
@@ -850,9 +850,91 @@ THE_KNE_mission_branch_3 = {
 		position = 4
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = {
+			if = {
+				limit = {
+					NOT = { is_emperor_of_china = yes }
+					any_country = {
+						is_emperor_of_china = yes
+					}
+				}
+				any_country = {
+					is_emperor_of_china = yes
+					war_with = ROOT
+				}
+				726 = {
+					OR = {
+						controlled_by = ROOT
+						owned_by = ROOT
+					}
+				}
+				1816 = {
+					OR = {
+						controlled_by = ROOT
+						owned_by = ROOT
+					}
+				}
+			}
+			else = {
+				is_emperor_of_china = yes
+			}
+		} 
 		
-		effect = {  } 
+		effect = {
+			if = {
+				limit = {
+					NOT = { is_emperor_of_china = yes }
+					any_country = {
+						is_emperor_of_china = yes
+					}
+				}
+				hidden_effect = {
+					random_country = {
+						limit = {
+							is_emperor_of_china = yes
+						}
+						white_peace = ROOT
+					}
+				}
+				liaoning_area = {
+					limit = {
+						owner = {
+							is_emperor_of_china = yes
+						}
+					}
+					cede_province = ROOT
+					add_territorial_core = ROOT
+				}
+				hebei_area = {
+					limit = {
+						owner = {
+							is_emperor_of_china = yes
+						}
+					}
+					cede_province = ROOT
+					add_territorial_core = ROOT
+				}
+				add_treasury = 2000
+				random_country = {
+					limit = {
+						is_emperor_of_china = yes
+					}
+					add_treasury = -2000
+					release_all_possible_countries = yes
+					release_all_subjects = yes
+				}
+			}
+			else = {
+				add_mandate = 50
+			}
+			hidden_effect = {
+				country_event = {
+					id = THE_KNE_events.1
+					days = 10
+					random = 20
+				}
+			}
+		} 
 	}
 	
 	THE_KNE_mission_3_5 = {
@@ -1103,9 +1185,51 @@ THE_KNE_mission_branch_4 = {
 				tooltip = THE_KNE_is_human_shape_ttt
 				NOT = { has_country_flag = THE_KNE_hakutaku_shape_flag }
 			}
+			splendor = 800
+			government_rank = 3
+			stability = 3
+			if = { limit = { has_estate = estate_church }			estate_loyalty = { estate = estate_church			loyalty = 60 } }
+			if = { limit = { has_estate = estate_brahmins }			estate_loyalty = { estate = estate_brahmins			loyalty = 60 } }
+			if = { limit = { has_estate = estate_burghers }			estate_loyalty = { estate = estate_burghers			loyalty = 60 } }
+			if = { limit = { has_estate = estate_cossacks }			estate_loyalty = { estate = estate_cossacks			loyalty = 60 } }
+			if = { limit = { has_estate = estate_dhimmi }			estate_loyalty = { estate = estate_dhimmi			loyalty = 60 } }
+			if = { limit = { has_estate = estate_jains }			estate_loyalty = { estate = estate_jains			loyalty = 60 } }
+			if = { limit = { has_estate = estate_maratha }			estate_loyalty = { estate = estate_maratha			loyalty = 60 } }
+			if = { limit = { has_estate = estate_nobles }			estate_loyalty = { estate = estate_nobles			loyalty = 60 } }
+			if = { limit = { has_estate = estate_nomadic_tribes }	estate_loyalty = { estate = estate_nomadic_tribes	loyalty = 60 } }
+			if = { limit = { has_estate = estate_rajput }			estate_loyalty = { estate = estate_rajput			loyalty = 60 } }
+			if = { limit = { has_estate = estate_vaisyas }			estate_loyalty = { estate = estate_vaisyas			loyalty = 60 } }
+			if = { limit = { has_estate = estate_janissaries }		estate_loyalty = { estate = estate_janissaries		loyalty = 60 } }
+			if = { limit = { has_estate = estate_eunuchs }			estate_loyalty = { estate = estate_eunuchs			loyalty = 60 } }
+			if = { limit = { has_estate = estate_qizilbash }		estate_loyalty = { estate = estate_qizilbash		loyalty = 60 } }
+			if = { limit = { has_estate = estate_ghulams }			estate_loyalty = { estate = estate_ghulams			loyalty = 60 } }
 		} 
 		
-		effect = {  } 
+		effect = {
+			if = { limit = { has_estate = estate_church }			add_estate_loyalty = { estate = estate_church			loyalty = -20 } }
+			if = { limit = { has_estate = estate_brahmins }			add_estate_loyalty = { estate = estate_brahmins			loyalty = -20 } }
+			if = { limit = { has_estate = estate_burghers }			add_estate_loyalty = { estate = estate_burghers			loyalty = -20 } }
+			if = { limit = { has_estate = estate_cossacks }			add_estate_loyalty = { estate = estate_cossacks			loyalty = -20 } }
+			if = { limit = { has_estate = estate_dhimmi }			add_estate_loyalty = { estate = estate_dhimmi			loyalty = -20 } }
+			if = { limit = { has_estate = estate_jains }			add_estate_loyalty = { estate = estate_jains			loyalty = -20 } }
+			if = { limit = { has_estate = estate_maratha }			add_estate_loyalty = { estate = estate_maratha			loyalty = -20 } }
+			if = { limit = { has_estate = estate_nobles }			add_estate_loyalty = { estate = estate_nobles			loyalty = -20 } }
+			if = { limit = { has_estate = estate_nomadic_tribes }	add_estate_loyalty = { estate = estate_nomadic_tribes	loyalty = -20 } }
+			if = { limit = { has_estate = estate_rajput }			add_estate_loyalty = { estate = estate_rajput			loyalty = -20 } }
+			if = { limit = { has_estate = estate_vaisyas }			add_estate_loyalty = { estate = estate_vaisyas			loyalty = -20 } }
+			if = { limit = { has_estate = estate_janissaries }		add_estate_loyalty = { estate = estate_janissaries		loyalty = -20 } }
+			if = { limit = { has_estate = estate_eunuchs }			add_estate_loyalty = { estate = estate_eunuchs			loyalty = -20 } }
+			if = { limit = { has_estate = estate_qizilbash }		add_estate_loyalty = { estate = estate_qizilbash		loyalty = -20 } }
+			if = { limit = { has_estate = estate_ghulams }			add_estate_loyalty = { estate = estate_ghulams			loyalty = -20 } }
+			change_estate_land_share = {
+				estate = all
+				share = -20
+			}
+			add_country_modifier = {
+				name = THE_KNE_straight_bright_modifier
+				duration = -1
+			}
+		} 
 	}
 	
 	THE_KNE_mission_4_5 = {
@@ -1192,9 +1316,55 @@ THE_KNE_mission_branch_5 = {
 				tooltip = THE_KNE_is_human_shape_ttt
 				NOT = { has_country_flag = THE_KNE_hakutaku_shape_flag }
 			}
+			OR = {
+				religious_unity = 1
+				has_estate_privilege = estate_church_religious_state
+			}
+			OR = {
+				advisor = theologian
+				advisor = inquisitor
+			}
+			if = {
+				limit = {
+					religion = tengri_pagan_reformed
+				}
+				OR = {
+					has_country_modifier = yellow_shamanism_modifier
+					has_country_modifier = black_shamanism_modifier
+				}
+			}
 		} 
 		
-		effect = {  } 
+		effect = {
+			if = {
+				limit = { religion = tengri_pagan_reformed }
+				if = {
+					limit = { has_country_modifier = yellow_shamanism_modifier }
+					add_country_modifier = {
+						name = black_shamanism_modifier
+						duration = -1
+					}
+				}
+				else = {
+					add_country_modifier = {
+						name = yellow_shamanism_modifier
+						duration = -1
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = confucianism
+						religion = th_buddhist
+					}
+				}
+				add_harmony = 100
+			}
+			else = {
+				add_manpower = 10
+			}
+		} 
 	}
 	
 	THE_KNE_mission_5_3 = {
@@ -1204,32 +1374,121 @@ THE_KNE_mission_branch_5 = {
 			THE_KNE_mission_4_2
 			THE_KNE_mission_5_2
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			OR = {
+				AND = {
+					has_building = university
+					NOT = { grown_by_development = 5 }
+				}
+				AND = {
+					grown_by_development = 5
+					NOT = { has_building = university }
+				}
+			}
+		} 
 		
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = THE_KNE_is_human_shape_ttt
 				NOT = { has_country_flag = THE_KNE_hakutaku_shape_flag }
 			}
+			num_of_owned_provinces_with = {
+				value = 5
+				has_building = university
+				grown_by_development = 5
+			}
+			custom_trigger_tooltip = {
+				tooltip = THE_KNE_human_unlock_all_country_ideas_ttt
+				has_idea = KNE_Art_of_War
+			}
 		} 
 		
-		effect = {  } 
+		effect = {
+			custom_tooltip = THE_KNE_province_action_2_upgrade_building_tt
+			custom_tooltip = THE_KNE_every_province_meet_trigger
+			tooltip = {
+				add_province_modifier = {
+					name = THE_KNE_hundred_tree_province_modifier
+					duration = 36500
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_building = university
+						grown_by_development = 5
+					}
+					add_province_modifier = {
+						name = THE_KNE_hundred_tree_province_modifier
+						duration = 36500
+					}
+				}
+			}
+			custom_tooltip = THE_KNE_human_ideas_n1_modifier_tt
+			hidden_effect = {
+				set_country_flag = THE_KNE_human_ideas_n1_modifier_flag
+			}
+		} 
 	}
 	
 	THE_KNE_mission_5_4 = {
 		icon = mission_unknown_mission
 		position = 4
 		required_missions = { THE_KNE_mission_5_3 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1816
+				province_id = 2140
+				province_id = 735
+			}
+			NOT = { is_state_core = ROOT }
+		} 
 		
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = THE_KNE_is_human_shape_ttt
 				NOT = { has_country_flag = THE_KNE_hakutaku_shape_flag }
 			}
+			is_state_core = 1816
+			is_state_core = 2140
+			is_state_core = 735
 		} 
 		
-		effect = {  } 
+		effect = {
+			if = {
+				limit = {
+					any_owned_province = {
+						has_province_modifier = THE_KNE_grand_university_province_modifier
+					}
+				}
+				random_owned_province = {
+					limit = {
+						has_province_modifier = THE_KNE_grand_university_province_modifier
+					}
+					hidden_effect = {
+						remove_province_modifier = THE_KNE_grand_university_province_modifier
+					}
+					add_province_modifier = {
+						name = THE_KNE_grand_university_upgrade_province_modifier
+						duration = -1
+					}
+				}
+			}
+			else = {
+				capital_scope = {
+					add_province_modifier = {
+						name = THE_KNE_grand_university_upgrade_province_modifier
+						duration = -1
+					}
+				}
+			}
+			custom_tooltip = THE_KNE_enable_china_korea_great_project_tt
+			hidden_effect = {
+				set_country_flag = th_can_use_chinese_monuments
+				set_country_flag = enable_korean_palace_flag
+			}
+		} 
 	}
 	
 	THE_KNE_mission_5_5 = {

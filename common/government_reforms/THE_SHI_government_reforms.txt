@@ -11,21 +11,18 @@ THE_SHI_forest_monarchy = {
 	nation_designer_cost = 0
 	native_mechanic = no
 	has_devotion = yes
-
+	
 	rulers_can_be_generals = no
 	potential = {
 		OR = {
-			tag=SHI
-			was_tag =SHI
+			tag = SHI
+			was_tag = SHI
 		}
 	}
-
+	
 	trigger={
-			OR = {
-				tag=SHI
-				have_had_reform = THE_SHI_forest_monarchy
-			}
-		}
+	}
+	
 	custom_attributes = {
 		enables_divine_idea_group = yes
 		THE_can_use_kami_ideas_government_attribute = yes
@@ -39,109 +36,106 @@ THE_SHI_forest_monarchy = {
 		inflation_reduction = 0.4
 		production_efficiency = -0.3
 		global_trade_goods_size = -0.3
-
+		
 		may_recruit_female_generals = yes
 	}
 	
-		government_abilities = {
-			SHI_forest_monarchy
-		}
+	government_abilities = {
+		SHI_forest_monarchy
+	}
 	
 	ai = {
 		factor = 2000
-		
-		}
 	}
-	SHI_tercio_reform = {
-		icon = "junko_persuer_of_grudge2"
-		allow_normal_conversion = yes
-		lock_level_when_selected = yes
+}
+SHI_tercio_reform = {
+	icon = "junko_persuer_of_grudge2"
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
 	
 	
-		potential = {
-			has_dlc = "Domination"
-			culture_group = iberian
-
-			is_colonial_nation = no
-		}
-		trigger = {
-			if = {
-				limit = { has_modifier_locking_military_tier = yes }
-				OR = {
-					has_reform = SHI_tercio_reform
-					has_not_modifier_locking_military_tier = yes
-				}
-			}
-		}
-		modifiers = {
-			has_tercio = yes
-			allowed_tercio_fraction = 2
-			army_tradition = 0.5
-			yearly_army_professionalism = 0.004
-		}
-		
-		ai = {
-			factor = 1000
-		}
+	potential = {
+		has_dlc = "Domination"
+		culture_group = iberian
+		is_colonial_nation = no
 	}
-	THE_SHI_ERCIYUAN_reform = {
-		icon = "dedicated_worship_reform"
-		allow_normal_conversion = yes
-		lock_level_when_selected = yes
-		allow_vassal_alliance = yes
-		nation_designer_cost = 0
-		potential = {
+	trigger = {
+		if = {
+			limit = { has_modifier_locking_military_tier = yes }
 			OR = {
-				has_reform = 	THE_SHI_ERCIYUAN_reform
-				have_had_reform = 	THE_SHI_ERCIYUAN_reform
-				has_country_flag = THE_SHI_ERCIYUAN_reform_flag
+				has_reform = SHI_tercio_reform
+				has_not_modifier_locking_military_tier = yes
 			}
 		}
-		trigger = { }
-		
+	}
+	modifiers = {
+		has_tercio = yes
+		allowed_tercio_fraction = 2
+		army_tradition = 0.5
+		yearly_army_professionalism = 0.004
+	}
 	
-		modifiers = {
-			all_estate_loyalty_equilibrium = 0.1
-			all_estate_influence_modifier = 0.1
-			diplomats = 2
-			diplomatic_upkeep = 4
-		}
-		custom_attributes = {
-			THE_SHI_court_banquet_attribute= yes
-		}
-		ai = {
-			factor = 1000
+	ai = {
+		factor = 1000
+	}
+}
+THE_SHI_ERCIYUAN_reform = {
+	icon = "dedicated_worship_reform"
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	allow_vassal_alliance = yes
+	nation_designer_cost = 0
+	potential = {
+		OR = {
+			has_reform = 	THE_SHI_ERCIYUAN_reform
+			have_had_reform = 	THE_SHI_ERCIYUAN_reform
+			has_country_flag = THE_SHI_ERCIYUAN_reform_flag
 		}
 	}
-	THE_SHI_ERCIYUAN_reform1= {
-		icon = "realm_of_luxurious_waste"
-		valid_for_new_country = no
+	trigger = { }
+	
+	
+	modifiers = {
+		all_estate_loyalty_equilibrium = 0.1
+		all_estate_influence_modifier = 0.1
+		diplomats = 2
+		diplomatic_upkeep = 4
+	}
+	custom_attributes = {
+		THE_SHI_court_banquet_attribute= yes
+	}
+	ai = {
+		factor = 1000
+	}
+}
+THE_SHI_ERCIYUAN_reform1= {
+	icon = "realm_of_luxurious_waste"
+	valid_for_new_country = no
 	valid_for_nation_designer = yes
 	nation_designer_cost = 40
-		potential = {
-				has_country_flag = THE_SHI_ERCIYUAN_reform1_flag
-			
-		}
-		
-		valid_for_new_country = no
+	potential = {
+		has_country_flag = THE_SHI_ERCIYUAN_reform1_flag
+	}
+	
+	valid_for_new_country = no
 	valid_for_nation_designer = yes
 	nation_designer_cost = 40
-		modifiers = {
-			tolerance_own = 2
+	modifiers = {
+		tolerance_own = 2
 		build_cost = 0.33
 		global_regiment_cost = 0.25
 		global_ship_cost = 0.25
 		prestige_decay = -0.01
 		inflation_reduction = 0.25
-		}
-		
-		government_abilities = {
-			SHI_charisma_11
-		}
-		ai = {
-			factor = 1000
-		}
-		custom_attributes = {
+	}
+	
+	government_abilities = {
+		SHI_charisma_11
+	}
+	ai = {
+		factor = 1000
+	}
+	custom_attributes = {
 		th_divine_legitimacy_mechanic = yes
 		th_increased_power_from_own_deity = yes
 		enables_aristocratic_idea_group = no
@@ -157,79 +151,78 @@ THE_SHI_forest_monarchy = {
 		}
 	}
 	maintain_dynasty = yes 
+}
+THE_SHI_ERCIYUAN_reform2= {
+	icon = "THE_ROD_nightingale"
+	
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	th_negated_bankruptcy = yes
+	th_can_lend_special_loans = yes
+	
+	nation_designer_cost = 0
+	potential = {
+		has_country_flag = THE_SHI_ERCIYUAN_reform2_flag
+		
 	}
-	THE_SHI_ERCIYUAN_reform2= {
-		icon = "THE_ROD_nightingale"
-	
-		allow_normal_conversion = yes
-		lock_level_when_selected = yes
-		th_negated_bankruptcy = yes
-		th_can_lend_special_loans = yes
-	
-		nation_designer_cost = 0
-		potential = {
-				has_country_flag = THE_SHI_ERCIYUAN_reform2_flag
-			
+	assimilation_cultures = {
+		iberian= {
+			global_trade_goods_size = 0.5
 		}
-		assimilation_cultures = {
-			iberian= {
-				global_trade_goods_size = 0.5
-			}
-			latin= {
-				trade_efficiency = 0.15
-				merchants = 1
-			}
-			french= {
-				manpower_recovery_speed = 0.25
-				global_manpower_modifier = 0.25
-			}
-			byzantine= {
-				military_tactics = 0.25
-			}
-			maghrebi= {
-				land_morale_constant =0.1
-			}
-			sahelian= {
-				merc_maintenance_modifier = -0.1
-			}
-			west_african= {
-				improve_relation_modifier = 0.2
-			}
-			southern_african= {
-				diplomatic_annexation_cost = -0.2
-			}
-			kongo_group= {
-				state_maintenance_modifier = -0.25
-			}
-			great_lakes_group= {
-				build_time = -0.1
-			}
-			african = {
-				global_institution_spread = 0.15
-			}
-			cushitic = {
-				prestige = 0.5
-			}
-			sudanese= {
-				advisor_cost = -0.15
-			}
-			germanic = {
-				yearly_absolutism = 0.1
-				administrative_efficiency = 0.1
-			}
-			scandinavian= {
-				production_efficiency = 0.15
-			}
-			british= {
-				adm_advisor_cost = -0.25
-				dip_advisor_cost = -0.25
-				mil_advisor_cost = -0.25
-			}
+		latin= {
+			trade_efficiency = 0.15
+			merchants = 1
+		}
+		french= {
+			manpower_recovery_speed = 0.25
+			global_manpower_modifier = 0.25
+		}
+		byzantine= {
+			military_tactics = 0.25
+		}
+		maghrebi= {
+			land_morale_constant =0.1
+		}
+		sahelian= {
+			merc_maintenance_modifier = -0.1
+		}
+		west_african= {
+			improve_relation_modifier = 0.2
+		}
+		southern_african= {
+			diplomatic_annexation_cost = -0.2
+		}
+		kongo_group= {
+			state_maintenance_modifier = -0.25
+		}
+		great_lakes_group= {
+			build_time = -0.1
+		}
+		african = {
+			global_institution_spread = 0.15
+		}
+		cushitic = {
+			prestige = 0.5
+		}
+		sudanese= {
+			advisor_cost = -0.15
+		}
+		germanic = {
+			yearly_absolutism = 0.1
+			administrative_efficiency = 0.1
+		}
+		scandinavian= {
+			production_efficiency = 0.15
+		}
+		british= {
+			adm_advisor_cost = -0.25
+			dip_advisor_cost = -0.25
+			mil_advisor_cost = -0.25
 		}
 		slavic= {
 			governing_cost = -0.5
 		}
-		turko_semitic  = {
+		turko_semitic = {
 			infantry_power = 0.25
 		}
 		iranian= {
@@ -273,7 +266,8 @@ THE_SHI_forest_monarchy = {
 			cav_to_inf_ratio = 0.1
 			cavalry_cost = -0.15
 		}
-		ai = {
-			factor = 1000
-		}
 	}
+	ai = {
+		factor = 1000
+	}
+}

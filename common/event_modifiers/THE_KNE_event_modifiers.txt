@@ -87,6 +87,34 @@ THE_KNE_grand_university_province_modifier = {
 	advisor_cost = -0.1
 }
 
+# 百年树人
+THE_KNE_hundred_tree_province_modifier = {
+	local_tax_modifier = 0.2
+	local_production_efficiency = 0.2
+	province_trade_power_value = 10
+	local_institution_spread = 0.25
+}
+
+# 正大光明
+THE_KNE_straight_bright_modifier = {
+	all_estate_loyalty_equilibrium = 0.1
+	estate_interaction_cooldown_modifier = -0.2
+	yearly_corruption = -0.1
+	culture_conversion_time = -0.25
+}
+
+# 大学堂
+THE_KNE_grand_university_upgrade_province_modifier = {
+	institution_growth = 1
+	global_institution_spread = 0.5
+	local_development_cost = -0.2
+	local_build_cost = -0.2
+	advisor_cost = -0.2
+	monthly_splendor = 2
+	harmonization_speed = 0.2
+	yearly_karma_decay = 2
+}
+
 ##### COUNTRY_IDEA_MODIFIER
 
 # @KN2噬史白泽

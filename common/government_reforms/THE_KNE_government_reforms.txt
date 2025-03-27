@@ -40,3 +40,48 @@ THE_KNE_monarchy_reform = {
 	raze_province = yes
 	
 }
+
+THE_KNE_hakutaku_mandate_reform = {
+	lock_level_when_selected = yes
+	icon = "hakutaku_monarchy_reform"
+	potential = {
+		OR = {
+			has_country_flag = THE_KNE_hakutaku_mandate_reform_flag
+			has_reform = THE_KNE_hakutaku_mandate_reform
+			have_had_reform = THE_KNE_hakutaku_mandate_reform
+		}
+	}
+	#legacy_equivalent = Gensokyan_hakutaku_monarchy
+	valid_for_new_country = no
+	valid_for_nation_designer = no
+	allow_normal_conversion = yes
+	can_change_primary_culture = no
+	fixed_rank = 3
+	has_meritocracy = yes
+	modifiers = {
+		cav_to_inf_ratio = 0.25
+		tolerance_heathen = 1
+		tolerance_own = 2
+		tolerance_heretic = 1
+		num_accepted_cultures = 5
+		global_autonomy = -0.05
+		governing_capacity = 500
+		harmonization_speed = 0.33
+	}
+	custom_attributes = {
+		locked_government_type = yes
+		enables_horde_idea_group = yes
+		has_tributaries = yes
+		th_enforce_tributaries = yes
+		rulers_can_be_generals = no
+		THE_KNE_hakutaku_swap_custom_attributes = yes
+		has_unify_china_cb = yes
+	}
+
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		allow_banners = yes
+	}
+	raze_province = yes
+	
+}

@@ -27,8 +27,10 @@ l_english:
  THE_KNE_mission_3_3_effect_tt: "治下所有§Y女真§!文化的省份转变为§Y满洲§!文化，获得以下效果:"
  THE_KNE_mission_4_3_effect_tt: "治下所有§Y朝鲜§!地区的§Y沿海§!省份:\n开始建造§Y1§!重型战舰，花费§Y0.0%§!，耗时§Y25.0%§!"
  THE_KNE_every_owned_iron_province_tt: "治下每个生产§Y铁矿§!的省份:"
- THE_KNE_unlock_all_country_ideas_ttt: "已解锁全部@[Root.GetTag]§Y噬史白泽§!理念"
+ THE_KNE_hakutaku_unlock_all_country_ideas_ttt: "已解锁全部@[Root.GetTag]§Y噬史白泽§!理念"
+ THE_KNE_human_unlock_all_country_ideas_ttt: "已解锁全部@[Root.GetTag]§Y存史白泽§!理念"
  THE_KNE_hakutaku_ideas_n1_modifier_tt: "当我们转换为§Y人类形态§!时，获得等同于@[Root.GetTag]§Y噬史白泽§!理念的修正"
+ THE_KNE_human_ideas_n1_modifier_tt: "当我们转换为§Y白泽形态§!时，获得等同于@[Root.GetTag]§Y存史白泽§!理念的修正"
  THE_KEN_enable_outside_danmaku_duel_tt: "对外界国家启用「§Y挑战弹幕决斗§!」外交行动\n赢得弹幕决斗的胜利将使目标国家获得所受火力伤害§R+10%§!持续§Y10§!年"
  THE_KNE_enable_train_artillery_banners_decision_tt: "启用决议「§Y训练火炮旗军§!」"
  THE_KNE_train_artillery_banners_500_tt: "在§Y[Root.Capital.GetName]§!生成§Y30§!队§P八旗炮兵§!"
@@ -37,6 +39,8 @@ l_english:
  THE_KNE_train_artillery_banners_more_tt: "提高陆军规模上限将生成更多§P八旗炮兵§!"
  THE_KNE_enable_province_action_1_3_tt: "启用省份行动「§Y吞噬历史§!」、「§Y创造历史§!」"
  THE_KNE_enable_province_action_2_tt: "启用省份行动「§Y传授知识§!」"
+ THE_KNE_province_action_2_upgrade_building_tt: "省份行动「§Y传授知识§!」在当地有§Y大学§!时，额外升级所有可升级的建筑"
+ THE_KNE_enable_china_korea_great_project_tt: "允许无视条件使用§Y中国奇观§!和§Y景福宫§!"
  ### CUSTOM_TOOLTIP_END
 
  ### DECISION
@@ -52,6 +56,8 @@ l_english:
  THE_KNE_monarchy_reform: "白泽君主制"
  THE_KNE_monarchy_reform_desc: "一种政策多变的君主制，因慧音的形态亦时常变化。当慧音的形态变化时，她的特质亦会改变，使得我国的方针政策全然变更！"
  mechanic_THE_KNE_hakutaku_swap_custom_attributes_yes: "允许在§Y人类形态§!和§Y白泽形态§!间转换"
+ THE_KNE_hakutaku_mandate_reform: "白泽天命"
+ THE_KNE_hakutaku_mandate_reform_desc: ""
  ### GOVERNMENT_END
 
  ### MODIFIER
@@ -66,6 +72,9 @@ l_english:
  THE_KNE_removed_danmaku_history_modifier: "弹幕历史被吞噬"
  THE_KNE_dashx21_modifier: "猛冲！"
  THE_KNE_grand_university_province_modifier: "大学堂"
+ THE_KNE_hundred_tree_province_modifier: "百年树人"
+ THE_KNE_straight_bright_modifier: "正大光明"
+ THE_KNE_grand_university_upgrade_province_modifier: "大学堂"
 
   ### COUNTRY_IDEA_MODIFIER
  THE_KNE_hakutaku_ideas_modifier: "噬史白泽"
@@ -80,6 +89,11 @@ l_english:
  ### VARIABLE
  the_kne_barrage_var: "轰击城墙次数"
  ### VARIABLE_END
+
+ ### EVENT
+ THE_KNE_events.1.title: ""
+ THE_KNE_events.1.desc: ""
+ ### EVENT_END
 
  ### FLAG
  THE_KNE_enable_outside_danmaku_duel_flag: "来自@KNE存史白泽: 启用对外界国家的弹幕对决"
