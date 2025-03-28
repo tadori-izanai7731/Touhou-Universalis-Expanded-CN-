@@ -41,6 +41,10 @@ l_english:
  THE_KNE_enable_province_action_2_tt: "启用省份行动「§Y传授知识§!」"
  THE_KNE_province_action_2_upgrade_building_tt: "省份行动「§Y传授知识§!」在当地有§Y大学§!时，额外升级所有可升级的建筑"
  THE_KNE_enable_china_korea_great_project_tt: "允许无视条件使用§Y中国奇观§!和§Y景福宫§!"
+ THE_KNE_complete_all_hakutaku_mission_tt: "完成所有§M白泽形态任务§!"
+ THE_KNE_complete_all_human_mission_tt: "完成所有§Y人类形态任务§!"
+ THE_KNE_auto_complete_estate_agenda_tt: "自动完成所有阶层议程"
+ THE_KNE_embracement_institution_add_power_tt: "接纳思潮时获得科技等级§Y20§!倍的对应君主点数"
  ### CUSTOM_TOOLTIP_END
 
  ### DECISION
@@ -99,4 +103,9 @@ l_english:
  THE_KNE_enable_outside_danmaku_duel_flag: "来自@KNE存史白泽: 启用对外界国家的弹幕对决"
  ### FLAG_END
 
- 
+ ### CHINA
+ zz_THE_KNE_china_reform_0_hakutaku_title: "@KNE§M通晓历史§!"
+ zz_THE_KNE_china_reform_0_hakutaku_desc: ""
+ zz_THE_KNE_china_reform_1_human_title: "@KNE§Y文明变迁§!"
+ zz_THE_KNE_china_reform_1_human_desc: ""
+ ### CHINA_END

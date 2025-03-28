@@ -1,0 +1,49 @@
+zz_THE_KNE_china_reform_0_hakutaku = {
+	empire = celestial_empire 
+	potential = {
+		is_emperor_of_china = yes
+		has_reform = THE_KNE_hakutaku_mandate_reform
+	}
+	trigger = { 
+		custom_trigger_tooltip = {
+			tooltip = THE_KNE_complete_all_hakutaku_mission_tt
+			mission_completed = THE_KNE_mission_1_4
+			mission_completed = THE_KNE_mission_2_4
+		}
+	}
+	member = {
+		all_power_cost = -0.05
+	} 
+	emperor = { 
+		stability_cost_to_declare_war = -1
+		num_accepted_cultures = 3
+	}
+	on_effect = {
+		custom_tooltip = THE_KNE_auto_complete_estate_agenda_tt
+	}
+}
+
+zz_THE_KNE_china_reform_1_human = {
+	empire = celestial_empire 
+	potential = {
+		is_emperor_of_china = yes
+		has_reform = THE_KNE_hakutaku_mandate_reform
+	}
+	trigger = { 
+		custom_trigger_tooltip = {
+			tooltip = THE_KNE_complete_all_human_mission_tt
+			mission_completed = THE_KNE_mission_4_4
+			mission_completed = THE_KNE_mission_5_4
+		}
+	}
+	member = {
+		administrative_efficiency = 0.05
+	} 
+	emperor = { 
+		embracement_cost = -0.25
+		free_policy = 1
+	}
+	on_effect = {
+		custom_tooltip = THE_KNE_embracement_institution_add_power_tt
+	}
+}
