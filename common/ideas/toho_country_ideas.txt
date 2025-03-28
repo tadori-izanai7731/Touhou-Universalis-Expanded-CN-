@@ -1379,62 +1379,62 @@ JNK_ideas = {
 	}
 }
 
-KEI_ideas = {
-	start = {
-		build_cost = -0.2
-		global_tax_modifier = 0.2
-	}
+# KEI_ideas = {
+# 	start = {
+# 		build_cost = -0.2
+# 		global_tax_modifier = 0.2
+# 	}
 
-	bonus = {
-		global_manpower_modifier = 0.33
-	}
+# 	bonus = {
+# 		global_manpower_modifier = 0.33
+# 	}
 
-	trigger = {
-		tag = KEI
-	}
-	free = yes
+# 	trigger = {
+# 		tag = KEI
+# 	}
+# 	free = yes
 	
-	KEI_protector_of_human_spirits = {
-		improve_relation_modifier = 0.2
-		legitimacy = 1
-		promote_culture_cost = -0.5
-	}
+# 	KEI_protector_of_human_spirits = {
+# 		improve_relation_modifier = 0.2
+# 		legitimacy = 1
+# 		promote_culture_cost = -0.5
+# 	}
 
-	KEI_creator_of_idols = {
-		global_missionary_strength = 0.03
-		tolerance_own = 3
-		global_unrest = -2
-	}
+# 	KEI_creator_of_idols = {
+# 		global_missionary_strength = 0.03
+# 		tolerance_own = 3
+# 		global_unrest = -2
+# 	}
 	
-	KEI_legion_of_haniwa = {
-		global_regiment_cost = -0.3
-		global_regiment_recruit_speed = -0.5
-		reinforce_speed = 0.5
-	}	
+# 	KEI_legion_of_haniwa = {
+# 		global_regiment_cost = -0.3
+# 		global_regiment_recruit_speed = -0.5
+# 		reinforce_speed = 0.5
+# 	}	
 	
-	KEI_mayumis_loyalty_and_strength = {
-		discipline = 0.05
-		shock_damage_received = -0.1
-		fire_damage_received = -0.1
-	}
+# 	KEI_mayumis_loyalty_and_strength = {
+# 		discipline = 0.05
+# 		shock_damage_received = -0.1
+# 		fire_damage_received = -0.1
+# 	}
 	
-	KEI_primate_spirit_garden = {
-		idea_cost = -0.1
-		innovativeness_gain = 0.25
-		technology_cost = -0.1
-	}
+# 	KEI_primate_spirit_garden = {
+# 		idea_cost = -0.1
+# 		innovativeness_gain = 0.25
+# 		technology_cost = -0.1
+# 	}
 	
-	KEI_struggle_with_animal_spirits = {
-		defensiveness = 0.25
-		fort_maintenance_modifier = -0.5
-	}
+# 	KEI_struggle_with_animal_spirits = {
+# 		defensiveness = 0.25
+# 		fort_maintenance_modifier = -0.5
+# 	}
 	
-	KEI_dominance_through_idols = {
-		years_of_nationalism = -5
-		stability_cost_modifier = -0.1
-		state_maintenance_modifier = -0.2
-	}
-}
+# 	KEI_dominance_through_idols = {
+# 		years_of_nationalism = -5
+# 		stability_cost_modifier = -0.1
+# 		state_maintenance_modifier = -0.2
+# 	}
+# }
 
 KOG_ideas = {
 	start = {

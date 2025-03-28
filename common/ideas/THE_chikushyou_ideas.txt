@@ -46,3 +46,53 @@ THE_ZAM_ideas = {
 		diplomatic_annexation_cost = -0.33
 	}
 }
+
+KEI_ideas = {
+	start = {
+		legitimacy = 1
+		global_tax_modifier = 0.33
+	}
+
+	bonus = {
+		land_forcelimit_modifier = 0.50
+	}
+
+	trigger = {
+		tag = KEI
+	}
+	free = yes
+	
+	KEI_protector_of_human_spirits = {
+		improve_relation_modifier = 0.2
+		promote_culture_cost = -0.5
+	}
+
+	KEI_creator_of_idols = {
+		tolerance_own = 2
+		global_unrest = -2
+	}
+	
+	KEI_legion_of_haniwa = {
+		global_regiment_cost = -0.25
+		reinforce_speed = 0.5
+	}	
+	
+	KEI_mayumis_loyalty_and_strength = {
+		discipline = 0.05
+		infantry_cost = -0.15
+	}
+	
+	KEI_primate_spirit_garden = {
+		idea_cost = -0.10
+		technology_cost = -0.10
+	}
+	
+	KEI_struggle_with_animal_spirits = {
+		garrison_size = 0.25
+		fort_maintenance_modifier = -0.25
+	}
+	
+	KEI_dominance_through_idols = {
+		years_of_nationalism = -10
+	}
+}

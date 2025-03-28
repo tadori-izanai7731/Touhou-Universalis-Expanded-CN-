@@ -48,6 +48,7 @@ THE_KEI_main_branch_1 = {
 		} 
 
 		effect = { 
+			custom_tooltip = THE_KEI_1_2_c_tt1
 			add_stability = 1
 			add_country_modifier = {
 				name = THE_KEI_savtor_all_power_buff
@@ -60,22 +61,62 @@ THE_KEI_main_branch_1 = {
 		icon = mission_unknown_mission
 		position = 4
 		required_missions = { THE_KEI_1_2 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			has_estate_privilege = THE_KEI_human_ghost_power_privileges
+			num_of_estate_agendas_completed = {
+				estate = estate_burghers
+				value = 3
+			}
+			estate_influence = {
+				estate = estate_church 
+				influence = 50
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			change_government_reform_progress = 50
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 50 
+			}
+			add_country_modifier = {
+				name = THE_KEI_slavtor_free_search_for_buff
+				duration = 18250
+			}
+		 } 
 	}
 
 	THE_KEI_1_5 = {
 		icon = mission_unknown_mission
 		position = 5
 		required_missions = { THE_KEI_1_4 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			OR = {
+				full_idea_group = THE_kami_ideas
+				full_idea_group = administrative_ideas
+				full_idea_group = innovativeness_ideas
+			}
+			reform_level = 4
+			government_reform_progress = 150
+		 } 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_KEI_1_5_c_tt1
+			change_government_reform_progress = -150
+			add_stability_or_adm_power = 1
+			add_country_modifier = {
+				name = THE_KEI_the_hecheng_buff
+				duration = -1
+			}
+		 } 
 	}
 
 	THE_KEI_1_6 = {
@@ -175,7 +216,7 @@ THE_KEI_main_branch_1 = {
 				limit = { 
 					ai = no
 				}
-				religious_unity = 1.00
+				religious_unity = 0.9
 				has_reform = THE_KEI_lonely_creation_government_reform
 				has_government_power = {
 					mechanic_type = THE_KEI_lonely_creation_mechanic
@@ -192,7 +233,7 @@ THE_KEI_main_branch_1 = {
 				}
 			}
 			else = {
-				religious_unity = 1.00
+				religious_unity = 0.8
 				is_year = 1490
 				has_government_power = {
 					mechanic_type = THE_KEI_lonely_creation_mechanic
@@ -208,6 +249,7 @@ THE_KEI_main_branch_1 = {
 			country_event = {
 				id = THE_KEI_flavor_events.8
 			}
+			custom_tooltip = THE_KEI_1_9_c_tt2
 			hidden_effect = {
 				set_country_flag = THE_KEI_can_change_religion_to_the_keiki
 			}
@@ -939,17 +981,12 @@ THE_KEI_main_branch_4 = {
 		trigger = { 
 			OR = {
 				HKR = {
-					has_opinion = {
+					has_opinion_modifier = {
 						who = ROOT
-						value = 100
+						modifier = sent_gift
 					}
-					marriage_with = ROOT
 				}
 				HKR = {
-					has_opinion = {
-						who = ROOT
-						value = -100
-					}
 					has_opinion_modifier = {
 						who = ROOT
 						modifier = scornfully_insulted
@@ -969,173 +1006,91 @@ THE_KEI_main_branch_4 = {
 		} 
 
 		effect = { 
+			#灵梦 好感+
 			if = {
 				limit = { 
-					NOT = {
-						HKR = {
-							has_opinion = {
-								who = ROOT
-								value = 100
-							}
-							marriage_with = ROOT
-						}
-					}
-					NOT = {
-						HKR = {
-							has_opinion = {
-								who = ROOT
-								value = -100
-							}
-							has_opinion_modifier = {
-								who = ROOT
-								modifier = scornfully_insulted
-							}
-						}
-					}
-					exists = HKR
-				}
-				custom_tooltip = THE_KEI_4_6_C_tt1_no
-				tooltip = {
-					create_alliance = HKR
-					add_favors = {
-						who = HKR
-						amount = 20
-						mutual = yes
-					}
-					add_trust = {
-						who = HKR
-						value = 50
-						mutual = yes
-					}
-				}
-				custom_tooltip = THE_KEI_4_6_C_tt2_no
-				tooltip = {
-					Hakurei_state = {
-						add_permanent_claim = ROOT
-					}
-					Hakurei_peninsula_state = {
-						add_permanent_claim = ROOT
-					}
-					Hakurei_western_coast = {
-						add_permanent_claim = ROOT
-					}
-					add_casus_belli = {
-						target = HKR
-						type = cb_vassalize_mission
-						months = 600
-					}
-				}
-			}
-			else_if = {
-				limit = { 
 					HKR = {
-						has_opinion = {
+						has_opinion_modifier = {
 							who = ROOT
-							value = 100
+							modifier = sent_gift
 						}
-						marriage_with = ROOT
 					}
-					exists = HKR
 				}
 				custom_tooltip = THE_KEI_4_6_C_tt1_yes
+				custom_tooltip = THE_KEI_hakurei_will_help_us_tt
 				create_alliance = HKR
-				add_favors = {
-					who = HKR
-					amount = 20
-					mutual = yes
-				}
 				add_trust = {
 					who = HKR
-					value = 50
+					value = 25
 					mutual = yes
 				}
-				custom_tooltip = THE_KEI_4_6_C_tt2_no
+				hidden_effect = {
+					HKR = {
+						add_adm_power = 100
+						add_dip_power = 100
+						add_mil_power = 100
+					}
+					set_country_flag = THE_KEI_hakurei_will_help_us_flag
+				}
+			}
+			else = {
+				custom_tooltip = THE_KEI_4_6_C_tt1_no
+				custom_tooltip = THE_KEI_hakurei_will_help_us_tt
 				tooltip = {
-					Hakurei_state = {
-						add_permanent_claim = ROOT
-					}
-					Hakurei_peninsula_state = {
-						add_permanent_claim = ROOT
-					}
-					Hakurei_western_coast = {
-						add_permanent_claim = ROOT
-					}
-					add_casus_belli = {
-						target = HKR
-						type = cb_vassalize_mission
-						months = 600
+					create_alliance = HKR
+					add_trust = {
+						who = HKR
+						value = 25
+						mutual = yes
 					}
 				}
 			}
-			else_if = {
+			if = {
 				limit = { 
 					HKR = {
-						has_opinion = {
-							who = ROOT
-							value = -100
-						}
 						has_opinion_modifier = {
 							who = ROOT
 							modifier = scornfully_insulted
 						}
 					}
-					exists = HKR
-				}
-				custom_tooltip = THE_KEI_4_6_C_tt1_no
-				tooltip = {
-					add_favors = {
-						who = HKR
-						amount = 20
-						mutual = yes
-					}
-					add_trust = {
-						who = HKR
-						value = 50
-						mutual = yes
-					}
 				}
 				custom_tooltip = THE_KEI_4_6_C_tt2_yes
-				Hakurei_state = {
-					add_permanent_claim = ROOT
-				}
-				Hakurei_peninsula_state = {
-					add_permanent_claim = ROOT
-				}
-				Hakurei_western_coast = {
-					add_permanent_claim = ROOT
-				}
+				custom_tooltip = THE_KEI_hakurei_will_not_help_us_tt
+
 				add_casus_belli = {
 					target = HKR
 					type = cb_vassalize_mission
-					months = 600
+					months =  360
 				}
-			}
-			else_if = {
-				limit = { 
-					OR = {
-						NOT = {
-							exists = HKR
-						}
-						HKR = {
-							is_subject = yes	
-						}
+				Hakurei_state = { add_permanent_claim = ROOT }
+				Hakurei_peninsula_state = { add_permanent_claim = ROOT }
+				Hakurei_western_coast = { add_permanent_claim = ROOT }
+				hidden_effect = {
+					set_country_flag = THE_KEI_hakurei_will_not_help_us_flag
+					HKR = {
+						create_alliance = HIG
+					}
+					HKR = {
+						add_historical_friend = HIG
+					}
+					HIG = {
+						add_historical_friend = HKR
 					}
 				}
-				add_stability = 1
-				if = {
-					limit = {
-						ai = yes
-					 }
-					 ROOT = {
-						add_historical_rival = HIG
-					 }
-					 HIG = {
-						add_historical_rival = ROOT
-					 }
-				}
 			}
-			Eastern_higan = {
-				add_permanent_claim = ROOT
+			else = {
+				custom_tooltip = THE_KEI_4_6_C_tt2_no
+				custom_tooltip = THE_KEI_hakurei_will_not_help_us_tt
+				tooltip = {
+					add_casus_belli = {
+						target = HKR
+						type = cb_vassalize_mission
+						months =  360
+					}
+					Hakurei_state = { add_permanent_claim = ROOT }
+					Hakurei_peninsula_state = { add_permanent_claim = ROOT }
+					Hakurei_western_coast = { add_permanent_claim = ROOT }
+				}
 			}
 		} 
 	}
@@ -2211,5 +2166,102 @@ THE_KEI_minor_branch_2_alone = {
 			}
 			custom_tooltip = THE_KEI_2_12_alone_c_tt1
 		 } 
+	}
+}
+#分支路线 创造
+THE_KEI_minor_branch_1_create = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = KEI 
+		has_country_flag = THE_KEI_branch_chose_create_branch_flag
+	} 
+
+	THE_KEI_1_10_create = {
+		icon = mission_unknown_mission
+		position = 10
+		required_missions = { THE_KEI_1_9_lock } 
+		provinces_to_highlight = { 
+		 } 
+
+		trigger = { 
+		 } 
+
+		effect = { 
+		} 
+	}
+
+	THE_KEI_1_12_create = {
+		icon = mission_unknown_mission
+		position = 12
+		required_missions = {
+			THE_KEI_2_11_create
+			THE_KEI_1_10_create
+		}
+		provinces_to_highlight = { 
+		 } 
+
+		trigger = { 
+		} 
+
+		effect = { 
+		}
+	}
+}
+THE_KEI_minor_branch_1_create = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = KEI 
+		has_country_flag = THE_KEI_branch_chose_create_branch_flag
+	} 
+
+	THE_KEI_2_10_create = {
+		icon = mission_unknown_mission
+		position = 10
+		required_missions = { THE_KEI_1_9_lock } 
+		provinces_to_highlight = { 
+		 } 
+
+		trigger = { 
+		 } 
+
+		effect = { 
+		} 
+	}
+
+	THE_KEI_2_11_create = {
+		icon = mission_unknown_mission
+		position = 11
+		required_missions = {
+			THE_KEI_2_10_create
+		}
+		provinces_to_highlight = { 
+		 } 
+
+		trigger = { 
+		} 
+
+		effect = { 
+		}
+	}
+	THE_KEI_2_12_create = {
+		icon = mission_unknown_mission
+		position = 12
+		required_missions = {
+			THE_KEI_2_11_create
+		}
+		provinces_to_highlight = { 
+		 } 
+
+		trigger = { 
+		} 
+
+		effect = { 
+		}
 	}
 }

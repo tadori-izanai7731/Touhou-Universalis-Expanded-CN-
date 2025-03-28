@@ -48,7 +48,7 @@ country_decisions = {
 			}
 		}
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 	}
 	#3级政体介绍
@@ -366,6 +366,40 @@ country_decisions = {
 					which = the_kei_the_blessing_of_the_keiki
 					value = 50
 				}
+			}
+		}
+	}
+	#######和尘的特殊决议
+	THE_KEI_hechen_special_decosion_open = {
+		color = { 70 222 219 }
+		potential = {
+			OR = {
+				tag = KEI
+				was_tag = KEI
+			}
+			mission_completed = THE_KEI_1_5
+		}
+		allow = {
+			adm_power = 100
+			dip_power = 100
+			mil_power = 100
+			custom_trigger_tooltip = {
+				tooltip = THE_KEI_hechen_special_decosion_open_cooldown_c_tt
+				OR = {
+					NOT = {
+						has_country_flag = THE_KEI_hechen_special_decosion_open_cooldown_flag
+					}
+					had_country_flag = {
+						flag = THE_KEI_hechen_special_decosion_open_cooldown_flag
+						days = 3650
+					}
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				clr_country_flag = THE_KEI_hechen_special_decosion_open_cooldown_flag
+				set_country_flag = THE_KEI_hechen_special_decosion_open_cooldown_flag
 			}
 		}
 	}

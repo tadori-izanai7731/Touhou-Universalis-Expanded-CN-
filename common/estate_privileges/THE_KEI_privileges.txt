@@ -56,7 +56,30 @@ THE_KEI_janissaries_warrior_2_privileges = {
 	on_revoked = {
 	}
 	benefits = {
-		janissaries_privilege_slots = 2
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+#人类灵特权
+THE_KEI_human_ghost_power_privileges = { #与生俱来
+	icon = privilege_demand_more_troops
+	max_absolutism = -10
+	influence = 0.10
+	loyalty = 0.15
+	is_valid = { 
+		OR = {
+			tag = KEI
+			was_tag = KEI
+		}
+		mission_completed = THE_KEI_1_2
+	}
+	can_select = {
+		always = yes
+	}
+	benefits = {
+		global_unrest = -1
+		all_estate_loyalty_equilibrium = 0.10
 	}
 	ai_will_do = {
 		factor = 0

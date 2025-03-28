@@ -240,6 +240,10 @@ THE_KEI_add_save_the_masses_power_effects = {
 				power_type = THE_KEI_masses_var_power
 				value = 2
 			}
+			change_variable = {
+				which = THE_KEI_masses_var_im_var
+				value = 1
+			}
 		}
 	}
 }
@@ -366,5 +370,44 @@ THE_KEI_add_subject_country_blessing_3_effect = {
 				value = 10
 			}
 		 }
+		
+	}
+}
+#KEI结束YAC与SKI的战争
+THE_KEI_decalre_to_YAC_or_SKI_won_war_effects = {
+	if = {
+		limit = { 
+			FROM = {
+				OR = {
+					tag = SKI
+					tag = YAC
+				}
+			}
+			ROOT = {
+				NOT = {
+					has_country_flag = 1
+				}
+			}
+		}
+		hidden_effect = {
+			ROOT = {
+				every_owned_province = {
+					remove_core = YAC
+					remove_core = SKI
+				}
+			}
+		}
+		#巫女如果存在
+		if = {
+			limit = { 
+				exists = HKR
+			}
+			HKR = {
+				country_event = {
+					id = THE_KEI_flavor_events.12
+					days = 30
+				}
+			}
+		}
 	}
 }

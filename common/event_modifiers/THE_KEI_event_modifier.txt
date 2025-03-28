@@ -165,3 +165,20 @@ THE_KEI_save_the_ghost_buff = {
 	infantry_cost = -0.10
 	movement_speed = 0.10
 }
+#自由的呼声
+THE_KEI_slavtor_free_search_for_buff = {
+	prestige = 1.0
+	estate_interaction_cooldown_modifier = -0.20
+}
+#合尘
+THE_KEI_the_hecheng_buff = {
+	build_cost = -0.10
+	monthly_reform_progress = 0.25
+}
+#九幽律令
+THE_KEI_the_hig_strial_buff = {
+	global_autonomy = -0.10
+	min_autonomy = -10
+	land_morale_constant = 0.10
+	land_maintenance_modifier = -0.10
+}
