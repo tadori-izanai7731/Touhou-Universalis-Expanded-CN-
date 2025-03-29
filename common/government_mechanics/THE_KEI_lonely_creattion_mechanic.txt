@@ -224,16 +224,16 @@ THE_KEI_save_the_masses_government_mechanic = {
 	}
 	powers = {
 		THE_KEI_masses_var_power = {
-			max = 100
+			max = 1000
 			min = 0
 			#变化
 			scaled_modifier = {
 				modifier = { 
-					infantry_power = 0.25
-					cavalry_power = 0.25
-					artillery_power = 0.25
-					reinforce_speed = 0.50
-					land_forcelimit = 200
+					infantry_power = 5.00
+					cavalry_power = 5.00
+					artillery_power = 5.00
+					reinforce_speed = 20.0
+					land_forcelimit = 2000
 				}
 			}
 		}

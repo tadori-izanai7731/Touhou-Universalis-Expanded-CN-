@@ -238,7 +238,7 @@ THE_KEI_add_save_the_masses_power_effects = {
 			add_government_power = {
 				mechanic_type = THE_KEI_save_the_masses_government_mechanic
 				power_type = THE_KEI_masses_var_power
-				value = 2
+				value = 1
 			}
 			change_variable = {
 				which = THE_KEI_masses_var_im_var
@@ -409,5 +409,18 @@ THE_KEI_decalre_to_YAC_or_SKI_won_war_effects = {
 				}
 			}
 		}
+	}
+}
+
+#指轮兵长的胜利计数
+THE_KEI_the_leader_won_battle_im_var_ieffect = {
+	if = {
+		limit = {
+			THE_KEI_the_leader_is_mayumi_trigger = yes
+		 }
+		 change_variable = {
+			which = THE_KEI_the_leader_won_battle_im_var
+			value = 1
+		 }
 	}
 }

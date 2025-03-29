@@ -1356,16 +1356,39 @@ THE_KEI_main_branch_5 = {
 		trigger = { 
 			custom_trigger_tooltip = {
 				tooltip = THE_KEI_5_5_c_tt2
+				check_variable = {
+					which = THE_KEI_the_leader_won_battle_im_var
+					value = 30
+				}
 			}
 			has_global_modifier_value = {
 				which = discipline
 				value = 0.10
 			}
-			has_mil_advisor = yes
+			monthly_mil = 13
+			OR = {
+				army_professionalism = 0.30
+				army_tradition = 50
+			}
 		 } 
 
 		effect = { 
 			custom_tooltip = THE_KEI_5_5_c_tt1
+			custom_tooltip = THE_KEI_5_6_c_tt2
+			if = {
+				limit = { 
+					army_professionalism = 0.30
+					army_tradition = 50
+				}
+				custom_tooltip = THE_KEI_5_6_c_tt3_yes
+				add_mil_tech = 1
+			}
+			else = {
+				custom_tooltip = THE_KEI_5_6_c_tt3_no
+				tooltip = {
+					add_mil_tech = 1
+				}
+			}
 			hidden_effect = {
 				set_variable = {
 					which = the_mayumi_fire_max_var
@@ -1395,11 +1418,87 @@ THE_KEI_main_branch_5 = {
 		icon = mission_unknown_mission
 		position = 6
 		required_missions = { THE_KEI_5_5 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_regiments_at_full_drill = 50
+			num_of_completed_idea_groups_adm = { amount = 2 } 
+			army_professionalism = 0.5
+			army_tradition = 80
+		 } 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_KEI_5_6_c_tt1
+			add_country_modifier = {
+				name = THE_KEI_the_army_refom_buff
+				duration = -1
+			}
+			if = {
+				limit = { 
+					has_government_mechanic = THE_KEI_save_the_masses_government_mechanic
+					NOT = {
+						has_government_power = {
+							mechanic_type = THE_KEI_save_the_masses_government_mechanic
+							power_type = THE_KEI_masses_var_power
+							value = 50
+						}
+					}
+				}
+				custom_tooltip = THE_KEI_5_6_c_tt2_yes
+				custom_tooltip = THE_KEI_5_6_c_tt3
+				hidden_effect = {
+					set_variable = {
+						which = THE_KEI_masses_var_im_var
+						which = THE_KEI_masses_var_im_var_2_var
+					}
+					while = {
+						limit = {
+							check_variable = {
+								which = THE_KEI_masses_var_im_var_2_var
+								value = 1
+							}
+						 }
+						 add_government_power = {
+							mechanic_type = THE_KEI_save_the_masses_government_mechanic
+							power_type = THE_KEI_masses_var_power
+							value = 1
+						 }
+						 change_variable = {
+							which = THE_KEI_masses_var_im_var_2_var
+							value = -1
+						}
+					}
+				}
+			}
+			else = {
+				custom_tooltip = THE_KEI_5_6_c_tt2_no
+				custom_tooltip = THE_KEI_5_6_c_tt3
+			}
+			hidden_effect = {
+				set_variable = {
+					which = the_mayumi_fire_max_var
+					value = 8
+				}
+				set_variable = {
+					which = the_mayumi_shock_max_var
+					value = 8
+				}
+				set_variable = {
+					which = the_mayumi_manuever_max_var
+					value = 8
+				}
+				set_variable = {
+					which = the_mayumi_siege_max_var
+					value = 8
+				}
+				set_variable = {
+					which = the_mayumi_max_var
+					value = 24
+				}
+			}
+		 } 
 	}
 
 	THE_KEI_5_7 = {
