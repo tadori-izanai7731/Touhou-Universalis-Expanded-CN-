@@ -24,3 +24,166 @@ country_event = {
 		add_mandate = 20
 	}
 }
+
+country_event = {
+	id = THE_KNE_events.2
+	title = THE_KNE_events.2.title
+	desc = THE_KNE_events.2.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = THE_KNE_events.2.a
+		trigger = {
+			taiwan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		taiwan_area = {
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+		}
+	}
+	option = {
+		name = THE_KNE_events.2.b
+		trigger = {
+			taiwan_area = {
+				is_empty = no
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		738 = {
+			if = {
+				limit = {
+					is_empty = no
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_treasury = -250
+				cede_province = ROOT
+			}
+			else_if = {
+				limit = {
+					is_empty = yes
+				}
+				add_siberian_construction = 500
+			}
+			else = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+		}
+		2154 = {
+			if = {
+				limit = {
+					is_empty = no
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_treasury = -250
+				cede_province = ROOT
+			}
+			else_if = {
+				limit = {
+					is_empty = yes
+				}
+				add_siberian_construction = 500
+			}
+			else = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+		}
+		2155 = {
+			if = {
+				limit = {
+					is_empty = no
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_treasury = -250
+				cede_province = ROOT
+			}
+			else_if = {
+				limit = {
+					is_empty = yes
+				}
+				add_siberian_construction = 500
+			}
+			else = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+		}
+	}
+	option = {
+		name = THE_KNE_events.2.c
+		trigger = {
+			taiwan_area = {
+				is_empty = no
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		738 = {
+			if = {
+				limit = {
+					is_empty = yes
+				}
+				add_siberian_construction = 500
+			}
+			else_if = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+		}
+		2154 = {
+			if = {
+				limit = {
+					is_empty = yes
+				}
+				add_siberian_construction = 500
+			}
+			else_if = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+		}
+		2155 = {
+			if = {
+				limit = {
+					is_empty = yes
+				}
+				add_siberian_construction = 500
+			}
+			else_if = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+		}
+	}
+	option = {
+		name = THE_KNE_events.2.d
+		trigger = {
+			taiwan_area = {
+				type = all
+				is_empty = yes
+			}
+		}
+		taiwan_area = {
+			add_siberian_construction = 500
+		}
+	}
+}

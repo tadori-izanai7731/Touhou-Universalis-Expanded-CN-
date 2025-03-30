@@ -5950,7 +5950,10 @@ jokhang_temple = {
 
 	#can we build it?
 	build_trigger = {
-		th_province_is_buddhist_or_accepts_buddhism = yes
+		OR = {
+			th_province_is_buddhist_or_accepts_buddhism = yes
+			th_can_use_chinese_monuments = yes
+		}
 	}
 
 	#what to do when it's built
@@ -5965,12 +5968,18 @@ jokhang_temple = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		th_province_is_buddhist_or_accepts_buddhism = yes 
+		OR = {
+			th_province_is_buddhist_or_accepts_buddhism = yes
+			th_can_use_chinese_monuments = yes
+		}
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		th_province_is_buddhist_or_accepts_buddhism = yes 
+		OR = {
+			th_province_is_buddhist_or_accepts_buddhism = yes
+			th_can_use_chinese_monuments = yes
+		}
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?

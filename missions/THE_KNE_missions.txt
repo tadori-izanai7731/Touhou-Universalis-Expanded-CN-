@@ -302,11 +302,25 @@ THE_KNE_mission_branch_1 = {
 		icon = mission_unknown_mission
 		position = 5
 		required_missions = { THE_KNE_mission_3_4 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			region = tibet_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
 		
-		trigger = {  } 
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 8
+				region = tibet_region
+			}
+		} 
 		
-		effect = {  } 
+		effect = {
+			add_mandate = 20
+			add_country_modifier = {
+				name = THE_KNE_tibet_modifier
+				duration = -1
+			}
+		} 
 	}
 	
 	THE_KNE_mission_1_6 = {
@@ -484,6 +498,9 @@ THE_KNE_mission_branch_2 = {
 		} 
 		
 		effect = {
+			tibet_region = {
+				add_permanent_claim = ROOT
+			}
 			add_country_modifier = {
 				name = THE_KNE_mongolia_horse_modifier
 				duration = -1
@@ -552,11 +569,31 @@ THE_KNE_mission_branch_2 = {
 		icon = mission_unknown_mission
 		position = 5
 		required_missions = { THE_KNE_mission_3_4 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			region = mongolia_region
+			trade_goods = livestock
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = { has_manpower_building_trigger = yes }
+			}
+		} 
 		
-		trigger = {  } 
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				region = mongolia_region
+				trade_goods = livestock
+				has_manpower_building_trigger = yes
+			}
+		} 
 		
-		effect = {  } 
+		effect = {
+			add_mandate = 20
+			add_country_modifier = {
+				name = THE_KNE_mongolia_modifier
+				duration = -1
+			}
+		} 
 	}
 	
 	THE_KNE_mission_2_6 = {
@@ -941,11 +978,30 @@ THE_KNE_mission_branch_3 = {
 		icon = mission_unknown_mission
 		position = 5
 		required_missions = { THE_KNE_mission_3_4 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			region = north_china_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 		
-		trigger = {  } 
+		trigger = {
+			north_china_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 		
-		effect = {  } 
+		effect = {
+			add_mandate = 20
+			north_china_region = {
+				add_unrest = -10
+				add_authority = -25
+				add_devastation = -25
+			}
+			add_country_modifier = {
+				name = THE_KNE_north_china_modifier
+				duration = -1
+			}
+		} 
 	}
 	
 	THE_KNE_mission_3_6 = {
@@ -1236,11 +1292,30 @@ THE_KNE_mission_branch_4 = {
 		icon = mission_unknown_mission
 		position = 5
 		required_missions = { THE_KNE_mission_3_4 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			region = xinan_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 		
-		trigger = {  } 
+		trigger = {
+			xinan_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 		
-		effect = {  } 
+		effect = {
+			add_mandate = 20
+			xinan_region = {
+				add_unrest = -10
+				add_authority = -25
+				add_devastation = -25
+			}
+			add_country_modifier = {
+				name = THE_KNE_xinan_modifier
+				duration = -1
+			}
+		} 
 	}
 	
 	THE_KNE_mission_4_6 = {
@@ -1495,11 +1570,36 @@ THE_KNE_mission_branch_5 = {
 		icon = mission_unknown_mission
 		position = 5
 		required_missions = { THE_KNE_mission_3_4 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			region = south_china_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 		
-		trigger = {  } 
+		trigger = {
+			south_china_region = {
+				type = all
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					area = taiwan_area
+				}
+			}
+		} 
 		
-		effect = {  } 
+		effect = {
+			add_mandate = 20
+			south_china_region = {
+				add_unrest = -10
+				add_authority = -25
+				add_devastation = -25
+			}
+			add_country_modifier = {
+				name = THE_KNE_south_china_modifier
+				duration = -1
+			}
+			country_event = {
+				id = THE_KNE_events.2
+			}
+		} 
 	}
 	
 	THE_KNE_mission_5_7 = {

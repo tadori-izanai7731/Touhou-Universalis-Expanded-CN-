@@ -44,3 +44,62 @@ THE_KNE_on_barrage_scripted_effect = {
 		}
 	}
 }
+
+THE_KNE_on_institution_embracement_scripted_effect = {
+	if = {
+		limit = {
+			empire_of_china_reform_passed = zz_THE_KNE_china_reform_1_human
+		}
+		export_to_variable = {
+			which = the_kne_adm_var
+			value = trigger_value:adm_tech
+		}
+		export_to_variable = {
+			which = the_kne_dip_var
+			value = trigger_value:dip_tech
+		}
+		export_to_variable = {
+			which = the_kne_mil_var
+			value = trigger_value:mil_tech
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = the_kne_adm_var
+					value = 1
+				}
+			}
+			add_adm_power = 30
+			subtract_variable = {
+				which = the_kne_adm_var
+				value = 1
+			}
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = the_kne_dip_var
+					value = 1
+				}
+			}
+			add_dip_power = 30
+			subtract_variable = {
+				which = the_kne_dip_var
+				value = 1
+			}
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = the_kne_mil_var
+					value = 1
+				}
+			}
+			add_mil_power = 30
+			subtract_variable = {
+				which = the_kne_mil_var
+				value = 1
+			}
+		}
+	}
+}

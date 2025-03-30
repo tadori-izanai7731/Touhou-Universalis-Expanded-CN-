@@ -115,6 +115,36 @@ THE_KNE_grand_university_upgrade_province_modifier = {
 	yearly_karma_decay = 2
 }
 
+# 征服天险
+THE_KNE_tibet_modifier = {
+	land_attrition = -0.1
+	reinforce_cost_modifier = -0.1
+}
+
+# 驯服草原
+THE_KNE_mongolia_modifier = {
+	cavalry_cost = -0.1
+	cavalry_power = 0.1
+}
+
+# 中流击水
+THE_KNE_north_china_modifier = {
+	province_warscore_cost = -0.15
+	diplomatic_reputation = 2
+}
+
+# 白虫伏威
+THE_KNE_xinan_modifier = {
+	religious_unity = 0.25
+	garrison_size = 0.2
+}
+
+# 子规啼夜
+THE_KNE_south_china_modifier = {
+	ship_durability = 0.1
+	range = 0.5
+}
+
 ##### COUNTRY_IDEA_MODIFIER
 
 # @KN2噬史白泽
