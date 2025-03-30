@@ -212,6 +212,69 @@ THE_KEI_lonely_creation_mechanic = {
 
 			########
 			 #合尘升级 外交类buff
+			 scaled_modifier = { #外交
+				modifier = {
+					improve_relation_modifier = 0.50
+				 }
+				 trigger = {
+					mission_completed = THE_KEI_2_10_create
+					full_idea_group = diplomatic_ideas 
+				 }
+			 }
+			 scaled_modifier = { #间谍
+				modifier = {
+					spy_offence = 0.50
+				 }
+				 trigger = {
+					mission_completed = THE_KEI_2_10_create
+					full_idea_group = spy_ideas 
+				 }
+			 }
+			 scaled_modifier = { #贸易
+				modifier = {
+					trade_efficiency = 0.20
+				 }
+				 trigger = {
+					mission_completed = THE_KEI_2_10_create
+					full_idea_group = trade_ideas
+				 }
+			 }
+			 scaled_modifier = { #探索
+				modifier = {
+					envoy_travel_time = -0.25
+				 }
+				 trigger = {
+					mission_completed = THE_KEI_2_10_create
+					full_idea_group = exploration_ideas
+				 }
+			 }
+			 scaled_modifier = { #航海
+				modifier = {
+					global_sailors_modifier = 0.50
+				 }
+				 trigger = {
+					mission_completed = THE_KEI_2_10_create
+					full_idea_group = maritime_ideas
+				 }
+			 }
+			 scaled_modifier = { #影响
+				modifier = {
+					diplomatic_annexation_cost = -0.20
+				 }
+				 trigger = {
+					mission_completed = THE_KEI_2_10_create
+					full_idea_group = influence_ideas
+				 }
+			 }
+			 scaled_modifier = { #宫廷
+			 modifier = {
+				reform_progress_growth = 0.20
+			  }
+			  trigger = {
+				 mission_completed = THE_KEI_2_10_create
+				 full_idea_group = court_ideas
+			  }
+		  	}
 		}
 	}
 }
@@ -235,6 +298,8 @@ THE_KEI_save_the_masses_government_mechanic = {
 					reinforce_speed = 20.0
 					land_forcelimit = 2000
 				}
+				start_value = 0
+				end_value = 1000
 			}
 		}
 	}

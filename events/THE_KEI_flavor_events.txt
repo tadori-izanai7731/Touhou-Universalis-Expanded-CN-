@@ -32,6 +32,12 @@ country_event = {
 			value = -5
 		}
 		add_yearly_manpower = 5.0
+		if = {
+			limit = { 
+				mission_completed = THE_KEI_1_12_create
+			}
+			add_manpower = 50
+		}
 	}
 	option = {
 		name = THE_KEI_flavor_events.1.d
@@ -623,6 +629,10 @@ country_event = {
 					loyalty = 80 
 				}
 			}
+		}
+		add_country_modifier = {
+			name = THE_KEI_the_light_man_buff
+			duration = -1
 		}
 		hidden_effect = {
 			set_country_flag = THE_KEI_branch_chose_create_branch_flag

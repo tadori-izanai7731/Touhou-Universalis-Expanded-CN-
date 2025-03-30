@@ -491,7 +491,14 @@ allianceaction = {
 			
 		}
 		allow = {
-			always = no
+			OR = {
+				FROM = {
+					mission_completed = THE_KEI_2_11_create
+				}
+				ROOT = {
+					mission_completed = THE_KEI_2_11_create
+				}
+			}
 		}
 	}
 	effect = {

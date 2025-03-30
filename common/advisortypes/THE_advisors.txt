@@ -135,3 +135,32 @@ the_sizuha = {
 		factor = 100
 	}
 }
+#磨弓
+the_mayumi = {
+	monarch_power = MIL
+	# Bonus
+	movement_speed = 0.20
+	morale_damage_received = -0.10
+
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				is_emperor_of_china = yes 
+			}
+		}
+		modifier = {
+			meritocracy = 0.25
+		}
+	}
+
+        # allow_only_male = yes
+    allow_only_female = yes
+
+	chance = {
+		factor = 0
+	}
+	
+	ai_will_do = {
+		factor = 100
+	}
+}

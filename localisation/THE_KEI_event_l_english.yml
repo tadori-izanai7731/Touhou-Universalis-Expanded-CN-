@@ -16,7 +16,7 @@
  THE_KEI_janissaries_warrior_2_privileges: "ÝuùRàVÚ‹"
  THE_KEI_lonely_creation_mechanic_power: "Su"
  ability_THE_KEI_lonely_creation_mechanic: "0Su0"
- THE_KEI_lonely_creation_mechanic_power_desc: "SuÿsS:NbIr.irIN¿ˆìYKNàeN^y›RÿvQ:V1VNupaÿø”1SNirKNu:g0\n\n[Root.THE_KEI_mechanic_extra_c_tt]"
+ THE_KEI_lonely_creation_mechanic_power_desc: "SuÿsS:NbIr.irIN¿ˆìYKNàeN^y›RÿvQ:V1VNupaÿø”1SNirKNu:g0\n\n[Root.THE_KEI_mechanic_extra_2_c_tt]\n[Root.THE_KEI_mechanic_extra_c_tt]"
  THE_KEI_lonely_creation_do: "RbVRu"
  mechanic_enables_estate_the_haniwa_yes: "=T(u§Y0ôWn0§!6–BS"
  THE_KEI_lonely_creation_do_desc: "P©RbIN¿ˆìY„v^y›RÿKˆNàeu‹TKNiråNu:g0"
@@ -61,6 +61,10 @@
  THE_KEI_add_blessing_50_keiki_c_tt1: "§M?a›R§!žX•50¹p"
  THE_KEI_add_blessing_100_keiki_c_tt1: "§M?a›R§!žX•100¹p"
  THE_KEI_flavor_events.11.a: ""
+ THE_KEI_flavor_events.8.t: "upB›„v	éb"
+ THE_KEI_flavor_events.desc: ""
+ THE_KEI_flavor_events.a: ">P,TÂríp„vHywy"
+ THE_KEI_flavor_events.b: ">P,Tê1u„v|T2U"
  ##buff_name
  THE_KEI_savtor_light_1_buff: "QeNKNIQ"
  THE_KEI_savtor_all_power_buff: "IY.sNR"
@@ -93,6 +97,9 @@
  THE_KEI_the_hecheng_buff: "TS"
  THE_KEI_the_hig_strial_buff: "kN‹^‹VäN"
  THE_KEI_the_army_refom_buff: "v–÷t„vVgRºN"
+ THE_KEI_without_all_question_buff: "àeNëk(‘u"
+ THE_KEI_without_out_of_life_buff: "…1Ru"
+ THE_KEI_the_light_man_buff: "ö—IQ"
  ##religion
  the_keiki: "¦hó`.‹W"
  the_keiki_fervor_shapping: "QXbV"
@@ -131,11 +138,16 @@
  THE_KEI_the_subject_of_keiki_decosions_religion_war_desc: ""
  THE_KEI_create_mayumi_advisor_cooldown_tt: "å‹³Q®‹20t^ÅNýwO(u1!k"
  THE_KEI_create_advisor_mayumi_decosion_title: "ÛbßR›Q‹NŒ˜î•§Y0×NRvPèxV0§!"
+ THE_KEI_change_religion_to_the_keiki_decoisions_title: "9eØSáOðN:N—RYe§Y0¦hó`.‹W0§!"
+ THE_KEI_change_religion_to_the_keiki_decoisions_desc: ""
  ##MISSION EXTRA
- THE_KEI_4_1_c_tt1: "c	gdkHeœgöe:\n--(Wb‰N`S†˜@SKI²RYrÄu@YAC<›pgÄu„vwýNSOËzsSrR©‹v^·ƒ—V8hÃV0\n--ùR@SKI²RYrÄu@YAC<›pgÄu±RbÿùR¹eÅNýwìS2U¨RirupßvËS0"
- THE_KEI_4_1_c_tt2: "(W–™ýub§Y30=e06w<SRÌ‘0§!è–"
+ THE_KEI_4_1_c_tt1: "§Vc	gdkHeœgöe:§!\n(Wb‰N-N`S†˜§YjuuLuýV¶R§!@SKI@YAC@GYK„vwýNSOËzsSrR©‹\nNùR¹eÅNýwìS2UvQÖN§YjuuLuýV¶R§!@SKI@YAC@GYK"
+ THE_KEI_4_1_c_tt2: "(W–™ýub§Y10=e06w<SRÌ‘0§!è–"
+ THE_KEI_4_1_c_tt3: "\n§M0QeNKNIQ0SOcíuôv0R@KEIbìNb—V3:Wb‰NÜw)R§!"
  THE_KEI_4_3_custom_tt1: "§YNb	gbìN(WjuuLu„vwýN·ƒ—V8hÃVÿv^lØS:NbìN„v—RYe0§!"
- THE_KEI_4_4_c_tt1: "–:gbìN„v10*N8hÃVwýN·ƒ—V§Y^y>y§!"
+ THE_KEI_4_4_c_tt1: "–:g10*N8hÃVwýNN§Yup•íV§!·ƒ—Vú^Qr§Y0^y>y0§!"
+ THE_KEI_4_4_c_tt3_yes: "£yes£å‚§Yup•íV§!òT	gú^Qr§Y0^y>y0§!"
+ THE_KEI_4_4_c_tt3_no: "£no£å‚§Yup•íV§!òT	gú^Qr§Y0^y>y0§!"
  THE_KEI_4_6_C_tt1_no: "£no£å‚bìNÇN@HKR§YZSKN§!ÐcGSsQû|ŒRbûN¡R"
  THE_KEI_4_6_C_tt2_no: "£no£å‚bìNÇY²Nž±@HKR§YZSKN§!ŒRbûN¡R"
  THE_KEI_4_6_C_tt1_yes: "£yes£å‚bìNÇN@HKR§YZSKN§!ÐcGSsQû|ŒRbûN¡R"
@@ -201,6 +213,22 @@
  THE_KEI_5_6_c_tt3: "bìNKb-N§O0ˆm„vIQ’‚0§!peÏ‘SO¾‹šR:N§O50§!¹p"
  THE_KEI_5_6_c_tt3_yes: "£yes£å‚bìNŒRbûN¡Röeåb	g§Y30%LwN¦^§!N§Y60F–›Q.Oßu§!Rÿ"
  THE_KEI_5_6_c_tt3_no: "£no£å‚bìNŒRbûN¡Röeåb	g§Y30%LwN¦^§!N§Y60F–›Q.Oßu§!Rÿ"
+ THE_KEI_2_5_c_tt1_yes: "\n£yes£§Y0ºN‰|up00¨Rirup00ëTsY0§!Ïk	g§G10%§!YŽN60%„v§OàVÚ‹¦^§!SO·ƒ—V100£adm££mil££dip£"
+ THE_KEI_2_5_c_tt1_no: "\n£no£§Y0ºN‰|up00¨Rirup00ëTsY0§!Ïk	g§G10%§!YŽN60%„v§OàVÚ‹¦^§!SO·ƒ—V100¹p£adm££mil££dip£"
+ THE_KEI_2_6_c_tt112: "\n£yes£§M9hnc‰^ó`aNòTˆm1Y„výV¦^ÿbìN°s(WS·ƒ—V(§Y[Root.THE_KEI_the_leader_won_battle_im_var.GetValue]§!)¹p§O0ˆm„vIQ’‚0§!§!"
+ THE_KEI_1_10_create_c_tt1: "óSòTSÿ§Y[Root.the_kei_change_religions_to_the_keiki_im_var.GetValue]§!/20	ÿ*NwýNlS:N§Y0¦hó`.‹W0§!"
+ THE_KEI_2_10_create_c_tt1: "GSµu?eœ^Û¦^ag:g6R§Y0W-W¢gêN0§!\n- -§WÙS9hncbìNòTŒRb„vY²NtõVÄuSOÙuˆNbìN˜YîOck§!\n- -§gæ‹Å`÷‹ågwSuÛ¦^ag§!"
+ THE_KEI_2_11_create_c_tt1: "\nÖSˆm?eSO§Y0dRìrRu0§!-N„v§MàeÕlÓußv§!:g6R"
+ THE_KEI_mechanic_extra_2_c_tt_0: ""
+ THE_KEI_mechanic_extra_2_c_tt_1: "\n§YbìNS9hncŒRb„vY²NtõVÄu·ƒ—VnØSîOck:§!\n- -§YY²NtõV§! 9e„UsQû| §G+50%§!\n- -§Yô•ŒtõV§! ô•ŒQú^¾‹ §G+50%§!\n- -§Y8ftõV§! 8fHe‡s §G+20%§!\n- -§Y¢c0ttõV§! OwLˆzöeô• §G-25%§!\n- -§Y*‚wmtõV§! hQýV4lKbîOck §G+50%§!\n- -§YqVÍTtõV§! Y²NTv^±‚9 §G-20%§!\n- -§Y«R÷^tõV§! 9ei—Û¦^žX• §G+15%§!"
+ THE_KEI_1_10_create_c_tt1: "–:g(WbìNwýNRú^1*N§O0¦hó`.‹W0§!9ei—-NÃV"
+ THE_KEI_1_12_create_c_tt1: "8nbVËYóÊNòTÛLˆÿ§Y[Root.the_kei_start_game_till_then_use_government_im_var.GetValue]§!/100	ÿ!kRbVRu"
+ THE_KEI_1_12_create_c_tt2: "?eœ^:g6R§Y0Ru0§!SO˜YR.§G50000§!ºN›R"
+ THE_KEI_4_1_c_tt_6_yes: "£yes£‚YœgbìNŒRbûN¡Röeÿ§Y0ºN‰|up0§!6–BSåb	g§Y40%§!qVÍT›RSO·ƒ—Vÿ"
+ THE_KEI_4_1_c_tt_6_no: "£no£‚YœgbìNŒRbûN¡Röeÿ§Y0ºN‰|up0§!6–BSåb	g§Y40%§!qVÍT›RSO·ƒ—Vÿ"
+ the_mayumi: "×NRvPèxV"
+ the_mayumi_desc: ""
+ 
  
  #DIP_action_EXTRA
  THE_KEI_grant_a_blessing_dip_action_title: "i`P"

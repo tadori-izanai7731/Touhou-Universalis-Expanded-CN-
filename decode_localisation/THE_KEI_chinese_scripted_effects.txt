@@ -16,3 +16,14 @@ THE_KEI_define_general_mayumi_siege_script = {
 		}
 	}
 }
+THE_KEI_define_the_advisor_mayumi_effect = {
+	define_advisor = {
+		type = the_mayumi
+		name = "仗刀偶磨弓"
+		skill = 3
+		cost_multiplier = 0.25
+		culture = ROOT
+		religion = ROOT
+		female = yes
+	}
+}

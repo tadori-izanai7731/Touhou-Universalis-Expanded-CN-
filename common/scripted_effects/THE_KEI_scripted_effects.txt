@@ -240,6 +240,15 @@ THE_KEI_add_save_the_masses_power_effects = {
 				power_type = THE_KEI_masses_var_power
 				value = 1
 			}
+		}
+	}
+	if = {
+		limit = { 
+			FROM = {
+				culture_group = Gensokyan_culture
+			}
+		}
+		KEI = {
 			change_variable = {
 				which = THE_KEI_masses_var_im_var
 				value = 1
@@ -374,43 +383,43 @@ THE_KEI_add_subject_country_blessing_3_effect = {
 	}
 }
 #KEI结束YAC与SKI的战争
-THE_KEI_decalre_to_YAC_or_SKI_won_war_effects = {
-	if = {
-		limit = { 
-			FROM = {
-				OR = {
-					tag = SKI
-					tag = YAC
-				}
-			}
-			ROOT = {
-				NOT = {
-					has_country_flag = 1
-				}
-			}
-		}
-		hidden_effect = {
-			ROOT = {
-				every_owned_province = {
-					remove_core = YAC
-					remove_core = SKI
-				}
-			}
-		}
-		#巫女如果存在
-		if = {
-			limit = { 
-				exists = HKR
-			}
-			HKR = {
-				country_event = {
-					id = THE_KEI_flavor_events.12
-					days = 30
-				}
-			}
-		}
-	}
-}
+# THE_KEI_decalre_to_YAC_or_SKI_won_war_effects = {
+# 	if = {
+# 		limit = { 
+# 			FROM = {
+# 				OR = {
+# 					tag = SKI
+# 					tag = YAC
+# 				}
+# 			}
+# 			ROOT = {
+# 				NOT = {
+# 					has_country_flag = 1
+# 				}
+# 			}
+# 		}
+# 		hidden_effect = {
+# 			ROOT = {
+# 				every_owned_province = {
+# 					remove_core = YAC
+# 					remove_core = SKI
+# 				}
+# 			}
+# 		}
+# 		#巫女如果存在
+# 		if = {
+# 			limit = { 
+# 				exists = HKR
+# 			}
+# 			HKR = {
+# 				country_event = {
+# 					id = THE_KEI_flavor_events.12
+# 					days = 30
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 
 #指轮兵长的胜利计数
 THE_KEI_the_leader_won_battle_im_var_ieffect = {
@@ -422,5 +431,45 @@ THE_KEI_the_leader_won_battle_im_var_ieffect = {
 			which = THE_KEI_the_leader_won_battle_im_var
 			value = 1
 		 }
+	}
+}
+#传教计数
+THE_KEI_change_religions_to_the_keiki_var_effect = {
+	if = {
+		limit = { 
+			ROOT = {
+				NOT = {
+					religion = the_keiki
+				}
+			}
+			owner = {
+				has_government_mechanic = THE_KEI_lonely_creation_mechanic
+				religion = the_keiki
+			}
+		}
+		owner = {
+			change_variable = {
+				which = the_kei_change_religions_to_the_keiki_im_var
+				value = 1
+			}
+		}
+	}
+}
+#计数战争次数移除修正
+THE_KEI_im_var_won_war_remove_mofidier_4_1_effect = {
+	if = {
+		limit = { 
+			check_variable = {
+				which = the_kei_the_kei_4_1_modifier_im_var
+				value = 1
+			}
+		}
+		change_variable = {
+			which = the_kei_the_kei_4_1_modifier_im_var
+			value = -1
+		}
+	}
+	else = {
+		remove_country_modifier = THE_KEI_savtor_light_1_buff
 	}
 }

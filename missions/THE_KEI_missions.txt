@@ -278,14 +278,9 @@ THE_KEI_main_branch_2 = {
 		 } 
 
 		effect = { 
-			add_prestige = 20
+			add_prestige = 25
 			add_treasury = 200
 			create_general = { tradition = 80 culture = Higanean }
-			5045 = {
-				add_base_tax = 2
-				add_base_production = 2
-				add_base_manpower = 2
-			}
 			Yachie_state = {
 				add_permanent_claim = ROOT
 			}
@@ -297,6 +292,13 @@ THE_KEI_main_branch_2 = {
 			}
 			Hifuu_club = {
 				add_permanent_claim = ROOT
+			}
+			hidden_effect = {
+				5045 = {
+					add_base_tax = 2
+					add_base_production = 2
+					add_base_manpower = 2
+				}
 			}
 		 } 
 	}
@@ -375,9 +377,294 @@ THE_KEI_main_branch_2 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			if = {
+				limit = { 
+					ai = no
+				}
+				AND = {
+					OR = {
+						num_of_estate_privileges = {
+							estate = estate_church
+							value = 6
+						}
+						estate_loyalty = {
+							estate = estate_church
+							loyalty = 60
+						}
+					}
+					OR = {
+						num_of_estate_privileges = {
+							estate = estate_burghers
+							value = 6
+						}
+						estate_loyalty = {
+							estate = estate_burghers
+							loyalty = 60
+						}
+					}
+					OR = {
+						num_of_estate_privileges = {
+							estate = estate_nobles
+							value = 6
+						}
+						estate_loyalty = {
+							estate = estate_nobles
+							loyalty = 60
+						}
+					}
+				}
+			}
+			else = {
+				num_of_owned_provinces_with = {
+					value = 40
+					has_tax_building_trigger = yes
+				}
+			}
+		 } 
 
 		effect = { 
+			if = {
+				limit = { 
+					OR = {
+						estate_loyalty = {
+							estate = estate_nobles
+							loyalty = 70
+						}
+						estate_loyalty = {
+							estate = estate_church
+							loyalty = 70
+						}
+						estate_loyalty = {
+							estate = estate_burghers
+							loyalty = 70
+						}
+						
+					}
+				}
+				custom_tooltip = THE_KEI_2_5_c_tt1_yes
+				if = {
+					limit = {
+						estate_loyalty = {
+							estate = estate_church
+							loyalty = 70
+						}
+					}
+					add_adm_power = 100
+				}
+				else_if = {
+					limit = {
+						estate_loyalty = {
+							estate = estate_church
+							loyalty = 80
+						}
+					}
+					add_adm_power = 200
+				}
+				else_if = {
+					limit = {
+						estate_loyalty = {
+							estate = estate_church
+							loyalty = 90
+						}
+					}
+					add_adm_power = 300
+				}
+				else_if = {
+					limit = {
+						estate_loyalty = {
+							estate = estate_church
+							loyalty = 100
+						}
+					}
+					add_adm_power = 400
+				}
+				if = {
+					limit = {
+						estate_loyalty = {
+							estate = estate_nobles
+							loyalty = 70
+						}
+					}
+					add_mil_power = 100
+				}
+				else_if = {
+					limit = {
+						estate_loyalty = {
+							estate = estate_nobles
+							loyalty = 80
+						}
+					}
+					add_mil_power = 200
+				}
+				else_if = {
+					limit = {
+						estate_loyalty = {
+							estate = estate_nobles
+							loyalty = 90
+						}
+					}
+					add_mil_power = 300
+				}
+				else_if = {
+					limit = {
+						estate_loyalty = {
+							estate = estate_nobles
+							loyalty = 100
+						}
+					}
+					add_mil_power = 400
+				}
+				if = {
+					limit = { 
+						estate_loyalty = {
+							estate = estate_burghers
+							loyalty = 70
+						}
+					}
+					add_dip_power = 100
+				}
+				else_if = {
+					limit = { 
+						estate_loyalty = {
+							estate = estate_burghers
+							loyalty = 80
+						}
+					}
+					add_dip_power = 200
+				}
+				else_if = {
+					limit = { 
+						estate_loyalty = {
+							estate = estate_burghers
+							loyalty = 90
+						}
+					}
+					add_dip_power = 300
+				}
+				else_if = {
+					limit = { 
+						estate_loyalty = {
+							estate = estate_burghers
+							loyalty = 100
+						}
+					}
+					add_dip_power = 400
+				}
+			}
+			else = {
+				custom_tooltip = THE_KEI_2_5_c_tt1_no
+				tooltip = {
+						if = {
+							limit = {
+								estate_loyalty = {
+									estate = estate_church
+									loyalty = 70
+								}
+							 }
+							 add_adm_power = 100
+						}
+						else_if = {
+							limit = {
+								estate_loyalty = {
+									estate = estate_church
+									loyalty = 80
+								}
+							 }
+							 add_adm_power = 200
+						}
+						else_if = {
+							limit = {
+								estate_loyalty = {
+									estate = estate_church
+									loyalty = 90
+								}
+							 }
+							 add_adm_power = 300
+						}
+						else_if = {
+							limit = {
+								estate_loyalty = {
+									estate = estate_church
+									loyalty = 100
+								}
+							 }
+							 add_adm_power = 400
+						}
+						if = {
+							limit = {
+								estate_loyalty = {
+									estate = estate_nobles
+									loyalty = 70
+								}
+							}
+							add_mil_power = 100
+						}
+						else_if = {
+							limit = {
+								estate_loyalty = {
+									estate = estate_nobles
+									loyalty = 80
+								}
+							}
+							add_mil_power = 200
+						}
+						else_if = {
+							limit = {
+								estate_loyalty = {
+									estate = estate_nobles
+									loyalty = 90
+								}
+							}
+							add_mil_power = 300
+						}
+						else_if = {
+							limit = {
+								estate_loyalty = {
+									estate = estate_nobles
+									loyalty = 100
+								}
+							}
+							add_mil_power = 400
+						}
+						if = {
+							limit = { 
+								estate_loyalty = {
+									estate = estate_burghers
+									loyalty = 70
+								}
+							}
+							add_dip_power = 100
+						}
+						else_if = {
+							limit = { 
+								estate_loyalty = {
+									estate = estate_burghers
+									loyalty = 80
+								}
+							}
+							add_dip_power = 200
+						}
+						else_if = {
+							limit = { 
+								estate_loyalty = {
+									estate = estate_burghers
+									loyalty = 90
+								}
+							}
+							add_dip_power = 300
+						}
+						else_if = {
+							limit = { 
+								estate_loyalty = {
+									estate = estate_burghers
+									loyalty = 100
+								}
+							}
+							add_dip_power = 400
+						}
+				}
+			}
 			add_government_reform = THE_KEI_dedicate_ourselves_government_reform
 		 } 
 	}
@@ -388,10 +675,69 @@ THE_KEI_main_branch_2 = {
 		required_missions = { THE_KEI_2_5 } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			if = {
+				limit = {
+					ai = no
+				 }
+				 num_of_owned_provinces_with = {
+					value = 30
+					has_building = cathedral
+				}
+				NOT = {
+					calc_true_if = {
+						amount = 20
+						all_country = {
+							culture_group = Gensokyan_culture
+							NOT = {
+								is_subject = yes
+							}
+						}
+					}
+				}
+			}
+			else = {
+				NOT = {
+					calc_true_if = {
+						amount = 20
+						all_country = {
+							culture_group = Gensokyan_culture
+							NOT = {
+								is_subject = yes
+							}
+						}
+					}
+				}
+			}
+		 } 
 
 		effect = { 
+			custom_tooltip = THE_KEI_2_6_c_tt112
 			add_government_reform = THE_KEI_save_the_masses_government_reform
+			hidden_effect = {
+				change_variable = {
+					which = THE_KEI_masses_var_im_var_33
+					which = THE_KEI_masses_var_im_var
+				}
+				while = {
+					limit = { 
+						check_variable = {
+							which = THE_KEI_masses_var_im_var_33
+							value = 1
+						}
+					}
+					change_variable = {
+						which = THE_KEI_masses_var_im_var_33
+						value = -1
+					}
+					add_government_power = {
+						mechanic_type = THE_KEI_save_the_masses_government_mechanic
+						power_type = THE_KEI_masses_var_power
+						value = 1
+					}
+				}
+
+			}
 		 } 
 	}
 
@@ -806,22 +1152,56 @@ THE_KEI_main_branch_4 = {
 		 } 
 
 		effect = { 
+			if = {
+				limit = {
+					estate_influence = {
+						estate = estate_burghers
+						influence = 40
+					}
+				 }
+				 custom_tooltip = THE_KEI_4_1_c_tt_6_yes
+				 define_advisor = {
+					type = commandant
+					skill = 2
+					culture = ROOT
+					religion = ROOT
+					cost_multiplier = 0.25
+				}
+			}
+			else = {
+				custom_tooltip = THE_KEI_4_1_c_tt_6_no
+				tooltip = {
+					define_advisor = {
+						type = commandant
+						skill = 2
+						culture = ROOT
+						religion = ROOT
+						cost_multiplier = 0.25
+					}
+				}
+			}
+			custom_tooltip = THE_KEI_4_1_c_tt3
 			add_country_modifier = {
 				name = THE_KEI_savtor_light_1_buff
-				duration = 3650
+				duration = -1
 			}
 			custom_tooltip = THE_KEI_4_1_c_tt1
 			custom_tooltip = THE_KEI_4_1_c_tt2
-			add_manpower = 50
+			add_manpower = 30
+			
 			
 			hidden_effect = {
 				set_variable = {
 					which = the_kei_haniwa_recruit_im_var
-					value = -30
+					value = -10
+				}
+				set_variable = {
+					which = the_kei_the_kei_4_1_modifier_im_var
+					value = 3
 				}
 				capital_scope = {
 					for = {
-						amount = 30
+						amount = 10
 						effect = "
 						janissary_infantry = ROOT
 						"
@@ -907,7 +1287,26 @@ THE_KEI_main_branch_4 = {
 
 		effect = { 
 			custom_tooltip = THE_KEI_4_4_c_tt1
-			add_prestige = 100
+			add_prestige = 50
+			if = {
+				limit = { 
+					5045 = {
+						has_building = temple
+					}
+				}
+				custom_tooltip = THE_KEI_4_4_c_tt3_yes
+				5045 = {
+					add_base_tax = 3
+				}
+			}
+			else = {
+				custom_tooltip = THE_KEI_4_4_c_tt3_no
+				tooltip = {
+					5045 = {
+						add_base_tax = 3
+					}
+				}
+			}
 			hidden_effect = {
 				for = {
 					amount = 10
@@ -1449,6 +1848,11 @@ THE_KEI_main_branch_5 = {
 				custom_tooltip = THE_KEI_5_6_c_tt2_yes
 				custom_tooltip = THE_KEI_5_6_c_tt3
 				hidden_effect = {
+					add_government_power = {
+						mechanic_type = THE_KEI_lonely_creation_mechanic
+						power_type = THE_KEI_lonely_creation_mechanic_power
+						value = -50
+					}
 					set_variable = {
 						which = THE_KEI_masses_var_im_var
 						which = THE_KEI_masses_var_im_var_2_var
@@ -2283,12 +2687,32 @@ THE_KEI_minor_branch_1_create = {
 		position = 10
 		required_missions = { THE_KEI_1_9_lock } 
 		provinces_to_highlight = { 
+			owned_by = ROOT
+			NOT = {
+				religion = the_keiki
+			}
+			
 		 } 
 
 		trigger = { 
+			religion = the_keiki
+			custom_trigger_tooltip = {
+				tooltip = THE_KEI_1_10_create_c_tt1
+				check_variable = {
+					which = the_kei_change_religions_to_the_keiki_im_var
+					value = 20
+				}
+			}
 		 } 
 
 		effect = { 
+			custom_tooltip = THE_KEI_1_10_create_c_tt1
+			hidden_effect = {
+				random_owned_province = {
+					add_reform_center = the_keiki
+					change_religion = the_keiki
+				}
+			}
 		} 
 	}
 
@@ -2303,9 +2727,21 @@ THE_KEI_minor_branch_1_create = {
 		 } 
 
 		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = THE_KEI_1_12_create_c_tt1
+				check_variable = {
+					which = the_kei_start_game_till_then_use_government_im_var 
+					value = 100
+				}
+			}
 		} 
 
 		effect = { 
+			custom_tooltip = THE_KEI_1_12_create_c_tt2
+			add_country_modifier = {
+				name = THE_KEI_without_out_of_life_buff
+				duration = -1
+			}
 		}
 	}
 }
@@ -2324,12 +2760,34 @@ THE_KEI_minor_branch_1_create = {
 		position = 10
 		required_missions = { THE_KEI_1_9_lock } 
 		provinces_to_highlight = { 
+			owned_by = ROOT
 		 } 
 
 		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 45
+				culture = Higanean
+				NOT = {
+					num_free_building_slots = 2
+				}
+				NOT = {
+					devastation = 1
+				}
+				NOT = {
+					local_autonomy = 1
+				}
+				NOT = {
+					unrest = 1
+				}
+			}
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 80
+			}
 		 } 
 
 		effect = { 
+			custom_tooltip = THE_KEI_2_10_create_c_tt1
 		} 
 	}
 
@@ -2340,12 +2798,28 @@ THE_KEI_minor_branch_1_create = {
 			THE_KEI_2_10_create
 		}
 		provinces_to_highlight = { 
+			owned_by = ROOT
 		 } 
 
 		trigger = { 
+			any_country = {
+				has_opinion = {
+					who = ROOT
+					value = 150
+				}
+			}
+			num_of_estate_agendas_completed = {
+				estate = estate_burghers
+				value = 2
+			}
+			num_of_estate_agendas_completed = {
+				estate = estate_nobles
+				value = 2
+			}
 		} 
 
 		effect = { 
+			custom_tooltip = THE_KEI_2_11_create_c_tt1
 		}
 	}
 	THE_KEI_2_12_create = {
@@ -2358,9 +2832,22 @@ THE_KEI_minor_branch_1_create = {
 		 } 
 
 		trigger = { 
+			all_country = {
+				capital_scope = {
+					superregion = gensokyo_superregion
+				}
+				OR = {
+					is_subject_of = ROOT
+					alliance_with = ROOT
+				}
+			}
 		} 
 
 		effect = { 
+			add_country_modifier = {
+				name = THE_KEI_without_all_question_buff
+				duration = -1
+			}
 		}
 	}
 }
