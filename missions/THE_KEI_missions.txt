@@ -910,9 +910,29 @@ THE_KEI_main_branch_3 = {
 		} 
 
 		effect = { 
-			add_mil_power = 150
 			5045 = {
 				add_or_upgrade_fort_building = yes
+			}
+			if = {
+				limit = { 
+					NOT = {
+						adm_tech = 4
+					}
+				}
+				custom_tooltip = THE_KEI_3_2_c_tt1_yes
+				add_adm_tech = 1
+				custom_tooltip = THE_KEI_3_2_c_tt2
+				tooltip = {
+					add_adm_power = 150
+				}
+			}
+			else = {
+				custom_tooltip = THE_KEI_3_2_c_tt1_no
+				tooltip = {
+					add_adm_tech = 1
+				}
+				custom_tooltip = THE_KEI_3_2_c_tt2
+				add_adm_power = 150
 			}
 		 } 
 	}
@@ -992,9 +1012,56 @@ THE_KEI_main_branch_3 = {
 		 } 
 
 		effect = { 
+			custom_tooltip = THE_KEI_3_6_c_tt1
 			add_country_modifier = {
 				name = THE_KEI_create_fort_buff
 				duration = -1
+			}
+			if = {
+				limit = { 
+					full_idea_group = infrastructure_ideas
+				}
+				custom_tooltip = THE_KEI_3_6_c_tt2_yes
+				add_country_modifier = {
+					name = THE_KEI_3_6_mission_buff
+					duration = -1
+				}
+			}
+			else = {
+				custom_tooltip = THE_KEI_3_6_c_tt2_no
+				tooltip = {
+					add_country_modifier = {
+						name = THE_KEI_3_6_mission_buff
+						duration = -1
+					}
+				}
+			}
+			hidden_effect = {
+				while = {
+					limit = { 
+						any_owned_province = {
+							has_fort_building_trigger = yes
+							NOT = {
+								has_province_flag = the_kei_the_mission_benifit_province_flag
+							}
+						}
+					}
+					random_owned_province = {
+						limit = {
+							has_fort_building_trigger = yes
+							NOT = {
+								has_province_flag = the_kei_the_mission_benifit_province_flag
+							}
+						}
+						set_province_flag = the_kei_the_mission_benifit_province_flag
+						owner = {
+							add_army_tradition = 5
+						}
+					}
+				}
+				every_owned_province = {
+					clr_country_flag = the_kei_the_mission_benifit_province_flag
+				}
 			}
 		 } 
 	}
@@ -1043,6 +1110,83 @@ THE_KEI_main_branch_3 = {
 
 		effect = { 
 			custom_tooltip = THE_KEI_3_9_c_tt1
+			if = {
+				limit = { 
+					monthly_income = 60
+				}
+				custom_tooltip = THE_KEI_3_9_c_tt2_yes
+				custom_tooltip = THE_KEI_3_9_c_tt3
+				hidden_effect = {
+					export_to_variable = {
+						which = the_kei_mission_3_9_benifit_to_power
+						value = monthly_income
+						who = ROOT
+					}
+					change_variable = {
+						which = the_kei_mission_3_9_benifit_to_power
+						value = -50
+					}
+					divide_variable = {
+						which = the_kei_mission_3_9_benifit_to_power
+						value = 10
+					}
+					while = {
+						limit = { 
+							check_variable = {
+								which = the_kei_mission_3_9_benifit_to_power
+								value = 1
+							}
+						}
+						change_variable = {
+							which = the_kei_mission_3_9_benifit_to_power
+							value = -1
+						}
+						add_government_power = {
+							mechanic_type = THE_KEI_lonely_creation_mechanic
+							power_type = THE_KEI_lonely_creation_mechanic_power
+							value = 5
+						}
+					}
+				}
+			}
+			else = {
+				custom_tooltip = THE_KEI_3_9_c_tt2_no
+				custom_tooltip = THE_KEI_3_9_c_tt3
+				tooltip = {
+					hidden_effect = {
+						export_to_variable = {
+							which = the_kei_mission_3_9_benifit_to_power
+							value = monthly_income
+							who = ROOT
+						}
+						change_variable = {
+							which = the_kei_mission_3_9_benifit_to_power
+							value = -50
+						}
+						divide_variable = {
+							which = the_kei_mission_3_9_benifit_to_power
+							value = 10
+						}
+						while = {
+							limit = { 
+								check_variable = {
+									which = the_kei_mission_3_9_benifit_to_power
+									value = 1
+								}
+							}
+							change_variable = {
+								which = the_kei_mission_3_9_benifit_to_power
+								value = -1
+							}
+							add_government_power = {
+								mechanic_type = THE_KEI_lonely_creation_mechanic
+								power_type = THE_KEI_lonely_creation_mechanic_power
+								value = 5
+							}
+						}
+					}
+				}
+			}
 		 } 
 	}
 
@@ -1220,6 +1364,9 @@ THE_KEI_main_branch_4 = {
 			OR = {
 				area = Yachie_state
 				area = Saki_state 
+				area = Sanzu_upstream
+				province_id = 5257
+				province_id = 5050
 			}
 		 } 
 
@@ -1232,13 +1379,14 @@ THE_KEI_main_branch_4 = {
 				type = all
 				owned_by = ROOT
 			}
+			Sanzu_upstream = {
+				type = all
+				owned_by = ROOT
+			}
 		 } 
 
 		effect = { 
 			custom_tooltip = THE_KEI_4_3_custom_tt1
-			add_adm_power = 75
-			add_dip_power = 75
-			add_mil_power = 75
 			Sea_of_petroleum = {
 				add_permanent_claim = ROOT
 			}
@@ -1288,6 +1436,10 @@ THE_KEI_main_branch_4 = {
 		effect = { 
 			custom_tooltip = THE_KEI_4_4_c_tt1
 			add_prestige = 50
+			add_country_modifier = {
+				name = THE_KEI_build_time_buff
+				duration = 7300
+			}
 			if = {
 				limit = { 
 					5045 = {
@@ -1339,10 +1491,17 @@ THE_KEI_main_branch_4 = {
 				area = Sanzu_upstream
 				area = Hifuu_club
 			}
-			NOT = {
-				owned_by = ROOT
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					base_tax = 5
+				}
+				NOT = {
+					development = 15
+				}
 			}
-
 		 } 
 
 		trigger = { 
@@ -1356,6 +1515,9 @@ THE_KEI_main_branch_4 = {
 					area = Sanzu_upstream
 					area = Hifuu_club
 				}
+				development = 15
+				is_core = ROOT
+				base_tax = 5
 			}
 		 } 
 
@@ -1367,6 +1529,31 @@ THE_KEI_main_branch_4 = {
 			add_adm_power = 100
 			add_dip_power = 100
 			add_mil_power = 100
+			if = {
+				limit = { 
+					num_of_provinces_owned_or_owned_by_subjects_with = {
+						value = 20
+						owned_by = ROOT
+						has_tax_building_trigger = yes
+					}
+				}
+				custom_tooltip = THE_KEI_4_5_c_tt2_yes
+				custom_tooltip = THE_KEI_4_5_c_tt1
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							has_building = temple
+						}
+						add_base_tax = 1
+						add_base_production = 1
+						add_base_manpower = 1
+					}
+				}
+			}
+			else = {
+				custom_tooltip = THE_KEI_4_5_c_tt2_no
+				custom_tooltip = THE_KEI_4_5_c_tt1
+			}
 		 } 
 	}
 
@@ -1530,13 +1717,13 @@ THE_KEI_main_branch_4 = {
 
 		trigger = { 
 			4983 = {
-				owned_by = ROOT
+				is_core = ROOT
 			}
 			5258 = {
-				owned_by = ROOT
+				is_core = ROOT
 			}
 			5268 = {
-				owned_by = ROOT
+				is_core = ROOT
 			}
 		 } 
 
@@ -1546,15 +1733,18 @@ THE_KEI_main_branch_4 = {
 				name = THE_KEI_rebuild_oder_buff
 				duration = -1
 			}
-			4983 = {
-				add_base_tax = 1
-				add_base_production = 1
-				add_base_manpower = 1
-			}
-			5045 = {
-				add_base_tax = 2
-				add_base_production = 3
-				add_base_manpower = 2
+			custom_tooltip = THE_KEI_4_8_c_tt2
+			hidden_effect = {
+				4983 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				5045 = {
+					add_base_tax = 1
+					add_base_production = 2
+					add_base_manpower = 1
+				}
 			}
 		 } 
 	}
@@ -1571,6 +1761,14 @@ THE_KEI_main_branch_4 = {
 			num_of_provinces_owned_or_owned_by_subjects_with = {
 				value = 55
 				region = hell_region
+				is_core = ROOT
+				NOT = {
+					nationalism = 1
+				}
+				NOT = {
+					devastation = 1
+				}
+				development = 18
 			}
 		 } 
 
@@ -1578,6 +1776,49 @@ THE_KEI_main_branch_4 = {
 			add_country_modifier = {
 				name = THE_KEI_the_wonder_buff
 				duration = -1
+			}
+			if = {
+				limit = { 
+					num_of_provinces_owned_or_owned_by_subjects_with = {
+						value = 55
+						region = hell_region
+						is_prosperous = yes
+					}
+				}
+				custom_tooltip = THE_KEI_4_9_c_tt2_yes
+				custom_tooltip = THE_KEI_4_9_c_tt3
+				add_country_modifier = {
+					name = THE_KEI_cloaked_in_radiance_buff
+					duration = -1
+				}
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							region = hell_region
+						}
+						add_base_tax = 1
+						add_base_production = 1
+						add_base_manpower = 1
+					}
+				}
+			}
+			else = {
+				custom_tooltip = THE_KEI_4_9_c_tt2_no
+				custom_tooltip = THE_KEI_4_9_c_tt3
+				add_country_modifier = {
+					name = THE_KEI_cloaked_in_radiance_buff
+					duration = -1
+				}
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							region = hell_region
+						}
+						add_base_tax = 1
+						add_base_production = 1
+						add_base_manpower = 1
+					}
+				}
 			}
 		 } 
 	}
@@ -1638,6 +1879,28 @@ THE_KEI_main_branch_4 = {
 
 		effect = { 
 			custom_tooltip = THE_KEI_4_11_c_tt1
+			if = {
+				limit = {
+					trading_bonus = {
+						trade_goods = iron
+						value = yes
+					}
+				}
+				custom_tooltip = THE_KEI_4_11_c_tt2_yes
+				add_country_modifier = {
+					name = THE_KEI_casting_iron_into_army_buff
+					duration = -1
+				}
+			}
+			else = {
+				custom_tooltip = THE_KEI_4_11_c_tt2_no
+				tooltip = {
+					add_country_modifier = {
+						name = THE_KEI_casting_iron_into_army_buff
+						duration = -1
+					}
+				}
+			}
 		 } 
 	}
 
@@ -2331,7 +2594,12 @@ THE_KEI_minor_branch_1_lock = {
 		required_missions = { THE_KEI_1_9_lock } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = THE_KEI_the_branch_mision_lock_c_tt
+				always = no
+			}
+		 } 
 
 		effect = {  } 
 	}
@@ -2345,7 +2613,13 @@ THE_KEI_minor_branch_1_lock = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = THE_KEI_the_branch_mision_lock_c_tt
+				always = no
+			}
+			
+		 } 
 
 		effect = {  } 
 	}
@@ -2371,7 +2645,12 @@ THE_KEI_minor_branch_2_lock = {
 		required_missions = { THE_KEI_1_9_lock } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = THE_KEI_the_branch_mision_lock_c_tt
+				always = no
+			}
+		 } 
 
 		effect = {  } 
 	}
@@ -2382,7 +2661,12 @@ THE_KEI_minor_branch_2_lock = {
 		required_missions = { THE_KEI_2_10_lock } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = THE_KEI_the_branch_mision_lock_c_tt
+				always = no
+			}
+		 } 
 
 		effect = {  } 
 	}
@@ -2393,7 +2677,12 @@ THE_KEI_minor_branch_2_lock = {
 		required_missions = { THE_KEI_2_11_lock } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = THE_KEI_the_branch_mision_lock_c_tt
+				always = no
+			}
+		 } 
 
 		effect = {  } 
 	}
@@ -2529,7 +2818,7 @@ THE_KEI_minor_branch_2_alone = {
 				ROOT = {
 					military_strength = {
 						who = PREV
-						value = 1.0
+						value = 0.50
 					}
 				}
 			}
@@ -2706,7 +2995,8 @@ THE_KEI_minor_branch_1_create = {
 		 } 
 
 		effect = { 
-			custom_tooltip = THE_KEI_1_10_create_c_tt1
+			custom_tooltip = THE_KEI_1_10_create_c_tt2
+			custom_tooltip = THE_KEI_1_10_create_c_tt3
 			hidden_effect = {
 				random_owned_province = {
 					add_reform_center = the_keiki
@@ -2732,6 +3022,17 @@ THE_KEI_minor_branch_1_create = {
 				check_variable = {
 					which = the_kei_start_game_till_then_use_government_im_var 
 					value = 100
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 30
+				development = 60
+				is_prosperous = yes
+				has_building = university
+				has_building = training_fields
+				has_building = cathedral
+				NOT = {
+					num_free_building_slots = 1
 				}
 			}
 		} 

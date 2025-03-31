@@ -100,6 +100,10 @@
  THE_KEI_without_all_question_buff: "àeNëk(‘u"
  THE_KEI_without_out_of_life_buff: "…1Ru"
  THE_KEI_the_light_man_buff: "ö—IQ"
+ THE_KEI_3_6_mission_buff: "‰SuQ"
+ THE_KEI_casting_iron_into_army_buff: "ø”Á”buQ"
+ THE_KEI_build_time_buff: "u—^yù"
+ THE_KEI_cloaked_in_radiance_buff: "«Ž«bIQ‰"
  ##religion
  the_keiki: "¦hó`.‹W"
  the_keiki_fervor_shapping: "QXbV"
@@ -144,7 +148,7 @@
  THE_KEI_4_1_c_tt1: "§Vc	gdkHeœgöe:§!\n(Wb‰N-N`S†˜§YjuuLuýV¶R§!@SKI@YAC@GYK„vwýNSOËzsSrR©‹\nNùR¹eÅNýwìS2UvQÖN§YjuuLuýV¶R§!@SKI@YAC@GYK"
  THE_KEI_4_1_c_tt2: "(W–™ýub§Y10=e06w<SRÌ‘0§!è–"
  THE_KEI_4_1_c_tt3: "\n§M0QeNKNIQ0SOcíuôv0R@KEIbìNb—V3:Wb‰NÜw)R§!"
- THE_KEI_4_3_custom_tt1: "§YNb	gbìN(WjuuLu„vwýN·ƒ—V8hÃVÿv^lØS:NbìN„v—RYe0§!"
+ THE_KEI_4_3_custom_tt1: "@SKI§Y²RYrÄu§!@YAC§Y<›pgÄu§!„vNb	gwýNûm RbìN„v§J0ôv^SÞT8hÃV0§!"
  THE_KEI_4_4_c_tt1: "–:g10*N8hÃVwýNN§Yup•íV§!·ƒ—Vú^Qr§Y0^y>y0§!"
  THE_KEI_4_4_c_tt3_yes: "£yes£å‚§Yup•íV§!òT	gú^Qr§Y0^y>y0§!"
  THE_KEI_4_4_c_tt3_no: "£no£å‚§Yup•íV§!òT	gú^Qr§Y0^y>y0§!"
@@ -171,7 +175,7 @@
  THE_KEI_1_9_c_tt1: "ã‰•³Q®‹9eáO—RYe0§Y¦hó`.‹W§!0"
  THE_KEI_5_5_c_tt1: "GSµu?eœ^:g6R0§YQXB›§!0\n - -S†˜üuT¹ppeNP–:N16ÿUSy˜NP–:N6"
  THE_KEI_5_9_c_tt1: "bìNNb	gMOŽN0Wñr„vwýNê»l¦^ÏQS§G30%§!v^ÏQS§G10t^§!R»yININ"
- THE_KEI_3_9_c_tt1: "Ïk!kÐcGSÑSUSýS·ƒ—V2.5§OSu§!"
+ THE_KEI_3_9_c_tt1: "ÐcGSûNaÑSUSS·ƒ—V2.5§OSu§!"
  THE_KEI_3_10_c_tt1: "ã‰•§YUe‹T0÷–Lˆ0§!\n - -§gdkHeœgAQ¸‹bìN(WûNabìN„v8hÃVwýNËzsSub1=eè–§!"
  THE_KEI_5_11_c_tt1: "£yes£§M‚YœgbìNÇVgŒRbûN¡R§!"
  THE_KEI_5_11_c_tt2: "£yes£§M‚YœgbìNÇ9e„UsQû|ŒRbûN¡R§!"
@@ -221,11 +225,31 @@
  THE_KEI_2_11_create_c_tt1: "\nÖSˆm?eSO§Y0dRìrRu0§!-N„v§MàeÕlÓußv§!:g6R"
  THE_KEI_mechanic_extra_2_c_tt_0: ""
  THE_KEI_mechanic_extra_2_c_tt_1: "\n§YbìNS9hncŒRb„vY²NtõVÄu·ƒ—VnØSîOck:§!\n- -§YY²NtõV§! 9e„UsQû| §G+50%§!\n- -§Yô•ŒtõV§! ô•ŒQú^¾‹ §G+50%§!\n- -§Y8ftõV§! 8fHe‡s §G+20%§!\n- -§Y¢c0ttõV§! OwLˆzöeô• §G-25%§!\n- -§Y*‚wmtõV§! hQýV4lKbîOck §G+50%§!\n- -§YqVÍTtõV§! Y²NTv^±‚9 §G-20%§!\n- -§Y«R÷^tõV§! 9ei—Û¦^žX• §G+15%§!"
- THE_KEI_1_10_create_c_tt1: "–:g(WbìNwýNRú^1*N§O0¦hó`.‹W0§!9ei—-NÃV"
+ THE_KEI_1_10_create_c_tt2: "–:g(WbìNwýNRú^1*N§O0¦hó`.‹W0§!9ei—-NÃV"
  THE_KEI_1_12_create_c_tt1: "8nbVËYóÊNòTÛLˆÿ§Y[Root.the_kei_start_game_till_then_use_government_im_var.GetValue]§!/100	ÿ!kRbVRu"
  THE_KEI_1_12_create_c_tt2: "?eœ^:g6R§Y0Ru0§!SO˜YR.§G50000§!ºN›R"
  THE_KEI_4_1_c_tt_6_yes: "£yes£‚YœgbìNŒRbûN¡Röeÿ§Y0ºN‰|up0§!6–BSåb	g§Y40%§!qVÍT›RSO·ƒ—Vÿ"
  THE_KEI_4_1_c_tt_6_no: "£no£‚YœgbìNŒRbûN¡Röeÿ§Y0ºN‰|up0§!6–BSåb	g§Y40%§!qVÍT›RSO·ƒ—Vÿ"
+ THE_KEI_4_5_c_tt1: "Nb	g&rTagöN„vwýN·ƒ—V£adm£§M1§!£dip£§M1§!£mil£§M1§!"
+ THE_KEI_4_5_c_tt2_yes: "£yes£§Wå‚bìN»lNwýNåb	g20*N§YúR™^§!b§YYeX§!‰|ú^Qr§!"
+ THE_KEI_4_5_c_tt2_no: "£no£§Wå‚bìN»lNwýNåb	g20*N§YúR™^§!b§YYeX§!‰|ú^Qr§!"
+ THE_KEI_3_2_c_tt1_yes: "£yes£§Wå‚bìN„vLˆ?eÑyŽb*g¾0R§M4§!µu§!"
+ THE_KEI_3_2_c_tt1_no: "£no£§Wå‚bìN„vLˆ?eÑyŽb*g¾0R§M4§!µu§!"
+ THE_KEI_3_2_c_tt2: "§W&TR§!"
+ THE_KEI_3_6_c_tt1: "ÏkNXR(W„v§O0‰^X0§!ú^QrÐc›O§YF–›Q.Oßu§! §G+5§!"
+ THE_KEI_3_6_c_tt2_yes: "£yes£å‚bìNòTŒRb§Y0úWú^tõVÄu0§!"
+ THE_KEI_3_6_c_tt2_no: "£no£å‚bìNòTŒRb§Y0úWú^tõVÄu0§!"
+ THE_KEI_the_branch_mision_lock_c_tt: "Ù=fN*N0§MR=eûN¡R§!0÷‹ŒRbûN¡R0§YupB›KNNhh§!0ã‰•"
+ THE_KEI_4_11_c_tt2_yes: "£yes£‚Yœgåb	gÁ”ÿw„v§Y8fVY±R§!"
+ THE_KEI_4_11_c_tt2_no: "£no£‚Yœgåb	gÁ”ÿw„v§Y8fVY±R§!"
+ THE_KEI_3_9_c_tt2_yes: "£yes£‚YœgbìNåb	g§G60§!åNN„v§Yg6eeQ§!"
+ THE_KEI_3_9_c_tt2_no: "£no£‚YœgbìNåb	g§G60§!åNN„v§Yg6eeQ§!"
+ THE_KEI_3_9_c_tt3: "¢núQ„vÏk10¹p§Yg6eeQ§!ýO·ƒ—V5¹p§OSu§!"
+ THE_KEI_4_8_c_tt2: "§Yup•íV§!·ƒ—V£adm£§M1§!£dip£§M2§!£mil£§M1§!\n§Y–T›¿k§!·ƒ—V£adm£§M1§!£dip£§M1§!£mil£§M1§!"
+ THE_KEI_4_9_c_tt2_yes: "£yes£§W‚YœgNb	g‰Bl„vwýNGWòT¾0R§G100%§!§YAucƒ¦^§!"
+ THE_KEI_4_9_c_tt2_no: "£no£§W‚YœgNb	g‰Bl„vwýNGWòT¾0R§G100%§!§YAucƒ¦^§!"
+ THE_KEI_4_9_c_tt3: "Nb	g§Y00Wñr0§!0W:S„vwýNGW·ƒ—V£adm£§M1§!£dip£§M1§!£mil£§M1§!"
+ THE_KEI_1_10_create_c_tt3: "GSµu§YUe‹T0qu0§!\n -§g0qu0’N¨R„vÑSUS¦^P–6RÐcØš0R120ÑSUS¦^v^N±‚9ÏQ:N§J1§!§!"
  the_mayumi: "×NRvPèxV"
  the_mayumi_desc: ""
  

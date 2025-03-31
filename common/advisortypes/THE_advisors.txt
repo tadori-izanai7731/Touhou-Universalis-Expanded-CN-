@@ -152,6 +152,17 @@ the_mayumi = {
 			meritocracy = 0.25
 		}
 	}
+	#磨弓
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_government_mechanic = THE_KEI_lonely_creation_mechanic
+			}
+		}
+		modifier = {
+			army_tradition_decay = -0.005
+		}
+	}
 
         # allow_only_male = yes
     allow_only_female = yes

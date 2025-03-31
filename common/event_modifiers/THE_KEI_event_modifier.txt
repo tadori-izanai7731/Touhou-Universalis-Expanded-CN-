@@ -32,10 +32,9 @@ THE_KEI_the_captial_of_KEI_v2_buff = {
 }
 #重塑命运
 THE_KEI_save_the_world_buff = {
-	core_creation = -0.10
-	war_exhaustion = -0.10
-	war_exhaustion_cost = -0.50
-	land_forcelimit = 10
+	development_cost = -0.10
+	war_exhaustion_cost = -0.80
+	land_forcelimit = 20
 }
 #解放水灵
 THE_KEI_save_the_sai_kawara_buff = {
@@ -44,13 +43,11 @@ THE_KEI_save_the_sai_kawara_buff = {
 }
 #秩序与平等
 THE_KEI_rebuild_oder_buff = {
-	yearly_corruption = -0.75
-	global_prosperity_growth = 0.75
+	yearly_corruption = -0.5
+	global_prosperity_growth = 0.5
 }
 #造型神愿
 THE_KEI_the_wonder_buff = {
-	global_tax_modifier = 0.50
-	global_unrest = -2
 	land_forcelimit_modifier = 0.50
 	land_forcelimit = 10
 }
@@ -201,4 +198,24 @@ THE_KEI_the_light_man_buff = {
 	diplomatic_upkeep = 3
 	diplomats = 2
 	diplomatic_reputation = 2
+}
+#厉兵
+THE_KEI_3_6_mission_buff = {
+	shock_damage = 0.10
+	ae_impact = -0.05
+}
+#铸铁成兵
+THE_KEI_casting_iron_into_army_buff = {
+	global_regiment_recruit_speed = -0.30
+}
+#甘霖神迹
+THE_KEI_build_time_buff = {
+	build_cost = -0.50
+	development_cost = -0.20
+}
+#身披光辉
+THE_KEI_cloaked_in_radiance_buff = {
+	tolerance_own = 2
+	global_tax_modifier = 0.33
+	global_prosperity_growth = 1.0
 }

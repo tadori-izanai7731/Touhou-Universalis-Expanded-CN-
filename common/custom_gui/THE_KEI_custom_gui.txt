@@ -800,6 +800,9 @@ custom_button = {
 						mission_completed = THE_KEI_1_8
 					}
 					NOT = {
+						mission_completed = THE_KEI_1_10_create
+					}
+					NOT = {
 						mission_completed = THE_KEI_2_12_alone
 					}
 				}
@@ -820,6 +823,9 @@ custom_button = {
 				FROM = {
 					mission_completed = THE_KEI_1_7
 					mission_completed = THE_KEI_1_8
+					NOT = {
+						mission_completed = THE_KEI_1_10_create
+					}
 					NOT = {
 						mission_completed = THE_KEI_2_12_alone
 					}
@@ -843,7 +849,10 @@ custom_button = {
 				FROM = {
 					mission_completed = THE_KEI_1_7
 					mission_completed = THE_KEI_1_8
-					mission_completed = THE_KEI_2_12_alone
+					OR = {
+						mission_completed = THE_KEI_1_10_create
+						mission_completed = THE_KEI_2_12_alone
+					}
 				}
 			}
 			ROOT = {
@@ -861,11 +870,41 @@ custom_button = {
 		}
 	}
 	effect = {
-		FROM = {
-			add_government_power = {
-				mechanic_type = THE_KEI_lonely_creation_mechanic
-				power_type = THE_KEI_lonely_creation_mechanic_power
-				value = -5
+		if = {
+			limit = {
+				OR = {
+					mission_completed = THE_KEI_1_10_create
+					mission_completed = THE_KEI_2_12_alone
+				}
+			 }
+			 FROM = {
+				add_government_power = {
+					mechanic_type = THE_KEI_lonely_creation_mechanic
+					power_type = THE_KEI_lonely_creation_mechanic_power
+					value = -2.5
+				}
+			}
+
+		}
+		else = {
+			FROM = {
+				add_government_power = {
+					mechanic_type = THE_KEI_lonely_creation_mechanic
+					power_type = THE_KEI_lonely_creation_mechanic_power
+					value = -5
+				}
+			}
+		}
+		if = {
+			limit = {
+				mission_completed = HE_KEI_1_10_create
+			 }
+			 FROM = {
+				add_government_power = {
+					mechanic_type = THE_KEI_lonely_creation_mechanic
+					power_type = THE_KEI_lonely_creation_mechanic_power
+					value = 1.5
+				}
 			}
 		}
 		ROOT = {
