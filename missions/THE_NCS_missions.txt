@@ -403,6 +403,9 @@ THE_NCS_branch_3 = {
 			}
 		}
 		effect = {
+			hell_region = {
+				add_permanent_claim = ROOT
+			}
 			hidden_effect = {
 				add_country_modifier = {
 					name = THE_NCS_absolute_uchidenokozuchi_master_modifier
@@ -410,33 +413,7 @@ THE_NCS_branch_3 = {
 				}
 			}
 			custom_tooltip = THE_NCS_3_5_tt
-			custom_tooltip = empty_line_tt
 			change_mil = 1
-			custom_tooltip = empty_line_tt
-			if = {
-				limit = {
-					mission_completed = THE_NCS_4_6
-				}
-				custom_tooltip = THE_NCS_3_5_tt_yes
-			}
-			else = {
-				custom_tooltip = THE_NCS_3_5_tt_no
-			}
-			tooltip = {
-				hell_region = {
-					add_permanent_claim = ROOT
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						mission_completed = THE_NCS_4_6
-					}
-					hell_region = {
-						add_permanent_claim = ROOT
-					}
-				}
-			}
 		}
 	}
 	#因为山就在那里
@@ -1105,19 +1082,6 @@ THE_NCS_branch_4 = {
 			}
 			custom_tooltip = empty_line_tt
 			if = {
-				limit = { mission_completed = THE_NCS_3_5 }
-				custom_tooltip = THE_NCS_4_6_case1_tt_yes
-			}
-			else = {
-				custom_tooltip = THE_NCS_4_6_case1_tt_no
-			}
-			tooltip = {
-				hell_region = {
-					add_permanent_claim = ROOT
-				}
-			}
-			custom_tooltip = empty_line_tt
-			if = {
 				limit = { is_subject = yes }
 				custom_tooltip = THE_NCS_4_6_case_2_1_tt_yes
 			}
@@ -1137,6 +1101,7 @@ THE_NCS_branch_4 = {
 				grant_independence = yes
 				remove_country_modifier = THE_NCS_temporary_patience_modifier
 			}
+			custom_tooltip = empty_line_tt
 			if = {
 				limit = { is_subject = yes }
 				custom_tooltip = THE_NCS_4_6_case_2_2_tt_no
@@ -1151,14 +1116,6 @@ THE_NCS_branch_4 = {
 				}
 			}
 			hidden_effect = {
-				if = {
-					limit = {
-						mission_completed = THE_NCS_3_5
-					}
-					hell_region = {
-						add_permanent_claim = ROOT
-					}
-				}
 				if = {
 					limit = {
 						is_subject = yes
