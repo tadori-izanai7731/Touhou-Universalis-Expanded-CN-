@@ -173,9 +173,11 @@ THE_KEI_win_battle_count_1_effect = {
 				has_country_modifier = THE_KEI_decree_sifang_buff
 			}
 		}
-		change_variable = {
-			which = the_kei_win_battle_count_im_var
-			value = 1
+		FROM = {
+			change_variable = {
+				which = the_kei_win_battle_count_im_var
+				value = 1
+			}
 		}
 	}
 }
@@ -253,6 +255,7 @@ THE_KEI_add_save_the_masses_power_effects = {
 				which = THE_KEI_masses_var_im_var
 				value = 1
 			}
+			
 		}
 	}
 }
@@ -427,9 +430,11 @@ THE_KEI_the_leader_won_battle_im_var_ieffect = {
 		limit = {
 			THE_KEI_the_leader_is_mayumi_trigger = yes
 		 }
-		 change_variable = {
-			which = THE_KEI_the_leader_won_battle_im_var
-			value = 1
+		 owner = {
+			change_variable = {
+				which = THE_KEI_the_leader_won_battle_im_var
+				value = 1
+			 }
 		 }
 	}
 }

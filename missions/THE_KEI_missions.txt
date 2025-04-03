@@ -1755,6 +1755,13 @@ THE_KEI_main_branch_4 = {
 		required_missions = { THE_KEI_4_8 } 
 		provinces_to_highlight = { 
 			region = hell_region
+			OR = {
+				NOT = {
+					development = 15
+				}
+				nationalism = 1
+				devastation = 1
+			}
 		 } 
 
 		trigger = { 
@@ -1768,7 +1775,7 @@ THE_KEI_main_branch_4 = {
 				NOT = {
 					devastation = 1
 				}
-				development = 18
+				development = 15
 			}
 		 } 
 
@@ -1777,6 +1784,7 @@ THE_KEI_main_branch_4 = {
 				name = THE_KEI_the_wonder_buff
 				duration = -1
 			}
+
 			if = {
 				limit = { 
 					num_of_provinces_owned_or_owned_by_subjects_with = {

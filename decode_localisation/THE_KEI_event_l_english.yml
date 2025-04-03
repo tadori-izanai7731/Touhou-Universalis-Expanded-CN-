@@ -219,7 +219,7 @@ l_english:
  THE_KEI_5_6_c_tt3_no: "£no£若我们完成任务时拥有§Y30%职业度§!与§Y60陆军传统§!则："
  THE_KEI_2_5_c_tt1_yes: "\n£yes£§Y「人类灵」「动物灵」「巫女」§!每有§G10%§!多于60%的§O忠诚度§!将会获得100£adm££mil££dip£"
  THE_KEI_2_5_c_tt1_no: "\n£no£§Y「人类灵」「动物灵」「巫女」§!每有§G10%§!多于60%的§O忠诚度§!将会获得100点£adm££mil££dip£"
- THE_KEI_2_6_c_tt112: "\n£yes£§M根据幻想乡已消失的国度，我们现在将获得(§Y[Root.THE_KEI_the_leader_won_battle_im_var.GetValue]§!)点§O「消逝的光芒」§!§!"
+ THE_KEI_2_6_c_tt112: "\n£yes£§M根据幻想乡已消失的国度，我们现在将获得(§Y[Root.THE_KEI_masses_var_im_var.GetValue]§!)点§O「消逝的光芒」§!§!"
  THE_KEI_1_10_create_c_tt1: "至少已将（§Y[Root.the_kei_change_religions_to_the_keiki_im_var.GetValue]§!/20）个省份转化为§Y「梦想造型」§!"
  THE_KEI_2_10_create_c_tt1: "升级政府进度条机制§Y「土圭枢仪」§!\n- -§W这将根据我们已完成的外交理念组将会给予我们额外修正§!\n- -§g详情请查看化生进度条§!"
  THE_KEI_2_11_create_c_tt1: "\n取消政体§Y「孤独创生」§!中的§M无法结盟§!机制"
