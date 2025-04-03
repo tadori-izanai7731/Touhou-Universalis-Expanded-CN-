@@ -1351,7 +1351,12 @@ THE_KEI_main_branch_4 = {
 						"
 					}
 				}
-				
+				YAC = {
+					set_country_flag = THE_KEI_declare_war_to_yac_ski_flag
+				}
+				SKI = {
+					set_country_flag = THE_KEI_declare_war_to_yac_ski_flag
+				}
 			}
 		} 
 	}
@@ -1496,10 +1501,7 @@ THE_KEI_main_branch_4 = {
 					owned_by = ROOT
 				}
 				NOT = {
-					base_tax = 5
-				}
-				NOT = {
-					development = 15
+					development = 10
 				}
 			}
 		 } 
@@ -1515,13 +1517,13 @@ THE_KEI_main_branch_4 = {
 					area = Sanzu_upstream
 					area = Hifuu_club
 				}
-				development = 15
+				development = 12
 				is_core = ROOT
-				base_tax = 5
 			}
 		 } 
 
 		effect = { 
+			change_mil = 1
 			add_country_modifier = {
 				name = THE_KEI_save_the_world_buff
 				duration = -1
@@ -1780,6 +1782,7 @@ THE_KEI_main_branch_4 = {
 		 } 
 
 		effect = { 
+			change_dip = 1
 			add_country_modifier = {
 				name = THE_KEI_the_wonder_buff
 				duration = -1

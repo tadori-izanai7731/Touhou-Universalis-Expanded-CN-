@@ -22,9 +22,32 @@ THE_KEI_annex_ski_yac_province_in_war_effects = {
 		 }
 		 FROM = {
 			cede_province = ROOT
-			add_core = ROOT
+			add_territorial_core = ROOT
 			change_religion = ROOT
 		 }
+	}
+	if = {
+		limit = {
+			ROOT = {
+				has_country_flag = THE_KEI_get_the_animal_run_first_flag
+				OR = {
+					tag = KEI
+					was_tag = KEI
+				}
+			}
+		 }
+		 FROM = {
+			add_base_tax = -20
+			add_base_production = -20
+			add_base_manpower = -20
+			add_devastation = 100
+			add_local_autonomy = 100
+			add_nationalism = -10
+			add_province_modifier = {
+				name = THE_KEI_all_animal_run_buff
+				duration = 3650
+			}
+		}
 	}
 }
 #获得化生
@@ -386,43 +409,34 @@ THE_KEI_add_subject_country_blessing_3_effect = {
 	}
 }
 #KEI结束YAC与SKI的战争
-# THE_KEI_decalre_to_YAC_or_SKI_won_war_effects = {
-# 	if = {
-# 		limit = { 
-# 			FROM = {
-# 				OR = {
-# 					tag = SKI
-# 					tag = YAC
-# 				}
-# 			}
-# 			ROOT = {
-# 				NOT = {
-# 					has_country_flag = 1
-# 				}
-# 			}
-# 		}
-# 		hidden_effect = {
-# 			ROOT = {
-# 				every_owned_province = {
-# 					remove_core = YAC
-# 					remove_core = SKI
-# 				}
-# 			}
-# 		}
-# 		#巫女如果存在
-# 		if = {
-# 			limit = { 
-# 				exists = HKR
-# 			}
-# 			HKR = {
-# 				country_event = {
-# 					id = THE_KEI_flavor_events.12
-# 					days = 30
-# 				}
-# 			}
-# 		}
-# 	}
-# }
+THE_KEI_decalre_to_YAC_or_SKI_won_war_effects = {
+	if = {
+		limit = { 
+			FROM = {
+				OR = {
+					tag = SKI
+					tag = YAC
+				}
+				has_country_flag = THE_KEI_declare_war_to_yac_ski_flag
+			}
+			ROOT = {
+				NOT = {
+					has_country_flag = THE_KEI_get_the_animal_run_first_flag
+				}
+				OR = {
+					tag = KEI
+					was_tag = KEI
+				}
+			}
+		}
+		KEI = {
+			country_event = {
+				id = THE_KEI_flavor_events.12
+				days = 60
+			}
+		}
+	}
+}
 
 #指轮兵长的胜利计数
 THE_KEI_the_leader_won_battle_im_var_ieffect = {
@@ -476,5 +490,18 @@ THE_KEI_im_var_won_war_remove_mofidier_4_1_effect = {
 	}
 	else = {
 		remove_country_modifier = THE_KEI_savtor_light_1_buff
+	}
+}
+
+#计数移除光辉岁月
+THE_KEI_development_remove_province_light_buff = {
+	if = {
+		limit = { 
+			ROOT = {
+				has_province_modifier = THE_KEI_all_animal_run_buff
+			}
+			development = 12
+		}
+		remove_province_modifier = THE_KEI_all_animal_run_buff
 	}
 }

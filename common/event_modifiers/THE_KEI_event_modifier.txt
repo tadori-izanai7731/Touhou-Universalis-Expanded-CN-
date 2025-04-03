@@ -85,8 +85,7 @@ THE_KEI_perfect_art_buff = {
 }
 #敕命「焕生」
 THE_KEI_rejuvenate_buff = {
-	development_cost = -0.20
-	development_cost_modifier = -0.10
+	development_cost = -0.10
 	global_monthly_devastation = -0.5
 }
 #地狱门扉
@@ -109,7 +108,7 @@ THE_KEI_oil_province_buff = {
 }
 #兴造
 THE_KEI_prepare_army_weapon_buff = {
-	general_cost = -0.33
+	general_cost = -0.25
 }
 #八衢封镇
 THE_KEI_create_fort_buff = {
@@ -208,12 +207,18 @@ THE_KEI_casting_iron_into_army_buff = {
 }
 #甘霖神迹
 THE_KEI_build_time_buff = {
-	build_cost = -0.50
-	development_cost = -0.20
+	build_cost = -0.20
+	development_cost = -0.10
 }
 #身披光辉
 THE_KEI_cloaked_in_radiance_buff = {
 	tolerance_own = 2
 	global_tax_modifier = 0.33
 	global_prosperity_growth = 1.0
+}
+#光辉岁月
+THE_KEI_all_animal_run_buff = {
+	min_local_autonomy = 80
+	local_autonomy = 0.05
+	local_development_cost = -0.10
 }
