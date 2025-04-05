@@ -145,6 +145,69 @@ THE_KNE_south_china_modifier = {
 	range = 0.5
 }
 
+# 王朝天命，周而复始
+THE_KNE_china_mandate_modifier = {
+	stability_cost_modifier = -0.33
+	build_time = -0.25
+	fort_maintenance_modifier = -0.25
+	global_monthly_devastation = -0.2
+	global_prosperity_growth = 1
+	meritocracy = 1
+	imperial_mandate = 0.1
+}
+
+# 五谷丰登
+THE_KNE_grain_province_modifier = {
+	local_development_cost = -0.1
+	local_tax_modifier = 0.5
+	local_production_efficiency = 0.5
+	local_manpower = 0.5
+	local_governing_cost_increase = -10
+	allowed_num_of_manufactories = 1
+}
+
+# 
+THE_KNE_iron_province_modifier = {
+	local_development_cost = -0.1
+	shock_damage = 0.0025
+	shock_damage_received = -0.0025
+	local_governing_cost_increase = -10
+	allowed_num_of_manufactories = 1
+}
+
+# 白泽旗军
+THE_KNE_hakutaku_banners_modifier = {
+	reinforce_speed = 0.5
+	drill_gain_modifier = 0.5
+	drill_decay_modifier = -0.5
+	fire_damage = 0.1
+	fire_damage_received = -0.1
+	is_banner_modifier = yes
+}
+
+# 军事史略
+THE_KNE_historical_military_modifier = {
+	mil_tech_cost_modifier = -0.2
+	country_military_power = 1
+	army_tradition_decay = -0.02
+	global_attacker_dice_roll_bonus = 1
+	global_defender_dice_roll_bonus = 1
+	enable_forced_march = yes
+}
+
+# 新白泽图
+THE_KNE_new_map_modifier = {
+	great_project_upgrade_cost = -0.5
+	land_forcelimit_modifier = 0.25
+	naval_forcelimit_modifier = 0.25
+	prestige_decay = -0.02
+	min_autonomy_in_territories = -0.2
+	missionaries = 1
+	merchants = 1
+	colonists = 1
+	diplomats = 1
+}
+
 ##### COUNTRY_IDEA_MODIFIER
 
 # @KN2噬史白泽

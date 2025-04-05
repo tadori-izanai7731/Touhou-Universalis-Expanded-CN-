@@ -5,8 +5,8 @@ l_english:
  THE_KNE_available_for_every_10_years_ttt: "每§Y10§!年只能训练一次火炮旗军"
  THE_KNE_now_is_human_shape_tt: "当前是§Y人类形态§!，执行决议转换为§Y白泽形态§!"
  THE_KNE_now_is_hakutaku_shape_tt: "当前是§Y白泽形态§!，执行决议转换为§Y人类形态§!"
- THE_KNE_is_human_shape_ttt: "是§Y人类形态§!(使用决议转换形态)"
- THE_KNE_is_hakutaku_shape_ttt: "是§Y白泽形态§!(使用决议转换形态)"
+ THE_KNE_is_human_shape_ttt: "这是一个§Y人类形态任务§!，只能在§Y人类形态§!下完成"
+ THE_KNE_is_hakutaku_shape_ttt: "这是一个§Y白泽形态任务§!，只能在§Y白泽形态§!下完成"
  THE_KNE_creat_tributary_HMC_after_take_mandate_tt: "@HMC§Y[HMC.GetName]§!将在完成任务「§Y白泽天命§!」后成为我们的§Y朝贡国§!"
  THE_KNE_remove_tribe_modifier_extra_effect_tt: "在「§Y为时除害§!」持续时间内，获得§Y鄂温克§!或§Y阿尔泰§!文化组的省份将减少所有国家对@[Root.GetTag][Root.GetName]的§G2§!点£THE_ae_icon£侵略扩张"
  THE_KNE_mission_4_1_effect_case0_tt: "根据已完成的任务条件获得以下额外效果:"
@@ -45,6 +45,16 @@ l_english:
  THE_KNE_complete_all_human_mission_tt: "完成所有§Y人类形态任务§!"
  THE_KNE_auto_complete_estate_agenda_tt: "自动完成所有阶层议程"
  THE_KNE_embracement_institution_add_power_tt: "接纳思潮时获得科技等级§Y30§!倍的对应君主点数"
+ THE_KNE_sinicize_every_culture_tt: "§Y汉化§!所有可能的文化"
+ THE_KNE_enable_sinicize_culture_decision_tt: "启用「§Y汉化§!」决议"
+ THE_KNE_accept_every_china_culture_tt: "接纳§Y中华§!文化组，这些文化不会占用文化槽"
+ THE_KNE_every_grain_province_meet_trigger_tt: "治下每个满足条件的§Y谷物§!省份:"
+ THE_KNE_every_iron_province_meet_trigger_tt: "治下每个满足条件的§Y铁矿§!省份:"
+ THE_KNE_mission_3_7_case1_tt_yes: "£yes£如果通过§Y八旗数量§!完成任务:"
+ THE_KNE_mission_3_7_case1_tt_no: "£no£如果通过§Y八旗数量§!完成任务:"
+ THE_KNE_mission_3_7_case2_tt_yes: "£yes£如果通过§Y军事理念§!完成任务:"
+ THE_KNE_mission_3_7_case2_tt_no: "£no£如果通过§Y军事理念§!完成任务:"
+ THE_KNE_halve_hegemony_requirements_tt: "§P降低宣称霸权的要求§!"
  ### CUSTOM_TOOLTIP_END
 
  ### DECISION
@@ -62,6 +72,8 @@ l_english:
  mechanic_THE_KNE_hakutaku_swap_custom_attributes_yes: "允许在§Y人类形态§!和§Y白泽形态§!间转换"
  THE_KNE_hakutaku_mandate_reform: "白泽天命"
  THE_KNE_hakutaku_mandate_reform_desc: ""
+ mechanic_THE_KNE_keju_event_5_years_custom_attributes_yes: "每§Y5§!年触发一次「§Y科举§!」事件"
+ mechanic_THE_KNE_china_reform_add_mandate_and_stability_yes: "进行天命改革获得§G30§!天命和§G50§!£adm£行政点"
  ### GOVERNMENT_END
 
  ### MODIFIER
@@ -84,6 +96,12 @@ l_english:
  THE_KNE_north_china_modifier: "中流击水"
  THE_KNE_xinan_modifier: "白虫伏威"
  THE_KNE_south_china_modifier: "子规啼夜"
+ THE_KNE_china_mandate_modifier: "王朝天命，周而复始"
+ THE_KNE_grain_province_modifier: "五谷丰登"
+ THE_KNE_iron_province_modifier: "熔铁锻型"
+ THE_KNE_hakutaku_banners_modifier: "白泽旗军"
+ THE_KNE_historical_military_modifier: "军事史略"
+ THE_KNE_new_map_modifier: "新白泽图"
 
   ### COUNTRY_IDEA_MODIFIER
  THE_KNE_hakutaku_ideas_modifier: "噬史白泽"
@@ -102,6 +120,21 @@ l_english:
  ### EVENT
  THE_KNE_events.1.title: ""
  THE_KNE_events.1.desc: ""
+
+ THE_KNE_events.2.title: ""
+ THE_KNE_events.2.desc: ""
+
+ THE_KNE_events.3.title: ""
+ THE_KNE_events.3.desc: ""
+
+ THE_KNE_events.5.title: "科举"
+ THE_KNE_events.5.desc: ""
+
+ THE_KNE_events.6.desc: ""
+
+ THE_KNE_events.7.desc: ""
+
+ THE_KNE_events.8.desc: ""
  ### EVENT_END
 
  ### FLAG

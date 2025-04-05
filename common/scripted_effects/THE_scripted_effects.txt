@@ -506,3 +506,103 @@ THE_add_historical_friend_and_reverse_scripted_effect = {
 	$tag$ = { add_historical_friend = ROOT }
 	add_historical_friend = $tag$
 }
+
+# $old_culture$
+# $old_culture1$
+# $old_culture2$
+# $old_culture3$
+# $old_culture4$
+# $old_culture5$
+# $old_culture6$
+# $old_culture7$
+# $old_culture8$
+# $old_culture9$
+# $new_culture$
+THE_update_entire_culture_scripted_effect = {
+	every_province = {
+		limit = {
+			OR = {
+				culture = $old_culture$
+				[[old_culture1]culture = $old_culture1$]
+				[[old_culture2]culture = $old_culture2$]
+				[[old_culture3]culture = $old_culture3$]
+				[[old_culture4]culture = $old_culture4$]
+				[[old_culture5]culture = $old_culture5$]
+				[[old_culture6]culture = $old_culture6$]
+				[[old_culture7]culture = $old_culture7$]
+				[[old_culture8]culture = $old_culture8$]
+				[[old_culture9]culture = $old_culture9$]
+			}
+		}
+		change_culture = $new_culture$
+	}
+	every_country = {
+		limit = {
+			OR = {
+				primary_culture = $old_culture$
+				[[old_culture1]primary_culture = $old_culture1$]
+				[[old_culture2]primary_culture = $old_culture2$]
+				[[old_culture3]primary_culture = $old_culture3$]
+				[[old_culture4]primary_culture = $old_culture4$]
+				[[old_culture5]primary_culture = $old_culture5$]
+				[[old_culture6]primary_culture = $old_culture6$]
+				[[old_culture7]primary_culture = $old_culture7$]
+				[[old_culture8]primary_culture = $old_culture8$]
+				[[old_culture9]primary_culture = $old_culture9$]
+			}
+		}
+		change_primary_culture = $new_culture$
+	}
+}
+
+THE_num_of_completed_idea_groups_adm = {
+	calc_true_if = {
+		desc = num_of_completed_idea_groups_adm_tt
+		full_idea_group = innovativeness_ideas
+		full_idea_group = religious_ideas
+		full_idea_group = economic_ideas
+		full_idea_group = expansion_ideas
+		full_idea_group = administrative_ideas
+		full_idea_group = humanist_ideas
+		full_idea_group = infrastructure_ideas
+		full_idea_group = THE_youkai_ideas
+		full_idea_group = THE_kami_ideas
+		amount = $amount$
+	}
+}
+
+THE_num_of_completed_idea_groups_dip = {
+	calc_true_if = {
+		desc = num_of_completed_idea_groups_dip_tt
+		full_idea_group = spy_ideas
+		full_idea_group = diplomatic_ideas
+		full_idea_group = trade_ideas
+		full_idea_group = exploration_ideas
+		full_idea_group = maritime_ideas
+		full_idea_group = influence_ideas
+		full_idea_group = court_ideas
+		full_idea_group = THE_human_ideas
+		full_idea_group = THE_fairy_ideas
+		amount = $amount$
+	}
+}
+
+THE_num_of_completed_idea_groups_mil = {
+	calc_true_if = {
+		desc = num_of_completed_idea_groups_mil_tt
+		full_idea_group = aristocracy_ideas
+		full_idea_group = offensive_ideas
+		full_idea_group = defensive_ideas
+		full_idea_group = quality_ideas
+		full_idea_group = quantity_ideas
+		full_idea_group = naval_ideas
+		full_idea_group = theocracy_gov_ideas
+		full_idea_group = indigenous_ideas
+		full_idea_group = horde_gov_ideas
+		full_idea_group = plutocracy_ideas
+		full_idea_group = mercenary_ideas
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = THE_gensokyan_ideas
+		amount = $amount$
+	}
+}

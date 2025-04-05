@@ -5,8 +5,8 @@
  THE_KNE_available_for_every_10_years_ttt: "Ïk§Y10§!t^êSýw­‹ÃuN!kkp®p×e›Q"
  THE_KNE_now_is_human_shape_tt: "SVMR=f§YºN‰|bV`§!ÿgbLˆ³Q®‹lbc:N§Y‹výlbV`§!"
  THE_KNE_now_is_hakutaku_shape_tt: "SVMR=f§Y‹výlbV`§!ÿgbLˆ³Q®‹lbc:N§YºN‰|bV`§!"
- THE_KNE_is_human_shape_ttt: "=f§YºN‰|bV`§!(O(u³Q®‹lbcbV`)"
- THE_KNE_is_hakutaku_shape_ttt: "=f§Y‹výlbV`§!(O(u³Q®‹lbcbV`)"
+ THE_KNE_is_human_shape_ttt: "Ù=fN*N§YºN‰|bV`ûN¡R§!ÿêSýw(W§YºN‰|bV`§!NŒRb"
+ THE_KNE_is_hakutaku_shape_ttt: "Ù=fN*N§Y‹výlbV`ûN¡R§!ÿêSýw(W§Y‹výlbV`§!NŒRb"
  THE_KNE_creat_tributary_HMC_after_take_mandate_tt: "@HMC§Y[HMC.GetName]§!S(WŒRbûN¡R0§Y‹výl)Y‹T§!0Tb:NbìN„v§Yg!ýV§!"
  THE_KNE_remove_tribe_modifier_extra_effect_tt: "(W0§Y:Nöed–³R§!0cíuöeô•…Qÿ·ƒ—V§Y‘)nKQ§!b§Y?–Sðl§!‡eSÄu„vwýNSÏQSNb	gýV¶RùR@[Root.GetTag][Root.GetName]„v§G2§!¹p£THE_ae_icon£µOeuib.V"
  THE_KNE_mission_4_1_effect_case0_tt: "9hncòTŒRb„vûN¡RagöN·ƒ—VåNN˜YHeœg:"
@@ -45,6 +45,16 @@
  THE_KNE_complete_all_human_mission_tt: "ŒRbNb	g§YºN‰|bV`ûN¡R§!"
  THE_KNE_auto_complete_estate_agenda_tt: "ê¨RŒRbNb	g6–BS®‹z"
  THE_KNE_embracement_institution_add_power_tt: "¥c³u`noöe·ƒ—VÑyŽbIrµu§Y30§!P„vùR”^TIN¹ppe"
+ THE_KNE_sinicize_every_culture_tt: "§YIlS§!Nb	gïSýw„v‡eS"
+ THE_KNE_enable_sinicize_culture_decision_tt: "=T(u0§YIlS§!0³Q®‹"
+ THE_KNE_accept_every_china_culture_tt: "¥c³u§Y-NNS§!‡eSÄuÿÙ›N‡eSNO`S(u‡eSýi"
+ THE_KNE_every_grain_province_meet_trigger_tt: "»lNÏk*Nán³agöN„v§Y7Œir§!wýN:"
+ THE_KNE_every_iron_province_meet_trigger_tt: "»lNÏk*Nán³agöN„v§YÁ”ÿw§!wýN:"
+ THE_KNE_mission_3_7_case1_tt_yes: "£yes£‚YœgÇ§YkQ×epeÏ‘§!ŒRbûN¡R:"
+ THE_KNE_mission_3_7_case1_tt_no: "£no£‚YœgÇ§YkQ×epeÏ‘§!ŒRbûN¡R:"
+ THE_KNE_mission_3_7_case2_tt_yes: "£yes£‚YœgÇ§Y›Q‹NtõV§!ŒRbûN¡R:"
+ THE_KNE_mission_3_7_case2_tt_no: "£no£‚YœgÇ§Y›Q‹NtõV§!ŒRbûN¡R:"
+ THE_KNE_halve_hegemony_requirements_tt: "§PM–NO±Rðy8—Cg„v‰Bl§!"
  ### CUSTOM_TOOLTIP_END
 
  ### DECISION
@@ -62,6 +72,8 @@
  mechanic_THE_KNE_hakutaku_swap_custom_attributes_yes: "AQ¸‹(W§YºN‰|bV`§!ŒT§Y‹výlbV`§!ô•lbc"
  THE_KNE_hakutaku_mandate_reform: "‹výl)Y‹T"
  THE_KNE_hakutaku_mandate_reform_desc: ""
+ mechanic_THE_KNE_keju_event_5_years_custom_attributes_yes: "Ïk§Y5§!t^æ‰ÑSN!k0§YÑy>N§!0‹NöN"
+ mechanic_THE_KNE_china_reform_add_mandate_and_stability_yes: "ÛLˆ)Y‹T9ei—·ƒ—V§G30§!)Y‹TŒT§G50§!£adm£Lˆ?e¹p"
  ### GOVERNMENT_END
 
  ### MODIFIER
@@ -84,6 +96,12 @@
  THE_KNE_north_china_modifier: "-NAmûQ4l"
  THE_KNE_xinan_modifier: "‹vk†OZ"
  THE_KNE_south_china_modifier: "PRÄ‰|UY"
+ THE_KNE_china_mandate_modifier: "‹sg)Y‹TÿhTwYËY"
+ THE_KNE_grain_province_modifier: "”N7Œ0N‰v"
+ THE_KNE_iron_province_modifier: "”qÁ”I•‹W"
+ THE_KNE_hakutaku_banners_modifier: "‹výl×e›Q"
+ THE_KNE_historical_military_modifier: "›Q‹NòSeu"
+ THE_KNE_new_map_modifier: "°e‹výlþV"
 
   ### COUNTRY_IDEA_MODIFIER
  THE_KNE_hakutaku_ideas_modifier: "lVòS‹výl"
@@ -102,6 +120,21 @@
  ### EVENT
  THE_KNE_events.1.title: ""
  THE_KNE_events.1.desc: ""
+
+ THE_KNE_events.2.title: ""
+ THE_KNE_events.2.desc: ""
+
+ THE_KNE_events.3.title: ""
+ THE_KNE_events.3.desc: ""
+
+ THE_KNE_events.5.title: "Ñy>N"
+ THE_KNE_events.5.desc: ""
+
+ THE_KNE_events.6.desc: ""
+
+ THE_KNE_events.7.desc: ""
+
+ THE_KNE_events.8.desc: ""
  ### EVENT_END
 
  ### FLAG

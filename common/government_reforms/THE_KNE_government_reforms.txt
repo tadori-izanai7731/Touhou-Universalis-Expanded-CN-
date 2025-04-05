@@ -85,3 +85,22 @@ THE_KNE_hakutaku_mandate_reform = {
 	raze_province = yes
 	
 }
+
+THE_KNE_new_keju_formats_reform = {
+	icon = "hakutaku_monarchy_reform"
+	potential = {
+		OR = {
+			has_reform = THE_KNE_new_keju_formats_reform
+			have_had_reform = THE_KNE_new_keju_formats_reform
+		}
+	}
+	modifiers = {
+		advisor_pool = 2
+		national_focus_years = -10
+		administrative_efficiency = 0.05
+	}
+	custom_attributes = {
+		THE_KNE_keju_event_5_years_custom_attributes = yes
+		THE_KNE_china_reform_add_mandate_and_stability = yes
+	}
+}

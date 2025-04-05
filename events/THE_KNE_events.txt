@@ -187,3 +187,241 @@ country_event = {
 		}
 	}
 }
+
+
+country_event = {
+	id = THE_KNE_events.3
+	title = THE_KNE_events.3.title
+	desc = THE_KNE_events.3.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = THE_KNE_events.3.a
+		change_dip = 1
+		custom_tooltip = THE_KNE_accept_every_china_culture_tt
+		custom_tooltip = THE_KNE_enable_sinicize_culture_decision_tt
+		hidden_effect = {
+			add_accepted_culture_or_dip_power = { culture = vietnamese_new free = yes }
+			add_accepted_culture_or_dip_power = { culture = korean_new free = yes }
+			add_accepted_culture_or_dip_power = { culture = tibetan_new free = yes }
+			add_accepted_culture_or_dip_power = { culture = altaic_new free = yes }
+			add_accepted_culture_or_dip_power = { culture = zhuang_new free = yes }
+			add_accepted_culture_or_dip_power = { culture = manchu_new free = yes }
+			add_accepted_culture_or_dip_power = { culture = chihan free = yes }
+			add_accepted_culture_or_dip_power = { culture = cantonese free = yes }
+			add_accepted_culture_or_dip_power = { culture = jin free = yes }
+			add_accepted_culture_or_dip_power = { culture = wu free = yes }
+			add_accepted_culture_or_dip_power = { culture = chimin free = yes }
+			add_accepted_culture_or_dip_power = { culture = hakka free = yes }
+			add_accepted_culture_or_dip_power = { culture = gan free = yes }
+			add_accepted_culture_or_dip_power = { culture = xiang free = yes }
+			add_accepted_culture_or_dip_power = { culture = sichuanese free = yes }
+			add_accepted_culture_or_dip_power = { culture = jianghuai free = yes }
+			add_accepted_culture_or_dip_power = { culture = xibei free = yes }
+			add_accepted_culture_or_dip_power = { culture = hubei free = yes }
+			add_accepted_culture_or_dip_power = { culture = zhongyuan free = yes }
+			add_accepted_culture_or_dip_power = { culture = shandong_culture free = yes }
+			set_country_flag = THE_KNE_enable_sinicize_culture_decision_flag
+		}
+	}
+}
+
+
+country_event = {
+	id = THE_KNE_events.4
+	title = NONE
+	desc = NONE
+	picture = none
+	is_triggered_only = yes
+
+	hidden = yes
+
+	option = {
+		name = NONE
+	}
+
+	after = {
+		add_mandate = 30
+		add_adm_power = 50
+	}
+}
+
+country_event = {
+	id = THE_KNE_events.5
+	title = THE_KNE_events.5.title
+	desc = THE_KNE_events.5.desc
+	# picture = none
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = THE_KNE_events.9
+				days = 1825
+			}
+		}
+	}
+
+	option = {
+		name = flavor_gbr.15.a
+		add_adm_power = 50
+		hidden_effect = {
+			country_event = {
+				id = THE_KNE_events.6
+			}
+		}
+	}
+
+	option = {
+		name = flavor_gbr.15.b
+		add_dip_power = 50
+		hidden_effect = {
+			country_event = {
+				id = THE_KNE_events.7
+			}
+		}
+	}
+
+	option = {
+		name = flavor_gbr.15.c
+		add_mil_power = 50
+		hidden_effect = {
+			country_event = {
+				id = THE_KNE_events.8
+			}
+		}
+	}
+}
+
+country_event = {
+	id = THE_KNE_events.6
+	title = THE_KNE_events.5.title
+	desc = THE_KNE_events.6.desc
+	# picture = none
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_gbr.16.a
+		THE_KNE_define_keju_advisor_scripted_effect = { type = artist }
+	}
+	option = {
+		name = flavor_gbr.16.b
+		THE_KNE_define_keju_advisor_scripted_effect = { type = inquisitor }
+	}
+	option = {
+		name = flavor_gbr.16.c
+		THE_KNE_define_keju_advisor_scripted_effect = { type = master_of_mint }
+	}
+	option = {
+		name = flavor_gbr.16.d
+		THE_KNE_define_keju_advisor_scripted_effect = { type = natural_scientist }
+	}
+	option = {
+		name = flavor_gbr.16.e
+		THE_KNE_define_keju_advisor_scripted_effect = { type = theologian }
+	}
+	option = {
+		name = flavor_gbr.16.f
+		THE_KNE_define_keju_advisor_scripted_effect = { type = treasurer }
+	}
+	option = {
+		name = flavor_gbr.16.g
+		THE_KNE_define_keju_advisor_scripted_effect = { type = philosopher }
+	}
+}
+
+country_event = {
+	id = THE_KNE_events.7
+	title = THE_KNE_events.5.title
+	desc = THE_KNE_events.7.desc
+	# picture = none
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_gbr.16.h
+		THE_KNE_define_keju_advisor_scripted_effect = { type = diplomat }
+	}
+	option = {
+		name = flavor_gbr.16.i
+		THE_KNE_define_keju_advisor_scripted_effect = { type = colonial_governor }
+	}
+	option = {
+		name = flavor_gbr.16.j
+		THE_KNE_define_keju_advisor_scripted_effect = { type = naval_reformer }
+	}
+	option = {
+		name = flavor_gbr.16.k
+		THE_KNE_define_keju_advisor_scripted_effect = { type = navigator }
+	}
+	option = {
+		name = flavor_gbr.16.l
+		THE_KNE_define_keju_advisor_scripted_effect = { type = spymaster }
+	}
+	option = {
+		name = flavor_gbr.16.m
+		THE_KNE_define_keju_advisor_scripted_effect = { type = statesman }
+	}
+	option = {
+		name = flavor_gbr.16.n
+		THE_KNE_define_keju_advisor_scripted_effect = { type = trader }
+	}
+}
+
+country_event = {
+	id = THE_KNE_events.8
+	title = THE_KNE_events.5.title
+	desc = THE_KNE_events.8.desc
+	# picture = none
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_gbr.16.o
+		THE_KNE_define_keju_advisor_scripted_effect = { type = army_organiser }
+	}
+	option = {
+		name = flavor_gbr.16.p
+		THE_KNE_define_keju_advisor_scripted_effect = { type = army_reformer }
+	}
+	option = {
+		name = flavor_gbr.16.q
+		THE_KNE_define_keju_advisor_scripted_effect = { type = commandant }
+	}
+	option = {
+		name = flavor_gbr.16.r
+		THE_KNE_define_keju_advisor_scripted_effect = { type = grand_captain }
+	}
+	option = {
+		name = flavor_gbr.16.s
+		THE_KNE_define_keju_advisor_scripted_effect = { type = recruitmaster }
+	}
+	option = {
+		name = flavor_gbr.16.u
+		THE_KNE_define_keju_advisor_scripted_effect = { type = fortification_expert }
+	}
+	option = {
+		name = flavor_gbr.16.v
+		THE_KNE_define_keju_advisor_scripted_effect = { type = quartermaster }
+	}
+}
+
+country_event = {
+	id = THE_KNE_events.9
+	title = NONE
+	desc = NONE
+	picture = none
+
+	hidden = yes
+
+	option = {
+		name = NONE
+	}
+
+	after = {
+		hidden_effect = {
+			country_event = {
+				id = THE_KNE_events.5
+			}
+		}
+	}
+}

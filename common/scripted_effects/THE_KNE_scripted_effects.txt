@@ -103,3 +103,24 @@ THE_KNE_on_institution_embracement_scripted_effect = {
 		}
 	}
 }
+
+THE_KNE_on_mandate_reform_passed_scripted_effect = {
+	if = {
+		limit = { has_government_attribute = THE_KNE_china_reform_add_mandate_and_stability }
+		hidden_effect = {
+			country_event = {
+				id = THE_KNE_events.4
+			}
+		}
+	}
+}
+
+THE_KNE_define_keju_advisor_scripted_effect = {
+	define_advisor = {
+		type = $type$
+		skill = 3
+		culture = ROOT
+		religion = ROOT
+		cost_multiplier = 0.25
+	}
+}

@@ -610,11 +610,46 @@ THE_KNE_mission_branch_2 = {
 		icon = mission_unknown_mission
 		position = 7
 		required_missions = { THE_KNE_mission_3_6 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { has_building = university }
+		} 
 		
-		trigger = {  } 
+		trigger = {
+			OR = {
+				in_golden_age = yes
+				has_had_golden_age = yes
+			}
+			OR = {
+				has_institution = enlightenment
+				AND = {
+					innovativeness = 100
+					num_of_owned_provinces_with = {
+						value = 50
+						has_building = university
+					}
+				}
+			}
+		} 
 		
-		effect = {  } 
+		effect = {
+			add_mandate = 100
+			add_country_modifier = {
+				name = THE_KNE_new_map_modifier
+				duration = -1
+			}
+			if = {
+				limit = { in_golden_age = yes }
+				extend_golden_age = 600
+			}
+			else = {
+				reset_golden_age = yes
+			}
+			custom_tooltip = THE_KNE_halve_hegemony_requirements_tt
+			hidden_effect = {
+				set_country_flag = halve_hegemony_requirements
+			}
+		} 
 	}
 }
 THE_KNE_mission_branch_3 = {
@@ -1014,9 +1049,37 @@ THE_KNE_mission_branch_3 = {
 		}
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = {
+			is_emperor_of_china = yes
+			imperial_mandate = 100
+		} 
 		
-		effect = {  } 
+		effect = {
+			if = {
+				limit = {
+					is_emperor_of_china = yes
+					NOT = { has_reform = THE_KNE_hakutaku_mandate_reform }
+				}
+				change_government = monarchy
+				add_government_reform = THE_KNE_hakutaku_mandate_reform
+			}
+			add_stability = 3
+			add_prestige_or_monarch_power = {
+				amount = 200
+			}
+			add_country_modifier = {
+				name = THE_KNE_china_mandate_modifier
+				duration = -1
+			}
+			THE_country_event_with_insight = {
+				id = THE_KNE_events.3
+				effect_tooltip = "
+					change_dip = 1
+					custom_tooltip = THE_KNE_accept_every_china_culture_tt
+					custom_tooltip = THE_KNE_enable_sinicize_culture_decision_tt
+				"
+			}
+		} 
 	}
 	
 	THE_KNE_mission_3_7 = {
@@ -1025,9 +1088,59 @@ THE_KNE_mission_branch_3 = {
 		required_missions = { THE_KNE_mission_4_6 } 
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = {
+			OR = {
+				num_of_banners = 100
+				THE_num_of_completed_idea_groups_mil = {
+					amount = 2
+				}
+			}
+			OR = {
+				army_professionalism = 0.5
+				army_tradition = 80
+			}
+		} 
 		
-		effect = {  } 
+		effect = {
+			if = {
+				limit = { num_of_banners = 100 }
+				custom_tooltip = THE_KNE_mission_3_7_case1_tt_yes
+				add_country_modifier = {
+					name = THE_KNE_hakutaku_banners_modifier
+					duration = -1
+				}
+			}
+			else = {
+				custom_tooltip = THE_KNE_mission_3_7_case1_tt_no
+				tooltip = {
+					add_country_modifier = {
+						name = THE_KNE_hakutaku_banners_modifier
+						duration = -1
+					}
+				}
+			}
+			if = {
+				limit = {
+					THE_num_of_completed_idea_groups_mil = {
+						amount = 2
+					}
+				}
+				custom_tooltip = THE_KNE_mission_3_7_case2_tt_yes
+				add_country_modifier = {
+					name = THE_KNE_historical_military_modifier
+					duration = -1
+				}
+			}
+			else = {
+				custom_tooltip = THE_KNE_mission_3_7_case2_tt_no
+				tooltip = {
+					add_country_modifier = {
+						name = THE_KNE_historical_military_modifier
+						duration = -1
+					}
+				}
+			}
+		} 
 	}
 }
 THE_KNE_mission_branch_4 = {
@@ -1321,11 +1434,93 @@ THE_KNE_mission_branch_4 = {
 	THE_KNE_mission_4_6 = {
 		icon = mission_unknown_mission
 		position = 6
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					superregion = china_superregion
+					OR = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+						AND = {
+							devastation = 0.01
+							NOT = { development = 15 }
+						}
+					}
+				}
+				AND = {
+					owned_by = ROOT
+					OR = {
+						trade_goods = grain
+						trade_goods = iron
+					}
+					NOT = { base_production = 8 }
+				}
+			}
+		} 
 		
-		trigger = {  } 
+		trigger = {
+			china_superregion = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					NOT = { devastation = 0.01 }
+					development = 15
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 12
+				trade_goods = grain
+				base_production = 8
+			}
+			num_of_owned_provinces_with = {
+				value = 6
+				trade_goods = iron
+				base_production = 8
+			}
+		} 
 		
-		effect = {  } 
+		effect = {
+			add_mandate = 50
+			custom_tooltip = THE_KNE_every_grain_province_meet_trigger_tt
+			tooltip = {
+				add_building = farm_estate
+				add_province_modifier = {
+					name = THE_KNE_grain_province_modifier
+					duration = -1
+				}
+			}
+			custom_tooltip = THE_KNE_every_iron_province_meet_trigger_tt
+			tooltip = {
+				add_building = weapons
+				add_province_modifier = {
+					name = THE_KNE_iron_province_modifier
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						trade_goods = grain
+						base_production = 8
+					}
+					add_building = farm_estate
+					add_province_modifier = {
+						name = THE_KNE_grain_province_modifier
+						duration = -1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						trade_goods = iron
+						base_production = 8
+					}
+					add_building = weapons
+					add_province_modifier = {
+						name = THE_KNE_iron_province_modifier
+						duration = -1
+					}
+				}
+			}
+		} 
 	}
 	
 	THE_KNE_mission_4_7 = {
@@ -1608,8 +1803,20 @@ THE_KNE_mission_branch_5 = {
 		required_missions = { THE_KNE_mission_4_6 } 
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = {
+			stability = 2
+			empire_of_china_reform_passed = new_keju_formats_decision
+			reform_level = 4
+			has_reform = THE_KNE_hakutaku_mandate_reform
+		} 
 		
-		effect = {  } 
+		effect = {
+			add_government_reform = THE_KNE_new_keju_formats_reform
+			hidden_effect = {
+				country_event = {
+					id = THE_KNE_events.5
+				}
+			}
+		} 
 	}
 }
