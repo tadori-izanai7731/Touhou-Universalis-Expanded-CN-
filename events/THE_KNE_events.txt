@@ -254,6 +254,10 @@ country_event = {
 	# picture = none
 	is_triggered_only = yes
 
+	trigger = {
+		has_government_attribute = THE_KNE_keju_event_5_years_custom_attributes
+	}
+
 	immediate = {
 		hidden_effect = {
 			country_event = {
@@ -414,6 +418,10 @@ country_event = {
 	is_triggered_only = yes
 
 	hidden = yes
+
+	trigger = {
+		has_government_attribute = THE_KNE_keju_event_5_years_custom_attributes
+	}
 
 	option = {
 		name = NONE
