@@ -411,6 +411,8 @@ country_event = {
 	desc = NONE
 	picture = none
 
+	is_triggered_only = yes
+
 	hidden = yes
 
 	option = {
