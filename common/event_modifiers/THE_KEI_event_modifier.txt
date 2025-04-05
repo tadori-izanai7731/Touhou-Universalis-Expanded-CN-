@@ -12,22 +12,20 @@ THE_KEI_savtor_light_1_buff = {
 #奉献一切
 THE_KEI_savtor_all_power_buff = {
 	all_estate_possible_privileges = 1
-	global_tax_income = 120
+	global_tax_income = 60
 }
 #信仰之地
 THE_KEI_the_captial_of_KEI_buff = {
 	local_religious_unity_contribution = 0.50
-	local_tax_modifier = 0.50
 	province_trade_power_value = 50
 }
 THE_KEI_the_captial_of_KEI_v2_buff = {
 	local_religious_unity_contribution = 0.50
-	local_tax_modifier = 1.00
-	trade_goods_size = 0.5
+	local_tax_modifier = 0.50
 	local_garrison_size = 1.00
 	local_garrison_damage = 1.00
 	local_defender_dice_roll_bonus = 1
-	fort_level = 4
+	fort_level = 5
 	province_trade_power_value = 50
 }
 #重塑命运
@@ -48,7 +46,7 @@ THE_KEI_rebuild_oder_buff = {
 }
 #造型神愿
 THE_KEI_the_wonder_buff = {
-	land_forcelimit_modifier = 0.50
+	land_forcelimit_modifier = 0.33
 	land_forcelimit = 10
 }
 #敕命「四方」
@@ -87,8 +85,7 @@ THE_KEI_perfect_art_buff = {
 }
 #敕命「焕生」
 THE_KEI_rejuvenate_buff = {
-	development_cost = -0.20
-	development_cost_modifier = -0.10
+	development_cost = -0.10
 	global_monthly_devastation = -0.5
 }
 #地狱门扉
@@ -111,7 +108,7 @@ THE_KEI_oil_province_buff = {
 }
 #兴造
 THE_KEI_prepare_army_weapon_buff = {
-	general_cost = -0.33
+	general_cost = -0.25
 }
 #八衢封镇
 THE_KEI_create_fort_buff = {
@@ -210,12 +207,18 @@ THE_KEI_casting_iron_into_army_buff = {
 }
 #甘霖神迹
 THE_KEI_build_time_buff = {
-	build_cost = -0.50
-	development_cost = -0.20
+	build_cost = -0.20
+	development_cost = -0.10
 }
 #身披光辉
 THE_KEI_cloaked_in_radiance_buff = {
 	tolerance_own = 2
 	global_tax_modifier = 0.33
 	global_prosperity_growth = 1.0
+}
+#光辉岁月
+THE_KEI_all_animal_run_buff = {
+	min_local_autonomy = 80
+	local_autonomy = 0.05
+	local_development_cost = -0.10
 }

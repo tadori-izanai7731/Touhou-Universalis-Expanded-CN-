@@ -811,6 +811,8 @@ custom_button = {
 				NOT = {
 					development = 30
 				}
+			}
+			FROM = {
 				has_government_power = {
 					mechanic_type = THE_KEI_lonely_creation_mechanic
 					power_type = THE_KEI_lonely_creation_mechanic_power
@@ -835,12 +837,12 @@ custom_button = {
 				NOT = {
 					development = 60
 				}
-				FROM = {
-					has_government_power = {
-						mechanic_type = THE_KEI_lonely_creation_mechanic
-						power_type = THE_KEI_lonely_creation_mechanic_power
-						value = 5
-					}
+			}
+			FROM = {
+				has_government_power = {
+					mechanic_type = THE_KEI_lonely_creation_mechanic
+					power_type = THE_KEI_lonely_creation_mechanic_power
+					value = 5
 				}
 			}
 		}
@@ -859,12 +861,12 @@ custom_button = {
 				NOT = {
 					development = 120
 				}
-				FROM = {
-					has_government_power = {
-						mechanic_type = THE_KEI_lonely_creation_mechanic
-						power_type = THE_KEI_lonely_creation_mechanic_power
-						value = 2.5
-					}
+			}
+			FROM = {
+				has_government_power = {
+					mechanic_type = THE_KEI_lonely_creation_mechanic
+					power_type = THE_KEI_lonely_creation_mechanic_power
+					value = 2.5
 				}
 			}
 		}

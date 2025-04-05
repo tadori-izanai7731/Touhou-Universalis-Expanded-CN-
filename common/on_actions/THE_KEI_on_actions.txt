@@ -5,20 +5,24 @@ on_siege_won_country = {
 on_mil_development = {
 	THE_KEI_develop_province_add_power_effects = yes
 	THE_KEI_add_subject_country_blessing_2_effect = yes
+	THE_KEI_development_remove_province_light_buff = yes
 }
 on_adm_development = {
 	THE_KEI_develop_province_add_power_effects = yes
 	THE_KEI_add_subject_country_blessing_2_effect = yes
+	THE_KEI_development_remove_province_light_buff = yes
 }
 on_dip_development = {
 	THE_KEI_develop_province_add_power_effects = yes
 	THE_KEI_add_subject_country_blessing_2_effect = yes
+	THE_KEI_development_remove_province_light_buff = yes
 }
 on_war_won = {
 	the_kei_gain_effect_mechanic_power_2_effect = {
-		value = 10
+		value = 5
 	}
 	THE_KEI_im_var_won_war_remove_mofidier_4_1_effect = yes
+	THE_KEI_decalre_to_YAC_or_SKI_won_war_effects = yes
 }
 on_province_culture_converted = {
 	the_kei_gain_effect_mechanic_power_1_effect = {

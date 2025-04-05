@@ -100,7 +100,7 @@ country_decisions = {
 			religion = the_keiki
 			ai = no
 			NOT = {
-				set_country_flag = THE_KEI_the_keiki_religions_close_flag
+				has_country_flag = THE_KEI_the_keiki_religions_close_flag
 			}
 			KEI = {
 				mission_completed = THE_KEI_1_10_alone

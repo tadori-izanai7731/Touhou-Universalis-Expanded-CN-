@@ -1,0 +1,40 @@
+THE_KEI_with_HIG_war_goal = {
+	type = superiority_loan
+	attacker = {
+		badboy_factor = 0.25
+		peace_cost_factor = 1.0
+		prestige_factor = 2.0
+		peace_options = {
+			po_demand_provinces
+			po_revoke_cores
+			po_release_vassals
+			po_gold
+			po_concede_defeat
+			po_trade_power
+			po_steer_trade
+			THE_KEI_hig_war_bad_po
+		}
+		allowed_provinces = {
+			always = yes
+		}
+	}
+	defender = {
+		badboy_factor = 0.5
+		peace_cost_factor = 0.75
+		prestige_factor = 2.0
+		peace_options = {
+			po_demand_provinces
+			po_revoke_cores
+			po_release_vassals
+			po_gold
+			po_concede_defeat
+			po_trade_power
+			po_steer_trade
+		}
+
+		allowed_provinces = {
+			always = yes
+		}
+	}
+	war_name = THE_KEI_HIG_bad_war_name 
+}

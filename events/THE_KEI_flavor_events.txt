@@ -873,49 +873,61 @@ country_event = {
 		}
 	}
 }
-#动物灵入侵
+#动物灵逃亡
 country_event = {
 	id = THE_KEI_flavor_events.12
 	title = "THE_KEI_flavor_events.12.t"
 	desc = "THE_KEI_flavor_events.12.desc"
 	picture = ""
 	is_triggered_only = yes
-	major = yes
+	hidden = no
 	trigger = { 
 
 	}
 	option = {
 		name = THE_KEI_flavor_events.12.a
-		custom_tooltip = THE_KEI_HKR_help_ours_c_tt1
-		hidden_effect = {
-			set_country_flag = THE_KEI_hakurei_help_KEI
-		}
-		ai_chance = {
-			factor = 50
-			modifier = {
-				factor = 0
-				has_country_flag = THE_KEI_hakurei_will_not_help_us_flag
+		custom_tooltip = THE_KEI_get_the_animal_run_c_tt1
+		tooltip = {
+			add_province_modifier = {
+				name = THE_KEI_all_animal_run_buff
+				duration = -1
 			}
 		}
-	}
-	option = {
-		name = THE_KEI_flavor_events.12.b
-		custom_tooltip = THE_KEI_HKR_help_ours_c_tt2
+		custom_tooltip = THE_KEI_get_the_animal_run_c_tt2
 		hidden_effect = {
-			set_country_flag = THE_KEI_hakurei_help_HIG
-		}
-		ai_chance = {
-			factor = 50
-			modifier = {
-				factor = 0
-				HKR = {
-					has_country_flag = THE_KEI_hakurei_will_help_us_flag
+			set_country_flag = THE_KEI_get_the_animal_run_first_flag
+			every_owned_province = {
+				limit = {
+					OR = {
+						area = Yachie_state
+						area = Saki_state
+						area = Sanzu_upstream
+						area = Hifuu_club
+					}
+				}
+				add_base_tax = -20
+				add_base_production = -20
+				add_base_manpower = -20
+				add_devastation = 100
+				add_local_autonomy = 100
+				add_nationalism = -10
+				add_province_modifier = {
+					name = THE_KEI_all_animal_run_buff
+					duration = -1
 				}
 			}
 		}
 	}
+	after = {
+		YAC = {
+			clr_country_flag = THE_KEI_declare_war_to_yac_ski_flag
+		}
+		SKI = {
+			clr_country_flag = THE_KEI_declare_war_to_yac_ski_flag
+		}
+	}
 }
-#阎魔发布警告
+#阎魔事件
 country_event = {
 	id = THE_KEI_flavor_events.13
 	title = "THE_KEI_flavor_events.13.t"
@@ -926,58 +938,59 @@ country_event = {
 	trigger = { 
 
 	}
-	#维护秩序
+	#维护秩序 不能容许
 	option = {
 		name = THE_KEI_flavor_events.13.a
-		add_prestige = 20
-		add_country_modifier = {
-			name = THE_KEI_the_hig_strial_buff
-			duration = -1
-		}
-		if = {
-			limit = {
-				ai = no
-			 }
-			 add_treasury = 200
-			 add_manpower = 20
-		}
-		HIG = {
-			declare_war_with_cb = {
-				who = KEI
-				casus_belli = cb_super_badboy
-			}
-		}
-		hidden_effect = {
-			if = {
-				limit = { 
-					HKR = {
-						has_country_flag = THE_KEI_hakurei_help_HIG
-					}
-				}
-				HKR = {
-					join_all_offensive_wars_of = HIG
-				}
-			}
-			if = {
-				limit = {
-					HKR = {
-						has_country_flag = THE_KEI_hakurei_help_KEI
-					}
-				 }
-				 HKR = {
-					join_all_defensive_wars_of = KEI
-				}
-			}
-		}
-		ai_chance = {
-			factor = 100
-		}
+		
 	}
+	#
 	option = {
 		name = THE_KEI_flavor_events.13.b
-		add_prestige = -15
-		ai_chance = {
-			factor = 0
-		}
 	}
 }
+#灵梦事件
+country_event = {
+	id = THE_KEI_flavor_events.14
+	title = "THE_KEI_flavor_events.14.t"
+	desc = "THE_KEI_flavor_events.14.desc"
+	picture = ""
+	is_triggered_only = yes
+	major = yes
+	trigger = { 
+
+	}
+	#加入彼岸
+	option = {
+		name = THE_KEI_flavor_events.14.a
+	}
+	#加入偶像
+	option = {
+		name = THE_KEI_flavor_events.14.b
+	}
+}
+# #KEI接受
+# country_event = {
+# 	id = THE_KEI_flavor_events.15
+# 	title = "THE_KEI_flavor_events.15.t"
+# 	desc = "THE_KEI_flavor_events.15.desc"
+# 	picture = ""
+# 	is_triggered_only = yes
+# 	major = yes
+# 	trigger = { 
+
+# 	}
+# 	#宣战
+# 	option = {
+# 		name = THE_KEI_flavor_events.15.a
+# 		HIG = {
+# 			declare_war_with_cb = {
+# 				casus_belli = THE_KEI_hig_bad_war_cb
+# 				who = KEI
+# 			}
+# 		}
+# 	}
+# 	#加入偶像
+# 	option = {
+# 		name = THE_KEI_flavor_events.15.b
+# 	}
+# }
