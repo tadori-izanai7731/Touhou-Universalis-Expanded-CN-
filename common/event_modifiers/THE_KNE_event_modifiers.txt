@@ -19,6 +19,7 @@ THE_KNE_mongolia_horse_modifier = {
 	amount_of_banners = 0.25
 	special_unit_manpower_cost_modifier = -0.1
 	loot_amount = 0.5
+	amount_of_banners = 0.1
 }
 
 # 战争召唤
@@ -119,12 +120,14 @@ THE_KNE_grand_university_upgrade_province_modifier = {
 THE_KNE_tibet_modifier = {
 	land_attrition = -0.1
 	reinforce_cost_modifier = -0.1
+	amount_of_banners = 0.1
 }
 
 # 驯服草原
 THE_KNE_mongolia_modifier = {
 	cavalry_cost = -0.1
 	cavalry_power = 0.1
+	amount_of_banners = 0.1
 }
 
 # 中流击水

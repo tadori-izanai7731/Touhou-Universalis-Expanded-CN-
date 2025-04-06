@@ -14,6 +14,7 @@ THE_KNE_estate_nobles_train_banners_privilege = {
 	penalties = {
 	}
 	benefits = {
+		amount_of_banners = 0.2
 	}
 	on_granted = {
 		add_country_modifier = {

@@ -23,13 +23,7 @@ THE_KNE_on_province_owner_change_scripted_effect = {
 			owner = { mission_completed = THE_KNE_mission_2_3 }
 			culture_group = altaic
 		}
-		if = {
-			limit = { owner = { mission_completed = THE_KNE_mission_3_3 } }
-			change_culture = manchu_new
-		}
-		else = {
-			change_culture = manchu
-		}
+		change_culture = THE_hakutaku_culture
 	}
 }
 

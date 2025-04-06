@@ -507,22 +507,11 @@ THE_KNE_mission_branch_2 = {
 			}
 			custom_tooltip = THE_KNE_mission_2_3_effect_tt
 			hidden_effect = {
-				if = {
-					limit = { mission_completed = THE_KNE_mission_3_3 }
-					every_owned_province = {
-						limit = {
-							culture_group = altaic
-						}
-						change_culture = manchu_new
+				every_owned_province = {
+					limit = {
+						culture_group = altaic
 					}
-				}
-				else = {
-					every_owned_province = {
-						limit = {
-							culture_group = altaic
-						}
-						change_culture = manchu
-					}
+					change_culture = THE_hakutaku_culture
 				}
 			}
 		} 
@@ -790,7 +779,6 @@ THE_KNE_mission_branch_3 = {
 				free = yes
 			}
 			hidden_effect = {
-				728 = { change_culture = manchu }
 				remove_country_modifier = mjz_dominance_of_the_horselords_modifier
 			}
 			set_country_flag = enables_estate_nomadic_tribes_flag
@@ -893,11 +881,11 @@ THE_KNE_mission_branch_3 = {
 					limit = {
 						culture = manchu
 					}
-					change_culture = manchu_new
+					change_culture = THE_hakutaku_culture
 				}
 				every_owned_province = {
 					limit = {
-						culture = manchu_new
+						culture = THE_hakutaku_culture
 					}
 					add_province_modifier = {
 						name = THE_KNE_call_of_war_province_modifier
@@ -905,10 +893,6 @@ THE_KNE_mission_branch_3 = {
 					}
 				}
 				remove_country_modifier = mjz_dominance_of_the_horselords_modifier
-			}
-			add_accepted_culture_or_dip_power = {
-				culture = manchu_new
-				free = yes
 			}
 			add_country_modifier = {
 				name = mjz_dominance_of_the_horselords_modifier

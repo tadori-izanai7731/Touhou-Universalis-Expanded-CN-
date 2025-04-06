@@ -57,7 +57,7 @@ country_event = {
 				change_government = monarchy
 				add_government_reform = THE_KNE_monarchy_reform
 				adopt_reform_progress = ROOT
-				change_primary_culture = "Youkai"
+				change_primary_culture = THE_hakutaku_culture
 				add_accepted_culture = manchu
 				change_religion = th_hakureishinto
 				remove_country_modifier = conversion_zeal
@@ -69,7 +69,7 @@ country_event = {
 					dip = 5
 					mil = 4
 					female = yes
-					culture = "Youkai"
+					culture = THE_hakutaku_culture
 					religion = th_hakureishinto
 				}
 				set_ruler_flag = touhou_character_ruler
@@ -121,7 +121,7 @@ country_event = {
 				}
 			}
 			728 = {
-				change_culture = "Youkai"
+				change_culture = THE_hakutaku_culture
 				add_base_tax = 1
 				add_base_manpower = 1
 				add_base_production = 1
@@ -129,6 +129,16 @@ country_event = {
 		}
 		ai_chance = {
 			factor = 0
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			KNE = {
+				every_owned_province = {
+					change_culture = THE_hakutaku_culture
+				}
+			}
 		}
 	}
 }

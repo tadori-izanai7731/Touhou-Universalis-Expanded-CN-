@@ -23,6 +23,7 @@ THE_KNE_monarchy_reform = {
 		global_autonomy = -0.05
 		governing_capacity = 300
 		harmonization_speed = 0.2
+		amount_of_banners = 0.25
 	}
 	custom_attributes = {
 		locked_government_type = yes
@@ -67,6 +68,7 @@ THE_KNE_hakutaku_mandate_reform = {
 		global_autonomy = -0.05
 		governing_capacity = 500
 		harmonization_speed = 0.33
+		amount_of_banners = 0.25
 	}
 	custom_attributes = {
 		locked_government_type = yes
