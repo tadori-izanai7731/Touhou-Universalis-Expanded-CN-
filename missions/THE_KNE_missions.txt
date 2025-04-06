@@ -681,7 +681,7 @@ THE_KNE_mission_branch_3 = {
 				limit = { exists = HMC }
 				OR = {
 					alliance_with = HMC
-					reverse_has_opinion_modifier = {
+					has_opinion_modifier = {
 						who = HMC
 						modifier = improved_relation
 						value = 100
@@ -1102,6 +1102,9 @@ THE_KNE_mission_branch_3 = {
 		} 
 		
 		effect = {
+			add_mil_tech = 1
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_KNE_mission_4_1_effect_case0_tt
 			if = {
 				limit = { num_of_banners = 100 }
 				custom_tooltip = THE_KNE_mission_3_7_case1_tt_yes
