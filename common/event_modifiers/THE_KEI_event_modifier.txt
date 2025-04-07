@@ -222,3 +222,7 @@ THE_KEI_all_animal_run_buff = {
 	local_autonomy = 0.05
 	local_development_cost = -0.10
 }
+THE_KEI_all_animal_run_buff_V2 = {
+	local_monthly_devastation = -1.0
+	local_autonomy = 0.10
+}

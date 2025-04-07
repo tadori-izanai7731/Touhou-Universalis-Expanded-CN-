@@ -26,29 +26,6 @@ THE_KEI_annex_ski_yac_province_in_war_effects = {
 			change_religion = ROOT
 		 }
 	}
-	if = {
-		limit = {
-			ROOT = {
-				has_country_flag = THE_KEI_get_the_animal_run_first_flag
-				OR = {
-					tag = KEI
-					was_tag = KEI
-				}
-			}
-		 }
-		 FROM = {
-			add_base_tax = -20
-			add_base_production = -20
-			add_base_manpower = -20
-			add_devastation = 100
-			add_local_autonomy = 100
-			add_nationalism = -10
-			add_province_modifier = {
-				name = THE_KEI_all_animal_run_buff
-				duration = 3650
-			}
-		}
-	}
 }
 #获得化生
 the_kei_gain_effect_mechanic_power_1_effect = {
@@ -503,5 +480,43 @@ THE_KEI_development_remove_province_light_buff = {
 			development = 12
 		}
 		remove_province_modifier = THE_KEI_all_animal_run_buff
+		add_base_tax = 1
+		add_base_production = 1
+		add_base_manpower = 1
+		add_country_modifier = {
+			name = THE_KEI_all_animal_run_buff_V2
+			duration = 3650
+		}
+	}
+}
+
+#割地饕餮+荒废
+#FROM 前拥有者 #ROOT 省份
+THE_KEI_conseguer_the_GYK_effect = {
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = THE_KEI_get_the_animal_run_first_flag
+				OR = {
+					tag = KEI
+					was_tag = KEI
+				}
+			}
+			FROM = {
+				has_country_flag = THE_KEI_declare_war_to_yac_ski_flag
+			}
+		 }
+		 ROOT = {
+			add_base_tax = -20
+			add_base_production = -20
+			add_base_manpower = -20
+			add_devastation = 100
+			add_local_autonomy = 100
+			add_nationalism = -10
+			add_province_modifier = {
+				name = THE_KEI_all_animal_run_buff
+				duration = 3650
+			}
+		}
 	}
 }

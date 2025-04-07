@@ -39,7 +39,9 @@ custom_button = {
 						has_country_modifier = THE_KEI_decree_work_buff
 					}
 				 }
-				 dip_tech = 4
+				 FROM = {
+					dip_tech = 4
+				 }
 			}
 		}
 		else_if = {
@@ -64,7 +66,9 @@ custom_button = {
 						has_country_modifier = THE_KEI_decree_work_buff
 					}
 				 }
-				 dip_tech = 17
+				 FROM = {
+					dip_tech = 17
+				 }
 			}
 		}
 		else_if = {
@@ -86,7 +90,9 @@ custom_button = {
 						has_country_modifier = THE_KEI_decree_work_buff
 					}
 				 }
-				 dip_tech = 22
+				 FROM = {
+					dip_tech = 22
+				 }
 			}
 		}
 		#工坊
@@ -111,7 +117,9 @@ custom_button = {
 						has_country_modifier = THE_KEI_decree_work_buff
 					}
 				 }
-				 adm_tech = 6
+				 FROM = {
+					adm_tech = 6
+				 }
 			}
 		}
 		else_if = {
@@ -133,7 +141,9 @@ custom_button = {
 						has_country_modifier = THE_KEI_decree_work_buff
 					}
 				 }
-				 adm_tech = 24
+				 FROM = {
+					adm_tech = 24
+				 }
 			}
 		}
 		#要塞建筑
@@ -184,7 +194,9 @@ custom_button = {
 						has_country_modifier = THE_KEI_decree_work_buff
 					}
 				 }
-				 mil_tech = 14
+				 FROM = {
+					mil_tech = 14
+				 }
 			}
 		}
 		else_if = {
@@ -212,7 +224,9 @@ custom_button = {
 						has_country_modifier = THE_KEI_decree_work_buff
 					}
 				 }
-				 adm_tech = 19
+				 FROM = {
+					mil_tech = 19
+				 }
 			}
 		}
 		else_if = {
@@ -240,7 +254,9 @@ custom_button = {
 						has_country_modifier = THE_KEI_decree_work_buff
 					}
 				 }
-				 adm_tech = 24
+				 FROM = {
+					mil_tech = 24
+				 }
 			}
 		}
 		#兵营
@@ -265,7 +281,9 @@ custom_button = {
 						has_country_modifier = THE_KEI_decree_work_buff
 					}
 				 }
-				 mil_tech = 6
+				 FROM = {
+					mil_tech = 6
+				 }
 			}
 		}
 		else_if = {
@@ -287,7 +305,9 @@ custom_button = {
 						has_country_modifier = THE_KEI_decree_work_buff
 					}
 				 }
-				 mil_tech = 16
+				 FROM = {
+					mil_tech = 16
+				 }
 			}
 		}
 		#军营
@@ -312,7 +332,9 @@ custom_button = {
 						has_country_modifier = THE_KEI_decree_work_buff
 					}
 				 }
-				mil_tech = 8
+				 FROM = {
+					mil_tech = 8
+				 }
 			}
 		}
 		else_if = {
@@ -334,7 +356,9 @@ custom_button = {
 						has_country_modifier = THE_KEI_decree_work_buff
 					}
 				 }
-				mil_tech = 24
+				 FROM = {
+					mil_tech = 24
+				 }
 			}
 		}
 		#寺庙
@@ -359,7 +383,9 @@ custom_button = {
 						has_country_modifier = THE_KEI_decree_work_buff
 					}
 				 }
-				adm_tech = 4
+				 FROM = {
+					adm_tech = 4
+				 }
 			}
 		}
 		else_if = {
@@ -381,7 +407,9 @@ custom_button = {
 						has_country_modifier = THE_KEI_decree_work_buff
 					}
 				 }
-				adm_tech = 12
+				 FROM = {
+					adm_tech = 12
+				 }
 			}
 		}
 		#法院
@@ -406,7 +434,9 @@ custom_button = {
 						has_country_modifier = THE_KEI_decree_work_buff
 					}
 				 }
-				adm_tech = 7
+				 FROM = {
+					adm_tech = 7
+				 }
 			}
 		}
 		else_if = {
@@ -428,7 +458,9 @@ custom_button = {
 						has_country_modifier = THE_KEI_decree_work_buff
 					}
 				 }
-				adm_tech = 22
+				 FROM = {
+					adm_tech = 22
+				 }
 			}
 		}
 		#大学
@@ -450,7 +482,9 @@ custom_button = {
 						has_country_modifier = THE_KEI_decree_work_buff
 					}
 				 }
-				adm_tech = 16
+				 FROM = {
+					adm_tech = 16
+				 }
 			}
 		}
 	}
@@ -792,6 +826,7 @@ custom_button = {
 		}
 	}
 	trigger = {
+		THE_KEI_development_remove_province_light_buff = yes
 		if = {
 			limit = {
 				FROM = {
