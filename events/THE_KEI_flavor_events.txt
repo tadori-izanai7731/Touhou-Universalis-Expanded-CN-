@@ -22,21 +22,96 @@ country_event = {
 		}
 	}
 	option = {
+		name = THE_KEI_flavor_events.1.a1
+		custom_tooltip = THE_KEI_flavor_events_1_c3_t
+		trigger = {
+			NOT = {
+				mission_completed = THE_KEI_5_3
+			}
+		}
+		tooltip = {
+			country_event = {
+				id = THE_KEI_flavor_events.2
+			}
+			hidden_effect = {
+				THE_KEI_define_mayumi_set_var_0_effects = yes
+			}
+		}
+	}
+	option = {
 		name = THE_KEI_flavor_events.1.b
 		trigger = {
 			mission_completed = THE_KEI_4_7
+			has_government_power = {
+				mechanic_type = THE_KEI_lonely_creation_mechanic
+				power_type = THE_KEI_lonely_creation_mechanic_power
+				value = 5
+			}
 		}
 		add_government_power = {
 			mechanic_type = THE_KEI_lonely_creation_mechanic
 			power_type = THE_KEI_lonely_creation_mechanic_power
 			value = -5
 		}
-		add_yearly_manpower = 5.0
+		add_yearly_manpower = 2.0
 		if = {
 			limit = { 
 				mission_completed = THE_KEI_1_12_create
 			}
 			add_manpower = 50
+		}
+	}
+	#未完成
+	option = {
+		name = THE_KEI_flavor_events.1.b1
+		custom_tooltip = THE_KEI_flavor_events_1_b1_t
+		trigger = {
+			NOT = {
+				mission_completed = THE_KEI_4_7
+			}
+		}
+		tooltip = {
+			add_government_power = {
+				mechanic_type = THE_KEI_lonely_creation_mechanic
+				power_type = THE_KEI_lonely_creation_mechanic_power
+				value = -5
+			}
+			add_yearly_manpower = 2.0
+			if = {
+				limit = { 
+					mission_completed = THE_KEI_1_12_create
+				}
+				add_manpower = 50
+			}
+		}
+	}
+	#不满足条件
+	option = {
+		name = THE_KEI_flavor_events.1.b2
+		custom_tooltip = THE_KEI_flavor_events_1_b2_t
+		trigger = {
+			mission_completed = THE_KEI_4_7
+			NOT = {
+				has_government_power = {
+					mechanic_type = THE_KEI_lonely_creation_mechanic
+					power_type = THE_KEI_lonely_creation_mechanic_power
+					value = 5
+				}
+			}
+		}
+		tooltip = {
+			add_government_power = {
+				mechanic_type = THE_KEI_lonely_creation_mechanic
+				power_type = THE_KEI_lonely_creation_mechanic_power
+				value = -5
+			}
+			add_yearly_manpower = 2.0
+			if = {
+				limit = { 
+					mission_completed = THE_KEI_1_12_create
+				}
+				add_manpower = 50
+			}
 		}
 	}
 	option = {
@@ -46,6 +121,19 @@ country_event = {
 		}
 		country_event = {
 			id = THE_KEI_flavor_events.4
+		}
+	}
+	option = {
+		name = THE_KEI_flavor_events.1.d1
+		trigger = {
+			NOT = {
+				mission_completed = THE_KEI_5_2
+			}
+		}
+		tooltip = {
+			country_event = {
+				id = THE_KEI_flavor_events.4
+			}
 		}
 	}
 	option = {
@@ -68,6 +156,7 @@ country_event = {
 	}
 	after = {
 	}
+	#火力计数
 	option = {
 		name = THE_KEI_flavor_events.2.a
 		trigger = {
@@ -98,6 +187,7 @@ country_event = {
 			}
 		}
 	}
+	#冲击点数
 	option = {
 		name = THE_KEI_flavor_events.2.b
 		trigger = {
@@ -128,6 +218,7 @@ country_event = {
 			}
 		}
 	}
+	#机动点数
 	option = {
 		name = THE_KEI_flavor_events.2.c
 		trigger = {
@@ -158,6 +249,7 @@ country_event = {
 			}
 		}
 	}
+	#围城点数
 	option = {
 		name = THE_KEI_flavor_events.2.d
 		trigger = {
@@ -189,30 +281,84 @@ country_event = {
 		}
 	}
 	option = {
+		name = THE_KEI_flavor_events.2.aa
+		custom_tooltip = THE_KEI_flavor_2_event_ab_tt1
+		trigger = {
+			OR = {
+				THE_KEI_not_can_define_mayumi_var_trigger_NOT = yes
+				check_variable = {
+					which = the_mayumi_fire_var
+					which = the_mayumi_fire_max_var
+				}
+			}
+		}
+		hidden_effect = {
+			THE_KEI_define_leader_send_government_power_back_effect = yes
+		}
+	}
+	option = {
+		name = THE_KEI_flavor_events.2.ab
+		custom_tooltip = THE_KEI_flavor_2_event_ab_tt1
+		trigger = {
+			OR = {
+				THE_KEI_not_can_define_mayumi_var_trigger_NOT = yes
+				check_variable = {
+					which = the_mayumi_shock_var
+					which = the_mayumi_shock_max_var
+				}
+			}
+		}
+		hidden_effect = {
+			THE_KEI_define_leader_send_government_power_back_effect = yes
+		}
+	}
+	option = {
+		name = THE_KEI_flavor_events.2.ac
+		custom_tooltip = THE_KEI_flavor_2_event_ab_tt1
+		trigger = {
+			OR = {
+				THE_KEI_not_can_define_mayumi_var_trigger_NOT = yes
+				check_variable = {
+					which = the_mayumi_manuever_var
+					which = the_mayumi_manuever_max_var
+				}
+			}
+		}
+		hidden_effect = {
+			THE_KEI_define_leader_send_government_power_back_effect = yes
+		}
+	}
+	option = {
+		name = THE_KEI_flavor_events.2.ae
+		custom_tooltip = THE_KEI_flavor_2_event_ab_tt1
+		trigger = {
+			OR = {
+				THE_KEI_not_can_define_mayumi_var_trigger_NOT = yes
+				check_variable = {
+					which = the_mayumi_siege_var
+					which = the_mayumi_siege_max_var
+				}
+			}
+		}
+		hidden_effect = {
+			THE_KEI_define_leader_send_government_power_back_effect = yes
+		}
+	}
+	#确定
+	option = {
 		name = THE_KEI_flavor_events.2.e
 		custom_tooltip = THE_KEI_flavor_2_event_c_tt1
 		hidden_effect = {
 			THE_KEI_define_general_mayumi = yes 
 		}
 	}
+	#返还
 	option = {
 		name = THE_KEI_flavor_events.2.f
 		highlight = yes
 		custom_tooltip = THE_KEI_flavor_event_2_c_tt
 		hidden_effect = {
-			while = {
-				limit = {
-					check_variable = {
-						which = the_mayumi_define_var
-						value = 1
-					}
-				 }
-				 add_government_power = {
-					mechanic_type = THE_KEI_lonely_creation_mechanic
-					power_type = THE_KEI_lonely_creation_mechanic_power
-					value = 1
-				 }
-			}
+			THE_KEI_define_leader_send_government_power_back_effect = yes
 		}
 	}
 }
@@ -231,78 +377,195 @@ country_event = {
 	}
 	after = {
 	}
+	#火力计数
 	option = {
 		name = THE_KEI_flavor_events.2.a
+		trigger = {
+			THE_KEI_not_can_define_mayumi_var_trigger = yes
+			NOT = {
+				check_variable = {
+					which = the_mayumi_fire_var
+					which = the_mayumi_fire_max_var
+				}
+			}
+		}
 		add_government_power = {
 			mechanic_type = THE_KEI_lonely_creation_mechanic
 			power_type = THE_KEI_lonely_creation_mechanic_power
-			value = -2
+			value = -1
 		}
-		add_mil_power = -20
 		hidden_effect = {
 			change_variable = {
 				which = the_mayumi_fire_var
 				value = 1
 			}
+			change_variable = {
+				which = the_mayumi_define_var
+				value = 1
+			}
 			country_event = {
-				id = THE_KEI_flavor_events.2
+				id = THE_KEI_flavor_events.3
 			}
 		}
 	}
+	#冲击点数
 	option = {
 		name = THE_KEI_flavor_events.2.b
+		trigger = {
+			THE_KEI_not_can_define_mayumi_var_trigger = yes
+			NOT = {
+				check_variable = {
+					which = the_mayumi_shock_var
+					which = the_mayumi_shock_max_var
+				}
+			}
+		}
 		add_government_power = {
 			mechanic_type = THE_KEI_lonely_creation_mechanic
 			power_type = THE_KEI_lonely_creation_mechanic_power
-			value = -2
+			value = -1
 		}
-		add_mil_power = -20
 		hidden_effect = {
 			change_variable = {
 				which = the_mayumi_shock_var
 				value = 1
 			}
+			change_variable = {
+				which = the_mayumi_define_var
+				value = 1
+			}
 			country_event = {
-				id = THE_KEI_flavor_events.2
+				id = THE_KEI_flavor_events.3
 			}
 		}
 	}
+	#机动点数
 	option = {
 		name = THE_KEI_flavor_events.2.c
+		trigger = {
+			THE_KEI_not_can_define_mayumi_var_trigger = yes
+			NOT = {
+				check_variable = {
+					which = the_mayumi_manuever_var
+					which = the_mayumi_manuever_max_var
+				}
+			}
+		}
 		add_government_power = {
 			mechanic_type = THE_KEI_lonely_creation_mechanic
 			power_type = THE_KEI_lonely_creation_mechanic_power
-			value = -2
+			value = -1
 		}
-		add_mil_power = -20
 		hidden_effect = {
 			change_variable = {
 				which = the_mayumi_manuever_var
 				value = 1
 			}
+			change_variable = {
+				which = the_mayumi_define_var
+				value = 1
+			}
 			country_event = {
-				id = THE_KEI_flavor_events.2
+				id = THE_KEI_flavor_events.3
 			}
 		}
 	}
+	#围城点数
 	option = {
 		name = THE_KEI_flavor_events.2.d
+		trigger = {
+			THE_KEI_not_can_define_mayumi_var_trigger = yes
+			NOT = {
+				check_variable = {
+					which = the_mayumi_seige_var
+					which = the_mayumi_seige_max_var
+				}
+			}
+		}
 		add_government_power = {
 			mechanic_type = THE_KEI_lonely_creation_mechanic
 			power_type = THE_KEI_lonely_creation_mechanic_power
-			value = -2
+			value = -1
 		}
-		add_mil_power = -20
 		hidden_effect = {
 			change_variable = {
 				which = the_mayumi_siege_var
 				value = 1
 			}
+			change_variable = {
+				which = the_mayumi_define_var
+				value = 1
+			}
 			country_event = {
-				id = THE_KEI_flavor_events.2
+				id = THE_KEI_flavor_events.3
 			}
 		}
 	}
+	option = {
+		name = THE_KEI_flavor_events.2.aa
+		custom_tooltip = THE_KEI_flavor_2_event_ab_tt1
+		trigger = {
+			OR = {
+				THE_KEI_not_can_define_mayumi_var_trigger_NOT = yes
+				check_variable = {
+					which = the_mayumi_fire_var
+					which = the_mayumi_fire_max_var
+				}
+			}
+		}
+		hidden_effect = {
+			THE_KEI_define_leader_send_government_power_back_effect = yes
+		}
+	}
+	option = {
+		name = THE_KEI_flavor_events.2.ab
+		custom_tooltip = THE_KEI_flavor_2_event_ab_tt1
+		trigger = {
+			OR = {
+				THE_KEI_not_can_define_mayumi_var_trigger_NOT = yes
+				check_variable = {
+					which = the_mayumi_shock_var
+					which = the_mayumi_shock_max_var
+				}
+			}
+		}
+		hidden_effect = {
+			THE_KEI_define_leader_send_government_power_back_effect = yes
+		}
+	}
+	option = {
+		name = THE_KEI_flavor_events.2.ac
+		custom_tooltip = THE_KEI_flavor_2_event_ab_tt1
+		trigger = {
+			OR = {
+				THE_KEI_not_can_define_mayumi_var_trigger_NOT = yes
+				check_variable = {
+					which = the_mayumi_manuever_var
+					which = the_mayumi_manuever_max_var
+				}
+			}
+		}
+		hidden_effect = {
+			THE_KEI_define_leader_send_government_power_back_effect = yes
+		}
+	}
+	option = {
+		name = THE_KEI_flavor_events.2.ae
+		custom_tooltip = THE_KEI_flavor_2_event_ab_tt1
+		trigger = {
+			OR = {
+				THE_KEI_not_can_define_mayumi_var_trigger_NOT = yes
+				check_variable = {
+					which = the_mayumi_siege_var
+					which = the_mayumi_siege_max_var
+				}
+			}
+		}
+		hidden_effect = {
+			THE_KEI_define_leader_send_government_power_back_effect = yes
+		}
+	}
+	#确定
 	option = {
 		name = THE_KEI_flavor_events.2.e
 		custom_tooltip = THE_KEI_flavor_2_event_c_tt1
@@ -310,82 +573,13 @@ country_event = {
 			THE_KEI_define_general_mayumi = yes 
 		}
 	}
+	#返还
 	option = {
 		name = THE_KEI_flavor_events.2.f
 		highlight = yes
+		custom_tooltip = THE_KEI_flavor_event_2_c_tt
 		hidden_effect = {
-			while = {
-				limit = { 
-					check_variable = {
-						which = the_mayumi_fire_var
-						value = 1
-					}
-				}
-				change_variable = {
-					which = the_mayumi_fire_var
-					value = -1
-				}
-				add_mil_power = 20
-				add_government_power = {
-					mechanic_type = THE_KEI_lonely_creation_mechanic
-					power_type = THE_KEI_lonely_creation_mechanic_power
-					value = 2
-				}
-			}
-			while = {
-				limit = { 
-					check_variable = {
-						which = the_mayumi_shock_var
-						value = 1
-					}
-				}
-				change_variable = {
-					which = the_mayumi_shock_var
-					value = -1
-				}
-				add_mil_power = 20
-				add_government_power = {
-					mechanic_type = THE_KEI_lonely_creation_mechanic
-					power_type = THE_KEI_lonely_creation_mechanic_power
-					value = 2
-				}
-			}
-			while = {
-				limit = { 
-					check_variable = {
-						which = the_mayumi_manuever_var
-						value = 1
-					}
-				}
-				change_variable = {
-					which = the_mayumi_manuever_var
-					value = -1
-				}
-				add_mil_power = 20
-				add_government_power = {
-					mechanic_type = THE_KEI_lonely_creation_mechanic
-					power_type = THE_KEI_lonely_creation_mechanic_power
-					value = 2
-				}
-			}
-			while = {
-				limit = { 
-					check_variable = {
-						which = the_mayumi_siege_var
-						value = 1
-					}
-				}
-				change_variable = {
-					which = the_mayumi_siege_var
-					value = -1
-				}
-				add_mil_power = 20
-				add_government_power = {
-					mechanic_type = THE_KEI_lonely_creation_mechanic
-					power_type = THE_KEI_lonely_creation_mechanic_power
-					value = 2
-				}
-			}
+			THE_KEI_define_leader_send_government_power_back_effect = yes
 		}
 	}
 }
@@ -474,6 +668,105 @@ country_event = {
 		add_country_modifier = {
 			name = THE_KEI_create_army_province_buff
 			duration = -1
+		}
+	}
+	###未解锁
+	#四方
+	option = {
+		name = THE_KEI_flavor_events.4.aa
+		custom_tooltip = THE_KEI_flavor_events_4_c_tt1
+		trigger = {
+			NOT = {
+				mission_completed = THE_KEI_5_2
+			}
+		}
+		tooltip = {
+			hidden_effect = {
+				THE_KEI_clr_all_decrese_buff_effects = yes
+			}
+			add_country_modifier = {
+				name = THE_KEI_decree_sifang_buff
+				duration = -1
+			}
+		}
+	}
+	#天工
+	option = {
+		name = THE_KEI_flavor_events.4.ab
+		custom_tooltip = THE_KEI_flavor_events_4_c_tt2
+		trigger = {
+			NOT = {
+				mission_completed = THE_KEI_2_7
+			}
+		}
+		tooltip = {
+			hidden_effect = {
+				THE_KEI_clr_all_decrese_buff_effects = yes
+			}
+			add_country_modifier = {
+				name = THE_KEI_decree_work_buff
+				duration = -1
+			}
+		}
+	}
+	#造物
+	option = {
+		name = THE_KEI_flavor_events.4.ac
+		custom_tooltip = THE_KEI_flavor_events_4_c_tt3
+		trigger = {
+			NOT = {
+				mission_completed = THE_KEI_2_7
+			}
+			NOT = {
+				mission_completed = THE_KEI_2_9
+			}
+		}
+		tooltip = {
+			hidden_effect = {
+				THE_KEI_clr_all_decrese_buff_effects = yes
+			}
+			add_country_modifier = {
+				name = THE_KEI_decree_work_V2_buff
+				duration = -1
+			}
+		}
+	}
+	#焕生
+	option = {
+		name = THE_KEI_flavor_events.4.ad
+		custom_tooltip = THE_KEI_flavor_events_4_c_tt4
+		trigger = {
+			NOT = {
+				mission_completed = THE_KEI_1_7
+			}
+		}
+		tooltip = {
+			hidden_effect = {
+				THE_KEI_clr_all_decrese_buff_effects = yes
+			}
+			add_country_modifier = {
+				name = THE_KEI_rejuvenate_buff
+				duration = -1
+			}
+		}
+	}
+	#雷行
+	option = {
+		name = THE_KEI_flavor_events.4.ae
+		custom_tooltip = THE_KEI_flavor_events_4_c_tt5
+		trigger = {
+			NOT = {
+				mission_completed = THE_KEI_3_10
+			}
+		}
+		tooltip = {
+			hidden_effect = {
+				THE_KEI_clr_all_decrese_buff_effects = yes
+			}
+			add_country_modifier = {
+				name = THE_KEI_create_army_province_buff
+				duration = -1
+			}
 		}
 	}
 }

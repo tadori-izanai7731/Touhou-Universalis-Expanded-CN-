@@ -285,11 +285,9 @@ THE_KEI_develop_province_add_power_effects = {
 THE_KEI_change_province_religion_effects = {
 	if = {
 		limit = { 
-			owner = {
-				mission_completed = THE_KEI_1_10_alone
-			}
+			mission_completed = THE_KEI_1_10_alone
 		}
-		ROOT = {
+		FROM = {
 			change_religion = the_keiki
 		}
 	}
@@ -518,5 +516,26 @@ THE_KEI_conseguer_the_GYK_effect = {
 				duration = 3650
 			}
 		}
+	}
+}
+
+#返还化生点数定义将领
+THE_KEI_define_leader_send_government_power_back_effect = {
+	while = {
+		limit = {
+			check_variable = {
+				which = the_mayumi_define_var
+				value = 1
+			}
+		 }
+		 add_government_power = {
+			mechanic_type = THE_KEI_lonely_creation_mechanic
+			power_type = THE_KEI_lonely_creation_mechanic_power
+			value = 1
+		 }
+		 change_variable = {
+			which = the_mayumi_define_var
+			value = -1
+		 }
 	}
 }
