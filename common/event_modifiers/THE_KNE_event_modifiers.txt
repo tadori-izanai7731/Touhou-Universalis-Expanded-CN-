@@ -211,6 +211,24 @@ THE_KNE_new_map_modifier = {
 	diplomats = 1
 }
 
+# 功在当代
+THE_KNE_now_age_province_modifier = {
+	local_development_cost = -0.33
+	trade_value = 10
+	province_trade_power_modifier = 0.2
+	local_great_project_upgrade_cost = -0.5
+	local_great_project_upgrade_time = -0.5
+}
+
+# 利在千秋
+THE_KNE_next_age_modifier = {
+	global_unrest = -2
+	merchants = 2
+	trade_steering = 0.5
+	dip_tech_cost_modifier = -0.1
+	imperial_mandate = 0.1
+}
+
 ##### COUNTRY_IDEA_MODIFIER
 
 # @KN2噬史白泽

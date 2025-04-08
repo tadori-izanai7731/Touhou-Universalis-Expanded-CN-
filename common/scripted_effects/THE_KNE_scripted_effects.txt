@@ -118,3 +118,36 @@ THE_KNE_define_keju_advisor_scripted_effect = {
 		cost_multiplier = 0.25
 	}
 }
+
+THE_KNE_add_now_age_province_modifier_scripted_effect = {
+	$province_id$ = {
+		add_province_modifier = {
+			name = THE_KNE_now_age_province_modifier
+			duration = -1
+		}
+		add_great_project_tier = {
+			type = THE_grand_canal_$province$ tier = -3
+		}
+	}
+}
+
+THE_KNE_grand_canal_mandate_1 = {
+	if = {
+		limit = { owner = { has_country_flag = THE_KNE_grand_canal_rebuikd_flag } }
+		owner = { add_mandate = 5 }
+	}
+}
+
+THE_KNE_grand_canal_mandate_2 = {
+	if = {
+		limit = { owner = { has_country_flag = THE_KNE_grand_canal_rebuikd_flag } }
+		owner = { add_mandate = 10 }
+	}
+}
+
+THE_KNE_grand_canal_mandate_3 = {
+	if = {
+		limit = { owner = { has_country_flag = THE_KNE_grand_canal_rebuikd_flag } }
+		owner = { add_mandate = 20 }
+	}
+}

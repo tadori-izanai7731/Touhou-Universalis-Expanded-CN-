@@ -66,6 +66,7 @@ THE_grand_canal_beijin = {
 		}
 		on_upgraded = {
 			owner = { add_treasury = 1000 }
+			THE_KNE_grand_canal_mandate_1 = yes
 		}
 	}
 	
@@ -90,6 +91,7 @@ THE_grand_canal_beijin = {
 		country_modifiers = { } 
 		on_upgraded = {
 			owner = { add_treasury = 2500 }
+			THE_KNE_grand_canal_mandate_2 = yes
 		}
 	}
 	
@@ -113,6 +115,7 @@ THE_grand_canal_beijin = {
 		}
 		on_upgraded = {
 			owner = { add_treasury = 5000 }
+			THE_KNE_grand_canal_mandate_3 = yes
 			add_base_tax = 1 
 			add_base_production = 1 
 			add_base_manpower = 1 
@@ -192,6 +195,7 @@ THE_grand_canal_hejian = {
 		}
 		on_upgraded = {
 			owner = { add_treasury = 1000 }
+			THE_KNE_grand_canal_mandate_1 = yes
 		}
 	}
 	
@@ -216,6 +220,7 @@ THE_grand_canal_hejian = {
 		country_modifiers = { } 
 		on_upgraded = {
 			owner = { add_treasury = 2500 }
+			THE_KNE_grand_canal_mandate_2 = yes
 		}
 	}
 	
@@ -239,6 +244,7 @@ THE_grand_canal_hejian = {
 		}
 		on_upgraded = {
 			owner = { add_treasury = 5000 }
+			THE_KNE_grand_canal_mandate_3 = yes
 			add_base_tax = 1 
 			add_base_production = 1 
 			add_base_manpower = 1 
@@ -317,6 +323,7 @@ THE_grand_canal_jinan = {
 		}
 		on_upgraded = {
 			owner = { add_treasury = 1000 }
+			THE_KNE_grand_canal_mandate_1 = yes
 		}
 	}
 	
@@ -341,6 +348,7 @@ THE_grand_canal_jinan = {
 		country_modifiers = { } 
 		on_upgraded = {
 			owner = { add_treasury = 2500 }
+			THE_KNE_grand_canal_mandate_2 = yes
 		}
 	}
 	
@@ -364,6 +372,7 @@ THE_grand_canal_jinan = {
 		}
 		on_upgraded = {
 			owner = { add_treasury = 5000 }
+			THE_KNE_grand_canal_mandate_3 = yes
 			add_base_tax = 1 
 			add_base_production = 1 
 			add_base_manpower = 1 
@@ -442,6 +451,7 @@ THE_grand_canal_yanzhou = {
 		}
 		on_upgraded = {
 			owner = { add_treasury = 1000 }
+			THE_KNE_grand_canal_mandate_1 = yes
 		}
 	}
 	
@@ -466,6 +476,7 @@ THE_grand_canal_yanzhou = {
 		country_modifiers = { } 
 		on_upgraded = {
 			owner = { add_treasury = 2500 }
+			THE_KNE_grand_canal_mandate_2 = yes
 		}
 	}
 	
@@ -489,6 +500,7 @@ THE_grand_canal_yanzhou = {
 		}
 		on_upgraded = {
 			owner = { add_treasury = 5000 }
+			THE_KNE_grand_canal_mandate_3 = yes
 			add_base_tax = 1 
 			add_base_production = 1 
 			add_base_manpower = 1 
@@ -498,7 +510,6 @@ THE_grand_canal_yanzhou = {
 		}
 	}
 }
-
 
 THE_grand_canal_xuzhou = {
 	start = 2141
@@ -568,6 +579,7 @@ THE_grand_canal_xuzhou = {
 		}
 		on_upgraded = {
 			owner = { add_treasury = 1000 }
+			THE_KNE_grand_canal_mandate_1 = yes
 		}
 	}
 	
@@ -592,6 +604,7 @@ THE_grand_canal_xuzhou = {
 		country_modifiers = { } 
 		on_upgraded = {
 			owner = { add_treasury = 2500 }
+			THE_KNE_grand_canal_mandate_2 = yes
 		}
 	}
 	
@@ -615,6 +628,7 @@ THE_grand_canal_xuzhou = {
 		}
 		on_upgraded = {
 			owner = { add_treasury = 5000 }
+			THE_KNE_grand_canal_mandate_3 = yes
 			add_base_tax = 1 
 			add_base_production = 1 
 			add_base_manpower = 1 
@@ -693,6 +707,7 @@ THE_grand_canal_huaian = {
 		}
 		on_upgraded = {
 			owner = { add_treasury = 1000 }
+			THE_KNE_grand_canal_mandate_1 = yes
 		}
 	}
 	
@@ -717,6 +732,7 @@ THE_grand_canal_huaian = {
 		country_modifiers = { } 
 		on_upgraded = {
 			owner = { add_treasury = 2500 }
+			THE_KNE_grand_canal_mandate_2 = yes
 		}
 	}
 	
@@ -740,6 +756,7 @@ THE_grand_canal_huaian = {
 		}
 		on_upgraded = {
 			owner = { add_treasury = 5000 }
+			THE_KNE_grand_canal_mandate_3 = yes
 			add_base_tax = 1 
 			add_base_production = 1 
 			add_base_manpower = 1 
@@ -818,6 +835,7 @@ THE_grand_canal_yangzhou = {
 		}
 		on_upgraded = {
 			owner = { add_treasury = 1000 }
+			THE_KNE_grand_canal_mandate_1 = yes
 		}
 	}
 	
@@ -842,6 +860,7 @@ THE_grand_canal_yangzhou = {
 		country_modifiers = { } 
 		on_upgraded = {
 			owner = { add_treasury = 2500 }
+			THE_KNE_grand_canal_mandate_2 = yes
 		}
 	}
 	
@@ -865,6 +884,7 @@ THE_grand_canal_yangzhou = {
 		}
 		on_upgraded = {
 			owner = { add_treasury = 5000 }
+			THE_KNE_grand_canal_mandate_3 = yes
 			add_base_tax = 1 
 			add_base_production = 1 
 			add_base_manpower = 1 
@@ -943,6 +963,7 @@ THE_grand_canal_zhenjiang = {
 		}
 		on_upgraded = {
 			owner = { add_treasury = 1000 }
+			THE_KNE_grand_canal_mandate_1 = yes
 		}
 	}
 	
@@ -967,6 +988,7 @@ THE_grand_canal_zhenjiang = {
 		country_modifiers = { } 
 		on_upgraded = {
 			owner = { add_treasury = 2500 }
+			THE_KNE_grand_canal_mandate_2 = yes
 		}
 	}
 	
@@ -990,6 +1012,7 @@ THE_grand_canal_zhenjiang = {
 		}
 		on_upgraded = {
 			owner = { add_treasury = 5000 }
+			THE_KNE_grand_canal_mandate_3 = yes
 			add_base_tax = 1 
 			add_base_production = 1 
 			add_base_manpower = 1 
@@ -1068,6 +1091,7 @@ THE_grand_canal_suzhou = {
 		}
 		on_upgraded = {
 			owner = { add_treasury = 1000 }
+			THE_KNE_grand_canal_mandate_1 = yes
 		}
 	}
 	
@@ -1092,6 +1116,7 @@ THE_grand_canal_suzhou = {
 		country_modifiers = { } 
 		on_upgraded = {
 			owner = { add_treasury = 2500 }
+			THE_KNE_grand_canal_mandate_2 = yes
 		}
 	}
 	
@@ -1115,6 +1140,7 @@ THE_grand_canal_suzhou = {
 		}
 		on_upgraded = {
 			owner = { add_treasury = 5000 }
+			THE_KNE_grand_canal_mandate_3 = yes
 			add_base_tax = 1 
 			add_base_production = 1 
 			add_base_manpower = 1 
@@ -1193,6 +1219,7 @@ THE_grand_canal_hangzhou = {
 		}
 		on_upgraded = {
 			owner = { add_treasury = 1000 }
+			THE_KNE_grand_canal_mandate_1 = yes
 		}
 	}
 	
@@ -1217,6 +1244,7 @@ THE_grand_canal_hangzhou = {
 		country_modifiers = { } 
 		on_upgraded = {
 			owner = { add_treasury = 2500 }
+			THE_KNE_grand_canal_mandate_2 = yes
 		}
 	}
 	
@@ -1240,6 +1268,7 @@ THE_grand_canal_hangzhou = {
 		}
 		on_upgraded = {
 			owner = { add_treasury = 5000 }
+			THE_KNE_grand_canal_mandate_3 = yes
 			add_base_tax = 1 
 			add_base_production = 1 
 			add_base_manpower = 1 

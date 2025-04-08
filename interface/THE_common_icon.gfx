@@ -45,4 +45,21 @@ spriteTypes = {
 		name = "GFX_great_project_THE_grand_canal_hangzhou"	
 		texturefile = "gfx//interface//great_projects//great_project_grand_canal.dds"
 	}
+
+	spriteType = {
+		name = "GFX_text_icon_gp_tire_0"
+		texturefile = "gfx//interface//great_projects//great_projects_level_icons//great_project_level_icon_tier_0.dds"
+	}
+	spriteType = {
+		name = "GFX_text_icon_gp_tire_1"
+		texturefile = "gfx//interface//great_projects//great_projects_level_icons//great_project_level_icon_tier_1.dds"
+	}
+	spriteType = {
+		name = "GFX_text_icon_gp_tire_2"
+		texturefile = "gfx//interface//great_projects//great_projects_level_icons//great_project_level_icon_tier_2.dds"
+	}
+	spriteType = {
+		name = "GFX_text_icon_gp_tire_3"
+		texturefile = "gfx//interface//great_projects//great_projects_level_icons//great_project_level_icon_tier_3.dds"
+	}
 }

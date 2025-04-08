@@ -1516,11 +1516,113 @@ THE_KNE_mission_branch_4 = {
 		icon = mission_unknown_mission
 		position = 7
 		required_missions = { THE_KNE_mission_4_6 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			superregion = china_superregion
+			OR = {
+				NOT = { owned_by = ROOT }
+				AND = {
+					NOT = { has_fort_building_trigger = yes }
+					all_neighbor_province = {
+						NOT = { has_fort_building_trigger = yes }
+					}
+				}
+			}
+		} 
 		
-		trigger = {  } 
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_KNE_all_grand_canal_level_3_tt
+				has_country_flag = THE_common_grand_canal_flag_beijin
+				has_country_flag = THE_common_grand_canal_flag_hejian
+				has_country_flag = THE_common_grand_canal_flag_jinan
+				has_country_flag = THE_common_grand_canal_flag_yanzhou
+				has_country_flag = THE_common_grand_canal_flag_xuzhou
+				has_country_flag = THE_common_grand_canal_flag_huaian
+				has_country_flag = THE_common_grand_canal_flag_yangzhou
+				has_country_flag = THE_common_grand_canal_flag_zhenjiang
+				has_country_flag = THE_common_grand_canal_flag_suzhou
+				has_country_flag = THE_common_grand_canal_flag_hangzhou
+			}
+			china_superregion = {
+				type = all
+				owned_by = ROOT
+				custom_trigger_tooltip = {
+					tooltip = THE_ROD_in_fort_zone_ttt
+					OR = {
+						has_fort_building_trigger = yes
+						any_neighbor_province = {
+							has_fort_building_trigger = yes
+						}
+					}
+				}
+			}
+		} 
 		
-		effect = {  } 
+		effect = {
+			custom_tooltip = flavor_jnk.15.a.tt
+			hidden_effect = {
+			  set_country_flag = jnk_no_more_flood
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_KNE_every_grand_canal_province_tt
+			tooltip = {
+				add_province_modifier = {
+					name = THE_KNE_now_age_province_modifier
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				set_country_flag = THE_KNE_grand_canal_rebuikd_flag
+				THE_KNE_add_now_age_province_modifier_scripted_effect = { province_id = 1816 province = beijin }
+				THE_KNE_add_now_age_province_modifier_scripted_effect = { province_id = 695 province = hejian }
+				THE_KNE_add_now_age_province_modifier_scripted_effect = { province_id = 691 province = jinan }
+				THE_KNE_add_now_age_province_modifier_scripted_effect = { province_id = 2140 province = yanzhou }
+				THE_KNE_add_now_age_province_modifier_scripted_effect = { province_id = 2141 province = xuzhou }
+				THE_KNE_add_now_age_province_modifier_scripted_effect = { province_id = 2142 province = huaian }
+				THE_KNE_add_now_age_province_modifier_scripted_effect = { province_id = 685 province = yangzhou }
+				THE_KNE_add_now_age_province_modifier_scripted_effect = { province_id = 2145 province = zhenjiang }
+				THE_KNE_add_now_age_province_modifier_scripted_effect = { province_id = 1822 province = suzhou }
+				THE_KNE_add_now_age_province_modifier_scripted_effect = { province_id = 684 province = hangzhou }
+			}
+			add_country_modifier = {
+				name = THE_KNE_next_age_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_KNE_china_province_tax_tt
+			tooltip = {
+				add_base_tax = 2
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_KNE_china_province_production_tt
+			tooltip = {
+				add_base_production = 2
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_KNE_china_province_manpower_tt
+			tooltip = {
+				add_base_manpower = 2
+			}
+			hidden_effect = {
+				china_superregion = {
+					limit = {
+						is_prosperous = yes
+					}
+					add_base_tax = 2
+				}
+				china_superregion = {
+					limit = {
+						num_of_times_expanded_infrastructure = 1
+					}
+					add_base_production = 2
+				}
+				china_superregion = {
+					limit = {
+						has_fort_building_trigger = yes
+					}
+					add_base_manpower = 2
+				}
+			}
+		} 
 	}
 	
 	THE_KNE_mission_4_8 = {
