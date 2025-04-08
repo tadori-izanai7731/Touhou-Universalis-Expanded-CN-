@@ -57,7 +57,7 @@ country_event = {
 		add_yearly_manpower = 2.0
 		if = {
 			limit = { 
-				mission_completed = THE_KEI_1_12_create
+				mission_completed = THE_KEI_2_12_create
 			}
 			add_manpower = 50
 		}
