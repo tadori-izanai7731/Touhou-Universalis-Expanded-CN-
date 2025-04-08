@@ -559,72 +559,85 @@ THE_KEI_interation_get_power_from_estate_effect = {
 			}
 		 }
 		 #巫女
-		 if = { limit = { estate_loyalty = { estate = estate_church loyalty = 10 } } add_adm_power = 10 }
-		 else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 20 } } add_adm_power = 20 }
-		 else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 30 } } add_adm_power = 30 }
-		 else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 40 } } add_adm_power = 40 }
-		 else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 50 } } add_adm_power = 50 }
-		 else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 60 } } add_adm_power = 60 }
-		 else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 70 } } add_adm_power = 70 }
-		 else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 80 } } add_adm_power = 80 }
+		 if = { limit = { estate_loyalty = { estate = estate_church loyalty = 100 } } add_adm_power = 100 }
 		 else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 90 } } add_adm_power = 90 }
-		 else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 100 } } add_adm_power = 100 }
+		 else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 80 } } add_adm_power = 80 }
+		 else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 70 } } add_adm_power = 70 }
+		 else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 60 } } add_adm_power = 60 }
+		 else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 50 } } add_adm_power = 50 }
+		 else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 40 } } add_adm_power = 40 }
+		 else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 30 } } add_adm_power = 30 }
+		 else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 20 } } add_adm_power = 20 }
+		 else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 10 } } add_adm_power = 10 }
 		 #人类
-		 if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 10 } } add_dip_power = 10 }
-		 else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 20 } } add_dip_power = 20 }
-		 else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 30 } } add_dip_power = 30 }
-		 else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 40 } } add_dip_power = 40 }
-		 else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 50 } } add_dip_power = 50 }
-		 else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 60 } } add_dip_power = 60 }
-		 else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 70 } } add_dip_power = 70 }
-		 else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 80 } } add_dip_power = 80 }
+		 if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 100 } } add_dip_power = 100 }
 		 else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 90 } } add_dip_power = 90 }
-		 else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 100 } } add_dip_power = 100 }
+		 else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 80 } } add_dip_power = 80 }
+		 else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 70 } } add_dip_power = 70 }
+		 else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 60 } } add_dip_power = 60 }
+		 else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 50 } } add_dip_power = 50 }
+		 else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 40 } } add_dip_power = 40 }
+		 else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 30 } } add_dip_power = 30 }
+		 else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 20 } } add_dip_power = 20 }
+		 else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 10 } } add_dip_power = 10 }
 		 #动物
-		 if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 10 } } add_mil_power = 10 }
-		 else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 20 } } add_mil_power = 20 }
-		 else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 30 } } add_mil_power = 30 }
-		 else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 40 } } add_mil_power = 40 }
-		 else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 50 } } add_mil_power = 50 }
-		 else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 60 } } add_mil_power = 60 }
-		 else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 70 } } add_mil_power = 70 }
-		 else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 80 } } add_mil_power = 80 }
+		 if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 100 } } add_mil_power = 100 }
 		 else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 90 } } add_mil_power = 90 }
-		 else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 100 } } add_mil_power = 100 }
+		 else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 80 } } add_mil_power = 80 }
+		 else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 70 } } add_mil_power = 70 }
+		 else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 60 } } add_mil_power = 60 }
+		 else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 50 } } add_mil_power = 50 }
+		 else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 40 } } add_mil_power = 40 }
+		 else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 30 } } add_mil_power = 30 }
+		 else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 20 } } add_mil_power = 20 }
+		 else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 10 } } add_mil_power = 10 }
 	}
 	else = {
 		#巫女
-		if = { limit = { estate_loyalty = { estate = estate_church loyalty = 10 } } add_adm_power = 20 }
-		else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 20 } } add_adm_power = 40 }
-		else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 30 } } add_adm_power = 60 }
-		else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 40 } } add_adm_power = 80 }
-		else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 50 } } add_adm_power = 100 }
-		else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 60 } } add_adm_power = 120 }
-		else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 70 } } add_adm_power = 140 }
-		else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 80 } } add_adm_power = 160 }
+		if = { limit = { estate_loyalty = { estate = estate_church loyalty = 100 } } add_adm_power = 200 }
 		else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 90 } } add_adm_power = 180 }
-		else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 100 } } add_adm_power = 200 }
+		else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 80 } } add_adm_power = 160 }
+		else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 70 } } add_adm_power = 140 }
+		else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 60 } } add_adm_power = 120 }
+		else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 50 } } add_adm_power = 100 }
+		else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 40 } } add_adm_power = 80 }
+		else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 30 } } add_adm_power = 60 }
+		else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 20 } } add_adm_power = 40 }
+		else_if = { limit = { estate_loyalty = { estate = estate_church loyalty = 10 } } add_adm_power = 20 }
 		#人类
-		if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 10 } } add_dip_power = 20 }
-		else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 20 } } add_dip_power = 40 }
-		else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 30 } } add_dip_power = 60 }
-		else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 40 } } add_dip_power = 80 }
-		else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 50 } } add_dip_power = 100 }
-		else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 60 } } add_dip_power = 120 }
-		else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 70 } } add_dip_power = 140 }
-		else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 80 } } add_dip_power = 160 }
+		if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 100 } } add_dip_power = 200 }
 		else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 90 } } add_dip_power = 180 }
-		else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 100 } } add_dip_power = 200 }
+		else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 80 } } add_dip_power = 160 }
+		else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 70 } } add_dip_power = 140 }
+		else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 60 } } add_dip_power = 120 }
+		else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 50 } } add_dip_power = 100 }
+		else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 40 } } add_dip_power = 80 }
+		else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 30 } } add_dip_power = 60 }
+		else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 20 } } add_dip_power = 40 }
+		else_if = { limit = { estate_loyalty = { estate = estate_burghers loyalty = 10 } } add_dip_power = 20 }
 		#动物
-		if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 10 } } add_mil_power = 20 }
-		else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 20 } } add_mil_power = 40 }
-		else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 30 } } add_mil_power = 60 }
-		else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 40 } } add_mil_power = 80 }
-		else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 50 } } add_mil_power = 100 }
-		else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 60 } } add_mil_power = 120 }
-		else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 70 } } add_mil_power = 140 }
-		else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 80 } } add_mil_power = 160 }
+		if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 100 } } add_mil_power = 200 }
 		else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 90 } } add_mil_power = 180 }
-		else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 100 } } add_mil_power = 200 }
+		else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 80 } } add_mil_power = 160 }
+		else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 70 } } add_mil_power = 140 }
+		else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 60 } } add_mil_power = 120 }
+		else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 50 } } add_mil_power = 100 }
+		else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 40 } } add_mil_power = 80 }
+		else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 30 } } add_mil_power = 60 }
+		else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 20 } } add_mil_power = 40 }
+		else_if = { limit = { estate_loyalty = { estate = estate_nobles loyalty = 10 } } add_mil_power = 20 }
 	}
+}
+
+#枣核添加发展度
+THE_KEI_can_core_creation_add_develpment_script_effect = {
+	if = {
+		limit = {
+			has_government_attribute = THE_KEI_can_core_creation_add_develpment
+		 }
+		 add_base_tax = 1
+		 add_base_production = 1
+		 add_base_manpower = 1
+		 add_core = FROM
+	}	
 }

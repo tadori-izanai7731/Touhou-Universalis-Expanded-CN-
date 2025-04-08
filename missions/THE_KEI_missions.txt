@@ -3046,7 +3046,6 @@ THE_KEI_minor_branch_1_create = {
 		} 
 
 		effect = { 
-			custom_tooltip = THE_KEI_1_12_create_c_tt2
 			add_country_modifier = {
 				name = THE_KEI_without_out_of_life_buff
 				duration = -1
@@ -3112,7 +3111,7 @@ THE_KEI_minor_branch_1_create = {
 		}
 	}
 }
-THE_KEI_minor_branch_1_create = {
+THE_KEI_minor_branch_2_create = {
 	slot = 2
 	generic = no
 	ai = yes
@@ -3215,6 +3214,7 @@ THE_KEI_minor_branch_1_create = {
 		} 
 
 		effect = { 
+			custom_tooltip = THE_KEI_1_12_create_c_tt2
 			add_country_modifier = {
 				name = THE_KEI_without_all_question_buff
 				duration = -1

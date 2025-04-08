@@ -76,3 +76,22 @@ THE_KEI_save_the_masses_government_reform = {
 		THE_KEI_save_the_masses_government_mechanic
 	}
 }
+#6级
+THE_KEI_without_the_time_and_end_government_reform = {
+	lock_level_when_selected = yes
+	icon = "THE_KEI_government_1_reform"
+	potential = {
+		OR = {
+			has_reform = THE_KEI_without_the_time_and_end_government_reform
+			have_had_reform = THE_KEI_without_the_time_and_end_government_reform
+		}
+	}
+	valid_for_new_country = no
+	valid_for_nation_designer = no
+	modifiers = {
+		governing_cost = -0.25
+	}
+	custom_attributes = {
+		THE_KEI_can_core_creation_add_develpment = yes
+	}
+}
