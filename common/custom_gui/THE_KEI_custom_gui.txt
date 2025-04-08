@@ -489,6 +489,7 @@ custom_button = {
 		}
 	}
 	effect = {
+		THE_KEI_the_kei_start_game_till_then_use_government_im_var_change_1_effect = yes
 		#集市1
 		if = {
 			limit = { 
@@ -907,6 +908,7 @@ custom_button = {
 		}
 	}
 	effect = {
+		THE_KEI_the_kei_start_game_till_then_use_government_im_var_change_1_effect = yes
 		if = {
 			limit = {
 				OR = {
@@ -949,6 +951,7 @@ custom_button = {
 			add_base_production = 1
 			add_base_manpower = 1
 		}
+		THE_KEI_development_remove_province_light_buff = yes
 		hidden_effect = {
 			change_variable = {
 				which = the_kei_rejuvenate_devlop_im_var
@@ -1030,6 +1033,7 @@ custom_button = {
 		}
 	}
 	effect = {
+		THE_KEI_the_kei_start_game_till_then_use_government_im_var_change_1_effect = yes
 		ROOT = {
 			infantry = FROM
 		}

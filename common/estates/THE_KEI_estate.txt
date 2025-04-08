@@ -63,13 +63,15 @@ estate_the_haniwa = {
 		}
 	}
 	country_modifier_happy = { 
-		reinforce_cost_modifier = 0.33
+		global_unrest = -2
+		reinforce_cost_modifier = -0.25
 	}
 	country_modifier_neutral = { 
-
+		
 	}
 	country_modifier_angry = { 
-		reinforce_speed = 0.33
+		global_unrest = 2
+		reinforce_cost_modifier = 0.33
 	}
 	land_ownership_modifier = { }
 	independence_government = monarchy

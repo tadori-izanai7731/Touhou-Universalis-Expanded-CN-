@@ -48,6 +48,7 @@ country_event = {
 				value = 5
 			}
 		}
+		THE_KEI_the_kei_start_game_till_then_use_government_im_var_change_1_effect = yes
 		add_government_power = {
 			mechanic_type = THE_KEI_lonely_creation_mechanic
 			power_type = THE_KEI_lonely_creation_mechanic_power
@@ -348,6 +349,7 @@ country_event = {
 	option = {
 		name = THE_KEI_flavor_events.2.e
 		custom_tooltip = THE_KEI_flavor_2_event_c_tt1
+		THE_KEI_the_kei_start_game_till_then_use_government_im_var_change_1_effect = yes
 		hidden_effect = {
 			THE_KEI_define_general_mayumi = yes 
 		}
@@ -569,6 +571,7 @@ country_event = {
 	option = {
 		name = THE_KEI_flavor_events.2.e
 		custom_tooltip = THE_KEI_flavor_2_event_c_tt1
+		THE_KEI_the_kei_start_game_till_then_use_government_im_var_change_1_effect = yes
 		hidden_effect = {
 			THE_KEI_define_general_mayumi = yes 
 		}

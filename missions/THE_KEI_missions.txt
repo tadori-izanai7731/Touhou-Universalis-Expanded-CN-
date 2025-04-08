@@ -954,10 +954,7 @@ THE_KEI_main_branch_3 = {
 
 		effect = { 
 			custom_tooltip = THE_KEI_3_4_c_tt1
-			add_prestige = 100
-			add_adm_power = 100
-			add_dip_power = 100
-			add_mil_power = 100
+			add_prestige = 200
 			hidden_effect = {
 				set_country_flag = THE_KEI_can_build_add_government_power_flag
 			}
@@ -2793,9 +2790,6 @@ THE_KEI_minor_branch_1_alone = {
 				name = THE_KEI_impure_consumables_buff
 				duration = -1
 			}
-			add_adm_power = 100
-			add_dip_power = 100
-			add_mil_power = 100
 		 } 
 	}
 }
@@ -3057,6 +3051,64 @@ THE_KEI_minor_branch_1_create = {
 				name = THE_KEI_without_out_of_life_buff
 				duration = -1
 			}
+			if = {
+				limit = {
+					estate_loyalty = {
+						estate = estate_burghers
+						loyalty = 100
+					}
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 100
+					}
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 100
+					}
+				 }
+				 custom_tooltip = THE_KEI_1_12_create_c_tt1_yes
+				 custom_tooltip = THE_KEI_1_12_create_c_tt2_yes
+				 custom_tooltip = THE_KEI_1_12_create_c_tt3
+				 tooltip = {
+					add_country_modifier = {
+						name = THE_KEI_the_new_life_mission_buff
+						duration = -1
+					}
+				}
+				hidden_effect = {
+					every_country = {
+						limit = {
+							religion = the_keiki
+						}
+						add_country_modifier = {
+							name = THE_KEI_the_new_life_mission_buff
+							duration = -1
+						}
+					}
+				}
+			}
+			else = {
+				custom_tooltip = THE_KEI_1_12_create_c_tt1_no
+				custom_tooltip = THE_KEI_1_12_create_c_tt2_yes
+				 custom_tooltip = THE_KEI_1_12_create_c_tt3
+				 tooltip = {
+					add_country_modifier = {
+						name = THE_KEI_the_new_life_mission_buff
+						duration = -1
+					}
+				}
+				hidden_effect = {
+					every_country = {
+						limit = {
+							religion = the_keiki
+						}
+						add_country_modifier = {
+							name = THE_KEI_the_new_life_mission_buff
+							duration = -1
+						}
+					}
+				}
+			}
 		}
 	}
 }
@@ -3129,6 +3181,10 @@ THE_KEI_minor_branch_1_create = {
 			}
 			num_of_estate_agendas_completed = {
 				estate = estate_nobles
+				value = 2
+			}
+			num_of_estate_agendas_completed = {
+				estate = estate_church
 				value = 2
 			}
 		} 

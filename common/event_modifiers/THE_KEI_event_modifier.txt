@@ -5,8 +5,8 @@ THE_KEI_estate_hina_wheel_buff = {
 }
 #救赎之光
 THE_KEI_savtor_light_1_buff = {
-	land_morale = 0.05
-	reinforce_speed = 1.50
+	land_morale = 0.10
+	reinforce_speed = 0.25
 	land_forcelimit = 20
 }
 #奉献一切
@@ -57,13 +57,13 @@ THE_KEI_decree_sifang_buff = {
 }
 #敕命「天工」
 THE_KEI_decree_work_buff = {
-	build_cost = -0.25
+	build_cost = -0.20
 	build_time = -0.10
 }
 ##敕命「造物」
 THE_KEI_decree_work_V2_buff = {
-	build_cost = -0.25
-	build_time = -0.25
+	build_cost = -0.20
+	build_time = -0.10
 	global_prosperity_growth = 1.0
 }
 ##敕命「雷行」
@@ -119,8 +119,6 @@ THE_KEI_create_fort_buff = {
 THE_KEI_stupid_human_buff = {
 	cb_on_religious_enemies = yes
 	enforce_religion_cost = -0.5
-	shock_damage_received = -0.10
-	fire_damage_received = -0.10
 }
 #畜生之道
 THE_KEI_the_animal_road_buff = {
@@ -154,13 +152,13 @@ THE_KEI_the_subject_of_keiki_religion_war_buff = {
 }
 #救赎怨灵
 THE_KEI_save_the_ghost_buff = {
-	infantry_cost = -0.10
+	infantry_cost = -0.05
 	movement_speed = 0.10
 }
 #自由的呼声
 THE_KEI_slavtor_free_search_for_buff = {
 	prestige = 1.0
-	estate_interaction_cooldown_modifier = -0.20
+	estate_interaction_cooldown_modifier = -0.05
 }
 #合尘
 THE_KEI_the_hecheng_buff = {
@@ -187,14 +185,13 @@ THE_KEI_without_all_question_buff = {
 }
 #超脱与创生
 THE_KEI_without_out_of_life_buff = {
-	all_estate_loyalty_equilibrium = 0.10
-	global_manpower_modifier = 0.20
+	all_estate_loyalty_equilibrium = 0.05
+	estate_interaction_cooldown_modifier = -0.10
 }
 #韶光
 THE_KEI_the_light_man_buff = {
-	diplomatic_upkeep = 3
-	diplomats = 2
-	diplomatic_reputation = 2
+	diplomats = 1
+	improve_relation_modifier = 0.33
 }
 #厉兵
 THE_KEI_3_6_mission_buff = {
@@ -220,9 +217,11 @@ THE_KEI_cloaked_in_radiance_buff = {
 THE_KEI_all_animal_run_buff = {
 	min_local_autonomy = 80
 	local_autonomy = 0.05
-	local_development_cost = -0.10
 }
 THE_KEI_all_animal_run_buff_V2 = {
 	local_monthly_devastation = -1.0
 	local_autonomy = 0.10
+}
+THE_KEI_the_new_life_mission_buff = {
+	monthly_fervor_increase = 5
 }
