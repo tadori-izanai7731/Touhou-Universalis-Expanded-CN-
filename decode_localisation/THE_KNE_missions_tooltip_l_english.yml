@@ -55,7 +55,7 @@ l_english:
  THE_KNE_mission_3_7_case2_tt_yes: "£yes£§M军事理念:§!"
  THE_KNE_mission_3_7_case2_tt_no: "£no£§M八旗数量:§!"
  THE_KNE_halve_hegemony_requirements_tt: "§P降低宣称霸权的要求§!"
- THE_KNE_all_grand_canal_level_3_tt: "所有大运河达到Y雄伟壮丽§!等级"
+ THE_KNE_all_grand_canal_level_3_tt: "所有大运河达到§Y雄伟壮丽§!等级"
  THE_KNE_every_grand_canal_province_tt: "所有大运河省份:\n大运河等级变为§Y无关紧要§!,升级大运河将获得§Y天命§!"
  THE_KNE_china_province_tax_tt: "§M中国次大陆每个处于繁荣的省份:§!"
  THE_KNE_china_province_production_tt: "§M中国次大陆每个已扩建基础设施的省份:§!"
@@ -81,6 +81,15 @@ l_english:
  mechanic_THE_KNE_china_reform_add_mandate_and_stability_yes: "进行天命改革获得§G30§!天命和§G50§!£adm£行政点"
  THE_KNE_new_keju_formats_reform: "新科举"
  THE_KNE_new_keju_formats_reform_desc: ""
+ THE_KNE_726_JAP_monarch_reform: "奉天征夷"
+ THE_KNE_726_JAP_monarch_reform_desc: ""
+ mechanic_THE_KNE_mandate_reform_strengthen_professionalism_custom_attributes_yes: "完成以下§Y天命改革§!使陆军职业度获得额外效果:\n   晋封外藩\n   编户齐民\n   崇文抑武\n   崇武抑文\n   推广旗军\n   改革军队"
+ THE_KNE_another_professionalism_20_tt_1: "陆军职业度达到20额外给予如下效果:\n附庸贡献的陆军数量上限: §G+20.0%§!\n朝贡国转向附庸国花费修正: §G-10.0%§!"
+ THE_KNE_another_professionalism_40_tt_1: "陆军职业度达到40额外给予如下效果:\n转变文化时间: §G-25.0%§!\n每年陆军传统: §G+1.00§!"
+ THE_KNE_another_professionalism_60_tt_1: "陆军职业度达到60额外给予如下效果:\n转变文化花费: §G-25.0%§!\n要塞维护费: §G-25.0%§!"
+ THE_KNE_another_professionalism_60_tt_2: "陆军职业度达到60额外给予如下效果:\n全局进攻方骰子数值奖励: §G+1.00§!\n陆军操练度获取修正: §G+1.00§!"
+ THE_KNE_another_professionalism_80_tt_1: "陆军职业度达到80额外给予如下效果:\n骑兵火力: §G+0.50§!\n骑兵冲击: §G+0.50§!"
+ THE_KNE_another_professionalism_100_tt_1: "陆军职业度达到100额外给予如下效果:\n军事战术: §G+0.20§!\n弹幕火力值修正: §G+10.0%§!"
  ### GOVERNMENT_END
 
  ### MODIFIER
@@ -144,6 +153,9 @@ l_english:
  THE_KNE_events.7.desc: ""
 
  THE_KNE_events.8.desc: ""
+
+ THE_KNE_events.10.title: "新世纪"
+ THE_KNE_events.10.desc: ""
  ### EVENT_END
 
  ### FLAG

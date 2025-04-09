@@ -106,3 +106,26 @@ THE_KNE_new_keju_formats_reform = {
 		THE_KNE_china_reform_add_mandate_and_stability = yes
 	}
 }
+
+THE_KNE_726_JAP_monarch_reform = {
+	icon = "hakutaku_monarchy_reform"
+	potential = {
+		OR = {
+			has_country_flag = THE_KNE_enable_726_JAP_monarch_reform_flag
+			has_reform = THE_KNE_726_JAP_monarch_reform
+			have_had_reform = THE_KNE_726_JAP_monarch_reform
+		}
+	}
+	modifiers = {
+		free_land_leader_pool = 2
+		free_navy_leader_pool = 2
+		global_regiment_recruit_speed = -0.2
+		global_ship_recruit_speed = -0.2
+		movement_speed = 0.1
+		global_ship_repair = 1.0
+		movement_speed_in_fleet_modifier = 1
+	}
+	custom_attributes = {
+		THE_KNE_mandate_reform_strengthen_professionalism_custom_attributes = yes
+	}
+}

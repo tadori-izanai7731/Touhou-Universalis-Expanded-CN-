@@ -55,7 +55,7 @@
  THE_KNE_mission_3_7_case2_tt_yes: "£yes£§M›Q‹NtõV:§!"
  THE_KNE_mission_3_7_case2_tt_no: "£no£§MkQ×epeÏ‘:§!"
  THE_KNE_halve_hegemony_requirements_tt: "§PM–NO±Rðy8—Cg„v‰Bl§!"
- THE_KNE_all_grand_canal_level_3_tt: "Nb	g'YÐ³l¾0RYÄ–OîXKN§!Irµu"
+ THE_KNE_all_grand_canal_level_3_tt: "Nb	g'YÐ³l¾0R§YÄ–OîXKN§!Irµu"
  THE_KNE_every_grand_canal_province_tt: "Nb	g'YÐ³lwýN:\n'YÐ³lIrµuØS:N§YàesQ't‰§!,GSµu'YÐ³lS·ƒ—V§Y)Y‹T§!"
  THE_KNE_china_province_tax_tt: "§M-NýV!k'YF–Ïk*NYŽNAucƒ„vwýN:§!"
  THE_KNE_china_province_production_tt: "§M-NýV!k'YF–Ïk*NòTibú^úWNx¾‹Ëe„vwýN:§!"
@@ -81,6 +81,15 @@
  mechanic_THE_KNE_china_reform_add_mandate_and_stability_yes: "ÛLˆ)Y‹T9ei—·ƒ—V§G30§!)Y‹TŒT§G50§!£adm£Lˆ?e¹p"
  THE_KNE_new_keju_formats_reform: "°eÑy>N"
  THE_KNE_new_keju_formats_reform_desc: ""
+ THE_KNE_726_JAP_monarch_reform: "IY)YV7Y"
+ THE_KNE_726_JAP_monarch_reform_desc: ""
+ mechanic_THE_KNE_mandate_reform_strengthen_professionalism_custom_attributes_yes: "ŒRbåNN§Y)Y‹T9ei—§!OF–›QLwN¦^·ƒ—V˜YHeœg:\n   KfSYé…\n   7bPŸl\n   T‡e‘bfk\n   Tfk‘b‡e\n   ¨c^×e›Q\n   9ei—›Q–"
+ THE_KNE_another_professionalism_20_tt_1: "F–›QLwN¦^¾0R20˜YÙuˆN‚YNHeœg:\nD–¸^!.s„vF–›QpeÏ‘NP–: §G+20.0%§!\ng!ýVlTD–¸^ýV±‚9îOck: §G-10.0%§!"
+ THE_KNE_another_professionalism_40_tt_1: "F–›QLwN¦^¾0R40˜YÙuˆN‚YNHeœg:\nlØS‡eSöeô•: §G-25.0%§!\nÏkt^F–›Q.Oßu: §G+1.00§!"
+ THE_KNE_another_professionalism_60_tt_1: "F–›QLwN¦^¾0R60˜YÙuˆN‚YNHeœg:\nlØS‡eS±‚9: §G-25.0%§!\n‰^Xôu²b9: §G-25.0%§!"
+ THE_KNE_another_professionalism_60_tt_2: "F–›QLwN¦^¾0R60˜YÙuˆN‚YNHeœg:\nhQNSÛIe¹e°šPRpe<PVY±R: §G+1.00§!\nF–›QÍdÃu¦^·ƒÖSîOck: §G+1.00§!"
+ THE_KNE_another_professionalism_80_tt_1: "F–›QLwN¦^¾0R80˜YÙuˆN‚YNHeœg:\n‘šuQkp›R: §G+0.50§!\n‘šuQ²QûQ: §G+0.50§!"
+ THE_KNE_another_professionalism_100_tt_1: "F–›QLwN¦^¾0R100˜YÙuˆN‚YNHeœg:\n›Q‹Nb=g: §G+0.20§!\n9VU^kp›R<PîOck: §G+10.0%§!"
  ### GOVERNMENT_END
 
  ### MODIFIER
@@ -144,6 +153,9 @@
  THE_KNE_events.7.desc: ""
 
  THE_KNE_events.8.desc: ""
+
+ THE_KNE_events.10.title: "°eNªu"
+ THE_KNE_events.10.desc: ""
  ### EVENT_END
 
  ### FLAG

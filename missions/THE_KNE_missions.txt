@@ -1089,6 +1089,15 @@ THE_KNE_mission_branch_3 = {
 		
 		effect = {
 			add_mil_tech = 1
+			if = {
+				limit = { government = monarchy }
+				add_government_reform = THE_KNE_726_JAP_monarch_reform
+			}
+			else = {
+				hidden_effect = {
+					set_country_flag = THE_KNE_enable_726_JAP_monarch_reform_flag
+				}
+			}
 			custom_tooltip = empty_line_tt
 			custom_tooltip = THE_KNE_mission_4_1_effect_case0_tt
 			if = {
@@ -1631,9 +1640,47 @@ THE_KNE_mission_branch_4 = {
 		required_missions = { THE_KNE_mission_4_7 } 
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = {
+			absolutism = 100
+			is_hegemon = yes
+			total_development = 3000
+			empire_of_china_reform_passed = establish_gaituguiliu_decision
+			empire_of_china_reform_passed = seaban_decision
+			empire_of_china_reform_passed = reform_land_tax_decision
+			empire_of_china_reform_passed = military_governors_decision
+			empire_of_china_reform_passed = centralizing_top_government_decision
+			empire_of_china_reform_passed = vassalize_tributaries_decision
+			empire_of_china_reform_passed = codify_single_whip_law_decision
+			empire_of_china_reform_passed = reign_in_estates_decision
+			empire_of_china_reform_passed = reform_civil_registration_decision
+			empire_of_china_reform_passed = establish_silver_standard_decision
+			empire_of_china_reform_passed = kanhe_certificate_decision
+			empire_of_china_reform_passed = new_keju_formats_decision
+			empire_of_china_reform_passed = inclusive_monarchy_decision
+			OR = {
+				empire_of_china_reform_passed = promote_bureaucratic_faction_decision
+				empire_of_china_reform_passed = promote_military_faction_decision
+			}
+			empire_of_china_reform_passed = unifed_trade_market_decision
+			empire_of_china_reform_passed = reform_the_military_branch_decision
+			empire_of_china_reform_passed = modernize_the_banners_decision
+			empire_of_china_reform_passed = study_foreign_ship_designs_decision
+			empire_of_china_reform_passed = tributary_embassies_decision
+			empire_of_china_reform_passed = new_world_discovery_decision
+			empire_of_china_reform_passed = zz_THE_KNE_china_reform_0_hakutaku
+			empire_of_china_reform_passed = zz_THE_KNE_china_reform_1_human
+		} 
 		
-		effect = {  } 
+		effect = {
+			THE_country_event_with_insight = {
+				id = THE_KNE_events.10
+				effect_tooltip = "
+					add_prestige_or_monarch_power = {
+						amount = 50
+					}
+				"
+			}
+		} 
 	}
 }
 THE_KNE_mission_branch_5 = {

@@ -435,3 +435,54 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = THE_KNE_events.10
+	title = THE_KNE_events.10.title
+	desc = THE_KNE_events.10.desc
+	# picture = none
+	is_triggered_only = yes
+
+	trigger = {
+		has_government_attribute = THE_KNE_keju_event_5_years_custom_attributes
+	}
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = THE_KNE_events.9
+				days = 1825
+			}
+		}
+	}
+
+	option = {
+		name = flavor_gbr.15.a
+		add_adm_power = 50
+		hidden_effect = {
+			country_event = {
+				id = THE_KNE_events.6
+			}
+		}
+	}
+
+	option = {
+		name = flavor_gbr.15.b
+		add_dip_power = 50
+		hidden_effect = {
+			country_event = {
+				id = THE_KNE_events.7
+			}
+		}
+	}
+
+	option = {
+		name = flavor_gbr.15.c
+		add_mil_power = 50
+		hidden_effect = {
+			country_event = {
+				id = THE_KNE_events.8
+			}
+		}
+	}
+}
