@@ -1,33 +1,43 @@
 THE_IQU_ideas = {
     start = {
-
+		light_ship_power = 0.33
+		morale_damage = 0.10
 	}
 	bonus = {
-
+		global_naval_barrage_cost = -1.00
 	}
 	trigger = {
 		tag = IQU
 	}
 	free = yes
 	THE_IQU_ideas_1 = {
-
+		diplomatic_reputation = 2
+		may_explore = yes
 	}
 	THE_IQU_ideas_2 = {
-		
+		colonists = 2
+		global_colonial_growth = 25
+		native_uprising_chance = -0.50
 	}
 	THE_IQU_ideas_3 = {
-		
+		envoy_travel_time = -0.25
+		movement_speed = 0.20
+		movement_speed_in_fleet_modifier = 1
 	}
 	THE_IQU_ideas_4 = {
-		
+		prestige = 0.5
 	}
 	THE_IQU_ideas_5 = {
-		
+		global_spy_defence = 0.50
+		morale_damage_received = -0.10
 	}
 	THE_IQU_ideas_6 = {
-		
+		global_ship_recruit_speed = -0.25
+		movement_speed_onto_off_boat_modifier = 1.00
+		war_exhaustion = -0.10
 	}
 	THE_IQU_ideas_7 = {
-		
+		development_cost = -0.15
+		colony_development_boost = 1
 	}
 }
