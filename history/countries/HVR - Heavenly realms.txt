@@ -1,0 +1,28 @@
+government = monarchy
+add_government_reform = Gensokyan_hvr_absolute_dictatorship
+government_rank = 1
+primary_culture = "Heavenish"
+religion = th_taoist
+technology_group = tech_gensokyan
+capital = 5052
+save_global_event_target_as = ")YPR"  # Tenshi
+th_discover_default = yes
+1443.1.1 = {
+  monarch = {
+    name = ")YPR"  # Tenshi
+    monarch = "‘k±êTES"
+    dynasty = "‘k±êTES"  # Hinanawi
+    birth_date = 2.1.1
+    adm = 3
+    dip = 5
+    mil = 6
+    female = yes
+  }
+	add_ruler_personality = immortal_personality
+	add_ruler_personality = babbling_buffoon_personality
+	add_ruler_personality = free_thinker_personality
+	set_ruler_flag = touhou_character_ruler
+	set_ruler_flag = touhou_original_ruler
+  set_ruler_flag = th_original_tenshi
+  set_country_flag = th_cannot_reeducate_ruler_flag
+}
