@@ -1,0 +1,2510 @@
+namespace = flavor_THE_HNG_mission_events
+country_event = {
+	id = flavor_THE_HNG_mission_events.1
+	title = "flavor_THE_HNG_mission_events.1.t"
+	desc = "flavor_THE_HNG_mission_events.1.desc"
+	picture = THE_HNG_mission1
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.1.a
+		swap_non_generic_missions = yes
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.2
+	title = "flavor_THE_HNG_mission_events.2.t"
+	desc = "flavor_THE_HNG_mission_events.2.desc"
+	picture = SPELLCARD_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.2.a
+		remove_country_modifier = THE_hng_mission_modifier2
+		if = {
+			limit = { NOT = { has_country_flag = hng_do_the_change3_flag } }
+			add_country_modifier = {
+				name = THE_hng_mission_modifier3
+				duration = -1
+			}
+		}
+		else = {
+			add_treasury = 200
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.3
+	title = "flavor_THE_HNG_mission_events.3.t"
+	desc = "flavor_THE_HNG_mission_events.3.desc"
+	picture = MEILINGBOSS_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.3.a
+		
+		add_country_modifier = {
+			name = THE_hng_mission_modifier5
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.4
+	title = "flavor_THE_HNG_mission_events.4.t"
+	desc = "flavor_THE_HNG_mission_events.4.desc"
+	picture = DRAGON_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.4.a
+		trigger = { 
+			is_subject = yes
+			NOT = { is_emperor_of_china = yes }
+			any_country = {
+				is_emperor_of_china = yes
+			}
+		}
+		custom_tooltip = THE_HNG_decrease_50_ae_tt
+		hidden_effect = {
+			every_known_country = {
+				add_aggressive_expansion = {
+					who = ROOT
+					value = -50
+					apply_calc = yes
+				}	
+			}
+		}
+		hidden_effect = {
+			vietnam_area = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					NOT = { owned_by = ROOT }
+				}
+				cede_province = ROOT
+			}
+			red_river_delta_area = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					NOT = { owned_by = ROOT }
+				}
+				cede_province = ROOT
+			}
+		}
+		vietnam_area = {
+			limit = {
+				owned_by = ROOT
+			}
+			add_core = ANN
+			remove_core = ROOT
+			change_religion = ROOT
+		}
+		red_river_delta_area = {
+			limit = {
+				owned_by = ROOT
+			}
+			add_core = ANN
+			remove_core = ROOT
+			change_religion = ROOT
+		}
+		release = ANN
+		create_subject = {
+			subject_type = march
+			subject = ANN
+		}
+		2373 = {
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 3
+			center_of_trade = 2
+		}
+		ANN = {
+			hidden_effect = {
+				set_capital = 2373
+				add_adm_power = 96
+				add_dip_power = 112
+				add_mil_power = 96
+				add_manpower = 10
+				add_sailors = 100
+				add_prestige = 100
+				change_estate_land_share = {
+					estate = estate_church
+					share = 50
+				}
+				change_estate_land_share = {
+					estate = estate_burghers
+					share = 50
+				}
+				change_estate_land_share = {
+					estate = estate_nobles
+					share = 100
+				}
+			}
+		}
+		if = {
+			limit = {
+				religion = confucianism
+			}
+			ANN = {
+			add_harmonized_religion = tengri_pagan_reformed
+			add_harmonized_religion = buddhism
+			add_harmonized_religion = mahayana
+			add_harmonized_religion = th_hakureishinto
+			}
+		}
+		event_target:EmperorOfChina = {
+			create_march = ANN
+			add_country_modifier = {
+				name = THE_hng_mission_modifier8
+				duration = 3650
+			}
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.4.b
+		trigger = {
+			is_subject = no
+		}
+		hidden_effect = {
+			vietnam_area = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					NOT = { owned_by = ROOT }
+				}
+				cede_province = ROOT
+			}
+			red_river_delta_area = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					NOT = { owned_by = ROOT }
+				}
+				cede_province = ROOT
+			}
+		}
+		vietnam_area = {
+			limit = {
+				owned_by = ROOT
+			}
+			add_core = ANN
+			remove_core = ROOT
+			change_religion = ROOT
+		}
+		red_river_delta_area = {
+			limit = {
+				owned_by = ROOT
+			}
+			add_core = ANN
+			remove_core = ROOT
+			change_religion = ROOT
+		}
+		release = ANN
+		create_subject = {
+			subject_type = march
+			subject = ANN
+		}
+		2373 = {
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 3
+			center_of_trade = 2
+		}
+		ANN = {
+			hidden_effect = {
+				set_capital = 2373
+				add_adm_power = 96
+				add_dip_power = 112
+				add_mil_power = 96
+				add_manpower = 10
+				add_sailors = 100
+				add_prestige = 100
+				change_estate_land_share = {
+					estate = estate_church
+					share = 50
+				}
+				change_estate_land_share = {
+					estate = estate_burghers
+					share = 50
+				}
+				change_estate_land_share = {
+					estate = estate_nobles
+					share = 100
+				}
+				change_technology_group = tech_gensokyan
+				change_unit_type = tech_gensokyan
+			}
+		}
+		create_march = ANN
+		add_years_of_income = 2
+		add_army_professionalism = 0.05
+		if = {
+			limit = {
+				religion = confucianism
+			}
+			ANN = {
+			add_harmonized_religion = tengri_pagan_reformed
+			add_harmonized_religion = buddhism
+			add_harmonized_religion = mahayana
+			add_harmonized_religion = th_hakureishinto
+			}
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.4.c
+		remove_opinion = {
+			who = event_target:EmperorOfChina
+			modifier = THE_HNG_opinion1
+		}
+	}
+}
+
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.5
+	title = "flavor_THE_HNG_mission_events.5.t"
+	desc = "flavor_THE_HNG_mission_events.5.desc"
+	picture = CROW_TENGU_GOOD_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.5.a
+		
+		add_country_modifier = {
+			name = THE_hng_mission_modifier11
+			duration = 9125
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.6
+	title = "flavor_THE_HNG_mission_events.6.t"
+	desc = "flavor_THE_HNG_mission_events.6.desc"
+	picture = DONATIONBOX_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.6.a
+		add_country_modifier = {
+			name = THE_hng_mission_modifier12
+			duration = -1
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.6.b
+		add_country_modifier = {
+			name = THE_hng_mission_modifier13
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.7
+	title = "flavor_THE_HNG_mission_events.7.t"
+	desc = "flavor_THE_HNG_mission_events.7.desc"
+	picture = CIRNOANDTHREEFAIRIES_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.7.a
+		add_country_modifier = {
+			name = THE_hng_mission_modifier14
+			duration = 10950
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.8
+	title = "flavor_THE_HNG_mission_events.8.t"
+	desc = "flavor_THE_HNG_mission_events.8.desc"
+	picture = FLOWERS_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.8.a
+		AVA = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = tributary_state
+				}
+				country_event = {
+					id = flavor_THE_HNG_mission_events.9
+				}
+			}
+		}
+		inherit = AVA
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.9
+	title = "flavor_THE_HNG_mission_events.9.t"
+	desc = "flavor_THE_HNG_mission_events.9.desc"
+	picture = FLOWERS_eventPicture
+	is_triggered_only = yes
+	major = yes
+	major_trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+	}
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.9.a
+		every_owned_province = {
+			add_permanent_province_modifier = {
+				name = THE_hng_mission_modifier128
+				duration = 7300
+			}
+		}
+		FROM = {
+			inherit = ROOT
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				total_development = 50
+			}
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.9.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { total_development = 50 }
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.10
+	title = "flavor_THE_HNG_mission_events.10.t"
+	desc = "flavor_THE_HNG_mission_events.10.desc"
+	picture = LATINNATIVE_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.10.a
+		add_treasury = -200
+		568 = {
+			owner = {
+				add_treasury = 200
+				add_opinion = {
+					who = ROOT
+					modifier = THE_HNG_opinion2
+				}
+			}
+			change_culture = ROOT
+			change_religion = ROOT
+			add_core = ROOT
+			remove_core = owner
+			cede_province = ROOT
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.10.b
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.11
+	title = "flavor_THE_HNG_mission_events.11.t"
+	desc = "flavor_THE_HNG_mission_events.11.desc"
+	picture = UNDERGROUND_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.11.a
+		add_country_modifier = {
+			name = THE_hng_mission_modifier16
+			duration = 10950
+		}
+	}
+}
+
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.12
+	title = "flavor_THE_HNG_mission_events.12.t"
+	desc = "flavor_THE_HNG_mission_events.12.desc"
+	picture = HINA_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.12.a
+		add_country_modifier = {
+			name = THE_hng_mission_modifier17
+			duration = -1
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.12.b
+		add_country_modifier = {
+			name = THE_hng_mission_modifier18
+			duration = -1
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.12.c
+		add_country_modifier = {
+			name = THE_hng_mission_modifier19
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.13
+	title = "flavor_THE_HNG_mission_events.13.t"
+	desc = "flavor_THE_HNG_mission_events.13.desc"
+	picture = HINA_eventPicture
+	is_triggered_only = yes
+	major = yes
+	major_trigger = {
+		capital_scope = {
+			OR = {
+				continent = asia
+				continent = gensokyo_continent
+				continent = moon_continent
+			}
+		}
+	}
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.13.a
+		change_technology_group = tech_gensokyan
+		change_unit_type = tech_gensokyan
+		add_country_modifier = {
+			name = THE_hng_mission_modifier23
+			duration = -1
+		}
+		HNG = {
+			create_union = LXA
+		}
+		ai_chance = { 
+			factor = 30
+			modifier = {
+				factor = 0
+				NOT = { 
+					LXA = {
+						has_opinion = {
+							who = HNG
+							value = -100
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				LXA = {
+					has_opinion = {
+						who = HNG
+						value = 100
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				LXA = {
+					alliance_with = HNG
+				}
+			}
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.13.b
+		HNG = {
+			add_casus_belli = {
+				target = LXA
+				type = cb_restore_personal_union
+				months = 240
+			}
+			add_country_modifier = {
+				name = THE_hng_mission_modifier22
+				duration = 1095
+			}
+		}
+		ai_chance = { 
+			factor = 12
+			modifier = {
+				factor = 0
+				NOT = { prestige = 50 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { dip_power = 100 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.14
+	title = "flavor_THE_HNG_mission_events.14.t"
+	desc = "flavor_THE_HNG_mission_events.14.desc"
+	picture = THE_HNG_mission2
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.14.a
+		add_country_modifier = {
+			name = THE_hng_mission_modifier24
+			duration = 7300
+		}
+		custom_tooltip = THE_HNG_mission34_tt
+		set_country_flag = THE_HNG_country_flag_mission1
+	}
+	
+	after = {
+		hidden_effect = {
+			country_event = {
+				id = flavor_THE_HNG_mission_events.15
+				days = 1825
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.15
+	title = "flavor_THE_HNG_mission_events.15.t"
+	desc = "flavor_THE_HNG_mission_events.15.desc"
+	picture = DRAGON_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		NOT = { is_emperor_of_china = yes }
+		any_country = {
+			is_emperor_of_china = yes
+			NOT = { war_with = ROOT }
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			declare_war_with_cb = {
+				who = event_target:EmperorOfChina
+				casus_belli = cb_chinese_unification
+			}
+			add_stability = 5
+			add_war_exhaustion = -5
+			every_known_country = {
+				add_aggressive_expansion = {
+					who = ROOT
+					value = -50
+				}	
+			}
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.15.a
+		tooltip = {
+			custom_tooltip = THE_HNG_decrease_50_ae_tt
+			declare_war_with_cb = {
+				who = event_target:EmperorOfChina 
+				casus_belli = cb_chinese_unification
+			}
+			add_stability = 5
+			add_war_exhaustion = -5
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.16
+	title = "flavor_THE_HNG_mission_events.16.t"
+	desc = "flavor_THE_HNG_mission_events.16.desc"
+	picture = OKINA_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.16.a
+		add_country_modifier = {
+			name = THE_hng_mission_modifier28
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.17
+	title = "flavor_THE_HNG_mission_events.17.t"
+	desc = "flavor_THE_HNG_mission_events.17.desc"
+	picture = TOUHOUMAPS_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.17.a
+		hidden_effect = {
+			every_province = {
+				remove_core = NPL
+			}
+			bhutan_area = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_core = NPL
+				remove_core = owner
+				cede_province = ROOT
+			}
+			hindusthan_region = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_core = NPL
+				remove_core = owner
+				cede_province = ROOT
+			}
+		}
+		release = NPL
+		create_subject = {
+			subject_type = th_special_march
+			subject = NPL
+		}
+		custom_tooltip = THE_HNG_EXTRA_set_npl_province_tt
+		NPL = {
+			hidden_effect = {
+				country_event = {
+					id = flavor_THE_HNG_mission_events.18
+				}
+				add_treasury = 500
+				add_manpower = 50
+				add_legitimacy = 100
+				set_capital = 2071
+				add_adm_power = 200
+				add_dip_power = 200
+				add_mil_power = 200
+				add_manpower = 30
+				add_sailors = 100
+				add_prestige = 100
+				change_estate_land_share = {
+					estate = all
+					share = -100
+				}
+				change_religion = ROOT
+				every_owned_province = {
+					change_religion = ROOT
+				}
+			}
+		}
+		2071 = {
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 3
+			center_of_trade = 2
+		}
+		set_country_flag = THE_HNG_had_NPL_subject
+		NPL = {
+			ROOT = { custom_tooltip = THE_HNG_EXTRA_can_inhert_tag_30_years_tt }
+		}
+		if = {
+			limit = {
+				religion = confucianism
+			}
+			NPL = {
+			add_harmonized_religion = buddhism
+			add_harmonized_religion = sunni
+			add_harmonized_religion = hinduism
+			add_harmonized_religion = th_hakureishinto
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.18
+	title = "flavor_THE_HNG_mission_events.18.t"
+	desc = "flavor_THE_HNG_mission_events.18.desc"
+	picture = TOUHOUMAPS_eventPicture
+	major = yes
+	major_trigger = {
+		capital_scope = {
+			OR = {
+				continent = asia
+				continent = gensokyo_continent
+				continent = moon_continent
+			}
+		}
+	}
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.18.a	
+		add_country_modifier = {
+			name = THE_hng_mission_modifier29
+			duration = -1
+		}
+		change_unit_type = tech_gensokyan
+		india_superregion = {
+			add_permanent_claim = ROOT
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.19
+	title = "flavor_THE_HNG_mission_events.19.t"
+	desc = "flavor_THE_HNG_mission_events.19.desc"
+	picture = TAKANE_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.19.a
+		add_country_modifier = {
+			name = THE_hng_mission_modifier31
+			duration = 7300
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.20
+	title = "flavor_THE_HNG_mission_events.20.t"
+	desc = "flavor_THE_HNG_mission_events.20.desc"
+	picture = TOUHOUMAPS_eventPicture
+	major = yes
+	major_trigger = {
+		capital_scope = {
+			OR = {
+				continent = asia
+				continent = gensokyo_continent
+				continent = moon_continent
+			}
+		}
+	}
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.20.a	
+		add_country_modifier = {
+			name = THE_hng_mission_modifier34
+			duration = -1
+		}
+		change_technology_group = tech_gensokyan
+		change_unit_type = tech_gensokyan
+		japan_region = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.21
+	title = "flavor_THE_HNG_mission_events.21.t"
+	desc = "flavor_THE_HNG_mission_events.21.desc"
+	picture = SUEZ_CANAL_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.21.a
+		add_treasury = -100
+		th_colonize_dev_province = {
+			province = 738
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.21.b
+		add_treasury = -100
+		th_colonize_dev_province = {
+			province = 2155
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.21.c
+		add_treasury = -100
+		th_colonize_dev_province = {
+			province = 2154
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.21.d
+		add_treasury = -200
+		th_colonize_dev_province = {
+			province = 2154
+		}
+		th_colonize_dev_province = {
+			province = 2155
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.21.e
+		add_treasury = -200
+		th_colonize_dev_province = {
+			province = 738
+		}
+		th_colonize_dev_province = {
+			province = 2155
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.21.f
+		add_treasury = -200
+		th_colonize_dev_province = {
+			province = 738
+		}
+		th_colonize_dev_province = {
+			province = 2154
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.21.g
+		add_treasury = -250
+		th_colonize_dev_province = {
+			province = 738
+		}
+		th_colonize_dev_province = {
+			province = 2155
+		}
+		th_colonize_dev_province = {
+			province = 2154
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.22
+	title = "flavor_THE_HNG_mission_events.22.t"
+	desc = "flavor_THE_HNG_mission_events.22.desc"
+	picture = THE_HNG_mission3
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.22.a
+		add_country_modifier = {
+			name = THE_hng_mission_modifier37
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.23
+	title = "flavor_THE_HNG_mission_events.23.t"
+	desc = "flavor_THE_HNG_mission_events.23.desc"
+	picture = KAPPA_DISASTER_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.23.a
+		add_country_modifier = {
+			name = THE_hng_mission_modifier41
+			duration = 7300
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.24
+	title = "flavor_THE_HNG_mission_events.24.t"
+	desc = "flavor_THE_HNG_mission_events.24.desc"
+	picture = AKISISTERSBOSS_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.24.a
+		add_country_modifier = {
+			name = THE_hng_mission_modifier55
+			duration = -1
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.24.b
+		highlight = yes
+		trigger = {
+			exists = AKI
+			AKI = {
+				NOT = { total_development = 250 }
+			}
+		}
+		add_country_modifier = {
+			name = THE_hng_mission_modifier55
+			duration = -1
+		}
+		inherit = AKI
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.25
+	title = "flavor_THE_HNG_mission_events.25.t"
+	desc = "flavor_THE_HNG_mission_events.25.desc"
+	picture = SEIRA_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.25.a
+		add_country_modifier = {
+			name = THE_hng_mission_modifier56
+			duration = -1
+		}
+		2174 = {
+			change_culture = Senkaian
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 3
+		}
+	}
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.25.b
+		add_country_modifier = {
+			name = THE_hng_mission_modifier56
+			duration = -1
+		}
+		2174 = {
+			change_culture = Senkaian
+			change_religion = th_taoist
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 3
+		}
+		change_religion = th_taoist
+		add_country_modifier = {
+			name = THE_hng_mission_modifier142
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.26
+	title = "flavor_THE_HNG_mission_events.26.t"
+	desc = "flavor_THE_HNG_mission_events.26.desc"
+	picture = SNOWSPRINGADVANCED_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.26.a
+		add_country_modifier = {
+			name = THE_hng_mission_modifier59
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.27
+	title = "flavor_THE_HNG_mission_events.27.t"
+	desc = "flavor_THE_HNG_mission_events.27.desc"
+	picture = RESORT_PARADISE_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.27.a
+		add_country_modifier = {
+			name = THE_hng_mission_modifier60
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.28
+	title = "flavor_THE_HNG_mission_events.28.t"
+	desc = "flavor_THE_HNG_mission_events.28.desc"
+	picture = GREAT_TENGU_GOOD_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.28.a
+		add_country_modifier = {
+			name = THE_hng_mission_modifier65
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.29
+	title = "flavor_THE_HNG_mission_events.29.t"
+	desc = "flavor_THE_HNG_mission_events.29.desc"
+	picture = YUUGI_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.29.a
+		add_country_modifier = {
+			name = THE_hng_mission_modifier66
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.30
+	title = "flavor_THE_HNG_mission_events.30.t"
+	desc = "flavor_THE_HNG_mission_events.30.desc"
+	picture = NITORI_GADGET_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.30.a
+		add_years_of_income = -1
+		add_country_modifier = {
+			name = THE_hng_mission_modifier67
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.31
+	title = "flavor_THE_HNG_mission_events.31.t"
+	desc = "flavor_THE_HNG_mission_events.31.desc"
+	picture = TAKANE_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.31.a
+		add_country_modifier = {
+			name = THE_hng_mission_modifier68
+			duration = -1
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.31.b
+		highlight = yes
+		trigger = {
+			exists = YME
+			NOT = {
+				YME = {
+					total_development = 250
+				}
+			}
+		}
+		add_country_modifier = {
+			name = THE_hng_mission_modifier68
+			duration = -1
+		}
+		inherit = YME
+	}
+}
+
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.32
+	title = "flavor_THE_HNG_mission_events.32.t"
+	desc = "flavor_THE_HNG_mission_events.32.desc"
+	picture = GENSOKYOTHRONE_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.32.a
+		add_country_modifier = {
+			name = THE_hng_mission_modifier71
+			duration = 7300
+		}
+		set_emperor_of_china = HNG
+		set_meritocracy = 100
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.33
+	title = "flavor_THE_HNG_mission_events.33.t"
+	desc = "flavor_THE_HNG_mission_events.33.desc"
+	picture = THE_HNG_mission4
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.33.a
+		add_treasury = -500
+		if = {
+			limit = { exists = KPP }
+			KPP = { add_treasury = 250 }
+		}
+		else = {
+			4965 = {
+				owner = { add_treasury = 250 }
+			}
+		}
+		if = {
+			limit = { exists = YME }
+			YME = { add_treasury = 250 }
+		}
+		else = {
+			5219 = {
+				owner = { add_treasury = 250 }
+			}
+		}
+		add_country_modifier = {
+			name = THE_hng_mission_modifier72
+			duration = 1825
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.34
+	title = "flavor_THE_HNG_mission_events.34.t"
+	desc = "flavor_THE_HNG_mission_events.34.desc"
+	picture = THE_HNG_mission1
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.34.a
+		add_mandate = 100
+		add_country_modifier = {
+			name = THE_hng_mission_modifier73
+			duration = -1
+		}
+		set_country_flag = THE_HNG_mission_event34
+		override_country_name = BHG
+		set_country_flag = is_BHG_flag
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.34.b
+		add_mandate = 100
+		add_country_modifier = {
+			name = THE_hng_mission_modifier73
+			duration = -1
+		}
+		set_country_flag = THE_HNG_mission_event34
+	}
+	
+	after = {
+		country_event = {
+			id = flavor_THE_HNG_mission_events.35
+			days = 10950
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.35
+	title = "flavor_THE_HNG_mission_events.35.t"
+	desc = "flavor_THE_HNG_mission_events.35.desc"
+	picture = THE_HNG_mission1
+	is_triggered_only = yes
+	
+	trigger = {
+		is_emperor_of_china = yes
+	}
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.35.a
+		set_country_flag = THE_HNG_can_disasters
+	}
+}
+
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.36
+	title = "flavor_THE_HNG_mission_events.36.t"
+	desc = "flavor_THE_HNG_mission_events.36.desc"
+	picture = THE_HNG_mission6
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.36.a
+		add_country_modifier = {
+			name = THE_hng_mission_modifier76
+			duration = -1
+		}
+		change_price = {
+			trade_goods = tea
+			key = THE_HNG_mission_flavor_THE_HNG_mission_events36
+			value = 0.75
+			duration = -1
+		}
+		change_price = {
+			trade_goods = chinaware
+			key = THE_HNG_mission_flavor_THE_HNG_mission_events36
+			value = 0.75
+			duration = -1
+		}
+		change_price = {
+			trade_goods = silk
+			key = THE_HNG_mission_flavor_THE_HNG_mission_events36
+			value = 0.75
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.37
+	title = "flavor_THE_HNG_mission_events.37.t"
+	desc = "flavor_THE_HNG_mission_events.37.desc"
+	picture = REMILIAVICTORY_eventPicture
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_variable = {
+				which = the_hng_remilia_combat_skills
+				value = 1800
+			}
+			th_getruler_fighting_skill = {
+				skill_boni = 0
+				type = normal
+			}
+			th_defineopponent_fighting_skill = {
+				variable = the_hng_remilia_combat_skills
+				type = normal
+			}
+		}
+	}
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.37.a
+		highlight = yes
+		th_danmaku_normal_fight_ruler_and_opponent = {
+			win_event = flavor_THE_HNG_mission_events.38
+			draw_event = flavor_THE_HNG_mission_events.39
+			defeat_event = flavor_THE_HNG_mission_events.39
+			days = 10
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.38
+	title = "flavor_THE_HNG_mission_events.38.t"
+	desc = "flavor_THE_HNG_mission_events.38.desc"
+	picture = REMILIAVICTORY_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.38.a
+		trigger = {
+			SCR = {
+				ai = yes
+			}
+		}
+		if = {
+			limit = {
+				exists = SCR
+			}
+			create_union = SCR
+			else = {
+				add_mil_power = 100
+			}
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.38.b
+		trigger = {
+			SCR = {
+				ai = no
+			}
+		}
+		if = {
+			limit = {
+				exists = SCR
+			}
+			add_casus_belli = {
+				target = SCR
+				type = cb_restore_personal_union
+				months = 600
+			}
+			else = {
+				add_mil_power = 100
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.39
+	title = "flavor_THE_HNG_mission_events.39.t"
+	desc = "flavor_THE_HNG_mission_events.39.desc"
+	picture = REMILIAVICTORY_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.39.a
+		if = {
+			limit = {
+				exists = SCR
+			}
+			add_casus_belli = {
+				target = SCR
+				type = cb_restore_personal_union
+				months = 600
+			}
+			else = {
+				add_mil_power = 50
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.40
+	title = "flavor_THE_HNG_mission_events.40.t"
+	desc = "flavor_THE_HNG_mission_events.40.desc"
+	picture = TOUHOUMOON_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.40.a
+		add_country_modifier = {
+			name = THE_hng_mission_modifier77
+			duration = -1
+		}
+		moon_continent = {
+			limit = {
+				is_core = ROOT
+			}
+			change_culture = Scarlett
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.40.b
+		add_country_modifier = {
+			name = THE_hng_mission_modifier77
+			duration = -1
+		}
+		
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.41
+	title = "flavor_THE_HNG_mission_events.41.t"
+	desc = "flavor_THE_HNG_mission_events.41.desc"
+	picture = THFEST_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.41.a
+		add_country_modifier = {
+			name = THE_hng_mission_modifier78
+			duration = -1
+		}
+		hidden_effect = {
+			every_known_country = {
+				limit = {
+					capital_scope = { continent = gensokyo_continent }
+					is_subject = no
+				}
+				country_event = {
+					id = flavor_THE_HNG_mission_events.42
+				}
+			}
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.41.b
+		add_country_modifier = {
+			name = THE_hng_mission_modifier79
+			duration = -1
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.41.c
+		trigger = {
+			has_country_flag = hng_do_the_change3_flag
+		}
+		add_country_modifier = {
+			name = THE_hng_mission_modifier79
+			duration = -1
+		}
+		add_country_modifier = {
+			name = THE_hng_mission_modifier78
+			duration = -1
+		}
+		hidden_effect = {
+			every_known_country = {
+				limit = {
+					capital_scope = { continent = gensokyo_continent }
+					is_subject = no
+				}
+				country_event = {
+					id = flavor_THE_HNG_mission_events.42
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.42
+	title = "flavor_THE_HNG_mission_events.42.t"
+	desc = "flavor_THE_HNG_mission_events.42.desc"
+	picture = FLOWERS_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.42.a
+		HNG = {
+			create_subject = {
+				subject_type = tributary_state
+				subject = ROOT
+			}
+		}
+		ai_chance = { 
+			factor = 80
+			modifier = {
+				factor = 0
+				total_development = 500
+			}
+			modifier = {
+				factor = 0.5
+				total_development = 150
+			}
+			modifier = {
+				factor = 0.25
+				total_development = 300
+			}
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.42.b
+		ai_chance = { 
+			factor = 20
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.43
+	title = "flavor_THE_HNG_mission_events.43.t"
+	desc = "flavor_THE_HNG_mission_events.43.desc"
+	picture = THE_HNG_mission6
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.43.a
+		add_country_modifier = {
+			name = THE_hng_mission_modifier83
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.44
+	title = "flavor_THE_HNG_mission_events.44.t"
+	desc = "flavor_THE_HNG_mission_events.44.desc"
+	picture = BYAKUREN_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.44.a
+		change_innovativeness = 20
+		if = {
+			limit = {
+				NOT = { is_in_deficit = yes }
+				NOT = { is_bankrupt = yes }
+				NOT = { num_of_loans = 1 }
+			}
+			add_treasury = -7
+		}
+		th_increase_ruler_adm_stat = {
+			adm = 1
+		}
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.45
+	title = "flavor_THE_HNG_mission_events.45.t"
+	desc = "flavor_THE_HNG_mission_events.45.desc"
+	picture = PIRATE_CAPTAINS_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.45.a
+		hidden_effect = {
+			country_event = {
+				id = flavor_THE_HNG_mission_events.46
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.45.b
+		add_treasury = -50
+		hidden_effect = {
+			country_event = {
+				id = flavor_THE_HNG_mission_events.47
+				days = 60
+			}
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.45.c
+		add_treasury = -100
+		hidden_effect = {
+			country_event = {
+				id = flavor_THE_HNG_mission_events.48
+				days = 120
+			}
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.45.d
+		add_treasury = -100
+		hidden_effect = {
+			country_event = {
+				id = flavor_THE_HNG_mission_events.49
+				days = 150
+			}
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.45.e
+		add_treasury = -150
+		hidden_effect = {
+			country_event = {
+				id = flavor_THE_HNG_mission_events.50
+				days = 180
+			}
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.45.f
+		add_treasury = -200
+		hidden_effect = {
+			country_event = {
+				id = flavor_THE_HNG_mission_events.51
+				days = 365
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.46
+	title = "flavor_THE_HNG_mission_events.46.t"
+	desc = "flavor_THE_HNG_mission_events.46.desc"
+	picture = THE_HNG_mission6
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.46.a
+		add_manpower = 0.001
+		set_country_flag = flavor_THE_HNG_mission_events46
+		1205 = {
+			change_culture = amhara
+		}
+		add_government_reform = THE_HNG_use_qiwa_army
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.46.b
+		add_manpower = -0.001
+		add_prestige_or_monarch_power = { amount = 100 }
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.47
+	title = "flavor_THE_HNG_mission_events.47.t"
+	desc = "flavor_THE_HNG_mission_events.47.desc"
+	picture = THE_HNG_mission6
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.46.a
+		add_manpower = 0.001
+		1205 = {
+			change_culture = al_misr_arabic
+			add_permanent_province_modifier = {
+				name = THE_hng_mission_modifier87
+				duration = -1
+			}
+		}
+		add_country_modifier = {
+			name = THE_hng_mission_modifier86
+			duration = -1
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.46.b
+		add_manpower = -0.001
+		add_prestige_or_monarch_power = { amount = 100 }
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.48
+	title = "flavor_THE_HNG_mission_events.48.t"
+	desc = "flavor_THE_HNG_mission_events.48.desc"
+	picture = THE_HNG_mission6
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.46.a
+		add_manpower = 0.001
+		1205 = {
+			change_culture = cosmopolitan_french
+			add_permanent_province_modifier = {
+				name = THE_hng_mission_modifier89
+				duration = -1
+			}
+		}
+		add_country_modifier = {
+			name = THE_hng_mission_modifier88
+			duration = -1
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.46.b
+		add_manpower = -0.001
+		add_prestige_or_monarch_power = { amount = 100 }
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.49
+	title = "flavor_THE_HNG_mission_events.49.t"
+	desc = "flavor_THE_HNG_mission_events.49.desc"
+	picture = THE_HNG_mission6
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.46.a
+		add_manpower = 0.001
+		1205 = {
+			change_culture = castillian
+			add_permanent_province_modifier = {
+				name = THE_hng_mission_modifier91
+				duration = -1
+			}
+		}
+		add_country_modifier = {
+			name = THE_hng_mission_modifier90
+			duration = -1
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.46.b
+		add_manpower = -0.001
+		add_prestige_or_monarch_power = { amount = 100 }
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.50
+	title = "flavor_THE_HNG_mission_events.50.t"
+	desc = "flavor_THE_HNG_mission_events.50.desc"
+	picture = THE_HNG_mission6
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.46.a
+		add_manpower = 0.001
+		1205 = {
+			change_culture = polish
+			add_permanent_province_modifier = {
+				name = THE_hng_mission_modifier93
+				duration = -1
+			}
+		}
+		add_country_modifier = {
+			name = THE_hng_mission_modifier92
+			duration = -1
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.46.b
+		add_manpower = -0.001
+		add_prestige_or_monarch_power = { amount = 100 }
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.51
+	title = "flavor_THE_HNG_mission_events.51.t"
+	desc = "flavor_THE_HNG_mission_events.51.desc"
+	picture = THE_HNG_mission6
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.46.a
+		add_manpower = 0.001
+		1205 = {
+			change_culture = swedish
+			add_permanent_province_modifier = {
+				name = THE_hng_mission_modifier95
+				duration = -1
+			}
+		}
+		add_country_modifier = {
+			name = THE_hng_mission_modifier94
+			duration = -1
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.46.b
+		add_manpower = -0.001
+		add_prestige_or_monarch_power = { amount = 100 }
+	}
+}
+
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.52
+	title = "flavor_THE_HNG_mission_events.52.t"
+	desc = "flavor_THE_HNG_mission_events.52.desc"
+	picture = PARSEE_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.52.a
+		tooltip = { 
+			release = PER
+			create_subject = {
+				subject_type = th_special_march
+				subject = PER
+			}
+			429 = {
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+				center_of_trade = 2
+			}
+			PER = {
+				change_unit_type = tech_gensokyan
+				add_country_modifier = {
+					name = THE_hng_mission_modifier96
+					duration = -1
+				}
+			}
+		}
+		set_country_flag = THE_HNG_had_PER_subject
+		PER = {
+			ROOT = { custom_tooltip = THE_HNG_EXTRA_can_inhert_tag_30_years_tt }
+		}
+		hidden_effect = {
+			persia_region = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_core = PER
+				remove_core = ROOT
+				change_religion = ROOT
+			}
+			release = PER
+			create_subject = {
+				subject_type = th_special_march
+				subject = PER
+			}
+		}
+		PER = {
+			hidden_effect = {
+				add_treasury = 5000
+				add_manpower = 50
+				add_sailors = 10000
+				429 = {
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 3
+					center_of_trade = 2
+				}
+				change_unit_type = tech_gensokyan
+				add_country_modifier = {
+					name = THE_hng_mission_modifier96
+					duration = -1
+				}
+				persia_region = {
+					add_core = PER 
+				}
+				anatolia_region = {
+					add_permanent_claim = PER 
+				}
+				mashriq_region = {
+					add_permanent_claim = PER 
+				}
+				egypt_region = {
+					add_permanent_claim = PER 
+				}
+			}
+		}
+		if = {
+			limit = {
+				religion = confucianism
+			}
+			PER = {
+			add_harmonized_religion = zoroastrian
+			add_harmonized_religion = sunni
+			add_harmonized_religion = hinduism
+			add_harmonized_religion = th_hakureishinto
+			}
+		}
+	}
+	# option = {
+	# 	name = flavor_THE_HNG_mission_events.52.b
+	# 	trigger = {
+	# 		NOT = { exists = PRS }
+	# 		5286 = {
+	# 			country_or_non_sovereign_subject_holds = ROOT
+	# 		}
+	# 		CRD = {
+	# 			has_opinion = {
+	# 				who = ROOT
+	# 				value = 150
+	# 			}
+	# 		}
+	# 		AND = {
+	# 			NOT = { exists = CRD }
+	# 			5286 = {
+	# 				owner = {
+	# 					has_opinion = {
+	# 						who = ROOT
+	# 						value = 150
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# 	set_country_flag = THE_HNG_had_PRS_subject
+	# 	persia_region = {
+	# 		limit = {
+	# 			owned_by = ROOT
+	# 		}
+	# 		add_core = PRS
+	# 		remove_core = ROOT
+	# 		change_religion = ROOT
+	# 	}
+	# 	release = PRS
+	# 	create_subject = {
+	# 		subject_type = th_special_march
+	# 		subject = PRS
+	# 	}
+	# 	429 = {
+	# 		add_base_tax = 3
+	# 		add_base_production = 3
+	# 		add_base_manpower = 3
+	# 		center_of_trade = 2
+	# 	}
+	# 	PRS = {
+	# 		add_country_modifier = {
+	# 			name = THE_hng_mission_modifier97
+	# 			duration = -1
+	# 		}
+	# 		hidden_effect = {
+	# 			add_treasury = 5000
+	# 			add_manpower = 50
+	# 			add_sailors = 10000
+	# 			change_technology_group = tech_gensokyan
+	# 			change_unit_type = tech_gensokyan
+	# 			th_respawn_ruler_with_new_stats_effect = yes
+	# 			persia_region = {
+	# 				limit = { 
+	# 					NOT = { owned_by = PRS } 
+	# 					NOT = { is_core = PRS } 
+	# 				}
+	# 				add_permanent_claim = PRS 
+	# 			}
+	# 			anatolia_region = {
+	# 				limit = { 
+	# 					NOT = { owned_by = PRS } 
+	# 					NOT = { is_core = PRS } 
+	# 				}
+	# 				add_permanent_claim = PRS 
+	# 			}
+	# 			mashriq_region = {
+	# 				limit = { 
+	# 					NOT = { owned_by = PRS } 
+	# 					NOT = { is_core = PRS } 
+	# 				}
+	# 				add_permanent_claim = PRS 
+	# 			}
+	# 			egypt_region = {
+	# 				limit = { 
+	# 					NOT = { owned_by = PRS } 
+	# 					NOT = { is_core = PRS } 
+	# 				}
+	# 				add_permanent_claim = PRS 
+	# 			}
+	# 		}
+	# 	}
+	# }
+	option = {
+		name = flavor_THE_HNG_mission_events.52.c
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.53
+	title = "flavor_THE_HNG_mission_events.53.t"
+	desc = "flavor_THE_HNG_mission_events.53.desc"
+	picture = YUKARI2_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.53.a
+		add_country_modifier = {
+			name = THE_hng_mission_modifier98
+			duration = 10950
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.54
+	title = "flavor_THE_HNG_mission_events.54.t"
+	desc = "flavor_THE_HNG_mission_events.54.desc"
+	picture = MURASA_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.54.a
+		tooltip = { 
+			release = LFA
+			create_subject = {
+				subject_type = th_special_march
+				subject = LFA
+			}
+			622 = {
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+				center_of_trade = 2
+			}
+			LFA = {
+				change_unit_type = tech_gensokyan
+				add_country_modifier = {
+					name = THE_hng_mission_modifier100
+					duration = -1
+				}
+			}
+		}
+		set_country_flag = THE_HNG_had_LFA_subject
+		LFA = {
+			ROOT = { custom_tooltip = THE_HNG_EXTRA_can_inhert_tag_30_years_tt }
+		}
+		hidden_effect = {
+			malaya_region = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_core = LFA
+				remove_core = owner
+				change_religion = ROOT
+			}
+			release = LFA
+			create_subject = {
+				subject_type = th_special_march
+				subject = LFA
+			}
+		}
+		LFA = {
+			hidden_effect = {
+				set_capital = 622
+				add_treasury = 5000
+				add_manpower = 50
+				add_sailors = 10000
+				622 = {
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 3
+					center_of_trade = 2
+				}
+				change_unit_type = tech_gensokyan
+				add_country_modifier = {
+					name = THE_hng_mission_modifier100
+					duration = -1
+				}
+				malaya_region = {
+					add_permanent_claim = LFA 
+				}
+				indonesia_region = {
+					add_permanent_claim = LFA 
+				}
+				moluccas_region = {
+					add_permanent_claim = LFA 
+				}
+			}
+		}
+		if = {
+			limit = {
+				religion = confucianism
+			}
+			LFA = {
+			add_harmonized_religion = sunni
+			add_harmonized_religion = hinduism
+			add_harmonized_religion = th_hakureishinto
+			}
+		}
+	}
+	# option = {
+	# 	name = flavor_THE_HNG_mission_events.54.b
+	# 	trigger = {
+	# 		NOT = { exists = MMU }
+	# 		OR = {
+	# 			5144 = {
+	# 				country_or_non_sovereign_subject_holds = ROOT
+	# 			}
+	# 			MYO = {
+	# 				has_opinion = {
+	# 					who = ROOT
+	# 					value = 150
+	# 				}
+	# 			}
+	# 			AND = {
+	# 				NOT = { exists = MYO }
+	# 				5144 = {
+	# 					owner = {
+	# 						has_opinion = {
+	# 							who = ROOT
+	# 							value = 150
+	# 						}
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# 	set_country_flag = THE_HNG_had_MMU_subject
+	# 	malaya_region = {
+	# 		limit = {
+	# 			owned_by = ROOT
+	# 		}
+	# 		add_core = MMU
+	# 		remove_core = ROOT
+	# 		change_religion = ROOT
+	# 	}
+	# 	release = MMU
+	# 	create_subject = {
+	# 		subject_type = th_special_march
+	# 		subject = MMU
+	# 	}
+	# 	2677 = {
+	# 		add_base_tax = 3
+	# 		add_base_production = 3
+	# 		add_base_manpower = 3
+	# 		center_of_trade = 2
+	# 	}
+	# 	MMU = {
+	# 		add_country_modifier = {
+	# 			name = THE_hng_mission_modifier101
+	# 			duration = -1
+	# 		}
+	# 		hidden_effect = {
+	# 			add_treasury = 5000
+	# 			add_manpower = 50
+	# 			add_sailors = 10000
+	# 			th_respawn_ruler_with_new_stats_effect = yes
+	# 			set_capital = 2677
+	# 			change_technology_group = tech_gensokyan
+	# 			change_unit_type = tech_gensokyan
+	# 			change_religion = ROOT
+	# 			add_government_reform = Gensokyan_mmu_thalassocratic_monarchy
+	# 			moluccas_region = {
+	# 				limit = { 
+	# 					NOT = { owned_by = MMU } 
+	# 					NOT = { is_core = MMU } 
+	# 				}
+	# 				add_permanent_claim = MMU 
+	# 			}
+	# 			malaya_region = {
+	# 				limit = { 
+	# 					NOT = { owned_by = MMU } 
+	# 					NOT = { is_core = MMU } 
+	# 				}
+	# 				add_permanent_claim = MMU 
+	# 			}
+	# 			indonesia_region = {
+	# 				limit = { 
+	# 					NOT = { owned_by = MMU } 
+	# 					NOT = { is_core = MMU } 
+	# 				}
+	# 				add_permanent_claim = MMU 
+	# 			}
+	# 		}
+	# 	}
+	# }
+	option = {
+		name = flavor_THE_HNG_mission_events.54.c
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.55
+	title = "flavor_THE_HNG_mission_events.55.t"
+	desc = "flavor_THE_HNG_mission_events.55.desc"
+	picture = RESORT_PARADISE_eventPicture
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.55.a
+		th_colonize_dev_province = {
+			province = 1177
+		}
+		th_colonize_dev_province = {
+			province = 1179
+		}
+		add_country_modifier = {
+			name = THE_hng_mission_modifier102
+			duration = 7300
+		}
+	}
+}
+
+country_event = {
+	id = flavor_THE_HNG_mission_events.56
+	title = "flavor_THE_HNG_mission_events.56.t"
+	desc = "flavor_THE_HNG_mission_events.56.desc"
+	picture = THE_HNG_mission8
+	is_triggered_only = yes
+	
+	option = {
+		name = flavor_THE_HNG_mission_events.56.a
+		add_years_of_income = 3
+		add_mandate = 25
+		change_religion = buddhism
+		add_country_modifier = {
+			name = THE_hng_mission_modifier104
+			duration = -1
+		}
+		add_stability = 1
+		hidden_effect = {
+			every_owned_province = {
+				change_religion = ROOT
+			}			
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.56.b
+		add_years_of_income = 3
+		add_mandate = 25
+		change_religion = vajrayana
+		add_country_modifier = {
+			name = THE_hng_mission_modifier104
+			duration = -1
+		}
+		add_stability = 1
+		hidden_effect = {
+			every_owned_province = {
+				change_religion = ROOT
+			}			
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.56.c
+		change_religion = confucianism
+		add_years_of_income = 5
+		add_mandate = 100
+		add_harmonized_religion = buddhism
+		add_harmonized_religion = vajrayana
+		add_harmonized_religion = shinto
+		add_harmonized_religion = mahayana
+		add_harmonized_religion = hinduism
+		add_harmonized_religion = shiite
+		add_harmonized_religion = catholic
+		add_harmonized_religion = animism
+		add_harmonized_religion = th_hakureishinto
+		add_harmonized_religion = zoroastrian
+		add_harmonized_religion = jewish
+		add_country_modifier = {
+			name = THE_hng_mission_modifier105
+			duration = -1
+		}
+		add_stability = 1
+		hidden_effect = {
+			every_owned_province = {
+				change_religion = ROOT
+			}			
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.56.d
+		add_mandate = -10
+		add_years_of_income = -1
+		change_religion = th_hakureishinto
+		add_country_modifier = {
+			name = THE_hng_mission_modifier106
+			duration = -1
+		}
+		add_stability = 1
+		hidden_effect = {
+			every_owned_province = {
+				change_religion = ROOT
+			}			
+		}		
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.56.e
+		highlight = yes
+		trigger = {
+			NOT = { religion = th_taoist }
+			OR = {
+				4987 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				MYO = {
+					alliance_with = ROOT	
+					has_opinion = {
+						who = ROOT
+						value = 175
+					}
+				}
+			}
+		}
+		add_mandate = -100
+		add_years_of_income = -3
+		add_meritocracy = -100
+		change_religion = th_buddhist
+		add_harmonized_religion = zoroastrian
+		add_harmonized_religion = jewish
+		add_harmonized_religion = buddhism
+		add_harmonized_religion = shamanism
+		add_harmonized_religion = hinduism
+		add_harmonized_religion = th_hakureishinto
+		add_harmonized_religion = th_taoist
+		add_harmonized_religion = th_moriyashinto
+		add_harmonized_religion = th_oldhakurei
+		add_harmonized_religion = th_shinkism
+		add_harmonized_religion = th_scientistic
+		add_harmonized_religion = th_occultism
+		add_harmonized_religion = lunarian_religion_g
+		add_harmonized_religion = christian
+		add_harmonized_religion = th_scarlet_christians
+		add_harmonized_religion = th_alukhuat
+		add_harmonized_religion = th_kagiyama
+		hidden_effect = {
+			every_owned_province = {
+				change_religion = ROOT
+			}			
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.56.f
+		highlight = yes
+		trigger = {
+			religion = th_taoist
+		}
+		change_religion = th_taoist
+		add_country_modifier = {
+			name = THE_hng_mission_modifier143
+			duration = -1
+		}
+		hidden_effect = {
+			every_owned_province = {
+				change_religion = ROOT
+			}			
+		}		
+	}
+}
+
+#大红的独立
+country_event = {
+	id = flavor_THE_HNG_mission_events.57
+	title = "flavor_THE_HNG_mission_events.57.t"
+	desc = "flavor_THE_HNG_mission_events.57.desc"
+	picture = RESORT_PARADISE_eventPicture
+	fire_only_once = yes
+	
+	major = yes
+	major_trigger = {
+		capital_scope = {
+			OR = {
+				continent = asia
+				continent = gensokyo_continent
+				continent = moon_continent
+			}
+		}
+	}
+	
+	trigger = {
+		is_emperor_of_china = yes
+		war_with = HNG
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.57.a
+		add_mandate = -50
+		remove_country_modifier = THE_hng_mission_modifier39
+		667 = {
+			if = {
+				limit = {
+					controlled_by = ROOT
+				}
+				add_permanent_province_modifier = {
+					name = THE_hng_mission_modifier108
+					duration = 7300
+				}
+			}	
+		}
+		669 = {
+			if = {
+				limit = {
+					controlled_by = ROOT
+				}
+				add_permanent_province_modifier = {
+					name = THE_hng_mission_modifier108
+					duration = 7300
+				}
+			}	
+		}
+		1821 = {
+			if = {
+				limit = {
+					controlled_by = ROOT
+				}
+				add_permanent_province_modifier = {
+					name = THE_hng_mission_modifier108
+					duration = 7300
+				}
+			}	
+		}
+		682 = {
+			if = {
+				limit = {
+					controlled_by = ROOT
+				}
+				add_permanent_province_modifier = {
+					name = THE_hng_mission_modifier108
+					duration = 7300
+				}
+			}	
+		}
+		667 = {
+			if = {
+				limit = {
+					controlled_by = ROOT
+				}
+				add_permanent_province_modifier = {
+					name = THE_hng_mission_modifier108
+					duration = 7300
+				}
+			}	
+		}
+		671 = {
+			if = {
+				limit = {
+					controlled_by = ROOT
+				}
+				add_permanent_province_modifier = {
+					name = THE_hng_mission_modifier108
+					duration = 7300
+				}
+			}	
+		}
+		700 = {
+			if = {
+				limit = {
+					controlled_by = ROOT
+				}
+				add_permanent_province_modifier = {
+					name = THE_hng_mission_modifier108
+					duration = 7300
+				}
+			}	
+		}
+		1836 = {
+			if = {
+				limit = {
+					controlled_by = ROOT
+				}
+				add_permanent_province_modifier = {
+					name = THE_hng_mission_modifier108
+					duration = 7300
+				}
+			}	
+		}
+		2140 = {
+			if = {
+				limit = {
+					controlled_by = ROOT
+				}
+				add_permanent_province_modifier = {
+					name = THE_hng_mission_modifier108
+					duration = 7300
+				}
+			}	
+		}
+		679 = {
+			if = {
+				limit = {
+					controlled_by = ROOT
+				}
+				add_permanent_province_modifier = {
+					name = THE_hng_mission_modifier108
+					duration = 7300
+				}
+			}	
+		}
+		1816 = {
+			if = {
+				limit = {
+					controlled_by = ROOT
+				}
+				add_permanent_province_modifier = {
+					name = THE_hng_mission_modifier108
+					duration = 7300
+				}
+			}	
+		}
+	}
+}
+
+#向天朝宣战
+country_event = {
+	id = flavor_THE_HNG_mission_events.58
+	title = "flavor_THE_HNG_mission_events.58.t"
+	desc = "flavor_THE_HNG_mission_events.58.desc"
+	picture = THE_HNG_mission1
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		war_with = event_target:EmperorOfChina 
+		NOT = { mission_completed = THE_HNG_1_3_32 }
+	}
+	immediate = {
+		hidden_effect = {
+			complete_mission = THE_HNG_1_3_32
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.58.a
+		set_country_flag = THE_HNG_country_flag_mission2
+		add_stability = 5
+		add_war_exhaustion = -5
+		swap_non_generic_missions = yes
+	}
+}
+
+#自动解锁任务事件
+country_event = {
+	id = flavor_THE_HNG_mission_events.59
+	title = "flavor_THE_HNG_mission_events.59.t"
+	desc = "flavor_THE_HNG_mission_events.59.desc"
+	picture = THE_HNG_mission1
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = HNG
+			was_tag = HNG
+		}
+		NOT = { has_country_flag = flavor_THE_HNG_events59 }
+		OR = {
+			is_year = 1570
+			AND = {
+				is_year = 1547
+				army_professionalism = 1
+			}
+		}
+		is_emperor_of_china = yes
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.59.a
+		swap_non_generic_missions = yes
+		set_country_flag = flavor_THE_HNG_mission_events59
+	}
+}
+
+

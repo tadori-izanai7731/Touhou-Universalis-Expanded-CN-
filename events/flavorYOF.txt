@@ -1,0 +1,1294 @@
+########################################
+# Flavor Events for Youkai Forest
+########################################
+
+namespace = flavor_yof
+
+#Question of religious direction
+country_event = {
+	id = flavor_yof.1
+	title = flavor_yof.1.t
+	desc = flavor_yof.1.desc
+	picture = SHRINE_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		tag = YOF
+		any_owned_province = {
+			religion = th_moriyashinto 
+		} 
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = yof_religions_lose_with_change
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {	#Send the Shrine Maidens! I can't tolerate any heretics in my land!
+		name = flavor_yof.1.a
+		
+		every_heretic_province = {
+			add_province_modifier = { 
+				name = th_yof_banned_heretics
+				duration = 1825
+			}
+		}
+		reverse_add_opinion = {
+			who = HKR
+			modifier = th_follows_our_religion
+		}
+		add_adm_power = -50
+		
+		ai_chance = { 
+			factor = 50
+		}
+	}
+	
+	option = {	#I guess I can tolerate them for now
+		name = flavor_yof.1.b
+		
+		add_country_modifier = { 
+			name = th_heretical_tolerance
+			duration = 5475
+		}
+		
+		ai_chance = { 
+			factor = 40
+		}
+	}
+	
+	option = {	#The Aki Sisters went missing now for awhile... I guess we could change our religion
+		name = flavor_yof.1.c
+		th_ds_excuse_religion_swapping = yes
+		add_stability = -1
+		change_religion = th_moriyashinto
+		
+		add_country_modifier = { 
+			name = th_converted_to_moriya
+			duration = 5475
+		}
+		reverse_add_opinion = {
+			who = MRY
+			modifier = th_follows_our_religion
+		}
+		
+		ai_chance = { 
+			factor = 10
+		}
+	}
+}
+##森林雏祭
+country_event = {
+	id = flavor_yof.2
+	title = flavor_yof.2.t
+	desc = flavor_yof.2.desc
+	picture = YOUKAIMOUNTAIN_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = flavor_yof.2.a
+		highlight = yes
+		##妖怪的树海
+		trigger = {
+			5187 = {
+				owned_by = ROOT
+			}
+		}
+		set_country_flag = yof_matsutri_youkari_forest_complete
+		Great_youkai_forest = {
+			if = {
+				limit = { owned_by = ROOT }
+				add_province_modifier = {
+					name = the_yof_hina_matsuri_province_buff
+					duration = 3650
+				}
+			}
+		}
+		Eastern_youkai_forest = {
+			if = {
+				limit = { owned_by = ROOT }
+				add_province_modifier = {
+					name = the_yof_hina_matsuri_province_buff
+					duration = 3650
+				}
+			}
+		}
+	}
+	option = {
+		name = flavor_yof.2.b
+		highlight = yes
+		##妖怪之山
+		trigger = {
+			4963 = {
+				owned_by = ROOT
+			}
+		}
+		set_country_flag = yof_matsutri_youkari_mountain_complete
+		Youkai_Mountains = {
+			if = {
+				limit = { owned_by = ROOT }
+				add_province_modifier = {
+					name = the_yof_hina_matsuri_province_buff
+					duration = 3650
+				}
+			}
+		}
+		Southern_youkai_mountains = {
+			if = {
+				limit = { owned_by = ROOT }
+				add_province_modifier = {
+					name = the_yof_hina_matsuri_province_buff
+					duration = 3650
+				}
+			}
+		}
+	}
+	option = {
+		name = flavor_yof.2.c
+		highlight = yes
+		##守矢神社
+		trigger = {
+			4998 = {
+				owned_by = ROOT
+			}
+		}
+		set_country_flag = yof_matsutri_moriya_state_complete
+		Moriya_coast_state = {
+			if = {
+				limit = { owned_by = ROOT }
+				add_province_modifier = {
+					name = the_yof_hina_matsuri_province_buff
+					duration = 3650
+				}
+			}
+		}
+		Moriya_state = {
+			if = {
+				limit = { owned_by = ROOT }
+				add_province_modifier = {
+					name = the_yof_hina_matsuri_province_buff
+					duration = 3650
+				}
+			}
+		}
+	}
+	option = {
+		name = flavor_yof.2.d
+		highlight = yes
+		##博丽神社
+		trigger = {
+			4955 = {
+				owned_by = ROOT
+			}
+		}
+		set_country_flag = yof_matsutri_hakurei_state_complete
+		Hakurei_state = {
+			if = {
+				limit = { owned_by = ROOT }
+				add_province_modifier = {
+					name = the_yof_hina_matsuri_province_buff
+					duration = 3650
+				}
+			}
+		}
+		Hakurei_peninsula_state = {
+			if = {
+				limit = { owned_by = ROOT }
+				add_province_modifier = {
+					name = the_yof_hina_matsuri_province_buff
+					duration = 3650
+				}
+			}
+		}
+	}
+	option = {
+		name = flavor_yof.2.e
+	}
+}
+
+###泛滥主
+country_event = {
+	id = flavor_yof.3
+	title = flavor_yof.3.t
+	desc = flavor_yof.3.desc
+	picture = YOUKAIMOUNTAIN_eventPicture
+	mean_time_to_happen = {
+		months = 640
+		modifier = {
+			factor = 0.6
+			has_government_power = {
+				mechanic_type = yokari_forest_mechanic
+				power_type = yokari_forest_doom_power
+				value = 20
+			}
+		}
+		modifier = {
+			factor = 0.6
+			has_government_power = {
+				mechanic_type = yokari_forest_mechanic
+				power_type = yokari_forest_doom_power
+				value = 40
+			}
+		}
+		modifier = {
+			factor = 0.6
+			has_government_power = {
+				mechanic_type = yokari_forest_mechanic
+				power_type = yokari_forest_doom_power
+				value = 60
+			}
+		}
+		modifier = {
+			factor = 0.6
+			has_government_power = {
+				mechanic_type = yokari_forest_mechanic
+				power_type = yokari_forest_doom_power
+				value = 80
+			}
+		}
+		modifier = {
+			factor = 0.4
+			has_government_power = {
+				mechanic_type = yokari_forest_mechanic
+				power_type = yokari_forest_doom_power
+				value = 100
+			}
+		}
+		modifier = {
+			factor = 0.4
+			has_government_power = {
+				mechanic_type = yokari_forest_mechanic
+				power_type = yokari_forest_doom_power
+				value = 150
+			}
+		}
+		modifier = {
+			factor = 0.4
+			has_government_power = {
+				mechanic_type = yokari_forest_mechanic
+				power_type = yokari_forest_doom_power
+				value = 200
+			}
+		}
+	}
+	trigger = {
+		has_government_mechanic = yokari_forest_mechanic
+		OR = {
+			tag = YOF
+			was_tag = YOF
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			change_variable = {
+				which = yof_dirt_river_flowed
+				value = 1
+			}
+			if = {
+				limit = { 
+					has_government_power = {
+						mechanic_type = yokari_forest_mechanic
+						power_type = yokari_forest_doom_power
+						value = 0
+					}
+					NOT = {
+						has_government_power = {
+							mechanic_type = yokari_forest_mechanic
+							power_type = yokari_forest_doom_power
+							value = 100
+						}
+					}
+				}
+				random_country = {
+					limit = {
+						ai = yes
+						NOT = {
+							has_country_modifier = yof_doom_river_flowed_neighbourhood_buff
+						}
+						is_neighbor_of = ROOT
+					}
+					country_event = {
+						id = flavor_yof.4
+					}
+				}
+				
+			}
+			else_if = {
+				limit = { 
+					has_government_power = {
+						mechanic_type = yokari_forest_mechanic
+						power_type = yokari_forest_doom_power
+						value = 100
+					}
+					NOT = {
+						has_government_power = {
+							mechanic_type = yokari_forest_mechanic
+							power_type = yokari_forest_doom_power
+							value = 150
+						}
+					}
+				}
+				for = {
+					amount = 2
+					effect = "
+						random_country = {
+							limit = {
+								ai = yes
+								NOT = {
+									has_country_modifier = yof_doom_river_flowed_neighbourhood_buff
+								}
+								is_neighbor_of = ROOT
+							}
+							country_event = {
+								id = flavor_yof.4
+							}
+						}
+					"
+				}
+			}
+			else_if = {
+				limit = { 
+					has_government_power = {
+						mechanic_type = yokari_forest_mechanic
+						power_type = yokari_forest_doom_power
+						value = 150
+					}
+				}
+				for = {
+					amount = 3
+					effect = "
+					random_country = {
+						limit = {
+							ai = yes
+							NOT = {
+								has_country_modifier = yof_doom_river_flowed_neighbourhood_buff
+							}
+							is_neighbor_of = ROOT
+						}
+						country_event = {
+							id = flavor_yof.4
+						}
+					}
+					"
+				}
+			}
+		}
+
+	}
+	option = {
+		name = flavor_yof.3.a
+		# custom_tooltip = yof_t
+		add_government_power = {
+			mechanic_type = yokari_forest_mechanic
+			power_type = yokari_forest_doom_power
+			value = -50
+		}
+		if = {
+			limit = { 
+				NOT = {
+					has_country_flag = yof_not_river_flowed_own_either_flag
+				}
+			}
+			add_country_modifier = {
+				name = yof_dirt_river_flowed_upon_own_buff
+				duration = 3650
+			}
+		}
+		if = {
+			limit = { 
+				NOT = {
+					check_variable = {
+						which = yof_dirt_river_flowed
+						value = 9
+					}
+				}
+			}
+			custom_tooltip = THE_YOF_decrease_yof_doom_saved_trigger_tt
+		}
+	}
+}
+###泛滥次
+country_event = {
+	id = flavor_yof.4
+	title = flavor_yof.4.t
+	desc = flavor_yof.4.desc
+	picture = YOUKAIMOUNTAIN_eventPicture
+	is_triggered_only = yes
+	major = yes
+	major_trigger = {
+		OR = {
+			tag = YOF
+			was_tag = YOF
+		}
+	}
+	option = {
+		name = flavor_yof.4.a
+		# custom_tooltip = yof_t
+		add_country_modifier = {
+			name = yof_doom_river_flowed_neighbourhood_buff
+			duration = 3650
+		}
+	}
+}
+###河川中的雏
+country_event = {
+	id = flavor_yof.5
+	title = flavor_yof.5.t
+	desc = flavor_yof.5.desc
+	picture = yof_events_3
+	trigger = {
+		tag = YOF
+	}
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 2
+		}
+		modifier = {
+			factor = 0.9
+			war_exhaustion = 4
+		}
+		modifier = {
+			factor = 0.8
+			war_exhaustion = 6
+		}
+		modifier = {
+			factor = 0.8
+			war_exhaustion = 8
+		}
+		modifier = {
+			factor = 0.8
+			war_exhaustion = 12
+		}
+		modifier = {
+			factor = 0.6
+			war_exhaustion = 16
+		}
+		modifier = {
+			factor = 0.2
+			war_exhaustion = 20
+		}
+		modifier = {
+			factor = 0.8
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 0.9
+			is_neighbor_of = TGU
+		}
+	}
+	option = {
+		name = flavor_yof.5.a
+		add_war_exhaustion = -2
+		if = {
+			limit = { 
+				war_exhaustion = 0
+				not = {
+					war_exhaustion = 2
+				}
+			}
+			add_government_power = {
+				mechanic_type = yokari_forest_mechanic
+				power_type = yokari_forest_doom_power
+				value = 10
+			}
+		}
+		else_if = {
+			limit = { 
+				war_exhaustion = 2
+				not = {
+					war_exhaustion = 4
+				}
+			}
+			add_government_power = {
+				mechanic_type = yokari_forest_mechanic
+				power_type = yokari_forest_doom_power
+				value = 15
+			}
+		}
+		else_if = {
+			limit = { 
+				war_exhaustion = 4
+				not = {
+					war_exhaustion = 8
+				}
+			}
+			add_government_power = {
+				mechanic_type = yokari_forest_mechanic
+				power_type = yokari_forest_doom_power
+				value = 20
+			}
+		}
+		else_if = {
+			limit = { 
+				war_exhaustion = 8
+				not = {
+					war_exhaustion = 12
+				}
+			}
+			add_government_power = {
+				mechanic_type = yokari_forest_mechanic
+				power_type = yokari_forest_doom_power
+				value = 30
+			}
+		}
+		else_if = {
+			limit = { 
+				war_exhaustion = 12
+				not = {
+					war_exhaustion = 16
+				}
+			}
+			add_government_power = {
+				mechanic_type = yokari_forest_mechanic
+				power_type = yokari_forest_doom_power
+				value = 40
+			}
+		}
+		else_if = {
+			limit = { 
+				war_exhaustion = 16
+				not = {
+					war_exhaustion = 20
+				}
+			}
+			add_government_power = {
+				mechanic_type = yokari_forest_mechanic
+				power_type = yokari_forest_doom_power
+				value = 50
+			}
+		}
+	}
+}
+##交予诸神的厄运
+country_event = {
+	id = flavor_yof.6
+	title = flavor_yof.6.t
+	desc = flavor_yof.6.desc
+	picture = SHRINE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = flavor_yof.6.a
+		##疫
+		trigger = {
+			not = {
+				has_country_modifier = yof_epidemic_buff
+			}
+		}
+		add_yearly_manpower = 0.5
+		add_country_modifier = {
+			name = yof_epidemic_buff
+			duration = 3650
+		}
+		if = {
+			limit = { 
+				tag = YOF
+			}
+			add_government_power = {
+				mechanic_type = yokari_forest_mechanic
+				power_type = yokari_forest_doom_power
+				value = -50
+			}
+		}
+		else_if = {
+			limit = { 
+				NOT = {
+					tag = YOF
+				}
+				religion = th_kagiyama
+			}
+			add_church_power = -50
+			random_country = {
+				limit = {
+					has_government_mechanic = yokari_forest_mechanic
+				}
+				add_government_power = {
+					mechanic_type = yokari_forest_mechanic
+					power_type = yokari_forest_doom_power
+					value = 10
+				}
+			}
+		}
+		if = {
+			limit = {
+				not = {
+					check_variable = {
+						which = yof_chruch_1_num
+						value = 10
+					}
+				}
+			}
+			hidden_effect = {
+				change_variable = {
+					which = yof_chruch_1_num
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = { 
+				check_variable = {
+					which = yof_chruch_1_num
+					value = 10
+				}
+			}
+			set_country_flag = yof_chruch_1_level_up_flag
+		}
+		hidden_effect = {
+			change_variable = {
+				which = yof_distribute_kami_num
+				value = 50
+			}
+		}
+	}
+	option = {
+		name = flavor_yof.6.b
+		##祸
+		trigger = {
+			not = {
+				has_country_modifier = yof_calamity_buff
+			}
+		}
+		add_yearly_sailors = 0.5
+		add_country_modifier = {
+			name = yof_calamity_buff
+			duration = 7300
+		}
+		if = {
+			limit = { 
+				tag = YOF
+			}
+			add_government_power = {
+				mechanic_type = yokari_forest_mechanic
+				power_type = yokari_forest_doom_power
+				value = -50
+			}
+		}
+		else_if = {
+			limit = { 
+				NOT = {
+					tag = YOF
+				}
+				religion = th_kagiyama
+			}
+			add_church_power = -50
+			random_country = {
+				limit = {
+					has_government_mechanic = yokari_forest_mechanic
+				}
+				add_government_power = {
+					mechanic_type = yokari_forest_mechanic
+					power_type = yokari_forest_doom_power
+					value = 10
+				}
+			}
+		}
+		if = {
+			limit = {
+				not = {
+					check_variable = {
+						which = yof_chruch_2_num
+						value = 10
+					}
+				}
+			}
+			hidden_effect = {
+				change_variable = {
+					which = yof_chruch_2_num
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = { 
+				check_variable = {
+					which = yof_chruch_2_num
+					value = 10
+				}
+			}
+			set_country_flag = yof_chruch_2_level_up_flag
+		}
+		hidden_effect = {
+			change_variable = {
+				which = yof_distribute_kami_num
+				value = 50
+			}
+		}
+	}
+	option = {
+		name = flavor_yof.6.c
+		##疵
+		trigger = {
+			not = {
+				has_country_modifier = yof_flaw_buff
+			}
+		}
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_country_modifier = {
+			name = yof_flaw_buff
+			duration = 3650
+		}
+		if = {
+			limit = { 
+				tag = YOF
+			}
+			add_government_power = {
+				mechanic_type = yokari_forest_mechanic
+				power_type = yokari_forest_doom_power
+				value = -50
+			}
+		}
+		else_if = {
+			limit = { 
+				NOT = {
+					tag = YOF
+				}
+				religion = th_kagiyama
+			}
+			add_church_power = -50
+			random_country = {
+				limit = {
+					has_government_mechanic = yokari_forest_mechanic
+				}
+				add_government_power = {
+					mechanic_type = yokari_forest_mechanic
+					power_type = yokari_forest_doom_power
+					value = 10
+				}
+			}
+		}
+		if = {
+			limit = {
+				not = {
+					check_variable = {
+						which = yof_chruch_3_num
+						value = 10
+					}
+				}
+			}
+			hidden_effect = {
+				change_variable = {
+					which = yof_chruch_3_num
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = { 
+				check_variable = {
+					which = yof_chruch_3_num
+					value = 10
+				}
+			}
+			set_country_flag = yof_chruch_3_level_up_flag
+		}
+		hidden_effect = {
+			change_variable = {
+				which = yof_distribute_kami_num
+				value = 50
+			}
+		}
+	}
+	option = {
+		name = flavor_yof.6.d
+		##痕
+		trigger = {
+			not = {
+				has_country_modifier = yof_scar_buff
+			}
+		}
+		add_country_modifier = {
+			name = yof_scar_buff
+			duration = 3650
+		}
+		if = {
+			limit = { 
+				tag = YOF
+			}
+			add_government_power = {
+				mechanic_type = yokari_forest_mechanic
+				power_type = yokari_forest_doom_power
+				value = -50
+			}
+		}
+		else_if = {
+			limit = { 
+				NOT = {
+					tag = YOF
+				}
+				religion = th_kagiyama
+			}
+			add_church_power = -50
+			random_country = {
+				limit = {
+					has_government_mechanic = yokari_forest_mechanic
+				}
+				add_government_power = {
+					mechanic_type = yokari_forest_mechanic
+					power_type = yokari_forest_doom_power
+					value = 10
+				}
+			}
+		}
+		if = {
+			limit = {
+				not = {
+					check_variable = {
+						which = yof_chruch_4_num
+						value = 10
+					}
+				}
+			}
+			hidden_effect = {
+				change_variable = {
+					which = yof_chruch_4_num
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = { 
+				check_variable = {
+					which = yof_chruch_4_num
+					value = 10
+				}
+			}
+			set_country_flag = yof_chruch_4_level_up_flag
+		}
+		hidden_effect = {
+			change_variable = {
+				which = yof_distribute_kami_num
+				value = 50
+			}
+		}
+	}
+	option = {
+		name = flavor_yof.6.e
+		##伤
+		trigger = {
+			not = {
+				has_country_modifier = yof_injury_buff
+			}
+		}
+		random_province = {
+			limit = {
+				owned_by = ROOT
+				not = {
+					development = 30
+				}
+			}
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+		add_country_modifier = {
+			name = yof_injury_buff
+			duration = 3650
+		}
+		if = {
+			limit = { 
+				tag = YOF
+			}
+			add_government_power = {
+				mechanic_type = yokari_forest_mechanic
+				power_type = yokari_forest_doom_power
+				value = -50
+			}
+		}
+		else_if = {
+			limit = { 
+				NOT = {
+					tag = YOF
+				}
+				religion = th_kagiyama
+			}
+			add_church_power = -50
+			random_country = {
+				limit = {
+					has_government_mechanic = yokari_forest_mechanic
+				}
+				add_government_power = {
+					mechanic_type = yokari_forest_mechanic
+					power_type = yokari_forest_doom_power
+					value = 10
+				}
+			}
+		}
+		if = {
+			limit = {
+				not = {
+					check_variable = {
+						which = yof_chruch_5_num
+						value = 10
+					}
+				}
+			}
+			hidden_effect = {
+				change_variable = {
+					which = yof_chruch_5_num
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = { 
+				check_variable = {
+					which = yof_chruch_5_num
+					value = 10
+				}
+			}
+			set_country_flag = yof_chruch_5_level_up_flag
+		}
+		hidden_effect = {
+			change_variable = {
+				which = yof_distribute_kami_num
+				value = 50
+			}
+		}
+	}
+	option = {
+		name = flavor_yof.6.f
+		##灾
+		trigger = {
+			not = {
+				has_country_modifier = yof_disaster_buff
+			}
+		}
+		add_country_modifier = {
+			name = yof_disaster_buff
+			duration = 7300
+		}
+		if = {
+			limit = { 
+				tag = YOF
+			}
+			add_government_power = {
+				mechanic_type = yokari_forest_mechanic
+				power_type = yokari_forest_doom_power
+				value = -50
+			}
+		}
+		else_if = {
+			limit = { 
+				NOT = {
+					tag = YOF
+				}
+				religion = th_kagiyama
+			}
+			add_church_power = -50
+			random_country = {
+				limit = {
+					has_government_mechanic = yokari_forest_mechanic
+				}
+				add_government_power = {
+					mechanic_type = yokari_forest_mechanic
+					power_type = yokari_forest_doom_power
+					value = 10
+				}
+			}
+		}
+		if = {
+			limit = {
+				not = {
+					check_variable = {
+						which = yof_chruch_6_num
+						value = 10
+					}
+				}
+			}
+			hidden_effect = {
+				change_variable = {
+					which = yof_chruch_6_num
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = { 
+				check_variable = {
+					which = yof_chruch_6_num
+					value = 10
+				}
+			}
+			set_country_flag = yof_chruch_6_level_up_flag
+		}
+		hidden_effect = {
+			change_variable = {
+				which = yof_distribute_kami_num
+				value = 50
+			}
+		}
+	}
+	option = {
+		name = flavor_yof.6.g
+		##厉
+		trigger = {
+			not = {
+				has_country_modifier = yof_severe_buff
+			}
+		}
+		add_country_modifier = {
+			name = yof_severe_buff
+			duration = 3650
+		}
+		if = {
+			limit = { 
+				tag = YOF
+			}
+			add_government_power = {
+				mechanic_type = yokari_forest_mechanic
+				power_type = yokari_forest_doom_power
+				value = -50
+			}
+		}
+		else_if = {
+			limit = { 
+				NOT = {
+					tag = YOF
+				}
+				religion = th_kagiyama
+			}
+			add_church_power = -50
+			random_country = {
+				limit = {
+					has_government_mechanic = yokari_forest_mechanic
+				}
+				add_government_power = {
+					mechanic_type = yokari_forest_mechanic
+					power_type = yokari_forest_doom_power
+					value = 10
+				}
+			}
+		}
+		if = {
+			limit = {
+				not = {
+					check_variable = {
+						which = yof_chruch_7_num
+						value = 10
+					}
+				}
+			}
+			hidden_effect = {
+				change_variable = {
+					which = yof_chruch_7_num
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = { 
+				check_variable = {
+					which = yof_chruch_7_num
+					value = 10
+				}
+			}
+			set_country_flag = yof_chruch_7_level_up_flag
+		}
+		hidden_effect = {
+			change_variable = {
+				which = yof_distribute_kami_num
+				value = 50
+			}
+		}
+	}
+	option = {
+		name = flavor_yof.6.h
+	}
+}
+##秋姐妹愿意附庸#########
+country_event = {
+	id = flavor_yof.7
+	title = flavor_yof.7.t
+	desc = flavor_yof.7.desc
+	picture = SHRINE_eventPicture
+	fire_only_once = yes
+	hidden = yes
+	trigger = {
+		has_country_flag = yof_aki_subject_temporaliy_flag
+		alliance_with = AKI
+	}
+	mean_time_to_happen = {
+		months = 36
+	}
+	option = {
+		name = flavor_yof.7.a
+		ROOT = {
+			vassalize = AKI
+		}
+	}
+}
+##河童试验开发
+country_event = {
+	id = flavor_yof.8
+	title = flavor_yof.8.t
+	desc = flavor_yof.8.desc
+	picture = NITORI_GADGET_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		name = flavor_yof.8.a
+		custom_tooltip = yof_tooltip_flavor_1t
+		set_country_flag = yof_hina_with_nitori_start_flag
+		hidden_effect = {
+			set_variable = {
+				which = yof_nitori_exploitation_doom_barrier_num
+				value = 0
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			country_event = {
+				id = flavor_yof.11
+				days = 7300
+			}
+		}
+	}
+}
+##博丽改信
+country_event = {
+	id = flavor_yof.9
+	title = flavor_yof.9.t
+	desc = flavor_yof.9.desc
+	picture = MOUNTAINOFFAITH_eventPicture
+	is_triggered_only = yes
+	major = yes
+	trigger = {
+	}
+	option = {
+		name = flavor_yof.9.a
+		change_religion = th_kagiyama
+		add_stability = -1
+		add_country_modifier = {
+			name = yof_change_kagiyama_buff
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 1.5
+				from = {
+					has_opinion = {
+					who = root
+					value = 0
+				}
+				}
+			}
+			modifier = {
+				factor = 2
+				from = {
+					has_opinion = {
+					who = root
+					value = 50
+				}
+				}
+			}
+			modifier = {
+				factor = 0.8
+				not = {
+					stability = 0
+				}
+			}
+		}
+	}
+	option = {
+		name = flavor_yof.9.b
+		add_stability = 1
+		add_adm_power = 50
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+##荷取开发进度
+country_event = {
+	id = flavor_yof.10
+	title = flavor_yof.10.t
+	desc = flavor_yof.10.desc
+	picture = NITORIBOSS_eventPicture
+	mean_time_to_happen = {
+		months = 24
+	}
+	trigger = {
+		has_country_flag = yof_hina_with_nitori_start_flag
+	}
+	option = {
+		name = flavor_yof.10.a
+		highlight = yes
+		add_adm_power = -20
+		add_dip_power = -20
+		add_mil_power = -20
+		change_variable = {
+			which = yof_nitori_exploitation_doom_barrier_num
+			value = 1
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = yof_nitori_exploitation_doom_barrier_num
+					value = 10
+				}
+			}
+			country_event = {
+				id = flavor_yof.12
+			}
+		}
+	}
+}
+##开发失败
+country_event = {
+	id = flavor_yof.11
+	title = flavor_yof.11.t
+	desc = flavor_yof.11.desc
+	picture = yof_events_1
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			check_variable = {
+				which = yof_nitori_exploitation_doom_barrier_num
+				value = 10
+			}
+		}
+		has_country_flag = yof_hina_with_nitori_start_flag
+		NOT = { has_country_flag = yof_hina_with_nitori_fall_flag }
+		NOT = { has_country_flag = yof_hina_with_nitori_completed_flag }
+	}
+	option = {
+		name = flavor_yof.11.a
+		clr_country_flag = yof_hina_with_nitori_start_flag
+		set_country_flag = yof_hina_with_nitori_fall_flag
+	}
+}
+##开发成功
+country_event = {
+	id = flavor_yof.12
+	title = flavor_yof.12.t
+	desc = flavor_yof.12.desc
+	picture = yof_events_1
+	is_triggered_only = yes
+	option = {
+		name = flavor_yof.12.a
+		clr_country_flag = yof_hina_with_nitori_start_flag
+		set_country_flag = yof_hina_with_nitori_completed_flag
+		set_country_flag = doom_power_yof_never_come_publishment_allow
+		add_country_modifier = {
+			name = yof_nitori_buff
+			duration = -1
+		}
+		add_adm_power = 300
+		add_dip_power = 300
+		add_mil_power = 300
+	}
+}

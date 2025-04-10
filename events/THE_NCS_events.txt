@@ -1,0 +1,421 @@
+namespace = THE_NCS_events
+#向天空沉没
+country_event = {
+	id = THE_NCS_events.1
+	title = THE_NCS_events.1.title
+	desc = THE_NCS_events.1.desc
+	picture = GFX_text_THE_NCS_event_1_icon
+	fire_only_once = yes
+	trigger = {
+		tag = NCS
+	}
+	option = {
+		name = THE_NCS_events.1.a
+		if = {
+			limit = {
+				ai = no
+			}
+			add_country_modifier = {
+				name = THE_NCS_sky_castle_modifier
+				duration = -1
+			}
+			hidden_effect = {
+				add_country_modifier = {
+					name = THE_NCS_magic_full_modifier
+					duration = -1
+				}
+			}
+		}
+		custom_tooltip = THE_NCS_events_3_tt
+		add_stability = 1
+	}
+}
+
+#见风使舵
+country_event = {
+	id = THE_NCS_events.2
+	title = THE_NCS_events.2.title
+	desc = THE_NCS_events.2.desc
+	picture = GFX_text_THE_NCS_event_2_icon
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	}
+	option = {
+		name = THE_NCS_events.2.a
+		ai_chance = {
+			factor = 5
+		}
+		add_country_modifier = {
+			name = THE_NCS_hakurei_modifier
+			duration = 7300
+		}
+	}
+	option = {
+		name = THE_NCS_events.2.b
+		ai_chance = {
+			factor = 5
+		}
+		change_religion = th_moriyashinto
+		every_owned_province = {
+			if = {
+				limit = {
+					NOT = {
+						religion = th_moriyashinto
+					}
+				}
+				add_province_modifier = {
+					name = THE_NCS_kazehouri_province_modifier
+					duration = 1800
+				}
+			}
+		}
+		country_event = {
+			id = THE_NCS_events.3
+		}
+	}
+}
+
+#山上新来的神明
+country_event = {
+	id = THE_NCS_events.3
+	title = THE_NCS_events.3.title
+	desc = THE_NCS_events.3.desc
+	picture = GFX_text_THE_NCS_event_3_icon
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	}
+	option = {
+		name = THE_NCS_events.3.a
+		ai_chance = {
+			factor = 5
+		}
+		MRY = {
+			country_event = {
+				id = THE_NCS_events.4
+			}
+		}
+	}
+	option = {
+		name = THE_NCS_events.3.b
+		create_alliance = MRY
+	}
+}
+
+#小人族的提议
+country_event = {
+	id = THE_NCS_events.4
+	title = THE_NCS_events.4.title
+	desc = THE_NCS_events.4.desc
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	}
+	option = {
+		name = THE_NCS_events.4.a
+		ai_chance = {
+			factor = 9
+		}
+		create_subject = {
+			subject_type = th_special_march
+			subject = NCS
+		}
+		NCS = {
+			add_stability = 1
+			add_country_modifier = {
+				name = THE_NCS_temporary_patience_modifier
+				duration = -1
+			}
+		}
+	}
+	option = {
+		name = THE_NCS_events.4.b
+		ai_chance = {
+			factor = 1
+		}
+		create_alliance = FROM
+	}
+}
+
+#天邪鬼之手
+country_event = {
+	id = THE_NCS_events.5
+	title = THE_NCS_events.5.title
+	desc = THE_NCS_events.5.desc
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = THE_NCS_events.5.a
+		ai_chance = {
+			factor = 70
+		}
+		add_country_modifier = {
+			name = THE_NCS_amanojaku_alliance_modifier
+			duration = -1
+		}
+	}
+	option = {
+		name = THE_NCS_events.5.b
+		ai_chance = {
+			factor = 30
+		}
+		NCS = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = KKO
+					}
+				}
+				add_country_modifier = {
+					name = THE_NCS_protect_kko_modifier
+					duration = -1
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = THE_NCS_protect_rai_sek_modifier
+					duration = -1
+				}
+			}
+			create_march = root
+		}
+	}
+}
+
+#爱乐者联盟集结
+country_event = {
+	id = THE_NCS_events.6
+	title = THE_NCS_events.6.title
+	desc = THE_NCS_events.6.desc
+	picture = GFX_text_THE_NCS_event_6_icon
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	}
+	option = {
+		name = THE_NCS_events.6.a
+		add_years_of_income = 2.5
+		add_yearly_manpower = 1
+		add_power_projection = {
+			type = THE_NCS_music_lover_pp
+			amount = 25
+		}
+		RAI = {
+			add_years_of_income = 2.5
+			add_yearly_manpower = 1
+		}
+		SEK = {
+			add_years_of_income = 2.5
+			add_yearly_manpower = 1
+		}
+		KKO = {
+			add_years_of_income = 2.5
+			add_yearly_manpower = 1
+		}
+	}
+}
+
+#正邪的小心思
+country_event = {
+	id = THE_NCS_events.7
+	title = THE_NCS_events.7.title
+	desc = THE_NCS_events.7.desc
+	picture = GFX_text_THE_NCS_event_7_icon
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	}
+	option = {
+		name = THE_NCS_events.7.a
+		5320 = {
+			owner = {
+				ROOT = {
+					declare_war_with_cb = {
+						who = PREV
+						casus_belli = cb_super_badboy
+					}
+					set_country_flag = THE_NCS_1600_flag
+				}
+			}
+		}
+	}
+}
+
+#归乡
+country_event = {
+	id = THE_NCS_events.8
+	title = THE_NCS_events.8.title
+	desc = THE_NCS_events.8.desc
+	picture = GFX_text_THE_NCS_event_8_icon
+	fire_only_once = yes
+	trigger = {
+		NOT = {
+			is_year = 1600
+		}
+		has_country_flag = THE_NCS_1600_flag
+		controls = 5320
+	}
+	option = {
+		name = THE_NCS_events.8.a
+		THE_NCS_define_kijin_seija_consort_scripted_effect = yes
+		hidden_effect = {
+			add_queen_personality = immortal_personality
+		}
+		th_enable_touhou_advisor = {
+			advisor = th_advisor_sagume
+		}
+		white_peace = LCU
+		clr_country_flag = THE_NCS_1600_flag
+	}
+}
+
+#望乡
+country_event = {
+	id = THE_NCS_events.9
+	title = THE_NCS_events.9.title
+	desc = THE_NCS_events.9.desc
+	picture = ETERNALNIGHT_eventPicture
+	fire_only_once = yes
+	trigger = {
+		is_year = 1600
+		is_in_war = {
+			attacker_leader = NCS
+			defender_leader = LCU
+		}
+		has_country_flag = THE_NCS_1600_flag
+		mission_completed = THE_NCS_4_1
+	}
+	option = {
+		name = THE_NCS_events.9.a
+		white_peace = LCU
+		add_country_modifier = {
+			name = THE_NCS_get_over_modifier
+			duration = -1
+			hidden = yes
+		}
+		clr_country_flag = THE_NCS_1600_flag
+	}
+}
+
+#小人族的休息
+country_event = {
+	id = THE_NCS_events.10
+	title = THE_NCS_events.10.title
+	desc = THE_NCS_events.10.desc
+	picture = GFX_text_THE_NCS_event_10_icon
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	}
+	option = {
+		name = THE_NCS_events.10.a
+		custom_tooltip = THE_NCS_end_event_tt
+	}
+}
+
+###########################隐藏事件
+#增加万宝槌次数
+country_event = {
+	id = THE_NCS_events.100
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		change_variable = {
+			which = the_ncs_uchidenokozuchi_var
+			value = 1
+		}
+	}
+	option = {
+		name = THE_NCS_events.100.a
+	}
+}
+
+#增加万宝槌次数（测试用）
+country_event = {
+	id = THE_NCS_events.10000
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		change_variable = {
+			which = the_ncs_uchidenokozuchi_var
+			value = 100
+		}
+	}
+	option = {
+		name = THE_NCS_events.100.a
+	}
+}
+
+#添加修正“魔力充裕”
+country_event = {
+	id = THE_NCS_events.101
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		remove_country_modifier = THE_NCS_magic_poor_modifier
+		add_country_modifier = {
+			name = THE_NCS_magic_full_modifier
+			duration = -1
+		}
+	}
+	option = {
+		name = THE_NCS_events.101.a
+	}
+}
+
+#集中发展度
+country_event = {
+	id = THE_NCS_events.102
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_province = {
+			if = {
+				limit = {
+					is_capital = no
+					is_state_core = ROOT
+					# has_owner_religion = yes
+				}
+				while = {
+					limit = {
+						base_tax = 2
+					}
+					add_base_tax = -1
+					ROOT = {
+						capital_scope = {
+							add_base_tax = 1
+						}
+					}
+				}
+				while = {
+					limit = {
+						base_production = 2
+					}
+					add_base_production = -1
+					ROOT = {
+						capital_scope = {
+							add_base_production = 1
+						}
+					}
+				}
+				while = {
+					limit = {
+						base_manpower = 2
+					}
+					add_base_manpower = -1
+					ROOT = {
+						capital_scope = {
+							add_base_manpower = 1
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = THE_NCS_events.102.a
+	}
+}

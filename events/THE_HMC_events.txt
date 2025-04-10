@@ -1,0 +1,329 @@
+namespace = THE_HMC_events
+#由on_startup触发
+country_event = {
+	id  = THE_HMC_events.1
+	title = THE_HMC_events.1.title
+	desc = THE_HMC_events.1.desc
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = HMC
+		NOT = { has_country_flag = THE_HMC_ramoant_rumor_flag }
+		NOT = { has_country_flag = THE_HMC_use_true_missions_flag }
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = THE_HMC_ramoant_rumor_flag
+		}
+	}
+
+	option = {
+		name = THE_HMC_events.1.a
+		custom_tooltip = THE_HMC_ramoant_rumor_tt
+	}
+}
+
+#由THE_HMC_human_capital_four_name_reform触发
+#Human capital election!
+country_event = {
+	id  = THE_HMC_events.2
+	title = THE_HMC_events.2.title
+	desc = THE_HMC_events.2.desc
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_government_attribute = THE_HMC_use_human_capital_election
+		# OR = {
+		# 	NOT = { has_country_flag = THE_HMC_election_timer_flag }
+		# 	had_country_flag = {
+		# 		flag = THE_HMC_election_timer_flag
+		# 		days = 1800
+		# 	}
+		# }
+	}
+
+	# immediate = {
+	# 	hidden_effect = {
+	# 		country_event = {
+	# 			id = THE_HMC_events.3
+	# 			days = 1825
+	# 		}
+	# 	}
+	# }
+
+	option = {
+		name = THE_HMC_events.2.a
+		if = {
+			limit = { THE_HMC_ruler_is_akyuu = yes }
+			add_scaled_republican_tradition = -10
+		}
+		THE_HMC_define_election_ruler_scripted_effect = { akyuu = yes }
+		if = {
+			limit = { has_country_flag = THE_HMC_akyuu_add_1_mil_flag }
+			change_mil = 1
+		}
+		if = {
+			limit = { has_country_flag = THE_HMC_akyuu_add_scholar_personality_flag }
+			add_ruler_personality = scholar_personality
+		}
+		if = {
+			limit = { has_country_flag = THE_HMC_akyuu_add_righteous_personality_flag }
+			add_ruler_personality = righteous_personality
+		}
+	}
+	option = {
+		name = THE_HMC_events.2.b
+		if = {
+			limit = { THE_HMC_ruler_is_kosuzu = yes }
+			add_scaled_republican_tradition = -10
+		}
+		THE_HMC_define_election_ruler_scripted_effect = { kosuzu = yes }
+		if = {
+			limit = { has_country_flag = THE_HMC_kosuzu_add_1_dip_flag }
+			change_dip = 1
+		}
+		if = {
+			limit = { has_country_flag = THE_HMC_kosuzu_add_1_mil_flag }
+			change_mil = 1
+		}
+		if = {
+			limit = { has_country_flag = THE_HMC_kosuzu_add_kind_hearted_personality_flag }
+			add_ruler_personality = kind_hearted_personality
+		}
+		if = {
+			limit = { has_country_flag = THE_HMC_kosuzu_add_free_thinker_personality_flag }
+			add_ruler_personality = free_thinker_personality
+		}
+	}
+	option = {
+		name = THE_HMC_events.2.c
+		if = {
+			limit = { THE_HMC_ruler_is_rinnosuke = yes }
+			add_scaled_republican_tradition = -10
+		}
+		THE_HMC_define_election_ruler_scripted_effect = { rinnosuke = yes }
+		if = {
+			limit = { has_country_flag = THE_HMC_rinnosuke_add_1_adm_flag }
+			change_adm = 1
+		}
+		if = {
+			limit = { has_country_flag = THE_HMC_rinnosuke_add_entrepreneur_personality_flag }
+			add_ruler_personality = entrepreneur_personality
+		}
+		if = {
+			limit = { has_country_flag = THE_HMC_rinnosuke_add_architectural_visionary_personality_flag }
+			add_ruler_personality = architectural_visionary_personality
+		}
+	}
+	option = {
+		name = THE_HMC_events.2.d
+		if = {
+			limit = { THE_HMC_ruler_is_keine = yes }
+			add_scaled_republican_tradition = -10
+		}
+		THE_HMC_define_election_ruler_scripted_effect = { keine = yes }
+		if = {
+			limit = { has_country_flag = THE_HMC_keine_add_1_dip_flag }
+			change_dip = 1
+		}
+		if = {
+			limit = { has_country_flag = THE_HMC_keine_add_well_connected_personality_flag }
+			add_ruler_personality = well_connected_personality
+		}
+		if = {
+			limit = { has_country_flag = THE_HMC_keine_add_industrious_personality_flag }
+			add_ruler_personality = industrious_personality
+		}
+	}
+}
+
+# #由THE_HMC_events.2触发
+# country_event = {
+# 	id  = THE_HMC_events.3
+# 	title = THE_HMC_events.3.title
+# 	desc = THE_HMC_events.3.desc
+# 	picture = DECLARATION_INDEPENDENCE_eventPicture
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		OR = {
+# 			NOT = { has_country_flag = THE_HMC_election_timer_flag }
+# 			had_country_flag = {
+# 				flag = THE_HMC_election_timer_flag
+# 				days = 1800
+# 			}
+# 		}
+# 	}
+# 	hidden = yes
+
+# 	immediate = {
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = THE_HMC_events.2
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = THE_HMC_events.3.a
+# 		hidden_effect = {
+# 			clr_country_flag = THE_HMC_election_timer_flag
+# 			set_country_flag = THE_HMC_election_timer_flag
+# 		}
+# 	}
+# }
+
+#由THE_HMC_fake_1_4触发
+country_event = {
+	id = THE_HMC_events.4
+	title = THE_HMC_events.4.title
+	desc = THE_HMC_events.4.desc
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = THE_HMC_events.4.a
+		every_country = {
+			limit = {
+				capital_scope = {
+					OR = {
+						superregion = gensokyo_superregion
+						superregion = gensokyo_orbit_superregion
+					}
+				}
+			}
+			add_stability = 3
+		}
+		custom_tooltip = THE_HMC_clear_ae_tt
+		hidden_effect = {
+			every_country = {
+				add_aggressive_expansion = {
+					who = ROOT
+					value = -1000
+					apply_calc = no
+				}
+			}
+		}
+		add_prestige_or_monarch_power = {
+			amount = 100
+		}
+		add_adm_power = 200
+		add_dip_power = 200
+		add_mil_power = 200
+		add_country_modifier = {
+			name = THE_HMC_witch_and_sage_modifier
+			duration = -1
+		}
+	}
+}
+
+#信赖的四人
+country_event = {
+	id = THE_HMC_events.5
+	title = THE_HMC_events.5.title
+	desc = THE_HMC_events.5.desc
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = THE_HMC_events.5.a
+	}
+}
+
+country_event = {
+	id = THE_HMC_events.6
+	title = NONE
+	desc = NONE
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+
+	option = {
+		name = NONE
+		remove_country_modifier = THE_HMC_establish_school_0_modifier
+		add_country_modifier = {
+			name = THE_HMC_establish_school_1_modifier
+			duration = 2160
+		}
+	}
+}
+
+country_event = {
+	id = THE_HMC_events.7
+	title = NONE
+	desc = NONE
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+
+	option = {
+		name = NONE
+		remove_country_modifier = THE_HMC_establish_school_1_modifier
+		add_country_modifier = {
+			name = THE_HMC_establish_school_2_modifier
+			duration = 2160
+		}
+	}
+}
+
+country_event = {
+	id = THE_HMC_events.8
+	title = NONE
+	desc = NONE
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+
+	option = {
+		name = NONE
+		remove_country_modifier = THE_HMC_establish_school_2_modifier
+		add_country_modifier = {
+			name = THE_HMC_establish_school_3_modifier
+			duration = 2160
+		}
+	}
+}
+
+country_event = {
+	id = THE_HMC_events.9
+	title = NONE
+	desc = NONE
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+
+	option = {
+		name = NONE
+		remove_country_modifier = THE_HMC_establish_school_3_modifier
+		add_country_modifier = {
+			name = THE_HMC_establish_school_4_modifier
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = THE_HMC_events.10
+	title = NONE
+	desc = NONE
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+
+	option = {
+		name = NONE
+		remove_country_modifier = THE_HMC_wondering_object_0_modifier
+		add_country_modifier = {
+			name = THE_HMC_wondering_object_1_modifier
+			duration = -1
+		}
+	}
+}

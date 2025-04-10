@@ -1,0 +1,3104 @@
+namespace = THE_ROD_events
+
+country_event = {
+	id = THE_ROD_events.0
+	title = THE_ROD_events.0.title
+	desc = THE_ROD_events.0.desc
+	picture = COMET_SIGHTED_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = THE_ROD_events.0.end
+		custom_tooltip = THE_ROD_end_event_tt
+	}
+}
+
+### Mission Events
+country_event = {
+	id = THE_ROD_events.1
+	title = THE_ROD_events.1.title
+	desc = THE_ROD_events.1.desc
+	picture = TRADEGOODS_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	goto = 12
+	
+	option = {
+		name = THE_ROD_events.1.a
+		custom_tooltip = THE_ROD_baltic_trade_event_tt
+		custom_tooltip = empty_line_tt
+		add_mercantilism = 10
+		12 = {
+			add_base_tax = 5
+			add_permanent_province_modifier = {
+				name = THE_ROD_euler_strait_tax_province_modifier
+				
+				duration = -1
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.1.b
+		custom_tooltip = THE_ROD_baltic_trade_event_tt
+		custom_tooltip = empty_line_tt
+		add_country_modifier = {
+			name = THE_ROD_free_sea_modifier
+			duration = -1
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+### Random Triggered Events
+country_event = {
+	id = THE_ROD_events.2
+	title = THE_ROD_events.2.title
+	desc = THE_ROD_events.2.desc
+	picture = CIVIL_WAR_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_country_flag = THE_ROD_rumia_ability_add_event_flag }
+	}
+	
+	immediate = {
+		set_country_flag = THE_ROD_rumia_ability_add_event_flag
+	}
+	
+	option = {
+		name = THE_ROD_events.2.a
+		trigger = {
+			NOT = { check_variable = { which = the_rumia_fire_var which = the_rumia_fire_max_var } }
+		}
+		custom_tooltip = THE_ROD_events_2_a_tt
+		hidden_effect = {
+			change_variable = { which = the_rumia_fire_var value = 1 }
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.2.b
+		trigger = {
+			NOT = { check_variable = { which = the_rumia_shock_var which = the_rumia_shock_max_var } }
+		}
+		custom_tooltip = THE_ROD_events_2_b_tt
+		hidden_effect = {
+			change_variable = { which = the_rumia_shock_var value = 1 }
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.2.c
+		trigger = {
+			NOT = { check_variable = { which = the_rumia_manuever_var which = the_rumia_manuever_max_var } }
+		}
+		custom_tooltip = THE_ROD_events_2_c_tt
+		hidden_effect = {
+			change_variable = { which = the_rumia_manuever_var value = 1 }
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.2.d
+		trigger = {
+			NOT = { check_variable = { which = the_rumia_siege_var which = the_rumia_siege_max_var } }
+		}
+		custom_tooltip = THE_ROD_events_2_d_tt
+		hidden_effect = {
+			change_variable = { which = the_rumia_siege_var value = 1 }
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.2.error
+		trigger = {
+			check_variable = { which = the_rumia_fire_var which = the_rumia_fire_max_var }
+			check_variable = { which = the_rumia_shock_var which = the_rumia_shock_max_var }
+			check_variable = { which = the_rumia_manuever_var which = the_rumia_manuever_max_var }
+			check_variable = { which = the_rumia_siege_var which = the_rumia_siege_max_var }
+		}
+		add_mil_power = 50
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	after = {
+		clr_country_flag = THE_ROD_rumia_ability_add_event_flag
+	}
+}
+
+
+country_event = {
+	id = THE_ROD_events.3
+	title = THE_ROD_events.3.title
+	desc = THE_ROD_events.3.desc
+	picture = HRE_eventPicture
+	is_triggered_only = yes
+
+	
+	option = {
+		name = THE_ROD_events.3.a
+		trigger = {
+			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = pommeranian }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = pommeranian }
+		THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = yes
+	}
+	option = {
+		name = THE_ROD_events.3.b
+		trigger = {
+			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = prussian }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = prussian }
+		THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = yes
+	}
+	option = {
+		name = THE_ROD_events.3.c
+		trigger = {
+			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = baltic_german }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = baltic_german }
+		THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = yes
+	}
+	option = {
+		name = THE_ROD_events.3.d
+		trigger = {
+			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = lower_saxon }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = lower_saxon }
+		THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = yes
+	}
+	option = {
+		name = THE_ROD_events.3.e
+		trigger = {
+			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = hannoverian }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = hannoverian }
+		THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = yes
+	}
+	option = {
+		name = THE_ROD_events.3.f
+		trigger = {
+			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = hessian }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = hessian }
+		THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = yes
+	}
+	option = {
+		name = THE_ROD_events.3.g
+		trigger = {
+			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = saxon }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = saxon }
+		THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = yes
+	}
+	option = {
+		name = THE_ROD_events.3.h
+		trigger = {
+			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = franconian }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = franconian }
+		THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = yes
+	}
+	option = {
+		name = THE_ROD_events.3.i
+		trigger = {
+			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = swabian }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = swabian }
+		THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = yes
+	}
+	option = {
+		name = THE_ROD_events.3.j
+		trigger = {
+			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = swiss }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = swiss }
+		THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = yes
+	}
+	option = {
+		name = THE_ROD_events.3.k
+		trigger = {
+			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = bavarian }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = bavarian }
+		THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = yes
+	}
+	option = {
+		name = THE_ROD_events.3.l
+		trigger = {
+			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = austrian }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = austrian }
+		THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = yes
+	}
+	option = {
+		name = THE_ROD_events.3.m
+		trigger = {
+			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = dutch }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = dutch }
+		THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = yes
+	}
+	option = {
+		name = THE_ROD_events.3.n
+		trigger = {
+			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = flemish }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = flemish }
+		THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = yes
+	}
+	option = {
+		name = THE_ROD_events.3.o
+		trigger = {
+			THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = frisian }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = frisian }
+		THE_ROD_add_unity_german_culture_power_from_accepted_culture_scripted_effect = yes
+	}
+}
+
+### ROD flavor events in THE!
+
+country_event = {
+	id = THE_ROD_events.4
+	title = THE_ROD_events.4.title
+	desc = THE_ROD_events.4.desc
+	picture = COMET_SIGHTED_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		mission_completed = THE_ROD_2_3
+		is_year = 1500
+	}
+	
+	mean_time_to_happen = {
+		months = 6000
+	}
+	
+	option = {
+		name = THE_ROD_events.4.a
+		custom_tooltip = THE_ROD_clear_darkness_manipulation_and_dark_moon_night_tt
+		hidden_effect = {
+			set_variable = {
+				which = the_rod_darkness_manipulation_var
+				value = 0
+			}
+			add_government_power = {
+				mechanic_type = THE_ROD_dark_moon_night_mechanic
+				power_type = THE_ROD_government_mechanic_power
+				value = -1000
+			}
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.5
+	title = THE_ROD_events.5.title
+	desc = THE_ROD_events.5.desc
+	picture = AB_ECLIPSE_eventPicture	# need gfx
+
+	fire_only_once = yes
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		mission_completed = THE_ROD_2_3
+	}
+	
+	mean_time_to_happen = {
+		months = 600
+	}
+	
+	option = {
+		name = THE_ROD_events.5.a
+		add_dip_power = 50
+		change_variable = {
+			which = the_rod_darkness_manipulation_var
+			value = 25
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.6
+	title = THE_ROD_events.6.title
+	desc = THE_ROD_events.6.desc
+	picture = ADVISOR_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		mission_completed = THE_ROD_2_3
+		mission_completed = THE_ROD_1_12
+		is_year = 1500
+	}
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	
+	option = {
+		name = THE_ROD_events.6.a
+		change_innovativeness = 5
+		THE_ROD_define_advisor_jan_ingenhousz_scripted_effect = yes
+		add_country_modifier = {
+			name = THE_ROD_photosynthesis_modifier
+			duration = -1
+		}
+		custom_tooltip = THE_ROD_decrease_dark_moon_night_negative_effect_tt
+		hidden_effect = {
+			set_country_flag = THE_ROD_decrease_mechanic_debuff_flag
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.7
+	title = THE_ROD_events.7.title
+	desc = THE_ROD_events.7.desc
+	picture = north_sea_maps_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		SWE = {
+			OR = {
+				is_in_war = {
+					attacker_leader = THIS
+					defender_leader = DAN
+					casus_belli = cb_independence_war
+				}
+				AND = {
+					is_subject_of = DAN
+					liberty_desire = 50
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = THE_ROD_events.7.a
+		if = {
+			limit = {
+				SWE = {
+					is_in_war = {
+						attacker_leader = THIS
+						defender_leader = DAN
+						casus_belli = cb_independence_war
+					}
+				}
+				NOT = { truce_with = DAN }
+			}
+			ROOT = {
+				create_alliance = SWE
+				join_all_offensive_wars_of = SWE
+				add_historical_friend = SWE
+				add_trust = {
+					who = SWE
+					value = 20
+					mutual = yes
+				}
+			}
+			SWE = {
+				add_historical_friend = ROOT
+				add_country_modifier = {
+					name = THE_ROD_support_from_rod_modifier
+					duration = -1
+					desc = THE_ROD_until_war_end_tt
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				SWE = {
+					is_in_war = {
+						attacker_leader = THIS
+						defender_leader = DAN
+						casus_belli = cb_independence_war
+					}
+				}
+			}
+			ROOT = {
+				create_alliance = SWE
+				add_historical_friend = SWE
+				add_trust = {
+					who = SWE
+					value = 20
+					mutual = yes
+				}
+			}
+			SWE = {
+				add_historical_friend = ROOT
+				add_country_modifier = {
+					name = THE_ROD_support_from_rod_modifier
+					duration = -1
+					desc = THE_ROD_until_war_end_tt
+				}
+			}
+		}
+		else = {
+			ROOT = {
+				support_independence_of = SWE
+				add_historical_friend = SWE
+				add_trust = {
+					who = SWE
+					value = 20
+					mutual = yes
+				}
+			}
+			SWE = {
+				add_historical_friend = ROOT
+				add_country_modifier = {
+					name = THE_ROD_support_from_rod_modifier
+					duration = -1
+					desc = THE_ROD_until_war_end_tt
+				}
+			}
+		}
+		DAN = {
+			add_country_modifier = {
+				name = THE_ROD_blockade_from_rod_modifier
+				duration = -1
+				desc = THE_ROD_until_war_end_tt
+			}
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.7.b
+		ROOT = {
+			add_trust = {
+				who = SWE
+				value = 20
+				mutual = yes
+			}
+		}
+		DAN = {
+			add_country_modifier = {
+				name = THE_ROD_blockade_from_rod_modifier
+				duration = -1
+				desc = THE_ROD_until_war_end_tt
+			}
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.7.c
+		add_treasury = 2
+		DAN = {
+			add_treasury = -1
+		}
+		SWE = {
+			add_treasury = -1
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.8
+	title = THE_ROD_events.8.title
+	desc = THE_ROD_events.8.desc
+	picture = COSSACK_ESTATE_RAIDERS_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		mission_completed = THE_ROD_2_7
+		any_owned_province = {
+			has_terrain = steppe
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 600
+	}
+	
+	option = {
+		name = THE_ROD_events.8.a
+		unlock_estate = {
+			estate = estate_cossacks
+		}
+		add_country_modifier = {
+			name = THE_ROD_estate_cossacks_privilege_modifier
+			duration = -1
+		}
+		# custom_tooltip = THE_ROD_estate_cossacks_influence_less_than_50_tt
+		hidden_effect = {
+			set_country_flag = THE_ROD_has_estate_cossacks_flag
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.8.b
+		custom_tooltip = THE_ROD_cossack_rebel_tt
+		for = {
+			amount = 5
+			effect = "
+				random_owned_province = {
+					limit = {
+						NOT = { has_province_flag = THE_ROD_spawn_rebels_province_flag }
+					}
+					spawn_rebels = {
+						size = 2
+						type = cossack_rebels
+					}
+					hidden_effect = {
+						set_province_flag = THE_ROD_spawn_rebels_province_flag
+					}
+				}
+			"
+		}
+		custom_tooltip = THE_ROD_all_livestock_province_tt
+		tooltip = {
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+		hidden_effect = {
+			every_province = {
+				limit = {
+					has_province_flag = THE_ROD_spawn_rebels_province_flag
+				}
+				clr_province_flag = THE_ROD_spawn_rebels_province_flag
+			}
+			every_owned_province = {
+				limit = {
+					trade_goods = livestock
+				}
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.9
+	title = THE_ROD_events.9.title
+	desc = THE_ROD_events.9.desc
+	picture = COSSACK_ESTATE_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		has_country_flag = THE_ROD_has_estate_cossacks_flag
+		NOT = {
+			estate_influence = {
+				estate = estate_cossacks
+				influence = 50
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+	}
+	
+	option = {
+		name = THE_ROD_events.9.a
+		hidden_effect = {
+			clr_country_flag = THE_ROD_has_estate_cossacks_flag
+		}
+		remove_country_modifier = THE_ROD_estate_cossacks_privilege_modifier
+		add_country_modifier = {
+			name = THE_ROD_estate_cossacks_system_modifier
+			duration = -1
+		}
+		if = {
+			limit = { mission_completed = THE_ROD_5_10 }
+			custom_tooltip = THE_ROD_rumia_add_2_shock_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							check_variable = {
+								which = the_rumia_shock_var
+								which = the_rumia_shock_max_var
+							}
+						}
+					}
+					change_variable = {
+						which = the_rumia_shock_var
+						value = 1
+					}
+				}
+				else = { add_mil_power = 100 } 
+				if = {
+					limit = {
+						NOT = {
+							check_variable = {
+								which = the_rumia_shock_var
+								which = the_rumia_shock_max_var
+							}
+						}
+					}
+					change_variable = {
+						which = the_rumia_shock_var
+						value = 1
+					}
+				}
+				else = { add_mil_power = 100 } 
+			}
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.10
+	title = THE_ROD_events.10.title
+	desc = THE_ROD_events.10.desc
+	picture = AB_ECLIPSE_eventPicture	# need gfx
+	fire_only_once = yes
+	
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		NOT = { current_age = age_of_discovery }
+	}
+	
+	mean_time_to_happen = {
+		months = 12000
+	}
+	
+	option = {
+		name = THE_ROD_events.10.a
+		add_treasury = -1
+		change_variable = {
+			which = the_rod_darkness_manipulation_var
+			value = 1
+		}
+		if = {
+			limit = { religion = catholic }
+			add_papal_influence = -1
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.11
+	title = THE_ROD_events.11.title
+	desc = THE_ROD_events.11.desc
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	trigger = {
+		mission_completed = THE_ROD_5_13
+		OR = { tag = ROD was_tag = ROD }
+		owns_core_province = 50
+	}
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	
+	option = {
+		name = THE_ROD_events.11.a
+		add_mil_power = 300
+		50 = {
+			add_or_upgrade_university_building = yes
+			add_permanent_province_modifier = {
+				name = THE_ROD_military_associations_province_modifier
+				duration = -1
+			}
+		}
+		add_country_modifier = {
+			name = THE_ROD_scharnhorst_tactic
+			duration = -1
+		}
+		THE_ROD_define_advisor_clausewitz_scripted_effect = yes
+		THE_ROD_define_blucher_general_scripted_effect = yes
+		hidden_effect = {
+			if = {
+				limit = { NOT = { mission_completed = THE_ROD_4_14 } }
+				set_country_flag = THE_ROD_4_14_complete_flag
+			}
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.12
+	title = THE_ROD_events.12.title
+	desc = THE_ROD_events.12.desc
+	picture = CIVIL_WAR_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		THE_ROD_has_rumia_general = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+	}
+	
+	option = {
+		name = THE_ROD_events.12.a
+		add_manpower = -0.001
+		add_country_modifier = {
+			name = THE_ROD_new_type_danmaku_modifier
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.13
+	title = THE_ROD_events.13.title
+	desc = THE_ROD_events.13.desc
+	picture = GREAT_BUILDING_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		wallachia_area = {
+			type = all
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+		any_owned_province = {
+			area = wallachia_area
+			has_fort_building_trigger = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	immediate = {
+		random_owned_province = {
+			limit = {
+				area = wallachia_area
+				has_fort_building_trigger = yes
+			}
+			save_event_target_as = THE_ROD_wallachia_fort_target
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.13.a
+		event_target:THE_ROD_wallachia_fort_target = {
+			add_or_upgrade_fort_building = yes
+		}
+		add_legitimacy = -1
+		hidden_effect = {
+			set_country_flag = THE_ROD_events_13_flag
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.14
+	title = THE_ROD_events.14.title
+	desc = THE_ROD_events.14.desc
+	picture = IMPALED_SOLDIERS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		has_country_flag = THE_ROD_events_13_flag
+	}
+	
+	mean_time_to_happen = {
+		months = 600
+	}
+	
+	immediate = {
+		clr_country_flag = THE_ROD_events_13_flag
+	}
+	
+	option = {
+		name = THE_ROD_events.14.a
+		add_prestige = 10
+		add_legitimacy = -100
+		add_ruler_modifier = {
+			name = THE_ROD_punctured_ruler_modifier
+			duration = -1
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.14.b
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.15
+	title = THE_ROD_events.15.title
+	desc = THE_ROD_events.15.desc
+	picture = PRUSSIA_eventPicture
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		mission_completed = THE_ROD_3_9
+		NOT = { mission_completed = THE_ROD_3_19 }
+		NOT = { exists = BRA }
+		NOT = { exists = PRU }
+	}
+	
+	option = {
+		name = THE_ROD_events.15.a
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -5
+		}
+		THE_ROD_define_heir_friedrich_wilhelm = yes
+		add_country_modifier = {
+			name = THE_ROD_friedrich_wilhelm_modifier
+			duration = -1
+			desc = THE_ROD_unitl_heir_die_tt
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.15.b
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -5
+		}
+		add_army_tradition = 30
+		add_country_modifier = {
+			name = THE_ROD_friedrich_wilhelm_mil_modifier
+			duration = 10950
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			set_country_flag = THE_ROD_can_trigger_event_16_flag
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.16
+	title = THE_ROD_events.16.title
+	desc = THE_ROD_events.16.desc
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 12000000
+	}
+	
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		had_country_flag = {
+			flag = THE_ROD_can_trigger_event_16_flag
+			days = 36500
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.16.a
+		custom_tooltip = THE_ROD_colorful_egg_tt
+	}
+	
+	after = {
+		hidden_effect = {
+			clr_country_flag = THE_ROD_can_trigger_event_16_flag
+		}
+	}
+}
+
+
+### Baltic Trade Event Group!
+### 波罗的海贸易事件组
+country_event = {
+	id = THE_ROD_events.17
+	title = THE_ROD_events.17.title
+	desc = THE_ROD_events.17.desc
+	picture = HARBOUR_eventPicture
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 240
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		43 = {
+			owned_by = ROOT
+			has_province_modifier = THE_ROD_baltic_sea_port
+		}
+	}
+	goto = 43
+	
+	option = {
+		name = THE_ROD_events.17.a
+		custom_tooltip = THE_ROD_baltic_trade_event_tt
+		custom_tooltip = empty_line_tt
+		43 = {
+			hidden_effect = {
+				remove_province_modifier = THE_ROD_baltic_sea_port
+				add_permanent_province_modifier = {
+					name = THE_ROD_baltic_sea_port_2
+					duration = -1
+				}
+				add_permanent_province_modifier = {
+					name = THE_ROD_baltic_sea_trade_center_province_modifier
+					duration = -1
+				}
+			}
+			custom_tooltip = THE_ROD_upgrade_baltic_sea_port_tt
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.18
+	title = THE_ROD_events.18.title
+	desc = THE_ROD_events.18.desc
+	picture = HARBOUR_eventPicture
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 240
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		45 = {
+			owned_by = ROOT
+			has_province_modifier = THE_ROD_baltic_sea_port
+		}
+	}
+	goto = 45
+	
+	option = {
+		name = THE_ROD_events.18.a
+		custom_tooltip = THE_ROD_baltic_trade_event_tt
+		custom_tooltip = empty_line_tt
+		45 = {
+			hidden_effect = {
+				remove_province_modifier = THE_ROD_baltic_sea_port
+				add_permanent_province_modifier = {
+					name = THE_ROD_baltic_sea_port_2
+					duration = -1
+				}
+				add_permanent_province_modifier = {
+					name = THE_ROD_baltic_sea_trade_center_province_modifier
+					duration = -1
+				}
+			}
+			custom_tooltip = THE_ROD_upgrade_baltic_sea_port_tt
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.19
+	title = THE_ROD_events.19.title
+	desc = THE_ROD_events.19.desc
+	picture = HARBOUR_eventPicture
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 240
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		38 = {
+			owned_by = ROOT
+			has_province_modifier = THE_ROD_baltic_sea_port
+		}
+	}
+	goto = 38
+	
+	option = {
+		name = THE_ROD_events.19.a
+		custom_tooltip = THE_ROD_baltic_trade_event_tt
+		custom_tooltip = empty_line_tt
+		38 = {
+			hidden_effect = {
+				remove_province_modifier = THE_ROD_baltic_sea_port
+				add_permanent_province_modifier = {
+					name = THE_ROD_baltic_sea_port_2
+					duration = -1
+				}
+				add_permanent_province_modifier = {
+					name = THE_ROD_baltic_sea_trade_center_province_modifier
+					duration = -1
+				}
+			}
+			custom_tooltip = THE_ROD_upgrade_baltic_sea_port_tt
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.20
+	title = THE_ROD_events.20.title
+	desc = THE_ROD_events.20.desc
+	picture = HARBOUR_eventPicture
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 240
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		12 = {
+			owned_by = ROOT
+			has_province_modifier = THE_ROD_baltic_sea_port
+		}
+	}
+	goto = 12
+	
+	option = {
+		name = THE_ROD_events.20.a
+		custom_tooltip = THE_ROD_baltic_trade_event_tt
+		custom_tooltip = empty_line_tt
+		12 = {
+			hidden_effect = {
+				remove_province_modifier = THE_ROD_baltic_sea_port
+				add_permanent_province_modifier = {
+					name = THE_ROD_baltic_sea_port_2
+					duration = -1
+				}
+				add_permanent_province_modifier = {
+					name = THE_ROD_baltic_sea_trade_center_province_modifier
+					duration = -1
+				}
+			}
+			custom_tooltip = THE_ROD_upgrade_baltic_sea_port_tt
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.21
+	title = THE_ROD_events.21.title
+	desc = THE_ROD_events.21.desc
+	picture = HARBOUR_eventPicture
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 240
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		25 = {
+			owned_by = ROOT
+			has_province_modifier = THE_ROD_baltic_sea_port
+		}
+	}
+	goto = 25
+	
+	option = {
+		name = THE_ROD_events.21.a
+		custom_tooltip = THE_ROD_baltic_trade_event_tt
+		custom_tooltip = empty_line_tt
+		25 = {
+			hidden_effect = {
+				remove_province_modifier = THE_ROD_baltic_sea_port
+				add_permanent_province_modifier = {
+					name = THE_ROD_baltic_sea_port_2
+					duration = -1
+				}
+				add_permanent_province_modifier = {
+					name = THE_ROD_baltic_sea_trade_center_province_modifier
+					duration = -1
+				}
+			}
+			custom_tooltip = THE_ROD_upgrade_baltic_sea_port_tt
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.22
+	title = THE_ROD_events.22.title
+	desc = THE_ROD_events.22.desc
+	picture = HARBOUR_eventPicture
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 240
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		33 = {
+			owned_by = ROOT
+			has_province_modifier = THE_ROD_baltic_sea_port
+		}
+	}
+	goto = 33
+	
+	option = {
+		name = THE_ROD_events.22.a
+		custom_tooltip = THE_ROD_baltic_trade_event_tt
+		custom_tooltip = empty_line_tt
+		33 = {
+			hidden_effect = {
+				remove_province_modifier = THE_ROD_baltic_sea_port
+				add_permanent_province_modifier = {
+					name = THE_ROD_baltic_sea_port_2
+					duration = -1
+				}
+				add_permanent_province_modifier = {
+					name = THE_ROD_baltic_sea_trade_center_province_modifier
+					duration = -1
+				}
+			}
+			custom_tooltip = THE_ROD_upgrade_baltic_sea_port_tt
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.23
+	title = THE_ROD_events.23.title
+	desc = THE_ROD_events.23.desc
+	picture = CARIBBEAN_PIRATE_FORT_eventPicture
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		mission_completed = THE_ROD_4_6
+		4745 = { country_or_non_sovereign_subject_holds = ROOT }
+		25 = { country_or_non_sovereign_subject_holds = ROOT }
+		OR = {
+			any_ally = {
+				religion_group = muslim
+			}
+			any_province = {
+				region = maghreb_region
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.23.a
+		custom_tooltip = THE_ROD_baltic_trade_event_tt
+		custom_tooltip = empty_line_tt
+		add_country_modifier = {
+			name = THE_ROD_sunset_pirates_modifier
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.24
+	title = THE_ROD_events.24.title
+	desc = THE_ROD_events.24.desc
+	picture = ATMOSPHERIC_ENGINE_eventPicture
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 600
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		OR = {
+			alliance_with = HSA
+			45 = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.24.a
+		custom_tooltip = THE_ROD_baltic_trade_event_tt
+		custom_tooltip = empty_line_tt
+		add_dip_power = 100
+		if = {
+			limit = { alliance_with = HSA }
+			add_favors = {
+				who = HSA
+				amount = -100
+			}
+		}
+		custom_tooltip = THE_ROD_lubeck_crane_tt
+		hidden_effect = {
+			set_country_flag = THE_ROD_lubeck_crane_flag
+			every_owned_province = {
+				limit = {
+					has_trade_building_trigger = yes
+					has_shipyard_building_trigger = yes
+				}
+				add_base_production = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.25
+	title = THE_ROD_events.25.title
+	desc = THE_ROD_events.25.desc
+	picture = FEAST_eventPicture
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		lower_saxony_area = {
+			type = all
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.25.a
+		custom_tooltip = THE_ROD_baltic_trade_event_tt
+		custom_tooltip = empty_line_tt
+		add_dip_power = 100
+		lower_saxony_area = {
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 3
+		}
+		change_price = {
+			trade_goods = salt
+			key = THE_ROD_salt_road_tt
+			value = 0.2
+			duration = -1
+		}
+		custom_tooltip = empty_line_tt
+		custom_tooltip = THE_ROD_salt_road_add_mercantilism_tt
+		hidden_effect = {
+			# write by python
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 1 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 2 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 3 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 4 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 5 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 6 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 7 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 8 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 9 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 10 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 11 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 12 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 13 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 14 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 15 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 16 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 17 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 18 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 19 } } add_mercantilism = 1 }
+			if = { limit = { trade_goods_produced_amount = { trade_goods = salt amount = 20 } } add_mercantilism = 1 }
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.26
+	title = THE_ROD_events.26.title
+	desc = THE_ROD_events.26.desc
+	picture = FALUN_COPPER_MINE_eventPicture
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		8 = { country_or_non_sovereign_subject_holds = ROOT }
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_list = {
+				90 = { }
+				10 = { set_country_flag = THE_ROD_discover_gold_flag }
+			}
+		}
+	}
+
+	goto = 8
+	
+	option = {
+		name = THE_ROD_events.26.a
+		custom_tooltip = THE_ROD_baltic_trade_event_tt
+		custom_tooltip = empty_line_tt
+		8 = {
+			add_great_project_tier = {
+				type = falun_copper_mine
+				tier = 1
+			}
+		}
+		add_inflation = -10
+		change_price = {
+			trade_goods = copper
+			key = SWEDEN_COPPER_MONOPOLIZATION
+			value = 0.5
+			duration = -1
+		}
+		change_price = {
+			trade_goods = iron
+			key = SWEDEN_IRON_MONOPOLIZATION
+			value = 0.2
+			duration = -1
+		}
+	}
+
+	option = {
+		name = THE_ROD_events.26.b
+		custom_tooltip = THE_ROD_baltic_trade_event_tt
+		custom_tooltip = empty_line_tt
+		8 = {
+			add_great_project_tier = {
+				type = falun_copper_mine
+				tier = 1
+			}
+		}
+		add_years_of_owned_provinces_production_income = {
+			years = 5
+			trigger = {
+				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					trade_goods = copper
+					trade_goods = iron
+				}
+			}
+			custom_tooltip = THE_ROD_copper_or_iron_province_tt
+		}
+	}
+
+	option = {
+		name = THE_ROD_events.26.c
+		highlight = yes
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_ROD_discover_gold_tt
+				has_country_flag = THE_ROD_discover_gold_flag
+			}
+		}
+		custom_tooltip = THE_ROD_baltic_trade_event_tt
+		custom_tooltip = empty_line_tt
+		8 = {
+			add_great_project_tier = {
+				type = falun_copper_mine
+				tier = 1
+			}
+			change_trade_goods = gold
+			add_base_production = 10
+			add_permanent_province_modifier = {
+				name = THE_ROD_falun_gold_mine_province_modifier
+				duration = -1
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = THE_ROD_discover_gold_flag }
+				clr_country_flag = THE_ROD_discover_gold_flag
+			}
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.27
+	title = THE_ROD_events.27.title
+	desc = THE_ROD_events.27.desc
+	picture = NORTH_SEA_MAPS_eventPicture
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 240
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		23 = { country_or_non_sovereign_subject_holds = ROOT }
+	}
+	
+	option = {
+		name = THE_ROD_events.27.a
+		custom_tooltip = THE_ROD_baltic_trade_event_tt
+		custom_tooltip = empty_line_tt
+		if = {
+			limit = {
+				OR = {
+					370 = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+					371 = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+					1978 = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+					1979 = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+				}
+			}
+			custom_tooltip = THE_ROD_cost_500_purchase_iceland_tt
+			custom_tooltip = empty_line_tt
+			hidden_effect = {
+				add_treasury = -500
+				subarctic_islands_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					remove_core = owner
+					cede_province = ROOT
+					add_core = ROOT
+				}
+			}
+		}
+		subarctic_islands_area = {
+			add_base_tax = 3
+			add_base_production = 5
+			add_base_manpower = 3
+			change_trade_goods = fish
+			add_building = grand_shipyard
+			add_building = drydock
+			add_building = wharf
+		}
+		# custom_tooltip = THE_ROD_subarctic_islands_area_extra_improve_bonus_tt
+		# hidden_effect = {
+		# 	set_country_flag = THE_ROD_subarctic_islands_area_extra_improve_bonus_flag
+		# }
+	}
+
+	option = {
+		name = THE_ROD_events.27.b
+		trigger = {
+			OR = {
+				370 = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+				371 = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+				1978 = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+				1979 = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+			}
+		}
+		custom_tooltip = THE_ROD_baltic_trade_event_tt
+		custom_tooltip = empty_line_tt
+	}
+}
+
+
+### German Empire Event Group!
+### 德意志帝国事件组
+country_event = {
+	id = THE_ROD_events.28
+	title = THE_ROD_events.28.title
+	desc = THE_ROD_events.28.desc
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 600
+		modifier = {
+			factor = 0.75
+			has_idea_group = mercenary_ideas
+		}
+		modifier = {
+			factor = 0.75
+			full_idea_group = mercenary_ideas
+		}
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+	}
+	
+	option = {
+		name = THE_ROD_events.28.a
+		custom_tooltip = THE_ROD_unlock_more_mercenary_tt
+		tooltip = {
+			add_country_modifier = {
+				name = mercenaries_to_the_standard
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			remove_country_modifier = mercenaries_to_the_standard
+			add_country_modifier = {
+				name = mercenaries_to_the_standard
+				duration = -1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.29
+	title = THE_ROD_events.29.title
+	desc = THE_ROD_events.29.desc
+	picture = GREAT_BUILDING_eventPicture
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 240
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		50 = {
+			owned_by = ROOT
+			is_state_core = ROOT
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.29.a
+		custom_tooltip = THE_ROD_german_empire_event_tt
+		custom_tooltip = empty_line_tt
+		50 = {
+			move_capital_effect = yes
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 3
+			add_great_project_tier = {
+				type = brandenburg_gate
+				tier = 1
+			}
+		}
+		add_prestige_or_monarch_power = {
+			amount = 20
+		}
+		custom_tooltip = THE_ROD_upgrade_brandenburg_gate_tt
+		hidden_effect = {
+			set_country_flag = THE_ROD_upgrade_brandenburg_gate_flag
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.29.b
+		custom_tooltip = THE_ROD_german_empire_event_tt
+		custom_tooltip = empty_line_tt
+		capital_scope = {
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 3
+		}
+		custom_tooltip = THE_ROD_upgrade_brandenburg_gate_tt
+		hidden_effect = {
+			set_country_flag = THE_ROD_upgrade_brandenburg_gate_flag
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.30
+	title = THE_ROD_events.30.title
+	desc = THE_ROD_events.30.desc
+	picture = HRE_eventPicture
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 600
+		modifier = {
+			factor = 0.5
+			alliance_with = emperor
+		}
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		is_part_of_hre = yes
+	}
+	
+	option = {
+		name = THE_ROD_events.30.a
+		custom_tooltip = THE_ROD_german_empire_event_tt
+		custom_tooltip = empty_line_tt
+		add_country_modifier = {
+			name = THE_ROD_markgraftum_modifier
+			duration = -1
+		}
+		custom_tooltip = THE_ROD_fort_manpower_bonus_tt
+		hidden_effect = {
+			set_country_flag = THE_ROD_fort_manpower_bonus_flag
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.31
+	title = THE_ROD_events.31.title
+	desc = THE_ROD_events.31.desc
+	picture = HABSBURG_eventPicture
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 12000
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		is_year = 1500
+		any_country = {
+			OR = {
+				tag = HAB
+				was_tag = HAB
+			}
+			is_free_or_tributary_trigger = yes
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.31.a
+		custom_tooltip = THE_ROD_german_empire_event_tt
+		custom_tooltip = empty_line_tt
+		add_country_modifier = {
+			name = THE_ROD_habsburg_marriage_modifier
+			duration = -1
+		}
+		random_country = {
+			limit = {
+				OR = { tag = HAB was_tag = HAB }
+			}
+			custom_tooltip = THE_ROD_force_create_marriage_hab_tt
+			hidden_effect = {
+				force_create_marriage = ROOT
+			}
+			if = {
+				limit = {
+					is_free_or_tributary_trigger = yes
+					NOT = { alliance_with = ROOT }
+				}
+				create_alliance = ROOT
+			}
+			add_historical_friend = ROOT
+			ROOT = {
+				add_historical_friend = PREV
+			}
+		}
+	}
+
+	option = {
+		name = THE_ROD_events.31.b
+		custom_tooltip = THE_ROD_german_empire_event_tt
+		custom_tooltip = empty_line_tt
+		custom_tooltip = THE_ROD_complete_diplomatic_mission_tt
+		hidden_effect = {
+			set_country_flag = THE_ROD_complete_diplomatic_mission_flag
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.32
+	title = THE_ROD_events.32.title
+	desc = THE_ROD_events.32.desc
+	picture = REFUGEES_ESCAPING_eventPicture
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		has_global_flag = great_peasants_war_flag
+		capital_scope = {
+			continent = europe
+		}
+		is_part_of_hre = yes
+		NOT = { has_government_attribute = is_peasants_republic }
+	}
+	
+	option = {
+		name = THE_ROD_events.32.a
+		custom_tooltip = THE_ROD_german_empire_event_tt
+		custom_tooltip = empty_line_tt
+		add_stability = 1
+		add_estate_loyalty = {
+			estate = all
+			loyalty = 10
+		}
+	}
+
+	option = {
+		name = THE_ROD_events.32.b
+		custom_tooltip = THE_ROD_german_empire_event_tt
+		custom_tooltip = empty_line_tt
+		add_stability = -1
+		add_estate_loyalty = {
+			estate = all
+			loyalty = -20
+		}
+		add_country_modifier = {
+			name = THE_ROD_out_of_peasants_war_modifier
+			duration = 10950
+		}
+		add_country_modifier = {
+			name = THE_ROD_safeguard_peasants_privilege_modifier
+			duration = -1
+		}
+	}
+
+	option = {
+		name = THE_ROD_events.32.c
+		highlight = yes
+		trigger = {
+			mission_completed = THE_ROD_1_12
+			crown_land_share = 50
+		}
+		custom_tooltip = THE_ROD_german_empire_event_tt
+		custom_tooltip = empty_line_tt
+		add_stability = -3
+		add_estate_loyalty = {
+			estate = all
+			loyalty = -50
+		}
+		custom_tooltip = THE_ROD_unlock_peasants_parliament_reform_tt
+		tooltip = {
+			add_government_reform = THE_ROD_peasants_parliament_reform
+		}
+		hidden_effect = {
+			set_country_flag = THE_ROD_unlock_peasants_parliament_reform_flag
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.33
+	title = THE_ROD_events.33.title
+	desc = THE_ROD_events.33.desc
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.5
+			OR = {
+				65 = { country_or_non_sovereign_subject_holds = ROOT }
+				exists = BAV
+			}
+		}
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		OR = {
+			is_year = 1500
+			65 = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.33.a
+		custom_tooltip = THE_ROD_german_empire_event_tt
+		custom_tooltip = empty_line_tt
+		add_prestige = 10
+		add_years_of_owned_provinces_production_income = {
+			years = 5
+			trigger = {
+				OR = {
+					trade_goods = grain
+					trade_goods = wine
+				}
+			}
+			custom_tooltip = THE_ROD_grain_or_wine_province_tt
+		}
+		if = {
+			limit = { has_government_mechanic = THE_ROD_german_culture_unity_mechanic }
+			if = {
+				limit = { THE_ROD_have_not_unity_german_culture_event_scripted_trigger = { culture = bavarian } }
+				THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = bavarian }
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_ROD_add_unity_german_culture_power_from_grain_or_wine_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							trade_goods = grain
+							trade_goods = wine
+						}
+					}
+					ROOT = {
+						add_government_power = {
+							mechanic_type = THE_ROD_german_culture_unity_mechanic
+							power_type = THE_ROD_german_cultural_unity_power
+							value = 1
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.34
+	title = THE_ROD_events.34.title
+	desc = THE_ROD_events.34.desc
+	picture = TRADEGOODS_eventPicture
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.5
+			trading_bonus = {
+				trade_goods = glass
+				value = yes
+			}
+		}
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		government_rank = 2
+	}
+	
+	option = {
+		name = THE_ROD_events.34.a
+		custom_tooltip = THE_ROD_german_empire_event_tt
+		custom_tooltip = empty_line_tt
+		custom_tooltip = THE_ROD_core_add_darkness_manipulation_var_tt
+		hidden_effect = {
+			set_country_flag = THE_ROD_core_add_darkness_manipulation_var_flag
+		}
+		change_price = {
+			trade_goods = glass
+			key = THE_ROD_black_glass_key_tt
+			value = 0.2
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.35
+	title = THE_ROD_events.35.title
+	desc = THE_ROD_events.35.desc
+	picture = CITY_VIEW_eventPicture
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		hre_size = 1
+		is_part_of_hre = yes
+	}
+	
+	option = {
+		name = THE_ROD_events.35.a
+		custom_tooltip = THE_ROD_german_empire_event_tt
+		custom_tooltip = empty_line_tt
+		43 = {
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+		}
+		custom_tooltip = THE_ROD_free_city_trade_power_tt
+		hidden_effect = {
+			set_variable = {
+				which = the_rod_free_city_var
+				value = 0
+			}
+			every_country = {
+				limit = {
+					has_reform = free_city
+				}
+				ROOT = {
+					change_variable = {
+						which = the_rod_free_city_var
+						value = 1
+					}
+				}
+			}
+			for_variable_amount = {
+				variable = the_rod_free_city_var
+				effect = "
+					45 = {
+						add_trade_modifier = {
+							who = ROOT
+							duration = -1
+							power = 5
+							key = THE_ROD_free_city_trade_power_key_tt
+						}
+					}
+				"
+			}
+			for_variable_amount = {
+				variable = the_rod_free_city_var
+				effect = "
+					61 = {
+						add_trade_modifier = {
+							who = ROOT
+							duration = -1
+							power = 5
+							key = THE_ROD_free_city_trade_power_key_tt
+						}
+					}
+				"
+			}
+			for_variable_amount = {
+				variable = the_rod_free_city_var
+				effect = "
+					1876 = {
+						add_trade_modifier = {
+							who = ROOT
+							duration = -1
+							power = 5
+							key = THE_ROD_free_city_trade_power_key_tt
+						}
+					}
+				"
+			}
+			for_variable_amount = {
+				variable = the_rod_free_city_var
+				effect = "
+					134 = {
+						add_trade_modifier = {
+							who = ROOT
+							duration = -1
+							power = 5
+							key = THE_ROD_free_city_trade_power_key_tt
+						}
+					}
+				"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.36
+	title = THE_ROD_events.36.title
+	desc = THE_ROD_events.36.desc
+	picture = BATTLE_eventPicture
+	
+	mean_time_to_happen = {
+		months = 240
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		num_of_mercenaries = 1
+		OR = {
+			has_country_modifier = mercenaries_to_the_standard
+			full_idea_group = mercenary_ideas
+		}
+		OR = {
+			NOT = { has_country_modifier = trust_from_mercs }
+			NOT = { has_country_modifier = great_reputation_modifier }
+			NOT = { has_country_modifier = mercenary_leadership }
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.36.a
+		trigger = {
+			NOT = { has_country_modifier = trust_from_mercs }
+		}
+		hidden_effect = {
+			remove_country_modifier = trust_from_mercs
+		}
+		add_country_modifier = {
+			name = trust_from_mercs
+			duration = -1
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.36.b
+		trigger = {
+			NOT = { has_country_modifier = great_reputation_modifier }
+		}
+		hidden_effect = {
+			remove_country_modifier = great_reputation_modifier
+		}
+		add_country_modifier = {
+			name = great_reputation_modifier
+			duration = -1
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.36.c
+		trigger = {
+			NOT = { has_country_modifier = mercenary_leadership }
+		}
+		hidden_effect = {
+			remove_country_modifier = mercenary_leadership
+		}
+		add_country_modifier = {
+			name = mercenary_leadership
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.37
+	title = THE_ROD_events.37.title
+	desc = THE_ROD_events.37.desc
+	picture = COUNCIL_TRENT_eventPicture
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 0.2
+			calc_true_if = {
+				amount = 5
+				accepted_culture = pommeranian
+				accepted_culture = prussian
+				accepted_culture = baltic_german
+				accepted_culture = lower_saxon
+				accepted_culture = hannoverian
+				accepted_culture = hessian
+				accepted_culture = saxon
+				accepted_culture = franconian
+				accepted_culture = swabian
+				accepted_culture = swiss
+				accepted_culture = bavarian
+				accepted_culture = austrian
+				accepted_culture = dutch
+				accepted_culture = flemish
+				accepted_culture = frisian
+			}
+		}
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		has_government_mechanic = THE_ROD_german_culture_unity_mechanic
+	}
+	
+	option = {
+		name = THE_ROD_events.37.a
+		custom_tooltip = THE_ROD_german_empire_event_tt
+		custom_tooltip = empty_line_tt
+		custom_tooltip = THE_ROD_german_culture_unity_mechanic_interaction_receive_power_tt
+		hidden_effect = {
+			set_country_flag = THE_ROD_german_culture_unity_mechanic_interaction_receive_power_flag
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.38
+	title = THE_ROD_events.38.title
+	desc = THE_ROD_events.38.desc
+	picture = ATMOSPHERIC_ENGINE_eventPicture
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 600
+		modifier = {
+			factor = 0.5
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				OR = {
+					region = north_german_region
+					region = south_german_region
+				}
+				trade_goods = iron
+			}
+		}
+		modifier = {
+			factor = 0.5
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				OR = {
+					region = north_german_region
+					region = south_german_region
+				}
+				trade_goods = coal
+			}
+		}
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		is_year = 1600
+	}
+	
+	option = {
+		name = THE_ROD_events.38.a
+		custom_tooltip = THE_ROD_german_empire_event_tt
+		custom_tooltip = empty_line_tt
+		add_country_modifier = {
+			name = THE_ROD_unity_wish_modifier
+			duration = -1
+		}
+		custom_tooltip = THE_ROD_german_coal_or_iron_province_effect_tt
+		tooltip = {
+			add_permanent_province_modifier = {
+				name = THE_ROD_blood_and_bone_province_modifier
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			north_german_region = {
+				limit = {
+					OR = {
+						trade_goods = iron
+						trade_goods = coal
+						has_latent_trade_goods = coal
+					}
+				}
+				add_permanent_province_modifier = {
+					name = THE_ROD_blood_and_bone_province_modifier
+					duration = -1
+				}
+			}
+			south_german_region = {
+				limit = {
+					OR = {
+						trade_goods = iron
+						trade_goods = coal
+						has_latent_trade_goods = coal
+					}
+				}
+				add_permanent_province_modifier = {
+					name = THE_ROD_blood_and_bone_province_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.39
+	title = THE_ROD_events.39.title
+	desc = THE_ROD_events.39.desc
+	picture = DIPLOMACY_SIGNING_eventPicture
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		has_government_mechanic = THE_ROD_german_culture_unity_mechanic
+		NOT = { exists = FEO }
+		2410 = { owned_by = ROOT }
+		any_owned_province = {
+			culture = goths
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.39.a
+		custom_tooltip = THE_ROD_german_empire_event_tt
+		custom_tooltip = empty_line_tt
+		hidden_effect = {
+			THE_ROD_upgrade_global_culture_scripted_effect = { culture_old = goths culture_new = gothic_ger }
+		}
+		THE_ROD_unity_german_culture_mechanic_scripted_effect = { culture = gothic_ger }
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.40
+	title = THE_ROD_events.40.title
+	desc = THE_ROD_events.40.desc
+	picture = BIG_BOOK_eventPicture
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		NOT = { hre_size = 1 }
+		has_government_mechanic = THE_ROD_german_culture_unity_mechanic
+		owns_all_provinces = {
+			OR = {
+				culture = czech
+				culture = sorbian
+				culture = schlesian
+			}
+			continent = europe
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.40.a
+		custom_tooltip = THE_ROD_german_empire_event_tt
+		custom_tooltip = empty_line_tt
+		hidden_effect = {
+			THE_ROD_upgrade_global_culture_scripted_effect = { culture_old = czech culture_new = THE_czech_german_culture }
+			THE_ROD_upgrade_global_culture_scripted_effect = { culture_old = sorbian culture_new = THE_sorbian_german_culture }
+			THE_ROD_upgrade_global_culture_scripted_effect = { culture_old = schlesian culture_new = THE_schlesian_german_culture }
+		}
+		THE_ROD_unity_german_culture_mechanic_without_prestige_scripted_effect = { culture = THE_czech_german_culture }
+		custom_tooltip = empty_line_tt
+		custom_tooltip = empty_line_tt
+		THE_ROD_unity_german_culture_mechanic_without_prestige_scripted_effect = { culture = THE_sorbian_german_culture }
+		custom_tooltip = empty_line_tt
+		custom_tooltip = empty_line_tt
+		THE_ROD_unity_german_culture_mechanic_without_prestige_scripted_effect = { culture = THE_schlesian_german_culture }
+		custom_tooltip = empty_line_tt
+		custom_tooltip = empty_line_tt
+		add_government_power = {
+			mechanic_type = THE_ROD_german_culture_unity_mechanic
+			power_type = THE_ROD_german_cultural_unity_power
+			value = -100
+		}
+		custom_tooltip = empty_line_tt
+		custom_tooltip = THE_ROD_assimilate_boh_tt
+		tooltip = {
+			particularist_rebels = 2
+		}
+		hidden_effect = {
+			for = {
+				amount = 10
+				effect = "
+					random_owned_province = {
+						limit = { culture_group = germanic }
+						particularist_rebels = 2
+					}
+				"
+			}
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.40.b
+		custom_tooltip = THE_ROD_german_empire_event_tt
+		custom_tooltip = empty_line_tt
+		# add_dip_power = -300
+		add_accepted_culture_or_dip_power = {
+			culture = czech
+			dip_reward = yes
+			free = yes
+		}
+		add_accepted_culture_or_dip_power = {
+			culture = sorbian
+			dip_reward = yes
+			free = yes
+		}
+		add_accepted_culture_or_dip_power = {
+			culture = schlesian
+			dip_reward = yes
+			free = yes
+		}
+	}
+}
+
+
+### God And Saint Event Group!
+### 神与圣事件组
+country_event = {
+	id = THE_ROD_events.41
+	title = THE_ROD_events.41.title
+	desc = THE_ROD_events.41.desc
+	picture = RELIGION_eventPicture
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		mission_completed = THE_ROD_1_17
+		religion = catholic
+	}
+	
+	option = {
+		name = THE_ROD_events.41.a
+		custom_tooltip = THE_ROD_god_and_saint_event_tt
+		custom_tooltip = empty_line_tt
+		add_papal_influence = 100
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		custom_tooltip = THE_ROD_decrease_1_18_trigger_tt
+		hidden_effect = {
+			set_country_flag = THE_ROD_decrease_1_18_trigger_flag
+			if = {
+				limit = { mission_completed = THE_ROD_1_18_catholic }
+				add_adm_power = 100
+			}
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.42
+	title = THE_ROD_events.42.title
+	desc = THE_ROD_events.42.desc
+	picture = ST_PETERS_CHURCH_eventPicture
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		has_government_attribute = THE_ROD_become_papal_controller_attribute
+		religion = catholic
+	}
+	
+	option = {
+		name = THE_ROD_events.42.a
+		custom_tooltip = THE_ROD_god_and_saint_event_tt
+		custom_tooltip = empty_line_tt
+		custom_tooltip = THE_ROD_catholic_great_project_decrease_decision_cost_tt
+		hidden_effect = {
+			set_country_flag = THE_ROD_catholic_great_project_decrease_decision_cost_flag
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.43
+	title = THE_ROD_events.43.title
+	desc = THE_ROD_events.43.desc
+	picture = UNIVERSITY_eventPicture
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		mission_completed = THE_ROD_1_17
+		religion = th_hakureishinto
+	}
+	
+	option = {
+		name = THE_ROD_events.43.a
+		custom_tooltip = THE_ROD_god_and_saint_event_tt
+		custom_tooltip = empty_line_tt
+		every_subject_country = {
+			limit = {
+				NOT = { religion = th_hakureishinto }
+			}
+			change_religion = th_hakureishinto
+		}
+		custom_tooltip = empty_line_tt
+		custom_tooltip = THE_ROD_every_hakureishinto_with_temple_province_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					religion = th_hakureishinto
+				}
+				add_base_tax = 1
+			}
+			every_owned_province = {
+				limit = {
+					religion = th_hakureishinto
+					has_tax_building_trigger = yes
+				}
+				add_base_tax = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.44
+	title = THE_ROD_events.44.title
+	desc = THE_ROD_events.44.desc
+	picture = CHURCH_ESTATE_UPSET_eventPicture
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		has_reform = THE_ROD_spread_hakurei_message_reform
+		religion = th_hakureishinto
+	}
+	
+	option = {
+		name = THE_ROD_events.44.a
+		custom_tooltip = THE_ROD_god_and_saint_event_tt
+		custom_tooltip = empty_line_tt
+		custom_tooltip = THE_ROD_hakureishinto_reform_extra_tt
+		hidden_effect = {
+			set_country_flag = THE_ROD_hakureishinto_reform_extra_flag
+			add_government_reform = THE_ROD_spread_hakurei_message_reform_x
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.45
+	title = THE_ROD_events.45.title
+	desc = THE_ROD_events.45.desc
+	picture = ST_PETERS_CHURCH_eventPicture
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		mission_completed = THE_ROD_1_17
+		NOT = { current_age = age_of_discovery }
+		OR = {
+			religion = th_hakureishinto
+			religion = catholic
+		}
+		4751 = { country_or_non_sovereign_subject_holds = ROOT }
+	}
+	
+	option = {
+		name = THE_ROD_events.45.a
+		trigger = {
+			religion = catholic
+		}
+		custom_tooltip = THE_ROD_god_and_saint_event_tt
+		custom_tooltip = empty_line_tt
+		4751 = {
+			if = {
+				limit = { NOT = { has_building = cathedral } }
+				add_building = cathedral
+			}
+			add_permanent_province_modifier = {
+				name = THE_ROD_saint_sariel_church_province_modifier
+				duration = -1
+			}
+		}
+	}
+
+	option = {
+		name = THE_ROD_events.45.b
+		trigger = {
+			religion = th_hakureishinto
+		}
+		custom_tooltip = THE_ROD_god_and_saint_event_tt
+		custom_tooltip = empty_line_tt
+		4751 = {
+			if = {
+				limit = { NOT = { has_building = cathedral } }
+				add_building = cathedral
+			}
+			add_permanent_province_modifier = {
+				name = THE_ROD_sariel_great_church_province_modifier
+				duration = -1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.46
+	title = THE_ROD_events.46.title
+	desc = THE_ROD_events.46.desc
+	picture = CULTURE_eventPicture
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		absolutism = 80
+		NOT = {
+			estate_influence = {
+				estate = estate_church
+				influence = 50
+			}
+		}
+		4141 = { country_or_non_sovereign_subject_holds = ROOT }
+		OR = {
+			religion = catholic
+			religion = th_hakureishinto
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.46.a
+		custom_tooltip = THE_ROD_god_and_saint_event_tt
+		custom_tooltip = empty_line_tt
+		if = {
+			limit = {
+				4141 = { NOT = { has_building = town_hall } }
+			}
+			4141 = { add_building = town_hall }
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = -100
+		}
+		add_country_modifier = {
+			name = THE_ROD_dithmarschen_law_modifier
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.47
+	title = THE_ROD_events.47.title
+	desc = THE_ROD_events.47.desc
+	picture = UNIVERSITY_eventPicture
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		NOT = { current_age = age_of_discovery }
+		OR = {
+			owns_core_province = 85
+			owns_core_province = 78
+			owns_core_province = 80
+		}
+		OR = {
+			religion = catholic
+			religion = th_hakureishinto
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.47.a
+		trigger = {
+			owns_core_province = 85
+		}
+		custom_tooltip = THE_ROD_god_and_saint_event_tt
+		custom_tooltip = empty_line_tt
+		85 = {
+			add_province_modifier = {
+				name = THE_ROD_cologne_college_province_modifier
+				duration = 7300
+			}
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.47.b
+		trigger = {
+			owns_core_province = 78
+		}
+		custom_tooltip = THE_ROD_god_and_saint_event_tt
+		custom_tooltip = empty_line_tt
+		78 = {
+			add_province_modifier = {
+				name = THE_ROD_mainz_college_province_modifier
+				duration = 7300
+			}
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.47.c
+		trigger = {
+			owns_core_province = 80
+		}
+		custom_tooltip = THE_ROD_god_and_saint_event_tt
+		custom_tooltip = empty_line_tt
+		80 = {
+			add_province_modifier = {
+				name = THE_ROD_trier_college_province_modifier
+				duration = 7300
+			}
+		}
+	}
+	
+	after = {
+		set_country_flag = THE_ROD_can_trigger_religion_end_event_flag
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.48
+	title = THE_ROD_events.48.title
+	desc = THE_ROD_events.48.desc
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		has_country_flag = THE_ROD_can_trigger_religion_end_event_flag
+		has_country_modifier = THE_ROD_dithmarschen_law_modifier
+		OR = {
+			religion = catholic
+			religion = th_hakureishinto
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.48.a
+		custom_tooltip = THE_ROD_god_and_saint_event_tt
+		custom_tooltip = empty_line_tt
+		add_splendor = -100
+		add_prestige = -10
+	}
+}
+
+### Darkness Order Event Group!
+### 宵暗骑士团事件组
+
+country_event = {
+	id = THE_ROD_events.101
+	title = THE_ROD_events.101.title 
+	desc = THE_ROD_events.101.desc
+	picture = BATTLE_VISTULA_LAGOON_eventPicture
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+	trigger = {
+		mission_completed = THE_ROD_2_5
+		OR = { tag = ROD was_tag = ROD }
+		# has_estate_privilege = THE_ROD_estate_nobles_knight_tradition
+		any_owned_province = {
+			NOT = { is_capital_of = ROOT }
+			culture = prussian
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.101.a
+		# custom_tooltip = THE_ROD_darkness_order_event_tt
+		# custom_tooltip = empty_line_tt
+		random_owned_province = {
+			limit = {
+				NOT = { is_capital_of = ROOT }
+				culture = prussian
+			}
+			catholic_rebels = 3
+		}
+		capital_scope = {
+			cavalry = ROOT
+			cavalry = ROOT
+			cavalry = ROOT
+			cavalry = ROOT
+			cavalry = ROOT
+		}
+	}
+
+	after = {
+		set_country_flag = THE_ROD_darkness_order_event_available_flag
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.102
+	title = THE_ROD_events.102.title
+	desc = THE_ROD_events.102.desc
+	picture = BATTLE_VISTULA_LAGOON_eventPicture
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		has_estate_privilege = THE_ROD_estate_nobles_knight_tradition
+		has_country_flag = THE_ROD_darkness_order_event_available_flag
+	}
+	
+	option = {
+		name = THE_ROD_events.102.a
+		custom_tooltip = THE_ROD_darkness_order_event_tt
+		custom_tooltip = empty_line_tt
+		add_country_modifier = {
+			name = THE_ROD_military_band_modifier
+			duration = -1
+		}
+		custom_tooltip = THE_ROD_battle_win_effect_tt
+		hidden_effect = {
+			set_country_flag = THE_ROD_battle_win_effect_flag
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.103
+	title = THE_ROD_events.103.title
+	desc = THE_ROD_events.103.desc
+	picture = DEATH_OF_HEIR_eventPicture
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 600
+		modifier = {
+			factor = 0.5
+			has_idea_group = spy_ideas
+		}
+		modifier = {
+			factor = 0.5
+			full_idea_group = spy_ideas
+		}
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		has_estate_privilege = THE_ROD_estate_nobles_knight_tradition
+		has_country_flag = THE_ROD_darkness_order_event_available_flag
+	}
+	
+	option = {
+		name = THE_ROD_events.103.a
+		custom_tooltip = THE_ROD_darkness_order_event_tt
+		custom_tooltip = empty_line_tt
+		add_manpower = -0.001
+		custom_tooltip = THE_ROD_spy_action_add_darkness_manipulation_tt
+		hidden_effect = {
+			set_country_flag = THE_ROD_spy_action_add_darkness_manipulation_flag
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.104
+	title = THE_ROD_events.104.title
+	desc = THE_ROD_events.104.desc
+	picture = RELIGIOUS_WARS_eventPicture
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		has_estate_privilege = THE_ROD_estate_nobles_knight_tradition
+		has_country_flag = THE_ROD_darkness_order_event_available_flag
+		LIV = { is_subject_of = ROOT }
+	}
+	
+	option = {
+		name = THE_ROD_events.104.a
+		custom_tooltip = THE_ROD_darkness_order_event_tt
+		custom_tooltip = empty_line_tt
+		add_dip_power = -100
+		add_estate_loyalty = {
+			estate = all
+			loyalty = -10
+		}
+		inherit = LIV
+	}
+
+	option = {
+		name = THE_ROD_events.104.b
+		custom_tooltip = THE_ROD_darkness_order_event_tt
+		custom_tooltip = empty_line_tt
+		LIV = {
+			add_historical_friend = ROOT
+			add_liberty_desire = -50
+		}
+		add_historical_friend = LIV
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.105
+	title = THE_ROD_events.105.title
+	desc = THE_ROD_events.105.desc
+	picture = SCOTTISH_MERCENARIES_eventPicture
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 360
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		has_estate_privilege = THE_ROD_estate_nobles_knight_tradition
+		has_country_flag = THE_ROD_darkness_order_event_available_flag
+	}
+	
+	option = {
+		name = THE_ROD_events.105.a
+		custom_tooltip = THE_ROD_darkness_order_event_tt
+		custom_tooltip = empty_line_tt
+		custom_tooltip = THE_ROD_unlock_tactic_mercenary_tt
+		hidden_effect = {
+			set_country_flag = THE_ROD_unlock_tactic_mercenary_flag
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.106
+	title = THE_ROD_events.106.title
+	desc = THE_ROD_events.106.desc
+	picture = FORT_eventPicture
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 240
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		has_estate_privilege = THE_ROD_estate_nobles_knight_tradition
+		has_country_flag = THE_ROD_darkness_order_event_available_flag
+		num_of_owned_provinces_with = {
+			value = 10
+			has_fort_building_trigger = yes
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.106.a
+		custom_tooltip = THE_ROD_darkness_order_event_tt
+		custom_tooltip = empty_line_tt
+		custom_tooltip = THE_ROD_contingency_management_tt
+		tooltip = {
+			add_devastation = -100
+			add_local_autonomy = -25
+			add_nationalism = -10
+		}
+		hidden_effect = {
+			set_country_flag = THE_ROD_contingency_management_flag
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.107
+	title = THE_ROD_events.107.title
+	desc = THE_ROD_events.107.desc
+	picture = UNIVERSITY_eventPicture
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 1200
+		modifier = {
+			factor = 0.6
+			mil_tech = 6
+		}
+		modifier = {
+			factor = 0.6
+			mil_tech = 7
+		}
+		modifier = {
+			factor = 0.6
+			mil_tech = 9
+		}
+		modifier = {
+			factor = 0.6
+			mil_tech = 11
+		}
+		modifier = {
+			factor = 0.6
+			mil_tech = 16
+		}
+	}
+	trigger = {
+		OR = { tag = ROD was_tag = ROD }
+		has_estate_privilege = THE_ROD_estate_nobles_knight_tradition
+		has_country_flag = THE_ROD_unlock_tactic_mercenary_flag
+		has_country_flag = THE_ROD_contingency_management_flag
+		has_country_flag = THE_ROD_spy_action_add_darkness_manipulation_flag
+		has_country_modifier = THE_ROD_military_band_modifier
+	}
+	
+	option = {
+		name = THE_ROD_events.107.a
+		custom_tooltip = THE_ROD_darkness_order_event_tt
+		custom_tooltip = empty_line_tt
+		custom_tooltip = THE_ROD_strategy_and_arm_department_change_name_tt
+		custom_tooltip = empty_line_tt
+		custom_tooltip = THE_ROD_strategy_and_arm_department_effect_tt
+		hidden_effect = {
+			set_country_flag = THE_ROD_strategy_and_arm_department_flag
+		}
+	}
+}
+
+country_event = {
+	id = THE_ROD_events.108
+	title = THE_ROD_events.108.title
+	desc = THE_ROD_events.108.desc
+	picture = INVENTION_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = THE_ROD_strategy_and_arm_department_flag
+		OR = {
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_1_flag }
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_2_flag }
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_3_flag }
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_4_flag }
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_5_flag }
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_6_flag }
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_7_flag }
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_8_flag }
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_9_flag }
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_10_flag }
+		}
+	}
+	
+	option = {
+		name = THE_ROD_events.108.1
+		trigger = {
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_1_flag }
+		}
+		set_country_flag = THE_ROD_strategy_and_arm_1_flag
+		custom_tooltip = THE_ROD_strategy_and_arm_department_extra_modifier_tt
+		custom_tooltip = THE_ROD_strategy_and_arm_department_tt_1
+	}
+
+	option = {
+		name = THE_ROD_events.108.2
+		trigger = {
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_2_flag }
+		}
+		set_country_flag = THE_ROD_strategy_and_arm_2_flag
+		custom_tooltip = THE_ROD_strategy_and_arm_department_extra_modifier_tt
+		custom_tooltip = THE_ROD_strategy_and_arm_department_tt_2
+	}
+
+	option = {
+		name = THE_ROD_events.108.3
+		trigger = {
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_3_flag }
+		}
+		set_country_flag = THE_ROD_strategy_and_arm_3_flag
+		custom_tooltip = THE_ROD_strategy_and_arm_department_extra_modifier_tt
+		custom_tooltip = THE_ROD_strategy_and_arm_department_tt_3
+	}
+
+	option = {
+		name = THE_ROD_events.108.4
+		trigger = {
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_4_flag }
+		}
+		set_country_flag = THE_ROD_strategy_and_arm_4_flag
+		custom_tooltip = THE_ROD_strategy_and_arm_department_extra_modifier_tt
+		custom_tooltip = THE_ROD_strategy_and_arm_department_tt_4
+	}
+
+	option = {
+		name = THE_ROD_events.108.5
+		trigger = {
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_5_flag }
+		}
+		set_country_flag = THE_ROD_strategy_and_arm_5_flag
+		custom_tooltip = THE_ROD_strategy_and_arm_department_extra_modifier_tt
+		custom_tooltip = THE_ROD_strategy_and_arm_department_tt_5
+	}
+
+	option = {
+		name = THE_ROD_events.108.6
+		trigger = {
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_6_flag }
+		}
+		set_country_flag = THE_ROD_strategy_and_arm_6_flag
+		custom_tooltip = THE_ROD_strategy_and_arm_department_extra_modifier_tt
+		custom_tooltip = THE_ROD_strategy_and_arm_department_tt_6
+	}
+
+	option = {
+		name = THE_ROD_events.108.7
+		trigger = {
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_7_flag }
+		}
+		set_country_flag = THE_ROD_strategy_and_arm_7_flag
+		custom_tooltip = THE_ROD_strategy_and_arm_department_extra_modifier_tt
+		custom_tooltip = THE_ROD_strategy_and_arm_department_tt_7
+	}
+
+	option = {
+		name = THE_ROD_events.108.8
+		trigger = {
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_8_flag }
+		}
+		set_country_flag = THE_ROD_strategy_and_arm_8_flag
+		custom_tooltip = THE_ROD_strategy_and_arm_department_extra_modifier_tt
+		custom_tooltip = THE_ROD_strategy_and_arm_department_tt_8
+	}
+
+	option = {
+		name = THE_ROD_events.108.9
+		trigger = {
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_9_flag }
+		}
+		set_country_flag = THE_ROD_strategy_and_arm_9_flag
+		custom_tooltip = THE_ROD_strategy_and_arm_department_extra_modifier_tt
+		custom_tooltip = THE_ROD_strategy_and_arm_department_tt_9
+	}
+
+	option = {
+		name = THE_ROD_events.108.10
+		trigger = {
+			NOT = { has_country_flag = THE_ROD_strategy_and_arm_10_flag }
+		}
+		set_country_flag = THE_ROD_strategy_and_arm_10_flag
+		custom_tooltip = THE_ROD_strategy_and_arm_department_extra_modifier_tt
+		custom_tooltip = THE_ROD_strategy_and_arm_department_tt_10
+	}
+
+	option = {
+		name = THE_ROD_events.108.error
+		trigger = {
+			has_country_flag = THE_ROD_strategy_and_arm_1_flag
+			has_country_flag = THE_ROD_strategy_and_arm_2_flag
+			has_country_flag = THE_ROD_strategy_and_arm_3_flag
+			has_country_flag = THE_ROD_strategy_and_arm_4_flag
+			has_country_flag = THE_ROD_strategy_and_arm_5_flag
+			has_country_flag = THE_ROD_strategy_and_arm_6_flag
+			has_country_flag = THE_ROD_strategy_and_arm_7_flag
+			has_country_flag = THE_ROD_strategy_and_arm_8_flag
+			has_country_flag = THE_ROD_strategy_and_arm_9_flag
+			has_country_flag = THE_ROD_strategy_and_arm_10_flag
+		}
+		custom_tooltip = THE_ROD_strategy_and_arm_department_tt_error
+	}
+}
