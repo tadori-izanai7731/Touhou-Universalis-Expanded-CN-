@@ -437,52 +437,38 @@ country_event = {
 }
 
 country_event = {
-	id = THE_KNE_events.10
-	title = THE_KNE_events.10.title
-	desc = THE_KNE_events.10.desc
+	id = THE_KNE_events.11
+	title = THE_KNE_events.11.title
+	desc = THE_KNE_events.11.desc
 	# picture = none
-	is_triggered_only = yes
+	mean_time_to_happen = {
+		months = 12
+	}
 
 	trigger = {
-		has_government_attribute = THE_KNE_keju_event_5_years_custom_attributes
+		OR = {
+			tag = KNE
+			was_tag = KNE
+		}
+		is_institution_enabled = renaissance
 	}
 
 	immediate = {
-		hidden_effect = {
-			country_event = {
-				id = THE_KNE_events.9
-				days = 1825
-			}
-		}
 	}
 
 	option = {
-		name = flavor_gbr.15.a
-		add_adm_power = 50
-		hidden_effect = {
-			country_event = {
-				id = THE_KNE_events.6
+		name = THE_KNE_events.11.a
+		if = {
+			limit = { NOT = { has_institution = renaissance } }
+			every_owned_province = {
+				add_institution_embracement = {
+					which = renaissance
+					value = 100
+				}
 			}
 		}
-	}
-
-	option = {
-		name = flavor_gbr.15.b
-		add_dip_power = 50
-		hidden_effect = {
-			country_event = {
-				id = THE_KNE_events.7
-			}
-		}
-	}
-
-	option = {
-		name = flavor_gbr.15.c
-		add_mil_power = 50
-		hidden_effect = {
-			country_event = {
-				id = THE_KNE_events.8
-			}
+		else = {
+			change_innovativeness = 5
 		}
 	}
 }

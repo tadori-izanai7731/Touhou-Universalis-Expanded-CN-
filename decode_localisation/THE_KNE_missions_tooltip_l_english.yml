@@ -16,7 +16,7 @@ l_english:
  THE_KNE_mission_4_1_effect_case2_tt_no: "£no£§M军事科技:§!"
  THE_KNE_mission_4_1_effect_case3_tt_yes: "£yes£§M骑兵数量:§!"
  THE_KNE_mission_4_1_effect_case3_tt_no: "£no£§M骑兵数量:§!"
- THE_KNE_mission_4_1_effect_case3_tt: "每拥有§Y1000§!£cavalry_icon_small£骑兵，获得§G500§!£icon_manpower£人力和§G20§!¤金币"
+ THE_KNE_mission_4_1_effect_case3_tt: "每拥有§Y1000§!£cavalry_icon_small£骑兵，获得§G1000§!£icon_manpower£人力和§G25§!¤"
  THE_KNE_mission_3_2_effect_case1_tt_yes: "£yes£§M省份自治度:§!"
  THE_KNE_mission_3_2_effect_case1_tt_no: "£no£§M省份自治度:§!"
  THE_KNE_mission_3_2_effect_case1_tt: "从治下每个§Y鄂温克§!文化组的省份获得§G10§!威望，溢出的威望将转化成三类§Y君主点数§!"
@@ -121,7 +121,7 @@ l_english:
  THE_KNE_now_age_province_modifier: "功在当代"
  THE_KNE_next_age_modifier: "利在千秋"
 
-  ### COUNTRY_IDEA_MODIFIER
+ ### COUNTRY_IDEA_MODIFIER
  THE_KNE_hakutaku_ideas_modifier: "噬史白泽"
  THE_KNE_human_ideas_modifier: "存史白泽"
  ### MODIFIER_END
@@ -156,6 +156,9 @@ l_english:
 
  THE_KNE_events.10.title: "新世纪"
  THE_KNE_events.10.desc: ""
+
+ THE_KNE_events.11.title: ""
+ THE_KNE_events.11.desc: ""
  ### EVENT_END
 
  ### FLAG
