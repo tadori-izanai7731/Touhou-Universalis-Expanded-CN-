@@ -513,7 +513,7 @@ THE_KEI_conseguer_the_GYK_effect = {
 			add_nationalism = -10
 			add_province_modifier = {
 				name = THE_KEI_all_animal_run_buff
-				duration = 3650
+				duration = -1
 			}
 		}
 	}
@@ -635,6 +635,7 @@ THE_KEI_can_core_creation_add_develpment_script_effect = {
 		limit = {
 			has_government_attribute = THE_KEI_can_core_creation_add_develpment
 		 }
+		 add_core = FROM
 		 if = {
 			limit = { 
 				NOT = {
@@ -650,7 +651,12 @@ THE_KEI_can_core_creation_add_develpment_script_effect = {
 			add_base_production = 2
 			add_base_manpower = 2
 		 }
-		 add_core = FROM
+		 if = {
+			limit = { 
+				has_province_modifier = THE_KEI_out_of_superegion_buff
+			}
+			remove_province_modifier = THE_KEI_out_of_superegion_buff
+		 }
 	}	
 }
 #地狱之外
@@ -678,8 +684,8 @@ THE_KEI_conseguer_the_GYK_effect = {
 			add_local_autonomy = 100
 			add_unrest = 5
 			add_province_modifier = {
-				name = THE_KEI_all_animal_run_buff
-				duration = 3650
+				name = THE_KEI_out_of_superegion_buff
+				duration = -1
 			}
 		}
 	}
