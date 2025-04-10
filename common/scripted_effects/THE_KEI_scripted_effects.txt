@@ -635,9 +635,52 @@ THE_KEI_can_core_creation_add_develpment_script_effect = {
 		limit = {
 			has_government_attribute = THE_KEI_can_core_creation_add_develpment
 		 }
-		 add_base_tax = 1
-		 add_base_production = 1
-		 add_base_manpower = 1
+		 if = {
+			limit = { 
+				NOT = {
+					development = 30
+				}
+			}
+			set_base_tax = 10
+			set_base_manpower = 10
+			set_base_production = 10
+		 }
+		 else = {
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+		 }
 		 add_core = FROM
 	}	
+}
+#地狱之外
+#FROM 前拥有者 #ROOT 省份
+THE_KEI_conseguer_the_GYK_effect = {
+	if = {
+		limit = {
+			owner = {
+				OR = {
+					tag = KEI
+					was_tag = KEI
+				}
+				NOT = {
+					has_government_attribute = THE_KEI_can_core_creation_add_develpment
+				}
+			}
+			ROOT = {
+				NOT = {
+					superregion = gensokyo_superregion 
+				}
+			}
+		 }
+		 ROOT = {
+			add_devastation = 100
+			add_local_autonomy = 100
+			add_unrest = 5
+			add_province_modifier = {
+				name = THE_KEI_all_animal_run_buff
+				duration = 3650
+			}
+		}
+	}
 }
