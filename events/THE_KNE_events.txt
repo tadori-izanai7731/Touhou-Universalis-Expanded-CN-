@@ -59,7 +59,7 @@ country_event = {
 					is_empty = no
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
-				add_treasury = -250
+				ROOT = { add_treasury = -250 }
 				cede_province = ROOT
 			}
 			else_if = {
@@ -80,7 +80,7 @@ country_event = {
 					is_empty = no
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
-				add_treasury = -250
+				ROOT = { add_treasury = -250 }
 				cede_province = ROOT
 			}
 			else_if = {
@@ -101,7 +101,7 @@ country_event = {
 					is_empty = no
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
-				add_treasury = -250
+				ROOT = { add_treasury = -250 }
 				cede_province = ROOT
 			}
 			else_if = {
@@ -432,6 +432,22 @@ country_event = {
 			country_event = {
 				id = THE_KNE_events.5
 			}
+		}
+	}
+}
+
+country_event = {
+	id = THE_KNE_events.10
+	title = THE_KNE_events.10.title
+	desc = THE_KNE_events.10.desc
+	# picture = none
+
+	is_triggered_only = yes
+
+	option = {
+		name = THE_KNE_events.10.a
+		add_prestige_or_monarch_power = {
+			amount = 50
 		}
 	}
 }
