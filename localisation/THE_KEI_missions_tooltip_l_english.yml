@@ -17,6 +17,13 @@
  THE_KEI_janissaries_name: "ôWn"
  THE_KEI_janissaries_warrior_privileges: "ôWnfkëX"
  THE_KEI_janissaries_warrior_2_privileges: "ÝuùRàVÚ‹"
+ THE_KEI_mayumi_strength_defend_privileges: " R:Vup•íV2–kS"
+ THE_KEI_mayumi_strength_development_privileges: " R:Vup•íVú^¾‹"
+ THE_KEI_mayumi_land_privileges: "ôWn†˜0WyrCg"
+ THE_KEI_mayumi_extra_mil_privileges: "ôWn›Q‹N=ec"
+ THE_KEI_mayumi_extra_dip_privileges: "ôWnY²N=ec"
+ THE_KEI_mayumi_extra_adm_privileges: "ôWnLˆ?e=ec"
+ THE_KEI_mayumi_create_leader_privileges: "ÐcÔbcnuQ•§Y0ã‰•³Q®‹0§!"
  THE_KEI_lonely_creation_mechanic_power: "Su"
  ability_THE_KEI_lonely_creation_mechanic: "0Su0"
  THE_KEI_lonely_creation_mechanic_power_desc: "SuÿsS:NbIr.irIN¿ˆìYKNàeN^y›RÿvQ:V1VNupaÿø”1SNirKNu:g0\n\n[Root.THE_KEI_mechanic_extra_2_c_tt]\n[Root.THE_KEI_mechanic_extra_c_tt]"
@@ -27,7 +34,7 @@
  THE_KEI_dedicate_ourselves_government_reform: "NyNˆIYu"
  THE_KEI_save_the_masses_government_reform: "Z†?ab‡k"
  THE_KEI_flavor_events.1.t: "R."
- THE_KEI_flavor_events.1.desc: ""
+ THE_KEI_flavor_events.1.desc: ":"
  THE_KEI_flavor_events.1.a: "---QXB›---"
  THE_KEI_flavor_events.1.a1: "---QXB›§g*gã‰•§!---"
  THE_KEI_flavor_events.1.b: "---Ru---"
@@ -151,6 +158,8 @@
  THE_KEI_change_workman_duixiang_decoisions_title: "9eØS0)YåT0ú^Qrîvh"
  THE_KEI_change_workman_duixiang_decoisions_desc: ""
  THE_KEI_check_save_the_masses_im_var_decosions_title: "#KEI§M0Z†?ab‡k0§!îvMRˆm„vIQ’‚pe:Nÿ[Root.THE_KEI_masses_var_im_var.GetValue])"
+ THE_KEI_check_save_the_masses_im_var_c_tt1: "§M7R°eSVMR¶r`§!"
+ THE_KEI_check_save_the_masses_im_var_c_tt2: "SVMR0Z†?a0&^eg„vîOckÿ\n- -ekuQjObýw›R +§G[Root.the_kei_decision_check_im_var_infi.GetValue]§!\n- -‘šuQjObýw›R +§G[Root.the_kei_decision_check_im_var_cala.GetValue]§!\n- -®puQjObýw›R +§G[Root.the_kei_decision_check_im_var_landfor.GetValue]§!\n- -F–›QNP– +§G[Root.the_kei_decision_check_im_var_reinforce.GetValue]§!\n- -eˆXT¦^ +§G[Root.the_kei_decision_check_im_var_infi.GetValue]§!"
  THE_KEI_check_save_the_masses_im_var_decosions_desc: ""
  THE_KEI_the_subject_of_keiki_decosions_title: "ågwSVMR?a›R§Mÿ[From.the_kei_the_blessing_of_the_keiki.GetValue])§!"
  THE_KEI_the_subject_of_keiki_decosions_desc: ""
@@ -286,6 +295,11 @@
  THE_KEI_1_12_create_c_tt1_no: "£no£‚YœgSVMR§Y0ºN‰|up0§!§Y0¨Rirup0§!§Y0ëTsY0§!6–BSàVÚ‹¦^GW:N§G100%§!"
  THE_KEI_1_12_create_c_tt2_yes: "?eœ^§Y0NyNˆIYu0§!¡l6e†˜0WSO:\n- -Ïk§G10%§!§Y0ëTsY0§!àVÚ‹¦^SO˜Y·ƒ—V§G10§!£adm£\n- -Ïk§G10%§!§Y0ºN‰|up0§!àVÚ‹¦^SO˜Y·ƒ—V§G10§!£dip£\n- -Ïk§G10%§!§Y0¨Rirup0§!àVÚ‹¦^SO˜Y·ƒ—V§G10§!£mil£"
  THE_KEI_1_12_create_c_tt3: "Nb	g„v§Y0¦hó`.‹W0§!ýV¶R·ƒ—VHeœgÿ"
+ THE_KEI_1_7_c_tt2: "Ïkµu§Y0Lˆ?eŒ˜î•0§!SOÙuˆNbìN ÏkgSužX•§G+0.1§!"
+ THE_KEI_2_10_create_c_tt2: "Ïkµu§Y0×NRvPèxV0§!SOÙuˆNbìN ôVÎWHe‡s§G+2.5%§!"
+ THE_KEI_3_4_c_tt3: "°sSuØšŽN0öeÿ \n- -·ƒ—V ÑSUSb,g§G-10%§!\nSuØšŽN50öeÿ\n- -·ƒ—V ÑSUSb,g§G-20%§!"
+ THE_KEI_5_3_c_tt23: "°sSuØšŽN50öeÿ\n- -Nb×Skp›R2O³R §G-10%§!\n- -Nb×S²QûQ2O³R §G-10%§!"
+ THE_KEI_1_9_lock_c_tt12: "ÇÑSUSwýNˆmd–ÿ[Root.the_kei_the_all_animal_run_buff_im_var.GetValue]/20	ÿ!k0§YNþfŒgÈa„v·g•§!0"
  the_mayumi: "×NRvPèxV"
  the_mayumi_desc: ""
  
@@ -310,14 +324,27 @@
  THE_KEI_flavor_events.12.t: "¨Rirup¡N"
  THE_KEI_flavor_events.12.desc: ""
  THE_KEI_flavor_events.12.a: ":"
- THE_KEI_flavor_events.12.b: ""
+ THE_KEI_flavor_events.13.t: "eQµO„v¨Rirup"
+ THE_KEI_flavor_events.13.a: "NïS¹R¸‹"
+ THE_KEI_flavor_events.13.b: "ÙN(WbìN„v»ltƒôV…Q"
+ THE_KEI_r_13_a_tt1: "§Mf‹JTyYìNybkQÑSwb‰N§!"
+ THE_KEI_r_13_b_tt1: "§MNup•íV²N‹Yÿ¥c×SôWn„v.^©R§!"
+ THE_KEI_r_13_b_tt2: "»lN„vNb	gwýNÏQS§G20%§!ê»l¦^"
+ THE_KEI_flavor_events.15.t: "egê|V¸S„vf‹JT"
+ THE_KEI_flavor_events.15.desc: ":"
+ THE_KEI_flavor_events.15.a: ":"
+ THE_KEI_r_15_tt1: "§MËzsSÊ‘>ebìN»lN„vNb	g¨Rirup8hÃV§!"
+ 
+
+
+
+
+ 
  THE_KEI_HKR_help_ours_c_tt1: "§MbìNSO`S0Rup•íV„vËz:W§!"
  THE_KEI_HKR_help_ours_c_tt2: "§MbìNSO`S0R–T›¿k„vËz:W§!"
- THE_KEI_get_the_animal_run_c_tt2: "§M0IQ‰Sg0§!Scíu0RbìNSdkwýNÑSUS0R§Y12§!ÑSUS¦^"
- THE_KEI_all_animal_run_buff_desc: "§M0IQ‰Sg0§!Scíu0RbìNSdkwýNÑSUS0R§Y12§!ÑSUS¦^"
- THE_KEI_flavor_events.13.t: "‰^ó`aN„v¨Rirup"
- THE_KEI_flavor_events.13.a: "bìNNýw¹R¸‹"
- THE_KEI_flavor_events.13.b: "Ø=f—r†N"
+ THE_KEI_get_the_animal_run_c_tt2: "§M0NþfŒgÈa„v·g•0§!Scíu0RbìNSdkwýNÑSUS0R§Y15§!ÑSUS¦^"
+ THE_KEI_all_animal_run_buff_desc: "§M0NþfŒgÈa„v·g•0§!Scíu0RbìNSdkwýNÑSUS0R§Y15§!ÑSUS¦^"
+ THE_KEI_out_of_superegion_buff_desc: "§M0NþfŒgÈa„v·g•0§!Scíu0RbìNSdkwýNÑSUS0R§Y24§!ÑSUS¦^"
  THE_KEI_HIG_bad_war_name: "–T›é`bb‰N"
  THE_KEI_hig_war_bad_po: "JRÏQ@KEI§YvPÏPKNj•§!†˜W"
  THE_KEI_hig_war_c_tt1: "@KEI§YvPÏPKNj•§!Ê‘>eSO…Q„vNb	g@SKI@YAC@GYK§Y¨Rirup§!8hÃV"

@@ -420,7 +420,7 @@ THE_hng_mission_modifier24 = {
 	cavalry_power = 0.15
 	cavalry_flanking = 0.5
 	cav_to_inf_ratio = 0.3
-	cavalry_cost = -0.1
+	cavalry_cost = -0.15
 }
 
 #发展中的大理
@@ -1512,4 +1512,17 @@ THE_hng_mission_modifier143 = {
 THE_hng_mission_modifier144 = {
 	tolerance_own = 2
 	religion = yes
+}
+
+#火力拓展
+THE_hng_mission_modifier145 = {
+	infantry_fire = 0.75
+	fire_damage_received = -0.1
+}
+
+#武士力量
+THE_hng_mission_modifier146 = {
+	infantry_fire = 1
+	fire_damage_received = -0.25
+	is_samurai_modifier = yes 
 }

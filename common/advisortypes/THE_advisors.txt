@@ -158,9 +158,10 @@ the_mayumi = {
 			owner = { 
 				has_government_mechanic = THE_KEI_lonely_creation_mechanic
 			}
+			mission_completed = THE_KEI_2_10_create
 		}
 		modifier = {
-			army_tradition_decay = -0.005
+			siege_ability = 0.025
 		}
 	}
 

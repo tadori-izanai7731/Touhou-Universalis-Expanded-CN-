@@ -78,10 +78,192 @@ THE_KEI_human_ghost_power_privileges = { #与生俱来
 		always = yes
 	}
 	benefits = {
-		global_unrest = -1
-		all_estate_loyalty_equilibrium = 0.10
+		global_unrest = -0.5
+		all_estate_loyalty_equilibrium = 0.05
 	}
 	ai_will_do = {
 		factor = 0
+	}
+}
+#加强灵长园防卫
+THE_KEI_mayumi_strength_defend_privileges = { 
+	icon = privilege_demand_more_troops
+	max_absolutism = -5
+	influence = 0.10
+	loyalty = 0.05
+	land_share = 0.10
+	is_valid = { 
+		OR = {
+			tag = KEI
+			was_tag = KEI
+		}
+	}
+	can_select = {
+		NOT = {
+			has_estate_privilege = THE_KEI_mayumi_strength_development_privileges
+		}
+	}
+	benefits = {
+		defensiveness = 0.10
+	}
+	modifier_by_land_ownership = {
+		discipline = 0.10
+		infantry_power = 0.20
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+#加强灵长园建设
+THE_KEI_mayumi_strength_development_privileges = { 
+	icon = privilege_demand_more_troops
+	max_absolutism = -5
+	influence = 0.10
+	loyalty = 0.05
+	land_share = 0.10
+	is_valid = { 
+		OR = {
+			tag = KEI
+			was_tag = KEI
+		}
+	}
+	can_select = {
+		NOT = {
+			has_estate_privilege = THE_KEI_mayumi_strength_defend_privileges
+		}
+	}
+	modifier_by_land_ownership = {
+		build_cost = -0.20
+		development_cost = -0.20
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+THE_KEI_mayumi_land_privileges = { 
+	icon = privilege_demand_more_troops
+	max_absolutism = -10
+	influence = 0.05
+	loyalty = 0.05
+	land_share = 0.05
+	is_valid = { 
+		OR = {
+			tag = KEI
+			was_tag = KEI
+		}
+	}
+	can_select = {
+		always = yes
+	}
+	benefits = {
+		governing_capacity = 100
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+#额外军事支持
+THE_KEI_mayumi_extra_mil_privileges = { 
+	icon = privilege_demand_more_troops
+	max_absolutism = -10
+	influence = 0.10
+	loyalty = -0.10
+	land_share = 0.05
+	is_valid = { 
+		OR = {
+			tag = KEI
+			was_tag = KEI
+		}
+	}
+	can_select = {
+		always = yes
+	}
+	benefits = {
+		country_military_power = 1
+	}
+	penalties = {
+		prestige = -0.25
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+#额外外交支持
+THE_KEI_mayumi_extra_dip_privileges = { 
+	icon = privilege_demand_more_troops
+	max_absolutism = -10
+	influence = 0.10
+	loyalty = -0.05
+	land_share = 0.05
+	is_valid = { 
+		OR = {
+			tag = KEI
+			was_tag = KEI
+		}
+	}
+	can_select = {
+		always = yes
+	}
+	benefits = {
+		country_diplomatic_power = 1
+	}
+	penalties = {
+		trade_efficiency = -0.05
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+#额外行政支持
+THE_KEI_mayumi_extra_adm_privileges = { 
+	icon = privilege_demand_more_troops
+	max_absolutism = -10
+	influence = 0.10
+	loyalty = -0.10
+	land_share = 0.05
+	is_valid = { 
+		OR = {
+			tag = KEI
+			was_tag = KEI
+		}
+	}
+	can_select = {
+		always = yes
+	}
+	benefits = {
+		country_admin_power = 1
+	}
+	penalties = {
+		prestige = -0.25
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+THE_KEI_mayumi_create_leader_privileges = {
+	icon = privilege_demand_more_troops
+	max_absolutism = -5
+	influence = 0.05
+	loyalty = 0.05
+	is_valid = { 
+		OR = {
+			tag = KEI
+			was_tag = KEI
+		}
+	}
+	can_select = {
+		always = yes
+	}
+	benefits = {
+		army_tradition = 0.5
+	}
+	penalties = {
+	}
+	ai_will_do = {
+		factor = 12
 	}
 }

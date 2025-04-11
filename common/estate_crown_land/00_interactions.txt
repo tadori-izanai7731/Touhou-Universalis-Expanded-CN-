@@ -457,6 +457,12 @@ interaction = {
 				 country_event = {
 					id = THE_KEI_flavor_events.7
 				 }
+				 hidden_effect = {
+					change_estate_land_share = {
+						estate = estate_the_haniwa
+						share = 1
+					}
+				 }
 			}
 			### THE_BEFORE_EFFECT_END
 			

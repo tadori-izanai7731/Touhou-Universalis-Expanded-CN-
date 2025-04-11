@@ -147,6 +147,13 @@ estate_the_haniwa = {
 	privileges = { 
 		#特殊
 		THE_KEI_janissaries_warrior_privileges
+		THE_KEI_mayumi_strength_defend_privileges
+		THE_KEI_mayumi_strength_development_privileges
+		THE_KEI_mayumi_land_privileges
+		THE_KEI_mayumi_extra_mil_privileges
+		THE_KEI_mayumi_extra_dip_privileges
+		THE_KEI_mayumi_extra_adm_privileges
+		THE_KEI_mayumi_create_leader_privileges
 	}
 	agendas = { 
 		estate_nobles_develop_x

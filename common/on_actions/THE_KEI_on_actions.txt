@@ -31,7 +31,7 @@ on_province_culture_converted = {
 }
 on_janissaries_raised = {
 	the_kei_gain_effect_mechanic_power_1_effect = {
-		value = 1
+		value = 0.5
 	}
 	THE_KEI_amount_haniwa_recruit_effect = yes
 }
@@ -73,8 +73,8 @@ on_bankruptcy = {
 }
 on_conquest = {
 	THE_KEI_add_subject_country_blessing_3_effect = yes
-	#
 	THE_KEI_conseguer_the_GYK_effect = yes
+	THE_KEI_conseguer_out_of_higf_effect = yes
 }
 on_core = {
 	THE_KEI_can_core_creation_add_develpment_script_effect = yes

@@ -2507,4 +2507,47 @@ country_event = {
 	}
 }
 
+#道路的分歧
+country_event = {
+	id = flavor_THE_HNG_mission_events.60
+	title = "flavor_THE_HNG_mission_events.60.t"
+	desc = "flavor_THE_HNG_mission_events.60.desc"
+	picture = THE_HNG_mission1
+	is_triggered_only = yes
 
+	option = {
+		name = flavor_THE_HNG_mission_events.60.a
+		hidden_effect = {
+				remove_country_modifier = THE_hng_mission_modifier24 
+			}
+		add_country_modifier = {
+				name = THE_hng_mission_modifier24
+				duration = -1
+			}
+		}
+
+	option = {
+			name = flavor_THE_HNG_mission_events.60.b
+			hidden_effect = {
+					remove_country_modifier = THE_hng_mission_modifier24
+				}
+			add_country_modifier = {
+					name = THE_hng_mission_modifier145
+					duration = -1
+				}
+			}
+	option = {
+				name = flavor_THE_HNG_mission_events.60.c
+				trigger = {
+					has_country_flag = hng_do_the_change1_flag 
+				}
+				hidden_effect = {
+						remove_country_modifier = THE_hng_mission_modifier24
+					}
+				add_country_modifier = {
+						name = THE_hng_mission_modifier146
+						duration = -1
+					}
+			}
+		
+	}
