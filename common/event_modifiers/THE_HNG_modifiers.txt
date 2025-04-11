@@ -1516,13 +1516,13 @@ THE_hng_mission_modifier144 = {
 
 #火力拓展
 THE_hng_mission_modifier145 = {
-	infantry_fire = 0.9
+	infantry_fire = 0.75
 	fire_damage_received = -0.1
 }
 
 #武士力量
 THE_hng_mission_modifier146 = {
-	infantry_fire = 0.7
+	infantry_fire = 1
 	fire_damage_received = -0.25
 	is_samurai_modifier = yes 
 }
