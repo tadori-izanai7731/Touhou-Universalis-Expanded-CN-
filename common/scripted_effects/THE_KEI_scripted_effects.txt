@@ -153,10 +153,12 @@ THE_KEI_define_general_mayumi_siege = {
 
 #耶尼切里计数
 THE_KEI_amount_haniwa_recruit_effect = {
-	owner = {
-		change_variable = {
-			which = the_kei_haniwa_recruit_im_var
-			value = 1
+	hidden_effect = {
+		owner = {
+			change_variable = {
+				which = the_kei_haniwa_recruit_im_var
+				value = 1
+			}
 		}
 	}
 }
@@ -475,7 +477,7 @@ THE_KEI_development_remove_province_light_buff = {
 			ROOT = {
 				has_province_modifier = THE_KEI_all_animal_run_buff
 			}
-			development = 12
+			development = 15
 		}
 		remove_province_modifier = THE_KEI_all_animal_run_buff
 		add_base_tax = 1
@@ -484,6 +486,30 @@ THE_KEI_development_remove_province_light_buff = {
 		add_country_modifier = {
 			name = THE_KEI_all_animal_run_buff_V2
 			duration = 3650
+		}
+		change_variable = {
+			which = the_kei_the_all_animal_run_buff_im_var
+			value = 1
+		}
+	}
+	if = {
+		limit = {
+			ROOT = {
+				has_province_modifier = THE_KEI_out_of_superegion_buff
+			}
+			development = 24
+		}
+		remove_province_modifier = THE_KEI_out_of_superegion_buff
+		add_base_tax = 1
+		add_base_production = 1
+		add_base_manpower = 1
+		add_country_modifier = {
+			name = THE_KEI_all_animal_run_buff_V2
+			duration = 3650
+		}
+		change_variable = {
+			which = the_kei_the_all_animal_run_buff_im_var
+			value = 1
 		}
 	}
 }
@@ -546,7 +572,7 @@ THE_KEI_the_kei_start_game_till_then_use_government_im_var_change_1_effect = {
 		change_variable = {
 			which = the_kei_start_game_till_then_use_government_im_var 
 			value = 1
-		}	
+		}
 	}
 }
 
@@ -661,7 +687,7 @@ THE_KEI_can_core_creation_add_develpment_script_effect = {
 }
 #地狱之外
 #FROM 前拥有者 #ROOT 省份
-THE_KEI_conseguer_the_GYK_effect = {
+THE_KEI_conseguer_out_of_higf_effect = {
 	if = {
 		limit = {
 			owner = {
@@ -680,9 +706,8 @@ THE_KEI_conseguer_the_GYK_effect = {
 			}
 		 }
 		 ROOT = {
-			add_devastation = 100
+			add_devastation = 30
 			add_local_autonomy = 100
-			add_unrest = 5
 			add_province_modifier = {
 				name = THE_KEI_out_of_superegion_buff
 				duration = -1

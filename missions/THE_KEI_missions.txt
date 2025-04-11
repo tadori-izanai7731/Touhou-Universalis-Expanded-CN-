@@ -166,10 +166,8 @@ THE_KEI_main_branch_1 = {
 		 } 
 
 		effect = { 
+			custom_tooltip = THE_KEI_1_7_c_tt2
 			custom_tooltip = THE_KEI_1_7_c_tt1
-			add_adm_power = 100
-			add_dip_power = 100
-			add_mil_power = 100
 		 } 
 	}
 
@@ -216,6 +214,13 @@ THE_KEI_main_branch_1 = {
 				limit = { 
 					ai = no
 				}
+				custom_trigger_tooltip = {
+					tooltip = THE_KEI_1_9_lock_c_tt12
+					check_variable = {
+						which = the_kei_the_all_animal_run_buff_im_var
+						value = 20
+					}
+				}
 				religious_unity = 0.9
 				has_reform = THE_KEI_lonely_creation_government_reform
 				has_government_power = {
@@ -228,17 +233,17 @@ THE_KEI_main_branch_1 = {
 					loyalty = 60
 				}
 				estate_loyalty = {
-					estate = estate_the_haniwa
-					loyalty = 60
+					estate = estate_church
+					loyalty = 80
 				}
 			}
 			else = {
-				religious_unity = 0.8
+				religious_unity = 0.75
 				is_year = 1490
 				has_government_power = {
 					mechanic_type = THE_KEI_lonely_creation_mechanic
 					power_type = THE_KEI_lonely_creation_mechanic_power
-					value = 25
+					value = 20
 				}
 			}
 		 } 
@@ -953,8 +958,8 @@ THE_KEI_main_branch_3 = {
 		 } 
 
 		effect = { 
+			custom_tooltip = THE_KEI_3_4_c_tt3
 			custom_tooltip = THE_KEI_3_4_c_tt1
-			add_prestige = 200
 			hidden_effect = {
 				set_country_flag = THE_KEI_can_build_add_government_power_flag
 			}
@@ -1987,12 +1992,13 @@ THE_KEI_main_branch_5 = {
 		 } 
 
 		effect = { 
+			custom_tooltip = THE_KEI_5_3_c_tt23
 			custom_tooltip = THE_KEI_5_3_c_tt1
 			custom_tooltip = THE_KEI_5_3_c_tt2
 			add_government_power = {
 				mechanic_type = THE_KEI_lonely_creation_mechanic
 				power_type = THE_KEI_lonely_creation_mechanic_power
-				value = 15
+				value = 20
 			}
 			hidden_effect = {
 				set_variable = {
@@ -3131,7 +3137,7 @@ THE_KEI_minor_branch_2_create = {
 
 		trigger = { 
 			num_of_owned_provinces_with = {
-				value = 45
+				value = 30
 				culture = Higanean
 				NOT = {
 					num_free_building_slots = 2
@@ -3153,6 +3159,7 @@ THE_KEI_minor_branch_2_create = {
 		 } 
 
 		effect = { 
+			custom_tooltip = THE_KEI_2_10_create_c_tt2
 			custom_tooltip = THE_KEI_2_10_create_c_tt1
 		} 
 	}

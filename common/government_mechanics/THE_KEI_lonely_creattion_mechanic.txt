@@ -109,6 +109,50 @@ THE_KEI_lonely_creation_mechanic = {
 				 start_value = 0
 				 end_value = 100
 			}
+			##任务
+			range_modifier = {
+				modifier = { 
+					development_cost = -0.10
+				}
+				trigger = {
+					mission_completed = THE_KEI_3_4
+				}
+				start_value = 0
+				end_value = 100
+			}
+			range_modifier = {
+				modifier = { 
+					development_cost = -0.10
+				}
+				trigger = {
+					mission_completed = THE_KEI_3_4
+				}
+				start_value = 50
+				end_value = 100
+			}
+			#防御
+			range_modifier = {
+				modifier = { 
+					fire_damage_received = -0.05
+					shock_damage_received = -0.05
+				}
+				trigger = {
+					mission_completed = THE_KEI_5_3
+				}
+				start_value = 0
+				end_value = 100
+			}
+			range_modifier = {
+				modifier = { 
+					fire_damage_received = -0.05
+					shock_damage_received = -0.0
+				}
+				trigger = {
+					mission_completed = THE_KEI_5_3
+				}
+				start_value = 50
+				end_value = 100
+			}
 			####土袿  理念组加成
 				#革新
 			range_modifier = {

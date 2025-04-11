@@ -1,6 +1,6 @@
 THE_KEI_estate_hina_wheel_buff = {
-	land_morale = 0.1
-	reinforce_cost_modifier = -1.00
+	reinforce_speed = 0.10
+	reinforce_cost_modifier = -0.80
 	is_janissary_modifier = yes
 }
 #救赎之光
@@ -167,9 +167,8 @@ THE_KEI_the_hecheng_buff = {
 }
 #九幽律令
 THE_KEI_the_hig_strial_buff = {
-	global_autonomy = -0.10
-	min_autonomy = -10
 	land_morale_constant = 0.10
+	discipline = 0.05
 	land_maintenance_modifier = -0.10
 }
 #陶瓷的杖刀人
@@ -227,5 +226,7 @@ THE_KEI_the_new_life_mission_buff = {
 }
 #不曾松懈的枷锁
 THE_KEI_out_of_superegion_buff = {
-	
+	min_local_autonomy = 100
+	local_autonomy = 0.05
+	local_core_creation = 0.05
 }
