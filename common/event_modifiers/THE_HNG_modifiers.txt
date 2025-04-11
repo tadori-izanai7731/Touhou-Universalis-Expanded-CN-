@@ -1513,3 +1513,16 @@ THE_hng_mission_modifier144 = {
 	tolerance_own = 2
 	religion = yes
 }
+
+#火力拓展
+THE_hng_mission_modifier145 = {
+	infantry_fire = 0.9
+	fire_damage_received = -0.1
+}
+
+#武士力量
+THE_hng_mission_modifier146 = {
+	infantry_fire = 0.7
+	fire_damage_received = -0.25
+	is_samurai_modifier = yes 
+}
