@@ -325,7 +325,7 @@ country_decisions = {
 			MNG = {
 				is_emperor_of_china = yes
 			}
-			is_free_or_tributary_trigger= yes
+			is_subject = no
 			NOT = { is_subject_of_type = tributary_state }
 			NOT = { mission_completed = THE_HNG_1_3_32 }
 			NOT = { mission_completed = THE_HNG_1_3_12 }
