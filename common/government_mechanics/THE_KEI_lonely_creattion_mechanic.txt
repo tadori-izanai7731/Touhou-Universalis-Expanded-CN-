@@ -26,14 +26,12 @@ THE_KEI_lonely_creation_mechanic = {
 			base_monthly_growth = 0
 			range_modifier = {
 				modifier = { 
-					land_morale = 0.05
 				}
 				start_value = 0
 				end_value = 100
 			}
 			range_modifier = {
 				modifier = { 
-					land_morale = 0.05
 					innovativeness_gain = 0.25
 				}
 				start_value = 25
@@ -41,7 +39,6 @@ THE_KEI_lonely_creation_mechanic = {
 			}
 			range_modifier = {
 				modifier = { 
-					land_morale = 0.05
 					idea_cost = -0.025
 					technology_cost = -0.025
 					innovativeness_gain = 0.25
@@ -51,7 +48,6 @@ THE_KEI_lonely_creation_mechanic = {
 			}
 			range_modifier = {
 				modifier = { 
-					land_morale = 0.05
 					idea_cost = -0.025
 					technology_cost = -0.025
 					innovativeness_gain = 0.25
@@ -133,8 +129,7 @@ THE_KEI_lonely_creation_mechanic = {
 			#防御
 			range_modifier = {
 				modifier = { 
-					fire_damage_received = -0.05
-					shock_damage_received = -0.05
+					global_manpower_modifier = 0.25
 				}
 				trigger = {
 					mission_completed = THE_KEI_5_3
@@ -144,8 +139,7 @@ THE_KEI_lonely_creation_mechanic = {
 			}
 			range_modifier = {
 				modifier = { 
-					fire_damage_received = -0.05
-					shock_damage_received = -0.0
+					global_manpower_modifier = 0.25
 				}
 				trigger = {
 					mission_completed = THE_KEI_5_3

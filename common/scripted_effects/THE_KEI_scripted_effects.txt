@@ -433,11 +433,6 @@ THE_KEI_the_leader_won_battle_im_var_ieffect = {
 THE_KEI_change_religions_to_the_keiki_var_effect = {
 	if = {
 		limit = { 
-			ROOT = {
-				NOT = {
-					religion = the_keiki
-				}
-			}
 			owner = {
 				has_government_mechanic = THE_KEI_lonely_creation_mechanic
 				religion = the_keiki
@@ -487,17 +482,20 @@ THE_KEI_development_remove_province_light_buff = {
 			name = THE_KEI_all_animal_run_buff_V2
 			duration = 3650
 		}
-		change_variable = {
-			which = the_kei_the_all_animal_run_buff_im_var
-			value = 1
+		owner = {
+			change_variable = {
+				which = the_kei_the_all_animal_run_buff_im_var
+				value = 1
+			}
 		}
+		
 	}
 	if = {
 		limit = {
 			ROOT = {
 				has_province_modifier = THE_KEI_out_of_superegion_buff
 			}
-			development = 24
+			development = 30
 		}
 		remove_province_modifier = THE_KEI_out_of_superegion_buff
 		add_base_tax = 1
@@ -507,9 +505,11 @@ THE_KEI_development_remove_province_light_buff = {
 			name = THE_KEI_all_animal_run_buff_V2
 			duration = 3650
 		}
-		change_variable = {
-			which = the_kei_the_all_animal_run_buff_im_var
-			value = 1
+		owner = {
+			change_variable = {
+				which = the_kei_the_all_animal_run_buff_im_var
+				value = 1
+			}
 		}
 	}
 }
@@ -705,8 +705,14 @@ THE_KEI_conseguer_out_of_higf_effect = {
 				}
 			}
 		 }
+		 owner = {
+			add_prestige = -0.5
+		 }
 		 ROOT = {
-			add_devastation = 30
+			add_base_tax = -1
+			add_base_production = -1
+			add_base_manpower = -1
+			add_devastation = 100
 			add_local_autonomy = 100
 			add_province_modifier = {
 				name = THE_KEI_out_of_superegion_buff

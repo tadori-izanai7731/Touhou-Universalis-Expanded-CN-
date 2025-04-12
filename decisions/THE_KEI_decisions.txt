@@ -58,7 +58,7 @@ country_decisions = {
 			has_government_mechanic = THE_KEI_save_the_masses_government_mechanic
 		}
 		allow = {
-			always = no
+			always = yes
 		}
 		effect = {
 			custom_tooltip = THE_KEI_check_save_the_masses_im_var_c_tt1

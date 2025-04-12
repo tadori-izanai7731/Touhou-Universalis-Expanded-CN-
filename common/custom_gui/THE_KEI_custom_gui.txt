@@ -953,9 +953,11 @@ custom_button = {
 		}
 		THE_KEI_development_remove_province_light_buff = yes
 		hidden_effect = {
-			change_variable = {
-				which = the_kei_rejuvenate_devlop_im_var
-				value = 1
+			FROM = {
+				change_variable = {
+					which = the_kei_rejuvenate_devlop_im_var
+					value = 1
+				}
 			}
 		}
 	}
