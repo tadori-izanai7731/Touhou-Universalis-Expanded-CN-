@@ -64,6 +64,14 @@ country_decisions = {
 			custom_tooltip = THE_KEI_check_save_the_masses_im_var_c_tt1
 			custom_tooltip = THE_KEI_check_save_the_masses_im_var_c_tt2
 			hidden_effect = {
+				set_variable = {
+					which = the_kei_decision_check_im_var_infi
+					value = 0
+				}
+				set_variable = {
+					which = the_kei_decision_check_im_var_landfor
+					value = 0
+				}
 				#步兵
 				change_variable = {
 					which = the_kei_decision_check_im_var_infi
@@ -73,33 +81,6 @@ country_decisions = {
 					which = the_kei_decision_check_im_var_infi
 					value = 0.5
 				}
-				#骑兵
-				change_variable = {
-					which = the_kei_decision_check_im_var_cala
-					which = THE_KEI_masses_var_im_var
-				}
-				multiply_variable = {
-					which = the_kei_decision_check_im_var_cala
-					value = 0.5
-				}
-				#炮兵
-				change_variable = {
-					which = the_kei_decision_check_im_var_arti
-					which = THE_KEI_masses_var_im_var
-				}
-				multiply_variable = {
-					which = the_kei_decision_check_im_var_arti
-					value = 0.5
-				}
-				#补员
-				change_variable = {
-					which = the_kei_decision_check_im_var_reinforce
-					which = THE_KEI_masses_var_im_var
-				}
-				multiply_variable = {
-					which = the_kei_decision_check_im_var_reinforce
-					value = 0.5
-				}
 				#陆军上限
 				change_variable = {
 					which = the_kei_decision_check_im_var_landfor
@@ -107,7 +88,7 @@ country_decisions = {
 				}
 				multiply_variable = {
 					which = the_kei_decision_check_im_var_landfor
-					value = 0.5
+					value = 2
 				}
 			}
 		}

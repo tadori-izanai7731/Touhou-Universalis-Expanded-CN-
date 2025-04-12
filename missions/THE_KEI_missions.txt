@@ -1599,6 +1599,9 @@ THE_KEI_main_branch_4 = {
 		} 
 
 		effect = { 
+			hell_region = {
+				add_permanent_claim = ROOT
+			}
 			#灵梦 好感+
 			if = {
 				limit = { 
@@ -1782,7 +1785,7 @@ THE_KEI_main_branch_4 = {
 				NOT = {
 					devastation = 1
 				}
-				development = 15
+				development = 20
 			}
 		 } 
 

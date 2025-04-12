@@ -479,8 +479,8 @@ country_event = {
 			THE_KEI_not_can_define_mayumi_var_trigger = yes
 			NOT = {
 				check_variable = {
-					which = the_mayumi_seige_var
-					which = the_mayumi_seige_max_var
+					which = the_mayumi_siege_var
+					which = the_mayumi_siege_max_var
 				}
 			}
 		}
@@ -1224,7 +1224,7 @@ country_event = {
 		HIG = {
 			country_event = {
 				id = THE_KEI_flavor_events.13
-				days = 730
+				days = 365
 			}
 		}
 	}
