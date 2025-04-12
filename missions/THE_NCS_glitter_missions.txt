@@ -1,0 +1,253 @@
+THE_NCS_glitter_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = NCS
+		has_country_flag = THE_NCS_enable_glitter_mission_flag
+	} 
+
+	THE_NCS_glitter_mission_1_1 = {
+		icon = mission_unknown_mission
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_NCS_glitter_mission_1_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_NCS_glitter_mission_2_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_NCS_glitter_mission_1_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { THE_NCS_glitter_mission_3_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_NCS_glitter_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = NCS
+		has_country_flag = THE_NCS_enable_glitter_mission_flag
+	} 
+
+	THE_NCS_glitter_mission_2_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = {
+			THE_NCS_glitter_mission_1_1
+			THE_NCS_glitter_mission_3_1
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_NCS_glitter_mission_2_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { THE_NCS_glitter_mission_3_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_NCS_glitter_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = NCS
+		has_country_flag = THE_NCS_enable_glitter_mission_flag
+	} 
+
+	THE_NCS_glitter_mission_3_1 = {
+		icon = mission_unknown_mission
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_NCS_glitter_mission_3_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = {
+			THE_NCS_glitter_mission_2_2
+			THE_NCS_glitter_mission_4_2
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_NCS_glitter_mission_3_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { THE_NCS_glitter_mission_3_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_NCS_glitter_branch_3_stage_0 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = NCS
+		has_country_flag = THE_NCS_enable_glitter_mission_flag
+	} 
+
+	THE_NCS_glitter_mission_3_5_0 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = {
+			THE_NCS_glitter_mission_1_4
+			THE_NCS_glitter_mission_2_4
+			THE_NCS_glitter_mission_3_4
+			THE_NCS_glitter_mission_4_4
+			THE_NCS_glitter_mission_5_4
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_NCS_glitter_branch_3_stage_1 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = NCS
+		has_country_flag = THE_NCS_enable_glitter_mission_flag
+	} 
+
+	THE_NCS_glitter_mission_3_5_1 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = {
+			THE_NCS_glitter_mission_1_4
+			THE_NCS_glitter_mission_2_4
+			THE_NCS_glitter_mission_3_4
+			THE_NCS_glitter_mission_4_4
+			THE_NCS_glitter_mission_5_4
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_NCS_glitter_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = NCS
+		has_country_flag = THE_NCS_enable_glitter_mission_flag
+	} 
+
+	THE_NCS_glitter_mission_4_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = {
+			THE_NCS_glitter_mission_3_1
+			THE_NCS_glitter_mission_5_1
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_NCS_glitter_mission_4_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { THE_NCS_glitter_mission_3_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_NCS_glitter_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = NCS
+		has_country_flag = THE_NCS_enable_glitter_mission_flag
+	} 
+
+	THE_NCS_glitter_mission_5_1 = {
+		icon = mission_unknown_mission
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_NCS_glitter_mission_5_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_NCS_glitter_mission_4_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_NCS_glitter_mission_5_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { THE_NCS_glitter_mission_3_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
