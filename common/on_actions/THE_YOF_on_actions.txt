@@ -39,14 +39,6 @@ on_startup = {
 	}
 }
 
-on_harmonized_th_kagiyama = {
-	on_harmonized_effect = yes
-	on_harmonized_religion_estate_privileges_effect = yes
-	events = {
-		THE_harmony_events.1
-	}
-}
-
 on_adm_development = {
 	THE_YOF_on_adm_development_scripted_effect = yes
 }
