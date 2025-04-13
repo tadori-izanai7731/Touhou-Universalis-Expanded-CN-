@@ -886,30 +886,16 @@ THE_KEI_main_branch_3 = {
 				}
 			}
 			else = {
-				if = {
-					limit = { 
-						is_year = 1500
-					}
-					total_development = 350
-					num_of_provinces_owned_or_owned_by_subjects_with = {
-						value = 8
-						OR = {
-							area = Yachie_state
-							area = Saki_state
-						}
-					}
-				}
-				else = {
-					total_development = 550
-					num_of_provinces_owned_or_owned_by_subjects_with = {
-						value = 10
-						OR = {
-							area = Yachie_state
-							area = Saki_state
-							area = Sanzu_upstream
-							area = Hifuu_club
-						}
-					}
+				# total_development = 350
+				# num_of_provinces_owned_or_owned_by_subjects_with = {
+				# 	value = 4
+				# 	OR = {
+				# 		area = Yachie_state
+				# 		area = Saki_state
+				# 	}
+				# }
+				KEI = {
+					has_country_flag = THE_KEI_unlock_government_refonm_extra_flag
 				}
 			}
 		} 
@@ -2621,7 +2607,26 @@ THE_KEI_minor_branch_1_lock = {
 			}
 		 } 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_KEI_if_change_to_alone_minor_banch_tt
+			custom_tooltip = THE_KEI_1_10_alone_c_1
+			custom_tooltip = THE_KEI_1_10_alone_c_2
+			add_adm_power = 300
+			add_dip_power = 300
+			add_mil_power = 300
+			hidden_effect = {
+				set_country_flag = THE_KEI_force_of_desire_unlock_flag
+			}
+			custom_tooltip = THE_KEI_if_change_to_create_minor_banch_tt
+			custom_tooltip = THE_KEI_1_10_create_c_tt2
+			custom_tooltip = THE_KEI_1_10_create_c_tt3
+			hidden_effect = {
+				random_owned_province = {
+					add_reform_center = the_keiki
+					change_religion = the_keiki
+				}
+			}
+		 } 
 	}
 
 	THE_KEI_1_12_lock = {
@@ -2638,10 +2643,80 @@ THE_KEI_minor_branch_1_lock = {
 				tooltip = THE_KEI_the_branch_mision_lock_c_tt
 				always = no
 			}
-			
 		 } 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_KEI_if_change_to_alone_minor_banch_tt
+			custom_tooltip = THE_KEI_1_12_alone_c_tt1
+			#buff
+			add_country_modifier = {
+				name = THE_KEI_impure_consumables_buff
+				duration = -1
+			}
+			custom_tooltip = THE_KEI_if_change_to_create_minor_banch_tt
+			add_country_modifier = {
+				name = THE_KEI_without_out_of_life_buff
+				duration = -1
+			}
+			if = {
+				limit = {
+					estate_loyalty = {
+						estate = estate_burghers
+						loyalty = 100
+					}
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 100
+					}
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 100
+					}
+				 }
+				 custom_tooltip = THE_KEI_1_12_create_c_tt1_yes
+				 custom_tooltip = THE_KEI_1_12_create_c_tt2_yes
+				 custom_tooltip = THE_KEI_1_12_create_c_tt3
+				 tooltip = {
+					add_country_modifier = {
+						name = THE_KEI_the_new_life_mission_buff
+						duration = -1
+					}
+				}
+				hidden_effect = {
+					every_country = {
+						limit = {
+							religion = the_keiki
+						}
+						add_country_modifier = {
+							name = THE_KEI_the_new_life_mission_buff
+							duration = -1
+						}
+					}
+				}
+			}
+			else = {
+				custom_tooltip = THE_KEI_1_12_create_c_tt1_no
+				custom_tooltip = THE_KEI_1_12_create_c_tt2_yes
+				 custom_tooltip = THE_KEI_1_12_create_c_tt3
+				 tooltip = {
+					add_country_modifier = {
+						name = THE_KEI_the_new_life_mission_buff
+						duration = -1
+					}
+				}
+				hidden_effect = {
+					every_country = {
+						limit = {
+							religion = the_keiki
+						}
+						add_country_modifier = {
+							name = THE_KEI_the_new_life_mission_buff
+							duration = -1
+						}
+					}
+				}
+			}
+		 } 
 	}
 }
 THE_KEI_minor_branch_2_lock = {
@@ -2672,7 +2747,73 @@ THE_KEI_minor_branch_2_lock = {
 			}
 		 } 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_KEI_if_change_to_alone_minor_banch_tt
+			custom_tooltip = THE_KEI_2_10_alone_c_tt1
+			add_prestige = 100
+			add_army_professionalism = 0.20
+			hidden_effect = {
+				random_owned_province = {
+					add_reform_center = the_keiki
+					change_religion = the_keiki
+				}
+				random_province = {
+					limit = {
+						superregion = gensokyo_superregion
+						religion = th_hakureishinto
+						NOT = {
+							religion = the_keiki
+						}
+						owner = {
+							all_owned_province = {
+								NOT = {
+									religion = the_keiki
+								}
+							}
+						}
+					}
+					change_religion = the_keiki
+					add_reform_center = the_keiki
+					add_permanent_province_modifier = {
+						name = "religious_zeal_at_conv"
+						duration = 9000
+					}
+					add_permanent_province_modifier = {
+						name = "th_center_of_reformation"
+						duration = -1
+					}
+				}
+				random_province = {
+					limit = {
+						superregion = gensokyo_superregion
+						religion = th_hakureishinto
+						NOT = {
+							religion = the_keiki
+						}
+						owner = {
+							all_owned_province = {
+								NOT = {
+									religion = the_keiki
+								}
+							}
+						}
+					}
+					change_religion = the_keiki
+					add_reform_center = the_keiki
+					add_permanent_province_modifier = {
+						name = "religious_zeal_at_conv"
+						duration = 9000
+					}
+					add_permanent_province_modifier = {
+						name = "th_center_of_reformation"
+						duration = -1
+					}
+				}
+			}
+			custom_tooltip = THE_KEI_if_change_to_create_minor_banch_tt
+			custom_tooltip = THE_KEI_2_10_create_c_tt2
+			custom_tooltip = THE_KEI_2_10_create_c_tt1
+		 } 
 	}
 
 	THE_KEI_2_11_lock = {
@@ -2688,7 +2829,20 @@ THE_KEI_minor_branch_2_lock = {
 			}
 		 } 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_KEI_if_change_to_alone_minor_banch_tt
+			custom_tooltip = THE_KEI_2_11_alone_c_tt1
+			add_country_modifier = {
+				name = THE_KEI_the_animal_road_buff
+				duration = -1
+			}
+			hidden_effect = {
+				
+			}
+			custom_tooltip = THE_KEI_if_change_to_create_minor_banch_tt
+			custom_tooltip = THE_KEI_2_11_create_c_tt1
+			add_government_reform = THE_KEI_without_the_time_and_end_government_reform
+		 } 
 	}
 
 	THE_KEI_2_12_lock = {
@@ -2704,7 +2858,23 @@ THE_KEI_minor_branch_2_lock = {
 			}
 		 } 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_KEI_if_change_to_alone_minor_banch_tt
+			custom_tooltip = THE_KEI_2_11_alone_c_tt1
+			add_country_modifier = {
+				name = THE_KEI_the_animal_road_buff
+				duration = -1
+			}
+			hidden_effect = {
+				
+			}
+			custom_tooltip = THE_KEI_if_change_to_create_minor_banch_tt
+			custom_tooltip = THE_KEI_1_12_create_c_tt2
+			add_country_modifier = {
+				name = THE_KEI_without_all_question_buff
+				duration = -1
+			}
+		 } 
 	}
 }
 #分支路线 孤独

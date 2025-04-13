@@ -139,7 +139,7 @@ l_english:
  THE_KEI_build_time_buff: "甘霖神迹"
  THE_KEI_cloaked_in_radiance_buff: "身披光辉"
  THE_KEI_all_animal_run_buff: "不曾松懈的枷锁"
- THE_KEI_all_animal_run_buff_V2: "不曾松懈的枷锁"
+ THE_KEI_all_animal_run_buff_V2: "光辉岁月"
  THE_KEI_the_new_life_mission_buff: "挣扎而生"
  THE_KEI_out_of_superegion_buff: "不曾松懈的枷锁"
  ##religion
@@ -154,9 +154,10 @@ l_english:
  the_keiki_fervor_mercy_short: "垂悯"
  keiki_center_of_reformation: "改革中心"
  ##decisions
+ THE_KEI_check_the_all_animal_run_buff_province_decosions_title: "查询拥有§M「不曾松懈的枷锁」§!的省份"
  THE_KEI_change_workman_duixiang_decoisions_title: "改变「天工」建筑目标"
  THE_KEI_change_workman_duixiang_decoisions_desc: ""
- THE_KEI_check_save_the_masses_im_var_decosions_title: "#KEI§M「虚愿成殇」§!目前消逝的光芒数为（[Root.THE_KEI_masses_var_im_var.GetValue])"
+ THE_KEI_check_save_the_masses_im_var_decosions_title: "@KEI§M「虚愿成殇」§!目前消逝的光芒数为（[Root.THE_KEI_masses_var_im_var.GetValue])"
  THE_KEI_check_save_the_masses_im_var_c_tt1: "§M刷新当前状态§!"
  THE_KEI_check_save_the_masses_im_var_c_tt2: "当前「虚愿」带来的修正：\n- -步兵作战能力 +§G[Root.the_kei_decision_check_im_var_infi.GetValue]%§!\n- -骑兵作战能力 +§G[Root.the_kei_decision_check_im_var_infi.GetValue]%§!\n- -炮兵作战能力 +§G[Root.the_kei_decision_check_im_var_infi.GetValue]%§!\n- -陆军上限 +§G[Root.the_kei_decision_check_im_var_landfor.GetValue]§!\n- -补员速度 +§G[Root.the_kei_decision_check_im_var_landfor.GetValue]§!"
  THE_KEI_check_save_the_masses_im_var_decosions_desc: ""
@@ -318,6 +319,8 @@ l_english:
  THE_KEI_mayumi_all_run_check_40_tt: "通过发展省份消除（[Root.the_kei_the_all_animal_run_buff_im_var.GetValue]/40）次「§Y不曾松懈的枷锁§!」"
  THE_KEI_mayumi_all_run_check_80_tt: "通过发展省份消除（[Root.the_kei_the_all_animal_run_buff_im_var.GetValue]/80）次「§Y不曾松懈的枷锁§!」"
  THE_KEI_mayumi_all_run_check_120_tt: "通过发展省份消除（[Root.the_kei_the_all_animal_run_buff_im_var.GetValue]/120）次「§Y不曾松懈的枷锁§!」"
+ THE_KEI_if_change_to_alone_minor_banch_tt: "若我们选择§J「孤独」§!线\n"
+ THE_KEI_if_change_to_create_minor_banch_tt: "若我们选择§J「创生」§!线\n"
  the_mayumi: "仗刀偶磨弓"
  the_mayumi_desc: ""
  
