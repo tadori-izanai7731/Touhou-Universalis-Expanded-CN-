@@ -1773,7 +1773,7 @@ THE_KEI_main_branch_4 = {
 			region = hell_region
 			OR = {
 				NOT = {
-					development = 15
+					development = 30
 				}
 				nationalism = 1
 				devastation = 1
@@ -1781,9 +1781,8 @@ THE_KEI_main_branch_4 = {
 		 } 
 
 		trigger = { 
-			num_of_provinces_owned_or_owned_by_subjects_with = {
-				value = 55
-				region = hell_region
+			hell_region = {
+				type = all
 				is_core = ROOT
 				NOT = {
 					nationalism = 1
@@ -2541,13 +2540,9 @@ THE_KEI_main_branch_5 = {
 		effect = { 
 			if = {
 				limit = {
-					CRD = {
-						is_subject_of = ROOT
-						religion = the_keiki
-						Chireiden_canal_state = {
-							type = all
-							owned_by = CRD
-						}
+					Chireiden_canal_state = {
+						type = all
+						owned_by = ROOT
 					}
 				 }
 				 custom_tooltip = THE_KEI_5_12_c_tt1_yes
@@ -2569,9 +2564,13 @@ THE_KEI_main_branch_5 = {
 			}
 			if = {
 				limit = {
-					Chireiden_canal_state = {
-						type = all
-						owned_by = ROOT
+					CRD = {
+						is_subject_of = ROOT
+						religion = the_keiki
+						Chireiden_canal_state = {
+							type = all
+							owned_by = CRD
+						}
 					}
 				 }
 				 custom_tooltip = THE_KEI_5_12_c_tt2_yes
