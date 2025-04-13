@@ -323,6 +323,9 @@ country_decisions = {
 			NOT = {
 				has_country_flag = THE_KEI_the_keiki_religions_close_flag
 			}
+			NOT = {
+				tag = KEI
+			}
 			KEI = {
 				mission_completed = THE_KEI_1_10_alone
 			}
@@ -395,6 +398,9 @@ country_decisions = {
 			NOT = {
 				has_country_flag = THE_KEI_the_keiki_religions_close_flag
 			}
+			NOT = {
+				tag = KEI
+			}
 			KEI = {
 				mission_completed = THE_KEI_1_10_alone
 			}
@@ -441,6 +447,9 @@ country_decisions = {
 			NOT = {
 				has_country_flag = THE_KEI_the_keiki_religions_close_flag
 			}
+			NOT = {
+				tag = KEI
+			}
 			KEI = {
 				mission_completed = THE_KEI_1_10_alone
 			}
@@ -486,6 +495,9 @@ country_decisions = {
 			NOT = {
 				has_country_flag = THE_KEI_the_keiki_religions_close_flag
 			}
+			NOT = {
+				tag = KEI
+			}
 			KEI = {
 				mission_completed = THE_KEI_1_10_alone
 			}
@@ -528,6 +540,9 @@ country_decisions = {
 			religion = the_keiki
 			NOT = {
 				has_country_flag = THE_KEI_the_keiki_religions_close_flag
+			}
+			NOT = {
+				tag = KEI
 			}
 			KEI = {
 				mission_completed = THE_KEI_1_10_alone
