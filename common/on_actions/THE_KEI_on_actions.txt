@@ -79,3 +79,6 @@ on_conquest = {
 on_core = {
 	THE_KEI_can_core_creation_add_develpment_script_effect = yes
 }
+on_battle_won_unit = {
+	THE_KEI_the_leader_won_battle_im_var_ieffect = yes
+}
