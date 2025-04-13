@@ -305,6 +305,11 @@ country_event = {
 	# picture = none
 	is_triggered_only = yes
 
+	trigger = {
+		has_government_attribute = THE_KNE_keju_event_5_years_custom_attributes
+	}
+
+
 	option = {
 		name = flavor_gbr.16.a
 		THE_KNE_define_keju_advisor_scripted_effect = { type = artist }
@@ -342,6 +347,11 @@ country_event = {
 	# picture = none
 	is_triggered_only = yes
 
+	trigger = {
+		has_government_attribute = THE_KNE_keju_event_5_years_custom_attributes
+	}
+
+
 	option = {
 		name = flavor_gbr.16.h
 		THE_KNE_define_keju_advisor_scripted_effect = { type = diplomat }
@@ -378,6 +388,11 @@ country_event = {
 	desc = THE_KNE_events.8.desc
 	# picture = none
 	is_triggered_only = yes
+
+	trigger = {
+		has_government_attribute = THE_KNE_keju_event_5_years_custom_attributes
+	}
+
 
 	option = {
 		name = flavor_gbr.16.o
@@ -488,3 +503,55 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = THE_KNE_events.12
+	title = THE_KNE_events.12.title
+	desc = THE_KNE_events.12.desc
+	# picture = none
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	trigger = {
+		OR = {
+			tag = KNE
+			was_tag = KNE
+		}
+		is_emperor_of_china = yes
+		exists = HMC
+		HMC = {
+			OR = {
+				is_free_or_tributary_trigger = yes
+				is_subject_of = ROOT
+			}
+		}
+		NOT = { has_country_flag = THE_KNE_event12_happened_flag }
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = THE_KNE_event12_happened_flag
+		}
+	}
+
+	option = {
+		name = THE_KNE_events.12.a
+		if = {
+			limit = {
+				HMC = { is_subject_of = ROOT }
+			}
+			add_mandate = 20
+		}
+		else = {
+			create_subject = {
+				who = HMC
+				subject_type = tributary_state
+			}
+		}
+		HMC = {
+			add_liberty_desire = -100
+		}
+	}
+}
+

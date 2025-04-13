@@ -25,6 +25,17 @@ THE_KNE_on_province_owner_change_scripted_effect = {
 		}
 		change_culture = THE_hakutaku_culture
 	}
+
+	if = {
+		limit = {
+			owner = { mission_completed = THE_KNE_mission_2_6 }
+			region = japan_region
+		}
+		add_permanent_province_modifier = {
+			name = THE_KNE_jinndai_province_modifier
+			duration = -1
+		}
+	}
 }
 
 THE_KNE_on_barrage_scripted_effect = {

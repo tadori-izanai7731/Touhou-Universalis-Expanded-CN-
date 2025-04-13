@@ -279,9 +279,15 @@ THE_KNE_mission_branch_1 = {
 				full_idea_group = THE_lunarian_ideas
 				full_idea_group = THE_gensokyan_ideas
 			}
-			has_global_modifier_value = {
-				which = danmaku_power_constant
-				value = 1500
+			OR = {
+				any_ally = {
+					total_development = 1000
+					culture_group = Gensokyan_culture
+				}
+				any_subject_country = {
+					total_development = 1000
+					culture_group = Gensokyan_culture
+				}
 			}
 		} 
 		
@@ -326,11 +332,85 @@ THE_KNE_mission_branch_1 = {
 	THE_KNE_mission_1_6 = {
 		icon = mission_unknown_mission
 		position = 6
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			if = {
+				limit = { exists = HMC }
+				is_capital_of = HMC
+			}
+			else = {
+				is_core = HMC
+			}
+		} 
 		
-		trigger = {  } 
+		trigger = {
+			if = {
+				limit = { exists = HMC }
+				HMC = {
+					is_subject_of = ROOT
+					has_opinion = {
+						who = ROOT
+						value = 200
+					}
+				}
+			}
+			else = {
+				any_owned_province = {
+					is_core = HMC
+				}
+			}
+		} 
 		
-		effect = {  } 
+		effect = {
+			if = {
+				limit = { exists = HMC }
+				if = {
+					limit = { HMC = { is_free_or_tributary_trigger = yes } }
+					create_subject = {
+						who = HMC
+						subject_type = march
+					}
+				}
+			}
+			else = {
+				release = HMC
+				create_subject = {
+					who = HMC
+					subject_type = march
+				}
+			}
+			custom_tooltip = THE_KNE_give_all_gensokyo_province_tt
+			gensokyo_superregion = {
+				add_permanent_claim = HMC
+			}
+			gensokyo_orbit_superregion = {
+				add_permanent_claim = HMC
+			}
+			add_country_modifier = {
+				name = THE_KNE_callback_modifier
+				duration = -1
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = { superregion = gensokyo_superregion superregion = gensokyo_orbit_superregion }
+					}
+					remove_core = ROOT
+					cede_province = HMC
+					add_core = HMC
+				}
+				HMC = {
+					every_owned_province = {
+						limit = {
+							NOT = { superregion = gensokyo_superregion }
+							NOT = { superregion = gensokyo_orbit_superregion }
+						}
+						remove_core = HMC
+						cede_province = ROOT
+						add_core = ROOT
+					}
+				}
+			}
+		} 
 	}
 	
 	THE_KNE_mission_1_7 = {
@@ -340,11 +420,73 @@ THE_KNE_mission_branch_1 = {
 			THE_KNE_mission_1_6
 			THE_KNE_mission_2_6
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				superregion = gensokyo_superregion
+				superregion = gensokyo_orbit_superregion
+			}
+			NOT = { owned_by = HMC }
+		} 
 		
-		trigger = {  } 
+		trigger = {
+			HMC = {
+				num_of_owned_provinces_with = {
+					value = 200
+					OR = {
+						superregion = gensokyo_superregion
+						superregion = gensokyo_orbit_superregion
+					}
+				}
+				num_of_owned_provinces_with = {
+					value = 15
+					OR = {
+						province_id = 4968
+						province_id = 4955
+						province_id = 4989
+						province_id = 5094
+						province_id = 4991
+						province_id = 4958
+						province_id = 4978
+						province_id = 4987
+						province_id = 5152
+						province_id = 5032
+						province_id = 5183
+						province_id = 5025
+						province_id = 5214
+						province_id = 4965
+						province_id = 4964
+						province_id = 4998
+						province_id = 5187
+						province_id = 5007
+						province_id = 4983
+					}
+				}
+			}
+		} 
 		
-		effect = {  } 
+		effect = {
+			custom_tooltip = THE_unlock_gensokyan_ideas_tt
+			hidden_effect = {
+				set_country_flag = th_formed_gensokyo_flag
+			}
+			add_power_projection = {
+				type = THE_common_form_gensokyan_pp
+				amount = 50
+			}
+			custom_tooltip = sca_scandinavian_european_empire_tt
+			add_country_modifier = {
+				name = THE_KNE_old_genso_history_modifier
+				duration = -1
+			}
+			HMC = {
+				override_country_name = THE_GNK
+				custom_tooltip = THE_unlock_gensokyan_ideas_tt
+				hidden_effect = {
+					set_country_flag = th_formed_gensokyo_flag
+				}
+			}
+
+		} 
 	}
 }
 THE_KNE_mission_branch_2 = {
@@ -588,12 +730,30 @@ THE_KNE_mission_branch_2 = {
 	THE_KNE_mission_2_6 = {
 		icon = mission_unknown_mission
 		position = 6
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			region = japan_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 		
 		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				region = japan_region
+			}
+			1020 = { country_or_non_sovereign_subject_holds = ROOT }
 		} 
 		
 		effect = {
+			japan_region = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_permanent_province_modifier = {
+					name = THE_KNE_jinndai_province_modifier
+					duration = -1
+				}
+			}
+			custom_tooltip = THE_KNE_japan_province_tt
 		}
 	}
 	
@@ -672,9 +832,8 @@ THE_KNE_mission_branch_3 = {
 				limit = { exists = HMC }
 				OR = {
 					alliance_with = HMC
-					has_opinion_modifier = {
+					reverse_has_opinion = {
 						who = HMC
-						modifier = improved_relation
 						value = 100
 					}
 				}
