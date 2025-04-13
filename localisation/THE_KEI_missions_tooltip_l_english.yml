@@ -51,10 +51,10 @@
  THE_KEI_flavor_events.2.a: "žX Rkp›R¹ppe£icon_fire£"
  THE_KEI_flavor_events.2.b: "žX R²QûQ¹ppe£icon_shock£"
  THE_KEI_flavor_events.2.c: "žX R:g¨R¹ppe£icon_manuever£"
- THE_KEI_flavor_events.2.d: "žX RôVÎW¹ppe£icon_seige£"
+ THE_KEI_flavor_events.2.d: "žX RôVÎW¹ppe£icon_siege£"
  THE_KEI_flavor_events.2.e: "³QšR"
  THE_KEI_flavor_2_event_ab_tt1: "ÔÞVv^ÔØ§G[Root.the_mayumi_define_var.GetValue]§!¹p§OSu§!"
- THE_KEI_flavor_2_event_c_tt1: "ôWnuQ•SVMR¹ppe £icon_fire£ÿ§M[Root.the_mayumi_fire_var.GetValue]§! £icon_shock£ÿ§M[Root.the_mayumi_shock_var.GetValue]§! £icon_manuever£ÿ§M[Root.the_mayumi_manuever_var.GetValue]§! £icon_seige£ÿ§M[Root.the_mayumi_siege_var.GetValue]§!"
+ THE_KEI_flavor_2_event_c_tt1: "ôWnuQ•SVMR¹ppe £icon_fire£ÿ§M[Root.the_mayumi_fire_var.GetValue]§! £icon_shock£ÿ§M[Root.the_mayumi_shock_var.GetValue]§! £icon_manuever£ÿ§M[Root.the_mayumi_manuever_var.GetValue]§! £icon_siege£ÿ§M[Root.the_mayumi_siege_var.GetValue]§!"
  THE_KEI_flavor_events.2.f: "ÔÞV"
  THE_KEI_flavor_event_2_c_tt: "ÔØ§G[Root.the_mayumi_define_var.GetValue]§!¹p§OSu§!"
  THE_KEI_flavor_events.2.aa: "§g0kp›R0¹ppeòT¾NP–§!"
@@ -139,7 +139,7 @@
  THE_KEI_build_time_buff: "u—^yù"
  THE_KEI_cloaked_in_radiance_buff: "«Ž«bIQ‰"
  THE_KEI_all_animal_run_buff: "NþfŒgÈa„v·g•"
- THE_KEI_all_animal_run_buff_V2: "NþfŒgÈa„v·g•"
+ THE_KEI_all_animal_run_buff_V2: "IQ‰Sg"
  THE_KEI_the_new_life_mission_buff: "1cNbwu"
  THE_KEI_out_of_superegion_buff: "NþfŒgÈa„v·g•"
  ##religion
@@ -154,9 +154,10 @@
  the_keiki_fervor_mercy_short: "‚W¯`"
  keiki_center_of_reformation: "9ei—-NÃV"
  ##decisions
+ THE_KEI_check_the_all_animal_run_buff_province_decosions_title: "ågâ‹åb	g§M0NþfŒgÈa„v·g•0§!„vwýN"
  THE_KEI_change_workman_duixiang_decoisions_title: "9eØS0)YåT0ú^Qrîvh"
  THE_KEI_change_workman_duixiang_decoisions_desc: ""
- THE_KEI_check_save_the_masses_im_var_decosions_title: "#KEI§M0Z†?ab‡k0§!îvMRˆm„vIQ’‚pe:Nÿ[Root.THE_KEI_masses_var_im_var.GetValue])"
+ THE_KEI_check_save_the_masses_im_var_decosions_title: "@KEI§M0Z†?ab‡k0§!îvMRˆm„vIQ’‚pe:Nÿ[Root.THE_KEI_masses_var_im_var.GetValue])"
  THE_KEI_check_save_the_masses_im_var_c_tt1: "§M7R°eSVMR¶r`§!"
  THE_KEI_check_save_the_masses_im_var_c_tt2: "SVMR0Z†?a0&^eg„vîOckÿ\n- -ekuQjObýw›R +§G[Root.the_kei_decision_check_im_var_infi.GetValue]%§!\n- -‘šuQjObýw›R +§G[Root.the_kei_decision_check_im_var_infi.GetValue]%§!\n- -®puQjObýw›R +§G[Root.the_kei_decision_check_im_var_infi.GetValue]%§!\n- -F–›QNP– +§G[Root.the_kei_decision_check_im_var_landfor.GetValue]§!\n- -eˆXT¦^ +§G[Root.the_kei_decision_check_im_var_landfor.GetValue]§!"
  THE_KEI_check_save_the_masses_im_var_decosions_desc: ""
@@ -318,6 +319,8 @@
  THE_KEI_mayumi_all_run_check_40_tt: "ÇÑSUSwýNˆmd–ÿ[Root.the_kei_the_all_animal_run_buff_im_var.GetValue]/40	ÿ!k0§YNþfŒgÈa„v·g•§!0"
  THE_KEI_mayumi_all_run_check_80_tt: "ÇÑSUSwýNˆmd–ÿ[Root.the_kei_the_all_animal_run_buff_im_var.GetValue]/80	ÿ!k0§YNþfŒgÈa„v·g•§!0"
  THE_KEI_mayumi_all_run_check_120_tt: "ÇÑSUSwýNˆmd–ÿ[Root.the_kei_the_all_animal_run_buff_im_var.GetValue]/120	ÿ!k0§YNþfŒgÈa„v·g•§!0"
+ THE_KEI_if_change_to_alone_minor_banch_tt: "å‚bìN	éb§J0dRìr0§!¿u\n"
+ THE_KEI_if_change_to_create_minor_banch_tt: "å‚bìN	éb§J0Ru0§!¿u\n"
  the_mayumi: "×NRvPèxV"
  the_mayumi_desc: ""
  

@@ -1212,6 +1212,12 @@ country_event = {
 					duration = -1
 				}
 			}
+			if = {
+				limit = {
+					ai = yes
+				 }
+				 set_country_flag = THE_KEI_unlock_government_refonm_extra_flag
+			}
 		}
 	}
 	after = {

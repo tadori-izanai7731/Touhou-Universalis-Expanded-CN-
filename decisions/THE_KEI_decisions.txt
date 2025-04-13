@@ -18,6 +18,88 @@ country_decisions = {
 			factor = 0
 		}
 	}
+	####查询未曾松懈之枷锁决议
+	THE_KEI_check_the_all_animal_run_buff_province_decosions = {
+		color = { 70 222 219 }
+		provinces_to_highlight = {
+			owned_by = ROOT
+			OR = {
+				has_province_modifier = THE_KEI_all_animal_run_buff
+				has_province_modifier = THE_KEI_out_of_superegion_buff
+			}
+		}
+		potential = {
+			OR = {
+				tag = KEI
+				was_tag = KEI
+			}
+			any_owned_province = {
+				OR = {
+					has_province_modifier = THE_KEI_all_animal_run_buff
+					has_province_modifier = THE_KEI_out_of_superegion_buff
+				}
+			}
+		}
+		allow = {
+			if = {
+				limit = { 
+					ai = no
+				}
+				always = no
+			}
+			else = {
+				OR = {
+					had_country_flag = {
+						flag = THE_KEI_check_the_all_animal_run_buff_province_cd_flag
+						days = 1075
+					}
+					NOT = {
+						has_country_flag = THE_KEI_check_the_all_animal_run_buff_province_cd_flag
+					}
+				}
+				any_owned_province = {
+					has_province_modifier = THE_KEI_all_animal_run_buff
+				}
+				OR = {
+					treasury = 200
+					has_government_power = {
+						mechanic_type = THE_KEI_lonely_creation_mechanic
+						power_type = THE_KEI_lonely_creation_mechanic_power
+						value = 50
+					}
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						treasury = 200
+					 }
+					 add_treasury = -50
+				}
+				else = {
+					add_government_power = {
+						mechanic_type = THE_KEI_lonely_creation_mechanic
+						power_type = THE_KEI_lonely_creation_mechanic_power
+						value = -5
+					}
+				}
+				random_province = {
+					limit = {
+						has_province_modifier = THE_KEI_all_animal_run_buff
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					THE_KEI_development_remove_province_light_buff = yes
+				}
+				clr_country_flag = THE_KEI_check_the_all_animal_run_buff_province_cd_flag
+				set_country_flag = THE_KEI_check_the_all_animal_run_buff_province_cd_flag
+			}
+		}
+
+	}
 	####招兵决议
 	THE_KEI_recruit_an_army_stage_1_decosions = { #第一阶段
 		color = { 70 224 219 }
