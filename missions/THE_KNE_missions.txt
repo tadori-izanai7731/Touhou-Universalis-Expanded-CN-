@@ -1961,7 +1961,7 @@ THE_KNE_mission_branch_5 = {
 				NOT = { has_country_flag = THE_KNE_hakutaku_shape_flag }
 			}
 			num_of_owned_provinces_with = {
-				value = 5
+				value = 10
 				has_building = university
 				grown_by_development = 5
 			}
