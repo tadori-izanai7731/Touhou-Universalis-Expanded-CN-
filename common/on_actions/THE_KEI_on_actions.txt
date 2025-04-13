@@ -54,6 +54,7 @@ on_province_religion_converted = {
 	THE_KEI_add_subject_country_blessing_effect = {
 		value = 10
 	}
+	THE_KEI_change_religions_to_the_keiki_var_effect = yes
 }
 on_battle_won_country = {
 	THE_KEI_win_battle_count_1_effect = yes
