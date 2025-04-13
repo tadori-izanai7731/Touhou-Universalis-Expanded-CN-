@@ -1492,24 +1492,44 @@ THE_KEI_main_branch_4 = {
 					owned_by = ROOT
 				}
 				NOT = {
-					development = 10
+					development = 12
 				}
 			}
 		 } 
 
 		trigger = { 
-			num_of_provinces_owned_or_owned_by_subjects_with = {
-				value = 20
-				OR = {
-					area = Sea_of_petroleum
-					area = Gate_to_the_dead 
-					area = Yachie_state
-					area = Saki_state
-					area = Sanzu_upstream
-					area = Hifuu_club
+			if = {
+				limit = { 
+					ai = no
 				}
-				development = 12
-				is_core = ROOT
+				num_of_provinces_owned_or_owned_by_subjects_with = {
+					value = 20
+					OR = {
+						area = Sea_of_petroleum
+						area = Gate_to_the_dead 
+						area = Yachie_state
+						area = Saki_state
+						area = Sanzu_upstream
+						area = Hifuu_club
+					}
+					development = 12
+					is_core = ROOT
+				}
+			}
+			else = {
+				num_of_provinces_owned_or_owned_by_subjects_with = {
+					value = 10
+					OR = {
+						area = Sea_of_petroleum
+						area = Gate_to_the_dead 
+						area = Yachie_state
+						area = Saki_state
+						area = Sanzu_upstream
+						area = Hifuu_club
+					}
+					development = 12
+					is_core = ROOT
+				}
 			}
 		 } 
 
@@ -1771,7 +1791,8 @@ THE_KEI_main_branch_4 = {
 				NOT = {
 					devastation = 1
 				}
-				development = 20
+				is_prosperous = yes
+				development = 30
 			}
 		 } 
 

@@ -30,7 +30,7 @@ THE_KEI_janissaries_warrior_privileges = {
 	benefits = {
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 100
 	}
 }
 THE_KEI_janissaries_warrior_2_privileges = {
@@ -82,7 +82,7 @@ THE_KEI_human_ghost_power_privileges = { #与生俱来
 		all_estate_loyalty_equilibrium = 0.05
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 10
 	}
 }
 #加强灵长园防卫
