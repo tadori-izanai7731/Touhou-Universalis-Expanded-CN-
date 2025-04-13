@@ -3,10 +3,7 @@ country_decisions = {
 		color = { 70 222 219 }
 		potential = {
 			ai = no
-			OR = {
-				has_country_modifier = THE_KEI_decree_work_V2_buff
-				has_country_modifier = THE_KEI_decree_work_buff
-			}
+			has_country_modifier = THE_KEI_create_army_province_buff
 			has_government_mechanic = THE_KEI_lonely_creation_mechanic
 		}
 		allow = {
@@ -21,6 +18,99 @@ country_decisions = {
 			factor = 0
 		}
 	}
+	####招兵决议
+	THE_KEI_recruit_an_army_stage_1_decosions = { #第一阶段
+		color = { 70 224 219 }
+		potential = {
+			ai = no
+			has_country_modifier = THE_KEI_create_army_province_buff
+			has_government_mechanic = THE_KEI_lonely_creation_mechanic
+			OR = {
+				has_country_flag = THE_KEI_recurit_an_army_stage_1_flag
+				AND = {
+					NOT = {
+						has_country_flag = THE_KEI_recurit_an_army_stage_1_flag
+					}
+					NOT = {
+						has_country_flag = THE_KEI_recurit_an_army_stage_2_flag
+					}
+					NOT = {
+						has_country_flag = THE_KEI_recurit_an_army_stage_3_flag
+					}
+				}
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			hidden_effect = {
+				THE_KEI_clr_all_recruit_army_flag_effect = yes
+				set_country_flag = THE_KEI_recurit_an_army_stage_2_flag
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	THE_KEI_recruit_an_army_stage_2_decosions = { #第二阶段
+		color = { 70 224 219 }
+		potential = {
+			ai = no
+			has_country_modifier = THE_KEI_create_army_province_buff
+			has_government_mechanic = THE_KEI_lonely_creation_mechanic
+			has_country_flag = THE_KEI_recurit_an_army_stage_2_flag
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			hidden_effect = {
+				if = {
+					limit = { 
+						NOT = {
+							mission_completed = THE_KEI_1_12_alone
+						}
+					}
+					#转到1
+					THE_KEI_clr_all_recruit_army_flag_effect = yes
+					set_country_flag = THE_KEI_recurit_an_army_stage_1_flag
+				}
+				else = {
+					#转到3
+					THE_KEI_clr_all_recruit_army_flag_effect = yes
+					set_country_flag = THE_KEI_recurit_an_army_stage_3_flag
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	THE_KEI_recruit_an_army_stage_3_decosions = { #第三阶段
+		color = { 70 224 219 }
+		potential = {
+			ai = no
+			has_country_modifier = THE_KEI_create_army_province_buff
+			has_government_mechanic = THE_KEI_lonely_creation_mechanic
+			has_country_flag = THE_KEI_recurit_an_army_stage_3_flag
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			hidden_effect = {
+				THE_KEI_clr_all_recruit_army_flag_effect = yes
+				set_country_flag = THE_KEI_recurit_an_army_stage_1_flag
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
 
 	THE_KEI_change_religion_to_the_keiki_decoisions = {
 		color = { 70 222 219 }

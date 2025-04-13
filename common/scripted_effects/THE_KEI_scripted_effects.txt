@@ -575,6 +575,16 @@ THE_KEI_the_kei_start_game_till_then_use_government_im_var_change_1_effect = {
 		}
 	}
 }
+THE_KEI_the_kei_start_game_till_then_use_government_im_var_change_2_effect = {
+	hidden_effect = {
+		owner = {
+			change_variable = {
+				which = the_kei_start_game_till_then_use_government_im_var 
+				value = 1
+			}
+		}
+	}
+}
 
 #阶层的忠诚度换点数
 THE_KEI_interation_get_power_from_estate_effect = {
@@ -720,4 +730,11 @@ THE_KEI_conseguer_out_of_higf_effect = {
 			}
 		}
 	}
+}
+
+#清除所有雷行flg
+THE_KEI_clr_all_recruit_army_flag_effect = {
+	clr_country_flag = THE_KEI_recurit_an_army_stage_1_flag
+	clr_country_flag = THE_KEI_recurit_an_army_stage_2_flag
+	clr_country_flag = THE_KEI_recurit_an_army_stage_3_flag
 }

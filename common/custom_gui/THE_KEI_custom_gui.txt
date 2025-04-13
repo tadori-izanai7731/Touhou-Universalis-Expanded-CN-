@@ -489,7 +489,7 @@ custom_button = {
 		}
 	}
 	effect = {
-		THE_KEI_the_kei_start_game_till_then_use_government_im_var_change_1_effect = yes
+		THE_KEI_the_kei_start_game_till_then_use_government_im_var_change_2_effect = yes
 		#集市1
 		if = {
 			limit = { 
@@ -908,7 +908,7 @@ custom_button = {
 		}
 	}
 	effect = {
-		THE_KEI_the_kei_start_game_till_then_use_government_im_var_change_1_effect = yes
+		THE_KEI_the_kei_start_game_till_then_use_government_im_var_change_2_effect = yes
 		if = {
 			limit = {
 				OR = {
@@ -990,96 +990,280 @@ custom_button = {
 		}
 	}
 	trigger = {
-		#判定铁矿对征兵要求的影响
 		if = {
 			limit = { 
-				NOT = {
-					trading_part = {
-						trade_goods = iron
-						value = 0.15
+				OR = {
+					has_country_flag = THE_KEI_recurit_an_army_stage_1_flag
+					AND = {
+						NOT = {
+							has_country_flag = THE_KEI_recurit_an_army_stage_1_flag
+						}
+						NOT = {
+							has_country_flag = THE_KEI_recurit_an_army_stage_2_flag
+						}
+						NOT = {
+							has_country_flag = THE_KEI_recurit_an_army_stage_3_flag
+						}
 					}
 				}
-				NOT = {
+			}
+			#判定铁矿对征兵要求的影响
+			if = {
+				limit = { 
+					NOT = {
+						trading_part = {
+							trade_goods = iron
+							value = 0.15
+						}
+					}
+					NOT = {
+						mission_completed = THE_KEI_4_11
+					}
+				}
+				FROM = {
+					manpower = 2
+				}
+			}
+			else_if = {
+				limit = { 
+					NOT = {
+						trading_part = {
+							trade_goods = iron
+							value = 0.15
+						}
+					}
 					mission_completed = THE_KEI_4_11
 				}
+				FROM = {
+					manpower = 2
+				}
 			}
-			FROM = {
-				manpower = 2
-			}
-		}
-		else_if = {
-			limit = { 
-				NOT = {
+			else_if = {
+				limit = { 
 					trading_part = {
 						trade_goods = iron
 						value = 0.15
 					}
+					mission_completed = THE_KEI_4_11
 				}
-				mission_completed = THE_KEI_4_11
+				FROM = {
+					manpower = 0.5
+				}
 			}
-			FROM = {
-				manpower = 2
+			
+		}
+		else_if = {
+			limit = {
+				has_country_flag = THE_KEI_recurit_an_army_stage_2_flag
+			}
+			#判定铁矿对征兵要求的影响
+			if = {
+				limit = { 
+					NOT = {
+						trading_part = {
+							trade_goods = iron
+							value = 0.15
+						}
+					}
+					NOT = {
+						mission_completed = THE_KEI_4_11
+					}
+				}
+				FROM = {
+					manpower = 10
+				}
+			}
+			else_if = {
+				limit = { 
+					NOT = {
+						trading_part = {
+							trade_goods = iron
+							value = 0.15
+						}
+					}
+					mission_completed = THE_KEI_4_11
+				}
+				FROM = {
+					manpower = 10
+				}
+			}
+			else_if = {
+				limit = { 
+					trading_part = {
+						trade_goods = iron
+						value = 0.15
+					}
+					mission_completed = THE_KEI_4_11
+				}
+				FROM = {
+					manpower = 2.5
+				}
 			}
 		}
 		else_if = {
-			limit = { 
-				trading_part = {
-					trade_goods = iron
-					value = 0.15
-				}
-				mission_completed = THE_KEI_4_11
-			}
-			FROM = {
-				manpower = 0.5
-			}
+			limit = {
+				has_country_flag = THE_KEI_recurit_an_army_stage_3_flag
+			 }
+			 has_government_power = {
+				mechanic_type = THE_KEI_lonely_creation_mechanic
+				power_type = THE_KEI_lonely_creation_mechanic_power
+				value = 50
+			 }
 		}
 	}
 	effect = {
-		THE_KEI_the_kei_start_game_till_then_use_government_im_var_change_1_effect = yes
-		ROOT = {
-			infantry = FROM
-		}
-		#判定铁矿对征兵要求的影响
+		THE_KEI_the_kei_start_game_till_then_use_government_im_var_change_2_effect = yes
+		#生成部队
 		if = {
 			limit = { 
-				NOT = {
-					trading_part = {
-						trade_goods = iron
-						value = 0.15
+				OR = {
+					has_country_flag = THE_KEI_recurit_an_army_stage_1_flag
+					AND = {
+						NOT = {
+							has_country_flag = THE_KEI_recurit_an_army_stage_1_flag
+						}
+						NOT = {
+							has_country_flag = THE_KEI_recurit_an_army_stage_2_flag
+						}
+						NOT = {
+							has_country_flag = THE_KEI_recurit_an_army_stage_3_flag
+						}
 					}
 				}
-				NOT = {
+			}
+			ROOT = {
+				infantry = FROM
+			}
+			#判定铁矿对征兵要求的影响
+			if = {
+				limit = { 
+					NOT = {
+						trading_part = {
+							trade_goods = iron
+							value = 0.15
+						}
+					}
+					NOT = {
+						mission_completed = THE_KEI_4_11
+					}
+				}
+				FROM = {
+					add_manpower = -2
+				}
+			}
+			else_if = {
+				limit = { 
+					NOT = {
+						trading_part = {
+							trade_goods = iron
+							value = 0.15
+						}
+					}
 					mission_completed = THE_KEI_4_11
 				}
+				FROM = {
+					add_manpower = -2
+				}
 			}
-			FROM = {
-				add_manpower = -2
-			}
-		}
-		else_if = {
-			limit = { 
-				NOT = {
+			else_if = {
+				limit = { 
 					trading_part = {
 						trade_goods = iron
 						value = 0.15
 					}
+					mission_completed = THE_KEI_4_11
 				}
-				mission_completed = THE_KEI_4_11
-			}
-			FROM = {
-				add_manpower = -2
+				FROM = {
+					add_manpower = -0.5
+				}
 			}
 		}
 		else_if = {
 			limit = { 
-				trading_part = {
-					trade_goods = iron
-					value = 0.15
-				}
-				mission_completed = THE_KEI_4_11
+				has_country_flag = THE_KEI_recurit_an_army_stage_2_flag
 			}
-			FROM = {
-				add_manpower = -0.5
+			ROOT = {
+				for = {
+					amount = 5
+					effect = "
+						infantry = FROM
+					"
+				}
+			}
+			#判定铁矿对征兵要求的影响
+			if = {
+				limit = { 
+					NOT = {
+						trading_part = {
+							trade_goods = iron
+							value = 0.15
+						}
+					}
+					NOT = {
+						mission_completed = THE_KEI_4_11
+					}
+				}
+				FROM = {
+					add_manpower = -10
+				}
+			}
+			else_if = {
+				limit = { 
+					NOT = {
+						trading_part = {
+							trade_goods = iron
+							value = 0.15
+						}
+					}
+					mission_completed = THE_KEI_4_11
+				}
+				FROM = {
+					add_manpower = -10
+				}
+			}
+			else_if = {
+				limit = { 
+					trading_part = {
+						trade_goods = iron
+						value = 0.15
+					}
+					mission_completed = THE_KEI_4_11
+				}
+				FROM = {
+					add_manpower = -2.5
+				}
+			}
+		}
+		else_if = {
+			limit = { 
+				has_country_flag = THE_KEI_recurit_an_army_stage_3_flag
+			}
+			custom_tooltip = THE_KEI_custom_ui_tt_stage_3_t
+			add_government_power = {
+				mechanic_type = THE_KEI_lonely_creation_mechanic
+				power_type = THE_KEI_lonely_creation_mechanic_power
+				value = -50
+			}
+			hidden_effect = {
+				export_to_variable = {
+					which = THE_KEI_cutom_ui_use_the_forcelimit_im_var
+					value = land_forcelimit
+				}
+				while = {
+					limit = { 
+						check_variable = {
+							which = THE_KEI_cutom_ui_use_the_forcelimit_im_var
+							value = 1
+						}
+					}
+					change_variable = {
+						which = THE_KEI_cutom_ui_use_the_forcelimit_im_var
+						value = -1
+					}
+					ROOT = {
+						infantry = FROM
+					}
+				}
 			}
 		}
 	}

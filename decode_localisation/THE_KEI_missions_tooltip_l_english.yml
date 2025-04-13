@@ -96,8 +96,8 @@ l_english:
  THE_KEI_flavor_events.11.a: ""
  THE_KEI_flavor_events.8.t: "灵魂的选择"
  THE_KEI_flavor_events.desc: ""
- THE_KEI_flavor_events.a: "倾听狂热的祈祷"
- THE_KEI_flavor_events.b: "倾听自由的呼唤"
+ THE_KEI_flavor_events.8.a: "倾听狂热的祈祷"
+ THE_KEI_flavor_events.8.b: "倾听自由的呼唤"
  THE_KEI_get_the_animal_run_c_tt1: "「§Y畜生界§!」的所有省份失去§R所有发展度§!，获得效果："
  ##buff_name
  THE_KEI_savtor_light_1_buff: "救赎之光"
@@ -184,6 +184,22 @@ l_english:
  THE_KEI_create_advisor_mayumi_decosion_title: "招募军事顾问§Y「仗刀偶磨弓」§!"
  THE_KEI_change_religion_to_the_keiki_decoisions_title: "改变信仰为宗教§Y「梦想造型」§!"
  THE_KEI_change_religion_to_the_keiki_decoisions_desc: ""
+ THE_KEI_recruit_an_army_stage_1_decosions_title: "当前「敕命」雷行状态：「招募1000人」"
+ THE_KEI_recruit_an_army_stage_1_decosions_desc: ""
+ THE_KEI_recruit_an_army_stage_2_decosions_title: ""当前「敕命」雷行状态：「招募5000人」"
+ THE_KEI_recruit_an_army_stage_2_decosions_desc: ""
+ THE_KEI_recruit_an_army_stage_3_decosions_title: ""当前「敕命」雷行状态：「招募100%陆军上限」"
+ THE_KEI_recruit_an_army_stage_3_decosions_desc: ""
+
+ #UI extra
+ THE_KEI_decrese_workman_gui: "§W「天工」§!"
+ THE_KEI_decrese_workman_gui_tt: ""
+ THE_KEI_rejuvenate_development_gui: "§W「焕生」§!"
+ THE_KEI_rejuvenate_development_gui_tt: ""
+ THE_KEI_province_create_army_gui: "§W「雷行」§!"
+ THE_KEI_province_create_army_gui_tt: ""
+ THE_KEI_custom_ui_tt_stage_3_t: "§W生成我们§G100%§!陆军上限的军队§!"
+ 
  ##MISSION EXTRA
  THE_KEI_4_1_c_tt1: "§V持有此效果时:§!\n在战争中占领§Y畜生界国家§!@SKI@YAC@GYK的省份将会立即割让\n且对方仅能召唤其他§Y畜生界国家§!@SKI@YAC@GYK"
  THE_KEI_4_1_c_tt2: "在首都生成§Y10支「耶尼切里」§!部队"
@@ -299,6 +315,9 @@ l_english:
  THE_KEI_3_4_c_tt3: "现化生高于0时： \n- -获得 发展成本§G-10%§!\n化生高于50时：\n- -获得 发展成本§G-20%§!"
  THE_KEI_5_3_c_tt23: "现化生高于50时：\n- -全国人力修正 §G+50%%§!"
  THE_KEI_1_9_lock_c_tt12: "通过发展省份消除（[Root.the_kei_the_all_animal_run_buff_im_var.GetValue]/20）次「§Y不曾松懈的枷锁§!」"
+ THE_KEI_mayumi_all_run_check_40_tt: "通过发展省份消除（[Root.the_kei_the_all_animal_run_buff_im_var.GetValue]/40）次「§Y不曾松懈的枷锁§!」"
+ THE_KEI_mayumi_all_run_check_80_tt: "通过发展省份消除（[Root.the_kei_the_all_animal_run_buff_im_var.GetValue]/80）次「§Y不曾松懈的枷锁§!」"
+ THE_KEI_mayumi_all_run_check_120_tt: "通过发展省份消除（[Root.the_kei_the_all_animal_run_buff_im_var.GetValue]/120）次「§Y不曾松懈的枷锁§!」"
  the_mayumi: "仗刀偶磨弓"
  the_mayumi_desc: ""
  

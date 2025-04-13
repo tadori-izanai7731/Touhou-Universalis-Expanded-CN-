@@ -169,7 +169,7 @@ THE_KEI_mayumi_extra_mil_privileges = {
 	icon = privilege_demand_more_troops
 	max_absolutism = -10
 	influence = 0.10
-	loyalty = -0.10
+	loyalty = 0.05
 	land_share = 0.05
 	is_valid = { 
 		OR = {
@@ -178,13 +178,56 @@ THE_KEI_mayumi_extra_mil_privileges = {
 		}
 	}
 	can_select = {
-		always = yes
+		if = {
+			limit = { 
+				NOT = {
+					has_estate_privilege = THE_KEI_mayumi_extra_dip_privileges
+				}
+				NOT = {
+					has_estate_privilege = THE_KEI_mayumi_extra_adm_privileges
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = THE_KEI_mayumi_all_run_check_40_tt
+				check_variable = {
+					which = the_kei_the_all_animal_run_buff_im_var
+					value = 30
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_estate_privilege = THE_KEI_mayumi_extra_dip_privileges
+					has_estate_privilege = THE_KEI_mayumi_extra_adm_privileges
+				}
+			 }
+			 custom_trigger_tooltip = {
+				tooltip = THE_KEI_mayumi_all_run_check_80_tt
+				check_variable = {
+					which = the_kei_the_all_animal_run_buff_im_var
+					value = 60
+				}
+			}
+		}
+		else_if = {
+			limit = { 
+				has_estate_privilege = THE_KEI_mayumi_extra_dip_privileges
+				has_estate_privilege = THE_KEI_mayumi_extra_adm_privileges
+			}
+			custom_trigger_tooltip = {
+				tooltip = THE_KEI_mayumi_all_run_check_120_tt
+				check_variable = {
+					which = the_kei_the_all_animal_run_buff_im_var
+					value = 90
+				}
+			}
+		}
 	}
 	benefits = {
 		country_military_power = 1
 	}
 	penalties = {
-		prestige = -0.25
 	}
 	ai_will_do = {
 		factor = 0
@@ -195,7 +238,7 @@ THE_KEI_mayumi_extra_dip_privileges = {
 	icon = privilege_demand_more_troops
 	max_absolutism = -10
 	influence = 0.10
-	loyalty = -0.05
+	loyalty = 0.05
 	land_share = 0.05
 	is_valid = { 
 		OR = {
@@ -204,13 +247,56 @@ THE_KEI_mayumi_extra_dip_privileges = {
 		}
 	}
 	can_select = {
-		always = yes
+		if = {
+			limit = { 
+				NOT = {
+					has_estate_privilege = THE_KEI_mayumi_extra_adm_privileges
+				}
+				NOT = {
+					has_estate_privilege = THE_KEI_mayumi_extra_mil_privileges
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = THE_KEI_mayumi_all_run_check_40_tt
+				check_variable = {
+					which = the_kei_the_all_animal_run_buff_im_var
+					value = 30
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_estate_privilege = THE_KEI_mayumi_extra_adm_privileges
+					has_estate_privilege = THE_KEI_mayumi_extra_mil_privileges
+				}
+			 }
+			 custom_trigger_tooltip = {
+				tooltip = THE_KEI_mayumi_all_run_check_80_tt
+				check_variable = {
+					which = the_kei_the_all_animal_run_buff_im_var
+					value = 60
+				}
+			}
+		}
+		else_if = {
+			limit = { 
+				has_estate_privilege = THE_KEI_mayumi_extra_adm_privileges
+				has_estate_privilege = THE_KEI_mayumi_extra_mil_privileges
+			}
+			custom_trigger_tooltip = {
+				tooltip = THE_KEI_mayumi_all_run_check_120_tt
+				check_variable = {
+					which = the_kei_the_all_animal_run_buff_im_var
+					value = 90
+				}
+			}
+		}
 	}
 	benefits = {
 		country_diplomatic_power = 1
 	}
 	penalties = {
-		trade_efficiency = -0.05
 	}
 	ai_will_do = {
 		factor = 0
@@ -222,7 +308,7 @@ THE_KEI_mayumi_extra_adm_privileges = {
 	icon = privilege_demand_more_troops
 	max_absolutism = -10
 	influence = 0.10
-	loyalty = -0.10
+	loyalty = 0.05
 	land_share = 0.05
 	is_valid = { 
 		OR = {
@@ -231,13 +317,56 @@ THE_KEI_mayumi_extra_adm_privileges = {
 		}
 	}
 	can_select = {
-		always = yes
+		if = {
+			limit = { 
+				NOT = {
+					has_estate_privilege = THE_KEI_mayumi_extra_dip_privileges
+				}
+				NOT = {
+					has_estate_privilege = THE_KEI_mayumi_extra_mil_privileges
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = THE_KEI_mayumi_all_run_check_40_tt
+				check_variable = {
+					which = the_kei_the_all_animal_run_buff_im_var
+					value = 30
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_estate_privilege = THE_KEI_mayumi_extra_dip_privileges
+					has_estate_privilege = THE_KEI_mayumi_extra_mil_privileges
+				}
+			 }
+			 custom_trigger_tooltip = {
+				tooltip = THE_KEI_mayumi_all_run_check_80_tt
+				check_variable = {
+					which = the_kei_the_all_animal_run_buff_im_var
+					value = 60
+				}
+			}
+		}
+		else_if = {
+			limit = { 
+				has_estate_privilege = THE_KEI_mayumi_extra_dip_privileges
+				has_estate_privilege = THE_KEI_mayumi_extra_mil_privileges
+			}
+			custom_trigger_tooltip = {
+				tooltip = THE_KEI_mayumi_all_run_check_120_tt
+				check_variable = {
+					which = the_kei_the_all_animal_run_buff_im_var
+					value = 90
+				}
+			}
+		}
 	}
 	benefits = {
 		country_admin_power = 1
 	}
 	penalties = {
-		prestige = -0.25
 	}
 	ai_will_do = {
 		factor = 0
