@@ -17,9 +17,6 @@ country_event = {
 		country_event = {
 			id = THE_KEI_flavor_events.2
 		}
-		hidden_effect = {
-			THE_KEI_define_mayumi_set_var_0_effects = yes
-		}
 	}
 	option = {
 		name = THE_KEI_flavor_events.1.a1
@@ -156,6 +153,7 @@ country_event = {
 		
 	}
 	after = {
+		THE_KEI_define_mayumi_set_var_0_effects = yes
 	}
 	#火力计数
 	option = {
@@ -378,6 +376,7 @@ country_event = {
 	immediate = {
 	}
 	after = {
+		THE_KEI_define_mayumi_set_var_0_effects = yes
 	}
 	#火力计数
 	option = {
@@ -1228,6 +1227,7 @@ country_event = {
 			}
 			#奖励
 			else = {
+				complete_mission = THE_KEI_2_3
 				add_government_reform = THE_KEI_lonely_creation_government_reform
 				add_government_power = {
 					mechanic_type = THE_KEI_lonely_creation_mechanic

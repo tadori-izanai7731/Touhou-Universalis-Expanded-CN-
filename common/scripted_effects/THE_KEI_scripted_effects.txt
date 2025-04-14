@@ -475,7 +475,7 @@ THE_KEI_development_remove_province_light_buff = {
 		add_base_tax = 1
 		add_base_production = 1
 		add_base_manpower = 1
-		add_country_modifier = {
+		add_province_modifier = {
 			name = THE_KEI_all_animal_run_buff_V2
 			duration = 3650
 		}
@@ -498,7 +498,7 @@ THE_KEI_development_remove_province_light_buff = {
 		add_base_tax = 1
 		add_base_production = 1
 		add_base_manpower = 1
-		add_country_modifier = {
+		add_province_modifier = {
 			name = THE_KEI_all_animal_run_buff_V2
 			duration = 3650
 		}
