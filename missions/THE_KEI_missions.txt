@@ -1329,7 +1329,7 @@ THE_KEI_main_branch_4 = {
 				}
 				set_variable = {
 					which = the_kei_the_kei_4_1_modifier_im_var
-					value = 3
+					value = 2
 				}
 				capital_scope = {
 					for = {
@@ -1452,6 +1452,11 @@ THE_KEI_main_branch_4 = {
 				tooltip = {
 					5045 = {
 						add_base_tax = 3
+					}
+				}
+				hidden_effect = {
+					5045 = {
+						add_building = temple
 					}
 				}
 			}
@@ -1971,7 +1976,7 @@ THE_KEI_main_branch_5 = {
 				tooltip = THE_KEI_5_2_c_tt1
 				check_variable = {
 					which = the_kei_haniwa_recruit_im_var
-					value = 20
+					value = 10
 				}
 			}
 			army_size = 40
@@ -2293,7 +2298,7 @@ THE_KEI_main_branch_5 = {
 		effect = { 
 			5251 = {
 				change_trade_goods = gold
-				add_country_modifier = {
+				add_province_modifier = {
 					name = THE_KEI_oil_province_buff 
 					duration = -1
 				}
@@ -2880,14 +2885,12 @@ THE_KEI_minor_branch_2_lock = {
 
 		effect = { 
 			custom_tooltip = THE_KEI_if_change_to_alone_minor_banch_tt
-			custom_tooltip = THE_KEI_2_11_alone_c_tt1
+			custom_tooltip = THE_KEI_2_12_alone_c_tt2
 			add_country_modifier = {
-				name = THE_KEI_the_animal_road_buff
+				name = THE_KEI_eternal_joy_land_buff
 				duration = -1
 			}
-			hidden_effect = {
-				
-			}
+			custom_tooltip = THE_KEI_2_12_alone_c_tt1
 			custom_tooltip = THE_KEI_if_change_to_create_minor_banch_tt
 			custom_tooltip = THE_KEI_1_12_create_c_tt2
 			add_country_modifier = {

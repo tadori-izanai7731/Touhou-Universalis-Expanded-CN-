@@ -1180,18 +1180,8 @@ country_event = {
 	trigger = { 
 
 	}
-	option = {
-		name = THE_KEI_flavor_events.12.a
-		custom_tooltip = THE_KEI_get_the_animal_run_c_tt1
-		tooltip = {
-			add_province_modifier = {
-				name = THE_KEI_all_animal_run_buff
-				duration = -1
-			}
-		}
-		custom_tooltip = THE_KEI_get_the_animal_run_c_tt2
+	immediate = {
 		hidden_effect = {
-			set_country_flag = THE_KEI_get_the_animal_run_first_flag
 			every_owned_province = {
 				limit = {
 					OR = {
@@ -1199,8 +1189,11 @@ country_event = {
 						area = Saki_state
 						area = Sanzu_upstream
 						area = Hifuu_club
+						area = Sea_of_petroleum
+						area = Gate_to_the_dead
 					}
 				}
+				add_territorial_core = ROOT
 				add_base_tax = -20
 				add_base_production = -20
 				add_base_manpower = -20
@@ -1212,25 +1205,57 @@ country_event = {
 					duration = -1
 				}
 			}
+			set_country_flag = THE_KEI_get_the_animal_run_first_flag
+		}
+	}
+	option = {
+		name = THE_KEI_flavor_events.12.a
+		custom_tooltip = THE_KEI_get_the_animal_run_c_tt111_2
+		custom_tooltip = THE_KEI_get_the_animal_run_c_tt1
+		tooltip = {
+			add_province_modifier = {
+				name = THE_KEI_all_animal_run_buff
+				duration = -1
+			}
+		}
+		custom_tooltip = THE_KEI_get_the_animal_run_c_tt2
+		hidden_effect = {
 			if = {
 				limit = {
 					ai = yes
 				 }
 				 set_country_flag = THE_KEI_unlock_government_refonm_extra_flag
 			}
+			#奖励
+			else = {
+				add_government_reform = THE_KEI_lonely_creation_government_reform
+				add_government_power = {
+					mechanic_type = THE_KEI_lonely_creation_mechanic
+					power_type = THE_KEI_lonely_creation_mechanic_power
+					value = 25
+				}
+				add_army_tradition = 25
+				add_army_professionalism = 0.20
+				5045 = {
+					add_province_modifier = {
+						name = THE_KEI_the_captial_of_KEI_buff
+						duration = -1
+					}
+				}
+				every_country = {
+					limit = {
+						alliance_with = ROOT
+					}
+					break_alliance = ROOT
+				}
+			}
 		}
 	}
 	after = {
-		YAC = {
-			clr_country_flag = THE_KEI_declare_war_to_yac_ski_flag
-		}
-		SKI = {
-			clr_country_flag = THE_KEI_declare_war_to_yac_ski_flag
-		}
 		HIG = {
 			country_event = {
 				id = THE_KEI_flavor_events.13
-				days = 365
+				days = 730
 			}
 		}
 	}

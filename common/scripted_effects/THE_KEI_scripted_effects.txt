@@ -22,7 +22,6 @@ THE_KEI_annex_ski_yac_province_in_war_effects = {
 		 }
 		 FROM = {
 			cede_province = ROOT
-			add_territorial_core = ROOT
 			change_religion = ROOT
 		 }
 	}
@@ -394,7 +393,6 @@ THE_KEI_decalre_to_YAC_or_SKI_won_war_effects = {
 					tag = SKI
 					tag = YAC
 				}
-				has_country_flag = THE_KEI_declare_war_to_yac_ski_flag
 			}
 			ROOT = {
 				NOT = {
@@ -409,7 +407,6 @@ THE_KEI_decalre_to_YAC_or_SKI_won_war_effects = {
 		KEI = {
 			country_event = {
 				id = THE_KEI_flavor_events.12
-				days = 60
 			}
 		}
 	}
@@ -711,17 +708,14 @@ THE_KEI_conseguer_out_of_higf_effect = {
 			}
 			ROOT = {
 				NOT = {
-					superregion = gensokyo_superregion 
+					region = hell_region
 				}
 			}
 		 }
 		 owner = {
-			add_prestige = -0.5
+			add_prestige = -1
 		 }
 		 ROOT = {
-			add_base_tax = -1
-			add_base_production = -1
-			add_base_manpower = -1
 			add_devastation = 100
 			add_local_autonomy = 100
 			add_province_modifier = {

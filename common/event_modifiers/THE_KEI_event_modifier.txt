@@ -214,7 +214,7 @@ THE_KEI_cloaked_in_radiance_buff = {
 }
 #光辉岁月
 THE_KEI_all_animal_run_buff = {
-	min_local_autonomy = 80
+	min_local_autonomy = 100
 	local_autonomy = 0.05
 }
 THE_KEI_all_animal_run_buff_V2 = {
@@ -226,7 +226,7 @@ THE_KEI_the_new_life_mission_buff = {
 }
 #不曾松懈的枷锁
 THE_KEI_out_of_superegion_buff = {
-	min_local_autonomy = 100
+	min_local_autonomy = 50
 	local_autonomy = 0.05
 	local_core_creation = 0.10
 }

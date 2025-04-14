@@ -98,7 +98,7 @@ l_english:
  THE_KEI_flavor_events.desc: ""
  THE_KEI_flavor_events.8.a: "倾听狂热的祈祷"
  THE_KEI_flavor_events.8.b: "倾听自由的呼唤"
- THE_KEI_get_the_animal_run_c_tt1: "「§Y畜生界§!」的所有省份失去§R所有发展度§!，获得效果："
+ THE_KEI_get_the_animal_run_c_tt1: "「§Y畜生界§!」的所有省份失去§R所有发展度§!并添加我们的核心，获得效果："
  ##buff_name
  THE_KEI_savtor_light_1_buff: "救赎之光"
  THE_KEI_savtor_all_power_buff: "奉献一切"
@@ -195,6 +195,7 @@ l_english:
  THE_KEI_create_the_mayumi_leader_from_descision_title: "@KEI§W提拔埴轮兵长§!"
  THE_KEI_create_the_mayumi_leader_from_descision_desc: ""
  THE_KEI_create_the_mayumi_leader_from_descision_cd_tt: "10年内未使用过此决议"
+ THE_KEI_get_the_animal_run_c_tt111_2: "自动完成任务§M「咏唱与讴歌」§!并获得奖励"
 
  #UI extra
  THE_KEI_decrese_workman_gui: "§W「天工」§!"
@@ -219,7 +220,7 @@ l_english:
  THE_KEI_4_6_C_tt2_yes: "£yes£若我们通过外交羞辱@HKR§Y博丽§!完成任务"
  THE_KEI_4_7_c_tt1: "解锁政府机制「§Y创生§!」"
  THE_KEI_4_8_c_tt1: "化生高于50时，额外获得:\n- -科技花费§G-5%§!\n- -理念花费§G-5%§!"
- THE_KEI_5_2_c_tt1: "已经招募（[Root.the_kei_haniwa_recruit_im_var.GetValue]/20）支耶尼切里部队"
+ THE_KEI_5_2_c_tt1: "已经招募（[Root.the_kei_haniwa_recruit_im_var.GetValue]/10）支耶尼切里部队"
  THE_KEI_5_2_c_tt2: "解锁政府机制「§Y敕命§!」\n解锁§O「敕命槽」§!"
  THE_KEI_5_2_c_tt3: "解锁§Y敕命「四方」§!"
  THE_KEI_5_3_c_tt1: "解锁政府机制「§Y塑魂§!」\n - -将领综合点数上限为8，单项上限为4"
