@@ -153,7 +153,6 @@ country_event = {
 		
 	}
 	after = {
-		THE_KEI_define_mayumi_set_var_0_effects = yes
 	}
 	#火力计数
 	option = {
@@ -350,6 +349,7 @@ country_event = {
 		THE_KEI_the_kei_start_game_till_then_use_government_im_var_change_1_effect = yes
 		hidden_effect = {
 			THE_KEI_define_general_mayumi = yes 
+			THE_KEI_define_mayumi_set_var_0_effects = yes
 		}
 	}
 	#返还
@@ -376,7 +376,6 @@ country_event = {
 	immediate = {
 	}
 	after = {
-		THE_KEI_define_mayumi_set_var_0_effects = yes
 	}
 	#火力计数
 	option = {
@@ -573,6 +572,7 @@ country_event = {
 		THE_KEI_the_kei_start_game_till_then_use_government_im_var_change_1_effect = yes
 		hidden_effect = {
 			THE_KEI_define_general_mayumi = yes 
+			THE_KEI_define_mayumi_set_var_0_effects = yes
 		}
 	}
 	#返还
