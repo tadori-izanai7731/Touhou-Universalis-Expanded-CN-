@@ -444,7 +444,6 @@ THE_KEI_main_branch_2 = {
 							estate = estate_burghers
 							loyalty = 70
 						}
-						
 					}
 				}
 				custom_tooltip = THE_KEI_2_5_c_tt1_yes
@@ -452,19 +451,10 @@ THE_KEI_main_branch_2 = {
 					limit = {
 						estate_loyalty = {
 							estate = estate_church
-							loyalty = 70
+							loyalty = 100
 						}
 					}
-					add_adm_power = 100
-				}
-				else_if = {
-					limit = {
-						estate_loyalty = {
-							estate = estate_church
-							loyalty = 80
-						}
-					}
-					add_adm_power = 200
+					add_adm_power = 400
 				}
 				else_if = {
 					limit = {
@@ -479,28 +469,29 @@ THE_KEI_main_branch_2 = {
 					limit = {
 						estate_loyalty = {
 							estate = estate_church
-							loyalty = 100
+							loyalty = 80
 						}
 					}
-					add_adm_power = 400
-				}
-				if = {
-					limit = {
-						estate_loyalty = {
-							estate = estate_nobles
-							loyalty = 70
-						}
-					}
-					add_mil_power = 100
+					add_adm_power = 200
 				}
 				else_if = {
 					limit = {
 						estate_loyalty = {
-							estate = estate_nobles
-							loyalty = 80
+							estate = estate_church
+							loyalty = 70
 						}
 					}
-					add_mil_power = 200
+					add_adm_power = 100
+				}
+				###
+				if = {
+					limit = {
+						estate_loyalty = {
+							estate = estate_nobles
+							loyalty = 100
+						}
+					}
+					add_mil_power = 400
 				}
 				else_if = {
 					limit = {
@@ -515,28 +506,29 @@ THE_KEI_main_branch_2 = {
 					limit = {
 						estate_loyalty = {
 							estate = estate_nobles
-							loyalty = 100
+							loyalty = 80
 						}
 					}
-					add_mil_power = 400
+					add_mil_power = 200
 				}
+				else_if = {
+					limit = {
+						estate_loyalty = {
+							estate = estate_nobles
+							loyalty = 70
+						}
+					}
+					add_mil_power = 100
+				}
+				##
 				if = {
 					limit = { 
 						estate_loyalty = {
 							estate = estate_burghers
-							loyalty = 70
+							loyalty = 100
 						}
 					}
-					add_dip_power = 100
-				}
-				else_if = {
-					limit = { 
-						estate_loyalty = {
-							estate = estate_burghers
-							loyalty = 80
-						}
-					}
-					add_dip_power = 200
+					add_dip_power = 400
 				}
 				else_if = {
 					limit = { 
@@ -551,10 +543,19 @@ THE_KEI_main_branch_2 = {
 					limit = { 
 						estate_loyalty = {
 							estate = estate_burghers
-							loyalty = 100
+							loyalty = 80
 						}
 					}
-					add_dip_power = 400
+					add_dip_power = 200
+				}
+				else_if = {
+					limit = { 
+						estate_loyalty = {
+							estate = estate_burghers
+							loyalty = 70
+						}
+					}
+					add_dip_power = 100
 				}
 			}
 			else = {
