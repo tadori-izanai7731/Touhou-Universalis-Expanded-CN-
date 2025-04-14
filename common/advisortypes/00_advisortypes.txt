@@ -128,8 +128,8 @@ philosopher = {
 		trigger = { 
 			owner = { 
 				has_government_mechanic = THE_KEI_lonely_creation_mechanic
+				mission_completed = THE_KEI_1_7
 			}
-			mission_completed = THE_KEI_1_7
 		}
 		modifier = {
 			monthly_THE_KEI_lonely_creation_mechanic_power = 0.1
@@ -263,8 +263,8 @@ natural_scientist = {
 		trigger = { 
 			owner = { 
 				has_government_mechanic = THE_KEI_lonely_creation_mechanic
+				mission_completed = THE_KEI_1_7
 			}
-			mission_completed = THE_KEI_1_7
 		}
 		modifier = {
 			monthly_THE_KEI_lonely_creation_mechanic_power = 0.1
@@ -409,8 +409,8 @@ artist = {
 		trigger = { 
 			owner = { 
 				has_government_mechanic = THE_KEI_lonely_creation_mechanic
+				mission_completed = THE_KEI_1_7
 			}
-			mission_completed = THE_KEI_1_7
 		}
 		modifier = {
 			monthly_THE_KEI_lonely_creation_mechanic_power = 0.1
@@ -563,8 +563,8 @@ treasurer = {
 		trigger = { 
 			owner = { 
 				has_government_mechanic = THE_KEI_lonely_creation_mechanic
+				mission_completed = THE_KEI_1_7
 			}
-			mission_completed = THE_KEI_1_7
 		}
 		modifier = {
 			monthly_THE_KEI_lonely_creation_mechanic_power = 0.1
@@ -720,8 +720,8 @@ theologian = {
 		trigger = { 
 			owner = { 
 				has_government_mechanic = THE_KEI_lonely_creation_mechanic
+				mission_completed = THE_KEI_1_7
 			}
-			mission_completed = THE_KEI_1_7
 		}
 		modifier = {
 			monthly_THE_KEI_lonely_creation_mechanic_power = 0.1
@@ -874,8 +874,8 @@ master_of_mint = {
 		trigger = { 
 			owner = { 
 				has_government_mechanic = THE_KEI_lonely_creation_mechanic
+				mission_completed = THE_KEI_1_7
 			}
-			mission_completed = THE_KEI_1_7
 		}
 		modifier = {
 			monthly_THE_KEI_lonely_creation_mechanic_power = 0.1
@@ -1040,8 +1040,8 @@ inquisitor = {
 		trigger = { 
 			owner = { 
 				has_government_mechanic = THE_KEI_lonely_creation_mechanic
+				mission_completed = THE_KEI_1_7
 			}
-			mission_completed = THE_KEI_1_7
 		}
 		modifier = {
 			monthly_THE_KEI_lonely_creation_mechanic_power = 0.1

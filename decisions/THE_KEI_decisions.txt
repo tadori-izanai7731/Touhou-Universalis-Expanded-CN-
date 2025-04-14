@@ -4,8 +4,8 @@ country_decisions = {
 		potential = {
 			ai = no
 			OR = {
-				has_province_modifier = THE_KEI_decree_work_buff
-				has_province_modifier = THE_KEI_decree_work_V2_buff
+				has_country_modifier = THE_KEI_decree_work_buff
+				has_country_modifier = THE_KEI_decree_work_V2_buff
 			}
 			has_government_mechanic = THE_KEI_lonely_creation_mechanic
 		}

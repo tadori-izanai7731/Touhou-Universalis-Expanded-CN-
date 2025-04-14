@@ -993,16 +993,24 @@ custom_button = {
 		if = {
 			limit = { 
 				OR = {
-					has_country_flag = THE_KEI_recurit_an_army_stage_1_flag
+					FROM = {
+						has_country_flag = THE_KEI_recurit_an_army_stage_1_flag
+					}
 					AND = {
 						NOT = {
-							has_country_flag = THE_KEI_recurit_an_army_stage_1_flag
+							FROM = {
+								has_country_flag = THE_KEI_recurit_an_army_stage_1_flag
+							}
 						}
 						NOT = {
-							has_country_flag = THE_KEI_recurit_an_army_stage_2_flag
+							FROM = {
+								has_country_flag = THE_KEI_recurit_an_army_stage_2_flag
+							}
 						}
 						NOT = {
-							has_country_flag = THE_KEI_recurit_an_army_stage_3_flag
+							FROM = {
+								has_country_flag = THE_KEI_recurit_an_army_stage_3_flag
+							}
 						}
 					}
 				}
@@ -1011,12 +1019,34 @@ custom_button = {
 			if = {
 				limit = { 
 					NOT = {
-						trading_part = {
-							trade_goods = iron
-							value = 0.15
+						FROM = {
+							trading_part = {
+								trade_goods = iron
+								value = 0.15
+							}
 						}
 					}
 					NOT = {
+						FROM = {
+							mission_completed = THE_KEI_4_11
+						}
+					}
+				}
+				FROM = {
+					manpower = 2
+				}
+			}
+			else_if = {
+				limit = { 
+					NOT = {
+						FROM = {
+							trading_part = {
+								trade_goods = iron
+								value = 0.15
+							}
+						}
+					}
+					FROM = {
 						mission_completed = THE_KEI_4_11
 					}
 				}
@@ -1026,25 +1056,13 @@ custom_button = {
 			}
 			else_if = {
 				limit = { 
-					NOT = {
+					FROM = {
 						trading_part = {
 							trade_goods = iron
 							value = 0.15
 						}
+						mission_completed = THE_KEI_4_11
 					}
-					mission_completed = THE_KEI_4_11
-				}
-				FROM = {
-					manpower = 2
-				}
-			}
-			else_if = {
-				limit = { 
-					trading_part = {
-						trade_goods = iron
-						value = 0.15
-					}
-					mission_completed = THE_KEI_4_11
 				}
 				FROM = {
 					manpower = 0.5
@@ -1054,18 +1072,42 @@ custom_button = {
 		}
 		else_if = {
 			limit = {
-				has_country_flag = THE_KEI_recurit_an_army_stage_2_flag
+				FROM = {
+					has_country_flag = THE_KEI_recurit_an_army_stage_2_flag
+				}
 			}
 			#判定铁矿对征兵要求的影响
 			if = {
 				limit = { 
 					NOT = {
-						trading_part = {
-							trade_goods = iron
-							value = 0.15
+						FROM = {
+							trading_part = {
+								trade_goods = iron
+								value = 0.15
+							}
 						}
 					}
 					NOT = {
+						FROM = {
+							mission_completed = THE_KEI_4_11
+						}
+					}
+				}
+				FROM = {
+					manpower = 10
+				}
+			}
+			else_if = {
+				limit = { 
+					NOT = {
+						FROM = {
+							trading_part = {
+								trade_goods = iron
+								value = 0.15
+							}
+						}
+					}
+					FROM = {
 						mission_completed = THE_KEI_4_11
 					}
 				}
@@ -1075,25 +1117,13 @@ custom_button = {
 			}
 			else_if = {
 				limit = { 
-					NOT = {
+					FROM = {
 						trading_part = {
 							trade_goods = iron
 							value = 0.15
 						}
+						mission_completed = THE_KEI_4_11
 					}
-					mission_completed = THE_KEI_4_11
-				}
-				FROM = {
-					manpower = 10
-				}
-			}
-			else_if = {
-				limit = { 
-					trading_part = {
-						trade_goods = iron
-						value = 0.15
-					}
-					mission_completed = THE_KEI_4_11
 				}
 				FROM = {
 					manpower = 2.5
@@ -1102,12 +1132,16 @@ custom_button = {
 		}
 		else_if = {
 			limit = {
-				has_country_flag = THE_KEI_recurit_an_army_stage_3_flag
+				FROM = {
+					has_country_flag = THE_KEI_recurit_an_army_stage_3_flag
+				}
 			 }
-			 has_government_power = {
-				mechanic_type = THE_KEI_lonely_creation_mechanic
-				power_type = THE_KEI_lonely_creation_mechanic_power
-				value = 50
+			 FROM = {
+				has_government_power = {
+					mechanic_type = THE_KEI_lonely_creation_mechanic
+					power_type = THE_KEI_lonely_creation_mechanic_power
+					value = 50
+				 }
 			 }
 		}
 	}
@@ -1117,16 +1151,24 @@ custom_button = {
 		if = {
 			limit = { 
 				OR = {
-					has_country_flag = THE_KEI_recurit_an_army_stage_1_flag
+					FROM = {
+						has_country_flag = THE_KEI_recurit_an_army_stage_1_flag
+					}
 					AND = {
 						NOT = {
-							has_country_flag = THE_KEI_recurit_an_army_stage_1_flag
+							FROM = {
+								has_country_flag = THE_KEI_recurit_an_army_stage_1_flag
+							}
 						}
 						NOT = {
-							has_country_flag = THE_KEI_recurit_an_army_stage_2_flag
+							FROM = {
+								has_country_flag = THE_KEI_recurit_an_army_stage_2_flag
+							}
 						}
 						NOT = {
-							has_country_flag = THE_KEI_recurit_an_army_stage_3_flag
+							FROM = {
+								has_country_flag = THE_KEI_recurit_an_army_stage_3_flag
+							}
 						}
 					}
 				}
@@ -1138,12 +1180,34 @@ custom_button = {
 			if = {
 				limit = { 
 					NOT = {
-						trading_part = {
-							trade_goods = iron
-							value = 0.15
+						FROM = {
+							trading_part = {
+								trade_goods = iron
+								value = 0.15
+							}
 						}
 					}
 					NOT = {
+						FROM = {
+							mission_completed = THE_KEI_4_11
+						}
+					}
+				}
+				FROM = {
+					add_manpower = -2
+				}
+			}
+			else_if = {
+				limit = { 
+					NOT = {
+						FROM = {
+							trading_part = {
+								trade_goods = iron
+								value = 0.15
+							}
+						}
+					}
+					FROM = {
 						mission_completed = THE_KEI_4_11
 					}
 				}
@@ -1153,25 +1217,13 @@ custom_button = {
 			}
 			else_if = {
 				limit = { 
-					NOT = {
+					FROM = {
 						trading_part = {
 							trade_goods = iron
 							value = 0.15
 						}
+						mission_completed = THE_KEI_4_11
 					}
-					mission_completed = THE_KEI_4_11
-				}
-				FROM = {
-					add_manpower = -2
-				}
-			}
-			else_if = {
-				limit = { 
-					trading_part = {
-						trade_goods = iron
-						value = 0.15
-					}
-					mission_completed = THE_KEI_4_11
 				}
 				FROM = {
 					add_manpower = -0.5
@@ -1180,7 +1232,9 @@ custom_button = {
 		}
 		else_if = {
 			limit = { 
-				has_country_flag = THE_KEI_recurit_an_army_stage_2_flag
+				FROM = {
+					has_country_flag = THE_KEI_recurit_an_army_stage_2_flag
+				}
 			}
 			ROOT = {
 				for = {
@@ -1194,12 +1248,34 @@ custom_button = {
 			if = {
 				limit = { 
 					NOT = {
-						trading_part = {
-							trade_goods = iron
-							value = 0.15
+						FROM = { 
+							trading_part = {
+								trade_goods = iron
+								value = 0.15
+							}
 						}
 					}
 					NOT = {
+						FROM = {
+							mission_completed = THE_KEI_4_11
+						}
+					}
+				}
+				FROM = {
+					add_manpower = -10
+				}
+			}
+			else_if = {
+				limit = { 
+					NOT = {
+						FROM = { 
+							trading_part = {
+								trade_goods = iron
+								value = 0.15
+							}
+						}
+					}
+					FROM = {
 						mission_completed = THE_KEI_4_11
 					}
 				}
@@ -1209,25 +1285,13 @@ custom_button = {
 			}
 			else_if = {
 				limit = { 
-					NOT = {
+					FROM = {
 						trading_part = {
 							trade_goods = iron
 							value = 0.15
 						}
+						mission_completed = THE_KEI_4_11
 					}
-					mission_completed = THE_KEI_4_11
-				}
-				FROM = {
-					add_manpower = -10
-				}
-			}
-			else_if = {
-				limit = { 
-					trading_part = {
-						trade_goods = iron
-						value = 0.15
-					}
-					mission_completed = THE_KEI_4_11
 				}
 				FROM = {
 					add_manpower = -2.5
@@ -1236,17 +1300,22 @@ custom_button = {
 		}
 		else_if = {
 			limit = { 
-				has_country_flag = THE_KEI_recurit_an_army_stage_3_flag
+				FROM = {
+					has_country_flag = THE_KEI_recurit_an_army_stage_3_flag
+				}
 			}
 			custom_tooltip = THE_KEI_custom_ui_tt_stage_3_t
-			add_government_power = {
-				mechanic_type = THE_KEI_lonely_creation_mechanic
-				power_type = THE_KEI_lonely_creation_mechanic_power
-				value = -50
+			FROM = {
+				add_government_power = {
+					mechanic_type = THE_KEI_lonely_creation_mechanic
+					power_type = THE_KEI_lonely_creation_mechanic_power
+					value = -50
+				}
 			}
 			hidden_effect = {
 				export_to_variable = {
 					which = THE_KEI_cutom_ui_use_the_forcelimit_im_var
+					who = FROM
 					value = land_forcelimit
 				}
 				while = {
