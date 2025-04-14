@@ -277,6 +277,9 @@ country_decisions = {
 		potential = {
 			religion = the_keiki
 			has_country_flag = THE_KEI_the_keiki_religions_close_flag
+			NOT = {
+				tag = KEI
+			}
 			KEI = {
 				mission_completed = THE_KEI_1_10_alone
 			}
@@ -299,6 +302,9 @@ country_decisions = {
 		potential = {
 			religion = the_keiki
 			ai = no
+			NOT = {
+				tag = KEI
+			}
 			NOT = {
 				has_country_flag = THE_KEI_the_keiki_religions_close_flag
 			}
@@ -544,7 +550,9 @@ country_decisions = {
 			NOT = {
 				has_country_flag = THE_KEI_the_keiki_religions_close_flag
 			}
-			
+			NOT = {
+				tag = KEI
+			}
 			KEI = {
 				mission_completed = THE_KEI_1_10_alone
 			}
@@ -582,40 +590,7 @@ country_decisions = {
 			}
 		}
 	}
-	#######和尘的特殊决议
-	# THE_KEI_hechen_special_decosion_open = {
-	# 	color = { 70 222 219 }
-	# 	potential = {
-	# 		OR = {
-	# 			tag = KEI
-	# 			was_tag = KEI
-	# 		}
-	# 		mission_completed = THE_KEI_1_5
-	# 	}
-	# 	allow = {
-	# 		adm_power = 100
-	# 		dip_power = 100
-	# 		mil_power = 100
-	# 		custom_trigger_tooltip = {
-	# 			tooltip = THE_KEI_hechen_special_decosion_open_cooldown_c_tt
-	# 			OR = {
-	# 				NOT = {
-	# 					has_country_flag = THE_KEI_hechen_special_decosion_open_cooldown_flag
-	# 				}
-	# 				had_country_flag = {
-	# 					flag = THE_KEI_hechen_special_decosion_open_cooldown_flag
-	# 					days = 3650
-	# 				}
-	# 			}
-	# 		}
-	# 	}
-	# 	effect = {
-	# 		hidden_effect = {
-	# 			clr_country_flag = THE_KEI_hechen_special_decosion_open_cooldown_flag
-	# 			set_country_flag = THE_KEI_hechen_special_decosion_open_cooldown_flag
-	# 		}
-	# 	}
-	# }
+
 	#招募§O杖刀偶磨弓
 	THE_KEI_create_advisor_mayumi_decosion = {
 		color = { 70 222 219 }
