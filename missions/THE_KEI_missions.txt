@@ -704,6 +704,7 @@ THE_KEI_main_branch_2 = {
 					value = 30
 					has_building = cathedral
 				}
+				reform_level = 3
 			}
 			else = {
 				always = yes
@@ -3404,6 +3405,7 @@ THE_KEI_minor_branch_2_create = {
 				estate = estate_church
 				value = 2
 			}
+			reform_level = 5
 		} 
 
 		effect = { 
