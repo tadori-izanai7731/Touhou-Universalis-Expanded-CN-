@@ -108,7 +108,7 @@ THE_KEI_lonely_creation_mechanic = {
 			##任务
 			range_modifier = {
 				modifier = { 
-					development_cost = -0.10
+					development_cost = -0.075
 				}
 				trigger = {
 					mission_completed = THE_KEI_3_4
@@ -118,7 +118,7 @@ THE_KEI_lonely_creation_mechanic = {
 			}
 			range_modifier = {
 				modifier = { 
-					development_cost = -0.10
+					development_cost = -0.075
 				}
 				trigger = {
 					mission_completed = THE_KEI_3_4
@@ -129,7 +129,7 @@ THE_KEI_lonely_creation_mechanic = {
 			#防御
 			range_modifier = {
 				modifier = { 
-					global_manpower_modifier = 0.25
+					global_manpower_modifier = 0.10
 				}
 				trigger = {
 					mission_completed = THE_KEI_5_3
@@ -139,7 +139,7 @@ THE_KEI_lonely_creation_mechanic = {
 			}
 			range_modifier = {
 				modifier = { 
-					global_manpower_modifier = 0.25
+					global_manpower_modifier = 0.10
 				}
 				trigger = {
 					mission_completed = THE_KEI_5_3
@@ -152,7 +152,7 @@ THE_KEI_lonely_creation_mechanic = {
 			range_modifier = {
 				modifier = { 
 					innovativeness_gain = 0.50
-					country_diplomatic_power = 2
+					country_diplomatic_power = 1
 				}
 				trigger = {
 					mission_completed = THE_KEI_1_5
@@ -163,7 +163,7 @@ THE_KEI_lonely_creation_mechanic = {
 			range_modifier = {
 				modifier = { 
 					tolerance_own = 2
-					global_tax_modifier = 0.25
+					global_tax_modifier = 0.15
 				}
 				trigger = {
 					mission_completed = THE_KEI_1_5
@@ -240,7 +240,7 @@ THE_KEI_lonely_creation_mechanic = {
 			range_modifier = {
 				modifier = { 
 					reserves_organisation = 0.15
-					overextension_impact_modifier = -0.20
+					overextension_impact_modifier = -0.10
 				}
 				trigger = {
 					mission_completed = THE_KEI_1_5
@@ -252,7 +252,7 @@ THE_KEI_lonely_creation_mechanic = {
 			 #合尘升级 外交类buff
 			 scaled_modifier = { #外交
 				modifier = {
-					improve_relation_modifier = 0.50
+					improve_relation_modifier = 0.33
 				 }
 				 trigger = {
 					mission_completed = THE_KEI_2_10_create
@@ -261,7 +261,7 @@ THE_KEI_lonely_creation_mechanic = {
 			 }
 			 scaled_modifier = { #间谍
 				modifier = {
-					spy_offence = 0.50
+					spy_offence = 0.25
 				 }
 				 trigger = {
 					mission_completed = THE_KEI_2_10_create
@@ -297,7 +297,7 @@ THE_KEI_lonely_creation_mechanic = {
 			 }
 			 scaled_modifier = { #影响
 				modifier = {
-					diplomatic_annexation_cost = -0.20
+					diplomatic_annexation_cost = -0.15
 				 }
 				 trigger = {
 					mission_completed = THE_KEI_2_10_create
@@ -306,7 +306,7 @@ THE_KEI_lonely_creation_mechanic = {
 			 }
 			 scaled_modifier = { #宫廷
 			 modifier = {
-				reform_progress_growth = 0.20
+				reform_progress_growth = 0.15
 			  }
 			  trigger = {
 				 mission_completed = THE_KEI_2_10_create

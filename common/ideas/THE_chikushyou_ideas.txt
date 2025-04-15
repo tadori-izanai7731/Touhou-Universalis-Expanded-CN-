@@ -49,12 +49,12 @@ THE_ZAM_ideas = {
 
 KEI_ideas = {
 	start = {
-		legitimacy = 1
-		global_tax_modifier = 0.33
+		legitimacy = 2
+		global_tax_modifier = 0.15
 	}
 
 	bonus = {
-		land_forcelimit_modifier = 0.50
+		global_manpower = 0.33
 	}
 
 	trigger = {
@@ -79,7 +79,7 @@ KEI_ideas = {
 	
 	KEI_mayumis_loyalty_and_strength = {
 		discipline = 0.05
-		infantry_cost = -0.15
+		infantry_cost = -0.10
 	}
 	
 	KEI_primate_spirit_garden = {

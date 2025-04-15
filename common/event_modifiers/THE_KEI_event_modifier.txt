@@ -1,6 +1,6 @@
 THE_KEI_estate_hina_wheel_buff = {
-	reinforce_speed = 0.10
-	reinforce_cost_modifier = -0.50
+	reinforce_speed = 0.20
+	reinforce_cost_modifier = -0.05
 	is_janissary_modifier = yes
 }
 #救赎之光
@@ -68,8 +68,8 @@ THE_KEI_decree_work_V2_buff = {
 }
 ##敕命「雷行」
 THE_KEI_create_army_province_buff = {
-	global_manpower_modifier = 0.33
-	manpower_recovery_speed = 0.33
+	land_attrition = -0.10
+	movement_speed = 0.05
 }
 THE_KEI_zaoxing_haniwa_art_buff = {
 	trade_goods_size = 1.0

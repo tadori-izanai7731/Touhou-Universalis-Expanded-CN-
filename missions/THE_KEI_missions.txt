@@ -366,6 +366,9 @@ THE_KEI_main_branch_2 = {
 				every_country = {
 					limit = {
 						alliance_with = ROOT
+						NOT = {
+							tag = HKR
+						}
 					}
 					break_alliance = ROOT
 				}
@@ -682,6 +685,17 @@ THE_KEI_main_branch_2 = {
 		provinces_to_highlight = {  } 
 
 		trigger = { 
+			NOT = {
+				calc_true_if = {
+					amount = 20
+					all_country = {
+						culture_group = Gensokyan_culture
+						NOT = {
+							is_subject = yes
+						}
+					}
+				}
+			}
 			if = {
 				limit = {
 					ai = no
@@ -690,30 +704,9 @@ THE_KEI_main_branch_2 = {
 					value = 30
 					has_building = cathedral
 				}
-				NOT = {
-					calc_true_if = {
-						amount = 20
-						all_country = {
-							culture_group = Gensokyan_culture
-							NOT = {
-								is_subject = yes
-							}
-						}
-					}
-				}
 			}
 			else = {
-				NOT = {
-					calc_true_if = {
-						amount = 20
-						all_country = {
-							culture_group = Gensokyan_culture
-							NOT = {
-								is_subject = yes
-							}
-						}
-					}
-				}
+				always = yes
 			}
 		 } 
 
@@ -963,7 +956,6 @@ THE_KEI_main_branch_3 = {
 				province_id = 5048
 				province_id = 5241
 				province_id = 5049
-				province_id = 5075
 				province_id = 5247
 				province_id = 5005
 			}
@@ -983,10 +975,6 @@ THE_KEI_main_branch_3 = {
 				has_fort_building_trigger = yes
 			}
 			5049 = {
-				owned_by = ROOT
-				has_fort_building_trigger = yes
-			}
-			5075 = {
 				owned_by = ROOT
 				has_fort_building_trigger = yes
 			}
@@ -1559,13 +1547,26 @@ THE_KEI_main_branch_4 = {
 				custom_tooltip = THE_KEI_4_5_c_tt2_yes
 				custom_tooltip = THE_KEI_4_5_c_tt1
 				hidden_effect = {
-					every_owned_province = {
-						limit = {
-							has_building = temple
-						}
-						add_base_tax = 1
-						add_base_production = 1
-						add_base_manpower = 1
+					for = {
+						amount = 20
+						effect = "
+							every_owned_province = {
+								limit = {
+									has_building = temple
+									OR = {
+										area = Sea_of_petroleum
+										area = Gate_to_the_dead 
+										area = Yachie_state
+										area = Saki_state
+										area = Sanzu_upstream
+										area = Hifuu_club
+									}
+								}
+								add_base_tax = 1
+								add_base_production = 1
+								add_base_manpower = 1
+							}
+						"
 					}
 				}
 			}
@@ -2118,7 +2119,7 @@ THE_KEI_main_branch_5 = {
 
 		trigger = { 
 			num_of_regiments_at_full_drill = 50
-			num_of_completed_idea_groups_adm = { amount = 2 } 
+			THE_num_of_completed_idea_groups_adm = { amount = 2 }
 			army_professionalism = 0.5
 			army_tradition = 80
 		 } 
@@ -2144,30 +2145,18 @@ THE_KEI_main_branch_5 = {
 				custom_tooltip = THE_KEI_5_6_c_tt3
 				hidden_effect = {
 					add_government_power = {
-						mechanic_type = THE_KEI_lonely_creation_mechanic
-						power_type = THE_KEI_lonely_creation_mechanic_power
-						value = -50
+						mechanic_type = THE_KEI_save_the_masses_government_mechanic
+						power_type = THE_KEI_masses_var_power
+						value = -1000
+					}
+					add_government_power = {
+						mechanic_type = THE_KEI_save_the_masses_government_mechanic
+						power_type = THE_KEI_masses_var_power
+						value = 50
 					}
 					set_variable = {
 						which = THE_KEI_masses_var_im_var
-						which = THE_KEI_masses_var_im_var_2_var
-					}
-					while = {
-						limit = {
-							check_variable = {
-								which = THE_KEI_masses_var_im_var_2_var
-								value = 1
-							}
-						 }
-						 add_government_power = {
-							mechanic_type = THE_KEI_save_the_masses_government_mechanic
-							power_type = THE_KEI_masses_var_power
-							value = 1
-						 }
-						 change_variable = {
-							which = THE_KEI_masses_var_im_var_2_var
-							value = -1
-						}
+						value = 50
 					}
 				}
 			}
@@ -3225,6 +3214,25 @@ THE_KEI_minor_branch_1_create = {
 			THE_KEI_1_10_create
 		}
 		provinces_to_highlight = { 
+			owned_by = ROOT
+			OR = {
+				NOT = {
+					development = 60
+				}
+				NOT = {
+					is_prosperous = yes
+				}
+				NOT = {
+					has_building = university
+				}
+				NOT = {
+					has_building = training_fields
+				}
+				NOT = {
+					has_building = cathedral
+				}
+				num_free_building_slots = 1
+			}
 		 } 
 
 		trigger = { 
@@ -3329,7 +3337,13 @@ THE_KEI_minor_branch_2_create = {
 		position = 10
 		required_missions = { THE_KEI_1_9_lock } 
 		provinces_to_highlight = { 
-			owned_by = ROOT
+			culture = Higanean
+			OR = {
+				num_free_building_slots = 2
+				devastation = 1
+				local_autonomy = 1
+				unrest = 1
+			}
 		 } 
 
 		trigger = { 
@@ -3407,13 +3421,16 @@ THE_KEI_minor_branch_2_create = {
 		 } 
 
 		trigger = { 
-			all_country = {
-				capital_scope = {
-					superregion = gensokyo_superregion
-				}
-				OR = {
-					is_subject_of = ROOT
+			is_hegemon_of_type = military_hegemon
+			monthly_income = 300
+			calc_true_if = {
+				amount = 3
+				all_country = {
 					alliance_with = ROOT
+					has_opinion = {
+						who = ROOT
+						value = 180
+					}
 				}
 			}
 		} 
