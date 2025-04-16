@@ -476,6 +476,8 @@ country_event = {
 		months = 12
 	}
 
+	fire_only_once = yes
+
 	trigger = {
 		OR = {
 			tag = KNE
@@ -512,6 +514,8 @@ country_event = {
 	mean_time_to_happen = {
 		months = 12
 	}
+
+	fire_only_once = yes
 
 	trigger = {
 		OR = {

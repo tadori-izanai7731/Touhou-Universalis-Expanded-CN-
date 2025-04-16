@@ -887,7 +887,7 @@ THE_KNE_mission_branch_3 = {
 			culture_group = evenks
 			OR = {
 				NOT = { owned_by = ROOT }
-				local_autonomy = 25
+				local_autonomy = 10
 				NOT = { development = 10 }
 			}
 		} 
@@ -897,7 +897,7 @@ THE_KNE_mission_branch_3 = {
 				num_of_owned_provinces_with = {
 					value = 10
 					culture_group = evenks
-					NOT = { local_autonomy = 25 }
+					NOT = { local_autonomy = 10 }
 				}
 				num_of_owned_provinces_with = {
 					value = 10
@@ -954,7 +954,7 @@ THE_KNE_mission_branch_3 = {
 					num_of_owned_provinces_with = {
 						value = 10
 						culture_group = evenks
-						NOT = { local_autonomy = 25 }
+						NOT = { local_autonomy = 10 }
 					}
 				}
 				custom_tooltip = THE_KNE_mission_3_2_effect_case1_tt_yes
@@ -983,7 +983,7 @@ THE_KNE_mission_branch_3 = {
 					num_of_owned_provinces_with = {
 						value = 10
 						culture_group = evenks
-						NOT = { local_autonomy = 25 }
+						development = 10
 					}
 				}
 				custom_tooltip = THE_KNE_mission_3_2_effect_case2_tt_yes
