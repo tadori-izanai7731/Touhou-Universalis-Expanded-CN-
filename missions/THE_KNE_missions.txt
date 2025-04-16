@@ -595,6 +595,18 @@ THE_KNE_mission_branch_2 = {
 		} 
 		
 		effect = {
+			capital_scope = {
+				banner_cavalry = ROOT
+				banner_cavalry = ROOT
+				banner_cavalry = ROOT
+				banner_cavalry = ROOT
+				banner_cavalry = ROOT
+				banner_cavalry = ROOT
+				banner_cavalry = ROOT
+				banner_cavalry = ROOT
+				banner_cavalry = ROOT
+				banner_cavalry = ROOT
+			}
 			add_army_professionalism = 0.1
 			remove_estate_privilege = estate_nobles_levies
 			hidden_effect = {

@@ -39,7 +39,7 @@ l_english:
  THE_KNE_train_artillery_banners_more_tt: "提高陆军规模上限将生成更多§P八旗炮兵§!"
  THE_KNE_enable_province_action_1_3_tt: "启用省份行动「§Y吞噬历史§!」、「§Y创造历史§!」"
  THE_KNE_enable_province_action_2_tt: "启用省份行动「§Y传授知识§!」"
- THE_KNE_province_action_2_upgrade_building_tt: "省份行动「§Y传授知识§!」在当地有§Y大学§!时，额外升级所有可升级的建筑"
+ THE_KNE_province_action_2_upgrade_building_tt: "在没有§Y大学§!的省份使用「§Y传授知识§!」不受时间间隔限制"
  THE_KNE_enable_china_korea_great_project_tt: "允许无视条件使用§Y中国奇观§!和§Y景福宫§!"
  THE_KNE_complete_all_hakutaku_mission_tt: "完成所有§M白泽形态任务§!"
  THE_KNE_complete_all_human_mission_tt: "完成所有§Y人类形态任务§!"
@@ -63,6 +63,7 @@ l_english:
  THE_KNE_give_all_gensokyo_province_tt: "治下所有属于§!幻想乡§!或§!幻想乡周边§!的省份转移给@HMC§Y[HMC.GetName]§!"
  THE_KNE_japan_province_tt: "之后获得的§Y日本§!地区省份也会获得此修正"
  THE_KNE_old_genso_history_modifier: "旧秘境史"
+ THE_KNE_every_province_meet_trigger: "治下每个满足条件的省份:"
 ### CUSTOM_TOOLTIP_END
 
 ### DECISION
