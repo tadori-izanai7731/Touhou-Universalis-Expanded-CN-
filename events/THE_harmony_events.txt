@@ -26,3 +26,59 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = THE_harmony_events.2
+	title = "THE_harmony_events.2.t"
+	desc = "THE_harmony_events.2.d"
+	picture = BYAKUREN_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "th_confucian_events.9.a"
+		tooltip = {
+			add_country_modifier = {
+				name = THE_harmonized_minoriko
+				duration = -1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = THE_harmony_events.3
+	title = "THE_harmony_events.3.t"
+	desc = "THE_harmony_events.3.d"
+	picture = BYAKUREN_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "th_confucian_events.9.a"
+		tooltip = {
+			add_country_modifier = {
+				name = THE_harmonized_keiki
+				duration = -1
+			}
+		}
+	}
+}
