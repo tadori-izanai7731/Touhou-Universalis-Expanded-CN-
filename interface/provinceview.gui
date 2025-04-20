@@ -584,8 +584,8 @@ guiTypes = {
 
 			guiButtonType = {
 				name = THE_YOF_distribute_hina_dolls_province_button
-				position = { x = 319 y = 187 }
-				quadTextureSprite = "GFX_button_straight_148_46"
+				position = { x = 303 y = 184 }
+				quadTextureSprite = "GFX_THE_YOF_hina_province_button"
 				buttonText = THE_YOF_distribute_hina_dolls_province_button_tt
 				buttonFont = "vic_18"
 				clicksound = "click"
@@ -594,8 +594,8 @@ guiTypes = {
 
 			guiButtonType = {
 				name = THE_YOF_memorialize_of_hina_province_button
-				position = { x = 319 y = 187 }
-				quadTextureSprite = "GFX_button_straight_148_46"
+				position = { x = 303 y = 184 }
+				quadTextureSprite = "GFX_THE_YOF_hina_province_button"
 				buttonText = THE_YOF_memorialize_of_hina_province_button_tt
 				buttonFont = "vic_18"
 				clicksound = "click"

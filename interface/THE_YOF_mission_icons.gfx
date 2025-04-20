@@ -158,4 +158,11 @@ spriteTypes = {
 		name = "government_reform_THE_YOF_suffering_doom_reform"
 		texturefile = "gfx//interface//government_reform_icons//THE_YOF_suffering_doom_reform.dds"
 	}
+
+	#gui
+	textSpriteType = {
+		name = "GFX_THE_YOF_hina_province_button"
+		texturefile = "gfx/interface/province_gui/THE_YOF_hina_button.dds"
+		alwaystransparent = yes
+	}
 }

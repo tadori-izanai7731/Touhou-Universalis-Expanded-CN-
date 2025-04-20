@@ -2,6 +2,7 @@ custom_button = {
 	name = THE_YOF_distribute_hina_dolls_province_button
 	tooltip = THE_YOF_distribute_hina_dolls_province_button_tooltip
 	potential = {
+		owner = { ai = no }
 		owned_by = FROM
 		owner = {
 			OR = {
@@ -76,6 +77,7 @@ custom_button = {
 	name = THE_YOF_memorialize_of_hina_province_button
 	tooltip = THE_YOF_memorialize_of_hina_province_button_tooltip
 	potential = {
+		owner = { ai = no }
 		owned_by = FROM
 		owner = {
 			OR = {
