@@ -1551,7 +1551,7 @@ THE_KEI_main_branch_4 = {
 					for = {
 						amount = 20
 						effect = "
-							every_owned_province = {
+							random_owned_province = {
 								limit = {
 									has_building = temple
 									OR = {
@@ -1562,12 +1562,19 @@ THE_KEI_main_branch_4 = {
 										area = Sanzu_upstream
 										area = Hifuu_club
 									}
+									NOT = {
+										has_province_flag = THE_KEI_mission_4_5_benifit_had_give
+									}
 								}
 								add_base_tax = 1
 								add_base_production = 1
 								add_base_manpower = 1
+								set_province_flag = THE_KEI_mission_4_5_benifit_had_give
 							}
 						"
+					}
+					every_owned_province = {
+						clr_province_flag = THE_KEI_mission_4_5_benifit_had_give
 					}
 				}
 			}
@@ -1722,7 +1729,7 @@ THE_KEI_main_branch_4 = {
 
 		effect = { 
 			custom_tooltip = THE_KEI_4_7_c_tt1
-			add_province_modifier = {
+			add_country_modifier = {
 				name = THE_KEI_save_the_sai_kawara_buff
 				duration = -1
 			}
