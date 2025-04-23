@@ -23,7 +23,12 @@ country_event = {
 		name = flavor_THE_HNG_mission_events.2.a
 		remove_country_modifier = THE_hng_mission_modifier2
 		if = {
-			limit = { NOT = { has_country_flag = hng_do_the_change3_flag } }
+			limit = { 
+				OR ={
+				NOT = { has_country_flag = hng_do_the_change3_flag } 
+				NOT = { has_country_modifier = THE_HNG_believe_your_country }
+				}
+			}
 			add_country_modifier = {
 				name = THE_hng_mission_modifier3
 				duration = -1
