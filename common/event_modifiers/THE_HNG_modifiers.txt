@@ -1449,10 +1449,10 @@ THE_hng_mission_modifier136 = {
 
 #让妖精离开
 THE_hng_mission_modifier137 = {
-	infantry_fire = -0.2
-	infantry_shock = -0.2
+	infantry_fire = -0.25
+	infantry_shock = -0.25
 	fire_damage_received = -0.5
-	regiment_manpower_usage = 0.75
+	regiment_manpower_usage = 0.25
 	is_samurai_modifier = yes 
 }
 
