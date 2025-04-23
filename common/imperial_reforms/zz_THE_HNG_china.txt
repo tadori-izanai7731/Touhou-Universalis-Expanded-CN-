@@ -180,9 +180,8 @@ zz_THE_HNG_wu_shi_chu_ji = {
 		global_tax_income = -12
 	} 
 	emperor = { 
-		infantry_fire = 0.1
-		infantry_shock = 0.1
+		infantry_fire = 0.15
+		infantry_shock = 0.15
 		regiment_manpower_usage = -0.25
-		  is_samurai_modifier = yes 
 	}
 }
