@@ -1202,6 +1202,7 @@ country_event = {
 	option = {
 		name = flavor_THE_HNG_mission_events.35.a
 		set_country_flag = THE_HNG_can_disasters
+		remove_country_modifier = THE_hng_mission_modifier74
 	}
 }
 
