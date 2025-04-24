@@ -29,4 +29,10 @@ spriteTypes = {
 		loadType = "INGAME"
 		transparencecheck = yes
 	}
+	spriteType = {
+		name = "GFX_THE_KEI_province_button"
+		texturefile = "gfx\\interface\\province_gui\\THE_KEI_province_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
 }

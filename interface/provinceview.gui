@@ -633,27 +633,27 @@ guiTypes = {
 			##KEI
 			guiButtonType = {
 				name = THE_KEI_decrese_workman_gui
-				position = { x = 372 y = 200 }
-				quadTextureSprite = "GFX_the_aki_harvest_province_2_button"
-				# buttonText = THE_ALC_province_button1_gui_tt
+				position = { x = 152 y = 280 }
+				quadTextureSprite = "GFX_THE_KEI_province_button"
+				buttonText = "THE_KEI_mechanic_button_1_text"
 				buttonFont = "vic_18"
 				clicksound = "click"
 				scripted = yes
 			}
 			guiButtonType = {
 				name = THE_KEI_rejuvenate_development_gui
-				position = { x = 372 y = 200 }
-				quadTextureSprite = "GFX_the_aki_harvest_province_2_button"
-				# buttonText = THE_ALC_province_button1_gui_tt
+				position = { x = 152 y = 280 }
+				quadTextureSprite = "GFX_THE_KEI_province_button"
+				buttonText = "THE_KEI_mechanic_button_2_text"
 				buttonFont = "vic_18"
 				clicksound = "click"
 				scripted = yes
 			}
 			guiButtonType = {
 				name = THE_KEI_province_create_army_gui
-				position = { x = 372 y = 200 }
-				quadTextureSprite = "GFX_the_aki_harvest_province_2_button"
-				# buttonText = THE_ALC_province_button1_gui_tt
+				position = { x = 152 y = 280 }
+				quadTextureSprite = "GFX_THE_KEI_province_button"
+				buttonText = "THE_KEI_mechanic_button_3_text"
 				buttonFont = "vic_18"
 				clicksound = "click"
 				scripted = yes
