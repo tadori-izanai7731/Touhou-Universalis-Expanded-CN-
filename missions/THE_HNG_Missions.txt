@@ -4045,6 +4045,8 @@ THE_HNG_2_3 = {
 		}
 		
 		effect = {
+			add_stability = 5
+			add_war_exhaustion = -20
 			th_increase_ruler_adm_stat = {
 				adm = 1
 			}
