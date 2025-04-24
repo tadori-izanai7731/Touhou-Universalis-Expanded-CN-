@@ -472,9 +472,6 @@ THE_KEI_development_remove_province_light_buff = {
 			development = 15
 		}
 		remove_province_modifier = THE_KEI_all_animal_run_buff
-		add_base_tax = 1
-		add_base_production = 1
-		add_base_manpower = 1
 		add_province_modifier = {
 			name = THE_KEI_all_animal_run_buff_V2
 			duration = 3650
@@ -495,9 +492,6 @@ THE_KEI_development_remove_province_light_buff = {
 			development = 30
 		}
 		remove_province_modifier = THE_KEI_out_of_superegion_buff
-		add_base_tax = 1
-		add_base_production = 1
-		add_base_manpower = 1
 		add_province_modifier = {
 			name = THE_KEI_all_animal_run_buff_V2
 			duration = 3650
@@ -534,6 +528,7 @@ THE_KEI_conseguer_the_GYK_effect = {
 			add_devastation = 100
 			add_local_autonomy = 100
 			add_nationalism = -10
+			add_territorial_core = ROOT
 			add_province_modifier = {
 				name = THE_KEI_all_animal_run_buff
 				duration = -1
@@ -692,7 +687,7 @@ THE_KEI_can_core_creation_add_develpment_script_effect = {
 		 }
 	}	
 }
-#地狱之外
+#地狱之外的地块修正
 #FROM 前拥有者 #ROOT 省份
 THE_KEI_conseguer_out_of_higf_effect = {
 	if = {

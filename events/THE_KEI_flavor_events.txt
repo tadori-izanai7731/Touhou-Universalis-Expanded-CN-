@@ -17,6 +17,9 @@ country_event = {
 		country_event = {
 			id = THE_KEI_flavor_events.2
 		}
+		hidden_effect = {
+			THE_KEI_define_mayumi_set_var_0_effects = yes
+		}
 	}
 	option = {
 		name = THE_KEI_flavor_events.1.a1
