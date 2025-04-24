@@ -2480,7 +2480,7 @@ country_event = {
 		name = flavor_THE_HNG_mission_events.58.a
 		set_country_flag = THE_HNG_country_flag_mission2
 		add_stability = 5
-		add_war_exhaustion = -5
+		add_war_exhaustion = -20
 		swap_non_generic_missions = yes
 	}
 }
