@@ -661,7 +661,9 @@ THE_KEI_interation_get_power_from_estate_effect = {
 THE_KEI_can_core_creation_add_develpment_script_effect = {
 	if = {
 		limit = {
-			has_government_attribute = THE_KEI_can_core_creation_add_develpment
+			FROM = {
+				has_government_attribute = THE_KEI_can_core_creation_add_develpment
+			}
 		 }
 		 add_core = FROM
 		 if = {
