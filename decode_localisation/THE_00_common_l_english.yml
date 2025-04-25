@@ -65,6 +65,22 @@ l_english:
  THE_season_secret_power_reform_change_mode_tt_winter: "「§Y季节之秘力§!」转变为§Y休眠的季节§!"
  THE_season_secret_power_reform_change_mode_tt_soil: "「§Y季节之秘力§!」转变为§Y幕后的季节§!"
  THE_forbid_defender_of_faith_enter_war_ttt: "限制信仰守护者参与无关战争"
+
+ THE_has_adm_advisor_level_1_tooltip: "聘请了一位技能等级至少为§Y1§!的§Y行政§!顾问。"
+ THE_has_adm_advisor_level_2_tooltip: "聘请了一位技能等级至少为§Y2§!的§Y行政§!顾问。"
+ THE_has_adm_advisor_level_3_tooltip: "聘请了一位技能等级至少为§Y3§!的§Y行政§!顾问。"
+ THE_has_adm_advisor_level_4_tooltip: "聘请了一位技能等级至少为§Y4§!的§Y行政§!顾问。"
+ THE_has_adm_advisor_level_5_tooltip: "聘请了一位技能等级至少为§Y5§!的§Y行政§!顾问。"
+ THE_has_dip_advisor_level_1_tooltip: "聘请了一位技能等级至少为§Y1§!的§Y外交§!顾问。"
+ THE_has_dip_advisor_level_2_tooltip: "聘请了一位技能等级至少为§Y2§!的§Y外交§!顾问。"
+ THE_has_dip_advisor_level_3_tooltip: "聘请了一位技能等级至少为§Y3§!的§Y外交§!顾问。"
+ THE_has_dip_advisor_level_4_tooltip: "聘请了一位技能等级至少为§Y4§!的§Y外交§!顾问。"
+ THE_has_dip_advisor_level_5_tooltip: "聘请了一位技能等级至少为§Y5§!的§Y外交§!顾问。"
+ THE_has_mil_advisor_level_1_tooltip: "聘请了一位技能等级至少为§Y1§!的§Y军事§!顾问。"
+ THE_has_mil_advisor_level_2_tooltip: "聘请了一位技能等级至少为§Y2§!的§Y军事§!顾问。"
+ THE_has_mil_advisor_level_3_tooltip: "聘请了一位技能等级至少为§Y3§!的§Y军事§!顾问。"
+ THE_has_mil_advisor_level_4_tooltip: "聘请了一位技能等级至少为§Y4§!的§Y军事§!顾问。"
+ THE_has_mil_advisor_level_5_tooltip: "聘请了一位技能等级至少为§Y5§!的§Y军事§!顾问。"
 ###CUSTOM_TOOLTIP_END
 
 ### MERC_DESC
@@ -218,6 +234,8 @@ l_english:
 ###CB
  cb_THE_nationalist: "民族主义"
  cb_THE_nationalist_desc: "他们占有我国民族聚居的省份。"
+ cb_THE_imperial: "帝国主义"
+ cb_THE_imperial_desc: "成为我们伟大帝国的一部分是他们最好的选择！"
 ###CB_END
 
 ###POLICY
