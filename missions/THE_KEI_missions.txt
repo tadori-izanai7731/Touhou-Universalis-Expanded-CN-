@@ -6,7 +6,7 @@ THE_KEI_main_branch_1 = {
 	potential = { tag = KEI } 
 
 	THE_KEI_1_2 = {
-		icon = mission_unknown_mission
+		icon = mission_touhou_hkr_estate
 		position = 2
 		required_missions = { THE_KEI_2_1 } 
 		provinces_to_highlight = { 
@@ -58,7 +58,7 @@ THE_KEI_main_branch_1 = {
 	}
 
 	THE_KEI_1_4 = {
-		icon = mission_unknown_mission
+		icon = mission_touhou_nether_border
 		position = 4
 		required_missions = { THE_KEI_1_2 } 
 		provinces_to_highlight = { 
@@ -91,7 +91,7 @@ THE_KEI_main_branch_1 = {
 	}
 
 	THE_KEI_1_5 = {
-		icon = mission_unknown_mission
+		icon = the_kei_mission_35
 		position = 5
 		required_missions = { THE_KEI_1_4 } 
 		provinces_to_highlight = { 
@@ -3334,7 +3334,7 @@ THE_KEI_minor_branch_2_create = {
 	} 
 
 	THE_KEI_2_10_create = {
-		icon = mission_unknown_mission
+		icon = the_kei_mission_33
 		position = 10
 		required_missions = { THE_KEI_1_9_lock } 
 		provinces_to_highlight = { 
@@ -3377,7 +3377,7 @@ THE_KEI_minor_branch_2_create = {
 	}
 
 	THE_KEI_2_11_create = {
-		icon = mission_unknown_mission
+		icon = the_kei_mission_34
 		position = 11
 		required_missions = {
 			THE_KEI_2_10_create
