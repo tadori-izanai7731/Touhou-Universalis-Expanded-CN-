@@ -1344,6 +1344,12 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 					}
 					add_years_of_income = -0.25	
 				}
+				if = {
+					limit = { 
+						 has_country_modifier = THE_HNG_strict_and_complete_economic
+					}
+					add_years_of_income = 2	
+				}
 				add_adm_power = -50
 				add_inflation = -5
 				add_country_modifier = {
@@ -1374,6 +1380,12 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 					}
 					add_years_of_income = -0.25	
 				}
+				if = {
+					limit = { 
+						 has_country_modifier = THE_HNG_more_efficient_land_system 
+					}
+					add_adm_power = 150
+				}
 				add_dip_power = -50
 				add_corruption = -2
 				add_country_modifier = {
@@ -1403,6 +1415,12 @@ THE_HNG_celestial_empire_Third_degree_mechanic = {
 						NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army }
 					}
 					add_years_of_income = -0.25	
+				}
+				if = {
+					limit = { 
+						 has_country_modifier = THE_HNG_modernization_gensokyo_army 
+					}
+					add_yearly_manpower = 2
 				}
 				add_mil_power = -50
 				add_army_professionalism = 0.03
