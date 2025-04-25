@@ -119,7 +119,7 @@ HNG_Inflation_rate_power_buff = {
 
 #度田
 HNG_Merger_degree_power_buff = {
-	min_autonomy = -5
+	min_autonomy_in_territories = -0.1
 	global_unrest = -2
 }
 
