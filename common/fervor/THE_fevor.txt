@@ -5,7 +5,12 @@ the_keiki_fervor_shapping = {
 	potential = {
 		FROM = { religion = the_keiki }
 	}
-	trigger = { }
+	trigger = {
+		if = {
+			limit = { NOT = { religion = the_keiki } }
+			religion = the_keiki
+		}
+	}
 	effect = {
 		global_manpower_modifier = 0.33
 		manpower_recovery_speed = 0.33
@@ -18,7 +23,12 @@ the_keiki_fervor_ruin = {
 	potential = {
 		FROM = { religion = the_keiki }
 	}
-	trigger = { }
+	trigger = {
+		if = {
+			limit = { NOT = { religion = the_keiki } }
+			religion = the_keiki
+		}
+	}
 	effect = {
 		land_morale = 0.20
 		morale_damage = 0.10
@@ -31,7 +41,12 @@ the_keiki_fervor_vibrant = {
 	potential = {
 		FROM = { religion = the_keiki }
 	}
-	trigger = { }
+	trigger = {
+		if = {
+			limit = { NOT = { religion = the_keiki } }
+			religion = the_keiki
+		}
+	}
 	effect = {
 		development_cost = -0.20
 		global_unrest = -2
@@ -44,7 +59,12 @@ the_keiki_fervor_mercy = {
 	potential = {
 		FROM = { religion = the_keiki }
 	}
-	trigger = { }
+	trigger = {
+		if = {
+			limit = { NOT = { religion = the_keiki } }
+			religion = the_keiki
+		}
+	}
 	effect = {
 		reform_progress_growth = 0.20
 		all_estate_loyalty_equilibrium = 0.1
