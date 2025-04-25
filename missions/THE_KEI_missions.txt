@@ -120,7 +120,7 @@ THE_KEI_main_branch_1 = {
 	}
 
 	THE_KEI_1_6 = {
-		icon = mission_unknown_mission
+		icon = mission_touhou_hakurei_shrine
 		position = 6
 		provinces_to_highlight = { 
 			is_capital_of = ROOT
@@ -150,7 +150,7 @@ THE_KEI_main_branch_1 = {
 	}
 
 	THE_KEI_1_7 = {
-		icon = mission_unknown_mission
+		icon = the_kei_mission_32
 		position = 7
 		required_missions = { THE_KEI_1_6 } 
 		provinces_to_highlight = { 
@@ -172,7 +172,7 @@ THE_KEI_main_branch_1 = {
 	}
 
 	THE_KEI_1_8 = {
-		icon = mission_unknown_mission
+		icon = mission_touhou_th_more_shrines
 		position = 8
 		required_missions = { THE_KEI_1_7 } 
 		provinces_to_highlight = { 
@@ -205,7 +205,7 @@ THE_KEI_main_branch_1 = {
 	}
 
 	THE_KEI_1_9_lock = {
-		icon = mission_unknown_mission
+		icon = the_kei_mission_31
 		position = 9
 		provinces_to_highlight = {  } 
 		
@@ -1045,7 +1045,7 @@ THE_KEI_main_branch_3 = {
 	}
 
 	THE_KEI_3_7 = {
-		icon = mission_unknown_mission
+		icon = the_kei_mission_27
 		position = 7
 		required_missions = { THE_KEI_4_6 } 
 		provinces_to_highlight = { 
@@ -2903,7 +2903,7 @@ THE_KEI_minor_branch_1_alone = {
 	} 
 
 	THE_KEI_1_10_alone = {
-		icon = mission_unknown_mission
+		icon = mission_touhou_th_inner_shrine
 		position = 10
 		required_missions = { THE_KEI_1_9_lock } 
 		provinces_to_highlight = { 
@@ -2941,7 +2941,7 @@ THE_KEI_minor_branch_1_alone = {
 	}
 
 	THE_KEI_1_12_alone = {
-		icon = mission_unknown_mission
+		icon = the_kei_mission_28
 		position = 12
 		required_missions = {
 			THE_KEI_2_11_alone
@@ -2997,7 +2997,7 @@ THE_KEI_minor_branch_2_alone = {
 	} 
 
 	THE_KEI_2_10_alone = {
-		icon = mission_unknown_mission
+		icon = kko_event_10
 		position = 10
 		required_missions = { THE_KEI_1_9_lock } 
 		provinces_to_highlight = { 
@@ -3092,7 +3092,7 @@ THE_KEI_minor_branch_2_alone = {
 	}
 
 	THE_KEI_2_11_alone = {
-		icon = mission_unknown_mission
+		icon = the_kei_mission_24
 		position = 11
 		required_missions = { THE_KEI_2_10_alone } 
 		provinces_to_highlight = { 
@@ -3134,7 +3134,7 @@ THE_KEI_minor_branch_2_alone = {
 	}
 
 	THE_KEI_2_12_alone = {
-		icon = mission_unknown_mission
+		icon = the_kei_mission_30
 		position = 12
 		required_missions = { THE_KEI_2_11_alone } 
 		provinces_to_highlight = { 
@@ -3173,7 +3173,7 @@ THE_KEI_minor_branch_1_create = {
 	} 
 
 	THE_KEI_1_10_create = {
-		icon = mission_unknown_mission
+		icon = mission_touhou_beer
 		position = 10
 		required_missions = { THE_KEI_1_9_lock } 
 		provinces_to_highlight = { 
@@ -3208,7 +3208,7 @@ THE_KEI_minor_branch_1_create = {
 	}
 
 	THE_KEI_1_12_create = {
-		icon = mission_unknown_mission
+		icon = kko_event_10
 		position = 12
 		required_missions = {
 			THE_KEI_2_11_create
@@ -3414,7 +3414,7 @@ THE_KEI_minor_branch_2_create = {
 		}
 	}
 	THE_KEI_2_12_create = {
-		icon = mission_unknown_mission
+		icon = the_kei_mission_29
 		position = 12
 		required_missions = {
 			THE_KEI_2_11_create
