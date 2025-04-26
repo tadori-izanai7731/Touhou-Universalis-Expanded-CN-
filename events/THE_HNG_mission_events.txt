@@ -543,11 +543,15 @@ country_event = {
 			factor = 12
 			modifier = {
 				factor = 0
-				NOT = { prestige = 50 }
+				NOT = { prestige = 0 }
 			}
-			modifier = {
-				factor = 0
-				NOT = { dip_power = 100 }
+			LXA = {
+				NOT = {
+				has_opinion = {
+					who = HNG
+					value = 0
+				      }
+			    }
 			}
 		}
 	}
