@@ -207,9 +207,9 @@ l_english:
  THE_KEI_province_create_army_gui_tt: ""
  THE_KEI_custom_ui_tt_stage_3_t: "§W生成我们§G100%§!陆军上限的军队§!"
  
- ##MISSION EXTRA
- THE_KEI_4_1_c_tt1: "§V持有此效果时:§!\n在战争中占领§Y畜生界国家§!@SKI@YAC@GYK的省份将会立即割让\n且对方仅能召唤其他§Y畜生界国家§!@SKI@YAC@GYK"
- THE_KEI_4_1_c_tt2: "在首都生成§Y10支「耶尼切里」§!部队"
+##MISSION EXTRA
+ THE_KEI_4_1_c_tt1: "§V在该修正持续时间内:§!\n占领@SKI@YAC@GYK§Y畜生界国家§!的省份将会立即割让\n且对方仅能召集其他@SKI@YAC@GYK§Y畜生界国家§!作为盟友参战"
+ THE_KEI_4_1_c_tt2: "在首都生成§Y10§!支§G耶尼切里§!部队"
  THE_KEI_4_1_c_tt3: "\n§M「救赎之光」将会持续直到@KEI我们赢得3场战争胜利§!"
  THE_KEI_4_3_custom_tt1: "@SKI§Y劲牙组§!@YAC§Y鬼杰组§!的所有省份添加我们的§J「直属州核心」§!"
  THE_KEI_4_4_c_tt1: "随机10个核心省份与§Y灵长园§!获得建筑§Y「神社」§!"
@@ -264,7 +264,7 @@ l_english:
  THE_KEI_5_12_c_tt2_yes: "£yes£§M如果我们以附庸@CRD地灵殿完成任务§!"
  THE_KEI_5_12_c_tt2_no: "£no£§M如果我们以附庸@CRD地灵殿完成任务§!"
  THE_KEI_5_12_c_tt3: "只要地灵殿仍为我们的附庸，我们将会获得效果：\n -附庸提供的陆军上限 §G+100%§! 外交合并花费 §G-25%§!"
- THE_KEI_1_2_c_tt1: "解锁§Y人类灵特权§!§M与生俱来之「自由」§!"
+ THE_KEI_1_2_c_tt1: "解锁§Y[Root.Get商人Name]§!阶层特权§M「与生俱来之『自由』」§!"
  THE_KEI_1_5_c_tt1: "解锁政府进度条机制§Y「土圭枢仪」§!\n- -§W这将根据我们已完成的行政理念将会给予我们不同的修正§!\n- -§g详情请查看化生进度条§!"
  THE_KEI_hechen_special_decosion_open_cooldown_c_tt: "此决议每10年可执行一次"
  THE_KEI_mechanic_extra_c_tt_1: "「土圭枢仪」：§Y我们将根据我们完成的行政理念组获得不同的修正：§!\n- -§Y革新理念§!：  创新度获取 §G+50%§! 每月外交点数 §G+1§!\n- -§Y宗教理念§!：  正统信仰容忍 §G+2§!  全国税收修正§G+15%§!\n- -§Y经济理念§!：  每月通货膨胀减少 §G+0.20%§! 年利息 §G-1§!\n- -§Y扩张理念§!：   殖民队 §G+2§! 殖民几率 §G+5%§!\n- -§Y行政理念§!：  行政效率 §G+5%§! 直属州治理成本 §G-10%§!\n- -§Y人文理念§!：  全国叛乱度 §G-2§! 异端容忍度 §G+2§!\n- -§Y基建理念§!：  发展成本修正 §G-10%§! 移动速度 §G+10%§!\n- -§Y神明理念§!：  正统信仰省份人力 §G+20%§! 每月热情点数 §G+2§!\n- -§Y妖怪理念§!：  未参战部队所受士气打击减少 §G+15%§! 过度扩张影响 §G-10%§!"
@@ -291,8 +291,8 @@ l_english:
  THE_KEI_1_10_create_c_tt2: "随机在我们省份创建1个§O「梦想造型」§!改革中心"
  THE_KEI_1_12_create_c_tt1: "游戏开始至今已进行（§Y[Root.the_kei_start_game_till_then_use_government_im_var.GetValue]§!/100）次创形创生"
  THE_KEI_1_12_create_c_tt2: "政府机制§Y「创生」§!将会额外创造§G50000§!人力"
- THE_KEI_4_1_c_tt_6_yes: "£yes£如果我们完成任务时，§Y「人类灵」§!阶层拥有§Y40%§!影响力将会获得："
- THE_KEI_4_1_c_tt_6_no: "£no£如果我们完成任务时，§Y「人类灵」§!阶层拥有§Y40%§!影响力将会获得："
+ THE_KEI_4_1_c_tt_6_yes: "£yes£如果§Y[Root.Get商人Name]§!阶层拥有§Y40%§!影响力:"
+ THE_KEI_4_1_c_tt_6_no: "£no£如果§Y[Root.Get商人Name]§!阶层拥有§Y40%§!影响力:"
  THE_KEI_4_5_c_tt1: "每有1个符合条件的「畜生界」省份我们会获得行政点§J10§! 外交点§J10§! 军事点§J10§!"
  THE_KEI_4_5_c_tt2_yes: "£yes£§W若我们治下省份拥有20个§Y寺庙§!或§Y教堂§!类建筑§!"
  THE_KEI_4_5_c_tt2_no: "£no£§W若我们治下省份拥有20个§Y寺庙§!或§Y教堂§!类建筑§!"
