@@ -27,23 +27,21 @@ THE_KEI_on_startup_scripted_effects = {
 THE_KEI_annex_ski_yac_province_in_war_effects = {
 	if = {
 		limit = {
-			ROOT = {
+			OR = {
+				tag = KEI
+				was_tag = KEI
+			}
+			has_country_modifier = THE_KEI_savtor_light_1_buff
+			is_in_war = {
+				attacker_leader = ROOT
+			}
+			FROM = {
 				OR = {
-					tag = KEI
-					was_tag = KEI
+					owned_by = SKI
+					owned_by = YAC
+					owned_by = GYK
 				}
-				has_country_modifier = THE_KEI_savtor_light_1_buff
-				is_in_war = {
-					attacker_leader = ROOT
-				}
-				FROM = {
-					OR = {
-						owned_by = SKI
-						owned_by = YAC
-						owned_by = GYK
-					}
-					is_capital = no
-				}
+				is_capital = no
 			}
 		}
 		FROM = {
@@ -492,9 +490,7 @@ THE_KEI_im_var_won_war_remove_mofidier_4_1_effect = {
 THE_KEI_development_remove_province_light_buff = {
 	if = {
 		limit = { 
-			ROOT = {
-				has_province_modifier = THE_KEI_all_animal_run_buff
-			}
+			has_province_modifier = THE_KEI_all_animal_run_buff
 			development = 15
 		}
 		remove_province_modifier = THE_KEI_all_animal_run_buff
@@ -512,9 +508,7 @@ THE_KEI_development_remove_province_light_buff = {
 	}
 	if = {
 		limit = {
-			ROOT = {
-				has_province_modifier = THE_KEI_out_of_superegion_buff
-			}
+			has_province_modifier = THE_KEI_out_of_superegion_buff
 			development = 30
 		}
 		remove_province_modifier = THE_KEI_out_of_superegion_buff

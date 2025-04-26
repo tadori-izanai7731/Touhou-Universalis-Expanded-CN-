@@ -1036,7 +1036,7 @@ country_event = {
 	picture = ""
 	is_triggered_only = yes
 	trigger = { 
-
+		
 	}
 	option = {
 		name = THE_KEI_flavor_events.11.a
@@ -1180,7 +1180,7 @@ country_event = {
 	is_triggered_only = yes
 	hidden = no
 	trigger = { 
-
+		
 	}
 	immediate = {
 		hidden_effect = {
@@ -1225,31 +1225,34 @@ country_event = {
 			if = {
 				limit = {
 					ai = yes
-				 }
-				 set_country_flag = THE_KEI_unlock_government_refonm_extra_flag
+				}
+				set_country_flag = THE_KEI_unlock_government_refonm_extra_flag
 			}
 			#奖励
 			else = {
-				complete_mission = THE_KEI_2_3
-				add_government_reform = THE_KEI_lonely_creation_government_reform
-				add_government_power = {
-					mechanic_type = THE_KEI_lonely_creation_mechanic
-					power_type = THE_KEI_lonely_creation_mechanic_power
-					value = 25
-				}
-				add_army_tradition = 25
-				add_army_professionalism = 0.20
-				5045 = {
-					add_province_modifier = {
-						name = THE_KEI_the_captial_of_KEI_buff
-						duration = -1
+				if = {
+					limit = { NOT = { mission_completed = THE_KEI_2_3 } }
+					complete_mission = THE_KEI_2_3
+					add_government_reform = THE_KEI_lonely_creation_government_reform
+					add_government_power = {
+						mechanic_type = THE_KEI_lonely_creation_mechanic
+						power_type = THE_KEI_lonely_creation_mechanic_power
+						value = 25
 					}
-				}
-				every_country = {
-					limit = {
-						alliance_with = ROOT
+					add_army_tradition = 25
+					add_army_professionalism = 0.20
+					5045 = {
+						add_province_modifier = {
+							name = THE_KEI_the_captial_of_KEI_buff
+							duration = -1
+						}
 					}
-					break_alliance = ROOT
+					every_country = {
+						limit = {
+							alliance_with = ROOT
+						}
+						break_alliance = ROOT
+					}
 				}
 			}
 		}
@@ -1272,7 +1275,7 @@ country_event = {
 	is_triggered_only = yes
 	major = yes
 	trigger = { 
-
+		
 	}
 	#维护秩序 不能容许
 	option = {
@@ -1292,9 +1295,9 @@ country_event = {
 			if = {
 				limit = {
 					ai = yes
-				 }
-				 add_manpower = 30
-				 add_treasury = 200
+				}
+				add_manpower = 30
+				add_treasury = 200
 			}
 		}
 		ai_chance = {
@@ -1345,7 +1348,7 @@ country_event = {
 	is_triggered_only = yes
 	major = yes
 	trigger = { 
-
+		
 	}
 	#宣战
 	option = {
@@ -1361,10 +1364,10 @@ country_event = {
 				HKR = {
 					has_country_flag = THE_KEI_hakurei_will_help_us_flag
 				}
-			 }
-			 HKR = {
+			}
+			HKR = {
 				join_all_defensive_wars_of = KEI
-			 }
+			}
 		}
 		else = {
 			HKR = {

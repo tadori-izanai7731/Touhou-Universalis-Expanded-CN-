@@ -900,6 +900,8 @@ THE_KEI_main_branch_3 = {
 			5045 = {
 				add_or_upgrade_fort_building = yes
 			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = empty_line_tt
 			if = {
 				limit = { 
 					NOT = {
@@ -1277,7 +1279,6 @@ THE_KEI_main_branch_4 = {
 		} 
 		
 		effect = { 
-
 			custom_tooltip = THE_KEI_4_1_c_tt2
 			add_manpower = 30
 			add_country_modifier = {
@@ -1286,6 +1287,7 @@ THE_KEI_main_branch_4 = {
 				desc = THE_KEI_4_1_c_tt3
 			}
 			custom_tooltip = THE_KEI_4_1_c_tt1
+			custom_tooltip = empty_line_tt
 			custom_tooltip = empty_line_tt
 			if = {
 				limit = {
@@ -1386,10 +1388,8 @@ THE_KEI_main_branch_4 = {
 				every_owned_province = {
 					limit = {
 						OR = {
-							area = Yachie_state
-							area = Saki_state
-							area = Sanzu_upstream
-							area = Hifuu_club
+							is_core = SKI
+							is_core = YAC
 						}
 					}
 					add_core = ROOT
@@ -1409,6 +1409,7 @@ THE_KEI_main_branch_4 = {
 				area = Sea_of_petroleum
 				area = Gate_to_the_dead
 			}
+			NOT = { owned_by = ROOT }
 		} 
 		
 		trigger = { 
@@ -1423,50 +1424,40 @@ THE_KEI_main_branch_4 = {
 		} 
 		
 		effect = { 
-			custom_tooltip = THE_KEI_4_4_c_tt1
 			add_prestige = 50
 			add_country_modifier = {
 				name = THE_KEI_build_time_buff
 				duration = 7300
 			}
-			if = {
-				limit = { 
-					5045 = {
-						has_building = temple
-					}
-				}
-				custom_tooltip = THE_KEI_4_4_c_tt3_yes
-				5045 = {
-					add_base_tax = 3
-				}
-			}
-			else = {
-				custom_tooltip = THE_KEI_4_4_c_tt3_no
-				tooltip = {
-					5045 = {
-						add_base_tax = 3
-					}
-				}
-				hidden_effect = {
-					5045 = {
-						add_building = temple
-					}
-				}
+			custom_tooltip = THE_KEI_4_4_c_tt1
+			tooltip = {
+				add_base_tax = 1
+				add_or_upgrade_tax_building = yes
 			}
 			hidden_effect = {
+				5045 = {
+					add_or_upgrade_tax_building = yes
+					add_base_tax = 1
+					set_province_flag = THE_KEI_4_4_province_flag
+				}
 				for = {
 					amount = 10
 					effect = "
-						random_province = {
+						random_owned_province = {
 								limit = {
-									owned_by = ROOT
-								NOT = {
-									has_tax_building_trigger = yes
+									NOT = { has_province_flag = THE_KEI_4_4_province_flag }
 								}
-							}
 							add_or_upgrade_tax_building = yes
+							add_base_tax = 1
+							set_province_flag = THE_KEI_4_4_province_flag
 						}
 					"
+				}
+				every_owned_province = {
+					limit = {
+						has_province_flag = THE_KEI_4_4_province_flag
+					}
+					clr_province_flag = THE_KEI_4_4_province_flag
 				}
 			}
 		} 
