@@ -1,3 +1,29 @@
+THE_KEI_on_startup_scripted_effects = {
+	if = {
+		limit = {
+			tag = KEI
+			NOT = { has_country_flag = THE_KEI_on_startup_set_variable_flag }
+		}
+		set_variable = { which = the_mayumi_define_var value = 0 }
+		set_variable = { which = the_mayumi_fire_var value = 0 }
+		set_variable = { which = the_mayumi_shock_var value = 0 }
+		set_variable = { which = the_mayumi_manuever_var value = 0 }
+		set_variable = { which = the_mayumi_siege_var value = 0 }
+		set_variable = { which = the_kei_masses_var_im_var value = 0 }
+		set_variable = { which = the_kei_decision_check_im_var_infi value = 0 }
+		set_variable = { which = the_kei_decision_check_im_var_landfor value = 0 }
+		set_variable = { which = the_kei_the_blessing_of_the_keiki value = 0 }
+		set_variable = { which = the_kei_haniwa_recruit_im_var value = 0 }
+		set_variable = { which = the_kei_win_battle_count_im_var value = 0 }
+		set_variable = { which = the_kei_rejuvenate_devlop_im_var value = 0 }
+		set_variable = { which = the_kei_the_leader_won_battle_im_var value = 0 }
+		set_variable = { which = the_kei_change_religions_to_the_keiki_im_var value = 0 }
+		set_variable = { which = the_kei_start_game_till_then_use_government_im_var value = 0 }
+		set_variable = { which = the_kei_the_all_animal_run_buff_im_var value = 0 }
+		set_country_flag = THE_KEI_on_startup_set_variable_flag
+	}
+}
+
 THE_KEI_annex_ski_yac_province_in_war_effects = {
 	if = {
 		limit = {
@@ -253,7 +279,7 @@ THE_KEI_add_save_the_masses_power_effects = {
 		}
 		KEI = {
 			change_variable = {
-				which = THE_KEI_masses_var_im_var
+				which = the_kei_masses_var_im_var
 				value = 1
 			}
 			
@@ -420,7 +446,7 @@ THE_KEI_the_leader_won_battle_im_var_ieffect = {
 		 }
 		 unit_owner = {
 			change_variable = {
-				which = THE_KEI_the_leader_won_battle_im_var
+				which = the_kei_the_leader_won_battle_im_var
 				value = 1
 			 }
 		 }

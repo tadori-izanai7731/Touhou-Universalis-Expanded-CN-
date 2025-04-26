@@ -717,18 +717,18 @@ THE_KEI_main_branch_2 = {
 			add_government_reform = THE_KEI_save_the_masses_government_reform
 			hidden_effect = {
 				change_variable = {
-					which = THE_KEI_masses_var_im_var_33
-					which = THE_KEI_masses_var_im_var
+					which = the_kei_masses_var_im_var_33
+					which = the_kei_masses_var_im_var
 				}
 				while = {
 					limit = { 
 						check_variable = {
-							which = THE_KEI_masses_var_im_var_33
+							which = the_kei_masses_var_im_var_33
 							value = 1
 						}
 					}
 					change_variable = {
-						which = THE_KEI_masses_var_im_var_33
+						which = the_kei_masses_var_im_var_33
 						value = -1
 					}
 					add_government_power = {
@@ -1275,6 +1275,16 @@ THE_KEI_main_branch_4 = {
 		} 
 		
 		effect = { 
+
+			custom_tooltip = THE_KEI_4_1_c_tt2
+			add_manpower = 30
+			add_country_modifier = {
+				name = THE_KEI_savtor_light_1_buff
+				duration = -1
+				desc = THE_KEI_4_1_c_tt3
+			}
+			custom_tooltip = THE_KEI_4_1_c_tt1
+			custom_tooltip = empty_line_tt
 			if = {
 				limit = {
 					estate_influence = {
@@ -1303,16 +1313,6 @@ THE_KEI_main_branch_4 = {
 					}
 				}
 			}
-			add_country_modifier = {
-				name = THE_KEI_savtor_light_1_buff
-				duration = -1
-				desc = THE_KEI_4_1_c_tt3
-			}
-			custom_tooltip = THE_KEI_4_1_c_tt1
-			custom_tooltip = THE_KEI_4_1_c_tt2
-			add_manpower = 30
-			
-			
 			hidden_effect = {
 				set_variable = {
 					which = the_kei_haniwa_recruit_im_var
@@ -2057,7 +2057,7 @@ THE_KEI_main_branch_5 = {
 			custom_trigger_tooltip = {
 				tooltip = THE_KEI_5_5_c_tt2
 				check_variable = {
-					which = THE_KEI_the_leader_won_battle_im_var
+					which = the_kei_the_leader_won_battle_im_var
 					value = 30
 				}
 			}
@@ -2160,7 +2160,7 @@ THE_KEI_main_branch_5 = {
 						value = 50
 					}
 					set_variable = {
-						which = THE_KEI_masses_var_im_var
+						which = the_kei_masses_var_im_var
 						value = 50
 					}
 				}

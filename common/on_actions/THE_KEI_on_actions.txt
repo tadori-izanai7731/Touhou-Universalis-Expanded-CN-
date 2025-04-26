@@ -1,3 +1,7 @@
+on_startup = {
+	THE_KEI_on_startup_scripted_effects = yes
+}
+
 on_siege_won_country = {
 	THE_KEI_annex_ski_yac_province_in_war_effects = yes
 	THE_KEI_change_province_religion_effects = yes

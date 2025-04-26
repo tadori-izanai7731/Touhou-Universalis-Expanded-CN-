@@ -250,7 +250,7 @@ country_decisions = {
 				#步兵
 				change_variable = {
 					which = the_kei_decision_check_im_var_infi
-					which = THE_KEI_masses_var_im_var
+					which = the_kei_masses_var_im_var
 				}
 				multiply_variable = {
 					which = the_kei_decision_check_im_var_infi
@@ -259,7 +259,7 @@ country_decisions = {
 				#陆军上限
 				change_variable = {
 					which = the_kei_decision_check_im_var_landfor
-					which = THE_KEI_masses_var_im_var
+					which = the_kei_masses_var_im_var
 				}
 				multiply_variable = {
 					which = the_kei_decision_check_im_var_landfor
