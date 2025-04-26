@@ -73,7 +73,7 @@ THE_KEI_lonely_creation_mechanic = {
 					country_admin_power = 1
 					country_diplomatic_power = 1
 					country_military_power = 1
-				 }
+				}
 				trigger = {
 					mission_completed = THE_KEI_3_12
 				}
@@ -84,26 +84,26 @@ THE_KEI_lonely_creation_mechanic = {
 				modifier = {
 					global_manpower_modifier = 0.50
 					manpower_recovery_speed = 0.33
-				 }
-				 trigger = {
+				}
+				trigger = {
 					mission_completed = THE_KEI_4_12
-				 }
-				 start_value = 0
-				 end_value = 100
+				}
+				start_value = 0
+				end_value = 100
 			}
 			range_modifier = {
 				modifier = {
 					vassal_forcelimit_bonus = 1.0
 					diplomatic_annexation_cost = -0.25
-				 }
-				 trigger = {
+				}
+				trigger = {
 					has_country_flag = THE_KEI_complete_5_12_mission_flag_with_vassal
 					CRD = {
 						is_subject_of = ROOT
 					}
-				 }
-				 start_value = 0
-				 end_value = 100
+				}
+				start_value = 0
+				end_value = 100
 			}
 			##任务
 			range_modifier = {
@@ -148,7 +148,7 @@ THE_KEI_lonely_creation_mechanic = {
 				end_value = 100
 			}
 			####土袿  理念组加成
-				#革新
+			#革新
 			range_modifier = {
 				modifier = { 
 					innovativeness_gain = 0.50
@@ -159,7 +159,7 @@ THE_KEI_lonely_creation_mechanic = {
 					full_idea_group = innovativeness_ideas
 				}
 			}
-				#宗教
+			#宗教
 			range_modifier = {
 				modifier = { 
 					tolerance_own = 2
@@ -170,7 +170,7 @@ THE_KEI_lonely_creation_mechanic = {
 					full_idea_group = religious_ideas
 				}
 			}
-				#经济
+			#经济
 			range_modifier = {
 				modifier = { 
 					inflation_reduction = 0.20
@@ -181,7 +181,7 @@ THE_KEI_lonely_creation_mechanic = {
 					full_idea_group = economic_ideas
 				}
 			}
-				#扩张
+			#扩张
 			range_modifier = {
 				modifier = { 
 					colonists = 2
@@ -192,7 +192,7 @@ THE_KEI_lonely_creation_mechanic = {
 					full_idea_group = expansion_idea
 				}
 			}
-				#行政
+			#行政
 			range_modifier = {
 				modifier = { 
 					administrative_efficiency = 0.05
@@ -203,7 +203,7 @@ THE_KEI_lonely_creation_mechanic = {
 					full_idea_group = administrative_ideas 
 				}
 			}
-				#人文
+			#人文
 			range_modifier = {
 				modifier = { 
 					global_unrest = -2
@@ -214,7 +214,7 @@ THE_KEI_lonely_creation_mechanic = {
 					full_idea_group = humanist_ideas
 				}
 			}
-				#基建
+			#基建
 			range_modifier = {
 				modifier = { 
 					development_cost_modifier = -0.10
@@ -225,7 +225,7 @@ THE_KEI_lonely_creation_mechanic = {
 					full_idea_group = infrastructure_ideas
 				}
 			}
-				#神明
+			#神明
 			range_modifier = {
 				modifier = { 
 					manpower_in_true_faith_provinces = 0.20
@@ -236,7 +236,7 @@ THE_KEI_lonely_creation_mechanic = {
 					full_idea_group = THE_kami_ideas
 				}
 			}
-				#妖怪
+			#妖怪
 			range_modifier = {
 				modifier = { 
 					reserves_organisation = 0.15
@@ -247,72 +247,79 @@ THE_KEI_lonely_creation_mechanic = {
 					full_idea_group = THE_youkai_ideas
 				}
 			}
-
+			
 			########
-			 #合尘升级 外交类buff
-			 scaled_modifier = { #外交
+			#合尘升级 外交类buff
+			#外交
+			scaled_modifier = { 
 				modifier = {
 					improve_relation_modifier = 0.33
-				 }
-				 trigger = {
+				}
+				trigger = {
 					mission_completed = THE_KEI_2_10_create
 					full_idea_group = diplomatic_ideas 
-				 }
-			 }
-			 scaled_modifier = { #间谍
+				}
+			}
+			#间谍
+			scaled_modifier = { 
 				modifier = {
 					spy_offence = 0.25
-				 }
-				 trigger = {
+				}
+				trigger = {
 					mission_completed = THE_KEI_2_10_create
 					full_idea_group = spy_ideas 
-				 }
-			 }
-			 scaled_modifier = { #贸易
+				}
+			}
+			#贸易
+			scaled_modifier = { 
 				modifier = {
 					trade_efficiency = 0.20
-				 }
-				 trigger = {
+				}
+				trigger = {
 					mission_completed = THE_KEI_2_10_create
 					full_idea_group = trade_ideas
-				 }
-			 }
-			 scaled_modifier = { #探索
+				}
+			}
+			#探索
+			scaled_modifier = { 
 				modifier = {
 					envoy_travel_time = -0.25
-				 }
-				 trigger = {
+				}
+				trigger = {
 					mission_completed = THE_KEI_2_10_create
 					full_idea_group = exploration_ideas
-				 }
-			 }
-			 scaled_modifier = { #航海
+				}
+			}
+			#航海
+			scaled_modifier = { 
 				modifier = {
 					global_sailors_modifier = 0.50
-				 }
-				 trigger = {
+				}
+				trigger = {
 					mission_completed = THE_KEI_2_10_create
 					full_idea_group = maritime_ideas
-				 }
-			 }
-			 scaled_modifier = { #影响
+				}
+			}
+			#影响
+			scaled_modifier = { 
 				modifier = {
 					diplomatic_annexation_cost = -0.15
-				 }
-				 trigger = {
+				}
+				trigger = {
 					mission_completed = THE_KEI_2_10_create
 					full_idea_group = influence_ideas
-				 }
-			 }
-			 scaled_modifier = { #宫廷
-			 modifier = {
-				reform_progress_growth = 0.15
-			  }
-			  trigger = {
-				 mission_completed = THE_KEI_2_10_create
-				 full_idea_group = court_ideas
-			  }
-		  	}
+				}
+			}
+			#宫廷
+			scaled_modifier = { 
+				modifier = {
+					reform_progress_growth = 0.15
+				}
+				trigger = {
+					mission_completed = THE_KEI_2_10_create
+					full_idea_group = court_ideas
+				}
+			}
 		}
 	}
 }
@@ -325,6 +332,7 @@ THE_KEI_save_the_masses_government_mechanic = {
 	}
 	powers = {
 		THE_KEI_masses_var_power = {
+			gui = THE_mechanic_power_hidden_gui
 			max = 1000
 			min = 0
 			#变化
