@@ -6,21 +6,25 @@ on_siege_won_country = {
 	THE_KEI_annex_ski_yac_province_in_war_effects = yes
 	THE_KEI_change_province_religion_effects = yes
 }
+
 on_mil_development = {
 	THE_KEI_develop_province_add_power_effects = yes
 	THE_KEI_add_subject_country_blessing_2_effect = yes
 	THE_KEI_development_remove_province_light_buff = yes
 }
+
 on_adm_development = {
 	THE_KEI_develop_province_add_power_effects = yes
 	THE_KEI_add_subject_country_blessing_2_effect = yes
 	THE_KEI_development_remove_province_light_buff = yes
 }
+
 on_dip_development = {
 	THE_KEI_develop_province_add_power_effects = yes
 	THE_KEI_add_subject_country_blessing_2_effect = yes
 	THE_KEI_development_remove_province_light_buff = yes
 }
+
 on_war_won = {
 	the_kei_gain_effect_mechanic_power_2_effect = {
 		value = 5
@@ -28,49 +32,60 @@ on_war_won = {
 	THE_KEI_im_var_won_war_remove_mofidier_4_1_effect = yes
 	THE_KEI_decalre_to_YAC_or_SKI_won_war_effects = yes
 }
+
 on_province_culture_converted = {
 	the_kei_gain_effect_mechanic_power_1_effect = {
 		value = 5
 	}
 }
+
 on_janissaries_raised = {
 	the_kei_gain_effect_mechanic_power_1_effect = {
 		value = 0.5
 	}
 	THE_KEI_amount_haniwa_recruit_effect = yes
 }
+
 on_annexed = {
 	THE_KEI_add_save_the_masses_power_effects = yes
 }
+
 on_regiment_recruited = {
 	THE_KEI_add_create_army_mission_1_12_im_var_effect = yes
 }
+
 on_adm_exploited = {
 	THE_KEI_explot_the_province_effect = yes
 }
+
 on_dip_exploited = {
 	THE_KEI_explot_the_province_effect = yes
 }
+
 on_mil_exploited = {
 	THE_KEI_explot_the_province_effect = yes
 }
+
 on_province_religion_converted = {
 	THE_KEI_add_subject_country_blessing_effect = {
 		value = 10
 	}
 	THE_KEI_change_religions_to_the_keiki_var_effect = yes
 }
+
 on_battle_won_country = {
 	THE_KEI_win_battle_count_1_effect = yes
 	THE_KEI_add_subject_country_blessing_effect = {
 		value = 10
 	}
 }
+
 on_battle_lost_country = {
 	THE_KEI_add_subject_country_blessing_effect = {
 		value = 50
 	}
 }
+
 on_bankruptcy = {
 	THE_KEI_add_subject_country_blessing_effect = {
 		value = 1000
@@ -82,9 +97,11 @@ on_province_owner_change = {
 	THE_KEI_conseguer_the_GYK_effect = yes
 	THE_KEI_conseguer_out_of_higf_effect = yes
 }
+
 on_core = {
 	THE_KEI_can_core_creation_add_develpment_script_effect = yes
 }
+
 on_battle_won_unit = {
 	THE_KEI_the_leader_won_battle_im_var_ieffect = yes
 }

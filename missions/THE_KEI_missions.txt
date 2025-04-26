@@ -908,7 +908,8 @@ THE_KEI_main_branch_3 = {
 				}
 				custom_tooltip = THE_KEI_3_2_c_tt1_yes
 				add_adm_tech = 1
-				custom_tooltip = THE_KEI_3_2_c_tt2
+				custom_tooltip = empty_line_tt
+				custom_tooltip = THE_KEI_3_2_c_tt2_no
 				tooltip = {
 					add_adm_power = 150
 				}
@@ -918,7 +919,8 @@ THE_KEI_main_branch_3 = {
 				tooltip = {
 					add_adm_tech = 1
 				}
-				custom_tooltip = THE_KEI_3_2_c_tt2
+				custom_tooltip = empty_line_tt
+				custom_tooltip = THE_KEI_3_2_c_tt2_yes
 				add_adm_power = 150
 			}
 		} 
