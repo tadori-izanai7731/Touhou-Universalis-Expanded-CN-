@@ -5359,7 +5359,10 @@ THE_HNG_2_5 = {
 						change_controller = ROOT
 						add_territorial_core = ROOT
 					}
-				}	
+				}
+				set_country_flag = sob_waizu_allowed_celestial_empire
+				set_country_flag = sob_form_new_shishen_gov_flag
+				set_country_flag = sob_waizu_form_gov_flag
 			}
 		}
 	}
