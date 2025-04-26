@@ -1314,7 +1314,7 @@ THE_KEI_main_branch_4 = {
 				}
 			}
 			hidden_effect = {
-				set_variable = {
+				change_variable = {
 					which = the_kei_haniwa_recruit_im_var
 					value = -10
 				}
