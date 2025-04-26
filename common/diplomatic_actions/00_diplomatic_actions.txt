@@ -202,7 +202,7 @@ declarewar = {
 		}
 		allow = {
 			FROM = { NOT = { has_reform = THE_KEI_lonely_creation_government_reform } }
-		 }
+		}
 	}
 	### THE_END
 	effect = {
