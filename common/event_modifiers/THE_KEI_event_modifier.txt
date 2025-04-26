@@ -1,3 +1,4 @@
+#埴轮武士
 THE_KEI_estate_hina_wheel_buff = {
 	reinforce_speed = 0.20
 	reinforce_cost_modifier = -0.05
@@ -19,6 +20,7 @@ THE_KEI_the_captial_of_KEI_buff = {
 	local_religious_unity_contribution = 0.50
 	province_trade_power_value = 50
 }
+#筑起乐园
 THE_KEI_the_captial_of_KEI_v2_buff = {
 	local_religious_unity_contribution = 0.50
 	local_tax_modifier = 0.50
@@ -71,6 +73,7 @@ THE_KEI_create_army_province_buff = {
 	land_attrition = -0.10
 	movement_speed = 0.05
 }
+#造型艺术
 THE_KEI_zaoxing_haniwa_art_buff = {
 	trade_goods_size = 1.0
 	local_prosperity_growth = 0.5
@@ -211,15 +214,17 @@ THE_KEI_cloaked_in_radiance_buff = {
 	global_tax_modifier = 0.33
 	global_prosperity_growth = 1.0
 }
-#光辉岁月
+#不曾松懈的枷锁
 THE_KEI_all_animal_run_buff = {
 	min_local_autonomy = 100
 	local_autonomy = 0.05
 }
+#光辉岁月
 THE_KEI_all_animal_run_buff_V2 = {
 	local_monthly_devastation = -1.0
 	local_autonomy = -0.50
 }
+#挣扎而生
 THE_KEI_the_new_life_mission_buff = {
 	monthly_fervor_increase = 5
 }
