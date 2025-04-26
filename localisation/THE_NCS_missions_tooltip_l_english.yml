@@ -1,5 +1,5 @@
 ﻿l_english:
-###event
+### EVENT
  THE_NCS_events.1.title: "T)Yzz‰l¡l"
  THE_NCS_events.1.desc: "êNåwYSãNºNïy=tN„v•ï‹«ˆWØVKNTÿÙµ^zz-N„vÎW^1S8lÜ0WjO:NùRSºNÏe„vÅ‹’TwXR(W0FONøRÕl^KNNˆNO©‹yY„vTãNNÂa—Vb=g0ˆ”™Y8NZPúQ†NNy˜NïSY6R„v³QšR0yY‰S†˜0WN„vNRØS:NÙµ^nmzzÎW„vNèRÿNÿyYN=fÎ‘î†„v8ngr¨RirupÿmNN=fP``„vwm×v–Y¾|ÿyYêS=f(WÞ˜wòT0\nêS‰yYó`ÿˆ”™Y8N1SýwY©‹yY(W‰^ó`aN„vÔn)YèTjm-NûRŒb0R‰RhQ„v*‚¿uÿ(W'Y9‚ÙVŽNb`YÿY`KNöeÿyY¿OýwGSw±Nb—™„NppS„v×e^0\n§GýV¶Ryrr‚§!ÿ\nÁûy`O„výÎWNú^Qr\n:N†N1VwwbÿÄuNˆPRPN–\n„g.NLu4ngKNÎW"
  THE_NCS_events.1.a: "úQÑSÿŒcác`O„v‹TÐÿ"
@@ -42,8 +42,9 @@
  THE_NCS_events.10.title: "SºNÏe„vOo`"
  THE_NCS_events.10.desc: "`OaN‚YUObTÿb„vSlQINÿckªv^¡l	gmb4YwSºNÿêS=fÜÜgNwS‰GSw„v*Y3–ÿÖNNôv(WIr…VÙ*NöeIR0\n`O(Wî•ÀNHNÿˆ”™Y8Nó`Åˆ»PÿêS=fïOÆ‰'Y0W0yY¡l	gIrckª„vÞVYÿ(uSÌire†NNNêñT„vS‹ˆÿØSb†Nck8^'YSÿÞ˜0R†Nckª„vckb—0\nÀNHNmN¡l	gÿckªÃVÌ‘ó`0yYN(uÞVTrî•˜˜ÿyYmNN—‰yY„vÞVTrÿyYée1SåwS†N0wo®N0\nÀNHNo®Nÿn0RlQINÑSî•†NÿyY„vr¹R	gNwÔk©wNRÌi„vT››R0\n±SV6q=f&&ckª,gegó`ô‹ÖNìNûQ%†N³låz0sbP†N)Y×r0Ye­‹†N<›ÏeKN‰|„vÿbw=fêñTã‰>e†NS–Y*`ÿžR†N*No1UOÀNHN„v06qwck(Wdköeÿ*Y3–òTÏu„`„`ÎN0Ws^¿uKNNÃúQNekÿckçTÎNyYb—MR„vSsYÌwTwegÿôv¥cw)nÔg0WSeQyY„vÆ‰Î‘04YN!kÁ‰yY:N¾–„v7hPRÿSºNÏe„v+gÔˆmN4YN!kIN¨RIeûQÿê•5u,‚±b†NN»Sÿ.sN†NêñTNuN!k„v<yir0\nNåwSÇ†NàQt^Ø=fN¬wÿ2NºNRV†NÿN¹=fBcNw4V„v)Yª<›ÿæSN¹=fBcNw8„vSºNÏe0öeô•Nzzô•ŒRŽ0W»QÓu†N0b¸‹Ù7h1S‹Y&&"
  THE_NCS_events.10.a: "&&àV:NyY1S=fyY„vNLu0"
+### EVENT_END
 
-#modifier
+### MODIFIER
  THE_NCS_kazehouri_modifier: "Î˜ky"
  THE_NCS_hakurei_modifier: "ZWšRNûypZSKN^ySKNï"
  THE_NCS_kazehouri_province_modifier: "Î˜kyúQîT"
@@ -93,8 +94,9 @@
  THE_NCS_party_opinion: "R‘´R"
 
  THE_NCS_music_lover_pp: "1rPNwTwßv"
+### MODIFIER_END
 
-#decision
+### DECISION
  THE_NCS_take_off_title: "@NCS§YwÞ˜§!"
  THE_NCS_take_off_desc: "Nb	gN=f§Y–™ý§!Nåb	g§YŒRte8hÃV§!„vwýN1Y»SÑSUS¦^ó1z6e01uµN01ºN›R\n§Y–™ý§!·ƒ—VNb	g1Y»S„vÑSUS¦^0"
  THE_NCS_take_off_decision_by_3_years_tt: "å‹³Q®‹Ïk§Y3§!t^ïSgbLˆN!k"
@@ -112,10 +114,84 @@
  THE_NCS_uchidenokozuchi_party_title: "@NCS£THE_NCS_uchidenokozuchi_icon£§MSNRÌi(uŽNV¾‹R‘´R§!"
  THE_NCS_uchidenokozuchi_party_desc: ""
 
-#var
- the_ncs_uchidenokozuchi_var: "NRÌiO(u!kpe"
+ THE_NCS_restore_building_form_capital_decision_title: "@NCS§l¨PXR–™ýú^Qr§!"
+ THE_NCS_restore_building_form_capital_decision_desc: ""
+ THE_NCS_set_auto_release_building_decision_title: "@NCS§l¾‹nê¨RÊ‘>eú^Qr‰|‹W§!"
+ THE_NCS_set_auto_release_building_decision_desc: ""
+ THE_NCS_release_building_decision_title: "@NCS§lKb¨RÊ‘>eú^Qr§!"
+ THE_NCS_release_building_decision_desc: ""
+ THE_NCS_set_auto_release_tax_title: ">¾‹nê¨RÊ‘>eú^Qrÿz6e"
+ THE_NCS_set_auto_release_tax_desc: ""
+ THE_NCS_set_auto_release_trade_title: ">¾‹nê¨RÊ‘>eú^Qrÿ8f"
+ THE_NCS_set_auto_release_trade_desc: ""
+ THE_NCS_set_auto_release_government_title: ">¾‹nê¨RÊ‘>eú^Qrÿ?eœ^"
+ THE_NCS_set_auto_release_government_desc: ""
+ THE_NCS_set_auto_release_university_title: ">¾‹nê¨RÊ‘>eú^Qrÿ'YfR"
+ THE_NCS_set_auto_release_university_desc: ""
+ THE_NCS_set_auto_release_sailor_title: ">¾‹nê¨RÊ‘>eú^Qrÿ4lKb"
+ THE_NCS_set_auto_release_sailor_desc: ""
+ THE_NCS_set_auto_release_shiplimit_title: ">¾‹nê¨RÊ‘>eú^Qrÿwm›QNP–"
+ THE_NCS_set_auto_release_shiplimit_desc: ""
+ THE_NCS_set_auto_release_product_title: ">¾‹nê¨RÊ‘>eú^QrÿuµN"
+ THE_NCS_set_auto_release_product_desc: ""
+ THE_NCS_set_auto_release_manpower_title: ">¾‹nê¨RÊ‘>eú^QrÿºN›R"
+ THE_NCS_set_auto_release_manpower_desc: ""
+ THE_NCS_set_auto_release_forcelimit_title: ">¾‹nê¨RÊ‘>eú^QrÿF–›QNP–"
+ THE_NCS_set_auto_release_forcelimit_desc: ""
+ THE_NCS_set_auto_release_fort_title: ">¾‹nê¨RÊ‘>eú^Qrÿ2–¡V"
+ THE_NCS_set_auto_release_fort_desc: ""
+ THE_NCS_set_auto_release_defense_title: ">¾‹nê¨RÊ‘>eú^Qrÿ¿lwm2–¡V"
+ THE_NCS_set_auto_release_defense_desc: ""
+ THE_NCS_set_auto_release_manufactory_title: ">¾‹nê¨RÊ‘>eú^QrÿåT‚S"
+ THE_NCS_set_auto_release_manufactory_desc: ""
+ THE_NCS_set_auto_release_household_title: ">¾‹nê¨RÊ‘>eú^QrÿëXuQKN¶R"
+ THE_NCS_set_auto_release_household_desc: ""
+ THE_NCS_set_auto_release_office_title: ">¾‹nê¨RÊ‘>eú^Qrÿ:V6RVuQžRlQ²R"
+ THE_NCS_set_auto_release_office_desc: ""
+ THE_NCS_set_auto_release_state_title: ">¾‹nê¨RÊ‘>eú^QrÿÞT®‹O"
+ THE_NCS_set_auto_release_state_desc: ""
+ THE_NCS_set_auto_release_rampart_title: ">¾‹nê¨RÊ‘>eú^QrÿÁX’W"
+ THE_NCS_set_auto_release_rampart_desc: ""
+ THE_NCS_release_building_tax_title: ">Kb¨RÊ‘>eú^Qrÿz6e"
+ THE_NCS_release_building_tax_desc: ""
+ THE_NCS_release_building_trade_title: ">Kb¨RÊ‘>eú^Qrÿ8f"
+ THE_NCS_release_building_trade_desc: ""
+ THE_NCS_release_building_government_title: ">Kb¨RÊ‘>eú^Qrÿ?eœ^"
+ THE_NCS_release_building_government_desc: ""
+ THE_NCS_release_building_university_title: ">Kb¨RÊ‘>eú^Qrÿ'YfR"
+ THE_NCS_release_building_university_desc: ""
+ THE_NCS_release_building_sailor_title: ">Kb¨RÊ‘>eú^Qrÿ4lKb"
+ THE_NCS_release_building_sailor_desc: ""
+ THE_NCS_release_building_shiplimit_title: ">Kb¨RÊ‘>eú^Qrÿwm›QNP–"
+ THE_NCS_release_building_shiplimit_desc: ""
+ THE_NCS_release_building_product_title: ">Kb¨RÊ‘>eú^QrÿuµN"
+ THE_NCS_release_building_product_desc: ""
+ THE_NCS_release_building_manpower_title: ">Kb¨RÊ‘>eú^QrÿºN›R"
+ THE_NCS_release_building_manpower_desc: ""
+ THE_NCS_release_building_forcelimit_title: ">Kb¨RÊ‘>eú^QrÿF–›QNP–"
+ THE_NCS_release_building_forcelimit_desc: ""
+ THE_NCS_release_building_fort_title: ">Kb¨RÊ‘>eú^Qrÿ2–¡V"
+ THE_NCS_release_building_fort_desc: ""
+ THE_NCS_release_building_defense_title: ">Kb¨RÊ‘>eú^Qrÿ¿lwm2–¡V"
+ THE_NCS_release_building_defense_desc: ""
+ THE_NCS_release_building_manufactory_title: ">Kb¨RÊ‘>eú^QrÿåT‚S"
+ THE_NCS_release_building_manufactory_desc: ""
+ THE_NCS_release_building_household_title: ">Kb¨RÊ‘>eú^QrÿëXuQKN¶R"
+ THE_NCS_release_building_household_desc: ""
+ THE_NCS_release_building_office_title: ">Kb¨RÊ‘>eú^Qrÿ:V6RVuQžRlQ²R"
+ THE_NCS_release_building_office_desc: ""
+ THE_NCS_release_building_state_title: ">Kb¨RÊ‘>eú^QrÿÞT®‹O"
+ THE_NCS_release_building_state_desc: ""
+ THE_NCS_release_building_rampart_title: ">Kb¨RÊ‘>eú^QrÿÁX’W"
+ THE_NCS_release_building_rampart_desc: ""
+### DECISION
 
-#tooltip
+### VARIABLE
+ the_ncs_uchidenokozuchi_var: "NRÌiO(u!kpe"
+ the_ncs_had_auto_release_var: "òT	éb„vú^Qr‰|‹W"
+### VARIABLE_END
+
+### CUSTOM_TOOLTIP
  THE_NCS_1_3_tt: "‚Yœg	g§YÆ–^§!b§Y8fÓN“^§!ÿSvQGSµu:N§YÁ‹8R²NfNb§!ÿ‚Yœg	g§YÁ‹8R²NfNb§!ÿ·ƒ—V§G2§!¹púWNxuµN"
  THE_NCS_1_4_tt: "‚Yœg	g§YÕlb–§!ÿSvQGSµu:N§Y^?e…S§!ÿ‚Yœg	g§Y^?e…S§!ÿ·ƒ—V§G1§!¹púWNxz6eŒT§G1§!¹púWNxºN›R"
  THE_NCS_1_5_tt: "‚Yœg	g§Y^y>y§!ÿSvQGSµu:N§Y^y«R§!ÿ‚Yœg	g§Y^y«R§!ÿ·ƒ—V§G2§!¹púWNxz6e"
@@ -185,7 +261,83 @@
  THE_NCS_3_5_tt_no: "£no£§M‚YœgûN¡R§Y0NQHSESºNN0§!òTŒRb§!ÿ"
  THE_NCS_end_event_tt: "ÖNìN„vEe‹NïSýwòTÏuÓumg†NÿFOO^y7wK`„v‰^ó`aNtS¡l	g&&a0Œ¨`NôvåNegùRS—xNckª„vœU1rÿmNa0Œ¨`Nôv©s0RÙÌ‘ÿ°s(WN¨YÕ‹Õ‹vQÖNýV¶R&&"
 
- #ideas
+ THE_NCS_show_capital_building_list: "§Y¨PXR–™ýú^Qr§!\n\n§MSVMRòT¨PXR„vú^Qr§!ÿ"
+ THE_NCS_open_set_auto_release_building_decision_tt: "§Y>f:y¾‹nê¨RÊ‘>eú^Qr³Q®‹§!"
+ THE_NCS_close_set_auto_release_building_decision_tt: "§Y–Ï…¾‹nê¨RÊ‘>eú^Qr³Q®‹§!"
+ THE_NCS_open_release_building_decision_tt: "§Y>f:yKb¨RÊ‘>eú^Qr³Q®‹§!"
+ THE_NCS_close_release_building_decision_tt: "§Y–Ï…Kb¨RÊ‘>eú^Qr³Q®‹§!"
+ THE_NCS_show_auto_release_building_list: "§MÁýöeSê¨RÊ‘>eåNNú^Qr§!ÿ"
+ THE_NCS_show_capital_building_tt_marketplace: "§YÆ–^§!"
+ THE_NCS_show_capital_building_tt_trade_depot: "§Y8fÓN“^§!"
+ THE_NCS_show_capital_building_tt_stock_exchange: "§YÁ‹8R²NfNb§!"
+ THE_NCS_show_capital_building_tt_workshop: "§YåTJW§!"
+ THE_NCS_show_capital_building_tt_counting_house: "§YO¡‹²R§!"
+ THE_NCS_show_capital_building_tt_temple: "§Y^y>y§!"
+ THE_NCS_show_capital_building_tt_cathedral: "§Y^y«R§!"
+ THE_NCS_show_capital_building_tt_barracks: "§YuQ%„§!"
+ THE_NCS_show_capital_building_tt_training_fields: "§Y­‹Ãu%„§!"
+ THE_NCS_show_capital_building_tt_shipyard: "§Y.9‚‚S§!"
+ THE_NCS_show_capital_building_tt_grand_shipyard: "§Y'Y9‚‚S§!"
+ THE_NCS_show_capital_building_tt_courthouse: "§YÕlb–§!"
+ THE_NCS_show_capital_building_tt_town_hall: "§Y^?e…S§!"
+ THE_NCS_show_capital_building_tt_dock: "§Y9‚^W§!"
+ THE_NCS_show_capital_building_tt_drydock: "§Yr^9‚^W§!"
+ THE_NCS_show_capital_building_tt_regimental_camp: "§Y›Q%„§!"
+ THE_NCS_show_capital_building_tt_conscription_center: "§YVìS-NÃV§!"
+ THE_NCS_show_capital_building_tt_university: "§Y'YfR§!"
+ THE_NCS_show_capital_building_tt_coastal_defence: "§Y¸S2–åT‹N§!"
+ THE_NCS_show_capital_building_tt_naval_battery: "§Ywm2–®pðS§!"
+ THE_NCS_show_capital_building_tt_fort_15th: "§YÎW!X§!"
+ THE_NCS_show_capital_building_tt_fort_16th: "§Yñh!X§!"
+ THE_NCS_show_capital_building_tt_fort_17th: "§Yf!X§!"
+ THE_NCS_show_capital_building_tt_fort_18th: "§Y‰^X§!"
+ THE_NCS_show_capital_building_tt_wharf: "§Ywm›QÅˆYåT‚S§!"
+ THE_NCS_show_capital_building_tt_weapons: "§YfkhVåT:W§!"
+ THE_NCS_show_capital_building_tt_textile: "§YºuÇuåT:W§!"
+ THE_NCS_show_capital_building_tt_plantations: "§YÍyiíV§!"
+ THE_NCS_show_capital_building_tt_tradecompany: "§Y²NfÙz§!"
+ THE_NCS_show_capital_building_tt_farm_estate: "§YœQ:W§!"
+ THE_NCS_show_capital_building_tt_mills: "§Y6R.‚S§!"
+ THE_NCS_show_capital_building_tt_soldier_households: "§YëXuQKN¶R§!"
+ THE_NCS_show_capital_building_tt_impressment_offices: "§Y:V6RVuQžRlQ²R§!"
+ THE_NCS_show_capital_building_tt_state_house: "§YÞT®‹O§!"
+ THE_NCS_show_capital_building_tt_ramparts: "§YÁX’W§!"
+ THE_NCS_show_capital_building_tt_furnace: "§Y”q‰p§!"
+ THE_NCS_auto_release_tt_on_tax: "ûm Rê¨RÊ‘>ez6eú^Qr"
+ THE_NCS_auto_release_tt_on_trade: "ûm Rê¨RÊ‘>e8fú^Qr"
+ THE_NCS_auto_release_tt_on_government: "ûm Rê¨RÊ‘>e?eœ^ú^Qr"
+ THE_NCS_auto_release_tt_on_university: "ûm Rê¨RÊ‘>e'YfRú^Qr"
+ THE_NCS_auto_release_tt_on_sailor: "ûm Rê¨RÊ‘>e4lKbú^Qr"
+ THE_NCS_auto_release_tt_on_shiplimit: "ûm Rê¨RÊ‘>ewm›QNP–ú^Qr"
+ THE_NCS_auto_release_tt_on_product: "ûm Rê¨RÊ‘>euµNú^Qr"
+ THE_NCS_auto_release_tt_on_manpower: "ûm Rê¨RÊ‘>eºN›Rú^Qr"
+ THE_NCS_auto_release_tt_on_forcelimit: "ûm Rê¨RÊ‘>eF–›QNP–ú^Qr"
+ THE_NCS_auto_release_tt_on_fort: "ûm Rê¨RÊ‘>e2–¡Vú^Qr"
+ THE_NCS_auto_release_tt_on_defense: "ûm Rê¨RÊ‘>e¿lwm2–¡Vú^Qr"
+ THE_NCS_auto_release_tt_on_manufactory: "ûm Rê¨RÊ‘>eåT‚Sú^Qr"
+ THE_NCS_auto_release_tt_on_household: "ûm Rê¨RÊ‘>eëXuQKN¶Rú^Qr"
+ THE_NCS_auto_release_tt_on_office: "ûm Rê¨RÊ‘>e:V6RVuQžRlQ²Rú^Qr"
+ THE_NCS_auto_release_tt_on_state: "ûm Rê¨RÊ‘>eÞT®‹Oú^Qr"
+ THE_NCS_auto_release_tt_on_rampart: "ûm Rê¨RÊ‘>eÁX’Wú^Qr"
+ THE_NCS_auto_release_tt_off_tax: "ÖSˆmê¨RÊ‘>ez6eú^Qr"
+ THE_NCS_auto_release_tt_off_trade: "ÖSˆmê¨RÊ‘>e8fú^Qr"
+ THE_NCS_auto_release_tt_off_government: "ÖSˆmê¨RÊ‘>e?eœ^ú^Qr"
+ THE_NCS_auto_release_tt_off_university: "ÖSˆmê¨RÊ‘>e'YfRú^Qr"
+ THE_NCS_auto_release_tt_off_sailor: "ÖSˆmê¨RÊ‘>e4lKbú^Qr"
+ THE_NCS_auto_release_tt_off_shiplimit: "ÖSˆmê¨RÊ‘>ewm›QNP–ú^Qr"
+ THE_NCS_auto_release_tt_off_product: "ÖSˆmê¨RÊ‘>euµNú^Qr"
+ THE_NCS_auto_release_tt_off_manpower: "ÖSˆmê¨RÊ‘>eºN›Rú^Qr"
+ THE_NCS_auto_release_tt_off_forcelimit: "ÖSˆmê¨RÊ‘>eF–›QNP–ú^Qr"
+ THE_NCS_auto_release_tt_off_fort: "ÖSˆmê¨RÊ‘>e2–¡Vú^Qr"
+ THE_NCS_auto_release_tt_off_defense: "ÖSˆmê¨RÊ‘>e¿lwm2–¡Vú^Qr"
+ THE_NCS_auto_release_tt_off_manufactory: "ÖSˆmê¨RÊ‘>eåT‚Sú^Qr"
+ THE_NCS_auto_release_tt_off_household: "ÖSˆmê¨RÊ‘>eëXuQKN¶Rú^Qr"
+ THE_NCS_auto_release_tt_off_office: "ÖSˆmê¨RÊ‘>e:V6RVuQžRlQ²Rú^Qr"
+ THE_NCS_auto_release_tt_off_state: "ÖSˆmê¨RÊ‘>eÞT®‹Oú^Qr"
+ THE_NCS_auto_release_tt_off_rampart: "ÖSˆmê¨RÊ‘>eÁX’Wú^Qr"
+### CUSTOM_TOOLTIP_END
+
+### IDEA
  THE_NCS_ideas: "SºNÏetõV"
  THE_NCS_ideas_start: "SºNÏe.Oßu"
  THE_NCS_ideas_bonus: "NøRÕl^Î‘ÃV"
@@ -204,3 +356,4 @@
  THE_NCS_desrever_idea_desc: "ùGYuµNåN³ÿöeKNIeôVwb2RŒ(W(uÐvQSÿÅ`‹NmN•Ådg<›ª)Y=flÍSir‹NNÐgS"
  THE_NCS_sukuna_hikona_descendant_idea_desc: "SfVTISoƒÿýw»laÅu³R0ÝOQO0u0Wÿ«ˆIY:NISoƒ^y07Œir^y0"
  THE_NCS_uchidenokozuchi_cool_down_tt: "§Y5§!t^…QàeÕlO(u£THE_NCS_uchidenokozuchi_icon£§MNRÌi³Q®‹§!\n"
+### IDEA_END

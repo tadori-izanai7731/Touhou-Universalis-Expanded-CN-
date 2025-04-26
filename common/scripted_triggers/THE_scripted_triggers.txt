@@ -40,8 +40,8 @@ THE_check_culture_slot_scripted_trigger = {
 	}
 }
 
-#$deity$
-#$days$
+# $deity$
+# $days$
 # 1460
 # 2190
 # 1825
@@ -112,5 +112,267 @@ THE_num_of_completed_idea_groups_mil = {
 		full_idea_group = THE_lunarian_ideas
 		full_idea_group = THE_gensokyan_ideas
 		amount = $amount$
+	}
+}
+
+
+# 拥有特定类型（行政/外交/军事）的顾问，不要求等级
+# 如果需要根据顾问决定效果，请勿使用此触发器
+# 必要分句 type = adm/dip/mil
+THE_has_type_advisor = {
+	THE_has_$type$_advisor = yes
+}
+
+
+# 拥有特定类型（行政/外交/军事）的顾问，要求等级
+# 如果需要根据顾问决定效果，请勿使用此触发器
+# 必要分句 type = adm/dip/mil
+# 必要分句 level = 1/2/3/4/5
+THE_has_type_advisor_with_level = {
+	THE_has_$type$_advisor_with_level = { level = $level$ }
+}
+
+
+# 不直接用于触发器，新增行政顾问请在该脚本中添加
+THE_has_adm_advisor = {
+	custom_trigger_tooltip = {
+		tooltip = has_adm_advisor_tooltip
+		OR = {
+			advisor = treasurer
+			advisor = philosopher
+			advisor = artist
+			advisor = theologian
+			advisor = master_of_mint
+			advisor = inquisitor
+			advisor = natural_scientist
+			advisor = th_advisor_reimu
+			advisor = th_advisor_rikako
+			advisor = th_advisor_yumemi
+			advisor = th_advisor_gengetsu
+			advisor = th_advisor_daiyousei
+			advisor = th_advisor_daiyousei_upgraded
+			advisor = th_advisor_patchouli
+			advisor = th_advisor_flandre
+			advisor = th_advisor_lunasa
+			advisor = th_advisor_yuyuko
+			advisor = th_advisor_wriggle
+			advisor = th_advisor_keine
+			advisor = th_advisor_eirin
+			advisor = th_advisor_mokou
+			advisor = th_advisor_medicine
+			advisor = th_advisor_eiki
+			advisor = th_advisor_shizuha
+			advisor = th_advisor_minoriko
+			advisor = th_advisor_nitori
+			advisor = th_advisor_sanae
+			advisor = th_advisor_hecatia
+			advisor = th_advisor_sagume
+			advisor = th_advisor_megumu
+		}
+	}
+}
+
+# 不直接用于触发器，新增行政顾问请在该脚本中添加
+THE_has_adm_advisor_with_level = {
+	custom_trigger_tooltip = {
+		tooltip = THE_has_adm_advisor_level_$level$_tooltip
+		OR = {
+			treasurer = $level$
+			philosopher = $level$
+			artist = $level$
+			theologian = $level$
+			master_of_mint = $level$
+			inquisitor = $level$
+			natural_scientist = $level$
+			th_advisor_reimu = $level$
+			th_advisor_rikako = $level$
+			th_advisor_yumemi = $level$
+			th_advisor_gengetsu = $level$
+			th_advisor_daiyousei = $level$
+			th_advisor_daiyousei_upgraded = $level$
+			th_advisor_patchouli = $level$
+			th_advisor_flandre = $level$
+			th_advisor_lunasa = $level$
+			th_advisor_yuyuko = $level$
+			th_advisor_wriggle = $level$
+			th_advisor_keine = $level$
+			th_advisor_eirin = $level$
+			th_advisor_mokou = $level$
+			th_advisor_medicine = $level$
+			th_advisor_eiki = $level$
+			th_advisor_shizuha = $level$
+			th_advisor_minoriko = $level$
+			th_advisor_nitori = $level$
+			th_advisor_sanae = $level$
+			th_advisor_hecatia = $level$
+			th_advisor_sagume = $level$
+			th_advisor_megumu = $level$
+		}
+	}
+}
+
+# 不直接用于触发器，新增外交顾问请在该脚本中添加
+THE_has_dip_advisor = {
+	custom_trigger_tooltip = {
+		tooltip = has_dip_advisor_tooltip
+		OR = {
+			advisor = statesman
+			advisor = diplomat
+			advisor = naval_reformer
+			advisor = trader
+			advisor = colonial_governor
+			advisor = navigator
+			advisor = spymaster
+			advisor = th_advisor_kana
+			advisor = th_advisor_ellen
+			advisor = th_advisor_chiyuri
+			advisor = th_advisor_mugetsu
+			advisor = th_advisor_remilia
+			advisor = th_advisor_chen
+			advisor = th_advisor_alice
+			advisor = th_advisor_alice_upgraded
+			advisor = th_advisor_lily
+			advisor = th_advisor_merlin
+			advisor = th_advisor_mystia
+			advisor = th_advisor_tewi
+			advisor = th_advisor_kaguya
+			advisor = th_advisor_aya
+			advisor = th_advisor_komachi
+			advisor = th_advisor_suwako
+			advisor = th_advisor_iku
+			advisor = th_advisor_hatate
+			advisor = th_advisor_seiga
+			advisor = th_advisor_doremy
+			advisor = th_advisor_star
+			advisor = THE_advisor_daiyousei
+		}
+	}
+}
+
+# 不直接用于触发器，新增外交顾问请在该脚本中添加
+THE_has_dip_advisor_with_level = {
+	custom_trigger_tooltip = {
+		tooltip = THE_has_dip_advisor_level_$level$_tooltip
+		OR = {
+			statesman = $level$
+			diplomat = $level$
+			naval_reformer = $level$
+			trader = $level$
+			colonial_governor = $level$
+			navigator = $level$
+			spymaster = $level$
+			th_advisor_kana = $level$
+			th_advisor_ellen = $level$
+			th_advisor_chiyuri = $level$
+			th_advisor_mugetsu = $level$
+			th_advisor_remilia = $level$
+			th_advisor_chen = $level$
+			th_advisor_alice = $level$
+			th_advisor_alice_upgraded = $level$
+			th_advisor_lily = $level$
+			th_advisor_merlin = $level$
+			th_advisor_mystia = $level$
+			th_advisor_tewi = $level$
+			th_advisor_kaguya = $level$
+			th_advisor_aya = $level$
+			th_advisor_komachi = $level$
+			th_advisor_suwako = $level$
+			th_advisor_iku = $level$
+			th_advisor_hatate = $level$
+			th_advisor_seiga = $level$
+			th_advisor_doremy = $level$
+			th_advisor_star = $level$
+			THE_advisor_daiyousei = $level$
+		}
+	}
+}
+
+# 不直接用于触发器，新增军事顾问请在该脚本中添加
+THE_has_mil_advisor = {
+	custom_trigger_tooltip = {
+		tooltip = has_mil_advisor_tooltip
+		OR = {
+			advisor = army_organiser
+			advisor = army_reformer
+			advisor = commandant
+			advisor = grand_captain
+			advisor = recruitmaster
+			advisor = fortification_expert
+			advisor = quartermaster
+			advisor = th_advisor_marisa
+			advisor = th_advisor_konngara
+			advisor = th_advisor_mima
+			advisor = th_advisor_sariel
+			advisor = th_advisor_rika
+			advisor = th_advisor_meira
+			advisor = th_advisor_kurumi
+			advisor = th_advisor_elly
+			advisor = th_advisor_yuuka
+			advisor = th_advisor_yumeko
+			advisor = th_advisor_shinki
+			advisor = th_advisor_rumia
+			advisor = th_advisor_cirno
+			advisor = th_advisor_meiling
+			advisor = th_advisor_sakuya
+			advisor = th_advisor_letty
+			advisor = th_advisor_lyrica
+			advisor = th_advisor_youmu
+			advisor = th_advisor_ran
+			advisor = th_advisor_yukari
+			advisor = th_advisor_reisen
+			advisor = th_advisor_hina
+			advisor = th_advisor_momiji
+			advisor = th_advisor_kanako
+			advisor = th_advisor_clownpiece
+			advisor = th_advisor_yorihime
+			advisor = the_koishi
+			advisor = the_sizuha
+			advisor = the_mayumi
+		}
+	}
+}
+
+# 不直接用于触发器，新增军事顾问请在该脚本中添加
+THE_has_mil_advisor_with_level = {
+	custom_trigger_tooltip = {
+		tooltip = THE_has_mil_advisor_level_$level$_tooltip
+		OR = {
+			army_organiser = $level$
+			army_reformer = $level$
+			commandant = $level$
+			grand_captain = $level$
+			recruitmaster = $level$
+			fortification_expert = $level$
+			quartermaster = $level$
+			th_advisor_marisa = $level$
+			th_advisor_konngara = $level$
+			th_advisor_mima = $level$
+			th_advisor_sariel = $level$
+			th_advisor_rika = $level$
+			th_advisor_meira = $level$
+			th_advisor_kurumi = $level$
+			th_advisor_elly = $level$
+			th_advisor_yuuka = $level$
+			th_advisor_yumeko = $level$
+			th_advisor_shinki = $level$
+			th_advisor_rumia = $level$
+			th_advisor_cirno = $level$
+			th_advisor_meiling = $level$
+			th_advisor_sakuya = $level$
+			th_advisor_letty = $level$
+			th_advisor_lyrica = $level$
+			th_advisor_youmu = $level$
+			th_advisor_ran = $level$
+			th_advisor_yukari = $level$
+			th_advisor_reisen = $level$
+			th_advisor_hina = $level$
+			th_advisor_momiji = $level$
+			th_advisor_kanako = $level$
+			th_advisor_clownpiece = $level$
+			th_advisor_yorihime = $level$
+			the_koishi = $level$
+			the_sizuha = $level$
+			the_mayumi = $level$
+		}
 	}
 }

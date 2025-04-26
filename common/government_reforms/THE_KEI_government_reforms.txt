@@ -33,19 +33,16 @@ THE_KEI_lonely_creation_government_reform = {
 #2级
 THE_KEI_dedicate_ourselves_government_reform = {
 	lock_level_when_selected = yes
-	icon = "THE_KEI_government_1_reform"
+	icon = "THE_KEI_government_2_reform"
 	potential = {
 		OR = {
 			has_reform = THE_KEI_dedicate_ourselves_government_reform
 			have_had_reform = THE_KEI_dedicate_ourselves_government_reform
 		}
 	}
-	valid_for_new_country = no
-	valid_for_nation_designer = no
 	modifiers = {
-		max_absolutism = 10
+		max_absolutism = 15
 		allow_free_estate_privilege_revocation = yes
-		loyalty_change_on_revoked = 0.10
 	}
 	custom_attributes = {
 		THE_KEI_dedicate_ourselves_governemnt_reform = yes
@@ -56,17 +53,15 @@ THE_KEI_dedicate_ourselves_government_reform = {
 #3级
 THE_KEI_save_the_masses_government_reform = {
 	lock_level_when_selected = yes
-	icon = "THE_KEI_government_1_reform"
+	icon = "THE_KEI_government_3_reform"
 	potential = {
 		OR = {
 			has_reform = THE_KEI_save_the_masses_government_reform
 			have_had_reform = THE_KEI_save_the_masses_government_reform
 		}
 	}
-	valid_for_new_country = no
-	valid_for_nation_designer = no
 	modifiers = {
-		improve_relation_modifier = 0.33
+		improve_relation_modifier = 0.25
 	}
 	custom_attributes = {
 		THE_KEI_save_the_masses_government_CUSTOM_ability = yes
@@ -78,15 +73,13 @@ THE_KEI_save_the_masses_government_reform = {
 #6级
 THE_KEI_without_the_time_and_end_government_reform = {
 	lock_level_when_selected = yes
-	icon = "THE_KEI_government_1_reform"
+	icon = "THE_KEI_government_6_reform"
 	potential = {
 		OR = {
 			has_reform = THE_KEI_without_the_time_and_end_government_reform
 			have_had_reform = THE_KEI_without_the_time_and_end_government_reform
 		}
 	}
-	valid_for_new_country = no
-	valid_for_nation_designer = no
 	modifiers = {
 		governing_cost = -0.25
 	}
