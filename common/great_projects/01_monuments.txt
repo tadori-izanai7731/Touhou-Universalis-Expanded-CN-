@@ -19258,7 +19258,10 @@ imperial_city_kyoto = {
 	type = monument
 
 	build_trigger = {
-		culture_group = japanese_g
+		OR = {
+			culture_group = japanese_g
+            culture_group = Gensokyan_culture
+		}
 		province_is_or_accepts_culture = yes
 	}
 
@@ -19271,7 +19274,7 @@ imperial_city_kyoto = {
 	can_use_modifiers_trigger = {
 		OR = {
 			culture_group = japanese_g
-			culture = Gensokyo_chinese
+            culture_group = Gensokyan_culture
 		}
 		province_is_or_accepts_culture = yes
 	}
@@ -19279,7 +19282,7 @@ imperial_city_kyoto = {
 	can_upgrade_trigger = {
 		OR = {
 			culture_group = japanese_g
-			culture = Gensokyo_chinese
+            culture_group = Gensokyan_culture
 		}
 		province_is_or_accepts_culture = yes
 	}
