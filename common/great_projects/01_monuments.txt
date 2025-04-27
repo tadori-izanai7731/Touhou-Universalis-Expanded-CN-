@@ -19269,12 +19269,18 @@ imperial_city_kyoto = {
 	}
 
 	can_use_modifiers_trigger = {
-		culture_group = japanese_g
+		OR = {
+			culture_group = japanese_g
+			culture = Gensokyo_chinese
+		}
 		province_is_or_accepts_culture = yes
 	}
 
 	can_upgrade_trigger = {
-		culture_group = japanese_g
+		OR = {
+			culture_group = japanese_g
+			culture = Gensokyo_chinese
+		}
 		province_is_or_accepts_culture = yes
 	}
 
