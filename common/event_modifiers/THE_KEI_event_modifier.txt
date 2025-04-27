@@ -1,7 +1,9 @@
 #埴轮武士
 THE_KEI_estate_hina_wheel_buff = {
-	reinforce_speed = 0.20
-	reinforce_cost_modifier = -0.05
+	reinforce_speed = 0.33
+	reinforce_cost_modifier = -0.15
+	land_maintenance_modifier = 0.50
+	land_attrition = -0.25
 	is_janissary_modifier = yes
 }
 #救赎之光
