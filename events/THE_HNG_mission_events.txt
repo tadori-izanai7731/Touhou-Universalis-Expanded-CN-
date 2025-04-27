@@ -497,9 +497,9 @@ country_event = {
 			create_union = LXA
 		}
 		ai_chance = { 
-			factor = 30
+			factor = 36
 			modifier = {
-				factor = 0
+				factor = 0.5
 				NOT = { 
 					LXA = {
 						has_opinion = {
@@ -536,18 +536,25 @@ country_event = {
 			}
 			add_country_modifier = {
 				name = THE_hng_mission_modifier22
-				duration = 1095
+				duration = 7300
 			}
 		}
 		ai_chance = { 
 			factor = 12
 			modifier = {
 				factor = 0
-				NOT = { prestige = 50 }
+				NOT = { prestige = 0 }
 			}
 			modifier = {
-				factor = 0
-				NOT = { dip_power = 100 }
+				factor = 3
+			LXA = {
+				NOT = {
+				has_opinion = {
+					who = HNG
+					value = 0
+				      }
+			       }
+			    }
 			}
 		}
 	}
