@@ -195,6 +195,10 @@ zz_THE_ru_ru_de_fubao = {
 	        religion = confucianism
 			religion = th_taoist		
 			}
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
 		}
 	}
 	trigger = { 
