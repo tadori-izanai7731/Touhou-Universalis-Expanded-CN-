@@ -186,3 +186,30 @@ zz_THE_HNG_wu_shi_chu_ji = {
 		regiment_manpower_usage = -0.25
 	}
 }
+
+zz_THE_ru_ru_de_fubao = {
+	empire = celestial_empire 
+	potential = {
+		event_target:EmperorOfChina = {
+			OR = {
+	        religion = confucianism
+			religion = th_taoist		
+			}
+			OR = {
+				tag = HNG
+				was_tag = HNG
+			}
+		}
+	}
+	trigger = { 
+		harmony = 50
+	}
+	member = {
+		global_missionary_strength = -0.01
+		no_religion_penalty = yes
+	} 
+	emperor = { 
+		harmonization_speed = 0.5
+		yearly_harmony = 0.25
+	}
+}

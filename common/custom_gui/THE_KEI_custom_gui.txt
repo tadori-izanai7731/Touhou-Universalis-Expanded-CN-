@@ -1309,7 +1309,7 @@ custom_button = {
 				add_government_power = {
 					mechanic_type = THE_KEI_lonely_creation_mechanic
 					power_type = THE_KEI_lonely_creation_mechanic_power
-					value = -50
+					value = -5
 				}
 			}
 			hidden_effect = {
@@ -1317,6 +1317,10 @@ custom_button = {
 					which = THE_KEI_cutom_ui_use_the_forcelimit_im_var
 					who = FROM
 					value = land_forcelimit
+				}
+				multiply_variable = {
+					which = THE_KEI_cutom_ui_use_the_forcelimit_im_var
+					value = 0.10
 				}
 				while = {
 					limit = { 
