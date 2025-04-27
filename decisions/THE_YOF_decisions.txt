@@ -109,7 +109,7 @@ country_decisions = {
 		}
 		potential = {
 			OR = {
-				religion = th_kagiyama
+				religion = THE_kagiyama_religion
 				tag = YOF
 				was_tag = YOF
 			}
@@ -160,7 +160,7 @@ country_decisions = {
 			}
 			has_country_flag = the_yof_change_religions_to_kagiyama_allow_flag
 			NOT = {
-				religion = th_kagiyama
+				religion = THE_kagiyama_religion
 			}
 		}
 		allow = {
@@ -174,11 +174,11 @@ country_decisions = {
 					limit = {
 						religion = ROOT
 					}
-					change_religion = th_kagiyama
+					change_religion = THE_kagiyama_religion
 				}
 				set_country_flag = THE_can_trigger_Hina_deity_event_flag
 			}
-			change_religion = th_kagiyama
+			change_religion = THE_kagiyama_religion
 			add_country_modifier = {
 				name = yof_kagiyama_religions_not_identified_buff
 				duration = -1

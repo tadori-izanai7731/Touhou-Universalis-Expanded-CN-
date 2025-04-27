@@ -49,10 +49,10 @@ THE_yokari_forest_monarchy = {
 THE_YOF_public_recognition_reform = {
 	icon = "THE_YOF_public_recognition_reform"
 	potential = {
-		religion = th_kagiyama
+		religion = THE_kagiyama_religion
 	}
 	trigger = {
-		religion = th_kagiyama
+		religion = THE_kagiyama_religion
 	}
 	allow_normal_conversion = yes
 	modifiers = {
@@ -65,10 +65,10 @@ THE_YOF_public_recognition_reform = {
 THE_YOF_doom_condensation_reform = {
 	icon = "THE_YOF_doom_condensation_reform"
 	potential = {
-		religion = th_kagiyama
+		religion = THE_kagiyama_religion
 	}
 	trigger = {
-		religion = th_kagiyama
+		religion = THE_kagiyama_religion
 	}
 	allow_normal_conversion = yes
 	custom_attributes = {
@@ -108,10 +108,10 @@ THE_YOF_strengthen_kagiyama_influence_reform = {
 THE_YOF_comprehensive_religion_reform = {
 	icon = "THE_YOF_comprehensive_religion_reform"
 	potential = {
-		religion = th_kagiyama
+		religion = THE_kagiyama_religion
 	}
 	trigger = {
-		religion = th_kagiyama
+		religion = THE_kagiyama_religion
 	}
 	allow_normal_conversion = yes
 	modifiers = {
@@ -124,10 +124,10 @@ THE_YOF_comprehensive_religion_reform = {
 THE_YOF_doom_whirlpool_reform = {
 	icon = "THE_YOF_river_reform"
 	potential = {
-		religion = th_kagiyama
+		religion = THE_kagiyama_religion
 	}
 	trigger = {
-		religion = th_kagiyama
+		religion = THE_kagiyama_religion
 	}
 	modifiers = {
 		ship_trade_power_modifier = 0.25
@@ -138,10 +138,10 @@ THE_YOF_doom_whirlpool_reform = {
 THE_YOF_all_doom_circulation_reform = {
 	icon = "THE_YOF_river_reform"
 	potential = {
-		religion = th_kagiyama
+		religion = THE_kagiyama_religion
 	}
 	trigger = {
-		religion = th_kagiyama
+		religion = THE_kagiyama_religion
 	}
 	modifiers = {
 		production_efficiency = 0.05
@@ -156,10 +156,10 @@ THE_YOF_all_doom_circulation_reform = {
 THE_YOF_education_reform = {
 	icon = "THE_YOF_education_reform"
 	potential = {
-		religion = th_kagiyama
+		religion = THE_kagiyama_religion
 	}
 	trigger = {
-		religion = th_kagiyama
+		religion = THE_kagiyama_religion
 	}
 	modifiers = {
 		reform_progress_growth = 0.15
@@ -169,10 +169,10 @@ THE_YOF_education_reform = {
 THE_YOF_devotion_reform = {
 	icon = "THE_YOF_devotion_reform"
 	potential = {
-		religion = th_kagiyama
+		religion = THE_kagiyama_religion
 	}
 	trigger = {
-		religion = th_kagiyama
+		religion = THE_kagiyama_religion
 	}
 	modifiers = {
 		allow_free_estate_privilege_revocation = yes
@@ -184,10 +184,10 @@ THE_YOF_devotion_reform = {
 THE_YOF_suffering_doom_reform = {
 	icon = "THE_YOF_suffering_doom_reform"
 	potential = {
-		religion = th_kagiyama
+		religion = THE_kagiyama_religion
 	}
 	trigger = {
-		religion = th_kagiyama
+		religion = THE_kagiyama_religion
 	}
 	modifiers = {
 		hostile_attrition = 1
@@ -198,10 +198,10 @@ THE_YOF_suffering_doom_reform = {
 THE_YOF_kagiyama_crown_reform = {
 	icon = "THE_YOF_kagiyama_crown_reform"
 	potential = {
-		religion = th_kagiyama
+		religion = THE_kagiyama_religion
 	}
 	trigger = {
-		religion = th_kagiyama
+		religion = THE_kagiyama_religion
 	}
 	modifiers = {
 		shock_damage_received = -0.05

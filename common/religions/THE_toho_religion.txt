@@ -2,7 +2,7 @@ Touhou = {
 	religious_schools = {
 		the_hina_school = {
 			potential_invite_scholar = {
-				religion = th_kagiyama
+				religion = THE_kagiyama_religion
 			}
 
 			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
@@ -59,7 +59,7 @@ Touhou = {
 	}
 
 
-	th_kagiyama = {
+	THE_kagiyama_religion = {
 		color = { 80 178 142 }
 		heretic = { th_heretic_lunar th_heretic_anime th_heretic_manga_elitists }
 		icon = 42
@@ -116,7 +116,7 @@ Touhou = {
 		harmonized_modifier = THE_harmonized_kagiyama
 	}
 	
-	the_minoriko = {
+	THE_minoriko_religion = {
 		color = { 255 250 32 }
 		heretic = { th_heretic_lunar th_heretic_anime th_heretic_manga_elitists }
 		icon = 43
@@ -195,7 +195,7 @@ Touhou = {
 		harmonized_modifier = THE_harmonized_minoriko
 	}
 
-	the_keiki = {
+	THE_keiki_religion = {
 		color = { 61 171 214 }
 		heretic = { th_heretic_lunar th_heretic_anime th_heretic_manga_elitists }
 		icon = 44
@@ -219,7 +219,7 @@ Touhou = {
 			th_shinkism
 			th_scientistic
 			the_minoriko
-			th_kagiyama
+			THE_kagiyama_religion
 		}
 
 		will_get_center = { #Refered to even for initial CoR Spawn

@@ -11,7 +11,7 @@ country_event = {
 	picture = HINA_eventPicture
 
 	trigger = {
-		religion = th_kagiyama
+		religion = THE_kagiyama_religion
 		OR = {
 			NOT = { has_country_flag = th_had_deity_event }
 			had_country_flag = {
@@ -57,7 +57,7 @@ country_event = {
 	picture = HINA_eventPicture
 
 	trigger = {
-		religion = th_kagiyama
+		religion = THE_kagiyama_religion
 		OR = {
 			NOT = { has_country_flag = th_had_deity_event }
 			had_country_flag = {
@@ -122,7 +122,7 @@ country_event = {
 	picture = HINA_eventPicture
 
 	trigger = {
-		religion = th_kagiyama
+		religion = THE_kagiyama_religion
 		OR = {
 			NOT = { has_country_flag = th_had_deity_event }
 			had_country_flag = {
@@ -173,7 +173,7 @@ country_event = {
 	picture = HINA_eventPicture
 
 	trigger = {
-		religion = th_kagiyama
+		religion = THE_kagiyama_religion
 		OR = {
 			NOT = { has_country_flag = th_had_deity_event }
 			had_country_flag = {
@@ -238,7 +238,7 @@ country_event = {
 
 	trigger = {
 		has_global_flag = yof_mry_add_to_kagiyama_buff_flag
-		religion = th_kagiyama
+		religion = THE_kagiyama_religion
 		OR = {
 			NOT = { has_country_flag = th_had_deity_event }
 			had_country_flag = {
@@ -303,7 +303,7 @@ country_event = {
 
 	trigger = {
 		has_global_flag = yof_mry_add_to_kagiyama_buff_flag
-		religion = th_kagiyama
+		religion = THE_kagiyama_religion
 		OR = {
 			NOT = { has_country_flag = th_had_deity_event }
 			had_country_flag = {
@@ -380,7 +380,7 @@ country_event = {
 
 	trigger = {
 		has_global_flag = yof_mry_add_to_kagiyama_buff_flag
-		religion = th_kagiyama
+		religion = THE_kagiyama_religion
 		OR = {
 			NOT = { has_country_flag = th_had_deity_event }
 			had_country_flag = {
@@ -426,7 +426,7 @@ province_event = {
 	trigger = {
 		has_global_flag = yof_mry_add_to_kagiyama_buff_flag
 		owner = {
-			religion = th_kagiyama
+			religion = THE_kagiyama_religion
 			OR = {
 				NOT = { has_country_flag = th_had_deity_event }
 				had_country_flag = {
@@ -485,7 +485,7 @@ country_event = {
 
 	trigger = {
 		has_global_flag = yof_mry_add_to_kagiyama_buff_flag
-		religion = th_kagiyama
+		religion = THE_kagiyama_religion
 		OR = {
 			NOT = { has_country_flag = th_had_deity_event }
 			had_country_flag = {

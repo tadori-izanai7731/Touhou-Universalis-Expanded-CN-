@@ -2091,7 +2091,7 @@ th_monument_youkai_forest = {
 		}
 		conditional_modifier = {
 			trigger = {
-				religion = th_kagiyama
+				religion = THE_kagiyama_religion
 				has_owner_religion = yes
 			}
 			modifier = {
@@ -2133,7 +2133,7 @@ th_monument_youkai_forest = {
 		}
 		conditional_modifier = {
 			trigger = {
-				religion = th_kagiyama
+				religion = THE_kagiyama_religion
 				has_owner_religion = yes
 			}
 			modifier = {
