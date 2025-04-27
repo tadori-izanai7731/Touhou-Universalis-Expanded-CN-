@@ -1,15 +1,10 @@
 zz_THE_KNE_china_reform_0_hakutaku = {
 	empire = celestial_empire 
 	potential = {
-		event_target:EmperorOfChina = {
-			OR = {
-				tag = KEI
-				was_tag = KEI
-			}
-		}
+		is_emperor_of_china = yes
+		has_reform = THE_KNE_hakutaku_mandate_reform
 	}
 	trigger = { 
-		has_reform = THE_KNE_hakutaku_mandate_reform
 		custom_trigger_tooltip = {
 			tooltip = THE_KNE_complete_all_hakutaku_mission_tt
 			mission_completed = THE_KNE_mission_1_4
@@ -31,15 +26,10 @@ zz_THE_KNE_china_reform_0_hakutaku = {
 zz_THE_KNE_china_reform_1_human = {
 	empire = celestial_empire 
 	potential = {
-		event_target:EmperorOfChina = {
-			OR = {
-				tag = KEI
-				was_tag = KEI
-			}
-		}
+		is_emperor_of_china = yes
+		has_reform = THE_KNE_hakutaku_mandate_reform
 	}
 	trigger = { 
-		has_reform = THE_KNE_hakutaku_mandate_reform
 		custom_trigger_tooltip = {
 			tooltip = THE_KNE_complete_all_human_mission_tt
 			mission_completed = THE_KNE_mission_4_4
