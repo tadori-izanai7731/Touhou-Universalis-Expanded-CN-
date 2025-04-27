@@ -10,6 +10,8 @@ hng_not_believe_chinese = {
 hng_come_from_gensokyo = {
 	has_samurai = yes
 	allowed_samurai_fraction = 0.15
+	mercenary_cost = -0.25
+	merc_maintenance_modifier = -0.25
 }
 
 #武士之家
@@ -908,6 +910,9 @@ THE_hng_mission_modifier86 = {
 	has_mamluks = yes
 	allowed_mamluks_fraction = 0.2
 	free_leader_pool = 1
+	cavalry_cost = -0.1
+	cavalry_power = 0.2
+	shock_damage_received = -0.1
 }
 
 
@@ -922,6 +927,8 @@ THE_hng_mission_modifier88 = {
 	free_leader_pool = 1
 	has_musketeer = yes
 	allowed_musketeer_fraction = 0.15
+	cavalry_cost = -0.2
+	fire_damage = 0.15
 }
 
 
@@ -935,6 +942,9 @@ THE_hng_mission_modifier90 = {
 	free_leader_pool = 1
 	has_tercio = yes
 	allowed_tercio_fraction = 0.15
+	cavalry_cost = -0.1
+	fire_damage_received = -0.1
+	shock_damage_received = -0.1
 }
 
 
@@ -948,6 +958,8 @@ THE_hng_mission_modifier92 = {
 	free_leader_pool = 1
 	can_recruit_hussars = yes
 	amount_of_hussars = 10
+	cavalry_power = 0.33
+	cavalry_cost = -0.1
 }
 
 
@@ -961,6 +973,9 @@ THE_hng_mission_modifier94 = {
 	free_leader_pool = 1
 	has_carolean = yes
 	amount_of_carolean = 20
+	infantry_power = 0.2
+	infantry_fire = 0.25
+	infantry_shock = 0.25
 }
 
 
@@ -1040,6 +1055,7 @@ THE_hng_mission_modifier103 = {
 THE_hng_mission_modifier104 = {
 	cb_on_religious_enemies = yes
 	global_missionary_strength = 0.03
+	warscore_cost_vs_other_religion = -0.2
 	religion = yes
 }
 
@@ -1048,7 +1064,9 @@ THE_hng_mission_modifier104 = {
 THE_hng_mission_modifier105 = {
 	stability_cost_modifier = -0.25
 	tolerance_own = 2
-	religion = yes
+	religion = yes	
+	warscore_cost_vs_other_religion = -0.2
+	stability_cost_to_declare_war = -2
 }
 
 #巫女传教
@@ -1516,8 +1534,6 @@ THE_hng_mission_modifier143 = {
 THE_hng_mission_modifier144 = {
 	tolerance_own = 2
 	religion = yes
-	warscore_cost_vs_other_religion = -0.2
-	stability_cost_to_declare_war = -2
 }
 
 #火力拓展
