@@ -145,8 +145,9 @@ THE_HNG_use_qiwa_army = {
 	modifiers = {
 		num_accepted_cultures = 1
 		free_leader_pool = 1
-		land_attrition = -0.1
+		land_attrition = -0.25
 		global_supply_limit_modifier = 0.33
+		infantry_shock = 1
 	}
 	
 	conditional = {
