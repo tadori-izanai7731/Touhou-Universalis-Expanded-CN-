@@ -2,13 +2,13 @@ fervor_trade = {
 	cost = 8
 	potential = {
 		FROM = {
-			NOT = { religion = the_keiki }
+			NOT = { religion = THE_keiki_religion }
 			NOT = { has_country_flag = ned_buff_fervor_actions }
 		}
 	}
 	trigger = {
 		FROM = {
-			NOT = { religion = the_keiki }
+			NOT = { religion = THE_keiki_religion }
 			NOT = { has_country_flag = ned_buff_fervor_actions }
 		}
 	}
@@ -47,13 +47,13 @@ fervor_war = {
 	cost = 8
 	potential = {
 		FROM = {
-			NOT = { religion = the_keiki }
+			NOT = { religion = THE_keiki_religion }
 			NOT = { has_country_flag = ned_buff_fervor_actions }
 		}
 	}
 	trigger = {
 		FROM = {
-			NOT = { religion = the_keiki }
+			NOT = { religion = THE_keiki_religion }
 			NOT = { has_country_flag = ned_buff_fervor_actions }
 		}
 	}
@@ -79,13 +79,13 @@ fervor_stability = {
 	cost = 8
 	potential = {
 		FROM = {
-			NOT = { religion = the_keiki }
+			NOT = { religion = THE_keiki_religion }
 			NOT = { has_country_flag = ned_buff_fervor_actions }
 		}
 	}
 	trigger = {
 		FROM = {
-			NOT = { religion = the_keiki }
+			NOT = { religion = THE_keiki_religion }
 			NOT = { has_country_flag = ned_buff_fervor_actions }
 		}
 	}
@@ -117,13 +117,13 @@ fervor_diplomacy = {
 	cost = 8
 	potential = {
 		FROM = {
-			NOT = { religion = the_keiki }
+			NOT = { religion = THE_keiki_religion }
 			NOT = { has_country_flag = ned_buff_fervor_actions }
 		}
 	}
 	trigger = {
 		FROM = {
-			NOT = { religion = the_keiki }
+			NOT = { religion = THE_keiki_religion }
 			NOT = { has_country_flag = ned_buff_fervor_actions }
 		}
 	}
@@ -150,13 +150,13 @@ fervor_trade_buffed = {
 	cost = 8
 	potential = {
 		FROM = {
-			NOT = { religion = the_keiki }
+			NOT = { religion = THE_keiki_religion }
 			has_country_flag = ned_buff_fervor_actions
 		}
 	}
 	trigger = {
 		FROM = {
-			NOT = { religion = the_keiki }
+			NOT = { religion = THE_keiki_religion }
 			has_country_flag = ned_buff_fervor_actions
 		}
 	}
@@ -195,13 +195,13 @@ fervor_war_buffed = {
 	cost = 8
 	potential = {
 		FROM = {
-			NOT = { religion = the_keiki }
+			NOT = { religion = THE_keiki_religion }
 			has_country_flag = ned_buff_fervor_actions
 		}
 	}
 	trigger = {
 		FROM = {
-			NOT = { religion = the_keiki }
+			NOT = { religion = THE_keiki_religion }
 			has_country_flag = ned_buff_fervor_actions
 		}
 	}
@@ -227,13 +227,13 @@ fervor_stability_buffed = {
 	cost = 8
 	potential = {
 		FROM = {
-			NOT = { religion = the_keiki }
+			NOT = { religion = THE_keiki_religion }
 			has_country_flag = ned_buff_fervor_actions
 		}
 	}
 	trigger = {
 		FROM = {
-			NOT = { religion = the_keiki }
+			NOT = { religion = THE_keiki_religion }
 			has_country_flag = ned_buff_fervor_actions
 		}
 	}
@@ -265,13 +265,13 @@ fervor_diplomacy_buffed = {
 	cost = 8
 	potential = {
 		FROM = {
-			NOT = { religion = the_keiki }
+			NOT = { religion = THE_keiki_religion }
 			has_country_flag = ned_buff_fervor_actions
 		}
 	}
 	trigger = {
 		FROM = {
-			NOT = { religion = the_keiki }
+			NOT = { religion = THE_keiki_religion }
 			has_country_flag = ned_buff_fervor_actions
 		}
 	}

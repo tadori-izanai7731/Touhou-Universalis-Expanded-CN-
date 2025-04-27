@@ -6,10 +6,10 @@ THE_KEI_grant_a_blessing_dip_action = {
 		ROOT = {
 			mission_completed = THE_KEI_1_10_alone
 			has_government_mechanic = THE_KEI_lonely_creation_mechanic
-			religion = the_keiki
+			religion = THE_keiki_religion
 		}
 		FROM = {
-			religion = the_keiki
+			religion = THE_keiki_religion
 		}
 		ai = no
 	}
@@ -126,10 +126,10 @@ THE_KEI_change_to_vasssalize_dip_action = {
 		ROOT = {
 			mission_completed = THE_KEI_1_10_alone
 			has_government_mechanic = THE_KEI_lonely_creation_mechanic
-			religion = the_keiki
+			religion = THE_keiki_religion
 		}
 		FROM = {
-			religion = the_keiki
+			religion = THE_keiki_religion
 			NOT = {
 				is_subject_of = ROOT
 			}
@@ -264,10 +264,10 @@ THE_KEI_inherit_us_subject_dip_action = {
 		ROOT = {
 			mission_completed = THE_KEI_1_10_alone
 			has_government_mechanic = THE_KEI_lonely_creation_mechanic
-			religion = the_keiki
+			religion = THE_keiki_religion
 		}
 		FROM = {
-			religion = the_keiki
+			religion = THE_keiki_religion
 			is_subject_of = ROOT
 		}
 		ai = no

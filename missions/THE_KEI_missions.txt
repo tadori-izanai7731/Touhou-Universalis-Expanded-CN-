@@ -2518,7 +2518,7 @@ THE_KEI_5_12 = {
 			}
 			CRD = {
 				is_subject_of = ROOT
-				religion = the_keiki
+				religion = THE_keiki_religion
 				Chireiden_canal_state = {
 					type = all
 					owned_by = CRD
@@ -2556,7 +2556,7 @@ THE_KEI_5_12 = {
 			limit = {
 				CRD = {
 					is_subject_of = ROOT
-					religion = the_keiki
+					religion = THE_keiki_religion
 					Chireiden_canal_state = {
 						type = all
 						owned_by = CRD
@@ -2632,8 +2632,8 @@ THE_KEI_minor_branch_1_lock = {
 			custom_tooltip = THE_KEI_1_10_create_c_tt3
 			hidden_effect = {
 				random_owned_province = {
-					add_reform_center = the_keiki
-					change_religion = the_keiki
+					add_reform_center = THE_keiki_religion
+					change_religion = THE_keiki_religion
 				}
 			}
 		} 
@@ -2695,7 +2695,7 @@ THE_KEI_minor_branch_1_lock = {
 				hidden_effect = {
 					every_country = {
 						limit = {
-							religion = the_keiki
+							religion = THE_keiki_religion
 						}
 						add_country_modifier = {
 							name = THE_KEI_the_new_life_mission_buff
@@ -2717,7 +2717,7 @@ THE_KEI_minor_branch_1_lock = {
 				hidden_effect = {
 					every_country = {
 						limit = {
-							religion = the_keiki
+							religion = THE_keiki_religion
 						}
 						add_country_modifier = {
 							name = THE_KEI_the_new_life_mission_buff
@@ -2764,26 +2764,26 @@ THE_KEI_minor_branch_2_lock = {
 			add_army_professionalism = 0.20
 			hidden_effect = {
 				random_owned_province = {
-					add_reform_center = the_keiki
-					change_religion = the_keiki
+					add_reform_center = THE_keiki_religion
+					change_religion = THE_keiki_religion
 				}
 				random_province = {
 					limit = {
 						superregion = gensokyo_superregion
 						religion = th_hakureishinto
 						NOT = {
-							religion = the_keiki
+							religion = THE_keiki_religion
 						}
 						owner = {
 							all_owned_province = {
 								NOT = {
-									religion = the_keiki
+									religion = THE_keiki_religion
 								}
 							}
 						}
 					}
-					change_religion = the_keiki
-					add_reform_center = the_keiki
+					change_religion = THE_keiki_religion
+					add_reform_center = THE_keiki_religion
 					add_permanent_province_modifier = {
 						name = "religious_zeal_at_conv"
 						duration = 9000
@@ -2798,18 +2798,18 @@ THE_KEI_minor_branch_2_lock = {
 						superregion = gensokyo_superregion
 						religion = th_hakureishinto
 						NOT = {
-							religion = the_keiki
+							religion = THE_keiki_religion
 						}
 						owner = {
 							all_owned_province = {
 								NOT = {
-									religion = the_keiki
+									religion = THE_keiki_religion
 								}
 							}
 						}
 					}
-					change_religion = the_keiki
-					add_reform_center = the_keiki
+					change_religion = THE_keiki_religion
+					add_reform_center = THE_keiki_religion
 					add_permanent_province_modifier = {
 						name = "religious_zeal_at_conv"
 						duration = 9000
@@ -2906,18 +2906,18 @@ THE_KEI_minor_branch_1_alone = {
 				is_capital = yes
 				owner = {
 					NOT = {
-						religion = the_keiki
+						religion = THE_keiki_religion
 					}
 				}
 			}
 		} 
 		
 		trigger = { 
-			religion = the_keiki
+			religion = THE_keiki_religion
 			calc_true_if = {
 				amount = 2
 				all_country = {
-					religion = the_keiki
+					religion = THE_keiki_religion
 				}
 			}
 		} 
@@ -3026,26 +3026,26 @@ THE_KEI_minor_branch_2_alone = {
 			add_army_professionalism = 0.20
 			hidden_effect = {
 				random_owned_province = {
-					add_reform_center = the_keiki
-					change_religion = the_keiki
+					add_reform_center = THE_keiki_religion
+					change_religion = THE_keiki_religion
 				}
 				random_province = {
 					limit = {
 						superregion = gensokyo_superregion
 						religion = th_hakureishinto
 						NOT = {
-							religion = the_keiki
+							religion = THE_keiki_religion
 						}
 						owner = {
 							all_owned_province = {
 								NOT = {
-									religion = the_keiki
+									religion = THE_keiki_religion
 								}
 							}
 						}
 					}
-					change_religion = the_keiki
-					add_reform_center = the_keiki
+					change_religion = THE_keiki_religion
+					add_reform_center = THE_keiki_religion
 					add_permanent_province_modifier = {
 						name = "religious_zeal_at_conv"
 						duration = 9000
@@ -3060,18 +3060,18 @@ THE_KEI_minor_branch_2_alone = {
 						superregion = gensokyo_superregion
 						religion = th_hakureishinto
 						NOT = {
-							religion = the_keiki
+							religion = THE_keiki_religion
 						}
 						owner = {
 							all_owned_province = {
 								NOT = {
-									religion = the_keiki
+									religion = THE_keiki_religion
 								}
 							}
 						}
 					}
-					change_religion = the_keiki
-					add_reform_center = the_keiki
+					change_religion = THE_keiki_religion
+					add_reform_center = THE_keiki_religion
 					add_permanent_province_modifier = {
 						name = "religious_zeal_at_conv"
 						duration = 9000
@@ -3173,13 +3173,13 @@ THE_KEI_minor_branch_1_create = {
 		provinces_to_highlight = { 
 			owned_by = ROOT
 			NOT = {
-				religion = the_keiki
+				religion = THE_keiki_religion
 			}
 			
 		} 
 		
 		trigger = { 
-			religion = the_keiki
+			religion = THE_keiki_religion
 			custom_trigger_tooltip = {
 				tooltip = THE_KEI_1_10_create_c_tt1
 				check_variable = {
@@ -3194,8 +3194,8 @@ THE_KEI_minor_branch_1_create = {
 			custom_tooltip = THE_KEI_1_10_create_c_tt3
 			hidden_effect = {
 				random_owned_province = {
-					add_reform_center = the_keiki
-					change_religion = the_keiki
+					add_reform_center = THE_keiki_religion
+					change_religion = THE_keiki_religion
 				}
 			}
 		} 
@@ -3283,7 +3283,7 @@ THE_KEI_minor_branch_1_create = {
 				hidden_effect = {
 					every_country = {
 						limit = {
-							religion = the_keiki
+							religion = THE_keiki_religion
 						}
 						add_country_modifier = {
 							name = THE_KEI_the_new_life_mission_buff
@@ -3305,7 +3305,7 @@ THE_KEI_minor_branch_1_create = {
 				hidden_effect = {
 					every_country = {
 						limit = {
-							religion = the_keiki
+							religion = THE_keiki_religion
 						}
 						add_country_modifier = {
 							name = THE_KEI_the_new_life_mission_buff
