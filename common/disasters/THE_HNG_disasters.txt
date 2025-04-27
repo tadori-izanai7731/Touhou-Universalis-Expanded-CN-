@@ -16,10 +16,10 @@ the_hng_disasters_one = {
 		total_development = 2750
 		OR = {
 			AND = {
-			overextension_percentage = 0.75
-			is_year = 1550	
+				overextension_percentage = 0.75
+				is_year = 1550	
 			}
-        has_disaster = the_hng_disasters_two
+			has_disaster = the_hng_disasters_two
 		}
 	}
 	can_stop = {
