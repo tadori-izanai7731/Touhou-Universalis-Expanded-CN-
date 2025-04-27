@@ -23,7 +23,7 @@ THE_KEI_on_startup_scripted_effects = {
 		set_country_flag = THE_KEI_on_startup_set_variable_flag
 	}
 }
-
+#偶像之境占领 动物灵省份 直接割让
 THE_KEI_annex_ski_yac_province_in_war_effects = {
 	if = {
 		limit = {
@@ -50,7 +50,7 @@ THE_KEI_annex_ski_yac_province_in_war_effects = {
 		}
 	}
 }
-#获得化生
+#获得化生 ##省份
 the_kei_gain_effect_mechanic_power_1_effect = {
 	if = {
 		limit = {
@@ -67,6 +67,7 @@ the_kei_gain_effect_mechanic_power_1_effect = {
 		}
 	}
 }
+#获得化生 ##国家
 the_kei_gain_effect_mechanic_power_2_effect = {
 	if = {
 		limit = {
@@ -206,7 +207,7 @@ THE_KEI_win_battle_count_1_effect = {
 		}
 	}
 }
-
+#自定义将领 设置初始化
 THE_KEI_define_mayumi_set_var_0_effects = {
 	set_variable = {
 		which = the_mayumi_fire_var
@@ -306,7 +307,7 @@ THE_KEI_develop_province_add_power_effects = {
 	}
 }
 
-#狂热
+#狂热 占领省份转变宗教
 THE_KEI_change_province_religion_effects = {
 	if = {
 		limit = { 
@@ -318,7 +319,7 @@ THE_KEI_change_province_religion_effects = {
 	}
 }
 
-#计数
+#计数 招募军队计数
 THE_KEI_add_create_army_mission_1_12_im_var_effect = {
 	if = {
 		limit = {
@@ -336,7 +337,7 @@ THE_KEI_add_create_army_mission_1_12_im_var_effect = {
 	}
 }
 
-#剥削省份
+#剥削省份 获得化生
 THE_KEI_explot_the_province_effect = {
 	if = {
 		limit = { 
@@ -357,7 +358,7 @@ THE_KEI_explot_the_province_effect = {
 	}
 }
 
-#添加愿力效果
+#添加愿力的数值
 THE_KEI_add_subject_country_blessing_effect = {
 	if = {
 		limit = {
@@ -467,7 +468,7 @@ THE_KEI_change_religions_to_the_keiki_var_effect = {
 		}
 	}
 }
-#计数战争次数移除修正
+#计数战争次数移除修正救赎之光
 THE_KEI_im_var_won_war_remove_mofidier_4_1_effect = {
 	if = {
 		limit = { 
@@ -486,7 +487,7 @@ THE_KEI_im_var_won_war_remove_mofidier_4_1_effect = {
 	}
 }
 
-#计数移除光辉岁月
+#计数移除不曾松懈的枷锁修正
 THE_KEI_development_remove_province_light_buff = {
 	if = {
 		limit = { 
@@ -525,7 +526,7 @@ THE_KEI_development_remove_province_light_buff = {
 	}
 }
 
-#割地饕餮+荒废
+#割让饕餮的省份
 #FROM 前拥有者 #ROOT 省份
 THE_KEI_conseguer_the_GYK_effect = {
 	if = {
@@ -557,7 +558,7 @@ THE_KEI_conseguer_the_GYK_effect = {
 	}
 }
 
-#返还化生点数定义将领
+#自定义将领 选择中止 返还点数
 THE_KEI_define_leader_send_government_power_back_effect = {
 	while = {
 		limit = {
@@ -578,7 +579,7 @@ THE_KEI_define_leader_send_government_power_back_effect = {
 	}
 }
 
-#创生次数的计数
+#创生次数的计数##国家
 THE_KEI_the_kei_start_game_till_then_use_government_im_var_change_1_effect = {
 	hidden_effect = {
 		change_variable = {
@@ -587,6 +588,7 @@ THE_KEI_the_kei_start_game_till_then_use_government_im_var_change_1_effect = {
 		}
 	}
 }
+#创生次数的计数##省份
 THE_KEI_the_kei_start_game_till_then_use_government_im_var_change_2_effect = {
 	hidden_effect = {
 		owner = {
