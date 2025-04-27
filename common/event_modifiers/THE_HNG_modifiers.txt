@@ -1516,6 +1516,8 @@ THE_hng_mission_modifier143 = {
 THE_hng_mission_modifier144 = {
 	tolerance_own = 2
 	religion = yes
+	warscore_cost_vs_other_religion = -0.2
+	stability_cost_to_declare_war = -2
 }
 
 #火力拓展
