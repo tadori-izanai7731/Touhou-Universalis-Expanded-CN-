@@ -910,6 +910,9 @@ THE_hng_mission_modifier86 = {
 	has_mamluks = yes
 	allowed_mamluks_fraction = 0.2
 	free_leader_pool = 1
+	cavalry_cost = -0.1
+	cavalry_power = 0.2
+	shock_damage_received = -0.1
 }
 
 
@@ -924,6 +927,8 @@ THE_hng_mission_modifier88 = {
 	free_leader_pool = 1
 	has_musketeer = yes
 	allowed_musketeer_fraction = 0.15
+	cavalry_cost = -0.2
+	fire_damage = 0.15
 }
 
 
@@ -937,6 +942,9 @@ THE_hng_mission_modifier90 = {
 	free_leader_pool = 1
 	has_tercio = yes
 	allowed_tercio_fraction = 0.15
+	cavalry_cost = -0.1
+	fire_damage_received = -0.1
+	shock_damage_received = -0.1
 }
 
 
@@ -950,6 +958,8 @@ THE_hng_mission_modifier92 = {
 	free_leader_pool = 1
 	can_recruit_hussars = yes
 	amount_of_hussars = 10
+	cavalry_power = 0.33
+	cavalry_cost = -0.1
 }
 
 
@@ -963,6 +973,9 @@ THE_hng_mission_modifier94 = {
 	free_leader_pool = 1
 	has_carolean = yes
 	amount_of_carolean = 20
+	infantry_power = 0.2
+	infantry_fire = 0.25
+	infantry_shock = 0.25
 }
 
 
