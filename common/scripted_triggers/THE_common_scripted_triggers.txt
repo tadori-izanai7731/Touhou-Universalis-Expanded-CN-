@@ -257,5 +257,97 @@ THE_has_harmonized_with_Touhou_harmonized = {
 		has_harmonized_with = th_shinkism
 		has_harmonized_with = th_scientistic
 		has_harmonized_with = th_occultism
+		has_harmonized_with = THE_kagiyama_religion
+		has_harmonized_with = THE_minoriko_religion
+		has_harmonized_with = THE_keiki_religion
+	}
+}
+
+THE_province_is_buddhist_or_accepts_buddhism = {
+	OR = {
+		custom_trigger_tooltip = {
+			tooltip = THE_province_is_buddhist_or_accepts_buddhism_at
+			OR = {
+				AND = {
+					religion = buddhism
+					OR = {
+						has_owner_religion = yes
+						owner = { has_harmonized_with = buddhism }
+						owner = { secondary_religion = buddhism }
+					}
+				}
+				AND = {
+					religion = vajrayana
+					OR = {
+						has_owner_religion = yes
+						owner = { has_harmonized_with = vajrayana }
+						owner = { secondary_religion = vajrayana }
+					}
+				}
+				AND = {
+					religion = mahayana
+					OR = {
+						has_owner_religion = yes
+						owner = { has_harmonized_with = mahayana }
+						owner = { secondary_religion = mahayana }
+					}
+				}
+				AND = {
+					religion = th_buddhist
+					OR = {
+						has_owner_religion = yes
+						owner = { has_harmonized_with = th_buddhist }
+						owner = { secondary_religion = th_buddhist }
+					}
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = THE_province_is_buddhist_or_accepts_buddhism_bt
+			owner = {
+				OR = {
+					has_harmonized_with = buddhism
+					has_harmonized_with = vajrayana
+					has_harmonized_with = mahayana
+					has_harmonized_with = th_buddhist
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = THE_province_is_buddhist_or_accepts_buddhism_ct
+			owner = {
+				OR = {
+					secondary_religion = buddhism
+					secondary_religion = vajrayana
+					secondary_religion = mahayana
+					secondary_religion = th_buddhist
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = province_is_buddhist_or_accepts_buddhism_dt
+			religion = shinto
+			has_owner_religion = yes
+		}
+		custom_trigger_tooltip = {
+			tooltip = THE_province_is_buddhist_or_accepts_buddhism_et
+			owner = { has_personal_deity = buddha }
+		}
+		custom_trigger_tooltip = {
+			tooltip = THE_province_is_buddhist_or_accepts_buddhism_ft
+			owner = { has_adopted_cult = buddhism_cult }
+		}
+		#For the case the province has a religion which the player has already harmonized with and cannot convert
+		#It's a hidden trigger because the tooltip is already super flooded and it is incredibly niche
+		hidden_trigger = {
+			owner = {
+				OR = {
+					has_harmonized_with = buddhism
+					has_harmonized_with = vajrayana
+					has_harmonized_with = mahayana
+				}
+				has_harmonized_with = ROOT
+			}
+		}
 	}
 }
