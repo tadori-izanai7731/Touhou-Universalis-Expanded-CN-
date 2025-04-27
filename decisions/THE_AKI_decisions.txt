@@ -7,11 +7,11 @@ country_decisions = {
 				AND = {
 					any_province = {
 						owned_by = ROOT
-						religion = the_minoriko
+						religion = THE_minoriko_religion
 					}
 				}
 			}
-			NOT = { religion = the_minoriko }
+			NOT = { religion = THE_minoriko_religion }
 		}
 		allow = {
 			stability = 1
@@ -20,7 +20,7 @@ country_decisions = {
 		effect = {
 			add_stability = -1
 			add_treasury = -100
-			change_religion = the_minoriko
+			change_religion = THE_minoriko_religion
 			hidden_effect = {
 				every_owned_province = {
 					change_religion = ROOT
@@ -72,7 +72,7 @@ country_decisions = {
 		color = { 255 186 39 }
 		potential = {
 			OR = {
-				religion = the_minoriko
+				religion = THE_minoriko_religion
 				has_government_attribute = THE_AKI_harvest_autumn_province_buff_abilities
 			}
 			ai = no
@@ -144,7 +144,7 @@ country_decisions = {
 			ai = no
 			OR = {
 				mission_completed = THE_AKI_potato_covenant
-				religion = the_minoriko
+				religion = THE_minoriko_religion
 			}
 		}
 		allow = {

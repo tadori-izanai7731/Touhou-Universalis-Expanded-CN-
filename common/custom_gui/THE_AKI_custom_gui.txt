@@ -6,7 +6,7 @@ custom_button = {
 		FROM = {
 			OR = {
 				has_government_attribute = THE_AKI_harvest_autumn_province_buff_abilities
-				religion = the_minoriko
+				religion = THE_minoriko_religion
 			}
 		}
 	}
@@ -91,7 +91,7 @@ custom_button = {
 		FROM = {
 			OR = {
 				mission_completed = THE_AKI_potato_covenant
-				religion = the_minoriko
+				religion = THE_minoriko_religion
 			}
 		}
 	}
@@ -171,7 +171,7 @@ custom_button = {
 			THE_AKI_province_button2_hidden_scripted_effect = { level = 1 }
 		}
 		if = {
-			limit = { FROM = { religion = the_minoriko } }
+			limit = { FROM = { religion = THE_minoriko_religion } }
 			FROM = { add_patriarch_authority = 0.05 }
 		}
 		if = {
@@ -194,7 +194,7 @@ custom_button = {
 		FROM = {
 			OR = {
 				has_government_attribute = THE_AKI_harvest_autumn_province_buff_abilities
-				religion = the_minoriko
+				religion = THE_minoriko_religion
 			}
 		}
 		owned_by = FROM
