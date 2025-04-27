@@ -917,6 +917,7 @@ country_event = {
 	option = {
 		name = THE_KEI_flavor_events.8.b
 		trigger = {
+			
 			estate_loyalty = {
 				estate = estate_burghers
 				loyalty = 60

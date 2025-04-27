@@ -12,7 +12,7 @@ THE_KEI_government_names = {
 	}
 	
 	ruler_female = {
-		3 = THE_KEI_RULER
+		3 = THE_KEI_RULER_3
 		2 = THE_KEI_RULER
 		1 = THE_KEI_RULER
 	}
@@ -32,6 +32,7 @@ THE_KEI_government_names = {
 	trigger = {
 		OR = {
 			has_government_attribute = THE_KEI_lonely_create_hana_wheel_abilities
+			tag = KEI
 		}
 	}
 }
