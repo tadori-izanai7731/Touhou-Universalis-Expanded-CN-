@@ -10,6 +10,8 @@ hng_not_believe_chinese = {
 hng_come_from_gensokyo = {
 	has_samurai = yes
 	allowed_samurai_fraction = 0.15
+	mercenary_cost = -0.25
+	merc_maintenance_modifier = -0.25
 }
 
 #武士之家
