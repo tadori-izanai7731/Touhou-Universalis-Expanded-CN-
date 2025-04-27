@@ -39,6 +39,7 @@ hng_samurai_come_from_gensokyo = {
 	infantry_shock = 0.5
 	fire_damage_received = 0.5
 	regiment_manpower_usage = 0.25
+	land_maintenance_modifier = 0.05
 	is_samurai_modifier = yes 
 }
 
@@ -288,6 +289,7 @@ THE_hng_mission_modifier4 = {
 #兴奋的妖怪武士
 THE_hng_mission_modifier5 = {
 	shock_damage_received = -0.1
+	land_maintenance_modifier = 0.025
 	is_samurai_modifier = yes 
 }
 
@@ -360,6 +362,7 @@ THE_hng_mission_modifier16 = {
 	has_samurai = yes
 	allowed_samurai_fraction = 0.1
 	infantry_shock = 0.15
+	land_maintenance_modifier = 0.05
 	is_samurai_modifier = yes 
 }
 
@@ -781,6 +784,7 @@ THE_hng_mission_modifier65 = {
 THE_hng_mission_modifier66 = {
 	fire_damage_received = -0.1
 	shock_damage_received = -0.1
+	land_maintenance_modifier = 0.05
 	is_samurai_modifier = yes 
 	has_samurai = yes
 }
@@ -878,6 +882,7 @@ THE_hng_mission_modifier80 = {
 THE_hng_mission_modifier81 = {
 	infantry_fire = 0.25
 	infantry_shock = 0.25
+	land_maintenance_modifier = 0.05
 	is_samurai_modifier = yes 
 }
 
@@ -1465,6 +1470,7 @@ THE_hng_mission_modifier136 = {
 	land_morale = 0.2
 	movement_speed = 2
 	regiment_manpower_usage = -1.2
+	land_maintenance_modifier = 0.05
 	is_samurai_modifier = yes 
 }
 
@@ -1474,6 +1480,7 @@ THE_hng_mission_modifier137 = {
 	infantry_shock = -0.25
 	fire_damage_received = -0.5
 	regiment_manpower_usage = 0.25
+	land_maintenance_modifier = -0.1
 	is_samurai_modifier = yes 
 }
 
@@ -1546,5 +1553,6 @@ THE_hng_mission_modifier145 = {
 THE_hng_mission_modifier146 = {
 	infantry_fire = 1
 	fire_damage_received = -0.25
+	land_maintenance_modifier = 0.05
 	is_samurai_modifier = yes 
 }
