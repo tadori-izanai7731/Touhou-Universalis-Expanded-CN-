@@ -327,7 +327,7 @@ THE_has_mil_advisor = {
 			advisor = th_advisor_yorihime
 			advisor = THE_koishi_advisor
 			advisor = THE_sizuha_advisor
-			advisor = the_mayumi
+			advisor = THE_mayumi_advisor
 		}
 	}
 }
@@ -372,7 +372,7 @@ THE_has_mil_advisor_with_level = {
 			th_advisor_yorihime = $level$
 			THE_koishi_advisor = $level$
 			THE_sizuha_advisor = $level$
-			the_mayumi = $level$
+			THE_mayumi_advisor = $level$
 		}
 	}
 }

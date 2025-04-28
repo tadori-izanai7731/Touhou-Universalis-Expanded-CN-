@@ -16,8 +16,16 @@ spriteTypes = {
 		loadType = "INGAME"
 	}
 	spriteType = {
-		name = "GFX_advisor_the_mayumi"
+		name = "GFX_advisor_THE_mayumi_advisor"
 		texturefile = "gfx//interface//the_advisor//mayumi_advisor.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_THE_daiyousei_advisor"
+		texturefile = "gfx//interface//advisors//th_advisor_daiyousei.dds"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
