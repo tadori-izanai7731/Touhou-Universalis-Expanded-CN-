@@ -244,7 +244,7 @@ THE_has_dip_advisor = {
 			advisor = th_advisor_seiga
 			advisor = th_advisor_doremy
 			advisor = th_advisor_star
-			advisor = THE_advisor_daiyousei
+			advisor = THE_daiyousei_advisor
 		}
 	}
 }
@@ -282,7 +282,7 @@ THE_has_dip_advisor_with_level = {
 			th_advisor_seiga = $level$
 			th_advisor_doremy = $level$
 			th_advisor_star = $level$
-			THE_advisor_daiyousei = $level$
+			THE_daiyousei_advisor = $level$
 		}
 	}
 }
