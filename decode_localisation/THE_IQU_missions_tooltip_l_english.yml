@@ -27,10 +27,13 @@ l_english:
 ### GOVERNMENT
  THE_IQU_sky_beyond_clouds_reform: "云外苍天"
  THE_IQU_sky_beyond_clouds_reform_desc: ""
- mechanic_THE_IQU_government_explore_coast_explore_mechanic_yes: "探索完成任意沿海省份时，有§G10%§!的概率直接发现该省份所在地区的所有省份。"
- ability_THE_IQU_sky_beyond_clouds_mechanic_mechanic: "天人冒险家"
- mechanic_THE_IQU_government_explorer_conquistador_mechanic_yes: "每拥有§Y1§!个探险家，获得§G10%§!殖民范围和§G5.0%§!贸易效率（最多§Y5§!个）"
+ mechanic_THE_IQU_government_explore_coast_explore_mechanic_yes: "- -探索完成任意沿海省份时，有§G10%§!的概率直接发现该省份所在地区的所有省份。"
+ ability_THE_IQU_sky_beyond_clouds_mechanic: "天人冒险家"
+ mechanic_THE_IQU_government_explorer_conquistador_mechanic_yes: "- -每拥有§Y1§!个探险家，获得§G10%§!殖民范围和§G5.0%§!贸易效率（最多§Y5§!个）"
  THE_IQU_sky_beyond_clouds_explorers_power: "拥有的探险家数量"
  monthly_THE_IQU_sky_beyond_clouds_explorers_power: "探险家加成增长"
- THE_IQU_RULER: "龙宫使者"
 ### GOVERNMENT_END
+
+### GOVERNMENT_NAME
+  THE_IQU_RULER: "龙宫使"
+### GOVERNMENT_NAME_END

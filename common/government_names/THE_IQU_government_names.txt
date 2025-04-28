@@ -1,4 +1,4 @@
-THE_KEI_government_names = {
+THE_IQU_government_names = {
 	rank = {
 		1 = TOUHOU_DOMAIN
 		2 = TOUHOU_REALM
@@ -6,9 +6,9 @@ THE_KEI_government_names = {
 	}
 	
 	ruler_male = {
-		3 = TOUHOU_EXECUTOR
-		2 = TOUHOU_EXECUTOR
-		1 = TOUHOU_EXECUTOR
+		3 = THE_IQU_RULER
+		2 = THE_IQU_RULER
+		1 = THE_IQU_RULER
 	}
 	
 	ruler_female = {
@@ -18,9 +18,9 @@ THE_KEI_government_names = {
 	}
 	
 	heir_male = {
-		1 = HEIR
-		2 = HEIR
-		3 = HEIR
+		1 = THE_KEI_HEIR
+		2 = THE_KEI_HEIR
+		3 = THE_KEI_HEIR
 	}
 
 	heir_female = {
@@ -31,7 +31,7 @@ THE_KEI_government_names = {
 
 	trigger = {
 		OR = {
-			has_government_attribute = THE_IQU_government_explore_coast_explore_mechanic
+			has_government_attribute = THE_IQU_government_explorer_conquistador_mechanic
 		}
 	}
 }

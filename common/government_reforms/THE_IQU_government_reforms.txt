@@ -1,10 +1,10 @@
 THE_IQU_sky_beyond_clouds_reform = {
 	lock_level_when_selected = yes
-	icon = "THE_AKI_government_reform_1"
+	icon = "THE_IQU_government_1_reform"
 	potential = {
 		OR = {
-			has_reform = THE_AKI_harvest_and_autumn_reform
-			have_had_reform = THE_AKI_harvest_and_autumn_reform
+			has_reform = THE_IQU_sky_beyond_clouds_reform
+			have_had_reform = THE_IQU_sky_beyond_clouds_reform
 		}
 	}
 	valid_for_new_country = no
