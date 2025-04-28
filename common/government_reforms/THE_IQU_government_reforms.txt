@@ -1,0 +1,28 @@
+THE_IQU_sky_beyond_clouds_reform = {
+	lock_level_when_selected = yes
+	icon = "THE_AKI_government_reform_1"
+	potential = {
+		OR = {
+			has_reform = THE_AKI_harvest_and_autumn_reform
+			have_had_reform = THE_AKI_harvest_and_autumn_reform
+		}
+	}
+	valid_for_new_country = no
+	valid_for_nation_designer = no
+	rulers_can_be_generals = no
+	can_change_primary_culture = no
+	
+	modifiers = {
+		governing_capacity = 150
+		global_unrest = -1
+		global_ship_recruit_speed = -0.10
+		native_assimilation = 0.25
+	}
+	government_abilities = {
+		THE_IQU_sky_beyond_clouds_mechanic
+	}
+	custom_attributes = {
+		THE_IQU_government_explore_coast_explore_mechanic = yes
+		THE_IQU_government_explorer_conquistador_mechanic = yes
+	}
+}

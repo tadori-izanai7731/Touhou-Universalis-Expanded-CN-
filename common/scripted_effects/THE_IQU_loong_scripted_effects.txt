@@ -1,0 +1,23 @@
+#探索海岸 FROM己方国家 #ROOT当前省份
+THE_IQU_explore_coast_exolore_government_effects = {
+	if = {
+		limit = {
+			FROM = {
+				has_government_attribute = THE_IQU_government_explore_coast_explore_mechanic
+			}
+		 }
+		 random_list = {
+			10 = {
+				ROOT = {
+					region = {
+						 discover_country = FROM
+					}
+				}
+			}
+			90 = {
+				
+			}
+		 }
+		 
+	}
+}
