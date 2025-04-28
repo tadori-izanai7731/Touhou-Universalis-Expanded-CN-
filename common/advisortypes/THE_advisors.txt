@@ -1,4 +1,4 @@
-#大妖精
+# 大妖精
 THE_daiyousei_advisor = {
 	monarch_power = DIP
 	skill_scaled_modifier = {
@@ -76,7 +76,8 @@ THE_daiyousei_advisor = {
 	}
 }
 
-the_koishi = {
+# 古明地恋
+THE_koishi_advisor = {
 	monarch_power = MIL
 	
 	# Bonus
@@ -104,8 +105,8 @@ the_koishi = {
 		factor = 10
 	}
 }
-#秋静叶
 
+# 秋静叶
 the_sizuha = {
 	monarch_power = MIL
 	
@@ -135,7 +136,8 @@ the_sizuha = {
 		factor = 100
 	}
 }
-#磨弓
+
+# 杖刀偶磨弓
 the_mayumi = {
 	monarch_power = MIL
 	# Bonus
