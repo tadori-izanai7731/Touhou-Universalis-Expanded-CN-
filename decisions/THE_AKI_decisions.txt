@@ -56,8 +56,8 @@ country_decisions = {
 		}
 		allow = {
 			mil_power = 100
-			NOT = { has_advisor_type_in_pool = the_sizuha }
-			NOT = { employed_advisor = { type = the_sizuha } }
+			NOT = { has_advisor_type_in_pool = THE_sizuha_advisor }
+			NOT = { employed_advisor = { type = THE_sizuha_advisor } }
 		}
 		effect = {
 			add_mil_power = -100

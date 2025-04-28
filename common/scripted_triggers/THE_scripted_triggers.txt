@@ -326,7 +326,7 @@ THE_has_mil_advisor = {
 			advisor = th_advisor_clownpiece
 			advisor = th_advisor_yorihime
 			advisor = THE_koishi_advisor
-			advisor = the_sizuha
+			advisor = THE_sizuha_advisor
 			advisor = the_mayumi
 		}
 	}
@@ -371,7 +371,7 @@ THE_has_mil_advisor_with_level = {
 			th_advisor_clownpiece = $level$
 			th_advisor_yorihime = $level$
 			THE_koishi_advisor = $level$
-			the_sizuha = $level$
+			THE_sizuha_advisor = $level$
 			the_mayumi = $level$
 		}
 	}
