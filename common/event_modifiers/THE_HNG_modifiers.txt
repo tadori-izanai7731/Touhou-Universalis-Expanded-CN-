@@ -1432,6 +1432,8 @@ THE_hng_mission_modifier128 = {
 #高棉乱局
 THE_hng_mission_modifier129 = {
 	local_warscore_cost_modifier = -0.5
+	local_hostile_attrition = 2
+	max_attrition = 2
 }
 
 #红龙的注视
