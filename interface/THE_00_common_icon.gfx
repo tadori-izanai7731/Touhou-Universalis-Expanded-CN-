@@ -62,4 +62,12 @@ spriteTypes = {
 		name = "GFX_text_icon_gp_tire_3"
 		texturefile = "gfx//interface//great_projects//great_projects_level_icons//great_project_level_icon_tier_3.dds"
 	}
+
+	spriteType = {
+		name = "GFX_cb_THE_imperial"
+		texturefile = "gfx/interface/casus_bellis/cb_THE_imperial.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
 }

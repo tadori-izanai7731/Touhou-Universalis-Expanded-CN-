@@ -1,0 +1,32 @@
+spriteTypes = {
+	### 本地化图标，使用£<texticon>£在本地化中插入图标，<texticon>为图标对应「name」中GFX_text_之后的部分
+	### Thanks for EE&ABE
+	spriteType = {
+		name = "GFX_text_icon_fire"
+		texturefile = "gfx//icons//fire_text_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_text_icon_shock"
+		texturefile = "gfx//icons//shock_text_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_text_icon_manuever"
+		texturefile = "gfx//icons//manuever_text_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_text_icon_siege"
+		texturefile = "gfx//icons//siege_text_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_text_THE_LIL_execute_decision_icon"
+		texturefile = "gfx/interface/THE_LIL_execute_decision.dds"
+	}
+	spriteType = {
+		name = "GFX_text_THE_LIL_info_decision_icon"
+		texturefile = "gfx/interface/THE_LIL_info_decision.dds"
+	}
+	spriteType = {
+		name = "GFX_text_THE_ae_icon"
+		texturefile = "gfx/interface/aggresive_exp_icon.dds"
+	}
+}

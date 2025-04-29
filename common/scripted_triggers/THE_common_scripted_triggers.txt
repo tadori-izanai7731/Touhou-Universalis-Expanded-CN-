@@ -57,5 +57,297 @@ THE_check_grand_canel_flag_amount_scripted_trigger = {
 }
 
 THE_province_is_or_accepts_touhou_religion = {
-	
+	custom_trigger_tooltip = {
+		tooltip = THE_province_is_or_accepts_touhou_religion_tt
+		OR = {
+			THE_province_is_or_accepts_religion_group_without_tooltip = {
+				religion_group = Touhou
+			}
+			THE_province_is_or_accepts_religion_group_without_tooltip = {
+				religion_group = lunarian_religion_g
+			}
+			province_is_or_accepts_religion = {
+				religion = th_gensokirishitan
+			}
+			province_is_or_accepts_religion = {
+				religion = th_scarlet_christians
+			}
+			province_is_or_accepts_religion = {
+				religion = th_alukhuat
+			}
+		}
+	}
+}
+
+# 不直接使用
+THE_province_is_or_accepts_religion_group_without_tooltip = {
+	OR = {
+		AND = {
+			religion_group = $religion_group$
+			has_owner_religion = yes
+		}
+		AND = {
+			owner = { THE_secondary_religion_group = { $religion_group$ = yes } }
+			OR = {
+				has_owner_religion = yes
+				religion_group = $religion_group$
+			}
+		}
+		AND = {
+			owner = { THE_has_harmonized_with_$religion_group$_harmonized = yes }
+			OR = {
+				has_owner_religion = yes
+				religion_group = $religion_group$
+			}
+		}
+	}
+}
+
+THE_secondary_religion_group = {
+	th_secondary_religion_group = {
+		[[christian]
+			OR = {
+				secondary_religion = catholic
+				secondary_religion = hussite
+				secondary_religion = coptic
+				secondary_religion = orthodox
+				secondary_religion = protestant
+				secondary_religion = reformed
+				secondary_religion = anglican
+				secondary_religion = th_gensokirishitan
+				secondary_religion = th_scarlet_christians
+			}
+		]
+		[[muslim]
+			OR = {
+				secondary_religion = sunni
+				secondary_religion = shiite
+				secondary_religion = ibadi
+				secondary_religion = th_alukhuat
+			}
+		]
+		[[eastern]
+			OR = {
+				secondary_religion = buddhism
+				secondary_religion = vajrayana
+				secondary_religion = mahayana
+				secondary_religion = confucianism
+				secondary_religion = shinto
+			}
+		]
+		[[dharmic]
+			OR = {
+				secondary_religion = hinduism
+				secondary_religion = sikhism
+			}
+		]
+		[[pagan]
+			OR = {
+				secondary_religion = animism
+				secondary_religion = shamanism
+				secondary_religion = totemism
+				secondary_religion = inti
+				secondary_religion = nahuatl
+				secondary_religion = mesoamerican_religion
+				secondary_religion = norse_pagan_reformed
+				secondary_religion = tengri_pagan_reformed
+				secondary_religion = dreamtime
+			}
+		]
+		[[jewish_group]
+			secondary_religion = jewish
+		]
+		[[zoroastrian_group]
+			secondary_religion = zoroastrian
+		]
+		[[Touhou]
+			OR = {
+				secondary_religion = th_hakureishinto
+				secondary_religion = th_moriyashinto
+				secondary_religion = th_oldhakurei
+				secondary_religion = th_shinkism
+				secondary_religion = th_occultism
+				secondary_religion = th_scientistic
+				secondary_religion = th_buddhist
+				secondary_religion = th_taoist
+				secondary_religion = THE_kagiyama_religion
+				secondary_religion = THE_minoriko_religion
+				secondary_religion = THE_keiki_religion
+			}
+		]
+		[[lunarian_religion_g]
+			secondary_religion = th_lunarian_religion
+		]
+	}
+}
+
+THE_has_harmonized_with_christian_harmonized = {
+	OR = {
+		has_harmonized_with = catholic
+		has_harmonized_with = protestant
+		has_harmonized_with = reformed
+		has_harmonized_with = anglican
+		has_harmonized_with = orthodox
+		has_harmonized_with = coptic
+		has_harmonized_with = hussite
+		has_harmonized_with = th_gensokirishitan
+		has_harmonized_with = th_scarlet_christians
+	}
+}
+
+THE_has_harmonized_with_muslim_harmonized = {
+	OR = {
+		has_harmonized_with = sunni
+		has_harmonized_with = shiite
+		has_harmonized_with = ibadi
+		has_harmonized_with = th_alukhuat
+	}
+}
+
+THE_has_harmonized_with_dharmic_harmonized = {
+	OR = {
+		has_harmonized_with = hinduism
+		has_harmonized_with = sikhism
+	}
+}
+
+THE_has_harmonized_with_eastern_harmonized = {
+	OR = {
+		has_harmonized_with = buddhism
+		has_harmonized_with = vajrayana
+		has_harmonized_with = mahayana
+		has_harmonized_with = shinto
+		has_harmonized_with = confucianism
+	}
+}
+
+THE_has_harmonized_with_pagan_harmonized = {
+	OR = {
+		has_harmonized_with = shamanism
+		has_harmonized_with = totemism
+		has_harmonized_with = nahuatl
+		has_harmonized_with = inti
+		has_harmonized_with = norse_pagan_reformed
+		has_harmonized_with = animism
+		has_harmonized_with = dreamtime
+		has_harmonized_with = mesoamerican_religion
+		has_harmonized_with = tengri_pagan_reformed
+	}
+}
+
+THE_has_harmonized_with_jewish_group_harmonized = {
+	has_harmonized_with = jewish
+}
+
+THE_has_harmonized_with_zoroastrian_group_harmonized = {
+	has_harmonized_with = zoroastrian
+}
+
+THE_has_harmonized_with_lunarian_religion_g_harmonized = {
+	has_harmonized_with = th_lunarian_religion
+}
+
+THE_has_harmonized_with_Touhou_harmonized = {
+	OR = {
+		has_harmonized_with = th_hakureishinto
+		has_harmonized_with = th_taoist
+		has_harmonized_with = th_buddhist
+		has_harmonized_with = th_moriyashinto
+		has_harmonized_with = th_oldhakurei
+		has_harmonized_with = th_shinkism
+		has_harmonized_with = th_scientistic
+		has_harmonized_with = th_occultism
+		has_harmonized_with = THE_kagiyama_religion
+		has_harmonized_with = THE_minoriko_religion
+		has_harmonized_with = THE_keiki_religion
+	}
+}
+
+THE_province_is_buddhist_or_accepts_buddhism = {
+	OR = {
+		custom_trigger_tooltip = {
+			tooltip = THE_province_is_buddhist_or_accepts_buddhism_at
+			OR = {
+				AND = {
+					religion = buddhism
+					OR = {
+						has_owner_religion = yes
+						owner = { has_harmonized_with = buddhism }
+						owner = { secondary_religion = buddhism }
+					}
+				}
+				AND = {
+					religion = vajrayana
+					OR = {
+						has_owner_religion = yes
+						owner = { has_harmonized_with = vajrayana }
+						owner = { secondary_religion = vajrayana }
+					}
+				}
+				AND = {
+					religion = mahayana
+					OR = {
+						has_owner_religion = yes
+						owner = { has_harmonized_with = mahayana }
+						owner = { secondary_religion = mahayana }
+					}
+				}
+				AND = {
+					religion = th_buddhist
+					OR = {
+						has_owner_religion = yes
+						owner = { has_harmonized_with = th_buddhist }
+						owner = { secondary_religion = th_buddhist }
+					}
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = THE_province_is_buddhist_or_accepts_buddhism_bt
+			owner = {
+				OR = {
+					has_harmonized_with = buddhism
+					has_harmonized_with = vajrayana
+					has_harmonized_with = mahayana
+					has_harmonized_with = th_buddhist
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = THE_province_is_buddhist_or_accepts_buddhism_ct
+			owner = {
+				OR = {
+					secondary_religion = buddhism
+					secondary_religion = vajrayana
+					secondary_religion = mahayana
+					secondary_religion = th_buddhist
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = province_is_buddhist_or_accepts_buddhism_dt
+			religion = shinto
+			has_owner_religion = yes
+		}
+		custom_trigger_tooltip = {
+			tooltip = THE_province_is_buddhist_or_accepts_buddhism_et
+			owner = { has_personal_deity = buddha }
+		}
+		custom_trigger_tooltip = {
+			tooltip = THE_province_is_buddhist_or_accepts_buddhism_ft
+			owner = { has_adopted_cult = buddhism_cult }
+		}
+		#For the case the province has a religion which the player has already harmonized with and cannot convert
+		#It's a hidden trigger because the tooltip is already super flooded and it is incredibly niche
+		hidden_trigger = {
+			owner = {
+				OR = {
+					has_harmonized_with = buddhism
+					has_harmonized_with = vajrayana
+					has_harmonized_with = mahayana
+				}
+				has_harmonized_with = ROOT
+			}
+		}
+	}
 }

@@ -1,65 +1,5 @@
 Touhou = {
-	religious_schools = {
-		the_hina_school = {
-			potential_invite_scholar = {
-				religion = th_kagiyama
-			}
-
-			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
-			can_invite_scholar = {
-				adm_power = 50
-				NOT = { has_country_modifier = th_hina_scholar_modifier }
-				ai = no
-			}
-
-			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
-			on_invite_scholar = {
-				add_adm_power = -50
-				th_clear_religious_scholar_modifiers_effect = yes
-				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
-				add_country_modifier = { name = th_hina_scholar_modifier duration = 7300 }
-			}
-
-			# If you don't set this it will expand on_invite_scholar effect which might be super big
-			invite_scholar_modifier_display = th_hina_scholar_modifier
-
-			picture = "GFX_icon_touhou_school_hina"
-
-			# religion_sub_modifier = no is possible, will hide icon in religious screen
-			# adm_tech_cost_modifier = -0.05
-		}
-		aki_school = {
-			potential_invite_scholar = {
-				religion = the_minoriko
-			}
-
-			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
-			can_invite_scholar = {
-				adm_power = 50
-				NOT = { has_country_modifier = th_okina_scholar_modifier }
-				ai = no
-			}
-
-			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
-			on_invite_scholar = {
-				add_adm_power = -50
-				th_clear_religious_scholar_modifiers_effect = yes
-				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
-				add_country_modifier = { name = th_aki_scholar_modifier duration = 7300 }
-			}
-
-			# If you don't set this it will expand on_invite_scholar effect which might be super big
-			invite_scholar_modifier_display = th_aki_scholar_modifier
-
-			picture = "GFX_icon_touhou_school_aki"
-
-			# religion_sub_modifier = no is possible, will hide icon in religious screen
-			# adm_tech_cost_modifier = -0.05
-		}
-	}
-
-
-	th_kagiyama = {
+	THE_kagiyama_religion = {
 		color = { 80 178 142 }
 		heretic = { th_heretic_lunar th_heretic_anime th_heretic_manga_elitists }
 		icon = 42
@@ -116,7 +56,7 @@ Touhou = {
 		harmonized_modifier = THE_harmonized_kagiyama
 	}
 	
-	the_minoriko = {
+	THE_minoriko_religion = {
 		color = { 255 250 32 }
 		heretic = { th_heretic_lunar th_heretic_anime th_heretic_manga_elitists }
 		icon = 43
@@ -195,7 +135,7 @@ Touhou = {
 		harmonized_modifier = THE_harmonized_minoriko
 	}
 
-	the_keiki = {
+	THE_keiki_religion = {
 		color = { 61 171 214 }
 		heretic = { th_heretic_lunar th_heretic_anime th_heretic_manga_elitists }
 		icon = 44
@@ -218,8 +158,8 @@ Touhou = {
 			th_oldhakurei
 			th_shinkism
 			th_scientistic
-			the_minoriko
-			th_kagiyama
+			THE_minoriko_religion
+			THE_kagiyama_religion
 		}
 
 		will_get_center = { #Refered to even for initial CoR Spawn

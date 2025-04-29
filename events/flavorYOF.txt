@@ -601,7 +601,7 @@ country_event = {
 				NOT = {
 					tag = YOF
 				}
-				religion = th_kagiyama
+				religion = THE_kagiyama_religion
 			}
 			add_church_power = -50
 			random_country = {
@@ -675,7 +675,7 @@ country_event = {
 				NOT = {
 					tag = YOF
 				}
-				religion = th_kagiyama
+				religion = THE_kagiyama_religion
 			}
 			add_church_power = -50
 			random_country = {
@@ -751,7 +751,7 @@ country_event = {
 				NOT = {
 					tag = YOF
 				}
-				religion = th_kagiyama
+				religion = THE_kagiyama_religion
 			}
 			add_church_power = -50
 			random_country = {
@@ -824,7 +824,7 @@ country_event = {
 				NOT = {
 					tag = YOF
 				}
-				religion = th_kagiyama
+				religion = THE_kagiyama_religion
 			}
 			add_church_power = -50
 			random_country = {
@@ -908,7 +908,7 @@ country_event = {
 				NOT = {
 					tag = YOF
 				}
-				religion = th_kagiyama
+				religion = THE_kagiyama_religion
 			}
 			add_church_power = -50
 			random_country = {
@@ -981,7 +981,7 @@ country_event = {
 				NOT = {
 					tag = YOF
 				}
-				religion = th_kagiyama
+				religion = THE_kagiyama_religion
 			}
 			add_church_power = -50
 			random_country = {
@@ -1054,7 +1054,7 @@ country_event = {
 				NOT = {
 					tag = YOF
 				}
-				religion = th_kagiyama
+				religion = THE_kagiyama_religion
 			}
 			add_church_power = -50
 			random_country = {
@@ -1169,7 +1169,7 @@ country_event = {
 	}
 	option = {
 		name = flavor_yof.9.a
-		change_religion = th_kagiyama
+		change_religion = THE_kagiyama_religion
 		add_stability = -1
 		add_country_modifier = {
 			name = yof_change_kagiyama_buff

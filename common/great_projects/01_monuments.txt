@@ -867,7 +867,7 @@ buddha_statues = {
 
 	#can we build it?
 	build_trigger = {
-		th_province_is_buddhist_or_accepts_buddhism = yes
+		THE_province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	#what to do when it's built
@@ -884,12 +884,12 @@ buddha_statues = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		th_province_is_buddhist_or_accepts_buddhism = yes
+		THE_province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		th_province_is_buddhist_or_accepts_buddhism = yes
+		THE_province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -1477,7 +1477,7 @@ angkor_wat = {
 
 	#can we build it?
 	build_trigger = {
-		th_province_is_buddhist_or_accepts_buddhism = yes
+		THE_province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	#what to do when it's built
@@ -1492,12 +1492,12 @@ angkor_wat = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		th_province_is_buddhist_or_accepts_buddhism = yes
+		THE_province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		th_province_is_buddhist_or_accepts_buddhism = yes
+		THE_province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -3238,31 +3238,43 @@ mount_fuji = {
 
 	#can we build it?
 	build_trigger = {
-		custom_trigger_tooltip = {
-			tooltip = mount_fuji_tt
-			OR = {		
-				th_is_shinto_religion_accepted = { secondary = yes harmonized = yes }
-				AND = {
-					religion = mahayana
-					has_owner_religion = yes
-				}
-				AND = {
-					OR = {
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = mount_fuji_tt
+				OR = {		
+					th_is_shinto_religion_accepted = { secondary = yes harmonized = yes }
+					AND = {
 						religion = mahayana
 						has_owner_religion = yes
 					}
-					owner = { has_harmonized_with = mahayana }
-				}
-				AND = {
-					owner = {
-						religion = tengri_pagan_reformed
-						secondary_religion = mahayana
+					AND = {
+						OR = {
+							religion = mahayana
+							has_owner_religion = yes
+						}
+						owner = { has_harmonized_with = mahayana }
 					}
-					OR = {
-						religion = mahayana
-						has_owner_religion = yes
+					AND = {
+						owner = {
+							religion = tengri_pagan_reformed
+							secondary_religion = mahayana
+						}
+						OR = {
+							religion = mahayana
+							has_owner_religion = yes
+						}
 					}
 				}
+			}
+			AND = {
+				OR = {
+					religion_group = Touhou
+					religion_group = lunarian_religion_g
+					religion = th_gensokirishitan
+					religion = th_scarlet_christians
+					religion = th_alukhuat
+				}
+				has_owner_religion = yes
 			}
 		}
 	}
@@ -3882,7 +3894,7 @@ shwedagon_pagoda = {
 
 	#can we build it?
 	build_trigger = {
-		th_province_is_buddhist_or_accepts_buddhism = yes
+		THE_province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	#what to do when it's built
@@ -3897,12 +3909,12 @@ shwedagon_pagoda = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		th_province_is_buddhist_or_accepts_buddhism = yes
+		THE_province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		th_province_is_buddhist_or_accepts_buddhism = yes
+		THE_province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -5226,7 +5238,7 @@ bagan_temples = {
 
 	#can we build it?
 	build_trigger = {
-		th_province_is_buddhist_or_accepts_buddhism = yes
+		THE_province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	#what to do when it's built
@@ -5241,12 +5253,12 @@ bagan_temples = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		th_province_is_buddhist_or_accepts_buddhism = yes
+		THE_province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		th_province_is_buddhist_or_accepts_buddhism = yes
+		THE_province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -5951,7 +5963,7 @@ jokhang_temple = {
 	#can we build it?
 	build_trigger = {
 		OR = {
-			th_province_is_buddhist_or_accepts_buddhism = yes
+			THE_province_is_buddhist_or_accepts_buddhism = yes
 			th_can_use_chinese_monuments = yes
 		}
 	}
@@ -5969,7 +5981,7 @@ jokhang_temple = {
 	#can our country use it?
 	can_use_modifiers_trigger = {
 		OR = {
-			th_province_is_buddhist_or_accepts_buddhism = yes
+			THE_province_is_buddhist_or_accepts_buddhism = yes
 			th_can_use_chinese_monuments = yes
 		}
 	}
@@ -5977,7 +5989,7 @@ jokhang_temple = {
 	#can our country upgrade it?
 	can_upgrade_trigger = {
 		OR = {
-			th_province_is_buddhist_or_accepts_buddhism = yes
+			THE_province_is_buddhist_or_accepts_buddhism = yes
 			th_can_use_chinese_monuments = yes
 		}
 	}
@@ -6145,7 +6157,7 @@ borobudur_temple = {
 				culture_group = malay
 				province_is_or_accepts_culture = yes
 			}
-			th_province_is_buddhist_or_accepts_buddhism = yes
+			THE_province_is_buddhist_or_accepts_buddhism = yes
 		}	
 	}
 
@@ -6166,7 +6178,7 @@ borobudur_temple = {
 				culture_group = malay
 				province_is_or_accepts_culture = yes
 			}
-			th_province_is_buddhist_or_accepts_buddhism = yes
+			THE_province_is_buddhist_or_accepts_buddhism = yes
 		}
 	}
 
@@ -6177,7 +6189,7 @@ borobudur_temple = {
 				culture_group = malay
 				province_is_or_accepts_culture = yes
 			}
-			th_province_is_buddhist_or_accepts_buddhism = yes
+			THE_province_is_buddhist_or_accepts_buddhism = yes
 		}
 	}
 
@@ -8632,7 +8644,11 @@ sankin_kotai_palaces = {
 
 	#can we build it?
 	build_trigger = {
-		th_is_gensokyan_or_japanese = yes
+		OR = {
+			culture_group = japanese_g
+			culture_group = Gensokyan_culture
+			culture_group = moon_culture
+		}
 		province_is_or_accepts_culture = yes
 	}
 
@@ -8648,13 +8664,21 @@ sankin_kotai_palaces = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		th_is_gensokyan_or_japanese = yes
+		OR = {
+			culture_group = japanese_g
+			culture_group = Gensokyan_culture
+			culture_group = moon_culture
+		}
 		province_is_or_accepts_culture = yes
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		th_is_gensokyan_or_japanese = yes
+		OR = {
+			culture_group = japanese_g
+			culture_group = Gensokyan_culture
+			culture_group = moon_culture
+		}
 		province_is_or_accepts_culture = yes
 	}
 
@@ -10628,7 +10652,7 @@ imperial_city_hue = {
 
 	#can we build it?
 	build_trigger = {
-		th_province_is_buddhist_or_accepts_buddhism = yes
+		THE_province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	#what to do when it's built
@@ -10643,12 +10667,12 @@ imperial_city_hue = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		th_province_is_buddhist_or_accepts_buddhism = yes
+		THE_province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		th_province_is_buddhist_or_accepts_buddhism = yes
+		THE_province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -12260,7 +12284,7 @@ ellora_caves = {
 				religion_group = dharmic
 				has_owner_religion = yes
 			}
-			th_province_is_buddhist_or_accepts_buddhism = yes
+			THE_province_is_buddhist_or_accepts_buddhism = yes
 		}
 	}
 
@@ -12276,7 +12300,7 @@ ellora_caves = {
 				religion_group = dharmic
 				has_owner_religion = yes
 			}
-			th_province_is_buddhist_or_accepts_buddhism = yes
+			THE_province_is_buddhist_or_accepts_buddhism = yes
 		}
 	}
 
@@ -12286,7 +12310,7 @@ ellora_caves = {
 				religion_group = dharmic
 				has_owner_religion = yes
 			}
-			th_province_is_buddhist_or_accepts_buddhism = yes
+			THE_province_is_buddhist_or_accepts_buddhism = yes
 		}
 	}
 
@@ -12390,7 +12414,7 @@ erdene_zuu = {
 				religion = tengri_pagan_reformed
 				has_owner_religion = yes
 			}
-			th_province_is_buddhist_or_accepts_buddhism = yes
+			THE_province_is_buddhist_or_accepts_buddhism = yes
 		}
 	}
 
@@ -12406,7 +12430,7 @@ erdene_zuu = {
 				religion = tengri_pagan_reformed
 				has_owner_religion = yes
 			}
-			th_province_is_buddhist_or_accepts_buddhism = yes
+			THE_province_is_buddhist_or_accepts_buddhism = yes
 		}
 	}
 
@@ -12416,7 +12440,7 @@ erdene_zuu = {
 				religion = tengri_pagan_reformed
 				has_owner_religion = yes
 			}
-			th_province_is_buddhist_or_accepts_buddhism = yes
+			THE_province_is_buddhist_or_accepts_buddhism = yes
 		}
 	}
 
@@ -13219,7 +13243,7 @@ hampi = {
 				religion_group = dharmic
 				has_owner_religion = yes
 			}
-			th_province_is_buddhist_or_accepts_buddhism = yes
+			THE_province_is_buddhist_or_accepts_buddhism = yes
 		}
 	}
 
@@ -13235,7 +13259,7 @@ hampi = {
 				religion_group = dharmic
 				has_owner_religion = yes
 			}
-			th_province_is_buddhist_or_accepts_buddhism = yes
+			THE_province_is_buddhist_or_accepts_buddhism = yes
 		}
 	}
 
@@ -13245,7 +13269,7 @@ hampi = {
 				religion_group = dharmic
 				has_owner_religion = yes
 			}
-			th_province_is_buddhist_or_accepts_buddhism = yes
+			THE_province_is_buddhist_or_accepts_buddhism = yes
 		}
 	}
 
@@ -16070,7 +16094,7 @@ swayambhunath = {
 	type = monument
 
 	build_trigger = {
-		th_province_is_buddhist_or_accepts_buddhism = yes
+		THE_province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	on_built = {
@@ -16080,11 +16104,11 @@ swayambhunath = {
 	}
 
 	can_use_modifiers_trigger = {
-		th_province_is_buddhist_or_accepts_buddhism = yes
+		THE_province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	can_upgrade_trigger = {
-		th_province_is_buddhist_or_accepts_buddhism = yes
+		THE_province_is_buddhist_or_accepts_buddhism = yes
 	}
 
 	keep_trigger = {
@@ -19260,7 +19284,8 @@ imperial_city_kyoto = {
 	build_trigger = {
 		OR = {
 			culture_group = japanese_g
-            culture_group = Gensokyan_culture
+			culture_group = Gensokyan_culture
+			culture_group = moon_culture
 		}
 		province_is_or_accepts_culture = yes
 	}
@@ -19274,7 +19299,8 @@ imperial_city_kyoto = {
 	can_use_modifiers_trigger = {
 		OR = {
 			culture_group = japanese_g
-            culture_group = Gensokyan_culture
+			culture_group = Gensokyan_culture
+			culture_group = moon_culture
 		}
 		province_is_or_accepts_culture = yes
 	}
@@ -19282,7 +19308,8 @@ imperial_city_kyoto = {
 	can_upgrade_trigger = {
 		OR = {
 			culture_group = japanese_g
-            culture_group = Gensokyan_culture
+			culture_group = Gensokyan_culture
+			culture_group = moon_culture
 		}
 		province_is_or_accepts_culture = yes
 	}
@@ -20970,6 +20997,10 @@ city_of_sarai = {
 				has_reform = steppe_horde
 				has_reform = holy_horde_reform
 				has_reform = cossacks_reform
+				has_reform = THE_KNE_monarchy_reform
+				has_reform = THE_KNE_hakutaku_mandate_reform
+				has_reform = THE_HNG_red_dragon_steppe_celestial_empire
+				has_reform = Gensokyan_fom_witch_government
 			}
 		}
 	}
@@ -20982,6 +21013,10 @@ city_of_sarai = {
 				has_reform = steppe_horde
 				has_reform = holy_horde_reform
 				has_reform = cossacks_reform
+				has_reform = THE_KNE_monarchy_reform
+				has_reform = THE_KNE_hakutaku_mandate_reform
+				has_reform = THE_HNG_red_dragon_steppe_celestial_empire
+				has_reform = Gensokyan_fom_witch_government
 			}
 		}
 	}
@@ -20992,6 +21027,10 @@ city_of_sarai = {
 				has_reform = steppe_horde
 				has_reform = holy_horde_reform
 				has_reform = cossacks_reform
+				has_reform = THE_KNE_monarchy_reform
+				has_reform = THE_KNE_hakutaku_mandate_reform
+				has_reform = THE_HNG_red_dragon_steppe_celestial_empire
+				has_reform = Gensokyan_fom_witch_government
 			}
 		}
 	}

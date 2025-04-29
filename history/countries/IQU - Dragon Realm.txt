@@ -1,5 +1,5 @@
 government = monarchy
-add_government_reform = Gensokyan_monarchy
+add_government_reform = THE_IQU_sky_beyond_clouds_reform
 government_rank = 1
 primary_culture = "Heavenish"
 religion = th_taoist
@@ -8,13 +8,13 @@ capital = 5032
 th_discover_default = yes
 1443.1.1 = {
   monarch = {
-    name = "cˆ–s"  # iqu
-    monarch = "8lml"
+    name = "cˆ–s"  # IQU
+    monarch_name = "cˆ–s"
     dynasty = "8lml"  
     birth_date = 2.1.1
     adm = 4
     dip = 6
-    mil = 5
+    mil = 3
     female = yes
   }
   add_ruler_personality = immortal_personality

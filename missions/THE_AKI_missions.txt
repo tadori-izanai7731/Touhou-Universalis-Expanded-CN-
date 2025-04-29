@@ -559,13 +559,13 @@ THE_AKI_branch_3 = {
 		required_missions = { THE_AKI_divine_virtue } 
 		provinces_to_highlight = { 
 			country_or_non_sovereign_subject_holds = ROOT
-			NOT = { religion = the_minoriko }
+			NOT = { religion = THE_minoriko_religion }
 		} 
 		
 		trigger = { 
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 25
-				religion = the_minoriko
+				religion = THE_minoriko_religion
 			}
 		}
 		
@@ -621,7 +621,7 @@ THE_AKI_branch_3 = {
 					limit = {
 						religion = th_buddhist
 					}
-					change_religion = the_minoriko
+					change_religion = THE_minoriko_religion
 				}
 			}
 		} 

@@ -24,7 +24,8 @@ country_decisions = {
 			has_country_flag = THE_debug_flag
 		}
 		allow = {
-			always = no
+			religion_group = Touhou
+			religion_group = lunarian_religion_g
 		}
 		effect = {
 		}

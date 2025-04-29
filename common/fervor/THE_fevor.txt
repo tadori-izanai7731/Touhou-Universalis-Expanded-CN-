@@ -3,12 +3,12 @@
 the_keiki_fervor_shapping = {
 	cost = 5
 	potential = {
-		FROM = { religion = the_keiki }
+		FROM = { religion = THE_keiki_religion }
 	}
 	trigger = {
 		if = {
-			limit = { NOT = { religion = the_keiki } }
-			religion = the_keiki
+			limit = { NOT = { religion = THE_keiki_religion } }
+			religion = THE_keiki_religion
 		}
 	}
 	effect = {
@@ -21,12 +21,12 @@ the_keiki_fervor_shapping = {
 the_keiki_fervor_ruin = {
 	cost = 5
 	potential = {
-		FROM = { religion = the_keiki }
+		FROM = { religion = THE_keiki_religion }
 	}
 	trigger = {
 		if = {
-			limit = { NOT = { religion = the_keiki } }
-			religion = the_keiki
+			limit = { NOT = { religion = THE_keiki_religion } }
+			religion = THE_keiki_religion
 		}
 	}
 	effect = {
@@ -39,12 +39,12 @@ the_keiki_fervor_ruin = {
 the_keiki_fervor_vibrant = {
 	cost = 5
 	potential = {
-		FROM = { religion = the_keiki }
+		FROM = { religion = THE_keiki_religion }
 	}
 	trigger = {
 		if = {
-			limit = { NOT = { religion = the_keiki } }
-			religion = the_keiki
+			limit = { NOT = { religion = THE_keiki_religion } }
+			religion = THE_keiki_religion
 		}
 	}
 	effect = {
@@ -57,12 +57,12 @@ the_keiki_fervor_vibrant = {
 the_keiki_fervor_mercy = {
 	cost = 5
 	potential = {
-		FROM = { religion = the_keiki }
+		FROM = { religion = THE_keiki_religion }
 	}
 	trigger = {
 		if = {
-			limit = { NOT = { religion = the_keiki } }
-			religion = the_keiki
+			limit = { NOT = { religion = THE_keiki_religion } }
+			religion = THE_keiki_religion
 		}
 	}
 	effect = {

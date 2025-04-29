@@ -11,8 +11,8 @@ country_decisions = {
 			has_country_flag = THE_LIL_unlock_create_daiyousei_advisor_decision_flag
 		}
 		allow = {
-			NOT = { has_advisor_type_in_pool = THE_advisor_daiyousei }
-			NOT = { employed_advisor = { type = THE_advisor_daiyousei } }
+			NOT = { has_advisor_type_in_pool = THE_daiyousei_advisor }
+			NOT = { employed_advisor = { type = THE_daiyousei_advisor } }
 		}
 		effect = {
 			THE_LIL_create_daiyousei_advisor_scripted_effect = yes

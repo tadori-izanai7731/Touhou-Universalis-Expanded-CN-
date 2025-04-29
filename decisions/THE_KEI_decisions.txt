@@ -202,7 +202,7 @@ country_decisions = {
 		potential = {
 			has_country_flag = THE_KEI_can_change_religion_to_the_keiki
 			NOT = {
-				religion = the_keiki
+				religion = THE_keiki_religion
 			}
 		}
 		allow = {
@@ -211,7 +211,7 @@ country_decisions = {
 		}
 		effect = {
 			add_stability = -1
-			change_religion = the_keiki
+			change_religion = THE_keiki_religion
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
@@ -275,7 +275,7 @@ country_decisions = {
 	THE_KEI_the_keiki_religions_decosions_open = {
 		color = { 70 222 219 }
 		potential = {
-			religion = the_keiki
+			religion = THE_keiki_religion
 			has_country_flag = THE_KEI_the_keiki_religions_close_flag
 			NOT = {
 				tag = KEI
@@ -300,7 +300,7 @@ country_decisions = {
 	THE_KEI_the_keiki_religions_decosions_close = {
 		color = { 70 222 219 }
 		potential = {
-			religion = the_keiki
+			religion = THE_keiki_religion
 			ai = no
 			NOT = {
 				tag = KEI
@@ -328,7 +328,7 @@ country_decisions = {
 	THE_KEI_the_subject_of_keiki_decosions_army_tradition = {
 		color = { 70 222 219 }
 		potential = {
-			religion = the_keiki
+			religion = THE_keiki_religion
 			NOT = {
 				has_country_flag = THE_KEI_the_keiki_religions_close_flag
 			}
@@ -403,7 +403,7 @@ country_decisions = {
 	THE_KEI_the_subject_of_keiki_decosions_powerpoints = {
 		color = { 70 222 219 }
 		potential = {
-			religion = the_keiki
+			religion = THE_keiki_religion
 			NOT = {
 				has_country_flag = THE_KEI_the_keiki_religions_close_flag
 			}
@@ -452,7 +452,7 @@ country_decisions = {
 	THE_KEI_the_subject_of_keiki_decosions_powerpoints = {
 		color = { 70 222 219 }
 		potential = {
-			religion = the_keiki
+			religion = THE_keiki_religion
 			NOT = {
 				has_country_flag = THE_KEI_the_keiki_religions_close_flag
 			}
@@ -500,7 +500,7 @@ country_decisions = {
 	THE_KEI_the_subject_of_keiki_decosions_advisor = {
 		color = { 70 222 219 }
 		potential = {
-			religion = the_keiki
+			religion = THE_keiki_religion
 			NOT = {
 				has_country_flag = THE_KEI_the_keiki_religions_close_flag
 			}
@@ -546,7 +546,7 @@ country_decisions = {
 	THE_KEI_the_subject_of_keiki_decosions_religion_war = {
 		color = { 70 222 219 }
 		potential = {
-			religion = the_keiki
+			religion = THE_keiki_religion
 			NOT = {
 				has_country_flag = THE_KEI_the_keiki_religions_close_flag
 			}

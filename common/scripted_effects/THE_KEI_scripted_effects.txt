@@ -314,7 +314,7 @@ THE_KEI_change_province_religion_effects = {
 			mission_completed = THE_KEI_1_10_alone
 		}
 		FROM = {
-			change_religion = the_keiki
+			change_religion = THE_keiki_religion
 		}
 	}
 }
@@ -362,7 +362,7 @@ THE_KEI_explot_the_province_effect = {
 THE_KEI_add_subject_country_blessing_effect = {
 	if = {
 		limit = {
-			religion = the_keiki
+			religion = THE_keiki_religion
 		}
 		change_variable = {
 			which = the_kei_the_blessing_of_the_keiki
@@ -375,7 +375,7 @@ THE_KEI_add_subject_country_blessing_2_effect = {
 	if = {
 		limit = {
 			owner = {
-				religion = the_keiki
+				religion = THE_keiki_religion
 				is_subject_of = KEI
 			}
 			FROM = {
@@ -394,10 +394,10 @@ THE_KEI_add_subject_country_blessing_3_effect = {
 	if = {
 		limit = { 
 			owner = {
-				religion = the_keiki
+				religion = THE_keiki_religion
 			}
 			NOT = {
-				religion = the_keiki
+				religion = THE_keiki_religion
 			}
 		}
 		owner = {
@@ -457,7 +457,7 @@ THE_KEI_change_religions_to_the_keiki_var_effect = {
 		limit = { 
 			owner = {
 				has_government_mechanic = THE_KEI_lonely_creation_mechanic
-				religion = the_keiki
+				religion = THE_keiki_religion
 			}
 		}
 		owner = {

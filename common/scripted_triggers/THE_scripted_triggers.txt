@@ -244,7 +244,7 @@ THE_has_dip_advisor = {
 			advisor = th_advisor_seiga
 			advisor = th_advisor_doremy
 			advisor = th_advisor_star
-			advisor = THE_advisor_daiyousei
+			advisor = THE_daiyousei_advisor
 		}
 	}
 }
@@ -282,7 +282,7 @@ THE_has_dip_advisor_with_level = {
 			th_advisor_seiga = $level$
 			th_advisor_doremy = $level$
 			th_advisor_star = $level$
-			THE_advisor_daiyousei = $level$
+			THE_daiyousei_advisor = $level$
 		}
 	}
 }
@@ -325,9 +325,9 @@ THE_has_mil_advisor = {
 			advisor = th_advisor_kanako
 			advisor = th_advisor_clownpiece
 			advisor = th_advisor_yorihime
-			advisor = the_koishi
-			advisor = the_sizuha
-			advisor = the_mayumi
+			advisor = THE_koishi_advisor
+			advisor = THE_sizuha_advisor
+			advisor = THE_mayumi_advisor
 		}
 	}
 }
@@ -370,9 +370,9 @@ THE_has_mil_advisor_with_level = {
 			th_advisor_kanako = $level$
 			th_advisor_clownpiece = $level$
 			th_advisor_yorihime = $level$
-			the_koishi = $level$
-			the_sizuha = $level$
-			the_mayumi = $level$
+			THE_koishi_advisor = $level$
+			THE_sizuha_advisor = $level$
+			THE_mayumi_advisor = $level$
 		}
 	}
 }

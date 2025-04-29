@@ -1,6 +1,6 @@
 spriteTypes = {
 	spriteType = {
-		name = "GFX_advisor_the_koishi"
+		name = "GFX_advisor_THE_koishi_advisor"
 		texturefile = "gfx//interface//the_advisor//koishi_advisor.png"
 		noOfFrames = 1
 		norefcount = yes
@@ -8,7 +8,7 @@ spriteTypes = {
 		loadType = "INGAME"
 	}
 	spriteType = {
-		name = "GFX_advisor_the_sizuha"
+		name = "GFX_advisor_THE_sizuha_advisor"
 		texturefile = "gfx//interface//the_advisor//sizuha_advisor.dds"
 		noOfFrames = 1
 		norefcount = yes
@@ -16,8 +16,16 @@ spriteTypes = {
 		loadType = "INGAME"
 	}
 	spriteType = {
-		name = "GFX_advisor_the_mayumi"
+		name = "GFX_advisor_THE_mayumi_advisor"
 		texturefile = "gfx//interface//the_advisor//mayumi_advisor.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_THE_daiyousei_advisor"
+		texturefile = "gfx//interface//advisors//th_advisor_daiyousei.dds"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"

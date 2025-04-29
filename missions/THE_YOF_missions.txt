@@ -485,7 +485,7 @@ THE_yof_slot_2 = {
 					}
 				}
 			}
-			religion = th_kagiyama
+			religion = THE_kagiyama_religion
 			check_variable = {
 				which = yof_doom_gather_on_or_off_num
 				value = 5
@@ -742,7 +742,7 @@ THE_yof_slot_2 = {
 			province_id = 4998
 			OR = {
 				NOT = { owned_by = ROOT }
-				NOT = { religion = th_kagiyama }
+				NOT = { religion = THE_kagiyama_religion }
 			}
 		} 
 		
@@ -750,14 +750,14 @@ THE_yof_slot_2 = {
 			OR = {
 				4998 = {
 					owned_by = ROOT
-					religion = th_kagiyama
+					religion = THE_kagiyama_religion
 				}
 				AND = {
 					ROOT = {
 						overlord_of = MRY
 					}
 					MRY = {
-						religion = th_kagiyama
+						religion = THE_kagiyama_religion
 					}
 				}
 			}
@@ -1127,19 +1127,19 @@ THE_yof_slot_3 = {
 				area = Great_youkai_forest
 				area = Eastern_youkai_forest
 			}
-			NOT = { religion = th_kagiyama }
+			NOT = { religion = THE_kagiyama_religion }
 		} 
 		
 		trigger = { 
-			religion = th_kagiyama
+			religion = THE_kagiyama_religion
 			num_of_aspects = 2
 			Great_youkai_forest = {
 				type = all
-				religion = th_kagiyama
+				religion = THE_kagiyama_religion
 			}
 			Eastern_youkai_forest = {
 				type = all
-				religion = th_kagiyama
+				religion = THE_kagiyama_religion
 			}
 		} 
 		
@@ -1266,13 +1266,13 @@ THE_yof_slot_3 = {
 			OR = {
 				calc_true_if = {
 					all_country = {
-						religion = th_kagiyama
+						religion = THE_kagiyama_religion
 					}
 					amount = 5
 				}
 				calc_true_if = {
 					all_province = {
-						religion = th_kagiyama
+						religion = THE_kagiyama_religion
 					}
 					amount = 40
 				}
@@ -1722,7 +1722,7 @@ THE_yof_slot_4 = {
 		} 
 		
 		trigger = { 
-			religion = th_kagiyama
+			religion = THE_kagiyama_religion
 			Great_youkai_forest = {
 				type = all
 				is_prosperous = yes
@@ -1847,7 +1847,7 @@ THE_yof_slot_4 = {
 			}
 			4955 = {
 				owned_by = ROOT
-				religion = th_kagiyama
+				religion = THE_kagiyama_religion
 			}
 		} 
 		
