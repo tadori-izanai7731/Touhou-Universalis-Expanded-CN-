@@ -601,7 +601,6 @@ guiTypes = {
 				clicksound = "click"
 				scripted = yes
 			}
-			##AKI
 			##THE_AKI
 			guiButtonType = {
 				name = THE_AKI_province_button1_gui
@@ -630,7 +629,7 @@ guiTypes = {
 				clicksound = "click"
 				scripted = yes
 			}
-			##KEI
+			##THE_KEI
 			guiButtonType = {
 				name = THE_KEI_decrese_workman_gui
 				position = { x = 152 y = 280 }
