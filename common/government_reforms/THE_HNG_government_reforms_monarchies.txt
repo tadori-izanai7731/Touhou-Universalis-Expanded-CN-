@@ -147,7 +147,7 @@ THE_HNG_use_qiwa_army = {
 		free_leader_pool = 1
 		land_attrition = -0.25
 		global_supply_limit_modifier = 0.33
-		infantry_shock = 1
+		infantry_shock = 0.5
 	}
 	
 	conditional = {
