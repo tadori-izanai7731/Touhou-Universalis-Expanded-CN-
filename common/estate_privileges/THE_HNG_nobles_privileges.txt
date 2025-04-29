@@ -156,6 +156,12 @@ THE_HNG_yaokai_fort_maintenance = {
 		benefits = {
 			fort_maintenance_modifier = -0.5
 			nobles_privilege_slots = 1
+			if = {
+				limit = {
+					has_country_modifier = THE_HNG_modernization_gensokyo_army
+				}
+				can_bypass_forts = yes
+			}
 		}
 		ai_will_do = {
 			factor = 10
