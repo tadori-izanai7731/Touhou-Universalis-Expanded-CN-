@@ -970,17 +970,18 @@ custom_button = {
 		#判断升级
 		if = {
 			limit = { 
-				mission_completed = THE_KEI_3_11
+				FROM = {
+					mission_completed = THE_KEI_3_11
+				}
 			}
 			OR = {
-				owned_by = ROOT
-				controlled_by = ROOT
-				owned_by_subject_of = ROOT
+				owned_by = FROM
+				controlled_by = FROM
+				owned_by_subject_of = FROM
 			}
 		}
 		else = {
 			owned_by = FROM
-			is_core = FROM
 		}
 		FROM = {
 			has_government_mechanic = THE_KEI_lonely_creation_mechanic
