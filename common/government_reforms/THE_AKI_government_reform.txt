@@ -12,8 +12,6 @@ THE_AKI_harvest_and_autumn_reform = {
 	valid_for_nation_designer = no
 	rulers_can_be_generals = no
 	can_change_primary_culture = no
-	enables_aristocratic_idea_group = no
-	enables_divine_idea_group = yes
 	
 	modifiers = {
 		governing_capacity = 250
@@ -27,6 +25,7 @@ THE_AKI_harvest_and_autumn_reform = {
 		THE_AKI_harvest_autumn_mechanic
 	}
 	custom_attributes = {
+		enables_divine_idea_group = yes
 		THE_AKI_harvest_autumn_province_buff_abilities = yes
 	}
 }
