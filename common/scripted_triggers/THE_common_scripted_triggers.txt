@@ -16,6 +16,8 @@ THE_use_common_election_scripted_trigger = {
 	NOT = { has_reform = THE_TFR_shadow_republic_reform }
 }
 
+# 必要分句 idea = $idea$
+# 请在
 THE_can_use_special_culture_ideas_scripted_trigger = {
 	# ai = no
 	OR = {
