@@ -21,13 +21,30 @@ country_decisions = {
 		}
 		potential = {
 			ai = no
-			has_country_flag = THE_debug_flag
+			has_country_flag = THE_testtest_flag
 		}
 		allow = {
 			religion_group = Touhou
 			religion_group = lunarian_religion_g
 		}
 		effect = {
+			if = {
+				limit = { any_country = { has_reform = shogunate } }
+				if = {
+					limit = { NOT = { government = monarchy } }
+					change_government = monarchy
+				}
+				add_government_reform = daimyo
+				random_country = {
+					limit = {
+						has_reform = shogunate
+					}
+					create_subject = {
+						who = ROOT
+						subject_type = daimyo_vassal
+					}
+				}
+			}
 		}
 	}
 }
