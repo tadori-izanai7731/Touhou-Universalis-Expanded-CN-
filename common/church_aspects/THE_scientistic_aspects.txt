@@ -1,0 +1,63 @@
+THE_build_theology_scientistic_blessing = {
+	is_blessing = yes
+
+	modifier = {
+		missionaries = 1
+		missionary_maintenance_cost = -0.33
+		church_loyalty_modifier = 0.1
+	}
+	ai_will_do = {
+		factor = 15
+	}
+}
+
+THE_religion_cross_research_scientistic_blessing = {
+	is_blessing = yes
+
+	modifier = {
+		development_cost = -0.1
+		monthly_reform_progress_modifier = 0.1
+	}
+	ai_will_do = {
+		factor = 15
+	}
+}
+
+THE_deny_miracle_scientistic_blessing = {
+	is_blessing = yes
+
+	modifier = {
+		free_policy = 1
+		embracement_cost = -0.25
+	}
+	ai_will_do = {
+		factor = 15
+	}
+}
+
+THE_science_technology_history_scientistic_blessing = {
+	is_blessing = yes
+
+	modifier = {
+		yearly_innovativeness = 0.25
+		monthly_splendor = 3
+		prestige = 1
+	}
+	ai_will_do = {
+		factor = 15
+	}
+}
+
+THE_contact_religion_society_scientistic_blessing = {
+	is_blessing = yes
+
+	modifier = {
+		same_religion_advisor_cost = -0.15
+		reverse_relation_with_heathen_religion = 10
+		reverse_relation_with_heretic_religion = 20
+	}
+	ai_will_do = {
+		factor = 15
+	}
+}
+

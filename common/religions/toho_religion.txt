@@ -1083,7 +1083,7 @@ Touhou = {
 			idea_cost = -0.1
 		}
 		
-		holy_sites = { 5180 1029 385 379 118 }
+		holy_sites = { 5180 1029 385 379 118 4955 4998 2140 558 5320 }
 		
 		blessings = {
 			th_scientistic_spreading_the_word
@@ -1091,6 +1091,11 @@ Touhou = {
 			th_scientistic_educated_governors
 			th_scientistic_send_archaeologist
 			th_scientistic_religious_modernized_production
+			THE_build_theology_scientistic_blessing
+			THE_religion_cross_research_scientistic_blessing
+			THE_deny_miracle_scientistic_blessing
+			THE_science_technology_history_scientistic_blessing
+			THE_contact_religion_society_scientistic_blessing
 		}
 		can_have_secondary_religion = yes
 		

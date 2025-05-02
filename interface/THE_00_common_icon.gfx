@@ -70,4 +70,30 @@ spriteTypes = {
 		
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
+
+	spriteType = {
+		name = "GFX_holy_site_4955"
+		texturefile = "gfx//interface//holy_sites//THE_hakurei_shrine_holy_sites.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_holy_site_4998"
+		texturefile = "gfx//interface//holy_sites//THE_moriya_shrine_holy_sites.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_holy_site_5320"
+		texturefile = "gfx//interface//holy_sites//THE_lunar_capital_holy_sites.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_holy_site_2140"
+		texturefile = "gfx//interface//holy_sites//THE_confucius_temple_holy_sites.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_holy_site_558"
+		texturefile = "gfx//interface//holy_sites//THE_buddhism_origin_holy_sites.dds"
+		loadType = "INGAME"
+	}
 }
