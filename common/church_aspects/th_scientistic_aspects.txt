@@ -1,9 +1,5 @@
 th_scientistic_spreading_the_word = {
 	is_blessing = yes
-	potential = {
-		NOT = { has_country_flag = THE_reselect_scientistic_blessing }
-	}
-
 	modifier = {
 		core_creation = -0.1
 		diplomatic_annexation_cost = -0.1
@@ -23,10 +19,6 @@ th_scientistic_spreading_the_word = {
 
 th_scientistic_teachings_of_the_crusades = {
 	is_blessing = yes
-	potential = {
-		NOT = { has_country_flag = THE_reselect_scientistic_blessing }
-	}
-
 	modifier = {
 		manpower_recovery_speed = 0.1
 		discipline = 0.05
@@ -44,10 +36,6 @@ th_scientistic_teachings_of_the_crusades = {
 
 th_scientistic_educated_governors = {
 	is_blessing = yes
-	potential = {
-		NOT = { has_country_flag = THE_reselect_scientistic_blessing }
-	}
-
 	modifier = {
 		legitimacy = 1
 		horde_unity = 1
@@ -73,10 +61,6 @@ th_scientistic_educated_governors = {
 
 th_scientistic_send_archaeologist = {
 	is_blessing = yes
-	potential = {
-		NOT = { has_country_flag = THE_reselect_scientistic_blessing }
-	}
-
 	modifier = {
 		global_missionary_strength = 0.03
 		idea_cost = -0.1
@@ -107,10 +91,6 @@ th_scientistic_send_archaeologist = {
 
 th_scientistic_religious_modernized_production = {
 	is_blessing = yes
-	potential = {
-		NOT = { has_country_flag = THE_reselect_scientistic_blessing }
-	}
-
 	modifier = {
 		global_trade_goods_size_modifier = 0.1
 		tolerance_own = 3
@@ -119,4 +99,3 @@ th_scientistic_religious_modernized_production = {
 		factor = 15
 	}
 }
-
