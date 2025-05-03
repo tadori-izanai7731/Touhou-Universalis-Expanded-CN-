@@ -1,0 +1,86 @@
+l_english:
+### COUNTRY
+ SEJ: "正邪领域"
+ SEJ_ADJ: "正邪领域"
+### COUNTRY_END
+
+### EVENT
+ flavor_THE_SEJ.1.t: "正邪的逃亡"
+### EVENT_END
+
+### IDEA
+ THE_SEJ_ideas: "正邪理念"
+ THE_SEJ_ideas_start: "正邪传统"
+ THE_SEJ_ideas_bonus: "正邪野心"
+ THE_SEJ_ideas_1: "弱者探险家"
+ THE_SEJ_ideas_1_desc: "缺乏美洲地图的正邪决心逆反传统，雇佣那些弱者而非贵族成为探险家，为扩张与行军提供指导"
+ THE_SEJ_ideas_2: "大规模训练"
+ THE_SEJ_ideas_2_desc: "拥有严格训练与钢铁纪律的弱者便足以统治强者——《下克上宣言》"
+ THE_SEJ_ideas_3: "下克上之火"
+ THE_SEJ_ideas_3_desc: "每一位弱者都有责任将下克上之火传遍世界的每一个角落——《下克上宣言》"
+ THE_SEJ_ideas_4: "弱者们，团结起来"
+ THE_SEJ_ideas_4_desc: "团结一致，携手共进，为了下克上的信仰而战——《下克上宣言》"
+ THE_SEJ_ideas_5: "下克上裁判所"
+ THE_SEJ_ideas_5_desc: "如果谁不能接受下克上的信仰，谁就是要被统治的强者"
+ THE_SEJ_ideas_6: "这是一场革命"
+ THE_SEJ_ideas_6_desc: "弱者们不屑于妥协，只会坚定地向全世界输出下克上的信仰——《下克上宣言》"
+ THE_SEJ_ideas_7: "驱逐强者"
+ THE_SEJ_ideas_7_desc: "作为被统治者的强者们，应当在新世界为弱者的事业做出贡献以偿还罪孽"
+### IDEA_END
+
+### GOVERNMENT
+ THE_SEJ_revolutionary_seija: "下克上革命社会"
+ THE_SEJ_revolutionary_seija_desc: "整个弱者社会团结在正邪周围，为了下克上的理念而奋斗"
+ THE_SEJ_revolutionary_guard: "正邪革命卫队训练"
+ THE_SEJ_revolutionary_guard_desc: "革命卫队成员必须经历残酷的犯规弹幕考验，以此来强化作战能力"
+
+ THE_SEJ_RULER: "天邪鬼"
+### GOVERNMENT_END
+
+### MODIFIER
+ THE_sej_mission_modifier_a: "正邪在奇琴伊察"
+ THE_sej_mission_modifier1: "教土著识字"
+ THE_sej_mission_modifier2: "移风易俗"
+ THE_sej_mission_modifier3: "下克上裁判所"
+ THE_sej_mission_modifier4: "弥合城邦冲突"
+ THE_sej_mission_modifier5: "建立合作机构"
+ THE_sej_mission_modifier6: "忠诚于正邪"
+ THE_sej_mission_modifier7: "复兴玛雅潘"
+ THE_sej_mission_modifier_852: "起飞！特诺奇蒂特兰"
+ THE_sej_mission_modifier9: "帕查库蒂的伟业"
+ THE_sej_mission_modifier10: "防御准备"
+ THE_sej_mission_modifier11: "海军准备"
+ THE_sej_mission_modifier12: "瘟疫防治"
+ THE_sej_mission_modifier13: "军事准备"
+ THE_sej_mission_modifier14: "开天辟地"
+ THE_sej_mission_modifier15: "最后的魔力"
+ THE_sej_mission_modifier17: "探索美洲"
+ THE_sej_mission_modifier18: "发现欧洲"
+ 
+### RELIGION
+ THE_Seija_religion_blessings: "反则道具"
+ THE_seija_A_Miracle_Mallet_Replica_blessing: "万宝槌仿制品"
+ THE_seija_Bloodthirsty_Yin_Yang_Orb_blessing: "渴望鲜血的阴阳玉"
+ THE_seija_Nimble_Fabric_blessing: "闪避布"
+ THE_seija_Substitute_Jizo_blessing: "替身地藏"
+ THE_seija_Ghastly_Send_Off_Lantern_blessing: "亡灵的送行提灯"
+ THE_seija_Four_Foot_Magic_Bomb_blessing: "四尺魔法炸弹"
+ THE_seija_Gap_Folding_Umbrella_blessing: "隙间的折叠伞"
+ THE_seija_Cursed_Decoy_Doll_blessing: "被诅咒的诱饵人偶"
+ THE_seija_Tengus_Toy_Camera_blessing: "天狗的玩具相机"
+### RELIGION_END
+
+ THE_SEJ_country_release_decision_title: "正邪的逃亡"
+ THE_SEJ_country_release_decision_desc: "正邪向小碗提出了特别的提议"
+ 
+ flavor_THE_SEJ.1: "正邪的逃亡"
+ flavor_THE_SEJ.1.desc: "历经幻想乡众人持续的追捕后，面对着破损的大结界，正邪想到了逃亡方法：“我要去世界上最落后的地方逃脱追捕，顺便掀起一场轰轰烈烈的下克上！”随即她便告别小碗，带上了失去能量的道具，踏上了前往美洲之路"
+ flavor_THE_SEJ.1.a: "正邪，你改悔罢"
+ flavor_THE_SEJ.1.b: "放心,我天邪鬼会回来的！"
+
+ SEJ_center_of_revolution.1000.name: "重燃下克上的火炬"
+ SEJ_center_of_revolution.1000.desc: "随着下克上斗争在幻想乡的失败，整个幻想乡的旧秩序仿佛都松了口气，满以为挑战已经被克服，一切都将归于正轨。然而，现在看来他们放心得太早了：在完成了初期准备工作后，正邪已经重新高举起下克上的旗帜，立志将整个世界弱者从强者的压迫中解放出来。"
+
+ flavor_THE_SEJ.EVTNAME101: "下克上宣言"
+ flavor_THE_SEJ.EVTDESC101: "正邪带着最辉煌的胜利，凯旋的军队，潜能释放的道具，回到了她最忠诚的黑宫。在这里，所有弱者们团结起来，组成了训练有素，士气高昂的军队，他们誓要保卫革命到最后一息。这一切意味着，正邪终于要对外输出革命了，她要让下克上之火冲出美洲，点燃整个世界！"
+ flavor_THE_SEJ.EVTOPTA101: "吾名正邪 生来即是天邪鬼！"

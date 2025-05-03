@@ -1,125 +1,125 @@
 #正邪在奇琴伊察
 THE_sej_mission_modifier_a = {
-    global_manpower = 10
-    add_years_of_income = 1
+	global_manpower = 10
+	add_years_of_income = 1
 }
 #教土著识字
 THE_sej_mission_modifier1 = {
 	culture_conversion_cost = -0.25
-    culture_conversion_time = -0.25
+	culture_conversion_time = -0.25
 }
 #移风易俗
 THE_sej_mission_modifier2 = {
-    global_missionary_strength = 0.01
-    tolerance_of_heathens_capacity = 1
+	global_missionary_strength = 0.01
+	tolerance_of_heathens_capacity = 1
 }
 #下克上裁判所
 THE_sej_mission_modifier3 ={
 	missionaries = 2
-    global_missionary_strength = 0.03
-    global_unrest = 2
-    tolerance_own = 2
-   # 加一行政
+	global_missionary_strength = 0.03
+	global_unrest = 2
+	tolerance_own = 2
+	# 加一行政
 }
 #弥合城邦冲突
 THE_sej_mission_modifier4 ={
 	global_autonomy = -0.05
-    stability_cost_modifier = -0.2
+	stability_cost_modifier = -0.2
 }
 #建立合作机构
 THE_sej_mission_modifier5 ={
-    global_unrest = -2
-    governing_capacity_modifier = -0.15
-    #加一外交
+	global_unrest = -2
+	governing_capacity_modifier = -0.15
+	#加一外交
 }
 #忠诚于正邪
 THE_sej_mission_modifier6 ={
-    governing_capacity_modifier = 0.25
+	governing_capacity_modifier = 0.25
 }
 #复兴玛雅潘
 THE_sej_mission_modifier7 ={
 	manpower_recovery_speed = 0.2
-    infantry_power = 0.1
+	infantry_power = 0.1
 }
 #起飞！特诺奇蒂特兰
 THE_sej_mission_modifier_852 = {
-    local_development_cost_modifier = -0.3
-    institution_growth = 1
+	local_development_cost_modifier = -0.3
+	institution_growth = 1
 }
 #添加奇观
 THE_sej_mission_modifier8 ={
-    great_project_upgrade_cost = -0.25
-    great_project_upgrade_time = -0.1
-    #仅限墨西哥城
+	great_project_upgrade_cost = -0.25
+	great_project_upgrade_time = -0.1
+	#仅限墨西哥城
 }
 #帕查库蒂的伟业
 THE_sej_mission_modifier9 ={
-    core_creation = -0.25
-    siege_ability = 0.1
-    num_accepted_cultures = 2
-    #加一行政
+	core_creation = -0.25
+	siege_ability = 0.1
+	num_accepted_cultures = 2
+	#加一行政
 }
 #防御准备
 THE_sej_mission_modifier10 ={
-    embracement_cost = -0.2
-    technology_cost = -0.15
+	embracement_cost = -0.2
+	technology_cost = -0.15
 }
 #海军准备
 THE_sej_mission_modifier11 ={
-    heavy_ship_cost = -0.3
-    global_ship_recruit_speed = -0.3
-    add_years_of_income = -3
-    #加一外交
+	heavy_ship_cost = -0.3
+	global_ship_recruit_speed = -0.3
+	add_years_of_income = -3
+	#加一外交
 }
 #瘟疫防治
 THE_sej_mission_modifier12 ={
-    add_stability = 1
-    manpower_recovery_speed = 0.1
-    add_years_of_income = -2
+	add_stability = 1
+	manpower_recovery_speed = 0.1
+	add_years_of_income = -2
 }
 #军事准备
 THE_sej_mission_modifier13 ={
-    province_warscore_cost = -0.2
-    country_military_power = 1
-    infantry_power = 0.1
-    add_years_of_income = -2
+	province_warscore_cost = -0.2
+	country_military_power = 1
+	infantry_power = 0.1
+	add_years_of_income = -2
 }
 #开天辟地
 THE_sej_mission_modifier14 ={
-    add_stability = -2
-    if = {
-      limit = { NOT = { government = monarchy } }
-      change_government_to_monarchy = yes
-    }
-    add_government_reform = THE_SEJ_revolutionary_seija
-    random_owned_province = {
-      limit = {
-        continent = root
-        is_core = ROOT
-        is_capital = no
-        highest_supply_limit_in_area = yes
-      }
-      spawn_rebels = {
-        type = revolutionary_rebels
-        size = 3
-      }
-    }
+	add_stability = -2
+	if = {
+		limit = { NOT = { government = monarchy } }
+		change_government_to_monarchy = yes
+	}
+	add_government_reform = THE_SEJ_revolutionary_seija
+	random_owned_province = {
+		limit = {
+			continent = root
+			is_core = ROOT
+			is_capital = no
+			highest_supply_limit_in_area = yes
+		}
+		spawn_rebels = {
+			type = revolutionary_rebels
+			size = 3
+		}
+	}
 }
 #最后的魔力
 THE_sej_mission_modifier15 ={
-    colonists = 1
-    global_colonial_growth = 1000
-    colony_development_boost = 1
+	colonists = 1
+	global_colonial_growth = 1000
+	colony_development_boost = 1
 }
 #探索美洲
 THE_sej_mission_modifier17 ={
 	range = 0.5
-    navy_tradition = 1
+	navy_tradition = 1
 }
 #发现欧洲
 THE_sej_mission_modifier18 ={
-    range = 0.5
-    navy_tradition = 1
+	range = 0.5
+	navy_tradition = 1
 }
 
-	
+

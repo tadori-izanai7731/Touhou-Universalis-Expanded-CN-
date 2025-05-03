@@ -1,11 +1,13 @@
 THE_SEJ_revolutionary_seija = {
 	lock_level_when_selected = yes
-    # government mechanics flags go here
+	# government mechanics flags go here
 	icon = "rioting_burning"
 	potential = {
+		OR = {
 			tag = SEJ
-			was_tag = SEJ{
-			has_country_modifier =	THE_sej_mission_modifier12
+			was_tag = SEJ
+		}
+		has_country_modifier =	THE_sej_mission_modifier12
 	}
 	allow_normal_conversion = no
 	legacy_government = yes
@@ -15,9 +17,9 @@ THE_SEJ_revolutionary_seija = {
 	revolutionary = yes
 	is_eligible_for_hre_emperor = no
 	modifiers = {
-    	governing_capacity = 250
+		governing_capacity = 250
 		global_manpower_modifier = 0.25
-		land_morale = 0.10
+		land_morale = 0.20
 		global_autonomy = -0.2
 		allowed_rev_guard_fraction = 0.2
 	}
@@ -30,10 +32,11 @@ THE_SEJ_revolutionary_guard	= {
 	icon = "line_infantry"
 	
 	potential = {
-			has_reform = THE_SEJ_revolutionary_seija
+		has_reform = THE_SEJ_revolutionary_seija
 	}
 	
 	modifiers = {
+		# Need Fix
 		land_maintenance_modifier = 0.5
 		fire_damage_received = -0.1
 		shock_damage_received = -0.1

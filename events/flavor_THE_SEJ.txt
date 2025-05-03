@@ -1,194 +1,193 @@
 namespace = flavor_THE_SEJ
-	#COCÔøΩ∆øÔøΩƒ∑ ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ
-country_event = {
-    id = flavor_THE_SEJ.1
-    title = "flavor_THE_SEJ.1.t"
-    desc = "flavor_THE_SEJ.1.desc"
-    picture = SEIJA_eventPicture
-    fire_only_once = yes
-    is_triggered_only = yes
-    option = {
-      name = flavor_THE_SEJ.1.a
-      ai_chance = {
-        factor = 0
-      }
-    }
-    option = {
-      name = flavor_THE_SEJ.1.b
-      highlight = yes
-      hidden_effect = {
-        COC = {
-          every_owned_province = {
-            kill_units = {
-              who = owner
-            }
-          }
-        }
-        inherit = COC
-        central_america_superregion = {
-          limit = {
-            owned_by = ROOT
-          }
-          add_core = SEJ
-          remove_core = ROOT
-          remove_core = COC
-          change_religion = THE_Seija_religion
-        }
-      }
-      release = SEJ
-      switch_tag = SEJ
-      hidden_effect = {
-        SEJ = {
-          change_government = monarchy
-          add_government_reform = Gensokyan_monarchy
-          adopt_reform_progress = ROOT
-          change_primary_culture = "Youkai"
-          change_religion = THE_Seija_religion
-          remove_country_modifier = conversion_zeal
-          define_ruler = {
-            name = "ck™ê"  # Seija
-            dynasty = "<õ∫N"  # Kijin
-            age = "15"
-            adm = 4
-            dip = 2
-            mil = 6
-            female = yes
-            culture = "Youkai"
-            religion = THE_Seija_religion
-          }
-          set_ruler_flag = touhou_character_ruler
-          set_ruler_flag = touhou_original_ruler
-          add_ruler_personality = immortal_personality
-          add_ruler_personality = peasant_revolt_leader_personality
-          add_accepted_culture = yucatec
-          add_accepted_culture = putun
-          add_accepted_culture = mayan
-          add_accepted_culture = highland_mayan
-          add_accepted_culture = wastek
-          add_accepted_culture = chontales
 
-          add_adm_power = 98
-          add_dip_power = 112
-          add_mil_power = 112
-          add_manpower = 5
-          add_sailors = 100
-          add_prestige = 25
-          set_capital = 846
-          change_estate_land_share = {
-            estate = estate_church
-            share = 20
-          }
-          change_estate_land_share = {
-            estate = estate_burghers
-            share = 20
-          }
-          change_estate_land_share = {
-            estate = estate_nobles
-            share = 29
-          }
-          capital_scope = {
-            add_base_tax = 2
-            add_base_production = 2
-            add_base_manpower = 2
-            change_culture = "Youkai"
-            change_religion = THE_Seija_religion
-            build_to_forcelimit = {
-              infantry = 0.9
-              light_ship = 0.4
-              transport = 0.5
-            }
-          }
-          north_america_superregion = {
-            discover_country = SEJ
-          }
-          south_america_superregion = {
-            discover_country = SEJ
-          }
-          central_america_superregion = {
-            discover_country = SEJ
-          }
-          guinea_region = {
-            discover_country = SEJ
-          }
-          country_event = {
-            id = th_religion_events.4
-            days = 7
-          }
-        }
-      }
-      ai_chance = {
-        factor = 100
-      }
-    }
+
+country_event = {
+	id = flavor_THE_SEJ.1
+	title = "flavor_THE_SEJ.1.t"
+	desc = "flavor_THE_SEJ.1.desc"
+	picture = SEIJA_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = flavor_THE_SEJ.1.a
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = flavor_THE_SEJ.1.b
+		highlight = yes
+		hidden_effect = {
+			COC = {
+				every_owned_province = {
+					kill_units = {
+						who = owner
+					}
+				}
+			}
+			inherit = COC
+			central_america_superregion = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_core = SEJ
+				remove_core = ROOT
+				remove_core = COC
+				change_religion = THE_Seija_religion
+			}
+		}
+		release = SEJ
+		switch_tag = SEJ
+		hidden_effect = {
+			SEJ = {
+				change_government = monarchy
+				add_government_reform = Gensokyan_monarchy
+				adopt_reform_progress = ROOT
+				change_primary_culture = "Youkai"
+				change_religion = THE_Seija_religion
+				remove_country_modifier = conversion_zeal
+				define_ruler = {
+					name = "ckÔøΩÔøΩ"  # Seija
+					dynasty = "<ÔøΩÔøΩN"  # Kijin
+					age = "15"
+					adm = 4
+					dip = 2
+					mil = 6
+					female = yes
+					culture = "Youkai"
+					religion = THE_Seija_religion
+				}
+				set_ruler_flag = touhou_character_ruler
+				set_ruler_flag = touhou_original_ruler
+				add_ruler_personality = immortal_personality
+				add_ruler_personality = peasant_revolt_leader_personality
+				add_accepted_culture = yucatec
+				add_accepted_culture = putun
+				add_accepted_culture = mayan
+				add_accepted_culture = highland_mayan
+				add_accepted_culture = wastek
+				add_accepted_culture = chontales
+				
+				add_adm_power = 98
+				add_dip_power = 112
+				add_mil_power = 112
+				add_manpower = 5
+				add_sailors = 100
+				add_prestige = 25
+				set_capital = 846
+				change_estate_land_share = {
+					estate = estate_church
+					share = 20
+				}
+				change_estate_land_share = {
+					estate = estate_burghers
+					share = 20
+				}
+				change_estate_land_share = {
+					estate = estate_nobles
+					share = 29
+				}
+				capital_scope = {
+					add_base_tax = 2
+					add_base_production = 2
+					add_base_manpower = 2
+					change_culture = "Youkai"
+					change_religion = THE_Seija_religion
+					build_to_forcelimit = {
+						infantry = 0.9
+						light_ship = 0.4
+						transport = 0.5
+					}
+				}
+				north_america_superregion = {
+					discover_country = SEJ
+				}
+				south_america_superregion = {
+					discover_country = SEJ
+				}
+				central_america_superregion = {
+					discover_country = SEJ
+				}
+				guinea_region = {
+					discover_country = SEJ
+				}
+				country_event = {
+					id = th_religion_events.4
+					days = 7
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
 }
 province_event = {
-      id = SEJ_center_of_revolution.1000
-      title = SEJ_center_of_revolution.1000.name
-      desc = SEJ_center_of_revolution.1000.desc
-      picture = REVOLUTION_eventPicture
-      major = yes
-      goto = root
-      is_triggered_only = yes
-      
-      trigger = {
-        has_dlc = "Emperor"
-        development = 20
-        owner = {
-          is_great_power = yes
-          is_free_or_tributary_trigger = yes
-          NOT = { tag = PAP }
-          #NOT = { has_reform = celestial_empire }
-        }
-        NOT = { has_province_modifier = religious_center }
-      }
-      fire_only_once = yes
-      immediate = {
-        hidden_effect = {
-          save_global_event_target_as = revolution_center
-          save_global_event_target_as = first_revolution_center
-        }
-      }
-    
-      option = {
-        name = SEJ_center_of_revolution.1000.A
-        spawn_center_of_revolution = root
-        set_province_flag = first_revolution_center
-        set_global_flag = first_revolution_center_spawned #to check time since spawn for backup center
-        
-        log = "Center of Revolution spawned in [Root.GetName] (owner: [Root.Owner.GetName]) in [GetYear]"
-      }
+	id = SEJ_center_of_revolution.1000
+	title = SEJ_center_of_revolution.1000.name
+	desc = SEJ_center_of_revolution.1000.desc
+	picture = REVOLUTION_eventPicture
+	major = yes
+	goto = root
+	is_triggered_only = yes
+	
+	trigger = {
+		has_dlc = "Emperor"
+		development = 20
+		owner = {
+			is_great_power = yes
+			is_free_or_tributary_trigger = yes
+			NOT = { tag = PAP }
+			#NOT = { has_reform = celestial_empire }
+		}
+		NOT = { has_province_modifier = religious_center }
+	}
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = {
+			save_global_event_target_as = revolution_center
+			save_global_event_target_as = first_revolution_center
+		}
+	}
+	
+	option = {
+		name = SEJ_center_of_revolution.1000.A
+		spawn_center_of_revolution = root
+		set_province_flag = first_revolution_center
+		set_global_flag = first_revolution_center_spawned #to check time since spawn for backup center
+		
+		log = "Center of Revolution spawned in [Root.GetName] (owner: [Root.Owner.GetName]) in [GetYear]"
+	}
 }
-    
+
 country_event = {
-      id = flavor_THE_SEJ.10
-      title = "flavor_THE_SEJ.EVTNAME101"
-      desc = "flavor_THE_SEJ.EVTDESC101"
-      picture = IMPORTANT_STATUE_eventPicture
-      is_triggered_only = yes
-      option = {		# France will be an empire!
-        name = "flavor_THE_SEJ.EVTOPTA101"
-        add_stability = -2
-        if = {
-          limit = { NOT = { government = monarchy } }
-          change_government_to_monarchy = yes
-        }
-        add_government_reform = THE_SEJ_revolutionary_seija
-        random_owned_province = {
-          limit = {
-            continent = root
-            is_core = ROOT
-            is_capital = no
-            highest_supply_limit_in_area = yes
-          }
-          spawn_rebels = {
-            type = revolutionary_rebels
-            size = 3
-          }
-        }
-      }
+	id = flavor_THE_SEJ.10
+	title = "flavor_THE_SEJ.EVTNAME101"
+	desc = "flavor_THE_SEJ.EVTDESC101"
+	picture = IMPORTANT_STATUE_eventPicture
+	is_triggered_only = yes
+	option = {		# France will be an empire!
+	name = "flavor_THE_SEJ.EVTOPTA101"
+	add_stability = -2
+	if = {
+		limit = { NOT = { government = monarchy } }
+		change_government_to_monarchy = yes
+	}
+	add_government_reform = THE_SEJ_revolutionary_seija
+	random_owned_province = {
+		limit = {
+			continent = root
+			is_core = ROOT
+			is_capital = no
+			highest_supply_limit_in_area = yes
+		}
+		spawn_rebels = {
+			type = revolutionary_rebels
+			size = 3
+		}
+	}
 }
-    
-    
+}
 
 
 
@@ -234,4 +233,6 @@ country_event = {
 
 
 
-  }
+
+
+}

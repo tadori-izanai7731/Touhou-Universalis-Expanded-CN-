@@ -7,15 +7,11 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		or = {
+		OR = {
 			has_dlc = "El Dorado"
 			has_dlc = "Winds of Change"
 		}
 		religion = mesoamerican_religion
-	}
-	
-	mean_time_to_happen = {
-		days = 1
 	}
 	
 	immediate = {
