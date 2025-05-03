@@ -341,27 +341,4 @@ country_decisions = {
 			}
 		}
 	}
-	#成立正邪
-	THE_SEJ_country_release_decision = {
-		potential = {	
-			tag = NCS
-			NOT = { exists = SEJ }
-			NOT = { has_country_flag = is_releasing_seija }
-			NOT = { is_year = 1445 }
-		}
-		allow = { NOT = { is_year = 1445 } }
-		effect = {
-			hidden_effect = {
-				set_country_flag = is_releasing_seija
-			}
-			country_event = { 
-				id = flavor_THE_SEJ.1
-			}
-		}
-		major = yes
-		
-		ai_will_do = {
-			factor = 0
-		}
-	}
 }
