@@ -1541,22 +1541,24 @@ THE_KEI_main_branch_4 = {
 				}
 				custom_tooltip = THE_KEI_4_5_c_tt2_yes
 				custom_tooltip = THE_KEI_4_5_c_tt1
-				every_owned_province = {
-					limit = {
-						has_building = temple
-						OR = {
-							area = Sea_of_petroleum
-							area = Gate_to_the_dead 
-							area = Yachie_state
-							area = Saki_state
-							area = Sanzu_upstream
-							area = Hifuu_club
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							has_building = temple
+							OR = {
+								area = Sea_of_petroleum
+								area = Gate_to_the_dead 
+								area = Yachie_state
+								area = Saki_state
+								area = Sanzu_upstream
+								area = Hifuu_club
+							}
 						}
-					}
-					owner = {
-						add_adm_power = 10
-						add_dip_power = 10
-						add_mil_power = 10
+						owner = {
+							add_adm_power = 10
+							add_dip_power = 10
+							add_mil_power = 10
+						}
 					}
 				}
 			}
