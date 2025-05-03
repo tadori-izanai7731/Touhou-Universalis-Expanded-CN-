@@ -82,7 +82,13 @@ THE_YUM_mission_branch_2 = {
 		position = 1
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			OR = {
+				army_size_percentage = 1.0
+				army_size = 30
+			}
+			num_of_generals = 1
+		} 
 
 		effect = {  } 
 	}
