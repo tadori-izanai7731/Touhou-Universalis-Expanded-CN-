@@ -1,0 +1,13 @@
+THE_SEJ_define_ruler_kijin_seija_scripted_effect = {
+	define_ruler = {
+		name = "正邪"  # Seija
+		dynasty = "鬼人"  # Kijin
+		age = 15
+		adm = 4
+		dip = 2
+		mil = 6
+		female = yes
+		culture = "Youkai"
+		religion = THE_Seija_religion
+	}
+}
