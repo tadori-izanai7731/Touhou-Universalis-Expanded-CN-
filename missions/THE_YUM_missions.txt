@@ -346,17 +346,6 @@ THE_YUM_mission_branch_5 = {
 		effect = {  } 
 	}
 
-	THE_YUM_mission_5_7 = {
-		icon = mission_unknown_mission
-		position = 7
-		required_missions = { THE_YUM_mission_4_6 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
 	THE_YUM_mission_5_5 = {
 		icon = mission_unknown_mission
 		position = 5
@@ -371,6 +360,17 @@ THE_YUM_mission_branch_5 = {
 		icon = mission_unknown_mission
 		position = 6
 		required_missions = { THE_YUM_mission_5_5 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_YUM_mission_5_7 = {
+		icon = mission_unknown_mission
+		position = 7
+		required_missions = { THE_YUM_mission_4_6 } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
