@@ -1,0 +1,44 @@
+THE_SEJ_ideas = {
+    start = {
+        global_unrest = 1
+		tolerance_own = 3
+	}
+	bonus = {
+        allowed_rev_guard_fraction = 0.2
+        max_revolutionary_zeal = 50
+	}
+	trigger = {
+		tag = SEJ
+	}
+	free = yes
+	THE_SEJ_ideas_1 = {
+        free_maintenance_on_expl_conq = yes
+		may_explore = yes
+	}
+	THE_SEJ_ideas_2 = {
+        infantry_power = 0.1
+        drill_decay_modifier = -0.2	
+	}
+	THE_SEJ_ideas_3 = {
+		colonists = 1
+		native_uprising_chance = -0.50
+	}
+	THE_SEJ_ideas_4 = {
+        years_of_nationalism = -5
+        manpower_in_true_faith_provinces = 0.15
+	}
+	THE_SEJ_ideas_5 = {
+		global_missionary_strength = 0.03
+		missionaries = 1
+	}
+	THE_SEJ_ideas_6 = {
+        warscore_cost_vs_other_religion = -0.25
+        tolerance_heretic = -3
+        tolerance_heathen = -3
+	}
+	THE_SEJ_ideas_7 = {
+		may_establish_frontier = yes
+        colony_development_boost = 1
+		auto_explore_adjacent_to_colony = yes
+	}
+}

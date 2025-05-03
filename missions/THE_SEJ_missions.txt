@@ -1,0 +1,532 @@
+THE_SEJ_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SEJ } 
+
+	THE_SEJ_missions_1_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_SEJ_missions_3_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = { dip_power = 200 } 
+
+		effect = {
+			add_dip_power = -200
+			add_country_modifier = {
+				name = "THE_sej_mission_modifier1"
+				duration = 7300
+			}
+		}
+	}
+
+	THE_SEJ_missions_1_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_SEJ_missions_1_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			2652 = { culture = Youkai } 
+			4591 = { culture = Youkai } 
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_sej_mission_modifier2"
+				duration = 7300
+			}
+		}
+	}
+
+	THE_SEJ_missions_1_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { THE_SEJ_missions_1_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = { religious_unity = 0.99 } 
+
+		effect = {
+			th_increase_ruler_adm_stat = { adm = 1 } 
+			add_country_modifier = {
+				name = "THE_sej_mission_modifier3"
+				duration = -1
+			}
+		}
+	}
+}
+THE_SEJ_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SEJ } 
+
+	THE_SEJ_missions_2_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_SEJ_missions_3_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = { stability = 3 } 
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_sej_mission_modifier4"
+				duration = 7300
+			}
+		}
+	}
+
+	THE_SEJ_missions_2_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_SEJ_missions_2_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			NOT = {
+				any_owned_province = {
+					unrest = 0
+					average_autonomy = 5
+				}
+			}
+			NOT = { num_of_loans = 1 } 
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_sej_mission_modifier5"
+				duration = -1
+			}
+			th_increase_ruler_adm_stat = { dip = 1 } 
+		}
+	}
+
+	THE_SEJ_missions_2_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { THE_SEJ_missions_2_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			NOT = {
+				any_owned_province = {
+					unrest = 0
+					average_autonomy = 5
+				}
+			}
+			NOT = { num_of_loans = 1 } 
+			is_revolution_target = yes
+		}
+
+		effect = {
+			remove_country_modifier = THE_sej_mission_modifier5
+			add_country_modifier = {
+				name = "THE_sej_mission_modifier6"
+				duration = -1
+			}
+		}
+	}
+
+	THE_SEJ_missions_2_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = { THE_SEJ_missions_3_5 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_total_ports = 20
+			num_of_heavy_ship = 10
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_sej_mission_modifier11"
+				duration = 7300
+			}
+			th_increase_ruler_adm_stat = { dip = 1 } 
+		}
+	}
+}
+THE_SEJ_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SEJ } 
+
+	THE_SEJ_missions_3_1 = {
+		icon = mission_unknown_mission
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = { tag = SEJ } 
+
+		effect = {
+			give_claims = { region = central_america_region } 
+			give_claims = { id = 2631 } 
+			give_claims = { id = 2630 } 
+			add_country_modifier = {
+				name = "THE_sej_mission_modifier_a"
+				duration = 7300
+			}
+		}
+	}
+
+	THE_SEJ_missions_3_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_SEJ_missions_3_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				region = central_america_region
+			}
+		}
+
+		effect = {
+			num_accepted_cultures = 2
+			add_country_modifier = {
+				give_claims = { region = mexico_region } 
+				give_claims = { region = rio_grande_region } 
+				give_claims = { region = california_region } 
+				name = "THE_sej_mission_modifier7"
+				duration = 7300
+			}
+		}
+	}
+
+	THE_SEJ_missions_3_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_SEJ_missions_3_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			NOT = { exists = AZT } 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				region = mexico_region
+			}
+			owns_core_province = 852
+		}
+
+		effect = {
+			num_accepted_cultures = 2
+			852 = {
+				add_permanent_province_modifier = {
+					name = "THE_sej_mission_modifier_852"
+					duration = -1
+				}
+			}
+			give_claims = { region = colombia_region } 
+			give_claims = { region = peru_region } 
+		}
+	}
+
+	THE_SEJ_missions_3_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { THE_SEJ_missions_3_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			owns_core_province = 808
+			NOT = { exists = CSU } 
+		}
+
+		effect = {
+			th_increase_ruler_adm_stat = { adm = 1 } 
+			add_country_modifier = {
+				name = "THE_sej_mission_modifier9"
+				duration = 7300
+			}
+		}
+	}
+
+	THE_SEJ_missions_3_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { THE_SEJ_missions_3_4 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				any_war_enemy_country = { is_colonial_empire_trigger = yes } 
+				custom_trigger_tooltip = {
+					tooltip = SUN_befriended_europeans
+					any_known_country = {
+						capital_scope = { continent = europe } 
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
+					}
+				}
+				any_neighbor_country = { is_colonial_empire_trigger = yes } 
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_sej_mission_modifier10"
+				duration = 7300
+			}
+		}
+	}
+
+	THE_SEJ_missions_3_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = { THE_SEJ_missions_3_5 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			adm_power = 300
+			dip_power = 300
+			mil_power = 300
+		}
+
+		effect = {
+			add_adm_power = -300
+			add_dip_power = -300
+			add_mil_power = -300
+			add_country_modifier = {
+				name = "THE_sej_mission_modifier12"
+				duration = -1
+			}
+	}
+	}
+	THE_SEJ_missions_3_7 = {
+		icon = mission_unknown_mission
+		position = 7
+		required_missions = {
+			THE_SEJ_missions_3_6
+			THE_SEJ_missions_2_6
+			THE_SEJ_missions_4_6
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				has_won_war_against = {
+					max_years_since = 25
+					who = FRA
+				}
+				has_won_war_against = {
+					max_years_since = 25
+					who = CAS
+				}
+				has_won_war_against = {
+					max_years_since = 25
+					who = SPA
+				}
+				has_won_war_against = {
+					max_years_since = 25
+					who = POR
+				}
+			}
+			AND ={
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 15
+					continent = europe
+				}
+			}
+		}
+
+		effect = {
+			 THE_country_event_with_insight = { id = flavor_THE_SEJ.10 }
+			 846 ={
+				spawn_center_of_revolution = 846
+		}  
+	} 
+}
+}
+THE_SEJ_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SEJ } 
+
+	THE_SEJ_missions_4_1 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_SEJ_missions_3_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			is_at_war = no
+			navy_size_percentage = 0.5
+		}
+
+		effect = {
+			th_enable_exploration_without_explo_ideas = yes
+			define_explorer = {
+				shock = 1
+				fire = 3
+				manuever = 5
+				siege = 1
+				name = "�YGY�v�^up"
+				female = yes
+			}
+			add_country_modifier = {
+				name = "THE_sej_mission_modifier17"
+				duration = 7300
+			}
+		}
+	}
+
+	THE_SEJ_missions_4_2 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_SEJ_missions_4_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = th_discovers_europe.tooltip
+				OR = {
+					iberia_region = { has_discovered = ROOT } 
+					france_region = { has_discovered = ROOT } 
+					low_countries_region = { has_discovered = ROOT } 
+					british_isles_region = { has_discovered = ROOT } 
+				}
+			}
+		}
+
+		effect = {
+			add_navy_tradition = 35
+			if = {
+				limit = { NOT = { num_of_explorers = 1 }  } 
+				define_explorer = {
+					shock = 1
+					fire = 3
+					manuever = 5
+					siege = 1
+					name = "�YGY�v�^up"
+					female = yes
+				}
+			}
+			else = { add_dip_power = 50 } 
+			th_colonize_dev_province = { province = 368 } 
+		}
+	}
+
+	THE_SEJ_missions_4_3 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { THE_SEJ_missions_4_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				continent = europe
+				value = 10
+			}
+		}
+
+		effect = {
+			custom_tooltip = SUN_enable_establishment_of_european_colonies
+			set_country_flag = SUN_enable_european_colonies_flag
+		}
+	}
+
+	THE_SEJ_missions_4_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = { THE_SEJ_missions_3_5 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			is_ahead_of_time_in_technology = { tech = adm } 
+			is_ahead_of_time_in_technology = { tech = dip } 
+			is_ahead_of_time_in_technology = { tech = mil } 
+			if = {
+				limit = { has_dlc = "Rule Britannia" } 
+				innovativeness = 40
+			}
+			else = {
+				monthly_adm = 11
+				monthly_dip = 11
+				monthly_mil = 11
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_sej_mission_modifier13"
+				duration = 7300
+			}
+		}
+	}
+}
+THE_SEJ_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SEJ } 
+
+	THE_SEJ_missions_5_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_SEJ_missions_3_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = { is_year = 1445 } 
+
+		effect = {
+			add_country_modifier = {
+				name = "THE_sej_mission_modifier15"
+				duration = 1825
+			}
+		}
+	}
+
+	THE_SEJ_missions_5_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { THE_SEJ_missions_5_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				superregion = north_america_superregion
+				value = 15
+			}
+		}
+
+		effect = {
+			set_country_flag = mesoamerica_american_frontiers_flag
+			custom_tooltip = AZT_UNLOCKS_ESTABLISHMENT_OF_AMERICAN_FRONTIERS
+			custom_tooltip = SEPERATOR_TOOLTIP
+		}
+	}
+
+	THE_SEJ_missions_5_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { THE_SEJ_missions_5_4 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				superregion = south_america_superregion
+				value = 15
+			}
+		}
+
+		effect = {
+			colonists = 1
+			colony_cost_modifier = -0.2
+			governing_capacity_modifier = 0.25
+		}
+	}
+}
