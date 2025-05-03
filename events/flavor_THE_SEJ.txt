@@ -47,8 +47,8 @@ country_event = {
 				change_religion = THE_Seija_religion
 				remove_country_modifier = conversion_zeal
 				define_ruler = {
-					name = "ck��"  # Seija
-					dynasty = "<��N"  # Kijin
+					name = "ck??"  # Seija
+					dynasty = "<??N"  # Kijin
 					age = "15"
 					adm = 4
 					dip = 2
@@ -166,73 +166,25 @@ country_event = {
 	desc = "flavor_THE_SEJ.EVTDESC101"
 	picture = IMPORTANT_STATUE_eventPicture
 	is_triggered_only = yes
-	option = {		# France will be an empire!
-	name = "flavor_THE_SEJ.EVTOPTA101"
-	add_stability = -2
-	if = {
-		limit = { NOT = { government = monarchy } }
-		change_government_to_monarchy = yes
-	}
-	add_government_reform = THE_SEJ_revolutionary_seija
-	random_owned_province = {
-		limit = {
-			continent = root
-			is_core = ROOT
-			is_capital = no
-			highest_supply_limit_in_area = yes
+	option = {
+		name = "flavor_THE_SEJ.EVTOPTA101"
+		add_stability = -2
+		if = {
+			limit = { NOT = { government = monarchy } }
+			change_government_to_monarchy = yes
 		}
-		spawn_rebels = {
-			type = revolutionary_rebels
-			size = 3
+		add_government_reform = THE_SEJ_revolutionary_seija
+		random_owned_province = {
+			limit = {
+				continent = root
+				is_core = ROOT
+				is_capital = no
+				highest_supply_limit_in_area = yes
+			}
+			spawn_rebels = {
+				type = revolutionary_rebels
+				size = 3
+			}
 		}
 	}
-}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
