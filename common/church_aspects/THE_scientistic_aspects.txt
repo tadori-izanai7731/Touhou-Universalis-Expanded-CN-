@@ -1,5 +1,8 @@
 THE_build_theology_scientistic_blessing = {
 	is_blessing = yes
+	potential = {
+		NOT = { has_country_flag = THE_reselect_scientistic_blessing }
+	}
 
 	modifier = {
 		missionaries = 1
@@ -13,6 +16,9 @@ THE_build_theology_scientistic_blessing = {
 
 THE_religion_cross_research_scientistic_blessing = {
 	is_blessing = yes
+	potential = {
+		NOT = { has_country_flag = THE_reselect_scientistic_blessing }
+	}
 
 	modifier = {
 		development_cost = -0.1
@@ -25,6 +31,9 @@ THE_religion_cross_research_scientistic_blessing = {
 
 THE_deny_miracle_scientistic_blessing = {
 	is_blessing = yes
+	potential = {
+		NOT = { has_country_flag = THE_reselect_scientistic_blessing }
+	}
 
 	modifier = {
 		free_policy = 1
@@ -37,6 +46,9 @@ THE_deny_miracle_scientistic_blessing = {
 
 THE_science_technology_history_scientistic_blessing = {
 	is_blessing = yes
+	potential = {
+		NOT = { has_country_flag = THE_reselect_scientistic_blessing }
+	}
 
 	modifier = {
 		yearly_innovativeness = 0.25
@@ -50,6 +62,9 @@ THE_science_technology_history_scientistic_blessing = {
 
 THE_contact_religion_society_scientistic_blessing = {
 	is_blessing = yes
+	potential = {
+		NOT = { has_country_flag = THE_reselect_scientistic_blessing }
+	}
 
 	modifier = {
 		same_religion_advisor_cost = -0.15
