@@ -102,7 +102,7 @@ THE_SEJ_missions_2 = {
 				name = "THE_sej_mission_modifier5"
 				duration = -1
 			}
-			th_increase_ruler_adm_stat = { dip = 1 } 
+			change_dip = 1
 		}
 	}
 	
@@ -148,7 +148,7 @@ THE_SEJ_missions_2 = {
 				name = "THE_sej_mission_modifier11"
 				duration = 7300
 			}
-			th_increase_ruler_adm_stat = { dip = 1 } 
+			change_dip = 1
 		}
 	}
 }
@@ -242,7 +242,7 @@ THE_SEJ_missions_3 = {
 		}
 		
 		effect = {
-			th_increase_ruler_adm_stat = { adm = 1 } 
+			change_adm = 1
 			add_country_modifier = {
 				name = "THE_sej_mission_modifier9"
 				duration = 7300
