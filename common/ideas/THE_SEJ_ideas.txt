@@ -36,9 +36,7 @@ THE_SEJ_ideas = {
 		years_of_nationalism = -10
 	}
 	THE_SEJ_ideas_7 = {
-		may_establish_frontier = yes
+		auto_explore_adjacent_to_colony = yes
 		colony_development_boost = 1
-		# 对以下修正的意见倾向于删除，以作者为准——SEKGY
-		# auto_explore_adjacent_to_colony = yes
 	}
 }
