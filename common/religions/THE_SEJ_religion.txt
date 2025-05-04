@@ -28,8 +28,8 @@ Touhou = {
 
         color = {178 38 76 }
 		heretic = { th_heretic_lunar th_heretic_anime th_heretic_manga_elitists }
-		icon = 44
-		#  icon = 45
+		#icon = 44
+	    icon = 45
 		#由于电脑问题，我做的图标文件会导致原版图标画质变低颜色发白，在修复以前暂时改用以其他图标
 		allow_female_defenders_of_the_faith = yes
 		country = {
