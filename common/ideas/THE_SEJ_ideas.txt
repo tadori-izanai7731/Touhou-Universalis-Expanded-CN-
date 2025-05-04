@@ -1,11 +1,10 @@
 THE_SEJ_ideas = {
 	start = {
-		global_unrest = 1
-		tolerance_own = 3
+		can_recruit_revolutionary_guards = yes
+		min_autonomy_in_territories = -0.1
 	}
 	bonus = {
 		allowed_rev_guard_fraction = 0.2
-		max_revolutionary_zeal = 50
 	}
 	trigger = {
 		tag = SEJ
@@ -17,14 +16,15 @@ THE_SEJ_ideas = {
 	}
 	THE_SEJ_ideas_2 = {
 		infantry_power = 0.1
-		drill_decay_modifier = -0.2	
+		drill_decay_modifier = -0.25
+		land_maintenance_modifier = -0.05
 	}
 	THE_SEJ_ideas_3 = {
 		colonists = 1
-		native_uprising_chance = -0.50
+		native_uprising_chance = -1
 	}
 	THE_SEJ_ideas_4 = {
-		years_of_nationalism = -5
+		global_prov_trade_power_modifier = 0.25
 		manpower_in_true_faith_provinces = 0.15
 	}
 	THE_SEJ_ideas_5 = {
@@ -32,13 +32,13 @@ THE_SEJ_ideas = {
 		missionaries = 1
 	}
 	THE_SEJ_ideas_6 = {
-		warscore_cost_vs_other_religion = -0.25
-		tolerance_heretic = -3
-		tolerance_heathen = -3
+		warscore_cost_vs_other_religion = -0.15
+		years_of_nationalism = -10
 	}
 	THE_SEJ_ideas_7 = {
 		may_establish_frontier = yes
 		colony_development_boost = 1
-		auto_explore_adjacent_to_colony = yes
+		# 对以下修正的意见倾向于删除，以作者为准——SEKGY
+		# auto_explore_adjacent_to_colony = yes
 	}
 }
