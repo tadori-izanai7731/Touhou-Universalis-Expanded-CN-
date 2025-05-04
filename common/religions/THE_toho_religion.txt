@@ -183,12 +183,9 @@ Touhou = {
 	}
 
 	THE_Seija_religion = {
-		flags_with_emblem_percentage = 20
-		flag_emblem_index_range = { 1 4 }
-		
 		color = { 178 38 76 }
 		heretic = { th_heretic_lunar th_heretic_anime th_heretic_manga_elitists }
-		icon = 44	# Need rewrite
+		icon = 45
 		allow_female_defenders_of_the_faith = yes
 		country = {
 			infantry_power = 0.2
@@ -216,7 +213,7 @@ Touhou = {
 			infantry_power = 0.1
 			war_exhaustion = -0.1 
 		}
-		holy_sites = { 424 223 4295 151 5035 852 846 808 1015 }
+		holy_sites = { 424 223 4295 4141 5035 852 846 808 1015 }
 		#本地 特诺奇蒂特兰 琉球 卢森堡 君宝 库斯科 阿尔达比勒（萨法维） 格拉纳达 哈桑凯伊夫 辉针城
 		blessings = {
 			THE_seija_A_Miracle_Mallet_Replica_blessing
