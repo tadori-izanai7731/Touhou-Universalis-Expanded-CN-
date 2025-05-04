@@ -376,14 +376,6 @@ THE_SEJ_missions_4 = {
 		
 		effect = {
 			th_enable_exploration_without_explo_ideas = yes
-			define_explorer = {
-				shock = 1
-				fire = 3
-				manuever = 5
-				siege = 1
-				name = "�YGY�v�^up"
-				female = yes
-			}
 			add_country_modifier = {
 				name = "THE_sej_mission_modifier17"
 				duration = 7300
@@ -411,18 +403,7 @@ THE_SEJ_missions_4 = {
 		
 		effect = {
 			add_navy_tradition = 35
-			if = {
-				limit = { NOT = { num_of_explorers = 1 }  } 
-				define_explorer = {
-					shock = 1
-					fire = 3
-					manuever = 5
-					siege = 1
-					name = "�YGY�v�^up"
-					female = yes
-				}
-			}
-			else = { add_dip_power = 50 } 
+			add_dip_power = 50
 			th_colonize_dev_province = { province = 368 } 
 		}
 	}
