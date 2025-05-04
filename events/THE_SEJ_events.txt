@@ -115,9 +115,9 @@ country_event = {
 	}
 }
 province_event = {
-	id = SEJ_center_of_revolution.1000
-	title = SEJ_center_of_revolution.1000.name
-	desc = SEJ_center_of_revolution.1000.desc
+	id = flavor_THE_SEJ.1000
+	title = flavor_THE_SEJ.1000.name
+	desc = flavor_THE_SEJ.1000.desc
 	picture = REVOLUTION_eventPicture
 	major = yes
 	goto = ROOT

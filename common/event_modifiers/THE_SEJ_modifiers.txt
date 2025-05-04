@@ -90,5 +90,7 @@ THE_sej_mission_modifier18 ={
 	range = 0.5
 	navy_tradition = 1
 }
-
-
+THE_SEJ_south_land_modifier = {
+	colonists = 1
+	colony_cost_modifier = -0.2
+}
