@@ -189,7 +189,7 @@ Touhou = {
 		allow_female_defenders_of_the_faith = yes
 		country = {
 			infantry_power = 0.2
-			war_exhaustion = -0.2
+			min_autonomy_in_territories = -0.1
 		}
 		
 		province = {

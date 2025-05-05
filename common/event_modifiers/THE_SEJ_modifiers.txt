@@ -28,12 +28,13 @@ THE_sej_mission_modifier4 = {
 THE_sej_mission_modifier5 = {
 	global_unrest = -2
 	state_governing_cost = 0.5
-	min_autonomy_in_territories = -0.3
+	min_autonomy_in_territories = -0.2
 }
 #忠诚于正邪
 THE_sej_mission_modifier6 = {
-	governing_capacity_modifier = 0.25
-	min_autonomy_in_territories = -0.1
+	governing_cost = -0.25
+	min_autonomy_in_territories = -0.3
+	state_governing_cost = 0.75
 }
 #复兴玛雅潘
 THE_sej_mission_modifier7 = {
