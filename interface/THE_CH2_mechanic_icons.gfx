@@ -1,8 +1,14 @@
 spriteTypes = {
-	#政府UI 上 300x106
+	#政府UI 上 300x86 xx 20
 	spriteType = {
-		name = "GFX_THE_CH2_rainbow_bank_up_background"
+		name = "GFX_THE_CH2_rainbow_bank_up_background_1"
 		texturefile = "gfx\\interface\\government_mechanics\\the_ch2\\THE_CH2_rainbow_bank_up_1.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_THE_CH2_rainbow_bank_up_background_2"
+		texturefile = "gfx\\interface\\government_mechanics\\the_ch2\\THE_CH2_rainbow_bank_up_2.dds"
 		loadType = "INGAME"
 		transparencecheck = yes
 	}
@@ -29,7 +35,7 @@ spriteTypes = {
 		colortwo = { 1.0 1.0 1.0 }
 		textureFile1 = "gfx\\interface\\government_mechanics\\the_ch2\\THE_CH2_bar_2_full.dds"
 		textureFile2 = "gfx\\interface\\government_mechanics\\the_ch2\\THE_CH2_bar_2_black.dds"
-		size = { x = 222 y = 5 }
+		size = { x = 222 y = 15 }
 		effectFile = "gfx/FX/progress.lua"
 	}
 }

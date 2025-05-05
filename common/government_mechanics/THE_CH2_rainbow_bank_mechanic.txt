@@ -5,16 +5,18 @@ THE_CH2_rainbow_bank_mechanic = {
 		always = yes
 	}
 	powers = {
-		THE_CH2_rainbow_bank_storage_power = {
-			#储量
-			gui = "THE_CH2_government_rainbow_bank_up_gui"
+		THE_CH2_rainbow_bank_issuance_power = {
+			#发行
+			gui = "THE_CH2_government_rainbow_bank_up_2_gui"
+			show_before_interactions = yes
 			min = 0
 			max = 100
 			base_monthly_growth = 0
 		}
-		THE_CH2_rainbow_bank_issuance_power = {
-			#发行
-			gui = "THE_CH2_government_rainbow_bank_up_2_gui"
+		THE_CH2_rainbow_bank_storage_power = {
+			#储量
+			gui = "THE_CH2_government_rainbow_bank_up_gui"
+			show_before_interactions = yes
 			min = 0
 			max = 100
 			base_monthly_growth = 0
