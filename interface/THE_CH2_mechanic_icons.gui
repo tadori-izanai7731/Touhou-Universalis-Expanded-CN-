@@ -48,23 +48,15 @@ guiTypes = {
 	windowType = {
 		name = "THE_CH2_government_ranbow_bank_interface_down_gui"
 		position = { x = 0 y = 0 }
-		size = { x = 300 y = 132 }
+		size = { x = 100 y = 76 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder = ""
 		Orientation = "UPPER_LEFT"
-		iconType = {
-			name = "government_background"
-			spriteType = "GFX_THE_CH2_rainbow_bank_down_background"
-			position = { x = 0 y = 0 }
-			Orientation = "UPPER_LEFT"
-		}
 		guiButtonType = {
 			name = "government_interaction_button"
-			size = { x = 100 y = 76 }
 			quadTextureSprite = "GFX_THE_KEI_lonely_creation_interface_1"
-			position = { x = 0 y = 0 }
-			scale = 1
+			position = { x = 0 y = 5 }
 			buttonFont = "vic_18"
 			clicksound = back_click
 		}
