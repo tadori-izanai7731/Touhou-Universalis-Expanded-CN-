@@ -1,0 +1,35 @@
+spriteTypes = {
+	#政府UI 上 300x106
+	spriteType = {
+		name = "GFX_THE_CH2_rainbow_bank_up_background"
+		texturefile = "gfx\\interface\\government_mechanics\\the_ch2\\THE_CH2_rainbow_bank_up_1.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	#进度条GUI
+	progressbartype = {
+		name = "GFX_THE_CH2_rainbow_bank_mechanic_bar_and_frame"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx\\interface\\government_mechanics\\the_ch2\\THE_CH2_bar_1_full.dds"
+		textureFile2 = "gfx\\interface\\government_mechanics\\the_ch2\\THE_CH2_bar_1_black.dds"
+		size = { x = 230 y = 30 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	#政府UI 下 300x132
+	spriteType = {
+		name = "GFX_THE_CH2_rainbow_bank_down_background"
+		texturefile = "gfx\\interface\\government_mechanics\\the_ch2\\THE_CH2_rainbow_bank_down_1.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	progressbartype = {
+		name = "GFX_THE_CH2_rainbow_bank_mechanic_down_bar_and_frame"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx\\interface\\government_mechanics\\the_ch2\\THE_CH2_bar_2_full.dds"
+		textureFile2 = "gfx\\interface\\government_mechanics\\the_ch2\\THE_CH2_bar_2_black.dds"
+		size = { x = 230 y = 30 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+}
