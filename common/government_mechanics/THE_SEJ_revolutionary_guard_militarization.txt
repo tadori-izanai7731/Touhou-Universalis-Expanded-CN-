@@ -1,0 +1,98 @@
+THE_SEJ_revolutionary_guard_militarization_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 10
+	available = {
+		
+	}
+
+	powers = {
+		THE_SEJ_revolutionary_guard_militarized_society = {
+			max = 100
+			base_monthly_growth = 0
+			monarch_power = MIL
+			scaled_modifier = {
+				modifier = {
+					discipline = 0.1
+					manpower_in_true_faith_provinces = 0.5
+					reinforce_speed = 0.5
+					global_regiment_cost = -0.25
+					land_maintenance_modifier = -0.25
+					monthly_THE_SEJ_revolutionary_guard_militarized_society = -1
+					allowed_rev_guard_fraction = 0.5
+				}
+			}
+			range_modifier = {
+				trigger = {
+					has_country_flag = THE_debug_flag
+				}
+				modifier = {
+					monthly_THE_SEJ_revolutionary_guard_militarized_society = 1
+				}
+			}
+		}
+	}
+	
+	interactions = {
+		THE_SEJ_revolutionary_guard_boost_militarization = {
+			gui = militarization_gov_mech
+			cost_type = THE_SEJ_revolutionary_guard_militarized_society
+			center = no
+			trigger = {
+				mil_power_cost = 100
+				NOT = {
+					has_government_power = {
+						mechanic_type = THE_SEJ_revolutionary_guard_militarization_mechanic
+						power_type = THE_SEJ_revolutionary_guard_militarized_society
+						value = 100
+					}
+				}
+			}
+			effect = { 
+				mil_power_cost = 100
+				custom_tooltip = THE_SEJ_add_rev_guard_militarized_society_by_fraction_tt
+				hidden_effect = {
+					export_to_variable = {
+						which = the_sej_rev_guard_var
+						value = trigger_value:num_of_revolutionary_guard
+						who = ROOT
+					}
+					export_to_variable = {
+						which = the_sej_land_forcelimit_var
+						value = trigger_value:land_forcelimit
+						who = ROOT
+					}
+					divide_variable = {
+						which = the_sej_rev_guard_var
+						which = the_sej_land_forcelimit_var
+					}
+					multiply_variable = {
+						which = the_sej_rev_guard_var
+						value = 100
+					}
+					for_variable_amount = {
+						variable = the_sej_rev_guard_var
+						effect = "
+							add_government_power = {
+								mechanic_type = THE_SEJ_revolutionary_guard_militarization_mechanic
+								power_type = THE_SEJ_revolutionary_guard_militarized_society
+								value = 0.5
+							}
+						"
+					}
+					set_variable = {
+						which = the_sej_rev_guard_var
+						value = 0
+					}
+					set_variable = {
+						which = the_sej_land_forcelimit_var
+						value = 0
+					}
+				}
+			}
+			cooldown_years = 5
+			ai_chance = {
+				factor = 1000
+			}
+		}
+	}
+}

@@ -13,7 +13,7 @@ THE_SEJ_revolutionary_seija = {
 	legacy_government = yes
 	valid_for_new_country = no
 	valid_for_nation_designer = no
-	monarchy = yes
+	# monarchy = yes
 	revolutionary = yes
 	is_eligible_for_hre_emperor = no
 	modifiers = {
@@ -21,7 +21,8 @@ THE_SEJ_revolutionary_seija = {
 		global_manpower_modifier = 0.25
 		land_morale = 0.20
 		global_autonomy = -0.2
-		allowed_rev_guard_fraction = 0.2
+		culture_conversion_time = -0.25
+		culture_conversion_cost = -0.25
 	}
 	ai = {
 		factor = 0
@@ -29,18 +30,24 @@ THE_SEJ_revolutionary_seija = {
 }
 THE_SEJ_revolutionary_guard	= {
 	lock_level_when_selected = yes
-	icon = "line_infantry"
+	icon = "feuillant_reform"
 	
 	potential = {
-		has_reform = THE_SEJ_revolutionary_seija
+		OR = {
+			has_reform = THE_SEJ_revolutionary_guard
+			have_had_reform = THE_SEJ_revolutionary_guard
+			has_country_flag = THE_SEJ_enable_THE_SEJ_revolutionary_guard_flag
+		}
 	}
 	
+	government_abilities = {
+		THE_SEJ_revolutionary_guard_militarization_mechanic
+	}
+
 	modifiers = {
-		# Need Fix
-		land_maintenance_modifier = 0.5
-		fire_damage_received = -0.1
-		shock_damage_received = -0.1
-		is_revolutionary_guard_modifier = yes
+		yearly_revolutionary_zeal = 1
+		allowed_rev_guard_fraction = 0.2
+		governing_capacity_modifier = -0.75
 	}
 }
 
@@ -69,5 +76,6 @@ THE_SEJ_expand_seija_paradise_reform = {
 		culture_conversion_cost = -0.2
 		diplomats = 1
 		improve_relation_modifier = 0.2
+		institution_spread_from_true_faith = 0.5
 	}
 }

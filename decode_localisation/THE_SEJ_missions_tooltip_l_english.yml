@@ -4,6 +4,7 @@ l_english:
  THE_SEJ_maya_gerat_project_accept_Youkai_culture_tt: "伟大工程§Y奇琴伊察§!、§Y蒂卡尔§!可以在省份文化是§Y妖怪§!时生效"
  THE_SEJ_aztek_gerat_project_accept_Youkai_culture_tt: "伟大工程§Y特诺奇蒂特兰§!、§Y钦聪灿§!可以在省份文化是§Y妖怪§!且宗教是§Y翻转构想§!时生效"
  THE_SEJ_inca_gerat_project_accept_Youkai_culture_tt: "伟大工程§Y印加路网§!、§Y马丘比丘§!、§Y蒂亚瓦那科§!可以在省份文化是§Y妖怪§!且宗教是§Y翻转构想§!时生效"
+ THE_SEJ_add_rev_guard_militarized_society_by_fraction_tt: "根据革命卫队在陆军上限中的占比增加§Y反逆卫队军事化§!，每§Y1%§!占比增加§G0.5§!§Y反逆卫队军事化§!"
 ### TOOLTIP_END
 
 ### COUNTRY
@@ -38,12 +39,17 @@ l_english:
 ### GOVERNMENT
  THE_SEJ_revolutionary_seija: "下克上革命社会"
  THE_SEJ_revolutionary_seija_desc: "整个弱者社会团结在正邪周围，为了下克上的理念而奋斗"
- THE_SEJ_revolutionary_guard: "正邪革命卫队训练"
- THE_SEJ_revolutionary_guard_desc: "革命卫队成员必须经历残酷的犯规弹幕考验，以此来强化作战能力"
+ THE_SEJ_revolutionary_guard: "掌控翻转的力量"
+ THE_SEJ_revolutionary_guard_desc: "革命卫队是强大的军事力量，掌控并强化这种力量是宣传反抗思想必要的基础"
  THE_SEJ_expand_seija_paradise_reform: "扩张弱者乐园"
  THE_SEJ_expand_seija_paradise_reform: "一个看起来像是弱者乐园的事物比真正的弱者乐园更有用，在不断的扩张中，曾经的弱者才能享受翻转的乐趣。"
  mechanic_THE_SEJ_converte_province_add_estate_loyalty_custom_attribute_yes: "省份转变为主流文化提高所有阶层§G5%§!忠诚度"
  mechanic_THE_SEJ_converte_province_add_reform_progress_custom_attribute_yes: "省份转变为主流文化获得§G2§!改革进度"
+ THE_SEJ_revolutionary_guard_militarized_society: "反逆卫队军事化"
+ monthly_THE_SEJ_revolutionary_guard_militarized_society: "月度反逆卫队军事化"
+ ability_THE_SEJ_revolutionary_guard_militarization_mechanic: "反逆卫队军事化"
+ THE_SEJ_revolutionary_guard_boost_militarization: "卫队反抗战争宣传"
+ THE_SEJ_revolutionary_guard_boost_militarization_desc: "革命卫队成员也是我们宣传反抗思想的重要力量，卫队在全国的宣传可以极大提升我们的军事力量"
 
  THE_SEJ_RULER: "天邪鬼"
 ### GOVERNMENT_END
