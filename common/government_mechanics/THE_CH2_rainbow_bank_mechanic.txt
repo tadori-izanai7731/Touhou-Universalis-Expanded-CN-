@@ -7,11 +7,49 @@ THE_CH2_rainbow_bank_mechanic = {
 	powers = {
 		THE_CH2_rainbow_bank_storage_power = {
 			#储量
-			gui = ""
+			gui = "THE_CH2_government_rainbow_bank_up_gui"
+			min = 0
+			max = 100
+			base_monthly_growth = 0
 		}
 		THE_CH2_rainbow_bank_issuance_power = {
 			#发行
-			gui = ""
+			gui = "THE_CH2_government_rainbow_bank_up_2_gui"
+			min = 0
+			max = 100
+			base_monthly_growth = 0
+		}
+	}
+	interactions = {
+		THE_CH2_interactions_1 = {
+			gui = "THE_CH2_government_ranbow_bank_interface_down_gui"
+			iocn = GFX_THE_FOM_alice_dolls_start
+			trigger = {
+				
+			}
+			effect = {
+				
+			}
+		}
+		THE_CH2_interactions_2 = {
+			gui = "THE_CH2_government_ranbow_bank_interface_down_gui"
+			iocn = GFX_THE_FOM_alice_dolls_start
+			trigger = {
+				
+			}
+			effect = {
+				
+			}
+		}
+		THE_CH2_interactions_3 = {
+			gui = "THE_CH2_government_ranbow_bank_interface_down_gui"
+			iocn = GFX_THE_FOM_alice_dolls_start
+			trigger = {
+				
+			}
+			effect = {
+				
+			}
 		}
 	}
 }

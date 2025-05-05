@@ -13,7 +13,7 @@ spriteTypes = {
 		colortwo = { 1.0 1.0 1.0 }
 		textureFile1 = "gfx\\interface\\government_mechanics\\the_ch2\\THE_CH2_bar_1_full.dds"
 		textureFile2 = "gfx\\interface\\government_mechanics\\the_ch2\\THE_CH2_bar_1_black.dds"
-		size = { x = 230 y = 30 }
+		size = { x = 222 y = 15 }
 		effectFile = "gfx/FX/progress.lua"
 	}
 	#政府UI 下 300x132
@@ -29,7 +29,7 @@ spriteTypes = {
 		colortwo = { 1.0 1.0 1.0 }
 		textureFile1 = "gfx\\interface\\government_mechanics\\the_ch2\\THE_CH2_bar_2_full.dds"
 		textureFile2 = "gfx\\interface\\government_mechanics\\the_ch2\\THE_CH2_bar_2_black.dds"
-		size = { x = 230 y = 30 }
+		size = { x = 222 y = 5 }
 		effectFile = "gfx/FX/progress.lua"
 	}
 }

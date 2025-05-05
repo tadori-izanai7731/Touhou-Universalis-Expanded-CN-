@@ -10,7 +10,6 @@ spriteTypes = {
 			dontRender = ""
 			horizontalBorder = ""
 			Orientation = "UPPER_LEFT"
-		
 			#bar and frame
 			iconType = {
 				name = "government_power_bar"
@@ -18,6 +17,23 @@ spriteTypes = {
 				position = { x = 39 y = 66 }
 				Orientation = "UPPER_LEFT"
 			}
+			iconType = {
+				name = "government_power_bar_frame"
+				spriteType = "GFX_THE_CH2_rainbow_bank_up_background"
+				position = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}	
+		}
+		windowType = {
+			name = "THE_CH2_government_rainbow_bank_up_2_gui"
+			backGround = ""
+			position = { x = 0 y = 0 }
+			size = { x = 300 y = 106 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = ""
+			Orientation = "UPPER_LEFT"
 			iconType = {
 				name = "government_power_bar"
 				spriteType = "GFX_THE_CH2_rainbow_bank_mechanic_down_bar_and_frame"
