@@ -350,6 +350,10 @@ THE_SEJ_missions_3 = {
 				name = "THE_sej_mission_modifier10"
 				duration = 7300
 			}
+			custom_tooltip = THE_SEJ_enable_THE_SEJ_revolutionary_guard_tt
+			hidden_effect = {
+				set_country_flag = THE_SEJ_enable_THE_SEJ_revolutionary_guard_flag
+			}
 		}
 	}
 	
