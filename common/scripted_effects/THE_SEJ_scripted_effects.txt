@@ -1,0 +1,46 @@
+############################################################
+### on_actions' scripted effects
+############################################################
+THE_SEJ_on_province_religion_converted_scripted_effect = {
+	if = {
+		limit = {
+			owner = {
+				religion = THE_Seija_religion
+				has_country_flag = THE_SEJ_converte_province_religion_add_2_unrest_flag
+			}
+		}
+		add_nationalism = -10
+		add_unrest = 2
+	}
+}
+
+THE_SEJ_on_province_culture_converted_scripted_effect = {
+	if = {
+		limit = {
+			culture = owner
+		}
+		if = {
+			limit = {
+				owner = {
+					has_government_attribute = THE_SEJ_converte_province_add_estate_loyalty_custom_attribute
+				}
+			}
+			owner = {
+				add_estate_loyalty = {
+					estate = all
+					loyalty = 5
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					has_government_attribute = THE_SEJ_converte_province_add_reform_progress_custom_attribute
+				}
+			}
+			owner = {
+				change_government_reform_progress = 2
+			}
+		}
+	}
+}

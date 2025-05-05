@@ -43,3 +43,31 @@ THE_SEJ_revolutionary_guard	= {
 		is_revolutionary_guard_modifier = yes
 	}
 }
+
+### LEVEL 3 ###
+THE_SEJ_expand_seija_paradise_reform = {
+	icon = "THE_SEJ_expand_seija_paradise_reform"
+
+	potential = {
+		OR = {
+			has_reform = THE_SEJ_expand_seija_paradise_reform
+			have_had_reform = THE_SEJ_expand_seija_paradise_reform
+			has_country_flag = THE_SEJ_enable_expand_seija_paradise_reform_flag
+		}
+	}
+
+	trigger = {
+		primary_culture = Youkai
+	}
+
+	custom_attributes = {
+		THE_SEJ_converte_province_add_estate_loyalty_custom_attribute = yes
+		THE_SEJ_converte_province_add_reform_progress_custom_attribute = yes
+	}
+
+	modifiers = {
+		culture_conversion_cost = -0.2
+		diplomats = 1
+		improve_relation_modifier = 0.2
+	}
+}

@@ -31,6 +31,7 @@ THE_SEJ_missions_1 = {
 		trigger = {
 			2652 = { culture = Youkai } 
 			4591 = { culture = Youkai } 
+			reform_level = 3
 		}
 		
 		effect = {
@@ -38,6 +39,14 @@ THE_SEJ_missions_1 = {
 				name = "THE_sej_mission_modifier2"
 				duration = 7300
 			}
+			if = {
+				limit = { NOT = { government = monarchy } }
+				change_government = monarchy
+			}
+			hidden_effect = {
+				set_country_flag = THE_SEJ_enable_expand_seija_paradise_reform_flag
+			}
+			add_government_reform = THE_SEJ_expand_seija_paradise_reform
 		}
 	}
 	
@@ -54,6 +63,10 @@ THE_SEJ_missions_1 = {
 			add_country_modifier = {
 				name = "THE_sej_mission_modifier3"
 				duration = -1
+			}
+			custom_tooltip = THE_SEJ_converte_province_religion_add_2_unrest_tt
+			hidden_effect = {
+				set_country_flag = THE_SEJ_converte_province_religion_add_2_unrest_flag
 			}
 		}
 	}

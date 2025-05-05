@@ -9,15 +9,14 @@ THE_sej_mission_modifier1 = {
 }
 #移风易俗
 THE_sej_mission_modifier2 = {
-	global_missionary_strength = 0.01
-	tolerance_of_heathens_capacity = 1
+	core_creation = -0.1
+	years_of_nationalism = -10
 }
 #下克上裁判所
 THE_sej_mission_modifier3 ={
-	missionaries = 2
-	global_missionary_strength = 0.03
-	global_unrest = 2
-	tolerance_own = 2
+	missionaries = 1
+	global_missionary_strength = 0.01
+	tolerance_own = 1
 }
 #弥合城邦冲突
 THE_sej_mission_modifier4 ={

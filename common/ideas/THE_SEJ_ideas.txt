@@ -1,10 +1,10 @@
 THE_SEJ_ideas = {
 	start = {
 		can_recruit_revolutionary_guards = yes
-		min_autonomy_in_territories = -0.1
+		allowed_rev_guard_fraction = 0.2
 	}
 	bonus = {
-		allowed_rev_guard_fraction = 0.2
+		min_autonomy_in_territories = -0.1
 	}
 	trigger = {
 		tag = SEJ
