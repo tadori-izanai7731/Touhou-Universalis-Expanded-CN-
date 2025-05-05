@@ -2270,7 +2270,13 @@ machu_picchu = {
 
 	#can we build it?
 	build_trigger = {
-		culture_group = andean_group
+		OR = {
+			culture_group = andean_group
+			THE_great_project_extra_optional_trigger_scripted_trigger = {
+				flag = THE_SEJ_inca_gerat_project_accept_Youkai_culture_flag
+				culture = Youkai
+			}
+		}
 		province_is_or_accepts_culture = yes
 	}
 
@@ -2286,13 +2292,25 @@ machu_picchu = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		culture_group = andean_group
+		OR = {
+			culture_group = andean_group
+			THE_great_project_extra_optional_trigger_scripted_trigger = {
+				flag = THE_SEJ_inca_gerat_project_accept_Youkai_culture_flag
+				culture = Youkai
+			}
+		}
 		province_is_or_accepts_culture = yes
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		culture_group = andean_group
+		OR = {
+			culture_group = andean_group
+			THE_great_project_extra_optional_trigger_scripted_trigger = {
+				flag = THE_SEJ_inca_gerat_project_accept_Youkai_culture_flag
+				culture = Youkai
+			}
+		}
 		province_is_or_accepts_culture = yes
 	}
 
@@ -2461,7 +2479,13 @@ chichen_itza = {
 
 	#can we build it?
 	build_trigger = {
-		culture_group = maya
+		OR = {
+			culture_group = maya
+			THE_great_project_extra_optional_trigger_scripted_trigger = {
+				flag = THE_SEJ_maya_gerat_project_accept_Youkai_culture_flag
+				culture = Youkai
+			}
+		}
 		province_is_or_accepts_culture = yes
 	}
 
@@ -2477,13 +2501,25 @@ chichen_itza = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		culture_group = maya
+		OR = {
+			culture_group = maya
+			THE_great_project_extra_optional_trigger_scripted_trigger = {
+				flag = THE_SEJ_maya_gerat_project_accept_Youkai_culture_flag
+				culture = Youkai
+			}
+		}
 		province_is_or_accepts_culture = yes
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		culture_group = maya
+		OR = {
+			culture_group = maya
+			THE_great_project_extra_optional_trigger_scripted_trigger = {
+				flag = THE_SEJ_maya_gerat_project_accept_Youkai_culture_flag
+				culture = Youkai
+			}
+		}
 		province_is_or_accepts_culture = yes
 	}
 
@@ -3511,7 +3547,13 @@ tenochtitlan = {
 
 	#can we build it?
 	build_trigger = {
-		culture_group = central_american
+		OR = {
+			culture_group = central_american
+			THE_great_project_extra_optional_trigger_scripted_trigger = {
+				flag = THE_SEJ_aztek_gerat_project_accept_Youkai_culture_flag
+				culture = Youkai
+			}
+		}
 		province_is_or_accepts_culture = yes
 	}
 
@@ -3527,13 +3569,25 @@ tenochtitlan = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		culture_group = central_american
+		OR = {
+			culture_group = central_american
+			THE_great_project_extra_optional_trigger_scripted_trigger = {
+				flag = THE_SEJ_aztek_gerat_project_accept_Youkai_culture_flag
+				culture = Youkai
+			}
+		}
 		province_is_or_accepts_culture = yes
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		culture_group = central_american
+		OR = {
+			culture_group = central_american
+			THE_great_project_extra_optional_trigger_scripted_trigger = {
+				flag = THE_SEJ_aztek_gerat_project_accept_Youkai_culture_flag
+				culture = Youkai
+			}
+		}
 		province_is_or_accepts_culture = yes
 	}
 
@@ -3663,10 +3717,16 @@ tenochtitlan = {
 		
 		conditional_modifier = {
 			trigger = {
-				custom_trigger_tooltip = {
-					tooltip = AZT_COMPLETED_TECNOCHTITLAN_MISSION
-					owner = {
-						has_country_flag = azt_tenochtitlan_buff_flag
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = AZT_COMPLETED_TECNOCHTITLAN_MISSION
+						owner = {
+							has_country_flag = azt_tenochtitlan_buff_flag
+						}
+					}
+					THE_great_project_extra_optional_trigger_scripted_trigger = {
+						flag = THE_SEJ_aztek_gerat_project_accept_Youkai_culture_flag
+						religion_or_accept = THE_Seija_religion
 					}
 				}
 			}
@@ -14858,6 +14918,10 @@ qhapaq_nam = {
 			culture_group = andean_group
 			culture = cara
 			culture = chachapoyan
+			THE_great_project_extra_optional_trigger_scripted_trigger = {
+				flag = THE_SEJ_inca_gerat_project_accept_Youkai_culture_flag
+				culture = Youkai
+			}
 		}
 		province_is_or_accepts_culture = yes
 	}
@@ -14873,6 +14937,10 @@ qhapaq_nam = {
 			culture_group = andean_group
 			culture = cara
 			culture = chachapoyan
+			THE_great_project_extra_optional_trigger_scripted_trigger = {
+				flag = THE_SEJ_inca_gerat_project_accept_Youkai_culture_flag
+				culture = Youkai
+			}
 		}
 		province_is_or_accepts_culture = yes
 	}
@@ -14882,6 +14950,10 @@ qhapaq_nam = {
 			culture_group = andean_group
 			culture = cara
 			culture = chachapoyan
+			THE_great_project_extra_optional_trigger_scripted_trigger = {
+				flag = THE_SEJ_inca_gerat_project_accept_Youkai_culture_flag
+				culture = Youkai
+			}
 		}
 		province_is_or_accepts_culture = yes
 	}
@@ -14975,9 +15047,16 @@ qhapaq_nam = {
 		}
 		conditional_modifier = {
 			trigger = {
-				owner = {
-					mission_completed = INC_qhapaq_nam
+				OR = {
+					owner = {
+						mission_completed = INC_qhapaq_nam
+					}
+					THE_great_project_extra_optional_trigger_scripted_trigger = {
+						flag = THE_SEJ_inca_gerat_project_accept_Youkai_culture_flag
+						religion_or_accept = THE_Seija_religion
+					}
 				}
+
 			}
 			modifier = {
 				envoy_travel_time = -0.5
@@ -16211,7 +16290,7 @@ white_house = {
 			OR = {
 				is_former_colonial_nation = yes
 				tag = USA
-				tag = HVA
+				# tag = HVA
 				AND = {
 					NOT = { government = native }
 					is_subject = no
@@ -16362,7 +16441,13 @@ tikal = {
 	type = monument
 
 	build_trigger = {
-		culture_group = maya
+		OR = {
+			culture_group = maya
+			THE_great_project_extra_optional_trigger_scripted_trigger = {
+				flag = THE_SEJ_maya_gerat_project_accept_Youkai_culture_flag
+				culture = Youkai
+			}
+		}
 		province_is_or_accepts_culture = yes
 	}
 
@@ -16373,12 +16458,24 @@ tikal = {
 	}
 
 	can_use_modifiers_trigger = {
-		culture_group = maya
+		OR = {
+			culture_group = maya
+			THE_great_project_extra_optional_trigger_scripted_trigger = {
+				flag = THE_SEJ_maya_gerat_project_accept_Youkai_culture_flag
+				culture = Youkai
+			}
+		}
 		province_is_or_accepts_culture = yes
 	}
 
 	can_upgrade_trigger = {
-		culture_group = maya
+		OR = {
+			culture_group = maya
+			THE_great_project_extra_optional_trigger_scripted_trigger = {
+				flag = THE_SEJ_maya_gerat_project_accept_Youkai_culture_flag
+				culture = Youkai
+			}
+		}
 		province_is_or_accepts_culture = yes
 	}
 
@@ -16474,8 +16571,14 @@ tiwanaku = {
 	type = monument
 
 	build_trigger = {
-		province_is_or_accepts_religion = {
-			religion = inti
+		OR = {
+			province_is_or_accepts_religion = {
+				religion = inti
+			}
+			THE_great_project_extra_optional_trigger_scripted_trigger = {
+				flag = THE_SEJ_inca_gerat_project_accept_Youkai_culture_flag
+				religion_or_accept = THE_Seija_religion
+			}
 		}
 	}
 
@@ -16486,14 +16589,26 @@ tiwanaku = {
 	}
 
 	can_use_modifiers_trigger = {
-		province_is_or_accepts_religion = {
-			religion = inti
+		OR = {
+			province_is_or_accepts_religion = {
+				religion = inti
+			}
+			THE_great_project_extra_optional_trigger_scripted_trigger = {
+				flag = THE_SEJ_inca_gerat_project_accept_Youkai_culture_flag
+				religion_or_accept = THE_Seija_religion
+			}
 		}
 	}
 
 	can_upgrade_trigger = {
-		province_is_or_accepts_religion = {
-			religion = inti
+		OR = {
+			province_is_or_accepts_religion = {
+				religion = inti
+			}
+			THE_great_project_extra_optional_trigger_scripted_trigger = {
+				flag = THE_SEJ_inca_gerat_project_accept_Youkai_culture_flag
+				religion_or_accept = THE_Seija_religion
+			}
 		}
 	}
 
@@ -20913,26 +21028,62 @@ tzintzuntzan = {
 	starting_tier = 1
 	type = monument
 	build_trigger = {
-		culture_group = central_american
+		OR = {
+			culture_group = central_american
+			THE_great_project_extra_optional_trigger_scripted_trigger = {
+				flag = THE_SEJ_aztek_gerat_project_accept_Youkai_culture_flag
+				religion = THE_Seija_religion
+			}
+		}
 		province_is_or_accepts_culture = yes
-		province_is_or_accepts_religion = {
-			religion = nahuatl
+		OR = {
+			province_is_or_accepts_religion = {
+				religion = nahuatl
+			}
+			THE_great_project_extra_optional_trigger_scripted_trigger = {
+				flag = THE_SEJ_aztek_gerat_project_accept_Youkai_culture_flag
+				religion_or_accept = THE_Seija_religion
+			}
 		}
 	}
 	on_built = {}
 	on_destroyed = {}
 	can_use_modifiers_trigger = {
-		culture_group = central_american
+		OR = {
+			culture_group = central_american
+			THE_great_project_extra_optional_trigger_scripted_trigger = {
+				flag = THE_SEJ_aztek_gerat_project_accept_Youkai_culture_flag
+				religion = THE_Seija_religion
+			}
+		}
 		province_is_or_accepts_culture = yes
-		province_is_or_accepts_religion = {
-			religion = nahuatl
+		OR = {
+			province_is_or_accepts_religion = {
+				religion = nahuatl
+			}
+			THE_great_project_extra_optional_trigger_scripted_trigger = {
+				flag = THE_SEJ_aztek_gerat_project_accept_Youkai_culture_flag
+				religion_or_accept = THE_Seija_religion
+			}
 		}
 	}
 	can_upgrade_trigger = {
-		culture_group = central_american
+		OR = {
+			culture_group = central_american
+			THE_great_project_extra_optional_trigger_scripted_trigger = {
+				flag = THE_SEJ_aztek_gerat_project_accept_Youkai_culture_flag
+				religion = THE_Seija_religion
+			}
+		}
 		province_is_or_accepts_culture = yes
-		province_is_or_accepts_religion = {
-			religion = nahuatl
+		OR = {
+			province_is_or_accepts_religion = {
+				religion = nahuatl
+			}
+			THE_great_project_extra_optional_trigger_scripted_trigger = {
+				flag = THE_SEJ_aztek_gerat_project_accept_Youkai_culture_flag
+				religion_or_accept = THE_Seija_religion
+			}
 		}
 	}
 	keep_trigger = {}
