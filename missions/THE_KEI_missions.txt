@@ -569,19 +569,10 @@ THE_KEI_main_branch_2 = {
 						limit = {
 							estate_loyalty = {
 								estate = estate_church
-								loyalty = 70
+								loyalty = 100
 							}
 						}
-						add_adm_power = 100
-					}
-					else_if = {
-						limit = {
-							estate_loyalty = {
-								estate = estate_church
-								loyalty = 80
-							}
-						}
-						add_adm_power = 200
+						add_adm_power = 400
 					}
 					else_if = {
 						limit = {
@@ -596,28 +587,29 @@ THE_KEI_main_branch_2 = {
 						limit = {
 							estate_loyalty = {
 								estate = estate_church
-								loyalty = 100
+								loyalty = 80
 							}
 						}
-						add_adm_power = 400
-					}
-					if = {
-						limit = {
-							estate_loyalty = {
-								estate = estate_nobles
-								loyalty = 70
-							}
-						}
-						add_mil_power = 100
+						add_adm_power = 200
 					}
 					else_if = {
 						limit = {
 							estate_loyalty = {
-								estate = estate_nobles
-								loyalty = 80
+								estate = estate_church
+								loyalty = 70
 							}
 						}
-						add_mil_power = 200
+						add_adm_power = 100
+					}
+					###
+					if = {
+						limit = {
+							estate_loyalty = {
+								estate = estate_nobles
+								loyalty = 100
+							}
+						}
+						add_mil_power = 400
 					}
 					else_if = {
 						limit = {
@@ -632,28 +624,29 @@ THE_KEI_main_branch_2 = {
 						limit = {
 							estate_loyalty = {
 								estate = estate_nobles
-								loyalty = 100
+								loyalty = 80
 							}
 						}
-						add_mil_power = 400
+						add_mil_power = 200
 					}
+					else_if = {
+						limit = {
+							estate_loyalty = {
+								estate = estate_nobles
+								loyalty = 70
+							}
+						}
+						add_mil_power = 100
+					}
+					##
 					if = {
 						limit = { 
 							estate_loyalty = {
 								estate = estate_burghers
-								loyalty = 70
+								loyalty = 100
 							}
 						}
-						add_dip_power = 100
-					}
-					else_if = {
-						limit = { 
-							estate_loyalty = {
-								estate = estate_burghers
-								loyalty = 80
-							}
-						}
-						add_dip_power = 200
+						add_dip_power = 400
 					}
 					else_if = {
 						limit = { 
@@ -668,10 +661,19 @@ THE_KEI_main_branch_2 = {
 						limit = { 
 							estate_loyalty = {
 								estate = estate_burghers
-								loyalty = 100
+								loyalty = 80
 							}
 						}
-						add_dip_power = 400
+						add_dip_power = 200
+					}
+					else_if = {
+						limit = { 
+							estate_loyalty = {
+								estate = estate_burghers
+								loyalty = 70
+							}
+						}
+						add_dip_power = 100
 					}
 				}
 			}
@@ -747,7 +749,7 @@ THE_KEI_main_branch_2 = {
 		position = 7
 		required_missions = { THE_KEI_1_6 } 
 		provinces_to_highlight = { 
-			province_id = 5045
+			trade_goods = gems
 		} 
 		
 		trigger = { 
@@ -833,7 +835,12 @@ THE_KEI_main_branch_2 = {
 		required_missions = { THE_KEI_2_8 } 
 		provinces_to_highlight = { 
 			owned_by = ROOT
-			trade_goods = gems
+			OR = {
+				num_free_building_slots = 1
+				NOT = {
+					development = 15
+				}
+			}
 		} 
 		
 		trigger = { 
@@ -1776,6 +1783,9 @@ THE_KEI_main_branch_4 = {
 				}
 				nationalism = 1
 				devastation = 1
+				NOT = {
+					is_prosperous = yes
+				}
 			}
 		} 
 		
