@@ -377,6 +377,7 @@ THE_has_mil_advisor_with_level = {
 	}
 }
 
+# 用于奇观文化/宗教条件的OR逻辑中（如果没有OR只能自己加个OR）
 # 必要分句flag = $flag$
 # 必要且唯一分句culture = $culture$|culture_group = $culture_group$|religion = $religion$|religion_group = $religion_group$
 THE_great_project_extra_optional_trigger_scripted_trigger = {
