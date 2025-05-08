@@ -1,0 +1,53 @@
+country_decisions = {
+	THE_TGU_relase_CH2_country_decisions = {
+		color = { 255 186 39 }
+		potential = {
+			ai = no
+			NOT = {
+				is_year = 1445
+			}
+			tag = TGU
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			release = CH2
+			hidden_effect = {
+				CH2 = {
+					THE_CH2_respawn_ruler_effects = yes
+					add_government_reform = THE_CH2_luna_prosperous_market_reform
+					capital_scope = {
+						infantry = CH2
+						infantry = CH2
+						infantry = CH2
+						infantry = CH2
+						infantry = CH2
+					}
+					add_treasury = 50
+					add_manpower = 10
+					add_adm_power = 102
+					add_dip_power = 126
+					add_mil_power = 102
+					change_estate_land_share = {
+						estate = estate_church
+						share = 14
+					}
+					change_estate_land_share = {
+						estate = estate_nobles
+						share = 14
+					}
+					change_estate_land_share = {
+						estate = estate_burghers
+						share = 31
+					}
+					add_accepted_culture = Tengu
+				}
+			}
+			switch_tag = CH2
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

@@ -1,3 +1,32 @@
+THE_CH2_luna_prosperous_market_reform = {
+	lock_level_when_selected = yes
+	icon = "THE_IQU_government_1_reform"
+	potential = {
+		OR = {
+			has_reform = THE_CH2_luna_prosperous_market_reform
+			have_had_reform = THE_CH2_luna_prosperous_market_reform
+		}
+	}
+	valid_for_new_country = no
+	valid_for_nation_designer = no
+	rulers_can_be_generals = no
+	can_change_primary_culture = no
+	modifiers = {
+		global_autonomy = -0.05
+		advisor_cost = -0.15
+		trade_efficiency = 0.10
+		global_unrest = -1
+		governing_capacity = 200
+	}
+	government_abilities = {
+		
+	}
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+	}
+}
 THE_CH2_ranbow_central_bank_reform = {
 	lock_level_when_selected = yes
 	icon = "THE_IQU_government_1_reform"
@@ -7,13 +36,7 @@ THE_CH2_ranbow_central_bank_reform = {
 			have_had_reform = THE_CH2_ranbow_central_bank_reform
 		}
 	}
-	valid_for_new_country = no
-	valid_for_nation_designer = no
-	rulers_can_be_generals = no
-	can_change_primary_culture = no
-	
 	modifiers = {
-		governing_capacity = 150
 	}
 	government_abilities = {
 		THE_CH2_rainbow_bank_mechanic

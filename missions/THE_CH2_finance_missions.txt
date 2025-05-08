@@ -284,6 +284,7 @@ THE_CH2_branch_4 = {
 		icon = mission_unknown_mission
 		position = 2
 		required_missions = { THE_CH2_4_1 } 
+		required_missions = { THE_CH2_5_1 } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
