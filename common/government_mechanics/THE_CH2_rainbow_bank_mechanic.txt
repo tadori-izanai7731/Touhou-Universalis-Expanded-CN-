@@ -6,15 +6,15 @@ THE_CH2_rainbow_bank_mechanic = {
 	}
 	powers = {
 		THE_CH2_rainbow_bank_issuance_power = {
-			#发行
+			#发行量
 			gui = "THE_CH2_government_rainbow_bank_up_2_gui"
 			show_before_interactions = yes
 			min = 0
-			max = 100
+			max = 1000000
 			base_monthly_growth = 0
 		}
-		THE_CH2_rainbow_bank_storage_power = {
-			#储量
+		THE_CH2_rainbow_bank_life_power = {
+			#活跃度
 			gui = "THE_CH2_government_rainbow_bank_up_gui"
 			show_before_interactions = yes
 			min = 0
@@ -23,6 +23,7 @@ THE_CH2_rainbow_bank_mechanic = {
 		}
 	}
 	interactions = {
+		#取钱
 		THE_CH2_interactions_1 = {
 			gui = "THE_CH2_government_ranbow_bank_interface_down_gui"
 			iocn = GFX_THE_KEI_lonely_creation_interface_1
@@ -30,7 +31,12 @@ THE_CH2_rainbow_bank_mechanic = {
 				
 			}
 			effect = {
-				
+				THE_CH2_sotre_in_rainbow_bank_out_effects = {
+					value = 1000
+				}
+				# THE_CH2_sotre_token_in_rainbow_bank_equal_to_gold_out_effect = {
+				# 	value = 1000
+				# }
 			}
 		}
 		THE_CH2_interactions_2 = {
@@ -43,6 +49,7 @@ THE_CH2_rainbow_bank_mechanic = {
 				
 			}
 		}
+		#存钱
 		THE_CH2_interactions_3 = {
 			gui = "THE_CH2_government_ranbow_bank_interface_down_gui"
 			iocn = GFX_THE_KEI_lonely_creation_interface_1
@@ -50,7 +57,12 @@ THE_CH2_rainbow_bank_mechanic = {
 				
 			}
 			effect = {
-				
+				THE_CH2_sotre_in_rainbow_bank_in_effects = {
+					value = 1000
+				}
+				# THE_CH2_sotre_token_in_rainbow_bank_equal_to_gold_in_effect = {
+				# 	value = 1000
+				# }
 			}
 		}
 	}

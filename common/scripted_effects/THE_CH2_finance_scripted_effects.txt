@@ -1,0 +1,254 @@
+THE_CH2_token_im_var_set_0_effects = {
+	if = {
+		limit = { 
+			NOT = { has_country_flag = THE_CH2_on_startup_set_variable_flag }
+		}
+		#基础价值
+		set_variable = {
+			which = the_ch2_base_token_value_1st_var
+			value = 2
+		}
+		set_variable = {
+			which = the_ch2_base_token_value_end_var
+			value = 2
+		}
+		#黄金储备量 设置为0
+		set_variable = {
+			which = the_ch2_rainbow_bank_gold_stroage_1st_var
+			value = 0
+		}
+		#筹码发行量 设置为0
+		set_variable = {
+			which = the_ch2_rainbow_bank_inssuance_1st_var
+			value = 0
+		}
+		#季度发行量
+		set_variable = {
+			which = the_ch2_rainbow_band_yearly_insuance_increase_im_var
+			value = 0
+		}
+		#季度抛售总量
+		set_variable = {
+			which = the_ch2_rainbow_bank_yearly_inssuance_reduce_im_var
+			value = 0
+		}
+		#印发量
+		set_variable = {
+			which = the_ch2_rainbow_bank_print_money_im_var
+			value = 0
+		}
+		#########
+		#去年发行量
+		set_variable = {
+			which = the_ch2_rainbow_bank_inssuance_increase_im_var_early_year
+			value = 0
+		}
+		#去年抛售量
+		set_variable = {
+			which = the_ch2_rainbow_bank_inssuance_reduce_im_var_early_year
+			value = 0
+		}
+		set_country_flag = THE_CH2_on_startup_set_variable_flag
+	}
+}
+THE_CH2_token_change_rate_early_early_year_effects = {
+
+}
+THE_CH2_token_change_rate_effects = {
+	#变化系数 = （弹性系数） （季度增长量-季度抛售总量*抛售影响系数-抵消量-印发量）/发行筹码总量
+	#筹码价值 = （2）x基础价值系数x（1+变化系数）
+	###总量计算
+
+	###季度增长率计算
+	change_variable = {
+		which = the_ch2_rainbow_band_yearly_insuance_increase_im_var_calculate_1st
+		which = the_ch2_rainbow_band_yearly_insuance_increase_im_var
+	}
+	change_variable = {
+		which = the_ch2_rainbow_band_yearly_insuance_increase_im_var_calculate_2st
+		which = the_ch2_rainbow_band_yearly_insuance_increase_im_var
+	}
+	change_variable = {
+		which = the_ch2_rainbow_bank_yearly_inssuance_reduce_im_var_calculate_1st
+		which = the_ch2_rainbow_bank_yearly_inssuance_reduce_im_var
+	}
+	change_variable = {
+		which = the_ch2_rainbow_bank_print_money_im_var_calculate_1st
+		which = the_ch2_rainbow_bank_print_money_im_var
+	}
+	subtract_variable = {
+		which = the_ch2_rainbow_band_yearly_insuance_increase_im_var_calculate_2st
+		which = the_ch2_rainbow_bank_yearly_inssuance_reduce_im_var_calculate_1st
+	}
+	subtract_variable = {
+		which = the_ch2_rainbow_band_yearly_insuance_increase_im_var_calculate_2st
+		which = the_ch2_rainbow_bank_print_money_im_var
+	}
+	#the_ch2_rainbow_band_yearly_insuance_increase_im_var_calculate_2st
+	change_variable = {
+		which = the_ch2_rainbow_bank_inssuance_1st_var_calculate_1st
+		which = the_ch2_rainbow_bank_inssuance_1st_var
+	}
+	divide_variable = {
+		which = the_ch2_rainbow_band_yearly_insuance_increase_im_var_calculate_2st
+		which = the_ch2_rainbow_bank_inssuance_1st_var_calculate_1st
+	}
+	subtract_variable = {
+		which = the_ch2_rainbow_band_yearly_insuance_increase_im_var_calculate_2st
+		value = 10
+	}
+	change_variable = {
+		which = the_ch2_rainbow_band_yearly_insuance_increase_im_var_calculate_3st_end
+		value = the_ch2_rainbow_band_yearly_insuance_increase_im_var_calculate_2st
+	}
+	#the_ch2_rainbow_band_yearly_insuance_increase_im_var_calculate_2st 变化RATE
+	###价值计算
+	#the_ch2_base_token_value_1st_var基本价值
+		#基本价值运算
+
+	##跳过
+	change_variable = {
+		which = the_ch2_base_token_value_1st_var_calculate_without_rate
+		which = the_ch2_base_token_value_1st_var
+	}
+	change_variable = {
+		which = the_ch2_base_token_value_1st_var_calculate_without_rate_2st
+		which = the_ch2_base_token_value_1st_var
+	}
+	# RATE -0.01
+		#常数1
+	set_variable = {
+		which = the_ch2_base_token_rate_calculate_1_0
+		value = 1
+	}
+	change_variable = {
+		which = the_ch2_base_token_rate_calculate_1_0
+		which = the_ch2_rainbow_band_yearly_insuance_increase_im_var_calculate_2st
+	}
+	#最终价值
+	multiply_variable = {
+		which = the_ch2_base_token_value_1st_var_calculate_without_rate
+		which = the_ch2_base_token_rate_calculate_1_0
+	}
+	change_variable = {
+		which = the_ch2_base_token_value_end_var
+		which = the_ch2_base_token_value_1st_var_calculate_without_rate
+	}
+	#随机价值波动
+	random_list = {
+		40 = { multiply_variable = { which = the_ch2_base_token_value_1st_var_calculate_without_rate value = 1.0 } }
+		10 = { multiply_variable = { which = the_ch2_base_token_value_1st_var_calculate_without_rate value = 0.99 } }
+		10 = { multiply_variable = { which = the_ch2_base_token_value_1st_var_calculate_without_rate value = 0.97 } }
+		10 = { multiply_variable = { which = the_ch2_base_token_value_1st_var_calculate_without_rate value = 0.95 } }
+		10 = { multiply_variable = { which = the_ch2_base_token_value_1st_var_calculate_without_rate value = 1.01 } }
+		10 = { multiply_variable = { which = the_ch2_base_token_value_1st_var_calculate_without_rate value = 1.03 } }
+		10 = { multiply_variable = { which = the_ch2_base_token_value_1st_var_calculate_without_rate value = 1.05 } }
+	}
+	#the_ch2_base_token_value_1st_var_calculate_without_rate
+	#the_ch2_base_token_value_end_var
+}
+#银行存入or取出 effect
+THE_CH2_sotre_in_rainbow_bank_in_effects = {
+	add_treasury = -$value$
+	change_variable = {
+		which = the_ch2_rainbow_bank_gold_stroage_1st_var
+		value = $value$
+	}
+}
+THE_CH2_sotre_in_rainbow_bank_out_effects = {
+	add_treasury = $value$
+	change_variable = {
+		which = the_ch2_rainbow_bank_gold_stroage_1st_var
+		value = -$value$
+	}
+}
+#添加季度发行增长量 effect
+THE_CH2_yearly_add_inssuance_increase_var_effect = {
+	change_variable = {
+		which = the_ch2_rainbow_band_yearly_insuance_increase_im_var
+		value = $value$
+	}
+}
+#存入的筹码折算
+THE_CH2_sotre_token_in_rainbow_bank_equal_to_gold_in_effect = {
+	set_variable = {
+		which = the_ch2_sotre_token_in_rainbow_bank_equal_to_gold_in_calculate_1st
+		value = $value$
+	}
+	divide_variable = {
+		which = the_ch2_sotre_token_in_rainbow_bank_equal_to_gold_in_calculate_1st
+		which = the_ch2_rainbow_band_yearly_insuance_increase_im_var_calculate_3st_end
+	}
+	while = {
+		limit = { 
+			check_variable = {
+				the_ch2_sotre_token_in_rainbow_bank_equal_to_gold_in_calculate_1st
+				value = 0.1
+			}
+		}
+		change_variable = {
+			which = the_ch2_sotre_token_in_rainbow_bank_equal_to_gold_in_calculate_1st
+			value = -0.1
+		}
+		#自身 增加筹码
+		change_variable = {
+			which = the_ch2_root_token_in_rainbow_bank
+			value = 0.1
+		}
+		#CH2计数
+		CH2 = {
+			THE_CH2_add_government_power_THE_CH2_rainbow_bank_issuance_power_effects = {
+				value = 0.1
+			}
+		}
+	}
+}
+THE_CH2_sotre_token_in_rainbow_bank_equal_to_gold_out_effect = {
+	set_variable = {
+		which = the_ch2_sotre_token_in_rainbow_bank_equal_to_gold_in_calculate_1st
+		value = $value$
+	}
+	divide_variable = {
+		which = the_ch2_sotre_token_in_rainbow_bank_equal_to_gold_in_calculate_1st
+		which = the_ch2_rainbow_band_yearly_insuance_increase_im_var_calculate_3st_end
+	}
+	while = {
+		limit = { 
+			check_variable = {
+				the_ch2_sotre_token_in_rainbow_bank_equal_to_gold_in_calculate_1st
+				value = 0.1
+			}
+		}
+		change_variable = {
+			which = the_ch2_sotre_token_in_rainbow_bank_equal_to_gold_in_calculate_1st
+			value = -0.1
+		}
+		#自身 减少筹码
+		change_variable = {
+			which = the_ch2_root_token_in_rainbow_bank
+			value = -0.1
+		}
+		#CH2计数
+		CH2 = {
+			THE_CH2_add_government_power_THE_CH2_rainbow_bank_issuance_power_effects = {
+				value = -0.1
+			}
+		}
+	}
+}
+##添加/移除 发行筹码量
+THE_CH2_add_government_power_THE_CH2_rainbow_bank_issuance_power_effects = {
+	add_government_power = {
+		mechanic_type = THE_CH2_rainbow_bank_mechanic
+		power_type = THE_CH2_rainbow_bank_issuance_power
+		value = $value$
+	}
+	change_variable = {
+		which = the_ch2_rainbow_band_yearly_insuance_increase_im_var
+		value = $value$
+	}
+	change_variable = {
+		which = the_ch2_rainbow_bank_inssuance_1st_var
+		value = $value$
+	}
+}
