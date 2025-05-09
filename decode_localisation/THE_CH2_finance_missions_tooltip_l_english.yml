@@ -36,9 +36,9 @@ l_english:
  THE_CH2_interactions_2_desc: ""
  THE_CH2_interactions_3: "存入资金"
  THE_CH2_interactions_3_desc: ""
- THE_CH2_rainbow_bank_life_power: "市场活跃度"
+ THE_CH2_rainbow_bank_life_power: "虹市活跃"
  THE_CH2_rainbow_bank_issuance_power: "筹码发行量"
- THE_CH2_rainbow_bank_issuance_power_desc: "当前¤§O黄金储备量§!--[Root.the_ch2_rainbow_bank_gold_stroage_1st_var.GetValue]--\n当前¤§M筹码发行量§!--[Root.the_ch2_rainbow_bank_inssuance_1st_var.GetValue]--\n\n当前¤§M筹码§!价格 = [Root.the_ch2_base_token_value_end_var.GetValue]¤§O杜卡特§!-较往年变化§G[Root.the_ch2_rainbow_band_yearly_insuance_increase_im_var_calculate_3st_end.GetValue]%§!"
+ THE_CH2_rainbow_bank_issuance_power_desc: "当前¤§O黄金储备量§!--[Root.the_ch2_rainbow_bank_gold_stroage_1st_var.GetValue]--\n当前¤§M筹码发行量§!--[Root.the_ch2_rainbow_bank_inssuance_1st_var.GetValue]--\n\n\n当前¤§M筹码§!价格 = [Root.the_ch2_base_token_value_end_var.GetValue]¤§O杜卡特§!-较往年变化§=[Root.the_ch2_rainbow_band_yearly_insuance_increase_im_var_calculate_3st_end.GetValue]%§!\n\n§O当前季度筹码发行量§![Root.the_ch2_rainbow_band_yearly_insuance_increase_im_var.GetValue]\n§O往前季度筹码发行量§![Root.the_ch2_rainbow_bank_inssuance_increase_im_var_early_year.GetValue]\n增长比例§=[Root.the_ch2_rainbow_bank_inssuance_increase_im_var_early_year_calculate_end.GetValue]%§!\n\n§J当前季度印发量§![Root.the_ch2_rainbow_bank_print_money_im_var.GetValue]"
 ### GOVERNMENT_END
 
 ### DECISIONS
@@ -49,3 +49,14 @@ l_english:
 ###VARIABLE
  the_ch2_root_token_in_rainbow_bank: "月虹筹码"
 ###VARIABLE_END
+
+###MODIFER
+ monthly_THE_CH2_rainbow_bank_life_power: "月度虹市活跃"
+ monthly_THE_CH2_rainbow_bank_issuance_power: "月度铸币"
+ THE_CH2_custom_goods_prices_custom_modifier: "证券价格修正"
+###MOFIFIER_END
+
+###GOODS
+ THE_securities_tradegoods: "证券"
+ THE_securities_tradegoods_desc: ""
+###GOODS_END

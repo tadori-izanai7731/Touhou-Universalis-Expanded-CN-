@@ -24,5 +24,13 @@ estate_danmaku = {
 			always = yes
 		}
 	}
+
+	modifier_definition = {
+		type = loyalty
+		key = THE_CH2_custom_goods_prices_custom_modifier
+		trigger = {
+			always = yes
+		}
+	}
 }
 

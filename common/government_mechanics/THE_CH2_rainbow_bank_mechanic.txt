@@ -12,14 +12,35 @@ THE_CH2_rainbow_bank_mechanic = {
 			min = 0
 			max = 1000000
 			base_monthly_growth = 0
+			scaled_modifier = {
+				modifier = { 
+					monthly_THE_CH2_rainbow_bank_life_power = 10
+					interest = 10
+					inflation_reduction = -10
+					yearly_corruption = 1
+				}
+				start_value = 0
+				end_value = 1000000
+			}
 		}
 		THE_CH2_rainbow_bank_life_power = {
 			#活跃度
 			gui = "THE_CH2_government_rainbow_bank_up_gui"
 			show_before_interactions = yes
 			min = 0
-			max = 100
+			max = 500
 			base_monthly_growth = 0
+			scaled_modifier = {
+				modifier = {
+					THE_CH2_custom_goods_prices_custom_modifier = 5.00
+					interest = -5
+					inflation_reduction = 5
+					yearly_corruption = -0.5
+					monthly_splendor = 5
+				 }
+				 start_value = 0
+				 end_value = 500
+			}
 		}
 	}
 	interactions = {
@@ -34,9 +55,9 @@ THE_CH2_rainbow_bank_mechanic = {
 				THE_CH2_sotre_in_rainbow_bank_out_effects = {
 					value = 1000
 				}
-				# THE_CH2_sotre_token_in_rainbow_bank_equal_to_gold_out_effect = {
-				# 	value = 1000
-				# }
+				THE_CH2_sotre_token_in_rainbow_bank_equal_to_gold_out_effect = {
+					value = 1000
+				}
 			}
 		}
 		THE_CH2_interactions_2 = {
@@ -60,9 +81,9 @@ THE_CH2_rainbow_bank_mechanic = {
 				THE_CH2_sotre_in_rainbow_bank_in_effects = {
 					value = 1000
 				}
-				# THE_CH2_sotre_token_in_rainbow_bank_equal_to_gold_in_effect = {
-				# 	value = 1000
-				# }
+				THE_CH2_sotre_token_in_rainbow_bank_equal_to_gold_in_effect = {
+					value = 1000
+				}
 			}
 		}
 	}

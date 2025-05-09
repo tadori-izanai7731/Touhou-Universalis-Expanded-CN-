@@ -52,8 +52,55 @@ THE_CH2_token_im_var_set_0_effects = {
 	}
 }
 THE_CH2_token_change_rate_early_early_year_effects = {
-
+	#往年计数比例
+	change_variable = {
+		which = the_ch2_rainbow_bank_inssuance_increase_im_var_early_year
+		which = the_ch2_rainbow_bank_inssuance_increase_im_var_early_early_year
+	}
+	change_variable = {
+		which = the_ch2_rainbow_bank_inssuance_increase_im_var_early_year
+		which = the_ch2_rainbow_band_yearly_insuance_increase_im_var
+	}
+	change_variable = {
+		which = the_ch2_rainbow_bank_inssuance_increase_im_var_early_year_calculate_1st
+		which = the_ch2_rainbow_band_yearly_insuance_increase_im_var
+	}
+			#
+			divide_variable = {
+				which = the_ch2_rainbow_bank_inssuance_increase_im_var_early_year_calculate_1st
+				which = the_ch2_rainbow_bank_inssuance_increase_im_var_early_early_year
+			}
+			subtract_variable = {
+				which = the_ch2_rainbow_bank_inssuance_increase_im_var_early_year_calculate_1st
+				value = 1
+			}
+	change_variable = {
+		which = the_ch2_rainbow_bank_inssuance_increase_im_var_early_year_calculate_end
+		which = the_ch2_rainbow_bank_inssuance_increase_im_var_early_year_calculate_1st
+	}
+	####每季度清零
+	#季度发行量
+	set_variable = {
+		which = the_ch2_rainbow_band_yearly_insuance_increase_im_var
+		value = 0
+	}
+	#季度抛售总量
+	set_variable = {
+		which = the_ch2_rainbow_bank_yearly_inssuance_reduce_im_var
+		value = 0
+	}
+	#印发量
+	set_variable = {
+		which = the_ch2_rainbow_bank_print_money_im_var
+		value = 0
+	}
+	set_variable = {
+		which = the_ch2_rainbow_band_yearly_insuance_increase_im_var_calculate_2st
+		value = 0
+	}
+	THE_CH2_token_change_rate_effects = yes
 }
+#每次的变化运算
 THE_CH2_token_change_rate_effects = {
 	#变化系数 = （弹性系数） （季度增长量-季度抛售总量*抛售影响系数-抵消量-印发量）/发行筹码总量
 	#筹码价值 = （2）x基础价值系数x（1+变化系数）
@@ -93,9 +140,9 @@ THE_CH2_token_change_rate_effects = {
 		which = the_ch2_rainbow_band_yearly_insuance_increase_im_var_calculate_2st
 		which = the_ch2_rainbow_bank_inssuance_1st_var_calculate_1st
 	}
-	subtract_variable = {
+	multiply_variable = {
 		which = the_ch2_rainbow_band_yearly_insuance_increase_im_var_calculate_2st
-		value = 10
+		value = 0.5
 	}
 	change_variable = {
 		which = the_ch2_rainbow_band_yearly_insuance_increase_im_var_calculate_3st_end
@@ -104,7 +151,7 @@ THE_CH2_token_change_rate_effects = {
 	#the_ch2_rainbow_band_yearly_insuance_increase_im_var_calculate_2st 变化RATE
 	###价值计算
 	#the_ch2_base_token_value_1st_var基本价值
-		#基本价值运算
+		#基本价值*价值修正
 
 	##跳过
 	change_variable = {
@@ -130,19 +177,19 @@ THE_CH2_token_change_rate_effects = {
 		which = the_ch2_base_token_value_1st_var_calculate_without_rate
 		which = the_ch2_base_token_rate_calculate_1_0
 	}
-	change_variable = {
-		which = the_ch2_base_token_value_end_var
-		which = the_ch2_base_token_value_1st_var_calculate_without_rate
-	}
 	#随机价值波动
 	random_list = {
 		40 = { multiply_variable = { which = the_ch2_base_token_value_1st_var_calculate_without_rate value = 1.0 } }
-		10 = { multiply_variable = { which = the_ch2_base_token_value_1st_var_calculate_without_rate value = 0.99 } }
 		10 = { multiply_variable = { which = the_ch2_base_token_value_1st_var_calculate_without_rate value = 0.97 } }
-		10 = { multiply_variable = { which = the_ch2_base_token_value_1st_var_calculate_without_rate value = 0.95 } }
+		10 = { multiply_variable = { which = the_ch2_base_token_value_1st_var_calculate_without_rate value = 0.94 } }
+		10 = { multiply_variable = { which = the_ch2_base_token_value_1st_var_calculate_without_rate value = 0.91 } }
 		10 = { multiply_variable = { which = the_ch2_base_token_value_1st_var_calculate_without_rate value = 1.01 } }
 		10 = { multiply_variable = { which = the_ch2_base_token_value_1st_var_calculate_without_rate value = 1.03 } }
 		10 = { multiply_variable = { which = the_ch2_base_token_value_1st_var_calculate_without_rate value = 1.05 } }
+	}
+	change_variable = {
+		which = the_ch2_base_token_value_end_var
+		which = the_ch2_base_token_value_1st_var_calculate_without_rate
 	}
 	#the_ch2_base_token_value_1st_var_calculate_without_rate
 	#the_ch2_base_token_value_end_var
@@ -230,8 +277,8 @@ THE_CH2_sotre_token_in_rainbow_bank_equal_to_gold_out_effect = {
 		}
 		#CH2计数
 		CH2 = {
-			THE_CH2_add_government_power_THE_CH2_rainbow_bank_issuance_power_effects = {
-				value = -0.1
+			THE_CH2_remove_government_power_THE_CH2_rainbow_bank_issuance_power_effects = {
+				value = 0.1
 			}
 		}
 	}
@@ -250,5 +297,64 @@ THE_CH2_add_government_power_THE_CH2_rainbow_bank_issuance_power_effects = {
 	change_variable = {
 		which = the_ch2_rainbow_bank_inssuance_1st_var
 		value = $value$
+	}
+}
+THE_CH2_remove_government_power_THE_CH2_rainbow_bank_issuance_power_effects = {
+	add_government_power = {
+		mechanic_type = THE_CH2_rainbow_bank_mechanic
+		power_type = THE_CH2_rainbow_bank_issuance_power
+		value = -$value$
+	}
+	subtract_variable = {
+		which = the_ch2_rainbow_bank_inssuance_1st_var
+		value = $value$
+	}
+	change_variable = {
+		which = the_ch2_rainbow_bank_yearly_inssuance_reduce_im_var
+		value = $value$
+	}
+}
+#结算证券价格
+THE_CH2_new_tradegoods_srcurities_prices_effects = {
+	export_to_variable = {
+		which = the_ch2_the_custom_goods_prices_custom_modifier_im_var
+		value = modifier:THE_CH2_custom_goods_prices_custom_modifier
+		who = ROOT
+	}
+	multiply_variable = {
+		which = the_ch2_the_custom_goods_prices_custom_modifier_im_var
+		value = 100
+	}
+	#取整
+	while = {
+		limit = {
+			check_variable = {
+				which = the_ch2_the_custom_goods_prices_custom_modifier_im_var
+				value = 1
+			}
+		 }
+		 change_variable = {
+			which = the_ch2_the_custom_goods_prices_custom_modifier_im_var
+			value = -1
+		 }
+		 change_variable = {
+			which = the_ch2_the_custom_goods_prices_custom_modifier_im_var_after
+			value = 1
+		 }
+	}
+	if = { limit = { check_variable = { which = the_ch2_the_custom_goods_prices_custom_modifier_im_var_after value = 500 } } THE_CH2_new_tradegoods_srcurities_prices_effects_set_end_effects = { price = 5.00 } }
+	else_if = { limit = { check_variable = { which = the_ch2_the_custom_goods_prices_custom_modifier_im_var_after value = 500 } } THE_CH2_new_tradegoods_srcurities_prices_effects_set_end_effects = { price = 5.00 } }
+	else_if = { limit = { check_variable = { which = the_ch2_the_custom_goods_prices_custom_modifier_im_var_after value = 500 } } THE_CH2_new_tradegoods_srcurities_prices_effects_set_end_effects = { price = 5.00 } }
+
+
+
+
+}
+THE_CH2_new_tradegoods_srcurities_prices_effects_set_end_effects = {
+	change_price = {
+		trade_goods = THE_securities_tradegoods
+		key = grain_shortage
+		value = $price$
+		duration = -1
 	}
 }
