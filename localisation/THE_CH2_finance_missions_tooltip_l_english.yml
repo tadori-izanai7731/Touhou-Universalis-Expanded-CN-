@@ -36,9 +36,9 @@
  THE_CH2_interactions_2_desc: ""
  THE_CH2_interactions_3: "XReQDÑ‘"
  THE_CH2_interactions_3_desc: ""
- THE_CH2_rainbow_bank_life_power: "^:WImÃ¦^"
+ THE_CH2_rainbow_bank_life_power: "y†^ImÃ"
  THE_CH2_rainbow_bank_issuance_power: "yrxÑSLˆÏ‘"
- THE_CH2_rainbow_bank_issuance_power_desc: "SVMR¤§OÄžÑ‘¨PYÏ‘§!--[Root.the_ch2_rainbow_bank_gold_stroage_1st_var.GetValue]--\nSVMR¤§MyrxÑSLˆÏ‘§!--[Root.the_ch2_rainbow_bank_inssuance_1st_var.GetValue]--\n\nSVMR¤§Myrx§!÷N<h = [Root.the_ch2_base_token_value_end_var.GetValue]¤§OjgaSyr§!-ƒŽVt^ØSS§G[Root.the_ch2_rainbow_band_yearly_insuance_increase_im_var_calculate_3st_end.GetValue]%§!"
+ THE_CH2_rainbow_bank_issuance_power_desc: "SVMR¤§OÄžÑ‘¨PYÏ‘§!--[Root.the_ch2_rainbow_bank_gold_stroage_1st_var.GetValue]--\nSVMR¤§MyrxÑSLˆÏ‘§!--[Root.the_ch2_rainbow_bank_inssuance_1st_var.GetValue]--\n\n\nSVMR¤§Myrx§!÷N<h = [Root.the_ch2_base_token_value_end_var.GetValue]¤§OjgaSyr§!-ƒŽVt^ØSS§=[Root.the_ch2_rainbow_band_yearly_insuance_increase_im_var_calculate_3st_end.GetValue]%§!\n\n§OSVMRcR¦^yrxÑSLˆÏ‘§![Root.the_ch2_rainbow_band_yearly_insuance_increase_im_var.GetValue]\n§OŽVMRcR¦^yrxÑSLˆÏ‘§![Root.the_ch2_rainbow_bank_inssuance_increase_im_var_early_year.GetValue]\nžX•Ôk‹O§=[Root.the_ch2_rainbow_bank_inssuance_increase_im_var_early_year_calculate_end.GetValue]%§!\n\n§JSVMRcR¦^pSÑSÏ‘§![Root.the_ch2_rainbow_bank_print_money_im_var.GetValue]"
 ### GOVERNMENT_END
 
 ### DECISIONS
@@ -49,3 +49,14 @@
 ###VARIABLE
  the_ch2_root_token_in_rainbow_bank: "gy†yrx"
 ###VARIABLE_END
+
+###MODIFER
+ monthly_THE_CH2_rainbow_bank_life_power: "g¦^y†^ImÃ"
+ monthly_THE_CH2_rainbow_bank_issuance_power: "g¦^ø”^"
+ THE_CH2_custom_goods_prices_custom_modifier: "Á‹8R÷N<hîOck"
+###MOFIFIER_END
+
+###GOODS
+ THE_securities_tradegoods: "Á‹8R"
+ THE_securities_tradegoods_desc: ""
+###GOODS_END
