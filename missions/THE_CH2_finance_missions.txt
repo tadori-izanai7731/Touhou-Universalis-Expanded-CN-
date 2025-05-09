@@ -187,7 +187,9 @@ THE_CH2_branch_3 = {
 	THE_CH2_3_1 = {
 		icon = mission_unknown_mission
 		position = 1
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+		 } 
 
 		trigger = {  } 
 
@@ -198,9 +200,13 @@ THE_CH2_branch_3 = {
 		icon = mission_unknown_mission
 		position = 3
 		required_missions = { THE_CH2_3_1 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			is_capital_of = TGU
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			
+		 } 
 
 		effect = {  } 
 	}
@@ -275,9 +281,25 @@ THE_CH2_branch_4 = {
 		position = 1
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			has_mil_advisor = yes
+			OR = {
+				army_size_percentage = 1.00
+				army_size = 15
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			create_general = { tradition = 60 culture = Youkai }
+			add_country_modifier = {
+				name = THE_CH2_finanece_start_game_indenpedent_buff
+				duration = 7300
+			}
+			custom_tooltip = THE_CH2_4_1_c_tt1
+			youkai_mountain_region = {
+				add_permanent_claim = ROOT
+			}
+		 } 
 	}
 
 	THE_CH2_4_2 = {
@@ -285,11 +307,18 @@ THE_CH2_branch_4 = {
 		position = 2
 		required_missions = { THE_CH2_4_1 } 
 		required_missions = { THE_CH2_5_1 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			OR = {
+				area = North_tengu_plains
+				area = Northern_youkai_mountains
+			}
+		 } 
 
 		trigger = {  } 
 
-		effect = {  } 
+		effect = { 
+
+		 } 
 	}
 
 	THE_CH2_4_3 = {
@@ -369,11 +398,30 @@ THE_CH2_branch_5 = {
 	THE_CH2_5_1 = {
 		icon = mission_unknown_mission
 		position = 1
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			is_capital_of = MRY
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			MRY = {
+				has_opinion = {
+					who = ROOT
+					value = 75
+				}
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			MRY = {
+				create_guarantee = ROOT
+				add_historical_friend = ROOT
+			}
+			add_dip_power = 100
+			add_country_modifier = {
+				name = THE_CH2_MRY_support_us_mission_buff
+				duration = 7300
+			}
+		 } 
 	}
 
 	THE_CH2_5_2 = {

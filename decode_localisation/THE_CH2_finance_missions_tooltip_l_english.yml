@@ -55,9 +55,15 @@ l_english:
  monthly_THE_CH2_rainbow_bank_issuance_power: "月度铸币"
  THE_CH2_custom_goods_prices_custom_modifier: "证券价格修正"
  THE_securities_government_power_change_rage: "证券价格修正"
+ THE_CH2_finanece_start_game_indenpedent_buff: "挣脱"
+ THE_CH2_MRY_support_us_mission_buff: "诹访之力"
 ###MOFIFIER_END
 
 ###GOODS
  THE_securities_tradegoods: "证券"
  THE_securities_tradegoods_desc: ""
 ###GOODS_END
+
+###MISSION_TOOLTIP
+	THE_CH2_4_1_c_tt1: "§V拥有此效果时:§!\n在对§Y天狗§!的独立战争中获胜,将获得§G3§!点稳定度"
+###MISSION_TOOLTIP_END

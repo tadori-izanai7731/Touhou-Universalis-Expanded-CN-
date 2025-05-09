@@ -1,3 +1,6 @@
+#####################################
+#ECONOMICAL SCRIPT EFFECTS
+#####################################
 THE_CH2_token_im_var_set_0_effects = {
 	if = {
 		limit = { 
@@ -850,5 +853,25 @@ THE_CH2_new_tradegoods_srcurities_prices_effects_set_end_effects = {
 		key = THE_securities_government_power_change_rage
 		value = $price$
 		duration = -1
+	}
+}
+#####################################
+#MISSION SCRIPT EFFECTS
+#####################################
+THE_CH2_start_game_declare_to_tgu_effect = {
+	if = {
+		limit = { 
+			FROM = {
+				tag = TGU
+			}
+			ROOT = {
+				tag = CH2
+				has_country_modifier = THE_CH2_finanece_start_game_indenpedent_buff
+			}
+		}
+		ROOT = {
+			remove_country_modifier = THE_CH2_finanece_start_game_indenpedent_buff
+			add_stability = 3
+		}
 	}
 }
