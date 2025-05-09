@@ -65,15 +65,15 @@ THE_CH2_token_change_rate_early_early_year_effects = {
 		which = the_ch2_rainbow_bank_inssuance_increase_im_var_early_year_calculate_1st
 		which = the_ch2_rainbow_band_yearly_insuance_increase_im_var
 	}
-			#
-			divide_variable = {
-				which = the_ch2_rainbow_bank_inssuance_increase_im_var_early_year_calculate_1st
-				which = the_ch2_rainbow_bank_inssuance_increase_im_var_early_early_year
-			}
-			subtract_variable = {
-				which = the_ch2_rainbow_bank_inssuance_increase_im_var_early_year_calculate_1st
-				value = 1
-			}
+	#
+	divide_variable = {
+		which = the_ch2_rainbow_bank_inssuance_increase_im_var_early_year_calculate_1st
+		which = the_ch2_rainbow_bank_inssuance_increase_im_var_early_early_year
+	}
+	subtract_variable = {
+		which = the_ch2_rainbow_bank_inssuance_increase_im_var_early_year_calculate_1st
+		value = 1
+	}
 	change_variable = {
 		which = the_ch2_rainbow_bank_inssuance_increase_im_var_early_year_calculate_end
 		which = the_ch2_rainbow_bank_inssuance_increase_im_var_early_year_calculate_1st
@@ -105,7 +105,7 @@ THE_CH2_token_change_rate_effects = {
 	#变化系数 = （弹性系数） （季度增长量-季度抛售总量*抛售影响系数-抵消量-印发量）/发行筹码总量
 	#筹码价值 = （2）x基础价值系数x（1+变化系数）
 	###总量计算
-
+	
 	###季度增长率计算
 	change_variable = {
 		which = the_ch2_rainbow_band_yearly_insuance_increase_im_var_calculate_1st
@@ -151,8 +151,8 @@ THE_CH2_token_change_rate_effects = {
 	#the_ch2_rainbow_band_yearly_insuance_increase_im_var_calculate_2st 变化RATE
 	###价值计算
 	#the_ch2_base_token_value_1st_var基本价值
-		#基本价值*价值修正
-
+	#基本价值*价值修正
+	
 	##跳过
 	change_variable = {
 		which = the_ch2_base_token_value_1st_var_calculate_without_rate
@@ -163,7 +163,7 @@ THE_CH2_token_change_rate_effects = {
 		which = the_ch2_base_token_value_1st_var
 	}
 	# RATE -0.01
-		#常数1
+	#常数1
 	set_variable = {
 		which = the_ch2_base_token_rate_calculate_1_0
 		value = 1
@@ -332,15 +332,15 @@ THE_CH2_new_tradegoods_srcurities_prices_effects = {
 				which = the_ch2_the_custom_goods_prices_custom_modifier_im_var
 				value = 1
 			}
-		 }
-		 change_variable = {
+		}
+		change_variable = {
 			which = the_ch2_the_custom_goods_prices_custom_modifier_im_var
 			value = -1
-		 }
-		 change_variable = {
+		}
+		change_variable = {
 			which = the_ch2_the_custom_goods_prices_custom_modifier_im_var_after
 			value = 1
-		 }
+		}
 	}
 	if = { limit = { check_variable = { which = the_ch2_the_custom_goods_prices_custom_modifier_im_var_after value = 500 } } THE_CH2_new_tradegoods_srcurities_prices_effects_set_end_effects = { price = 5.00 } }
 	else_if = { limit = { check_variable = { which = the_ch2_the_custom_goods_prices_custom_modifier_im_var_after value = 499 } } THE_CH2_new_tradegoods_srcurities_prices_effects_set_end_effects = { price = 4.99 } }
