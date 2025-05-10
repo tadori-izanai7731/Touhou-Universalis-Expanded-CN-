@@ -44,11 +44,133 @@ country_decisions = {
 					add_accepted_culture = Tengu
 					THE_CH2_token_im_var_set_0_effects = yes
 				}
+				TGU = {
+					vassalize = CH2
+				}
 			}
 			switch_tag = CH2
 		}
 		ai_will_do = {
 			factor = 0
+		}
+	}
+	THE_CH2_declare_to_tgu_independent_war_decisions = {
+		color = { 29 77 191 }
+		potential = {
+			has_country_flag = THE_CH2_unlock_indenpendent_war_decision_flag
+			exists = TGU
+			ai = no
+		}
+		allow = {
+			is_at_war = no
+			is_subject = yes
+		}
+		effect = {
+			declare_war_with_cb = {
+				casus_belli = THE_AKI_season_war_cb
+				who = TGU
+			}
+			custom_tooltip = THE_CH2_indenpendent_war_decision_c_tt
+			hidden_effect = {
+				clr_country_flag = THE_CH2_unlock_indenpendent_war_decision_flag
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	####
+	#银行决议
+	#存钱
+	THE_CH2_other_country_can_bank_interface_decisions_1 = {
+		color = { 29 77 191 }
+		potential = {
+			NOT = {
+				has_government_mechanic = THE_CH2_rainbow_bank_mechanic
+			}
+			CH2 = {
+				has_government_mechanic = THE_CH2_rainbow_bank_mechanic
+			}
+			OR = {
+				capital_scope = {
+					OR = {
+						region = youkai_mountain_region
+						region = foot_of_the_mountain_region
+					}
+				}
+				has_country_flag = THE_CH2_ch2_market_access_country_flag
+			}
+		}
+		allow = {
+			treasury = 200
+		}
+		effect = {
+			THE_CH2_sotre_in_rainbow_bank_in_effects = {
+				value = 100
+			}
+			THE_CH2_sotre_token_in_rainbow_bank_equal_to_gold_in_effect = {
+				value = 100
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				NOT = {
+					current_income_balance = 5
+				}
+			}
+		}
+	}
+	#取钱
+	THE_CH2_other_country_can_bank_interface_decisions_2 = {
+		color = { 29 77 191 }
+		potential = {
+			NOT = {
+				has_government_mechanic = THE_CH2_rainbow_bank_mechanic
+			}
+			CH2 = {
+				has_government_mechanic = THE_CH2_rainbow_bank_mechanic
+			}
+			OR = {
+				capital_scope = {
+					OR = {
+						region = youkai_mountain_region
+						region = foot_of_the_mountain_region
+					}
+				}
+				has_country_flag = THE_CH2_ch2_market_access_country_flag
+			}
+		}
+		allow = {
+			ROOT = {
+				check_variable = {
+					which = the_ch2_rainbow_bank_gold_root_country_stroage_var
+					value = 100
+				}
+			}
+		}
+		effect = {
+			THE_CH2_sotre_in_rainbow_bank_out_effects = {
+				value = 100
+			}
+			THE_CH2_sotre_token_in_rainbow_bank_equal_to_gold_out_effect = {
+				value = 100
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				current_income_balance = 0
+			}
+			modifier = {
+				factor = 5
+				NOT = {
+					current_income_balance = -10
+				}
+			}
 		}
 	}
 }

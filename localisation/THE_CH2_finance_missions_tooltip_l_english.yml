@@ -38,12 +38,19 @@
  THE_CH2_interactions_3_desc: ""
  THE_CH2_rainbow_bank_life_power: "y†^ImÃ"
  THE_CH2_rainbow_bank_issuance_power: "yrxÑSLˆÏ‘"
- THE_CH2_rainbow_bank_issuance_power_desc: "SVMR¤§OÄžÑ‘¨PYÏ‘§!--[Root.the_ch2_rainbow_bank_gold_stroage_1st_var.GetValue]--\nSVMR¤§MyrxÑSLˆÏ‘§!--[Root.the_ch2_rainbow_bank_inssuance_1st_var.GetValue]--\n\n\nSVMR¤§Myrx§!÷N<h = [Root.the_ch2_base_token_value_end_var.GetValue]¤§OjgaSyr§!-ƒŽVt^ØSS§=[Root.the_ch2_rainbow_band_yearly_insuance_increase_im_var_calculate_3st_end.GetValue]%§!\n\n§OSVMRcR¦^yrxÑSLˆÏ‘§![Root.the_ch2_rainbow_band_yearly_insuance_increase_im_var.GetValue]\n§OŽVMRcR¦^yrxÑSLˆÏ‘§![Root.the_ch2_rainbow_bank_inssuance_increase_im_var_early_year.GetValue]\nžX•Ôk‹O§=[Root.the_ch2_rainbow_bank_inssuance_increase_im_var_early_year_calculate_end.GetValue]%§!\n\n§JSVMRcR¦^pSÑSÏ‘§![Root.the_ch2_rainbow_bank_print_money_im_var.GetValue]"
+ THE_CH2_rainbow_bank_issuance_power_desc: "SVMR¤§OÄžÑ‘¨PYÏ‘§!--[Root.the_ch2_rainbow_bank_gold_stroage_1st_var.GetValue]--\nSVMR¤§MyrxÑSLˆÏ‘§!--[Root.the_ch2_rainbow_bank_inssuance_1st_var.GetValue]--\n\n\nSVMR¤§Myrx§!÷N<h = [Root.the_ch2_base_token_value_end_var.GetValue]¤§OjgaSyr§!-ƒŽVt^ØSS§G[Root.the_ch2_rainbow_band_yearly_insuance_increase_im_var_calculate_3st_end.GetValue]%§!\n\n§OSVMRcR¦^yrxÑSLˆÏ‘§![Root.the_ch2_rainbow_band_yearly_insuance_increase_im_var.GetValue]\n§OŽVMRcR¦^yrxÑSLˆÏ‘§![Root.the_ch2_rainbow_bank_inssuance_increase_im_var_early_year.GetValue]\nžX•Ôk‹O§=[Root.the_ch2_rainbow_bank_inssuance_increase_im_var_early_year_calculate_end.GetValue]%§!\n\n§JSVMRcR¦^pSÑSÏ‘§![Root.the_ch2_rainbow_bank_print_money_im_var.GetValue]"
 ### GOVERNMENT_END
 
 ### DECISIONS
  THE_TGU_relase_CH2_country_decisions_title: "nbo@CH2gy†^:W"
  THE_TGU_relase_CH2_country_decisions_desc: ""
+ THE_CH2_declare_to_tgu_independent_war_decisions_title: "T@TGU§Y)Y×r§!ÑS¨RìrËzb‰N"
+ THE_CH2_declare_to_tgu_independent_war_decisions_desc: ""
+ THE_CH2_other_country_can_bank_interface_decisions_1_title: "@CH2gy†ö”LˆXR>k"
+ THE_CH2_other_country_can_bank_interface_decisions_1_desc: ""
+ THE_CH2_other_country_can_bank_interface_decisions_2_title: "@CH2gy†ö”LˆÖS±”"
+ THE_CH2_other_country_can_bank_interface_decisions_2_desc: ""
+ 
 ### DECISIONS_END
 
 ###VARIABLE
@@ -55,9 +62,22 @@
  monthly_THE_CH2_rainbow_bank_issuance_power: "g¦^ø”^"
  THE_CH2_custom_goods_prices_custom_modifier: "Á‹8R÷N<hîOck"
  THE_securities_government_power_change_rage: "Á‹8R÷N<hîOck"
+ THE_CH2_finanece_start_game_indenpedent_buff: "1c1"
+ THE_CH2_MRY_support_us_mission_buff: "ù‹¿‹KN›R"
 ###MOFIFIER_END
 
 ###GOODS
  THE_securities_tradegoods: "Á‹8R"
  THE_securities_tradegoods_desc: ""
 ###GOODS_END
+
+###MISSION_TOOLTIP
+ THE_CH2_4_1_c_tt1: "§Våb	gdkHeœgöe:§!\n(WùR§Y)Y×r§!„vìrËzb‰N-N·ƒÜw,S·ƒ—V§G3§!¹p3zšR¦^\n"
+ THE_CH2_4_2_c_tt1: ":NbìNMOŽN§Y)Y×rØšŸS§!:SßWN§Y–Y*`KNqSSè§!:SßW„vNb	gwýNûm R§Gôv^SÞT8hÃV§!"
+ THE_CH2_5_1_c_tt1_yes: "£yes£‚YœgbìNÍNjO:N@TGU§Y)Y×r§!„v^SýVÿRÿ"
+ THE_CH2_5_1_c_tt1_no: "£no£‚YœgbìNÍNjO:N@TGU§Y)Y×r§!„v^SýVÿRÿ"
+ THE_CH2_indenpendent_war_decision_c_tt: "bìNSùR@TGU§Y)Y×r§!ÑS¨R0^:Wb‰N0ÿÌS¹eàeÕlìS2UßvËS0\n- - -å‚ŒRbûN¡R0²N‹YqSåz0:@YME§YqSåz§!SO.^©RbìN\n- - -å‚ŒRbûN¡R0R¿‹^y>y0ÿ@MRY§YˆRâw§!SO.^©RbìN"
+ THE_CH2_4_1_c_tt2: "=T(u³Q®‹0§YT)Y×rÑS¨R^:Wb‰N§!0"
+ THE_CH2_5_1_c_tt2: "Ç³Q®‹0§YT)Y×rÑS¨R^:Wb‰N§!0ÿ@MRY§YˆRâw§!SO.^©RbìN"
+ THE_CH2_2_1_c_tt2: "Ç³Q®‹0§YT)Y×rÑS¨R^:Wb‰N§!0ÿ@YME§YqSåz§!SO.^©RbìN"
+###MISSION_TOOLTIP_END

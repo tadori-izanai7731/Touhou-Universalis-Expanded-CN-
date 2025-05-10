@@ -91,11 +91,50 @@ THE_CH2_branch_2 = {
 	THE_CH2_2_1 = {
 		icon = mission_unknown_mission
 		position = 1
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			is_capital_of = YME
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			YME = {
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			YME = {
+				add_historical_friend = ROOT
+			}
+
+			if = {
+				limit = { 
+					ROOT = {
+						is_subject = yes
+					}
+				}
+				custom_tooltip = THE_CH2_5_1_c_tt1_yes
+				custom_tooltip = THE_CH2_2_1_c_tt2
+				hidden_effect = {
+					YME = {
+						set_country_flag = THE_CH2_alliance_will_help_ch2_indenpendent_flag
+					}
+				}
+			}
+			else = {
+				custom_tooltip = THE_CH2_5_1_c_tt1_no
+				custom_tooltip = THE_CH2_2_1_c_tt2
+				tooltip = {
+					hidden_effect = {
+						YME = {
+							set_country_flag = THE_CH2_alliance_will_help_ch2_indenpendent_flag
+						}
+					}
+				}
+			}
+		 } 
 	}
 
 	THE_CH2_2_2 = {
@@ -188,12 +227,21 @@ THE_CH2_branch_3 = {
 		icon = mission_unknown_mission
 		position = 1
 		provinces_to_highlight = { 
-			owned_by = ROOT
+			is_capital_of = ROOT
 		 } 
 
-		trigger = {  } 
+		trigger = { 
+			5357 = {
+				development = 18
+				has_trade_building_trigger = yes
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			5357 = {
+				center_of_trade = 2
+			}
+		 } 
 	}
 
 	THE_CH2_3_3 = {
@@ -205,10 +253,13 @@ THE_CH2_branch_3 = {
 		 } 
 
 		trigger = { 
-			
+			total_development = TGU
+			army_size = TGU
 		 } 
 
-		effect = {  } 
+		effect = { 
+			vassalize = TGU
+		 } 
 	}
 
 	THE_CH2_3_4 = {
@@ -219,7 +270,9 @@ THE_CH2_branch_3 = {
 
 		trigger = {  } 
 
-		effect = {  } 
+		effect = { 
+			add_government_reform = THE_CH2_ranbow_central_bank_reform
+		 } 
 	}
 
 	THE_CH2_3_5 = {
@@ -290,14 +343,18 @@ THE_CH2_branch_4 = {
 		 } 
 
 		effect = { 
+			custom_tooltip = THE_CH2_4_1_c_tt2
+			youkai_mountain_region = {
+				add_permanent_claim = ROOT
+			}
 			create_general = { tradition = 60 culture = Youkai }
 			add_country_modifier = {
 				name = THE_CH2_finanece_start_game_indenpedent_buff
-				duration = 7300
+				duration = -1
 			}
 			custom_tooltip = THE_CH2_4_1_c_tt1
-			youkai_mountain_region = {
-				add_permanent_claim = ROOT
+			hidden_effect = {
+				set_country_flag = THE_CH2_unlock_indenpendent_war_decision_flag
 			}
 		 } 
 	}
@@ -312,13 +369,38 @@ THE_CH2_branch_4 = {
 				area = North_tengu_plains
 				area = Northern_youkai_mountains
 			}
-		 } 
-
-		trigger = {  } 
-
+		} 
+		
+		trigger = {
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 6
+				OR = {
+					area = North_tengu_plains
+					area = Northern_youkai_mountains
+				}
+			}
+		} 
+		
 		effect = { 
-
-		 } 
+			custom_tooltip = THE_CH2_4_2_c_tt1
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = North_tengu_plains
+							area = Northern_youkai_mountains
+						}
+					}
+					add_core = ROOT
+				}
+			}
+			add_prestige = 50
+			5357 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		} 
 	}
 
 	THE_CH2_4_3 = {
@@ -413,13 +495,37 @@ THE_CH2_branch_5 = {
 
 		effect = { 
 			MRY = {
-				create_guarantee = ROOT
 				add_historical_friend = ROOT
 			}
 			add_dip_power = 100
 			add_country_modifier = {
 				name = THE_CH2_MRY_support_us_mission_buff
 				duration = 7300
+			}
+			if = {
+				limit = { 
+					ROOT = {
+						is_subject = yes
+					}
+				}
+				custom_tooltip = THE_CH2_5_1_c_tt1_yes
+				custom_tooltip = THE_CH2_5_1_c_tt2
+				hidden_effect = {
+					MRY = {
+						set_country_flag = THE_CH2_alliance_will_help_ch2_indenpendent_flag
+					}
+				}
+			}
+			else = {
+				custom_tooltip = THE_CH2_5_1_c_tt1_no
+				custom_tooltip = THE_CH2_5_1_c_tt2
+				tooltip = {
+					hidden_effect = {
+						MRY = {
+							set_country_flag = THE_CH2_alliance_will_help_ch2_indenpendent_flag
+						}
+					}
+				}
 			}
 		 } 
 	}

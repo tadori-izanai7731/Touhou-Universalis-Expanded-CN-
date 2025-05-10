@@ -1,3 +1,7 @@
 on_yearly_pulse = {
 	THE_CH2_token_change_rate_early_early_year_effects = yes
+	THE_CH2_new_tradegoods_srcurities_prices_effects = yes
+}
+on_war_won = {
+	THE_CH2_start_game_declare_to_tgu_effect = yes
 }

@@ -38,12 +38,19 @@ l_english:
  THE_CH2_interactions_3_desc: ""
  THE_CH2_rainbow_bank_life_power: "虹市活跃"
  THE_CH2_rainbow_bank_issuance_power: "筹码发行量"
- THE_CH2_rainbow_bank_issuance_power_desc: "当前¤§O黄金储备量§!--[Root.the_ch2_rainbow_bank_gold_stroage_1st_var.GetValue]--\n当前¤§M筹码发行量§!--[Root.the_ch2_rainbow_bank_inssuance_1st_var.GetValue]--\n\n\n当前¤§M筹码§!价格 = [Root.the_ch2_base_token_value_end_var.GetValue]¤§O杜卡特§!-较往年变化§=[Root.the_ch2_rainbow_band_yearly_insuance_increase_im_var_calculate_3st_end.GetValue]%§!\n\n§O当前季度筹码发行量§![Root.the_ch2_rainbow_band_yearly_insuance_increase_im_var.GetValue]\n§O往前季度筹码发行量§![Root.the_ch2_rainbow_bank_inssuance_increase_im_var_early_year.GetValue]\n增长比例§=[Root.the_ch2_rainbow_bank_inssuance_increase_im_var_early_year_calculate_end.GetValue]%§!\n\n§J当前季度印发量§![Root.the_ch2_rainbow_bank_print_money_im_var.GetValue]"
+ THE_CH2_rainbow_bank_issuance_power_desc: "当前¤§O黄金储备量§!--[Root.the_ch2_rainbow_bank_gold_stroage_1st_var.GetValue]--\n当前¤§M筹码发行量§!--[Root.the_ch2_rainbow_bank_inssuance_1st_var.GetValue]--\n\n\n当前¤§M筹码§!价格 = [Root.the_ch2_base_token_value_end_var.GetValue]¤§O杜卡特§!-较往年变化§G[Root.the_ch2_rainbow_band_yearly_insuance_increase_im_var_calculate_3st_end.GetValue]%§!\n\n§O当前季度筹码发行量§![Root.the_ch2_rainbow_band_yearly_insuance_increase_im_var.GetValue]\n§O往前季度筹码发行量§![Root.the_ch2_rainbow_bank_inssuance_increase_im_var_early_year.GetValue]\n增长比例§=[Root.the_ch2_rainbow_bank_inssuance_increase_im_var_early_year_calculate_end.GetValue]%§!\n\n§J当前季度印发量§![Root.the_ch2_rainbow_bank_print_money_im_var.GetValue]"
 ### GOVERNMENT_END
 
 ### DECISIONS
  THE_TGU_relase_CH2_country_decisions_title: "扮演@CH2月虹市场"
  THE_TGU_relase_CH2_country_decisions_desc: ""
+ THE_CH2_declare_to_tgu_independent_war_decisions_title: "向@TGU§Y天狗§!发动独立战争"
+ THE_CH2_declare_to_tgu_independent_war_decisions_desc: ""
+ THE_CH2_other_country_can_bank_interface_decisions_1_title: "@CH2月虹银行存款"
+ THE_CH2_other_country_can_bank_interface_decisions_1_desc: ""
+ THE_CH2_other_country_can_bank_interface_decisions_2_title: "@CH2月虹银行取钱"
+ THE_CH2_other_country_can_bank_interface_decisions_2_desc: ""
+ 
 ### DECISIONS_END
 
 ###VARIABLE
@@ -65,5 +72,12 @@ l_english:
 ###GOODS_END
 
 ###MISSION_TOOLTIP
-	THE_CH2_4_1_c_tt1: "§V拥有此效果时:§!\n在对§Y天狗§!的独立战争中获胜,将获得§G3§!点稳定度"
+ THE_CH2_4_1_c_tt1: "§V拥有此效果时:§!\n在对§Y天狗§!的独立战争中获胜,将获得§G3§!点稳定度\n"
+ THE_CH2_4_2_c_tt1: "为我们位于§Y天狗高原§!区域与§Y妖怪之山北部§!区域的所有省份添加§G直属州核心§!"
+ THE_CH2_5_1_c_tt1_yes: "£yes£如果我们仍作为@TGU§Y天狗§!的属国，则："
+ THE_CH2_5_1_c_tt1_no: "£no£如果我们仍作为@TGU§Y天狗§!的属国，则："
+ THE_CH2_indenpendent_war_decision_c_tt: "我们将对@TGU§Y天狗§!发动「市场战争」，双方无法召唤盟友。\n- - -若完成任务「交好山童」:@YME§Y山童§!将会帮助我们\n- - -若完成任务「初访神社」：@MRY§Y守矢§!将会帮助我们"
+ THE_CH2_4_1_c_tt2: "启用决议「§Y向天狗发动市场战争§!」"
+ THE_CH2_5_1_c_tt2: "通过决议「§Y向天狗发动市场战争§!」，@MRY§Y守矢§!将会帮助我们"
+ THE_CH2_2_1_c_tt2: "通过决议「§Y向天狗发动市场战争§!」，@YME§Y山童§!将会帮助我们"
 ###MISSION_TOOLTIP_END
