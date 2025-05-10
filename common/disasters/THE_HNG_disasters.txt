@@ -467,6 +467,10 @@ the_hng_disasters_four = {
 	}
 	progress = {
 		modifier = {
+			factor = 1
+			army_size = 150
+		}
+		modifier = {
 			factor = 2
 			has_government_power = {
 				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
