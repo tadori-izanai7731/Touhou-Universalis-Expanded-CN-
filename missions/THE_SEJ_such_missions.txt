@@ -1,0 +1,446 @@
+THE_SEJ_such_mission_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = SEJ
+		always = no
+	} 
+
+	THE_SEJ_such_mission_1_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_SEJ_such_mission_2_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_1_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_SEJ_such_mission_1_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_1_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { THE_SEJ_such_mission_1_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_1_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = {
+			THE_SEJ_such_mission_1_5
+			THE_SEJ_such_mission_2_5
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_1_8 = {
+		icon = mission_unknown_mission
+		position = 8
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_1_9 = {
+		icon = mission_unknown_mission
+		position = 9
+		required_missions = { THE_SEJ_such_mission_1_8 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_1_10 = {
+		icon = mission_unknown_mission
+		position = 10
+		required_missions = { THE_SEJ_such_mission_2_9 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_1_11 = {
+		icon = mission_unknown_mission
+		position = 11
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_SEJ_such_mission_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = SEJ
+		always = no
+	} 
+
+	THE_SEJ_such_mission_2_1 = {
+		icon = mission_unknown_mission
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_2_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_SEJ_such_mission_3_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_2_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { THE_SEJ_such_mission_1_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_2_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { THE_SEJ_such_mission_3_4 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_2_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = { THE_SEJ_such_mission_2_5 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_2_9 = {
+		icon = mission_unknown_mission
+		position = 9
+		required_missions = { THE_SEJ_such_mission_1_8 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_2_10 = {
+		icon = mission_unknown_mission
+		position = 10
+		required_missions = { THE_SEJ_such_mission_2_9 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_SEJ_such_mission_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = SEJ
+		always = no
+	} 
+
+	THE_SEJ_such_mission_3_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_SEJ_such_mission_2_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_3_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { THE_SEJ_such_mission_3_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_3_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { THE_SEJ_such_mission_3_4 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_3_7 = {
+		icon = mission_unknown_mission
+		position = 7
+		required_missions = {
+			THE_SEJ_such_mission_2_6
+			THE_SEJ_such_mission_3_5
+			THE_SEJ_such_mission_5_6
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_3_10 = {
+		icon = mission_unknown_mission
+		position = 10
+		required_missions = {
+			THE_SEJ_such_mission_2_9
+			THE_SEJ_such_mission_4_9
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_3_11 = {
+		icon = mission_unknown_mission
+		position = 11
+		required_missions = { THE_SEJ_such_mission_3_10 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_SEJ_such_mission_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = SEJ
+		always = no
+	} 
+
+	THE_SEJ_such_mission_4_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_SEJ_such_mission_5_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_4_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = {
+			THE_SEJ_such_mission_3_2
+			THE_SEJ_such_mission_4_2
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_4_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { THE_SEJ_such_mission_5_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_4_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { THE_SEJ_such_mission_3_4 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_4_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = { THE_SEJ_such_mission_4_5 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_4_9 = {
+		icon = mission_unknown_mission
+		position = 9
+		required_missions = { THE_SEJ_such_mission_5_8 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_4_10 = {
+		icon = mission_unknown_mission
+		position = 10
+		required_missions = { THE_SEJ_such_mission_4_9 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_SEJ_such_mission_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = SEJ
+		always = no
+	} 
+
+	THE_SEJ_such_mission_5_1 = {
+		icon = mission_unknown_mission
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_5_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_SEJ_such_mission_5_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_5_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { THE_SEJ_such_mission_5_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_5_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = { THE_SEJ_such_mission_4_5 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_5_8 = {
+		icon = mission_unknown_mission
+		position = 8
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_5_10 = {
+		icon = mission_unknown_mission
+		position = 10
+		required_missions = { THE_SEJ_such_mission_5_8 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_5_11 = {
+		icon = mission_unknown_mission
+		position = 11
+		required_missions = {
+			THE_SEJ_such_mission_4_10
+			THE_SEJ_such_mission_5_10
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
