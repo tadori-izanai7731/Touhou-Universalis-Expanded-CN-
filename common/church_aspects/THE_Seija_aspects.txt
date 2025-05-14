@@ -16,6 +16,9 @@ THE_seija_A_Miracle_Mallet_Replica_blessing = {
 		core_creation = -0.2
 		ignore_coring_distance = yes
 	}
+	effect = {
+		set_country_flag = THE_SEJ_A_Miracle_Mallet_Replica_blessing_flag
+	}
 	ai_will_do = {
 		factor = 10
 	}
@@ -29,6 +32,9 @@ THE_seija_Bloodthirsty_Yin_Yang_Orb_blessing = {
 		extra_manpower_at_religious_war = yes
 		land_morale = 0.15
 	}
+	effect = {
+		set_country_flag = THE_SEJ_Bloodthirsty_Yin_Yang_Orb_blessing_flag
+	}
 	ai_will_do = {
 		factor = 10
 	}
@@ -41,6 +47,9 @@ THE_seija_Nimble_Fabric_blessing = {
 	modifier = {
 		recover_army_morale_speed = 0.1
 		fire_damage_received = -0.1
+	}
+	effect = {
+		set_country_flag = THE_SEJ_Nimble_Fabric_blessing_flag
 	}
 	ai_will_do = {
 		factor = 10
@@ -56,6 +65,9 @@ THE_seija_Substitute_Jizo_blessing = {
 		colonists = 1
 		diplomats = 1
 	}
+	effect = {
+		set_country_flag = THE_SEJ_Substitute_Jizo_blessing_flag
+	}
 	ai_will_do = {
 		factor = 10
 	}
@@ -68,6 +80,9 @@ THE_seija_Ghastly_Send_Off_Lantern_blessing = {
 	modifier = {
 		regiment_manpower_usage = -0.15
 		disengagement_chance = 0.33
+	}
+	effect = {
+		set_country_flag = THE_SEJ_Ghastly_Send_Off_Lantern_blessing_flag
 	}
 	ai_will_do = {
 		factor = 10
@@ -83,6 +98,9 @@ THE_seija_Four_Foot_Magic_Bomb_blessing = {
 		great_project_upgrade_cost = -0.25
 		global_allowed_num_of_buildings = 1
 	}
+	effect = {
+		set_country_flag = THE_SEJ_Four_Foot_Magic_Bomb_blessing_flag
+	}
 	ai_will_do = {
 		factor = 10
 	}
@@ -96,6 +114,9 @@ THE_seija_Gap_Folding_Umbrella_blessing = {
 		global_colonial_growth = 30
 		envoy_travel_time = -0.25
 		sea_repair = yes
+	}
+	effect = {
+		set_country_flag = THE_SEJ_Gap_Folding_Umbrella_blessing_flag
 	}
 	ai_will_do = {
 		factor = 10
@@ -111,6 +132,9 @@ THE_seija_Cursed_Decoy_Doll_blessing = {
 		ae_impact = -0.1
 		annexation_relations_impact = -0.5
 	}
+	effect = {
+		set_country_flag = THE_SEJ_Cursed_Decoy_Doll_blessing_flag
+	}
 	ai_will_do = {
 		factor = 10
 	}
@@ -123,6 +147,9 @@ THE_seija_Tengus_Toy_Camera_blessing = {
 	modifier = {
 		global_institution_spread = 0.5
 		movement_speed = 0.2
+	}
+	effect = {
+		set_country_flag = THE_SEJ_Tengus_Toy_Camera_blessing_flag
 	}
 	ai_will_do = {
 		factor = 10
