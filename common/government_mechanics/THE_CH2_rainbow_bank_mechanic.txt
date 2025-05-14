@@ -23,6 +23,15 @@ THE_CH2_rainbow_bank_mechanic = {
 				 start_value = 0
 				 end_value = 500
 			}
+			range_modifier = {
+				modifier = {
+					trade_efficiency = 2.00
+					trade_steering = 2.00
+					global_ship_trade_power = 1.00
+				}
+				start_value = 0
+				end_value = 500
+			}
 		}
 		THE_CH2_rainbow_bank_issuance_power = {
 			#发行量
