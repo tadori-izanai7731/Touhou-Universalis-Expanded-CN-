@@ -2238,6 +2238,10 @@ THE_LIL_mission_branch_3 = {
 				name = "THE_LIL_spring_builder_modifier"
 				duration = -1
 			}
+			if = {
+				limit = { has_country_flag = th_formed_gensokyo_flag }
+				override_country_name = THE_LIL_GSK
+			}
 		}
 	}
 

@@ -73,7 +73,18 @@ country_decisions = {
 				set_government_rank = 3
 			}
 			th_disable_incidents = yes
-			override_country_name = THE_GNK
+			if = {
+				limit = {
+					THE_GSK_special_country_name_scripted_trigger = { country_name = THE_LIL_GSK }
+				}
+				override_country_name = THE_LIL_GSK
+			}
+			if = {
+				limit = {
+					NOT = { THE_GSK_special_country_name_scripted_trigger = { country_name = THE_LIL_GSK } }
+				}
+				override_country_name = THE_GNK
+			}
 			custom_tooltip = Gensokyan_nation_tt
 			hidden_effect = {
 				gensokyo_continent = {

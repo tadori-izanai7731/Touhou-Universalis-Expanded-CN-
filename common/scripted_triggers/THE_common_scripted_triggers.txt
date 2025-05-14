@@ -353,3 +353,14 @@ THE_province_is_buddhist_or_accepts_buddhism = {
 		}
 	}
 }
+
+THE_GSK_special_country_name_scripted_trigger = {
+	THE_GSK_special_country_name_scripted_trigger_$country_name$ = yes
+}
+
+THE_GSK_special_country_name_scripted_trigger_THE_LIL_GSK = {
+	AND = {
+		tag = LIL
+		mission_completed = THE_LIL_28_3
+	}
+}
