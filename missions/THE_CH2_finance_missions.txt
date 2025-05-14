@@ -143,7 +143,9 @@ THE_CH2_branch_2 = {
 		required_missions = { THE_CH2_2_1 } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_centers_of_trade = 2
+		 } 
 
 		effect = {  } 
 	}
@@ -173,7 +175,9 @@ THE_CH2_branch_2 = {
 	THE_CH2_2_5 = {
 		icon = mission_unknown_mission
 		position = 5
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			
+		 } 
 
 		trigger = {  } 
 
@@ -240,6 +244,9 @@ THE_CH2_branch_3 = {
 		effect = { 
 			5357 = {
 				center_of_trade = 2
+				add_permanent_province_modifier = {
+					name = THE_CH2_trade_of_center_province_buff
+				}
 			}
 		 } 
 	}
@@ -259,6 +266,10 @@ THE_CH2_branch_3 = {
 
 		effect = { 
 			vassalize = TGU
+			add_country_modifier = {
+				name = THE_CH2_vassal_tgu_wind_in_mountain_buff
+				duration = -1
+			}
 		 } 
 	}
 
@@ -286,7 +297,9 @@ THE_CH2_branch_3 = {
 
 		trigger = {  } 
 
-		effect = {  } 
+		effect = { 
+			
+		 } 
 	}
 
 	THE_CH2_3_6 = {
@@ -392,6 +405,12 @@ THE_CH2_branch_4 = {
 						}
 					}
 					add_core = ROOT
+				}
+				every_ally = {
+					add_trust = {
+						who = ROOT
+						value = 20
+					}
 				}
 			}
 			add_prestige = 50

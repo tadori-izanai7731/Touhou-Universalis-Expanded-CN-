@@ -8,3 +8,18 @@ THE_CH2_finanece_start_game_indenpedent_buff = {
 THE_CH2_MRY_support_us_mission_buff = {
 	production_efficiency = 0.10
 }
+#山间之风
+THE_CH2_vassal_tgu_wind_in_mountain_buff = {
+	caravan_power = 0.25
+	liberty_desire_from_subject_development = -0.25
+}
+
+
+
+##PROVINCE BUFF
+#商业中心
+THE_CH2_trade_of_center_province_buff = {
+	merchants = 1
+	trade_goods_size = 0.5
+	province_trade_power_value = 100
+}
