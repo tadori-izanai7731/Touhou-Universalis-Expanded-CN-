@@ -279,6 +279,10 @@ THE_SEJ_such_mission_branch_2 = {
 				discover_country = ROOT
 				add_permanent_claim = ROOT
 			}
+			add_country_modifier = {
+				name = THE_SEJ_colony_island_modifier
+				duration = 7300
+			}
 			custom_tooltip = THE_SEJ_carribeans_region_may_produce_clove_tt
 		} 
 	}
