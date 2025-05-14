@@ -3,7 +3,10 @@ THE_SEJ_missions_1 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = SEJ } 
+	potential = {
+		tag = SEJ
+		NOT = { has_country_flag = THE_SEJ_enable_such_mission_flag }
+	} 
 	
 	THE_SEJ_missions_1_2 = {
 		icon = mission_unknown_mission
@@ -85,7 +88,10 @@ THE_SEJ_missions_2 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = SEJ } 
+	potential = {
+		tag = SEJ
+		NOT = { has_country_flag = THE_SEJ_enable_such_mission_flag }
+	} 
 	
 	THE_SEJ_missions_2_2 = {
 		icon = mission_unknown_mission
@@ -179,7 +185,10 @@ THE_SEJ_missions_3 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = SEJ } 
+	potential = {
+		tag = SEJ
+		NOT = { has_country_flag = THE_SEJ_enable_such_mission_flag }
+	} 
 	
 	THE_SEJ_missions_3_1 = {
 		icon = mission_unknown_mission
@@ -428,7 +437,10 @@ THE_SEJ_missions_4 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = SEJ } 
+	potential = {
+		tag = SEJ
+		NOT = { has_country_flag = THE_SEJ_enable_such_mission_flag }
+	} 
 	
 	THE_SEJ_missions_4_1 = {
 		icon = mission_unknown_mission
@@ -537,7 +549,10 @@ THE_SEJ_missions_5 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = SEJ } 
+	potential = {
+		tag = SEJ
+		NOT = { has_country_flag = THE_SEJ_enable_such_mission_flag }
+	} 
 	
 	THE_SEJ_missions_5_2 = {
 		icon = mission_unknown_mission
