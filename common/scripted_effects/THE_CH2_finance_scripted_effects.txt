@@ -1076,7 +1076,7 @@ THE_CH2_start_development_province_get_buff_effect = {
 		}
 		ROOT = {
 			add_province_modifier = {
-				name = THE_CH2_trade_of_center_province_buff
+				name = THE_CH2_trade_of_center_yme_buff
 				duration = -1
 			}
 		}
