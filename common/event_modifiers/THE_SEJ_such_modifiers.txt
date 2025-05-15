@@ -12,3 +12,9 @@ THE_SEJ_sea_chance_modifier = {
 THE_SEJ_colony_island_modifier = {
 	colonists = 1
 }
+
+THE_SEJ_southest_point_modifier = {
+	range = 1.0
+	colonists = 1
+	colonist_placement_chance = 0.1
+}

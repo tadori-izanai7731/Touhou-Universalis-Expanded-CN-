@@ -65,11 +65,28 @@ THE_SEJ_such_mission_branch_1 = {
 		icon = mission_unknown_mission
 		position = 5
 		required_missions = { THE_SEJ_such_mission_1_3 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			province_id = 782
+		} 
 
-		trigger = {  } 
+		trigger = {
+			has_discovered = 782
+		} 
 
-		effect = {  } 
+		effect = {
+			782 = {
+				cede_province = ROOT
+				add_core = ROOT
+			}
+			add_country_modifier = {
+				name = THE_SEJ_southest_point_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_SEJ_colonize_complete_create_neighbor_siberia_tt
+			hidden_effect = {
+				set_country_flag = THE_SEJ_colonize_complete_create_neighbor_siberia_flag
+			}
+		} 
 	}
 
 	THE_SEJ_such_mission_1_6 = {

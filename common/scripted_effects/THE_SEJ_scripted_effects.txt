@@ -44,3 +44,15 @@ THE_SEJ_on_province_culture_converted_scripted_effect = {
 		}
 	}
 }
+
+THE_SEJ_on_colony_finished_scripted_effect = {
+	if = {
+		limit = { owner = { has_country_flag = THE_SEJ_colonize_complete_create_neighbor_siberia_flag } }
+		set_province_flag = THE_SEJ_neighbor_siberia_target_province_flag
+		owner = {
+			country_event = {
+				id = THE_SEJ_events.4
+			}
+		}
+	}
+}

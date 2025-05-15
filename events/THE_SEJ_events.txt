@@ -1,8 +1,8 @@
-namespace = flavor_THE_SEJ
+namespace = THE_SEJ_events
 
 
 country_event = {
-	id = flavor_THE_SEJ.1
+	id = THE_SEJ_events.1
 	title = "flavor_THE_SEJ.1.t"
 	desc = "flavor_THE_SEJ.1.desc"
 	picture = SEIJA_eventPicture
@@ -114,8 +114,9 @@ country_event = {
 		}
 	}
 }
+
 province_event = {
-	id = flavor_THE_SEJ.1000
+	id = THE_SEJ_events.1000
 	title = flavor_THE_SEJ.1000.name
 	desc = flavor_THE_SEJ.1000.desc
 	picture = REVOLUTION_eventPicture
@@ -153,7 +154,7 @@ province_event = {
 }
 
 country_event = {
-	id = flavor_THE_SEJ.10
+	id = THE_SEJ_events.10
 	title = "flavor_THE_SEJ.EVTNAME101"
 	desc = "flavor_THE_SEJ.EVTDESC101"
 	picture = IMPORTANT_STATUE_eventPicture
@@ -176,6 +177,26 @@ country_event = {
 			spawn_rebels = {
 				type = revolutionary_rebels
 				size = 3
+			}
+		}
+	}
+}
+
+country_event = {
+	id = THE_SEJ_events.4
+	title = NONE
+	desc = NONE
+	picture = IMPORTANT_STATUE_eventPicture
+	hidden = yes
+	option = {
+		name = NONE
+		every_owned_province = {
+			limit = {
+				has_province_flag = THE_SEJ_neighbor_siberia_target_province_flag
+			}
+			clr_province_flag = THE_SEJ_neighbor_siberia_target_province_flag
+			every_empty_neighbor_province = {
+				add_siberian_construction = 1
 			}
 		}
 	}
