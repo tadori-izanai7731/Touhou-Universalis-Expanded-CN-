@@ -260,6 +260,9 @@ THE_SEJ_such_mission_branch_2 = {
 				duration = 7300
 			}
 			custom_tooltip = THE_SEJ_carribeans_region_may_produce_clove_tt
+			hidden_effect = {
+				set_country_flag = THE_SEJ_carribeans_region_may_produce_clove_flag
+			}
 		}
 	}
 

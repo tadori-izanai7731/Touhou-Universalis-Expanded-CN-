@@ -2259,6 +2259,7 @@ cloves = {
 				OR = {
 					area = molluca_area
 					area = spice_islands_area
+					region = carribeans_region
 				}
 			}
 		}
@@ -2276,6 +2277,16 @@ cloves = {
 					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = cloves } }
 				}
 			}
+		}
+		### THE
+		modifier = {
+			factor = 0
+			region = carribeans_region
+			FROM = { NOT = { has_country_flag = THE_SEJ_carribeans_region_may_produce_clove_flag } }
+		}
+		modifier = {
+			factor = 0.25
+			region = carribeans_region
 		}
 	}
 }
