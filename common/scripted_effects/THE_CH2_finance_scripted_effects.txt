@@ -1063,3 +1063,22 @@ THE_CH2_start_game_declare_to_tgu_effect = {
 		}
 	}
 }
+THE_CH2_start_development_province_get_buff_effect = {
+	if = {
+		limit = { 
+			owner = {
+				tag = CH2
+			}
+			ROOT = {
+				development = 15
+				province_has_center_of_trade_of_level = 2
+			}
+		}
+		ROOT = {
+			add_province_modifier = {
+				name = THE_CH2_trade_of_center_province_buff
+				duration = -1
+			}
+		}
+	}
+}

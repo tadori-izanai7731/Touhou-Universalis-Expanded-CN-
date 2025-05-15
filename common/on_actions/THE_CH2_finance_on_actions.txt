@@ -5,3 +5,12 @@ on_yearly_pulse = {
 on_war_won = {
 	THE_CH2_start_game_declare_to_tgu_effect = yes
 }
+on_adm_development = {
+	THE_CH2_start_development_province_get_buff_effect = yes
+}
+on_dip_development = {
+	THE_CH2_start_development_province_get_buff_effect = yes
+}
+on_mil_development = {
+	THE_CH2_start_development_province_get_buff_effect = yes
+}

@@ -73,6 +73,26 @@ country_decisions = {
 			custom_tooltip = THE_CH2_indenpendent_war_decision_c_tt
 			hidden_effect = {
 				clr_country_flag = THE_CH2_unlock_indenpendent_war_decision_flag
+				if = {
+					limit = { 
+						MRY = {
+							has_country_flag = THE_CH2_alliance_will_help_ch2_indenpendent_flag
+						}
+					}
+					MRY = {
+						join_all_offensive_wars_of = ROOT
+					}
+				}
+				if = {
+					limit = { 
+						YME = {
+							has_country_flag = THE_CH2_alliance_will_help_ch2_indenpendent_flag
+						}
+					}
+					YME = {
+						join_all_offensive_wars_of = ROOT
+					}
+				}
 			}
 		}
 		ai_will_do = {
@@ -106,11 +126,30 @@ country_decisions = {
 			treasury = 200
 		}
 		effect = {
-			THE_CH2_sotre_in_rainbow_bank_in_effects = {
-				value = 100
+			custom_tooltip = THE_CH2_other_country_root_token_tt
+			if = {
+				limit = {
+					ROOT = {
+						NOT = {
+							has_country_modifier = THE_CH2_storge_in_bank_other_country_buff
+						}
+					}
+				 }
+				 add_country_modifier = {
+					name = THE_CH2_storge_in_bank_other_country_buff
+					duration = 3650
+				 }
 			}
-			THE_CH2_sotre_token_in_rainbow_bank_equal_to_gold_in_effect = {
-				value = 100
+			tooltip = {
+				add_treasury = -100
+			}
+			hidden_effect = {
+				THE_CH2_sotre_in_rainbow_bank_in_effects = {
+					value = 100
+				}
+				THE_CH2_sotre_token_in_rainbow_bank_equal_to_gold_in_effect = {
+					value = 100
+				}
 			}
 		}
 		ai_will_do = {
@@ -144,19 +183,28 @@ country_decisions = {
 			}
 		}
 		allow = {
-			ROOT = {
-				check_variable = {
-					which = the_ch2_rainbow_bank_gold_root_country_stroage_var
-					value = 100
+			custom_trigger_tooltip = {
+				tooltip = THE_CH2_stroge_in_bank_root_trigger_tt
+				ROOT = {
+					check_variable = {
+						which = the_ch2_rainbow_bank_gold_root_country_stroage_var
+						value = 100
+					}
 				}
 			}
 		}
 		effect = {
-			THE_CH2_sotre_in_rainbow_bank_out_effects = {
-				value = 100
+			custom_tooltip = THE_CH2_other_country_root_token_tt
+			tooltip = {
+				add_treasury = 100
 			}
-			THE_CH2_sotre_token_in_rainbow_bank_equal_to_gold_out_effect = {
-				value = 100
+			hidden_effect = {
+				THE_CH2_sotre_in_rainbow_bank_out_effects = {
+					value = 100
+				}
+				THE_CH2_sotre_token_in_rainbow_bank_equal_to_gold_out_effect = {
+					value = 100
+				}
 			}
 		}
 		ai_will_do = {

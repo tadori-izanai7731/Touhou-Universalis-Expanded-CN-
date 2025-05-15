@@ -50,7 +50,8 @@
  THE_CH2_other_country_can_bank_interface_decisions_1_desc: ""
  THE_CH2_other_country_can_bank_interface_decisions_2_title: "@CH2gy†ö”LˆÖS±”"
  THE_CH2_other_country_can_bank_interface_decisions_2_desc: ""
- 
+ THE_CH2_other_country_root_token_tt: "- -¤SVMRc	g§MXR>k§!: [Root.the_ch2_rainbow_bank_gold_root_country_stroage_var.GetValue]\n- -¤SVMRc	g§Myrx§!: [Root.the_ch2_root_token_in_rainbow_bank.GetValue]\n\n\n- -SVMR¤§OÄžÑ‘¨PYÏ‘§!--[CH2.the_ch2_rainbow_bank_gold_stroage_1st_var.GetValue]- -\nSVMR¤§MyrxÑSLˆÏ‘§!- -[CH2.the_ch2_rainbow_bank_inssuance_1st_var.GetValue]- -\n\n\nSVMR¤§Myrx§!÷N<h = [CH2.the_ch2_base_token_value_end_var.GetValue]¤§OjgaSyr§!-ƒŽVt^ØSS§G[CH2.the_ch2_rainbow_band_yearly_insuance_increase_im_var_calculate_3st_end.GetValue]%§!\n\n§OSVMRcR¦^yrxÑSLˆÏ‘§![CH2.the_ch2_rainbow_band_yearly_insuance_increase_im_var.GetValue]\n§OŽVMRcR¦^yrxÑSLˆÏ‘§![CH2.the_ch2_rainbow_bank_inssuance_increase_im_var_early_year.GetValue]\nžX•Ôk‹O§=[CH2.the_ch2_rainbow_bank_inssuance_increase_im_var_early_year_calculate_end.GetValue]%§!\n\n§JSVMRcR¦^pSÑSÏ‘§![CH2.the_ch2_rainbow_bank_print_money_im_var.GetValue]"
+ THE_CH2_stroge_in_bank_root_trigger_tt: "óS	g¤§J100§!XR>k"
 ### DECISIONS_END
 
 ###VARIABLE
@@ -64,6 +65,14 @@
  THE_securities_government_power_change_rage: "Á‹8R÷N<hîOck"
  THE_CH2_finanece_start_game_indenpedent_buff: "1c1"
  THE_CH2_MRY_support_us_mission_buff: "ù‹¿‹KN›R"
+ THE_CH2_trade_of_center_province_buff: "FUN-NÃV"
+ THE_CH2_vassal_tgu_wind_in_mountain_buff: "qSô•KNÎ˜"
+ THE_CH2_storge_in_bank_other_country_buff: "ö”Lˆt0"
+ THE_CH2_towards_to_the_sea_buff: "TNw'YwmúQÑS"
+ THE_CH2_port_of_departure_buff: "=T*‚KN=n"
+ THE_CH2_good_timber_ship_buff: "¾|åTo‚Pg"
+ THE_CH2_can_build_ship_buff: ""
+ THE_CH2_the_wind_of_exploration_ideas_buff: "¢c0tKNÎ˜"
 ###MOFIFIER_END
 
 ###GOODS
@@ -80,4 +89,7 @@
  THE_CH2_4_1_c_tt2: "=T(u³Q®‹0§YT)Y×rÑS¨R^:Wb‰N§!0"
  THE_CH2_5_1_c_tt2: "Ç³Q®‹0§YT)Y×rÑS¨R^:Wb‰N§!0ÿ@MRY§YˆRâw§!SO.^©RbìN"
  THE_CH2_2_1_c_tt2: "Ç³Q®‹0§YT)Y×rÑS¨R^:Wb‰N§!0ÿ@YME§YqSåz§!SO.^©RbìN"
+ THE_CH2_2_6_c_tt: "wýN0§Y–Y*`„vhwm§!0Sub3X‚‰‹Wb0‚"
+ THE_CH2_2_6_c_tt_2_yes: "£yes£‚YœgbìNòTŒRb0§M¢c0ttõVÄu§!0ÿR·ƒ—V‚YNHeœgÿ"
+ THE_CH2_2_6_c_tt_2_no: "£no£‚YœgbìNòTŒRb0§M¢c0ttõVÄu§!0ÿR·ƒ—V‚YNHeœgÿ"
 ###MISSION_TOOLTIP_END

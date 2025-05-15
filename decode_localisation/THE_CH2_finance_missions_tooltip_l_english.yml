@@ -50,7 +50,8 @@ l_english:
  THE_CH2_other_country_can_bank_interface_decisions_1_desc: ""
  THE_CH2_other_country_can_bank_interface_decisions_2_title: "@CH2月虹银行取钱"
  THE_CH2_other_country_can_bank_interface_decisions_2_desc: ""
- 
+ THE_CH2_other_country_root_token_tt: "- -¤当前持有§M存款§!: [Root.the_ch2_rainbow_bank_gold_root_country_stroage_var.GetValue]\n- -¤当前持有§M筹码§!: [Root.the_ch2_root_token_in_rainbow_bank.GetValue]\n\n\n- -当前¤§O黄金储备量§!--[CH2.the_ch2_rainbow_bank_gold_stroage_1st_var.GetValue]- -\n当前¤§M筹码发行量§!- -[CH2.the_ch2_rainbow_bank_inssuance_1st_var.GetValue]- -\n\n\n当前¤§M筹码§!价格 = [CH2.the_ch2_base_token_value_end_var.GetValue]¤§O杜卡特§!-较往年变化§G[CH2.the_ch2_rainbow_band_yearly_insuance_increase_im_var_calculate_3st_end.GetValue]%§!\n\n§O当前季度筹码发行量§![CH2.the_ch2_rainbow_band_yearly_insuance_increase_im_var.GetValue]\n§O往前季度筹码发行量§![CH2.the_ch2_rainbow_bank_inssuance_increase_im_var_early_year.GetValue]\n增长比例§=[CH2.the_ch2_rainbow_bank_inssuance_increase_im_var_early_year_calculate_end.GetValue]%§!\n\n§J当前季度印发量§![CH2.the_ch2_rainbow_bank_print_money_im_var.GetValue]"
+ THE_CH2_stroge_in_bank_root_trigger_tt: "至少有¤§J100§!存款"
 ### DECISIONS_END
 
 ###VARIABLE
@@ -66,6 +67,12 @@ l_english:
  THE_CH2_MRY_support_us_mission_buff: "诹访之力"
  THE_CH2_trade_of_center_province_buff: "商业中心"
  THE_CH2_vassal_tgu_wind_in_mountain_buff: "山间之风"
+ THE_CH2_storge_in_bank_other_country_buff: "银行理财"
+ THE_CH2_towards_to_the_sea_buff: "向着大海出发"
+ THE_CH2_port_of_departure_buff: "启航之港"
+ THE_CH2_good_timber_ship_buff: "精工良材"
+ THE_CH2_can_build_ship_buff: ""
+ THE_CH2_the_wind_of_exploration_ideas_buff: "探索之风"
 ###MOFIFIER_END
 
 ###GOODS
@@ -82,4 +89,7 @@ l_english:
  THE_CH2_4_1_c_tt2: "启用决议「§Y向天狗发动市场战争§!」"
  THE_CH2_5_1_c_tt2: "通过决议「§Y向天狗发动市场战争§!」，@MRY§Y守矢§!将会帮助我们"
  THE_CH2_2_1_c_tt2: "通过决议「§Y向天狗发动市场战争§!」，@YME§Y山童§!将会帮助我们"
+ THE_CH2_2_6_c_tt: "省份「§Y妖怪的树海§!」将生成3艘轻型战舰"
+ THE_CH2_2_6_c_tt_2_yes: "£yes£如果我们已完成「§M探索理念组§!」，则获得如下效果："
+ THE_CH2_2_6_c_tt_2_no: "£no£如果我们已完成「§M探索理念组§!」，则获得如下效果："
 ###MISSION_TOOLTIP_END

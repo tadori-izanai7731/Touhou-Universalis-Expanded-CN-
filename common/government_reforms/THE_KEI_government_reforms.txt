@@ -43,7 +43,7 @@ THE_KEI_dedicate_ourselves_government_reform = {
 	modifiers = {
 		max_absolutism = 15
 		allow_free_estate_privilege_revocation = yes
-		loyalty_change_on_revoked = -0.10
+		loyalty_change_on_revoked = 0.10
 	}
 	custom_attributes = {
 		THE_KEI_dedicate_ourselves_governemnt_reform = yes
