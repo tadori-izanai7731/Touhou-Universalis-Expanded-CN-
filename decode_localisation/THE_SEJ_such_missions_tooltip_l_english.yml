@@ -6,6 +6,14 @@ l_english:
  THE_SEJ_explore_sea_province_improve_explor_tt: "探索§Y未知海域§!有概率提升§Y探险家§!的属性。"
  THE_SEJ_carribeans_region_may_produce_clove_tt: "§Y加勒比§!地区将有概率产出§Y丁香§!。"
  THE_SEJ_colonize_complete_create_neighbor_siberia_tt: "殖民地成长为城市时，在相邻未殖民省份创建§Y拓荒区§!"
+ THE_SEJ_enable_negative_influence_decision_tt: "启用决议「§Y反逆思潮影响力§!」"
+ THE_SEJ_every_8_production_add_production_building_tt: "治下每个满足条件的省份:"
+ THE_SEJ_such_mission_4_2_tt_case1_yes: "£yes£§M如果已选择反则道具「§Y四尺魔法炸弹§!」:§!"
+ THE_SEJ_such_mission_4_2_tt_case1_no: "£no£§M如果已选择反则道具「§Y四尺魔法炸弹§!」:§!"
+ THE_SEJ_events_5_tt: "商队将前往北方换取对我们更有价值的物资。"
+ THE_SEJ_such_mission_4_3_tt_case1_yes: "£yes£§M如果已选择反则道具「§Y隙间的折叠伞§!」:§!"
+ THE_SEJ_such_mission_4_3_tt_case1_no: "£no£§M如果已选择反则道具「§Y隙间的折叠伞§!」:§!"
+ THE_SEJ_events_6_tt: "商队能够前往更远的北方换取一些独特的物资。"
 ### TOOLTIP_END
 
 
@@ -14,4 +22,30 @@ l_english:
  THE_SEJ_sea_chance_modifier: "海的可能"
  THE_SEJ_colony_island_modifier: "殖民群岛"
  THE_SEJ_southest_point_modifier: "大陆的尽头"
+ THE_SEJ_bomb_for_development_modifier: "炸弹开道"
+ THE_SEJ_cocoa_trader_modifier: "可可商队"
+ THE_SEJ_north_trade_modifier: "糖、谷物、羊毛"
+ THE_SEJ_north_trade_extra_modifier: "牲畜、棉花、烟草"
+
+ THE_SEJ_negative_influence_modifier_1: ""
+ THE_SEJ_negative_influence_modifier_2: ""
+ THE_SEJ_negative_influence_modifier_3: ""
+ THE_SEJ_negative_influence_modifier_4: ""
+ THE_SEJ_negative_influence_modifier_5: ""
+ THE_SEJ_negative_influence_modifier_6: ""
+ THE_SEJ_negative_influence_modifier_7: ""
+ THE_SEJ_negative_influence_modifier_8: ""
+ THE_SEJ_negative_influence_modifier_9: ""
+ THE_SEJ_negative_influence_modifier_10: ""
 ### MODIFIER_END
+
+
+### EVENT
+ THE_SEJ_events.5.title: "北方的商品"
+ THE_SEJ_events.5.desc: ""
+ THE_SEJ_events.5.a: "这就是我们需要的"
+
+ THE_SEJ_events.6.title: "前往更远的北方"
+ THE_SEJ_events.6.desc: ""
+ THE_SEJ_events.6.a: "这会成为我们扩张的帮助"
+### EVENT_END

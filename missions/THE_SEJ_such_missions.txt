@@ -474,9 +474,45 @@ THE_SEJ_such_mission_branch_4 = {
 		required_missions = { THE_SEJ_such_mission_5_1 } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				base_production = 8
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			custom_tooltip = THE_SEJ_every_8_production_add_production_building_tt
+			tooltip = {
+				add_or_upgrade_production_building = yes
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						base_production = 8
+					}
+					add_or_upgrade_production_building = yes
+				}
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = { has_country_flag = THE_SEJ_Four_Foot_Magic_Bomb_blessing_flag }
+				custom_tooltip = THE_SEJ_such_mission_4_2_tt_case1_yes
+				add_country_modifier = {
+					name = THE_SEJ_bomb_for_development_modifier
+					duration = 7300
+				}
+			}
+			else = {
+				custom_tooltip = THE_SEJ_such_mission_4_2_tt_case1_no
+				tooltip = {
+					add_country_modifier = {
+						name = THE_SEJ_bomb_for_development_modifier
+						duration = 7300
+					}
+				}
+			}
+		} 
 	}
 
 	THE_SEJ_such_mission_4_3 = {
@@ -486,11 +522,42 @@ THE_SEJ_such_mission_branch_4 = {
 			THE_SEJ_such_mission_3_2
 			THE_SEJ_such_mission_4_2
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			has_discovered = ROOT
+			trade_goods = cocoa
+		} 
 
-		trigger = {  } 
+		trigger = {
+			trade_goods_produced_amount = {
+				trade_goods = cocoa
+				amount = 7
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = THE_SEJ_cocoa_trader_modifier
+				duration = -1
+			}
+			THE_country_event_with_insight = {
+				id = THE_SEJ_events.5
+				days = 365
+				insight_tooltip = THE_SEJ_events_5_tt
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = { has_country_flag = THE_SEJ_Gap_Folding_Umbrella_blessing_flag }
+				custom_tooltip = THE_SEJ_such_mission_4_3_tt_case1_yes
+				custom_tooltip = THE_SEJ_events_6_tt
+				hidden_effect = {
+					set_country_flag = THE_SEJ_events_6_flag
+				}
+			}
+			else = {
+				custom_tooltip = THE_SEJ_such_mission_4_3_tt_case1_no
+				custom_tooltip = THE_SEJ_events_6_tt
+			}
+		} 
 	}
 
 	THE_SEJ_such_mission_4_4 = {
@@ -563,9 +630,16 @@ THE_SEJ_such_mission_branch_5 = {
 		position = 1
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			grown_by_development = 25
+		} 
 
-		effect = {  } 
+		effect = {
+			custom_tooltip = THE_SEJ_enable_negative_influence_decision_tt
+			hidden_effect = {
+				set_country_flag = THE_SEJ_enable_negative_influence_decision_flag
+			}
+		} 
 	}
 
 	THE_SEJ_such_mission_5_3 = {

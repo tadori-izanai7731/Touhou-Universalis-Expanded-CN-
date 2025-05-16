@@ -22,4 +22,42 @@ country_decisions = {
 			factor = 0
 		}
 	}
+
+	THE_SEJ_negative_influence_decision = {
+		potential = {
+			OR = {
+				tag = SEJ
+				was_tag = SEJ
+			}
+			has_country_flag = THE_SEJ_enable_negative_influence_decision_flag
+			NOT = { has_country_flag = THE_SEJ_negative_influence_level_10 }
+		}
+
+		allow = {
+			if = { limit = { THE_SEJ_check_nifl_st = { level = 9 } } THE_SEJ_check_ni_st = { value = 100000000 } }
+			else_if = { limit = { THE_SEJ_check_nifl_st = { level = 8 } } THE_SEJ_check_ni_st = { value = 10000000 } }
+			else_if = { limit = { THE_SEJ_check_nifl_st = { level = 7 } } THE_SEJ_check_ni_st = { value = 1000000 } }
+			else_if = { limit = { THE_SEJ_check_nifl_st = { level = 6 } } THE_SEJ_check_ni_st = { value = 100000 } }
+			else_if = { limit = { THE_SEJ_check_nifl_st = { level = 5 } } THE_SEJ_check_ni_st = { value = 10000 } }
+			else_if = { limit = { THE_SEJ_check_nifl_st = { level = 4 } } THE_SEJ_check_ni_st = { value = 1000 } }
+			else_if = { limit = { THE_SEJ_check_nifl_st = { level = 3 } } THE_SEJ_check_ni_st = { value = 100 } }
+			else_if = { limit = { THE_SEJ_check_nifl_st = { level = 2 } } THE_SEJ_check_ni_st = { value = 10 } }
+			else_if = { limit = { THE_SEJ_check_nifl_st = { level = 1 } } THE_SEJ_check_ni_st = { value = 1 } }
+			else = { always = yes }
+		}
+
+		effect = {
+			THE_SEJ_remove_all_ni_modifier = yes
+			if = { limit = { THE_SEJ_check_nifl_st = { level = 9 } } THE_SEJ_check_ni_se = { level = 10 } }
+			else_if = { limit = { THE_SEJ_check_nifl_st = { level = 8 } } THE_SEJ_check_ni_se = { level = 9 } }
+			else_if = { limit = { THE_SEJ_check_nifl_st = { level = 7 } } THE_SEJ_check_ni_se = { level = 8 } }
+			else_if = { limit = { THE_SEJ_check_nifl_st = { level = 6 } } THE_SEJ_check_ni_se = { level = 7 } }
+			else_if = { limit = { THE_SEJ_check_nifl_st = { level = 5 } } THE_SEJ_check_ni_se = { level = 6 } }
+			else_if = { limit = { THE_SEJ_check_nifl_st = { level = 4 } } THE_SEJ_check_ni_se = { level = 5 } }
+			else_if = { limit = { THE_SEJ_check_nifl_st = { level = 3 } } THE_SEJ_check_ni_se = { level = 4 } }
+			else_if = { limit = { THE_SEJ_check_nifl_st = { level = 2 } } THE_SEJ_check_ni_se = { level = 3 } }
+			else_if = { limit = { THE_SEJ_check_nifl_st = { level = 1 } } THE_SEJ_check_ni_se = { level = 2 } }
+			else = { THE_SEJ_check_ni_se = { level = 1 } }
+		}
+	}
 }

@@ -1,0 +1,12 @@
+### value = $value$
+THE_SEJ_check_ni_st = {
+	check_variable = {
+		which = the_sej_negative_influence_var
+		value = $value$
+	}
+}
+
+### level = $level$
+THE_SEJ_check_nifl_st = {
+	has_country_flag = THE_SEJ_negative_influence_level_$level$_flag
+}

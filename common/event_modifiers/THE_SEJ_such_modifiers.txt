@@ -18,3 +18,66 @@ THE_SEJ_southest_point_modifier = {
 	colonists = 1
 	colonist_placement_chance = 0.1
 }
+
+THE_SEJ_bomb_for_development_modifier = {
+	development_cost = -0.2
+	global_trade_goods_size_modifier = 0.1
+}
+
+THE_SEJ_cocoa_trader_modifier = {
+	merchants = 1
+	placed_merchant_power = 5
+}
+
+THE_SEJ_north_trade_modifier = {
+	land_forcelimit = 6
+	war_exhaustion = -0.03
+	global_ship_cost = -0.05
+}
+
+THE_SEJ_north_trade_extra_modifier = {
+	movement_speed = 0.05
+	native_assimilation = 0.25
+	overextension_impact_modifier = -0.25
+}
+
+### THE_SEJ negative influence modifier
+THE_SEJ_negative_influence_modifier_1 = {
+
+}
+
+THE_SEJ_negative_influence_modifier_2 = {
+
+}
+
+THE_SEJ_negative_influence_modifier_3 = {
+
+}
+
+THE_SEJ_negative_influence_modifier_4 = {
+
+}
+
+THE_SEJ_negative_influence_modifier_5 = {
+
+}
+
+THE_SEJ_negative_influence_modifier_6 = {
+
+}
+
+THE_SEJ_negative_influence_modifier_7 = {
+
+}
+
+THE_SEJ_negative_influence_modifier_8 = {
+
+}
+
+THE_SEJ_negative_influence_modifier_9 = {
+
+}
+
+THE_SEJ_negative_influence_modifier_10 = {
+
+}

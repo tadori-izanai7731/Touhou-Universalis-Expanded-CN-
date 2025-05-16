@@ -56,3 +56,31 @@ THE_SEJ_on_colony_finished_scripted_effect = {
 		}
 	}
 }
+
+
+############################################################
+### NOT on_actions' scripted effects
+############################################################
+
+THE_SEJ_remove_all_ni_modifier = {
+	hidden_effect = {
+		remove_country_modifier = THE_SEJ_negative_influence_modifier_1
+		remove_country_modifier = THE_SEJ_negative_influence_modifier_2
+		remove_country_modifier = THE_SEJ_negative_influence_modifier_3
+		remove_country_modifier = THE_SEJ_negative_influence_modifier_4
+		remove_country_modifier = THE_SEJ_negative_influence_modifier_5
+		remove_country_modifier = THE_SEJ_negative_influence_modifier_6
+		remove_country_modifier = THE_SEJ_negative_influence_modifier_7
+		remove_country_modifier = THE_SEJ_negative_influence_modifier_8
+		remove_country_modifier = THE_SEJ_negative_influence_modifier_9
+		remove_country_modifier = THE_SEJ_negative_influence_modifier_10
+	}
+}
+
+THE_SEJ_check_ni_se = {
+	set_country_flag = THE_SEJ_negative_influence_level_$level$_flag
+	add_country_modifier = {
+		name = THE_SEJ_negative_influence_modifier_$level$
+		duration = -1
+	}
+}
