@@ -1,0 +1,35 @@
+THE_SEJ_spread_seija_religion_diplomatic_action = {
+	category = th_diplo_action
+	require_acceptance = no
+	is_visible = {
+		has_government_attribute = THE_SEJ_enable_spread_seija_religion_diplomatic_action_custom_attribute
+	}
+	is_allowed = {
+		if = {
+			limit = { NOT = { has_country_flag = THE_debug_flag } }
+			custom_trigger_tooltip = {
+				tooltip = THE_SEJ_all_country_is_not_spread_seija_religion_target_tt
+				all_countries_including_self = {
+					NOT = { has_country_modifier = THE_SEJ_spread_seija_religion_target_modifier }
+				}
+			}
+		}
+		FROM = { ai = yes }
+	}
+	on_accept = {
+		FROM = {
+			add_country_modifier = {
+				name = THE_SEJ_spread_seija_religion_target_modifier
+				duration = 7300
+				hidden = yes
+			}
+		}
+	}
+	on_decline = {
+	}
+	ai_acceptance = {
+	}
+	ai_will_do = {
+		always = no
+	}
+}

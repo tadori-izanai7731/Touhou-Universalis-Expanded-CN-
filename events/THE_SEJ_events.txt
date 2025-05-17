@@ -244,3 +244,66 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = THE_SEJ_events.7
+	title = THE_SEJ_events.7.title
+	desc = THE_SEJ_events.7.desc
+	picture = IMPORTANT_STATUE_eventPicture
+
+	hidden = yes
+	mean_time_to_happen = {
+		months = 6
+	}
+	trigger = {
+		has_country_modifier = THE_SEJ_spread_seija_religion_target_modifier
+	}
+
+	option = {
+		if = {
+			limit = { total_development = 1000 }
+			for = {
+				amount = 5
+				effect = "
+					THE_SEJ_spawn_seija_religion_rebels_se = yes
+				"
+			}
+		}
+		else_if = {
+			limit = { total_development = 750 }
+			for = {
+				amount = 4
+				effect = "
+					THE_SEJ_spawn_seija_religion_rebels_se = yes
+				"
+			}
+		}
+		else_if = {
+			limit = { total_development = 500 }
+			for = {
+				amount = 3
+				effect = "
+					THE_SEJ_spawn_seija_religion_rebels_se = yes
+				"
+			}
+		}
+		else_if = {
+			limit = { total_development = 250 }
+			for = {
+				amount = 2
+				effect = "
+					THE_SEJ_spawn_seija_religion_rebels_se = yes
+				"
+			}
+		}
+		else = {
+			THE_SEJ_spawn_seija_religion_rebels_se = yes
+		}
+	}
+
+	after = {
+		every_owned_province = {
+			clr_province_flag = THE_SEJ_had_spawn_seija_religion_rebel_province_flag
+		}
+	}
+}

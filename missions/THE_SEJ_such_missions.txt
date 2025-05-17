@@ -716,6 +716,7 @@ THE_SEJ_such_mission_branch_5 = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
+			religion = THE_Seija_religion
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 10
 				religion = THE_Seija_religion
@@ -766,9 +767,46 @@ THE_SEJ_such_mission_branch_5 = {
 		required_missions = { THE_SEJ_such_mission_5_3 } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			religion = THE_Seija_religion
+			OR = {
+				is_defender_of_faith_of_tier = 3
+				calc_true_if = {
+					desc = THE_SEJ_num_of_break_rule_prop_has_select_tt
+					has_country_flag = THE_SEJ_A_Miracle_Mallet_Replica_blessing_flag
+					has_country_flag = THE_SEJ_Bloodthirsty_Yin_Yang_Orb_blessing_flag
+					has_country_flag = THE_SEJ_Nimble_Fabric_blessing_flag
+					has_country_flag = THE_SEJ_Substitute_Jizo_blessing_flag
+					has_country_flag = THE_SEJ_Ghastly_Send_Off_Lantern_blessing_flag
+					has_country_flag = THE_SEJ_Four_Foot_Magic_Bomb_blessing_flag
+					has_country_flag = THE_SEJ_Gap_Folding_Umbrella_blessing_flag
+					has_country_flag = THE_SEJ_Cursed_Decoy_Doll_blessing_flag
+					has_country_flag = THE_SEJ_Tengus_Toy_Camera_blessing_flag
+					amount = 6
+				}
+			}
+			reform_level = 4
+		}
 
-		effect = {  } 
+		effect = {
+			custom_tooltip = THE_SEJ_enable_pagan_state_tt
+			hidden_effect = {
+				set_country_flag = THE_SEJ_enable_pagan_state_flag
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = { government = monarchy }
+				add_government_reform = THE_SEJ_seija_union_reform
+				hidden_effect = {
+					set_country_flag = THE_SEJ_enable_seija_union_reform_flag
+				}
+			}
+			else = {
+				hidden_effect = {
+					set_country_flag = THE_SEJ_enable_seija_union_reform_flag
+				}
+			}
+		}
 	}
 
 	THE_SEJ_such_mission_5_6 = {

@@ -20,6 +20,9 @@
  THE_SEJ_such_mission_4_4_case1_tt_yes: "£yes£§M‚YœgòT	ébÍSRSwQ0§Y«ˆÅ‹’T„vñ‹u™ºNvP§!0:§!"
  THE_SEJ_such_mission_4_4_case1_tt_no: "£no£§M‚YœgòT	ébÍSRSwQ0§Y«ˆÅ‹’T„vñ‹u™ºNvP§!0:§!"
  THE_SEJ_such_mission_4_4_case1_tt: "@NCS§Y[NCS.GetName]§!Nýwb:NvQÖNýV¶R„v±Rbîvh0"
+ THE_SEJ_num_of_break_rule_prop_has_select_tt: "*NÍSRSwQòT«ˆ	éb0"
+ THE_SEJ_enable_pagan_state_tt: "ïSåNO(u§YàV‚„TÜb§!0§Y³uætyrS—RYe§!0§Y›sÅ–—RYe§!„v1W0W0"
+ THE_SEJ_all_country_is_not_spread_seija_religion_target_tt: "¡l	gýV¶Rck(W«ˆ§Y‹q¨Rûl„gó`§!0"
 
  THE_SEJ_base_add_ni_dtt: "åNNàV.tOžX R§YÍS`noqVÍT›R§!:\nVgwýN: §G+5§!\nwýNŒRb–kl: §G+5§!\n:V6RTaÛS›Q‰Bl: §G+500§!\nÛS›QÁkýV: §G+10000§!"
  THE_SEJ_change_religion_province_add_ni_dtt: "wýN—RYelØS:N§Yûl„gó`§!: §G+3§!"
@@ -49,6 +52,8 @@
  THE_SEJ_replace_pagan_religion_modifier: "ÖSãNŸSËYáOðN"
  THE_SEJ_ncs_idea_1_modifier: "‰ˆ”QR"
  THE_SEJ_ncs_idea_7_modifier: "SfVTKNÔˆ"
+ THE_SEJ_seija_union_modifier: "ÍSw5–¿u"
+ THE_SEJ_spread_seija_religion_target_modifier: "ûl„gó`‹q¨Rîvh"
 
  THE_SEJ_negative_influence_modifier_1: ""
  THE_SEJ_negative_influence_modifier_2: ""
@@ -72,3 +77,30 @@
  THE_SEJ_events.6.desc: ""
  THE_SEJ_events.6.a: "ÙOb:NbìNib.V„v.^©R"
 ### EVENT_END
+
+
+### GOVERNMENT
+ THE_SEJ_seija_union_reform: "ûl„gó`5–¿u"
+ THE_SEJ_seija_union_reform_desc: "±›NeÜ„v0W:SÍN	g¸‹Y1Vwÿôv¥cVgÖNìN„výV¶Rv^N°sžRÿ(WU^TÀoÑSÖNìN„vÂríp³åNib'Yûl„gó`„v5–¿u0"
+
+ mechanic_THE_SEJ_converte_province_religion_reduce_nationlism_custom_attribute_yes: ".OYeÏQSwýN§G10§!t^R»yININÿFOOžX R§R2§!ÛSqN¦^0"
+ mechanic_THE_SEJ_enable_spread_seija_religion_diplomatic_action_custom_attribute_yes: "=T(uY²NLˆ¨R0§Y‹q¨Rûl„gó`§!0"
+### GOVERNMENT_END
+
+
+### DIPLOMATIC
+ THE_SEJ_spread_seija_religion_diplomatic_action: "‹q¨Rûl„gó`"
+ THE_SEJ_spread_seija_religion_diplomatic_action_title: "‹q¨Rûl„gó`"
+ THE_SEJ_spread_seija_religion_diplomatic_action_desc: "§Y[From.GetName]§!S(W§Y20§!t^…QcíurÑS§Yûl„gó`§!ÛSqNÿôv0RÛS›QS§Y[From.GetName]§!„výVYe:V6RlØS:N§Yûl„gó`§!"
+ THE_SEJ_spread_seija_religion_diplomatic_action_tooltip: "sSOûl„gó`„v,g(v^Nýwú^Ëzwck„v1VwPNíVÿmNNqVÍT±›NK„T—RYe„váO’VùRÙÍy`ó`„v4ngÿckª„výw›RïSåNÀoÑSSV0W„vÛS›QgÈuOýV¶R¥c³uûl„gó`0"
+### DIPLOMATIC_END
+
+
+### REBEL
+ THE_seija_religion_rebels_demand: "O$COUNTRYNAME$9e—R"
+ THE_seija_religion_rebels_demand_desc: "—RYeÛS›Q:N$RELIGION$áOðNwb0ÖNìN‰BlbìNb²‹ƒRóØšàeN„v0WMO0"
+ THE_seija_religion_rebels_title: "—RYe"
+ THE_seija_religion_rebels_name: "$RELIGION$Ârípw"
+ THE_seija_religion_rebels_desc: "—RYeÂráO’VŽVŽV(W×SµcŽNVáOðNýV¶R„vwýNŽcwÛSqN0ÖNìNaþV.O­dvQáOðNv^SbûQNb	g„v^—áO’V0"
+ THE_seija_religion_rebels_army: "$RELIGION$ÛS›Q"
+### REBEL_END

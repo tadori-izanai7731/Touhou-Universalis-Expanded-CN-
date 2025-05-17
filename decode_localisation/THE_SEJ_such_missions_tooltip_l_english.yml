@@ -20,6 +20,9 @@ l_english:
  THE_SEJ_such_mission_4_4_case1_tt_yes: "£yes£§M如果已选择反则道具「§Y被诅咒的诱饵人偶§!」:§!"
  THE_SEJ_such_mission_4_4_case1_tt_no: "£no£§M如果已选择反则道具「§Y被诅咒的诱饵人偶§!」:§!"
  THE_SEJ_such_mission_4_4_case1_tt: "@NCS§Y[NCS.GetName]§!不能成为其他国家的宣战目标。"
+ THE_SEJ_num_of_break_rule_prop_has_select_tt: "个反则道具已被选择。"
+ THE_SEJ_enable_pagan_state_tt: "可以使用§Y因蒂崇拜§!、§Y纳瓦特尔宗教§!、§Y玛雅宗教§!的圣地。"
+ THE_SEJ_all_country_is_not_spread_seija_religion_target_tt: "没有国家正在被§Y煽动翻转构想§!。"
 
  THE_SEJ_base_add_ni_dtt: "以下因素会增加§Y反逆思潮影响力§!:\n征服省份: §G+5§!\n省份完成殖民: §G+5§!\n强制同意叛军要求: §G+500§!\n叛军毁国: §G+10000§!"
  THE_SEJ_change_religion_province_add_ni_dtt: "省份宗教转变为§Y翻转构想§!: §G+3§!"
@@ -49,6 +52,8 @@ l_english:
  THE_SEJ_replace_pagan_religion_modifier: "取代原始信仰"
  THE_SEJ_ncs_idea_1_modifier: "辉针剑"
  THE_SEJ_ncs_idea_7_modifier: "少彦名之裔"
+ THE_SEJ_seija_union_modifier: "反逆者阵线"
+ THE_SEJ_spread_seija_religion_target_modifier: "翻转构想煽动目标"
 
  THE_SEJ_negative_influence_modifier_1: ""
  THE_SEJ_negative_influence_modifier_2: ""
@@ -72,3 +77,30 @@ l_english:
  THE_SEJ_events.6.desc: ""
  THE_SEJ_events.6.a: "这会成为我们扩张的帮助"
 ### EVENT_END
+
+
+### GOVERNMENT
+ THE_SEJ_seija_union_reform: "翻转构想阵线"
+ THE_SEJ_seija_union_reform_desc: "那些遥远的地区仍有许多弱者，直接征服他们的国家并不现实，在幕后激发他们的狂热足以扩大翻转构想的阵线。"
+
+ mechanic_THE_SEJ_converte_province_religion_reduce_nationlism_custom_attribute_yes: "传教减少省份§G10§!年分离主义，但会增加§R2§!叛乱度。"
+ mechanic_THE_SEJ_enable_spread_seija_religion_diplomatic_action_custom_attribute_yes: "启用外交行动「§Y煽动翻转构想§!」"
+### GOVERNMENT_END
+
+
+### DIPLOMATIC
+ THE_SEJ_spread_seija_religion_diplomatic_action: "煽动翻转构想"
+ THE_SEJ_spread_seija_religion_diplomatic_action_title: "煽动翻转构想"
+ THE_SEJ_spread_seija_religion_diplomatic_action_desc: "§Y[From.GetName]§!将在§Y20§!年内持续爆发§Y翻转构想§!叛乱，直到叛军将§Y[From.GetName]§!的国教强制转变为§Y翻转构想§!"
+ THE_SEJ_spread_seija_religion_diplomatic_action_tooltip: "即使翻转构想的本质并不能建立真正的弱者乐园，也不影响那些落后宗教的信徒对这种思想的渴望，正邪的能力可以激发当地的叛军最终使国家接纳翻转构想。"
+### DIPLOMATIC_END
+
+
+### REBEL
+ THE_seija_religion_rebels_demand: "使$COUNTRYNAME$改宗"
+ THE_seija_religion_rebels_demand_desc: "宗教叛军为$RELIGION$信仰而战。他们要求我们承认它至高无上的地位。"
+ THE_seija_religion_rebels_title: "宗教"
+ THE_seija_religion_rebels_name: "$RELIGION$狂热者"
+ THE_seija_religion_rebels_desc: "宗教狂信徒往往在受控于异信仰国家的省份掀起叛乱。他们意图传播其信仰并打击所有的非信徒。"
+ THE_seija_religion_rebels_army: "$RELIGION$叛军"
+### REBEL_END

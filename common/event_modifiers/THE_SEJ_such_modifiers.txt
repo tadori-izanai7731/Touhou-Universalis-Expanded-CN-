@@ -56,6 +56,16 @@ THE_SEJ_ncs_idea_7_modifier = {
 	manpower_recovery_speed = 0.2
 }
 
+THE_SEJ_seija_union_modifier = {
+	extra_manpower_at_religious_war = yes
+	manpower_in_true_faith_provinces = 0.5
+	tolerance_own = 3
+}
+
+THE_SEJ_spread_seija_religion_target_modifier = {
+	
+}
+
 ### THE_SEJ negative influence modifier
 THE_SEJ_negative_influence_modifier_1 = {
 

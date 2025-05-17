@@ -69,7 +69,7 @@ THE_SEJ_expand_seija_paradise_reform = {
 	}
 
 	custom_attributes = {
-		THE_SEJ_converte_province_add_estate_loyalty_custom_attribute = yes
+		# THE_SEJ_converte_province_add_estate_loyalty_custom_attribute = yes
 		THE_SEJ_converte_province_add_reform_progress_custom_attribute = yes
 	}
 
@@ -78,5 +78,33 @@ THE_SEJ_expand_seija_paradise_reform = {
 		diplomats = 1
 		improve_relation_modifier = 0.2
 		institution_spread_from_true_faith = 0.5
+	}
+}
+
+### LEVEL 4 ###
+THE_SEJ_seija_union_reform = {
+	icon = "THE_SEJ_expand_seija_paradise_reform"
+
+	potential = {
+		OR = {
+			has_reform = THE_SEJ_seija_union_reform
+			have_had_reform = THE_SEJ_seija_union_reform
+			has_country_flag = THE_SEJ_enable_seija_union_reform_flag
+		}
+	}
+
+	trigger = {
+		religion = THE_Seija_religion
+	}
+
+	custom_attributes = {
+		THE_SEJ_enable_spread_seija_religion_diplomatic_action_custom_attribute = yes
+		THE_SEJ_converte_province_religion_reduce_nationlism_custom_attribute = yes
+	}
+
+	modifiers = {
+		manpower_in_true_faith_provinces = 0.5
+		institution_spread_from_true_faith = 1.0
+		church_loyalty_modifier = 0.1
 	}
 }

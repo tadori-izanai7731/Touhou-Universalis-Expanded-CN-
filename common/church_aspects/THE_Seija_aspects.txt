@@ -69,7 +69,8 @@ THE_seija_Substitute_Jizo_blessing = {
 		set_country_flag = THE_SEJ_Substitute_Jizo_blessing_flag
 	}
 	ai_will_do = {
-		factor = 10
+		# has colonists
+		factor = 1
 	}
 }
 
