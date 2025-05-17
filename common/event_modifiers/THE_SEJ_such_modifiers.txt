@@ -41,6 +41,21 @@ THE_SEJ_north_trade_extra_modifier = {
 	overextension_impact_modifier = -0.25
 }
 
+THE_SEJ_replace_pagan_religion_modifier = {
+	global_heathen_missionary_strength = 0.03
+	warscore_cost_vs_other_religion = -0.1
+}
+
+THE_SEJ_ncs_idea_1_modifier = {
+	fire_damage = 0.1
+	shock_damage = 0.1
+}
+
+THE_SEJ_ncs_idea_7_modifier = {
+	global_trade_goods_size_modifier = 0.1
+	manpower_recovery_speed = 0.2
+}
+
 ### THE_SEJ negative influence modifier
 THE_SEJ_negative_influence_modifier_1 = {
 

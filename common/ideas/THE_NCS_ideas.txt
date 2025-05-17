@@ -44,7 +44,7 @@ THE_NCS_ideas = {
 	}
 	#少彦名之裔
 	THE_NCS_sukuna_hikona_descendant_idea = {
-		trade_goods_size_modifier = 0.1
+		global_trade_goods_size_modifier = 0.1
 		manpower_recovery_speed = 0.2
 	}
 }

@@ -4,7 +4,7 @@ l_english:
  THE_SEJ_create_60_conquistador_add_6_manuever_tt: "获得§G60§!陆军传统的征服者，此征服者额外获得§G6§!£icon_manuever£机动。"
  THE_SEJ_maya_gerat_project_neighbor_province_add_3_dev_tt: "§Y[846.GetName]§!和§Y[842.GetName]§!的所有相邻省份获得§G1§!基础税收、§G1§!基础生产、§G1§!基础人力"
  THE_SEJ_explore_sea_province_improve_explor_tt: "探索§Y未知海域§!有概率提升§Y探险家§!的属性。"
- THE_SEJ_carribeans_region_may_produce_clove_tt: "§Y加勒比§!地区将有概率产出§Y丁香§!。"
+ THE_SEJ_carribeans_region_may_produce_clove_tt: "§Y加勒比§!地区将会产出§Y丁香§!。"
  THE_SEJ_colonize_complete_create_neighbor_siberia_tt: "殖民地成长为城市时，在相邻未殖民省份创建§Y拓荒区§!"
  THE_SEJ_enable_negative_influence_decision_tt: "启用决议「§Y反逆思潮影响力§!」"
  THE_SEJ_every_8_production_add_production_building_tt: "治下每个满足条件的省份:"
@@ -14,6 +14,26 @@ l_english:
  THE_SEJ_such_mission_4_3_tt_case1_yes: "£yes£§M如果已选择反则道具「§Y隙间的折叠伞§!」:§!"
  THE_SEJ_such_mission_4_3_tt_case1_no: "£no£§M如果已选择反则道具「§Y隙间的折叠伞§!」:§!"
  THE_SEJ_events_6_tt: "商队能够前往更远的北方换取一些独特的物资。"
+ THE_SEJ_enable_events_6_tt: "£yes£借助「§Y隙间的折叠伞§!」，商队将前往更远的北方。"
+ THE_SEJ_every_seija_religion_add_100_all_power_tt: "从每个信仰§Y翻转构想§!的国家获得§G100§!£adm£行政点数、§G100§!£dip£外交点数、§G100§!£mil£军事点数。"
+ THE_SEJ_change_religion_province_add_ni_tt: "省份宗教转变为§Y翻转构想§!时获得§G3§!反逆思潮影响力。"
+ THE_SEJ_such_mission_4_4_case1_tt_yes: "£yes£§M如果已选择反则道具「§Y被诅咒的诱饵人偶§!」:§!"
+ THE_SEJ_such_mission_4_4_case1_tt_no: "£no£§M如果已选择反则道具「§Y被诅咒的诱饵人偶§!」:§!"
+ THE_SEJ_such_mission_4_4_case1_tt: "@NCS§Y[NCS.GetName]§!不能成为其他国家的宣战目标。"
+
+ THE_SEJ_base_add_ni_dtt: "以下因素会增加§Y反逆思潮影响力§!:\n征服省份: §G+5§!\n省份完成殖民: §G+5§!\n强制同意叛军要求: §G+500§!\n叛军毁国: §G+10000§!"
+ THE_SEJ_change_religion_province_add_ni_dtt: "省份宗教转变为§Y翻转构想§!: §G+3§!"
+
+ THE_SEJ_has_ni_level_ttt_1: "§Y反逆思潮影响力§!等级达到§Y1§!"
+ THE_SEJ_has_ni_level_ttt_2: "§Y反逆思潮影响力§!等级达到§Y2§!"
+ THE_SEJ_has_ni_level_ttt_3: "§Y反逆思潮影响力§!等级达到§Y3§!"
+ THE_SEJ_has_ni_level_ttt_4: "§Y反逆思潮影响力§!等级达到§Y4§!"
+ THE_SEJ_has_ni_level_ttt_5: "§Y反逆思潮影响力§!等级达到§Y5§!"
+ THE_SEJ_has_ni_level_ttt_6: "§Y反逆思潮影响力§!等级达到§Y6§!"
+ THE_SEJ_has_ni_level_ttt_7: "§Y反逆思潮影响力§!等级达到§Y7§!"
+ THE_SEJ_has_ni_level_ttt_8: "§Y反逆思潮影响力§!等级达到§Y8§!"
+ THE_SEJ_has_ni_level_ttt_9: "§Y反逆思潮影响力§!等级达到§Y9§!"
+ THE_SEJ_has_ni_level_ttt_10: "§Y反逆思潮影响力§!等级达到§Y10§!"
 ### TOOLTIP_END
 
 
@@ -26,6 +46,9 @@ l_english:
  THE_SEJ_cocoa_trader_modifier: "可可商队"
  THE_SEJ_north_trade_modifier: "糖、谷物、羊毛"
  THE_SEJ_north_trade_extra_modifier: "牲畜、棉花、烟草"
+ THE_SEJ_replace_pagan_religion_modifier: "取代原始信仰"
+ THE_SEJ_ncs_idea_1_modifier: "辉针剑"
+ THE_SEJ_ncs_idea_7_modifier: "少彦名之裔"
 
  THE_SEJ_negative_influence_modifier_1: ""
  THE_SEJ_negative_influence_modifier_2: ""
