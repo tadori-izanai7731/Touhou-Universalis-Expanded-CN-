@@ -26,3 +26,21 @@ THE_IQU_sky_beyond_clouds_reform = {
 		THE_IQU_government_explorer_conquistador_mechanic = yes
 	}
 }
+THE_IQU_scarlet_sky_reform = {
+	lock_level_when_selected = yes
+	icon = "THE_IQU_government_2_reform"
+	potential = {
+		OR = {
+			has_reform = THE_IQU_sky_beyond_clouds_reform
+			have_had_reform = THE_IQU_sky_beyond_clouds_reform
+		}
+	}
+	
+	modifiers = {
+		colonist_placement_chance = 0.05
+		global_colonial_growth = 15
+	}
+	custom_attributes = {
+		THE_IQU_scarlet_sky_reform_mechanic = yes
+	}
+}

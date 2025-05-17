@@ -21,3 +21,16 @@ THE_IQU_explore_coast_exolore_government_effects = {
 		 
 	}
 }
+#
+THE_IQU_scarlet_sky_government_effects = {
+	if = {
+		limit = {
+			owner = {
+				has_government_attribute = THE_IQU_scarlet_sky_reform_mechanic
+			}
+		}
+		every_province_in_state = {
+			create_colony = 1000
+		}
+	}
+}
