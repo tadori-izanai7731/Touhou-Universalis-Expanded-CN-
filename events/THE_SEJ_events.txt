@@ -188,6 +188,7 @@ country_event = {
 	desc = NONE
 	picture = IMPORTANT_STATUE_eventPicture
 	hidden = yes
+	is_triggered_only = yes
 	option = {
 		name = NONE
 		every_owned_province = {
@@ -217,7 +218,8 @@ country_event = {
 			duration = -1
 		}
 		if = {
-			limit = { has_country_flag = THE_SEJ_events_6_flag }
+			limit = { has_country_flag = THE_SEJ_Gap_Folding_Umbrella_blessing_flag }
+			custom_tooltip = THE_SEJ_enable_events_6_tt
 			country_event = {
 				id = THE_SEJ_events.6
 				days = 730

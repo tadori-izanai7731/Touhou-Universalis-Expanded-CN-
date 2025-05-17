@@ -4,7 +4,7 @@
  THE_SEJ_create_60_conquistador_add_6_manuever_tt: "·ƒ—V§G60§!F–›Q.Oßu„vVgwÿdkVgw˜Y·ƒ—V§G6§!£icon_manuever£:g¨R0"
  THE_SEJ_maya_gerat_project_neighbor_province_add_3_dev_tt: "§Y[846.GetName]§!ŒT§Y[842.GetName]§!„vNb	gøv»wýN·ƒ—V§G1§!úWNxz6e0§G1§!úWNxuµN0§G1§!úWNxºN›R"
  THE_SEJ_explore_sea_province_improve_explor_tt: "¢c0t§Y*gåwwmßW§!	g‚i‡sÐcGS§Y¢ci–¶R§!„v^S'`0"
- THE_SEJ_carribeans_region_may_produce_clove_tt: "§Y RÒRÔk§!0W:SS	g‚i‡sµNúQ§YN™™§!0"
+ THE_SEJ_carribeans_region_may_produce_clove_tt: "§Y RÒRÔk§!0W:SSOµNúQ§YN™™§!0"
  THE_SEJ_colonize_complete_create_neighbor_siberia_tt: "–kl0Wb•:NÎW^öeÿ(Wøv»*g–klwýNRú^§YÓbRƒ:S§!"
  THE_SEJ_enable_negative_influence_decision_tt: "=T(u³Q®‹0§YÍS`noqVÍT›R§!0"
  THE_SEJ_every_8_production_add_production_building_tt: "»lNÏk*Nán³agöN„vwýN:"
@@ -14,6 +14,26 @@
  THE_SEJ_such_mission_4_3_tt_case1_yes: "£yes£§M‚YœgòT	ébÍSRSwQ0§Y™–ô•„v˜bàSO§!0:§!"
  THE_SEJ_such_mission_4_3_tt_case1_no: "£no£§M‚YœgòT	ébÍSRSwQ0§Y™–ô•„v˜bàSO§!0:§!"
  THE_SEJ_events_6_tt: "FU–ýwYMRŽVôfÜ„vS¹ebcÖSN›Nìryr„virD0"
+ THE_SEJ_enable_events_6_tt: "£yes£P©R0§Y™–ô•„v˜bàSO§!0ÿFU–SMRŽVôfÜ„vS¹e0"
+ THE_SEJ_every_seija_religion_add_100_all_power_tt: "ÎNÏk*NáOðN§Yûl„gó`§!„výV¶R·ƒ—V§G100§!£adm£Lˆ?e¹ppe0§G100§!£dip£Y²N¹ppe0§G100§!£mil£›Q‹N¹ppe0"
+ THE_SEJ_change_religion_province_add_ni_tt: "wýN—RYelØS:N§Yûl„gó`§!öe·ƒ—V§G3§!ÍS`noqVÍT›R0"
+ THE_SEJ_such_mission_4_4_case1_tt_yes: "£yes£§M‚YœgòT	ébÍSRSwQ0§Y«ˆÅ‹’T„vñ‹u™ºNvP§!0:§!"
+ THE_SEJ_such_mission_4_4_case1_tt_no: "£no£§M‚YœgòT	ébÍSRSwQ0§Y«ˆÅ‹’T„vñ‹u™ºNvP§!0:§!"
+ THE_SEJ_such_mission_4_4_case1_tt: "@NCS§Y[NCS.GetName]§!Nýwb:NvQÖNýV¶R„v±Rbîvh0"
+
+ THE_SEJ_base_add_ni_dtt: "åNNàV.tOžX R§YÍS`noqVÍT›R§!:\nVgwýN: §G+5§!\nwýNŒRb–kl: §G+5§!\n:V6RTaÛS›Q‰Bl: §G+500§!\nÛS›QÁkýV: §G+10000§!"
+ THE_SEJ_change_religion_province_add_ni_dtt: "wýN—RYelØS:N§Yûl„gó`§!: §G+3§!"
+
+ THE_SEJ_has_ni_level_ttt_1: "§YÍS`noqVÍT›R§!Irµu¾0R§Y1§!"
+ THE_SEJ_has_ni_level_ttt_2: "§YÍS`noqVÍT›R§!Irµu¾0R§Y2§!"
+ THE_SEJ_has_ni_level_ttt_3: "§YÍS`noqVÍT›R§!Irµu¾0R§Y3§!"
+ THE_SEJ_has_ni_level_ttt_4: "§YÍS`noqVÍT›R§!Irµu¾0R§Y4§!"
+ THE_SEJ_has_ni_level_ttt_5: "§YÍS`noqVÍT›R§!Irµu¾0R§Y5§!"
+ THE_SEJ_has_ni_level_ttt_6: "§YÍS`noqVÍT›R§!Irµu¾0R§Y6§!"
+ THE_SEJ_has_ni_level_ttt_7: "§YÍS`noqVÍT›R§!Irµu¾0R§Y7§!"
+ THE_SEJ_has_ni_level_ttt_8: "§YÍS`noqVÍT›R§!Irµu¾0R§Y8§!"
+ THE_SEJ_has_ni_level_ttt_9: "§YÍS`noqVÍT›R§!Irµu¾0R§Y9§!"
+ THE_SEJ_has_ni_level_ttt_10: "§YÍS`noqVÍT›R§!Irµu¾0R§Y10§!"
 ### TOOLTIP_END
 
 
@@ -26,6 +46,9 @@
  THE_SEJ_cocoa_trader_modifier: "ïSïSFU–"
  THE_SEJ_north_trade_modifier: "Ö|07Œir0ŠÛk"
  THE_SEJ_north_trade_extra_modifier: "rrju0Éh±‚0ßpIƒ"
+ THE_SEJ_replace_pagan_religion_modifier: "ÖSãNŸSËYáOðN"
+ THE_SEJ_ncs_idea_1_modifier: "‰ˆ”QR"
+ THE_SEJ_ncs_idea_7_modifier: "SfVTKNÔˆ"
 
  THE_SEJ_negative_influence_modifier_1: ""
  THE_SEJ_negative_influence_modifier_2: ""

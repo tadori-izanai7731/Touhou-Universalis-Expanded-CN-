@@ -472,7 +472,10 @@ THE_SEJ_such_mission_branch_4 = {
 		icon = mission_unknown_mission
 		position = 2
 		required_missions = { THE_SEJ_such_mission_5_1 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { base_production = 8 }
+		} 
 
 		trigger = {
 			num_of_owned_provinces_with = {
@@ -548,15 +551,11 @@ THE_SEJ_such_mission_branch_4 = {
 			if = {
 				limit = { has_country_flag = THE_SEJ_Gap_Folding_Umbrella_blessing_flag }
 				custom_tooltip = THE_SEJ_such_mission_4_3_tt_case1_yes
-				custom_tooltip = THE_SEJ_events_6_tt
-				hidden_effect = {
-					set_country_flag = THE_SEJ_events_6_flag
-				}
 			}
 			else = {
 				custom_tooltip = THE_SEJ_such_mission_4_3_tt_case1_no
-				custom_tooltip = THE_SEJ_events_6_tt
 			}
+			custom_tooltip = THE_SEJ_events_6_tt
 		} 
 	}
 
@@ -566,9 +565,77 @@ THE_SEJ_such_mission_branch_4 = {
 		required_missions = { THE_SEJ_such_mission_5_3 } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			if = {
+				limit = { exists = NCS }
+				NCS = {
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+				}
+			}
+			else = {
+				5035 = {
+					owner = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			if = {
+				limit = { exists = NCS }
+				THE_add_historical_friend_and_reverse_scripted_effect = {
+					tag = NCS
+				}
+				NCS = {
+					change_religion = THE_Seija_religion
+					hidden_effect = {
+						every_owned_province = {
+							change_religion = THE_Seija_religion
+						}
+					}
+				}
+				custom_tooltip = empty_line_tt
+				if = {
+					limit = { has_country_flag = THE_SEJ_Cursed_Decoy_Doll_blessing_flag }
+					custom_tooltip = THE_SEJ_such_mission_4_4_case1_tt_yes
+					create_subject = {
+						subject_type = crown_colony
+						who = NCS
+					}
+					custom_tooltip = THE_SEJ_such_mission_4_4_case1_tt
+					hidden_effect = {
+						NCS = {  set_country_flag = THE_only_player_enable_declare_war_flag }
+					}
+				}
+				else = {
+					custom_tooltip = THE_SEJ_such_mission_4_4_case1_tt_no
+					tooltip = {
+						create_subject = {
+							subject_type = crown_colony
+							who = NCS
+						}
+						custom_tooltip = THE_SEJ_such_mission_4_4_case1_tt
+					}
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = THE_SEJ_ncs_idea_1_modifier
+					duration = 7300
+				}
+				add_country_modifier = {
+					name = THE_SEJ_ncs_idea_7_modifier
+					duration = 7300
+				}
+			}
+		} 
 	}
 
 	THE_SEJ_such_mission_4_5 = {
@@ -648,9 +715,49 @@ THE_SEJ_such_mission_branch_5 = {
 		required_missions = { THE_SEJ_such_mission_5_1 } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				religion = THE_Seija_religion
+			}
+			custom_trigger_tooltip = {
+				tooltip = THE_SEJ_has_ni_level_ttt_3
+				has_country_flag = THE_SEJ_negative_influence_level_3_flag
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			if = {
+				limit = { is_defender_of_faith = yes }
+				add_treasury = 500
+			}
+			else = {
+				set_defender_of_the_faith = {
+					who = ROOT
+				}
+			}
+			add_country_modifier = {
+				name = THE_SEJ_replace_pagan_religion_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_SEJ_change_religion_province_add_ni_tt
+			hidden_effect = {
+				set_country_flag = THE_SEJ_change_religion_province_add_ni_flag
+			}
+			custom_tooltip = THE_SEJ_every_seija_religion_add_100_all_power_tt
+			hidden_effect = {
+				every_country_including_inactive = {
+					limit = {
+						religion = THE_Seija_religion
+					}
+					ROOT = {
+						add_adm_power = 100
+						add_dip_power = 100
+						add_mil_power = 100
+					}
+				}
+			}
+		} 
 	}
 
 	THE_SEJ_such_mission_5_5 = {

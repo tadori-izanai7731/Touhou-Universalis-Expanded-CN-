@@ -193,8 +193,8 @@ Touhou = {
 		}
 		
 		province = {
-			local_tax_modifier = -0.25
-			local_unrest = -2
+			local_tax_modifier = -0.2
+			local_missionary_strength = -0.05
 		}
 		
 		allowed_center_conversion = {

@@ -204,6 +204,17 @@ declarewar = {
 			FROM = { NOT = { has_reform = THE_KEI_lonely_creation_government_reform } }
 		}
 	}
+	condition = {
+		tooltip = THE_only_player_enable_declare_war_tt
+		potential = {
+			FROM = {
+				has_country_flag = THE_only_player_enable_declare_war_flag
+			}
+		}
+		allow = {
+			ai = no
+		}
+	}
 	### THE_END
 	effect = {
 		on_war_declaration_effect = yes
