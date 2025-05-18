@@ -2139,6 +2139,7 @@ MAY_obsidian_source = {
 			OR = {
 				technology_group = high_american
 				technology_group = mesoamerican
+				has_estate_privilege = THE_SEJ_develop_obsidian_estate_privilege
 			}
 		}
 	}
@@ -2148,6 +2149,7 @@ MAY_obsidian_source = {
 			OR = {
 				technology_group = high_american
 				technology_group = mesoamerican
+				has_estate_privilege = THE_SEJ_develop_obsidian_estate_privilege
 			}
 		}
 	}
@@ -2156,13 +2158,23 @@ MAY_obsidian_source = {
 	
 	#Province scope
 	on_activation = {
-		add_permanent_province_modifier = {
-			name = MAY_active_obsidian_source
-			duration = -1
+		if = {
+			limit = { owner = { has_estate_privilege = THE_SEJ_develop_obsidian_estate_privilege } }
+			add_permanent_province_modifier = {
+				name = THE_SEJ_active_obsidian_source_upgrade_province_modifier
+				duration = -1
+			}
+		}
+		else = {
+			add_permanent_province_modifier = {
+				name = MAY_active_obsidian_source
+				duration = -1
+			}
 		}
 	}
 	
 	on_deactivation = {
+		remove_province_modifier = THE_SEJ_active_obsidian_source_upgrade_province_modifier
 		remove_province_modifier = MAY_active_obsidian_source
 	}
 	

@@ -23,6 +23,8 @@ l_english:
  THE_SEJ_num_of_break_rule_prop_has_select_tt: "个反则道具已被选择。"
  THE_SEJ_enable_pagan_state_tt: "可以使用§Y因蒂崇拜§!、§Y纳瓦特尔宗教§!、§Y玛雅宗教§!的圣地。"
  THE_SEJ_all_country_is_not_spread_seija_religion_target_tt: "没有国家正在被§Y煽动翻转构想§!。"
+ THE_SEJ_enable_develop_obsidian_estate_privilege_tt: "启用§Y[Root.Get贵族Name]§!阶层特权「§Y开发黑曜石§!」"
+ THE_SEJ_upgrade_active_obsidian_source_tt: "省份修正「§Y开发黑曜石资源§!」提供的本地贸易竞争力翻倍，并给予§G+1.0%§!步兵作战能力和§G+1.0%§!骑兵作战能力"
 
  THE_SEJ_base_add_ni_dtt: "以下因素会增加§Y反逆思潮影响力§!:\n征服省份: §G+5§!\n省份完成殖民: §G+5§!\n强制同意叛军要求: §G+500§!\n叛军毁国: §G+10000§!"
  THE_SEJ_change_religion_province_add_ni_dtt: "省份宗教转变为§Y翻转构想§!: §G+3§!"
@@ -54,6 +56,7 @@ l_english:
  THE_SEJ_ncs_idea_7_modifier: "少彦名之裔"
  THE_SEJ_seija_union_modifier: "反逆者阵线"
  THE_SEJ_spread_seija_religion_target_modifier: "翻转构想煽动目标"
+ THE_SEJ_active_obsidian_source_upgrade_province_modifier: "开发黑曜石资源"
 
  THE_SEJ_negative_influence_modifier_1: ""
  THE_SEJ_negative_influence_modifier_2: ""
@@ -104,3 +107,8 @@ l_english:
  THE_seija_religion_rebels_desc: "宗教狂信徒往往在受控于异信仰国家的省份掀起叛乱。他们意图传播其信仰并打击所有的非信徒。"
  THE_seija_religion_rebels_army: "$RELIGION$叛军"
 ### REBEL_END
+
+### ESTATE
+ THE_SEJ_develop_obsidian_estate_privilege: "开发黑曜石"
+ THE_SEJ_develop_obsidian_estate_privilege_desc: "这个地区有丰富的黑曜石资源，当地人常用于贸易或制作武器。"
+### ESTATE_END

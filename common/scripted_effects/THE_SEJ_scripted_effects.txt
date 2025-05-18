@@ -60,6 +60,13 @@ THE_SEJ_on_colony_finished_scripted_effect = {
 	}
 }
 
+THE_SEJ_on_abandon_colony_scripted_effect = {
+	if = {
+		limit = { has_province_flag = THE_SEJ_not_trigger_colony_finished_oa_province_flag }
+		clr_province_flag = THE_SEJ_not_trigger_colony_finished_oa_province_flag
+	}
+}
+
 
 ############################################################
 ### NOT on_actions' scripted effects

@@ -66,6 +66,14 @@ THE_SEJ_spread_seija_religion_target_modifier = {
 	
 }
 
+THE_SEJ_active_obsidian_source_upgrade_province_modifier = {
+	province_trade_power_value = 5.0
+	infantry_power = 0.01
+	cavalry_power = 0.01
+
+	picture = "obsidian"
+}
+
 ### THE_SEJ negative influence modifier
 THE_SEJ_negative_influence_modifier_1 = {
 

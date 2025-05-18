@@ -1,0 +1,46 @@
+THE_SEJ_develop_obsidian_estate_privilege = {
+	icon = privilege_macuahuitl
+	max_absolutism = 0
+	loyalty = 0.05
+	influence = 0.1
+	is_valid = {
+		has_country_flag = THE_SEJ_enable_develop_obsidian_estate_privilege_flag
+	}
+	can_select = {
+	}
+	penalties = {
+	}
+	benefits = {
+		
+	}
+	on_granted = {
+		custom_tooltip = THE_SEJ_upgrade_active_obsidian_source_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = MAY_active_obsidian_source
+				}
+				remove_province_modifier = MAY_active_obsidian_source
+				add_permanent_province_modifier = {
+					name = THE_SEJ_active_obsidian_source_upgrade_province_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				has_province_modifier = MAY_active_obsidian_source
+			}
+			remove_province_modifier = MAY_active_obsidian_source
+			add_permanent_province_modifier = {
+				name = THE_SEJ_active_obsidian_source_upgrade_province_modifier
+				duration = -1
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
