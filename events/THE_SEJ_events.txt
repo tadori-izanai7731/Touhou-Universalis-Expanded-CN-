@@ -198,6 +198,7 @@ country_event = {
 			clr_province_flag = THE_SEJ_neighbor_siberia_target_province_flag
 			every_empty_neighbor_province = {
 				add_siberian_construction = 1
+				set_province_flag = THE_SEJ_not_trigger_colony_finished_oa_province_flag
 			}
 		}
 	}
