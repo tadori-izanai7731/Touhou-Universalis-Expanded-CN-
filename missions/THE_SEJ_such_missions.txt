@@ -140,9 +140,13 @@ THE_SEJ_such_mission_branch_1 = {
 		position = 11
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			always = yes
+		} 
 
-		effect = {  } 
+		effect = {
+			custom_tooltip = THE_SEJ_such_mission_1_11_reward_by_completed_mission_tt
+		} 
 	}
 }
 THE_SEJ_such_mission_branch_2 = {
