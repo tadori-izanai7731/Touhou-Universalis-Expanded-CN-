@@ -1373,17 +1373,13 @@ THE_KEI_main_branch_4 = {
 		} 
 		
 		trigger = { 
-			Yachie_state = {
-				type = all
-				owned_by = ROOT
-			}
-			Saki_state = {
-				type = all
-				owned_by = ROOT
-			}
-			Sanzu_upstream = {
-				type = all
-				owned_by = ROOT
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 5
+				OR = {
+					area = Yachie_state
+					area = Saki_state
+					area = Sanzu_upstream
+				}
 			}
 		} 
 		
