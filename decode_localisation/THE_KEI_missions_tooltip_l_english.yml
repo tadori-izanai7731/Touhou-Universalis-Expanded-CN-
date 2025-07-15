@@ -1,4 +1,5 @@
 l_english:
+#GOVERNMENT
  THE_KEI_lonely_creation_government_reform: "孤独创生"
  THE_KEI_lonely_creation_government_reform_desc: ""
  THE_KEI_HEIR: "天选者"
@@ -12,6 +13,10 @@ l_english:
  THE_KEI_without_the_time_and_end_government_reform: "无始无终"
  THE_KEI_without_the_time_and_end_government_reform_desc: ""
  mechanic_THE_KEI_can_core_creation_add_develpment_yes: "省份核心化后：\n- -并直接添加§J「直属州」§!核心\n- -§M若省份发展度低于30§!:\n- - - -基础税收 基础生产 基础人力均设定为§G10§!\n- -§M否则§!：\n- - - -获得§G2§!基础税收§G2§!基础生产§G2§!基础人力\n"
+ mechanic_THE_KEI_lonely_other_the_hell_province_debuff_yes: "当我们割让「§Y地狱§!」地区以外的省份时，该省份将会获得效果「§Y不曾松懈的枷锁§!」\n  本地最低自治度 §R+75%§!\n  每月自治度变化 §R+0.10§!\n  核心化花费 §R+10%§!\n「§Y不曾松懈的枷锁§!」将持续到我们将此省份提升到§Y30§!或更高发展度"
+#GOVERNMENT_END
+
+#EASTE
  THE_KEI_noble_name: "动物灵"
  THE_KEI_burghers_name: "人类灵"
  THE_KEI_janissaries_name: "埴轮"
@@ -144,6 +149,8 @@ l_english:
  THE_KEI_the_new_life_mission_buff: "挣扎而生"
  THE_KEI_out_of_superegion_buff: "不曾松懈的枷锁"
  THE_KEI_oil_province_buff: "石油"
+ THE_KEI_thought_of_rebirth_buff: "回生之念"
+ THE_KEI_law_in_keiki_buff: "灵长园的律法"
  ##religion
  THE_keiki_religion: "梦想造型"
  the_keiki_fervor_shapping: "塑形"
@@ -254,9 +261,8 @@ l_english:
  THE_KEI_2_10_alone_c_tt1: "在幻想乡随机创建3个§O「梦想造型」§!改革中心"
  THE_KEI_2_11_alone_c_tt1: "我们在剥削省份发展度时获得§G2.5§!§O化生§!，并降低§G10§!叛乱度以及§G30%§!自治度"
  THE_KEI_1_10_alone_c_1: "额外效果§O敕命「狂热」§!\n - -§g我们在战争中占领的所有省份都会转教为「梦想造型」§!"
- THE_KEI_1_10_alone_c_2: "解锁特殊机制§O「愿力」§!\n - -§g详情请查看决议§!"
  THE_KEI_1_12_alone_c_tt1: "升级§O敕命「雷行」§!\n - -§M通过决议切换§!\n - -§g现允许我们花费5点§O化生§!生成我们陆军上限§G10%§!的步兵§!"
- THE_KEI_2_11_alone_c_tt2: "至少拥有5点§Y正统信仰容忍§!"
+ THE_KEI_2_11_alone_c_tt2: "至少拥有7点§Y正统信仰容忍§!"
  THE_KEI_2_12_alone_c_tt1: "§M拥有此效果时，所有国家均无法对我们宣战§!"
  THE_KEI_2_12_alone_c_tt2: "升级§Y敕命「焕生」§!\n -§g「焕生」互动的发展度限制提高到120发展度并且花费减半§!"
  THE_KEI_the_eternal_land_declare_tt: "由于@KEI§Y偶像之境§!拥有修正§M恒乐常土§!我们无法对其宣战"
@@ -370,7 +376,7 @@ l_english:
 
 
 
- 
+#EVENT_START
  THE_KEI_HKR_help_ours_c_tt1: "§M我们将会占到灵长园的立场§!"
  THE_KEI_HKR_help_ours_c_tt2: "§M我们将会占到阎魔殿的立场§!"
  THE_KEI_get_the_animal_run_c_tt2: "「§Y不曾松懈的枷锁§!」将持续到我们将此省份提升到§Y15§!或更高发展度"
@@ -384,3 +390,19 @@ l_english:
  THE_harmonized_keiki: "融合梦想造型信仰"
  THE_harmony_events.3.t: "融合梦想造型"
  THE_harmony_events.3.d: "梦想造型的信仰，最早起源于灵长园。在那里，身处绝境的人类灵长怀着最后的希望，狂热地召唤着埴安神袿姬，期盼她带来救赎之光。信众们为了渴求这份救赎，放弃了过往的一切身份与执念，只为获得新生的希望。随着时间推移，我们国度的子民越来越多地接纳了梦想造型的信仰。当地教会势力不断壮大，也将这一信仰传播至幻想乡各处，甚至外界。在我们的和谐教化之下，人们逐渐淡化了与梦想造型信仰相关的认同问题。如今梦想造型的信众已完全融入[Root.GetName]社会，他们或成为辛勤的劳动者，或担任重要的行政职务，成为我们庞大而复杂的行政机器中不可或缺的一部分。"
+#EVENT_END
+ THE_KEI_flavor_events.16.t: "神赐的军势"
+ THE_KEI_flavor_events.16.desc: "战火肆虐，城墙摇摇欲坠。士兵们疲惫不堪，平民蜷缩在废墟之中，祈祷着奇迹。此时，一缕微光穿透了硝烟，其声就是我等的救赎之歌。「受苦的子民们啊，让我来分担你们的伤痛吧。」祂平静而温柔地说道。仅仅指尖掠过士兵断裂的铠甲，锈迹便化作飞舞的萤火。"
+ THE_KEI_flavor_events.16.a: "请赐予我们守护的力量"
+ THE_KEI_flavor_events.16.b: "我们需要智慧的指引"
+ THE_KEI_flavor_events.16.c: "我们想用自己的双手守护家园"
+ THE_KEI_flavor_events.17.t: "神授之器"
+ THE_KEI_flavor_events.17.desc: "袿姬作为造型神，常常赐教我们的子民工艺的知识与技法，她的神赐并非直接赐予成品，而是将「理解」与「创造」的能力赋予凡人。正是在她的祝福下，人们不再满足于模仿与复制，而是开始探索未知，勇于创新，将传统技艺与当今智慧巧妙融合，创造出前所未有的奇迹。"
+ THE_KEI_flavor_events.17.a: "赞颂神明的智慧"
+ THE_KEI_flavor_events.18.t: "雕塑工坊"
+ THE_KEI_flavor_events.18.desc: "袿姬，这位掌管工艺与造型的至高神祇，在她的庇佑下，我们的工艺技艺日新月异，子民们心怀虔诚，渴望在我们的国度中增添一座雕塑工坊，以此作为对神恩的回报，为袿姬添加一丝光辉。"
+ THE_KEI_flavor_events.18.a: "全力支持"
+ THE_KEI_flavor_events.18.b: "资源还是用在别处比较好"
+ THE_KEI_flavor_events.19.t: "袿姬的法律"
+ THE_KEI_flavor_events.19.desc: "袿姬作为降临畜生界的神明，将无数人类灵庇护在身下，抗争着畜生界相互争斗的命运，抗争着阎魔的威权统治，祂创新性的提出新的管理体系，为真正公正平等的乐园铺下基石。此条法案同样被献给我们，我们应当向其学习。"
+ THE_KEI_flavor_events.19.a: "我会明智的运用它们。"

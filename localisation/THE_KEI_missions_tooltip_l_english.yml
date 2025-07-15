@@ -1,4 +1,5 @@
 ﻿l_english:
+#GOVERNMENT
  THE_KEI_lonely_creation_government_reform: "dRìrRu"
  THE_KEI_lonely_creation_government_reform_desc: ""
  THE_KEI_HEIR: ")Y	w"
@@ -12,6 +13,10 @@
  THE_KEI_without_the_time_and_end_government_reform: "àeËYàeÈu"
  THE_KEI_without_the_time_and_end_government_reform_desc: ""
  mechanic_THE_KEI_can_core_creation_add_develpment_yes: "wýN8hÃVSTÿ\n- -v^ôv¥cûm R§J0ôv^SÞT0§!8hÃV\n- -§Må‚wýNÑSUS¦^NOŽN30§!:\n- - - -úWNxz6e úWNxuµN úWNxºN›RGW¾‹šR:N§G10§!\n- -§M&TR§!ÿ\n- - - -·ƒ—V§G2§!úWNxz6e§G2§!úWNxuµN§G2§!úWNxºN›R\n"
+ mechanic_THE_KEI_lonely_other_the_hell_province_debuff_yes: "SVbìNrR©‹0§Y0Wñr§!00W:SåNY„vwýNöeÿå‹wýNSO·ƒ—VHeœg0§YNþfŒgÈa„v·g•§!0\n  ,g0WgNOê»l¦^ §R+75%§!\n  Ïkgê»l¦^ØSS §R+0.10§!\n  8hÃVS±‚9 §R+10%§!\n0§YNþfŒgÈa„v·g•§!0Scíu0RbìNSdkwýNÐcGS0R§Y30§!bôfØšÑSUS¦^"
+#GOVERNMENT_END
+
+#EASTE
  THE_KEI_noble_name: "¨Rirup"
  THE_KEI_burghers_name: "ºN‰|up"
  THE_KEI_janissaries_name: "ôWn"
@@ -144,6 +149,8 @@
  THE_KEI_the_new_life_mission_buff: "1cNbwu"
  THE_KEI_out_of_superegion_buff: "NþfŒgÈa„v·g•"
  THE_KEI_oil_province_buff: "ów¹l"
+ THE_KEI_thought_of_rebirth_buff: "ÞVuKNõV"
+ THE_KEI_law_in_keiki_buff: "up•íV„v‹VÕl"
  ##religion
  THE_keiki_religion: "¦hó`.‹W"
  the_keiki_fervor_shapping: "QXbV"
@@ -254,9 +261,8 @@
  THE_KEI_2_10_alone_c_tt1: "(W‰^ó`aN–:gRú^3*N§O0¦hó`.‹W0§!9ei—-NÃV"
  THE_KEI_2_11_alone_c_tt1: "bìN(WeRJRwýNÑSUS¦^öe·ƒ—V§G2.5§!§OSu§!ÿv^M–NO§G10§!ÛSqN¦^åNÊS§G30%§!ê»l¦^"
  THE_KEI_1_10_alone_c_1: "˜YHeœg§OUe‹T0Âríp0§!\n - -§gbìN(Wb‰N-N`S†˜„vNb	gwýNýOlYe:N0¦hó`.‹W0§!"
- THE_KEI_1_10_alone_c_2: "ã‰•yrŠk:g6R§O0?a›R0§!\n - -§gæ‹Å`÷‹ågw³Q®‹§!"
  THE_KEI_1_12_alone_c_tt1: "GSµu§OUe‹T0÷–Lˆ0§!\n - -§MÇ³Q®‹Rbc§!\n - -§g°sAQ¸‹bìN±‚95¹p§OSu§!ubbìNF–›QNP–§G10%§!„vekuQ§!"
- THE_KEI_2_11_alone_c_tt2: "óSåb	g5¹p§YckßuáOðN¹RÍV§!"
+ THE_KEI_2_11_alone_c_tt2: "óSåb	g7¹p§YckßuáOðN¹RÍV§!"
  THE_KEI_2_12_alone_c_tt1: "§Måb	gdkHeœgöeÿNb	gýV¶RGWàeÕlùRbìN±Rb§!"
  THE_KEI_2_12_alone_c_tt2: "GSµu§YUe‹T0qu0§!\n -§g0qu0’N¨R„vÑSUS¦^P–6RÐcØš0R120ÑSUS¦^v^N±‚9ÏQJS§!"
  THE_KEI_the_eternal_land_declare_tt: "1uŽN@KEI§YvPÏPKNƒX§!åb	gîOck§MR`PN8^W§!bìNàeÕlùRvQ±Rb"
@@ -370,7 +376,7 @@
 
 
 
- 
+#EVENT_START
  THE_KEI_HKR_help_ours_c_tt1: "§MbìNSO`S0Rup•íV„vËz:W§!"
  THE_KEI_HKR_help_ours_c_tt2: "§MbìNSO`S0R–T›¿k„vËz:W§!"
  THE_KEI_get_the_animal_run_c_tt2: "0§YNþfŒgÈa„v·g•§!0Scíu0RbìNSdkwýNÐcGS0R§Y15§!bôfØšÑSUS¦^"
@@ -384,3 +390,19 @@
  THE_harmonized_keiki: "‡T¦hó`.‹WáOðN"
  THE_harmony_events.3.t: "‡T¦hó`.‹W"
  THE_harmony_events.3.d: "¦hó`.‹W„váOðNÿgéewnŽNup•íV0(W±Ì‘ÿ«ŽYÝuƒX„vºN‰|up•`NwgT„v^gÿÂríp0WìS2UNwôW‰R^y¿ˆìYÿgüvyY&^egQeNKNIQ0áOOìN:N†N4nBlÙýNQeNÿ>eV†NÇŽV„vNR«ŽýNNgbõVÿêS:N·ƒ—V°eu„v^g0–Nwöeô•¨cûyÿbìNýV¦^„vPRlŠegŠY0W¥c³u†N¦hó`.‹W„váOðN0SV0WYeO¿R›RN­eîX'YÿmNSÙNáOðN.O­dó‰^ó`aNTYÿuóYLu0(WbìN„vŒTŒYeSKNNÿºNìNnámS†NN¦hó`.‹WáOðNøvsQ„v²‹Tî•˜˜0‚YÊN¦hó`.‹W„váOOòTŒRhQ‡eQ[Root.GetName]>yOÿÖNìNbb:N›äR„v³R¨RwÿbÅbûNÍ‘‰„vLˆ?eLw¡Rÿb:NbìNž^'YwYBg„vLˆ?e:ghV-NNïSb:„vNèR0"
+#EVENT_END
+ THE_KEI_flavor_events.16.t: "^yP„v›Q¿R"
+ THE_KEI_flavor_events.16.desc: "bkp†wP†ÿÎW™XGdGd2k`W0ëXuQìN²uë`N*Xÿs^l7‡)(WŸ^ŸXKN-NÿHywyNwGYù0dköeÿN®VIQz†NkxßpÿvQðX1S=fbIr„vQeNKNLk00×Sæ‚„vPRlìNJUÿ©‹begRÅb`OìN„v2OÛu'T00Bys^Y—w)nÔg0Wô‹S0ÅNÅNcS cÇëXuQ­eÂˆ„và”2uÿ•ù¿OSjOÞ˜‚„v2„kp0"
+ THE_KEI_flavor_events.16.a: "÷‹PˆNbìNˆR²b„v›RÏ‘"
+ THE_KEI_flavor_events.16.b: "bìN—‰zfga„vcV"
+ THE_KEI_flavor_events.16.c: "bìNó`(uêñT„vÌSKbˆR²b¶RíV"
+ THE_KEI_flavor_events.17.t: "^yˆcKNhV"
+ THE_KEI_flavor_events.17.desc: "¿ˆìYjO:N.‹W^yÿ8^8^PYebìN„vPRlåTz‚„våwÆ‹NŽbÕlÿyY„v^yPv^^—ôv¥cPˆNbÁTÿw=fS0tã‰0N0R.0„výw›RKˆNáQºN0ck=f(WyY„vkyyNÿºNìNNQán³ŽN!jÿNNY6Rÿw=fVËY¢c0t*gåwÿÇRŽNR°eÿS.OßuŽbz‚NSVÊNzfgaçT™Y‡TÿR.úQMRNb*g	g„vGYù0"
+ THE_KEI_flavor_events.17.a: "^‚˜^yf„vzfga"
+ THE_KEI_flavor_events.18.t: "Õ–QXåTJW"
+ THE_KEI_flavor_events.18.desc: "¿ˆìYÿÙMOŒc¡råTz‚N.‹W„vóØš^yGyÿ(WyY„v‡^QONÿbìN„våTz‚Žbz‚åe°egVÿPRlìNÃV`T†Ú‹ÿ4ng(WbìN„výV¦^-NžXûmNµ^Õ–QXåTJWÿåNdkjO:NùR^yi`„vÞV¥bÿ:N¿ˆìYûm RNNIQ‰0"
+ THE_KEI_flavor_events.18.a: "hQ›R=ec"
+ THE_KEI_flavor_events.18.b: "DnØ=f(u(W+RYÔkƒ‹Y"
+ THE_KEI_flavor_events.19.t: "¿ˆìY„vÕl‹V"
+ THE_KEI_flavor_events.19.desc: "¿ˆìYjO:NM–4NjuuLu„v^yfÿSàepeºN‰|up‡^²b(W«ŽNÿ—b‰NNwjuuLuøv’N‰N—e„v‹TÐÿ—b‰NNw–T›„vZCgßu»lÿByR°e'`„vÐcúQ°e„v¡rtSOû|ÿ:NwcklQcks^Ir„vPNíVú”NúWów0dkagÕlHhT7h«ˆ.sÙubìNÿbìN”^SVTvQfR`N0"
+ THE_KEI_flavor_events.19.a: "bOfzf„vÐ(uƒRìN0"

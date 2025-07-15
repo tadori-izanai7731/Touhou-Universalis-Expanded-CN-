@@ -426,7 +426,7 @@ THE_KEI_main_branch_2 = {
 			}
 			else = {
 				num_of_owned_provinces_with = {
-					value = 40
+					value = 30
 					has_tax_building_trigger = yes
 				}
 			}
@@ -945,7 +945,7 @@ THE_KEI_main_branch_3 = {
 		
 		trigger = { 
 			num_of_owned_provinces_with = {
-				value = 30
+				value = 20
 				has_tax_building_trigger = yes
 			}
 		} 
@@ -1281,8 +1281,12 @@ THE_KEI_main_branch_4 = {
 		} 
 		
 		trigger = { 
-			has_mil_advisor = yes
-			land_maintenance = 1.00
+			OR = {
+				has_adm_advisor = yes
+				has_dip_advisor = yes
+				has_mil_advisor = yes
+			}
+			land_maintenance = 0.99
 		} 
 		
 		effect = { 
@@ -1869,11 +1873,11 @@ THE_KEI_main_branch_4 = {
 				limit = { 
 					ai = no
 				}
-				army_size = 100
+				army_size = 75
 				army_professionalism = 0.10
 			}
 			else = {
-				army_size = 100
+				army_size = 75
 			}
 		} 
 		
@@ -2632,13 +2636,9 @@ THE_KEI_minor_branch_1_lock = {
 		effect = { 
 			custom_tooltip = THE_KEI_if_change_to_alone_minor_banch_tt
 			custom_tooltip = THE_KEI_1_10_alone_c_1
-			custom_tooltip = THE_KEI_1_10_alone_c_2
 			add_adm_power = 300
 			add_dip_power = 300
 			add_mil_power = 300
-			hidden_effect = {
-				set_country_flag = THE_KEI_force_of_desire_unlock_flag
-			}
 			custom_tooltip = THE_KEI_if_change_to_create_minor_banch_tt
 			custom_tooltip = THE_KEI_1_10_create_c_tt2
 			custom_tooltip = THE_KEI_1_10_create_c_tt3
@@ -2936,13 +2936,9 @@ THE_KEI_minor_branch_1_alone = {
 		
 		effect = { 
 			custom_tooltip = THE_KEI_1_10_alone_c_1
-			custom_tooltip = THE_KEI_1_10_alone_c_2
 			add_adm_power = 300
 			add_dip_power = 300
 			add_mil_power = 300
-			hidden_effect = {
-				set_country_flag = THE_KEI_force_of_desire_unlock_flag
-			}
 		} 
 	}
 	
@@ -3017,19 +3013,9 @@ THE_KEI_minor_branch_2_alone = {
 		} 
 		
 		trigger = { 
-			all_country = {
-				NOT = {
-					tag = KEI
-				}
-				capital_scope = { superregion = gensokyo_superregion }
-				ROOT = {
-					military_strength = {
-						who = PREV
-						value = 0.50
-					}
-				}
-			}
+			great_power_rank = 1
 			total_development = 1000
+			army_size = 200
 		} 
 		
 		effect = { 
@@ -3110,18 +3096,22 @@ THE_KEI_minor_branch_2_alone = {
 			
 			#忠诚度
 			estate_loyalty = {
+				estate = estate_church
+				loyalty = 90
+			}
+			estate_loyalty = {
 				estate = estate_burghers
-				loyalty = 50
+				loyalty = 90
 			}
 			estate_loyalty = {
 				estate = estate_nobles
-				loyalty = 50
+				loyalty = 90
 			}
 			custom_trigger_tooltip = {
 				tooltip = THE_KEI_2_11_alone_c_tt2
 				has_global_modifier_value = {
 					which = tolerance_own
-					value = 5
+					value = 7
 				}
 			}
 		} 

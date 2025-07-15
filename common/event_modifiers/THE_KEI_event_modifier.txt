@@ -198,8 +198,7 @@ THE_KEI_the_light_man_buff = {
 }
 #厉兵
 THE_KEI_3_6_mission_buff = {
-	shock_damage = 0.10
-	ae_impact = -0.05
+	ae_impact = -0.10
 }
 #铸铁成兵
 THE_KEI_casting_iron_into_army_buff = {
@@ -207,8 +206,8 @@ THE_KEI_casting_iron_into_army_buff = {
 }
 #甘霖神迹
 THE_KEI_build_time_buff = {
-	build_cost = -0.20
-	development_cost = -0.10
+	build_cost = -0.25
+	development_cost = -0.05
 }
 #身披光辉
 THE_KEI_cloaked_in_radiance_buff = {
@@ -224,7 +223,7 @@ THE_KEI_all_animal_run_buff = {
 #光辉岁月
 THE_KEI_all_animal_run_buff_V2 = {
 	local_monthly_devastation = -1.0
-	local_autonomy = -0.50
+	local_autonomy = -1.00
 }
 #挣扎而生
 THE_KEI_the_new_life_mission_buff = {
@@ -232,11 +231,23 @@ THE_KEI_the_new_life_mission_buff = {
 }
 #不曾松懈的枷锁
 THE_KEI_out_of_superegion_buff = {
-	min_local_autonomy = 50
-	local_autonomy = 0.05
+	min_local_autonomy = 75
+	local_autonomy = 0.10
 	local_core_creation = 0.10
 }
 THE_harmonized_keiki = {
 	build_cost = -0.10
+	religion = yes
+}
+#回生之念 
+THE_KEI_thought_of_rebirth_buff = {
+	land_morale = 0.10
+	naval_morale = 0.10
+	religion = yes
+}
+#灵长园的律法
+THE_KEI_law_in_keiki_buff = {
+	global_autonomy = -0.05
+	legitimacy = 0.5
 	religion = yes
 }
