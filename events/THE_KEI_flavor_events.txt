@@ -1449,6 +1449,7 @@ country_event = {
 	}
 	option = {
 		name = THE_KEI_flavor_events.16.a
+		custom_tooltip = THE_KEI_flavor_16_c_tt1
 		hidden_effect = {
 			export_to_variable = {
 				which = THE_KEI_the_manpower_subject_give_var
@@ -1665,6 +1666,15 @@ country_event = {
 			duration = 7300
 		}
 		add_adm_power = 75
+		every_ally = {
+			root = {
+				add_favors = {
+					who = prev
+					amount = 10
+				}
+			}
+			
+		}
 	}
 }
 country_event = {
@@ -1698,6 +1708,10 @@ country_event = {
 		months = 24
 	}
 	option = {
-
+		random_owned_province = {
+			random_list = {
+				
+			}
+		}
 	}
 }

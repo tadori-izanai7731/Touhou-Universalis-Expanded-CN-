@@ -1,43 +1,32 @@
 l_english:
 #GOVERNMENT
  THE_KEI_lonely_creation_government_reform: "孤独创生"
- THE_KEI_lonely_creation_government_reform_desc: ""
+ THE_KEI_lonely_creation_government_reform_desc: "在畜生界那混沌而残酷的黑暗深渊中，神明袿姬，以无上的救世主之姿降临于灵长园，庇护被苦难与压迫紧紧束缚的人类灵，以绝对公正为基石，建立真正平等的乐园。"
  THE_KEI_HEIR: "天选者"
  THE_KEI_RULER: "造形神"
+ THE_KEI_dedicate_ourselves_government_reform: "祀血奉生"
+ THE_KEI_dedicate_ourselves_government_reform_desc: "随着救世主的光明照亮灵长园之际，袿姬在推翻畜生界的荒唐与不公，往昔弱肉强食的争斗在此崩解，所有成员摒弃隔阂，因对偶像的绝对信仰而紧密团结，甘愿为其伟大事业奉献热血与生命。"
+ THE_KEI_save_the_masses_government_reform: "虚愿成殇"
+ THE_KEI_save_the_masses_government_reform_desc: "当我们将希望播撒于畜生界那片被黑暗浸染的土地时，地表幻想乡却依旧深陷不公平命运的泥沼。在那里，命运如无情的利刃，肆意切割着生灵的幸福。无数无家可归的人类与妖怪，怀揣着虚幻却又炽热的愿望。向着我等救世主祈愿，为我等救世主贡献一切。"
  mechanic_THE_KEI_lonely_create_hana_wheel_abilities_yes: "启用「创形创生」机制"
  mechanic_THE_KEI_can_not_create_allianece_yes: "禁止结盟"
  mechanic_THE_KEI_dedicate_ourselves_governemnt_reform_yes: "当我们回收领地时：\n -获得6个月§G收入§!\n -获得1次更改国家焦点的机会\n -§Y动物灵§!每10点忠诚度将会获得10£mil£\n -§Y巫女§!每10点忠诚度将会获得10£adm£\n -§Y人类灵§!每10点忠诚度将会获得10£dip£"
- ability_THE_KEI_save_the_masses_government_mechanic: "造型神之力将会随着祈愿增强"
- mechanic_THE_KEI_save_the_masses_government_CUSTOM_ability_yes: "幻想乡每有1个国度消逝，我们均会获得:\n- -步兵作战能力 §G+0.5%§!\n- -骑兵作战能力 §G+0.5%§!\n- -炮兵作战能力 §G+0.5%§! \n- -陆军规模上限 §G+2§!\n- -补员速度 §G+2%§!"
- THE_KEI_lonely_gods_can_not_alliance_c_tooltip: "孤立无援的造形神"
+ ability_THE_KEI_save_the_masses_government_mechanic: "消逝之光"
+ mechanic_THE_KEI_save_the_masses_government_CUSTOM_ability_yes: "每当幻想乡国家灭亡时，我们均会获得以下效果:\n- -步兵作战能力 §G+0.5%§!\n- -骑兵作战能力 §G+0.5%§!\n- -炮兵作战能力 §G+0.5%§! \n- -陆军规模上限 §G+2§!\n- -补员速度 §G+2%§!"
+ THE_KEI_lonely_gods_can_not_alliance_c_tooltip: "「孤立无援的造形神」"
  THE_KEI_without_the_time_and_end_government_reform: "无始无终"
  THE_KEI_without_the_time_and_end_government_reform_desc: ""
  mechanic_THE_KEI_can_core_creation_add_develpment_yes: "省份核心化后：\n- -并直接添加§J「直属州」§!核心\n- -§M若省份发展度低于30§!:\n- - - -基础税收 基础生产 基础人力均设定为§G10§!\n- -§M否则§!：\n- - - -获得§G2§!基础税收§G2§!基础生产§G2§!基础人力\n"
  mechanic_THE_KEI_lonely_other_the_hell_province_debuff_yes: "当我们割让「§Y地狱§!」地区以外的省份时，该省份将会获得效果「§Y不曾松懈的枷锁§!」\n  本地最低自治度 §R+75%§!\n  每月自治度变化 §R+0.10§!\n  核心化花费 §R+10%§!\n「§Y不曾松懈的枷锁§!」将持续到我们将此省份提升到§Y30§!或更高发展度"
 #GOVERNMENT_END
 
-#EASTE
- THE_KEI_noble_name: "动物灵"
- THE_KEI_burghers_name: "人类灵"
- THE_KEI_janissaries_name: "埴轮"
- THE_KEI_janissaries_warrior_privileges: "埴轮武士"
- THE_KEI_janissaries_warrior_2_privileges: "绝对忠诚"
- THE_KEI_mayumi_strength_defend_privileges: "加强灵长园防卫"
- THE_KEI_mayumi_strength_development_privileges: "加强灵长园建设"
- THE_KEI_mayumi_land_privileges: "埴轮领地特权"
- THE_KEI_mayumi_extra_mil_privileges: "埴轮军事支持"
- THE_KEI_mayumi_extra_dip_privileges: "埴轮外交支持"
- THE_KEI_mayumi_extra_adm_privileges: "埴轮行政支持"
- THE_KEI_mayumi_create_leader_privileges: "提拔埴轮兵长§Y「解锁决议」§!"
- THE_KEI_lonely_creation_mechanic_power: "化生"
+#GOVERNEMNT_EXTRA
  ability_THE_KEI_lonely_creation_mechanic: "「化生」"
  THE_KEI_lonely_creation_mechanic_power_desc: "化生，即为我等造物主袿姬之无上神力，其强弱与灵感，铸就万物之生机。\n\n[Root.THE_KEI_mechanic_extra_2_c_tt]\n[Root.THE_KEI_mechanic_extra_c_tt]"
  THE_KEI_lonely_creation_do: "创形创生"
  mechanic_enables_estate_the_haniwa_yes: "启用§Y「埴轮」§!阶层"
  THE_KEI_lonely_creation_do_desc: "借助我主袿姬的神力，赋予无生命之物以生机。"
  THE_KEI_estate_hina_wheel_buff: "埴轮武士"
- THE_KEI_dedicate_ourselves_government_reform: "祀血奉生"
- THE_KEI_save_the_masses_government_reform: "虚愿成殇"
  THE_KEI_masses_var_power: "虚愿"
  THE_KEI_flavor_events.1.t: "创造"
  THE_KEI_flavor_events.1.desc: "缺"
@@ -151,6 +140,7 @@ l_english:
  THE_KEI_oil_province_buff: "石油"
  THE_KEI_thought_of_rebirth_buff: "回生之念"
  THE_KEI_law_in_keiki_buff: "灵长园的律法"
+ THE_KEI_advance_fort_buff: "加强防御工事"
  ##religion
  THE_keiki_religion: "梦想造型"
  the_keiki_fervor_shapping: "塑形"
@@ -201,11 +191,13 @@ l_english:
  THE_KEI_recruit_an_army_stage_2_decosions_desc: ""
  THE_KEI_recruit_an_army_stage_3_decosions_title: ""当前「敕命」雷行状态：「招募100%陆军上限」"
  THE_KEI_recruit_an_army_stage_3_decosions_desc: ""
- THE_KEI_create_the_mayumi_leader_from_descision_title: "@KEI§W提拔埴轮兵长§!"
- THE_KEI_create_the_mayumi_leader_from_descision_desc: ""
+ THE_KEI_create_the_mayumi_leader_from_descision_title: "@KEI§W埴轮:提拔埴轮兵长§!"
+ THE_KEI_create_the_mayumi_leader_from_descision_desc: "我们会请求神明赐予善于征战的将领"
  THE_KEI_create_the_mayumi_leader_from_descision_cd_tt: "10年内未使用过此决议"
  THE_KEI_get_the_animal_run_c_tt111_2: "完成任务§M「咏唱与讴歌」§!并获得奖励"
-
+ THE_KEI_create_fort_in_country_decision_title: "@KEI§W埴轮:扩建防御工事§!"
+ THE_KEI_create_fort_in_country_decision_desc: "使用造型神的力量建造防御工事"
+ THE_KEI_create_fort_in_country_decision_cd_tt: "20年内未使用过此决议"
  #UI extra
  THE_KEI_decrese_workman_gui: "§W「天工」§!"
  THE_KEI_decrese_workman_gui_tt: ""
@@ -338,7 +330,6 @@ l_english:
  THE_mayumi_advisor: "仗刀偶磨弓"
  THE_mayumi_advisor_desc: ""
  
- 
  #DIP_action_EXTRA
  THE_KEI_grant_a_blessing_dip_action_title: "恩赐"
  THE_KEI_grant_a_blessing_dip_action_desc: ""
@@ -353,9 +344,44 @@ l_english:
  
 
  #特权
+ THE_KEI_noble_name: "动物灵"
+ THE_KEI_burghers_name: "人类灵"
+ THE_KEI_janissaries_name: "埴轮"
+ the_estate_the_haniwa_loyalty_modifier: "埴轮忠诚均衡点"
+ the_estate_the_haniwa_influence_modifier: "埴轮影响力"
+ the_estate_the_haniwa_privilege_slots: "埴轮特权槽"
+ THE_KEI_janissaries_warrior_privileges: "埴轮武士"
+ THE_KEI_janissaries_warrior_privileges_desc: "埴轮自诞生起，就对灵长园怀着绝对纯粹的忠心。其偶像之身都是用极其坚硬的陶土精心铸造而成，这种材质让它们拥有超乎寻常的坚固，能抵御各种外力的冲击。"
+ THE_KEI_mayumi_strength_defend_privileges: "偶像防卫队"
+ THE_KEI_mayumi_strength_defend_privileges_desc: "袿姬身旁，簇拥着一众忠心耿耿的部下，他们如铜墙铁壁般构筑起灵长园的坚固防线。为了战胜敌人，可靠的同伴是必要的。"
+ THE_KEI_mayumi_strength_development_privileges: "乐园的创作者"
+ THE_KEI_mayumi_strength_development_privileges_desc: "身为创作者的袿姬统御全局，精心谋划，指挥着忠诚且能干的部下—埴輪，一同投身于灵长园的浩大建设工程之中，力求打造出一方乐土。"
+ THE_KEI_mayumi_land_privileges: "埴轮领地特权"
+ THE_KEI_mayumi_land_privileges_desc: "埴轮是袿姬最忠诚的部下，它们一直尽心尽力为帝国效力，所以按道理也该在帝国里分到属于它们的土地。"
+ THE_KEI_mayumi_extra_mil_privileges: "「鬼形造形术」"
+ THE_KEI_mayumi_extra_dip_privileges: "「圆形造形术」"
+ THE_KEI_mayumi_extra_adm_privileges: "「方形造形术」"
+ THE_KEI_mayumi_create_leader_privileges: "神之所授"
+ THE_KEI_mayumi_create_leader_privileges_desc: "埴轮作为神明的部下，一直以来承担着灵长园的防御任务，作为被神明赋予神力的偶像，她们终究会带领我们走向胜利。"
+ THE_KEI_mayumi_create_leader_privileges_c_tt1: "启用阶层决议§Y埴轮:提拔埴轮兵长§!\n此§Y阶层互动§!将会提供以下效果：\n获得§G60§!陆军传统的将军。\n§Y效果随陆军传统的多少而变化§!\n§Y埴轮§!阶层失去§R10§!忠诚度"
+ 
+ THE_KEI_lonely_creation_mechanic_power: "化生"
  THE_KEI_human_ghost_power_privileges: "与生俱来之「自由」" 
  THE_KEI_human_ghost_power_privileges_desc: "或许吧。"
- #EVENT EX
+ THE_KEI_high_reformprogress_privileges: "高效行政"
+ THE_KEI_high_reformprogress_privileges_desc: "袿姬降临后，针对灵长园与畜生界的特殊生态，构建了三级行政管理体系。通过重构行政体系，将畜生界原本混沌的社会纳入秩序的治理之下。"
+ THE_KEI_contract_war_privileges: "承包军事"
+ THE_KEI_contract_war_privileges_desc: "埴轮将全面接管灵长园防御力量，为我们的子民筑起铜墙铁壁，彻底隔绝外界的往来。"
+ THE_KEI_advance_fort_privileges: "加强要塞防御"
+ THE_KEI_advance_fort_privileges_desc: "要塞和堡垒一直以来都是咱们抵御外部来犯之敌的关键依托，它们就像坚固的盾牌，守护着我们的安全。现在，造型神袿姬给予了我们赐福，趁着这有利时机，修建更多坚固的堡垒。"
+ THE_KEI_advance_fort_privileges_c_tt11: "启用阶层决议§Y埴轮:扩建防御工事§!\n此§Y阶层互动§!将会提供以下效果：\n随机一处省份将以§G25%§!时间以及§G100%§!花费建造一座要塞。\n此外，将会为所有要塞省份提供以下效果:"
+ THE_KEI_advance_fort_privileges_c_tt22: "所有拥有要塞的省份将会移除以下效果:"
+ THE_KEI_mechanic_button_1_text: "天工"
+ THE_KEI_mechanic_button_2_text: "焕生"
+ THE_KEI_mechanic_button_3_text: "雷行"
+#END
+
+#EVENT_START
  THE_KEI_flavor_events.12.t: "动物灵逃亡"
  THE_KEI_flavor_events.12.desc: ""
  THE_KEI_flavor_events.12.a: "缺"
@@ -369,14 +395,6 @@ l_english:
  THE_KEI_flavor_events.15.desc: "缺"
  THE_KEI_flavor_events.15.a: "缺"
  THE_KEI_r_15_tt1: "§M立即释放我们治下的所有动物灵核心§!"
- THE_KEI_mechanic_button_1_text: "天工"
- THE_KEI_mechanic_button_2_text: "焕生"
- THE_KEI_mechanic_button_3_text: "雷行"
-
-
-
-
-#EVENT_START
  THE_KEI_HKR_help_ours_c_tt1: "§M我们将会占到灵长园的立场§!"
  THE_KEI_HKR_help_ours_c_tt2: "§M我们将会占到阎魔殿的立场§!"
  THE_KEI_get_the_animal_run_c_tt2: "「§Y不曾松懈的枷锁§!」将持续到我们将此省份提升到§Y15§!或更高发展度"
@@ -390,10 +408,10 @@ l_english:
  THE_harmonized_keiki: "融合梦想造型信仰"
  THE_harmony_events.3.t: "融合梦想造型"
  THE_harmony_events.3.d: "梦想造型的信仰，最早起源于灵长园。在那里，身处绝境的人类灵长怀着最后的希望，狂热地召唤着埴安神袿姬，期盼她带来救赎之光。信众们为了渴求这份救赎，放弃了过往的一切身份与执念，只为获得新生的希望。随着时间推移，我们国度的子民越来越多地接纳了梦想造型的信仰。当地教会势力不断壮大，也将这一信仰传播至幻想乡各处，甚至外界。在我们的和谐教化之下，人们逐渐淡化了与梦想造型信仰相关的认同问题。如今梦想造型的信众已完全融入[Root.GetName]社会，他们或成为辛勤的劳动者，或担任重要的行政职务，成为我们庞大而复杂的行政机器中不可或缺的一部分。"
-#EVENT_END
  THE_KEI_flavor_events.16.t: "神赐的军势"
  THE_KEI_flavor_events.16.desc: "战火肆虐，城墙摇摇欲坠。士兵们疲惫不堪，平民蜷缩在废墟之中，祈祷着奇迹。此时，一缕微光穿透了硝烟，其声就是我等的救赎之歌。「受苦的子民们啊，让我来分担你们的伤痛吧。」祂平静而温柔地说道。仅仅指尖掠过士兵断裂的铠甲，锈迹便化作飞舞的萤火。"
  THE_KEI_flavor_events.16.a: "请赐予我们守护的力量"
+ THE_KEI_flavor_16_c_tt1: "根据@KEI§Y偶像之境§!的最大人力，我们将会获得："
  THE_KEI_flavor_events.16.b: "我们需要智慧的指引"
  THE_KEI_flavor_events.16.c: "我们想用自己的双手守护家园"
  THE_KEI_flavor_events.17.t: "神授之器"
@@ -406,3 +424,4 @@ l_english:
  THE_KEI_flavor_events.19.t: "袿姬的法律"
  THE_KEI_flavor_events.19.desc: "袿姬作为降临畜生界的神明，将无数人类灵庇护在身下，抗争着畜生界相互争斗的命运，抗争着阎魔的威权统治，祂创新性的提出新的管理体系，为真正公正平等的乐园铺下基石。此条法案同样被献给我们，我们应当向其学习。"
  THE_KEI_flavor_events.19.a: "我会明智的运用它们。"
+#END

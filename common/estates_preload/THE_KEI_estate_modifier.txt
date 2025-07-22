@@ -1,21 +1,21 @@
 estate_the_haniwa = {
 	modifier_definition = {
 		type = loyalty
-		key = estate_the_haniwa_loyalty_modifier
+		key = the_estate_the_haniwa_loyalty_modifier
 		trigger = {
 			has_estate = estate_the_haniwa
 		}
 	}
 	modifier_definition = {
 		type = influence
-		key = wolf_the_haniwa_influence_modifier
+		key = the_estate_the_haniwa_influence_modifier
 		trigger = {
 			has_estate = estate_the_haniwa
 		}
 	}
 	modifier_definition = {
 		type = privileges
-		key = wolf_the_haniwa_privilege_slots
+		key = the_estate_the_haniwa_privilege_slots
 		trigger = {
 			has_estate = estate_the_haniwa
 		}

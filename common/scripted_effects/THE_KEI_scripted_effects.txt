@@ -751,3 +751,24 @@ THE_KEI_clr_all_recruit_army_flag_effect = {
 	clr_country_flag = THE_KEI_recurit_an_army_stage_2_flag
 	clr_country_flag = THE_KEI_recurit_an_army_stage_3_flag
 }
+
+#扩建防御工事检测
+THE_KEI_check_the_fort_privilige_effect = {
+	if = {
+		limit = { 
+			owner = {
+				has_estate_privilege = THE_KEI_advance_fort_privileges
+			}
+			ROOT = {
+				has_fort_building_trigger = yes
+				NOT = {
+					has_province_modifier = THE_KEI_advance_fort_buff
+				}
+			}
+		}
+		add_province_modifier = {
+			name = THE_KEI_advance_fort_buff
+			duration = -1
+		}
+	}
+}

@@ -78,16 +78,60 @@ country_decisions = {
 						}
 						
 					}
-					random_province = {
-						limit = {
-							has_province_modifier = THE_KEI_all_animal_run_buff
+					if = {
+						limit = { 
+							any_owned_province = {
+								has_province_modifier = THE_KEI_all_animal_run_buff
+								development = 15
+							}
 						}
-						add_base_tax = 3
-						add_base_production = 1
-						add_base_manpower = 2
-						THE_KEI_development_remove_province_light_buff = yes
+						random_province = {
+							limit = {
+								has_province_modifier = THE_KEI_all_animal_run_buff
+							}
+							add_base_tax = 3
+							add_base_production = 1
+							add_base_manpower = 2
+							THE_KEI_development_remove_province_light_buff = yes
+						}
+						add_treasury = -50
 					}
-					add_treasury = -50
+					else_if = {
+						limit = {
+							any_owned_province = {
+								has_province_modifier = THE_KEI_all_animal_run_buff
+								development = 9
+							}
+						}
+						random_province = {
+							limit = {
+								has_province_modifier = THE_KEI_all_animal_run_buff
+							}
+							add_base_tax = 3
+							add_base_production = 1
+							add_base_manpower = 2
+							THE_KEI_development_remove_province_light_buff = yes
+						}
+						add_treasury = -50
+					}
+					else_if = {
+						limit = { 
+							any_owned_province = {
+								has_province_modifier = THE_KEI_all_animal_run_buff
+								development = 3
+							}
+						}
+						random_province = {
+							limit = {
+								has_province_modifier = THE_KEI_all_animal_run_buff
+							}
+							add_base_tax = 3
+							add_base_production = 1
+							add_base_manpower = 2
+							THE_KEI_development_remove_province_light_buff = yes
+						}
+						add_treasury = -50
+					}
 				}
 				else_if = {
 					limit = {
@@ -725,6 +769,83 @@ country_decisions = {
 
 				}
 				create_general = { tradition = 60 add_fire = 1 add_shock = 1 culture = Higanean }
+			}
+		}
+	}
+	THE_KEI_create_fort_in_country_decision = {
+		color = { 70 222 219 }
+		potential = {
+			OR = {
+				tag = KEI
+				was_tag = KEI
+			}
+			has_estate_privilege = THE_KEI_advance_fort_privileges
+		}
+		allow = {
+			treasury = 200
+			custom_trigger_tooltip = {
+				tooltip = THE_KEI_create_fort_in_country_decision_cd_tt
+				OR = {
+					NOT = {
+						has_country_flag = THE_KEI_create_fort_in_country_decision_cd_flag
+					}
+					had_country_flag = {
+						flag = THE_KEI_create_fort_in_country_decision_cd_flag
+						days = 7300
+					}
+				}
+			}
+		}
+		effect = {
+			random_owned_province = {
+				limit = {
+					NOT = {
+						has_fort_building_trigger = yes
+					}
+				}
+				add_building_construction = {
+					building = fort_15th
+					speed = 0.25
+					cost = 1
+				}
+				hidden_effect = {
+					add_province_modifier = {
+						name = THE_KEI_advance_fort_buff
+						duration = -1
+					}
+				}
+			}
+			hidden_effect = {
+				clr_country_flag = THE_KEI_create_fort_in_country_decision_cd_flag
+				set_country_flag = THE_KEI_create_fort_in_country_decision_cd_flag
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 5
+				treasury = 500
+			}
+			modifier = {
+				factor = 10
+				treasury = 10
+			}
+			modifier = {
+				factor = 15
+				is_at_war = yes
+			}
+			modifier = {
+				factor = 0
+				num_of_owned_provinces_with = {
+					value = 30
+					has_fort_building_trigger = yes
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					current_income_balance = 12
+				}
 			}
 		}
 	}

@@ -67,7 +67,7 @@ estate_the_haniwa = {
 		reinforce_cost_modifier = -0.25
 	}
 	country_modifier_neutral = { 
-		
+		reinforce_cost_modifier = 0.10
 	}
 	country_modifier_angry = { 
 		global_unrest = 2
@@ -150,10 +150,13 @@ estate_the_haniwa = {
 		THE_KEI_mayumi_strength_defend_privileges
 		THE_KEI_mayumi_strength_development_privileges
 		THE_KEI_mayumi_land_privileges
+		THE_KEI_mayumi_create_leader_privileges
+		THE_KEI_high_reformprogress_privileges
+		THE_KEI_contract_war_privileges
+		THE_KEI_advance_fort_privileges
 		THE_KEI_mayumi_extra_mil_privileges
 		THE_KEI_mayumi_extra_dip_privileges
 		THE_KEI_mayumi_extra_adm_privileges
-		THE_KEI_mayumi_create_leader_privileges
 	}
 	agendas = { 
 		estate_nobles_develop_x

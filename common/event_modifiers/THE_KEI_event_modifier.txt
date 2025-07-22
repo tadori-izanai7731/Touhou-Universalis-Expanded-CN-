@@ -171,7 +171,7 @@ THE_KEI_the_hecheng_buff = {
 }
 #九幽律令
 THE_KEI_the_hig_strial_buff = {
-	land_morale_constant = 0.10
+	land_morale = 0.10
 	discipline = 0.05
 	land_maintenance_modifier = -0.10
 }
@@ -202,11 +202,11 @@ THE_KEI_3_6_mission_buff = {
 }
 #铸铁成兵
 THE_KEI_casting_iron_into_army_buff = {
-	global_regiment_recruit_speed = -0.30
+	global_regiment_recruit_speed = -0.20
 }
 #甘霖神迹
 THE_KEI_build_time_buff = {
-	build_cost = -0.25
+	build_cost = -0.20
 	development_cost = -0.05
 }
 #身披光辉
@@ -250,4 +250,9 @@ THE_KEI_law_in_keiki_buff = {
 	global_autonomy = -0.05
 	legitimacy = 0.5
 	religion = yes
+}
+#加强防御工事
+THE_KEI_advance_fort_buff = {
+	fort_level = 1
+	local_garrison_size = 0.25
 }
