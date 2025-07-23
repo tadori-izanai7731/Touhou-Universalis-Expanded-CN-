@@ -61,14 +61,14 @@ THE_KEI_decree_sifang_buff = {
 }
 #敕命「天工」
 THE_KEI_decree_work_buff = {
-	build_cost = -0.20
-	build_time = -0.10
+	build_cost = -0.15
+	build_time = -0.05
 }
 ##敕命「造物」
 THE_KEI_decree_work_V2_buff = {
-	build_cost = -0.20
-	build_time = -0.10
-	global_prosperity_growth = 1.0
+	build_cost = -0.15
+	build_time = -0.05
+	global_prosperity_growth = 0.5
 }
 ##敕命「雷行」
 THE_KEI_create_army_province_buff = {

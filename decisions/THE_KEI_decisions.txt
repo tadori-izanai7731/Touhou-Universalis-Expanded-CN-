@@ -849,4 +849,27 @@ country_decisions = {
 			}
 		}
 	}
+	THE_KEI_add_advanced_building_construction_decision = {
+		color = { 70 222 219 }
+		potential = {
+			ai = no
+			OR = {
+				tag = KEI
+				was_tag = KEI
+			}
+			mission_completed = THE_KEI_2_7
+			mission_completed = THE_KEI_2_9
+		}
+		allow = {
+			treasury = 200
+		}
+		effect = {
+			country_event = {
+				id = THE_KEI_flavor_events.21
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
 }

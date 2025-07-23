@@ -85,8 +85,98 @@ the_kei_gain_effect_mechanic_power_2_effect = {
 	}
 }
 
-##
+##older获得将领
 
+THE_KEI_define_general_mayumi_older = {
+	THE_KEI_define_general_mayumi_fire_older = yes
+}
+
+THE_KEI_define_general_mayumi_fire_older = {
+	THE_KEI_define_general_mayumi_fire_script_older = { mayumi_fire = 0 }
+	THE_KEI_define_general_mayumi_fire_script_older = { mayumi_fire = 1 }
+	THE_KEI_define_general_mayumi_fire_script_older = { mayumi_fire = 2 }
+	THE_KEI_define_general_mayumi_fire_script_older = { mayumi_fire = 3 }
+	THE_KEI_define_general_mayumi_fire_script_older = { mayumi_fire = 4 }
+	THE_KEI_define_general_mayumi_fire_script_older = { mayumi_fire = 5 }
+	THE_KEI_define_general_mayumi_fire_script_older = { mayumi_fire = 6 }
+	THE_KEI_define_general_mayumi_fire_script_older = { mayumi_fire = 7 }
+	THE_KEI_define_general_mayumi_fire_script_older = { mayumi_fire = 8 }
+}
+
+THE_KEI_define_general_mayumi_fire_script_older = {
+	if = {
+		limit = {
+			is_variable_equal = {
+				which = the_mayumi_fire_var_older
+				value = $mayumi_fire$
+			}
+		}
+		THE_KEI_define_general_mayumi_shock_older = { mayumi_fire = $mayumi_fire$ }
+	}
+}
+
+THE_KEI_define_general_mayumi_shock_older = {
+	THE_KEI_define_general_mayumi_shock_script_older = { mayumi_fire = $mayumi_fire$ mayumi_shock = 0 }
+	THE_KEI_define_general_mayumi_shock_script_older = { mayumi_fire = $mayumi_fire$ mayumi_shock = 1 }
+	THE_KEI_define_general_mayumi_shock_script_older = { mayumi_fire = $mayumi_fire$ mayumi_shock = 2 }
+	THE_KEI_define_general_mayumi_shock_script_older = { mayumi_fire = $mayumi_fire$ mayumi_shock = 3 }
+	THE_KEI_define_general_mayumi_shock_script_older = { mayumi_fire = $mayumi_fire$ mayumi_shock = 4 }
+	THE_KEI_define_general_mayumi_shock_script_older = { mayumi_fire = $mayumi_fire$ mayumi_shock = 5 }
+	THE_KEI_define_general_mayumi_shock_script_older = { mayumi_fire = $mayumi_fire$ mayumi_shock = 6 }
+	THE_KEI_define_general_mayumi_shock_script_older = { mayumi_fire = $mayumi_fire$ mayumi_shock = 7 }
+	THE_KEI_define_general_mayumi_shock_script_older = { mayumi_fire = $mayumi_fire$ mayumi_shock = 8 }
+}
+
+THE_KEI_define_general_mayumi_shock_script_older = {
+	if = {
+		limit = {
+			is_variable_equal = {
+				which = the_mayumi_shock_var_older
+				value = $mayumi_shock$
+			}
+		}
+		THE_KEI_define_general_mayumi_manuever_older = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ }
+	}
+}
+
+THE_KEI_define_general_mayumi_manuever_older = {
+	THE_KEI_define_general_mayumi_manuever_script_older = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = 0 }
+	THE_KEI_define_general_mayumi_manuever_script_older = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = 1 }
+	THE_KEI_define_general_mayumi_manuever_script_older = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = 2 }
+	THE_KEI_define_general_mayumi_manuever_script_older = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = 3 }
+	THE_KEI_define_general_mayumi_manuever_script_older = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = 4 }
+	THE_KEI_define_general_mayumi_manuever_script_older = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = 5 }
+	THE_KEI_define_general_mayumi_manuever_script_older = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = 6 }
+	THE_KEI_define_general_mayumi_manuever_script_older = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = 7 }
+	THE_KEI_define_general_mayumi_manuever_script_older = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = 8 }
+}
+
+THE_KEI_define_general_mayumi_manuever_script_older = {
+	if = {
+		limit = {
+			is_variable_equal = {
+				which = the_mayumi_manuever_var_older
+				value = $mayumi_manuever$
+			}
+		}
+		THE_KEI_define_general_mayumi_siege_older = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = $mayumi_manuever$ }
+	}
+}
+
+THE_KEI_define_general_mayumi_siege_older = {
+	THE_KEI_define_general_mayumi_siege_script_older = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = $mayumi_manuever$ mayumi_siege = 0 }
+	THE_KEI_define_general_mayumi_siege_script_older = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = $mayumi_manuever$ mayumi_siege = 1 }
+	THE_KEI_define_general_mayumi_siege_script_older = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = $mayumi_manuever$ mayumi_siege = 2 }
+	THE_KEI_define_general_mayumi_siege_script_older = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = $mayumi_manuever$ mayumi_siege = 3 }
+	THE_KEI_define_general_mayumi_siege_script_older = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = $mayumi_manuever$ mayumi_siege = 4 }
+	THE_KEI_define_general_mayumi_siege_script_older = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = $mayumi_manuever$ mayumi_siege = 5 }
+	THE_KEI_define_general_mayumi_siege_script_older = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = $mayumi_manuever$ mayumi_siege = 6 }
+	THE_KEI_define_general_mayumi_siege_script_older = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = $mayumi_manuever$ mayumi_siege = 7 }
+	THE_KEI_define_general_mayumi_siege_script_older = { mayumi_fire = $mayumi_fire$ mayumi_shock = $mayumi_shock$ mayumi_manuever = $mayumi_manuever$ mayumi_siege = 8 }
+}
+
+
+########
 THE_KEI_define_general_mayumi = {
 	THE_KEI_define_general_mayumi_fire = yes
 }
@@ -207,8 +297,47 @@ THE_KEI_win_battle_count_1_effect = {
 		}
 	}
 }
-#自定义将领 设置初始化
+#自定义将领 设置结算
 THE_KEI_define_mayumi_set_var_0_effects = {
+	set_variable = {
+		which = the_mayumi_fire_var_older
+		which = the_mayumi_fire_var
+	}
+	set_variable = {
+		which = the_mayumi_shock_var_older
+		which = the_mayumi_shock_var
+	}
+	set_variable = {
+		which = the_mayumi_manuever_var_older
+		which = the_mayumi_manuever_var
+	}
+	set_variable = {
+		which = the_mayumi_siege_var_older
+		which = the_mayumi_siege_var
+	}
+	set_variable = {
+		which = the_mayumi_fire_var
+		value = 0
+	}
+	set_variable = {
+		which = the_mayumi_shock_var
+		value = 0
+	}
+	set_variable = {
+		which = the_mayumi_manuever_var
+		value = 0
+	}
+	set_variable = {
+		which = the_mayumi_siege_var
+		value = 0
+	}
+	set_variable = {
+		which = the_mayumi_define_var
+		value = 0
+	}
+}
+#初始化
+THE_KEI_define_mayumi_set_var_0_effects_start = {
 	set_variable = {
 		which = the_mayumi_fire_var
 		value = 0
