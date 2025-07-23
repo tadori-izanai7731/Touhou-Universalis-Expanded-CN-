@@ -54,7 +54,7 @@ country_decisions = {
 				OR = {
 					had_country_flag = {
 						flag = THE_KEI_check_the_all_animal_run_buff_province_cd_flag
-						days = 925
+						days = 1500
 					}
 					NOT = {
 						has_country_flag = THE_KEI_check_the_all_animal_run_buff_province_cd_flag
