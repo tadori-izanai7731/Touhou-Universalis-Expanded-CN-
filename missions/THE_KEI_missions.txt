@@ -1014,7 +1014,7 @@ THE_KEI_main_branch_3 = {
 				custom_tooltip = THE_KEI_3_6_c_tt2_yes
 				add_country_modifier = {
 					name = THE_KEI_3_6_mission_buff
-					duration = -1
+					duration = 7300
 				}
 			}
 			else = {
@@ -1022,7 +1022,7 @@ THE_KEI_main_branch_3 = {
 				tooltip = {
 					add_country_modifier = {
 						name = THE_KEI_3_6_mission_buff
-						duration = -1
+						duration = 7300
 					}
 				}
 			}
@@ -1799,7 +1799,6 @@ THE_KEI_main_branch_4 = {
 				NOT = {
 					devastation = 1
 				}
-				is_prosperous = yes
 				development = 30
 			}
 		} 

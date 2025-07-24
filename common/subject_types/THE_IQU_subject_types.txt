@@ -44,16 +44,27 @@ THE_IQU_the_subject_over_hvr = {
 	divert_trade = yes
 	send_officers = yes
 
-
-
-	can_fight = { same_overlord = daimyo_vassal }
-
+	can_fight = {
+		independent_nations = yes
+		same_overlord = THE_IQU_the_subject_over_hvr
+		other_overlord = all
+	}
+	can_ally = {
+		independent_nations = yes
+		same_overlord = THE_IQU_the_subject_over_hvr
+		other_overlord = all
+	}
+	can_rival = {
+		independent_nations = yes
+		same_overlord = THE_IQU_the_subject_over_hvr
+		other_overlord = all
+	}
 	# Modifiers:
 	modifier_subject = clear # Trade Protectorate don't get the ordinary subject_nation penalty 
 	modifier_overlord = {
 		trigger = {
 			always = yes
 		}
-		modifier = THE_HMC_human_trade_league_overlord_modifier
+		modifier = THE_IQU_overlord_yunn_buff
 	}
 }

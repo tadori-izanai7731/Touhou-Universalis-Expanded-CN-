@@ -198,7 +198,8 @@ THE_KEI_the_light_man_buff = {
 }
 #厉兵
 THE_KEI_3_6_mission_buff = {
-	ae_impact = -0.10
+	shock_damage = 0.1
+	ae_impact = -0.05
 }
 #铸铁成兵
 THE_KEI_casting_iron_into_army_buff = {
