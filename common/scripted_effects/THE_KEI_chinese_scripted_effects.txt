@@ -36,7 +36,7 @@ THE_KEI_define_general_mayumi_siege_script_older = {
 }
 THE_KEI_define_the_advisor_mayumi_effect = {
 	define_advisor = {
-		type = the_mayumi
+		type = THE_mayumi_advisor
 		name = "×NRvPèxV"
 		skill = 3
 		cost_multiplier = 0.25
