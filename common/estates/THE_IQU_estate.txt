@@ -1,0 +1,45 @@
+estate_nobles = {
+	custom_name = {
+		desc = THE_IQU_noble_name
+		trigger = {
+			OR = {
+				tag = IQU
+				was_tag = IQU
+			}
+		}
+	}
+	privileges = {
+		THE_IQU_tennin_delegate_power_privileges
+	}
+}
+
+estate_burghers = {
+	custom_name = {
+		desc = THE_IQU_burghers_name
+		trigger = {
+			OR = {
+				tag = IQU
+				was_tag = IQU
+			}
+		 }
+	}
+	
+	privileges = {
+	}
+}
+
+estate_church = {
+	custom_name = {
+		desc = THE_IQU_church_name
+		trigger = {
+			OR = {
+				tag = IQU
+				was_tag = IQU
+			}
+		 }
+	}
+	
+	privileges = {
+	}
+}
+

@@ -27,9 +27,9 @@
 ### GOVERNMENT
  THE_IQU_sky_beyond_clouds_reform: "‘NYÍ‚)Y"
  THE_IQU_sky_beyond_clouds_reform_desc: ""
- mechanic_THE_IQU_government_explore_coast_explore_mechanic_yes: "- -¢c0tŒRbûNa¿lwmwýNöeÿ	g§G10%§!„v‚i‡sôv¥cÑS°så‹wýNNb(W0W:S„vNb	gwýN0"
+ mechanic_THE_IQU_government_explore_coast_explore_mechanic_yes: "-¢c0tŒRbûNa¿lwmwýNöeÿ	g§G10%§!„v‚i‡sôv¥cÑS°så‹wýNNb(W0W:S„vNb	gwýN0"
  ability_THE_IQU_sky_beyond_clouds_mechanic: ")YºN’Qi–¶R"
- mechanic_THE_IQU_government_explorer_conquistador_mechanic_yes: "- -Ïkåb	g§Y1§!*N¢ci–¶Rÿ·ƒ—V§G10%§!–klƒôVŒT§G5.0%§!8fHe‡sÿgY§Y5§!*N	ÿ"
+ mechanic_THE_IQU_government_explorer_conquistador_mechanic_yes: "-Ïkåb	g§Y1§!*N¢ci–¶Rÿ·ƒ—V§G10%§!–klƒôVŒT§G5.0%§!8fHe‡sÿgY§Y5§!*N	ÿ"
  THE_IQU_sky_beyond_clouds_explorers_power: "åb	g„v¢ci–¶RpeÏ‘"
  monthly_THE_IQU_sky_beyond_clouds_explorers_power: "¢ci–¶R RbžX•"
  THE_IQU_scarlet_sky_reform: "Ñžwm-N„vïu¢u"
@@ -51,4 +51,51 @@
 
 ### MODIFIER
  THE_IQU_overlord_yunn_buff: "„s‘Nwm"
+ THE_IQU_abyssal_scale_forge_buff: "ß†™Ÿ:x2u"
+ THE_IQU_sail_and_sails_buff: "V^Ü*‚"
 ### MODIFIER_END
+
+### ESTATE
+ THE_IQU_noble_name: ")YºN"
+ THE_IQU_burghers_name: "¢ci–¶R"
+ THE_IQU_church_name: "Î˜4l^"
+ THE_IQU_tennin_delegate_power_privileges: ".w™Ÿ4"
+ THE_IQU_tennin_delegate_power_privileges_desc: ">TINcˆ–såe8^(W‘N-Nò•8nÿv^N(Wa)YNt‹Nÿv^Šb'YèRNsQ.•„v?e¡R²NÙu†NT'Y6–BS0"
+ THE_IQU_tennin_delegate_power_privileges_c_tt1: " =T(u6–BS³Q®‹§Y)YºN:ìSÆ–¢ci–¶R§!\n dk§Y6–BS’N¨R§!SOÐc›OåNNHeœgÿ\n ·ƒ—V§G50§!F–›Q.Oßu„vÐccwÿå‹Ðccw§YS†˜:g¨R§!˜Y§G+1§!	ÿ0\n §YHeœg–wm›Q.Oßu„vYSwØSS§!\n§Y)YºN§!6–BS1Y»S§R10§!àVÚ‹¦^"
+### ESTATE_END
+
+### MISSION_EXTRA
+ THE_IQU_1_1_c_tt: "ã‰•§Y)YºN§!6–BSyrCg0§Y.w™Ÿ^§!0ÿS·ƒ—VåNNHeœgÿ\n "
+ THE_IQU_1_2_c_tt1: " SV§YûNawýN§!åb	g§O*‚wmV8^¹p§!öeÿbìNsSïSã‰•§Y³Q®‹§!0¢ci–ÜƒUS0"
+### MISSION_EXTRA_END
+
+### DECISIONS
+ THE_IQU_etate_privileges_add_navy_leaders_decisions_title: "6–BS³Q®‹§Y)YºN:ìSÆ–¢ci–¶R§!"
+ THE_IQU_etate_privileges_add_navy_leaders_decisions_desc: ""
+ THE_IQU_etate_privileges_add_navy_leaders_decisions_c_trigger_t: "dk³Q®‹*g(W20t^…QO(uÇ"
+ THE_IQU_explore_the_unique_points_core_decisions_title: "0¢ci–ÜƒUS0"
+ THE_IQU_explore_the_unique_points_core_decisions_desc: ""
+### DECISIONS_END
+
+### EVENT
+ THE_IQU_flavor_events.0.t: "0¢ci–ÜƒUS0"
+ THE_IQU_flavor_events.0.desc: ":"
+ THE_IQU_flavor_events.0.0: "ÔÞV"
+ THE_IQU_flavor_events.0.1: "(W§Y[THE_IQU_province_unique_1_target.GetAreaName]§!ÄuÇu¢ci––"
+ THE_IQU_flavor_events.0.2: "(W§Y[THE_IQU_province_unique_2_target.GetAreaName]§!ÄuÇu¢ci––"
+ THE_IQU_flavor_events.0.3: "(W§Y[THE_IQU_province_unique_3_target.GetAreaName]§!ÄuÇu¢ci––"
+ THE_IQU_flavor_events.0.4: "(W§Y[THE_IQU_province_unique_4_target.GetAreaName]§!ÄuÇu¢ci––"
+ THE_IQU_province_unique_point_difficult_displat_ctt_1: "§gÎ˜s^jmY—§!"
+ THE_IQU_province_unique_point_difficult_displat_ctt_2: "§W®Vâlaƒ>o§!"
+ THE_IQU_province_unique_point_difficult_displat_ctt_3: "§Yâl›mylŒm§!"
+ THE_IQU_province_unique_point_difficult_displat_ctt_4: "§OÍ‚™Ÿ`›m§!"
+ THE_IQU_province_unique_point_difficult_displat_ctt_5: "§R)Y«R†‰wm§!"
+ THE_IQU_event_0_c_tt1: "dk0W:S¢ci–¾–¦^:Nÿ[This.THE_IQU_province_unique_point_difficult_displat_c_tt]"
+ THE_IQU_flavor_events.1.t: "0ÄuÇu0‚–0"
+ THE_IQU_flavor_events.1.desc: ""
+ THE_IQU_flavor_events.1.0: ">eV"
+### EVENT_END
+
+### SCRIPT_EFFECT
+ THE_IQU_unique_set_temporary_point_c_tt1: ":N§Y[This.GetName]§!ûm R§O*‚wmV8^¹p§!"
+### SCRIPT_EFFECT_END

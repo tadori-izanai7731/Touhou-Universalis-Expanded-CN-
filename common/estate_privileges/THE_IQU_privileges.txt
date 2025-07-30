@@ -1,0 +1,46 @@
+#眠龙帖
+THE_IQU_tennin_delegate_power_privileges = {
+	icon = privilege_demand_more_troops
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0
+	loyalty = 0
+	land_share = 0
+	is_valid = { 
+		OR = {
+			tag = IQU
+			was_tag = IQU
+		}
+		has_country_flag = THE_IQU_unlock_tennin_delegate_power_privileges_flag
+	}
+	can_select = {
+		always = yes
+	}
+	on_granted = {
+		custom_tooltip = THE_IQU_tennin_delegate_power_privileges_c_tt1
+		hidden_effect = {
+			set_country_flag = THE_IQU_tennin_delegate_power_privileges
+		}
+	}
+	can_revoke = { 
+		
+	} 
+	on_revoked = {
+		always = no
+	}
+	benefits = {
+		all_estate_loyalty_equilibrium = 0.10
+		all_estate_influence_modifier = 0.10
+		colonist_placement_chance = 0.05
+		production_efficiency = 0.10
+	}
+	conditional_modifier = {
+		trigger = {
+			mission_completed = THE_IQU_1_1
+		}
+		min_autonomy = 5
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}

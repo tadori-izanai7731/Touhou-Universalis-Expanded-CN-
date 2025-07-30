@@ -1,0 +1,34 @@
+defined_text = {
+	name = THE_IQU_province_unique_point_difficult_displat_c_tt
+	random = no
+	text = { 
+		localisation_key = THE_IQU_province_unique_point_difficult_displat_ctt_1
+		trigger = {
+			has_province_flag = THE_IQU_province_explore_lvl_1_flag
+		}
+	}
+	text = {
+		localisation_key = THE_IQU_province_unique_point_difficult_displat_ctt_2
+		trigger = {
+			has_province_flag = THE_IQU_province_explore_lvl_2_flag
+		}
+	}
+	text = {
+		localisation_key = THE_IQU_province_unique_point_difficult_displat_ctt_3
+		trigger = {
+			has_province_flag = THE_IQU_province_explore_lvl_3_flag
+		}
+	}
+	text = {
+		localisation_key = THE_IQU_province_unique_point_difficult_displat_ctt_4
+		trigger = {
+			has_province_flag = THE_IQU_province_explore_lvl_4_flag
+		}
+	}
+	text = {
+		localisation_key = THE_IQU_province_unique_point_difficult_displat_ctt_5
+		trigger = {
+			has_province_flag = THE_IQU_province_explore_lvl_5_flag
+		}
+	}
+}

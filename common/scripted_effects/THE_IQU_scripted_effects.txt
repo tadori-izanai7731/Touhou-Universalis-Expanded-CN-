@@ -1,0 +1,63 @@
+THE_IQU_define_expedition_target_effects = {
+	random_owned_province = {
+		limit = {
+			has_province_flag = THE_IQU_province_unique_point_flag
+			NOT = {
+				has_province_flag = THE_IQU_had_saved_unique_point_flag
+			}
+		}
+		save_event_target_as = THE_IQU_province_unique_1_target
+		set_province_flag = THE_IQU_had_saved_unique_point_flag
+	}
+	random_owned_province = {
+		limit = {
+			has_province_flag = THE_IQU_province_unique_point_flag
+			NOT = {
+				has_province_flag = THE_IQU_had_saved_unique_point_flag
+			}
+		}
+		save_event_target_as = THE_IQU_province_unique_2_target
+		set_province_flag = THE_IQU_had_saved_unique_point_flag
+	}
+	random_owned_province = {
+		limit = {
+			has_province_flag = THE_IQU_province_unique_point_flag
+			NOT = {
+				has_province_flag = THE_IQU_had_saved_unique_point_flag
+			}
+		}
+		save_event_target_as = THE_IQU_province_unique_3_target
+		set_province_flag = THE_IQU_had_saved_unique_point_flag
+	}
+	random_owned_province = {
+		limit = {
+			has_province_flag = THE_IQU_province_unique_point_flag
+			NOT = {
+				has_province_flag = THE_IQU_had_saved_unique_point_flag
+			}
+		}
+		save_event_target_as = THE_IQU_province_unique_4_target
+		set_province_flag = THE_IQU_had_saved_unique_point_flag
+	}
+}
+
+THE_IQU_add_unique_point_temporary_province_effects = {
+	hidden_effect = {
+		random_owned_province = {
+			limit = {
+				area = $area$
+			}
+			set_province_flag = THE_IQU_province_unique_point_flag
+			#DIFFICULT
+			set_province_flag = THE_IQU_province_explore_lvl_$level$_flag
+			# save_event_target_as = THE_IQU_unique_point_temporar_set_target
+		}
+	}
+	$area$ = {
+		custom_tooltip = THE_IQU_unique_set_temporary_point_c_tt1
+	}
+	# event_target:THE_IQU_unique_point_temporar_set_target = {
+	# 	set_province_flag = THE_IQU_province_unique_point_flag
+	# }
+	
+}

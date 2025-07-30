@@ -1,3 +1,13 @@
 THE_IQU_overlord_yunn_buff = {
 	naval_forcelimit_modifier = 0.1
 }
+#蛟龙砺甲
+THE_IQU_abyssal_scale_forge_buff = {
+	navy_tradition = 1
+	naval_morale = 0.15
+}
+#征帆远航
+THE_IQU_sail_and_sails_buff = {
+	naval_maintenance_modifier = -0.10
+	sailors_recovery_speed = 0.15
+}

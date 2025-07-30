@@ -51,4 +51,51 @@ l_english:
 
 ### MODIFIER
  THE_IQU_overlord_yunn_buff: "玄云海"
+ THE_IQU_abyssal_scale_forge_buff: "蛟龙砺甲"
+ THE_IQU_sail_and_sails_buff: "征帆远航"
 ### MODIFIER_END
+
+### ESTATE
+ THE_IQU_noble_name: "天人"
+ THE_IQU_burghers_name: "探险家"
+ THE_IQU_church_name: "风水师"
+ THE_IQU_tennin_delegate_power_privileges: "眠龙贴"
+ THE_IQU_tennin_delegate_power_privileges_desc: "吾主衣玖日常在云中闲游，并不在意天下琐事，并把大部分不关键的政务交给了各大阶层。"
+ THE_IQU_tennin_delegate_power_privileges_c_tt1: " 启用阶层决议§Y天人:召集探险家§!\n 此§Y阶层互动§!将会提供以下效果：\n 获得§G50§!陆军传统的提督（该提督§Y将领机动§!额外§G+1§!）。\n §Y效果随海军传统的多少而变化§!\n§Y天人§!阶层失去§R10§!忠诚度"
+### ESTATE_END
+
+### MISSION_EXTRA
+ THE_IQU_1_1_c_tt: "解锁§Y天人§!阶层特权「§Y眠龙帖§!」，将获得以下效果：\n "
+ THE_IQU_1_2_c_tt1: " 当§Y任意省份§!拥有§O航海异常点§!时，我们即可解锁§Y决议§!「探险菜单」"
+### MISSION_EXTRA_END
+
+### DECISIONS
+ THE_IQU_etate_privileges_add_navy_leaders_decisions_title: "阶层决议§Y天人:召集探险家§!"
+ THE_IQU_etate_privileges_add_navy_leaders_decisions_desc: ""
+ THE_IQU_etate_privileges_add_navy_leaders_decisions_c_trigger_t: "此决议未在20年内使用过"
+ THE_IQU_explore_the_unique_points_core_decisions_title: "「探险菜单」"
+ THE_IQU_explore_the_unique_points_core_decisions_desc: ""
+### DECISIONS_END
+
+### EVENT
+ THE_IQU_flavor_events.0.t: "「探险菜单」"
+ THE_IQU_flavor_events.0.desc: "缺"
+ THE_IQU_flavor_events.0.0: "返回"
+ THE_IQU_flavor_events.0.1: "在§Y[THE_IQU_province_unique_1_target.GetAreaName]§!组织探险队"
+ THE_IQU_flavor_events.0.2: "在§Y[THE_IQU_province_unique_2_target.GetAreaName]§!组织探险队"
+ THE_IQU_flavor_events.0.3: "在§Y[THE_IQU_province_unique_3_target.GetAreaName]§!组织探险队"
+ THE_IQU_flavor_events.0.4: "在§Y[THE_IQU_province_unique_4_target.GetAreaName]§!组织探险队"
+ THE_IQU_province_unique_point_difficult_displat_ctt_1: "§g风平浪静§!"
+ THE_IQU_province_unique_point_difficult_displat_ctt_2: "§W微波荡漾§!"
+ THE_IQU_province_unique_point_difficult_displat_ctt_3: "§Y波涛汹涌§!"
+ THE_IQU_province_unique_point_difficult_displat_ctt_4: "§O苍龙怒涛§!"
+ THE_IQU_province_unique_point_difficult_displat_ctt_5: "§R天劫覆海§!"
+ THE_IQU_event_0_c_tt1: "此地区探险难度为：[This.THE_IQU_province_unique_point_difficult_displat_c_tt]"
+ THE_IQU_flavor_events.1.t: "「组织舰队」"
+ THE_IQU_flavor_events.1.desc: ""
+ THE_IQU_flavor_events.1.0: "放弃"
+### EVENT_END
+
+### SCRIPT_EFFECT
+ THE_IQU_unique_set_temporary_point_c_tt1: "为§Y[This.GetName]§!添加§O航海异常点§!"
+### SCRIPT_EFFECT_END

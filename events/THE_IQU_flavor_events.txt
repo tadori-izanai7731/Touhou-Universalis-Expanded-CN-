@@ -1,0 +1,108 @@
+namespace = THE_IQU_flavor_events
+country_event = {
+	id = THE_IQU_flavor_events.0
+	title = "THE_IQU_flavor_events.0.t"
+	desc = "THE_IQU_flavor_events.0.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_saved_event_target = THE_IQU_province_unique_1_target } }
+				THE_IQU_define_expedition_target_effects = yes
+			}
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.0.0
+		highlight = yes
+	}
+	option = {
+		name = THE_IQU_flavor_events.0.1
+		goto = THE_IQU_province_unique_1_target
+		event_target:THE_IQU_province_unique_1_target = {
+			custom_tooltip = THE_IQU_event_0_c_tt1
+			province_event = {
+				id = THE_IQU_flavor_events.1
+			}
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.0.2
+		goto = THE_IQU_province_unique_2_target
+		trigger = {
+			has_saved_event_target = THE_IQU_province_unique_2_target
+		}
+		event_target:THE_IQU_province_unique_2_target = {
+			custom_tooltip = THE_IQU_event_0_c_tt1
+			province_event = {
+				id = THE_IQU_flavor_events.1
+			}
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.0.3
+		goto = THE_IQU_province_unique_3_target
+		trigger = {
+			has_saved_event_target = THE_IQU_province_unique_3_target
+		}
+		event_target:THE_IQU_province_unique_3_target = {
+			custom_tooltip = THE_IQU_event_0_c_tt1
+			province_event = {
+				id = THE_IQU_flavor_events.1
+			}
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.0.4
+		goto = THE_IQU_province_unique_4_target
+		trigger = {
+			has_saved_event_target = THE_IQU_province_unique_4_target
+		}
+		event_target:THE_IQU_province_unique_4_target = {
+			custom_tooltip = THE_IQU_event_0_c_tt1
+			province_event = {
+				id = THE_IQU_flavor_events.1
+			}
+		}
+	}
+	after = {
+		every_owned_province = {
+			clr_province_flag = THE_IQU_had_saved_unique_point_flag
+		}
+	}
+}
+province_event = {
+	id = THE_IQU_flavor_events.1
+	title = "THE_IQU_flavor_events.1.t"
+	desc = "THE_IQU_flavor_events.1.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	#放弃
+	option = {
+		name = THE_IQU_flavor_events.1.0
+		highlight = yes
+	}
+	#
+	option = {
+		name = THE_IQU_flavor_events.1.1
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.1.2
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.1.3
+		
+	}
+}

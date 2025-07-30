@@ -1,0 +1,91 @@
+country_decisions = {
+	#阶层决议
+	THE_IQU_etate_privileges_add_navy_leaders_decisions = {
+		color = { 21 54 168 }
+		potential = {
+			has_estate_privilege = THE_IQU_tennin_delegate_power_privileges
+		}
+		allow = {
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 40
+			}
+			custom_trigger_tooltip = {
+				tooltip = THE_IQU_etate_privileges_add_navy_leaders_decisions_c_trigger_t
+				OR = {
+					NOT = {
+						has_country_flag = THE_IQU_etate_privileges_add_navy_leaders_decisions_cd_flag
+					}
+					had_country_flag = {
+						flag = THE_IQU_etate_privileges_add_navy_leaders_decisions_cd_flag
+						days = 7300
+					}
+				}
+			}
+		}
+		effect = {
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = -10
+			}
+			if = {
+				limit = { 
+					navy_tradition = 90
+				}
+				create_admiral = { tradition = 100 add_manuever = 1 culture = Heavenish }
+			}
+			else_if = {
+				limit = { 
+					navy_tradition = 80
+				}
+				create_admiral = { tradition = 90 add_manuever = 1 culture = Heavenish }
+			}
+			else_if = {
+				limit = { 
+					navy_tradition = 70
+				}
+				create_admiral = { tradition = 80 add_manuever = 1 culture = Heavenish }
+			}
+			else_if = {
+				limit = { 
+					navy_tradition = 60
+				}
+				create_admiral = { tradition = 70 add_manuever = 1 culture = Heavenish }
+			}
+			else_if = {
+				limit = { 
+					navy_tradition = 50
+				}
+				create_admiral = { tradition = 60 add_manuever = 1 culture = Heavenish }
+			}
+			else = {
+				create_admiral = { tradition = 50 add_manuever = 1 culture = Heavenish }
+			}
+			hidden_effect = {
+				clr_consort_flag = THE_IQU_etate_privileges_add_navy_leaders_decisions_cd_flag
+				set_country_flag = THE_IQU_etate_privileges_add_navy_leaders_decisions_cd_flag
+			}
+		}
+	}
+	#探险决议
+	THE_IQU_explore_the_unique_points_core_decisions = {
+		color = { 21 54 168 }
+		potential = {
+			any_owned_province = {
+				has_province_flag = THE_IQU_province_unique_point_flag
+			}
+			OR = {
+				tag = IQU
+				was_tag = IQU
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			country_event = {
+				id = THE_IQU_flavor_events.0
+			}
+		}
+	}
+}

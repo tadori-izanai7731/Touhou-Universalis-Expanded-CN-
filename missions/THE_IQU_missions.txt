@@ -8,24 +8,66 @@ THE_IQU_main_branch_1 = {
 	THE_IQU_1_1 = {
 		icon = mission_unknown_mission
 		position = 1
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			is_capital_of = ROOT
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			stability = 1
+			OR = {
+				num_of_estate_agendas_completed = {
+					estate = estate_nobles
+					value = 2
+				}
+				HVR = {
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+				}
+			}
+		 } 
 
 		effect = { 
-			
-		 } 
+			HVR = {
+				add_stability = 1
+			}
+			custom_tooltip = THE_IQU_1_1_c_tt
+			tooltip = {
+				set_estate_privilege = THE_IQU_tennin_delegate_power_privileges
+			}
+			hidden_effect = {
+				set_country_flag = THE_IQU_unlock_tennin_delegate_power_privileges_flag
+			}
+		} 
 	}
 
 	THE_IQU_1_2 = {
 		icon = mission_unknown_mission
 		position = 2
 		required_missions = { THE_IQU_1_1 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			is_capital_of = ROOT
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			OR = {
+				navy_size_percentage = 1.00
+				num_of_light_ship = 15
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			THE_IQU_add_unique_point_temporary_province_effects = {
+				area = Dragon_islands
+				level = 1
+			}
+			custom_tooltip = THE_IQU_1_2_c_tt1
+			add_country_modifier = {
+				name = THE_IQU_sail_and_sails_buff
+				duration = 5475
+			}
+		 } 
 	}
 
 	THE_IQU_1_3 = {
@@ -104,16 +146,27 @@ THE_IQU_main_branch_2 = {
 	THE_IQU_2_1 = {
 		icon = mission_unknown_mission
 		position = 1
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			is_capital_of = ROOT
+		 } 
 		
 		trigger = { 
 			OR = {
 				army_size = 15
 				army_size_percentage = 1
 			}
+			has_dip_advisor = yes
 		} 
 		
 		effect = { 
+			add_country_modifier = {
+				name = THE_IQU_abyssal_scale_forge_buff
+				duration = 7300
+			}
+			create_admiral = { tradition = 50 culture = Heavenish }
+			Yumemi_space_state = {
+				add_permanent_claim = ROOT
+			}
 		} 
 	}
 
