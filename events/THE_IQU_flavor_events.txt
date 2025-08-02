@@ -28,6 +28,9 @@ country_event = {
 			province_event = {
 				id = THE_IQU_flavor_events.1
 			}
+			hidden_effect = {
+				set_province_flag = THE_IQU_this_provinces_is_exploring_now
+			}
 		}
 	}
 	option = {
@@ -40,6 +43,9 @@ country_event = {
 			custom_tooltip = THE_IQU_event_0_c_tt1
 			province_event = {
 				id = THE_IQU_flavor_events.1
+			}
+			hidden_effect = {
+				set_province_flag = THE_IQU_this_provinces_is_exploring_now
 			}
 		}
 	}
@@ -54,6 +60,9 @@ country_event = {
 			province_event = {
 				id = THE_IQU_flavor_events.1
 			}
+			hidden_effect = {
+				set_province_flag = THE_IQU_this_provinces_is_exploring_now
+			}
 		}
 	}
 	option = {
@@ -66,6 +75,9 @@ country_event = {
 			custom_tooltip = THE_IQU_event_0_c_tt1
 			province_event = {
 				id = THE_IQU_flavor_events.1
+			}
+			hidden_effect = {
+				set_province_flag = THE_IQU_this_provinces_is_exploring_now
 			}
 		}
 	}
@@ -85,18 +97,33 @@ province_event = {
 		
 	}
 	immediate = {
-		
+		hidden_effect = {
+			if = {
+				limit = { 
+					any_owned_province = {
+						has_province_flag = THE_IQU_this_provinces_is_exploring_now
+					}
+				}
+				random_owned_province = {
+					limit = {
+						has_province_flag = THE_IQU_this_provinces_is_exploring_now
+					}
+					save_event_target_as = THE_IQU_province_unique_exploring_now_target
+				}
+			}
+		}
 	}
 	#放弃
 	option = {
 		name = THE_IQU_flavor_events.1.0
 		highlight = yes
 	}
-	#
+	#增加轻型船只
 	option = {
 		name = THE_IQU_flavor_events.1.1
 		
 	}
+	#增加运输船只
 	option = {
 		name = THE_IQU_flavor_events.1.2
 		
