@@ -78,60 +78,18 @@ country_decisions = {
 						}
 						
 					}
-					if = {
-						limit = { 
-							any_owned_province = {
-								has_province_modifier = THE_KEI_all_animal_run_buff
-								development = 15
-							}
-						}
-						random_province = {
-							limit = {
-								has_province_modifier = THE_KEI_all_animal_run_buff
-							}
-							add_base_tax = 3
-							add_base_production = 1
-							add_base_manpower = 2
-							THE_KEI_development_remove_province_light_buff = yes
-						}
-						add_treasury = -50
-					}
-					else_if = {
+					random_owned_province = {
 						limit = {
-							any_owned_province = {
-								has_province_modifier = THE_KEI_all_animal_run_buff
-								development = 9
-							}
+							has_province_modifier = THE_KEI_all_animal_run_buff
 						}
-						random_province = {
-							limit = {
-								has_province_modifier = THE_KEI_all_animal_run_buff
-							}
-							add_base_tax = 3
-							add_base_production = 1
-							add_base_manpower = 2
-							THE_KEI_development_remove_province_light_buff = yes
-						}
-						add_treasury = -50
+						add_base_tax = 6
+						add_base_production = 3
+						add_base_manpower = 5
+						THE_KEI_development_remove_province_light_buff = yes
+						add_local_autonomy = -50
+						add_devastation = -100
 					}
-					else_if = {
-						limit = { 
-							any_owned_province = {
-								has_province_modifier = THE_KEI_all_animal_run_buff
-								development = 3
-							}
-						}
-						random_province = {
-							limit = {
-								has_province_modifier = THE_KEI_all_animal_run_buff
-							}
-							add_base_tax = 3
-							add_base_production = 1
-							add_base_manpower = 2
-							THE_KEI_development_remove_province_light_buff = yes
-						}
-						add_treasury = -50
-					}
+					add_treasury = -50
 				}
 				else_if = {
 					limit = {

@@ -58,7 +58,7 @@ KEI_ideas = {
 	}
 
 	bonus = {
-		global_manpower_modifier = 0.33
+		land_forcelimit_modifier = 0.25
 	}
 
 	trigger = {
@@ -72,28 +72,26 @@ KEI_ideas = {
 	}
 
 	KEI_creator_of_idols = {
-		tolerance_own = 2
+		tolerance_own = 1
 		global_unrest = -2
 	}
 	
 	KEI_legion_of_haniwa = {
-		global_regiment_cost = -0.25
-		reinforce_speed = 0.5
+		reinforce_speed = 0.25
 	}	
 	
 	KEI_mayumis_loyalty_and_strength = {
-		discipline = 0.05
-		infantry_cost = -0.10
+		infantry_cost = -0.15
 	}
 	
 	KEI_primate_spirit_garden = {
-		idea_cost = -0.10
-		technology_cost = -0.10
+		idea_cost = -0.05
+		technology_cost = -0.05
 	}
 	
 	KEI_struggle_with_animal_spirits = {
 		garrison_size = 0.25
-		fort_maintenance_modifier = -0.25
+		fort_maintenance_modifier = -0.50
 	}
 	
 	KEI_dominance_through_idols = {

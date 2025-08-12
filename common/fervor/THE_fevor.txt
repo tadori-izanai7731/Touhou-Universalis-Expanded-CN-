@@ -12,8 +12,8 @@ the_keiki_fervor_shapping = {
 		}
 	}
 	effect = {
-		global_manpower_modifier = 0.33
-		manpower_recovery_speed = 0.33
+		manpower_in_true_faith_provinces = 0.25
+		manpower_recovery_speed = 0.15
 		regiment_manpower_usage = -0.10
 	}
 }
@@ -30,8 +30,8 @@ the_keiki_fervor_ruin = {
 		}
 	}
 	effect = {
-		land_morale = 0.20
-		morale_damage = 0.10
+		land_morale = 0.10
+		army_tradition_from_battle = 0.33
 		global_regiment_recruit_speed = -0.20
 	}
 }
@@ -48,9 +48,9 @@ the_keiki_fervor_vibrant = {
 		}
 	}
 	effect = {
-		development_cost = -0.20
+		development_cost = -0.10
 		global_unrest = -2
-		production_efficiency = 0.20
+		production_efficiency = 0.15
 	}
 }
 
@@ -66,8 +66,8 @@ the_keiki_fervor_mercy = {
 		}
 	}
 	effect = {
-		reform_progress_growth = 0.20
-		all_estate_loyalty_equilibrium = 0.1
+		reform_progress_growth = 0.15
+		all_estate_loyalty_equilibrium = 0.10
 		yearly_corruption = -1.0
 	}
 }

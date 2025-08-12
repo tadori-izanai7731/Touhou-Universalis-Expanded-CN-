@@ -886,7 +886,13 @@ THE_KEI_check_the_fort_privilige_effect = {
 	if = {
 		limit = { 
 			owner = {
-				has_estate_privilege = THE_KEI_advance_fort_privileges
+				OR = {
+					has_estate_privilege = THE_KEI_advance_fort_privileges
+					AND = {
+						tag = KIE
+						ai = yes
+					}
+				}
 			}
 			ROOT = {
 				has_fort_building_trigger = yes
@@ -898,6 +904,93 @@ THE_KEI_check_the_fort_privilige_effect = {
 		add_province_modifier = {
 			name = THE_KEI_advance_fort_buff
 			duration = -1
+		}
+	}
+}
+#older减少化生
+THE_KEI_older_change_government_power_effects = {
+	change_variable = {
+		which = the_mayumi_fire_var_older_old
+		which = the_mayumi_fire_var_older
+	}
+	change_variable = {
+		which = the_mayumi_shock_var_older_old
+		which = the_mayumi_shock_var_older
+	}
+	change_variable = {
+		which = the_mayumi_manuever_var_older_old
+		which = the_mayumi_manuever_var_older
+	}
+	change_variable = {
+		which = the_mayumi_siege_var_older_old
+		which = the_mayumi_siege_var_older
+	}
+	while = {
+		limit = { 
+			check_variable = {
+				which = the_mayumi_fire_var_older_old
+				value = 0
+			}
+		}
+		change_variable = {
+			which = the_mayumi_fire_var_older_old
+			value = -1
+		}
+		add_government_power = {
+			mechanic_type = THE_KEI_lonely_creation_mechanic
+			power_type = THE_KEI_lonely_creation_mechanic_power
+			value = -1
+		}
+	}
+	while = {
+		limit = { 
+			check_variable = {
+				which = the_mayumi_shock_var_older_old
+				value = 0
+			}
+		}
+		change_variable = {
+			which = the_mayumi_shock_var_older_old
+			value = -1
+		}
+		add_government_power = {
+			mechanic_type = THE_KEI_lonely_creation_mechanic
+			power_type = THE_KEI_lonely_creation_mechanic_power
+			value = -1
+		}
+	}
+	while = {
+		limit = { 
+			check_variable = {
+				which = the_mayumi_manuever_var_older_old
+				value = 0
+			}
+		}
+		change_variable = {
+			which = the_mayumi_manuever_var_older_old
+			value = -1
+		}
+		add_government_power = {
+			mechanic_type = THE_KEI_lonely_creation_mechanic
+			power_type = THE_KEI_lonely_creation_mechanic_power
+			value = -1
+		}
+	}
+	while = {
+		limit = { 
+			check_variable = {
+				which = the_mayumi_siege_var_older_old
+				value = 0
+			}
+		}
+		change_variable = {
+			which = the_mayumi_siege_var_older_old
+			value = -1
+		}
+		add_government_power = {
+			mechanic_type = THE_KEI_lonely_creation_mechanic
+			power_type = THE_KEI_lonely_creation_mechanic_power
+			value = -1
 		}
 	}
 }

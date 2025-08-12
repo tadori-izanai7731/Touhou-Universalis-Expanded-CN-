@@ -70,9 +70,6 @@ THE_KEI_lonely_creation_mechanic = {
 			range_modifier = {
 				modifier = {
 					global_institution_spread = 0.33
-					country_admin_power = 1
-					country_diplomatic_power = 1
-					country_military_power = 1
 				}
 				trigger = {
 					mission_completed = THE_KEI_3_12
