@@ -39,10 +39,17 @@ THE_IQU_the_subject_over_hvr = {
 	
 	# Subject Interactions:
 	# (immediate)
-	block_settlement_growth = yes
-	allow_settlement_growth = yes
+	block_settlement_growth = no
+	allow_settlement_growth = no
 	divert_trade = yes
 	send_officers = yes
+	place_relative_on_throne = no
+	bestow_gifts = yes
+	return_land = no
+
+
+	pays_overlord = -0.30
+	naval_forcelimit_to_overlord = 0.25
 
 	can_fight = {
 		independent_nations = yes

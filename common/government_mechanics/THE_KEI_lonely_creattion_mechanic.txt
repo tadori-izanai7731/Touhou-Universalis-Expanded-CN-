@@ -79,8 +79,8 @@ THE_KEI_lonely_creation_mechanic = {
 			}
 			scaled_modifier = {
 				modifier = {
-					global_manpower_modifier = 0.50
-					manpower_recovery_speed = 0.33
+					global_manpower_modifier = 0.33
+					manpower_recovery_speed = 0.15
 				}
 				trigger = {
 					mission_completed = THE_KEI_4_12
