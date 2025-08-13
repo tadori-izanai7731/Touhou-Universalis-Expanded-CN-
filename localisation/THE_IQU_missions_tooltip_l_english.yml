@@ -50,6 +50,7 @@
 ### SUBJECT_END
 
 ### MODIFIER
+ THE_IQU_nautical_experience_custom_modifier: "*‚wmÏuŒš"
  THE_IQU_overlord_yunn_buff: "„s‘Nwm"
  THE_IQU_abyssal_scale_forge_buff: "ß†™Ÿ:x2u"
  THE_IQU_sail_and_sails_buff: "V^Ü*‚"
@@ -61,12 +62,12 @@
  THE_IQU_church_name: "Î˜4l^"
  THE_IQU_tennin_delegate_power_privileges: ".w™Ÿ4"
  THE_IQU_tennin_delegate_power_privileges_desc: ">TINcˆ–såe8^(W‘N-Nò•8nÿv^N(Wa)YNt‹Nÿv^Šb'YèRNsQ.•„v?e¡R²NÙu†NT'Y6–BS0"
- THE_IQU_tennin_delegate_power_privileges_c_tt1: " =T(u6–BS³Q®‹§Y)YºN:ìSÆ–¢ci–¶R§!\n dk§Y6–BS’N¨R§!SOÐc›OåNNHeœgÿ\n ·ƒ—V§G50§!F–›Q.Oßu„vÐccwÿå‹Ðccw§YS†˜:g¨R§!˜Y§G+1§!	ÿ0\n §YHeœg–wm›Q.Oßu„vYSwØSS§!\n§Y)YºN§!6–BS1Y»S§R10§!àVÚ‹¦^"
+ THE_IQU_tennin_delegate_power_privileges_c_tt1: " =T(u6–BS³Q®‹§Y)YºN:ìSÆ–¢ci–¶R§!\n dk§Y6–BS’N¨R§!SOÐc›OåNNHeœgÿ\n ·ƒ—V§G50§!F–›Q.Oßu„v¢ci–¶Rÿå‹¢ci–¶R§YS†˜:g¨R§!˜Y§G+1§!	ÿ0\n §YHeœg–wm›Q.Oßu„vYSwØSS§!\n§Y)YºN§!6–BS1Y»S§R10§!àVÚ‹¦^"
 ### ESTATE_END
 
 ### MISSION_EXTRA
  THE_IQU_1_1_c_tt: "ã‰•§Y)YºN§!6–BSyrCg0§Y.w™Ÿ^§!0ÿS·ƒ—VåNNHeœgÿ\n "
- THE_IQU_1_2_c_tt1: " SV§YûNawýN§!åb	g§O*‚wmV8^¹p§!öeÿbìNsSïSã‰•§Y³Q®‹§!0¢ci–ÜƒUS0"
+ THE_IQU_1_2_c_tt1: " SV§YûNawýN§!åb	g§OwmþVV8^¹p§!öeÿbìNsSïSã‰•§Y³Q®‹§!0¢ci–ÜƒUS0"
 ### MISSION_EXTRA_END
 
 ### DECISIONS
@@ -94,8 +95,39 @@
  THE_IQU_flavor_events.1.t: "0ÄuÇu0‚–0"
  THE_IQU_flavor_events.1.desc: ""
  THE_IQU_flavor_events.1.0: ">eV"
+ THE_IQU_flavor_events.2.t: "÷–‘NK…zz"
+ THE_IQU_flavor_events.2.desc: "™Ÿ«R„v0‚–(W™ŸKN›S¹„vÍ‚yz-NzLˆÿbìN„vKmØuKNÅeòTÏu*‚Lˆ†N	gNµkÝ»y0‘NBS²š6qØS—VSmÍ‘‹S‘b0MR¹eÿNGrèT'Y„vÅ”ppr‚‘N™XckûÚnŒm¨RÿvQô•5uIQ‚Y™ŸÇ†8npÿ‰l÷•„v÷–ðXêñmY.Oegÿ—¨RNwz„…„vzzl0cˆ–sjO:N™Ÿ«ROÿòTÏuŒcác0R†N°s(W„vÅ`µQ0:VLˆz4xÿàeVŽN(W´f`„v÷–™ŸÌwNLˆpÿz	gNNa¿O0‚–1SO«ˆàeÅ`„vê•5u•dÂˆ0"
+ THE_IQU_flavor_events.2.1: "HQ(W1SÑ„v‘N=nN0"
+ THE_IQU_flavor_events.2.2: "HQ:VLˆz4x'T0"
+ THE_IQU_flavor_events.3.t: "‘NVþ–ce"
+ THE_IQU_flavor_events.3.desc: "bìN„v9‚•cˆ–sOe•0WUcIc0R÷–‘N¹lAmg®V1V„v™–ÿ(WyY„v¾|ÆQVüRNÿ9‚–‚Y8n|œ,‚ÑneQÙGrír„z„v‰RhQS0Å”ppr‚„v‘N™X(W2NµOûŒ†TîTÿSVgTNN÷–1ž«ˆ›b(W«ŽTÿAŒ6qVg„vÍ‚yzÍ‘°eåb±b†NbìN0"
+ THE_IQU_flavor_events.3.1: "™Ÿ^y‡^QONw`Ob0"
+ THE_IQU_flavor_events.4.t: ")YZKNÛw"
+ THE_IQU_flavor_events.4.desc: "bìNvšeQ÷–‘N¹lAmg®V1V„v™–ÿ²š6qÿÂr´f„vlAm•dobNw9‚^ÿÆRÆ–„vê•5u‚Y)YZKNÛw,‚p6qK„N0àeº‹bìN„v9‚•cˆ–s‚YUO(WŸq‰`¯sƒXT›RKcÂrœoÿFOÍN	gpeSw<w„v5uÇ†¾|ÆQ0W•dÂˆ†NpeX‚9‚„v™Ÿ¨šN2ug0SV9‚–ÈuŽN1c1±Gr‰k¡N„v)o¡mÿ«RTYOu„v4lKbìNb—ùRNwürÉ…„v2ugŒTàQX‚onm„v‹k¸š0"
+ THE_IQU_flavor_events.4.1: "‹†ØNúQãN÷NÿFOINSOSXR0"
+ THE_IQU_flavor_events.5.t: "Í‘°e=Tz"
+ THE_IQU_flavor_events.5.desc: "0‚–3z3zÊleQD–ÑøvùRs^Y—„v‘N=nÿ(WÏuÇpeåe„vIr…VT0ÈuŽNÿÅ”pp„v‘NBSnnz„…ÿÂr´f„v÷–1žS:NÜ»S„vYOÍTÿ3–IQÍ‘°ez‘N™–0(W†˜–ˆcˆ–s„v‹TäNN=T*‚09‚–všúQÎ˜=nÿQ!k‡eQ^–àe W„vÍ‚yz0"
+ THE_IQU_flavor_events.5.1: "‹†Kwd†Nöeåe0"
+ THE_IQU_flavor_events.6.t: "dR›SKNIN"
+ THE_IQU_flavor_events.6.desc: "bìN„v0‚– cÇàe W„vÍ‚yzÿgÈu(WNµ^Ü»y)YLuIN*‚S„vdR›SÁeK„•0dk›S‘Nþ–-Õuÿupl2l2lÿ>f6q	g)YºNESOO(WdkY0‚Yœgýw—V0RdkY)YºN„vcVÅV6qïSåNžX RbìN¢c0t„vHe‡s06qwÿSVcˆ–sIrºNSÕ‹`—ÑöeÿN¡wàebV„vZ‹Sê›SÃV%V+oVeg0›STu„vIƒ(gàeÎ˜ê¨R0‹†6qÙv^¡l	g—Qa0Rcˆ–sÿFO>f6qdk0WN0kÎY¢RÿôfN¹RÅdï•N¢cåg0b—ùRÙfnx„vÒb¥eÿçuíujPYubUSVŒåg>f6q1Y<yNEQán*gåwÎ˜i–0"
+ THE_IQU_flavor_events.6.1: ":VLˆjPYuêSO’VžX¥‚‚„0"
+ THE_IQU_flavor_events_flavor_tt1: "§gSÕ‹êñT¢c0t*gåw„v†˜ßW§!"
+ THE_IQU_flavor_events.6.2: "SÕ‹NKNŸl0"
+ THE_IQU_flavor_events.7.t: "‘NþVRb"
+ THE_IQU_flavor_events.7.desc: "âe6qdR›SINºNàeaøv©Rÿcˆ–s³QšRO`—ê«ŽùR)YaŒ„vmßR›RN*‚wm„vÏuŒšÿ&^†˜9‚–(ŒNa¢c0tÙGrL–u„v‘NwmN»Ñ›SS0pehTTÿbìNbŸR„vØu6RúQ†NNýNæ‹KSN¾|nx„vD–Ñ‘Nwm0WþV0"
+ THE_IQU_flavor_events.7.1: "bœg‡˜0N"
+ THE_IQU_flavor_events.8.t: "÷‘Nwm"
+ THE_IQU_flavor_events.8.desc: "1Y»S†Ndk0W)YºNïSýwÐc›O„vcVÿ9‚–(WL–u„v‘Nwm-N‚YTòvºNxdaŒ08lmlcˆ–s‹†íz›R”^¯sƒXÿFOdk0W)YaŒá‹2Œÿ—fAmylŒmÿÜ…yYŸq‰`„v™Ÿ«RhT¹0gRÈp„v ˜8|N•dÂˆ„v‘NBS©‹9‚êS×Smc%NÍ‘ÿèReˆÙuNÍs5êNhV`WeQñmn0"
+ THE_IQU_flavor_events.8.1: "è`Ûu„vYe­‹"
+ THE_IQU_flavor_events.9.t: ""
+ THE_IQU_flavor_events.9.desc: ""
+ THE_IQU_flavor_events.9.1: ""
+ THE_IQU_flavor_events.10.t: ""
+ THE_IQU_flavor_events.10.desc: ""
+ THE_IQU_flavor_events.10.1: ""
 ### EVENT_END
 
 ### SCRIPT_EFFECT
- THE_IQU_unique_set_temporary_point_c_tt1: ":N§Y[This.GetName]§!ûm R§O*‚wmV8^¹p§!"
+ THE_IQU_unique_set_temporary_point_c_tt1: ":N§Y[This.GetName]§!ûm R§OwmþVV8^¹p§!"
+ THE_IQU_add_explore_progress_or_dangerous_progres_c_tt1: "  :NSVMR¢ci–Û¦^9eØS§G[Root.the_iqu_will_change_explore_progress.GetValue]%§!\n  :NSVMRqSi–Û¦^9eØS§R[Root.the_iqu_will_change_danger_progress.GetValue]%§!"
 ### SCRIPT_EFFECT_END

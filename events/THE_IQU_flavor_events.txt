@@ -97,21 +97,21 @@ province_event = {
 		
 	}
 	immediate = {
-		hidden_effect = {
-			if = {
-				limit = { 
-					any_owned_province = {
-						has_province_flag = THE_IQU_this_provinces_is_exploring_now
-					}
-				}
-				random_owned_province = {
-					limit = {
-						has_province_flag = THE_IQU_this_provinces_is_exploring_now
-					}
-					save_event_target_as = THE_IQU_province_unique_exploring_now_target
-				}
-			}
-		}
+		# hidden_effect = {
+		# 	if = {
+		# 		limit = { 
+		# 			any_owned_province = {
+		# 				has_province_flag = THE_IQU_this_provinces_is_exploring_now
+		# 			}
+		# 		}
+		# 		random_owned_province = {
+		# 			limit = {
+		# 				has_province_flag = THE_IQU_this_provinces_is_exploring_now
+		# 			}
+		# 			save_event_target_as = THE_IQU_province_unique_exploring_now_target
+		# 		}
+		# 	}
+		# }
 	}
 	#放弃
 	option = {
@@ -128,8 +128,184 @@ province_event = {
 		name = THE_IQU_flavor_events.1.2
 		
 	}
+	#开始探险
 	option = {
-		name = THE_IQU_flavor_events.1.3
-		
+		name = THE_IQU_flavor_events.1.99
+		owner = {
+			set_country_flag = THE_IQU_now_is_exploring_flag
+			THE_IQU_on_start_the_explore_event_effects = yes
+		}
 	}
 }
+##探险风味事件
+##1 雷云蔽空
+country_event = {
+	id = THE_IQU_flavor_events.2
+	title = "THE_IQU_flavor_events.2.t"
+	desc = "THE_IQU_flavor_events.2.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.2.1
+	}
+	option = {
+		name = THE_IQU_flavor_events.2.2
+		random_list = {
+			70 = {
+
+			}
+			30 = {
+
+			}
+		}
+	}
+}
+#云开雾散
+country_event = {
+	id = THE_IQU_flavor_events.3
+	title = "THE_IQU_flavor_events.3.t"
+	desc = "THE_IQU_flavor_events.3.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.3.1
+	}
+}
+#天罚之矛
+country_event = {
+	id = THE_IQU_flavor_events.4
+	title = "THE_IQU_flavor_events.4.t"
+	desc = "THE_IQU_flavor_events.4.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.4.1
+	}
+}
+#重新启程
+country_event = {
+	id = THE_IQU_flavor_events.5
+	title = "THE_IQU_flavor_events.5.t"
+	desc = "THE_IQU_flavor_events.5.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.5.1
+	}
+}
+
+##2 孤岛之主
+country_event = {
+	id = THE_IQU_flavor_events.6
+	title = "THE_IQU_flavor_events.6.t"
+	desc = "THE_IQU_flavor_events.6.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.6.1
+		custom_tooltip = THE_IQU_flavor_events_flavor_tt1
+	}
+	option = {
+		name = THE_IQU_flavor_events.6.2
+	}
+}
+#云图初成
+country_event = {
+	id = THE_IQU_flavor_events.7
+	title = "THE_IQU_flavor_events.7.t"
+	desc = "THE_IQU_flavor_events.7.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.7.1
+	}
+}
+#迷途云海
+country_event = {
+	id = THE_IQU_flavor_events.8
+	title = "THE_IQU_flavor_events.8.t"
+	desc = "THE_IQU_flavor_events.8.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.8.1
+	}
+}
+#言辞难化
+country_event = {
+	id = THE_IQU_flavor_events.9
+	title = "THE_IQU_flavor_events.9.t"
+	desc = "THE_IQU_flavor_events.9.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.9.1
+	}
+}
+#精诚所至
+country_event = {
+	id = THE_IQU_flavor_events.10
+	title = "THE_IQU_flavor_events.10.t"
+	desc = "THE_IQU_flavor_events.10.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.10.1
+	}
+}
+
+##3

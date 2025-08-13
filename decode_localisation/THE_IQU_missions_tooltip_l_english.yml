@@ -50,6 +50,7 @@ l_english:
 ### SUBJECT_END
 
 ### MODIFIER
+ THE_IQU_nautical_experience_custom_modifier: "航海经验"
  THE_IQU_overlord_yunn_buff: "玄云海"
  THE_IQU_abyssal_scale_forge_buff: "蛟龙砺甲"
  THE_IQU_sail_and_sails_buff: "征帆远航"
@@ -61,12 +62,12 @@ l_english:
  THE_IQU_church_name: "风水师"
  THE_IQU_tennin_delegate_power_privileges: "眠龙贴"
  THE_IQU_tennin_delegate_power_privileges_desc: "吾主衣玖日常在云中闲游，并不在意天下琐事，并把大部分不关键的政务交给了各大阶层。"
- THE_IQU_tennin_delegate_power_privileges_c_tt1: " 启用阶层决议§Y天人:召集探险家§!\n 此§Y阶层互动§!将会提供以下效果：\n 获得§G50§!陆军传统的提督（该提督§Y将领机动§!额外§G+1§!）。\n §Y效果随海军传统的多少而变化§!\n§Y天人§!阶层失去§R10§!忠诚度"
+ THE_IQU_tennin_delegate_power_privileges_c_tt1: " 启用阶层决议§Y天人:召集探险家§!\n 此§Y阶层互动§!将会提供以下效果：\n 获得§G50§!陆军传统的探险家（该探险家§Y将领机动§!额外§G+1§!）。\n §Y效果随海军传统的多少而变化§!\n§Y天人§!阶层失去§R10§!忠诚度"
 ### ESTATE_END
 
 ### MISSION_EXTRA
  THE_IQU_1_1_c_tt: "解锁§Y天人§!阶层特权「§Y眠龙帖§!」，将获得以下效果：\n "
- THE_IQU_1_2_c_tt1: " 当§Y任意省份§!拥有§O航海异常点§!时，我们即可解锁§Y决议§!「探险菜单」"
+ THE_IQU_1_2_c_tt1: " 当§Y任意省份§!拥有§O海图异常点§!时，我们即可解锁§Y决议§!「探险菜单」"
 ### MISSION_EXTRA_END
 
 ### DECISIONS
@@ -94,8 +95,39 @@ l_english:
  THE_IQU_flavor_events.1.t: "「组织舰队」"
  THE_IQU_flavor_events.1.desc: ""
  THE_IQU_flavor_events.1.0: "放弃"
+ THE_IQU_flavor_events.2.t: "雷云蔽空"
+ THE_IQU_flavor_events.2.desc: "龙宫的舰队在龙之岛边缘的苍穹中穿行，我们的测绘之旅已经航行了有一段距离。云层骤然变得浓重压抑。前方，一片巨大的铅灰色云墙正翻滚涌动，其间电光如龙蛇游走，沉闷的雷声自深处传来，震动着稀薄的空气。衣玖作为龙宫使，已经掌握到了现在的情况。强行突破，无异于在暴怒的雷龙脊背上行走，稍有不慎便舰队就会被无情的闪电撕裂。"
+ THE_IQU_flavor_events.2.1: "先在就近的云港避一避。"
+ THE_IQU_flavor_events.2.2: "先强行突破吧。"
+ THE_IQU_flavor_events.3.t: "云开雾散"
+ THE_IQU_flavor_events.3.desc: "我们的船长衣玖敏锐地捕捉到雷云边缘气流最微弱的缝隙，在她的精准引导下，船队如游鱼般滑入这片狭窄的安全通道。铅灰色的云墙在两侧翻腾咆哮，当最后一丝雷鸣被抛在身后，豁然开朗的苍穹重新拥抱了我们。"
+ THE_IQU_flavor_events.3.1: "龙神庇佑着你我。"
+ THE_IQU_flavor_events.4.t: "天罚之矛"
+ THE_IQU_flavor_events.4.desc: "我们驶入雷云边缘气流最微弱的缝隙，骤然，狂暴的气流撕扯着船帆，密集的闪电如天罚之矛般轰然落下。无论我们的船长衣玖如何在熟悉环境后力挽狂澜，但仍有数道耀眼的电蛇精准地撕裂了数艘船的龙骨与甲板。当船队终于挣脱那片死亡的漩涡，劫后余生的水手们面对着狼藉的甲板和几艘漂浮的残骸。"
+ THE_IQU_flavor_events.4.1: "虽付出代价，但主体尚存。"
+ THE_IQU_flavor_events.5.t: "重新启程"
+ THE_IQU_flavor_events.5.desc: "舰队稳稳泊入附近相对平静的云港，在经过数日的等待后。终于，铅灰的云层渐渐稀薄，狂暴的雷鸣化为远去的余响，阳光重新穿透云隙。在领袖衣玖的命令下启航。船队驶出避风港，再次融入广阔无垠的苍穹。"
+ THE_IQU_flavor_events.5.1: "虽耽搁了时日。"
+ THE_IQU_flavor_events.6.t: "孤岛之主"
+ THE_IQU_flavor_events.6.desc: "我们的舰队掠过无垠的苍穹，最终在一座远离天界主航道的孤岛旁落锚。此岛云雾缭绕，灵气氤氲，显然有天人居住在此处。如果能得到此处天人的指引必然可以增加我们探索的效率。然而，当衣玖等人尝试靠近时，一股无形的威压自岛心弥漫开来。岛畔的草木无风自动。虽然这并没有震慑到衣玖，但显然此地不欢迎外客，更不容擅闯与探查。面对这明确的拒斥，继续停留或展开调查显然失礼且充满未知风险。"
+ THE_IQU_flavor_events.6.1: "强行停留只会徒增芥蒂。"
+ THE_IQU_flavor_events_flavor_tt1: "§g尝试自己探索未知的领域§!"
+ THE_IQU_flavor_events.6.2: "尝试与之沟通。"
+ THE_IQU_flavor_events.7.t: "云图初成"
+ THE_IQU_flavor_events.7.desc: "既然孤岛主人无意相助，衣玖决定依靠自身对天象的洞察力与航海的经验，带领船队谨慎探索这片陌生的云海与邻近岛屿。数周后，我们成功的绘制出了一份详尽且精确的附近云海地图。"
+ THE_IQU_flavor_events.7.1: "成果颇丰"
+ THE_IQU_flavor_events.8.t: "迷途云海"
+ THE_IQU_flavor_events.8.desc: "失去了此地天人可能提供的指引，船队在陌生的云海中如同盲人摸象。永江衣玖虽竭力适应环境，但此地天象诡谲，暗流汹涌，远超她熟悉的龙宫周边。剧烈的颠簸与撕裂的云层让船只受损严重，部分补给与珍贵仪器坠入深渊。"
+ THE_IQU_flavor_events.8.1: "惨痛的教训"
+ THE_IQU_flavor_events.9.t: ""
+ THE_IQU_flavor_events.9.desc: ""
+ THE_IQU_flavor_events.9.1: ""
+ THE_IQU_flavor_events.10.t: ""
+ THE_IQU_flavor_events.10.desc: ""
+ THE_IQU_flavor_events.10.1: ""
 ### EVENT_END
 
 ### SCRIPT_EFFECT
- THE_IQU_unique_set_temporary_point_c_tt1: "为§Y[This.GetName]§!添加§O航海异常点§!"
+ THE_IQU_unique_set_temporary_point_c_tt1: "为§Y[This.GetName]§!添加§O海图异常点§!"
+ THE_IQU_add_explore_progress_or_dangerous_progres_c_tt1: "  为当前探险进度改变§G[Root.the_iqu_will_change_explore_progress.GetValue]%§!\n  为当前危险进度改变§R[Root.the_iqu_will_change_danger_progress.GetValue]%§!"
 ### SCRIPT_EFFECT_END

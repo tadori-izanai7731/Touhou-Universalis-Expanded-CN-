@@ -32,34 +32,34 @@ country_decisions = {
 				limit = { 
 					navy_tradition = 90
 				}
-				create_admiral = { tradition = 100 add_manuever = 1 culture = Heavenish }
+				create_explorer = { tradition = 100 add_manuever = 1 culture = Heavenish }
 			}
 			else_if = {
 				limit = { 
 					navy_tradition = 80
 				}
-				create_admiral = { tradition = 90 add_manuever = 1 culture = Heavenish }
+				create_explorer = { tradition = 90 add_manuever = 1 culture = Heavenish }
 			}
 			else_if = {
 				limit = { 
 					navy_tradition = 70
 				}
-				create_admiral = { tradition = 80 add_manuever = 1 culture = Heavenish }
+				create_explorer = { tradition = 80 add_manuever = 1 culture = Heavenish }
 			}
 			else_if = {
 				limit = { 
 					navy_tradition = 60
 				}
-				create_admiral = { tradition = 70 add_manuever = 1 culture = Heavenish }
+				create_explorer = { tradition = 70 add_manuever = 1 culture = Heavenish }
 			}
 			else_if = {
 				limit = { 
 					navy_tradition = 50
 				}
-				create_admiral = { tradition = 60 add_manuever = 1 culture = Heavenish }
+				create_explorer = { tradition = 60 add_manuever = 1 culture = Heavenish }
 			}
 			else = {
-				create_admiral = { tradition = 50 add_manuever = 1 culture = Heavenish }
+				create_explorer = { tradition = 50 add_manuever = 1 culture = Heavenish }
 			}
 			hidden_effect = {
 				clr_consort_flag = THE_IQU_etate_privileges_add_navy_leaders_decisions_cd_flag

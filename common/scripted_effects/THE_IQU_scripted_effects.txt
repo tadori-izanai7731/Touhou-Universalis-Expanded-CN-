@@ -1,3 +1,4 @@
+##定义探索目标 初始化
 THE_IQU_define_expedition_target_effects = {
 	random_owned_province = {
 		limit = {
@@ -41,6 +42,7 @@ THE_IQU_define_expedition_target_effects = {
 	}
 }
 
+##设定 （异常点）
 THE_IQU_add_unique_point_temporary_province_effects = {
 	hidden_effect = {
 		random_owned_province = {
@@ -59,5 +61,53 @@ THE_IQU_add_unique_point_temporary_province_effects = {
 	# event_target:THE_IQU_unique_point_temporar_set_target = {
 	# 	set_province_flag = THE_IQU_province_unique_point_flag
 	# }
+	
+}
+
+##添加危险度，和探险进度
+THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+	hidden_effect = {
+		set_variable = {
+			which = the_iqu_will_change_explore_progress
+			value = $explore$
+		}
+		set_variable = {
+			which = the_iqu_will_change_danger_progress
+			value = $danger$
+		}
+	}
+}
+THE_IQU_add_explore_progress_or_dangerous_progress_effects = {
+	#改变将会改变的进度
+	hidden_effect = {
+		#改变
+		change_variable = {
+			which = the_iqu_now_explore_progress
+			which = the_iqu_will_change_explore_progress
+		}
+		change_variable = {
+			which = the_iqu_now_danger_progress
+			which = the_iqu_will_change_danger_progress
+		}
+	}
+	custom_tooltip = THE_IQU_add_explore_progress_or_dangerous_progres_c_tt1
+}
+
+##探险初始化数值
+THE_IQU_on_start_the_explore_event_effects = {
+	hidden_effect = {
+		set_variable = {
+			which = the_iqu_max_explore_progress
+			value = 100
+		}
+		set_variable = {
+			which = the_iqu_max_danger_progress
+			value = 100
+		}
+	}
+}
+
+##检测探险度是否完成or失败
+THE_IQU_on_check_the_progress_event_effect = {
 	
 }
