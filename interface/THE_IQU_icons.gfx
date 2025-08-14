@@ -1,4 +1,5 @@
 spriteTypes = {
+	## Government Reform
 	spriteType = {
 		name = "government_reform_THE_IQU_government_1_reform"
 		texturefile = "gfx\\interface\\government_reform_icons\THE_IQU\\THE_IQU_government_refom_1.dds"
@@ -6,5 +7,10 @@ spriteTypes = {
 	spriteType = {
 		name = "government_reform_THE_IQU_government_2_reform"
 		texturefile = "gfx\\interface\\government_reform_icons\THE_IQU\\THE_IQU_government_refom_2.dds"
+	}
+	## Event Picture
+	spriteType = {
+		name = "THE_IQU_event_picture_1"
+		texturefile = "gfx//event_pictures//THE_IQU//THE_IQU_event_picture_1.dds"
 	}
 }

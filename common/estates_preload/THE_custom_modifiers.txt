@@ -34,8 +34,8 @@ estate_danmaku = {
 	}
 
 	modifier_definition = {
-		type = privileges
-		key = THE_IQU_nautical_experience_custom_modifier
+		type = loyalty
+		key = THE_IQU_explore_treasury_get_cutom_modifier
 		trigger = {
 			always = yes
 		}

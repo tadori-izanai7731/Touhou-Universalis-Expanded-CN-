@@ -64,7 +64,7 @@ THE_IQU_add_unique_point_temporary_province_effects = {
 	
 }
 
-##添加危险度，和探险进度
+##初始化--将要添加危险度，和探险进度
 THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
 	hidden_effect = {
 		set_variable = {
@@ -75,8 +75,24 @@ THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
 			which = the_iqu_will_change_danger_progress
 			value = $danger$
 		}
+		THE_IQU_read_the_province_difficult_to_progress_script = yes
 	}
 }
+#读取探险难度进行修正
+THE_IQU_read_the_province_difficult_to_progress_script = {
+	random_owned_province = {
+		limit = {
+			has_province_flag = THE_IQU_this_provinces_is_exploring_now
+		}
+		save_event_target_as = THE_IQU_province_difficult_correct_target
+	}
+	if = { limit = { event_target:THE_IQU_province_difficult_correct_target = { has_province_flag = THE_IQU_province_explore_lvl_1_flag } } subtract_variable = { which = the_iqu_will_change_explore_progress value = 1.4 } subtract_variable = { which = the_iqu_will_change_danger_progress value = 0.6 } }
+	else_if = { limit = { event_target:THE_IQU_province_difficult_correct_target = { has_province_flag = THE_IQU_province_explore_lvl_2_flag } } subtract_variable = { which = the_iqu_will_change_explore_progress value = 1.2 } subtract_variable = { which = the_iqu_will_change_danger_progress value = 0.8 } }
+	else_if = { limit = { event_target:THE_IQU_province_difficult_correct_target = { has_province_flag = THE_IQU_province_explore_lvl_3_flag } } subtract_variable = { which = the_iqu_will_change_explore_progress value = 1.0 } subtract_variable = { which = the_iqu_will_change_danger_progress value = 1.0 } }
+	else_if = { limit = { event_target:THE_IQU_province_difficult_correct_target = { has_province_flag = THE_IQU_province_explore_lvl_4_flag } } subtract_variable = { which = the_iqu_will_change_explore_progress value = 0.8 } subtract_variable = { which = the_iqu_will_change_danger_progress value = 1.2 } }
+	else_if = { limit = { event_target:THE_IQU_province_difficult_correct_target = { has_province_flag = THE_IQU_province_explore_lvl_5_flag } } subtract_variable = { which = the_iqu_will_change_explore_progress value = 0.6 } subtract_variable = { which = the_iqu_will_change_danger_progress value = 1.4 } }
+}
+
 THE_IQU_add_explore_progress_or_dangerous_progress_effects = {
 	#改变将会改变的进度
 	hidden_effect = {
@@ -91,23 +107,229 @@ THE_IQU_add_explore_progress_or_dangerous_progress_effects = {
 		}
 	}
 	custom_tooltip = THE_IQU_add_explore_progress_or_dangerous_progres_c_tt1
+	##可视化当前探险进度&危险进度
+	custom_tooltip = THE_IQU_now_explore_progress_view_c_tt_x
+	custom_tooltip = THE_IQU_now_dangerous_progres_view_c_tt_x
+	hidden_effect = {
+		THE_IQU_on_check_the_progress_event_effect = yes
+	}
 }
 
 ##探险初始化数值
 THE_IQU_on_start_the_explore_event_effects = {
 	hidden_effect = {
 		set_variable = {
-			which = the_iqu_max_explore_progress
-			value = 100
+			which = the_iqu_now_explore_progress
+			value = 0
 		}
 		set_variable = {
-			which = the_iqu_max_danger_progress
-			value = 100
+			which = the_iqu_now_danger_progress
+			value = 0
 		}
 	}
 }
 
 ##检测探险度是否完成or失败
 THE_IQU_on_check_the_progress_event_effect = {
-	
+	hidden_effect = {
+		if = {
+			limit = { 
+				check_variable = {
+					which = the_iqu_now_explore_progress
+					value = 100
+				}
+			}
+			###触发成功事件
+			country_event = {
+				id = THE_IQU_flavor_events.1000
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = the_iqu_now_danger_progress
+					value = 100
+				}
+			 }
+			 ###触发失败事件
+			 country_event = {
+				id = THE_IQU_flavor_events.1001
+			}
+		}
+	}
+}
+
+##奖励结算-IMMEDIATE
+THE_IQU_explore_event_get_benifit_immeditate_script = {
+	random_owned_province = {
+		limit = {
+			has_province_flag = THE_IQU_this_provinces_is_exploring_now
+		}
+		save_event_target_as = THE_IQU_province_difficult_about_treasury_target
+	}
+	set_variable = {
+		which = the_iqu_base_treasury_im_var
+		value = 200
+	}
+	if = { limit = { event_target:THE_IQU_province_difficult_about_treasury_target = { has_province_flag = THE_IQU_province_explore_lvl_1_flag } } subtract_variable = { which = the_iqu_base_treasury_im_var value = 0.6 } }
+	else_if = { limit = { event_target:THE_IQU_province_difficult_about_treasury_target = { has_province_flag = THE_IQU_province_explore_lvl_2_flag } } subtract_variable = { which = the_iqu_base_treasury_im_var value = 0.8 } }
+	else_if = { limit = { event_target:THE_IQU_province_difficult_about_treasury_target = { has_province_flag = THE_IQU_province_explore_lvl_3_flag } } subtract_variable = { which = the_iqu_base_treasury_im_var value = 1.0 } }
+	else_if = { limit = { event_target:THE_IQU_province_difficult_about_treasury_target = { has_province_flag = THE_IQU_province_explore_lvl_4_flag } } subtract_variable = { which = the_iqu_base_treasury_im_var value = 1.2 } }
+	else_if = { limit = { event_target:THE_IQU_province_difficult_about_treasury_target = { has_province_flag = THE_IQU_province_explore_lvl_5_flag } } subtract_variable = { which = the_iqu_base_treasury_im_var value = 1.4 } }
+	##设置金钱奖励
+	set_variable = {
+		which = the_iqu_base_treasury_gold_im_var
+		which = the_iqu_base_treasury_im_var
+	}
+	subtract_variable = {
+		which = the_iqu_base_treasury_gold_im_var
+		value = 2
+	}
+	#导出奖励修正
+	export_to_variable = {
+		which = the_iqu_treasury_get_modifier_im_var
+		value = modifier:THE_IQU_explore_treasury_get_cutom_modifier
+	}
+	change_variable = {
+		which = the_iqu_treasury_get_modifier_im_var
+		value = 1
+	}
+	subtract_variable = {
+		which = the_iqu_base_treasury_im_var
+		which = the_iqu_treasury_get_modifier_im_var
+	}
+	## 点数奖励变量 the_iqu_base_treasury_im_var
+	## 金钱奖励变量 the_iqu_base_treasury_gold_im_var
+}
+##奖励获取—Effect
+THE_IQU_explore_event_get_benifit_effect_effect = {
+	#本地化
+	custom_tooltip = THE_IQU_explore_get_treasury_point_c_tt1
+	hidden_effect = {
+		while = {
+			limit = { 
+				check_variable = {
+					which = the_iqu_base_treasury_im_var
+					value = 1
+				}
+			}
+			add_adm_power = 1
+			add_dip_power = 1
+			add_mil_power = 1
+			change_variable = {
+				which = the_iqu_base_treasury_im_var
+				value = -1
+			}
+		}
+		while = {
+			limit = { 
+				check_variable = {
+					which = the_iqu_base_treasury_gold_im_var
+					value = 1
+				}
+			}
+			add_treasury = 1
+			change_variable = {
+				which = the_iqu_base_treasury_gold_im_var
+				value = -1
+			}
+		}
+	}
+}
+##更新「航海经验」变量 the_iqu_nautical_experience_change_im_var
+##检测「航海经验」更改触发概率脚本
+THE_IQU_check_nautical_experience_change_event_random_effects = {
+	if = { limit = { check_variable = { which = the_iqu_nautical_experience_change_im_var value = 10 } } random_list = { 80 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 20 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	else_if = { limit = { check_variable = { which = the_iqu_nautical_experience_change_im_var value = 9 } } random_list = { 75 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 25 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	else_if = { limit = { check_variable = { which = the_iqu_nautical_experience_change_im_var value = 8 } } random_list = { 70 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 30 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	else_if = { limit = { check_variable = { which = the_iqu_nautical_experience_change_im_var value = 7 } } random_list = { 65 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 35 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	else_if = { limit = { check_variable = { which = the_iqu_nautical_experience_change_im_var value = 6 } } random_list = { 60 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 40 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	else_if = { limit = { check_variable = { which = the_iqu_nautical_experience_change_im_var value = 5 } } random_list = { 55 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 45 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	else_if = { limit = { check_variable = { which = the_iqu_nautical_experience_change_im_var value = 4 } } random_list = { 50 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 50 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	else_if = { limit = { check_variable = { which = the_iqu_nautical_experience_change_im_var value = 3 } } random_list = { 45 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 55 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	else_if = { limit = { check_variable = { which = the_iqu_nautical_experience_change_im_var value = 2 } } random_list = { 40 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 60 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	else_if = { limit = { check_variable = { which = the_iqu_nautical_experience_change_im_var value = 1 } } random_list = { 35 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 65 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	else_if = { limit = { check_variable = { which = the_iqu_nautical_experience_change_im_var value = 0 } } random_list = { 30 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 70 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_c_tt1
+}
+
+##更新「才学经验」变量 the_iqu_learning_experience_change_im_var
+##检测「才学经验」更改触发概率脚本
+THE_IQU_check_learning_experience_change_event_random_effects = {
+	if = { limit = { check_variable = { which = the_iqu_learning_experience_change_im_var value = 10 } } random_list = { 80 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 20 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	else_if = { limit = { check_variable = { which = the_iqu_learning_experience_change_im_var value = 9 } } random_list = { 75 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 25 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	else_if = { limit = { check_variable = { which = the_iqu_learning_experience_change_im_var value = 8 } } random_list = { 70 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 30 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	else_if = { limit = { check_variable = { which = the_iqu_learning_experience_change_im_var value = 7 } } random_list = { 65 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 35 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	else_if = { limit = { check_variable = { which = the_iqu_learning_experience_change_im_var value = 6 } } random_list = { 60 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 40 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	else_if = { limit = { check_variable = { which = the_iqu_learning_experience_change_im_var value = 5 } } random_list = { 55 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 45 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	else_if = { limit = { check_variable = { which = the_iqu_learning_experience_change_im_var value = 4 } } random_list = { 50 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 50 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	else_if = { limit = { check_variable = { which = the_iqu_learning_experience_change_im_var value = 3 } } random_list = { 45 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 55 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	else_if = { limit = { check_variable = { which = the_iqu_learning_experience_change_im_var value = 2 } } random_list = { 40 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 60 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	else_if = { limit = { check_variable = { which = the_iqu_learning_experience_change_im_var value = 1 } } random_list = { 35 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 65 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	else_if = { limit = { check_variable = { which = the_iqu_learning_experience_change_im_var value = 0 } } random_list = { 30 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 70 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	custom_tooltip = THE_IQU_check_learning_experience_change_event_effect_c_tt1
+}
+##更新「外交经验」变量 the_iqu_diplomacal_experience_change_im_var
+##检测「外交经验」更改触发概率脚本
+THE_IQU_check_diplomacal_experience_change_event_random_effects = {
+	if = { limit = { check_variable = { which = the_iqu_diplomacal_experience_change_im_var value = 10 } } random_list = { 80 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 20 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	else_if = { limit = { check_variable = { which = the_iqu_diplomacal_experience_change_im_var value = 9 } } random_list = { 75 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 25 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	else_if = { limit = { check_variable = { which = the_iqu_diplomacal_experience_change_im_var value = 8 } } random_list = { 70 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 30 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	else_if = { limit = { check_variable = { which = the_iqu_diplomacal_experience_change_im_var value = 7 } } random_list = { 65 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 35 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	else_if = { limit = { check_variable = { which = the_iqu_diplomacal_experience_change_im_var value = 6 } } random_list = { 60 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 40 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	else_if = { limit = { check_variable = { which = the_iqu_diplomacal_experience_change_im_var value = 5 } } random_list = { 55 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 45 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	else_if = { limit = { check_variable = { which = the_iqu_diplomacal_experience_change_im_var value = 4 } } random_list = { 50 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 50 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	else_if = { limit = { check_variable = { which = the_iqu_diplomacal_experience_change_im_var value = 3 } } random_list = { 45 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 55 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	else_if = { limit = { check_variable = { which = the_iqu_diplomacal_experience_change_im_var value = 2 } } random_list = { 40 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 60 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	else_if = { limit = { check_variable = { which = the_iqu_diplomacal_experience_change_im_var value = 1 } } random_list = { 35 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 65 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	else_if = { limit = { check_variable = { which = the_iqu_diplomacal_experience_change_im_var value = 0 } } random_list = { 30 = { hidden_effect = { country_event = { id = $better_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt1 } 70 = { hidden_effect = { country_event = { id = $bad_id$ days = 2 } } custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt2 } } }
+	custom_tooltip = THE_IQU_check_diplomacal_experience_change_event_effect_c_tt1
+}
+##检测 触发「一般」事件
+THE_IQU_check_none_normal_change_event_random_effects = {
+	hidden_effect = {
+		country_event = {
+			id = $ne_id$
+			days = 2
+		}
+	}
+	custom_tooltip = THE_IQU_check_nautical_experience_change_event_effect_e_tt3
+}
+##「成功」的事件清除
+THE_IQU_clr_the_exploring_now_success_effect = {
+	hidden_effect = {
+		every_owned_province = {
+			limit = {
+				has_province_flag = THE_IQU_this_provinces_is_exploring_now
+			}
+			#清除难度 flag
+			clr_province_flag = THE_IQU_province_explore_lvl_1_flag
+			clr_province_flag = THE_IQU_province_explore_lvl_2_flag
+			clr_province_flag = THE_IQU_province_explore_lvl_3_flag
+			clr_province_flag = THE_IQU_province_explore_lvl_4_flag
+			clr_province_flag = THE_IQU_province_explore_lvl_5_flag
+			#清除异常点
+			clr_province_flag = THE_IQU_province_unique_point_flag
+		}
+		#清除正在探索
+		random_owned_province = {
+			limit = {
+				has_province_flag = THE_IQU_this_provinces_is_exploring_now
+			}
+			clr_province_flag = THE_IQU_this_provinces_is_exploring_now
+		}
+		clr_country_flag = THE_IQU_now_is_exploring_flag
+	}
+}
+#「失败」的事件清除
+THE_IQU_clr_the_exploring_now_fail_effect = {
+	hidden_effect = {
+		random_owned_province = {
+			limit = {
+				has_province_flag = THE_IQU_this_provinces_is_exploring_now
+			}
+			clr_province_flag = THE_IQU_this_provinces_is_exploring_now
+		}
+		clr_country_flag = THE_IQU_now_is_exploring_flag
+	}
 }

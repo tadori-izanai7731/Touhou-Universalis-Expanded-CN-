@@ -32,3 +32,190 @@ defined_text = {
 		}
 	}
 }
+defined_text = {
+	name = THE_IQU_now_explore_progress_view_displat_c_tt
+	random = no
+	text = { 
+		localisation_key = THE_IQU_now_explore_progress_view_displat_ctt_9
+		trigger = {
+			check_variable = {
+				which = the_iqu_now_explore_progress
+				value = 90
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_IQU_now_explore_progress_view_displat_ctt_8
+		trigger = {
+			check_variable = {
+				which = the_iqu_now_explore_progress
+				value = 80
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_IQU_now_explore_progress_view_displat_ctt_7
+		trigger = {
+			check_variable = {
+				which = the_iqu_now_explore_progress
+				value = 70
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_IQU_now_explore_progress_view_displat_ctt_6
+		trigger = {
+			check_variable = {
+				which = the_iqu_now_explore_progress
+				value = 60
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_IQU_now_explore_progress_view_displat_ctt_5
+		trigger = {
+			check_variable = {
+				which = the_iqu_now_explore_progress
+				value = 50
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_IQU_now_explore_progress_view_displat_ctt_4
+		trigger = {
+			check_variable = {
+				which = the_iqu_now_explore_progress
+				value = 40
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_IQU_now_explore_progress_view_displat_ctt_3
+		trigger = {
+			check_variable = {
+				which = the_iqu_now_explore_progress
+				value = 30
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_IQU_now_explore_progress_view_displat_ctt_2
+		trigger = {
+			check_variable = {
+				which = the_iqu_now_explore_progress
+				value = 20
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_IQU_now_explore_progress_view_displat_ctt_1
+		trigger = {
+			check_variable = {
+				which = the_iqu_now_explore_progress
+				value = 10
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_IQU_now_explore_progress_view_displat_ctt_0
+		trigger = {
+			check_variable = {
+				which = the_iqu_now_explore_progress
+				value = 0
+			}
+		}
+	}
+}
+defined_text = {
+	name = THE_IQU_now_dangerous_progress_view_displat_c_tt
+	text = { 
+		localisation_key = THE_IQU_now_dangerous_progress_view_displat_ctt_9
+		trigger = {
+			check_variable = {
+				which = the_iqu_now_danger_progress
+				value = 90
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_IQU_now_dangerous_progress_view_displat_ctt_8
+		trigger = {
+			check_variable = {
+				which = the_iqu_now_danger_progress
+				value = 80
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_IQU_now_dangerous_progress_view_displat_ctt_7
+		trigger = {
+			check_variable = {
+				which = the_iqu_now_danger_progress
+				value = 70
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_IQU_now_dangerous_progress_view_displat_ctt_6
+		trigger = {
+			check_variable = {
+				which = the_iqu_now_danger_progress
+				value = 60
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_IQU_now_dangerous_progress_view_displat_ctt_5
+		trigger = {
+			check_variable = {
+				which = the_iqu_now_danger_progress
+				value = 50
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_IQU_now_dangerous_progress_view_displat_ctt_4
+		trigger = {
+			check_variable = {
+				which = the_iqu_now_danger_progress
+				value = 40
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_IQU_now_dangerous_progress_view_displat_ctt_3
+		trigger = {
+			check_variable = {
+				which = the_iqu_now_danger_progress
+				value = 30
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_IQU_now_dangerous_progress_view_displat_ctt_2
+		trigger = {
+			check_variable = {
+				which = the_iqu_now_danger_progress
+				value = 20
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_IQU_now_dangerous_progress_view_displat_ctt_1
+		trigger = {
+			check_variable = {
+				which = the_iqu_now_danger_progress
+				value = 10
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_IQU_now_dangerous_progress_view_displat_ctt_0
+		trigger = {
+			check_variable = {
+				which = the_iqu_now_danger_progress
+				value = 0
+			}
+		}
+	}
+}
