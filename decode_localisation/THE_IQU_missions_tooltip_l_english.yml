@@ -61,7 +61,7 @@ l_english:
  THE_IQU_burghers_name: "探险家"
  THE_IQU_church_name: "风水师"
  THE_IQU_tennin_delegate_power_privileges: "眠龙贴"
- THE_IQU_tennin_delegate_power_privileges_desc: "吾主衣玖日常在云中闲游，并不在意天下琐事，并把大部分不关键的政务交给了各大阶层。"
+ THE_IQU_tennin_delegate_power_privileges_desc: "天界政局已定，长女大人尚能主持事务。吾主衣玖习惯长日在云中闲游，并不想在意天下琐事，便把大部分不关键的政务交给了各大阶层。"
  THE_IQU_tennin_delegate_power_privileges_c_tt1: " 启用阶层决议§Y天人:召集探险家§!\n 此§Y阶层互动§!将会提供以下效果：\n 获得§G50§!陆军传统的探险家（该探险家§Y将领机动§!额外§G+1§!）。\n §Y效果随海军传统的多少而变化§!\n§Y天人§!阶层失去§R10§!忠诚度"
 ### ESTATE_END
 
@@ -235,4 +235,11 @@ l_english:
  THE_IQU_now_dangerous_progress_view_displat_ctt_2: " §R■ ■§! ■ ■ ■ ■ ■ ■ ■ ■"
  THE_IQU_now_dangerous_progress_view_displat_ctt_1: " §R■§! ■ ■ ■ ■ ■ ■ ■ ■ ■"
  THE_IQU_now_dangerous_progress_view_displat_ctt_0: " ■ ■ ■ ■ ■ ■ ■ ■ ■ ■"
+ THE_IQU_add_prestige_or_navy_tradition_c_tt1: "溢出的威望转化为§Y海军传统§!"
 ### SCRIPT_EFFECT_END
+
+
+
+### SCRIPT_TRIGGER
+ THE_IQU_this_province_had_been_explored_ctt_1: "§Y[This.GetName]§!地区已经通过「§M云游机制§!」§Y完成探索§!"
+### SCRIPT_TRIGGER_END

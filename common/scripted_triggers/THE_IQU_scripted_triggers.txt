@@ -1,0 +1,13 @@
+THE_IQU_this_province_had_been_explored_custom_trigger = {
+	$area$ = {
+		custom_trigger_tooltip = {
+			tooltip = THE_IQU_this_province_had_been_explored_ctt_1
+			hidden_trigger = {
+				any_owned_province = {
+					area = $area$
+					has_province_flag = THE_IQU_this_province_had_been_explored_flag
+				}
+			}	
+		}
+	}
+}

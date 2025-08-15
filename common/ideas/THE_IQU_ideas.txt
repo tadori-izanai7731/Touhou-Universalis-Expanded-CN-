@@ -1,6 +1,6 @@
 THE_IQU_ideas = {
     start = {
-		naval_maintenance_modifier = -0.25
+		light_ship_power = 0.33
 		morale_damage = 0.10
 	}
 	bonus = {
@@ -12,7 +12,7 @@ THE_IQU_ideas = {
 	free = yes
 	THE_IQU_ideas_1 = {
 		diplomatic_reputation = 2
-		light_ship_power = 0.33
+		naval_maintenance_modifier = -0.25
 	}
 	THE_IQU_ideas_2 = {
 		naval_tradition_from_battle = 0.33
@@ -35,6 +35,6 @@ THE_IQU_ideas = {
 	}
 	THE_IQU_ideas_7 = {
 		development_cost = -0.05
-		global_ship_cost = -0.20
+		global_ship_cost = -0.15
 	}
 }

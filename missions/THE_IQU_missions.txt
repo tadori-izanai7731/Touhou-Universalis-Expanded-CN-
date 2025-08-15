@@ -58,9 +58,10 @@ THE_IQU_main_branch_1 = {
 		 } 
 
 		effect = { 
-			THE_IQU_add_unique_point_temporary_province_effects = {
-				area = Dragon_islands
-				level = 1
+			Dragon_islands = {
+				THE_IQU_add_unique_point_temporary_province_effects = {
+					level = 1
+				}
 			}
 			custom_tooltip = THE_IQU_1_2_c_tt1
 			add_country_modifier = {
@@ -76,9 +77,18 @@ THE_IQU_main_branch_1 = {
 		required_missions = { THE_IQU_1_2 } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			THE_IQU_this_province_had_been_explored_custom_trigger = {
+				area = Dragon_islands
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			add_dip_power = 50
+			THE_IQU_add_prestige_or_navy_tradition_effects = {
+				value = 25
+			}
+		} 
 	}
 
 	THE_IQU_1_4 = {

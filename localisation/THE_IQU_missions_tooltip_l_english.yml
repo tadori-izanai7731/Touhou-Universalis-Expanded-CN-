@@ -61,7 +61,7 @@
  THE_IQU_burghers_name: "¢ci–¶R"
  THE_IQU_church_name: "Î˜4l^"
  THE_IQU_tennin_delegate_power_privileges: ".w™Ÿ4"
- THE_IQU_tennin_delegate_power_privileges_desc: ">TINcˆ–såe8^(W‘N-Nò•8nÿv^N(Wa)YNt‹Nÿv^Šb'YèRNsQ.•„v?e¡R²NÙu†NT'Y6–BS0"
+ THE_IQU_tennin_delegate_power_privileges_desc: ")YLu?eNSòTšRÿ•sY'YºNSýwINc‹N¡R0>TINcˆ–s`Nï`•åe(W‘N-Nò•8nÿv^Nó`(Wa)YNt‹Nÿ¿OŠb'YèRNsQ.•„v?e¡R²NÙu†NT'Y6–BS0"
  THE_IQU_tennin_delegate_power_privileges_c_tt1: " =T(u6–BS³Q®‹§Y)YºN:ìSÆ–¢ci–¶R§!\n dk§Y6–BS’N¨R§!SOÐc›OåNNHeœgÿ\n ·ƒ—V§G50§!F–›Q.Oßu„v¢ci–¶Rÿå‹¢ci–¶R§YS†˜:g¨R§!˜Y§G+1§!	ÿ0\n §YHeœg–wm›Q.Oßu„vYSwØSS§!\n§Y)YºN§!6–BS1Y»S§R10§!àVÚ‹¦^"
 ### ESTATE_END
 
@@ -235,4 +235,11 @@
  THE_IQU_now_dangerous_progress_view_displat_ctt_2: " §R %  %§!  %  %  %  %  %  %  %  %"
  THE_IQU_now_dangerous_progress_view_displat_ctt_1: " §R %§!  %  %  %  %  %  %  %  %  %"
  THE_IQU_now_dangerous_progress_view_displat_ctt_0: "  %  %  %  %  %  %  %  %  %  %"
+ THE_IQU_add_prestige_or_navy_tradition_c_tt1: "¢núQ„vZglS:N§Ywm›Q.Oßu§!"
 ### SCRIPT_EFFECT_END
+
+
+
+### SCRIPT_TRIGGER
+ THE_IQU_this_province_had_been_explored_ctt_1: "§Y[This.GetName]§!0W:SòTÏuÇ0§M‘N8n:g6R§!0§YŒRb¢c0t§!"
+### SCRIPT_TRIGGER_END
