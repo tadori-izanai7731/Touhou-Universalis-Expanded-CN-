@@ -58,6 +58,14 @@ THE_IQU_main_branch_1 = {
 		 } 
 
 		effect = { 
+			#任意Dragon_islands区域的province_id
+			<province_id> = {
+				random_province_in_state = {
+					THE_IQU_add_unique_point_temporary_province_effects = {
+						level = 1
+					}
+				}
+			}
 			Dragon_islands = {
 				THE_IQU_add_unique_point_temporary_province_effects = {
 					level = 1
