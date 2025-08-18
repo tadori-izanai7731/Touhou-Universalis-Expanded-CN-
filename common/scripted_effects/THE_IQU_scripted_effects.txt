@@ -116,6 +116,39 @@ THE_IQU_add_explore_progress_or_dangerous_progress_effects = {
 		THE_IQU_on_check_the_progress_event_effect = yes
 	}
 }
+#月球探索探险进度 无视danger
+THE_IQU_add_explore_progress_or_dangerous_progress_effects_before_on_moon_once = {
+	hidden_effect = {
+		set_variable = {
+			which = the_iqu_will_change_explore_progress
+			value = $explore$
+		}
+		set_variable = {
+			which = the_iqu_will_change_danger_progress
+			value = $danger$
+		}
+	}
+}
+#月球探索探险进度 无视danger
+THE_IQU_add_explore_progress_or_dangerous_progress_effects_on_moon_once = {
+	#改变将会改变的进度
+	hidden_effect = {
+		#改变
+		change_variable = {
+			which = the_iqu_now_explore_progress
+			which = the_iqu_will_change_explore_progress
+		}
+		change_variable = {
+			which = the_iqu_now_danger_progress
+			which = the_iqu_will_change_danger_progress
+		}
+	}
+	custom_tooltip = THE_IQU_add_explore_progress_or_dangerous_progres_c_tt1
+	##可视化当前探险进度&危险进度
+	custom_tooltip = THE_IQU_now_explore_progress_view_c_tt_x
+	custom_tooltip = THE_IQU_now_dangerous_progres_view_c_tt_x
+}
+
 
 ##探险初始化数值
 THE_IQU_on_start_the_explore_event_effects = {

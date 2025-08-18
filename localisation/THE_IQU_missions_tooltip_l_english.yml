@@ -54,6 +54,7 @@
  THE_IQU_overlord_yunn_buff: "„s‘Nwm"
  THE_IQU_abyssal_scale_forge_buff: "ß†™Ÿ:x2u"
  THE_IQU_sail_and_sails_buff: "V^Ü*‚"
+ THE_IQU_base_on_the_moon_buff: "gb—9hnc0W"
 ### MODIFIER_END
 
 ### ESTATE
@@ -68,6 +69,8 @@
 ### MISSION_EXTRA
  THE_IQU_1_1_c_tt: "ã‰•§Y)YºN§!6–BSyrCg0§Y.w™Ÿ^§!0ÿS·ƒ—VåNNHeœgÿ\n "
  THE_IQU_1_2_c_tt1: " SV§YûNawýN§!åb	g§OwmþVV8^¹p§!öeÿbìNsSïSã‰•§Y³Q®‹§!0¢ci–ÜƒUS0"
+ THE_IQU_2_3_extra_c_tt1_yes: "\n£yes£å‚ŒRbûN¡Röe,@LCU[LCU.GetName]åb	gùRbìN„v‹Ya¦^îOck0§Y‰…„v®O±§!0ÿSO·ƒ—VåNNHeœgÿ"
+ THE_IQU_2_3_extra_c_tt1_no: "\n£no£å‚ŒRbûN¡Röe,@LCU[LCU.GetName]åb	gùRbìN„v‹Ya¦^îOck0§Y‰…„v®O±§!0ÿSO·ƒ—VåNNHeœgÿ"
 ### MISSION_EXTRA_END
 
 ### DECISIONS
@@ -188,6 +191,103 @@
  THE_IQU_flavor_events.30.t: "&V­eYOó—"
  THE_IQU_flavor_events.30.desc: "cˆ–scS¹eæ‰4t&VÿNnó—S*gceVÿýVÁ‰NSR—qV‚Y5u4xzz0NêSR—ž¾u cÇ­NÒ‰ÿÎ˜Ã”²šÍTÊ`4xÂRY—04t&VáU1ž—²˜ÿcˆ–scS®V˜ÿ–sSfW6q6eKb0cˆ–s±b4tw«Žÿ–:g&^†˜OºN»yV0"
  THE_IQU_flavor_events.30.1: "YOó—*gKS"
+ THE_IQU_flavor_events.30.t: "g®NN„vºN"
+ THE_IQU_flavor_events.30.desc: "nc™Ÿ^yNb:yÿg®Nv^^—Z†àe%„v.Oô‹KNirÿw=f¬`ŽNÜ»y‰^ó`aN0MOŽNÔk)YLuôfÜØš)Y„vtSO0vQ0WhˆwQYïS›O‰vF–„virtagöNÿ‹†6qÙÜ…ŽN8^ºN„vtã‰0°s)YLuéy^òT6q3zúVN™Ÿ«RòTàe‹N¡Rÿcˆ–smN¡lÅV‰…V(WÙ|`ºN„vœ^¸-N†N0"
+ THE_IQU_flavor_events.30.1: "êS=f»yV›N¸‹öeP0"
+ THE_IQU_event_30_c_tt1: "SVŒRb§Ygb—§!:SßW„v¢c0tTÿgºN„v2–¡Vû|ßuSO1YHe0"
+ THE_IQU_flavor_events.31.t: "ppr‚RƒŸS"
+ THE_IQU_flavor_events.31.desc: "bìN(WgtRƒ.obŸRNwF–0<wMRofaŒN^yÝ‹-N„vg*b6qNTÿîvKNNbÊS=U	g‰kÂR„vpp‹vRƒŸSÿz„…„v'YlàeÕlµb¡VËpíp„v3–IQÿ0WhˆM^ŽxówN©SQS0v`±R¯sƒXÜ…„˜gÿ9‚XTìNùRÙGr*gåw†˜ßWàQNNNàeNbåw0"
+ THE_IQU_flavor_events.31.1: "TD–Ñ„vqS	bVV"
+ THE_IQU_flavor_events.31.2: "1S0WÍ‘te9hnc0W"
+ THE_IQU_flavor_events.32.t: "gKNof"
+ THE_IQU_flavor_events.32.desc: "^y‚èÇRƒ.o¹„vqS	ÿ>f2—(W<wMR„v=f²š6qTN„va–TÿQÜY=fË–„v—fr‚s^ŸS0ö”ppr‚„sfk©S(W8lR`„vYzzNÛlw‹^IQÿÜ:wKNofßz<O)YLuP¬`„v‘NwmÿîXKN—VäNºNOSo`0"
+ THE_IQU_flavor_events.32.1: "‚YdkÛvofÿN¨YjO×‹N–™0"
+ THE_IQU_flavor_events.33.t: "Únów"
+ THE_IQU_flavor_events.33.desc: "^y‚p‚¾–ûŠgtqS	KNE–ÿa–íSqSÁXN„vèTówàVÍ‘›RŒg¨Rÿp6qÚnK„0vQ-NNWWèTówàràrždûQ9‚SOµOb—ÿÑSúQ:R3w„vidædðX0(g(9‚«Ž˜öeúQ°sf>fèxmcÿNx^Óu„g*gmô‹T4xOWÿ*‚Lˆýw›RSXR0"
+ THE_IQU_flavor_events.33.1: "HQëM–ÀhîO'T0"
+ THE_IQU_flavor_events.34.t: "gb—9hnc0W"
+ THE_IQU_flavor_events.34.desc: "cˆ–sNäN(WNwF–¹pú^¾‹4Nöe9hnc0Wÿv^>mcºNXTÇ‘Æ–hT¹„vgt7h,g0>e<wg»SÿÙÌ‘„vRƒÉQ0WŒŒN)YLu„v‘NwmNnmów*b6qNTÿpp‹v„v'Y0WÂRY—àeðXÿÿNiOÞöeô•ýòTÝQúV0"
+ THE_IQU_flavor_events.34.1: "NRý=f±HN„vNïS`®‹0"
+ THE_IQU_flavor_events.35.t: "*Y3–Î˜"
+ THE_IQU_flavor_events.35.desc: "gt<ONN:S‰|<O‰^ó`aN'YÓuLu„v^yf›RÏ‘‡^²bÿNb	g0WŒŒý´f2—(WËpíp„v*Y3–KNNÿcíub×SNwÐgÍy:V'Yw*gåw„v*Y3–›RÏ‘gqS0KS¡r^y‚1uyr6RPg™e„gbÿFOÍNàeÕl•gµb¡VÙÍyàebV„vµOŽ†0"
+ THE_IQU_flavor_events.35.1: "åNSÕlú^¾‹ÓuLuÛLˆµb¡V0"
+ THE_IQU_flavor_events.35.2: "wßRÙÍy^yØy°saŒ"
+ THE_IQU_flavor_events.36.t: "'Y0WKN™–"
+ THE_IQU_flavor_events.36.desc: "^y‚(W*‚Lˆ-NaYÑS°sNYñmƒ„vgb—Âˆ7Œÿcˆ–sSV:gËz­eNäNvšeQ0èT©S„v4–qV”–Ýu†NËpÈp„v3–IQÿ9‚SO(WøvùR3zšR„v¯sƒX-N‚föeMQ×SµOŽ†0Âˆ7Œ…Qè‹†‹^—fÿtS+R	gm)Y0*gþfÁ‰Ç„vÿwów(WmÁXNê•ÁpNw0"
+ THE_IQU_flavor_events.36.1: "Ç‘›Nww'T0"
+ THE_IQU_flavor_events.37.t: "ÓuLu4xmc"
+ THE_IQU_flavor_events.37.desc: "¾‹N„vÓuLu*gýwŒRhQµb¡V*Y3–›RÏ‘„v²QûQÿËpíp„v^yØyýwÏ‘z†N2–²bÿ)YLuÐc›O„vüR*‚Åˆn(WtqN„v»yPRAm-N‰V•^1Yupÿ9‚SOgRÈp—¨Rÿ*‚Lˆýw›RòT'YSb˜bcb0"
+ THE_IQU_flavor_events.37.1: "Ù=fUOIr„v›RÏ‘ÿ"
+ THE_IQU_flavor_events.38.t: "8^Æ‹KNY"
+ THE_IQU_flavor_events.38.desc: "Çcˆ–s„vOe•Â‰KmNýw›R¢cågÿbìNÈuŽNùRÙ¡w|píp„v*Y3–KN›R	g†NRek²‹åw0ƒRâe^—8^Æ‹-N„v^y›R¦N^—)YLuKNuplÿw=fNÍy¯u¹|„vlo`0vQ	gNÍy:d&^ýwÏ‘„v®VSKNirGlZwwbÿbìNSvQðyKN:N0ïz00"
+ THE_IQU_flavor_events.38.1: "åNbìNîvMR„v4ls^v^¡l	gžRÕlÂ‰Km0"
+ THE_IQU_flavor_events.39.t: "*gã‰KNŒ"
+ THE_IQU_flavor_events.39.desc: "KS¡ríz›RwßRÿFOdkIr›RÏ‘âe^—^yfi`ýlÿ¦N^—–YªT³uÿvQXR(W,g«Ž¿ON‰^ó`aN„v8^Æ‹øv–`ÿ„seY«ƒKm0"
+ THE_IQU_flavor_events.39.1: "åeTÂSŸ`'T0"
+ THE_IQU_flavor_events.40.t: "^yØy„vqVPR"
+ THE_IQU_flavor_events.40.desc: "bìNvšeQgwms^ŸSÿcˆ–sz6qf‹É‰å‚	gå‚àe„vlo` cÇRƒ.oÿbìNòT«ˆïvN0cˆ–síQPã‰û‹zzl„výw›RÿyYÅ•šRîvhÿNêS–?S«ŽbV„v0Wñr–Y¾|0*gIr`—Ñÿ–Y¾|tSåNv`jOgR„vßpþ–nK…Æ‰Î‘ÿ¬wô•ˆm1Yàe*Ž0"
+ THE_IQU_flavor_events.40.1: "¡RÅVÒdOO¡Rî•ÿ"
+ THE_IQU_flavor_events.40.2: "„`6q>S–0"
+ THE_IQU_flavor_events.41.t: "¡Rî•"
+ THE_IQU_flavor_events.41.desc: "bìNˆVëVÒdOO±êS0Wñr–Y¾|ÿ(WO)YºN„vZQaNÿ–Y¾|bhNwT2—wøvÿ0=f0WñrsY^ykaSÐcšN·Ébµx¯eÉbVy)R'YºN>mbìNeg„vÿ0yYcTgb—ñmYÿ0'YºN×S^yupKNXbÛIegKNýÿbìN1pbqNgb—ÓuLu···0(W–Y¾|„vcVNbìNÁ‰0R†NNagÓuLu„v™–ÿ±=fŽVÌ‘KNg„vSï0"
+ THE_IQU_flavor_events.41.1: "w=fGY™Y0"
+ THE_IQU_flavor_events.42.t: "v`jOgR"
+ THE_IQU_flavor_events.42.desc: "bìNˆVëVÒdOO±êS0Wñr–Y¾|ÿ(WO)YºN„vZQaNÿ–Y¾|mt)NwfW‹vÿ0=f0WñrsY^ykaSÐcšN·Ébµx¯eÉbVy)R'YºN>mbìNeg„vÿ0yYcTgb—ñmYÿ0'YºN×S^yupKNXbÛIegKNýÿbìN1pbqNgb—ÓuLu···06qwSVcˆ–sýî•ôfYÆu‚‚öeÿ–Y¾|z6qáràžNrÿzz-NNåwUOöeúQ°s„v‰|+g«ˆlbT9‚XTÿ«ˆlbT„v9‚XT•mêl*jAmàeÕlAw<w0YêS–Y¾|SyYìN„vO4OQepÿ1öeØàràr„vž±†NbìN0"
+ THE_IQU_flavor_events.42.1: "b†NÿQ“bOOyYìNmN¡lÀNHNaIN0"
+ THE_IQU_flavor_events.43.t: "Z†*OKNg"
+ THE_IQU_flavor_events.43.desc: "cˆ–sªVNw–Y¾|WYu„v*ŽùÿV†˜^y‚ñmeQôfñmY„vgwmÿgÈu(WNYmbòfgIQ„vÂˆ™–MR‰š³0dkYXR(WNwN‰^ó`aN'YÓuLuøv<O„vÓuLuÿgb—„vRƒœ‚ßzêS=fZ†GPhˆaŒÿbìNNåwÓuLu„væSNïz=fÀNHN0NÂˆ™–ír˜–ÿ^y‚àeÕlLˆÿêS‹Y1ucˆ–s‡sàQMO)YºNqQTÛeQvQ-N0"
+ THE_IQU_flavor_events.43.1: "ŽeQvQ-N0"
+ THE_IQU_flavor_events.44.t: "Z†qV÷*Ž"
+ THE_IQU_flavor_events.44.desc: "9‚–ªVNw–Y¾|„vÕuùñmeQgwmÿtSk6qÑS°s±›Nê•Áp„v÷xIQ0jkœe„v³pShQ=f¾|ÃV^n„vGPˆmo`bìN«ˆbV†NÿFOâe6qO	g–Y¾|(WÙàeu‹T„vRƒ.oûy¨RÿÙD–ÑÅVšRNÏP=fwwegÙ7h0êSýw(uaåwd0tÙGr0W&^†N0"
+ THE_IQU_flavor_events.44.1: "ÙO9›Nöeô•0"
+ THE_IQU_flavor_events.45.t: "qNAmN¦hƒXzzô•"
+ THE_IQU_flavor_events.45.desc: "SVbìNÛeQÓuLu„v™–ÿÂr´f„vqNAmùˆcNwbìNÿždeQNGrIQ*`F–»y„vVßW0àQMO)YºNÅÝQw‘Nþ–3zšR«ŽbVÿSVÂ‰ßRÛVhTöeÿ<wMRßz=fBSBSàSàS„v¹e<hQÜuÿ‚YàQUOñhj•,‚²N•ö^8Oÿ-N.Y¬`nmNwNnèT'Y¢ugÿ·QIQzmbòf„vzzô•PWh0àepeRƒÞ‹„vofaŒ(WdkŒm°s0"
+ THE_IQU_flavor_events.45.1: "‚Ydká‹2ŒKNofÿŽNdkjOIu0"
+ THE_IQU_flavor_events.45.2: "ûRŒbúQãS"
+ THE_IQU_flavor_events.46.t: "0Ði‰RþV0"
+ THE_IQU_flavor_events.46.desc: "cˆ–sËzŽNZ†zz¹e<hKNô•ÿUSVIut(WZ†àe-NjOIuÿRÅk‚YqS³S„vr•R4x÷mŒlÿÔgå‚Am‘N„vUèl˜bÈSþRÒRúQzzô•PWh„vôv¿u0–NwgTNôn¨XŽNIut>SèK„>kÿ‚YdkRƒÞ‹„vVaŒ1SšR<h(W±R¸uKNNÿSjO0Ði‰RþV00"
+ THE_IQU_flavor_events.46.1: "jO:NªuõVmNN•0"
+ THE_IQU_flavor_events.47.t: "¦hƒX„v=eM‘w"
+ THE_IQU_flavor_events.47.desc: "cˆ–s¬`UŽNZ†zzÿrSÝQÞno‚EN0¨Xr‚(W¹e<hQÜuô•?‡‡ÿtSËYÈuàeÕlUcIc±n¢ug„v^yõ—0jOIuNJSöeÿcˆ–sýV6q·cr•ùSÿIut«ˆ·cTqNAm09R±ô•ÿVzzô•gRÈp—²˜ÿ¦hƒXzzô•„vINºNÆTegªT°s«Ž†NÿN:Wv`bNïSMQ0"
+ THE_IQU_flavor_events.47.1: "dkIrofr‚Ø=fîT›N0"
+ THE_IQU_flavor_events.48.t: "¦hƒX„v=eM‘w"
+ THE_IQU_flavor_events.48.desc: "cˆ–s‡s)YºNzLˆŽN¹e<hQÜuÿRƒÞ‹„vVaŒ(WÛVhTAml0ýV6qÿ¦hƒX„vINºNÆTegªTÏ‚Oyr°s«Ž†N0‹†6qyY(WdkˆR²bŽVgKNý„vSÿNÇÙàQMO<yŒŒ„v¢RºNv^¡l.b*YY»žæpÿyYˆVPNa>eLˆÿz˜¿OØ2—0gKNý0Ù*N*gåw¿R›R„vøvsQáOo`0"
+ THE_IQU_flavor_events.48.1: "a0ŒMRˆ0"
+ THE_IQU_flavor_events.49.t: ""
+ THE_IQU_flavor_events.49.desc: ""
+ THE_IQU_flavor_events.49.1: ""
+ THE_IQU_flavor_events.50.t: ""
+ THE_IQU_flavor_events.50.desc: ""
+ THE_IQU_flavor_events.50.1: ""
+ THE_IQU_flavor_events.50.2: ""
+ THE_IQU_flavor_events.51.t: ""
+ THE_IQU_flavor_events.51.desc: ""
+ THE_IQU_flavor_events.51.1: ""
+ THE_IQU_flavor_events.52.t: ""
+ THE_IQU_flavor_events.52.desc: ""
+ THE_IQU_flavor_events.52.1: ""
+ THE_IQU_flavor_events.53.t: ""
+ THE_IQU_flavor_events.53.desc: ""
+ THE_IQU_flavor_events.53.1: ""
+ THE_IQU_flavor_events.54.t: ""
+ THE_IQU_flavor_events.54.desc: ""
+ THE_IQU_flavor_events.54.1: ""
+ THE_IQU_flavor_events.55.t: ""
+ THE_IQU_flavor_events.55.desc: ""
+ THE_IQU_flavor_events.55.1: ""
+ THE_IQU_flavor_events.56.t: ""
+ THE_IQU_flavor_events.56.desc: ""
+ THE_IQU_flavor_events.56.1: ""
+ THE_IQU_flavor_events.57.t: ""
+ THE_IQU_flavor_events.57.desc: ""
+ THE_IQU_flavor_events.57.1: ""
+ THE_IQU_flavor_events.58.t: ""
+ THE_IQU_flavor_events.58.desc: ""
+ THE_IQU_flavor_events.58.1: ""
+ THE_IQU_flavor_events.58.2: ""
+ THE_IQU_flavor_events.59.t: ""
+ THE_IQU_flavor_events.59.desc: ""
+ THE_IQU_flavor_events.59.1: ""
 ### EVENT_END
 
 ### END_EVENT
@@ -204,7 +304,7 @@
 ### END_EVENT_END
 
 ### SCRIPT_EFFECT
- THE_IQU_unique_set_temporary_point_c_tt1: ":N§Y[This.GetName]§!ûm R§OwmþVV8^¹p§!"
+ THE_IQU_unique_set_temporary_point_c_tt1: ":N§Y[This.GetAreaName]§!ûm R§OwmþVV8^¹p§!"
  THE_IQU_add_explore_progress_or_dangerous_progres_c_tt1: "  :NSVMR¢ci–Û¦^9eØS§G[Root.the_iqu_will_change_explore_progress.GetValue]%§!\n  :NSVMRqSi–Û¦^9eØS§R[Root.the_iqu_will_change_danger_progress.GetValue]%§!"
  THE_IQU_check_nautical_experience_change_event_effect_c_tt1: "-dk	y˜:N@IQU§M*‚wm	y˜§!ÿ‰béb‚i‡sSO1u§Y0*‚wmÏuŒš0§!³QšR"
  THE_IQU_check_nautical_experience_change_event_effect_e_tt1: "§Yæ‰ÑSbŸR‹NöN§!"
@@ -243,3 +343,10 @@
 ### SCRIPT_TRIGGER
  THE_IQU_this_province_had_been_explored_ctt_1: "§Y[This.GetName]§!0W:SòTÏuÇ0§M‘N8n:g6R§!0§YŒRb¢c0t§!"
 ### SCRIPT_TRIGGER_END
+
+### CB_TYPES
+ THE_IQU_lunar_war_cb: "gb—b‰N"
+ THE_IQU_lunar_war_cb_desc: "§Yå‹±Rbt1uêSýwrR©‹îvhMOŽN0gb—0:SßW„vwýN0§!"
+ THE_IQU_lunar_war_goals_desc: "b‰Nîvh: :YÖS–™ý"
+ THE_IQU_lunar_war_name: "gb—b‰N"
+### CB_TYPES_END

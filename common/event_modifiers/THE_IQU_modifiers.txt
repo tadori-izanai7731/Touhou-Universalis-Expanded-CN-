@@ -11,3 +11,9 @@ THE_IQU_sail_and_sails_buff = {
 	naval_maintenance_modifier = -0.10
 	sailors_recovery_speed = 0.50
 }
+#月面根据地
+THE_IQU_base_on_the_moon_buff = {
+	province_trade_power_value = 50
+	local_development_cost = -0.15
+	local_production_efficiency = 0.10
+}

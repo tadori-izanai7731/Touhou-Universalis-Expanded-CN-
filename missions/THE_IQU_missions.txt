@@ -59,14 +59,7 @@ THE_IQU_main_branch_1 = {
 
 		effect = { 
 			#任意Dragon_islands区域的province_id
-			<province_id> = {
-				random_province_in_state = {
-					THE_IQU_add_unique_point_temporary_province_effects = {
-						level = 1
-					}
-				}
-			}
-			Dragon_islands = {
+			5032 = {
 				THE_IQU_add_unique_point_temporary_province_effects = {
 					level = 1
 				}
@@ -203,22 +196,83 @@ THE_IQU_main_branch_2 = {
 		icon = mission_unknown_mission
 		position = 3
 		required_missions = { THE_IQU_1_2 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			region = moon_region
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			5320 = {
+				has_discovered = ROOT
+			}
+			5338 = {
+				has_discovered = ROOT
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			5338 = {
+				cede_province = ROOT
+				change_culture = ROOT
+				change_religion = ROOT
+				THE_IQU_add_unique_point_temporary_province_effects = {
+					level = 4
+				}
+			}
+			add_adm_power = 50
+			if = {
+				limit = { 
+					5320 = {
+						owner = {
+							has_opinion_modifier = {
+								who = ROOT
+								modifier = scornfully_insulted
+							}
+						}
+					}
+				}
+				custom_tooltip = THE_IQU_2_3_extra_c_tt1_yes
+				add_power_projection = {
+					type = zim_african_great_power 
+					amount = 10
+				}
+			}
+			else = {
+				custom_tooltip = THE_IQU_2_3_extra_c_tt1_no
+				tooltip = {
+					add_power_projection = {
+						type = zim_african_great_power 
+						amount = 10
+					}
+				}
+			}
+		 } 
 	}
 
 	THE_IQU_2_4 = {
 		icon = mission_unknown_mission
 		position = 4
 		required_missions = { THE_IQU_2_3 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			area = Uncolonized_moon_state
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			THE_IQU_this_province_had_been_explored_custom_trigger = {
+				area = Uncolonized_moon_state
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			moon_region = {
+				add_permanent_claim = ROOT
+			}
+			5338 = {
+				add_province_modifier = {
+					name = THE_IQU_base_on_the_moon_buff
+					duration = -1
+				}
+			}
+		} 
 	}
 
 	THE_IQU_2_5 = {

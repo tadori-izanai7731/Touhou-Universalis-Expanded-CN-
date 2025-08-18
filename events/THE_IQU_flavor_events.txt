@@ -890,6 +890,547 @@ country_event = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
 	}
 }
+##################
+###月之都
+
+## #0 月球之行，起点
+country_event = {
+	id = THE_IQU_flavor_events.30
+	title = "THE_IQU_flavor_events.30.t"
+	desc = "THE_IQU_flavor_events.30.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+	}
+	option = {
+		name = THE_IQU_flavor_events.30.1
+		goto = 5338
+		custom_tooltip = THE_IQU_event_30_c_tt1
+		add_prestige = -5
+		add_dip_power = 20
+		hidden_effect = {
+			country_event = {
+				id = THE_IQU_flavor_events.31
+				days = 730
+			}
+		}
+	}
+}
+##  #1 无边的荒原 无法前进
+country_event = {
+	id = THE_IQU_flavor_events.31
+	title = "THE_IQU_flavor_events.31.t"
+	desc = "THE_IQU_flavor_events.31.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		#坚持前进
+		name = THE_IQU_flavor_events.31.1
+	}
+	option = {
+		#休整根据地
+		name = THE_IQU_flavor_events.31.2
+		random_owned_province = {
+			limit = {
+				region = moon_region
+			}
+			add_base_production = 1
+		}
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.32
+	title = "THE_IQU_flavor_events.32.t"
+	desc = "THE_IQU_flavor_events.32.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+	}
+	option = {
+		name = THE_IQU_flavor_events.32.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.33
+	title = "THE_IQU_flavor_events.33.t"
+	desc = "THE_IQU_flavor_events.33.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+	}
+	option = {
+		name = THE_IQU_flavor_events.33.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.34
+	title = "THE_IQU_flavor_events.34.t"
+	desc = "THE_IQU_flavor_events.34.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+	}
+	option = {
+		name = THE_IQU_flavor_events.34.1
+	}
+}
+## #2 太阳风
+country_event = {
+	id = THE_IQU_flavor_events.35
+	title = "THE_IQU_flavor_events.35.t"
+	desc = "THE_IQU_flavor_events.35.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+	}
+	option = {
+		#坚持前进
+		name = THE_IQU_flavor_events.35.1
+	}
+	option = {
+		#考察现象
+		name = THE_IQU_flavor_events.35.2
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.36
+	title = "THE_IQU_flavor_events.36.t"
+	desc = "THE_IQU_flavor_events.36.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+	}
+	option = {
+		name = THE_IQU_flavor_events.36.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.37
+	title = "THE_IQU_flavor_events.37.t"
+	desc = "THE_IQU_flavor_events.37.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+	}
+	option = {
+		name = THE_IQU_flavor_events.37.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.38
+	title = "THE_IQU_flavor_events.38.t"
+	desc = "THE_IQU_flavor_events.38.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+	}
+	option = {
+		name = THE_IQU_flavor_events.38.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.39
+	title = "THE_IQU_flavor_events.39.t"
+	desc = "THE_IQU_flavor_events.39.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+	}
+	option = {
+		name = THE_IQU_flavor_events.39.1
+	}
+}
+## #3 月海 进入月海，被妖精盯上
+country_event = {
+	id = THE_IQU_flavor_events.40
+	title = "THE_IQU_flavor_events.40.t"
+	desc = "THE_IQU_flavor_events.40.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+	}
+	option = {
+		#抓住妖精，外交
+		name = THE_IQU_flavor_events.40.1
+	}
+	option = {
+		#追上她，顺便研究附近地表
+		name = THE_IQU_flavor_events.40.2
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.41
+	title = "THE_IQU_flavor_events.41.t"
+	desc = "THE_IQU_flavor_events.41.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+	}
+	option = {
+		name = THE_IQU_flavor_events.41.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.42
+	title = "THE_IQU_flavor_events.42.t"
+	desc = "THE_IQU_flavor_events.42.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+	}
+	option = {
+		name = THE_IQU_flavor_events.42.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.43
+	title = "THE_IQU_flavor_events.43.t"
+	desc = "THE_IQU_flavor_events.43.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+	}
+	option = {
+		name = THE_IQU_flavor_events.43.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.44
+	title = "THE_IQU_flavor_events.44.t"
+	desc = "THE_IQU_flavor_events.44.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+	}
+	option = {
+		name = THE_IQU_flavor_events.44.1
+	}
+}
+## #4 乱流/梦境世界
+country_event = {
+	id = THE_IQU_flavor_events.45
+	title = "THE_IQU_flavor_events.45.t"
+	desc = "THE_IQU_flavor_events.45.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+	}
+	option = {
+		#作画
+		name = THE_IQU_flavor_events.45.1
+	}
+	option = {
+		#寻找出口
+		name = THE_IQU_flavor_events.45.2
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.46
+	title = "THE_IQU_flavor_events.46.t"
+	desc = "THE_IQU_flavor_events.46.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+	}
+	option = {
+		name = THE_IQU_flavor_events.46.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.47
+	title = "THE_IQU_flavor_events.47.t"
+	desc = "THE_IQU_flavor_events.47.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+	}
+	option = {
+		name = THE_IQU_flavor_events.47.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.48
+	title = "THE_IQU_flavor_events.48.t"
+	desc = "THE_IQU_flavor_events.48.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+	}
+	option = {
+		name = THE_IQU_flavor_events.48.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.49
+	title = "THE_IQU_flavor_events.49.t"
+	desc = "THE_IQU_flavor_events.49.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+	}
+	option = {
+		name = THE_IQU_flavor_events.49.1
+	}
+}
+## #5 静海
+country_event = {
+	id = THE_IQU_flavor_events.50
+	title = "THE_IQU_flavor_events.50.t"
+	desc = "THE_IQU_flavor_events.50.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+	}
+	option = {
+		#才学，侦测附近环境
+		name = THE_IQU_flavor_events.50.1
+	}
+	option = {
+		#航海，寻找陆地
+		name = THE_IQU_flavor_events.50.2
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.51
+	title = "THE_IQU_flavor_events.51.t"
+	desc = "THE_IQU_flavor_events.51.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+	}
+	option = {
+		name = THE_IQU_flavor_events.51.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.52
+	title = "THE_IQU_flavor_events.52.t"
+	desc = "THE_IQU_flavor_events.52.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+	}
+	option = {
+		name = THE_IQU_flavor_events.52.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.53
+	title = "THE_IQU_flavor_events.53.t"
+	desc = "THE_IQU_flavor_events.53.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+	}
+	option = {
+		name = THE_IQU_flavor_events.53.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.54
+	title = "THE_IQU_flavor_events.54.t"
+	desc = "THE_IQU_flavor_events.54.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+	}
+	option = {
+		name = THE_IQU_flavor_events.54.1
+	}
+}
+## #6 纯狐的营地
+country_event = {
+	id = THE_IQU_flavor_events.55
+	title = "THE_IQU_flavor_events.55.t"
+	desc = "THE_IQU_flavor_events.55.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+	}
+	option = {
+		#请求技术
+		name = THE_IQU_flavor_events.55.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.56
+	title = "THE_IQU_flavor_events.56.t"
+	desc = "THE_IQU_flavor_events.56.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+	}
+	option = {
+		#请求技术
+		name = THE_IQU_flavor_events.56.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.57
+	title = "THE_IQU_flavor_events.57.t"
+	desc = "THE_IQU_flavor_events.57.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+	}
+	option = {
+		#请求技术
+		name = THE_IQU_flavor_events.57.1
+	}
+}
+## #7烽火，去与从
+country_event = {
+	id = THE_IQU_flavor_events.58
+	title = "THE_IQU_flavor_events.58.t"
+	desc = "THE_IQU_flavor_events.58.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+	}
+	option = {
+		#加入月面战争
+		name = THE_IQU_flavor_events.58.1
+		hidden_effect = {
+			set_country_flag = THE_IQU_enable_lunar_war_cb_flag
+		}
+	}
+	option = {
+		#离开与我无关
+		name = THE_IQU_flavor_events.58.2
+	}
+}
+
+##探索完成「月面」
+country_event = {
+	id = THE_IQU_flavor_events.59
+	title = "THE_IQU_flavor_events.59.t"
+	desc = "THE_IQU_flavor_events.59.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		THE_IQU_explore_event_get_benifit_immeditate_script = yes
+	}
+	option = {
+		name = THE_IQU_flavor_events.59.1
+		custom_tooltip = THE_IQU_lunar_explore_has_been_done_flag
+		THE_IQU_explore_event_get_benifit_effect_effect = yes
+		THE_IQU_clr_the_exploring_now_success_effect = yes
+	}
+}
 
 ### 探险结束事件
 #「成功」
