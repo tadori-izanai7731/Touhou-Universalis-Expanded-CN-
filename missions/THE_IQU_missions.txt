@@ -76,7 +76,9 @@ THE_IQU_main_branch_1 = {
 		icon = mission_unknown_mission
 		position = 3
 		required_missions = { THE_IQU_1_2 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			area = Dragon_islands
+		 } 
 
 		trigger = { 
 			THE_IQU_this_province_had_been_explored_custom_trigger = {
@@ -270,6 +272,9 @@ THE_IQU_main_branch_2 = {
 			moon_region = {
 				add_permanent_claim = ROOT
 			}
+			THE_IQU_add_prestige_or_navy_tradition_effects = {
+				value = 15
+			}
 			5338 = {
 				add_province_modifier = {
 					name = THE_IQU_base_on_the_moon_buff
@@ -364,7 +369,18 @@ THE_IQU_main_branch_3 = {
 		required_missions = { THE_IQU_2_4 } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			5320 = {
+				owned_by = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 6
+				OR = {
+					area = Western_moon_state
+					area = Southern_moon_state
+				}
+			}
+		 } 
 
 		effect = {  } 
 	}

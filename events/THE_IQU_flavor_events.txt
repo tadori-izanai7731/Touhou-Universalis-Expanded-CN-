@@ -904,6 +904,7 @@ country_event = {
 		
 	}
 	immediate = {
+		
 	}
 	option = {
 		name = THE_IQU_flavor_events.30.1
@@ -911,12 +912,6 @@ country_event = {
 		custom_tooltip = THE_IQU_event_30_c_tt1
 		add_prestige = -5
 		add_dip_power = 20
-		hidden_effect = {
-			country_event = {
-				id = THE_IQU_flavor_events.31
-				days = 730
-			}
-		}
 	}
 }
 ##  #1 无边的荒原 无法前进
@@ -925,25 +920,34 @@ country_event = {
 	title = "THE_IQU_flavor_events.31.t"
 	desc = "THE_IQU_flavor_events.31.desc"
 	picture = ""
-	is_triggered_only = yes
 	trigger = {
-		
+		tag = IQU
+		has_country_flag = THE_IQU_now_is_exploring_flag
+		NOT = { has_country_flag = THE_IQU_had_explore_event }
+		any_owned_province = {
+			region = moon_region
+			has_province_flag = THE_IQU_this_provinces_is_exploring_now
+		}
 	}
 	immediate = {
-
+		set_country_flag = THE_IQU_had_explore_event
+	}
+	mean_time_to_happen = {
+		months = 24
 	}
 	option = {
 		#坚持前进
 		name = THE_IQU_flavor_events.31.1
+		THE_IQU_check_nautical_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.32
+			bad_id = THE_IQU_flavor_events.33
+		}
 	}
 	option = {
 		#休整根据地
 		name = THE_IQU_flavor_events.31.2
-		random_owned_province = {
-			limit = {
-				region = moon_region
-			}
-			add_base_production = 1
+		THE_IQU_check_none_normal_change_event_random_effects = {
+			ne_id = THE_IQU_flavor_events.34
 		}
 	}
 }
@@ -958,9 +962,21 @@ country_event = {
 		
 	}
 	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before_on_moon_once = {
+			explore = 15
+			danger = 0
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.32.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_on_moon_once = yes
+		add_adm_power = 15
+		hidden_effect = {
+			country_event = {
+				id = THE_IQU_flavor_events.35
+				days = 730
+			}
+		}
 	}
 }
 #
@@ -974,9 +990,22 @@ country_event = {
 		
 	}
 	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before_on_moon_once = {
+			explore = 10
+			danger = 0
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.33.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_on_moon_once = yes
+		add_prestige = -5
+		add_mil_power = -15
+		hidden_effect = {
+			country_event = {
+				id = THE_IQU_flavor_events.35
+				days = 730
+			}
+		}
 	}
 }
 #
@@ -990,9 +1019,27 @@ country_event = {
 		
 	}
 	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before_on_moon_once = {
+			explore = 10
+			danger = 0
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.34.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_on_moon_once = yes
+		add_prestige = 2
+		random_owned_province = {
+			limit = {
+				region = moon_region
+			}
+			add_base_production = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = THE_IQU_flavor_events.35
+				days = 730
+			}
+		}
 	}
 }
 ## #2 太阳风
@@ -1010,10 +1057,18 @@ country_event = {
 	option = {
 		#坚持前进
 		name = THE_IQU_flavor_events.35.1
+		THE_IQU_check_nautical_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.36
+			bad_id = THE_IQU_flavor_events.37
+		}
 	}
 	option = {
 		#考察现象
 		name = THE_IQU_flavor_events.35.2
+		THE_IQU_check_learning_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.37
+			bad_id = THE_IQU_flavor_events.38
+		}
 	}
 }
 #
@@ -1027,9 +1082,21 @@ country_event = {
 		
 	}
 	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before_on_moon_once = {
+			explore = 15
+			danger = 0
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.36.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_on_moon_once = yes
+		add_mil_power = 10
+		hidden_effect = {
+			country_event = {
+				id = THE_IQU_flavor_events.40
+				days = 730
+			}
+		}
 	}
 }
 #
@@ -1043,9 +1110,22 @@ country_event = {
 		
 	}
 	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before_on_moon_once = {
+			explore = 10
+			danger = 0
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.37.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_on_moon_once = yes
+		add_dip_power = -15
+		add_prestige = -2
+		hidden_effect = {
+			country_event = {
+				id = THE_IQU_flavor_events.40
+				days = 730
+			}
+		}
 	}
 }
 #
@@ -1059,9 +1139,24 @@ country_event = {
 		
 	}
 	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before_on_moon_once = {
+			explore = 15
+			danger = 0
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.38.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_on_moon_once = yes
+		add_dip_power = 25
+		random_owned_province = {
+			add_base_production = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = THE_IQU_flavor_events.40
+				days = 730
+			}
+		}
 	}
 }
 #
@@ -1075,9 +1170,22 @@ country_event = {
 		
 	}
 	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before_on_moon_once = {
+			explore = 10
+			danger = 0
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.39.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_on_moon_once = yes
+		add_adm_power = -5
+		add_dip_power = -10
+		hidden_effect = {
+			country_event = {
+				id = THE_IQU_flavor_events.40
+				days = 730
+			}
+		}
 	}
 }
 ## #3 月海 进入月海，被妖精盯上
@@ -1095,10 +1203,18 @@ country_event = {
 	option = {
 		#抓住妖精，外交
 		name = THE_IQU_flavor_events.40.1
+		THE_IQU_check_diplomacal_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.41
+			bad_id = THE_IQU_flavor_events.42
+		}
 	}
 	option = {
 		#追上她，顺便研究附近地表
 		name = THE_IQU_flavor_events.40.2
+		THE_IQU_check_nautical_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.43
+			bad_id = THE_IQU_flavor_events.44
+		}
 	}
 }
 #
@@ -1112,9 +1228,22 @@ country_event = {
 		
 	}
 	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before_on_moon_once = {
+			explore = 10
+			danger = 0
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.41.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_on_moon_once = yes
+		add_prestige = 5
+		add_mil_power = 10
+		hidden_effect = {
+			country_event = {
+				id = THE_IQU_flavor_events.45
+				days = 730
+			}
+		}
 	}
 }
 #
@@ -1128,9 +1257,24 @@ country_event = {
 		
 	}
 	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before_on_moon_once = {
+			explore = 10
+			danger = 0
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.42.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_on_moon_once = yes
+		add_adm_power = -5
+		add_dip_power = -5
+		add_mil_power = -5
+		add_prestige = -2
+		hidden_effect = {
+			country_event = {
+				id = THE_IQU_flavor_events.45
+				days = 730
+			}
+		}
 	}
 }
 #
@@ -1144,9 +1288,24 @@ country_event = {
 		
 	}
 	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before_on_moon_once = {
+			explore = 15
+			danger = 0
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.43.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_on_moon_once = yes
+		add_dip_power = 10
+		THE_IQU_add_prestige_or_navy_tradition_effects = {
+			value = 5
+		}
+		hidden_effect = {
+			country_event = {
+				id = THE_IQU_flavor_events.45
+				days = 730
+			}
+		}
 	}
 }
 #
@@ -1160,9 +1319,23 @@ country_event = {
 		
 	}
 	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before_on_moon_once = {
+			explore = 10
+			danger = 0
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.44.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_on_moon_once = yes
+		add_dip_power = -10
+		add_mil_power = -5
+		add_sailors = -1
+		hidden_effect = {
+			country_event = {
+				id = THE_IQU_flavor_events.45
+				days = 730
+			}
+		}
 	}
 }
 ## #4 乱流/梦境世界
@@ -1180,10 +1353,18 @@ country_event = {
 	option = {
 		#作画
 		name = THE_IQU_flavor_events.45.1
+		THE_IQU_check_learning_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.46
+			bad_id = THE_IQU_flavor_events.47
+		}
 	}
 	option = {
 		#寻找出口
 		name = THE_IQU_flavor_events.45.2
+		THE_IQU_check_nautical_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.48
+			bad_id = THE_IQU_flavor_events.49
+		}
 	}
 }
 #
@@ -1197,9 +1378,22 @@ country_event = {
 		
 	}
 	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before_on_moon_once = {
+			explore = 10
+			danger = 0
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.46.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_on_moon_once = yes
+		add_prestige = 5
+		add_adm_power = 10
+		hidden_effect = {
+			country_event = {
+				id = THE_IQU_flavor_events.50
+				days = 730
+			}
+		}
 	}
 }
 #
@@ -1213,9 +1407,22 @@ country_event = {
 		
 	}
 	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before_on_moon_once = {
+			explore = 10
+			danger = 0
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.47.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_on_moon_once = yes
+		add_manpower = -1
+		add_mil_power = -10
+		hidden_effect = {
+			country_event = {
+				id = THE_IQU_flavor_events.50
+				days = 730
+			}
+		}
 	}
 }
 #
@@ -1229,9 +1436,21 @@ country_event = {
 		
 	}
 	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before_on_moon_once = {
+			explore = 10
+			danger = 0
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.48.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_on_moon_once = yes
+		add_adm_power = 15
+		hidden_effect = {
+			country_event = {
+				id = THE_IQU_flavor_events.50
+				days = 730
+			}
+		}
 	}
 }
 #
@@ -1245,9 +1464,22 @@ country_event = {
 		
 	}
 	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before_on_moon_once = {
+			explore = 10
+			danger = 0
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.49.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_on_moon_once = yes
+		add_adm_power = -10
+		add_prestige = -5
+		hidden_effect = {
+			country_event = {
+				id = THE_IQU_flavor_events.50
+				days = 730
+			}
+		}
 	}
 }
 ## #5 静海
@@ -1265,10 +1497,18 @@ country_event = {
 	option = {
 		#才学，侦测附近环境
 		name = THE_IQU_flavor_events.50.1
+		THE_IQU_check_learning_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.51
+			bad_id = THE_IQU_flavor_events.52
+		}
 	}
 	option = {
 		#航海，寻找陆地
 		name = THE_IQU_flavor_events.50.2
+		THE_IQU_check_nautical_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.53
+			bad_id = THE_IQU_flavor_events.54
+		}
 	}
 }
 #
@@ -1282,9 +1522,23 @@ country_event = {
 		
 	}
 	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before_on_moon_once = {
+			explore = 20
+			danger = 0
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.51.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_on_moon_once = yes
+		add_prestige = 2
+		add_adm_power = 5
+		add_dip_power = 5
+		hidden_effect = {
+			country_event = {
+				id = THE_IQU_flavor_events.55
+				days = 730
+			}
+		}
 	}
 }
 #
@@ -1298,9 +1552,23 @@ country_event = {
 		
 	}
 	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before_on_moon_once = {
+			explore = 20
+			danger = 0
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.52.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_on_moon_once = yes
+		add_adm_power = -5
+		add_manpower = -1
+		add_sailors = -1
+		hidden_effect = {
+			country_event = {
+				id = THE_IQU_flavor_events.55
+				days = 730
+			}
+		}
 	}
 }
 #
@@ -1314,9 +1582,22 @@ country_event = {
 		
 	}
 	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before_on_moon_once = {
+			explore = 20
+			danger = 0
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.53.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_on_moon_once = yes
+		add_army_professionalism = 0.02
+		add_navy_tradition = 1
+		hidden_effect = {
+			country_event = {
+				id = THE_IQU_flavor_events.55
+				days = 730
+			}
+		}
 	}
 }
 #
@@ -1330,9 +1611,22 @@ country_event = {
 		
 	}
 	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before_on_moon_once = {
+			explore = 20
+			danger = 0
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.54.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_on_moon_once = yes
+		add_army_tradition = -2
+		add_mil_power = -5
+		hidden_effect = {
+			country_event = {
+				id = THE_IQU_flavor_events.55
+				days = 730
+			}
+		}
 	}
 }
 ## #6 纯狐的营地
@@ -1350,6 +1644,10 @@ country_event = {
 	option = {
 		#请求技术
 		name = THE_IQU_flavor_events.55.1
+		THE_IQU_check_diplomacal_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.56
+			bad_id = THE_IQU_flavor_events.57
+		}
 	}
 }
 #
@@ -1363,10 +1661,25 @@ country_event = {
 		
 	}
 	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before_on_moon_once = {
+			explore = 15
+			danger = 0
+		}
 	}
 	option = {
 		#请求技术
 		name = THE_IQU_flavor_events.56.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_on_moon_once = yes
+		add_adm_power = 25
+		add_dip_power = 25
+		add_mil_power = 25
+		add_army_professionalism = 0.05
+		hidden_effect = {
+			country_event = {
+				id = THE_IQU_flavor_events.58
+				days = 730
+			}
+		}
 	}
 }
 #
@@ -1380,10 +1693,21 @@ country_event = {
 		
 	}
 	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before_on_moon_once = {
+			explore = 15
+			danger = 0
+		}
 	}
 	option = {
 		#请求技术
 		name = THE_IQU_flavor_events.57.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_on_moon_once = yes
+		hidden_effect = {
+			country_event = {
+				id = THE_IQU_flavor_events.58
+				days = 730
+			}
+		}
 	}
 }
 ## #7烽火，去与从
@@ -1411,6 +1735,13 @@ country_event = {
 		name = THE_IQU_flavor_events.58.2
 		custom_tooltip = THE_IQU_event_58_c_tt2
 	}
+	after = {
+		hidden_effect = {
+			country_event = {
+				id = THE_IQU_flavor_events.59
+			}
+		}
+	}
 }
 
 ##探索完成「月面」
@@ -1431,7 +1762,9 @@ country_event = {
 		#月面
 		th_outdate_moon_defenses = yes
 		#
-		THE_IQU_explore_event_get_benifit_effect_effect = yes
+		THE_IQU_explore_event_get_benifit_effect_effect = {
+			base = 200
+		}
 		THE_IQU_clr_the_exploring_now_success_effect = yes
 	}
 }
@@ -1452,7 +1785,9 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.1000.1
-		THE_IQU_explore_event_get_benifit_effect_effect = yes
+		THE_IQU_explore_event_get_benifit_effect_effect = {
+			base = 120
+		}
 		THE_IQU_clr_the_exploring_now_success_effect = yes
 	}
 }
