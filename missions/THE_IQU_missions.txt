@@ -210,6 +210,10 @@ THE_IQU_main_branch_2 = {
 		 } 
 
 		effect = { 
+			country_event = {
+				id = THE_IQU_flavor_events.30
+			}
+			custom_tooltip = THE_IQU_2_3_c_tt1
 			5338 = {
 				cede_province = ROOT
 				change_culture = ROOT

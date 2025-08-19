@@ -1401,6 +1401,7 @@ country_event = {
 	option = {
 		#加入月面战争
 		name = THE_IQU_flavor_events.58.1
+		custom_tooltip = THE_IQU_event_58_c_tt1
 		hidden_effect = {
 			set_country_flag = THE_IQU_enable_lunar_war_cb_flag
 		}
@@ -1408,6 +1409,7 @@ country_event = {
 	option = {
 		#离开与我无关
 		name = THE_IQU_flavor_events.58.2
+		custom_tooltip = THE_IQU_event_58_c_tt2
 	}
 }
 
@@ -1426,7 +1428,9 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.59.1
-		custom_tooltip = THE_IQU_lunar_explore_has_been_done_flag
+		#月面
+		th_outdate_moon_defenses = yes
+		#
 		THE_IQU_explore_event_get_benifit_effect_effect = yes
 		THE_IQU_clr_the_exploring_now_success_effect = yes
 	}

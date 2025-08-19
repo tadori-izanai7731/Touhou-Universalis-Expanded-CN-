@@ -196,42 +196,44 @@ THE_IQU_on_check_the_progress_event_effect = {
 
 ##奖励结算-IMMEDIATE
 THE_IQU_explore_event_get_benifit_immeditate_script = {
-	random_owned_province = {
-		limit = {
-			has_province_flag = THE_IQU_this_provinces_is_exploring_now
+	hidden_effect = {
+		random_owned_province = {
+			limit = {
+				has_province_flag = THE_IQU_this_provinces_is_exploring_now
+			}
+			save_event_target_as = THE_IQU_province_difficult_about_treasury_target
 		}
-		save_event_target_as = THE_IQU_province_difficult_about_treasury_target
-	}
-	set_variable = {
-		which = the_iqu_base_treasury_im_var
-		value = 200
-	}
-	if = { limit = { event_target:THE_IQU_province_difficult_about_treasury_target = { has_province_flag = THE_IQU_province_explore_lvl_1_flag } } subtract_variable = { which = the_iqu_base_treasury_im_var value = 0.6 } }
-	else_if = { limit = { event_target:THE_IQU_province_difficult_about_treasury_target = { has_province_flag = THE_IQU_province_explore_lvl_2_flag } } subtract_variable = { which = the_iqu_base_treasury_im_var value = 0.8 } }
-	else_if = { limit = { event_target:THE_IQU_province_difficult_about_treasury_target = { has_province_flag = THE_IQU_province_explore_lvl_3_flag } } subtract_variable = { which = the_iqu_base_treasury_im_var value = 1.0 } }
-	else_if = { limit = { event_target:THE_IQU_province_difficult_about_treasury_target = { has_province_flag = THE_IQU_province_explore_lvl_4_flag } } subtract_variable = { which = the_iqu_base_treasury_im_var value = 1.2 } }
-	else_if = { limit = { event_target:THE_IQU_province_difficult_about_treasury_target = { has_province_flag = THE_IQU_province_explore_lvl_5_flag } } subtract_variable = { which = the_iqu_base_treasury_im_var value = 1.4 } }
-	##设置金钱奖励
-	set_variable = {
-		which = the_iqu_base_treasury_gold_im_var
-		which = the_iqu_base_treasury_im_var
-	}
-	subtract_variable = {
-		which = the_iqu_base_treasury_gold_im_var
-		value = 2
-	}
-	#导出奖励修正
-	export_to_variable = {
-		which = the_iqu_treasury_get_modifier_im_var
-		value = modifier:THE_IQU_explore_treasury_get_cutom_modifier
-	}
-	change_variable = {
-		which = the_iqu_treasury_get_modifier_im_var
-		value = 1
-	}
-	subtract_variable = {
-		which = the_iqu_base_treasury_im_var
-		which = the_iqu_treasury_get_modifier_im_var
+		set_variable = {
+			which = the_iqu_base_treasury_im_var
+			value = 200
+		}
+		if = { limit = { event_target:THE_IQU_province_difficult_about_treasury_target = { has_province_flag = THE_IQU_province_explore_lvl_1_flag } } subtract_variable = { which = the_iqu_base_treasury_im_var value = 0.6 } }
+		else_if = { limit = { event_target:THE_IQU_province_difficult_about_treasury_target = { has_province_flag = THE_IQU_province_explore_lvl_2_flag } } subtract_variable = { which = the_iqu_base_treasury_im_var value = 0.8 } }
+		else_if = { limit = { event_target:THE_IQU_province_difficult_about_treasury_target = { has_province_flag = THE_IQU_province_explore_lvl_3_flag } } subtract_variable = { which = the_iqu_base_treasury_im_var value = 1.0 } }
+		else_if = { limit = { event_target:THE_IQU_province_difficult_about_treasury_target = { has_province_flag = THE_IQU_province_explore_lvl_4_flag } } subtract_variable = { which = the_iqu_base_treasury_im_var value = 1.2 } }
+		else_if = { limit = { event_target:THE_IQU_province_difficult_about_treasury_target = { has_province_flag = THE_IQU_province_explore_lvl_5_flag } } subtract_variable = { which = the_iqu_base_treasury_im_var value = 1.4 } }
+		##设置金钱奖励
+		set_variable = {
+			which = the_iqu_base_treasury_gold_im_var
+			which = the_iqu_base_treasury_im_var
+		}
+		subtract_variable = {
+			which = the_iqu_base_treasury_gold_im_var
+			value = 2
+		}
+		#导出奖励修正
+		export_to_variable = {
+			which = the_iqu_treasury_get_modifier_im_var
+			value = modifier:THE_IQU_explore_treasury_get_cutom_modifier
+		}
+		change_variable = {
+			which = the_iqu_treasury_get_modifier_im_var
+			value = 1
+		}
+		subtract_variable = {
+			which = the_iqu_base_treasury_im_var
+			which = the_iqu_treasury_get_modifier_im_var
+		}	
 	}
 	## 点数奖励变量 the_iqu_base_treasury_im_var
 	## 金钱奖励变量 the_iqu_base_treasury_gold_im_var
