@@ -1782,18 +1782,15 @@ THE_LIL_mission_branch_3 = {
 		required_missions = { THE_LIL_15_3 } 
 		provinces_to_highlight = {
 			province_id = 795
-			OR = {
-				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
-				NOT = { has_production_building_trigger = yes } 
-				NOT = { has_courthouse_building_trigger = yes } 
-				NOT = { base_manpower = 6 } 
-			}
 		}
 
 		trigger = {
 			795 = {
 				country_or_non_sovereign_subject_holds = ROOT
-				has_production_building_trigger = yes
+				OR = {
+					has_production_building_trigger = yes
+					trade_goods = gold
+				}
 				has_courthouse_building_trigger = yes
 				base_manpower = 6
 			}
