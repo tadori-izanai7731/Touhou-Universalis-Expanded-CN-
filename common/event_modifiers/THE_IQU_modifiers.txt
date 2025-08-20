@@ -17,3 +17,14 @@ THE_IQU_base_on_the_moon_buff = {
 	local_development_cost = -0.15
 	local_production_efficiency = 0.10
 }
+#月尘实录
+THE_IQU_records_of_lunar_dust_buff = {
+	technology_cost = -0.05
+	light_ship_hull_size_modifier = 0.25
+}
+#远海之港
+THE_IQU_yunn_prot_out_of_gensokyo_buff = {
+	province_trade_power_value = 50
+	local_development_cost = -0.10
+	local_production_efficiency = 0.15
+}

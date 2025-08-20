@@ -97,21 +97,86 @@ THE_IQU_main_branch_1 = {
 	THE_IQU_1_4 = {
 		icon = mission_unknown_mission
 		position = 4
-		required_missions = { THE_IQU_1_3 } 
+		required_missions = { 
+			THE_IQU_1_3
+		} 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 1
+				NOT = {
+					superregion = gensokyo_superregion
+				}
+				NOT = {
+					superregion = gensokyo_orbit_superregion
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_IQU_1_4_c_tt1
+			tooltip = {
+				add_province_modifier = {
+					name = THE_IQU_yunn_prot_out_of_gensokyo_buff
+					duration = -1
+				}
+			}
+			add_dip_power = 50
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						NOT = {
+							superregion = gensokyo_superregion
+						}
+						NOT = {
+							superregion = gensokyo_orbit_superregion
+						}
+					}
+					THE_IQU_add_unique_point_temporary_province_effects = {
+						level = 2
+					}
+					if = {
+						limit = { 
+							THIS = {
+								has_colonist = yes
+							}
+						}
+						add_colonysize = 1000
+					}
+					add_province_modifier = {
+						name = THE_IQU_yunn_prot_out_of_gensokyo_buff
+						duration = -1
+					}
+				}
+			}
+		 } 
 	}
 
 	THE_IQU_1_5 = {
 		icon = mission_unknown_mission
 		position = 5
 		required_missions = { THE_IQU_1_4 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			has_province_modifier = THE_IQU_yunn_prot_out_of_gensokyo_buff
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			any_owned_province = {
+				has_province_modifier = THE_IQU_yunn_prot_out_of_gensokyo_buff
+				area = {
+					custom_trigger_tooltip = {
+						tooltip = THE_IQU_1_5_c_tt1
+						hidden_trigger = {
+							any_owned_province = {
+								area = $area$
+								has_province_flag = THE_IQU_this_province_had_been_explored_flag
+							}
+						}	
+					}
+				}
+			}
+		} 
 
 		effect = {  } 
 	}
@@ -367,7 +432,15 @@ THE_IQU_main_branch_3 = {
 		icon = mission_unknown_mission
 		position = 5
 		required_missions = { THE_IQU_2_4 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			OR = {
+				area = Western_moon_state
+				area = Southern_moon_state
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		} 
 
 		trigger = { 
 			5320 = {
@@ -382,7 +455,12 @@ THE_IQU_main_branch_3 = {
 			}
 		 } 
 
-		effect = {  } 
+		effect = { 
+			add_country_modifier = {
+				name = THE_IQU_records_of_lunar_dust_buff
+				duration = -1
+			}
+		 } 
 	}
 
 	THE_IQU_3_6 = {
