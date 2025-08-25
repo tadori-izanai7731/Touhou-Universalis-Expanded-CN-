@@ -28,3 +28,83 @@ THE_IQU_yunn_prot_out_of_gensokyo_buff = {
 	local_development_cost = -0.10
 	local_production_efficiency = 0.15
 }
+#山环水抱
+THE_IQU_encriclied_the_montain_embrace_water_buff = {
+	development_cost = -0.05
+	build_cost = -0.10
+	envoy_travel_time = -0.10
+}
+#风水兴盛-金之行
+THE_IQU_Feng_shui_jin_buff = {
+	local_tax_modifier = 0.50
+	local_development_cost = -0.05
+	local_warscore_cost_modifier = -1.0
+	local_sailors_modifier = 0.50
+	local_build_cost = -0.15
+	local_production_efficiency = 0.10
+	province_trade_power_value = 5
+}
+#风水兴盛-水之行
+THE_IQU_Feng_shui_shui_buff = {
+	trade_goods_size_modifier = 0.33
+	local_development_cost = -0.05
+	local_warscore_cost_modifier = -1.0
+	local_sailors_modifier = 0.50
+	local_build_cost = -0.15
+	local_production_efficiency = 0.10
+	province_trade_power_value = 5
+}
+#风水兴盛-木之行
+THE_IQU_Feng_shui_mu_buff = {
+	local_institution_spread = 0.50
+	local_development_cost = -0.05
+	local_warscore_cost_modifier = -1.0
+	local_sailors_modifier = 0.50
+	local_build_cost = -0.15
+	local_production_efficiency = 0.10
+	province_trade_power_value = 5
+}
+#风水兴盛-火之行
+THE_IQU_Feng_shui_huo_buff = {
+	local_manpower_modifier = 0.50
+	local_development_cost = -0.05
+	local_warscore_cost_modifier = -1.0
+	local_sailors_modifier = 0.50
+	local_build_cost = -0.15
+	local_production_efficiency = 0.10
+	province_trade_power_value = 5
+}
+#风水兴盛-土之行
+THE_IQU_Feng_shui_tu_buff = {
+	local_defensiveness = 0.33
+	local_development_cost = -0.05
+	local_warscore_cost_modifier = -1.0
+	local_sailors_modifier = 0.50
+	local_build_cost = -0.15
+	local_production_efficiency = 0.10
+	province_trade_power_value = 5
+}
+#龙脉-龙之首
+THE_IQU_lonng_vein_head_province_buff = {
+	supply_limit = 16
+	local_warscore_cost_modifier = -1.00
+	local_colonial_growth = 25
+	local_development_cost = -0.15
+	local_build_cost = -0.10
+}
+#龙脉-龙之迹
+THE_IQU_lonng_vein_foot_province_buff = {
+	supply_limit = 8
+	local_colonist_placement_chance = 0.10
+	local_colonial_growth = 50
+	local_warscore_cost_modifier = -1.00
+	local_production_efficiency = 0.1
+	province_trade_power_modifier = 0.25
+}
+#神谕宣告者
+THE_IQU_loong_proclamation_for_the_god_buff = {
+	global_institution_spread = 0.33
+	morale_damage = 0.1
+	global_trade_goods_size_modifier = 0.1
+	envoy_travel_time = -0.05
+}

@@ -1769,6 +1769,28 @@ country_event = {
 	}
 }
 
+##巴拿马
+country_event = {
+	id = THE_IQU_flavor_events.60
+	title = "THE_IQU_flavor_events.60.t"
+	desc = "THE_IQU_flavor_events.60.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.60.1
+		THE_IQU_add_unique_point_temporary_province_effects = {
+			level = 3
+		}
+		add_prestige = 10
+	}
+}
+
 ### 探险结束事件
 #「成功」
 country_event = {
@@ -1825,5 +1847,6 @@ country_event = {
 		name = THE_IQU_flavor_events.1002.1
 		highlight = yes
 		custom_tooltip = THE_IQU_flavor_events_1002_c_tt1
+
 	}
 }

@@ -161,6 +161,7 @@ THE_IQU_on_start_the_explore_event_effects = {
 			which = the_iqu_now_danger_progress
 			value = 0
 		}
+		##
 	}
 }
 
@@ -381,6 +382,60 @@ THE_IQU_clr_the_exploring_now_success_effect = {
 		##事件持有清除
 		clr_country_flag = THE_IQU_had_explore_event
 		clr_country_flag = THE_IQU_having_explore_event
+		THE_IQU_add_fengshui_wuxing_province_permant_buff_effect = yes 
+	}
+}
+## 添加风水五行之期
+THE_IQU_add_fengshui_wuxing_province_permant_buff_effect = {
+	if = {
+		limit = {
+			region = {
+				type = all
+				NOT = { has_province_modifier = THE_IQU_Feng_shui_jin_buff }
+				NOT = { has_province_modifier = THE_IQU_Feng_shui_shui_buff }
+				NOT = { has_province_modifier = THE_IQU_Feng_shui_mu_buff }
+				NOT = { has_province_modifier = THE_IQU_Feng_shui_huo_buff }
+				NOT = { has_province_modifier = THE_IQU_Feng_shui_tu_buff }
+			}
+		}
+		random_list = {
+			20 = {
+				add_province_modifier = {
+					name = THE_IQU_Feng_shui_jin_buff
+					duration = -1
+				}
+			}
+			20 = {
+				add_province_modifier = {
+					name = THE_IQU_Feng_shui_shui_buff
+					duration = -1
+				}
+			}
+			20 = {
+				add_province_modifier = {
+					name = THE_IQU_Feng_shui_mu_buff
+					duration = -1
+				}
+			}
+			20 = {
+				add_province_modifier = {
+					name = THE_IQU_Feng_shui_huo_buff
+					duration = -1
+				}
+			}
+			20 = {
+				add_province_modifier = {
+					name = THE_IQU_Feng_shui_tu_buff
+					duration = -1
+				}
+			}
+		}
+		if = {
+			limit = {
+				mission_completed = THE_IQU_2_5
+			}
+			change_trade_goods = paper
+		}
 	}
 }
 #「失败」的事件清除
@@ -423,6 +478,134 @@ THE_IQU_add_prestige_or_navy_tradition_effects = {
 		}
 	}
 }
+# 引导龙脉添加建筑
+THE_IQU_guide_the_lonng_vein_custom_gui_script = {
+	custom_tooltip = THE_IQU_guide_the_loong_vein_building_construction_scripted_c_tt1
+	add_building_construction = {
+		building = THE_IQU_guide_the_loong_vein_building
+		cost = 1.0
+		speed = 1.0
+	}
+}
+#建筑效果
+THE_IQU_guide_the_loong_vein_building_construction_scripted = {
+	hidden_effect = {
+		if = {
+			limit = { 
+				any_neighbor_province = {
+					has_province_modifier = THE_IQU_lonng_vein_head_province_buff
+				}
+			}
+			random_neighbor_province = {
+				limit = {
+					has_province_modifier = THE_IQU_lonng_vein_head_province_buff
+				}
+				remove_province_modifier = THE_IQU_lonng_vein_head_province_buff
+				add_province_modifier = {
+					name = THE_IQU_lonng_vein_foot_province_buff
+					duration = 7300
+				}
+				THE_IQU_move_wuxing_loong_province_flag_effect = yes
+			}
+		}
+		else = {
+			sea_zone = {
+				random_neighbor_province = {
+					limit = {
+						has_province_modifier = THE_IQU_lonng_vein_head_province_buff
+					}
+					remove_province_modifier = THE_IQU_lonng_vein_head_province_buff
+					add_province_modifier = {
+						name = THE_IQU_lonng_vein_foot_province_buff
+						duration = 7300
+					}
+					THE_IQU_move_wuxing_loong_province_flag_effect = yes
+				}	
+			}
+		}
+		add_province_modifier = {
+			name = THE_IQU_lonng_vein_head_province_buff
+			duration = -1
+		}
+		THE_IQU_will_check_province_fengshui_and_add_next_flag_effect = yes
+	}
+}
+#建筑检测 当地风水，获得flag以及下一期五行
+# THE_IQU_loong_vein_get_wuxing_jin_flag 已获得五行-金
+# THE_IQU_loong_vein_get_wuxing_shui_flag 已获得五行-水
+# THE_IQU_loong_vein_get_wuxing_mu_flag 已获得五行-木
+# THE_IQU_loong_vein_get_wuxing_huo_flag 已获得五行-火
+# THE_IQU_loong_vein_get_wuxing_tu_flag 已获得五行-土
+
+####
+# THE_IQU_loong_vein_get_wuxing_jin_flag_next 下一期-金
+# THE_IQU_loong_vein_get_wuxing_shui_flag_next 下一期-水
+# THE_IQU_loong_vein_get_wuxing_mu_flag_next 下一期-木
+# THE_IQU_loong_vein_get_wuxing_huo_flag_next 下一期-火
+# THE_IQU_loong_vein_get_wuxing_tu_flag_next 下一期-土
+THE_IQU_will_check_province_fengshui_and_add_next_flag_effect = {
+	THE_IQU_will_check_province_fengshui_and_add_next_flag_script = { wuxing = jin next = shui }
+	THE_IQU_will_check_province_fengshui_and_add_next_flag_script = { wuxing = shui next = mu }
+	THE_IQU_will_check_province_fengshui_and_add_next_flag_script = { wuxing = mu next = huo }
+	THE_IQU_will_check_province_fengshui_and_add_next_flag_script = { wuxing = huo next = tu }
+	THE_IQU_will_check_province_fengshui_and_add_next_flag_script = { wuxing = tu next = jin }
+}
+THE_IQU_will_check_province_fengshui_and_add_next_flag_script = {
+	if = {
+		limit = { 
+			has_province_modifier = THE_IQU_Feng_shui_$wuxing$_buff
+			has_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag_next
+		}
+		THE_IQU_will_clr_all_next_wuxing_province_flag_effect = yes
+		set_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag
+		set_province_flag = THE_IQU_loong_vein_get_wuxing_$next$_flag_next
+	}
+}
+#清除所有下一期五行标签
+THE_IQU_will_clr_all_next_wuxing_province_flag_effect = {
+	clr_province_flag = THE_IQU_loong_vein_get_wuxing_jin_flag_next
+	clr_province_flag = THE_IQU_loong_vein_get_wuxing_shui_flag_next
+	clr_province_flag = THE_IQU_loong_vein_get_wuxing_mu_flag_next
+	clr_province_flag = THE_IQU_loong_vein_get_wuxing_huo_flag_next
+	clr_province_flag = THE_IQU_loong_vein_get_wuxing_tu_flag_next
+}
+#转移省份标签
+THE_IQU_move_wuxing_loong_province_flag_effect = {
+	THE_IQU_move_wuxing_loong_province_flag_script = { wuxing = jin }
+	THE_IQU_move_wuxing_loong_province_flag_script = { wuxing = shui }
+	THE_IQU_move_wuxing_loong_province_flag_script = { wuxing = mu }
+	THE_IQU_move_wuxing_loong_province_flag_script = { wuxing = huo }
+	THE_IQU_move_wuxing_loong_province_flag_script = { wuxing = tu }
+}
+THE_IQU_move_wuxing_loong_province_flag_script = {
+	if = {
+		limit = { 
+			THIS = {
+				has_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag
+			}
+		}
+		THIS = {
+			clr_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag
+		}
+		ROOT = {
+			set_country_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag
+		}
+	}
+	if = {
+		limit = { 
+			THIS = {
+				has_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag_next
+			}
+		}
+		THIS = {
+			clr_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag_next
+		}
+		ROOT = {
+			set_country_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag_next
+		}
+	}
+}
+
 ################################
 ##On Action Script
 ##############################
@@ -435,6 +618,8 @@ THE_IQU_on_startup_scripted_effects = {
 		set_variable = { which = the_iqu_nautical_experience_change_im_var value = 0 }
 		set_variable = { which = the_iqu_learning_experience_change_im_var value = 0 }
 		set_variable = { which = the_iqu_diplomacal_experience_change_im_var value = 0 }
+		#MISSION 
+		set_variable = { which = the_iqu_explore_province_number_im_var value = 0 }
 		set_country_flag = THE_IQU_on_startup_set_variable_flag
 	}
 }
@@ -471,6 +656,42 @@ THE_IQU_scarlet_sky_government_effects = {
 		}
 		every_province_in_state = {
 			create_colony = 1000
+		}
+	}
+}
+#探索省份数量计数
+THE_IQU_number_explore_province_im_var_effect = {
+	if = {
+		limit = { 
+			FROM = {
+				has_government_attribute = THE_IQU_government_explore_coast_explore_mechanic
+			}
+		}
+		FROM = {
+			change_variable = {
+				#探险计数
+				which = the_iqu_explore_province_number_im_var
+				value = 1
+			}
+		}
+	}
+}
+#触发异常点事件
+
+
+#巴拿马
+THE_IQU_panama_add_unique_point_event_effect = {
+	if = {
+		limit = { 
+			FROM = {
+				OR = {
+					tag = IQU
+					was_tag = IQU
+				}
+			}
+		}
+		province_event = {
+			id = THE_IQU_flavor_events.60
 		}
 	}
 }

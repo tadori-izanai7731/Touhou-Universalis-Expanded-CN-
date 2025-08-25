@@ -57,6 +57,27 @@ l_english:
  THE_IQU_base_on_the_moon_buff: "月面根据地"
  THE_IQU_records_of_lunar_dust_buff: "月尘实录"
  THE_IQU_yunn_prot_out_of_gensokyo_buff: "远海之港"
+ THE_IQU_encriclied_the_montain_embrace_water_buff: "山环水抱"
+ THE_IQU_lonng_vein_head_province_buff: "龙脉-龙之首"
+ THE_IQU_lonng_vein_foot_province_buff: "龙脉-龙之迹"
+ THE_IQU_lonng_vein_head_province_buff_desc: "地龙颔首，山河气运皆汇于斯。纳寰宇之精粹，聚四海之气运。\n= 当前龙脉状态：\n= = §W金之行§!：[Root.THE_IQU_Wu_Xing_loong_vein_get_Jin_displat_tt]\n= = §M水之行§!：[Root.THE_IQU_Wu_Xing_loong_vein_get_Shui_displat_tt]\n= = §J木之行§!：[Root.THE_IQU_Wu_Xing_loong_vein_get_Mu_displat_tt]\n= = §O火之行§!：[Root.THE_IQU_Wu_Xing_loong_vein_get_Huo_displat_tt]\n= = §V土之行§!：[Root.THE_IQU_Wu_Xing_loong_vein_get_Tu_displat_tt]\n\n= = =下一期： [Root.THE_IQU_Wu_Xing_loong_vein_get_next_displat_tt]"
+ THE_IQU_Wu_Xing_loong_vein_get_Jin_displat_ctt_0: "§g未获得§!"
+ THE_IQU_Wu_Xing_loong_vein_get_Jin_displat_ctt_x: "§W已获得§!"
+ THE_IQU_Wu_Xing_loong_vein_get_Shui_displat_ctt_0: "§g未获得§!"
+ THE_IQU_Wu_Xing_loong_vein_get_Shui_displat_ctt_x: "§W已获得§!"
+ THE_IQU_Wu_Xing_loong_vein_get_Mu_displat_ctt_0: "§g未获得§!"
+ THE_IQU_Wu_Xing_loong_vein_get_Mu_displat_ctt_x: "§W已获得§!"
+ THE_IQU_Wu_Xing_loong_vein_get_Huo_displat_ctt_0: "§g未获得§!"
+ THE_IQU_Wu_Xing_loong_vein_get_Huo_displat_ctt_x: "§W已获得§!"
+ THE_IQU_Wu_Xing_loong_vein_get_Tu_displat_ctt_0: "§g未获得§!"
+ THE_IQU_Wu_Xing_loong_vein_get_Tu_displat_ctt_x: "§W已获得§!"
+ THE_IQU_Wu_Xing_loong_vein_get_next_displat_ctt_0: "§W金§!"
+ THE_IQU_Wu_Xing_loong_vein_get_next_displat_ctt_1: "§M水§!"
+ THE_IQU_Wu_Xing_loong_vein_get_next_displat_ctt_2: "§E木§!"
+ THE_IQU_Wu_Xing_loong_vein_get_next_displat_ctt_3: "§O火§!"
+ THE_IQU_Wu_Xing_loong_vein_get_next_displat_ctt_4: "§V土§!"
+ THE_IQU_Wu_Xing_loong_vein_get_next_displat_ctt_5: "§g未读取§!"
+ THE_IQU_loong_proclamation_for_the_god_buff: "神谕的宣告者"
 ### MODIFIER_END
 
 ### ESTATE
@@ -75,6 +96,11 @@ l_english:
  THE_IQU_2_3_extra_c_tt1_no: "\n£no£若完成任务时,@LCU[LCU.GetName]拥有对我们的好感度修正「§Y轻蔑的侮辱§!」，将会获得以下效果："
  THE_IQU_2_3_c_tt1: "当§Y月面§!区域以「§M云游§!」机制完成探索后，§Y月面防御机制§!将会失效。"
  THE_IQU_1_4_c_tt1: "§Y目标省份§!将获得以下效果：\n 添加§O海图异常点§!\n  若该省份为§Y殖民地§!，将立即§Y殖民完成§!"
+ THE_IQU_1_5_c_tt1: "§Y[This.GetAreaName]§!地区已经通过「§M云游机制§!」§Y完成探索§!"
+ THE_IQU_1_5_c_tt2: "现在§Y探索海岸§!省份时，将会§M10§!%的概率在随机省份添加§O海图异常点§!"
+ THE_IQU_1_6_c_tt1: "通过§Y探险家§!探索超过（[Root.the_iqu_explore_province_number_im_var.GetValue]/100）个省份"
+ THE_IQU_2_5_c_tt1: "任意省份修正§O龙脉-龙之首§!已齐集§Y五行§!"
+ THE_IQU_2_5_c_tt2: "§M拥有§!修正§Y风水兴盛-「」之行§!的省份将会开始生产§Y纸张§!\n - -§g含之后重置§Y风水兴盛-「」之行§!的省份§!"
 ### MISSION_EXTRA_END
 
 ### DECISIONS
@@ -294,6 +320,9 @@ l_english:
  THE_IQU_flavor_events.59.t: "月尘实录"
  THE_IQU_flavor_events.59.desc: "神舟穿过大气层，降落在天界的云港之上。舱内满载着月球表面的样本与资料，向大家揭秘着这存在于传说中的「仙境」，现在应该叫是「星球」了。衣玖她将见闻整理成册，包含着月之都的存在，月之民的历史，以及纯狐千年的复仇。成书之后被衣玖藏于书房之中。"
  THE_IQU_flavor_events.59.1: "命名为《月尘实录》"
+ THE_IQU_flavor_events.60.t: "天龙之颈"
+ THE_IQU_flavor_events.60.desc: "船队沿着未知的海岸线航行，最终在一处地势陡峭、丛林密布的海峡停下了脚步。登陆探查的海滩狭窄而崎岖，浓密的热带雨林几乎无法通行。随着几位天人腾云雾飞上高天观察，这条狭窄的土腰，其西方是舰队刚刚穿越的浩瀚碧海，而东方竟是一片无边无际的全新大洋。南北延伸至视野尽头，却不见任何贯通之处。"
+ THE_IQU_flavor_events.60.1: "在地图上标记，并且详细测绘附近的海岸线。"
 ### EVENT_END
 
 ### END_EVENT
@@ -342,12 +371,13 @@ l_english:
  THE_IQU_now_dangerous_progress_view_displat_ctt_1: " §R■§! ■ ■ ■ ■ ■ ■ ■ ■ ■"
  THE_IQU_now_dangerous_progress_view_displat_ctt_0: " ■ ■ ■ ■ ■ ■ ■ ■ ■ ■"
  THE_IQU_add_prestige_or_navy_tradition_c_tt1: "溢出的威望转化为§Y海军传统§!"
+ THE_IQU_guide_the_loong_vein_building_construction_scripted_c_tt1: "引渡完成后将§Y相邻省份§!或§Y共同沿海省份§!的§O龙脉-龙之首§!修正转移到此省份，且原省份获得§O龙脉-龙之迹§!修正- -持续20年"
 ### SCRIPT_EFFECT_END
-
 
 
 ### SCRIPT_TRIGGER
  THE_IQU_this_province_had_been_explored_ctt_1: "§Y[This.GetName]§!地区已经通过「§M云游机制§!」§Y完成探索§!"
+ THE_IQU_this_province_had_been_explored_ctt_2: "§Y[This.GetName]§!区域至少有1个§Y地区§!已经通过「§M云游机制§!」§Y完成探索§!"
 ### SCRIPT_TRIGGER_END
 
 ### CB_TYPES
@@ -356,3 +386,12 @@ l_english:
  THE_IQU_lunar_war_goals_desc: "战争目标: 夺取首都"
  THE_IQU_lunar_war_name: "月面战争"
 ### CB_TYPES_END
+
+### BUILDING
+ building_THE_IQU_guide_the_loong_vein_building: "引渡龙脉"
+ building_THE_IQU_guide_the_loong_vein_building_desc: "引渡龙脉" 
+### BUILDING_END
+
+### CUSTOM_GUI
+ THE_IQU_guide_the_loong_vein_province_button_gui_c_tt1: "§W引渡龙脉§!\n======================="
+### CUSTOM_GUI_END

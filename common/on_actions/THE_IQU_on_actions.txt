@@ -1,5 +1,7 @@
 on_explore_coast = {
 	THE_IQU_explore_coast_exolore_government_effects = yes
+	#巴拿马
+	THE_IQU_panama_add_unique_point_event_effect = yes
 }
 on_colony_finished = {
 	THE_IQU_scarlet_sky_government_effects = yes

@@ -1,0 +1,41 @@
+custom_button = {
+	name = THE_IQU_guide_the_loong_vein_province_button_gui
+	tooltip = THE_IQU_guide_the_loong_vein_province_button_gui_c_tt1
+	potential = {
+		FROM = {
+			OR = {
+				tag = IQU
+				was_tag = IQU
+			}
+		}
+		OR = {
+			owned_by = FROM
+			owned_by_subject_of = FROM
+		}
+	 }
+	trigger = {
+		FROM = {
+			ai = no
+		}
+		NOT = {
+			has_province_modifier = THE_IQU_lonng_vein_head_province_buff
+		}
+		NOT = {
+			has_province_modifier = THE_IQU_lonng_vein_foot_province_buff
+		}
+		OR = {
+			any_neighbor_province = {
+				has_province_modifier = THE_IQU_lonng_vein_head_province_buff
+			}
+			sea_zone = {
+				any_neighbor_province = {
+					has_province_modifier = THE_IQU_lonng_vein_head_province_buff
+				}
+			}
+		}
+		
+	 }
+	effect = {
+		THE_IQU_guide_the_lonng_vein_custom_gui_script = yes
+	 }
+}

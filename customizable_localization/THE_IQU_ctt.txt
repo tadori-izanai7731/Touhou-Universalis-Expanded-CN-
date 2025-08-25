@@ -219,3 +219,146 @@ defined_text = {
 		}
 	}
 }
+#金-之期
+defined_text = {
+	name = THE_IQU_Wu_Xing_loong_vein_get_Jin_displat_tt
+	text = {
+		localisation_key = THE_IQU_Wu_Xing_loong_vein_get_Jin_displat_ctt_0
+		trigger = {
+			NOT = {
+				has_province_flag = THE_IQU_loong_vein_get_wuxing_jin_flag
+			}
+		}
+	}
+	text = {
+		localisation_key = THE_IQU_Wu_Xing_loong_vein_get_Jin_displat_ctt_x
+		trigger = {
+			has_province_flag = THE_IQU_loong_vein_get_wuxing_jin_flag
+		}
+	}
+}
+#水-之期
+defined_text = {
+	name = THE_IQU_Wu_Xing_loong_vein_get_Shui_displat_tt
+	text = {
+		localisation_key = THE_IQU_Wu_Xing_loong_vein_get_Shui_displat_ctt_0
+		trigger = {
+			NOT = {
+				has_province_flag = THE_IQU_loong_vein_get_wuxing_shui_flag
+			}
+		}
+	}
+	text = {
+		localisation_key = THE_IQU_Wu_Xing_loong_vein_get_Shui_displat_ctt_x
+		trigger = {
+			has_province_flag = THE_IQU_loong_vein_get_wuxing_shui_flag
+		}
+	}
+}
+#木-之期
+defined_text = {
+	name = THE_IQU_Wu_Xing_loong_vein_get_Mu_displat_tt
+	text = {
+		localisation_key = THE_IQU_Wu_Xing_loong_vein_get_Mu_displat_ctt_0
+		trigger = {
+			NOT = {
+				has_province_flag = THE_IQU_loong_vein_get_wuxing_mu_flag
+			}
+		}
+	}
+	text = {
+		localisation_key = THE_IQU_Wu_Xing_loong_vein_get_Mu_displat_ctt_x
+		trigger = {
+			has_province_flag = THE_IQU_loong_vein_get_wuxing_mu_flag
+		}
+	}
+}
+#火-之期
+defined_text = {
+	name = THE_IQU_Wu_Xing_loong_vein_get_Huo_displat_tt
+	text = {
+		localisation_key = THE_IQU_Wu_Xing_loong_vein_get_Huo_displat_ctt_0
+		trigger = {
+			NOT = {
+				has_province_flag = THE_IQU_loong_vein_get_wuxing_huo_flag
+			}
+		}
+	}
+	text = {
+		localisation_key = THE_IQU_Wu_Xing_loong_vein_get_Huo_displat_ctt_x
+		trigger = {
+			has_province_flag = THE_IQU_loong_vein_get_wuxing_huo_flag
+		}
+	}
+}
+#土-之期
+defined_text = {
+	name = THE_IQU_Wu_Xing_loong_vein_get_Tu_displat_tt
+	text = {
+		localisation_key = THE_IQU_Wu_Xing_loong_vein_get_Tu_displat_ctt_0
+		trigger = {
+			NOT = {
+				has_province_flag = THE_IQU_loong_vein_get_wuxing_tu_flag
+			}
+		}
+	}
+	text = {
+		localisation_key = THE_IQU_Wu_Xing_loong_vein_get_Tu_displat_ctt_x
+		trigger = {
+			has_province_flag = THE_IQU_loong_vein_get_wuxing_tu_flag
+		}
+	}
+}
+defined_text = {
+	name = THE_IQU_Wu_Xing_loong_vein_get_next_displat_tt
+	text = {
+		localisation_key = THE_IQU_Wu_Xing_loong_vein_get_next_displat_ctt_0
+		trigger = {
+			has_province_flag = THE_IQU_loong_vein_get_wuxing_jin_flag_next
+		}
+	 }
+	text = {
+		localisation_key = THE_IQU_Wu_Xing_loong_vein_get_next_displat_ctt_1
+		trigger = {
+			has_province_flag = THE_IQU_loong_vein_get_wuxing_shui_flag_next
+		}
+	 }
+	text = {
+		localisation_key = THE_IQU_Wu_Xing_loong_vein_get_next_displat_ctt_2
+		trigger = {
+			has_province_flag = THE_IQU_loong_vein_get_wuxing_mu_flag_next
+		}
+	 }
+	text = {
+		localisation_key = THE_IQU_Wu_Xing_loong_vein_get_next_displat_ctt_3
+		trigger = {
+			has_province_flag = THE_IQU_loong_vein_get_wuxing_huo_flag_next
+		}
+	 }
+	text = {
+		localisation_key = THE_IQU_Wu_Xing_loong_vein_get_next_displat_ctt_4
+		trigger = {
+			has_province_flag = THE_IQU_loong_vein_get_wuxing_tu_flag_next
+		}
+	 }
+	 text = {
+		localisation_key = THE_IQU_Wu_Xing_loong_vein_get_next_displat_ctt_5
+		trigger = {
+			NOT = {
+				has_province_flag = THE_IQU_loong_vein_get_wuxing_jin_flag_next
+			}
+			NOT = {
+				has_province_flag = THE_IQU_loong_vein_get_wuxing_shui_flag_next
+			}
+			NOT = {
+				has_province_flag = THE_IQU_loong_vein_get_wuxing_mu_flag_next
+			}
+			NOT = {
+				has_province_flag = THE_IQU_loong_vein_get_wuxing_huo_flag_next
+			}
+			NOT = {
+				has_province_flag = THE_IQU_loong_vein_get_wuxing_tu_flag_next
+			}
+		}
+	 }
+}

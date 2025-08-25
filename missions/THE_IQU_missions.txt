@@ -159,37 +159,51 @@ THE_IQU_main_branch_1 = {
 		required_missions = { THE_IQU_1_4 } 
 		provinces_to_highlight = { 
 			has_province_modifier = THE_IQU_yunn_prot_out_of_gensokyo_buff
-		 } 
-
+		} 
+		
 		trigger = { 
 			any_owned_province = {
 				has_province_modifier = THE_IQU_yunn_prot_out_of_gensokyo_buff
-				area = {
-					custom_trigger_tooltip = {
-						tooltip = THE_IQU_1_5_c_tt1
-						hidden_trigger = {
-							any_owned_province = {
-								area = $area$
-								has_province_flag = THE_IQU_this_province_had_been_explored_flag
-							}
-						}	
-					}
+				custom_trigger_tooltip = {
+					tooltip = THE_IQU_1_5_c_tt1
+					has_province_flag = THE_IQU_this_province_had_been_explored_flag	
 				}
 			}
 		} 
-
-		effect = {  } 
+		
+		effect = { 
+			custom_tooltip = THE_IQU_1_5_c_tt2
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			add_country_modifier = {
+				name = THE_IQU_encriclied_the_montain_embrace_water_buff
+				duration = -1
+			}
+		} 
 	}
 
 	THE_IQU_1_6 = {
 		icon = mission_unknown_mission
 		position = 6
 		required_missions = { THE_IQU_1_5 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			is_capital_of = ROOT
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = THE_IQU_1_6_c_tt1
+				check_variable = {
+					which = the_iqu_explore_province_number_im_var
+					value = 100
+				}
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			
+		 } 
 	}
 
 	THE_IQU_1_7 = {
@@ -354,9 +368,52 @@ THE_IQU_main_branch_2 = {
 		position = 5
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 5
+				trade_goods = paper
+				has_production_building_trigger = yes
+				base_production = 7
+			}
+			custom_trigger_tooltip = {
+				tooltip = THE_IQU_2_5_c_tt1
+				any_owned_province = {
+					has_province_flag = THE_IQU_loong_vein_get_wuxing_jin_flag
+					has_province_flag = THE_IQU_loong_vein_get_wuxing_shui_flag
+					has_province_flag = THE_IQU_loong_vein_get_wuxing_mu_flag
+					has_province_flag = THE_IQU_loong_vein_get_wuxing_huo_flag
+					has_province_flag = THE_IQU_loong_vein_get_wuxing_tu_flag
+				}
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_IQU_2_5_c_tt2
+			add_country_modifier = {
+				name = THE_IQU_loong_proclamation_for_the_god_buff
+				duration = -1
+			}
+			change_price = {
+				trade_goods = paper
+				key = grain_shortage
+				value = 0.25
+				duration = -1
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							has_province_modifier = THE_IQU_Feng_shui_jin_buff
+							has_province_modifier = THE_IQU_Feng_shui_shui_buff
+							has_province_modifier = THE_IQU_Feng_shui_mu_buff
+							has_province_modifier = THE_IQU_Feng_shui_huo_buff
+							has_province_modifier = THE_IQU_Feng_shui_tu_buff
+						}
+					}
+					change_trade_goods = paper
+				}
+			}
+		} 
 	}
 
 	THE_IQU_2_6 = {
@@ -364,9 +421,37 @@ THE_IQU_main_branch_2 = {
 		position = 6
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			THE_IQU_this_province_had_been_explored_region_custom_trigger = {
+				region = colombia_region
+			}
+			835 = {
+				OR = {
+					owned_by = ROOT
+					owned_by_subject_of = ROOT
+				}
+				is_strongest_trade_power = ROOT
+				development = 20
+			}
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 12
+				region = colombia_region
+			}
+			treasury = 500
+		 } 
 
-		effect = {  } 
+		effect = { 
+			add_treasury = -500
+			THE_IQU_add_prestige_or_navy_tradition_effects = {
+				value = 100
+			}
+			835 = {
+				add_great_project = {
+					type = panama_canal
+					instant = no
+				}
+			}
+		 } 
 	}
 
 	THE_IQU_2_7 = {
@@ -383,9 +468,12 @@ THE_IQU_main_branch_2 = {
 	THE_IQU_2_8 = {
 		icon = mission_unknown_mission
 		position = 8
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			is_capital_of = ROOT
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+		 } 
 
 		effect = {  } 
 	}

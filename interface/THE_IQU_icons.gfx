@@ -13,4 +13,9 @@ spriteTypes = {
 		name = "THE_IQU_event_picture_1"
 		texturefile = "gfx//event_pictures//THE_IQU//THE_IQU_event_picture_1.dds"
 	}
+	## 省份UI
+	spriteType = {
+		name = "GFX_the_iqu_loong_vein_province_button"
+		texturefile = "gfx\\interface\\province_gui\\THE_IQU_loong_button.dds"
+	}
 }
