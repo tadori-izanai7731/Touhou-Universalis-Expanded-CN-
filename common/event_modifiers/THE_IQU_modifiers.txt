@@ -108,3 +108,33 @@ THE_IQU_loong_proclamation_for_the_god_buff = {
 	global_trade_goods_size_modifier = 0.1
 	envoy_travel_time = -0.05
 }
+#咖啡醇酿
+THE_IQU_explore_coffee_island_buff = {
+	trade_efficiency = 0.20
+	mercantilism_cost = -0.25
+}
+#雪风与天惠
+THE_IQU_cold_wind_and_god_buff = {
+	THE_IQU_explore_treasury_get_cutom_modifier = 0.25
+	global_trade_power = 0.1
+}
+#游鳞巡弋
+THE_IQU_fish_swim_recycle_buff = {
+	range = 0.50
+	navy_tradition = 1
+	naval_morale = 0.20
+}
+#风之眷顾
+THE_IQU_favor_of_wind_buff = {
+	light_ship_hull_size_modifier = 0.25
+	movement_speed_in_fleet_modifier = 1
+	free_navy_leader_pool = 1
+}
+#龙之嗣
+THE_IQU_child_of_loong_buff = {
+	THE_IQU_guide_loong_vein_custom_modifier = -0.10
+	global_ship_trade_power = 0.50
+	has_voc_indiamen = yes
+	allowed_voc_indiamen_fraction = 0.25
+	light_ship_number_of_cannons_modifier = 0.50
+}

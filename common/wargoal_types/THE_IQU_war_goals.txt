@@ -41,3 +41,67 @@ THE_IQU_lunar_war_goals = {
 
 	war_name = THE_IQU_lunar_war_name
 }
+#
+THE_IQU_england_war_goals = {
+	type = superiority
+
+	attacker = {
+		badboy_factor = 0.75
+		peace_cost_factor = 0.75
+		prestige_factor = 2.0
+		peace_options = {
+			po_demand_provinces
+			po_revoke_cores
+			po_release_vassals
+			po_gold
+			po_concede_defeat
+			po_trade_power
+			po_steer_trade
+		}
+
+		allowed_provinces = {
+			has_port = yes
+			OR = {
+				region = british_isles_region
+				region = scandinavia_region
+				region = iberia_region
+				region = france_region
+				region = maghreb_region
+				region = low_countries_region
+				region = canada_region
+				region = north_german_region
+			}
+		}
+	}
+
+	defender = {
+		badboy_factor = 0.75
+		peace_cost_factor = 0.75
+		prestige_factor = 2.0
+		peace_options = {
+			po_demand_provinces
+			po_revoke_cores
+			po_release_vassals
+			po_gold
+			po_concede_defeat
+			po_trade_power
+			po_steer_trade
+		}
+
+		allowed_provinces = {
+			has_port = yes
+			OR = {
+				region = british_isles_region
+				region = scandinavia_region
+				region = iberia_region
+				region = france_region
+				region = maghreb_region
+				region = low_countries_region
+				region = canada_region
+				region = north_german_region
+			}
+		}
+	}
+
+	war_name = THE_IQU_england_war_name
+}

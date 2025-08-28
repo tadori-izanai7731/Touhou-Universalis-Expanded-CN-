@@ -527,6 +527,26 @@ THE_IQU_guide_the_loong_vein_building_construction_scripted = {
 			name = THE_IQU_lonng_vein_head_province_buff
 			duration = -1
 		}
+		### 特殊任务效果
+		if = {
+			limit = {
+				OR = {
+					owner = {
+						tag = IQU
+						mission_completed = THE_IQU_3_8
+					}
+					overlord = {
+						tag = IQU
+						mission_completed = THE_IQU_3_8
+					}
+				} 
+			}
+			add_colonysize = 100
+			change_native_size = 4000
+			change_native_ferocity = -2
+			change_native_hostileness = -2
+		}
+		###
 		THE_IQU_will_check_province_fengshui_and_add_next_flag_effect = yes
 	}
 }
@@ -645,17 +665,71 @@ THE_IQU_explore_coast_exolore_government_effects = {
 		 }
 		 
 	}
-}
-#所有的area完成殖民
-THE_IQU_scarlet_sky_government_effects = {
 	if = {
 		limit = {
+			FROM = {
+				mission_completed = THE_IQU_1_7
+			}
+		 }
+		FROM = {
+			add_army_tradition = 1
+		}
+	}
+}
+#殖民完成oa
+THE_IQU_scarlet_sky_government_effects = {
+	if = {
+		limit = { 
 			owner = {
 				has_government_attribute = THE_IQU_scarlet_sky_reform_mechanic
 			}
 		}
-		every_province_in_state = {
-			create_colony = 1000
+		owner = {
+			country_event = {
+				id = THE_IQU_flavor_events.1003
+			}
+		}
+	}
+	if = {
+		limit = { 
+			owner = {
+				has_government_attribute = THE_IQU_scarlet_sky_reform_mechanic
+			}
+		}
+		random_list = {
+			25 = {
+				add_province_modifier = {
+					name = THE_IQU_lonng_vein_head_province_buff
+					duration = -1
+				}
+			}
+			975 = {
+
+			}
+		}
+	}
+	if = {
+		limit = { 
+			owner = {
+				mission_completed = THE_IQU_2_7
+			}
+		}
+		add_base_production = 1
+	}
+	if = {
+		limit = { 
+			owner = {
+				mission_completed = THE_IQU_1_8
+			}
+			region = carribeans_region
+		}
+		random_list = {
+			75 = {
+				change_trade_goods = coffee
+			}
+			25 = {
+
+			}
 		}
 	}
 }

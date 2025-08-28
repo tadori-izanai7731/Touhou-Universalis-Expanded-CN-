@@ -1850,3 +1850,31 @@ country_event = {
 
 	}
 }
+#殖民oa
+country_event = {
+	id = THE_IQU_flavor_events.1003
+	title = "THE_IQU_flavor_events.1003.t"
+	desc = "THE_IQU_flavor_events.1003.desc"
+	picture = "THE_IQU_event_picture_1"
+	is_triggered_only = yes
+	hidden = yes
+	trigger = {
+		
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_government_attribute = THE_IQU_scarlet_sky_reform_mechanic
+			}
+			FROM = {
+				area = {
+					type = all
+					create_colony = 1000
+				}
+			}
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.1002.1
+	}
+}

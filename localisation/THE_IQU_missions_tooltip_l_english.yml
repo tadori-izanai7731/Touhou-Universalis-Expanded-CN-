@@ -35,6 +35,7 @@
  THE_IQU_scarlet_sky_reform: "Ñžwm-N„vïu¢u"
  THE_IQU_scarlet_sky_reform_desc: ""
  mechanic_THE_IQU_scarlet_sky_reform_mechanic_yes: "–kl0Wb•:NÎW^öeÿê¨R–klŒRb0§Yôv^SÞT§!0…Q„vNb	g0§Y*g–klwýN§!0"
+ mechanic_THE_IQU_scarlet_sky_reform_mechanic_2_yes: "°sSV–kl0Wb•:NÎW^öeÿXR(W1%„v‚i‡s·ƒ—VîOck§O™Ÿ	-™ŸKN–™§!"
  
 ### GOVERNMENT_END
 
@@ -51,6 +52,7 @@
 
 ### MODIFIER
  THE_IQU_explore_treasury_get_cutom_modifier: "‘N8n¹ppeVY±RîOck"
+ THE_IQU_guide_loong_vein_custom_modifier: "™Ÿ	VüRöeô•"
  THE_IQU_overlord_yunn_buff: "„s‘Nwm"
  THE_IQU_abyssal_scale_forge_buff: "ß†™Ÿ:x2u"
  THE_IQU_sail_and_sails_buff: "V^Ü*‚"
@@ -78,6 +80,11 @@
  THE_IQU_Wu_Xing_loong_vein_get_next_displat_ctt_4: "§VW§!"
  THE_IQU_Wu_Xing_loong_vein_get_next_displat_ctt_5: "§g*gû‹ÖS§!"
  THE_IQU_loong_proclamation_for_the_god_buff: "^yŒ„v±RJTw"
+ THE_IQU_explore_coffee_island_buff: "–TaU‡‘‘"
+ THE_IQU_cold_wind_and_god_buff: "ê–Î˜N)Yà`"
+ THE_IQU_favor_of_wind_buff: "Î˜KN7wŒ˜"
+ THE_IQU_fish_swim_recycle_buff: "8nÞœáTV"
+ THE_IQU_child_of_loong_buff: "™ŸKNãU"
 ### MODIFIER_END
 
 ### ESTATE
@@ -101,6 +108,13 @@
  THE_IQU_1_6_c_tt1: "Ç§Y¢ci–¶R§!¢c0t…Çÿ[Root.the_iqu_explore_province_number_im_var.GetValue]/100	ÿ*NwýN"
  THE_IQU_2_5_c_tt1: "ûNawýNîOck§O™Ÿ	-™ŸKN–™§!òTPŸÆ–§Y”NLˆ§!"
  THE_IQU_2_5_c_tt2: "§Måb	g§!îOck§YÎ˜4ltQÛv-00KNLˆ§!„vwýNSOVËYuµN§Y¸u.V§!\n - -§g+TKNTÍ‘n§YÎ˜4ltQÛv-00KNLˆ§!„vwýN§!"
+ THE_IQU_1_7_c_tt1: "°s(W§Y¢c0twm¸S§!ŒRböeÿ·ƒ—V1¹p§MF–›Q.Oßu§!\n"
+ THE_IQU_2_7_c_tt1: "°s(W§Y–kl0W§!ÑSUS:NÎW^öeÿ˜Y·ƒ—V1¹p§YuµNÑSUS¦^§!\n"
+ THE_IQU_1_8_c_tt2: "SV§Y RÒRÔk0W:S§!„v–kl0WÑSUS:NÎW^öeÿS	g§G75%§!„v‚i‡sSµNirØSôf:N§Y–TaU§!\n"
+ THE_IQU_3_7_c_tt2_yes: "£yes£å‚§MŒRbûN¡R§!öeÿóS	g50X‚§Y‰‹Wb0‚§!ÿS·ƒ—VåNNHeœgÿ"
+ THE_IQU_3_7_c_tt2_no: "£no£å‚§MŒRbûN¡R§!öeÿóS	g50X‚§Y‰‹Wb0‚§!ÿS·ƒ—VåNNHeœgÿ"
+ THE_IQU_3_7_c_tt1: "ã‰•§M0Õœ|œb‰N0§!±Rbt1uÿAQ¸‹bìN:YÖSNb	g¿l§YS'Y‰m§!0W:S„v§Y¿lwmwýN§!"
+ THE_IQU_3_8_c_tt1: "°sSV§O™Ÿ	-™ŸKN–™§!«ˆ§YV!n§!eQ–kl0WwýNöeÿå‹–kl0WwýN·ƒ—VåNNHeœgÿ\n- - -SV0WšRESwpeÏ‘ §G+100§!\n- - -SV0WŸSOOlpeÏ‘ §G+4000§!\n- -SV0WŸSOOlÎ‘î†¦^ §G-2§!\n- -SV0WŸSOOlµOeu'` §G-2§!"
 ### MISSION_EXTRA_END
 
 ### DECISIONS
@@ -382,9 +396,14 @@
 
 ### CB_TYPES
  THE_IQU_lunar_war_cb: "gb—b‰N"
- THE_IQU_lunar_war_cb_desc: "§Yå‹±Rbt1uêSýwrR©‹îvhMOŽN0gb—0:SßW„vwýN0§!"
+ THE_IQU_lunar_war_cb_desc: "§Yå‹±Rbt1uêSýwrR©‹îvhMOŽN0§Ygb—§!0:SßW„vwýN0§!"
  THE_IQU_lunar_war_goals_desc: "b‰Nîvh: :YÖS–™ý"
  THE_IQU_lunar_war_name: "gb—b‰N"
+ THE_IQU_england_war_cb: "Õœ|œb‰N"
+ THE_IQU_england_war_cb_desc: ""§Yå‹±Rbt1uêSýwrR©‹îvhMOŽN¿l0§YS*Ys^mwmßW§!0:SßW„v¿lwmwýN0§!"
+ THE_IQU_lunar_war_goals_desc: "b‰Nîvh: US°s8—Cg"
+ THE_IQU_england_war_name: "Õœ|œb‰N"
+ 
 ### CB_TYPES_END
 
 ### BUILDING

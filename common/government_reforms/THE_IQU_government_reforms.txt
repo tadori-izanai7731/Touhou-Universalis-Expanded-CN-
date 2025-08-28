@@ -16,7 +16,7 @@ THE_IQU_sky_beyond_clouds_reform = {
 		governing_capacity = 150
 		free_navy_leader_pool = 1
 		global_ship_recruit_speed = -0.05
-		native_assimilation = 0.20
+		native_assimilation = 0.05
 	}
 	government_abilities = {
 		THE_IQU_sky_beyond_clouds_mechanic
@@ -37,10 +37,11 @@ THE_IQU_scarlet_sky_reform = {
 	}
 	
 	modifiers = {
-		colonist_placement_chance = 0.05
-		global_colonial_growth = 15
+		native_assimilation = 0.25
+		global_colonial_growth = 10
 	}
 	custom_attributes = {
 		THE_IQU_scarlet_sky_reform_mechanic = yes
+		THE_IQU_scarlet_sky_reform_mechanic_2 = yes
 	}
 }

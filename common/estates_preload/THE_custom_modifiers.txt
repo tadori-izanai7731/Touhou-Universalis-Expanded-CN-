@@ -40,5 +40,12 @@ estate_danmaku = {
 			always = yes
 		}
 	}
+	modifier_definition = {
+		type = influence
+		key = THE_IQU_guide_loong_vein_custom_modifier
+		trigger = {
+			always = yes
+		}
+	}
 }
 

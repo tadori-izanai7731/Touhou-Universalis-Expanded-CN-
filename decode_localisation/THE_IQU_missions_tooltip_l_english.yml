@@ -35,6 +35,7 @@ l_english:
  THE_IQU_scarlet_sky_reform: "黑海中的绯红"
  THE_IQU_scarlet_sky_reform_desc: ""
  mechanic_THE_IQU_scarlet_sky_reform_mechanic_yes: "殖民地成长为城市时，自动殖民完成「§Y直属州§!」内的所有「§Y未殖民省份§!」"
+ mechanic_THE_IQU_scarlet_sky_reform_mechanic_2_yes: "现当殖民地成长为城市时，存在1%的概率获得修正§O龙脉-龙之首§!"
  
 ### GOVERNMENT_END
 
@@ -51,6 +52,7 @@ l_english:
 
 ### MODIFIER
  THE_IQU_explore_treasury_get_cutom_modifier: "云游点数奖励修正"
+ THE_IQU_guide_loong_vein_custom_modifier: "龙脉引导时间"
  THE_IQU_overlord_yunn_buff: "玄云海"
  THE_IQU_abyssal_scale_forge_buff: "蛟龙砺甲"
  THE_IQU_sail_and_sails_buff: "征帆远航"
@@ -78,6 +80,11 @@ l_english:
  THE_IQU_Wu_Xing_loong_vein_get_next_displat_ctt_4: "§V土§!"
  THE_IQU_Wu_Xing_loong_vein_get_next_displat_ctt_5: "§g未读取§!"
  THE_IQU_loong_proclamation_for_the_god_buff: "神谕的宣告者"
+ THE_IQU_explore_coffee_island_buff: "咖啡醇酿"
+ THE_IQU_cold_wind_and_god_buff: "雪风与天惠"
+ THE_IQU_favor_of_wind_buff: "风之眷顾"
+ THE_IQU_fish_swim_recycle_buff: "游鳞巡弋"
+ THE_IQU_child_of_loong_buff: "龙之嗣"
 ### MODIFIER_END
 
 ### ESTATE
@@ -101,6 +108,13 @@ l_english:
  THE_IQU_1_6_c_tt1: "通过§Y探险家§!探索超过（[Root.the_iqu_explore_province_number_im_var.GetValue]/100）个省份"
  THE_IQU_2_5_c_tt1: "任意省份修正§O龙脉-龙之首§!已齐集§Y五行§!"
  THE_IQU_2_5_c_tt2: "§M拥有§!修正§Y风水兴盛-「」之行§!的省份将会开始生产§Y纸张§!\n - -§g含之后重置§Y风水兴盛-「」之行§!的省份§!"
+ THE_IQU_1_7_c_tt1: "现在§Y探索海岸§!完成时，获得1点§M陆军传统§!\n"
+ THE_IQU_2_7_c_tt1: "现在§Y殖民地§!发展为城市时，额外获得1点§Y生产发展度§!\n"
+ THE_IQU_1_8_c_tt2: "当§Y加勒比地区§!的殖民地发展为城市时，将有§G75%§!的概率将产物变更为§Y咖啡§!\n"
+ THE_IQU_3_7_c_tt2_yes: "£yes£若§M完成任务§!时，至少有50艘§Y轻型战舰§!，将获得以下效果："
+ THE_IQU_3_7_c_tt2_no: "£no£若§M完成任务§!时，至少有50艘§Y轻型战舰§!，将获得以下效果："
+ THE_IQU_3_7_c_tt1: "解锁§M「鳕鱼战争」§!宣战理由，允许我们夺取所有沿§Y北大西洋§!地区的§Y沿海省份§!"
+ THE_IQU_3_8_c_tt1: "现当§O龙脉-龙之首§!被§Y引渡§!入殖民地省份时，该殖民地省份获得以下效果：\n- - -当地定居者数量 §G+100§!\n- - -当地原住民数量 §G+4000§!\n- -当地原住民野蛮度 §G-2§!\n- -当地原住民侵略性 §G-2§!"
 ### MISSION_EXTRA_END
 
 ### DECISIONS
@@ -382,9 +396,14 @@ l_english:
 
 ### CB_TYPES
  THE_IQU_lunar_war_cb: "月面战争"
- THE_IQU_lunar_war_cb_desc: "§Y该宣战理由只能割让目标位于「月面」区域的省份。§!"
+ THE_IQU_lunar_war_cb_desc: "§Y该宣战理由只能割让目标位于「§Y月面§!」区域的省份。§!"
  THE_IQU_lunar_war_goals_desc: "战争目标: 夺取首都"
  THE_IQU_lunar_war_name: "月面战争"
+ THE_IQU_england_war_cb: "鳕鱼战争"
+ THE_IQU_england_war_cb_desc: ""§Y该宣战理由只能割让目标位于沿「§Y北太平洋海域§!」区域的沿海省份。§!"
+ THE_IQU_lunar_war_goals_desc: "战争目标: 展现霸权"
+ THE_IQU_england_war_name: "鳕鱼战争"
+ 
 ### CB_TYPES_END
 
 ### BUILDING
