@@ -18,7 +18,7 @@ THE_IQU_this_province_had_been_explored_region_custom_trigger = {
 			tooltip = THE_IQU_this_province_had_been_explored_ctt_2
 			hidden_trigger = {
 				any_owned_province = {
-					area = $region$
+					region = $region$
 					has_province_flag = THE_IQU_this_province_had_been_explored_flag
 				}
 			}	
