@@ -395,3 +395,16 @@ THE_great_project_extra_optional_trigger_scripted_trigger = {
 		}
 	}
 }
+
+# 用于冷却型决议
+# 必要分句flag = $flag$，days = $days$
+# 配套工具提示本地化键值custom_tooltip = THE_cd_type_decision_<year>_years_ttt，yesr支持5、10、15、20、30、50
+THE_cd_type_decision_scripted_trigger = {
+	OR = {
+		NOT = { has_country_flag = $flag$ }
+		had_country_flag = {
+			flag = $flag$
+			days = $days$
+		}
+	}
+}
