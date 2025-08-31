@@ -2257,16 +2257,293 @@ country_event = {
 }
 
 ###6 林中野兽
+country_event = {
+	id = THE_IQU_flavor_events.86
+	title = "THE_IQU_flavor_events.86.t"
+	desc = "THE_IQU_flavor_events.86.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.86.1
+	}
+	option = {
+		name = THE_IQU_flavor_events.86.2
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.87
+	title = "THE_IQU_flavor_events.87.t"
+	desc = "THE_IQU_flavor_events.87.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.87.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.88
+	title = "THE_IQU_flavor_events.88.t"
+	desc = "THE_IQU_flavor_events.88.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.88.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.89
+	title = "THE_IQU_flavor_events.89.t"
+	desc = "THE_IQU_flavor_events.89.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.89.1
+	}
+}
 
 ###7 补给匮乏
+country_event = {
+	id = THE_IQU_flavor_events.90
+	title = "THE_IQU_flavor_events.90.t"
+	desc = "THE_IQU_flavor_events.90.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.90.1
+	}
+	option = {
+		name = THE_IQU_flavor_events.90.2
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.91
+	title = "THE_IQU_flavor_events.91.t"
+	desc = "THE_IQU_flavor_events.91.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.91.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.92
+	title = "THE_IQU_flavor_events.92.t"
+	desc = "THE_IQU_flavor_events.92.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.92.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.93
+	title = "THE_IQU_flavor_events.93.t"
+	desc = "THE_IQU_flavor_events.93.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.93.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.94
+	title = "THE_IQU_flavor_events.94.t"
+	desc = "THE_IQU_flavor_events.94.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.94.1
+	}
+}
 
 ###8 大雪
+country_event = {
+	id = THE_IQU_flavor_events.95
+	title = "THE_IQU_flavor_events.95.t"
+	desc = "THE_IQU_flavor_events.95.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.95.1
+	}
+	option = {
+		name = THE_IQU_flavor_events.95.2
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.96
+	title = "THE_IQU_flavor_events.96.t"
+	desc = "THE_IQU_flavor_events.96.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.96.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.97
+	title = "THE_IQU_flavor_events.97.t"
+	desc = "THE_IQU_flavor_events.97.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.97.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.98
+	title = "THE_IQU_flavor_events.98.t"
+	desc = "THE_IQU_flavor_events.98.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.98.1
+	}
+}
 
 ###9 沼泽/染病
+country_event = {
+	id = THE_IQU_flavor_events.99
+	title = "THE_IQU_flavor_events.99.t"
+	desc = "THE_IQU_flavor_events.99.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.98.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.100
+	title = "THE_IQU_flavor_events.100.t"
+	desc = "THE_IQU_flavor_events.100.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.100.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.101
+	title = "THE_IQU_flavor_events.101.t"
+	desc = "THE_IQU_flavor_events.101.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.101.1
+	}
+}
 
 ###10 原住民袭击
 
-###11 
+###11 神明
 
 
 ### 探险结束事件
