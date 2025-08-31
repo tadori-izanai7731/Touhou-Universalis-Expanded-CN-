@@ -554,3 +554,22 @@ THE_update_entire_culture_scripted_effect = {
 		change_primary_culture = $new_culture$
 	}
 }
+
+
+# special_unit_category = $special_unit_category$
+# type = $type$
+# amount = $amount$
+THE_create_special_unit_scripted_effect = {
+	hidden_effect = {
+			for = {
+			amount = $amount$
+			effect = "
+				create_unit_forcelimit_percentage = {
+					type = $type$
+					special_unit_category = $special_unit_category$
+					force_limit_percentage = 0.00000001
+				}
+			"
+		}
+	}
+}
