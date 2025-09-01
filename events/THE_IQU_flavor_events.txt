@@ -2542,9 +2542,344 @@ country_event = {
 }
 
 ###10 原住民袭击
-
+country_event = {
+	id = THE_IQU_flavor_events.102
+	title = "THE_IQU_flavor_events.102.t"
+	desc = "THE_IQU_flavor_events.102.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.102.1
+	}
+	option = {
+		name = THE_IQU_flavor_events.102.2
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.103
+	title = "THE_IQU_flavor_events.103.t"
+	desc = "THE_IQU_flavor_events.103.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.103.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.104
+	title = "THE_IQU_flavor_events.104.t"
+	desc = "THE_IQU_flavor_events.104.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.104.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.105
+	title = "THE_IQU_flavor_events.105.t"
+	desc = "THE_IQU_flavor_events.105.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.105.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.106
+	title = "THE_IQU_flavor_events.106.t"
+	desc = "THE_IQU_flavor_events.106.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.106.1
+	}
+}
 ###11 神明
+country_event = {
+	id = THE_IQU_flavor_events.107
+	title = "THE_IQU_flavor_events.107.t"
+	desc = "THE_IQU_flavor_events.107.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.107.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.108
+	title = "THE_IQU_flavor_events.108.t"
+	desc = "THE_IQU_flavor_events.108.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.108.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.109
+	title = "THE_IQU_flavor_events.109.t"
+	desc = "THE_IQU_flavor_events.109.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.109.1
+	}
+}
 
+###12 邀请节日
+country_event = {
+	id = THE_IQU_flavor_events.110
+	title = "THE_IQU_flavor_events.110.t"
+	desc = "THE_IQU_flavor_events.110.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.110.1
+	}
+	option = {
+		name = THE_IQU_flavor_events.110.2
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.111
+	title = "THE_IQU_flavor_events.111.t"
+	desc = "THE_IQU_flavor_events.111.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.111.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.112
+	title = "THE_IQU_flavor_events.112.t"
+	desc = "THE_IQU_flavor_events.112.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.112.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.113
+	title = "THE_IQU_flavor_events.113.t"
+	desc = "THE_IQU_flavor_events.113.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.113.1
+	}
+}
+
+###13 幻想之庭
+country_event = {
+	id = THE_IQU_flavor_events.114
+	title = "THE_IQU_flavor_events.114.t"
+	desc = "THE_IQU_flavor_events.114.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.114.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.115
+	title = "THE_IQU_flavor_events.115.t"
+	desc = "THE_IQU_flavor_events.115.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.115.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.116
+	title = "THE_IQU_flavor_events.116.t"
+	desc = "THE_IQU_flavor_events.116.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.116.1
+	}
+}
+
+###14 龙之图腾
+country_event = {
+	id = THE_IQU_flavor_events.117
+	title = "THE_IQU_flavor_events.117.t"
+	desc = "THE_IQU_flavor_events.117.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.117.1
+	}
+	option = {
+		name = THE_IQU_flavor_events.117.2
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.118
+	title = "THE_IQU_flavor_events.118.t"
+	desc = "THE_IQU_flavor_events.118.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.118.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.119
+	title = "THE_IQU_flavor_events.119.t"
+	desc = "THE_IQU_flavor_events.119.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.119.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.120
+	title = "THE_IQU_flavor_events.120.t"
+	desc = "THE_IQU_flavor_events.120.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.120.1
+	}
+}
+
+###15 被遗弃的废墟
+
+###16 原住民向导
 
 ### 探险结束事件
 #「成功」
