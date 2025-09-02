@@ -831,3 +831,44 @@ THE_IQU_panama_add_unique_point_event_effect = {
 		}
 	}
 }
+
+###2年脉冲
+THE_IQU_explore_on_2_years_pluse_effect = {
+	if = {
+		limit = { 
+			tag = IQU
+			has_country_flag = THE_IQU_now_is_exploring_flag
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					NOT = {
+						region = orbital_region
+					}
+					NOT = {
+						region = moon_region
+					}
+					has_province_flag = THE_IQU_this_provinces_is_exploring_now
+				}
+			}
+			random_events = {
+				10 = THE_IQU_flavor_events.66
+				10 = THE_IQU_flavor_events.70
+				10 = THE_IQU_flavor_events.75
+				10 = THE_IQU_flavor_events.79
+				10 = THE_IQU_flavor_events.83
+				10 = THE_IQU_flavor_events.86
+				10 = THE_IQU_flavor_events.90
+				10 = THE_IQU_flavor_events.95
+				10 = THE_IQU_flavor_events.99
+				10 = THE_IQU_flavor_events.102
+				10 = THE_IQU_flavor_events.107
+				10 = THE_IQU_flavor_events.110
+				10 = THE_IQU_flavor_events.114
+				10 = THE_IQU_flavor_events.117
+				10 = THE_IQU_flavor_events.121
+				10 = THE_IQU_flavor_events.126
+			}
+		}
+	}
+}
