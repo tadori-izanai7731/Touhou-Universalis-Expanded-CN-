@@ -842,6 +842,73 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 		if = {
 			limit = {
 				any_owned_province = {
+					region = cascadia_region
+					has_province_flag = THE_IQU_this_provinces_is_exploring_now
+				}
+			 }
+			 random_events = {
+				10 = THE_IQU_flavor_events.66
+				10 = THE_IQU_flavor_events.70
+				10 = THE_IQU_flavor_events.75
+				10 = THE_IQU_flavor_events.79
+				10 = THE_IQU_flavor_events.83
+				10 = THE_IQU_flavor_events.86
+				10 = THE_IQU_flavor_events.90
+				10 = THE_IQU_flavor_events.95
+				10 = THE_IQU_flavor_events.99
+				10 = THE_IQU_flavor_events.102
+				10 = THE_IQU_flavor_events.107
+				10 = THE_IQU_flavor_events.110
+				10 = THE_IQU_flavor_events.114
+				10 = THE_IQU_flavor_events.117
+				10 = THE_IQU_flavor_events.121
+				10 = THE_IQU_flavor_events.126
+				##
+				20 = THE_IQU_flavor_events.130
+				20 = THE_IQU_flavor_events.133
+				20 = THE_IQU_flavor_events.137
+				20 = THE_IQU_flavor_events.141
+			}
+		}
+		else_if = {
+			limit = { 
+				any_owned_province = {
+					OR = {
+						region = peru_region
+						region = upper_peru_region
+						region = la_plata_region
+					}
+					has_province_flag = THE_IQU_this_provinces_is_exploring_now
+				}
+			}
+			 random_events = {
+				10 = THE_IQU_flavor_events.66
+				10 = THE_IQU_flavor_events.70
+				10 = THE_IQU_flavor_events.75
+				10 = THE_IQU_flavor_events.79
+				10 = THE_IQU_flavor_events.83
+				10 = THE_IQU_flavor_events.86
+				10 = THE_IQU_flavor_events.90
+				10 = THE_IQU_flavor_events.95
+				10 = THE_IQU_flavor_events.99
+				10 = THE_IQU_flavor_events.102
+				10 = THE_IQU_flavor_events.107
+				10 = THE_IQU_flavor_events.110
+				10 = THE_IQU_flavor_events.114
+				10 = THE_IQU_flavor_events.117
+				10 = THE_IQU_flavor_events.121
+				10 = THE_IQU_flavor_events.126
+				##
+				20 = THE_IQU_flavor_events.144
+				20 = THE_IQU_flavor_events.148
+				20 = THE_IQU_flavor_events.153
+				20 = THE_IQU_flavor_events.156
+			}
+
+		}
+		else_if = {
+			limit = {
+				any_owned_province = {
 					NOT = {
 						region = orbital_region
 					}

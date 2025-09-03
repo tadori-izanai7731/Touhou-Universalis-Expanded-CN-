@@ -3475,7 +3475,598 @@ country_event = {
 		add_prestige = 10
 	}
 }
+####################
+###卡斯卡迪亚专属
 
+##卡斯卡迪亚断层
+country_event = {
+	id = THE_IQU_flavor_events.130
+	title = "THE_IQU_flavor_events.130.t"
+	desc = "THE_IQU_flavor_events.130.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.130.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.131
+	title = "THE_IQU_flavor_events.131.t"
+	desc = "THE_IQU_flavor_events.131.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.131.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.132
+	title = "THE_IQU_flavor_events.132.t"
+	desc = "THE_IQU_flavor_events.132.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.132.1
+	}
+}
+##峡湾地貌
+country_event = {
+	id = THE_IQU_flavor_events.133
+	title = "THE_IQU_flavor_events.133.t"
+	desc = "THE_IQU_flavor_events.133.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.133.1
+	}
+	option = {
+		name = THE_IQU_flavor_events.133.2
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.134
+	title = "THE_IQU_flavor_events.134.t"
+	desc = "THE_IQU_flavor_events.134.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.134.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.135
+	title = "THE_IQU_flavor_events.135.t"
+	desc = "THE_IQU_flavor_events.135.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.135.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.136
+	title = "THE_IQU_flavor_events.136.t"
+	desc = "THE_IQU_flavor_events.136.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.136.1
+	}
+}
+
+###北极熊
+country_event = {
+	id = THE_IQU_flavor_events.137
+	title = "THE_IQU_flavor_events.137.t"
+	desc = "THE_IQU_flavor_events.137.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.137.1
+	}
+	option = {
+		name = THE_IQU_flavor_events.137.2
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.138
+	title = "THE_IQU_flavor_events.138.t"
+	desc = "THE_IQU_flavor_events.138.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.138.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.139
+	title = "THE_IQU_flavor_events.139.t"
+	desc = "THE_IQU_flavor_events.139.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.139.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.140
+	title = "THE_IQU_flavor_events.140.t"
+	desc = "THE_IQU_flavor_events.140.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.140.1
+	}
+}
+#极北苔原
+country_event = {
+	id = THE_IQU_flavor_events.141
+	title = "THE_IQU_flavor_events.141.t"
+	desc = "THE_IQU_flavor_events.141.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.141.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.142
+	title = "THE_IQU_flavor_events.142.t"
+	desc = "THE_IQU_flavor_events.142.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.142.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.143
+	title = "THE_IQU_flavor_events.143.t"
+	desc = "THE_IQU_flavor_events.143.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.143.1
+	}
+}
+############
+#安第斯 秘鲁/上秘鲁/拉普拉塔
+############
+
+###彩虹山
+country_event = {
+	id = THE_IQU_flavor_events.144
+	title = "THE_IQU_flavor_events.144.t"
+	desc = "THE_IQU_flavor_events.144.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.144.1
+	}
+	option = {
+		name = THE_IQU_flavor_events.145.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.145
+	title = "THE_IQU_flavor_events.145.t"
+	desc = "THE_IQU_flavor_events.145.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.145.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.146
+	title = "THE_IQU_flavor_events.146.t"
+	desc = "THE_IQU_flavor_events.146.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.146.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.147
+	title = "THE_IQU_flavor_events.147.t"
+	desc = "THE_IQU_flavor_events.147.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.147.1
+	}
+}
+###加拉帕戈斯群岛
+country_event = {
+	id = THE_IQU_flavor_events.148
+	title = "THE_IQU_flavor_events.148.t"
+	desc = "THE_IQU_flavor_events.148.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.148.1
+	}
+	option = {
+		name = THE_IQU_flavor_events.148.2
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.149
+	title = "THE_IQU_flavor_events.149.t"
+	desc = "THE_IQU_flavor_events.149.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.149.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.150
+	title = "THE_IQU_flavor_events.150.t"
+	desc = "THE_IQU_flavor_events.150.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.150.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.151
+	title = "THE_IQU_flavor_events.151.t"
+	desc = "THE_IQU_flavor_events.151.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.151.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.152
+	title = "THE_IQU_flavor_events.152.t"
+	desc = "THE_IQU_flavor_events.152.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.152.1
+	}
+}
+###纳斯卡线条
+country_event = {
+	id = THE_IQU_flavor_events.153
+	title = "THE_IQU_flavor_events.153.t"
+	desc = "THE_IQU_flavor_events.153.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.153.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.154
+	title = "THE_IQU_flavor_events.154.t"
+	desc = "THE_IQU_flavor_events.154.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.154.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.155
+	title = "THE_IQU_flavor_events.155.t"
+	desc = "THE_IQU_flavor_events.155.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.155.1
+	}
+}
+###阿空加瓜峰
+country_event = {
+	id = THE_IQU_flavor_events.156
+	title = "THE_IQU_flavor_events.156.t"
+	desc = "THE_IQU_flavor_events.156.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.156.1
+	}
+	option = {
+		name = THE_IQU_flavor_events.156.2
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.157
+	title = "THE_IQU_flavor_events.157.t"
+	desc = "THE_IQU_flavor_events.157.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.157.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.158
+	title = "THE_IQU_flavor_events.158.t"
+	desc = "THE_IQU_flavor_events.158.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.158.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.159
+	title = "THE_IQU_flavor_events.159.t"
+	desc = "THE_IQU_flavor_events.159.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.159.1
+	}
+}
+##################################
+# 巴西/哥伦比亚
+##################
+
+###潘塔纳尔湿地
+country_event = {
+	id = THE_IQU_flavor_events.160
+	title = "THE_IQU_flavor_events.160.t"
+	desc = "THE_IQU_flavor_events.160.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.160.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.161
+	title = "THE_IQU_flavor_events.161.t"
+	desc = "THE_IQU_flavor_events.161.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.161.1
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.162
+	title = "THE_IQU_flavor_events.162.t"
+	desc = "THE_IQU_flavor_events.162.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.162.1
+	}
+}
+###雨林深处
+
+
+###
 ### 探险结束事件
 #「成功」
 country_event = {
