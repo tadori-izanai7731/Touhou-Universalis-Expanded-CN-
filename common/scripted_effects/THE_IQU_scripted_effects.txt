@@ -907,6 +907,112 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 
 		}
 		else_if = {
+			limit = { 
+				any_owned_province = {
+					OR = {
+						region = caribbean_sea_region
+						region = southeast_america_region
+						region = mississippi_region
+					}
+					has_province_flag = THE_IQU_this_provinces_is_exploring_now
+				}
+			}
+			 random_events = {
+				10 = THE_IQU_flavor_events.66
+				10 = THE_IQU_flavor_events.70
+				10 = THE_IQU_flavor_events.75
+				10 = THE_IQU_flavor_events.79
+				10 = THE_IQU_flavor_events.83
+				10 = THE_IQU_flavor_events.86
+				10 = THE_IQU_flavor_events.90
+				10 = THE_IQU_flavor_events.95
+				10 = THE_IQU_flavor_events.99
+				10 = THE_IQU_flavor_events.102
+				10 = THE_IQU_flavor_events.107
+				10 = THE_IQU_flavor_events.110
+				10 = THE_IQU_flavor_events.114
+				10 = THE_IQU_flavor_events.117
+				10 = THE_IQU_flavor_events.121
+				10 = THE_IQU_flavor_events.126
+				##
+				20 = THE_IQU_flavor_events.176
+				20 = THE_IQU_flavor_events.179
+				20 = THE_IQU_flavor_events.184
+				20 = THE_IQU_flavor_events.187
+			}
+
+		}
+		else_if = {
+			limit = { 
+				any_owned_province = {
+					OR = {
+						region = canada_region
+						region = northeast_america_region
+						region = great_lakes_region
+					}
+					has_province_flag = THE_IQU_this_provinces_is_exploring_now
+				}
+			}
+			 random_events = {
+				10 = THE_IQU_flavor_events.66
+				10 = THE_IQU_flavor_events.70
+				10 = THE_IQU_flavor_events.75
+				10 = THE_IQU_flavor_events.79
+				10 = THE_IQU_flavor_events.83
+				10 = THE_IQU_flavor_events.86
+				10 = THE_IQU_flavor_events.90
+				10 = THE_IQU_flavor_events.95
+				10 = THE_IQU_flavor_events.99
+				10 = THE_IQU_flavor_events.102
+				10 = THE_IQU_flavor_events.107
+				10 = THE_IQU_flavor_events.110
+				10 = THE_IQU_flavor_events.114
+				10 = THE_IQU_flavor_events.117
+				10 = THE_IQU_flavor_events.121
+				10 = THE_IQU_flavor_events.126
+				##
+				20 = THE_IQU_flavor_events.192
+				20 = THE_IQU_flavor_events.195
+				20 = THE_IQU_flavor_events.199
+				20 = THE_IQU_flavor_events.202
+			}
+
+		}
+		else_if = {
+			limit = { 
+				any_owned_province = {
+					OR = {
+						region = colombia_region
+						region = brazil_region
+					}
+					has_province_flag = THE_IQU_this_provinces_is_exploring_now
+				}
+			}
+			 random_events = {
+				10 = THE_IQU_flavor_events.66
+				10 = THE_IQU_flavor_events.70
+				10 = THE_IQU_flavor_events.75
+				10 = THE_IQU_flavor_events.79
+				10 = THE_IQU_flavor_events.83
+				10 = THE_IQU_flavor_events.86
+				10 = THE_IQU_flavor_events.90
+				10 = THE_IQU_flavor_events.95
+				10 = THE_IQU_flavor_events.99
+				10 = THE_IQU_flavor_events.102
+				10 = THE_IQU_flavor_events.107
+				10 = THE_IQU_flavor_events.110
+				10 = THE_IQU_flavor_events.114
+				10 = THE_IQU_flavor_events.117
+				10 = THE_IQU_flavor_events.121
+				10 = THE_IQU_flavor_events.126
+				##
+				20 = THE_IQU_flavor_events.160
+				20 = THE_IQU_flavor_events.163
+				20 = THE_IQU_flavor_events.168
+				20 = THE_IQU_flavor_events.173
+			}
+		}
+		else_if = {
 			limit = {
 				any_owned_province = {
 					NOT = {
