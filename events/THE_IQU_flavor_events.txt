@@ -1803,8 +1803,11 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.60.1
-		THE_IQU_add_unique_point_temporary_province_effects = {
-			level = 3
+		goto = FROM
+		FROM = {
+			THE_IQU_add_unique_point_temporary_province_effects = {
+				level = 3
+			}
 		}
 		add_prestige = 10
 	}
@@ -1824,8 +1827,11 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.61.1
-		THE_IQU_add_unique_point_temporary_province_effects = {
-			level = 3
+		goto = FROM
+		FROM = {
+			THE_IQU_add_unique_point_temporary_province_effects = {
+				level = 1
+			}
 		}
 		add_prestige = 10
 		add_base_production = 2
@@ -1846,8 +1852,11 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.62.1
-		THE_IQU_add_unique_point_temporary_province_effects = {
-			level = 5
+		goto = FROM
+		FROM = {
+			THE_IQU_add_unique_point_temporary_province_effects = {
+				level = 5
+			}
 		}
 		add_prestige = 10
 	}
@@ -1867,8 +1876,11 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.63.1
-		THE_IQU_add_unique_point_temporary_province_effects = {
-			level = 2
+		goto = FROM
+		FROM = {
+			THE_IQU_add_unique_point_temporary_province_effects = {
+				level = 2
+			}
 		}
 		add_prestige = 10
 	}
@@ -1888,8 +1900,11 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.64.1
-		THE_IQU_add_unique_point_temporary_province_effects = {
-			level = 3
+		goto = FROM
+		FROM = {
+			THE_IQU_add_unique_point_temporary_province_effects = {
+				level = 3
+			}
 		}
 		add_prestige = 10
 	}
@@ -1909,8 +1924,11 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.65.1
-		THE_IQU_add_unique_point_temporary_province_effects = {
-			level = 3
+		goto = FROM
+		FROM = {
+			THE_IQU_add_unique_point_temporary_province_effects = {
+				level = 3
+			}
 		}
 		add_prestige = 10
 	}
@@ -3493,6 +3511,10 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.130.1
+		THE_IQU_check_learning_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.131
+			bad_id = THE_IQU_flavor_events.132
+		}
 	}
 }
 #
@@ -3506,10 +3528,15 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = -5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.131.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_adm_power = 50
 	}
 }
 #
@@ -3523,10 +3550,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = 5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.132.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = -5
+		add_mil_power = -25
 	}
 }
 ##峡湾地貌
@@ -3544,9 +3577,16 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.133.1
+		THE_IQU_check_nautical_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.134
+			bad_id = THE_IQU_flavor_events.135
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.133.2
+		THE_IQU_check_none_normal_change_event_random_effects = {
+			ne_id = THE_IQU_flavor_events.136
+		}
 	}
 }
 #
@@ -3560,10 +3600,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = -5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.134.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_dip_power = 50
+		add_adm_power = -15
 	}
 }
 #
@@ -3577,10 +3623,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = 10
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.135.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_manpower = -5
+		add_sailors = -2
 	}
 }
 #
@@ -3594,10 +3646,17 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 0
+			danger = -15
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.136.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_adm_power = 25
+		add_treasury = 25
+		add_prestige = 5
 	}
 }
 
@@ -3616,9 +3675,16 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.137.1
+		THE_IQU_check_learning_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.138
+			bad_id = THE_IQU_flavor_events.139
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.137.2
+		THE_IQU_check_none_normal_change_event_random_effects = {
+			ne_id = THE_IQU_flavor_events.140
+		}
 	}
 }
 #
@@ -3632,10 +3698,17 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 15
+			danger = 5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.138.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		change_innovativeness = 5
+		add_adm_power = 100
+		add_prestige = 10
 	}
 }
 #
@@ -3649,10 +3722,17 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = 10
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.139.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_adm_power = 25
+		add_sailors = -2
+		add_prestige = 5
 	}
 }
 #
@@ -3666,10 +3746,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = -5
+			danger = -10
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.140.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		change_innovativeness = 2
+		add_mil_power = 25
 	}
 }
 #极北苔原
@@ -3683,10 +3769,17 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = -5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.141.1
+		THE_IQU_check_diplomacal_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.142
+			bad_id = THE_IQU_flavor_events.143
+		}
 	}
 }
 #
@@ -3700,10 +3793,17 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = -5
+			danger = 5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.142.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		change_innovativeness = 2
+		add_adm_power = 25
+		add_prestige = 5
 	}
 }
 #
@@ -3721,6 +3821,10 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.143.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_dip_power = -15
+		add_mil_power = -15
+		add_manpower = -2
 	}
 }
 ############
@@ -3742,9 +3846,16 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.144.1
+		THE_IQU_check_diplomacal_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.145
+			bad_id = THE_IQU_flavor_events.146
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.145.1
+		THE_IQU_check_none_normal_change_event_random_effects = {
+			ne_id = THE_IQU_flavor_events.147
+		}
 	}
 }
 #
@@ -3758,10 +3869,18 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 15
+			danger = -5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.145.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_adm_power = 50
+		add_dip_power = 50
+		add_mil_power = 50
+		change_innovativeness = 5
 	}
 }
 #
@@ -3775,10 +3894,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = 5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.146.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_adm_power = -25
+		add_prestige = -5
 	}
 }
 #
@@ -3792,10 +3917,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = -5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.147.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = 10
+		add_sailors = 2
 	}
 }
 ###加拉帕戈斯群岛
@@ -3813,9 +3944,17 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.148.1
+		THE_IQU_check_learning_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.149
+			bad_id = THE_IQU_flavor_events.150
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.148.2
+		THE_IQU_check_diplomacal_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.151
+			bad_id = THE_IQU_flavor_events.152
+		}
 	}
 }
 #
@@ -3829,10 +3968,21 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 20
+			danger = -10
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.149.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		change_innovativeness = 15
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		THE_IQU_add_prestige_or_navy_tradition_effects = {
+			value = 50
+		}
 	}
 }
 #
@@ -3846,10 +3996,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 5
+			danger = 5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.150.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = -10
+		add_treasury = -25
 	}
 }
 #
@@ -3863,10 +4019,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = -5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.151.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_adm_power = 25
+		add_prestige = 10
 	}
 }
 #
@@ -3880,10 +4042,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 5
+			danger = 10
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.152.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = -5
+		add_manpower = -5
 	}
 }
 ###纳斯卡线条
@@ -3901,6 +4069,10 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.153.1
+		THE_IQU_check_diplomacal_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.154
+			bad_id = THE_IQU_flavor_events.155
+		}
 	}
 }
 #
@@ -3914,10 +4086,15 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = -5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.154.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_adm_power = 50
 	}
 }
 #
@@ -3931,10 +4108,15 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 5
+			danger = 0
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.155.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_adm_power = 25
 	}
 }
 ###阿空加瓜峰
@@ -3952,9 +4134,16 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.156.1
+		THE_IQU_check_nautical_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.157
+			bad_id = THE_IQU_flavor_events.158
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.156.2
+		THE_IQU_check_none_normal_change_event_random_effects = {
+			ne_id = THE_IQU_flavor_events.159
+		}
 	}
 }
 #
@@ -3968,10 +4157,17 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 15
+			danger = -5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.157.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		change_innovativeness = 2
+		add_navy_tradition = 5
+		add_dip_power = 15
 	}
 }
 #
@@ -3985,10 +4181,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 5
+			danger = 0
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.158.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		change_innovativeness = -2
+		add_prestige = -5
 	}
 }
 #
@@ -4002,10 +4204,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 5
+			danger = -20
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.159.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = 15
+		add_adm_power = 25
 	}
 }
 ##################################
@@ -4027,6 +4235,10 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.160.1
+		THE_IQU_check_nautical_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.161
+			bad_id = THE_IQU_flavor_events.162
+		}
 	}
 }
 #
@@ -4040,10 +4252,15 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 15
+			danger = -10
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.161.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_adm_power = 25
 	}
 }
 #
@@ -4057,10 +4274,17 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 5
+			danger = 15
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.162.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = -10
+		add_mil_power = -25
+		add_manpower = -2
 	}
 }
 ###雨林深处
@@ -4078,9 +4302,17 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.163.1
+		THE_IQU_check_learning_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.164
+			bad_id = THE_IQU_flavor_events.165
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.163.2
+		THE_IQU_check_diplomacal_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.166
+			bad_id = THE_IQU_flavor_events.167
+		}
 	}
 }
 #
@@ -4094,10 +4326,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = 0
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.164.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		change_innovativeness = 2
+		add_dip_power = 15
 	}
 }
 #
@@ -4111,10 +4349,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = -5
+			danger = 5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.165.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_adm_power = -15
+		add_prestige = -5
 	}
 }
 #
@@ -4125,13 +4369,19 @@ country_event = {
 	picture = ""
 	is_triggered_only = yes
 	trigger = {
-		
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = -10
+		}
 	}
 	immediate = {
 
 	}
 	option = {
 		name = THE_IQU_flavor_events.166.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_dip_power = -50
+		add_prestige = 15
 	}
 }
 #
@@ -4145,10 +4395,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = 10
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.167.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_adm_power = -25
+		add_army_tradition = 2
 	}
 }
 ### 黑凯门鳄
@@ -4166,9 +4422,17 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.168.1
+		THE_IQU_check_learning_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.170
+			bad_id = THE_IQU_flavor_events.171
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.168.2
+		THE_IQU_check_diplomacal_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.172
+			bad_id = THE_IQU_flavor_events.173
+		}
 	}
 }
 #
@@ -4182,10 +4446,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = -5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.169.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		change_innovativeness = 5
+		add_dip_power = 100
 	}
 }
 #
@@ -4199,10 +4469,15 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 5
+			danger = -5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.170.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_adm_power = -50
 	}
 }
 #
@@ -4216,10 +4491,17 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 15
+			danger = 5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.171.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_mil_power = 25
+		add_army_professionalism = 0.02
+		add_prestige = 10
 	}
 }
 #
@@ -4233,10 +4515,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = 10
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.172.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_dip_power = -25
+		add_prestige = -5
 	}
 }
 ###箭毒蛙
@@ -4254,6 +4542,10 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.173.1
+		THE_IQU_check_nautical_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.174
+			bad_id = THE_IQU_flavor_events.175
+		}
 	}
 }
 #
@@ -4267,10 +4559,15 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 15
+			danger = -10
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.174.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = 25
 	}
 }
 #
@@ -4284,10 +4581,17 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = 15
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.175.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_mil_power = -20
+		add_adm_power = -20
+		change_innovativeness = -5
 	}
 }
 #############################
@@ -4308,6 +4612,10 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.176.1
+		THE_IQU_check_diplomacal_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.177
+			bad_id = THE_IQU_flavor_events.178
+		}
 	}
 }
 #
@@ -4321,10 +4629,15 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = 15
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.177.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = 10
 	}
 }
 #
@@ -4342,6 +4655,8 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.178.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = -5
 	}
 }
 ###珊瑚礁
@@ -4359,9 +4674,17 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.179.1
+		THE_IQU_check_learning_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.180
+			bad_id = THE_IQU_flavor_events.181
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.179.2
+		THE_IQU_check_nautical_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.182
+			bad_id = THE_IQU_flavor_events.183
+		}
 	}
 }
 #
@@ -4375,10 +4698,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = 5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.180.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		change_innovativeness = 2
+		add_dip_power = 20
 	}
 }
 #
@@ -4392,10 +4721,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 5
+			danger = 0
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.181.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = -5
+		add_sailors = -1
 	}
 }
 #
@@ -4409,10 +4744,17 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 20
+			danger = -5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.182.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		change_innovativeness = 5
+		add_dip_power = 100
+		add_prestige = 10
 	}
 }
 #
@@ -4426,10 +4768,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 5
+			danger = 0
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.183.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = -5
+		add_dip_power = -25
 	}
 }
 ###火山岩
@@ -4447,6 +4795,10 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.184.1
+		THE_IQU_check_nautical_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.185
+			bad_id = THE_IQU_flavor_events.186
+		}
 	}
 }
 #
@@ -4460,10 +4812,15 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = 0
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.185.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = 10
 	}
 }
 #
@@ -4477,10 +4834,15 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 5
+			danger = 5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.186.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = -5
 	}
 }
 ###红树林湿地
@@ -4498,9 +4860,17 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.187.1
+		THE_IQU_check_diplomacal_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.188
+			bad_id = THE_IQU_flavor_events.189
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.187.2
+		THE_IQU_check_nautical_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.190
+			bad_id = THE_IQU_flavor_events.191
+		}
 	}
 }
 #
@@ -4514,10 +4884,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 15
+			danger = 5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.188.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_mil_power = 100
+		add_prestige = 10
 	}
 }
 #
@@ -4531,10 +4907,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 5
+			danger = 5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.189.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = -5
+		add_manpower = -1
 	}
 }
 #
@@ -4548,10 +4930,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = -5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.190.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_adm_power = 25
+		add_navy_tradition = 5
 	}
 }
 #
@@ -4562,13 +4950,18 @@ country_event = {
 	picture = ""
 	is_triggered_only = yes
 	trigger = {
-		
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 5
+			danger = 5
+		}
 	}
 	immediate = {
 
 	}
 	option = {
 		name = THE_IQU_flavor_events.191.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = -5
 	}
 }
 #############################
@@ -4590,6 +4983,10 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.192.1
+		THE_IQU_check_diplomacal_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.193
+			bad_id = THE_IQU_flavor_events.194
+		}
 	}
 }
 #
@@ -4603,10 +5000,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = -5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.193.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = 10
+		add_army_professionalism = 0.02
 	}
 }
 #
@@ -4620,10 +5023,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = -5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.194.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = 15
+		add_adm_power = -15
 	}
 }
 ###银亮的湖面
@@ -4641,9 +5050,16 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.195.1
+		THE_IQU_check_learning_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.196
+			bad_id = THE_IQU_flavor_events.197
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.195.2
+		THE_IQU_check_none_normal_change_event_random_effects = {
+			ne_id = THE_IQU_flavor_events.198
+		}
 	}
 }
 #
@@ -4657,10 +5073,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 15
+			danger = -5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.196.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		change_innovativeness = 5
+		add_dip_power = 100
 	}
 }
 #
@@ -4674,10 +5096,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = -5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.197.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = -5
+		add_treasury = -15
 	}
 }
 #
@@ -4691,10 +5119,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = -5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.198.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_treasury = -5
+		add_mil_power = 25
 	}
 }
 ###冰川地貌
@@ -4712,6 +5146,10 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.199.1
+		THE_IQU_check_nautical_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.200
+			bad_id = THE_IQU_flavor_events.201
+		}
 	}
 }
 #
@@ -4725,10 +5163,15 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = -10
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.200.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_adm_power = 50
 	}
 }
 #
@@ -4742,10 +5185,15 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 5
+			danger = 5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.201.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_dip_power = -25
 	}
 }
 ###海鸟繁殖季
@@ -4763,9 +5211,16 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.202.1
+		THE_IQU_check_learning_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.203
+			bad_id = THE_IQU_flavor_events.204
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.202.2
+		THE_IQU_check_none_normal_change_event_random_effects = {
+			ne_id = THE_IQU_flavor_events.205
+		}
 	}
 }
 #
@@ -4779,10 +5234,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 15
+			danger = 0
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.203.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_adm_power = 100
+		change_innovativeness = 2
 	}
 }
 #
@@ -4796,10 +5257,15 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = 10
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.204.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = -5
 	}
 }
 #
@@ -4813,10 +5279,15 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 5
+			danger = -10
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.205.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_adm_power = -25
 	}
 }
 
@@ -4840,6 +5311,10 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.206.1
+		THE_IQU_check_learning_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.207
+			bad_id = THE_IQU_flavor_events.208
+		}
 	}
 }
 #
@@ -4853,10 +5328,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = -5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.207.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_dip_power = 100
+		change_innovativeness = 5
 	}
 }
 #
@@ -4870,10 +5351,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 5
+			danger = -10
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.208.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = -5
+		add_dip_power = 20
 	}
 }
 ###袋鼠
@@ -4891,9 +5378,16 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.209.1
+		THE_IQU_check_diplomacal_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.210
+			bad_id = THE_IQU_flavor_events.211
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.209.2
+		THE_IQU_check_none_normal_change_event_random_effects = {
+			ne_id = THE_IQU_flavor_events.212
+		}
 	}
 }
 #
@@ -4907,10 +5401,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = -5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.210.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = 10
+		add_army_professionalism = 0.02
 	}
 }
 #
@@ -4924,10 +5424,15 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 5
+			danger = 10
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.211.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = -5
 	}
 }
 #
@@ -4941,10 +5446,15 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 5
+			danger = -10
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.212.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_dip_power = 25
 	}
 }
 ###乌鲁鲁
@@ -4962,6 +5472,10 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.213.1
+		THE_IQU_check_nautical_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.214
+			bad_id = THE_IQU_flavor_events.215
+		}
 	}
 }
 #
@@ -4975,10 +5489,16 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = -5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.214.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = 10
+		add_adm_power = 20
 	}
 }
 #
@@ -4992,18 +5512,521 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 5
+			danger = 0
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.215.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = -5
 	}
 }
-###
+###马尔湖
+country_event = {
+	id = THE_IQU_flavor_events.216
+	title = "THE_IQU_flavor_events.216.t"
+	desc = "THE_IQU_flavor_events.216.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.216.1
+		THE_IQU_check_learning_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.217
+			bad_id = THE_IQU_flavor_events.218
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.216.2
+		THE_IQU_check_none_normal_change_event_random_effects = {
+			ne_id = THE_IQU_flavor_events.219
+		}
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.217
+	title = "THE_IQU_flavor_events.217.t"
+	desc = "THE_IQU_flavor_events.217.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 15
+			danger = 5
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.217.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_adm_power = 50
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.218
+	title = "THE_IQU_flavor_events.218.t"
+	desc = "THE_IQU_flavor_events.218.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 5
+			danger = 0
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.218.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = -5
+		add_manpower = -2
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.219
+	title = "THE_IQU_flavor_events.219.t"
+	desc = "THE_IQU_flavor_events.219.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 5
+			danger = 0
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.219.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		change_innovativeness = 1
+		add_dip_power = 5
+	}
+}
 
 #############################
 ###英格兰
 ###############
 
+###白垩
+country_event = {
+	id = THE_IQU_flavor_events.220
+	title = "THE_IQU_flavor_events.220.t"
+	desc = "THE_IQU_flavor_events.220.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.220.1
+		THE_IQU_check_learning_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.221
+			bad_id = THE_IQU_flavor_events.222
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.220.2
+		THE_IQU_check_none_normal_change_event_random_effects = {
+			ne_id = THE_IQU_flavor_events.223
+		}
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.221
+	title = "THE_IQU_flavor_events.221.t"
+	desc = "THE_IQU_flavor_events.221.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = -5
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.221.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		change_innovativeness = 5
+		add_dip_power = 50
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.222
+	title = "THE_IQU_flavor_events.222.t"
+	desc = "THE_IQU_flavor_events.222.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 5
+			danger = 5
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.222.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = -5
+		add_dip_power = -5
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.223
+	title = "THE_IQU_flavor_events.223.t"
+	desc = "THE_IQU_flavor_events.223.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 0
+			danger = -10
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.223.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = 5
+	}
+}
+###渡鸦
+country_event = {
+	id = THE_IQU_flavor_events.224
+	title = "THE_IQU_flavor_events.224.t"
+	desc = "THE_IQU_flavor_events.224.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.224.1
+		THE_IQU_check_diplomacal_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.225
+			bad_id = THE_IQU_flavor_events.226
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.224.2
+		THE_IQU_check_none_normal_change_event_random_effects = {
+			ne_id = THE_IQU_flavor_events.227
+		}
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.225
+	title = "THE_IQU_flavor_events.225.t"
+	desc = "THE_IQU_flavor_events.225.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = -5
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.225.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_army_tradition = 5
+		add_mil_power = 25
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.226
+	title = "THE_IQU_flavor_events.226.t"
+	desc = "THE_IQU_flavor_events.226.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = -5
+			danger = 10
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.226.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = -5
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.227
+	title = "THE_IQU_flavor_events.227.t"
+	desc = "THE_IQU_flavor_events.227.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 5
+			danger = -5
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.227.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = 10
+	}
+}
+###罗马浴场
+country_event = {
+	id = THE_IQU_flavor_events.228
+	title = "THE_IQU_flavor_events.228.t"
+	desc = "THE_IQU_flavor_events.228.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.228.1
+		THE_IQU_check_learning_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.229
+			bad_id = THE_IQU_flavor_events.230
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.228.2
+		THE_IQU_check_diplomacal_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.231
+			bad_id = THE_IQU_flavor_events.232
+		}
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.229
+	title = "THE_IQU_flavor_events.229.t"
+	desc = "THE_IQU_flavor_events.229.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = -5
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.229.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_dip_power = 50
+		change_innovativeness = 2
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.230
+	title = "THE_IQU_flavor_events.230.t"
+	desc = "THE_IQU_flavor_events.230.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 5
+			danger = 5
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.230.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = -5
+		add_dip_power = -15
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.231
+	title = "THE_IQU_flavor_events.231.t"
+	desc = "THE_IQU_flavor_events.231.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 5
+			danger = -20
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.231.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_adm_power = 75
+		add_prestige = 10
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.232
+	title = "THE_IQU_flavor_events.232.t"
+	desc = "THE_IQU_flavor_events.232.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = -5
+			danger = -10
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.232.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = -5
+	}
+}
+###紫色石楠
+country_event = {
+	id = THE_IQU_flavor_events.233
+	title = "THE_IQU_flavor_events.233.t"
+	desc = "THE_IQU_flavor_events.233.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+
+	}
+	option = {
+		name = THE_IQU_flavor_events.233.1
+		THE_IQU_check_diplomacal_experience_change_event_random_effects = {
+			better_id = THE_IQU_flavor_events.234
+			bad_id = THE_IQU_flavor_events.235
+		}
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.234
+	title = "THE_IQU_flavor_events.234.t"
+	desc = "THE_IQU_flavor_events.234.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = -5
+			danger = -10
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.234.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = 15
+		add_army_tradition = 2
+		add_navy_tradition = 2
+	}
+}
+#
+country_event = {
+	id = THE_IQU_flavor_events.235
+	title = "THE_IQU_flavor_events.235.t"
+	desc = "THE_IQU_flavor_events.235.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = -5
+			danger = -10
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.235.1
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+		add_prestige = -5
+		add_adm_power = -15
+	}
+}
+######################
+###探索事件 END
+#####################
+
+###天子
+country_event = {
+	id = THE_IQU_flavor_events.236
+	title = "THE_IQU_flavor_events.236.t"
+	desc = "THE_IQU_flavor_events.236.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 10
+			danger = -10
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.236.1
+		THE_IQU_define_admiral_the_tenshi_chinese_effect = yes
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
+	}
+}
+##TOTAL END
+###############
 
 ### 探险结束事件
 #「成功」
@@ -5090,5 +6113,50 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.1002.1
+	}
+}
+#发现异常点
+country_event = {
+	id = THE_IQU_flavor_events.1004
+	title = "THE_IQU_flavor_events.1004.t"
+	desc = "THE_IQU_flavor_events.1004.desc"
+	picture = "THE_IQU_event_picture_1"
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.1004.1
+		highlight = yes
+		goto = FROM
+		FROM = {
+			random_list = {
+				10 = {
+					THE_IQU_add_unique_point_temporary_province_effects = {
+						level = 1
+					}
+				}
+				20 = {
+					THE_IQU_add_unique_point_temporary_province_effects = {
+						level = 2
+					}
+				}
+				35 = {
+					THE_IQU_add_unique_point_temporary_province_effects = {
+						level = 3
+					}
+				}
+				25 = {
+					THE_IQU_add_unique_point_temporary_province_effects = {
+						level = 4
+					}
+				}
+				10 = {
+					THE_IQU_add_unique_point_temporary_province_effects = {
+						level = 5
+					}
+				}
+			}
+		}
 	}
 }

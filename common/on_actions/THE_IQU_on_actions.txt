@@ -1,6 +1,6 @@
 on_explore_coast = {
-	THE_IQU_explore_coast_exolore_government_effects = yes
-	#巴拿马
+	THE_IQU_number_explore_province_im_var_effect = yes
+	#探索事件
 	THE_IQU_panama_add_unique_point_event_effect = yes
 }
 on_colony_finished = {
@@ -8,4 +8,7 @@ on_colony_finished = {
 }
 on_startup = {
 	THE_IQU_on_startup_scripted_effects = yes
+}
+on_bi_yearly_pulse = {
+	THE_IQU_explore_on_2_years_pluse_effect = yes
 }

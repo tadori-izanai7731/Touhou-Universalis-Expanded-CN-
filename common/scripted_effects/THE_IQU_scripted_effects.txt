@@ -659,39 +659,6 @@ THE_IQU_on_startup_scripted_effects = {
 		set_country_flag = THE_IQU_on_startup_set_variable_flag
 	}
 }
-#探索海岸 FROM己方国家 #ROOT当前省份
-THE_IQU_explore_coast_exolore_government_effects = {
-	if = {
-		limit = {
-			FROM = {
-				has_government_attribute = THE_IQU_government_explore_coast_explore_mechanic
-			}
-		 }
-		 random_list = {
-			10 = {
-				ROOT = {
-					region = {
-						 discover_country = FROM
-					}
-				}
-			}
-			90 = {
-				
-			}
-		 }
-		 
-	}
-	if = {
-		limit = {
-			FROM = {
-				mission_completed = THE_IQU_1_7
-			}
-		 }
-		FROM = {
-			add_army_tradition = 1
-		}
-	}
-}
 #殖民完成oa
 THE_IQU_scarlet_sky_government_effects = {
 	if = {
@@ -749,8 +716,9 @@ THE_IQU_scarlet_sky_government_effects = {
 		}
 	}
 }
-#探索省份数量计数
+#探索海岸oa
 THE_IQU_number_explore_province_im_var_effect = {
+	#探索省份计数
 	if = {
 		limit = { 
 			FROM = {
@@ -765,9 +733,38 @@ THE_IQU_number_explore_province_im_var_effect = {
 			}
 		}
 	}
-}
-#触发异常点事件
+	#探索海岸
+	if = {
+		limit = {
+			FROM = {
+				mission_completed = THE_IQU_1_7
+			}
+		}
+		FROM = {
+			add_army_tradition = 1
+		}
+	}
+	#获得异常点
+	if = {
+		limit = { 
+			FROM = {
+				mission_completed = THE_IQU_1_5
+			}
+		}
+		FROM = {
+			random_list = {
+				10 = {
+					country_event = {
+						id = THE_IQU_flavor_events.1004
+					}
+				}
+				90 = {
 
+				}
+			}
+		}
+	}
+}
 
 #探索事件
 THE_IQU_panama_add_unique_point_event_effect = {
@@ -781,8 +778,10 @@ THE_IQU_panama_add_unique_point_event_effect = {
 			}
 			province_id = 835
 		}
-		province_event = {
-			id = THE_IQU_flavor_events.60
+		FROM = {
+			country_event = {
+				id = THE_IQU_flavor_events.60
+			}
 		}
 	}
 	#西印度
@@ -796,8 +795,10 @@ THE_IQU_panama_add_unique_point_event_effect = {
 			}
 			province_id = 487
 		}
-		province_event = {
-			id = THE_IQU_flavor_events.61
+		FROM = {
+			country_event = {
+				id = THE_IQU_flavor_events.61
+			}
 		}
 	}
 	#亚马孙
@@ -811,8 +812,10 @@ THE_IQU_panama_add_unique_point_event_effect = {
 			}
 			province_id = 2890
 		}
-		province_event = {
-			id = THE_IQU_flavor_events.62
+		FROM = {
+			country_event = {
+				id = THE_IQU_flavor_events.62
+			}
 		}
 	}
 	#北美东海岸
@@ -826,8 +829,44 @@ THE_IQU_panama_add_unique_point_event_effect = {
 			}
 			province_id = 938
 		}
-		province_event = {
-			id = THE_IQU_flavor_events.63
+		FROM = {
+			country_event = {
+				id = THE_IQU_flavor_events.63
+			}
+		}
+	}
+	#澳大利亚
+	if = {
+		limit = { 
+			FROM = {
+				OR = {
+					tag = IQU
+					was_tag = IQU
+				}
+			}
+			province_id = 4850
+		}
+		FROM = {
+			country_event = {
+				id = THE_IQU_flavor_events.64
+			}
+		}
+	}
+	#加拿大
+	if = {
+		limit = { 
+			FROM = {
+				OR = {
+					tag = IQU
+					was_tag = IQU
+				}
+			}
+			province_id = 980
+		}
+		FROM = {
+			country_event = {
+				id = THE_IQU_flavor_events.65
+			}
 		}
 	}
 }
@@ -868,6 +907,8 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 				20 = THE_IQU_flavor_events.133
 				20 = THE_IQU_flavor_events.137
 				20 = THE_IQU_flavor_events.141
+				#
+				5 = THE_IQU_flavor_events.236
 			}
 		}
 		else_if = {
@@ -903,6 +944,8 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 				20 = THE_IQU_flavor_events.148
 				20 = THE_IQU_flavor_events.153
 				20 = THE_IQU_flavor_events.156
+				#
+				5 = THE_IQU_flavor_events.236
 			}
 
 		}
@@ -939,6 +982,8 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 				20 = THE_IQU_flavor_events.179
 				20 = THE_IQU_flavor_events.184
 				20 = THE_IQU_flavor_events.187
+				#
+				5 = THE_IQU_flavor_events.236
 			}
 
 		}
@@ -975,6 +1020,8 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 				20 = THE_IQU_flavor_events.195
 				20 = THE_IQU_flavor_events.199
 				20 = THE_IQU_flavor_events.202
+				#
+				5 = THE_IQU_flavor_events.236
 			}
 
 		}
@@ -1010,6 +1057,78 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 				20 = THE_IQU_flavor_events.163
 				20 = THE_IQU_flavor_events.168
 				20 = THE_IQU_flavor_events.173
+				#
+				5 = THE_IQU_flavor_events.236
+			}
+		}
+		else_if = {
+			limit = { 
+				any_owned_province = {
+					OR = {
+						region = australia_region
+					}
+					has_province_flag = THE_IQU_this_provinces_is_exploring_now
+				}
+			}
+			 random_events = {
+				10 = THE_IQU_flavor_events.66
+				10 = THE_IQU_flavor_events.70
+				10 = THE_IQU_flavor_events.75
+				10 = THE_IQU_flavor_events.79
+				10 = THE_IQU_flavor_events.83
+				10 = THE_IQU_flavor_events.86
+				10 = THE_IQU_flavor_events.90
+				10 = THE_IQU_flavor_events.95
+				10 = THE_IQU_flavor_events.99
+				10 = THE_IQU_flavor_events.102
+				10 = THE_IQU_flavor_events.107
+				10 = THE_IQU_flavor_events.110
+				10 = THE_IQU_flavor_events.114
+				10 = THE_IQU_flavor_events.117
+				10 = THE_IQU_flavor_events.121
+				10 = THE_IQU_flavor_events.126
+				##
+				20 = THE_IQU_flavor_events.206
+				20 = THE_IQU_flavor_events.209
+				20 = THE_IQU_flavor_events.213
+				20 = THE_IQU_flavor_events.216
+				#
+				5 = THE_IQU_flavor_events.236
+			}
+		}
+		else_if = {
+			limit = { 
+				any_owned_province = {
+					OR = {
+						region = british_isles_region
+					}
+					has_province_flag = THE_IQU_this_provinces_is_exploring_now
+				}
+			}
+			 random_events = {
+				10 = THE_IQU_flavor_events.66
+				10 = THE_IQU_flavor_events.70
+				10 = THE_IQU_flavor_events.75
+				10 = THE_IQU_flavor_events.79
+				10 = THE_IQU_flavor_events.83
+				10 = THE_IQU_flavor_events.86
+				10 = THE_IQU_flavor_events.90
+				10 = THE_IQU_flavor_events.95
+				10 = THE_IQU_flavor_events.99
+				# 10 = THE_IQU_flavor_events.102
+				# 10 = THE_IQU_flavor_events.107
+				# 10 = THE_IQU_flavor_events.110
+				# 10 = THE_IQU_flavor_events.114
+				# 10 = THE_IQU_flavor_events.117
+				10 = THE_IQU_flavor_events.121
+				# 10 = THE_IQU_flavor_events.126
+				##
+				15 = THE_IQU_flavor_events.220
+				15 = THE_IQU_flavor_events.224
+				15 = THE_IQU_flavor_events.228
+				15 = THE_IQU_flavor_events.233
+				#
+				5 = THE_IQU_flavor_events.236
 			}
 		}
 		else_if = {
@@ -1041,6 +1160,8 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 				10 = THE_IQU_flavor_events.117
 				10 = THE_IQU_flavor_events.121
 				10 = THE_IQU_flavor_events.126
+				#
+				5 = THE_IQU_flavor_events.236
 			}
 		}
 	}
