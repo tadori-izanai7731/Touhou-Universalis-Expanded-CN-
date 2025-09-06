@@ -656,8 +656,40 @@ THE_IQU_on_startup_scripted_effects = {
 		set_variable = { which = the_iqu_diplomacal_experience_change_im_var value = 0 }
 		#MISSION 
 		set_variable = { which = the_iqu_explore_province_number_im_var value = 0 }
-		set_country_flag = THE_IQU_on_startup_set_variable_flag
+		##START EVENT
 	}
+	if = {
+		limit = {
+			th_is_or_was_tag = {
+				tag = IQU
+			}
+			NOT = {
+				has_country_flag = THE_IQU_on_startup_set_variable_flag
+			}
+		}
+		country_event = {
+			id = THE_IQU_flavor_events.238
+			days = 7
+		}
+	}
+	###HVR
+	if = {
+		limit = {
+			th_is_or_was_tag = {
+				tag = HVR
+			}
+			IQU = {
+				NOT = {
+					has_country_flag = THE_IQU_on_startup_set_variable_flag
+				}
+			}
+		}
+		country_event = {
+			id = THE_IQU_flavor_events.237
+		}
+	}
+	#only flag
+	set_country_flag = THE_IQU_on_startup_set_variable_flag
 }
 #殖民完成oa
 THE_IQU_scarlet_sky_government_effects = {

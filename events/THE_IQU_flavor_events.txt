@@ -4369,13 +4369,13 @@ country_event = {
 	picture = ""
 	is_triggered_only = yes
 	trigger = {
+		
+	}
+	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
 			explore = 10
 			danger = -10
 		}
-	}
-	immediate = {
-
 	}
 	option = {
 		name = THE_IQU_flavor_events.166.1
@@ -4950,13 +4950,13 @@ country_event = {
 	picture = ""
 	is_triggered_only = yes
 	trigger = {
+		
+	}
+	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
 			explore = 5
 			danger = 5
 		}
-	}
-	immediate = {
-
 	}
 	option = {
 		name = THE_IQU_flavor_events.191.1
@@ -6025,6 +6025,90 @@ country_event = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects = yes
 	}
 }
+
+#天子归来/天界侧
+country_event = {
+	id = THE_IQU_flavor_events.237
+	title = "THE_IQU_flavor_events.237.t"
+	desc = "THE_IQU_flavor_events.237.desc"
+	picture = "TENSHI_eventPicture"
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = hvr_has_variables_set
+			th_hvr_initiate_rebel_counter = yes
+			set_variable = {
+				which = hvr_earthquake_counter
+				value = 0
+			}
+			set_variable = {
+				which = hvr_num_of_max_temper
+				value = 0
+			}
+			set_variable = {
+				which = hvr_weather_action_counter
+				value = 0
+			}
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.237.1
+		trigger = {
+			OR = {
+				IQU = {
+					ai = no
+				}
+				HVR = {
+					ai = no
+				}
+			}
+		}
+		custom_tooltip = hvr_instability.tt
+		add_stability = -2
+		add_legitimacy = -40
+		add_country_modifier = {
+			name = hvr_unstable_country_lv4
+			duration = -1
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.237.2
+		trigger = {
+			OR = {
+				IQU = {
+					ai = yes
+				}
+				HVR = {
+					ai = yes
+				}
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+#天子归来/龙宫侧
+country_event = {
+	id = THE_IQU_flavor_events.238
+	title = "THE_IQU_flavor_events.238.t"
+	desc = "THE_IQU_flavor_events.238.desc"
+	picture = "THE_IQU_event_picture_1"
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.238.1
+	}
+}
+
 ##TOTAL END
 ###############
 

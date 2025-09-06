@@ -70,6 +70,9 @@ country_decisions = {
 	#探险决议
 	THE_IQU_explore_the_unique_points_core_decisions = {
 		color = { 21 54 168 }
+		provinces_to_highlight = {
+			has_province_flag = THE_IQU_province_unique_point_flag
+		}
 		potential = {
 			any_owned_province = {
 				has_province_flag = THE_IQU_province_unique_point_flag
