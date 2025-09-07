@@ -641,6 +641,369 @@ THE_IQU_move_wuxing_loong_province_flag_script = {
 		}
 	}
 }
+##天子规训 effect
+##顺从度：0-100% the_iqu_the_tenshi_obedience_im_var
+##教学经验：int the_iqu_the_tenshi_teaching_experience_im_var
+
+##当前胜利点
+#the_iqu_the_iqu_win_point_total_im_var
+#the_iqu_the_hvr_win_point_total_im_var
+THE_IQU_random_chess_playing_desc_random_flag_effect = {
+	clr_country_flag = THE_IQU_random_chess_desc_flag_1
+	clr_country_flag = THE_IQU_random_chess_desc_flag_2
+	clr_country_flag = THE_IQU_random_chess_desc_flag_3
+	clr_country_flag = THE_IQU_random_chess_desc_flag_4
+	clr_country_flag = THE_IQU_random_chess_desc_flag_5
+	##随机文本flag
+	random_list = {
+		1 = { set_country_flag = THE_IQU_random_chess_desc_flag_1 }
+		1 = { set_country_flag = THE_IQU_random_chess_desc_flag_2 }
+		1 = { set_country_flag = THE_IQU_random_chess_desc_flag_3 }
+		1 = { set_country_flag = THE_IQU_random_chess_desc_flag_4 }
+		1 = { set_country_flag = THE_IQU_random_chess_desc_flag_5 }
+	}
+}
+
+THE_IQU_random_chess_playing_option_random_flag_effect = {
+
+}
+##提前随机预设
+THE_IQU_random_chess_playing_option_random_flag_effect_before = {
+	random_list = {
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 25 hvr_win = 10 opt = 1 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 15 hvr_win = 15 opt = 1 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 15 hvr_win = 20 opt = 1 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 15 hvr_win = 10 opt = 1 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 0 hvr_win = 10 opt = 1 }
+		}
+	}
+	random_list = {
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 15 hvr_win = 10 opt = 2 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 15 hvr_win = 15 opt = 2 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 5 hvr_win = 10 opt = 2 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 10 hvr_win = 5 opt = 2 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 0 hvr_win = 25 opt = 2 }
+		}
+	}
+	random_list = {
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 20 hvr_win = 15 opt = 3 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 5 hvr_win = 10 opt = 3 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 10 hvr_win = 15 opt = 3 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 5 hvr_win = 0 opt = 3 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 10 hvr_win = 5 opt = 3 }
+		}
+	}
+	random_list = {
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 5 hvr_win = 15 opt = 4 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 0 hvr_win = 5 opt = 4 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 10 hvr_win = 15 opt = 4 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 20 hvr_win = 10 opt = 4 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 0 hvr_win = 10 opt = 4 }
+		}
+	}
+	random_list = {
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 15 hvr_win = 10 opt = 5 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 10 hvr_win = 5 opt = 5 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 5 hvr_win = 5 opt = 5 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 10 hvr_win = 10 opt = 5 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 5 hvr_win = 10 opt = 5 }
+		}
+	}
+}
+THE_IQU_random_chess_playing_option_random_flag_script_before = {
+	if = {
+		limit = {
+			tag = IQU
+		}
+		set_variable = {
+			which = the_iqu_iqu_chess_will_add_victory_point_$opt$
+			value = $iqu_win$
+		}
+		set_variable = {
+			which = the_iqu_hvr_chess_will_add_victory_point_$opt$
+			value = $hvr_win$
+		}
+	}
+	else = {
+		IQU = {
+			set_variable = {
+				which = the_iqu_iqu_chess_will_add_victory_point_$opt$
+				value = $iqu_win$
+			}
+			set_variable = {
+				which = the_iqu_hvr_chess_will_add_victory_point_$opt$
+				value = $hvr_win$
+			}
+		}
+	}
+}
+#设定结算点数
+THE_IQU_random_option_change_win_point_option_effect = {
+	#增益
+	if = { limit = {  check_variable = { which = the_iqu_iqu_chess_will_add_victory_point_$opt$ value = 25 } } custom_tooltip = THE_IQU_win_point_get_c_tt1 }
+	else_if = { limit = {  check_variable = { which = the_iqu_iqu_chess_will_add_victory_point_$opt$ value = 20 } } custom_tooltip = THE_IQU_win_point_get_c_tt2 }
+	else_if = { limit = {  check_variable = { which = the_iqu_iqu_chess_will_add_victory_point_$opt$ value = 15 } } custom_tooltip = THE_IQU_win_point_get_c_tt3 }
+	else_if = { limit = {  check_variable = { which = the_iqu_iqu_chess_will_add_victory_point_$opt$ value = 10 } } custom_tooltip = THE_IQU_win_point_get_c_tt4 }
+	else_if = { limit = {  check_variable = { which = the_iqu_iqu_chess_will_add_victory_point_$opt$ value = 5 } } custom_tooltip = THE_IQU_win_point_get_c_tt5 }
+	else_if = { limit = {  check_variable = { which = the_iqu_iqu_chess_will_add_victory_point_$opt$ value = 0 } } custom_tooltip = THE_IQU_win_point_get_c_tt6 }
+	#
+	if = { limit = {  check_variable = { which = the_iqu_hvr_chess_will_add_victory_point_$opt$ value = 25 } } custom_tooltip = THE_IQU_win_point_get_c_tt7 }
+	else_if = { limit = {  check_variable = { which = the_iqu_hvr_chess_will_add_victory_point_$opt$ value = 20 } } custom_tooltip = THE_IQU_win_point_get_c_tt8 }
+	else_if = { limit = {  check_variable = { which = the_iqu_hvr_chess_will_add_victory_point_$opt$ value = 15 } } custom_tooltip = THE_IQU_win_point_get_c_tt9 }
+	else_if = { limit = {  check_variable = { which = the_iqu_hvr_chess_will_add_victory_point_$opt$ value = 10 } } custom_tooltip = THE_IQU_win_point_get_c_tt10 }
+	else_if = { limit = {  check_variable = { which = the_iqu_hvr_chess_will_add_victory_point_$opt$ value = 5 } } custom_tooltip = THE_IQU_win_point_get_c_tt11 }
+	else_if = { limit = {  check_variable = { which = the_iqu_hvr_chess_will_add_victory_point_$opt$ value = 0 } } custom_tooltip = THE_IQU_win_point_get_c_tt12 }
+
+	if = {
+		limit = { 
+			check_variable = {
+				which = the_iqu_the_iqu_win_point_total_im_var
+				which = the_iqu_the_hvr_win_point_total_im_var
+			}
+		}
+		custom_tooltip = THE_IQU_win_point_get_c_tt13
+	}
+	else = {
+		custom_tooltip = THE_IQU_win_point_get_c_tt14
+	}
+	hidden_effect = {
+		change_variable = {
+			which = the_iqu_the_iqu_win_point_total_im_var
+			which = the_iqu_iqu_chess_will_add_victory_point_$opt$
+		}
+		change_variable = {
+			which = the_iqu_the_hvr_win_point_total_im_var
+			which = the_iqu_hvr_chess_will_add_victory_point_$opt$
+		}
+	}
+}
+##下棋结算胜利
+THE_IQU_play_chess_end_add_point_effects = {
+	change_variable = {
+		which = the_iqu_the_tenshi_obedience_im_var
+		value = $obedience$
+	}
+	hidden_effect = {
+		#相减
+		subtract_variable = {
+			which = the_iqu_the_iqu_win_point_total_im_var
+			which = the_iqu_the_hvr_win_point_total_im_var
+		}
+		set_variable = {
+			which = the_iqu_the_tenshi_teaching_experience_will_became_im_var
+			which = the_iqu_the_tenshi_obedience_im_var
+		}
+		change_variable = {
+			which = the_iqu_the_tenshi_teaching_experience_will_became_im_var
+			value = 1
+		}
+		multiply_variable = {
+			which = the_iqu_the_iqu_win_point_total_im_var
+			which = the_iqu_the_tenshi_teaching_experience_will_became_im_var
+		}
+		#mission var
+		change_variable = {
+			which = the_iqu_mission_about_win_chess_im_var
+			value = 1
+		}
+	}
+	change_variable = {
+		which = the_iqu_the_tenshi_teaching_experience_im_var
+		value = the_iqu_the_iqu_win_point_total_im_var
+	}
+	THE_IQU_teaching_tenshi_add_power_effect = yes
+}
+THE_IQU_teaching_tenshi_add_power_effect = {
+	if = {
+		limit = {
+			check_variable = {
+				which = the_iqu_the_tenshi_teaching_experience_im_var
+				value = 100
+			}
+		 }
+		THE_IQU_teaching_tenshi_add_power_script = yes
+	}
+}
+THE_IQU_teaching_tenshi_add_power_script = {
+	if = {
+		limit = { 
+			HVR = { adm = 6 }
+			HVR = { dip = 6 }
+			HVR = { mil = 6 }
+		}
+		random_list = {
+			10 = {
+				add_adm_power = 75
+			}
+			10 = {
+				add_dip_power = 75
+			}
+			10 = {
+				add_mil_power = 75
+			}
+		}
+		HVR = {
+			random_list = {
+				10 = {
+					add_adm_power = 75
+				}
+				10 = {
+					add_dip_power = 75
+				}
+				10 = {
+					add_mil_power = 75
+				}
+			}
+		}
+	}
+	#2个
+	else_if = {
+		limit = { 
+			HVR = { adm = 6 }
+			HVR = { dip = 6 }
+		}
+		HVR = {
+			th_increase_ruler_adm_stat = { mil = 1 }
+			THE_IQU_add_government_power_lvl_3_effect = { value = 1 power = mil }
+		}
+		
+	}
+	else_if = {
+		limit = { 
+			HVR = { adm = 6 }
+			HVR = { mil = 6 }
+		}
+		HVR = {
+			th_increase_ruler_adm_stat = { dip = 1 } 
+			THE_IQU_add_government_power_lvl_3_effect = { value = 1 power = dip }
+		}
+	}
+	else_if = {
+		limit = { 
+			HVR = { dip = 6 }
+			HVR = { mil = 6 }
+		}
+		HVR = {
+			th_increase_ruler_adm_stat = { adm = 1 }
+			THE_IQU_add_government_power_lvl_3_effect = { value = 1 power = adm }
+		}
+	}
+	#一个
+	else_if = {
+		limit = {
+			HVR = { mil = 6 }
+		 }
+		 HVR = {
+			random_list = {
+				10 = { th_increase_ruler_adm_stat = { adm = 1 } THE_IQU_add_government_power_lvl_3_effect = { value = 1 power = adm } }
+				10 = { th_increase_ruler_adm_stat = { dip = 1 } THE_IQU_add_government_power_lvl_3_effect = { value = 1 power = dip } }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			HVR = { dip = 6 }
+		 }
+		 HVR = {
+			random_list = {
+				10 = { th_increase_ruler_adm_stat = { adm = 1 } THE_IQU_add_government_power_lvl_3_effect = { value = 1 power = adm } }
+				10 = { th_increase_ruler_adm_stat = { mil = 1 } THE_IQU_add_government_power_lvl_3_effect = { value = 1 power = mil } }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			HVR = { adm = 6 }
+		 }
+		 HVR = {
+			random_list = {
+				10 = { th_increase_ruler_adm_stat = { mil = 1 } THE_IQU_add_government_power_lvl_3_effect = { value = 1 power = mil } }
+				10 = { th_increase_ruler_adm_stat = { dip = 1 } THE_IQU_add_government_power_lvl_3_effect = { value = 1 power = dip } }
+			}
+		} 
+	}
+	else_if = {
+		limit = { 
+			NOT = { HVR = { adm = 6 } } 
+			NOT = { HVR = { dip = 6 } } 
+			NOT = { HVR = { mil = 6 } } 
+		}
+		HVR = {
+			random_list = {
+				10 = { th_increase_ruler_adm_stat = { adm = 1 } THE_IQU_add_government_power_lvl_3_effect = { value = 1 power = adm } }
+				10 = { th_increase_ruler_adm_stat = { dip = 1 } THE_IQU_add_government_power_lvl_3_effect = { value = 1 power = dip } }
+				10 = { th_increase_ruler_adm_stat = { mil = 1 } THE_IQU_add_government_power_lvl_3_effect = { value = 1 power = mil } }
+			}
+		}
+	}
+}
+##添加政府点数
+THE_IQU_government_lvl3_cloud_with_sky_add_pwoer_effect_before = {
+	if = { limit = { HVR = { adm = 6 } } THE_IQU_add_government_power_lvl_3_effect = { value = 6 power = adm } }
+	else_if = { limit = { HVR = { adm = 5 } } THE_IQU_add_government_power_lvl_3_effect = { value = 5 power = adm } }
+	else_if = { limit = { HVR = { adm = 4 } } THE_IQU_add_government_power_lvl_3_effect = { value = 4 power = adm } }
+	else_if = { limit = { HVR = { adm = 3 } } THE_IQU_add_government_power_lvl_3_effect = { value = 3 power = adm } }
+	#
+	if = { limit = { HVR = { dip = 6 } } THE_IQU_add_government_power_lvl_3_effect = { value = 6 power = dip } }
+	else_if = { limit = { HVR = { dip = 5 } } THE_IQU_add_government_power_lvl_3_effect = { value = 5 power = dip } }
+	else_if = { limit = { HVR = { dip = 4 } } THE_IQU_add_government_power_lvl_3_effect = { value = 4 power = dip } }
+	else_if = { limit = { HVR = { dip = 3 } } THE_IQU_add_government_power_lvl_3_effect = { value = 3 power = dip } }
+	#
+	if = { limit = { HVR = { mil = 6 } } THE_IQU_add_government_power_lvl_3_effect = { value = 6 power = mil } }
+}
+
+THE_IQU_add_government_power_lvl_3_effect = {
+	add_government_power = {
+		mechanic_type = THE_IQU_cloud_with_sky_mechanic
+		power_type = THE_IQU_with_hvr_$power$_power_power
+		value = $value$
+	}
+}
 
 ################################
 ##On Action Script
@@ -656,6 +1019,9 @@ THE_IQU_on_startup_scripted_effects = {
 		set_variable = { which = the_iqu_diplomacal_experience_change_im_var value = 0 }
 		#MISSION 
 		set_variable = { which = the_iqu_explore_province_number_im_var value = 0 }
+		set_variable = { which = the_iqu_mission_about_win_chess_im_var value = 0 }
+		set_variable = { which = the_iqu_the_tenshi_obedience_im_var value = 0 }
+		set_variable = { which = the_iqu_the_tenshi_teaching_experience_im_var value = 0 }
 		##START EVENT
 	}
 	if = {
@@ -1195,6 +1561,18 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 				#
 				5 = THE_IQU_flavor_events.236
 			}
+		}
+	}
+	if = {
+		limit = { 
+			OR = {
+				tag = IQU
+				was_tag = IQU
+			}
+			has_government_attribute = THE_IQU_the_world_all_will_be_known_reform_mechanic
+		}
+		every_war_enemy_country = {
+			remove_fow = 24
 		}
 	}
 }

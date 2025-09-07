@@ -91,4 +91,48 @@ country_decisions = {
 			}
 		}
 	}
+	#召唤天子
+	THE_IQU_unlock_tenshi_advisor_decisions = {
+		color = { 21 54 168 }
+		potential = {
+			OR = {
+				tag = IQU
+				was_tag = IQU
+			}
+			has_country_flag = THE_IQU_unlock_tenshi_advisor_flag
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = THE_cd_type_decision_15_years_ttt
+				THE_cd_type_decision_scripted_trigger = {
+					flag = THE_IQU_call_tenshi_advisor_cd_flag
+					days = 5475
+				}
+			}
+			
+		}
+		effect = {
+			THE_IQU_define_the_tenshi_advisor_effect = yes
+			hidden_effect = {
+				clr_country_flag = THE_IQU_call_tenshi_advisor_cd_flag
+				set_country_flag = THE_IQU_call_tenshi_advisor_cd_flag
+			}
+		}
+	}
+	THE_IQU_teach_the_tenshi_decisions = {
+		color = { 21 54 168 }
+		potential = {
+			OR = {
+				tag = IQU
+				was_tag = IQU
+			}
+			has_country_flag = THE_IQU_unlock_tenshi_advisor_flag
+		}
+		allow = {
+			ai = no
+		}	
+		effect = {
+			
+		}
+	}
 }

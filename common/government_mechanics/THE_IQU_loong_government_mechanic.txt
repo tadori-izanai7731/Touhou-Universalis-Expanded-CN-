@@ -40,3 +40,61 @@ THE_IQU_sky_beyond_clouds_mechanic = {
 
 	}
 }
+THE_IQU_cloud_with_sky_mechanic = {
+	available = {
+		always = yes
+	}
+	powers = {
+		THE_IQU_with_hvr_adm_power_power = {
+			gui = THE_mechanic_power_hidden_gui
+			max = 6
+			min = 0
+			base_monthly_growth = 0
+			increases_with_global = no
+			scaled_modifier = {
+				trigger = {
+					HVR = {
+						overlord_of = ROOT
+					}
+				}
+				modifier = {
+					country_admin_power = 3
+				}
+			}
+		}
+		THE_IQU_with_hvr_dip_power_power = {
+			gui = THE_mechanic_power_hidden_gui
+			max = 6
+			min = 0
+			base_monthly_growth = 0
+			increases_with_global = no
+			scaled_modifier = {
+				trigger = {
+					HVR = {
+						overlord_of = ROOT
+					}
+				}
+				modifier = {
+					country_diplomatic_power = 3
+				}
+			}
+		}
+		THE_IQU_with_hvr_mil_power_power = {
+			gui = THE_mechanic_power_hidden_gui
+			max = 6
+			min = 0
+			base_monthly_growth = 0
+			increases_with_global = no
+			scaled_modifier = {
+				trigger = {
+					HVR = {
+						overlord_of = ROOT
+					}
+				}
+				modifier = {
+					country_military_power = 3
+				}
+			}
+		}
+	}
+}

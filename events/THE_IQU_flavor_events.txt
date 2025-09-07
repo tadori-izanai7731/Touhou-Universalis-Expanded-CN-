@@ -6080,7 +6080,7 @@ country_event = {
 	option = {
 		name = THE_IQU_flavor_events.237.2
 		trigger = {
-			OR = {
+			AND = {
 				IQU = {
 					ai = yes
 				}
@@ -6106,6 +6106,16 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.238.1
+		tooltip = {
+			HVR = {
+				add_stability = -2
+				add_legitimacy = -40
+				add_country_modifier = {
+					name = hvr_unstable_country_lv4
+					duration = -1
+				}
+			}
+		}
 	}
 }
 
@@ -6242,5 +6252,200 @@ country_event = {
 				}
 			}
 		}
+	}
+}
+#天人规训「菜单」
+ country_event = {
+	id = THE_IQU_flavor_events.1005
+	title = "THE_IQU_flavor_events.1005.t"
+	desc = "THE_IQU_flavor_events.1005.desc"
+	picture = "THE_IQU_event_picture_1"
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.1005.1
+		country_event = {
+			id = THE_IQU_flavor_events.1006
+		}
+		hidden_effect = {
+			set_variable = {
+				which = the_iqu_the_iqu_win_point_total_im_var
+				value = 0
+			}
+			set_variable = {
+				which = the_iqu_the_hvr_win_point_total_im_var
+				value = 0
+			}
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.1005.100
+		highlight = yes
+	}
+}
+#对弈事件/龙宫侧
+ country_event = {
+	id = THE_IQU_flavor_events.1006
+	title = "THE_IQU_flavor_events.1006.t"
+	desc = {
+		trigger = {
+		
+		}
+		desc = "THE_IQU_flavor_events.1006.desc_1"
+	}
+	picture = "THE_IQU_event_picture_1"
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			THE_IQU_random_chess_playing_option_random_flag_effect_before = yes
+		}
+	}
+	trigger = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.1006.1
+		THE_IQU_random_option_change_win_point_option_effect = {
+			opt = 1
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.1006.2
+		THE_IQU_random_option_change_win_point_option_effect = {
+			opt = 2
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.1006.3
+		THE_IQU_random_option_change_win_point_option_effect = {
+			opt = 3
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.1006.4
+		THE_IQU_random_option_change_win_point_option_effect = {
+			opt = 4
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.1006.5
+		THE_IQU_random_option_change_win_point_option_effect = {
+			opt = 5
+		}
+	}
+	after = {
+		#随机的文本脚本
+		hidden_effect = {
+			if = {
+				limit = { 
+					check_variable = {
+						which = the_iqu_the_iqu_win_point_total_im_var
+						value = 100
+					}
+				}
+				country_event = {
+					id = THE_IQU_flavor_events.1009
+				}
+			}
+			else_if = {
+				limit = { 
+					check_variable = {
+						which = the_iqu_the_hvr_win_point_total_im_var
+						value = 100
+					}
+				}
+				country_event = {
+					id = THE_IQU_flavor_events.1010
+				}
+			}
+			else = {
+				THE_IQU_random_chess_playing_desc_random_flag_effect = yes
+				HVR = {
+					country_event = {
+						id = THE_IQU_flavor_events.1007
+					}
+				}
+			}
+		}
+	}
+}
+#对弈事件/天界侧
+ country_event = {
+	id = THE_IQU_flavor_events.1007
+	title = "THE_IQU_flavor_events.1007.t"
+	desc = "THE_IQU_flavor_events.1007.desc"
+	picture = "THE_IQU_event_picture_1"
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.1007.1
+	}
+	after = {
+		hidden_effect = {
+			IQU = {
+				country_event = {
+					id = THE_IQU_flavor_events.1006
+					days = 1
+				}
+			}
+		}
+	}
+}
+#砸棋盘，彩蛋
+ country_event = {
+	id = THE_IQU_flavor_events.1008
+	title = "THE_IQU_flavor_events.1008.t"
+	desc = "THE_IQU_flavor_events.1008.desc"
+	picture = "THE_IQU_event_picture_1"
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.1008.1
+	}
+	after = {
+	}
+}
+#成功
+ country_event = {
+	id = THE_IQU_flavor_events.1009
+	title = "THE_IQU_flavor_events.1009.t"
+	desc = "THE_IQU_flavor_events.1009.desc"
+	picture = "THE_IQU_event_picture_1"
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.1009.1
+		THE_IQU_play_chess_end_add_point_effects = yes
+	}
+	after = {
+	}
+}
+#失败
+ country_event = {
+	id = THE_IQU_flavor_events.1010
+	title = "THE_IQU_flavor_events.1010.t"
+	desc = "THE_IQU_flavor_events.1010.desc"
+	picture = "THE_IQU_event_picture_1"
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.1010.1
+		add_prestige = -20
+		change_variable = {
+			which = the_iqu_the_tenshi_obedience_im_var
+			value = -2.5
+		}
+	}
+	after = {
 	}
 }

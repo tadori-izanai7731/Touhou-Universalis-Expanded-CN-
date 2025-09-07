@@ -138,3 +138,32 @@ THE_IQU_child_of_loong_buff = {
 	allowed_voc_indiamen_fraction = 0.25
 	light_ship_number_of_cannons_modifier = 0.50
 }
+#龙令天从
+THE_IQU_loong_command_buff = {
+	all_estate_loyalty_equilibrium = 0.25
+	all_estate_influence_modifier = -0.10
+}
+#规训天人
+THE_IQU_teach_tennin_buff = {
+	prestige = 0.25
+	legitimacy = 0.25
+}
+#天靖四海
+THE_IQU_hvr_cannot_decalre_war_buff = {
+	can_not_declare_war = yes
+	development_cost = -0.15
+	global_trade_goods_size = 0.5
+	merchants = 1
+	trade_steering = 0.33
+}
+#天之纲
+THE_IQU_iqu_declare_war_buff = {
+	global_autonomy = -0.05
+	governing_cost = -0.10
+}
+#云港
+THE_IQU_cloud_port_buff = {
+	ship_recruit_speed = -0.25
+	local_great_project_upgrade_cost = -0.25
+	local_institution_spread = 0.1
+}

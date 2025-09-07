@@ -612,16 +612,34 @@ THE_IQU_main_branch_3 = {
 	THE_IQU_3_1 = {
 		icon = mission_unknown_mission
 		position = 1
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			is_capital_of = ROOT
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			capital_scope = {
+				development = 35
+				has_production_building_trigger = yes
+				has_trade_building_trigger = yes
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			capital_scope = {
+				change_trade_goods = paper
+				add_province_modifier = {
+					name = THE_IQU_cloud_port_buff
+					duration = -1
+				}
+				add_building = university
+			}
+		 } 
 	}
 
 	THE_IQU_3_2 = {
 		icon = mission_unknown_mission
 		position = 2
+		required_missions = { THE_IQU_3_1 } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -633,11 +651,28 @@ THE_IQU_main_branch_3 = {
 		icon = mission_unknown_mission
 		position = 3
 		required_missions = { THE_IQU_4_2 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			is_capital_of = ROOT
+		 } 
 
-		trigger = {  } 
+		trigger = { 
 
-		effect = {  } 
+		 } 
+
+		effect = { 
+			custom_tooltip = THE_IQU_3_3_c_tt1
+			add_dip_power = 75
+			add_country_modifier = {
+				name = THE_IQU_iqu_declare_war_buff
+				duration = -1
+			}
+			HVR = {
+				add_country_modifier = {
+					name = THE_IQU_hvr_cannot_decalre_war_buff
+					duration = -1
+				}
+			}
+		 } 
 	}
 
 	THE_IQU_3_5 = {
@@ -803,33 +838,147 @@ THE_IQU_main_branch_4 = {
 	THE_IQU_4_1 = {
 		icon = mission_unknown_mission
 		position = 1
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			is_capital_of = ROOT
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			stability = 1
+			OR = {
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 50
+				}
+				estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 50
+				}
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 50
+				}
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_IQU_4_1_c_tt1
+			tooltip = {
+				HVR = {
+					add_stability = 2
+				}
+			}
+			add_country_modifier = {
+				name = THE_IQU_loong_command_buff
+				duration = 7300
+			}
+			add_dip_power = 50
+			hidden_effect = {
+				HVR = {
+					remove_country_modifier = hvr_unstable_country_lv1
+					remove_country_modifier = hvr_unstable_country_lv2
+					remove_country_modifier = hvr_unstable_country_lv3
+					remove_country_modifier = hvr_unstable_country_lv4
+					if = {
+						limit = { 
+							HVR = {
+								OR = {
+									has_country_flag = hvr_no_education_flag
+									has_country_flag = hvr_teach_lesson_flag
+								}
+							}
+						}
+						set_country_flag = hvr_no_education_flag
+						swap_non_generic_missions = yes
+					}
+					complete_mission = hvr_ease_estates
+					complete_mission = hvr_finish_agenda
+					complete_mission = hvr_prove_legitimacy
+					#
+					complete_mission = hvr_improve_stability
+					complete_mission = hvr_beat_rebels
+					complete_mission = hvr_control_crown_land
+					# hvr_stability_branch_mission_1
+					# hvr_stability_branch_mission_2
+					# hvr_stability_branch_mission_3
+					add_stability = 2
+				}
+			}
+		 } 
 	}
 
 	THE_IQU_4_2 = {
 		icon = mission_unknown_mission
 		position = 2
 		required_missions = { THE_IQU_4_1 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			is_capital_of = ROOT
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			NOT = {
+				has_estate_privilege = THE_IQU_tennin_government_loose_privileges
+			}
+			HVR = {
+				has_opinion = {
+					who = ROOT
+					value = 200
+				}
+			}
+			OR = {
+				has_adm_advisor_2 = yes
+				has_dip_advisor_2 = yes
+				has_mil_advisor_2 = yes
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_IQU_4_2_c_tt1
+			custom_tooltip = THE_IQU_4_2_c_tt2
+			add_country_modifier = {
+				name = THE_IQU_teach_tennin_buff
+				duration = -1
+			}
+			hidden_effect = {
+				set_country_flag = THE_IQU_unlock_tenshi_advisor_flag
+				set_variable = {
+					which = the_iqu_the_tenshi_obedience_im_var
+					value = 0
+				}
+				set_variable = {
+					which = the_iqu_the_tenshi_teaching_experience_im_var
+					value = 0
+				}
+			}
+		 } 
 	}
 
 	THE_IQU_4_3 = {
 		icon = mission_unknown_mission
 		position = 3
 		required_missions = { THE_IQU_4_2 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			is_capital_of = ROOT
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = THE_IQU_4_3_c_tt1
+				check_variable = {
+					which = the_iqu_mission_about_win_chess_im_var
+					value = 15
+				}
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_IQU_4_3_c_tt2
+			tooltip = {
+				add_government_reform = THE_IQU_cloud_with_sky_reform
+			}
+			hidden_effect = {
+				THE_IQU_government_lvl3_cloud_with_sky_add_pwoer_effect_before = yes
+			}
+		 } 
 	}
 
 	THE_IQU_4_4 = {
@@ -925,7 +1074,12 @@ THE_IQU_main_branch_5 = {
 
 		trigger = {  } 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_IQU_5_5_c_tt1
+			tooltip = {
+				add_government_reform = THE_IQU_the_world_all_will_be_known_reform
+			}
+		 } 
 	}
 
 	THE_IQU_5_6 = {

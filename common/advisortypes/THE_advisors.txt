@@ -141,7 +141,7 @@ THE_sizuha_advisor = {
 THE_mayumi_advisor = {
 	monarch_power = MIL
 	# Bonus
-	movement_speed = 0.20
+	movement_speed = 0.10
 	morale_damage_received = -0.10
 
 	skill_scaled_modifier = {
@@ -174,6 +174,34 @@ THE_mayumi_advisor = {
 		factor = 0
 	}
 	
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+# 比那名居天子
+THE_tenshi_advisor = {
+	monarch_power = DIP
+	# Bonus
+	diplomatic_reputation = -1
+
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				is_emperor_of_china = yes 
+			}
+		}
+		modifier = {
+			meritocracy = 0.25
+		}
+	}
+
+	allow_only_female = yes
+
+	chance = {
+		factor = 0
+	}
+
 	ai_will_do = {
 		factor = 100
 	}

@@ -4,6 +4,11 @@ l_english:
  IQU_ADJ: "龙宫"
 ### COUNTRY_END
 
+###ADVISOR
+ THE_tenshi_advisor: "比那名居 天子"
+ THE_tenshi_advisor_desc: ""
+###ADVISOR_END
+
 ### IDEA
  THE_IQU_ideas: "龙宫理念"
  THE_IQU_ideas_start: "龙宫传统"
@@ -36,7 +41,12 @@ l_english:
  THE_IQU_scarlet_sky_reform_desc: ""
  mechanic_THE_IQU_scarlet_sky_reform_mechanic_yes: "殖民地成长为城市时，自动殖民完成「§Y直属州§!」内的所有「§Y未殖民省份§!」"
  mechanic_THE_IQU_scarlet_sky_reform_mechanic_2_yes: "现当殖民地成长为城市时，存在1%的概率获得修正§O龙脉-龙之首§!"
- 
+ THE_IQU_cloud_with_sky_reform: "云佑天合"
+ THE_IQU_cloud_with_sky_reform_desc: ""
+ ability_THE_IQU_cloud_with_sky_mechanic: "天人辅政"
+ mechanic_THE_IQU_cloud_with_sky_mechanic_2_yes: "==@HVR「§Y天子§!」的每点§Y行政点§!£adm£转化为我们§G0.5§!每月额外§Y行政点§!£adm£\n==@HVR「§Y天子§!」的每点§Y外交点§!£dip£转化为我们§G0.5§!每月额外§Y外交点§!£dip£\n==@HVR「§Y天子§!」的每点§Y军事点§!£mil£转化为我们§G0.5§!每月额外§Y军事点§!£mil£"
+ THE_IQU_the_world_all_will_be_known_reform: "观澜测天"
+ mechanic_THE_IQU_the_world_all_will_be_known_reform_mechanic_yes: "--永久消除所有与我们§Y交战国家§!的§Y战争迷雾§!\n"
 ### GOVERNMENT_END
 
 ### GOVERNMENT_NAME
@@ -85,6 +95,11 @@ l_english:
  THE_IQU_favor_of_wind_buff: "风之眷顾"
  THE_IQU_fish_swim_recycle_buff: "游鳞巡弋"
  THE_IQU_child_of_loong_buff: "龙之嗣"
+ THE_IQU_loong_command_buff: "龙令天从"
+ THE_IQU_teach_tennin_buff: "规训天人"
+ THE_IQU_hvr_cannot_decalre_war_buff: "天靖四海"
+ THE_IQU_iqu_declare_war_buff: "天之纲"
+ THE_IQU_cloud_port_buff: "云港"
 ### MODIFIER_END
 
 ### ESTATE
@@ -94,6 +109,9 @@ l_english:
  THE_IQU_tennin_delegate_power_privileges: "眠龙贴"
  THE_IQU_tennin_delegate_power_privileges_desc: "天界政局已定，长女大人尚能主持事务。吾主衣玖习惯长日在云中闲游，并不想在意天下琐事，便把大部分不关键的政务交给了各大阶层。"
  THE_IQU_tennin_delegate_power_privileges_c_tt1: " 启用阶层决议§Y天人:召集探险家§!\n 此§Y阶层互动§!将会提供以下效果：\n 获得§G50§!陆军传统的探险家（该探险家§Y将领机动§!额外§G+1§!）。\n §Y效果随海军传统的多少而变化§!\n§Y天人§!阶层失去§R10§!忠诚度"
+ THE_IQU_tennin_government_loose_privileges: "混乱的天界政局"
+ THE_IQU_tennin_government_loose_privileges_desc: ""
+ THE_IQU_tennin_government_loose_privileges_c_tt1: "随机5点£dip£§Y生产发展度§!分配至拥有的省份"
 ### ESTATE_END
 
 ### MISSION_EXTRA
@@ -115,6 +133,13 @@ l_english:
  THE_IQU_3_7_c_tt2_no: "£no£若§M完成任务§!时，至少有50艘§Y轻型战舰§!，将获得以下效果："
  THE_IQU_3_7_c_tt1: "解锁§M「鳕鱼战争」§!宣战理由，允许我们夺取所有沿§Y北大西洋§!地区的§Y沿海省份§!"
  THE_IQU_3_8_c_tt1: "现当§O龙脉-龙之首§!被§Y引渡§!入殖民地省份时，该殖民地省份获得以下效果：\n- - -当地定居者数量 §G+100§!\n- - -当地原住民数量 §G+4000§!\n- -当地原住民野蛮度 §G-2§!\n- -当地原住民侵略性 §G-2§!"
+ THE_IQU_4_1_c_tt1: "@HVR§Y[HVR.GetName]§!将会移除所有§O动荡时代§!修正"
+ THE_IQU_4_2_c_tt1: "解锁特殊外交顾问§Y「比那名居天子」§!\n"
+ THE_IQU_4_2_c_tt2: "且当§Y「天子」§!存在于我们的内阁中时，解锁§Y特殊决议§!「§M规训天人§!」"
+ THE_IQU_4_3_c_tt1: "在「§Y天人规训§!」中已让天子获得§Y15§!点教养(目前：[Root.the_iqu_mission_about_win_chess_im_var.GetValue])"
+ THE_IQU_3_3_c_tt1: "@HVR§Y[HVR.GetName]§!将§O无法宣战§!，并会被强迫参与@IQU§Y[IQU.GetName]§!的§Y任何§!战争"
+ THE_IQU_5_5_c_tt1: "解锁第§Y6§!层政府改革：「§O观澜测天§!」"
+ THE_IQU_4_3_c_tt2: "解锁第§Y3§!层政府改革：「§O云佑天合§!」"
 ### MISSION_EXTRA_END
 
 ### DECISIONS
@@ -123,6 +148,8 @@ l_english:
  THE_IQU_etate_privileges_add_navy_leaders_decisions_c_trigger_t: "此决议未在20年内使用过"
  THE_IQU_explore_the_unique_points_core_decisions_title: "「探险菜单」"
  THE_IQU_explore_the_unique_points_core_decisions_desc: ""
+ THE_IQU_unlock_tenshi_advisor_decisions_title: "招募外交顾问§Y「比那名居天子」§!"
+ THE_IQU_unlock_tenshi_advisor_decisions_desc: ""
 ### DECISIONS_END
 
 ### EVENT
@@ -899,6 +926,21 @@ l_english:
  THE_IQU_flavor_events.238.t: "天子归来"
  THE_IQU_flavor_events.238.desc: "天界的比那名居一族大小姐，竟凭强硬手段将在位的执政官直接赶下了台。可隐居的天界长老们本就无心过问政务，此刻不知在何处逍遥自在，只当天子这番举动是孩童打闹的戏码，全未放在心上。​\n龙宫使衣玖本就无意卷入天界的权斗琐事 —— 她与这位比那名居家的大小姐早有往来，也算熟识。在她看来，谁来当执政官都无关紧要，只要不扰了自己在云中闲游的清净便好。​\n可天子的胡闹愈发过火，终于惹得一众不满的天人集结成起义军，径直闹到了比那名居邸前。更让衣玖难以忍受的是，有顶天的混乱竟愈演愈烈。她抬眼望去，只见天子非但没有收敛，反倒乐得与起义的天人缠斗，越战越尽兴，半分没有退让之意。天界连日被雷电撕裂、大地震颤，轰鸣声日夜不绝，彻底扰了她在云中闲游的清净。​\n衣玖心中暗忖：「这群天人贵族本就不是善茬，再这么闹下去，天界不知要乱到何时。倒不如自己下场，趁早摆平这场闹剧。天子她自会好好管教；而那些挑事作乱的天人，也断不能逃脱应有的诛罚。」"
  THE_IQU_flavor_events.238.1: "「等此间事了，我自会将比那名居天子带往龙宫受审。」"
+ THE_IQU_flavor_events.1006.t: "与天子弈棋"
+ THE_IQU_flavor_events.1006.desc: ""
+ THE_IQU_flavor_events.1006.1: ""
+ THE_IQU_flavor_events.1006.2: ""
+ THE_IQU_flavor_events.1006.3: ""
+ THE_IQU_flavor_events.1006.4: ""
+ THE_IQU_flavor_events.1006.5: ""
+ THE_IQU_flavor_events.1007.t: ""
+ THE_IQU_flavor_events.1007.desc: ""
+ THE_IQU_flavor_events.1009.t: "胜"
+ THE_IQU_flavor_events.1009.desc: ""
+ THE_IQU_flavor_events.1009.1: ""
+ THE_IQU_flavor_events.1010.t: "败"
+ THE_IQU_flavor_events.1010.desc: ""
+ THE_IQU_flavor_events.1010.1: ""
 ### EVENT_END
 
 ### SYS_EVENT
@@ -915,9 +957,26 @@ l_english:
  THE_IQU_flavor_events.1004.t: "发现「异常点」"
  THE_IQU_flavor_events.1004.desc: ""
  THE_IQU_flavor_events.1004.1: "了解"
+ THE_IQU_flavor_events.1005.t: "天人规训"
 ### SYS_EVENT_END
 
 ### SCRIPT_EFFECT
+ the_iqu_the_tenshi_obedience_im_var: "「天子」教养"
+ the_iqu_the_tenshi_teaching_experience_im_var: "教导经验"
+ THE_IQU_win_point_get_c_tt1: "对@IQU「§Y衣玖§!」的胜利有§J极大增益§!"
+ THE_IQU_win_point_get_c_tt2: "对@IQU「§Y衣玖§!」的胜利有§M较大增益§!"
+ THE_IQU_win_point_get_c_tt3: "对@IQU「§Y衣玖§!」的胜利有§Y一般增益§!"
+ THE_IQU_win_point_get_c_tt4: "对@IQU「§Y衣玖§!」的胜利有§O较小增益§!"
+ THE_IQU_win_point_get_c_tt5: "对@IQU「§Y衣玖§!」的胜利有§W微小增益§!"
+ THE_IQU_win_point_get_c_tt6: "对@IQU「§Y衣玖§!」的胜利有§g没有增益§!"
+ THE_IQU_win_point_get_c_tt7: "对@HVR「§Y天子§!」的胜利有§J极大增益§!"
+ THE_IQU_win_point_get_c_tt8: "对@HVR「§Y天子§!」的胜利有§M较大增益§!"
+ THE_IQU_win_point_get_c_tt9: "对@HVR「§Y天子§!」的胜利有§Y一般增益§!"
+ THE_IQU_win_point_get_c_tt10: "对@HVR「§Y天子§!」的胜利有§O较小增益§!"
+ THE_IQU_win_point_get_c_tt11: "对@HVR「§Y天子§!」的胜利有§W微小增益§!"
+ THE_IQU_win_point_get_c_tt12: "对@HVR「§Y天子§!」的胜利有§g没有增益§!"
+ THE_IQU_win_point_get_c_tt13: "目前局势：@IQU「§Y衣玖§!」占据§M上风§!"
+ THE_IQU_win_point_get_c_tt14: "目前局势：@HVR「§Y天子§!」占据§M上风§!"
  THE_IQU_unique_set_temporary_point_c_tt1: "为§Y[This.GetAreaName]§!添加§O海图异常点§!"
  THE_IQU_add_explore_progress_or_dangerous_progres_c_tt1: "  为当前探险进度改变§G[Root.the_iqu_will_change_explore_progress.GetValue]%§!\n  为当前危险进度改变§R[Root.the_iqu_will_change_danger_progress.GetValue]%§!"
  THE_IQU_check_nautical_experience_change_event_effect_c_tt1: "-此选项为@IQU§M航海选项§!，抉择概率将会由§Y「航海经验」§!决定"
