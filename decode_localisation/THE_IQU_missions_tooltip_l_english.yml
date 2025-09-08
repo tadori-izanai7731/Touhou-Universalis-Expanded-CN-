@@ -100,6 +100,7 @@ l_english:
  THE_IQU_hvr_cannot_decalre_war_buff: "天靖四海"
  THE_IQU_iqu_declare_war_buff: "天之纲"
  THE_IQU_cloud_port_buff: "云港"
+ THE_IQU_trade_paper_buff: "纸张贸易"
 ### MODIFIER_END
 
 ### ESTATE
@@ -136,10 +137,14 @@ l_english:
  THE_IQU_4_1_c_tt1: "@HVR§Y[HVR.GetName]§!将会移除所有§O动荡时代§!修正"
  THE_IQU_4_2_c_tt1: "解锁特殊外交顾问§Y「比那名居天子」§!\n"
  THE_IQU_4_2_c_tt2: "且当§Y「天子」§!存在于我们的内阁中时，解锁§Y特殊决议§!「§M规训天人§!」"
- THE_IQU_4_3_c_tt1: "在「§Y天人规训§!」中已让天子获得§Y15§!点教养(目前：[Root.the_iqu_mission_about_win_chess_im_var.GetValue])"
+ THE_IQU_4_3_c_tt1: "在「§Y天人规训§!」中已让天子获得§Y50§!点教养(目前：[Root.the_iqu_mission_about_win_chess_im_var.GetValue])"
  THE_IQU_3_3_c_tt1: "@HVR§Y[HVR.GetName]§!将§O无法宣战§!，并会被强迫参与@IQU§Y[IQU.GetName]§!的§Y任何§!战争"
  THE_IQU_5_5_c_tt1: "解锁第§Y6§!层政府改革：「§O观澜测天§!」"
  THE_IQU_4_3_c_tt2: "解锁第§Y3§!层政府改革：「§O云佑天合§!」"
+ THE_IQU_3_1_c_tt1_yes: "£yes£若§M完成任务§!时，已完成「§Y探索理念组§!」或「§Y贸易理念组§!」，将获得以下效果："
+ THE_IQU_3_1_c_tt1_no: "£no£若§M完成任务§!时，已完成「§Y探索理念组§!」或「§Y贸易理念组§!」，将获得以下效果："
+ THE_IQU_3_1_c_tt2: "随机§Y2§!个省份将商品变更为§Y纸张§!"
+ THE_IQU_4_4_c_tt1: "现在每§Y5§!年将会额外结算§G1§!次贸易收入\n - -贸易收入将会计为@IQU§Y[IQU.GetName]§!与@HVR§Y[HVR.GetName]§!收入的总和，此外@IQU§Y[IQU.GetName]§!与@HVR§Y[HVR.GetName]§!位于「外部界域」贸易区的总竞争力的差幅越大，收入系数越低。当季度差幅在±20%以内时，将获得以下效果："
 ### MISSION_EXTRA_END
 
 ### DECISIONS

@@ -1576,3 +1576,102 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 		}
 	}
 }
+#设定收入
+THE_IQU_set_yearly_trade_income_with_hvr_effect = {
+	#衣玖总竞争力
+	set_variable = {
+		which = the_iqu_total_heaven_trade_power_im_var_iqu
+		value = 0
+	}
+	#天子总竞争力
+	set_variable = {
+		which = the_iqu_total_heaven_trade_power_im_var_hvr
+		value = 0
+	}
+	#
+	while = {
+		limit = { 
+			any_owned_province = {
+				trade_company_region = th_trade_company_heaven
+				NOT = {
+					has_province_flag = THE_IQU_has_set_point_trade_province_power_flag
+				}
+			}
+		}
+		random_owned_province = {
+			limit = {
+				trade_company_region = th_trade_company_heaven
+				NOT = {
+					has_province_flag = THE_IQU_has_set_point_trade_province_power_flag
+				}
+			}
+			ROOT = {
+				export_to_variable = {
+					variable_name = the_iqu_total_heaven_trade_power_im_var_iqu_single_province
+					value = province_trade_power
+					who = PREV
+				}
+				#累加变量
+				change_variable = {
+					which = the_iqu_total_heaven_trade_power_im_var_iqu
+					which = the_iqu_total_heaven_trade_power_im_var_iqu_single_province
+				}
+			}
+			set_province_flag = THE_IQU_has_set_point_trade_province_power_flag
+		}
+	}
+	every_owned_province = {
+		limit = {
+			trade_company_region = th_trade_company_heaven
+		}
+		clr_province_flag = THE_IQU_has_set_point_trade_province_power_flag
+	}
+	while = {
+		limit = { 
+			#天界的省份贸易
+			HVR = {
+				any_owned_province = {
+					trade_company_region = th_trade_company_heaven
+					NOT = {
+						has_province_flag = THE_IQU_has_set_point_trade_province_power_flag2
+					}
+				}
+			}
+		}
+		HVR = {
+			random_owned_province = {
+				limit = {
+					trade_company_region = th_trade_company_heaven
+					NOT = {
+						has_province_flag = THE_IQU_has_set_point_trade_province_power_flag2
+					}
+				}
+				ROOT = {
+					export_to_variable = {
+						variable_name = the_iqu_total_heaven_trade_power_im_var_hvr_single_province
+						value = province_trade_power
+						who = PREV
+					}
+					#累加变量
+					change_variable = {
+						which = the_iqu_total_heaven_trade_power_im_var_hvr
+						which = the_iqu_total_heaven_trade_power_im_var_hvr_single_province
+					}
+				}
+				set_province_flag = THE_IQU_has_set_point_trade_province_power_flag2
+			}
+		}
+	}
+	HVR = {
+		every_owned_province = {
+			limit = {
+				trade_company_region = th_trade_company_heaven
+			}
+			clr_province_flag = THE_IQU_has_set_point_trade_province_power_flag
+		}
+	}
+	#得出变量
+	#龙宫省份贸易竞争力 the_iqu_total_heaven_trade_power_im_var_iqu
+	#天界省份贸易竞争力 the_iqu_total_heaven_trade_power_im_var_hvr
+	
+}

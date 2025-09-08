@@ -622,16 +622,63 @@ THE_IQU_main_branch_3 = {
 				has_production_building_trigger = yes
 				has_trade_building_trigger = yes
 			}
+			num_of_owned_provinces_with = {
+				value = 10
+				development = 20
+				has_production_building_trigger = yes
+				has_trade_building_trigger = yes
+			}
 		 } 
 
 		effect = { 
+			custom_tooltip = THE_IQU_3_1_c_tt2
 			capital_scope = {
 				change_trade_goods = paper
+				add_building = university
 				add_province_modifier = {
 					name = THE_IQU_cloud_port_buff
 					duration = -1
 				}
-				add_building = university
+			}
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						NOT = {
+							trade_goods = paper
+						}
+					}
+					change_trade_goods = paper
+				}
+				random_owned_province = {
+					limit = {
+						NOT = {
+							trade_goods = paper
+						}
+					}
+					change_trade_goods = paper
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						full_idea_group = exploration_ideas
+						full_idea_group = trade_ideas
+					}
+				 }
+				 custom_tooltip = THE_IQU_3_1_c_tt1_yes
+				 add_country_modifier = {
+						name = THE_IQU_trade_paper_buff
+						duration = -1
+					}
+			}
+			else = {
+				 custom_tooltip = THE_IQU_3_1_c_tt1_no
+				 tooltip = {
+					add_country_modifier = {
+						name = THE_IQU_trade_paper_buff
+						duration = -1
+					}
+				 }
 			}
 		 } 
 	}
@@ -652,12 +699,35 @@ THE_IQU_main_branch_3 = {
 		position = 3
 		required_missions = { THE_IQU_4_2 } 
 		provinces_to_highlight = { 
-			is_capital_of = ROOT
+			OR = {
+				owned_by = ROOT
+				owned_by_subject_of = ROOT
+			}
+			OR = {
+				NOT = {
+					development = 10
+				}
+				NOT = {
+					has_courthouse_building_trigger = yes
+				}
+			}
 		 } 
 
 		trigger = { 
-
-		 } 
+			stability = 1
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 15
+				development = 10
+				has_courthouse_building_trigger = yes
+			}
+			army_professionalism = 0.20
+			all_owned_province = {
+				is_prosperous = yes
+				NOT = {
+					devastation = 1
+				}
+			}
+		} 
 
 		effect = { 
 			custom_tooltip = THE_IQU_3_3_c_tt1
@@ -965,8 +1035,15 @@ THE_IQU_main_branch_4 = {
 				tooltip = THE_IQU_4_3_c_tt1
 				check_variable = {
 					which = the_iqu_mission_about_win_chess_im_var
-					value = 15
+					value = 50
 				}
+			}
+			has_adm_advisor_3 = yes
+			has_dip_advisor_3 = yes
+			has_mil_advisor_3 = yes
+			full_idea_group = court_ideas
+			capital_scope = {
+				has_building = university
 			}
 		 } 
 
@@ -978,6 +1055,7 @@ THE_IQU_main_branch_4 = {
 			hidden_effect = {
 				THE_IQU_government_lvl3_cloud_with_sky_add_pwoer_effect_before = yes
 			}
+			add_dip_power = 75
 		 } 
 	}
 
@@ -988,11 +1066,42 @@ THE_IQU_main_branch_4 = {
 			THE_IQU_3_3
 			THE_IQU_4_3
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			OR = {
+				owned_by = ROOT
+				owned_by_subject_of = ROOT
+			}
+			OR = {
+				NOT = {
+					has_trade_building_trigger = yes
+				}
+				NOT = {
+					province_has_center_of_trade_of_level = 2
+				}
+			}
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			stability = 3
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 20
+				province_has_center_of_trade_of_level = 2
+				has_trade_building_trigger = yes
+			}
+			5032 = {
+				highest_value_trade_node = yes
+			}
+			trading_part = {
+				trade_goods = paper
+				value = 0.05
+			}
+			monthly_trade_income = 50
+		 } 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_IQU_4_4_c_tt1
+			add_adm_power = 75
+		} 
 	}
 
 	THE_IQU_4_6 = {
