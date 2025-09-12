@@ -47,6 +47,18 @@
  mechanic_THE_IQU_cloud_with_sky_mechanic_2_yes: "==@HVR0§Y)YPR§!0„vÏk¹p§YLˆ?e¹p§!£adm£lS:NbìN§G0.5§!Ïkg˜Y§YLˆ?e¹p§!£adm£\n==@HVR0§Y)YPR§!0„vÏk¹p§YY²N¹p§!£dip£lS:NbìN§G0.5§!Ïkg˜Y§YY²N¹p§!£dip£\n==@HVR0§Y)YPR§!0„vÏk¹p§Y›Q‹N¹p§!£mil£lS:NbìN§G0.5§!Ïkg˜Y§Y›Q‹N¹p§!£mil£"
  THE_IQU_the_world_all_will_be_known_reform: "Â‰œoKm)Y"
  mechanic_THE_IQU_the_world_all_will_be_known_reform_mechanic_yes: "--8lENˆmd–Nb	gNbìN§Y²NbýV¶R§!„v§Yb‰N÷þ–§!\n"
+ THE_IQU_tennin_one_taoist_reform: ")YºNNS"
+ THE_IQU_tennin_one_taoist_reform_desc: ""
+ mechanic_THE_IQU_tennin_one_taoist_reform_mechanic_yes: "=T(uwýN	c®”0§MV!n™Ÿ	§!0AQ¸‹bìNS™Ÿ	§YVüR§!óvQÖNwýN0\nN™Ÿ	O×S0R0§YÎ˜4lKNLˆ§!0„vqVÍTwÓgN0§V”NLˆ§!0ÿÇwýN	c®”ýwvQwýNub§OwmþVV8^¹p§!\nSVbìNŒRbÓgN0§V”NLˆ§!0„v§OwmþVV8^¹p§!ÿSO·ƒ—V0§V”NLˆ§!0KNpS\n---Ïk¹p§WÑ‘KNpS§!SO&^eg T’c®puQ2O³R §G+1%§!\n---Ïk¹p§M4lKNpS§!SO&^eg 8fHe‡s §G+1%§!\n---Ïk¹p§J(gKNpS§!SO&^eg ÑSUSb,g §G-1%§!\n---Ïk¹p§OkpKNpS§!SO&^eg FUÁTµNúQîOck §G+1%§!\n---Ïk¹p§WWKNpS§!SO&^eg wýNgNOê»l¦^ §G-1%§! "
+ THE_IQU_with_hvr_adm_power_power: "egê)YPRLˆ?eýw›R"
+ THE_IQU_with_hvr_dip_power_power: "egê)YPRY²Nýw›R"
+ THE_IQU_with_hvr_mil_power_power: "egê)YPR›Q‹Nýw›R"
+ THE_IQU_tennin_one_taoist_jin_power: "§WÑ‘KNpS§!"
+ THE_IQU_tennin_one_taoist_shui_power: "§M4lKNpS§!"
+ THE_IQU_tennin_one_taoist_mu_power: "§J(gKNpS§!"
+ THE_IQU_tennin_one_taoist_huo_power: "§OkpKNpS§!"
+ THE_IQU_tennin_one_taoist_tu_power: "§VWKNpS§!"
+ 
 ### GOVERNMENT_END
 
 ### GOVERNMENT_NAME
@@ -101,6 +113,11 @@
  THE_IQU_iqu_declare_war_buff: ")YKN²u"
  THE_IQU_cloud_port_buff: "‘N=n"
  THE_IQU_trade_paper_buff: "¸u.V8f"
+ THE_IQU_trade_steer_100_buff: "8fOSšR"
+ THE_IQU_have_no_mind_buff: "àeõVàeó`"
+ THE_IQU_build_shipyard_buff: "3‚I‚øvçu"
+ THE_IQU_moon_explore_range_buff: "µlŸnïo•"
+ THE_IQU_cloud_sail_on_sea_buff: "‘N^Nmwm"
 ### MODIFIER_END
 
 ### ESTATE
@@ -124,7 +141,7 @@
  THE_IQU_1_4_c_tt1: "§YîvhwýN§!S·ƒ—VåNNHeœgÿ\n ûm R§OwmþVV8^¹p§!\n  å‚å‹wýN:N§Y–kl0W§!ÿSËzsS§Y–klŒRb§!"
  THE_IQU_1_5_c_tt1: "§Y[This.GetAreaName]§!0W:SòTÏuÇ0§M‘N8n:g6R§!0§YŒRb¢c0t§!"
  THE_IQU_1_5_c_tt2: "°s(W§Y¢c0twm¸S§!wýNöeÿSO§M10§!%„v‚i‡s(W–:gwýNûm R§OwmþVV8^¹p§!"
- THE_IQU_1_6_c_tt1: "Ç§Y¢ci–¶R§!¢c0t…Çÿ[Root.the_iqu_explore_province_number_im_var.GetValue]/100	ÿ*NwýN"
+ THE_IQU_1_6_c_tt1: "Ç§Y¢ci–¶R§!¢c0t…Çÿ[Root.the_iqu_explore_province_number_im_var.GetValue]/75	ÿ*NwýN"
  THE_IQU_2_5_c_tt1: "ûNawýNîOck§O™Ÿ	-™ŸKN–™§!òTPŸÆ–§Y”NLˆ§!"
  THE_IQU_2_5_c_tt2: "§Måb	g§!îOck§YÎ˜4ltQÛv-00KNLˆ§!„vwýNSOVËYuµN§Y¸u.V§!\n - -§g+TKNTÍ‘n§YÎ˜4ltQÛv-00KNLˆ§!„vwýN§!"
  THE_IQU_1_7_c_tt1: "°s(W§Y¢c0twm¸S§!ŒRböeÿ·ƒ—V1¹p§MF–›Q.Oßu§!\n"
@@ -144,7 +161,21 @@
  THE_IQU_3_1_c_tt1_yes: "£yes£å‚§MŒRbûN¡R§!öeÿòTŒRb0§Y¢c0ttõVÄu§!0b0§Y8ftõVÄu§!0ÿS·ƒ—VåNNHeœgÿ"
  THE_IQU_3_1_c_tt1_no: "£no£å‚§MŒRbûN¡R§!öeÿòTŒRb0§Y¢c0ttõVÄu§!0b0§Y8ftõVÄu§!0ÿS·ƒ—VåNNHeœgÿ"
  THE_IQU_3_1_c_tt2: "–:g§Y2§!*NwýNSFUÁTØSôf:N§Y¸u.V§!"
- THE_IQU_4_4_c_tt1: "°s(WÏk§Y5§!t^SO˜YÓu—r§G1§!!k8f6eeQ\n - -8f6eeQSO¡‹:N@IQU§Y[IQU.GetName]§!N@HVR§Y[HVR.GetName]§!6eeQ„vI`ŒTÿdkY@IQU§Y[IQU.GetName]§!N@HVR§Y[HVR.GetName]§!MOŽN0YèLußW08f:S„vI`Þz‰N›R„vîTE^Š'Yÿ6eeQû|peŠNO0SVcR¦^îTE^(W±20%åN…QöeÿS·ƒ—VåNNHeœgÿ"
+ THE_IQU_4_4_c_tt1: "°s(WÏk§Y5§!t^SO˜YÓu—r§G1§!!k8f6eeQ\n -8f6eeQSO¡‹:N@IQU§Y[IQU.GetName]§!N@HVR§Y[HVR.GetName]§!6eeQ„vI`ŒT0\n -å‚@IQU§Y[IQU.GetName]§!N@HVR§Y[HVR.GetName]§!MOŽN0§YYèLußW§!08f:S„v§MÞz‰N›R§!øvIröeÿ6eeQg'Yÿ–Nw@IQU§Y[IQU.GetName]§!N@HVR§Y[HVR.GetName]§!„v§MÞz‰N›R§!„v§YîTE^§!žX'Yw§YpˆÏQ§!"
+ THE_IQU_event_1011_c_tt1: "@IQU§Y[IQU.GetName]§!N@HVR§Y[HVR.GetName]§!SOT·ƒ—VÑ‘±”¤[Root.the_iqu_iqu_years_of_income_im_var.GetValue]"
+ THE_IQU_4_6_c_tt1: "Ç0§M‘N8n:g6R§!0òTÏuŒRb¢c0t§W25§!*N§Y0W:S§!ÿîvMRÿ§Y[Root.the_iqu_had_explore_area_number_im_var.GetValue]§!	ÿ"
+ THE_IQU_4_4_c_tt2: "@HVR0§Y)YPR§!0„vÏk¹p§YLˆ?e¹p§!£adm£SO:NbìN&^eg§YFUÁTµNúQîOck§!§G+2§!% §Y8fHe‡s§!§G+2§!%\n"
+ THE_IQU_4_6_c_tt3: "@HVR0§Y)YPR§!0„vÏk¹p§YY²N¹p§!£dip£SO:NbìN&^eg§YhQýV4lKbîOck§!§G+5§!%\n"
+ THE_IQU_4_6_c_tt2: "ÑSUSåb	gîOck0§O™Ÿ	-™ŸKNù§!0„vwýNSO	g§Y50§!%„v‚i‡s˜YÐcGS1¹p§YÑSUS¦^§!"
+ THE_IQU_5_3_c_tt1_yes: "£yes£å‚§MŒRbûN¡R§!öeÿbìNåb	g0§Ygb—§!0:SßW„vNb	gwýN,SO·ƒ—VåNNHeœgÿ"
+ THE_IQU_5_3_c_tt1_no: "£no£å‚§MŒRbûN¡R§!öeÿbìNåb	g0§Ygb—§!0:SßW„vNb	gwýN,SO·ƒ—VåNNHeœgÿ"
+ THE_IQU_5_3_c_tt2: "§Y15§!¹p£dip£§YuµNÑSUS¦^§!SO«ˆRM‘óbìN(W0§Ygb—§!0:SßW„vwýN"
+ THE_IQU_5_4_c_tt1: "°s(W§Y–kl0W§!ÑSUS:NÎW^öeÿ˜Y·ƒ—V1¹p§YuµNÑSUS¦^§!\n"
+ THE_IQU_5_5_c_tt2: "§MNLu§!NNb	g„v§YwýN§!†v«ˆbìNNbÑS°s"
+ THE_IQU_5_7_c_tt1: "°s(WbìNO(u§YwmN®pûQ§!öeÿSôv¥c`S†˜vQ§Y‰^X§!wýNÿv^·ƒ—V§G25§!§Y›Q‹N¹p§!£mil£"
+ THE_IQU_4_7_c_tt1: "Ç§Y¢ci–¶R§!¢c0t…Çÿ[Root.the_iqu_explore_province_number_im_var.GetValue]/150	ÿ*NwýN"
+ THE_IQU_5_8_c_tt1: "SVMRV!n™Ÿ	ŠÇ50!kqS	wýNÿîvMRÿ[Root.the_iqu_mountain_province_has_been_teer_im_var.GetValue]	ÿ"
+ THE_IQU_4_8_c_tt1: "SVMRV!n™Ÿ	ŠÇ50!kqS	wýNÿîvMRÿ[Root.the_iqu_jungle_province_has_been_teer_im_var.GetValue]	ÿ"
 ### MISSION_EXTRA_END
 
 ### DECISIONS

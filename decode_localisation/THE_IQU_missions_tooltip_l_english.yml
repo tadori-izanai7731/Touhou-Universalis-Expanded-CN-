@@ -47,6 +47,18 @@ l_english:
  mechanic_THE_IQU_cloud_with_sky_mechanic_2_yes: "==@HVR「§Y天子§!」的每点§Y行政点§!£adm£转化为我们§G0.5§!每月额外§Y行政点§!£adm£\n==@HVR「§Y天子§!」的每点§Y外交点§!£dip£转化为我们§G0.5§!每月额外§Y外交点§!£dip£\n==@HVR「§Y天子§!」的每点§Y军事点§!£mil£转化为我们§G0.5§!每月额外§Y军事点§!£mil£"
  THE_IQU_the_world_all_will_be_known_reform: "观澜测天"
  mechanic_THE_IQU_the_world_all_will_be_known_reform_mechanic_yes: "--永久消除所有与我们§Y交战国家§!的§Y战争迷雾§!\n"
+ THE_IQU_tennin_one_taoist_reform: "天人一道"
+ THE_IQU_tennin_one_taoist_reform_desc: ""
+ mechanic_THE_IQU_tennin_one_taoist_reform_mechanic_yes: "启用省份按钮「§M引渡龙脉§!」允许我们将龙脉§Y引导§!至其他省份。\n且龙脉会受到「§Y风水之行§!」的影响而染上「§V五行§!」，通过省份按钮能其省份生成§O海图异常点§!\n当我们完成染上「§V五行§!」的§O海图异常点§!，将会获得「§V五行§!」之印\n---每点§W金之印§!将会带来 后排炮兵伤害 §G+1%§!\n---每点§M水之印§!将会带来 贸易效率 §G+1%§!\n---每点§J木之印§!将会带来 发展成本 §G-1%§!\n---每点§O火之印§!将会带来 商品产出修正 §G+1%§!\n---每点§V土之印§!将会带来 省份最低自治度 §G-1%§!"
+ THE_IQU_with_hvr_adm_power_power: "来自天子行政能力"
+ THE_IQU_with_hvr_dip_power_power: "来自天子外交能力"
+ THE_IQU_with_hvr_mil_power_power: "来自天子军事能力"
+ THE_IQU_tennin_one_taoist_jin_power: "§W金之印§!"
+ THE_IQU_tennin_one_taoist_shui_power: "§M水之印§!"
+ THE_IQU_tennin_one_taoist_mu_power: "§J木之印§!"
+ THE_IQU_tennin_one_taoist_huo_power: "§O火之印§!"
+ THE_IQU_tennin_one_taoist_tu_power: "§V土之印§!"
+ 
 ### GOVERNMENT_END
 
 ### GOVERNMENT_NAME
@@ -101,6 +113,11 @@ l_english:
  THE_IQU_iqu_declare_war_buff: "天之纲"
  THE_IQU_cloud_port_buff: "云港"
  THE_IQU_trade_paper_buff: "纸张贸易"
+ THE_IQU_trade_steer_100_buff: "贸易协定"
+ THE_IQU_have_no_mind_buff: "无念无想"
+ THE_IQU_build_shipyard_buff: "舳舻相继"
+ THE_IQU_moon_explore_range_buff: "沧溟濯锋"
+ THE_IQU_cloud_sail_on_sea_buff: "云帆济海"
 ### MODIFIER_END
 
 ### ESTATE
@@ -124,7 +141,7 @@ l_english:
  THE_IQU_1_4_c_tt1: "§Y目标省份§!将获得以下效果：\n 添加§O海图异常点§!\n  若该省份为§Y殖民地§!，将立即§Y殖民完成§!"
  THE_IQU_1_5_c_tt1: "§Y[This.GetAreaName]§!地区已经通过「§M云游机制§!」§Y完成探索§!"
  THE_IQU_1_5_c_tt2: "现在§Y探索海岸§!省份时，将会§M10§!%的概率在随机省份添加§O海图异常点§!"
- THE_IQU_1_6_c_tt1: "通过§Y探险家§!探索超过（[Root.the_iqu_explore_province_number_im_var.GetValue]/100）个省份"
+ THE_IQU_1_6_c_tt1: "通过§Y探险家§!探索超过（[Root.the_iqu_explore_province_number_im_var.GetValue]/75）个省份"
  THE_IQU_2_5_c_tt1: "任意省份修正§O龙脉-龙之首§!已齐集§Y五行§!"
  THE_IQU_2_5_c_tt2: "§M拥有§!修正§Y风水兴盛-「」之行§!的省份将会开始生产§Y纸张§!\n - -§g含之后重置§Y风水兴盛-「」之行§!的省份§!"
  THE_IQU_1_7_c_tt1: "现在§Y探索海岸§!完成时，获得1点§M陆军传统§!\n"
@@ -144,7 +161,21 @@ l_english:
  THE_IQU_3_1_c_tt1_yes: "£yes£若§M完成任务§!时，已完成「§Y探索理念组§!」或「§Y贸易理念组§!」，将获得以下效果："
  THE_IQU_3_1_c_tt1_no: "£no£若§M完成任务§!时，已完成「§Y探索理念组§!」或「§Y贸易理念组§!」，将获得以下效果："
  THE_IQU_3_1_c_tt2: "随机§Y2§!个省份将商品变更为§Y纸张§!"
- THE_IQU_4_4_c_tt1: "现在每§Y5§!年将会额外结算§G1§!次贸易收入\n - -贸易收入将会计为@IQU§Y[IQU.GetName]§!与@HVR§Y[HVR.GetName]§!收入的总和，此外@IQU§Y[IQU.GetName]§!与@HVR§Y[HVR.GetName]§!位于「外部界域」贸易区的总竞争力的差幅越大，收入系数越低。当季度差幅在±20%以内时，将获得以下效果："
+ THE_IQU_4_4_c_tt1: "现在每§Y5§!年将会额外结算§G1§!次贸易收入\n -贸易收入将会计为@IQU§Y[IQU.GetName]§!与@HVR§Y[HVR.GetName]§!收入的总和。\n -若@IQU§Y[IQU.GetName]§!与@HVR§Y[HVR.GetName]§!位于「§Y外部界域§!」贸易区的§M竞争力§!相等时，收入最大，随着@IQU§Y[IQU.GetName]§!与@HVR§Y[HVR.GetName]§!的§M竞争力§!的§Y差幅§!增大而§Y衰减§!"
+ THE_IQU_event_1011_c_tt1: "@IQU§Y[IQU.GetName]§!与@HVR§Y[HVR.GetName]§!将会各获得金钱¤[Root.the_iqu_iqu_years_of_income_im_var.GetValue]"
+ THE_IQU_4_6_c_tt1: "通过「§M云游机制§!」已经完成探索§W25§!个§Y地区§!（目前：§Y[Root.the_iqu_had_explore_area_number_im_var.GetValue]§!）"
+ THE_IQU_4_4_c_tt2: "@HVR「§Y天子§!」的每点§Y行政点§!£adm£将会为我们带来§Y商品产出修正§!§G+2§!% §Y贸易效率§!§G+2§!%\n"
+ THE_IQU_4_6_c_tt3: "@HVR「§Y天子§!」的每点§Y外交点§!£dip£将会为我们带来§Y全国水手修正§!§G+5§!%\n"
+ THE_IQU_4_6_c_tt2: "发展拥有修正「§O龙脉-龙之迹§!」的省份将会有§Y50§!%的概率额外提升1点§Y发展度§!"
+ THE_IQU_5_3_c_tt1_yes: "£yes£若§M完成任务§!时，我们拥有「§Y月面§!」区域的所有省份,将会获得以下效果："
+ THE_IQU_5_3_c_tt1_no: "£no£若§M完成任务§!时，我们拥有「§Y月面§!」区域的所有省份,将会获得以下效果："
+ THE_IQU_5_3_c_tt2: "§Y15§!点£dip£§Y生产发展度§!将会被分配至我们在「§Y月面§!」区域的省份"
+ THE_IQU_5_4_c_tt1: "现在§Y殖民地§!发展为城市时，额外获得1点§Y生产发展度§!\n"
+ THE_IQU_5_5_c_tt2: "§M世界§!上所有的§Y省份§!皆被我们所发现"
+ THE_IQU_5_7_c_tt1: "现在我们使用§Y海上炮击§!时，将直接占领其§Y要塞§!省份，并获得§G25§!§Y军事点§!£mil£"
+ THE_IQU_4_7_c_tt1: "通过§Y探险家§!探索超过（[Root.the_iqu_explore_province_number_im_var.GetValue]/150）个省份"
+ THE_IQU_5_8_c_tt1: "当前引渡龙脉越过50次山脉省份（目前：[Root.the_iqu_mountain_province_has_been_teer_im_var.GetValue]）"
+ THE_IQU_4_8_c_tt1: "当前引渡龙脉越过50次山脉省份（目前：[Root.the_iqu_jungle_province_has_been_teer_im_var.GetValue]）"
 ### MISSION_EXTRA_END
 
 ### DECISIONS

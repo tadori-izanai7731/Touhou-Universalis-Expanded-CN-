@@ -153,7 +153,7 @@ THE_IQU_hvr_cannot_decalre_war_buff = {
 	can_not_declare_war = yes
 	development_cost = -0.15
 	global_trade_goods_size = 0.5
-	merchants = 1
+	merchants = 5
 	trade_steering = 0.33
 }
 #天之纲
@@ -170,4 +170,35 @@ THE_IQU_cloud_port_buff = {
 #纸张贸易
 THE_IQU_trade_paper_buff = {
 	trade_efficiency = 0.10
+}
+#贸易协定
+THE_IQU_trade_steer_100_buff = {
+	trade_efficiency = 0.10
+	THE_IQU_guide_loong_vein_custom_modifier = -0.10
+}
+#无念无想
+THE_IQU_have_no_mind_buff = {
+	all_estate_loyalty_equilibrium = 0.1
+	core_creation = -0.05
+	leader_naval_manuever = 1
+	discipline = 0.05
+	trade_steering = 0.50
+}
+#舳舻相继
+THE_IQU_build_shipyard_buff = {
+	range = 0.25
+	global_ship_recruit_speed = -0.15
+	naval_attrition = -0.1
+}
+#沧溟濯锋
+THE_IQU_moon_explore_range_buff = {
+	range = 0.50
+	movement_speed_in_fleet_modifier = 1
+	shock_damage = 0.05
+}
+#云帆济海 
+THE_IQU_cloud_sail_on_sea_buff = {
+	ship_power_propagation = 0.25
+	naval_morale = 0.1
+	shock_damage_received = -0.05
 }

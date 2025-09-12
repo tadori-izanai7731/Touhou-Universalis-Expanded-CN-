@@ -6449,3 +6449,38 @@ country_event = {
 	after = {
 	}
 }
+#给钱
+ country_event = {
+	id = THE_IQU_flavor_events.1011
+	title = "THE_IQU_flavor_events.1011.t"
+	desc = "THE_IQU_flavor_events.1011.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		THE_IQU_set_yearly_trade_income_with_hvr_effect = yes
+	}
+	option = {
+		name = THE_IQU_flavor_events.1011.1
+		custom_tooltip = THE_IQU_event_1011_c_tt1
+		hidden_effect = {
+			while = {
+				limit = {
+					check_variable = {
+						which = the_iqu_iqu_years_of_income_im_var
+						value = 5
+					}
+				 }
+				 add_treasury = 5
+				 HVR = {
+					add_treasury = 5
+				 }
+			}
+		}
+	}
+	after = {
+
+	}
+}

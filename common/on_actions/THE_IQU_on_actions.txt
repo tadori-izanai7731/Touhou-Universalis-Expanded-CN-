@@ -12,3 +12,18 @@ on_startup = {
 on_bi_yearly_pulse = {
 	THE_IQU_explore_on_2_years_pluse_effect = yes
 }
+on_five_year_pulse = {
+	THE_IQU_on_5_years_pluse_effect = yes
+}
+on_adm_development = {
+	THE_IQU_on_development_adm_effect = yes
+}
+on_dip_development = {
+	THE_IQU_on_development_dip_effect = yes
+}
+on_mil_development = {
+	THE_IQU_on_development_mil_effect = yes
+}
+on_naval_barrage = {
+	THE_IQU_naval_on_brrange_effect = yes
+}

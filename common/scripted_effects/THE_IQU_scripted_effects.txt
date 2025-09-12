@@ -383,6 +383,10 @@ THE_IQU_clr_the_exploring_now_success_effect = {
 		clr_country_flag = THE_IQU_had_explore_event
 		clr_country_flag = THE_IQU_having_explore_event
 		THE_IQU_add_fengshui_wuxing_province_permant_buff_effect = yes 
+		change_variable = {
+			which = the_iqu_had_explore_area_number_im_var
+			value = 1
+		}
 	}
 }
 ## 添加风水五行之期
@@ -428,6 +432,9 @@ THE_IQU_add_fengshui_wuxing_province_permant_buff_effect = {
 					name = THE_IQU_Feng_shui_tu_buff
 					duration = -1
 				}
+			}
+			100 = {
+
 			}
 		}
 		if = {
@@ -561,6 +568,28 @@ THE_IQU_guide_the_loong_vein_building_construction_scripted = {
 			change_native_size = 4000
 			change_native_ferocity = -2
 			change_native_hostileness = -2
+		}
+		if = {
+			limit = {
+				has_terrain = jungle
+			 }
+			 owner = {
+				change_variable = {
+					which = the_iqu_jungle_province_has_been_teer_im_var
+					value = 1
+				}
+			 }
+		}
+		if = {
+			limit = {
+				has_terrain = mountain
+			 }
+			 owner = {
+				change_variable = {
+					which = the_iqu_mountain_province_has_been_teer_im_var
+					value = 1
+				}
+			 }
 		}
 		###
 		THE_IQU_will_check_province_fengshui_and_add_next_flag_effect = yes
@@ -1022,6 +1051,9 @@ THE_IQU_on_startup_scripted_effects = {
 		set_variable = { which = the_iqu_mission_about_win_chess_im_var value = 0 }
 		set_variable = { which = the_iqu_the_tenshi_obedience_im_var value = 0 }
 		set_variable = { which = the_iqu_the_tenshi_teaching_experience_im_var value = 0 }
+		set_variable = { which = the_iqu_had_explore_area_number_im_var value = 0 }
+		set_variable = { which = the_iqu_jungle_province_has_been_teer_im_var value = 0 }
+		set_variable = { which = the_iqu_mountain_province_has_been_teer_im_var value = 0 }
 		##START EVENT
 	}
 	if = {
@@ -1093,6 +1125,14 @@ THE_IQU_scarlet_sky_government_effects = {
 		limit = { 
 			owner = {
 				mission_completed = THE_IQU_2_7
+			}
+		}
+		add_base_production = 1
+	}
+	if = {
+		limit = { 
+			owner = {
+				mission_completed = THE_IQU_5_4
 			}
 		}
 		add_base_production = 1
@@ -1673,5 +1713,150 @@ THE_IQU_set_yearly_trade_income_with_hvr_effect = {
 	#得出变量
 	#龙宫省份贸易竞争力 the_iqu_total_heaven_trade_power_im_var_iqu
 	#天界省份贸易竞争力 the_iqu_total_heaven_trade_power_im_var_hvr
-	
+	if = {
+		limit = {
+			check_variable = {
+				which = the_iqu_total_heaven_trade_power_im_var_iqu
+				which = the_iqu_total_heaven_trade_power_im_var_hvr
+			}
+		 }
+		 divide_variable = {
+			which = the_iqu_total_heaven_trade_power_im_var_hvr
+			which = the_iqu_total_heaven_trade_power_im_var_iqu
+		 }
+		 set_variable = {
+			which = the_iqu_total_heaven_trade_power_im_var_percentage_use
+			which = the_iqu_total_heaven_trade_power_im_var_hvr
+		 }
+	}
+	else = {
+		divide_variable = {
+			which = the_iqu_total_heaven_trade_power_im_var_iqu
+			which = the_iqu_total_heaven_trade_power_im_var_hvr
+		}
+		set_variable = {
+			which = the_iqu_total_heaven_trade_power_im_var_percentage_use
+			which = the_iqu_total_heaven_trade_power_im_var_iqu
+		 }
+	}
+	#the_iqu_total_heaven_trade_power_im_var_percentage_use 贸易竞争力差幅
+	export_to_variable = {
+		which = the_iqu_iqu_years_of_income_im_var
+		value = years_of_income
+		who = ROOT
+	}
+	export_to_variable = {
+		which = the_iqu_hvr_years_of_income_im_var
+		value = years_of_income
+		who = HVR
+	}
+	export_to_variable = {
+		which = the_iqu_iqu_years_of_income_im_var_trade_percentage
+		value = trade_income_percentage
+		who = ROOT
+	}
+	export_to_variable = {
+		which = the_iqu_hvr_years_of_income_im_var_trade_percentage
+		value = trade_income_percentage
+		who = HVR
+	}
+	# x5
+	multiply_variable = {
+		which = the_iqu_iqu_years_of_income_im_var
+		value = 5
+	}
+	multiply_variable = {
+		which = the_iqu_hvr_years_of_income_im_var
+		value = 5
+	}
+	# x比例
+	multiply_variable = {
+		which = the_iqu_iqu_years_of_income_im_var
+		which = the_iqu_iqu_years_of_income_im_var_trade_percentage
+	}
+	multiply_variable = {
+		which = the_iqu_hvr_years_of_income_im_var
+		which = the_iqu_hvr_years_of_income_im_var_trade_percentage
+	}
+	#
+	change_variable = {
+		which = the_iqu_iqu_years_of_income_im_var
+		which = the_iqu_hvr_years_of_income_im_var
+	}
+	#总收入 the_iqu_iqu_years_of_income_im_var
+}
+THE_IQU_on_5_years_pluse_effect = {
+	if = {
+		limit = {
+			mission_completed = THE_IQU_4_4
+		 }
+		 country_event = {
+			id = THE_IQU_flavor_events.1011
+		 }
+	}
+}
+THE_IQU_on_development_adm_effect = {
+	if = {
+		limit = {
+			has_province_modifier = THE_IQU_lonng_vein_foot_province_buff
+			owner = {
+				mission_completed = THE_IQU_4_6
+			}
+		}
+		random_list = {
+			50 = {
+				add_base_tax = 1
+			}
+			50 = {
+				
+			}
+		}
+	}
+}
+THE_IQU_on_development_dip_effect = {
+	if = {
+		limit = {
+			has_province_modifier = THE_IQU_lonng_vein_foot_province_buff
+			owner = {
+				mission_completed = THE_IQU_4_6
+			}
+		}
+		random_list = {
+			50 = {
+				add_base_production = 1
+			}
+			50 = {
+				
+			}
+		}
+	}
+}
+THE_IQU_on_development_mil_effect = {
+	if = {
+		limit = {
+			has_province_modifier = THE_IQU_lonng_vein_foot_province_buff
+			owner = {
+				mission_completed = THE_IQU_4_6
+			}
+		}
+		random_list = {
+			50 = {
+				add_base_manpower = 1
+			}
+			50 = {
+				
+			}
+		}
+	}
+}
+#攻城
+THE_IQU_naval_on_brrange_effect = {
+	if = {
+		limit = {
+			mission_completed = THE_IQU_5_7
+		 }
+		 FROM = {
+			change_controller = ROOT
+		 }
+	}
 }
