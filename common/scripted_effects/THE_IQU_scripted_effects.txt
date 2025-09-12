@@ -1033,7 +1033,316 @@ THE_IQU_add_government_power_lvl_3_effect = {
 		value = $value$
 	}
 }
+#龙脉消止
+THE_IQU_end_the_loong_vein_effect = {
+	if = {
+		limit = { 
+			THE_IQU_num_of_wuxing_flag_province_with_trigger = {
+				value = 5
+			}
+		}
+		THE_IQU_add_unique_point_temporary_province_effects = {
+			level = 5
+		}
+	}
+	else_if = {
+		limit = {
+			THE_IQU_num_of_wuxing_flag_province_with_trigger = {
+				value = 4
+			}
+		 }
+		 THE_IQU_add_unique_point_temporary_province_effects = {
+			level = 4
+		}
+	}
+	else_if = {
+		limit = {
+			THE_IQU_num_of_wuxing_flag_province_with_trigger = {
+				value = 3
+			}
+		 }
+		 THE_IQU_add_unique_point_temporary_province_effects = {
+			level = 3
+		}
+	}
+	else_if = {
+		limit = {
+			THE_IQU_num_of_wuxing_flag_province_with_trigger = {
+				value = 2
+			}
+		 }
+		 THE_IQU_add_unique_point_temporary_province_effects = {
+			level = 2
+		}
+	}
+	else_if = {
+		limit = {
+			THE_IQU_num_of_wuxing_flag_province_with_trigger = {
+				value = 1
+			}
+		 }
+		 THE_IQU_add_unique_point_temporary_province_effects = {
+			level = 1
+		}
+	}
+	####获得特殊点五行
+	# THE_IQU_has_get_unique_point_is_jin_flag
+	# THE_IQU_has_get_unique_point_is_shui_flag
+	# THE_IQU_has_get_unique_point_is_mu_flag
+	# THE_IQU_has_get_unique_point_is_huo_flag
+	# THE_IQU_has_get_unique_point_is_tu_flag
+	hidden_effect = {
+		if = {
+			limit = { 
+				THE_IQU_has_any_province_wuxing_flag_trigger = {
+					wuxing = jin
+				}
+			}
+			set_country_flag = THE_IQU_has_get_unique_point_is_jin_flag
+		}
+		if = {
+			limit = { 
+				THE_IQU_has_any_province_wuxing_flag_trigger = {
+					wuxing = shui
+				}
+			}
+			set_country_flag = THE_IQU_has_get_unique_point_is_shui_flag
+		}
+		if = {
+			limit = { 
+				THE_IQU_has_any_province_wuxing_flag_trigger = {
+					wuxing = mu
+				}
+			}
+			set_country_flag = THE_IQU_has_get_unique_point_is_mu_flag
+		}
+		if = {
+			limit = { 
+				THE_IQU_has_any_province_wuxing_flag_trigger = {
+					wuxing = huo
+				}
+			}
+			set_country_flag = THE_IQU_has_get_unique_point_is_huo_flag
+		}
+		if = {
+			limit = { 
+				THE_IQU_has_any_province_wuxing_flag_trigger = {
+					wuxing = tu
+				}
+			}
+			set_country_flag = THE_IQU_has_get_unique_point_is_tu_flag
+		}
+		clr_country_flag = THE_IQU_loong_vein_get_wuxing_jin_flag
+		clr_country_flag = THE_IQU_loong_vein_get_wuxing_shui_flag
+		clr_country_flag = THE_IQU_loong_vein_get_wuxing_mu_flag
+		clr_country_flag = THE_IQU_loong_vein_get_wuxing_huo_flag
+		clr_country_flag = THE_IQU_loong_vein_get_wuxing_tu_flag
+		#
+		clr_country_flag = THE_IQU_loong_vein_get_wuxing_jin_flag_next
+		clr_country_flag = THE_IQU_loong_vein_get_wuxing_shui_flag_next
+		clr_country_flag = THE_IQU_loong_vein_get_wuxing_mu_flag_next
+		clr_country_flag = THE_IQU_loong_vein_get_wuxing_huo_flag_next
+		clr_country_flag = THE_IQU_loong_vein_get_wuxing_tu_flag_next
+		#
+		remove_province_modifier = THE_IQU_lonng_vein_head_province_buff
+	}
+}
 
+#
+THE_IQU_add_diplomacal_experience_var_effect = {
+	custom_tooltip = THE_IQU_add_experience_var_c_tt1
+	hidden_effect = {
+		change_variable = {
+			which = the_iqu_diplomacal_experience_change_im_var
+			value = 1
+		}
+	}
+}
+THE_IQU_add_learning_experience_var_effect = {
+	custom_tooltip = THE_IQU_add_experience_var_c_tt2
+	hidden_effect = {
+		change_variable = {
+			which = the_iqu_learning_experience_change_im_var
+			value = 1
+		}
+	}
+}
+THE_IQU_add_nautical_experience_var_effect = {
+	custom_tooltip = THE_IQU_add_experience_var_c_tt3
+	hidden_effect = {
+		change_variable = {
+			which = the_iqu_nautical_experience_change_im_var
+		}
+	}
+}
+
+THE_IQU_will_get_wuxing_point_after_explore_effect = {
+	if = {
+		limit = { 
+			ROOT = {
+				has_government_attribute = THE_IQU_tennin_one_taoist_reform_mechanic
+				OR = {
+					was_tag = IQU
+					tag = IQU
+				}
+			}
+		}
+		if = {
+			limit = { 
+				THIS = {
+					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+						wuxing = jin
+					}
+				}
+			}
+			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt6
+			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt1
+		}
+		if = {
+			limit = { 
+				THIS = {
+					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+						wuxing = shui
+					}
+				}
+			}
+			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt6
+			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt2
+		}
+		if = {
+			limit = { 
+				THIS = {
+					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+						wuxing = mu
+					}
+				}
+			}
+			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt6
+			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt3
+		}
+		if = {
+			limit = { 
+				THIS = {
+					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+						wuxing = huo
+					}
+				}
+			}
+			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt6
+			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt4
+		}
+		if = {
+			limit = { 
+				THIS = {
+					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+						wuxing = tu
+					}
+				}
+			}
+			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt6
+			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt5
+		}
+	}
+}
+#探险后结算
+THE_IQU_after_get_wuxing_point_after_explore_effect = {
+	if = {
+		limit = { 
+			ROOT = {
+				has_government_attribute = THE_IQU_tennin_one_taoist_reform_mechanic
+				OR = {
+					was_tag = IQU
+					tag = IQU
+				}
+			}
+		}
+		if = {
+			limit = { 
+				THIS = {
+					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+						wuxing = jin
+					}
+				}
+			}
+			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt1
+			hidden_effect = {
+				add_government_power = {
+					mechanic_type = THE_IQU_tennin_one_taoist_mechanic
+					power_type = THE_IQU_tennin_one_taoist_jin_power
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = { 
+				THIS = {
+					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+						wuxing = shui
+					}
+				}
+			}
+			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt2
+			hidden_effect = {
+				add_government_power = {
+					mechanic_type = THE_IQU_tennin_one_taoist_mechanic
+					power_type = THE_IQU_tennin_one_taoist_shui_power
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = { 
+				THIS = {
+					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+						wuxing = mu
+					}
+				}
+			}
+			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt3
+			hidden_effect = {
+				add_government_power = {
+					mechanic_type = THE_IQU_tennin_one_taoist_mechanic
+					power_type = THE_IQU_tennin_one_taoist_mu_power
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = { 
+				THIS = {
+					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+						wuxing = huo
+					}
+				}
+			}
+			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt4
+			hidden_effect = {
+				add_government_power = {
+					mechanic_type = THE_IQU_tennin_one_taoist_mechanic
+					power_type = THE_IQU_tennin_one_taoist_huo_power
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = { 
+				THIS = {
+					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+						wuxing = tu
+					}
+				}
+			}
+			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt5
+			hidden_effect = {
+				add_government_power = {
+					mechanic_type = THE_IQU_tennin_one_taoist_mechanic
+					power_type = THE_IQU_tennin_one_taoist_tu_power
+					value = 1
+				}
+			}
+		}
+	}
+}
 ################################
 ##On Action Script
 ##############################

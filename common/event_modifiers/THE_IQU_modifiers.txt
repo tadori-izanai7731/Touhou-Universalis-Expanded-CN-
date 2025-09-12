@@ -179,7 +179,6 @@ THE_IQU_trade_steer_100_buff = {
 #无念无想
 THE_IQU_have_no_mind_buff = {
 	all_estate_loyalty_equilibrium = 0.1
-	core_creation = -0.05
 	leader_naval_manuever = 1
 	discipline = 0.05
 	trade_steering = 0.50
@@ -201,4 +200,22 @@ THE_IQU_cloud_sail_on_sea_buff = {
 	ship_power_propagation = 0.25
 	naval_morale = 0.1
 	shock_damage_received = -0.05
+}
+#蕴炁
+THE_IQU_grouth_air_buff = {
+	THE_IQU_explore_treasury_get_cutom_modifier = 0.25
+	colonists = 1
+	dip_tech_cost_modifier = -0.05
+}
+#凝元
+THE_IQU_forze_air_buff = {
+	THE_IQU_explore_treasury_get_cutom_modifier = 0.25
+	fire_damage_received = -0.10
+	dip_tech_cost_modifier = -0.05
+}
+#清辉 
+THE_IQU_qing_hui_buff = {
+	THE_IQU_explore_treasury_get_cutom_modifier = 0.05
+	global_naval_engagement_modifier = 0.25
+	movement_speed_onto_off_boat_modifier = 0.50
 }

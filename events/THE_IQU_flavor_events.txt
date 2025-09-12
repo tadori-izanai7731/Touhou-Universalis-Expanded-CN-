@@ -28,6 +28,7 @@ country_event = {
 			province_event = {
 				id = THE_IQU_flavor_events.1
 			}
+			THE_IQU_will_get_wuxing_point_after_explore_effect = yes
 			hidden_effect = {
 				set_province_flag = THE_IQU_this_provinces_is_exploring_now
 			}
@@ -44,6 +45,7 @@ country_event = {
 			province_event = {
 				id = THE_IQU_flavor_events.1
 			}
+			THE_IQU_will_get_wuxing_point_after_explore_effect = yes
 			hidden_effect = {
 				set_province_flag = THE_IQU_this_provinces_is_exploring_now
 			}
@@ -60,6 +62,7 @@ country_event = {
 			province_event = {
 				id = THE_IQU_flavor_events.1
 			}
+			THE_IQU_will_get_wuxing_point_after_explore_effect = yes
 			hidden_effect = {
 				set_province_flag = THE_IQU_this_provinces_is_exploring_now
 			}
@@ -76,6 +79,7 @@ country_event = {
 			province_event = {
 				id = THE_IQU_flavor_events.1
 			}
+			THE_IQU_will_get_wuxing_point_after_explore_effect = yes
 			hidden_effect = {
 				#省份标记正在探索
 				set_province_flag = THE_IQU_this_provinces_is_exploring_now
@@ -6141,6 +6145,7 @@ country_event = {
 		THE_IQU_explore_event_get_benifit_effect_effect = {
 			base = 120
 		}
+		THE_IQU_after_get_wuxing_point_after_explore_effect = yes
 		THE_IQU_clr_the_exploring_now_success_effect = yes
 	}
 }
@@ -6243,11 +6248,6 @@ country_event = {
 				25 = {
 					THE_IQU_add_unique_point_temporary_province_effects = {
 						level = 4
-					}
-				}
-				10 = {
-					THE_IQU_add_unique_point_temporary_province_effects = {
-						level = 5
 					}
 				}
 			}

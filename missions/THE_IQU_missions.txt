@@ -250,6 +250,7 @@ THE_IQU_main_branch_1 = {
 			mexico_region = {
 				add_permanent_claim = ROOT
 			}
+			THE_IQU_add_diplomacal_experience_var_effect = yes
 		 } 
 	}
 
@@ -274,6 +275,7 @@ THE_IQU_main_branch_1 = {
 				has_production_building_trigger = yes
 				base_production = 7
 			}
+			
 		 } 
 
 		effect = { 
@@ -288,6 +290,8 @@ THE_IQU_main_branch_1 = {
 				value = 0.50
 				duration = -1
 			}
+			THE_IQU_add_nautical_experience_var_effect = yes
+			THE_IQU_add_diplomacal_experience_var_effect = yes
 		} 
 	}
 }
@@ -417,6 +421,7 @@ THE_IQU_main_branch_2 = {
 			THE_IQU_add_prestige_or_navy_tradition_effects = {
 				value = 15
 			}
+			THE_IQU_add_diplomacal_experience_var_effect = yes
 			5338 = {
 				add_province_modifier = {
 					name = THE_IQU_base_on_the_moon_buff
@@ -473,6 +478,9 @@ THE_IQU_main_branch_2 = {
 				value = 0.25
 				duration = -1
 			}
+			THE_IQU_add_diplomacal_experience_var_effect = yes
+			THE_IQU_add_learning_experience_var_effect = yes
+			THE_IQU_add_nautical_experience_var_effect = yes
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
@@ -565,6 +573,7 @@ THE_IQU_main_branch_2 = {
 			add_adm_power = 75
 			add_dip_power = 75
 			add_mil_power = 75
+			THE_IQU_add_nautical_experience_var_effect = yes
 			add_country_modifier = {
 				name = THE_IQU_cold_wind_and_god_buff
 				duration = -1
@@ -599,6 +608,7 @@ THE_IQU_main_branch_2 = {
 		effect = { 
 			add_yearly_sailors = 0.5
 			add_dip_power = 75
+			THE_IQU_add_learning_experience_var_effect = yes
 		 } 
 	}
 }
@@ -766,6 +776,16 @@ THE_IQU_main_branch_3 = {
 				name = THE_IQU_records_of_lunar_dust_buff
 				duration = -1
 			}
+			random_owned_province = {
+				limit = {
+					region = moon_region
+					owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = THE_IQU_lonng_vein_head_province_buff
+					duration = -1
+				}
+			}
 		 } 
 	}
 
@@ -773,11 +793,29 @@ THE_IQU_main_branch_3 = {
 		icon = mission_unknown_mission
 		position = 6
 		required_missions = { THE_IQU_3_5 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			NOT = {
+				has_province_modifier = THE_IQU_lonng_vein_foot_province_buff
+			}
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 20
+				region = moon_region
+				has_province_modifier = THE_IQU_lonng_vein_foot_province_buff
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			THE_IQU_add_learning_experience_var_effect = yes
+			THE_IQU_add_nautical_experience_var_effect = yes
+			add_country_modifier = {
+				name = THE_IQU_qing_hui_buff
+				duration = -1
+			}
+		 } 
 	}
 
 	THE_IQU_3_7 = {
@@ -877,6 +915,9 @@ THE_IQU_main_branch_3 = {
 
 		effect = { 
 			custom_tooltip = THE_IQU_3_8_c_tt1
+			THE_IQU_add_diplomacal_experience_var_effect = yes
+			THE_IQU_add_learning_experience_var_effect = yes
+			THE_IQU_add_nautical_experience_var_effect = yes
 			add_adm_power = 100
 			add_dip_power = 100
 			add_mil_power = 100
@@ -1045,6 +1086,8 @@ THE_IQU_main_branch_4 = {
 				THE_IQU_government_lvl3_cloud_with_sky_add_pwoer_effect_before = yes
 			}
 			add_dip_power = 75
+			THE_IQU_add_diplomacal_experience_var_effect = yes
+			THE_IQU_add_learning_experience_var_effect = yes
 		 } 
 	}
 
@@ -1208,6 +1251,16 @@ THE_IQU_main_branch_4 = {
 		 } 
 
 		effect = { 
+			THE_IQU_add_learning_experience_var_effect = yes
+			THE_IQU_add_nautical_experience_var_effect = yes
+			THE_IQU_add_diplomacal_experience_var_effect = yes
+			THE_IQU_add_prestige_or_navy_tradition_effects = {
+				value = 50
+			}
+			add_country_modifier = {
+				name = THE_IQU_grouth_air_buff
+				duration = -1
+			}
 			add_government_power = {
 				mechanic_type = THE_IQU_tennin_one_taoist_mechanic
 				power_type = THE_IQU_tennin_one_taoist_shui_power
@@ -1475,6 +1528,16 @@ THE_IQU_main_branch_5 = {
 		 } 
 
 		effect = { 
+			THE_IQU_add_learning_experience_var_effect = yes
+			THE_IQU_add_nautical_experience_var_effect = yes
+			THE_IQU_add_diplomacal_experience_var_effect = yes
+			THE_IQU_add_prestige_or_navy_tradition_effects = {
+				value = 50
+			}
+			add_country_modifier = {
+				name = THE_IQU_forze_air_buff
+				duration = -1
+			}
 			add_government_power = {
 				mechanic_type = THE_IQU_tennin_one_taoist_mechanic
 				power_type = THE_IQU_tennin_one_taoist_tu_power

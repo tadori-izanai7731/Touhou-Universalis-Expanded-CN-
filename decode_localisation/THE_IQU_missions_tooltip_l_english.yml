@@ -58,6 +58,7 @@ l_english:
  THE_IQU_tennin_one_taoist_mu_power: "§J木之印§!"
  THE_IQU_tennin_one_taoist_huo_power: "§O火之印§!"
  THE_IQU_tennin_one_taoist_tu_power: "§V土之印§!"
+ THE_IQU_end_the_loong_vein_button_ctt1: "当前「§O龙脉-龙之首§!」至少已获得1种「§V五行§!」"
  
 ### GOVERNMENT_END
 
@@ -118,6 +119,14 @@ l_english:
  THE_IQU_build_shipyard_buff: "舳舻相继"
  THE_IQU_moon_explore_range_buff: "沧溟濯锋"
  THE_IQU_cloud_sail_on_sea_buff: "云帆济海"
+ THE_IQU_grouth_air_buff: "蕴炁"
+ THE_IQU_forze_air_buff: "凝元"
+ THE_IQU_qing_hui_buff: "清辉"
+ THE_IQU_Feng_shui_jin_buff: "风水兴盛-§w金§!之行"
+ THE_IQU_Feng_shui_shui_buff: "风水兴盛-§M水§!之行"
+ THE_IQU_Feng_shui_mu_buff: "风水兴盛-§J木§!之行"
+ THE_IQU_Feng_shui_huo_buff: "风水兴盛-§O火§!之行"
+ THE_IQU_Feng_shui_tu_buff: "风水兴盛-§V土§!之行"
 ### MODIFIER_END
 
 ### ESTATE
@@ -1046,6 +1055,15 @@ l_english:
  THE_IQU_now_dangerous_progress_view_displat_ctt_0: " ■ ■ ■ ■ ■ ■ ■ ■ ■ ■"
  THE_IQU_add_prestige_or_navy_tradition_c_tt1: "溢出的威望转化为§Y海军传统§!"
  THE_IQU_guide_the_loong_vein_building_construction_scripted_c_tt1: "引渡完成后将§Y相邻省份§!或§Y共同沿海省份§!的§O龙脉-龙之首§!修正转移到此省份，且原省份获得§O龙脉-龙之迹§!修正- -持续20年"
+ THE_IQU_add_experience_var_c_tt1: "为@IQU§Y衣玖§!添加1点「§M才学经验§!」"
+ THE_IQU_add_experience_var_c_tt2: "为@IQU§Y衣玖§!添加1点「§M外交经验§!」"
+ THE_IQU_add_experience_var_c_tt3: "为@IQU§Y衣玖§!添加1点「§M航海经验§!」"
+ THE_IQU_will_get_wuxing_point_after_explore_c_tt1: "--获得§G1§!点「金之印」"
+ THE_IQU_will_get_wuxing_point_after_explore_c_tt1: "--获得§G1§!点「金之印」"
+ THE_IQU_will_get_wuxing_point_after_explore_c_tt3: "--获得§G1§!点「金之印」"
+ THE_IQU_will_get_wuxing_point_after_explore_c_tt4: "--获得§G1§!点「金之印」"
+ THE_IQU_will_get_wuxing_point_after_explore_c_tt5: "--获得§G1§!点「金之印」"
+ THE_IQU_will_get_wuxing_point_after_explore_c_tt6: "根据当前省份的§O曾存在的龙脉§!，我们将："
 ### SCRIPT_EFFECT_END
 
 
@@ -1073,4 +1091,5 @@ l_english:
 
 ### CUSTOM_GUI
  THE_IQU_guide_the_loong_vein_province_button_gui_c_tt1: "§W引渡龙脉§!\n======================="
+ THE_IQU_end_the_loong_vein_province_button_gui_c_tt1: "§W消止龙脉§!\n======================="
 ### CUSTOM_GUI_END
