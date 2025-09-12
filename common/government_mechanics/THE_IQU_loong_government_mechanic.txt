@@ -40,3 +40,157 @@ THE_IQU_sky_beyond_clouds_mechanic = {
 
 	}
 }
+THE_IQU_cloud_with_sky_mechanic = {
+	available = {
+		always = yes
+	}
+	powers = {
+		THE_IQU_with_hvr_adm_power_power = {
+			gui = THE_mechanic_power_hidden_gui
+			max = 6
+			min = 0
+			base_monthly_growth = 0
+			increases_with_global = no
+			scaled_modifier = {
+				trigger = {
+					HVR = {
+						overlord_of = ROOT
+					}
+				}
+				modifier = {
+					country_admin_power = 3
+				}
+			}
+			scaled_modifier = {
+				trigger = {
+					HVR = {
+						overlord_of = ROOT
+					}
+					mission_completed = THE_IQU_4_4
+				}
+				modifier = { 
+					global_trade_goods_size_modifier = 0.12
+					trade_efficiency = 0.12
+				}
+			}
+		}
+		THE_IQU_with_hvr_dip_power_power = {
+			gui = THE_mechanic_power_hidden_gui
+			max = 6
+			min = 0
+			base_monthly_growth = 0
+			increases_with_global = no
+			scaled_modifier = {
+				trigger = {
+					HVR = {
+						overlord_of = ROOT
+					}
+				}
+				modifier = {
+					country_diplomatic_power = 3
+				}
+			}
+			scaled_modifier = {
+				trigger = {
+					HVR = {
+						overlord_of = ROOT
+					}
+					mission_completed = THE_IQU_4_4
+				}
+				modifier = { 
+					global_sailors_modifier = 0.30
+				}
+			}
+		}
+		THE_IQU_with_hvr_mil_power_power = {
+			gui = THE_mechanic_power_hidden_gui
+			max = 6
+			min = 0
+			base_monthly_growth = 0
+			increases_with_global = no
+			scaled_modifier = {
+				trigger = {
+					HVR = {
+						overlord_of = ROOT
+					}
+				}
+				modifier = {
+					country_military_power = 3
+				}
+			}
+		}
+	}
+}
+
+THE_IQU_tennin_one_taoist_mechanic = {
+	available = {
+		always = yes
+	}
+	powers = {
+		#金
+		THE_IQU_tennin_one_taoist_jin_power = {
+			gui = THE_mechanic_power_hidden_gui
+			max = 1000
+			min = 0
+			base_monthly_growth = 0
+			increases_with_global = no
+			scaled_modifier = {
+				modifier = { 
+					backrow_artillery_damage = 10.0
+				}
+			}
+		}
+		#水
+		THE_IQU_tennin_one_taoist_shui_power = {
+			gui = THE_mechanic_power_hidden_gui
+			max = 1000
+			min = 0
+			base_monthly_growth = 0
+			increases_with_global = no
+			scaled_modifier = {
+				modifier = { 
+					trade_efficiency = 10.00
+				}
+			}
+		}
+		#木
+		THE_IQU_tennin_one_taoist_mu_power = {
+			gui = THE_mechanic_power_hidden_gui
+			max = 1000
+			min = 0
+			base_monthly_growth = 0
+			increases_with_global = no
+			scaled_modifier = {
+				modifier = { 
+					development_cost = -10.00
+				}
+			}
+		}
+		#火
+		THE_IQU_tennin_one_taoist_huo_power = {
+			gui = THE_mechanic_power_hidden_gui
+			max = 1000
+			min = 0
+			base_monthly_growth = 0
+			increases_with_global = no
+			scaled_modifier = {
+				modifier = { 
+					global_trade_goods_size_modifier = 10.00
+				}
+			}
+		}
+		#土
+		THE_IQU_tennin_one_taoist_tu_power = {
+			gui = THE_mechanic_power_hidden_gui
+			max = 1000
+			min = 0
+			base_monthly_growth = 0
+			increases_with_global = no
+			scaled_modifier = {
+				modifier = { 
+					min_autonomy_in_territories = -10
+				}
+			}
+		}
+	}
+}

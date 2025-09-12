@@ -383,6 +383,10 @@ THE_IQU_clr_the_exploring_now_success_effect = {
 		clr_country_flag = THE_IQU_had_explore_event
 		clr_country_flag = THE_IQU_having_explore_event
 		THE_IQU_add_fengshui_wuxing_province_permant_buff_effect = yes 
+		change_variable = {
+			which = the_iqu_had_explore_area_number_im_var
+			value = 1
+		}
 	}
 }
 ## 添加风水五行之期
@@ -428,6 +432,9 @@ THE_IQU_add_fengshui_wuxing_province_permant_buff_effect = {
 					name = THE_IQU_Feng_shui_tu_buff
 					duration = -1
 				}
+			}
+			100 = {
+
 			}
 		}
 		if = {
@@ -562,6 +569,28 @@ THE_IQU_guide_the_loong_vein_building_construction_scripted = {
 			change_native_ferocity = -2
 			change_native_hostileness = -2
 		}
+		if = {
+			limit = {
+				has_terrain = jungle
+			 }
+			 owner = {
+				change_variable = {
+					which = the_iqu_jungle_province_has_been_teer_im_var
+					value = 1
+				}
+			 }
+		}
+		if = {
+			limit = {
+				has_terrain = mountain
+			 }
+			 owner = {
+				change_variable = {
+					which = the_iqu_mountain_province_has_been_teer_im_var
+					value = 1
+				}
+			 }
+		}
 		###
 		THE_IQU_will_check_province_fengshui_and_add_next_flag_effect = yes
 	}
@@ -641,7 +670,679 @@ THE_IQU_move_wuxing_loong_province_flag_script = {
 		}
 	}
 }
+##天子规训 effect
+##顺从度：0-100% the_iqu_the_tenshi_obedience_im_var
+##教学经验：int the_iqu_the_tenshi_teaching_experience_im_var
 
+##当前胜利点
+#the_iqu_the_iqu_win_point_total_im_var
+#the_iqu_the_hvr_win_point_total_im_var
+THE_IQU_random_chess_playing_desc_random_flag_effect = {
+	clr_country_flag = THE_IQU_random_chess_desc_flag_1
+	clr_country_flag = THE_IQU_random_chess_desc_flag_2
+	clr_country_flag = THE_IQU_random_chess_desc_flag_3
+	clr_country_flag = THE_IQU_random_chess_desc_flag_4
+	clr_country_flag = THE_IQU_random_chess_desc_flag_5
+	##随机文本flag
+	random_list = {
+		1 = { set_country_flag = THE_IQU_random_chess_desc_flag_1 }
+		1 = { set_country_flag = THE_IQU_random_chess_desc_flag_2 }
+		1 = { set_country_flag = THE_IQU_random_chess_desc_flag_3 }
+		1 = { set_country_flag = THE_IQU_random_chess_desc_flag_4 }
+		1 = { set_country_flag = THE_IQU_random_chess_desc_flag_5 }
+	}
+}
+
+THE_IQU_random_chess_playing_option_random_flag_effect = {
+
+}
+##提前随机预设
+THE_IQU_random_chess_playing_option_random_flag_effect_before = {
+	random_list = {
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 25 hvr_win = 10 opt = 1 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 15 hvr_win = 15 opt = 1 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 15 hvr_win = 20 opt = 1 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 15 hvr_win = 10 opt = 1 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 0 hvr_win = 10 opt = 1 }
+		}
+	}
+	random_list = {
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 15 hvr_win = 10 opt = 2 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 15 hvr_win = 15 opt = 2 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 5 hvr_win = 10 opt = 2 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 10 hvr_win = 5 opt = 2 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 0 hvr_win = 25 opt = 2 }
+		}
+	}
+	random_list = {
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 20 hvr_win = 15 opt = 3 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 5 hvr_win = 10 opt = 3 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 10 hvr_win = 15 opt = 3 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 5 hvr_win = 0 opt = 3 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 10 hvr_win = 5 opt = 3 }
+		}
+	}
+	random_list = {
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 5 hvr_win = 15 opt = 4 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 0 hvr_win = 5 opt = 4 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 10 hvr_win = 15 opt = 4 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 20 hvr_win = 10 opt = 4 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 0 hvr_win = 10 opt = 4 }
+		}
+	}
+	random_list = {
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 15 hvr_win = 10 opt = 5 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 10 hvr_win = 5 opt = 5 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 5 hvr_win = 5 opt = 5 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 10 hvr_win = 10 opt = 5 }
+		}
+		10 = {
+			THE_IQU_random_chess_playing_option_random_flag_script_before = { iqu_win = 5 hvr_win = 10 opt = 5 }
+		}
+	}
+}
+THE_IQU_random_chess_playing_option_random_flag_script_before = {
+	if = {
+		limit = {
+			tag = IQU
+		}
+		set_variable = {
+			which = the_iqu_iqu_chess_will_add_victory_point_$opt$
+			value = $iqu_win$
+		}
+		set_variable = {
+			which = the_iqu_hvr_chess_will_add_victory_point_$opt$
+			value = $hvr_win$
+		}
+	}
+	else = {
+		IQU = {
+			set_variable = {
+				which = the_iqu_iqu_chess_will_add_victory_point_$opt$
+				value = $iqu_win$
+			}
+			set_variable = {
+				which = the_iqu_hvr_chess_will_add_victory_point_$opt$
+				value = $hvr_win$
+			}
+		}
+	}
+}
+#设定结算点数
+THE_IQU_random_option_change_win_point_option_effect = {
+	#增益
+	if = { limit = {  check_variable = { which = the_iqu_iqu_chess_will_add_victory_point_$opt$ value = 25 } } custom_tooltip = THE_IQU_win_point_get_c_tt1 }
+	else_if = { limit = {  check_variable = { which = the_iqu_iqu_chess_will_add_victory_point_$opt$ value = 20 } } custom_tooltip = THE_IQU_win_point_get_c_tt2 }
+	else_if = { limit = {  check_variable = { which = the_iqu_iqu_chess_will_add_victory_point_$opt$ value = 15 } } custom_tooltip = THE_IQU_win_point_get_c_tt3 }
+	else_if = { limit = {  check_variable = { which = the_iqu_iqu_chess_will_add_victory_point_$opt$ value = 10 } } custom_tooltip = THE_IQU_win_point_get_c_tt4 }
+	else_if = { limit = {  check_variable = { which = the_iqu_iqu_chess_will_add_victory_point_$opt$ value = 5 } } custom_tooltip = THE_IQU_win_point_get_c_tt5 }
+	else_if = { limit = {  check_variable = { which = the_iqu_iqu_chess_will_add_victory_point_$opt$ value = 0 } } custom_tooltip = THE_IQU_win_point_get_c_tt6 }
+	#
+	if = { limit = {  check_variable = { which = the_iqu_hvr_chess_will_add_victory_point_$opt$ value = 25 } } custom_tooltip = THE_IQU_win_point_get_c_tt7 }
+	else_if = { limit = {  check_variable = { which = the_iqu_hvr_chess_will_add_victory_point_$opt$ value = 20 } } custom_tooltip = THE_IQU_win_point_get_c_tt8 }
+	else_if = { limit = {  check_variable = { which = the_iqu_hvr_chess_will_add_victory_point_$opt$ value = 15 } } custom_tooltip = THE_IQU_win_point_get_c_tt9 }
+	else_if = { limit = {  check_variable = { which = the_iqu_hvr_chess_will_add_victory_point_$opt$ value = 10 } } custom_tooltip = THE_IQU_win_point_get_c_tt10 }
+	else_if = { limit = {  check_variable = { which = the_iqu_hvr_chess_will_add_victory_point_$opt$ value = 5 } } custom_tooltip = THE_IQU_win_point_get_c_tt11 }
+	else_if = { limit = {  check_variable = { which = the_iqu_hvr_chess_will_add_victory_point_$opt$ value = 0 } } custom_tooltip = THE_IQU_win_point_get_c_tt12 }
+
+	if = {
+		limit = { 
+			check_variable = {
+				which = the_iqu_the_iqu_win_point_total_im_var
+				which = the_iqu_the_hvr_win_point_total_im_var
+			}
+		}
+		custom_tooltip = THE_IQU_win_point_get_c_tt13
+	}
+	else = {
+		custom_tooltip = THE_IQU_win_point_get_c_tt14
+	}
+	hidden_effect = {
+		change_variable = {
+			which = the_iqu_the_iqu_win_point_total_im_var
+			which = the_iqu_iqu_chess_will_add_victory_point_$opt$
+		}
+		change_variable = {
+			which = the_iqu_the_hvr_win_point_total_im_var
+			which = the_iqu_hvr_chess_will_add_victory_point_$opt$
+		}
+	}
+}
+##下棋结算胜利
+THE_IQU_play_chess_end_add_point_effects = {
+	change_variable = {
+		which = the_iqu_the_tenshi_obedience_im_var
+		value = $obedience$
+	}
+	hidden_effect = {
+		#相减
+		subtract_variable = {
+			which = the_iqu_the_iqu_win_point_total_im_var
+			which = the_iqu_the_hvr_win_point_total_im_var
+		}
+		set_variable = {
+			which = the_iqu_the_tenshi_teaching_experience_will_became_im_var
+			which = the_iqu_the_tenshi_obedience_im_var
+		}
+		change_variable = {
+			which = the_iqu_the_tenshi_teaching_experience_will_became_im_var
+			value = 1
+		}
+		multiply_variable = {
+			which = the_iqu_the_iqu_win_point_total_im_var
+			which = the_iqu_the_tenshi_teaching_experience_will_became_im_var
+		}
+		#mission var
+		change_variable = {
+			which = the_iqu_mission_about_win_chess_im_var
+			value = 1
+		}
+	}
+	change_variable = {
+		which = the_iqu_the_tenshi_teaching_experience_im_var
+		value = the_iqu_the_iqu_win_point_total_im_var
+	}
+	THE_IQU_teaching_tenshi_add_power_effect = yes
+}
+THE_IQU_teaching_tenshi_add_power_effect = {
+	if = {
+		limit = {
+			check_variable = {
+				which = the_iqu_the_tenshi_teaching_experience_im_var
+				value = 100
+			}
+		 }
+		THE_IQU_teaching_tenshi_add_power_script = yes
+	}
+}
+THE_IQU_teaching_tenshi_add_power_script = {
+	if = {
+		limit = { 
+			HVR = { adm = 6 }
+			HVR = { dip = 6 }
+			HVR = { mil = 6 }
+		}
+		random_list = {
+			10 = {
+				add_adm_power = 75
+			}
+			10 = {
+				add_dip_power = 75
+			}
+			10 = {
+				add_mil_power = 75
+			}
+		}
+		HVR = {
+			random_list = {
+				10 = {
+					add_adm_power = 75
+				}
+				10 = {
+					add_dip_power = 75
+				}
+				10 = {
+					add_mil_power = 75
+				}
+			}
+		}
+	}
+	#2个
+	else_if = {
+		limit = { 
+			HVR = { adm = 6 }
+			HVR = { dip = 6 }
+		}
+		HVR = {
+			th_increase_ruler_adm_stat = { mil = 1 }
+			THE_IQU_add_government_power_lvl_3_effect = { value = 1 power = mil }
+		}
+		
+	}
+	else_if = {
+		limit = { 
+			HVR = { adm = 6 }
+			HVR = { mil = 6 }
+		}
+		HVR = {
+			th_increase_ruler_adm_stat = { dip = 1 } 
+			THE_IQU_add_government_power_lvl_3_effect = { value = 1 power = dip }
+		}
+	}
+	else_if = {
+		limit = { 
+			HVR = { dip = 6 }
+			HVR = { mil = 6 }
+		}
+		HVR = {
+			th_increase_ruler_adm_stat = { adm = 1 }
+			THE_IQU_add_government_power_lvl_3_effect = { value = 1 power = adm }
+		}
+	}
+	#一个
+	else_if = {
+		limit = {
+			HVR = { mil = 6 }
+		 }
+		 HVR = {
+			random_list = {
+				10 = { th_increase_ruler_adm_stat = { adm = 1 } THE_IQU_add_government_power_lvl_3_effect = { value = 1 power = adm } }
+				10 = { th_increase_ruler_adm_stat = { dip = 1 } THE_IQU_add_government_power_lvl_3_effect = { value = 1 power = dip } }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			HVR = { dip = 6 }
+		 }
+		 HVR = {
+			random_list = {
+				10 = { th_increase_ruler_adm_stat = { adm = 1 } THE_IQU_add_government_power_lvl_3_effect = { value = 1 power = adm } }
+				10 = { th_increase_ruler_adm_stat = { mil = 1 } THE_IQU_add_government_power_lvl_3_effect = { value = 1 power = mil } }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			HVR = { adm = 6 }
+		 }
+		 HVR = {
+			random_list = {
+				10 = { th_increase_ruler_adm_stat = { mil = 1 } THE_IQU_add_government_power_lvl_3_effect = { value = 1 power = mil } }
+				10 = { th_increase_ruler_adm_stat = { dip = 1 } THE_IQU_add_government_power_lvl_3_effect = { value = 1 power = dip } }
+			}
+		} 
+	}
+	else_if = {
+		limit = { 
+			NOT = { HVR = { adm = 6 } } 
+			NOT = { HVR = { dip = 6 } } 
+			NOT = { HVR = { mil = 6 } } 
+		}
+		HVR = {
+			random_list = {
+				10 = { th_increase_ruler_adm_stat = { adm = 1 } THE_IQU_add_government_power_lvl_3_effect = { value = 1 power = adm } }
+				10 = { th_increase_ruler_adm_stat = { dip = 1 } THE_IQU_add_government_power_lvl_3_effect = { value = 1 power = dip } }
+				10 = { th_increase_ruler_adm_stat = { mil = 1 } THE_IQU_add_government_power_lvl_3_effect = { value = 1 power = mil } }
+			}
+		}
+	}
+}
+##添加政府点数
+THE_IQU_government_lvl3_cloud_with_sky_add_pwoer_effect_before = {
+	if = { limit = { HVR = { adm = 6 } } THE_IQU_add_government_power_lvl_3_effect = { value = 6 power = adm } }
+	else_if = { limit = { HVR = { adm = 5 } } THE_IQU_add_government_power_lvl_3_effect = { value = 5 power = adm } }
+	else_if = { limit = { HVR = { adm = 4 } } THE_IQU_add_government_power_lvl_3_effect = { value = 4 power = adm } }
+	else_if = { limit = { HVR = { adm = 3 } } THE_IQU_add_government_power_lvl_3_effect = { value = 3 power = adm } }
+	#
+	if = { limit = { HVR = { dip = 6 } } THE_IQU_add_government_power_lvl_3_effect = { value = 6 power = dip } }
+	else_if = { limit = { HVR = { dip = 5 } } THE_IQU_add_government_power_lvl_3_effect = { value = 5 power = dip } }
+	else_if = { limit = { HVR = { dip = 4 } } THE_IQU_add_government_power_lvl_3_effect = { value = 4 power = dip } }
+	else_if = { limit = { HVR = { dip = 3 } } THE_IQU_add_government_power_lvl_3_effect = { value = 3 power = dip } }
+	#
+	if = { limit = { HVR = { mil = 6 } } THE_IQU_add_government_power_lvl_3_effect = { value = 6 power = mil } }
+}
+
+THE_IQU_add_government_power_lvl_3_effect = {
+	add_government_power = {
+		mechanic_type = THE_IQU_cloud_with_sky_mechanic
+		power_type = THE_IQU_with_hvr_$power$_power_power
+		value = $value$
+	}
+}
+#龙脉消止
+THE_IQU_end_the_loong_vein_effect = {
+	if = {
+		limit = { 
+			THE_IQU_num_of_wuxing_flag_province_with_trigger = {
+				value = 5
+			}
+		}
+		THE_IQU_add_unique_point_temporary_province_effects = {
+			level = 5
+		}
+	}
+	else_if = {
+		limit = {
+			THE_IQU_num_of_wuxing_flag_province_with_trigger = {
+				value = 4
+			}
+		 }
+		 THE_IQU_add_unique_point_temporary_province_effects = {
+			level = 4
+		}
+	}
+	else_if = {
+		limit = {
+			THE_IQU_num_of_wuxing_flag_province_with_trigger = {
+				value = 3
+			}
+		 }
+		 THE_IQU_add_unique_point_temporary_province_effects = {
+			level = 3
+		}
+	}
+	else_if = {
+		limit = {
+			THE_IQU_num_of_wuxing_flag_province_with_trigger = {
+				value = 2
+			}
+		 }
+		 THE_IQU_add_unique_point_temporary_province_effects = {
+			level = 2
+		}
+	}
+	else_if = {
+		limit = {
+			THE_IQU_num_of_wuxing_flag_province_with_trigger = {
+				value = 1
+			}
+		 }
+		 THE_IQU_add_unique_point_temporary_province_effects = {
+			level = 1
+		}
+	}
+	####获得特殊点五行
+	# THE_IQU_has_get_unique_point_is_jin_flag
+	# THE_IQU_has_get_unique_point_is_shui_flag
+	# THE_IQU_has_get_unique_point_is_mu_flag
+	# THE_IQU_has_get_unique_point_is_huo_flag
+	# THE_IQU_has_get_unique_point_is_tu_flag
+	hidden_effect = {
+		if = {
+			limit = { 
+				THE_IQU_has_any_province_wuxing_flag_trigger = {
+					wuxing = jin
+				}
+			}
+			set_country_flag = THE_IQU_has_get_unique_point_is_jin_flag
+		}
+		if = {
+			limit = { 
+				THE_IQU_has_any_province_wuxing_flag_trigger = {
+					wuxing = shui
+				}
+			}
+			set_country_flag = THE_IQU_has_get_unique_point_is_shui_flag
+		}
+		if = {
+			limit = { 
+				THE_IQU_has_any_province_wuxing_flag_trigger = {
+					wuxing = mu
+				}
+			}
+			set_country_flag = THE_IQU_has_get_unique_point_is_mu_flag
+		}
+		if = {
+			limit = { 
+				THE_IQU_has_any_province_wuxing_flag_trigger = {
+					wuxing = huo
+				}
+			}
+			set_country_flag = THE_IQU_has_get_unique_point_is_huo_flag
+		}
+		if = {
+			limit = { 
+				THE_IQU_has_any_province_wuxing_flag_trigger = {
+					wuxing = tu
+				}
+			}
+			set_country_flag = THE_IQU_has_get_unique_point_is_tu_flag
+		}
+		clr_country_flag = THE_IQU_loong_vein_get_wuxing_jin_flag
+		clr_country_flag = THE_IQU_loong_vein_get_wuxing_shui_flag
+		clr_country_flag = THE_IQU_loong_vein_get_wuxing_mu_flag
+		clr_country_flag = THE_IQU_loong_vein_get_wuxing_huo_flag
+		clr_country_flag = THE_IQU_loong_vein_get_wuxing_tu_flag
+		#
+		clr_country_flag = THE_IQU_loong_vein_get_wuxing_jin_flag_next
+		clr_country_flag = THE_IQU_loong_vein_get_wuxing_shui_flag_next
+		clr_country_flag = THE_IQU_loong_vein_get_wuxing_mu_flag_next
+		clr_country_flag = THE_IQU_loong_vein_get_wuxing_huo_flag_next
+		clr_country_flag = THE_IQU_loong_vein_get_wuxing_tu_flag_next
+		#
+		remove_province_modifier = THE_IQU_lonng_vein_head_province_buff
+	}
+}
+
+#
+THE_IQU_add_diplomacal_experience_var_effect = {
+	custom_tooltip = THE_IQU_add_experience_var_c_tt1
+	hidden_effect = {
+		change_variable = {
+			which = the_iqu_diplomacal_experience_change_im_var
+			value = 1
+		}
+	}
+}
+THE_IQU_add_learning_experience_var_effect = {
+	custom_tooltip = THE_IQU_add_experience_var_c_tt2
+	hidden_effect = {
+		change_variable = {
+			which = the_iqu_learning_experience_change_im_var
+			value = 1
+		}
+	}
+}
+THE_IQU_add_nautical_experience_var_effect = {
+	custom_tooltip = THE_IQU_add_experience_var_c_tt3
+	hidden_effect = {
+		change_variable = {
+			which = the_iqu_nautical_experience_change_im_var
+		}
+	}
+}
+
+THE_IQU_will_get_wuxing_point_after_explore_effect = {
+	if = {
+		limit = { 
+			ROOT = {
+				has_government_attribute = THE_IQU_tennin_one_taoist_reform_mechanic
+				OR = {
+					was_tag = IQU
+					tag = IQU
+				}
+			}
+		}
+		if = {
+			limit = { 
+				THIS = {
+					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+						wuxing = jin
+					}
+				}
+			}
+			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt6
+			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt1
+		}
+		if = {
+			limit = { 
+				THIS = {
+					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+						wuxing = shui
+					}
+				}
+			}
+			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt6
+			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt2
+		}
+		if = {
+			limit = { 
+				THIS = {
+					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+						wuxing = mu
+					}
+				}
+			}
+			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt6
+			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt3
+		}
+		if = {
+			limit = { 
+				THIS = {
+					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+						wuxing = huo
+					}
+				}
+			}
+			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt6
+			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt4
+		}
+		if = {
+			limit = { 
+				THIS = {
+					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+						wuxing = tu
+					}
+				}
+			}
+			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt6
+			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt5
+		}
+	}
+}
+#探险后结算
+THE_IQU_after_get_wuxing_point_after_explore_effect = {
+	if = {
+		limit = { 
+			ROOT = {
+				has_government_attribute = THE_IQU_tennin_one_taoist_reform_mechanic
+				OR = {
+					was_tag = IQU
+					tag = IQU
+				}
+			}
+		}
+		if = {
+			limit = { 
+				THIS = {
+					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+						wuxing = jin
+					}
+				}
+			}
+			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt1
+			hidden_effect = {
+				add_government_power = {
+					mechanic_type = THE_IQU_tennin_one_taoist_mechanic
+					power_type = THE_IQU_tennin_one_taoist_jin_power
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = { 
+				THIS = {
+					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+						wuxing = shui
+					}
+				}
+			}
+			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt2
+			hidden_effect = {
+				add_government_power = {
+					mechanic_type = THE_IQU_tennin_one_taoist_mechanic
+					power_type = THE_IQU_tennin_one_taoist_shui_power
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = { 
+				THIS = {
+					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+						wuxing = mu
+					}
+				}
+			}
+			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt3
+			hidden_effect = {
+				add_government_power = {
+					mechanic_type = THE_IQU_tennin_one_taoist_mechanic
+					power_type = THE_IQU_tennin_one_taoist_mu_power
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = { 
+				THIS = {
+					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+						wuxing = huo
+					}
+				}
+			}
+			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt4
+			hidden_effect = {
+				add_government_power = {
+					mechanic_type = THE_IQU_tennin_one_taoist_mechanic
+					power_type = THE_IQU_tennin_one_taoist_huo_power
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = { 
+				THIS = {
+					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+						wuxing = tu
+					}
+				}
+			}
+			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt5
+			hidden_effect = {
+				add_government_power = {
+					mechanic_type = THE_IQU_tennin_one_taoist_mechanic
+					power_type = THE_IQU_tennin_one_taoist_tu_power
+					value = 1
+				}
+			}
+		}
+	}
+}
 ################################
 ##On Action Script
 ##############################
@@ -656,41 +1357,46 @@ THE_IQU_on_startup_scripted_effects = {
 		set_variable = { which = the_iqu_diplomacal_experience_change_im_var value = 0 }
 		#MISSION 
 		set_variable = { which = the_iqu_explore_province_number_im_var value = 0 }
-		set_country_flag = THE_IQU_on_startup_set_variable_flag
-	}
-}
-#探索海岸 FROM己方国家 #ROOT当前省份
-THE_IQU_explore_coast_exolore_government_effects = {
-	if = {
-		limit = {
-			FROM = {
-				has_government_attribute = THE_IQU_government_explore_coast_explore_mechanic
-			}
-		 }
-		 random_list = {
-			10 = {
-				ROOT = {
-					region = {
-						 discover_country = FROM
-					}
-				}
-			}
-			90 = {
-				
-			}
-		 }
-		 
+		set_variable = { which = the_iqu_mission_about_win_chess_im_var value = 0 }
+		set_variable = { which = the_iqu_the_tenshi_obedience_im_var value = 0 }
+		set_variable = { which = the_iqu_the_tenshi_teaching_experience_im_var value = 0 }
+		set_variable = { which = the_iqu_had_explore_area_number_im_var value = 0 }
+		set_variable = { which = the_iqu_jungle_province_has_been_teer_im_var value = 0 }
+		set_variable = { which = the_iqu_mountain_province_has_been_teer_im_var value = 0 }
+		##START EVENT
 	}
 	if = {
 		limit = {
-			FROM = {
-				mission_completed = THE_IQU_1_7
+			th_is_or_was_tag = {
+				tag = IQU
 			}
-		 }
-		FROM = {
-			add_army_tradition = 1
+			NOT = {
+				has_country_flag = THE_IQU_on_startup_set_variable_flag
+			}
+		}
+		country_event = {
+			id = THE_IQU_flavor_events.238
+			days = 7
 		}
 	}
+	###HVR
+	if = {
+		limit = {
+			th_is_or_was_tag = {
+				tag = HVR
+			}
+			IQU = {
+				NOT = {
+					has_country_flag = THE_IQU_on_startup_set_variable_flag
+				}
+			}
+		}
+		country_event = {
+			id = THE_IQU_flavor_events.237
+		}
+	}
+	#only flag
+	set_country_flag = THE_IQU_on_startup_set_variable_flag
 }
 #殖民完成oa
 THE_IQU_scarlet_sky_government_effects = {
@@ -735,6 +1441,14 @@ THE_IQU_scarlet_sky_government_effects = {
 	if = {
 		limit = { 
 			owner = {
+				mission_completed = THE_IQU_5_4
+			}
+		}
+		add_base_production = 1
+	}
+	if = {
+		limit = { 
+			owner = {
 				mission_completed = THE_IQU_1_8
 			}
 			region = carribeans_region
@@ -749,8 +1463,9 @@ THE_IQU_scarlet_sky_government_effects = {
 		}
 	}
 }
-#探索省份数量计数
+#探索海岸oa
 THE_IQU_number_explore_province_im_var_effect = {
+	#探索省份计数
 	if = {
 		limit = { 
 			FROM = {
@@ -765,9 +1480,38 @@ THE_IQU_number_explore_province_im_var_effect = {
 			}
 		}
 	}
-}
-#触发异常点事件
+	#探索海岸
+	if = {
+		limit = {
+			FROM = {
+				mission_completed = THE_IQU_1_7
+			}
+		}
+		FROM = {
+			add_army_tradition = 1
+		}
+	}
+	#获得异常点
+	if = {
+		limit = { 
+			FROM = {
+				mission_completed = THE_IQU_1_5
+			}
+		}
+		FROM = {
+			random_list = {
+				10 = {
+					country_event = {
+						id = THE_IQU_flavor_events.1004
+					}
+				}
+				90 = {
 
+				}
+			}
+		}
+	}
+}
 
 #探索事件
 THE_IQU_panama_add_unique_point_event_effect = {
@@ -781,8 +1525,10 @@ THE_IQU_panama_add_unique_point_event_effect = {
 			}
 			province_id = 835
 		}
-		province_event = {
-			id = THE_IQU_flavor_events.60
+		FROM = {
+			country_event = {
+				id = THE_IQU_flavor_events.60
+			}
 		}
 	}
 	#西印度
@@ -796,8 +1542,10 @@ THE_IQU_panama_add_unique_point_event_effect = {
 			}
 			province_id = 487
 		}
-		province_event = {
-			id = THE_IQU_flavor_events.61
+		FROM = {
+			country_event = {
+				id = THE_IQU_flavor_events.61
+			}
 		}
 	}
 	#亚马孙
@@ -811,8 +1559,10 @@ THE_IQU_panama_add_unique_point_event_effect = {
 			}
 			province_id = 2890
 		}
-		province_event = {
-			id = THE_IQU_flavor_events.62
+		FROM = {
+			country_event = {
+				id = THE_IQU_flavor_events.62
+			}
 		}
 	}
 	#北美东海岸
@@ -826,8 +1576,596 @@ THE_IQU_panama_add_unique_point_event_effect = {
 			}
 			province_id = 938
 		}
-		province_event = {
-			id = THE_IQU_flavor_events.63
+		FROM = {
+			country_event = {
+				id = THE_IQU_flavor_events.63
+			}
 		}
+	}
+	#澳大利亚
+	if = {
+		limit = { 
+			FROM = {
+				OR = {
+					tag = IQU
+					was_tag = IQU
+				}
+			}
+			province_id = 4850
+		}
+		FROM = {
+			country_event = {
+				id = THE_IQU_flavor_events.64
+			}
+		}
+	}
+	#加拿大
+	if = {
+		limit = { 
+			FROM = {
+				OR = {
+					tag = IQU
+					was_tag = IQU
+				}
+			}
+			province_id = 980
+		}
+		FROM = {
+			country_event = {
+				id = THE_IQU_flavor_events.65
+			}
+		}
+	}
+}
+
+###2年脉冲
+THE_IQU_explore_on_2_years_pluse_effect = {
+	if = {
+		limit = { 
+			tag = IQU
+			has_country_flag = THE_IQU_now_is_exploring_flag
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					region = cascadia_region
+					has_province_flag = THE_IQU_this_provinces_is_exploring_now
+				}
+			 }
+			 random_events = {
+				10 = THE_IQU_flavor_events.66
+				10 = THE_IQU_flavor_events.70
+				10 = THE_IQU_flavor_events.75
+				10 = THE_IQU_flavor_events.79
+				10 = THE_IQU_flavor_events.83
+				10 = THE_IQU_flavor_events.86
+				10 = THE_IQU_flavor_events.90
+				10 = THE_IQU_flavor_events.95
+				10 = THE_IQU_flavor_events.99
+				10 = THE_IQU_flavor_events.102
+				10 = THE_IQU_flavor_events.107
+				10 = THE_IQU_flavor_events.110
+				10 = THE_IQU_flavor_events.114
+				10 = THE_IQU_flavor_events.117
+				10 = THE_IQU_flavor_events.121
+				10 = THE_IQU_flavor_events.126
+				##
+				20 = THE_IQU_flavor_events.130
+				20 = THE_IQU_flavor_events.133
+				20 = THE_IQU_flavor_events.137
+				20 = THE_IQU_flavor_events.141
+				#
+				5 = THE_IQU_flavor_events.236
+			}
+		}
+		else_if = {
+			limit = { 
+				any_owned_province = {
+					OR = {
+						region = peru_region
+						region = upper_peru_region
+						region = la_plata_region
+					}
+					has_province_flag = THE_IQU_this_provinces_is_exploring_now
+				}
+			}
+			 random_events = {
+				10 = THE_IQU_flavor_events.66
+				10 = THE_IQU_flavor_events.70
+				10 = THE_IQU_flavor_events.75
+				10 = THE_IQU_flavor_events.79
+				10 = THE_IQU_flavor_events.83
+				10 = THE_IQU_flavor_events.86
+				10 = THE_IQU_flavor_events.90
+				10 = THE_IQU_flavor_events.95
+				10 = THE_IQU_flavor_events.99
+				10 = THE_IQU_flavor_events.102
+				10 = THE_IQU_flavor_events.107
+				10 = THE_IQU_flavor_events.110
+				10 = THE_IQU_flavor_events.114
+				10 = THE_IQU_flavor_events.117
+				10 = THE_IQU_flavor_events.121
+				10 = THE_IQU_flavor_events.126
+				##
+				20 = THE_IQU_flavor_events.144
+				20 = THE_IQU_flavor_events.148
+				20 = THE_IQU_flavor_events.153
+				20 = THE_IQU_flavor_events.156
+				#
+				5 = THE_IQU_flavor_events.236
+			}
+
+		}
+		else_if = {
+			limit = { 
+				any_owned_province = {
+					OR = {
+						region = caribbean_sea_region
+						region = southeast_america_region
+						region = mississippi_region
+					}
+					has_province_flag = THE_IQU_this_provinces_is_exploring_now
+				}
+			}
+			 random_events = {
+				10 = THE_IQU_flavor_events.66
+				10 = THE_IQU_flavor_events.70
+				10 = THE_IQU_flavor_events.75
+				10 = THE_IQU_flavor_events.79
+				10 = THE_IQU_flavor_events.83
+				10 = THE_IQU_flavor_events.86
+				10 = THE_IQU_flavor_events.90
+				10 = THE_IQU_flavor_events.95
+				10 = THE_IQU_flavor_events.99
+				10 = THE_IQU_flavor_events.102
+				10 = THE_IQU_flavor_events.107
+				10 = THE_IQU_flavor_events.110
+				10 = THE_IQU_flavor_events.114
+				10 = THE_IQU_flavor_events.117
+				10 = THE_IQU_flavor_events.121
+				10 = THE_IQU_flavor_events.126
+				##
+				20 = THE_IQU_flavor_events.176
+				20 = THE_IQU_flavor_events.179
+				20 = THE_IQU_flavor_events.184
+				20 = THE_IQU_flavor_events.187
+				#
+				5 = THE_IQU_flavor_events.236
+			}
+
+		}
+		else_if = {
+			limit = { 
+				any_owned_province = {
+					OR = {
+						region = canada_region
+						region = northeast_america_region
+						region = great_lakes_region
+					}
+					has_province_flag = THE_IQU_this_provinces_is_exploring_now
+				}
+			}
+			 random_events = {
+				10 = THE_IQU_flavor_events.66
+				10 = THE_IQU_flavor_events.70
+				10 = THE_IQU_flavor_events.75
+				10 = THE_IQU_flavor_events.79
+				10 = THE_IQU_flavor_events.83
+				10 = THE_IQU_flavor_events.86
+				10 = THE_IQU_flavor_events.90
+				10 = THE_IQU_flavor_events.95
+				10 = THE_IQU_flavor_events.99
+				10 = THE_IQU_flavor_events.102
+				10 = THE_IQU_flavor_events.107
+				10 = THE_IQU_flavor_events.110
+				10 = THE_IQU_flavor_events.114
+				10 = THE_IQU_flavor_events.117
+				10 = THE_IQU_flavor_events.121
+				10 = THE_IQU_flavor_events.126
+				##
+				20 = THE_IQU_flavor_events.192
+				20 = THE_IQU_flavor_events.195
+				20 = THE_IQU_flavor_events.199
+				20 = THE_IQU_flavor_events.202
+				#
+				5 = THE_IQU_flavor_events.236
+			}
+
+		}
+		else_if = {
+			limit = { 
+				any_owned_province = {
+					OR = {
+						region = colombia_region
+						region = brazil_region
+					}
+					has_province_flag = THE_IQU_this_provinces_is_exploring_now
+				}
+			}
+			 random_events = {
+				10 = THE_IQU_flavor_events.66
+				10 = THE_IQU_flavor_events.70
+				10 = THE_IQU_flavor_events.75
+				10 = THE_IQU_flavor_events.79
+				10 = THE_IQU_flavor_events.83
+				10 = THE_IQU_flavor_events.86
+				10 = THE_IQU_flavor_events.90
+				10 = THE_IQU_flavor_events.95
+				10 = THE_IQU_flavor_events.99
+				10 = THE_IQU_flavor_events.102
+				10 = THE_IQU_flavor_events.107
+				10 = THE_IQU_flavor_events.110
+				10 = THE_IQU_flavor_events.114
+				10 = THE_IQU_flavor_events.117
+				10 = THE_IQU_flavor_events.121
+				10 = THE_IQU_flavor_events.126
+				##
+				20 = THE_IQU_flavor_events.160
+				20 = THE_IQU_flavor_events.163
+				20 = THE_IQU_flavor_events.168
+				20 = THE_IQU_flavor_events.173
+				#
+				5 = THE_IQU_flavor_events.236
+			}
+		}
+		else_if = {
+			limit = { 
+				any_owned_province = {
+					OR = {
+						region = australia_region
+					}
+					has_province_flag = THE_IQU_this_provinces_is_exploring_now
+				}
+			}
+			 random_events = {
+				10 = THE_IQU_flavor_events.66
+				10 = THE_IQU_flavor_events.70
+				10 = THE_IQU_flavor_events.75
+				10 = THE_IQU_flavor_events.79
+				10 = THE_IQU_flavor_events.83
+				10 = THE_IQU_flavor_events.86
+				10 = THE_IQU_flavor_events.90
+				10 = THE_IQU_flavor_events.95
+				10 = THE_IQU_flavor_events.99
+				10 = THE_IQU_flavor_events.102
+				10 = THE_IQU_flavor_events.107
+				10 = THE_IQU_flavor_events.110
+				10 = THE_IQU_flavor_events.114
+				10 = THE_IQU_flavor_events.117
+				10 = THE_IQU_flavor_events.121
+				10 = THE_IQU_flavor_events.126
+				##
+				20 = THE_IQU_flavor_events.206
+				20 = THE_IQU_flavor_events.209
+				20 = THE_IQU_flavor_events.213
+				20 = THE_IQU_flavor_events.216
+				#
+				5 = THE_IQU_flavor_events.236
+			}
+		}
+		else_if = {
+			limit = { 
+				any_owned_province = {
+					OR = {
+						region = british_isles_region
+					}
+					has_province_flag = THE_IQU_this_provinces_is_exploring_now
+				}
+			}
+			 random_events = {
+				10 = THE_IQU_flavor_events.66
+				10 = THE_IQU_flavor_events.70
+				10 = THE_IQU_flavor_events.75
+				10 = THE_IQU_flavor_events.79
+				10 = THE_IQU_flavor_events.83
+				10 = THE_IQU_flavor_events.86
+				10 = THE_IQU_flavor_events.90
+				10 = THE_IQU_flavor_events.95
+				10 = THE_IQU_flavor_events.99
+				# 10 = THE_IQU_flavor_events.102
+				# 10 = THE_IQU_flavor_events.107
+				# 10 = THE_IQU_flavor_events.110
+				# 10 = THE_IQU_flavor_events.114
+				# 10 = THE_IQU_flavor_events.117
+				10 = THE_IQU_flavor_events.121
+				# 10 = THE_IQU_flavor_events.126
+				##
+				15 = THE_IQU_flavor_events.220
+				15 = THE_IQU_flavor_events.224
+				15 = THE_IQU_flavor_events.228
+				15 = THE_IQU_flavor_events.233
+				#
+				5 = THE_IQU_flavor_events.236
+			}
+		}
+		else_if = {
+			limit = {
+				any_owned_province = {
+					NOT = {
+						region = orbital_region
+					}
+					NOT = {
+						region = moon_region
+					}
+					has_province_flag = THE_IQU_this_provinces_is_exploring_now
+				}
+			}
+			random_events = {
+				10 = THE_IQU_flavor_events.66
+				10 = THE_IQU_flavor_events.70
+				10 = THE_IQU_flavor_events.75
+				10 = THE_IQU_flavor_events.79
+				10 = THE_IQU_flavor_events.83
+				10 = THE_IQU_flavor_events.86
+				10 = THE_IQU_flavor_events.90
+				10 = THE_IQU_flavor_events.95
+				10 = THE_IQU_flavor_events.99
+				10 = THE_IQU_flavor_events.102
+				10 = THE_IQU_flavor_events.107
+				10 = THE_IQU_flavor_events.110
+				10 = THE_IQU_flavor_events.114
+				10 = THE_IQU_flavor_events.117
+				10 = THE_IQU_flavor_events.121
+				10 = THE_IQU_flavor_events.126
+				#
+				5 = THE_IQU_flavor_events.236
+			}
+		}
+	}
+	if = {
+		limit = { 
+			OR = {
+				tag = IQU
+				was_tag = IQU
+			}
+			has_government_attribute = THE_IQU_the_world_all_will_be_known_reform_mechanic
+		}
+		every_war_enemy_country = {
+			remove_fow = 24
+		}
+	}
+}
+#设定收入
+THE_IQU_set_yearly_trade_income_with_hvr_effect = {
+	#衣玖总竞争力
+	set_variable = {
+		which = the_iqu_total_heaven_trade_power_im_var_iqu
+		value = 0
+	}
+	#天子总竞争力
+	set_variable = {
+		which = the_iqu_total_heaven_trade_power_im_var_hvr
+		value = 0
+	}
+	#
+	while = {
+		limit = { 
+			any_owned_province = {
+				trade_company_region = th_trade_company_heaven
+				NOT = {
+					has_province_flag = THE_IQU_has_set_point_trade_province_power_flag
+				}
+			}
+		}
+		random_owned_province = {
+			limit = {
+				trade_company_region = th_trade_company_heaven
+				NOT = {
+					has_province_flag = THE_IQU_has_set_point_trade_province_power_flag
+				}
+			}
+			ROOT = {
+				export_to_variable = {
+					variable_name = the_iqu_total_heaven_trade_power_im_var_iqu_single_province
+					value = province_trade_power
+					who = PREV
+				}
+				#累加变量
+				change_variable = {
+					which = the_iqu_total_heaven_trade_power_im_var_iqu
+					which = the_iqu_total_heaven_trade_power_im_var_iqu_single_province
+				}
+			}
+			set_province_flag = THE_IQU_has_set_point_trade_province_power_flag
+		}
+	}
+	every_owned_province = {
+		limit = {
+			trade_company_region = th_trade_company_heaven
+		}
+		clr_province_flag = THE_IQU_has_set_point_trade_province_power_flag
+	}
+	while = {
+		limit = { 
+			#天界的省份贸易
+			HVR = {
+				any_owned_province = {
+					trade_company_region = th_trade_company_heaven
+					NOT = {
+						has_province_flag = THE_IQU_has_set_point_trade_province_power_flag2
+					}
+				}
+			}
+		}
+		HVR = {
+			random_owned_province = {
+				limit = {
+					trade_company_region = th_trade_company_heaven
+					NOT = {
+						has_province_flag = THE_IQU_has_set_point_trade_province_power_flag2
+					}
+				}
+				ROOT = {
+					export_to_variable = {
+						variable_name = the_iqu_total_heaven_trade_power_im_var_hvr_single_province
+						value = province_trade_power
+						who = PREV
+					}
+					#累加变量
+					change_variable = {
+						which = the_iqu_total_heaven_trade_power_im_var_hvr
+						which = the_iqu_total_heaven_trade_power_im_var_hvr_single_province
+					}
+				}
+				set_province_flag = THE_IQU_has_set_point_trade_province_power_flag2
+			}
+		}
+	}
+	HVR = {
+		every_owned_province = {
+			limit = {
+				trade_company_region = th_trade_company_heaven
+			}
+			clr_province_flag = THE_IQU_has_set_point_trade_province_power_flag
+		}
+	}
+	#得出变量
+	#龙宫省份贸易竞争力 the_iqu_total_heaven_trade_power_im_var_iqu
+	#天界省份贸易竞争力 the_iqu_total_heaven_trade_power_im_var_hvr
+	if = {
+		limit = {
+			check_variable = {
+				which = the_iqu_total_heaven_trade_power_im_var_iqu
+				which = the_iqu_total_heaven_trade_power_im_var_hvr
+			}
+		 }
+		 divide_variable = {
+			which = the_iqu_total_heaven_trade_power_im_var_hvr
+			which = the_iqu_total_heaven_trade_power_im_var_iqu
+		 }
+		 set_variable = {
+			which = the_iqu_total_heaven_trade_power_im_var_percentage_use
+			which = the_iqu_total_heaven_trade_power_im_var_hvr
+		 }
+	}
+	else = {
+		divide_variable = {
+			which = the_iqu_total_heaven_trade_power_im_var_iqu
+			which = the_iqu_total_heaven_trade_power_im_var_hvr
+		}
+		set_variable = {
+			which = the_iqu_total_heaven_trade_power_im_var_percentage_use
+			which = the_iqu_total_heaven_trade_power_im_var_iqu
+		 }
+	}
+	#the_iqu_total_heaven_trade_power_im_var_percentage_use 贸易竞争力差幅
+	export_to_variable = {
+		which = the_iqu_iqu_years_of_income_im_var
+		value = years_of_income
+		who = ROOT
+	}
+	export_to_variable = {
+		which = the_iqu_hvr_years_of_income_im_var
+		value = years_of_income
+		who = HVR
+	}
+	export_to_variable = {
+		which = the_iqu_iqu_years_of_income_im_var_trade_percentage
+		value = trade_income_percentage
+		who = ROOT
+	}
+	export_to_variable = {
+		which = the_iqu_hvr_years_of_income_im_var_trade_percentage
+		value = trade_income_percentage
+		who = HVR
+	}
+	# x5
+	multiply_variable = {
+		which = the_iqu_iqu_years_of_income_im_var
+		value = 5
+	}
+	multiply_variable = {
+		which = the_iqu_hvr_years_of_income_im_var
+		value = 5
+	}
+	# x比例
+	multiply_variable = {
+		which = the_iqu_iqu_years_of_income_im_var
+		which = the_iqu_iqu_years_of_income_im_var_trade_percentage
+	}
+	multiply_variable = {
+		which = the_iqu_hvr_years_of_income_im_var
+		which = the_iqu_hvr_years_of_income_im_var_trade_percentage
+	}
+	#
+	change_variable = {
+		which = the_iqu_iqu_years_of_income_im_var
+		which = the_iqu_hvr_years_of_income_im_var
+	}
+	#总收入 the_iqu_iqu_years_of_income_im_var
+}
+THE_IQU_on_5_years_pluse_effect = {
+	if = {
+		limit = {
+			mission_completed = THE_IQU_4_4
+		 }
+		 country_event = {
+			id = THE_IQU_flavor_events.1011
+		 }
+	}
+}
+THE_IQU_on_development_adm_effect = {
+	if = {
+		limit = {
+			has_province_modifier = THE_IQU_lonng_vein_foot_province_buff
+			owner = {
+				mission_completed = THE_IQU_4_6
+			}
+		}
+		random_list = {
+			50 = {
+				add_base_tax = 1
+			}
+			50 = {
+				
+			}
+		}
+	}
+}
+THE_IQU_on_development_dip_effect = {
+	if = {
+		limit = {
+			has_province_modifier = THE_IQU_lonng_vein_foot_province_buff
+			owner = {
+				mission_completed = THE_IQU_4_6
+			}
+		}
+		random_list = {
+			50 = {
+				add_base_production = 1
+			}
+			50 = {
+				
+			}
+		}
+	}
+}
+THE_IQU_on_development_mil_effect = {
+	if = {
+		limit = {
+			has_province_modifier = THE_IQU_lonng_vein_foot_province_buff
+			owner = {
+				mission_completed = THE_IQU_4_6
+			}
+		}
+		random_list = {
+			50 = {
+				add_base_manpower = 1
+			}
+			50 = {
+				
+			}
+		}
+	}
+}
+#攻城
+THE_IQU_naval_on_brrange_effect = {
+	if = {
+		limit = {
+			mission_completed = THE_IQU_5_7
+		 }
+		 FROM = {
+			change_controller = ROOT
+		 }
 	}
 }

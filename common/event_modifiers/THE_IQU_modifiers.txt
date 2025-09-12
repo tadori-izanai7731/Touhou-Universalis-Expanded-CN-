@@ -138,3 +138,84 @@ THE_IQU_child_of_loong_buff = {
 	allowed_voc_indiamen_fraction = 0.25
 	light_ship_number_of_cannons_modifier = 0.50
 }
+#龙令天从
+THE_IQU_loong_command_buff = {
+	all_estate_loyalty_equilibrium = 0.25
+	all_estate_influence_modifier = -0.10
+}
+#规训天人
+THE_IQU_teach_tennin_buff = {
+	prestige = 0.25
+	legitimacy = 0.25
+}
+#天靖四海
+THE_IQU_hvr_cannot_decalre_war_buff = {
+	can_not_declare_war = yes
+	development_cost = -0.15
+	global_trade_goods_size = 0.5
+	merchants = 5
+	trade_steering = 0.33
+}
+#天之纲
+THE_IQU_iqu_declare_war_buff = {
+	global_autonomy = -0.05
+	governing_cost = -0.10
+}
+#云港
+THE_IQU_cloud_port_buff = {
+	ship_recruit_speed = -0.25
+	local_great_project_upgrade_cost = -0.25
+	local_institution_spread = 0.1
+}
+#纸张贸易
+THE_IQU_trade_paper_buff = {
+	trade_efficiency = 0.10
+}
+#贸易协定
+THE_IQU_trade_steer_100_buff = {
+	trade_efficiency = 0.10
+	THE_IQU_guide_loong_vein_custom_modifier = -0.10
+}
+#无念无想
+THE_IQU_have_no_mind_buff = {
+	all_estate_loyalty_equilibrium = 0.1
+	leader_naval_manuever = 1
+	discipline = 0.05
+	trade_steering = 0.50
+}
+#舳舻相继
+THE_IQU_build_shipyard_buff = {
+	range = 0.25
+	global_ship_recruit_speed = -0.15
+	naval_attrition = -0.1
+}
+#沧溟濯锋
+THE_IQU_moon_explore_range_buff = {
+	range = 0.50
+	movement_speed_in_fleet_modifier = 1
+	shock_damage = 0.05
+}
+#云帆济海 
+THE_IQU_cloud_sail_on_sea_buff = {
+	ship_power_propagation = 0.25
+	naval_morale = 0.1
+	shock_damage_received = -0.05
+}
+#蕴炁
+THE_IQU_grouth_air_buff = {
+	THE_IQU_explore_treasury_get_cutom_modifier = 0.25
+	colonists = 1
+	dip_tech_cost_modifier = -0.05
+}
+#凝元
+THE_IQU_forze_air_buff = {
+	THE_IQU_explore_treasury_get_cutom_modifier = 0.25
+	fire_damage_received = -0.10
+	dip_tech_cost_modifier = -0.05
+}
+#清辉 
+THE_IQU_qing_hui_buff = {
+	THE_IQU_explore_treasury_get_cutom_modifier = 0.05
+	global_naval_engagement_modifier = 0.25
+	movement_speed_onto_off_boat_modifier = 0.50
+}

@@ -9,7 +9,7 @@ th_discover_default = yes
 1443.1.1 = {
   monarch = {
     name = "cˆ–s"  # IQU
-    monarch_name = "cˆ–s"
+    monarch_name = "8lml"
     dynasty = "8lml"  
     birth_date = 2.1.1
     adm = 4
@@ -20,4 +20,5 @@ th_discover_default = yes
   add_ruler_personality = immortal_personality
   set_ruler_flag = touhou_character_ruler
   set_ruler_flag = touhou_original_ruler
+  set_estate_privilege = THE_IQU_tennin_government_loose_privileges
 }

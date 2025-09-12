@@ -31,17 +31,82 @@ THE_IQU_scarlet_sky_reform = {
 	icon = "THE_IQU_government_2_reform"
 	potential = {
 		OR = {
-			has_reform = THE_IQU_sky_beyond_clouds_reform
-			have_had_reform = THE_IQU_sky_beyond_clouds_reform
+			has_reform = THE_IQU_scarlet_sky_reform
+			have_had_reform = THE_IQU_scarlet_sky_reform
 		}
 	}
 	
 	modifiers = {
 		native_assimilation = 0.25
-		global_colonial_growth = 10
+		reform_progress_growth = 0.10
 	}
 	custom_attributes = {
 		THE_IQU_scarlet_sky_reform_mechanic = yes
 		THE_IQU_scarlet_sky_reform_mechanic_2 = yes
+	}
+}
+#云佑天合 #3
+THE_IQU_cloud_with_sky_reform = {
+	lock_level_when_selected = yes
+	icon = "THE_IQU_government_1_reform"
+	potential = {
+		mission_completed = THE_IQU_4_3
+	}
+	
+	modifiers = {
+		country_military_power = -1
+		monthly_heir_claim_increase = 0.05
+		THE_IQU_guide_loong_vein_custom_modifier = -0.10
+	}
+
+	government_abilities = {
+		THE_IQU_cloud_with_sky_mechanic
+	}
+	custom_attributes = {
+		THE_IQU_cloud_with_sky_mechanic_2 = yes
+	}
+}
+#天人一道 #4
+THE_IQU_tennin_one_taoist_reform = {
+	lock_level_when_selected = yes
+	icon = "THE_IQU_government_1_reform"
+	potential = {
+		OR = {
+			has_reform = THE_IQU_tennin_one_taoist_reform
+			have_had_reform = THE_IQU_tennin_one_taoist_reform
+		}
+	}
+	modifiers = {
+		monthly_fervor_increase = 4
+		church_loyalty_modifier = 0.1
+		th_max_feng_shui_prov = 4
+		th_feng_shui_to_prov_ratio = 1.0
+		native_assimilation = 0.25
+	}
+	government_abilities = {
+		THE_IQU_tennin_one_taoist_mechanic
+	}
+	custom_attributes = {
+		THE_IQU_tennin_one_taoist_reform_mechanic = yes
+	}
+}
+#观澜测天 #6
+THE_IQU_the_world_all_will_be_known_reform = {
+	lock_level_when_selected = yes
+	icon = "THE_IQU_government_1_reform"
+	potential = {
+		mission_completed = THE_IQU_5_5
+	}
+	
+	modifiers = {
+		naval_attrition = -0.1
+		blockade_efficiency = 1.00
+	}
+
+	government_abilities = {
+
+	}
+	custom_attributes = {
+		THE_IQU_the_world_all_will_be_known_reform_mechanic = yes
 	}
 }

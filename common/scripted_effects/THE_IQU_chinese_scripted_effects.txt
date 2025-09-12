@@ -1,0 +1,22 @@
+THE_IQU_define_admiral_the_tenshi_chinese_effect = {
+	define_explorer = {
+		name = "‘k±êTES )YPR"
+		female = yes
+		shock = 1
+		fire = 5
+		manuever = 6
+		siege = 0
+	}
+}
+
+THE_IQU_define_the_tenshi_advisor_effect = {
+	define_advisor = {
+		type = THE_tenshi_advisor
+		name = "‘k±êTES)YPR"
+		skill = 1
+		cost_multiplier = 0.10
+		culture = ROOT
+		religion = ROOT
+		female = no
+	}
+}

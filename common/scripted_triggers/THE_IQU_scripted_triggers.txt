@@ -25,3 +25,36 @@ THE_IQU_this_province_had_been_explored_region_custom_trigger = {
 		}
 	}
 }
+
+THE_IQU_num_of_wuxing_flag_province_with_trigger = {
+	calc_true_if = {
+		amount = $value$
+		has_province_flag = THE_IQU_loong_vein_get_wuxing_jin_flag
+		has_province_flag = THE_IQU_loong_vein_get_wuxing_shui_flag
+		has_province_flag = THE_IQU_loong_vein_get_wuxing_mu_flag
+		has_province_flag = THE_IQU_loong_vein_get_wuxing_huo_flag
+		has_province_flag = THE_IQU_loong_vein_get_wuxing_tu_flag
+	}
+}
+
+# THE_IQU_loong_vein_get_wuxing_jin_flag 已获得五行-金
+# THE_IQU_loong_vein_get_wuxing_shui_flag 已获得五行-水
+# THE_IQU_loong_vein_get_wuxing_mu_flag 已获得五行-木
+# THE_IQU_loong_vein_get_wuxing_huo_flag 已获得五行-火
+# THE_IQU_loong_vein_get_wuxing_tu_flag 已获得五行-土
+
+####
+# THE_IQU_loong_vein_get_wuxing_jin_flag_next 下一期-金
+# THE_IQU_loong_vein_get_wuxing_shui_flag_next 下一期-水
+# THE_IQU_loong_vein_get_wuxing_mu_flag_next 下一期-木
+# THE_IQU_loong_vein_get_wuxing_huo_flag_next 下一期-火
+# THE_IQU_loong_vein_get_wuxing_tu_flag_next 下一期-土
+
+#wuxing jin mu shui huo tu 
+THE_IQU_has_any_province_wuxing_flag_trigger = {
+	has_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag
+}
+
+THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+	has_province_flag = THE_IQU_has_get_unique_point_is_$wuxing$_flag
+}
