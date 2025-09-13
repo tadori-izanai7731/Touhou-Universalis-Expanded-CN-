@@ -667,6 +667,15 @@ guiTypes = {
 				clicksound = "click"
 				scripted = yes
 			}
+			guiButtonType = {
+				name = THE_IQU_end_the_loong_vein_province_button_gui
+				position = { x = 372 y = 200 }
+				quadTextureSprite = "GFX_the_iqu_end_loong_vein_province_button"
+				# buttonText = ""
+				buttonFont = "vic_18"
+				clicksound = "click"
+				scripted = yes
+			}
 
 			### Core
 

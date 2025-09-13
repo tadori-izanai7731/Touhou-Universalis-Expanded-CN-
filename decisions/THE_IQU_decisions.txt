@@ -83,7 +83,14 @@ country_decisions = {
 			}
 		}
 		allow = {
-			always = yes
+			custom_trigger_tooltip = {
+				tooltip = THE_IQU_explore_the_unique_points_core_decisions_c_tt1
+				ROOT = {
+					NOT = {
+						has_country_flag = THE_IQU_now_is_exploring_flag
+					}
+				}
+			}
 		}
 		effect = {
 			country_event = {

@@ -191,8 +191,8 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
-			danger = 5
+			explore = 15
+			danger = 0
 		}
 	}
 	option = {
@@ -212,8 +212,8 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
-			danger = 15
+			explore = 10
+			danger = 10
 		}
 	}
 	option = {
@@ -233,7 +233,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
+			explore = 10
 			danger = 5
 		}
 	}
@@ -303,7 +303,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 15
+			explore = 20
 			danger = -5
 		}
 	}
@@ -345,7 +345,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = -5
+			explore = 5
 			danger = 0
 		}
 	}
@@ -411,8 +411,8 @@ country_event = {
 	option = {
 		name = THE_IQU_flavor_events.11.1
 		THE_IQU_check_nautical_experience_change_event_random_effects = {
-			better_id = THE_IQU_flavor_events.12
-			bad_id = THE_IQU_flavor_events.13
+			better_id = THE_IQU_flavor_events.13
+			bad_id = THE_IQU_flavor_events.12
 		}
 	}
 	option = {
@@ -434,7 +434,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = -5
+			explore = -10
 			danger = 10
 		}
 	}
@@ -455,7 +455,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 15
+			explore = 20
 			danger = -5
 		}
 	}
@@ -476,7 +476,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 15
 			danger = 5
 		}
 	}
@@ -538,7 +538,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 15
 			danger = -5
 		}
 	}
@@ -559,8 +559,8 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
-			danger = 5
+			explore = 10
+			danger = 0
 		}
 	}
 	option = {
@@ -626,7 +626,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 20
 			danger = -5
 		}
 	}
@@ -647,8 +647,8 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = -5
-			danger = 5
+			explore = 10
+			danger = 0
 		}
 	}
 	option = {
@@ -668,8 +668,8 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
-			danger = 5
+			explore = 15
+			danger = 0
 		}
 	}
 	option = {
@@ -689,8 +689,8 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
-			danger = 15
+			explore = 15
+			danger = 0
 		}
 	}
 	option = {
@@ -779,7 +779,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 15
 			danger = 5
 		}
 	}
@@ -800,8 +800,8 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
-			danger = 5
+			explore = 10
+			danger = 0
 		}
 	}
 	option = {
@@ -820,8 +820,8 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
-			danger = 15
+			explore = 15
+			danger = 10
 		}
 	}
 	option = {
@@ -883,7 +883,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 0
+			explore = 15
 			danger = -10
 		}
 	}
@@ -904,7 +904,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 0
+			explore = 10
 			danger = 5
 		}
 	}
@@ -1778,17 +1778,22 @@ country_event = {
 		
 	}
 	immediate = {
-		THE_IQU_explore_event_get_benifit_immeditate_script = yes
+		THE_IQU_explore_event_get_benifit_immeditate_script = {
+			base = 200
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.59.1
 		#月面
 		th_outdate_moon_defenses = yes
 		#
-		THE_IQU_explore_event_get_benifit_effect_effect = {
-			base = 200
-		}
+		THE_IQU_explore_event_get_benifit_effect_effect = yes
 		THE_IQU_clr_the_exploring_now_success_effect = yes
+		hidden_effect = {
+			5338 = {
+				set_province_flag = THE_IQU_this_province_had_been_explored_flag
+			}
+		}
 	}
 }
 
@@ -6138,13 +6143,13 @@ country_event = {
 		
 	}
 	immediate = {
-		THE_IQU_explore_event_get_benifit_immeditate_script = yes
+		THE_IQU_explore_event_get_benifit_immeditate_script = {
+			base = 120
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.1000.1
-		THE_IQU_explore_event_get_benifit_effect_effect = {
-			base = 120
-		}
+		THE_IQU_explore_event_get_benifit_effect_effect = yes
 		THE_IQU_after_get_wuxing_point_after_explore_effect = yes
 		THE_IQU_clr_the_exploring_now_success_effect = yes
 	}

@@ -1,0 +1,27 @@
+government = monarchy
+add_government_reform = THE_FOM_Magic_envoy_reform
+government_rank = 1
+primary_culture = "Magician"
+add_accepted_culture = "Fairy"
+religion = th_hakureishinto
+technology_group = tech_gensokyan
+historical_friend = HKR
+historical_friend = ALC
+capital = 5090
+th_discover_default = yes
+1443.1.1 = {
+	monarch = {
+		name = "T›t™l"  # Marisa
+		monarch_name = "T›t™l"
+		dynasty = "þ–è–"  # Kirisame
+		birth_date = 1425.1.12
+		adm = 4
+		dip = 3
+		mil = 6
+		female = yes
+	  }
+	  add_ruler_personality = th_longevity_personality
+	  set_ruler_flag = th_original_marisa
+	  set_ruler_flag = touhou_character_ruler
+	  set_ruler_flag = touhou_original_ruler
+}

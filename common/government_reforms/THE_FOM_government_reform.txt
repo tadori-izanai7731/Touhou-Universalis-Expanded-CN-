@@ -1,0 +1,173 @@
+#妖怪领地
+THE_FOM_Youkai_countries_reform = {
+	lock_level_when_selected = yes
+	icon = "witch_government_reform"
+	potential = {
+		has_reform = THE_FOM_Youkai_countries_reform
+	}
+	valid_for_new_country = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+	modifiers = {
+		governing_capacity = 50
+		global_unrest = -1
+		land_maintenance_modifier = -0.50
+		land_forcelimit = 5
+	}
+}
+#魔法使君主制
+THE_FOM_Magic_envoy_reform = {
+	lock_level_when_selected = yes
+	icon = "THE_MRS_reform_1_level"
+	potential = {
+		has_reform = THE_FOM_Magic_envoy_reform
+	}
+	valid_for_new_country = no
+	valid_for_nation_designer = yes
+	rulers_can_be_generals = no
+	nation_designer_cost = 40
+	can_change_primary_culture = no
+	modifiers = {
+		army_tradition_decay = -0.025
+		land_maintenance_modifier = -0.10
+		global_autonomy = -0.05
+		governing_capacity = 150
+	}
+	raze_province = yes
+	custom_attributes = {
+		THE_MRS_unlock_steak_book_at = yes
+	}
+}
+#人偶使君主制
+THE_FOM_Dolls_envoy_reform = {
+	lock_level_when_selected = yes
+	icon = "witch_government_reform"
+	potential = {
+		has_reform = THE_FOM_Dolls_envoy_reform
+	}
+	valid_for_new_country = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+	modifiers = {
+		global_unrest = -1
+		morale_damage = 0.05
+		global_autonomy = -0.05
+		governing_capacity = 150
+	}
+	custom_attributes = {
+		enable_making_dolls_crops = yes 
+	}
+	government_abilities = {
+		THE_FOM_alice_dolls_making_mechanics
+	}
+}
+#星之器皿 魔理沙2级
+THE_FOM_Witch_authority_reform = {
+	lock_level_when_selected = yes
+	icon = "THE_MRS_reform_2_level"
+	potential = {
+		has_reform = THE_FOM_Magic_envoy_reform
+		has_reform = THE_FOM_Witch_authority_reform
+	}
+	modifiers = {
+		morale_damage = 0.05
+		all_estate_possible_privileges = -5
+		all_estate_loyalty_equilibrium = -0.20
+		all_estate_influence_modifier = -0.30
+		estate_interaction_cooldown_modifier = -0.20
+		max_absolutism = 5
+	}
+	government_abilities = {
+		THE_FOM_marisa_witch_authority_mechanic
+	}
+}
+#人偶2级
+THE_FOM_alice_dolls_influence_reform = {
+	lock_level_when_selected = yes
+	icon = "witch_government_reform"
+	potential = {
+		has_reform = THE_FOM_Dolls_envoy_reform
+	}
+	modifiers = {
+		morale_damage = 0.05
+	}
+	government_abilities = {
+		THE_FOM_alice_dolls_influence_mechanic
+	}
+}
+#魔女的舞会
+THE_FOM_Witch_paticipate_political = {
+	lock_level_when_selected = yes
+	has_parliament = yes
+	icon = "witch_government_reform"
+	potential = {
+		has_reform = THE_FOM_Magic_envoy_reform
+		has_reform = THE_FOM_Witch_paticipate_political
+	}
+	modifiers = {
+		promote_culture_cost = -0.20
+		max_absolutism = 10
+		monthly_reform_progress_modifier = 0.15
+	}
+	# government_abilities = {
+	# 	THE_FOM_marisa_witch_forest_political_mechanic
+	# }
+	government_abilities = {
+		THE_MRS_witch_paticipate_political_unlock_congress
+	}
+}
+#夜空为卷-劫掠魔法使 5级
+THE_FOM_Witch_marisa_plundering_by_magician = {
+	lock_level_when_selected = yes
+	icon = "witch_government_reform"
+	potential = {
+		has_reform = THE_FOM_Magic_envoy_reform
+		mission_completed = THE_FOM_repacious_witch 
+	}
+	modifiers = {
+		governing_cost = -0.20
+		raze_power_gain = 0.10
+	}
+	custom_attributes = {
+		THE_FOM_enable_direct_core_after_invasion_MRS = yes 
+	}
+}
+#魔法使外交 6级
+THE_FOM_Witch_marisa_conquer_and_expand_territories = {
+	lock_level_when_selected = yes
+	icon = "witch_government_reform"
+	potential = {
+		has_reform = THE_FOM_Magic_envoy_reform
+		mission_completed = THE_FOM_Kirisame_marisa
+	}
+	modifiers = {
+		ae_impact = +0.10
+		province_warscore_cost = -0.15
+	}
+	custom_attributes = {
+		THE_FOM_enable_ae_break_through_the_encirclement_network_MRS = yes
+	}
+}
+#虫妖君主制 万蛰千蜚
+THE_WRG_vast_amount_of_night_bug_reform = {
+	lock_level_when_selected = yes
+	icon = "witch_government_reform"
+	potential = {
+		tag = WRG
+	}
+	can_change_primary_culture = no
+	valid_for_new_country = no
+	valid_for_nation_designer = yes
+	rulers_can_be_generals = no
+	nation_designer_cost = 40
+	modifiers = {
+		legitimacy = 1
+		estate_interaction_cooldown_modifier = -0.20
+		global_autonomy = -0.05
+		national_focus_years = -5
+		governing_capacity = 150
+	}
+	government_abilities = {
+		THE_WRG_insect_swarm_mechanic
+	}
+}
