@@ -1,0 +1,28 @@
+government = monarchy
+add_government_reform = THE_FOM_Youkai_countries_reform
+government_rank = 1
+primary_culture = "Youkai"
+add_accepted_culture = "Fairy"
+add_accepted_culture = "Magician"
+religion = th_hakureishinto
+technology_group = tech_gensokyan
+historical_friend = WRG
+capital = 5093
+th_discover_default = yes
+1443.1.1 = {
+	monarch = {
+		name = "s|¯e‚„šN"  # Mystia
+		monarch_name = "s|¯e‚„šN"  
+		dynasty = "WŒ…Éb"  #lorarei
+		birth_date = 1413.7.4
+		death_date = 9999.1.5
+		claim = 90
+		adm = 4
+		dip = 4
+		mil = 3
+		female = yes
+	}
+	add_ruler_personality = immortal_personality
+	set_ruler_flag = touhou_character_ruler
+	set_ruler_flag = touhou_original_heir
+}

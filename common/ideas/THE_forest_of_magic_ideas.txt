@@ -1,0 +1,284 @@
+THE_MGT_ideas = {
+	start = {
+		allow_mercenary_drill = yes
+		fire_damage = 0.15
+	}
+
+	bonus = {
+		development_cost = -0.10
+	}
+	
+	trigger = {
+		tag = MGT
+	}
+	free = yes
+
+	THE_MGT_start_idea_1 = {
+		mercenary_manpower= 0.15
+	}
+	THE_MGT_start_idea_2 = {
+		THE_MGT_estate_dolls_pools_rescover = 0.33
+		THE_MGT_estate_dolls_pools_power = 0.33
+	}
+	THE_MGT_start_idea_3 = {
+		advisor_cost = -0.10
+	}
+	THE_MGT_start_idea_4 = {
+		technology_cost = -0.05
+		embracement_cost = -0.15
+	}
+	THE_MGT_start_idea_5 = {
+		legitimacy = 1
+	}
+	THE_MGT_start_idea_6 = {
+		build_cost = -0.05
+		build_time = -0.05
+	}
+	THE_MGT_start_idea_7 = {
+		land_morale = 0.15
+	}
+}
+THE_MRS_ideas = {
+	start = {
+		infantry_power = 0.10
+		province_warscore_cost = -0.15
+	}
+
+	bonus = {
+		interest = -0.5
+	}
+	
+	trigger = {
+		tag = MRS
+	}
+	free = yes
+
+	THE_MRS_start_idea_1 = {
+		movement_speed = 0.15
+	}
+	THE_MRS_start_idea_2 = {
+		infantry_cost = -0.05
+	}
+	THE_MRS_start_idea_3 = {
+		discipline = 0.05
+	}
+	THE_MRS_start_idea_4 = {
+		technology_cost = -0.05
+		embracement_cost = -0.15
+	}
+	THE_MRS_start_idea_5 = {
+		legitimacy = 1
+	}
+	THE_MRS_start_idea_6 = {
+		global_tax_modifier = 0.10
+		fire_damage = 0.05
+	}
+	THE_MRS_start_idea_7 = {
+		unjustified_demands = -0.25
+	}
+}
+THE_ENK_ideas = {
+	start = {
+		fort_maintenance_modifier = -0.15
+		movement_speed = 0.15
+	}
+
+	bonus = {
+		land_attrition = -0.20
+	}
+	
+	trigger = {
+		tag = ENK
+	}
+	free = yes
+	THE_ENK_idea_1 = {
+		defensiveness = 0.30
+		development_cost = -0.10
+	}
+	THE_ENK_idea_2 = {
+		recover_army_morale_speed = 0.15
+		reinforce_speed = 0.20
+	}
+	THE_ENK_idea_3 = {
+		hostile_attrition = 1
+		max_hostile_attrition = 5
+	}
+	THE_ENK_idea_4 = {
+		land_morale = 0.15
+	}
+	THE_ENK_idea_5 = {
+		build_cost = -0.20
+	}
+	THE_ENK_idea_6 = {
+		yearly_corruption = -0.10
+		prestige = 1
+	}
+	THE_ENK_idea_7 = {
+		shock_damage_received = -0.15
+		cavalry_cost = -0.20
+	}
+}
+THE_MST_ideas = {
+	start = {
+		improve_relation_modifier = 0.35
+		interest = -1
+	}
+
+	bonus = {
+		development_cost = -0.15
+	}
+	
+	trigger = {
+		tag = MST
+	}
+	free = yes
+	THE_MST_idea_1 = {
+		global_allowed_num_of_buildings = 1
+		move_capital_cost_modifier = -0.50
+	}
+	THE_MST_idea_2 = {
+		diplomatic_reputation = 1
+		diplomats = 1
+	}
+	THE_MST_idea_3 = {
+		global_trade_goods_size_modifier = 0.20
+	}
+	THE_MST_idea_4 = {
+		ae_impact = -0.10
+		movement_speed = 0.10
+	}
+	THE_MST_idea_5 = {
+		production_efficiency = 0.15
+		trade_steering = 0.50
+	}
+	THE_MST_idea_6 = {
+		build_cost = -0.20
+		build_time = -0.20
+	}
+	THE_MST_idea_7 = {
+		global_trade_power = 0.10
+		advisor_cost = -0.25
+	}
+}
+THE_WRG_ideas = {
+	start = {
+		land_morale_constant = 0.5
+		yearly_army_professionalism = 0.002
+	}
+
+	bonus = {
+		global_manpower_modifier = 0.20
+	}
+	
+	trigger = {
+		tag = WRG
+	}
+	free = yes
+	THE_WRG_idea_1 = {
+		recover_army_morale_speed = 0.10
+		reinforce_speed = 0.15
+	}
+	THE_WRG_idea_2 = {
+		production_efficiency = 0.15
+	}
+	THE_WRG_idea_3 = {
+		prestige = 1
+		monthly_splendor = 1
+		army_tradition_decay = -0.1
+	}
+	THE_WRG_idea_4 = {
+		leader_siege = 1
+		max_general_siege = 2
+	}
+	THE_WRG_idea_5 = {
+		all_estate_loyalty_equilibrium = 0.15
+	}
+	THE_WRG_idea_6 = {
+		advisor_cost = -0.20
+		min_autonomy_in_territories = -0.05
+	}
+	THE_WRG_idea_7 = {
+		administrative_efficiency = 0.05
+	}
+}
+THE_FOM1_ideas = {
+	start = {
+		province_warscore_cost = -0.15
+		movement_speed = 0.15
+	}
+	bonus = {
+		unjustified_demands = -0.35
+	}
+	trigger = {
+		was_tag = MRS
+		tag = FOM
+	}
+	free = yes
+	THE_FOM1_idea_1 = {
+		global_unrest = -2
+		stability_cost_modifier = -0.20
+	}
+	THE_FOM1_idea_2 = {
+		discipline = 0.05
+		fire_damage = 0.10
+	}
+	THE_FOM1_idea_3 = {
+		global_regiment_cost = -0.25
+		global_regiment_recruit_speed = -0.25
+	}
+	THE_FOM1_idea_4 = {
+		global_manpower_modifier = 0.30
+		land_forcelimit_modifier = 0.30
+		manpower_recovery_speed = 0.30
+	}
+	THE_FOM1_idea_5 = {
+		interest = -2
+	}
+	THE_FOM1_idea_6 = {
+		technology_cost = -0.10
+		embracement_cost = -0.15
+	}
+	THE_FOM1_idea_7 = {
+		cavalry_flanking = 0.50
+	}
+}
+THE_FOM2_ideas = {
+	start = {
+		build_cost = -0.15
+		mercenary_cost = -0.15
+	}
+	bonus = {
+		development_cost = -0.15
+	}
+	trigger = {
+		tag = FOM
+		was_tag = MGT
+	}
+	free = yes
+	THE_FOM2_idea_1 = {
+		mercenary_manpower= 0.50
+		merc_maintenance_modifier = -0.50
+	}
+	THE_FOM2_idea_2 = {
+		global_trade_goods_size_modifier = 0.33
+	}
+	THE_FOM2_idea_3 = {
+		advisor_cost = -0.25
+		ae_impact = -0.20
+	}
+	THE_FOM2_idea_4 = {
+		estate_dolls_pools_power = 1.00
+		land_forcelimit_modifier = 0.50
+	}
+	THE_FOM2_idea_5 = {
+		technology_cost = -0.10
+		embracement_cost = -0.15
+	}
+	THE_FOM2_idea_6 = {
+		merc_leader_army_tradition = 0.5
+	}
+	THE_FOM2_idea_7 = {
+		land_morale = 0.15
+		morale_damage = 0.15
+	}
+}

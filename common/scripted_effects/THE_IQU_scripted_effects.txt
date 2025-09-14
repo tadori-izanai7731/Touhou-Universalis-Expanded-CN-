@@ -370,6 +370,7 @@ THE_IQU_clr_the_exploring_now_success_effect = {
 			clr_province_flag = THE_IQU_province_unique_point_flag
 			#设立完成标记
 			set_province_flag = THE_IQU_this_province_had_been_explored_flag
+			THE_IQU_add_fengshui_wuxing_province_permant_buff_effect = yes 
 		}
 		#清除正在探索
 		random_owned_province = {
@@ -382,7 +383,6 @@ THE_IQU_clr_the_exploring_now_success_effect = {
 		##事件持有清除
 		clr_country_flag = THE_IQU_had_explore_event
 		clr_country_flag = THE_IQU_having_explore_event
-		THE_IQU_add_fengshui_wuxing_province_permant_buff_effect = yes 
 		change_variable = {
 			which = the_iqu_had_explore_area_number_im_var
 			value = 1
@@ -1469,7 +1469,10 @@ THE_IQU_number_explore_province_im_var_effect = {
 	if = {
 		limit = { 
 			FROM = {
-				has_government_attribute = THE_IQU_government_explore_coast_explore_mechanic
+				OR = {
+					tag = IQU
+					was_tag = IQU
+				}
 			}
 		}
 		FROM = {
@@ -1632,31 +1635,31 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 					has_province_flag = THE_IQU_this_provinces_is_exploring_now
 				}
 			 }
-			 random_events = {
-				10 = THE_IQU_flavor_events.66
-				10 = THE_IQU_flavor_events.70
-				10 = THE_IQU_flavor_events.75
-				10 = THE_IQU_flavor_events.79
-				10 = THE_IQU_flavor_events.83
-				10 = THE_IQU_flavor_events.86
-				10 = THE_IQU_flavor_events.90
-				10 = THE_IQU_flavor_events.95
-				10 = THE_IQU_flavor_events.99
-				10 = THE_IQU_flavor_events.102
-				10 = THE_IQU_flavor_events.107
-				10 = THE_IQU_flavor_events.110
-				10 = THE_IQU_flavor_events.114
-				10 = THE_IQU_flavor_events.117
-				10 = THE_IQU_flavor_events.121
-				10 = THE_IQU_flavor_events.126
-				##
-				20 = THE_IQU_flavor_events.130
-				20 = THE_IQU_flavor_events.133
-				20 = THE_IQU_flavor_events.137
-				20 = THE_IQU_flavor_events.141
+			 random_list = {
+				10 = { country_event = { id = THE_IQU_flavor_events.66 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.70 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.75 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.79 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.83 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.86 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.90 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.95 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.99 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.102 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.107 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.110 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.114 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.117 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.121 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.126 } }
 				#
-				5 = THE_IQU_flavor_events.236
-			}
+				20 = { country_event = { id = THE_IQU_flavor_events.130 } }
+				20 = { country_event = { id = THE_IQU_flavor_events.133 } }
+				20 = { country_event = { id = THE_IQU_flavor_events.137 } }
+				20 = { country_event = { id = THE_IQU_flavor_events.141 } }
+
+				20 = { country_event = { id = THE_IQU_flavor_events.236 } }
+			 }
 		}
 		else_if = {
 			limit = { 
@@ -1669,32 +1672,31 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 					has_province_flag = THE_IQU_this_provinces_is_exploring_now
 				}
 			}
-			 random_events = {
-				10 = THE_IQU_flavor_events.66
-				10 = THE_IQU_flavor_events.70
-				10 = THE_IQU_flavor_events.75
-				10 = THE_IQU_flavor_events.79
-				10 = THE_IQU_flavor_events.83
-				10 = THE_IQU_flavor_events.86
-				10 = THE_IQU_flavor_events.90
-				10 = THE_IQU_flavor_events.95
-				10 = THE_IQU_flavor_events.99
-				10 = THE_IQU_flavor_events.102
-				10 = THE_IQU_flavor_events.107
-				10 = THE_IQU_flavor_events.110
-				10 = THE_IQU_flavor_events.114
-				10 = THE_IQU_flavor_events.117
-				10 = THE_IQU_flavor_events.121
-				10 = THE_IQU_flavor_events.126
-				##
-				20 = THE_IQU_flavor_events.144
-				20 = THE_IQU_flavor_events.148
-				20 = THE_IQU_flavor_events.153
-				20 = THE_IQU_flavor_events.156
+			 random_list = {
+				10 = { country_event = { id = THE_IQU_flavor_events.66 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.70 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.75 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.79 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.83 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.86 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.90 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.95 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.99 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.102 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.107 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.110 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.114 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.117 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.121 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.126 } }
 				#
-				5 = THE_IQU_flavor_events.236
-			}
+				20 = { country_event = { id = THE_IQU_flavor_events.144 } }
+				20 = { country_event = { id = THE_IQU_flavor_events.148 } }
+				20 = { country_event = { id = THE_IQU_flavor_events.153 } }
+				20 = { country_event = { id = THE_IQU_flavor_events.156 } }
 
+				20 = { country_event = { id = THE_IQU_flavor_events.236 } }
+			 }
 		}
 		else_if = {
 			limit = { 
@@ -1707,31 +1709,56 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 					has_province_flag = THE_IQU_this_provinces_is_exploring_now
 				}
 			}
-			 random_events = {
-				10 = THE_IQU_flavor_events.66
-				10 = THE_IQU_flavor_events.70
-				10 = THE_IQU_flavor_events.75
-				10 = THE_IQU_flavor_events.79
-				10 = THE_IQU_flavor_events.83
-				10 = THE_IQU_flavor_events.86
-				10 = THE_IQU_flavor_events.90
-				10 = THE_IQU_flavor_events.95
-				10 = THE_IQU_flavor_events.99
-				10 = THE_IQU_flavor_events.102
-				10 = THE_IQU_flavor_events.107
-				10 = THE_IQU_flavor_events.110
-				10 = THE_IQU_flavor_events.114
-				10 = THE_IQU_flavor_events.117
-				10 = THE_IQU_flavor_events.121
-				10 = THE_IQU_flavor_events.126
-				##
-				20 = THE_IQU_flavor_events.176
-				20 = THE_IQU_flavor_events.179
-				20 = THE_IQU_flavor_events.184
-				20 = THE_IQU_flavor_events.187
+			 random_list = {
+				10 = { country_event = { id = THE_IQU_flavor_events.66 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.70 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.75 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.79 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.83 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.86 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.90 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.95 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.99 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.102 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.107 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.110 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.114 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.117 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.121 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.126 } }
 				#
-				5 = THE_IQU_flavor_events.236
-			}
+				20 = { country_event = { id = THE_IQU_flavor_events.176 } }
+				20 = { country_event = { id = THE_IQU_flavor_events.179 } }
+				20 = { country_event = { id = THE_IQU_flavor_events.184 } }
+				20 = { country_event = { id = THE_IQU_flavor_events.187 } }
+
+				20 = { country_event = { id = THE_IQU_flavor_events.236 } }
+			 }
+			#  random_events = {
+			# 	10 = THE_IQU_flavor_events.66
+			# 	10 = THE_IQU_flavor_events.70
+			# 	10 = THE_IQU_flavor_events.75
+			# 	10 = THE_IQU_flavor_events.79
+			# 	10 = THE_IQU_flavor_events.83
+			# 	10 = THE_IQU_flavor_events.86
+			# 	10 = THE_IQU_flavor_events.90
+			# 	10 = THE_IQU_flavor_events.95
+			# 	10 = THE_IQU_flavor_events.99
+			# 	10 = THE_IQU_flavor_events.102
+			# 	10 = THE_IQU_flavor_events.107
+			# 	10 = THE_IQU_flavor_events.110
+			# 	10 = THE_IQU_flavor_events.114
+			# 	10 = THE_IQU_flavor_events.117
+			# 	10 = THE_IQU_flavor_events.121
+			# 	10 = THE_IQU_flavor_events.126
+			# 	##
+			# 	20 = THE_IQU_flavor_events.176
+			# 	20 = THE_IQU_flavor_events.179
+			# 	20 = THE_IQU_flavor_events.184
+			# 	20 = THE_IQU_flavor_events.187
+			# 	#
+			# 	5 = THE_IQU_flavor_events.236
+			# }
 
 		}
 		else_if = {
@@ -1745,31 +1772,56 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 					has_province_flag = THE_IQU_this_provinces_is_exploring_now
 				}
 			}
-			 random_events = {
-				10 = THE_IQU_flavor_events.66
-				10 = THE_IQU_flavor_events.70
-				10 = THE_IQU_flavor_events.75
-				10 = THE_IQU_flavor_events.79
-				10 = THE_IQU_flavor_events.83
-				10 = THE_IQU_flavor_events.86
-				10 = THE_IQU_flavor_events.90
-				10 = THE_IQU_flavor_events.95
-				10 = THE_IQU_flavor_events.99
-				10 = THE_IQU_flavor_events.102
-				10 = THE_IQU_flavor_events.107
-				10 = THE_IQU_flavor_events.110
-				10 = THE_IQU_flavor_events.114
-				10 = THE_IQU_flavor_events.117
-				10 = THE_IQU_flavor_events.121
-				10 = THE_IQU_flavor_events.126
-				##
-				20 = THE_IQU_flavor_events.192
-				20 = THE_IQU_flavor_events.195
-				20 = THE_IQU_flavor_events.199
-				20 = THE_IQU_flavor_events.202
+			 random_list = {
+				10 = { country_event = { id = THE_IQU_flavor_events.66 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.70 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.75 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.79 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.83 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.86 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.90 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.95 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.99 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.102 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.107 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.110 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.114 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.117 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.121 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.126 } }
 				#
-				5 = THE_IQU_flavor_events.236
-			}
+				20 = { country_event = { id = THE_IQU_flavor_events.192 } }
+				20 = { country_event = { id = THE_IQU_flavor_events.195 } }
+				20 = { country_event = { id = THE_IQU_flavor_events.199 } }
+				20 = { country_event = { id = THE_IQU_flavor_events.202 } }
+
+				20 = { country_event = { id = THE_IQU_flavor_events.236 } }
+			 }
+			#  random_events = {
+			# 	10 = THE_IQU_flavor_events.66
+			# 	10 = THE_IQU_flavor_events.70
+			# 	10 = THE_IQU_flavor_events.75
+			# 	10 = THE_IQU_flavor_events.79
+			# 	10 = THE_IQU_flavor_events.83
+			# 	10 = THE_IQU_flavor_events.86
+			# 	10 = THE_IQU_flavor_events.90
+			# 	10 = THE_IQU_flavor_events.95
+			# 	10 = THE_IQU_flavor_events.99
+			# 	10 = THE_IQU_flavor_events.102
+			# 	10 = THE_IQU_flavor_events.107
+			# 	10 = THE_IQU_flavor_events.110
+			# 	10 = THE_IQU_flavor_events.114
+			# 	10 = THE_IQU_flavor_events.117
+			# 	10 = THE_IQU_flavor_events.121
+			# 	10 = THE_IQU_flavor_events.126
+			# 	##
+			# 	20 = THE_IQU_flavor_events.192
+			# 	20 = THE_IQU_flavor_events.195
+			# 	20 = THE_IQU_flavor_events.199
+			# 	20 = THE_IQU_flavor_events.202
+			# 	#
+			# 	5 = THE_IQU_flavor_events.236
+			# }
 
 		}
 		else_if = {
@@ -1782,31 +1834,56 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 					has_province_flag = THE_IQU_this_provinces_is_exploring_now
 				}
 			}
-			 random_events = {
-				10 = THE_IQU_flavor_events.66
-				10 = THE_IQU_flavor_events.70
-				10 = THE_IQU_flavor_events.75
-				10 = THE_IQU_flavor_events.79
-				10 = THE_IQU_flavor_events.83
-				10 = THE_IQU_flavor_events.86
-				10 = THE_IQU_flavor_events.90
-				10 = THE_IQU_flavor_events.95
-				10 = THE_IQU_flavor_events.99
-				10 = THE_IQU_flavor_events.102
-				10 = THE_IQU_flavor_events.107
-				10 = THE_IQU_flavor_events.110
-				10 = THE_IQU_flavor_events.114
-				10 = THE_IQU_flavor_events.117
-				10 = THE_IQU_flavor_events.121
-				10 = THE_IQU_flavor_events.126
-				##
-				20 = THE_IQU_flavor_events.160
-				20 = THE_IQU_flavor_events.163
-				20 = THE_IQU_flavor_events.168
-				20 = THE_IQU_flavor_events.173
+			 random_list = {
+				10 = { country_event = { id = THE_IQU_flavor_events.66 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.70 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.75 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.79 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.83 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.86 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.90 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.95 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.99 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.102 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.107 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.110 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.114 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.117 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.121 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.126 } }
 				#
-				5 = THE_IQU_flavor_events.236
-			}
+				20 = { country_event = { id = THE_IQU_flavor_events.160 } }
+				20 = { country_event = { id = THE_IQU_flavor_events.163 } }
+				20 = { country_event = { id = THE_IQU_flavor_events.168 } }
+				20 = { country_event = { id = THE_IQU_flavor_events.173 } }
+
+				20 = { country_event = { id = THE_IQU_flavor_events.236 } }
+			 }
+			#  random_events = {
+			# 	10 = THE_IQU_flavor_events.66
+			# 	10 = THE_IQU_flavor_events.70
+			# 	10 = THE_IQU_flavor_events.75
+			# 	10 = THE_IQU_flavor_events.79
+			# 	10 = THE_IQU_flavor_events.83
+			# 	10 = THE_IQU_flavor_events.86
+			# 	10 = THE_IQU_flavor_events.90
+			# 	10 = THE_IQU_flavor_events.95
+			# 	10 = THE_IQU_flavor_events.99
+			# 	10 = THE_IQU_flavor_events.102
+			# 	10 = THE_IQU_flavor_events.107
+			# 	10 = THE_IQU_flavor_events.110
+			# 	10 = THE_IQU_flavor_events.114
+			# 	10 = THE_IQU_flavor_events.117
+			# 	10 = THE_IQU_flavor_events.121
+			# 	10 = THE_IQU_flavor_events.126
+			# 	##
+			# 	20 = THE_IQU_flavor_events.160
+			# 	20 = THE_IQU_flavor_events.163
+			# 	20 = THE_IQU_flavor_events.168
+			# 	20 = THE_IQU_flavor_events.173
+			# 	#
+			# 	5 = THE_IQU_flavor_events.236
+			# }
 		}
 		else_if = {
 			limit = { 
@@ -1817,31 +1894,56 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 					has_province_flag = THE_IQU_this_provinces_is_exploring_now
 				}
 			}
-			 random_events = {
-				10 = THE_IQU_flavor_events.66
-				10 = THE_IQU_flavor_events.70
-				10 = THE_IQU_flavor_events.75
-				10 = THE_IQU_flavor_events.79
-				10 = THE_IQU_flavor_events.83
-				10 = THE_IQU_flavor_events.86
-				10 = THE_IQU_flavor_events.90
-				10 = THE_IQU_flavor_events.95
-				10 = THE_IQU_flavor_events.99
-				10 = THE_IQU_flavor_events.102
-				10 = THE_IQU_flavor_events.107
-				10 = THE_IQU_flavor_events.110
-				10 = THE_IQU_flavor_events.114
-				10 = THE_IQU_flavor_events.117
-				10 = THE_IQU_flavor_events.121
-				10 = THE_IQU_flavor_events.126
-				##
-				20 = THE_IQU_flavor_events.206
-				20 = THE_IQU_flavor_events.209
-				20 = THE_IQU_flavor_events.213
-				20 = THE_IQU_flavor_events.216
+			 random_list = {
+				10 = { country_event = { id = THE_IQU_flavor_events.66 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.70 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.75 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.79 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.83 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.86 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.90 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.95 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.99 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.102 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.107 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.110 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.114 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.117 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.121 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.126 } }
 				#
-				5 = THE_IQU_flavor_events.236
-			}
+				20 = { country_event = { id = THE_IQU_flavor_events.206 } }
+				20 = { country_event = { id = THE_IQU_flavor_events.209 } }
+				20 = { country_event = { id = THE_IQU_flavor_events.213 } }
+				20 = { country_event = { id = THE_IQU_flavor_events.216 } }
+
+				20 = { country_event = { id = THE_IQU_flavor_events.236 } }
+			 }
+			#  random_events = {
+			# 	10 = THE_IQU_flavor_events.66
+			# 	10 = THE_IQU_flavor_events.70
+			# 	10 = THE_IQU_flavor_events.75
+			# 	10 = THE_IQU_flavor_events.79
+			# 	10 = THE_IQU_flavor_events.83
+			# 	10 = THE_IQU_flavor_events.86
+			# 	10 = THE_IQU_flavor_events.90
+			# 	10 = THE_IQU_flavor_events.95
+			# 	10 = THE_IQU_flavor_events.99
+			# 	10 = THE_IQU_flavor_events.102
+			# 	10 = THE_IQU_flavor_events.107
+			# 	10 = THE_IQU_flavor_events.110
+			# 	10 = THE_IQU_flavor_events.114
+			# 	10 = THE_IQU_flavor_events.117
+			# 	10 = THE_IQU_flavor_events.121
+			# 	10 = THE_IQU_flavor_events.126
+			# 	##
+			# 	20 = THE_IQU_flavor_events.206
+			# 	20 = THE_IQU_flavor_events.209
+			# 	20 = THE_IQU_flavor_events.213
+			# 	20 = THE_IQU_flavor_events.216
+			# 	#
+			# 	5 = THE_IQU_flavor_events.236
+			# }
 		}
 		else_if = {
 			limit = { 
@@ -1852,31 +1954,31 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 					has_province_flag = THE_IQU_this_provinces_is_exploring_now
 				}
 			}
-			 random_events = {
-				10 = THE_IQU_flavor_events.66
-				10 = THE_IQU_flavor_events.70
-				10 = THE_IQU_flavor_events.75
-				10 = THE_IQU_flavor_events.79
-				10 = THE_IQU_flavor_events.83
-				10 = THE_IQU_flavor_events.86
-				10 = THE_IQU_flavor_events.90
-				10 = THE_IQU_flavor_events.95
-				10 = THE_IQU_flavor_events.99
-				# 10 = THE_IQU_flavor_events.102
-				# 10 = THE_IQU_flavor_events.107
-				# 10 = THE_IQU_flavor_events.110
-				# 10 = THE_IQU_flavor_events.114
-				# 10 = THE_IQU_flavor_events.117
-				10 = THE_IQU_flavor_events.121
-				# 10 = THE_IQU_flavor_events.126
-				##
-				15 = THE_IQU_flavor_events.220
-				15 = THE_IQU_flavor_events.224
-				15 = THE_IQU_flavor_events.228
-				15 = THE_IQU_flavor_events.233
+			 random_list = {
+				10 = { country_event = { id = THE_IQU_flavor_events.66 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.70 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.75 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.79 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.83 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.86 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.90 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.95 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.99 } }
+				# 10 = { country_event = { id = THE_IQU_flavor_events.102 } }
+				# 10 = { country_event = { id = THE_IQU_flavor_events.107 } }
+				# 10 = { country_event = { id = THE_IQU_flavor_events.110 } }
+				# 10 = { country_event = { id = THE_IQU_flavor_events.114 } }
+				# 10 = { country_event = { id = THE_IQU_flavor_events.117 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.121 } }
+				# 10 = { country_event = { id = THE_IQU_flavor_events.126 } }
 				#
-				5 = THE_IQU_flavor_events.236
-			}
+				20 = { country_event = { id = THE_IQU_flavor_events.220 } }
+				20 = { country_event = { id = THE_IQU_flavor_events.224 } }
+				20 = { country_event = { id = THE_IQU_flavor_events.228 } }
+				20 = { country_event = { id = THE_IQU_flavor_events.233 } }
+
+				20 = { country_event = { id = THE_IQU_flavor_events.236 } }
+			 }
 		}
 		else_if = {
 			limit = {
@@ -1890,26 +1992,46 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 					has_province_flag = THE_IQU_this_provinces_is_exploring_now
 				}
 			}
-			random_events = {
-				10 = THE_IQU_flavor_events.66
-				10 = THE_IQU_flavor_events.70
-				10 = THE_IQU_flavor_events.75
-				10 = THE_IQU_flavor_events.79
-				10 = THE_IQU_flavor_events.83
-				10 = THE_IQU_flavor_events.86
-				10 = THE_IQU_flavor_events.90
-				10 = THE_IQU_flavor_events.95
-				10 = THE_IQU_flavor_events.99
-				10 = THE_IQU_flavor_events.102
-				10 = THE_IQU_flavor_events.107
-				10 = THE_IQU_flavor_events.110
-				10 = THE_IQU_flavor_events.114
-				10 = THE_IQU_flavor_events.117
-				10 = THE_IQU_flavor_events.121
-				10 = THE_IQU_flavor_events.126
+			 random_list = {
+				10 = { country_event = { id = THE_IQU_flavor_events.66 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.70 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.75 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.79 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.83 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.86 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.90 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.95 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.99 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.102 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.107 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.110 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.114 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.117 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.121 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.126 } }
 				#
-				5 = THE_IQU_flavor_events.236
-			}
+				20 = { country_event = { id = THE_IQU_flavor_events.236 } }
+			 }
+			# random_events = {
+			# 	10 = THE_IQU_flavor_events.66
+			# 	10 = THE_IQU_flavor_events.70
+			# 	10 = THE_IQU_flavor_events.75
+			# 	10 = THE_IQU_flavor_events.79
+			# 	10 = THE_IQU_flavor_events.83
+			# 	10 = THE_IQU_flavor_events.86
+			# 	10 = THE_IQU_flavor_events.90
+			# 	10 = THE_IQU_flavor_events.95
+			# 	10 = THE_IQU_flavor_events.99
+			# 	10 = THE_IQU_flavor_events.102
+			# 	10 = THE_IQU_flavor_events.107
+			# 	10 = THE_IQU_flavor_events.110
+			# 	10 = THE_IQU_flavor_events.114
+			# 	10 = THE_IQU_flavor_events.117
+			# 	10 = THE_IQU_flavor_events.121
+			# 	10 = THE_IQU_flavor_events.126
+			# 	#
+			# 	5 = THE_IQU_flavor_events.236
+			# }
 		}
 	}
 	if = {
@@ -1921,7 +2043,7 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 			has_government_attribute = THE_IQU_the_world_all_will_be_known_reform_mechanic
 		}
 		every_war_enemy_country = {
-			remove_fow = 24
+			remove_fow = 12
 		}
 	}
 }

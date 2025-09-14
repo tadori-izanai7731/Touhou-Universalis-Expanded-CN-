@@ -69,8 +69,8 @@ custom_button = {
 				THE_IQU_has_any_province_wuxing_flag_trigger = { wuxing = tu }
 			}
 		}
-		num_of_owned_provinces_with = {
-			value = 20
+		num_of_provinces_owned_or_owned_by_subjects_with = {
+			value = 10
 			has_province_modifier = THE_IQU_lonng_vein_foot_province_buff
 		}
 	 }

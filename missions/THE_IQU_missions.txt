@@ -6,7 +6,7 @@ THE_IQU_main_branch_1 = {
 	potential = { tag = IQU } 
 
 	THE_IQU_1_1 = {
-		icon = mission_unknown_mission
+		icon = mission_return_of_tenshi
 		position = 1
 		provinces_to_highlight = { 
 			is_capital_of = ROOT
@@ -43,7 +43,7 @@ THE_IQU_main_branch_1 = {
 	}
 
 	THE_IQU_1_2 = {
-		icon = mission_unknown_mission
+		icon = the_iqu_mission_2
 		position = 2
 		required_missions = { THE_IQU_1_1 } 
 		provinces_to_highlight = { 
@@ -73,7 +73,7 @@ THE_IQU_main_branch_1 = {
 	}
 
 	THE_IQU_1_3 = {
-		icon = mission_unknown_mission
+		icon = the_iqu_mission_5
 		position = 3
 		required_missions = { THE_IQU_1_2 } 
 		provinces_to_highlight = { 
@@ -95,7 +95,7 @@ THE_IQU_main_branch_1 = {
 	}
 
 	THE_IQU_1_4 = {
-		icon = mission_unknown_mission
+		icon = the_iqu_mission_3
 		position = 4
 		required_missions = { 
 			THE_IQU_1_3
@@ -154,7 +154,7 @@ THE_IQU_main_branch_1 = {
 	}
 
 	THE_IQU_1_5 = {
-		icon = mission_unknown_mission
+		icon = the_iqu_mission_11
 		position = 5
 		required_missions = { THE_IQU_1_4 } 
 		provinces_to_highlight = { 
@@ -184,7 +184,7 @@ THE_IQU_main_branch_1 = {
 	}
 
 	THE_IQU_1_6 = {
-		icon = mission_unknown_mission
+		icon = the_iqu_mission_21
 		position = 6
 		required_missions = { THE_IQU_1_5 } 
 		provinces_to_highlight = { 
@@ -225,7 +225,7 @@ THE_IQU_main_branch_1 = {
 	}
 
 	THE_IQU_1_7 = {
-		icon = mission_unknown_mission
+		icon = mission_touhou_agni
 		position = 7
 		required_missions = { THE_IQU_1_6 } 
 		provinces_to_highlight = { 
@@ -255,7 +255,7 @@ THE_IQU_main_branch_1 = {
 	}
 
 	THE_IQU_1_8 = {
-		icon = mission_unknown_mission
+		icon = mission_touhou_dragonduel
 		position = 8
 		required_missions = { THE_IQU_1_7 } 
 		provinces_to_highlight = { 
@@ -303,7 +303,7 @@ THE_IQU_main_branch_2 = {
 	potential = { tag = IQU } 
 
 	THE_IQU_2_1 = {
-		icon = mission_unknown_mission
+		icon = mission_iku_approaching_storm
 		position = 1
 		provinces_to_highlight = { 
 			is_capital_of = ROOT
@@ -330,18 +330,36 @@ THE_IQU_main_branch_2 = {
 	}
 
 	THE_IQU_2_2 = {
-		icon = mission_unknown_mission
+		icon = the_iqu_mission_4
 		position = 2
 		required_missions = { THE_IQU_2_1 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			area = Yumemi_space_state
+			NOT = {
+				owned_by = ROOT
+			}
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			Yumemi_space_state = {
+				type = all
+				owned_by = ROOT
+			}
+		 } 
 
-		effect = {  } 
+		effect = { 
+			THE_IQU_add_nautical_experience_var_effect = yes
+			THE_IQU_add_prestige_or_navy_tradition_effects = {
+				value = 15
+			}
+			add_adm_power = 75
+			add_dip_power = 75
+			add_mil_power = 75
+		 } 
 	}
 
 	THE_IQU_2_3 = {
-		icon = mission_unknown_mission
+		icon = mission_dream_world_windows
 		position = 3
 		required_missions = { THE_IQU_1_2 } 
 		provinces_to_highlight = { 
@@ -401,7 +419,7 @@ THE_IQU_main_branch_2 = {
 	}
 
 	THE_IQU_2_4 = {
-		icon = mission_unknown_mission
+		icon = mission_reisen
 		position = 4
 		required_missions = { THE_IQU_2_3 } 
 		provinces_to_highlight = { 
@@ -432,7 +450,7 @@ THE_IQU_main_branch_2 = {
 	}
 
 	THE_IQU_2_5 = {
-		icon = mission_unknown_mission
+		icon = the_iqu_mission_24
 		position = 5
 		provinces_to_highlight = { 
 			trade_goods = paper
@@ -499,7 +517,7 @@ THE_IQU_main_branch_2 = {
 	}
 
 	THE_IQU_2_6 = {
-		icon = mission_unknown_mission
+		icon = mission_stairway_to_heaven
 		position = 6
 		provinces_to_highlight = { 
 			region = colombia_region
@@ -539,7 +557,7 @@ THE_IQU_main_branch_2 = {
 	}
 
 	THE_IQU_2_7 = {
-		icon = mission_unknown_mission
+		icon = mission_iceland
 		position = 7
 		required_missions = { THE_IQU_1_6 } 
 		provinces_to_highlight = { 
@@ -582,7 +600,7 @@ THE_IQU_main_branch_2 = {
 	}
 
 	THE_IQU_2_8 = {
-		icon = mission_unknown_mission
+		icon = mission_fish_1
 		position = 8
 		provinces_to_highlight = { 
 			OR = {
@@ -620,7 +638,7 @@ THE_IQU_main_branch_3 = {
 	potential = { tag = IQU } 
 
 	THE_IQU_3_1 = {
-		icon = mission_unknown_mission
+		icon = mission_touhou_tenshi_on_route_66
 		position = 1
 		provinces_to_highlight = { 
 			is_capital_of = ROOT
@@ -694,7 +712,7 @@ THE_IQU_main_branch_3 = {
 	}
 
 	THE_IQU_3_3 = {
-		icon = mission_unknown_mission
+		icon = mission_tenshi_empire
 		position = 3
 		required_missions = { THE_IQU_4_2 } 
 		provinces_to_highlight = { 
@@ -745,7 +763,7 @@ THE_IQU_main_branch_3 = {
 	}
 
 	THE_IQU_3_5 = {
-		icon = mission_unknown_mission
+		icon = mission_retake_our_land
 		position = 5
 		required_missions = { THE_IQU_2_4 } 
 		provinces_to_highlight = { 
@@ -776,6 +794,7 @@ THE_IQU_main_branch_3 = {
 				name = THE_IQU_records_of_lunar_dust_buff
 				duration = -1
 			}
+			add_adm_power = 75
 			random_owned_province = {
 				limit = {
 					region = moon_region
@@ -790,7 +809,7 @@ THE_IQU_main_branch_3 = {
 	}
 
 	THE_IQU_3_6 = {
-		icon = mission_unknown_mission
+		icon = mission_lunar_empire
 		position = 6
 		required_missions = { THE_IQU_3_5 } 
 		provinces_to_highlight = { 
@@ -819,7 +838,7 @@ THE_IQU_main_branch_3 = {
 	}
 
 	THE_IQU_3_7 = {
-		icon = mission_unknown_mission
+		icon = mission_touhou_kappa_swamp
 		position = 7
 		required_missions = { THE_IQU_1_6 } 
 		provinces_to_highlight = { 
@@ -879,7 +898,7 @@ THE_IQU_main_branch_3 = {
 	}
 
 	THE_IQU_3_8 = {
-		icon = mission_unknown_mission
+		icon = the_iqu_mission_22
 		position = 8
 		required_missions = { THE_IQU_3_7 } 
 		provinces_to_highlight = { 
@@ -936,7 +955,7 @@ THE_IQU_main_branch_4 = {
 	potential = { tag = IQU } 
 
 	THE_IQU_4_1 = {
-		icon = mission_unknown_mission
+		icon = the_iqu_mission_13
 		position = 1
 		provinces_to_highlight = { 
 			is_capital_of = ROOT
@@ -1007,7 +1026,7 @@ THE_IQU_main_branch_4 = {
 	}
 
 	THE_IQU_4_2 = {
-		icon = mission_unknown_mission
+		icon = the_iqu_mission_22
 		position = 2
 		required_missions = { THE_IQU_4_1 } 
 		provinces_to_highlight = { 
@@ -1053,7 +1072,7 @@ THE_IQU_main_branch_4 = {
 	}
 
 	THE_IQU_4_3 = {
-		icon = mission_unknown_mission
+		icon = the_iqu_mission_18
 		position = 3
 		required_missions = { THE_IQU_4_2 } 
 		provinces_to_highlight = { 
@@ -1092,7 +1111,7 @@ THE_IQU_main_branch_4 = {
 	}
 
 	THE_IQU_4_4 = {
-		icon = mission_unknown_mission
+		icon = the_iqu_mission_8
 		position = 4
 		required_missions = {
 			THE_IQU_3_3
@@ -1142,7 +1161,7 @@ THE_IQU_main_branch_4 = {
 	}
 
 	THE_IQU_4_6 = {
-		icon = mission_unknown_mission
+		icon = the_iqu_mission_12
 		position = 6
 		required_missions = { THE_IQU_4_4 } 
 		provinces_to_highlight = { 
@@ -1203,7 +1222,7 @@ THE_IQU_main_branch_4 = {
 	}
 
 	THE_IQU_4_7 = {
-		icon = mission_unknown_mission
+		icon = mission_touhou_taoism_heresy
 		position = 7
 		provinces_to_highlight = { 
 			owned_by = ROOT
@@ -1235,7 +1254,7 @@ THE_IQU_main_branch_4 = {
 	}
 
 	THE_IQU_4_8 = {
-		icon = mission_unknown_mission
+		icon = mission_touhou_forest_of_magic
 		position = 8
 		required_missions = { THE_IQU_4_7 } 
 		provinces_to_highlight = {  } 
@@ -1277,7 +1296,7 @@ THE_IQU_main_branch_5 = {
 	potential = { tag = IQU } 
 
 	THE_IQU_5_1 = {
-		icon = mission_unknown_mission
+		icon = mission_great_navy
 		position = 1
 		provinces_to_highlight = { 
 			owned_by = ROOT
@@ -1307,7 +1326,7 @@ THE_IQU_main_branch_5 = {
 	}
 
 	THE_IQU_5_3 = {
-		icon = mission_unknown_mission
+		icon = mission_rb_a_mighty_fleet
 		position = 3
 		required_missions = { THE_IQU_5_1 } 
 		provinces_to_highlight = { 
@@ -1380,7 +1399,7 @@ THE_IQU_main_branch_5 = {
 	}
 
 	THE_IQU_5_4 = {
-		icon = mission_unknown_mission
+		icon = the_iqu_mission_7
 		position = 4
 		required_missions = { THE_IQU_5_3 } 
 		provinces_to_highlight = { 
@@ -1428,7 +1447,7 @@ THE_IQU_main_branch_5 = {
 	}
 
 	THE_IQU_5_5 = {
-		icon = mission_unknown_mission
+		icon = the_iqu_mission_10
 		position = 5
 		required_missions = { THE_IQU_5_4 } 
 		provinces_to_highlight = { 
@@ -1457,7 +1476,7 @@ THE_IQU_main_branch_5 = {
 	}
 
 	THE_IQU_5_6 = {
-		icon = mission_unknown_mission
+		icon = mission_naval_dominance
 		position = 6
 		provinces_to_highlight = { 
 			owned_by = ROOT
@@ -1485,7 +1504,7 @@ THE_IQU_main_branch_5 = {
 	}
 
 	THE_IQU_5_7 = {
-		icon = mission_unknown_mission
+		icon = mission_tenshi_form_empire_2
 		position = 7
 		required_missions = { THE_IQU_5_6 } 
 		provinces_to_highlight = {  } 
@@ -1509,7 +1528,7 @@ THE_IQU_main_branch_5 = {
 	}
 
 	THE_IQU_5_8 = {
-		icon = mission_unknown_mission
+		icon = mission_touhou_youkai_mountain
 		position = 8
 		required_missions = { THE_IQU_4_7 } 
 		provinces_to_highlight = { 

@@ -47,5 +47,19 @@ estate_danmaku = {
 			always = yes
 		}
 	}
+	modifier_definition = {
+		type = loyalty
+		key = THE_MGT_estate_dolls_pools_rescover
+		trigger = {
+			always = yes
+		}
+	}
+	modifier_definition = {
+		type = loyalty
+		key = THE_MGT_estate_dolls_pools_power
+		trigger = {
+			always = yes
+		}
+	}
 }
 
