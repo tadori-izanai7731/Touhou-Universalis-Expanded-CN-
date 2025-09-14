@@ -1,11 +1,11 @@
-MGT_ideas = {
+THE_MGT_ideas = {
 	start = {
 		allow_mercenary_drill = yes
 		fire_damage = 0.15
 	}
 
 	bonus = {
-		development_cost_modifier = -0.10
+		development_cost = -0.10
 	}
 	
 	trigger = {
@@ -14,14 +14,14 @@ MGT_ideas = {
 	free = yes
 
 	THE_MGT_start_idea_1 = {
-		mercenary_manpower= 0.25
+		mercenary_manpower= 0.15
 	}
 	THE_MGT_start_idea_2 = {
-		estate_dolls_pools_rescover = 0.33
-		estate_dolls_pools_power = 0.33
+		THE_MGT_estate_dolls_pools_rescover = 0.33
+		THE_MGT_estate_dolls_pools_power = 0.33
 	}
 	THE_MGT_start_idea_3 = {
-		advisor_cost = -0.15
+		advisor_cost = -0.10
 	}
 	THE_MGT_start_idea_4 = {
 		technology_cost = -0.05
@@ -38,10 +38,10 @@ MGT_ideas = {
 		land_morale = 0.15
 	}
 }
-MRS_ideas = {
+THE_MRS_ideas = {
 	start = {
-		infantry_power = 0.15
-		core_creation = -0.15
+		infantry_power = 0.10
+		province_warscore_cost = -0.15
 	}
 
 	bonus = {
@@ -57,7 +57,7 @@ MRS_ideas = {
 		movement_speed = 0.15
 	}
 	THE_MRS_start_idea_2 = {
-		land_maintenance_modifier = -0.10
+		infantry_cost = -0.05
 	}
 	THE_MRS_start_idea_3 = {
 		discipline = 0.05
@@ -71,13 +71,13 @@ MRS_ideas = {
 	}
 	THE_MRS_start_idea_6 = {
 		global_tax_modifier = 0.10
-		inflation_reduction = 0.1
+		fire_damage = 0.05
 	}
 	THE_MRS_start_idea_7 = {
 		unjustified_demands = -0.25
 	}
 }
-ENK_ideas = {
+THE_ENK_ideas = {
 	start = {
 		fort_maintenance_modifier = -0.15
 		movement_speed = 0.15
@@ -118,7 +118,7 @@ ENK_ideas = {
 		cavalry_cost = -0.20
 	}
 }
-MST_ideas = {
+THE_MST_ideas = {
 	start = {
 		improve_relation_modifier = 0.35
 		interest = -1
@@ -144,12 +144,12 @@ MST_ideas = {
 		global_trade_goods_size_modifier = 0.20
 	}
 	THE_MST_idea_4 = {
-		ae_impact = -0.1
+		ae_impact = -0.10
 		movement_speed = 0.10
 	}
 	THE_MST_idea_5 = {
-		production_efficiency = 0.33
-		trade_steering = 0.33
+		production_efficiency = 0.15
+		trade_steering = 0.50
 	}
 	THE_MST_idea_6 = {
 		build_cost = -0.20
@@ -160,7 +160,7 @@ MST_ideas = {
 		advisor_cost = -0.25
 	}
 }
-WRG_ideas = {
+THE_WRG_ideas = {
 	start = {
 		land_morale_constant = 0.5
 		yearly_army_professionalism = 0.002
@@ -201,7 +201,7 @@ WRG_ideas = {
 		administrative_efficiency = 0.05
 	}
 }
-FOM1_ideas = {
+THE_FOM1_ideas = {
 	start = {
 		province_warscore_cost = -0.15
 		movement_speed = 0.15
@@ -242,7 +242,7 @@ FOM1_ideas = {
 		cavalry_flanking = 0.50
 	}
 }
-FOM2_ideas = {
+THE_FOM2_ideas = {
 	start = {
 		build_cost = -0.15
 		mercenary_cost = -0.15

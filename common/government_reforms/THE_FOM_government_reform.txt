@@ -1,9 +1,15 @@
+#################################
+# 第一层
+###################################
 #妖怪领地
 THE_FOM_Youkai_countries_reform = {
 	lock_level_when_selected = yes
 	icon = "witch_government_reform"
 	potential = {
-		has_reform = THE_FOM_Youkai_countries_reform
+		OR = {
+			has_reform = THE_FOM_Youkai_countries_reform
+			have_had_reform = THE_FOM_Youkai_countries_reform
+		}
 	}
 	valid_for_new_country = no
 	valid_for_nation_designer = yes
@@ -15,29 +21,37 @@ THE_FOM_Youkai_countries_reform = {
 		land_forcelimit = 5
 	}
 }
-#魔法使君主制
-THE_FOM_Magic_envoy_reform = {
+#夜辉流光
+THE_MRS_magic_and_meteor_reform = {
 	lock_level_when_selected = yes
 	icon = "THE_MRS_reform_1_level"
 	potential = {
-		has_reform = THE_FOM_Magic_envoy_reform
+		OR = {
+			has_reform = THE_MRS_magic_and_meteor_reform
+			have_had_reform = THE_MRS_magic_and_meteor_reform
+		}
 	}
+
 	valid_for_new_country = no
-	valid_for_nation_designer = yes
+	valid_for_nation_designer = no
 	rulers_can_be_generals = no
-	nation_designer_cost = 40
 	can_change_primary_culture = no
+
 	modifiers = {
-		army_tradition_decay = -0.025
-		land_maintenance_modifier = -0.10
+		army_tradition_decay = -0.010
 		global_autonomy = -0.05
 		governing_capacity = 150
 	}
 	raze_province = yes
+	government_abilities = {
+		THE_MRS_can_lock_cavalry_percentage_government_mechanic
+	}
 	custom_attributes = {
 		THE_MRS_unlock_steak_book_at = yes
+		THE_MRS_can_lock_cavalry_percentage_mechanic = yes
 	}
 }
+
 #人偶使君主制
 THE_FOM_Dolls_envoy_reform = {
 	lock_level_when_selected = yes

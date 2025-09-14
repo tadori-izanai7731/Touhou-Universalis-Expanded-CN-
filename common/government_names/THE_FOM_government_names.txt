@@ -1,0 +1,112 @@
+THE_MGT_government_names = {
+	rank = {
+		1 = TOUHOU_DOMAIN
+		2 = TOUHOU_REALM
+		3 = TOUHOU_EMPIRE
+	}
+	ruler_male = {
+		3 = TOUHOU_EXECUTOR
+		2 = TOUHOU_EXECUTOR
+		1 = TOUHOU_EXECUTOR
+	}
+	ruler_female = {
+		3 = THE_MGT_RULER
+		2 = THE_MGT_RULER
+		1 = THE_MGT_RULER
+	}
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+	heir_female = {
+		1 = THE_MGT_HEIR
+		2 = THE_MGT_HEIR
+		3 = THE_MGT_HEIR
+	}
+
+	trigger = {
+		OR = {
+			tag = MGT
+			AND = {
+				tag = FOM
+				was_tag = MGT
+			}
+		}
+	}
+}
+
+THE_MRS_government_names = {
+	rank = {
+		1 = TOUHOU_DOMAIN
+		2 = TOUHOU_REALM
+		3 = TOUHOU_EMPIRE
+	}
+	ruler_male = {
+		3 = TOUHOU_EXECUTOR
+		2 = TOUHOU_EXECUTOR
+		1 = TOUHOU_EXECUTOR
+	}
+	ruler_female = {
+		3 = THE_MRS_RULER_3
+		2 = THE_MRS_RULER_2
+		1 = THE_MRS_RULER
+	}
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+	heir_female = {
+		1 = THE_MGT_HEIR
+		2 = THE_MGT_HEIR
+		3 = THE_MGT_HEIR
+	}
+
+	trigger = {
+		OR = {
+			tag = MRS
+			AND = {
+				tag = FOM
+				was_tag = MRS
+			}
+		}
+	}
+}
+
+THE_FOM_youkai_government_names = {
+	rank = {
+		1 = TOUHOU_DOMAIN
+		2 = TOUHOU_REALM
+		3 = TOUHOU_EMPIRE
+	}
+	ruler_male = {
+		3 = TOUHOU_EXECUTOR
+		2 = TOUHOU_EXECUTOR
+		1 = TOUHOU_EXECUTOR
+	}
+	ruler_female = {
+		3 = THE_FOM_youkai_RULER
+		2 = THE_FOM_youkai_RULER
+		1 = THE_FOM_youkai_RULER
+	}
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+	heir_female = {
+		1 = THE_MGT_HEIR
+		2 = THE_MGT_HEIR
+		3 = THE_MGT_HEIR
+	}
+
+	trigger = {
+		OR = {
+			tag = ENK
+			tag = MST
+			tag = WRG
+		}
+		is_subject_of = MRS
+	}
+}
