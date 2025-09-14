@@ -1,0 +1,70 @@
+country_decisions = {
+	THE_FOM_create_FOM_country_decision = {
+		color = { 44 145 70 }
+		potential = {
+			OR = {
+				tag = MRS
+				tag = MGT
+			}
+		}
+		allow = {
+			OR = {
+				MRS = {
+					is_subject_of = ROOT
+				}
+				MGT = {
+					is_subject_of = ROOT
+				}
+			}
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 10
+				OR = {
+					area = Forest_coast_state
+					area = Forest_of_magic
+					area = Forest_edge_state
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = THE_FOM_create_FOM_country_decision_c_tt1
+			custom_tooltip = THE_FOM_create_FOM_country_decision_c_tt2
+			if = {
+				limit = {
+					tag = MRS
+				}
+				inherit = MGT
+			}
+			else_if = {
+				limit = {
+					tag = MGT
+				 }
+				 inherit = MRS
+			}
+			add_prestige = 25
+			hidden_effect = {
+				every_subject_country = {
+					limit = {
+						capital_scope = {
+							OR = {
+								area = Forest_coast_state
+								area = Forest_of_magic
+								area = Forest_edge_state
+							}
+						}
+					}
+					ROOT = {
+						inherit = PREV
+					}
+				}
+				change_tag = FOM
+				swap_free_idea_group = yes
+				swap_non_generic_missions = yes
+				change_color = {
+					27
+					120
+					68
+				}
+			}
+		}
+	}
+}

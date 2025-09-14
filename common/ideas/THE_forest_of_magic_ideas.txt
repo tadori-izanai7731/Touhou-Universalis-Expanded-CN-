@@ -152,12 +152,12 @@ THE_MST_ideas = {
 		trade_steering = 0.50
 	}
 	THE_MST_idea_6 = {
-		build_cost = -0.20
-		build_time = -0.20
+		build_cost = -0.10
+		build_time = -0.15
 	}
 	THE_MST_idea_7 = {
 		global_trade_power = 0.10
-		advisor_cost = -0.25
+		advisor_cost = -0.15
 	}
 }
 THE_WRG_ideas = {
@@ -184,17 +184,17 @@ THE_WRG_ideas = {
 	THE_WRG_idea_3 = {
 		prestige = 1
 		monthly_splendor = 1
-		army_tradition_decay = -0.1
+		army_tradition_decay = -0.01
 	}
 	THE_WRG_idea_4 = {
 		leader_siege = 1
-		max_general_siege = 2
+		max_general_siege = 1
 	}
 	THE_WRG_idea_5 = {
-		all_estate_loyalty_equilibrium = 0.15
+		all_estate_loyalty_equilibrium = 0.10
 	}
 	THE_WRG_idea_6 = {
-		advisor_cost = -0.20
+		advisor_cost = -0.15
 		min_autonomy_in_territories = -0.05
 	}
 	THE_WRG_idea_7 = {
@@ -267,7 +267,7 @@ THE_FOM2_ideas = {
 		ae_impact = -0.20
 	}
 	THE_FOM2_idea_4 = {
-		estate_dolls_pools_power = 1.00
+		THE_MGT_estate_dolls_pools_power = 1.00
 		land_forcelimit_modifier = 0.50
 	}
 	THE_FOM2_idea_5 = {
