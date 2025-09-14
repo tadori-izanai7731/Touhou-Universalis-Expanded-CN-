@@ -386,7 +386,7 @@ THE_great_project_extra_optional_trigger_scripted_trigger = {
 		[[culture]culture = $culture$]
 		[[culture_group]culture_group = $culture_group$]
 		[[religion]religion = $religion$]
-		[[religion_or_accept]province_is_or_accepts_religion = { religion =  $religion$ }]
+		[[religion_or_accept]province_is_or_accepts_religion = { religion = $religion_or_accept$ }]
 		[[religion_group]religion_group = $religion_group$]
 	}
 	else = {
