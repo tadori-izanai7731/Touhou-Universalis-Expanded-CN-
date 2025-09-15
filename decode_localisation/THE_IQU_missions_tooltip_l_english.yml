@@ -149,11 +149,11 @@ l_english:
  THE_IQU_2_3_c_tt1: "当§Y月面§!区域以「§M云游§!」机制完成探索后，§Y月面防御机制§!将会失效。"
  THE_IQU_1_4_c_tt1: "§Y目标省份§!将获得以下效果：\n 添加§O海图异常点§!\n  若该省份为§Y殖民地§!，将立即§Y殖民完成§!"
  THE_IQU_1_5_c_tt1: "§Y[This.GetAreaName]§!地区已经通过「§M云游机制§!」§Y完成探索§!"
- THE_IQU_1_5_c_tt2: "现在§Y探索海岸§!省份时，将会§M10§!%的概率在随机省份添加§O海图异常点§!"
+ THE_IQU_1_5_c_tt2: "现在§Y创建§!殖民地省份时，将会§M10§!%的概率在随机省份添加§O海图异常点§!"
  THE_IQU_1_6_c_tt1: "通过§Y探险家§!探索超过（[Root.the_iqu_explore_province_number_im_var.GetValue]/75）个省份"
  THE_IQU_2_5_c_tt1: "任意省份修正§O龙脉-龙之首§!已齐集§Y五行§!"
  THE_IQU_2_5_c_tt2: "§M拥有§!修正§Y风水兴盛-「」之行§!的省份将会开始生产§Y纸张§!\n - -§g含之后重置§Y风水兴盛-「」之行§!的省份§!"
- THE_IQU_1_7_c_tt1: "现在§Y探索海岸§!完成时，获得1点§M陆军传统§!\n"
+ THE_IQU_1_7_c_tt1: "现在§Y创建§!殖民地省份时，获得1点§M陆军传统§!\n"
  THE_IQU_2_7_c_tt1: "现在§Y殖民地§!发展为城市时，额外获得1点§Y生产发展度§!\n"
  THE_IQU_1_8_c_tt2: "当§Y加勒比地区§!的殖民地发展为城市时，将有§G75%§!的概率将产物变更为§Y咖啡§!\n"
  THE_IQU_3_7_c_tt2_yes: "£yes£若§M完成任务§!时，至少有50艘§Y轻型战舰§!，将获得以下效果："
@@ -185,6 +185,8 @@ l_english:
  THE_IQU_4_7_c_tt1: "通过§Y探险家§!探索超过（[Root.the_iqu_explore_province_number_im_var.GetValue]/150）个省份"
  THE_IQU_5_8_c_tt1: "当前引渡龙脉越过50次山脉省份（目前：[Root.the_iqu_mountain_province_has_been_teer_im_var.GetValue]）"
  THE_IQU_4_8_c_tt1: "当前引渡龙脉越过50次山脉省份（目前：[Root.the_iqu_jungle_province_has_been_teer_im_var.GetValue]）"
+ THE_IQU_4_2_c_tt3: "现在@HVR§Y[HVR.GetName]§!禁止§M羞辱§!@IQU§Y[IQU.GetName]§!"
+ THE_IQU_hvr_cannot_insult_iqu_c_yy1: "@HVR[HVR.GetName]禁止§M羞辱§!@IQU[IQU.GetName]"
 ### MISSION_EXTRA_END
 
 ### DECISIONS

@@ -781,6 +781,20 @@ insultaction = {
 			}
 		}
 	}
+	###########
+	###  THE
+	########
+	condition = {
+		tooltip = THE_IQU_hvr_cannot_insult_iqu_c_yy1
+		potential = {
+			FROM = {
+				mission_completed = THE_IQU_4_2
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
 	effect = {
 		change_asha_vahishta = { value = -5 }
 		if = {
