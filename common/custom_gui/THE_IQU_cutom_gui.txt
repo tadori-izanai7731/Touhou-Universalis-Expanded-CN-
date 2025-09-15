@@ -55,8 +55,8 @@ custom_button = {
 		OR = {
 			owned_by = FROM
 			owned_by_subject_of = FROM
-			has_province_modifier = THE_IQU_lonng_vein_head_province_buff
 		}
+		has_province_modifier = THE_IQU_lonng_vein_head_province_buff
 	}
 	trigger = {
 		custom_trigger_tooltip = {
@@ -69,9 +69,11 @@ custom_button = {
 				THE_IQU_has_any_province_wuxing_flag_trigger = { wuxing = tu }
 			}
 		}
-		num_of_provinces_owned_or_owned_by_subjects_with = {
-			value = 10
-			has_province_modifier = THE_IQU_lonng_vein_foot_province_buff
+		owner = {
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 10
+				has_province_modifier = THE_IQU_lonng_vein_foot_province_buff
+			}
 		}
 	 }
 	effect = { 

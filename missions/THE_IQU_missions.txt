@@ -1248,13 +1248,6 @@ THE_IQU_main_branch_4 = {
 					has_province_modifier = THE_IQU_Feng_shui_tu_buff
 				}
 			}
-			custom_trigger_tooltip = {
-				tooltip = THE_IQU_4_7_c_tt1
-				check_variable = {
-					which = the_iqu_explore_province_number_im_var
-					value = 100
-				}
-			}
 		 } 
 
 		effect = { 
@@ -1273,7 +1266,7 @@ THE_IQU_main_branch_4 = {
 				tooltip = THE_IQU_4_8_c_tt1
 				check_variable = {
 					which = the_iqu_jungle_province_has_been_teer_im_var
-					value = 50
+					value = 25
 				}
 			}
 		 } 
@@ -1550,7 +1543,7 @@ THE_IQU_main_branch_5 = {
 				tooltip = THE_IQU_5_8_c_tt1
 				check_variable = {
 					which = the_iqu_mountain_province_has_been_teer_im_var
-					value = 50
+					value = 25
 				}
 			}
 		 } 

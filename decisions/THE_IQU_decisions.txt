@@ -126,6 +126,7 @@ country_decisions = {
 			}
 		}
 	}
+	#
 	THE_IQU_teach_the_tenshi_decisions = {
 		color = { 21 54 168 }
 		potential = {
@@ -134,12 +135,117 @@ country_decisions = {
 				was_tag = IQU
 			}
 			has_country_flag = THE_IQU_unlock_tenshi_advisor_flag
+			advisor = THE_tenshi_advisor
 		}
 		allow = {
 			ai = no
+			custom_trigger_tooltip = {
+				tooltip = THE_cd_type_decision_5_years_ttt
+				THE_cd_type_decision_scripted_trigger = {
+					flag = THE_IQU_teach_the_tenshi_cd_flag
+					days = 1825
+				}
+			}
 		}	
 		effect = {
-			
+			country_event = {
+				id = THE_IQU_flavor_events.1005
+			}
+		}
+	}
+	#
+	THE_IQU_check_the_loong_vein_decisions = {
+		color = { 21 54 168 }
+		potential = {
+			OR = {
+				tag = IQU
+				was_tag = IQU
+			}
+			OR = {
+				AND = {
+					NOT = { has_country_flag = THE_IQU_check_decision_flag_1 }
+					NOT = { has_country_flag = THE_IQU_check_decision_flag_2 }
+					NOT = { has_country_flag = THE_IQU_check_decision_flag_3 }
+				}
+				has_country_flag = THE_IQU_check_decision_flag_1
+			}
+		}
+		allow = {
+			ai = no
+		}
+		effect = {
+			custom_tooltip = THE_IQU_check_decision_c_tt1
+			hidden_effect = {
+				clr_country_flag = THE_IQU_check_decision_flag_1
+				clr_country_flag = THE_IQU_check_decision_flag_2
+				clr_country_flag = THE_IQU_check_decision_flag_3
+				#
+				set_country_flag = THE_IQU_check_decision_flag_2
+			}
+		}
+	}
+	THE_IQU_check_the_unique_point_has_done_decisions = {
+		color = { 21 54 168 }
+		potential = {
+			OR = {
+				tag = IQU
+				was_tag = IQU
+			}
+			has_country_flag = THE_IQU_check_decision_flag_2
+		}
+		allow = {
+			ai = no
+		}
+		effect = {
+			custom_tooltip = THE_IQU_check_decision_c_tt1
+			hidden_effect = {
+				clr_country_flag = THE_IQU_check_decision_flag_1
+				clr_country_flag = THE_IQU_check_decision_flag_2
+				clr_country_flag = THE_IQU_check_decision_flag_3
+				#
+				set_country_flag = THE_IQU_check_decision_flag_3
+			}
+		}
+	}
+	THE_IQU_check_the_fengshui_xingsheng_decisions = {
+		color = { 21 54 168 }
+		potential = {
+			OR = {
+				tag = IQU
+				was_tag = IQU
+			}
+			has_country_flag = THE_IQU_check_decision_flag_3
+		}
+		allow = {
+			ai = no
+		}
+		effect = {
+			custom_tooltip = THE_IQU_check_decision_c_tt1
+			hidden_effect = {
+				clr_country_flag = THE_IQU_check_decision_flag_1
+				clr_country_flag = THE_IQU_check_decision_flag_2
+				clr_country_flag = THE_IQU_check_decision_flag_3
+				#
+				set_country_flag = THE_IQU_check_decision_flag_1
+			}
+		}
+	}
+	THE_IQU_check_the_explore_rule_decisions = {
+		color = { 21 54 168 }
+		potential = {
+			OR = {
+				tag = IQU
+				was_tag = IQU
+			}
+			ai = no
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			country_event = {
+				id = THE_IQU_flavor_events.1002
+			}
 		}
 	}
 }

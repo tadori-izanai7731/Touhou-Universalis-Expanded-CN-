@@ -48,7 +48,7 @@ THE_IQU_scarlet_sky_reform = {
 #云佑天合 #3
 THE_IQU_cloud_with_sky_reform = {
 	lock_level_when_selected = yes
-	icon = "THE_IQU_government_1_reform"
+	icon = "THE_IQU_government_5_reform"
 	potential = {
 		mission_completed = THE_IQU_4_3
 	}
@@ -69,7 +69,7 @@ THE_IQU_cloud_with_sky_reform = {
 #天人一道 #4
 THE_IQU_tennin_one_taoist_reform = {
 	lock_level_when_selected = yes
-	icon = "THE_IQU_government_1_reform"
+	icon = "THE_IQU_government_3_reform"
 	potential = {
 		OR = {
 			has_reform = THE_IQU_tennin_one_taoist_reform
@@ -93,7 +93,7 @@ THE_IQU_tennin_one_taoist_reform = {
 #观澜测天 #6
 THE_IQU_the_world_all_will_be_known_reform = {
 	lock_level_when_selected = yes
-	icon = "THE_IQU_government_1_reform"
+	icon = "THE_IQU_government_4_reform"
 	potential = {
 		mission_completed = THE_IQU_5_5
 	}
