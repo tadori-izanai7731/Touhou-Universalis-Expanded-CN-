@@ -107,7 +107,7 @@ THE_LIL_transform_to_spring_territory = {	#设为春之领地
 				calc_true_if = {
 					all_subject_country = {
 						is_subject_of_type = THE_LIL_spring_territory_vassal
-						has_country_flag = THE_LIL_special_spring_territory_flag
+						NOT = { has_country_flag = THE_LIL_special_spring_territory_flag }
 					}
 					amount = 10
 				}
