@@ -156,6 +156,9 @@ country_decisions = {
 	#
 	THE_IQU_check_the_loong_vein_decisions = {
 		color = { 21 54 168 }
+		provinces_to_highlight = {
+			has_province_modifier = THE_IQU_lonng_vein_head_province_buff
+		}
 		potential = {
 			OR = {
 				tag = IQU
@@ -170,6 +173,7 @@ country_decisions = {
 				has_country_flag = THE_IQU_check_decision_flag_1
 			}
 		}
+
 		allow = {
 			ai = no
 		}
@@ -186,6 +190,9 @@ country_decisions = {
 	}
 	THE_IQU_check_the_unique_point_has_done_decisions = {
 		color = { 21 54 168 }
+		provinces_to_highlight = {
+			has_province_flag = THE_IQU_this_province_had_been_explored_flag
+		}
 		potential = {
 			OR = {
 				tag = IQU
@@ -209,6 +216,15 @@ country_decisions = {
 	}
 	THE_IQU_check_the_fengshui_xingsheng_decisions = {
 		color = { 21 54 168 }
+		provinces_to_highlight = {
+			OR = {
+				has_province_modifier = THE_IQU_Feng_shui_jin_buff
+				has_province_modifier = THE_IQU_Feng_shui_shui_buff
+				has_province_modifier = THE_IQU_Feng_shui_mu_buff
+				has_province_modifier = THE_IQU_Feng_shui_huo_buff
+				has_province_modifier = THE_IQU_Feng_shui_tu_buff
+			}
+		}
 		potential = {
 			OR = {
 				tag = IQU

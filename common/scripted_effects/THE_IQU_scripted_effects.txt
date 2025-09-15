@@ -40,6 +40,47 @@ THE_IQU_define_expedition_target_effects = {
 		save_event_target_as = THE_IQU_province_unique_4_target
 		set_province_flag = THE_IQU_had_saved_unique_point_flag
 	}
+	#4-8
+	random_owned_province = {
+		limit = {
+			has_province_flag = THE_IQU_province_unique_point_flag
+			NOT = {
+				has_province_flag = THE_IQU_had_saved_unique_point_flag
+			}
+		}
+		save_event_target_as = THE_IQU_province_unique_5_target
+		set_province_flag = THE_IQU_had_saved_unique_point_flag
+	}
+	random_owned_province = {
+		limit = {
+			has_province_flag = THE_IQU_province_unique_point_flag
+			NOT = {
+				has_province_flag = THE_IQU_had_saved_unique_point_flag
+			}
+		}
+		save_event_target_as = THE_IQU_province_unique_6_target
+		set_province_flag = THE_IQU_had_saved_unique_point_flag
+	}
+	random_owned_province = {
+		limit = {
+			has_province_flag = THE_IQU_province_unique_point_flag
+			NOT = {
+				has_province_flag = THE_IQU_had_saved_unique_point_flag
+			}
+		}
+		save_event_target_as = THE_IQU_province_unique_7_target
+		set_province_flag = THE_IQU_had_saved_unique_point_flag
+	}
+	random_owned_province = {
+		limit = {
+			has_province_flag = THE_IQU_province_unique_point_flag
+			NOT = {
+				has_province_flag = THE_IQU_had_saved_unique_point_flag
+			}
+		}
+		save_event_target_as = THE_IQU_province_unique_8_target
+		set_province_flag = THE_IQU_had_saved_unique_point_flag
+	}
 }
 
 ##设定 （异常点）

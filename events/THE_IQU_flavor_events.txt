@@ -86,6 +86,79 @@ country_event = {
 			}
 		}
 	}
+	#
+	option = {
+		name = THE_IQU_flavor_events.0.4
+		goto = THE_IQU_province_unique_5_target
+		trigger = {
+			has_saved_event_target = THE_IQU_province_unique_5_target
+		}
+		event_target:THE_IQU_province_unique_5_target = {
+			custom_tooltip = THE_IQU_event_0_c_tt1
+			province_event = {
+				id = THE_IQU_flavor_events.1
+			}
+			THE_IQU_will_get_wuxing_point_after_explore_effect = yes
+			hidden_effect = {
+				#省份标记正在探索
+				set_province_flag = THE_IQU_this_provinces_is_exploring_now
+			}
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.0.4
+		goto = THE_IQU_province_unique_6_target
+		trigger = {
+			has_saved_event_target = THE_IQU_province_unique_6_target
+		}
+		event_target:THE_IQU_province_unique_6_target = {
+			custom_tooltip = THE_IQU_event_0_c_tt1
+			province_event = {
+				id = THE_IQU_flavor_events.1
+			}
+			THE_IQU_will_get_wuxing_point_after_explore_effect = yes
+			hidden_effect = {
+				#省份标记正在探索
+				set_province_flag = THE_IQU_this_provinces_is_exploring_now
+			}
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.0.4
+		goto = THE_IQU_province_unique_7_target
+		trigger = {
+			has_saved_event_target = THE_IQU_province_unique_7_target
+		}
+		event_target:THE_IQU_province_unique_7_target = {
+			custom_tooltip = THE_IQU_event_0_c_tt1
+			province_event = {
+				id = THE_IQU_flavor_events.1
+			}
+			THE_IQU_will_get_wuxing_point_after_explore_effect = yes
+			hidden_effect = {
+				#省份标记正在探索
+				set_province_flag = THE_IQU_this_provinces_is_exploring_now
+			}
+		}
+	}
+	option = {
+		name = THE_IQU_flavor_events.0.4
+		goto = THE_IQU_province_unique_8_target
+		trigger = {
+			has_saved_event_target = THE_IQU_province_unique_8_target
+		}
+		event_target:THE_IQU_province_unique_8_target = {
+			custom_tooltip = THE_IQU_event_0_c_tt1
+			province_event = {
+				id = THE_IQU_flavor_events.1
+			}
+			THE_IQU_will_get_wuxing_point_after_explore_effect = yes
+			hidden_effect = {
+				#省份标记正在探索
+				set_province_flag = THE_IQU_this_provinces_is_exploring_now
+			}
+		}
+	}
 	after = {
 		every_owned_province = {
 			clr_province_flag = THE_IQU_had_saved_unique_point_flag
