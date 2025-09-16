@@ -245,6 +245,7 @@ THE_has_dip_advisor = {
 			advisor = th_advisor_doremy
 			advisor = th_advisor_star
 			advisor = THE_daiyousei_advisor
+			advisor = THE_tenshi_advisor
 		}
 	}
 }
@@ -283,6 +284,7 @@ THE_has_dip_advisor_with_level = {
 			th_advisor_doremy = $level$
 			th_advisor_star = $level$
 			THE_daiyousei_advisor = $level$
+			THE_tenshi_advisor = $level$
 		}
 	}
 }

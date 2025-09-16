@@ -315,7 +315,7 @@ THE_IQU_main_branch_2 = {
 				army_size = 15
 				army_size_percentage = 1
 			}
-			has_dip_advisor = yes
+			THE_has_dip_advisor = yes
 		} 
 		
 		effect = { 
@@ -1045,9 +1045,9 @@ THE_IQU_main_branch_4 = {
 				}
 			}
 			OR = {
-				has_adm_advisor_2 = yes
-				has_dip_advisor_2 = yes
-				has_mil_advisor_2 = yes
+				THE_has_adm_advisor_with_level = { level = 2 }
+				THE_has_dip_advisor_with_level = { level = 2 }
+				THE_has_mil_advisor_with_level = { level = 2 }
 			}
 		 } 
 
@@ -1089,9 +1089,9 @@ THE_IQU_main_branch_4 = {
 					value = 50
 				}
 			}
-			has_adm_advisor_3 = yes
-			has_dip_advisor_3 = yes
-			has_mil_advisor_3 = yes
+			THE_has_adm_advisor_with_level = { level = 3 }
+			THE_has_dip_advisor_with_level = { level = 3 }
+			THE_has_mil_advisor_with_level = { level = 3 }
 			full_idea_group = court_ideas
 			capital_scope = {
 				has_building = university
