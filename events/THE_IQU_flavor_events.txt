@@ -6368,6 +6368,9 @@ country_event = {
 	option = {
 		name = THE_IQU_flavor_events.1005.100
 		highlight = yes
+		hidden_effect = {
+			clr_country_flag = THE_IQU_has_owneed_tenshi_teaching_event_flag
+		}
 	}
 }
 #对弈事件/龙宫侧
@@ -6471,11 +6474,22 @@ country_event = {
 			}
 			else = {
 				THE_IQU_random_chess_playing_desc_random_flag_effect = yes
-				HVR = {
-					country_event = {
-						id = THE_IQU_flavor_events.1007
+				random_list = {
+					99 = {
+						HVR = {
+							country_event = {
+								id = THE_IQU_flavor_events.1007
+							}
+						}
+					}
+					1 = {
+						country_event = {
+							id = THE_IQU_flavor_events.1008
+							days = 1
+						}
 					}
 				}
+				
 			}
 		}
 	}
@@ -6522,6 +6536,7 @@ country_event = {
 		}
 	}
 	after = {
+		clr_country_flag = THE_IQU_has_owneed_tenshi_teaching_event_flag
 	}
 }
 #成功
@@ -6536,11 +6551,14 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.1009.1
-		THE_IQU_play_chess_end_add_point_effects = yes
+		THE_IQU_play_chess_end_add_point_effects = {
+			obedience = 5
+		}
 	}
 	after = {
 		clr_country_flag = THE_IQU_teach_the_tenshi_cd_flag
 		set_country_flag = THE_IQU_teach_the_tenshi_cd_flag
+		clr_country_flag = THE_IQU_has_owneed_tenshi_teaching_event_flag
 	}
 }
 #失败
@@ -6562,6 +6580,7 @@ country_event = {
 		}
 	}
 	after = {
+		clr_country_flag = THE_IQU_has_owneed_tenshi_teaching_event_flag
 	}
 }
 #给钱

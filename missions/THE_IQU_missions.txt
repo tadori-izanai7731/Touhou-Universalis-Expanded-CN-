@@ -136,14 +136,7 @@ THE_IQU_main_branch_1 = {
 					THE_IQU_add_unique_point_temporary_province_effects = {
 						level = 2
 					}
-					if = {
-						limit = { 
-							THIS = {
-								colonysize = 1
-							}
-						}
-						add_colonysize = 1000
-					}
+					add_colonysize = 1000
 					add_province_modifier = {
 						name = THE_IQU_yunn_prot_out_of_gensokyo_buff
 						duration = -1
@@ -1092,7 +1085,7 @@ THE_IQU_main_branch_4 = {
 			custom_trigger_tooltip = {
 				tooltip = THE_IQU_4_3_c_tt1
 				check_variable = {
-					which = the_iqu_mission_about_win_chess_im_var
+					which = the_iqu_the_tenshi_obedience_im_var
 					value = 50
 				}
 			}

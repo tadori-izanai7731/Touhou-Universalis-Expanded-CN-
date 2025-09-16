@@ -437,13 +437,11 @@ THE_IQU_add_fengshui_wuxing_province_permant_buff_effect = {
 			ROOT = {
 				region = {
 					type = all
-					OR = {
-						NOT = { has_province_modifier = THE_IQU_Feng_shui_jin_buff }
-						NOT = { has_province_modifier = THE_IQU_Feng_shui_shui_buff }
-						NOT = { has_province_modifier = THE_IQU_Feng_shui_mu_buff }
-						NOT = { has_province_modifier = THE_IQU_Feng_shui_huo_buff }
-						NOT = { has_province_modifier = THE_IQU_Feng_shui_tu_buff }
-					}	
+					NOT = { has_province_modifier = THE_IQU_Feng_shui_jin_buff }
+					NOT = { has_province_modifier = THE_IQU_Feng_shui_shui_buff }
+					NOT = { has_province_modifier = THE_IQU_Feng_shui_mu_buff }
+					NOT = { has_province_modifier = THE_IQU_Feng_shui_huo_buff }
+					NOT = { has_province_modifier = THE_IQU_Feng_shui_tu_buff }
 				}
 			}
 		}
@@ -598,17 +596,19 @@ THE_IQU_add_prestige_or_navy_tradition_effects = {
 # 引导龙脉添加建筑
 THE_IQU_guide_the_lonng_vein_custom_gui_script = {
 	custom_tooltip = THE_IQU_guide_the_loong_vein_building_construction_scripted_c_tt1
-	export_to_variable = {
-		value = the_iqu_guide_loong_vein_export_im_var
-		which = modifier:THE_IQU_guide_loong_vein_custom_modifier
-	}
-	set_variable = {
-		which = the_iqu_base_guide_loong_vein_building_time_im_var
-		value = 1
-	}
-	subtract_variable = {
-		which = the_iqu_base_guide_loong_vein_building_time_im_var
-		which = the_iqu_guide_loong_vein_export_im_var
+	hidden_effect = {
+		export_to_variable = {
+			value = the_iqu_guide_loong_vein_export_im_var
+			which = modifier:THE_IQU_guide_loong_vein_custom_modifier
+		}
+		set_variable = {
+			which = the_iqu_base_guide_loong_vein_building_time_im_var
+			value = 1
+		}
+		subtract_variable = {
+			which = the_iqu_base_guide_loong_vein_building_time_im_var
+			which = the_iqu_guide_loong_vein_export_im_var
+		}
 	}
 	if = { limit = { check_variable = { which = the_iqu_base_guide_loong_vein_building_time_im_var value = 0.9 } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.9 } }
 	else_if = { limit = { check_variable = { which = the_iqu_base_guide_loong_vein_building_time_im_var value = 0.8 } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.8 } }
@@ -983,18 +983,6 @@ THE_IQU_play_chess_end_add_point_effects = {
 			which = the_iqu_the_iqu_win_point_total_im_var
 			which = the_iqu_the_hvr_win_point_total_im_var
 		}
-		set_variable = {
-			which = the_iqu_the_tenshi_teaching_experience_will_became_im_var
-			which = the_iqu_the_tenshi_obedience_im_var
-		}
-		change_variable = {
-			which = the_iqu_the_tenshi_teaching_experience_will_became_im_var
-			value = 1
-		}
-		multiply_variable = {
-			which = the_iqu_the_iqu_win_point_total_im_var
-			which = the_iqu_the_tenshi_teaching_experience_will_became_im_var
-		}
 		#mission var
 		change_variable = {
 			which = the_iqu_mission_about_win_chess_im_var
@@ -1003,7 +991,7 @@ THE_IQU_play_chess_end_add_point_effects = {
 	}
 	change_variable = {
 		which = the_iqu_the_tenshi_teaching_experience_im_var
-		value = the_iqu_the_iqu_win_point_total_im_var
+		which = the_iqu_the_iqu_win_point_total_im_var
 	}
 	THE_IQU_teaching_tenshi_add_power_effect = yes
 }
@@ -1292,6 +1280,7 @@ THE_IQU_add_nautical_experience_var_effect = {
 	hidden_effect = {
 		change_variable = {
 			which = the_iqu_nautical_experience_change_im_var
+			value = 1
 		}
 	}
 }
@@ -1603,7 +1592,7 @@ THE_IQU_number_explore_province_im_var_effect = {
 	# 		}
 	# 	}
 	# }
-	#探索海岸
+	#建立殖民地
 	if = {
 		limit = {
 			owner = {
@@ -1622,27 +1611,30 @@ THE_IQU_number_explore_province_im_var_effect = {
 			}
 			ROOT = {
 				has_port = yes
-				area = {
-					type = all
-					OR = {
-						NOT = {
-							has_province_flag = THE_IQU_this_province_had_been_explored_flag
-						}
-						NOT = {
-							has_province_flag = THE_IQU_province_unique_point_flag
-						}
+				all_state_province = {
+					NOT = {
+						has_province_flag = THE_IQU_this_province_had_been_explored_flag
 					}
+					NOT = {
+						has_province_flag = THE_IQU_province_unique_point_flag
+					}
+				}
+				NOT = {
+					has_province_flag = THE_IQU_this_province_had_been_explored_flag
+				}
+				NOT = {
+					has_province_flag = THE_IQU_province_unique_point_flag
 				}
 			}
 		}
 		owner = {
 			random_list = {
-				75 = {
+				25 = {
 					country_event = {
 						id = THE_IQU_flavor_events.1004
 					}
 				}
-				25 = {
+				75 = {
 
 				}
 			}

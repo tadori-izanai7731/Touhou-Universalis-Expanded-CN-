@@ -146,10 +146,19 @@ country_decisions = {
 					days = 1825
 				}
 			}
+			custom_trigger_tooltip = {
+				tooltip = THE_IQU_teach_the_tenshi_decisions_c_tt1
+				NOT = {
+					has_country_flag = THE_IQU_has_owneed_tenshi_teaching_event_flag
+				}
+			}
 		}	
 		effect = {
 			country_event = {
 				id = THE_IQU_flavor_events.1005
+			}
+			hidden_effect = {
+				set_country_flag = THE_IQU_has_owneed_tenshi_teaching_event_flag
 			}
 		}
 	}

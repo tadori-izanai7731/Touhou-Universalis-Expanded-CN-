@@ -165,7 +165,7 @@ l_english:
  THE_IQU_4_1_c_tt1: "@HVR§Y[HVR.GetName]§!将会移除所有§O动荡时代§!修正"
  THE_IQU_4_2_c_tt1: "解锁特殊外交顾问§Y「比那名居天子」§!\n"
  THE_IQU_4_2_c_tt2: "且当§Y「天子」§!存在于我们的内阁中时，解锁§Y特殊决议§!「§M规训天人§!」"
- THE_IQU_4_3_c_tt1: "在「§Y天人规训§!」中已让天子获得§Y50§!点教养(目前：[Root.the_iqu_mission_about_win_chess_im_var.GetValue])"
+ THE_IQU_4_3_c_tt1: "在「§Y天人规训§!」中已让天子获得§Y50§!点教养(目前：[Root.the_iqu_the_tenshi_obedience_im_var.GetValue])"
  THE_IQU_3_3_c_tt1: "@HVR§Y[HVR.GetName]§!将§O无法宣战§!，并会被强迫参与@IQU§Y[IQU.GetName]§!的§Y任何§!战争"
  THE_IQU_5_5_c_tt1: "解锁第§Y6§!层政府改革：「§O观澜测天§!」"
  THE_IQU_4_3_c_tt2: "解锁第§Y3§!层政府改革：「§O云佑天合§!」"
@@ -211,6 +211,7 @@ l_english:
  THE_IQU_check_decision_c_tt1: "切换查询状态"
  THE_IQU_check_the_explore_rule_decisions_title: "查询@IQU§Y[IQU.GetName]§!「§M云游机制§!」教程"
  THE_IQU_check_the_explore_rule_decisions_desc: ""
+ THE_IQU_teach_the_tenshi_decisions_c_tt1: "没有已经发生的事件"
 ### DECISIONS_END
 
 ### EVENT
@@ -1025,6 +1026,10 @@ l_english:
  THE_IQU_flavor_events.1004.desc: "探索期间，我们顺利识别出一处异常点，目前该点位已完整标记在海图中，请移步「探险菜单」获取信息。"
  THE_IQU_flavor_events.1004.1: "了解"
  THE_IQU_flavor_events.1005.t: "天人规训"
+ THE_IQU_flavor_events.1005.desc: "在此菜单下我们可以查询天子当前的经验进度\n\n天子当前§O教养§!为[Root.the_iqu_the_tenshi_obedience_im_var.GetValue]\n\n天子当前§O教养经验§!为[Root.the_iqu_the_tenshi_teaching_experience_im_var.GetValue]\n\n= =若天子的§O教养经验§!达到100时，将会随机提升1点§O君主点数§!，若天子君主点数均为6时，则随机获得75点数"
+ THE_IQU_flavor_events.1005.1: "与天子弈棋"
+ the_iqu_the_iqu_win_point_total_im_var: "衣玖的胜利得分"
+ THE_IQU_flavor_events.1005.100: "返回"
 ### SYS_EVENT_END
 
 ### SCRIPT_EFFECT

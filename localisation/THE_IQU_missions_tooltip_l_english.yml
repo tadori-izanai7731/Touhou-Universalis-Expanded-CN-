@@ -165,7 +165,7 @@
  THE_IQU_4_1_c_tt1: "@HVR§Y[HVR.GetName]§!SOûyd–Nb	g§O¨RaƒöeãN§!îOck"
  THE_IQU_4_2_c_tt1: "ã‰•yrŠkY²NŒ˜î•§Y0Ôk±TES)YPR0§!\n"
  THE_IQU_4_2_c_tt2: "NSV§Y0)YPR0§!XR(WŽNbìN„v…Q–-Nöeÿã‰•§YyrŠk³Q®‹§!0§MÄ‰­‹)YºN§!0"
- THE_IQU_4_3_c_tt1: "(W0§Y)YºNÄ‰­‹§!0-NòT©‹)YPR·ƒ—V§Y50§!¹pYe‰Q(îvMRÿ[Root.the_iqu_mission_about_win_chess_im_var.GetValue])"
+ THE_IQU_4_3_c_tt1: "(W0§Y)YºNÄ‰­‹§!0-NòT©‹)YPR·ƒ—V§Y50§!¹pYe‰Q(îvMRÿ[Root.the_iqu_the_tenshi_obedience_im_var.GetValue])"
  THE_IQU_3_3_c_tt1: "@HVR§Y[HVR.GetName]§!S§OàeÕl±Rb§!ÿv^O«ˆ:VëÂSN@IQU§Y[IQU.GetName]§!„v§YûNUO§!b‰N"
  THE_IQU_5_5_c_tt1: "ã‰•,r§Y6§!BS?eœ^9ei—ÿ0§OÂ‰œoKm)Y§!0"
  THE_IQU_4_3_c_tt2: "ã‰•,r§Y3§!BS?eœ^9ei—ÿ0§O‘NQO)YT§!0"
@@ -211,6 +211,7 @@
  THE_IQU_check_decision_c_tt1: "Rbcågâ‹¶r`"
  THE_IQU_check_the_explore_rule_decisions_title: "ågâ‹@IQU§Y[IQU.GetName]§!0§M‘N8n:g6R§!0Yez"
  THE_IQU_check_the_explore_rule_decisions_desc: ""
+ THE_IQU_teach_the_tenshi_decisions_c_tt1: "¡l	gòTÏuÑSu„v‹NöN"
 ### DECISIONS_END
 
 ### EVENT
@@ -1025,6 +1026,10 @@
  THE_IQU_flavor_events.1004.desc: "¢c0tgô•ÿbìNz˜)RÆ‹+RúQNYV8^¹pÿîvMRå‹¹pMOòTŒRteh°‹(WwmþV-Nÿ÷‹ûyek0¢ci–ÜƒUS0·ƒÖSáOo`0"
  THE_IQU_flavor_events.1004.1: "†Nã‰"
  THE_IQU_flavor_events.1005.t: ")YºNÄ‰­‹"
+ THE_IQU_flavor_events.1005.desc: "(WdkÜƒUSNbìNïSåNågâ‹)YPRSVMR„vÏuŒšÛ¦^\n\n)YPRSVMR§OYe‰Q§!:N[Root.the_iqu_the_tenshi_obedience_im_var.GetValue]\n\n)YPRSVMR§OYe‰QÏuŒš§!:N[Root.the_iqu_the_tenshi_teaching_experience_im_var.GetValue]\n\n= =å‚)YPR„v§OYe‰QÏuŒš§!¾0R100öeÿSO–:gÐcGS1¹p§OTIN¹ppe§!ÿå‚)YPRTIN¹ppeGW:N6öeÿR–:g·ƒ—V75¹ppe"
+ THE_IQU_flavor_events.1005.1: "N)YPRVËh"
+ the_iqu_the_iqu_win_point_total_im_var: "cˆ–s„vÜw)R—VR"
+ THE_IQU_flavor_events.1005.100: "ÔÞV"
 ### SYS_EVENT_END
 
 ### SCRIPT_EFFECT
