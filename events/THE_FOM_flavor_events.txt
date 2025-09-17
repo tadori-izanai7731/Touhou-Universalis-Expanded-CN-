@@ -1,0 +1,19 @@
+namespace = THE_FOM_flavor_events
+
+
+country_event = {
+	id = THE_FOM_flavor_events.1
+	title = THE_FOM_flavor_events.t
+	desc = THE_FOM_flavor_events.desc
+
+	is_triggered_only = yes
+
+	immediate = {
+		
+	}
+	option = {
+		name = THE_FOM_flavor_events.1.1
+
+		
+	}
+}

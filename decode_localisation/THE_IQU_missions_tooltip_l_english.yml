@@ -173,7 +173,7 @@ l_english:
  THE_IQU_3_1_c_tt1_no: "£no£若§M完成任务§!时，已完成「§Y探索理念组§!」或「§Y贸易理念组§!」，将获得以下效果："
  THE_IQU_3_1_c_tt2: "随机§Y2§!个省份将商品变更为§Y纸张§!"
  THE_IQU_4_4_c_tt1: "现在每§Y5§!年将会额外结算§G1§!次贸易收入\n -贸易收入将会计为@IQU§Y[IQU.GetName]§!与@HVR§Y[HVR.GetName]§!收入的总和。\n -若@IQU§Y[IQU.GetName]§!与@HVR§Y[HVR.GetName]§!位于「§Y外部界域§!」贸易区的§M竞争力§!相等时，收入最大，随着@IQU§Y[IQU.GetName]§!与@HVR§Y[HVR.GetName]§!的§M竞争力§!的§Y差幅§!增大而§Y衰减§!"
- THE_IQU_event_1011_c_tt1: "@IQU§Y[IQU.GetName]§!与@HVR§Y[HVR.GetName]§!将会各获得金钱¤[Root.the_iqu_iqu_years_of_income_im_var.GetValue]"
+ THE_IQU_event_1011_c_tt1: "@IQU§Y[IQU.GetName]§!与@HVR§Y[HVR.GetName]§!将会各获得金钱¤ [Root.the_iqu_iqu_years_of_income_im_var.GetValue]"
  THE_IQU_4_6_c_tt1: "通过「§M云游机制§!」已经完成探索§W25§!个§Y地区§!（目前：§Y[Root.the_iqu_had_explore_area_number_im_var.GetValue]§!）"
  THE_IQU_4_4_c_tt2: "@HVR「§Y天子§!」的每点§Y行政点§!£adm£将会为我们带来§Y商品产出修正§!§G+2§!% §Y贸易效率§!§G+2§!%\n"
  THE_IQU_4_6_c_tt3: "@HVR「§Y天子§!」的每点§Y外交点§!£dip£将会为我们带来§Y全国水手修正§!§G+5§!%\n"
@@ -1030,6 +1030,9 @@ l_english:
  THE_IQU_flavor_events.1005.1: "与天子弈棋"
  the_iqu_the_iqu_win_point_total_im_var: "衣玖的胜利得分"
  THE_IQU_flavor_events.1005.100: "返回"
+ THE_IQU_flavor_events.1011.t: "额外收入"
+ THE_IQU_flavor_events.1011.desc: "我们和天界通过联合贸易获得的额外收入"
+ THE_IQU_flavor_events.1011.1: "了解"
 ### SYS_EVENT_END
 
 ### SCRIPT_EFFECT

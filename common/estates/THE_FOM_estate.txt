@@ -1,0 +1,50 @@
+estate_burghers = {
+	custom_name = {
+		desc = THE_FOM_burghers_name
+		trigger = { 
+			OR = {
+				tag = MGT
+				was_tag = MGT
+				tag = MRS
+				was_tag = MRS
+			}
+		}
+	}
+	privileges = {
+		
+	}
+}
+
+estate_nobles = {
+	custom_name = {
+		desc = THE_FOM_noble_name
+		trigger = { 
+			OR = {
+				tag = MGT
+				was_tag = MGT
+				tag = MRS
+				was_tag = MRS
+			}
+		}
+	}
+	privileges = {
+		
+	}
+}
+
+estate_church = {
+	custom_name = {
+		desc = THE_FOM_church_name
+		trigger = { 
+			OR = {
+				tag = MGT
+				was_tag = MGT
+				tag = MRS
+				was_tag = MRS
+			}
+		}
+	}
+	privileges = {
+		
+	}
+}

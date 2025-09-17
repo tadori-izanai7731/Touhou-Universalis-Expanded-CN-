@@ -1,0 +1,20 @@
+################################
+##On Action Script
+##############################
+THE_FOM_on_startup_scripted_effects = {
+	if = {
+		limit = { 
+			tag = MRS
+			NOT = { has_country_flag = THE_FOM_on_startup_set_variable_flag }
+		}
+		country_event = {
+			id = randomeventsstapehordes.25
+		}
+	}
+
+
+
+
+
+	set_country_flag = THE_FOM_on_startup_set_variable_flag
+}

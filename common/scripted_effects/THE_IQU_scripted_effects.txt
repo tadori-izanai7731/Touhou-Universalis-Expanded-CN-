@@ -2365,6 +2365,14 @@ THE_IQU_set_yearly_trade_income_with_hvr_effect = {
 		which = the_iqu_hvr_years_of_income_im_var
 	}
 	#总收入 the_iqu_iqu_years_of_income_im_var
+	set_variable = {
+		which = the_iqu_total_number_years_of_income_im_var
+		which = the_iqu_iqu_years_of_income_im_var
+	}
+	multiply_variable = {
+		which = the_iqu_total_number_years_of_income_im_var
+		value = 5
+	}
 }
 THE_IQU_on_5_years_pluse_effect = {
 	if = {

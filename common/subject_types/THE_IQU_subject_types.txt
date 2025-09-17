@@ -1,41 +1,33 @@
 THE_IQU_the_subject_over_hvr = {
-	copy_from = vassal
+	copy_from = default
 	can_have_great_projects_moved_by_overlord = no
 
 	# Triggers:
 	is_potential_overlord = {
 	}
 
-	sprite = GFX_THE_HMC_human_trade_league_icon
-	diplomacy_overlord_sprite = GFX_THE_HMC_human_trade_league_lead_icon
-	diplomacy_subject_sprite = GFX_THE_HMC_human_trade_league_am_icon
+	sprite = GFX_icon_vassal
+	diplomacy_overlord_sprite = GFX_diplomacy_leadvassal
+	diplomacy_subject_sprite = GFX_diplomacy_amvassal
 
 	# Properties:
 	can_be_annexed = no
-	forms_trade_companies = no
 	can_fight_independence_war = no
 	joins_overlords_wars = yes
-	joins_colonial_wars = no
-	opinion_on_subject_integration = 0 #Determines how much opinion they actually lose when a fellow subject gets integrated.
-	overlord_can_attack = no
-	takes_diplo_slot = no
+	opinion_on_subject_integration = 0
 	base_liberty_desire = -50
-	relative_power_class = 1
-	should_quit_wars_on_activation = yes
-	uses_military_focus = yes
 	overlord_protects_external = yes
-	counts_for_borders = yes
-	counts_as_overlord_holding = yes
-	can_use_claims = no
 	share_rebel_popup = yes
-	can_transfer_in_peace = yes
-	can_set_mil_focus = yes
-	can_send_missionary_to_subject = no
-	can_concentrate_development = yes
-	can_gain_favors = yes
+
+	can_have_subjects_of_other_types = yes
+
+	is_colony_subtype = no
+	is_march = no
+	forms_trade_companies = yes
 	
 	liberty_desire_development_ratio = 0.1
 	trust_on_start = 80
+	can_gain_favors = yes
 	
 	# Subject Interactions:
 	# (immediate)

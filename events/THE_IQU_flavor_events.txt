@@ -6594,7 +6594,9 @@ country_event = {
 		
 	}
 	immediate = {
-		THE_IQU_set_yearly_trade_income_with_hvr_effect = yes
+		hidden_effect = {
+			THE_IQU_set_yearly_trade_income_with_hvr_effect = yes
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.1011.1
@@ -6604,12 +6606,16 @@ country_event = {
 				limit = {
 					check_variable = {
 						which = the_iqu_iqu_years_of_income_im_var
-						value = 5
+						value = 1
 					}
 				 }
-				 add_treasury = 5
+				 add_treasury = 1
 				 HVR = {
-					add_treasury = 5
+					add_treasury = 1
+				 }
+				 change_variable = {
+					which = the_iqu_iqu_years_of_income_im_var
+					value = -1
 				 }
 			}
 		}
