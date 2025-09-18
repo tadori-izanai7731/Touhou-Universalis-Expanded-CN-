@@ -344,7 +344,10 @@ THE_KEI_main_branch_2 = {
 				}
 			}
 			else = {
-				always = yes
+				5045 = {
+					owned_by = ROOT
+					development = 30
+				}
 			}
 		} 
 		
@@ -433,24 +436,8 @@ THE_KEI_main_branch_2 = {
 		} 
 		
 		effect = { 
-			if = {
-				limit = { 
-					OR = {
-						estate_loyalty = {
-							estate = estate_nobles
-							loyalty = 70
-						}
-						estate_loyalty = {
-							estate = estate_church
-							loyalty = 70
-						}
-						estate_loyalty = {
-							estate = estate_burghers
-							loyalty = 70
-						}
-					}
-				}
-				custom_tooltip = THE_KEI_2_5_c_tt1_yes
+			custom_tooltip = THE_KEI_2_5_c_tt1_yes
+			hidden_effect = {
 				if = {
 					limit = {
 						estate_loyalty = {
@@ -487,7 +474,6 @@ THE_KEI_main_branch_2 = {
 					}
 					add_adm_power = 100
 				}
-				###
 				if = {
 					limit = {
 						estate_loyalty = {
@@ -524,7 +510,6 @@ THE_KEI_main_branch_2 = {
 					}
 					add_mil_power = 100
 				}
-				##
 				if = {
 					limit = { 
 						estate_loyalty = {
@@ -562,121 +547,7 @@ THE_KEI_main_branch_2 = {
 					add_dip_power = 100
 				}
 			}
-			else = {
-				custom_tooltip = THE_KEI_2_5_c_tt1_no
-				tooltip = {
-					if = {
-						limit = {
-							estate_loyalty = {
-								estate = estate_church
-								loyalty = 100
-							}
-						}
-						add_adm_power = 400
-					}
-					else_if = {
-						limit = {
-							estate_loyalty = {
-								estate = estate_church
-								loyalty = 90
-							}
-						}
-						add_adm_power = 300
-					}
-					else_if = {
-						limit = {
-							estate_loyalty = {
-								estate = estate_church
-								loyalty = 80
-							}
-						}
-						add_adm_power = 200
-					}
-					else_if = {
-						limit = {
-							estate_loyalty = {
-								estate = estate_church
-								loyalty = 70
-							}
-						}
-						add_adm_power = 100
-					}
-					###
-					if = {
-						limit = {
-							estate_loyalty = {
-								estate = estate_nobles
-								loyalty = 100
-							}
-						}
-						add_mil_power = 400
-					}
-					else_if = {
-						limit = {
-							estate_loyalty = {
-								estate = estate_nobles
-								loyalty = 90
-							}
-						}
-						add_mil_power = 300
-					}
-					else_if = {
-						limit = {
-							estate_loyalty = {
-								estate = estate_nobles
-								loyalty = 80
-							}
-						}
-						add_mil_power = 200
-					}
-					else_if = {
-						limit = {
-							estate_loyalty = {
-								estate = estate_nobles
-								loyalty = 70
-							}
-						}
-						add_mil_power = 100
-					}
-					##
-					if = {
-						limit = { 
-							estate_loyalty = {
-								estate = estate_burghers
-								loyalty = 100
-							}
-						}
-						add_dip_power = 400
-					}
-					else_if = {
-						limit = { 
-							estate_loyalty = {
-								estate = estate_burghers
-								loyalty = 90
-							}
-						}
-						add_dip_power = 300
-					}
-					else_if = {
-						limit = { 
-							estate_loyalty = {
-								estate = estate_burghers
-								loyalty = 80
-							}
-						}
-						add_dip_power = 200
-					}
-					else_if = {
-						limit = { 
-							estate_loyalty = {
-								estate = estate_burghers
-								loyalty = 70
-							}
-						}
-						add_dip_power = 100
-					}
-				}
-			}
+			custom_tooltip = empty_line_tt
 			add_government_reform = THE_KEI_dedicate_ourselves_government_reform
 		} 
 	}
@@ -705,17 +576,13 @@ THE_KEI_main_branch_2 = {
 				}
 				num_of_owned_provinces_with = {
 					value = 30
-					has_building = cathedral
+					has_tax_building_trigger = yes
 				}
-				reform_level = 3
 			}
-			else = {
-				always = yes
-			}
+			reform_level = 3
 		} 
 		
 		effect = { 
-			custom_tooltip = THE_KEI_2_6_c_tt112
 			add_government_reform = THE_KEI_save_the_masses_government_reform
 			hidden_effect = {
 				change_variable = {
@@ -739,8 +606,8 @@ THE_KEI_main_branch_2 = {
 						value = 1
 					}
 				}
-				
 			}
+			custom_tooltip = THE_KEI_2_6_c_tt112
 		} 
 	}
 	
@@ -1100,12 +967,12 @@ THE_KEI_main_branch_3 = {
 		
 		effect = { 
 			custom_tooltip = THE_KEI_3_9_c_tt1
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_KEI_3_9_c_tt2_yes
 			if = {
 				limit = { 
 					monthly_income = 60
 				}
-				custom_tooltip = THE_KEI_3_9_c_tt2_yes
-				custom_tooltip = THE_KEI_3_9_c_tt3
 				hidden_effect = {
 					export_to_variable = {
 						which = the_kei_mission_3_9_benifit_to_power
@@ -1135,44 +1002,6 @@ THE_KEI_main_branch_3 = {
 							mechanic_type = THE_KEI_lonely_creation_mechanic
 							power_type = THE_KEI_lonely_creation_mechanic_power
 							value = 5
-						}
-					}
-				}
-			}
-			else = {
-				custom_tooltip = THE_KEI_3_9_c_tt2_no
-				custom_tooltip = THE_KEI_3_9_c_tt3
-				tooltip = {
-					hidden_effect = {
-						export_to_variable = {
-							which = the_kei_mission_3_9_benifit_to_power
-							value = monthly_income
-							who = ROOT
-						}
-						change_variable = {
-							which = the_kei_mission_3_9_benifit_to_power
-							value = -50
-						}
-						divide_variable = {
-							which = the_kei_mission_3_9_benifit_to_power
-							value = 10
-						}
-						while = {
-							limit = { 
-								check_variable = {
-									which = the_kei_mission_3_9_benifit_to_power
-									value = 1
-								}
-							}
-							change_variable = {
-								which = the_kei_mission_3_9_benifit_to_power
-								value = -1
-							}
-							add_government_power = {
-								mechanic_type = THE_KEI_lonely_creation_mechanic
-								power_type = THE_KEI_lonely_creation_mechanic_power
-								value = 5
-							}
 						}
 					}
 				}
@@ -1282,9 +1111,9 @@ THE_KEI_main_branch_4 = {
 		
 		trigger = { 
 			OR = {
-				has_adm_advisor = yes
-				has_dip_advisor = yes
-				has_mil_advisor = yes
+				THE_has_adm_advisor = yes
+				THE_has_dip_advisor = yes
+				THE_has_mil_advisor = yes
 			}
 			land_maintenance = 0.99
 		} 
@@ -1538,6 +1367,7 @@ THE_KEI_main_branch_4 = {
 			add_adm_power = 100
 			add_dip_power = 100
 			add_mil_power = 100
+			custom_tooltip = empty_line_tt
 			if = {
 				limit = { 
 					num_of_provinces_owned_or_owned_by_subjects_with = {
@@ -1653,6 +1483,7 @@ THE_KEI_main_branch_4 = {
 					}
 				}
 			}
+			custom_tooltip = empty_line_tt
 			if = {
 				limit = { 
 					HKR = {
