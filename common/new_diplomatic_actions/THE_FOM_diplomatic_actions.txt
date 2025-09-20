@@ -1,0 +1,134 @@
+THE_FOM_add_influence_send_gift_diplomatic_actions = {
+	category = th_diplo_action
+	require_acceptance = no
+
+	is_visible = {
+		ai = no
+		OR = {
+			th_is_or_was_tag = { tag = MGT }
+			th_is_or_was_tag = { tag = MRS }
+		}
+		FROM = {
+			has_reform = THE_FOM_Youkai_countries_reform
+		}
+	}
+	is_allowed = {
+		treasury = 15
+		if = {
+			limit = {
+				ROOT = {
+					th_is_or_was_tag = { tag = MRS }
+				}
+			}
+			FROM = {
+				OR = {
+					NOT = {
+						has_country_flag = THE_FOM_youkai_region_had_been_influence_by_MRS_cd_flag
+					}
+					had_country_flag = {
+						flag = THE_FOM_youkai_region_had_been_influence_by_MRS_cd_flag
+						days = 120
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				ROOT = {
+					th_is_or_was_tag = { tag = MGT }
+				}
+			 }
+			 FROM = {
+				OR = {
+					NOT = {
+						has_country_flag = THE_FOM_youkai_region_had_been_influence_by_MGT_cd_flag
+					}
+					had_country_flag = {
+						flag = THE_FOM_youkai_region_had_been_influence_by_MGT_cd_flag
+						days = 120
+					}
+				}
+			}
+		}
+	}
+	on_accept = {
+		add_treasury = -15
+		hidden_effect = {
+			FROM = {
+				country_event = {
+					id = THE_FOM_flavor_events.1000
+				}
+			}
+		}
+	}
+	ai_will_do = {
+		always = yes
+	}
+}
+THE_FOM_add_influence_send_manpower_diplomatic_actions = {
+	category = th_diplo_action
+	require_acceptance = no
+
+	is_visible = {
+		OR = {
+			th_is_or_was_tag = { tag = MGT }
+			th_is_or_was_tag = { tag = MRS }
+		}
+		FROM = {
+			has_reform = THE_FOM_Youkai_countries_reform
+		}
+	}
+	is_allowed = {
+		manpower = 2
+		if = {
+			limit = {
+				ROOT = {
+					th_is_or_was_tag = { tag = MRS }
+				}
+			}
+			FROM = {
+				OR = {
+					NOT = {
+						has_country_flag = THE_FOM_youkai_region_had_been_influence_by_MRS_cd_flag
+					}
+					had_country_flag = {
+						flag = THE_FOM_youkai_region_had_been_influence_by_MRS_cd_flag
+						days = 120
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				ROOT = {
+					th_is_or_was_tag = { tag = MGT }
+				}
+			 }
+			 FROM = {
+				OR = {
+					NOT = {
+						has_country_flag = THE_FOM_youkai_region_had_been_influence_by_MGT_cd_flag
+					}
+					had_country_flag = {
+						flag = THE_FOM_youkai_region_had_been_influence_by_MGT_cd_flag
+						days = 120
+					}
+				}
+			}
+		}
+	}
+	on_accept = {
+		add_manpower = -2
+		hidden_effect = {
+			FROM = {
+				country_event = {
+					id = THE_FOM_flavor_events.1000
+				}
+			}
+		}
+	}
+	ai_will_do = {
+		always = yes
+	}
+}
+

@@ -1,0 +1,28 @@
+#1rKNNxT›t™l
+THE_FOM_alice_marriage_with_marisa_effect = {
+	create_union = MRS
+	define_consort = {
+		name = "T›t™l"
+		dynasty = "þ–è–"
+		culture = Magician
+		adm = 4
+		dip = 3
+		mil = 6
+		female = yes
+	}
+	add_queen_personality = immortal_personality
+}
+#T›t™lx1rKNN
+THE_FOM_marisa_marriage_with_alice_effect = {
+	create_union = MGT
+	define_consort = {
+		name = "1rKNN"
+		dynasty = "›s<hyrmO·V"
+		culture = Magician
+		adm = 5
+		dip = 4
+		mil = 5
+		female = yes
+	}
+	add_queen_personality = immortal_personality
+}

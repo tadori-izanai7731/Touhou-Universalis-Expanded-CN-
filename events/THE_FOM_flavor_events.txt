@@ -3,17 +3,777 @@ namespace = THE_FOM_flavor_events
 
 country_event = {
 	id = THE_FOM_flavor_events.1
-	title = THE_FOM_flavor_events.t
-	desc = THE_FOM_flavor_events.desc
+	title = THE_FOM_flavor_events.1.t
+	desc = THE_FOM_flavor_events.1.desc
 
 	is_triggered_only = yes
-
+	trigger = {
+		
+	}
 	immediate = {
 		
 	}
 	option = {
 		name = THE_FOM_flavor_events.1.1
+		add_splendor = 5
+		hidden_effect = {
+			country_event = {
+				id = THE_FOM_flavor_events.2
+				days = 30
+			}
+		}
+	}
+}
+#初
+country_event = {
+	id = THE_FOM_flavor_events.2
+	title = THE_FOM_flavor_events.2.t
+	desc = THE_FOM_flavor_events.2.desc
 
+	is_triggered_only = yes
+	trigger = {
 		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_FOM_flavor_events.2.1
+		custom_tooltip = THE_FOM_flavor_events_2_c_tt1
+		hidden_effect = {
+			set_global_flag = THE_FOM_disaster_first_start_flag
+		}
+	}
+}
+###灾难事件
+#开始
+country_event = {
+	id = THE_FOM_flavor_events.3
+	title = THE_FOM_flavor_events.3.t
+	desc = THE_FOM_flavor_events.3.desc
+
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_FOM_flavor_events.3.1
+		custom_tooltip = THE_FOM_flavor_events_3_c_tt1
+	}
+}
+#落幕
+country_event = {
+	id = THE_FOM_flavor_events.4
+	title = THE_FOM_flavor_events.4.t
+	desc = THE_FOM_flavor_events.4.desc
+
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					th_is_or_was_tag = { tag = MRS }
+				 }
+				 clr_global_flag = THE_FOM_disaster_first_start_flag
+			}
+		}
+	}
+	option = {
+		name = THE_FOM_flavor_events.4.1
+		hidden_effect = {
+			if = {
+				limit = {
+					th_is_or_was_tag = { tag = MRS }
+				 }
+				 set_global_flag = THE_FOM_disaster_second_start_flag
+			}
+		}
+	}
+}
+#暗淡的星光
+country_event = {
+	id = THE_FOM_flavor_events.5
+	title = THE_FOM_flavor_events.5.t
+	desc = THE_FOM_flavor_events.5.desc
+
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_FOM_flavor_events.5.1
+		hidden_effect = {
+			country_event = {
+				id = THE_FOM_flavor_events.6
+				days = 1
+			}
+		}
+	}
+}
+#渴
+country_event = {
+	id = THE_FOM_flavor_events.6
+	title = THE_FOM_flavor_events.6.t
+	desc = THE_FOM_flavor_events.6.desc
+
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_FOM_flavor_events.6.1
+		custom_tooltip = THE_FOM_flavor_events_6_c_tt1
+		hidden_effect = {
+			country_event = {
+				id = THE_FOM_flavor_events.7
+				days = 1
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = THE_FOM_flavor_events.6.2
+		custom_tooltip = THE_FOM_flavor_events_6_c_tt2
+		hidden_effect = {
+			country_event = {
+				id = THE_FOM_flavor_events.8
+				days = 1
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+#站在面前的-人偶使
+country_event = {
+	id = THE_FOM_flavor_events.7
+	title = THE_FOM_flavor_events.7.t
+	desc = THE_FOM_flavor_events.7.desc
+
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_FOM_flavor_events.7.1
+		custom_tooltip = THE_FOM_flavor_events_7_c_tt1
+		hidden_effect = { set_country_flag = THE_MRS_check_mgt_minor_branch_flag } 
+		complete_mission = THE_MRS_mission_3_2
+		swap_non_generic_missions = yes
+		add_adm_power = 25
+		add_dip_power = 25
+		add_mil_power = 25
+	}
+}
+
+#站在面前的-巫女
+country_event = {
+	id = THE_FOM_flavor_events.8
+	title = THE_FOM_flavor_events.8.t
+	desc = THE_FOM_flavor_events.8.desc
+
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_FOM_flavor_events.8.1
+	}
+}
+
+#叛乱事件
+country_event = {
+	id = THE_FOM_flavor_events.9
+	title = THE_FOM_flavor_events.9.t
+	desc = THE_FOM_flavor_events.9.desc
+
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_FOM_flavor_events.9.1
+		add_prestige = 5
+		add_treasury = 20
+		random_owned_province = {
+			spawn_rebels = {
+				type = leadered_peasant_rebels
+				size = 0.5
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = THE_FOM_flavor_events.9.2
+		trigger = {
+			OR = {
+				tag = ENK
+				tag = MST
+				tag = WRG
+			}
+		}
+		add_prestige = -1
+		add_adm_power = -10
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+country_event = {
+	id = THE_FOM_flavor_events.10
+	title = THE_FOM_flavor_events.10.t
+	desc = THE_FOM_flavor_events.10.desc
+
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_FOM_flavor_events.10.1
+		add_prestige = 5
+		add_treasury = 20
+		random_owned_province = {
+			spawn_rebels = {
+				type = leadered_peasant_rebels
+				size = 0.5
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = THE_FOM_flavor_events.10.2
+		add_prestige = -2
+		add_mil_power = -10
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+country_event = {
+	id = THE_FOM_flavor_events.11
+	title = THE_FOM_flavor_events.11.t
+	desc = THE_FOM_flavor_events.11.desc
+
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_FOM_flavor_events.11.1
+		add_prestige = 10
+		add_treasury = 15
+		random_owned_province = {
+			spawn_rebels = {
+				type = leadered_peasant_rebels
+				size = 0.5
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = {
+	id = THE_FOM_flavor_events.12
+	title = THE_FOM_flavor_events.12.t
+	desc = THE_FOM_flavor_events.12.desc
+
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_FOM_flavor_events.12.1
+		add_prestige = 10
+		add_treasury = 15
+		random_owned_province = {
+			spawn_rebels = {
+				type = leadered_peasant_rebels
+				size = 0.5
+			}
+		}
+	}
+	option = {
+		name = THE_FOM_flavor_events.12.2
+		add_prestige = -5
+		add_treasury = -1
+		random_owned_province = {
+			add_local_autonomy = 15
+		}
+	}
+}
+
+###森林的命运 隐藏
+country_event = {
+	id = THE_FOM_flavor_events.13
+	title = THE_FOM_flavor_events.13.t
+	desc = THE_FOM_flavor_events.13.desc
+
+	is_triggered_only = yes
+	hidden = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_FOM_flavor_events.13.1
+		if = {
+			limit = { 
+				th_is_or_was_tag = { tag = MRS }
+			}
+			ENK = {
+				country_event = { id = THE_FOM_flavor_events.14 days = 5 }
+			}
+			MST = {
+				country_event = { id = THE_FOM_flavor_events.14 days = 5 }
+			}
+			WRG = {
+				country_event = { id = THE_FOM_flavor_events.14 days = 5 }
+			}
+			MGT = {
+				country_event = { id = THE_FOM_flavor_events.15 days = 8 }
+			}
+		}
+	}
+}
+#森林的命运 妖怪
+country_event = {
+	id = THE_FOM_flavor_events.14
+	title = THE_FOM_flavor_events.14.t
+	desc = THE_FOM_flavor_events.14.desc
+	major = yes
+	major_trigger = {
+		OR = {
+			tag = MGT
+			tag = MRS
+			tag = ENK
+			tag = MST
+			tag = WRG
+			was_tag = MGT
+			was_tag = MRS
+		}
+	}
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_FOM_flavor_events.14.1
+		hidden_effect = {
+			set_country_flag = THE_FOM_youkai_region_desire_for_liberate
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						check_variable = {
+							which = the_fom_forest_influence_is_marisa_var
+							which = the_fom_forest_influence_is_alice_var
+						}
+						check_variable = {
+							which = the_fom_forest_influence_is_marisa_var
+							which = the_fom_forest_influence_is_our_var
+						}
+					}
+					AND = {
+						check_variable = {
+							which = the_fom_forest_influence_is_alice_var
+							which = the_fom_forest_influence_is_marisa_var
+						}
+						check_variable = {
+							which = the_fom_forest_influence_is_alice_var
+							which = the_fom_forest_influence_is_our_var
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = THE_FOM_flavor_events.14.2
+		hidden_effect = {
+			set_country_flag = THE_FOM_youkai_region_desire_for_marisa
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						check_variable = {
+							which = the_fom_forest_influence_is_alice_var
+							which = the_fom_forest_influence_is_marisa_var
+						}
+						check_variable = {
+							which = the_fom_forest_influence_is_alice_var
+							which = the_fom_forest_influence_is_our_var
+						}
+					}
+					AND = {
+						check_variable = {
+							which = the_fom_forest_influence_is_our_var
+							which = the_fom_forest_influence_is_marisa_var
+						}
+						check_variable = {
+							which = the_fom_forest_influence_is_our_var
+							which = the_fom_forest_influence_is_alice_var
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = THE_FOM_flavor_events.14.3
+		hidden_effect = {
+			set_country_flag = THE_FOM_youkai_region_desire_for_alice
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						check_variable = {
+							which = the_fom_forest_influence_is_marisa_var
+							which = the_fom_forest_influence_is_alice_var
+						}
+						check_variable = {
+							which = the_fom_forest_influence_is_marisa_var
+							which = the_fom_forest_influence_is_our_var
+						}
+					}
+					AND = {
+						check_variable = {
+							which = the_fom_forest_influence_is_our_var
+							which = the_fom_forest_influence_is_marisa_var
+						}
+						check_variable = {
+							which = the_fom_forest_influence_is_our_var
+							which = the_fom_forest_influence_is_alice_var
+						}
+					}
+				}
+			}
+		}
+	}
+}
+#森林的命运 爱丽丝
+country_event = {
+	id = THE_FOM_flavor_events.15
+	title = THE_FOM_flavor_events.15.t
+	desc = THE_FOM_flavor_events.15.desc
+	major = yes
+	major_trigger = {
+		OR = {
+			tag = MGT
+			tag = MRS
+			tag = ENK
+			tag = MST
+			tag = WRG
+			was_tag = MGT
+			was_tag = MRS
+		}
+	}
+
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_FOM_flavor_events.15.1
+		custom_tooltip = THE_FOM_flavor_events_15_c_tt1
+		hidden_effect = {
+			MRS = {
+				country_event = {
+					id = THE_FOM_flavor_events.16
+					days = 2
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				OR = {
+					AND = { 
+						ENK = { has_country_flag = THE_FOM_youkai_region_desire_for_alice }
+						MST = { has_country_flag = THE_FOM_youkai_region_desire_for_alice }
+					}
+					AND = { 
+						ENK = { has_country_flag = THE_FOM_youkai_region_desire_for_alice }
+						WRG = { has_country_flag = THE_FOM_youkai_region_desire_for_alice }
+					}
+					AND = { 
+						MST = { has_country_flag = THE_FOM_youkai_region_desire_for_alice }
+						WRG = { has_country_flag = THE_FOM_youkai_region_desire_for_alice }
+					}
+					AND = {
+						ENK = { has_country_flag = THE_FOM_youkai_region_desire_for_alice }
+						MST = { has_country_flag = THE_FOM_youkai_region_desire_for_alice }
+						WRG = { has_country_flag = THE_FOM_youkai_region_desire_for_alice }
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = THE_FOM_flavor_events.15.2
+		custom_tooltip = THE_FOM_flavor_events_15_c_tt2
+		custom_tooltip = empty_line_tt
+		custom_tooltip = THE_FOM_flavor_events_15_c_tt3
+		THE_FOM_MGT_care_who_influence_by_her_effects = yes
+		trigger = {
+			
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						AND = { 
+							ENK = { has_country_flag = THE_FOM_youkai_region_desire_for_alice }
+							MST = { has_country_flag = THE_FOM_youkai_region_desire_for_alice }
+						}
+						AND = { 
+							ENK = { has_country_flag = THE_FOM_youkai_region_desire_for_alice }
+							WRG = { has_country_flag = THE_FOM_youkai_region_desire_for_alice }
+						}
+						AND = { 
+							MST = { has_country_flag = THE_FOM_youkai_region_desire_for_alice }
+							WRG = { has_country_flag = THE_FOM_youkai_region_desire_for_alice }
+						}
+						AND = {
+							ENK = { has_country_flag = THE_FOM_youkai_region_desire_for_alice }
+							MST = { has_country_flag = THE_FOM_youkai_region_desire_for_alice }
+							WRG = { has_country_flag = THE_FOM_youkai_region_desire_for_alice }
+						}
+					}
+				}
+			}
+		}
+	}
+}
+#森林的见证
+country_event = {
+	id = THE_FOM_flavor_events.16
+	title = THE_FOM_flavor_events.16.t
+	desc = THE_FOM_flavor_events.16.desc
+	major = yes
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_FOM_flavor_events.16.1
+		THE_FOM_marisa_marriage_with_alice_effect = yes 
+	}
+}
+#爱丽丝请求
+country_event = {
+	id = THE_FOM_flavor_events.17
+	title = THE_FOM_flavor_events.17.t
+	desc = THE_FOM_flavor_events.17.desc
+	major = yes
+	major_trigger = {
+		th_is_or_was_tag = { tag = MGT }
+	}
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_FOM_flavor_events.17.1
+		hidden_effect = {
+			MRS = {
+				every_subject_country = {
+					limit = {
+						has_reform = THE_FOM_Youkai_countries_reform
+					}
+					grant_independence = yes
+					MGT = {
+						create_subject = {
+							subject_type = THE_FOM_youkai_territory_of_forest
+							subject = PREV
+						}
+					}
+				}
+			}
+		}
+		THE_FOM_alice_marriage_with_marisa_effect = yes
+	}
+	option = {
+		name = THE_FOM_flavor_events.17.2
+	}
+}
+
+###森林的命运 幕起
+country_event = {
+	id = THE_FOM_flavor_events.18
+	title = THE_FOM_flavor_events.18.t
+	desc = THE_FOM_flavor_events.18.desc
+	major = yes
+	major_trigger = {
+		is_subject_of = MRS
+		OR = {
+			tag = ENK
+			tag = MST
+			tag = WRG
+		}
+	}
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_FOM_flavor_events.18.1
+		custom_tooltip = THE_FOM_flavor_events_18_c_tt1
+		custom_tooltip = empty_line_tt
+		THE_FOM_care_who_desire_for_liberty_effects = yes
+		random_subject_country = {
+			limit = {
+				has_country_flag = THE_FOM_youkai_region_desire_for_liberate
+			}
+			declare_war_with_cb = {
+				who = MRS
+				casus_belli = cb_annex
+			}
+			add_treasury = 100
+			add_manpower = 20
+			capital_scope = {
+				PREV = { infantry = PREV }
+				PREV = { infantry = PREV }
+				PREV = { infantry = PREV }
+			}
+			hidden_effect = {
+				set_country_flag = THE_FOM_desire_liberty_youkai_enemy_leader_flag
+			}
+			every_country = {
+				limit = {
+					NOT = {
+						has_country_flag = THE_FOM_desire_liberty_youkai_enemy_leader_flag
+					}
+					has_country_flag = THE_FOM_youkai_region_desire_for_liberate
+				}
+				join_all_offensive_wars_of = PREV
+				add_treasury = 100
+				add_manpower = 20
+				capital_scope = {
+					PREV = { infantry = PREV }
+					PREV = { infantry = PREV }
+					PREV = { infantry = PREV }
+				}
+			}
+		}
+	}
+}
+
+
+#######################
+##other event
+#######################
+
+country_event = {
+	id = THE_FOM_flavor_events.1000
+	title = THE_FOM_flavor_events.1000.t
+	desc = THE_FOM_flavor_events.1000.desc
+
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_FOM_flavor_events.1000.1
+		custom_tooltip = THE_FOM_event_1000_check_var_tooltip
+		if = {
+			limit = {
+				FROM = {
+					th_is_or_was_tag = { tag = MRS }
+				}
+			}
+			change_variable = {
+				which = the_fom_forest_influence_is_marisa_var
+				value = 5
+			}
+			hidden_effect = {
+				clr_country_flag = THE_FOM_youkai_region_had_been_influence_by_MRS_cd_flag
+				set_country_flag = THE_FOM_youkai_region_had_been_influence_by_MRS_cd_flag
+			}
+		}
+		else_if = {
+			limit = {
+				FROM = {
+					th_is_or_was_tag = { tag = MGT }
+				}
+			 }
+			 change_variable = {
+				which = the_fom_forest_influence_is_alice_var
+				value = 5
+			}
+			hidden_effect = {
+				clr_country_flag = THE_FOM_youkai_region_had_been_influence_by_MGT_cd_flag
+				set_country_flag = THE_FOM_youkai_region_had_been_influence_by_MGT_cd_flag
+			}
+		}
 	}
 }

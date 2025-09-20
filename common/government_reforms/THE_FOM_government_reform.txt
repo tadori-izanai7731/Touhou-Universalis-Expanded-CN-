@@ -12,7 +12,7 @@ THE_FOM_Youkai_countries_reform = {
 		}
 	}
 	valid_for_new_country = no
-	valid_for_nation_designer = yes
+	valid_for_nation_designer = no
 	nation_designer_cost = 40
 	modifiers = {
 		governing_capacity = 50
@@ -21,7 +21,7 @@ THE_FOM_Youkai_countries_reform = {
 		land_forcelimit = 5
 	}
 }
-#夜辉流光
+#星色夜空
 THE_MRS_magic_and_meteor_reform = {
 	lock_level_when_selected = yes
 	icon = "THE_MRS_reform_1_level"

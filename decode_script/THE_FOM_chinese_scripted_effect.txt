@@ -1,0 +1,28 @@
+#爱丽丝x魔理沙
+THE_FOM_alice_marriage_with_marisa_effect = {
+	create_union = MRS
+	define_consort = {
+		name = "魔理沙"
+		dynasty = "雾雨"
+		culture = Magician
+		adm = 4
+		dip = 3
+		mil = 6
+		female = yes
+	}
+	add_queen_personality = immortal_personality
+}
+#魔理沙x爱丽丝
+THE_FOM_marisa_marriage_with_alice_effect = {
+	create_union = MGT
+	define_consort = {
+		name = "爱丽丝"
+		dynasty = "玛格特洛依德"
+		culture = Magician
+		adm = 5
+		dip = 4
+		mil = 5
+		female = yes
+	}
+	add_queen_personality = immortal_personality
+}

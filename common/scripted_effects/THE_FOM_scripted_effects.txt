@@ -8,13 +8,220 @@ THE_FOM_on_startup_scripted_effects = {
 			NOT = { has_country_flag = THE_FOM_on_startup_set_variable_flag }
 		}
 		country_event = {
-			id = randomeventsstapehordes.25
+			id = THE_FOM_flavor_events.1
+		}
+		#初始变量
+		ENK = {
+			THE_FOM_on_start_random_list_set_influence_effects = {
+				marisa = 0
+				alice = 0
+				us = 10
+				other = 0
+			}
+		}
+		#
+		MST = {
+			THE_FOM_on_start_random_list_set_influence_effects = {
+				marisa = 10
+				alice = 15
+				us = 10
+				other = 0
+			}
+		}
+		#
+		WRG = {
+			THE_FOM_on_start_random_list_set_influence_effects = {
+				marisa = 10
+				alice = 10
+				us = 20
+				other = 5
+			}
 		}
 	}
-
-
-
-
-
+	if = {
+		limit = {
+			OR = {
+				tag = MRS
+				tag = MGT
+				tag = ENK
+				tag = MST
+				tag = WRG
+			}
+		}
+		set_variable = {
+			which = the_fom_check_won_rebel_im_var
+			value = 0
+		}
+	}
 	set_country_flag = THE_FOM_on_startup_set_variable_flag
+}
+
+THE_FOM_on_start_random_list_set_influence_effects = {
+	random_list = {
+		$marisa$ = {
+			set_variable = { which = the_fom_forest_influence_is_marisa_var value = 60 }
+			set_variable = { which = the_fom_forest_influence_is_alice_var value = 30 }
+			set_variable = { which = the_fom_forest_influence_is_our_var value = 30 }
+		}
+		$alice$ = {
+			set_variable = { which = the_fom_forest_influence_is_marisa_var value = 30 }
+			set_variable = { which = the_fom_forest_influence_is_alice_var value = 30 }
+			set_variable = { which = the_fom_forest_influence_is_our_var value = 60 }
+		}
+		$us$ = {
+			set_variable = { which = the_fom_forest_influence_is_marisa_var value = 30 }
+			set_variable = { which = the_fom_forest_influence_is_alice_var value = 60 }
+			set_variable = { which = the_fom_forest_influence_is_our_var value = 30 }
+		}
+		$other$ = {
+			set_variable = { which = the_fom_forest_influence_is_marisa_var value = 30 }
+			set_variable = { which = the_fom_forest_influence_is_alice_var value = 30 }
+			set_variable = { which = the_fom_forest_influence_is_our_var value = 30 }
+		}
+	}
+}
+
+THE_FOM_won_rebel_im_var_effects = {
+	if = {
+		limit = {
+			unit_owner = {
+				th_is_or_was_tag = {
+					tag = REB
+				}
+			}
+			enemy_unit = {
+				unit_owner = {
+					OR = {
+						tag = MRS
+						tag = MGT
+						tag = MST
+						tag = WRG
+						tag = ENK
+						was_tag = MRS
+						was_tag = MGT
+					}
+				}
+			}
+		}
+		enemy_unit = {
+			unit_owner = {
+				change_variable = {
+					which = the_fom_check_won_rebel_im_var
+					value = 1
+				}
+			}
+		}
+	}
+	if = {
+		limit = { 
+			enemy_unit = {
+				unit_owner = {
+					tag = MRS
+					check_variable = {
+						which = the_fom_check_won_rebel_im_var
+						value = 2
+					}
+					NOT = {
+						check_variable = {
+							which = the_fom_check_won_rebel_im_var
+							value = 3
+						}
+					}
+				}
+			}
+		}
+		enemy_unit = {
+			unit_owner = {
+				country_event = {
+					id = THE_FOM_flavor_events.5
+					days = 1
+				}
+			}
+		}
+	}
+}
+THE_FOM_won_youkai_enemy_leader_effects = {
+	if = {
+		limit = { 
+			OR = {
+				AND = {
+					ROOT = {
+						tag = MRS
+					}
+					FROM = {
+						has_country_flag = THE_FOM_desire_liberty_youkai_enemy_leader_flag
+					}
+				}
+				AND = {
+					FROM = {
+						tag = MRS
+					}
+					ROOT = {
+						has_country_flag = THE_FOM_desire_liberty_youkai_enemy_leader_flag
+					}
+				}
+			}
+			NOT = {
+				has_global_flag = THE_FOM_the_second_disaster_need_ended_flag
+			}
+		}
+		clr_global_flag = THE_FOM_disaster_second_start_flag
+		set_global_flag = THE_FOM_the_second_disaster_need_ended_flag
+	}
+}
+
+#######################
+## OTHER SCRIPT
+########################
+THE_FOM_MGT_care_who_influence_by_her_effects = {
+	if = {
+		limit = {
+			ENK = {
+				has_country_flag = THE_FOM_youkai_region_desire_for_liberate
+			}
+		 }
+		 custom_tooltip = THE_FOM_MGT_care_who_influence_by_her_effects_c_tt1
+	}
+	if = {
+		limit = {
+			MST = {
+				has_country_flag = THE_FOM_youkai_region_desire_for_liberate
+			}
+		 }
+		 custom_tooltip = THE_FOM_MGT_care_who_influence_by_her_effects_c_tt2
+	}
+	if = {
+		limit = {
+			WRG = {
+				has_country_flag = THE_FOM_youkai_region_desire_for_liberate
+			}
+		 }
+		 custom_tooltip = THE_FOM_MGT_care_who_influence_by_her_effects_c_tt3
+	}
+}
+THE_FOM_care_who_desire_for_liberty_effects = {
+	if = {
+		limit = {
+			ENK = {
+				has_country_flag = THE_FOM_youkai_region_desire_for_liberate
+			}
+		 }
+		 custom_tooltip = THE_FOM_care_who_desire_for_liberty_effects_c_tt1
+	}
+	if = {
+		limit = {
+			MST = {
+				has_country_flag = THE_FOM_youkai_region_desire_for_liberate
+			}
+		 }
+		 custom_tooltip = THE_FOM_care_who_desire_for_liberty_effects_c_tt2
+	}
+	if = {
+		limit = {
+			WRG = {
+				has_country_flag = THE_FOM_youkai_region_desire_for_liberate
+			}
+		 }
+		 custom_tooltip = THE_FOM_care_who_desire_for_liberty_effects_c_tt3
+	}
 }

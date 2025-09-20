@@ -172,16 +172,135 @@ l_english:
  THE_FOM_create_FOM_country_decision_desc: ""
  THE_FOM_create_FOM_country_decision_c_tt1: "继承我们所有的§O森林领国§!"
  THE_FOM_create_FOM_country_decision_c_tt2: "获得新的§M理念§!与§Y任务树§!"
+ THE_FOM_check_all_vassal_decisions_title: "查询各「§M森林领地§!」当前§Y影响力§!"
+ THE_FOM_check_all_vassal_decisions_desc: ""
+ THE_FOM_check_all_vassal_decisions_c_tt1: "当前@ENK§Y[ENK.GetName]§!的§M影响力§!状况为\n= =@MRS§Y[MRS.GetName]§!影响力： §Y[ENK.the_fom_forest_influence_is_marisa_var.GetValue]§!\n= =@MGT§Y[MGT.GetName]§!影响力： §Y[ENK.the_fom_forest_influence_is_alice_var.GetValue]§!\n= =@ENK§Y[ENK.GetName]§!独立影响力： §Y[ENK.the_fom_forest_influence_is_our_var.GetValue]§!"
+ THE_FOM_check_all_vassal_decisions_c_tt2: "当前@MST§Y[MST.GetName]§!的§M影响力§!状况为\n= =@MRS§Y[MRS.GetName]§!影响力： §Y[MST.the_fom_forest_influence_is_marisa_var.GetValue]§!\n= =@MGT§Y[MGT.GetName]§!影响力： §Y[MST.the_fom_forest_influence_is_alice_var.GetValue]§!\n= =@MST§Y[MST.GetName]§!独立影响力： §Y[MST.the_fom_forest_influence_is_our_var.GetValue]§!"
+ THE_FOM_check_all_vassal_decisions_c_tt3: "当前@WRG§Y[WRG.GetName]§!的§M影响力§!状况为\n= =@MRS§Y[MRS.GetName]§!影响力： §Y[WRG.the_fom_forest_influence_is_marisa_var.GetValue]§!\n= =@MGT§Y[MGT.GetName]§!影响力： §Y[WRG.the_fom_forest_influence_is_alice_var.GetValue]§!\n= =@WRG§Y[WRG.GetName]§!独立影响力： §Y[WRG.the_fom_forest_influence_is_our_var.GetValue]§!"
 ###DECISION_END
 
 ###ESTATE
  THE_FOM_burghers_name: "妖怪"
- THE_FOM_noble_name: "魔女会"
+ THE_FOM_noble_name: "魔女"
  THE_FOM_church_name: "巫女"
 ###ESTATE_END
 
 ###EVENT
  THE_FOM_flavor_events.1.t: "晨曦"
- THE_FOM_flavor_events.desc: "魔法森林曾是幻想乡深处最沉默的角落，参天古木的虬枝交错成密不透风的穹顶，晨雾像浸了冷露的薄纱，缠在树干间滞留整日，连日光都只能滤成几缕碎银，落在积了层腐叶的地面。这里只有零星的妖怪与魔法师居住。直到魔理沙作为外来者闯入了森林，她拨开树叶，开辟兽道，将森林打理的井井有条。不少妖怪自发的集结于她的领导之下，称之为「森林之守护」。可没人留意，每当夜幕降临，森林深处的古木主干会泛起点点淡金微光，仿佛在诉说这片森林未被知晓的奥秘。"
- THE_FOM_flavor_events.1.1: "这森林注定不会安宁。"
+ THE_FOM_flavor_events.1.desc: "魔法森林曾是幻想乡深处最沉默的角落，参天古木的虬枝交错成密不透风的穹顶，晨雾像浸了冷露的薄纱，缠在树干间滞留整日，连日光都只能滤成几缕碎银，落在积了层腐叶的地面。这里只有零星的妖怪与魔法师居住。直到魔理沙作为外来者闯入了森林，她拨开树叶，开辟兽道，将森林打理的井井有条。不少妖怪自发的集结于她的领导之下，称之为「森林之守护」。可没人留意，每当夜幕降临，森林深处的古木主干会泛起点点微光，仿佛在诉说这片森林未被知晓的奥秘。"
+ THE_FOM_flavor_events.1.1: "这森林注定不会安宁--"
+ THE_FOM_flavor_events.2.t: "魔女的不满"
+ THE_FOM_flavor_events.2.desc: "不知何时，森林里的部分魔女心底生了芥蒂。她们瞧着魔理沙 —— 不过是个寿命短暂的人类，她们可是亲眼见证过森林百年枯荣的存在，古木的倒伏、新菌的破土都刻在记忆里。凭什么要听一个「普通」的人类指挥？不满的种子便像霉菌一般在暗处滋生。"
+ THE_FOM_flavor_events.2.1: "希望不会有什么意外。"
+ THE_FOM_flavor_events_2_c_tt1: "潜在的危机-§O魔法森林灾难:秘林惊澜§\n\n§Y查看灾难面板获取更多信息。§!"
+ THE_FOM_flavor_events.3.t: "秘林惊澜"
+ THE_FOM_flavor_events.3.desc: "魔女的诡计未等风声落地便付诸行动，「大结界即将破碎」的谣言如同疯狂的藤蔓缠绕着森林，「幻想将随之消逝」恐慌更像浓雾般裹住每只生灵。妖怪们被恐惧攥住，扎堆集结着争夺安全领地，往日平和的林间彻底乱了套。\n\n更反常的是，妖精与妖怪身上都多了股莫名的狂暴之力，妖气更烈。这绝非魔女能办到的手笔，是暗处有其他势力在推波助澜，把混乱往更甚的方向搅。"
+ THE_FOM_flavor_events.3.1: "待风波稍定，再进行调查吧"
+ THE_FOM_flavor_events_3_c_tt1: "§O秘林惊澜已开始§"
+ THE_FOM_flavor_events.4.t: "落幕"
+ THE_FOM_flavor_events.4.desc: "随着最后的一批的妖怪与妖精被魔理沙退治，森林总算重新落了静，只是这份静像刚压下的火苗，谁也不敢说会不会再窜起火星。至少，此刻的安宁，是真的？"
+ THE_FOM_flavor_events.4.1: "终于，这一切纷扰得以告终"
+ THE_FOM_flavor_events.5.t: "黯淡的星光"
+ THE_FOM_flavor_events.5.desc: "魔理沙的脚步早发虚了，几天几夜没合眼，眼底的血丝像爬满的红蛛网，连抓着扫帚的指节都泛着白。她靠在树干上喘口气「这点骚乱，我就能摆平」 —— 可不能输给灵梦啊，那家伙要是知道自己撑不住···\n\n可骚乱像滚雪球似的越滚越大，就在一次与狂乱妖精的战斗中，她胸口却猛地一闷，眼前的树影开始打转。她还想咬牙站直，腿却软得不听使唤，最终重重摔在厚厚的落叶上。"
+ THE_FOM_flavor_events.5.1: "只余下落叶轻轻拂过她汗湿的额发"
+ THE_FOM_flavor_events.6.t: "就这样了吗？"
+ THE_FOM_flavor_events.6.desc: "魔理沙的视线早成了蒙着雾的玻璃，眼前的妖精身影都揉成了晃动的光斑，扫帚坠在落叶里，连抓住的力气都没有。「就这样了吗···死在这」 她昏沉地想，迎接着最后的攻击。\n\n就在这时，“咻” 的一声破风响炸开，妖精被击飞。一漆黑色的身影挡在了魔理沙的面前。"
+ THE_FOM_flavor_events.6.1: "是爱丽丝吗？"
+ THE_FOM_flavor_events.6.2: "是灵梦吧···"
+ THE_FOM_flavor_events_6_c_tt1: "@MRS§Y[MRS.GetName]§!任务树将会偏向@MGT§Y爱丽丝§!"
+ THE_FOM_flavor_events_6_c_tt2: "@MRS§Y[MRS.GetName]§!任务树将会偏向@MGT§Y灵梦§!"
+ THE_FOM_flavor_events.7.t: "是人偶使"
+ THE_FOM_flavor_events.7.desc: "碎金似的阳光透过层层落叶，落在她的金发上，连垂在肩头的黑色缎带都泛着柔和的光，衬得她站在乱叶间愈发优雅。爱丽丝转过身，向瘫在地上的魔理沙伸出手，手却在半空中悄悄顿了顿，才再递过去。嘴上依旧是惯常的语调，却藏着不易察觉的关切：「真拿你没办法，要不是这骚乱已经吵到了我那里，我才不会特意绕过来帮你。」"
+ THE_FOM_flavor_events.7.1: "「哟，原来你是嫌吵才来的啊？」"
+ THE_FOM_flavor_events_7_c_tt1: "§g她没立刻伸手，反而借着爱丽丝的手劲，先把滑到脚边的扫帚勾了回来§!"
+ THE_FOM_flavor_events.8.t: "是巫女"
+ THE_FOM_flavor_events.8.desc: "符咒炸开的金光还没散尽，被灵力震飞的妖精早没了踪影，红白巫女服的下摆沾着几点泥渍，灵梦却依旧单手叉腰站着，带着漫不经心的傲气。她朝瘫在落叶里的魔理沙递出手：「你这家伙，每次都要给我惹麻烦，还能站起来吗？」魔理沙没去接那只手，反而蜷了蜷手指，掌心和灵梦的掌心「啪」地撞在一起，她借着这股劲儿撑着膝盖起身，膝盖发颤却没再晃。"
+ THE_FOM_flavor_events.8.1: "「我可没这么容易输啊，灵梦。」"
+ THE_FOM_flavor_events.9.t: "森林妖怪起义"
+ THE_FOM_flavor_events.9.desc: "狂乱的妖怪们于森林深处发起了对魔法使魔理沙的征讨。它们坚称作为人类的魔理沙无力担任森林的守护者，主张应由它们接掌魔法森林的统治权，以维护森林的秩序与安宁。"
+ THE_FOM_flavor_events.9.1: "适可而止吧"
+ THE_FOM_flavor_events.9.2: "我们又有什么理由帮助人类呢"
+ THE_FOM_flavor_events.10.t: "森林自由权派系"
+ THE_FOM_flavor_events.10.desc: "随着时局细微而复杂的变化，众多妖怪对于现行秩序的忠诚开始出现裂痕，他们揭竿而起，宣布建立自治政权，解散魔法森林，以寻求权力与自由。"
+ THE_FOM_flavor_events.10.1: "可恶！"
+ THE_FOM_flavor_events.10.2: "给她们想要的"
+ THE_FOM_flavor_events.11.t: "狂乱的妖精"
+ THE_FOM_flavor_events.11.desc: "成群狂乱的妖精在一起作乱，往日里还算平和的林间彻底没了规矩，她们的妖气比往日强了三分，实力不容小觑。"
+ THE_FOM_flavor_events.11.1: "将她们退治"
+ THE_FOM_flavor_events.12.t: "最后通牒"
+ THE_FOM_flavor_events.12.desc: "游行的妖怪已经愈演愈烈，甚至对她们的领主和「森林之守护」提出质疑，将粗糙纸质的最后通牒奉上，为自己的森林所求自治。"
+ THE_FOM_flavor_events.12.1: "荒谬"
+ THE_FOM_flavor_events.12.2: "随她们去吧"
+ THE_FOM_flavor_events.14.t: "森林的命运"
+ THE_FOM_flavor_events.14.desc: "尽管「森林之守护」已经平定的骚乱，魔女们的野心也明晃晃地展现出来，请帖递到我们这些领主手里时，封蜡还带着热意，字里行间却满是挑唆，邀我们加入这场叛乱，并且许诺给予我们更多的好处。我们需要在此抉择森林的命运走向。"
+ THE_FOM_flavor_events.14.1: "我们的命运应该紧握在自己手中。"
+ THE_FOM_flavor_events.14.2: "我们仍会与魔理沙站在一起。"
+ THE_FOM_flavor_events.14.3: "还是另一片森林的人偶师更加靠谱。"
+ THE_FOM_flavor_events.15.t: "森林的命运"
+ THE_FOM_flavor_events.15.desc: "尽管魔理沙已经平定的骚乱，魔女们的野心也明晃晃地展现出来，森林的平静只是表象，问题远未得到真正的解决。甚至我们曾经深信不疑的妖怪领主，也对我们的努力失去了信心，信任逐渐瓦解。"
+ THE_FOM_flavor_events.15.1: "至少我还会帮助魔理沙。"
+ THE_FOM_flavor_events_15_c_tt1: "@MRS§Y[MRS.GetName]§!将§M联合统治§!@MGT§Y[MGT.GetName]§!"
+ THE_FOM_flavor_events.15.2: "我不会再让魔理沙涉足危险。"
+ THE_FOM_flavor_events_15_c_tt2: "@MGT§Y[MGT.GetName]§!将§M联合统治§!@MRS§Y[MRS.GetName]§!"
+ THE_FOM_flavor_events_15_c_tt3: "若@MRS§Y[MRS.GetName]§!拒绝提议，@MGT§Y[MGT.GetName]§!将以「强迫联合统治」为战争借口向@MRS§Y[MRS.GetName]§!宣战\n所有支持@MGT§Y[MGT.GetName]§!将会成为我们的§M森林领地§!"
+ THE_FOM_flavor_events.16.t: "森林的见证"
+ THE_FOM_flavor_events.16.desc: "事变前夕，魔理沙坐在魔法店的桌前，指尖划过整理好的情报纸页，身后传来极轻的脚步声 —— 轻得只有她能辨出是谁。她没回头，任由那道身影走近。\n \n爱丽丝停在她身后，没说话，只抬手替她理了理散乱的金发，指腹蹭过发间的草屑。「魔理沙。」爱丽丝的声音很轻，却带着不容错辨的认真，打破了室内的寂静。她绕到魔理沙的身前，握住她的手，黑色的瞳孔印着灯光：「别再勉强自己。我知道你好胜，不服输，可我再也不想看你一个人战斗、一个人担着危险。哪怕前路荆棘丛生，告诉我，你不再孤单，因为我的心，我的力量，都会与你同在。」\n \n魔理沙望着爱丽丝的眼睛，心里像被什么填得满满当当。那句「我能行!」卡在了喉咙里，最终还是咽了回去，她悄悄攥紧了爱丽丝的手。"
+ THE_FOM_flavor_events.16.1: "爱丽丝——谢谢你"
+ THE_FOM_flavor_events.17.t: ""
+ THE_FOM_flavor_events.17.desc: ""
+ THE_FOM_flavor_events.17.1: ""
+ THE_FOM_flavor_events.17.2: ""
+ THE_FOM_flavor_events.18.t: "秘林惊澜-续"
+ THE_FOM_flavor_events.18.desc: ""
+ THE_FOM_flavor_events.18.1: "准备迎战"
+ THE_FOM_flavor_events_18_c_tt1: "所有§O渴望独立§!的「§M森林领地§!」将会向我们宣战"
 ###EVENT_END
+
+###END_EVENT
+ THE_FOM_flavor_events.1000.t: "影响力变化"
+ THE_FOM_flavor_events.1000.desc: "我们刚刚收到了来自§O[From.GetName]§!的资助，或许我们应当重新考量其对我们的影响力。"
+ THE_FOM_flavor_events.1000.1: "了解"
+ THE_FOM_event_1000_check_var_tooltip: "当前§Y[Root.GetName]§!影响力状态\n==@MRS§Y[MRS.GetName]§!影响力： [From.the_fom_forest_influence_is_marisa_var.GetValue]\n==@MGT§Y[MGT.GetName]§!影响力： [From.the_fom_forest_influence_is_alice_var.GetValue]\n==§Y[Root.GetName]§!独立影响力： [From.the_fom_forest_influence_is_our_var.GetValue]"
+###END_EVENT_END
+
+###VARIABLE
+ the_fom_forest_influence_is_marisa_var: "@MRS§Y雾雨之森§!影响力"
+ the_fom_forest_influence_is_alice_var: "@MGT§Y人偶之森§!影响力"
+ the_fom_forest_influence_is_our_var: "§Y己方§!独立影响力"
+###VARIABLE_END
+
+###DIP_ACTION
+ THE_FOM_add_influence_send_gift_diplomatic_actions_title: "为§Y[From.GetName]§!资助金钱"
+ THE_FOM_add_influence_send_gift_diplomatic_actions_tooltip: "当前§Y[From.GetName]§!影响力状态\n==@MRS§Y[MRS.GetName]§!影响力： §Y[From.the_fom_forest_influence_is_marisa_var.GetValue]§!\n==@MGT§Y[MGT.GetName]§!影响力： §Y[From.the_fom_forest_influence_is_alice_var.GetValue]§!\n==§Y己方§!独立影响力： §Y[From.the_fom_forest_influence_is_our_var.GetValue]§!"
+ THE_FOM_add_influence_send_gift_diplomatic_actions_desc: "§Y[Root.GetName]§!对§Y[From.GetName]§!的影响力将改变§Y5§!"
+ THE_FOM_add_influence_send_manpower_diplomatic_actions_title: "为§Y[From.GetName]§!资助人手"
+ THE_FOM_add_influence_send_manpower_diplomatic_actions_tooltip: "当前§Y[From.GetName]§!影响力状态\n==@MRS§Y[MRS.GetName]§!影响力： §Y[From.the_fom_forest_influence_is_marisa_var.GetValue]§!\n==@MGT§Y[MGT.GetName]§!影响力： §Y[From.the_fom_forest_influence_is_alice_var.GetValue]§!\n==§Y己方§!独立影响力： §Y[From.the_fom_forest_influence_is_our_var.GetValue]§!"
+ THE_FOM_add_influence_send_manpower_diplomatic_actions_desc: "§Y[Root.GetName]§!对§Y[From.GetName]§!的影响力将改变§Y5§!"
+###DIP_ACTION_END
+
+###MRS_MISSION_EXTRA
+ THE_MRS_mission_3_1_c_tt1: "累计击败叛军§Y5§!次 （目前：§Y[Root.the_fom_check_won_rebel_im_var.GetValue]）§!"
+ THE_MRS_mission_3_1_c_tt1_yes: "£yes£若我们先行完成任务「§M妖噤林寂§!」"
+ THE_MRS_mission_3_1_c_tt1_no: "£no£若他国先行完成任务「§M妖噤林寂§!」"
+###MRS_MISSION_EXTRA_END
+
+##SCRIPT_EFFECT
+ THE_FOM_MGT_care_who_influence_by_her_effects_c_tt1: "@ENK§Y[ENK.GetName]§!将会支持@MGT§Y[MGT.GetName]§!"
+ THE_FOM_MGT_care_who_influence_by_her_effects_c_tt2: "@MST§Y[MST.GetName]§!将会支持@MGT§Y[MGT.GetName]§!"
+ THE_FOM_MGT_care_who_influence_by_her_effects_c_tt3: "@WRG§Y[WRG.GetName]§!将会支持@MGT§Y[MGT.GetName]§!"
+ THE_FOM_care_who_desire_for_liberty_effects_c_tt1: "@ENK§Y[ENK.GetName]§!将会§O渴求独立§!"
+ THE_FOM_care_who_desire_for_liberty_effects_c_tt2: "@MST§Y[MST.GetName]§!将会§O渴求独立§!"
+ THE_FOM_care_who_desire_for_liberty_effects_c_tt3: "@WRG§Y[WRG.GetName]§!将会§O渴求独立§!"
+##SCRIPT_EFFECT_END
+
+#FLAG
+ THE_FOM_youkai_region_had_been_influence_by_MGT_cd_flag: "当前已被影响"
+ THE_FOM_youkai_region_had_been_influence_by_MRS_cd_flag: "当前已被影响"
+#FLAG_END
+
+##DISASTER
+ THE_FOM_forest_awaken_the_first: "§O秘林惊澜-起§!"
+ THE_FOM_forest_awaken_the_first_c_tt1: "任意国家完成任务「§M妖噤林寂§!」"
+ THE_FOM_forest_awaken_the_second: "§O秘林惊澜-续§!"
+ THE_FOM_forest_awaken_the_second_trigger_flag_c_tt1: "秘林惊澜-续已经结束\n@MRS§Y[MRS.GetName]§!或者@MGT§Y[MGT.GetName]§!击溃§Y独立叛军§!\n或§Y独立叛军§!赢得了§Y战争胜利§!"
+##DISASTER_END
