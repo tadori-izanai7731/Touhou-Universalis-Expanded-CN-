@@ -1780,7 +1780,7 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 		}
 		if = {
 			limit = {
-				any_owned_province = {
+				any_province = {
 					region = cascadia_region
 					has_province_flag = THE_IQU_this_provinces_is_exploring_now
 				}
@@ -1813,7 +1813,7 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 		}
 		else_if = {
 			limit = { 
-				any_owned_province = {
+				any_province = {
 					OR = {
 						region = peru_region
 						region = upper_peru_region
@@ -1850,7 +1850,7 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 		}
 		else_if = {
 			limit = { 
-				any_owned_province = {
+				any_province = {
 					OR = {
 						region = caribbean_sea_region
 						region = southeast_america_region
@@ -1913,7 +1913,7 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 		}
 		else_if = {
 			limit = { 
-				any_owned_province = {
+				any_province = {
 					OR = {
 						region = canada_region
 						region = northeast_america_region
@@ -1976,7 +1976,7 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 		}
 		else_if = {
 			limit = { 
-				any_owned_province = {
+				any_province = {
 					OR = {
 						region = colombia_region
 						region = brazil_region
@@ -2037,7 +2037,7 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 		}
 		else_if = {
 			limit = { 
-				any_owned_province = {
+				any_province = {
 					OR = {
 						region = australia_region
 					}
@@ -2097,7 +2097,7 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 		}
 		else_if = {
 			limit = { 
-				any_owned_province = {
+				any_province = {
 					OR = {
 						region = british_isles_region
 					}
@@ -2132,7 +2132,7 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 		}
 		else_if = {
 			limit = {
-				any_owned_province = {
+				any_province = {
 					NOT = {
 						region = orbital_region
 					}
