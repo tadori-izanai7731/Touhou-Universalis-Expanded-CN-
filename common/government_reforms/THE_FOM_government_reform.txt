@@ -75,24 +75,24 @@ THE_FOM_Dolls_envoy_reform = {
 		THE_FOM_alice_dolls_making_mechanics
 	}
 }
-#星之器皿 魔理沙2级
-THE_FOM_Witch_authority_reform = {
+#系向辰光
+THE_MRS_wish_upon_the_star_reform = {
 	lock_level_when_selected = yes
 	icon = "THE_MRS_reform_2_level"
 	potential = {
-		has_reform = THE_FOM_Magic_envoy_reform
-		has_reform = THE_FOM_Witch_authority_reform
+		OR = {
+			has_reform = THE_MRS_wish_upon_the_star_reform
+			have_had_reform = THE_MRS_wish_upon_the_star_reform
+		}
 	}
 	modifiers = {
-		morale_damage = 0.05
-		all_estate_possible_privileges = -5
-		all_estate_loyalty_equilibrium = -0.20
-		all_estate_influence_modifier = -0.30
-		estate_interaction_cooldown_modifier = -0.20
+		all_estate_possible_privileges = -1
+		all_estate_loyalty_equilibrium = -0.15
+		estate_interaction_cooldown_modifier = -0.25
 		max_absolutism = 5
 	}
 	government_abilities = {
-		THE_FOM_marisa_witch_authority_mechanic
+		THE_MRS_wish_upon_the_star_reform_mechanic
 	}
 }
 #人偶2级
@@ -160,28 +160,5 @@ THE_FOM_Witch_marisa_conquer_and_expand_territories = {
 	}
 	custom_attributes = {
 		THE_FOM_enable_ae_break_through_the_encirclement_network_MRS = yes
-	}
-}
-#虫妖君主制 万蛰千蜚
-THE_WRG_vast_amount_of_night_bug_reform = {
-	lock_level_when_selected = yes
-	icon = "witch_government_reform"
-	potential = {
-		tag = WRG
-	}
-	can_change_primary_culture = no
-	valid_for_new_country = no
-	valid_for_nation_designer = yes
-	rulers_can_be_generals = no
-	nation_designer_cost = 40
-	modifiers = {
-		legitimacy = 1
-		estate_interaction_cooldown_modifier = -0.20
-		global_autonomy = -0.05
-		national_focus_years = -5
-		governing_capacity = 150
-	}
-	government_abilities = {
-		THE_WRG_insect_swarm_mechanic
 	}
 }

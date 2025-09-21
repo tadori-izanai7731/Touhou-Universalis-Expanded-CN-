@@ -70,14 +70,13 @@ country_decisions = {
 	THE_FOM_check_all_vassal_decisions = {
 		color = { 44 174 82 }
 		potential = {
-			ai = no
 			OR = {
 				tag = MRS
 				tag = MGT
 			}
 		}
 		allow = {
-			always = yes
+			ai = no
 		}
 		effect = {
 			custom_tooltip = THE_FOM_check_all_vassal_decisions_c_tt1
@@ -85,6 +84,42 @@ country_decisions = {
 			custom_tooltip = THE_FOM_check_all_vassal_decisions_c_tt2
 			custom_tooltip = empty_line_tt
 			custom_tooltip = THE_FOM_check_all_vassal_decisions_c_tt3
+		}
+	}
+	THE_FOM_check_the_mushroom_decisions = {
+		color = { 44 174 82 }
+		potential = {
+			OR = {
+				tag = MRS
+				was_tag = MRS
+			}
+			has_country_flag = THE_FOM_marisa_has_the_unique_mushroom_flag
+		}
+		allow = {
+			ai = no
+		}
+		effect = {
+			country_event = {
+				id = THE_FOM_flavor_events.21
+			}
+		}
+	}
+	THE_FOM_can_get_back_to_the_forest_decisions = {
+		color = { 44 174 82 }
+		potential = {
+			OR = {
+				tag = MRS
+				was_tag = MRS
+			}
+			has_country_flag = THE_FOM_can_gather_the_unique_mushroom_flag
+		}
+		allow = {
+			ai = no
+		}
+		effect = {
+			country_event = {
+				id = THE_FOM_flavor_events.24
+			}
 		}
 	}
 }

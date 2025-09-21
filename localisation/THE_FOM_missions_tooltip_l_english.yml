@@ -149,6 +149,9 @@
  mechanic_THE_MRS_unlock_steak_book_at_yes: "=T(u0ƒzfN0Y²NLˆ¨R"
  mechanic_THE_MRS_can_lock_cavalry_percentage_mechanic_yes: "8lEN•šRîOck0§O‘šuQÔk‹O§!0:N§Y25§!%ÿsSbìNSàeÕlåNûNUObVVžX R0§O‘šuQÔk‹O§!0"
  THE_MRS_lock_cavalry_percentage_government_power: "egêŽN0§OY‰AmIQ§!0"
+ ability_THE_MRS_can_lock_cavalry_percentage_government_mechanic: "T›ÕlO"
+ THE_MRS_wish_upon_the_star_reform: "û|T°IQ"
+ THE_MRS_wish_upon_the_star_reform_desc: ""
 ###GOVERNMENT_END
 
 ###SUBJECT
@@ -171,12 +174,16 @@
  THE_FOM_create_FOM_country_decision_title: "bËz@FOM§YT›Õlîh—g§!"
  THE_FOM_create_FOM_country_decision_desc: ""
  THE_FOM_create_FOM_country_decision_c_tt1: "çubbìNNb	g„v§Oîh—g†˜ýV§!"
- THE_FOM_create_FOM_country_decision_c_tt2: "·ƒ—V°e„v§MtõV§!N§YûN¡Rh§!"
+ THE_FOM_create_FOM_country_decision_c_tt2: "·ƒ—V°e„v§MtõV§!"
  THE_FOM_check_all_vassal_decisions_title: "ågâ‹T0§Mîh—g†˜0W§!0SVMR§YqVÍT›R§!"
  THE_FOM_check_all_vassal_decisions_desc: ""
  THE_FOM_check_all_vassal_decisions_c_tt1: "SVMR@ENK§Y[ENK.GetName]§!„v§MqVÍT›R§!¶rµQ:N\n= =@MRS§Y[MRS.GetName]§!qVÍT›Rÿ §Y[ENK.the_fom_forest_influence_is_marisa_var.GetValue]§!\n= =@MGT§Y[MGT.GetName]§!qVÍT›Rÿ §Y[ENK.the_fom_forest_influence_is_alice_var.GetValue]§!\n= =@ENK§Y[ENK.GetName]§!ìrËzqVÍT›Rÿ §Y[ENK.the_fom_forest_influence_is_our_var.GetValue]§!"
  THE_FOM_check_all_vassal_decisions_c_tt2: "SVMR@MST§Y[MST.GetName]§!„v§MqVÍT›R§!¶rµQ:N\n= =@MRS§Y[MRS.GetName]§!qVÍT›Rÿ §Y[MST.the_fom_forest_influence_is_marisa_var.GetValue]§!\n= =@MGT§Y[MGT.GetName]§!qVÍT›Rÿ §Y[MST.the_fom_forest_influence_is_alice_var.GetValue]§!\n= =@MST§Y[MST.GetName]§!ìrËzqVÍT›Rÿ §Y[MST.the_fom_forest_influence_is_our_var.GetValue]§!"
  THE_FOM_check_all_vassal_decisions_c_tt3: "SVMR@WRG§Y[WRG.GetName]§!„v§MqVÍT›R§!¶rµQ:N\n= =@MRS§Y[MRS.GetName]§!qVÍT›Rÿ §Y[WRG.the_fom_forest_influence_is_marisa_var.GetValue]§!\n= =@MGT§Y[MGT.GetName]§!qVÍT›Rÿ §Y[WRG.the_fom_forest_influence_is_alice_var.GetValue]§!\n= =@WRG§Y[WRG.GetName]§!ìrËzqVÍT›Rÿ §Y[WRG.the_fom_forest_influence_is_our_var.GetValue]§!"
+ THE_FOM_check_the_mushroom_decisions_title: "ågw0§YNïS8TV§!„v†Çƒ0"
+ THE_FOM_check_the_mushroom_decisions_desc: ""
+ THE_FOM_can_get_back_to_the_forest_decisions_title: "ÔÞV0§Y÷þ–îh—g§!0"
+ THE_FOM_can_get_back_to_the_forest_decisions_desc: ""
 ###DECISION_END
 
 ###ESTATE
@@ -254,6 +261,56 @@
  THE_FOM_flavor_events.18.desc: ""
  THE_FOM_flavor_events.18.1: "ÆQYÎb"
  THE_FOM_flavor_events_18_c_tt1: "Nb	g§O4ngìrËz§!„v0§Mîh—g†˜0W§!0SOTbìN±Rb"
+ THE_FOM_flavor_events.19.t: "îh—gKNðX"
+ THE_FOM_flavor_events.19.desc: "hfIQ¹q®V-NÿT›t™l‚YŽV8^N7h(W—gô•z­hÇ‘Æ–oƒIƒÿ—gô•Y—'Œÿ=U	gyYNK„öS„vÆuŽxðXNÜY–¦uzLp(gN„v|T2U²NÇu00bNšR=f«ˆ±›NæpºN„v–Y*`ìNVúQ‰^É‰†N00Õkßzÿêîh—gqNWY†NåNegÿ–Y*`NT›ÕlO„vµU±V¿O*gþfjPGk0(WN!k†ÇƒNóÃ„v1Yï‹-NÿT›t™lNNaŽzzÿ«ŽSON1uêIN0WÑneQ†NN*N–Øy„vmtz0"
+ THE_FOM_flavor_events.19.1: "8k8kÿkb^`HN1Yup†N0"
+ THE_FOM_flavor_events.20.t: "GYyr„v†Çƒÿ"
+ THE_FOM_flavor_events.20.desc: "ùRŽNÙN*hGY*`„v†ÇƒÿT›t™l¡l	gûNUOpSaŒ0yYê²‹:NêñTòTÏuÁ‰ÇÙîh—g-NNb	g„v†Çƒ†NÿFOÙN*h···žRb>m„vyYSV6qNO>eÇÙ!k:gO0"
+ THE_FOM_flavor_events.20.1: "Ø=f&^»Sî•î•8l3tÿyYNšRO	gNb†Nã‰0"
+ THE_FOM_flavor_events.21.t: "GYyr„v†Çƒ"
+ THE_FOM_flavor_events.21.desc: "ƒROçeY—Y—0Who`ŽNLhb—KNNÿ†SÏupeåe„v¢c0tNNÈaxvzÿ1rKNNNT›t™lÍN*gýwíc:yvQ^yØy„v,g(0"
+ THE_FOM_flavor_events.21.1: "&^(W«ŽN"
+ THE_FOM_flavor_events_21_c_tt1: "§gKNTQMRŽV±Grîh—g'T§!"
+ THE_FOM_flavor_events.21.2: "»yV"
+ THE_FOM_flavor_events_21_c_tt2: "§gb¸‹ÐgYïSåN>mN(u:W§!"
+ THE_FOM_flavor_events.22.t: "Ž÷‹ýQÿ"
+ THE_FOM_flavor_events.22.desc: "T›t™lN1rKNNSGYyr„v†Çƒ&^Ùu8l3tÿ8l3t4VÒ‰YVNw®Vrÿ±^yÅ`ÿNiOêS	gyYåwSfÙ†Çƒ„veg†S0W¾a„v=fÿyY„vÞVYtS=f:0bmNNåwS0ÿØÐc:ybìNÿå‚ÞV0RKNMR„v±Grîh—gÿb¸‹ýw	g°e„vÑS°s0"
+ THE_FOM_flavor_events.22.1: "*gåw„v’Qi–ïS=fg©‹ºNg…V„vÿ"
+ THE_FOM_flavor_events.23.t: "þ–-—NFƒØh"
+ THE_FOM_flavor_events.23.desc: "T›t™lSSŽNMRŽV±GrGYV†Çƒ—g„vï0ïS±GräSwKN0Wÿ<O=fNYKNô•«ˆKˆN†Nu‹TÿúQMRNb*g	g„v^yØyNá‹2Œ0îh—geQãSòT«ˆƒÆR„vFƒØhN‰k‰kSOOÿhTmÈSŒwSmÍ‘þ–-—ÿ©‹T›t™lN1rKNNÞ¹eTý¾–¨00Ùîh—g···NOw„v=fÿ=fIm„v'Tÿ0T›t™lJSV©srS0"
+ THE_FOM_flavor_events.23.1: "âe6qÙ7hÿï•Û»Sww'Tÿ"
+ THE_FOM_flavor_events.24.t: "÷þ–îh—g"
+ THE_FOM_flavor_events.24.desc: "T›t™lÅzÇBSBShNÿµb¾†ÇƒNu„v—g0W-N.Yzz0W0zz0WÛVhT«ˆh(gN†Çƒ't't¯sÕuÿQàeïÿ=U	g-N.Y„vówØvY—Y—+OËzÿÛVhTceK„„vÎ‘±‚¹pvQô•ÿQàeÖNir01rKNNpTzz0W-N.YÿêSÁ‰ówØvNL•IRNwäSw‡eWRÿ<Ob‹Nwñmƒ=T:yÿ04xÃVupKNúV•ÿŠ¾|^yKNjñr00âe6qQàeñmeQ„vïSýwÿŒNºNêS‹Y	ébÔÞV···"
+ THE_FOM_flavor_events.24.1: "TNGYyr„v†Çƒ"
+ THE_FOM_flavor_events.24.2: "GY*`···"
+ THE_FOM_flavor_events_24_c_tt1: "zTïSåNÇ§Y³Q®‹§!ÔÞV"
+ THE_FOM_flavor_events.25.t: "÷þ–îh—g"
+ THE_FOM_flavor_events.25.desc: "T›t™lÙz(W4l`lck-N.Yÿ3–IQzÇh—g™–ôvôvmK„ÿgq®N`lÃVów‘x0‘xNIRWR(W3–IQN<hYnpfÿ±‚í‹‰É‹ÿ–IQ4–AmlÿcVöeIQ0"
+ THE_FOM_flavor_events.25.1: "TMR"
+ THE_FOM_flavor_events.25.2: "TóS"
+ THE_FOM_flavor_events.25.3: "TT"
+ THE_FOM_flavor_events.25.4: "TæT"
+ THE_FOM_flavor_events.29.t: "îh—g„vwŒš"
+ THE_FOM_flavor_events.29.desc: "T›t™lzÇLp(gNeg0RmŸzãSÿNúQNb™eÿmãSòT«ˆá‹V„vFƒØhNgag%N%NžRžRSOO0ïSyYN`—ÑÿÙ›NFƒØhßzê¨RSbVÿ<O(WÎ¥cyY0T›t™ltQKY0W(WŸS0WegÞVóÿÕ‹Nw©‹ÙFƒØhè•YVàQ!k0FOÙ›Nh(gùR1rKNNv^NËS‹YÿËYÈu¡l:NyYSbVFƒØh0"
+ THE_FOM_flavor_events.29.1: "iRN„vïêSýwT›t™lêñTp†N0"
+ THE_FOM_flavor_events.30.t: "ÂRmpKNIN"
+ THE_FOM_flavor_events.30.desc: "T›t™lŽeQhmÿàeNîh—g„va×VckVNwyYçuíuTMR0ÙöeÿNS«ŽNw—e÷r„v«ŽqVúQ°sck=fNT›t™lée(Wîh—g-NøvŸq„v	N4YgaKNPR0yYfWŠÿÙ:Wšš¨Rck=fyYINºNÂRmpKNIN„vKbrÿîv„v¿O=f2UwäSwîha×V„vèla0óŽNT›t™lÿdkIRòTàeÕlTMR00b¡l—V	ÿT›t™l0Ù=fb„vûN¡Rÿ`OÞV»SÿbïSåNSV¡lÁ‰Ç`O00yY—OûN¡R(WdkûQ%T›t™lÿåN:YÖSîh—ga×V„v8lR`KNIQ0"
+ THE_FOM_flavor_events.30.1: "‰=fw‰æbbÿ1S+Rÿb0çeÆ‹0ô‹‹N?Q0"
+ THE_FOM_flavor_events.31.t: "0§M8lR`KNIQ§!0"
+ THE_FOM_flavor_events.31.desc: "ˆVëVgaKNPRsS«ˆT›t™l9VU^ûQ%ÿgTNmgIQædÇ	N4YgaKNPR„v«ŽSO¹öeÿyYz6q6e†NKb00b“†N00yY‰ðXô‹ÿµO«Ž©‹úQ«ŽTŽVñmY„vïÿ	ŽÄNw0RówÁXÁeÿ0©‹8lR`KNIQK„(WM‘—VNƒR„vºNKbÌ‘ôfÍ‘‰00\n \nT›t™lçuíuTMRÿmtz•^è„vªnAmz6qÛlwÆuŽx„vIQ0±›NIQ¹pz˜Nw4lAmNnmÿÏPÉcŽx„vf³lm(Wzzl-NÿÞhmÁXN„vR—Ô‚ý«ˆÓg—VÑS–f0àeNîh—g„va×VQ!kÍTwÿÙ!kNQ=f!jÊ|„v|T2Uÿw=fnpf„vcVÿz˜NwIQAm.NT›t™l„vKbU0\n \n0ŽVMR00a×V„vðXó—)nŒTÈSZWšR0\n \nyYñm8TNãSlÿv˜NwÎb—weg„v:V'YlAmŽVMRpÿ±lAmÏPàebV„vOSœ–ÿ9T—VyY„vcˆFdssjOÍTÿK^jàQNN‰‹S0R<wiw0yY8OKbzÇIQAmÿcSRæ‰0R±âV¬`(WªnAmNzz„v8lR`KNIQöeÿ)n–f„v›RÏ‘¬wô•ùˆOO†NyY0\n \n0îh—g„vsY?QJU00a×V„vðXó—(WyY3w¹‰ÍTÿ&^NwIƒ(g„vn™™ÿhm-N„vf³l,‚IQ¹pnnce»SÿêSYuªnAmÍN(W‰‰AmÌm0"
+ THE_FOM_flavor_events.31.1: "?a`O8lÜˆRgÙGrW0Wÿ¦N8lÜ	gºNÿ‚Yîh—gˆR²b`O,‚ÿˆR²b`O0"
+ THE_FOM_flavor_events_31_c_tt1: "þ–è–T›t™lb:N0§O8luw§!0"
+ THE_FOM_flavor_events.32.t: "¾|^y„vé…ñr"
+ THE_FOM_flavor_events.32.desc: "T›t™lgNbRPRÿÚuÂpr‚iV‚Yno4l+oVÿÙuNir†‰N¦h‰^r‚Œ0NLu<OÏuNSKN‡ØSÿSjOAm¨R„viVy†IuwS0þfZWNïSgd„v©Sów0‰lY—„v'Y0Wÿ(WyYÝQÆ‰-Nn‹!jÊ|ÿ‚Y«ˆÆur‰ædÿSjO‰ÈvSÃW–Î˜Ø˜ce0aÆ‹ÎN!jÊ|-NÏ‚’‘öeÿT›t™lÑSÉ‰êñT«ŽYnˆo4l`l0"
+ THE_FOM_flavor_events.32.1: "wwD–Ñ	gÀNHNØSS'T0"
+ THE_FOM_alice_give_tooltip_effects_c_tt1: "1rKNNÿ§M±‚„vpeÏ‘<ONNNŸ”„vIR¦^	gsQ,N±‚v^NOÆQöeøvV0§!"
+ THE_FOM_alice_give_tooltip_effects_c_tt2: "1rKNNÿ§M±‚„vpeÏ‘<ONNNŸ”„vIR¦^	gsQ0§!"
+ THE_FOM_alice_give_tooltip_effects_c_tt3: "1rKNNÿ§MÙvzßz=fÿ§!"
+ THE_FOM_flavor_event_25_question_c_tt1: "§gÊNåeKN±‚ÿöewV0§!"
+ THE_FOM_flavor_event_25_question_c_tt2: "§g±‚V±‚‹kÿ:Yöe	N—0§!"
+ THE_FOM_flavor_event_25_question_c_tt3: "§g²³‚ß>eÿö^öemQ‹V0§!"
+ THE_FOM_flavor_event_25_question_c_tt4: "§g±‚VKNöeÿ–™åeàeŒN0§!"
+
 ###EVENT_END
 
 ###END_EVENT
@@ -280,6 +337,8 @@
 
 ###MRS_MISSION_EXTRA
  THE_MRS_mission_3_1_c_tt1: "=t¡‹ûQ%ÛS›Q§Y5§!!k ÿîvMRÿ§Y[Root.the_fom_check_won_rebel_im_var.GetValue]	ÿ§!"
+ THE_MRS_mission_3_1_c_tt1_yes: "£yes£å‚bìNHQLˆŒRbûN¡R0§M–YdV—gÂR§!0"
+ THE_MRS_mission_3_1_c_tt1_no: "£no£å‚ÖNýVHQLˆŒRbûN¡R0§M–YdV—gÂR§!0"
 ###MRS_MISSION_EXTRA_END
 
 ##SCRIPT_EFFECT
@@ -292,11 +351,13 @@
 ##SCRIPT_EFFECT_END
 
 #FLAG
- THE_FOM_youkai_region_had_been_influence_by_MGT_cd_flag: "§Y[From.GetName]§!òT«ˆ§Y[MGT.GetName]§!qVÍT"
- THE_FOM_youkai_region_had_been_influence_by_MRS_cd_flag: "§Y[From.GetName]§!òT«ˆ§Y[MRS.GetName]§!qVÍT"
+ THE_FOM_youkai_region_had_been_influence_by_MGT_cd_flag: "SVMRòT«ˆqVÍT"
+ THE_FOM_youkai_region_had_been_influence_by_MRS_cd_flag: "SVMRòT«ˆqVÍT"
 #FLAG_END
 
 ##DISASTER
+ THE_FOM_forest_awaken_the_first: "§OØy—gÊ`œo-w§!"
+ THE_FOM_forest_awaken_the_first_c_tt1: "ûNaýV¶RŒRbûN¡R0§M–YdV—gÂR§!0"
  THE_FOM_forest_awaken_the_second: "§OØy—gÊ`œo-íu§!"
- THE_FOM_forest_awaken_the_second_trigger_flag_c_tt1: "Øy—gÊ`œo-íuòTÏuÓumg\n@MRS§Y[MRS.GetName]§!bw@MGT§Y[MGT.GetName]§!ûQƒn§YìrËzÛS›Q§!\nb§YìrËzÛS›Q§!b—V†N§Yb‰NÜw)R§!"
+ THE_FOM_forest_awaken_the_second_trigger_flag_c_tt1: "Øy—gÊ`œo-íuòTÏuÓumg\n@MRS§Y[MRS.GetName]§!ûQƒn§YìrËzÛS›Q§!\nb§YìrËzÛS›Q§!b—V†N§Yb‰NÜw)R§!"
 ##DISASTER_END

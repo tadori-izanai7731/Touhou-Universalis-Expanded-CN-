@@ -89,11 +89,14 @@ THE_MRS_1_stage_branch_3 = {
 		effect = { 
 			if = {
 				limit = {
-					has_global_flag = THE_FOM_forest_awaken_the_first_xxx_come_down_flag
+					NOT = {
+						has_global_flag = THE_FOM_forest_awaken_the_first_xxx_come_down_flag
+					}
 				}
 				custom_tooltip = THE_MRS_mission_3_1_c_tt1_yes
 				add_stability = 1
 				add_mil_power = 50
+				set_global_flag = THE_FOM_forest_awaken_the_first_xxx_come_down_flag
 			}
 			else = {
 				custom_tooltip = THE_MRS_mission_3_1_c_tt1_no

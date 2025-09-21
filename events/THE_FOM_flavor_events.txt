@@ -181,6 +181,23 @@ country_event = {
 		add_adm_power = 25
 		add_dip_power = 25
 		add_mil_power = 25
+		hidden_effect = {
+			if = {
+				limit = { 
+					ai = no
+				}
+				country_event = {
+					id = THE_FOM_flavor_events.19
+					days = 1825
+				}
+			}
+			else = {
+				country_event = {
+					id = THE_FOM_flavor_events.31
+					days = 1825
+				}
+			}
+		}
 	}
 }
 
@@ -673,6 +690,7 @@ country_event = {
 			tag = ENK
 			tag = MST
 			tag = WRG
+			tag = MGT
 		}
 	}
 	is_triggered_only = yes
@@ -722,6 +740,455 @@ country_event = {
 				}
 			}
 		}
+	}
+}
+###森林之声
+country_event = {
+	id = THE_FOM_flavor_events.19
+	title = THE_FOM_flavor_events.19.t
+	desc = THE_FOM_flavor_events.19.desc
+	is_triggered_only = yes
+
+	trigger = {
+		
+	}
+
+	option = {
+		name = THE_FOM_flavor_events.19.1
+		hidden_effect = {
+			country_event = {
+				id = THE_FOM_flavor_events.20
+				days = 180
+			}
+		}
+	}
+
+}
+##奇怪的蘑菇
+country_event = {
+	id = THE_FOM_flavor_events.20
+	title = THE_FOM_flavor_events.20.t
+	desc = THE_FOM_flavor_events.20.desc
+	is_triggered_only = yes
+
+	trigger = {
+		
+	}
+
+	option = {
+		name = THE_FOM_flavor_events.20.1
+		hidden_effect = {
+			set_country_flag = THE_FOM_marisa_has_the_unique_mushroom_flag
+		}
+	}
+
+}
+#观察，奇怪的蘑菇
+country_event = {
+	id = THE_FOM_flavor_events.21
+	title = THE_FOM_flavor_events.21.t
+	desc = THE_FOM_flavor_events.21.desc
+	is_triggered_only = yes
+
+	trigger = {
+		
+	}
+
+	option = {
+		name = THE_FOM_flavor_events.21.1
+		highlight = yes
+		trigger = {
+			has_country_flag = THE_FOM_can_gather_the_unique_mushroom_flag
+		}
+		custom_tooltip = THE_FOM_flavor_events_21_c_tt1
+		hidden_effect = {
+			set_country_flag = THE_FOM_can_gather_the_unique_mushroom_flag_next
+		}
+	}
+	option = {
+		name = THE_FOM_flavor_events.21.2
+		custom_tooltip = THE_FOM_flavor_events_21_c_tt2
+	}
+}
+#邀请函
+country_event = {
+	id = THE_FOM_flavor_events.22
+	title = THE_FOM_flavor_events.22.t
+	desc = THE_FOM_flavor_events.22.desc
+	is_triggered_only = yes
+
+	trigger = {
+		
+	}
+
+	option = {
+		name = THE_FOM_flavor_events.22.1
+
+	}
+
+}
+#雾霭与荆棘
+country_event = {
+	id = THE_FOM_flavor_events.23
+	title = THE_FOM_flavor_events.23.t
+	desc = THE_FOM_flavor_events.23.desc
+	is_triggered_only = yes
+
+	trigger = {
+		
+	}
+
+	option = {
+		name = THE_FOM_flavor_events.23.1
+		hidden_effect = {
+			country_event = {
+				id = THE_FOM_flavor_events.24
+			}
+		}
+	}
+
+}
+#迷雾森林 初见
+country_event = {
+	id = THE_FOM_flavor_events.24
+	title = THE_FOM_flavor_events.24.t
+	desc = THE_FOM_flavor_events.24.desc
+	is_triggered_only = yes
+
+	trigger = {
+		
+	}
+
+	option = {
+		name = THE_FOM_flavor_events.24.1
+		trigger = {
+			has_country_flag = THE_FOM_can_gather_the_unique_mushroom_flag_next
+		}
+		random = {
+			chance = 99
+			kill_ruler = yes
+		}
+		hidden_effect = {
+			country_event = {
+				id = THE_FOM_flavor_events.32
+				days = 30
+			}
+			clr_country_flag = THE_FOM_marisa_has_the_unique_mushroom_flag
+			clr_country_flag = THE_FOM_can_gather_the_unique_mushroom_flag
+			clr_country_flag = THE_FOM_can_gather_the_unique_mushroom_flag_next
+		}
+	}
+	option = {
+		name = THE_FOM_flavor_events.24.2
+		custom_tooltip = THE_FOM_flavor_events_24_c_tt1
+		hidden_effect = {
+			set_country_flag = THE_FOM_can_gather_the_unique_mushroom_flag
+		}
+	}
+}
+#迷雾森林 轮回第一次
+country_event = {
+	id = THE_FOM_flavor_events.25
+	title = THE_FOM_flavor_events.25.t
+	desc = THE_FOM_flavor_events.25.desc
+	is_triggered_only = yes
+
+	trigger = {
+		
+	}
+
+	option = {
+		name = THE_FOM_flavor_events.25.1
+		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt1
+		THE_FOM_alice_give_tooltip_effects = yes
+		THE_FOM_fow_forest_error_option_effects = yes
+	}
+	option = { #正确答案
+		name = THE_FOM_flavor_events.25.2
+		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt1
+		THE_FOM_alice_give_tooltip_effects = yes
+		hidden_effect = {
+			country_event = {
+				id = THE_FOM_flavor_events.26
+				days = 30
+			}
+		}
+	}
+	option = { 
+		name = THE_FOM_flavor_events.25.3
+		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt1
+		THE_FOM_alice_give_tooltip_effects = yes
+		THE_FOM_fow_forest_error_option_effects = yes
+	}
+	option = {
+		name = THE_FOM_flavor_events.25.4
+		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt1
+		THE_FOM_alice_give_tooltip_effects = yes
+		THE_FOM_fow_forest_error_option_effects = yes
+	}
+	#ai专用通道
+	option = {
+		name = THE_FOM_flavor_events.25.5
+	}
+}
+
+#迷雾森林 轮回第二次
+country_event = {
+	id = THE_FOM_flavor_events.26
+	title = THE_FOM_flavor_events.25.t
+	desc = THE_FOM_flavor_events.25.desc
+	is_triggered_only = yes
+
+	trigger = {
+		
+	}
+
+	option = { 
+		name = THE_FOM_flavor_events.25.1
+		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt2
+		THE_FOM_alice_give_tooltip_effects = yes
+		THE_FOM_fow_forest_error_option_effects = yes
+	}
+	option = {
+		name = THE_FOM_flavor_events.25.2
+		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt2
+		THE_FOM_alice_give_tooltip_effects = yes
+		THE_FOM_fow_forest_error_option_effects = yes
+	}
+	option = { #正确答案
+		name = THE_FOM_flavor_events.25.3 
+		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt2
+		THE_FOM_alice_give_tooltip_effects = yes
+		hidden_effect = {
+			country_event = {
+				id = THE_FOM_flavor_events.27
+				days = 30
+			}
+		}
+	}
+	option = {
+		name = THE_FOM_flavor_events.25.4
+		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt2
+		THE_FOM_alice_give_tooltip_effects = yes
+		THE_FOM_fow_forest_error_option_effects = yes
+	}
+}
+
+#迷雾森林 轮回第三次
+country_event = {
+	id = THE_FOM_flavor_events.27
+	title = THE_FOM_flavor_events.25.t
+	desc = THE_FOM_flavor_events.25.desc
+	is_triggered_only = yes
+
+	trigger = {
+		
+	}
+
+	option = { #正确答案
+		name = THE_FOM_flavor_events.25.1
+		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt3
+		THE_FOM_alice_give_tooltip_effects = yes
+		THE_FOM_fow_forest_error_option_effects = yes
+		hidden_effect = {
+			country_event = {
+				id = THE_FOM_flavor_events.28
+				days = 30
+			}
+		}
+	}
+	option = {
+		name = THE_FOM_flavor_events.25.2
+		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt3
+		THE_FOM_alice_give_tooltip_effects = yes
+		THE_FOM_fow_forest_error_option_effects = yes
+	}
+	option = {
+		name = THE_FOM_flavor_events.25.3
+		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt3
+		THE_FOM_alice_give_tooltip_effects = yes
+		THE_FOM_fow_forest_error_option_effects = yes
+	}
+	option = {
+		name = THE_FOM_flavor_events.25.4
+		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt3
+		THE_FOM_alice_give_tooltip_effects = yes
+		THE_FOM_fow_forest_error_option_effects = yes
+	}
+}
+
+#迷雾森林 轮回第四次
+country_event = {
+	id = THE_FOM_flavor_events.28
+	title = THE_FOM_flavor_events.25.t
+	desc = THE_FOM_flavor_events.25.desc
+	is_triggered_only = yes
+
+	trigger = {
+		
+	}
+
+	option = {
+		name = THE_FOM_flavor_events.25.1
+		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt4
+		THE_FOM_alice_give_tooltip_effects = yes
+		THE_FOM_fow_forest_error_option_effects = yes
+	}
+	option = { #正确答案
+		name = THE_FOM_flavor_events.25.2
+		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt4
+		THE_FOM_alice_give_tooltip_effects = yes
+		hidden_effect = {
+			country_event = {
+				id = THE_FOM_flavor_events.29
+				days = 30
+			}
+		}
+	}
+	option = {
+		name = THE_FOM_flavor_events.25.3
+		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt4
+		THE_FOM_alice_give_tooltip_effects = yes
+		THE_FOM_fow_forest_error_option_effects = yes
+	}
+	option = {
+		name = THE_FOM_flavor_events.25.4
+		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt4
+		THE_FOM_alice_give_tooltip_effects = yes
+		THE_FOM_fow_forest_error_option_effects = yes
+	}
+}
+
+#森林的考验
+country_event = {
+	id = THE_FOM_flavor_events.29
+	title = THE_FOM_flavor_events.29.t
+	desc = THE_FOM_flavor_events.29.desc
+	is_triggered_only = yes
+
+	trigger = {
+		
+	}
+
+	option = {
+		name = THE_FOM_flavor_events.29.1
+		add_adm_power = 75
+		add_dip_power = 75
+		add_mil_power = 75
+		hidden_effect = {
+			country_event = {
+				id = THE_FOM_flavor_events.30
+				days = 30
+			}
+		}
+	}
+}
+#慧之子出现
+country_event = {
+	id = THE_FOM_flavor_events.30
+	title = THE_FOM_flavor_events.30.t
+	desc = THE_FOM_flavor_events.30.desc
+	is_triggered_only = yes
+
+	trigger = {
+		
+	}
+	immediate = {
+		hidden_effect = {
+			th_getruler_fighting_skill = {
+				skill_boni = 0
+				type = incident
+			}
+			set_variable = {
+				which = THE_FOM_event_enk_im_var
+				value = 750
+			}
+			th_defineopponent_fighting_skill = {
+				variable = THE_FOM_event_enk_im_var
+				type = incident
+			}
+		}
+	}
+
+	option = {
+		name = THE_FOM_flavor_events.30.1
+		th_danmaku_incident_fight_ruler_and_opponent = yes
+		hidden_effect = {
+			country_event = {
+				id = THE_FOM_flavor_events.31
+				days = 30
+			}
+		}
+	}
+}
+#森林的永恒之光
+country_event = {
+	id = THE_FOM_flavor_events.31
+	title = THE_FOM_flavor_events.31.t
+	desc = THE_FOM_flavor_events.31.desc
+	is_triggered_only = yes
+	major = yes
+	trigger = {
+		
+	}
+
+	option = {
+		name = THE_FOM_flavor_events.31.1
+		custom_tooltip = THE_FOM_flavor_events_31_c_tt1
+		change_adm = 1
+		change_dip = 1
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		hidden_effect = {
+			remove_ruler_personality = th_longevity_personality
+			add_ruler_personality = immortal_personality
+			if = {
+				limit = {
+					ai = yes
+				 }
+				 add_ruler_personality = conqueror_personality
+			}
+		}
+	}
+}
+#精神的藩篱
+country_event = {
+	id = THE_FOM_flavor_events.32
+	title = THE_FOM_flavor_events.32.t
+	desc = THE_FOM_flavor_events.32.desc
+	is_triggered_only = yes
+
+	trigger = {
+		
+	}
+
+	option = {
+		name = THE_FOM_flavor_events.32.1
+		hidden_effect = {
+			country_event = {
+				id = THE_FOM_flavor_events.25
+				days = 30
+			}
+		}
+	}
+}
+##################
+##魔女威权
+############
+country_event = {
+	id = THE_FOM_flavor_events.33
+	title = THE_FOM_flavor_events.33.t
+	desc = THE_FOM_flavor_events.33.desc
+	is_triggered_only = yes
+
+	trigger = {
+		
+	}
+
+	option = {
+		name = THE_FOM_flavor_events.33.1
+		add_government_reform = THE_MRS_wish_upon_the_star_reform
 	}
 }
 
