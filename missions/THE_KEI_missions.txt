@@ -613,10 +613,10 @@ THE_KEI_main_branch_2 = {
 		required_missions = { THE_KEI_1_6 } 
 		provinces_to_highlight = { 
 			trade_goods = gems
+			has_discovered = ROOT
 		} 
 		
 		trigger = { 
-			gems = 2
 			num_of_owned_provinces_with = {
 				value = 2
 				trade_goods = gems
@@ -643,7 +643,8 @@ THE_KEI_main_branch_2 = {
 				random_province = {
 					limit = {
 						trade_goods = gems
-						is_core = yes	
+						is_core = yes
+						NOT = { has_province_modifier = THE_KEI_zaoxing_haniwa_art_buff }
 					}
 					add_province_modifier = {
 						name = THE_KEI_zaoxing_haniwa_art_buff
@@ -721,9 +722,6 @@ THE_KEI_main_branch_2 = {
 			add_adm_power = 100
 			add_dip_power = 100
 			add_mil_power = 100
-			hidden_effect = {
-				
-			}
 		} 
 	}
 }
@@ -2219,7 +2217,7 @@ THE_KEI_5_11 = {
 			}
 			hidden_effect = {
 				for = {
-					amount = 20
+					amount = 15
 					effect = "
 							random_owned_province = {
 						limit = {
@@ -2234,23 +2232,22 @@ THE_KEI_5_11 = {
 			}
 			custom_tooltip = THE_KEI_5_11_c_tt4
 			tooltip = {
-				custom_tooltip = THE_KEI_5_11_c_tt3
-				hidden_effect = {
-					ONI = {
+				5008 = {
+					owner = {
 						change_religion = ROOT
-					}
-					ROOT = {
-						vassalize = ONI
+						custom_tooltip = THE_KEI_5_11_c_tt3
 					}
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				ONI = {
-					has_opinion = {
-						who = ROOT
-						value = 150
+				5008 = {
+					owner = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
 					}
 				}
 			}
@@ -2263,30 +2260,21 @@ THE_KEI_5_11 = {
 					add_building = barracks
 				}
 			}
-			hidden_effect = {
-				for = {
-					amount = 15
-					effect = "
-							random_owned_province = {
-						limit = {
-							is_core = ROOT
-						}
-						add_base_manpower = 1
-							}
-						
-						
-						"
-				}
-			}
 			custom_tooltip = THE_KEI_5_11_c_tt2
-			
-			custom_tooltip = THE_KEI_5_11_c_tt3
-			hidden_effect = {
-				ONI = {
+			5008 = {
+				owner = {
 					change_religion = ROOT
-				}
-				ROOT = {
-					vassalize = ONI
+					custom_tooltip = THE_KEI_5_11_c_tt3
+					hidden_effect = {
+						if = {
+							limit = {
+								NOT = { total_development = 200 }
+							}
+							ROOT = {
+								vassalize = PREV
+							}
+						}
+					}
 				}
 			}
 		}
@@ -2301,30 +2289,12 @@ THE_KEI_5_11 = {
 					add_building = barracks
 				}
 			}
-			hidden_effect = {
-				for = {
-					amount = 20
-					effect = "
-							random_owned_province = {
-						limit = {
-							is_core = ROOT
-						}
-						add_base_manpower = 1
-							}
-						
-						
-						"
-				}
-			}
 			custom_tooltip = THE_KEI_5_11_c_tt4
 			tooltip = {
-				custom_tooltip = THE_KEI_5_11_c_tt3
-				hidden_effect = {
-					ONI = {
+				5008 = {
+					owner = {
 						change_religion = ROOT
-					}
-					ROOT = {
-						vassalize = ONI
+						custom_tooltip = THE_KEI_5_11_c_tt3
 					}
 				}
 			}
@@ -3007,6 +2977,7 @@ THE_KEI_minor_branch_1_create = {
 		} 
 		
 		trigger = { 
+			mission_completed = THE_KEI_1_8
 			religion = THE_keiki_religion
 			custom_trigger_tooltip = {
 				tooltip = THE_KEI_1_10_create_c_tt1

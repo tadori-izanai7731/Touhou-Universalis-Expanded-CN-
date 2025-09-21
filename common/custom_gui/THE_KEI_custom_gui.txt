@@ -829,64 +829,8 @@ custom_button = {
 	trigger = {
 		THE_KEI_development_remove_province_light_buff = yes
 		if = {
-			limit = {
-				FROM = {
-					mission_completed = THE_KEI_1_7
-					NOT = {
-						mission_completed = THE_KEI_1_8
-					}
-					NOT = {
-						mission_completed = THE_KEI_1_10_create
-					}
-					NOT = {
-						mission_completed = THE_KEI_2_12_alone
-					}
-				}
-			}
-			ROOT = {
-				NOT = {
-					development = 30
-				}
-			}
-			FROM = {
-				has_government_power = {
-					mechanic_type = THE_KEI_lonely_creation_mechanic
-					power_type = THE_KEI_lonely_creation_mechanic_power
-					value = 5
-				}
-			}
-		}
-		else_if = {
 			limit = { 
 				FROM = {
-					mission_completed = THE_KEI_1_7
-					mission_completed = THE_KEI_1_8
-					NOT = {
-						mission_completed = THE_KEI_1_10_create
-					}
-					NOT = {
-						mission_completed = THE_KEI_2_12_alone
-					}
-				}
-			}
-			ROOT = {
-				NOT = {
-					development = 60
-				}
-			}
-			FROM = {
-				has_government_power = {
-					mechanic_type = THE_KEI_lonely_creation_mechanic
-					power_type = THE_KEI_lonely_creation_mechanic_power
-					value = 5
-				}
-			}
-		}
-		else_if = {
-			limit = { 
-				FROM = {
-					mission_completed = THE_KEI_1_7
-					mission_completed = THE_KEI_1_8
 					OR = {
 						mission_completed = THE_KEI_1_10_create
 						mission_completed = THE_KEI_2_12_alone
@@ -903,6 +847,39 @@ custom_button = {
 					mechanic_type = THE_KEI_lonely_creation_mechanic
 					power_type = THE_KEI_lonely_creation_mechanic_power
 					value = 2.5
+				}
+			}
+		}
+		else_if = {
+			limit = { 
+				FROM = {
+					mission_completed = THE_KEI_1_8
+				}
+			}
+			ROOT = {
+				NOT = {
+					development = 60
+				}
+			}
+			FROM = {
+				has_government_power = {
+					mechanic_type = THE_KEI_lonely_creation_mechanic
+					power_type = THE_KEI_lonely_creation_mechanic_power
+					value = 5
+				}
+			}
+		}
+		else = {
+			ROOT = {
+				NOT = {
+					development = 30
+				}
+			}
+			FROM = {
+				has_government_power = {
+					mechanic_type = THE_KEI_lonely_creation_mechanic
+					power_type = THE_KEI_lonely_creation_mechanic_power
+					value = 5
 				}
 			}
 		}
