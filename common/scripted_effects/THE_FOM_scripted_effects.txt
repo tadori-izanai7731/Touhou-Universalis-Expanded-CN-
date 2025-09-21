@@ -13,10 +13,10 @@ THE_FOM_on_startup_scripted_effects = {
 		#初始变量
 		ENK = {
 			THE_FOM_on_start_random_list_set_influence_effects = {
-				marisa = 0
-				alice = 0
-				us = 10
-				other = 0
+				marisa = 1
+				alice = 1
+				us = 50
+				other = 1
 			}
 		}
 		#
@@ -24,16 +24,16 @@ THE_FOM_on_startup_scripted_effects = {
 			THE_FOM_on_start_random_list_set_influence_effects = {
 				marisa = 10
 				alice = 15
-				us = 10
-				other = 0
+				us = 2
+				other = 2
 			}
 		}
 		#
 		WRG = {
 			THE_FOM_on_start_random_list_set_influence_effects = {
-				marisa = 10
-				alice = 10
-				us = 20
+				marisa = 15
+				alice = 5
+				us = 25
 				other = 5
 			}
 		}
@@ -59,18 +59,18 @@ THE_FOM_on_startup_scripted_effects = {
 THE_FOM_on_start_random_list_set_influence_effects = {
 	random_list = {
 		$marisa$ = {
-			set_variable = { which = the_fom_forest_influence_is_marisa_var value = 60 }
+			set_variable = { which = the_fom_forest_influence_is_marisa_var value = 50 }
 			set_variable = { which = the_fom_forest_influence_is_alice_var value = 30 }
 			set_variable = { which = the_fom_forest_influence_is_our_var value = 30 }
 		}
 		$alice$ = {
 			set_variable = { which = the_fom_forest_influence_is_marisa_var value = 30 }
 			set_variable = { which = the_fom_forest_influence_is_alice_var value = 30 }
-			set_variable = { which = the_fom_forest_influence_is_our_var value = 60 }
+			set_variable = { which = the_fom_forest_influence_is_our_var value = 50 }
 		}
 		$us$ = {
 			set_variable = { which = the_fom_forest_influence_is_marisa_var value = 30 }
-			set_variable = { which = the_fom_forest_influence_is_alice_var value = 60 }
+			set_variable = { which = the_fom_forest_influence_is_alice_var value = 50 }
 			set_variable = { which = the_fom_forest_influence_is_our_var value = 30 }
 		}
 		$other$ = {
@@ -142,11 +142,26 @@ THE_FOM_won_rebel_im_var_effects = {
 }
 THE_FOM_won_youkai_enemy_leader_effects = {
 	if = {
+		limit = {
+			ROOT = {
+				tag = MRS
+				was_tag = MRS
+			}
+			FROM = {
+				has_country_flag = THE_FOM_desire_liberty_youkai_enemy_leader_flag
+			}
+		}
+		country_event = {
+			id = THE_FOM_flavor_events.33
+		}
+	}
+	if = {
 		limit = { 
 			OR = {
 				AND = {
 					ROOT = {
 						tag = MRS
+						was_tag = MRS
 					}
 					FROM = {
 						has_country_flag = THE_FOM_desire_liberty_youkai_enemy_leader_flag
@@ -155,6 +170,7 @@ THE_FOM_won_youkai_enemy_leader_effects = {
 				AND = {
 					FROM = {
 						tag = MRS
+						was_tag = MRS
 					}
 					ROOT = {
 						has_country_flag = THE_FOM_desire_liberty_youkai_enemy_leader_flag
@@ -164,6 +180,12 @@ THE_FOM_won_youkai_enemy_leader_effects = {
 			NOT = {
 				has_global_flag = THE_FOM_the_second_disaster_need_ended_flag
 			}
+		}
+		ROOT = {
+			clr_country_flag = THE_FOM_desire_liberty_youkai_enemy_leader_flag
+		}
+		FROM = {
+			clr_country_flag = THE_FOM_desire_liberty_youkai_enemy_leader_flag
 		}
 		clr_global_flag = THE_FOM_disaster_second_start_flag
 		set_global_flag = THE_FOM_the_second_disaster_need_ended_flag
@@ -224,4 +246,47 @@ THE_FOM_care_who_desire_for_liberty_effects = {
 		 }
 		 custom_tooltip = THE_FOM_care_who_desire_for_liberty_effects_c_tt3
 	}
+}
+
+THE_FOM_alice_give_tooltip_effects = {
+	if = {
+		limit = { 
+			check_variable = {
+				which = the_fom_check_error_in_forest_sounds_im_var
+				value = 9
+			}
+		}
+		custom_tooltip = THE_FOM_alice_give_tooltip_effects_c_tt1
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = the_fom_check_error_in_forest_sounds_im_var
+				value = 7
+			}
+		}
+		custom_tooltip = THE_FOM_alice_give_tooltip_effects_c_tt2
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = the_fom_check_error_in_forest_sounds_im_var
+				value = 5
+			}
+		}
+		custom_tooltip = THE_FOM_alice_give_tooltip_effects_c_tt3
+	}
+}
+
+THE_FOM_fow_forest_error_option_effects = {
+	hidden_effect = {
+			change_variable = {
+				which = the_fom_check_error_in_forest_sounds_im_var
+				value = 1
+			}
+			country_event = {
+				id = THE_FOM_flavor_events.25
+				days = yes
+			}
+		}
 }

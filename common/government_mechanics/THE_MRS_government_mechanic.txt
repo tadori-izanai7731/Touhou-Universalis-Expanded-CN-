@@ -56,3 +56,32 @@ THE_MRS_can_lock_cavalry_percentage_government_mechanic = {
 		}
 	}
 }
+
+THE_MRS_wish_upon_the_star_reform_mechanic = {
+	# alert_icon_gfx = GFX_alerticons_government_mechanics
+	# alert_icon_index = 5
+	available = {
+		always = yes
+	}
+	powers = {
+		THE_MRS_wish_upon_the_star_power = {
+			max = 100
+			min = 0
+			scaled_modifier = {
+				modifier = {
+					ae_impact = 0.20
+					prestige = 10
+					available_province_loot = 0.25
+					all_estate_influence_modifier = -0.50
+				}
+				trigger = {
+					has_government_power = {
+						mechanic_type = THE_MRS_can_lock_cavalry_percentage_government_mechanic
+						power_type = THE_MRS_lock_cavalry_percentage_government_power
+						value = 0
+					}
+				}
+			}
+		}
+	}
+}

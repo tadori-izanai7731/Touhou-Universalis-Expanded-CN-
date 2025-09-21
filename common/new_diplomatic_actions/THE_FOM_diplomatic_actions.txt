@@ -60,6 +60,8 @@ THE_FOM_add_influence_send_gift_diplomatic_actions = {
 				}
 			}
 		}
+		
+		
 	}
 	ai_will_do = {
 		always = yes
@@ -70,6 +72,7 @@ THE_FOM_add_influence_send_manpower_diplomatic_actions = {
 	require_acceptance = no
 
 	is_visible = {
+		ai = no
 		OR = {
 			th_is_or_was_tag = { tag = MGT }
 			th_is_or_was_tag = { tag = MRS }
