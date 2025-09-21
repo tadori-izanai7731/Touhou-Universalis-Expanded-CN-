@@ -441,34 +441,19 @@ the_hng_disasters_four = {
 	
 	can_start = {
 		OR = {
-			AND = {
-				army_size = 150
-				OR = {
-					tag = HNG
-					was_tag = HNG
-				}
-			}
+			tag = HNG
+			was_tag = HNG
 		}
+		army_size = 150
 	}	
 	can_stop = {
-		OR = {
-			AND = {
-				NOT = { is_year = 1550 }
-				army_tradition = 85			
-			}
-			AND = {
-				NOT = { army_size = 150	 }
-				OR = {
-					tag = HNG
-					was_tag = HNG
-				}
-			}
-		}
+		NOT = { is_year = 1550 }
+		army_tradition = 85		
 	}
 	progress = {
 		modifier = {
 			factor = 1
-			army_size = 150
+			always = yes
 		}
 		modifier = {
 			factor = 2
