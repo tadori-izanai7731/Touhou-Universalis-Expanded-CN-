@@ -2,10 +2,11 @@ country_decisions = {
 	THE_FOM_create_FOM_country_decision = {
 		color = { 44 145 70 }
 		potential = {
-			OR = {
-				tag = MRS
-				tag = MGT
-			}
+			always = no
+			# OR = {
+			# 	tag = MRS
+			# 	tag = MGT
+			# }
 		}
 		allow = {
 			OR = {

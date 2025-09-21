@@ -93,6 +93,13 @@ country_decisions = {
 			}
 		}
 		effect = {
+			if = {
+				limit = { 
+					has_country_flag = THE_IQU_now_is_exploring_flag
+				}
+				custom_tooltip = THE_IQU_now_explore_progress_view_c_tt_x
+				custom_tooltip = THE_IQU_now_dangerous_progres_view_c_tt_x
+			}
 			country_event = {
 				id = THE_IQU_flavor_events.0
 			}
@@ -169,6 +176,7 @@ country_decisions = {
 			has_province_modifier = THE_IQU_lonng_vein_head_province_buff
 		}
 		potential = {
+			ai = no
 			OR = {
 				tag = IQU
 				was_tag = IQU
@@ -184,7 +192,7 @@ country_decisions = {
 		}
 
 		allow = {
-			ai = no
+			always = yes
 		}
 		effect = {
 			custom_tooltip = THE_IQU_check_decision_c_tt1
@@ -203,6 +211,7 @@ country_decisions = {
 			has_province_flag = THE_IQU_this_province_had_been_explored_flag
 		}
 		potential = {
+			ai = no
 			OR = {
 				tag = IQU
 				was_tag = IQU
@@ -210,7 +219,7 @@ country_decisions = {
 			has_country_flag = THE_IQU_check_decision_flag_2
 		}
 		allow = {
-			ai = no
+			always = yes
 		}
 		effect = {
 			custom_tooltip = THE_IQU_check_decision_c_tt1
@@ -235,6 +244,7 @@ country_decisions = {
 			}
 		}
 		potential = {
+			ai = no
 			OR = {
 				tag = IQU
 				was_tag = IQU
@@ -242,7 +252,7 @@ country_decisions = {
 			has_country_flag = THE_IQU_check_decision_flag_3
 		}
 		allow = {
-			ai = no
+			always = yes
 		}
 		effect = {
 			custom_tooltip = THE_IQU_check_decision_c_tt1
