@@ -67,13 +67,15 @@ THE_KEI_main_branch_1 = {
 		
 		trigger = { 
 			has_estate_privilege = THE_KEI_human_ghost_power_privileges
-			num_of_estate_agendas_completed = {
-				estate = estate_burghers
-				value = 3
-			}
-			estate_influence = {
-				estate = estate_church 
-				influence = 50
+			OR = {
+				num_of_estate_agendas_completed = {
+					estate = estate_burghers
+					value = 2
+				}
+				estate_influence = {
+					estate = estate_burghers
+					influence = 80
+				}
 			}
 		} 
 		
@@ -743,7 +745,7 @@ THE_KEI_main_branch_3 = {
 		position = 2
 		required_missions = { THE_KEI_2_1 } 
 		provinces_to_highlight = { 
-			owned_by = ROOT
+			province_id = 5045
 		} 
 		
 		trigger = { 
@@ -819,6 +821,7 @@ THE_KEI_main_branch_3 = {
 		
 		effect = { 
 			custom_tooltip = THE_KEI_3_4_c_tt3
+			custom_tooltip = empty_line_tt
 			custom_tooltip = THE_KEI_3_4_c_tt1
 			hidden_effect = {
 				set_country_flag = THE_KEI_can_build_add_government_power_flag
@@ -1826,7 +1829,6 @@ THE_KEI_main_branch_5 = {
 		
 		effect = { 
 			custom_tooltip = THE_KEI_5_2_c_tt2
-			custom_tooltip = THE_KEI_5_2_c_tt3
 			add_mil_power = 100
 		} 
 	}
@@ -1838,24 +1840,27 @@ THE_KEI_main_branch_5 = {
 		provinces_to_highlight = {  } 
 		
 		trigger = { 
-			custom_trigger_tooltip = {
-				tooltip = THE_KEI_5_3_c_tt3
-				check_variable = {
-					which = the_kei_win_battle_count_im_var
-					value = 15
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = THE_KEI_5_3_c_tt3
+					check_variable = {
+						which = the_kei_win_battle_count_im_var
+						value = 15
+					}
 				}
+				num_of_janissaries = 100
 			}
 		} 
 		
 		effect = { 
-			custom_tooltip = THE_KEI_5_3_c_tt23
-			custom_tooltip = THE_KEI_5_3_c_tt1
-			custom_tooltip = THE_KEI_5_3_c_tt2
 			add_government_power = {
 				mechanic_type = THE_KEI_lonely_creation_mechanic
 				power_type = THE_KEI_lonely_creation_mechanic_power
 				value = 20
 			}
+			custom_tooltip = THE_KEI_5_3_c_tt23
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_KEI_5_3_c_tt1
 			hidden_effect = {
 				set_variable = {
 					which = the_mayumi_fire_max_var

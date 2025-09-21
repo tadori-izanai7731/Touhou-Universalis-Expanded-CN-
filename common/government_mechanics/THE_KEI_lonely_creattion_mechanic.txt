@@ -24,39 +24,17 @@ THE_KEI_lonely_creation_mechanic = {
 			min = 0
 			max = 100
 			base_monthly_growth = 0
-			range_modifier = {
-				modifier = { 
+			scaled_modifier = {
+				modifier = {
+					idea_cost = -0.05
+					technology_cost = -0.05
+					innovativeness_gain = 1.0
 				}
 				start_value = 0
 				end_value = 100
 			}
-			range_modifier = {
-				modifier = { 
-					innovativeness_gain = 0.25
-				}
-				start_value = 25
-				end_value = 100
-			}
-			range_modifier = {
-				modifier = { 
-					idea_cost = -0.025
-					technology_cost = -0.025
-					innovativeness_gain = 0.25
-				}
-				start_value = 50
-				end_value = 100
-			}
-			range_modifier = {
-				modifier = { 
-					idea_cost = -0.025
-					technology_cost = -0.025
-					innovativeness_gain = 0.25
-				}
-				start_value = 75
-				end_value = 100
-			}
 			#任务
-			range_modifier = {
+			scaled_modifier = {
 				modifier = { 
 					idea_cost = -0.05
 					technology_cost = -0.05
@@ -64,17 +42,17 @@ THE_KEI_lonely_creation_mechanic = {
 				trigger = {
 					mission_completed = THE_KEI_4_8
 				}
-				start_value = 50
+				start_value = 0
 				end_value = 100
 			}
-			range_modifier = {
+			scaled_modifier = {
 				modifier = {
 					global_institution_spread = 0.33
 				}
 				trigger = {
 					mission_completed = THE_KEI_3_12
 				}
-				start_value = 75
+				start_value = 0
 				end_value = 100
 			}
 			scaled_modifier = {
@@ -88,60 +66,40 @@ THE_KEI_lonely_creation_mechanic = {
 				start_value = 0
 				end_value = 100
 			}
-			range_modifier = {
-				modifier = {
-					vassal_forcelimit_bonus = 1.0
-					diplomatic_annexation_cost = -0.25
-				}
-				trigger = {
-					has_country_flag = THE_KEI_complete_5_12_mission_flag_with_vassal
-					CRD = {
-						is_subject_of = ROOT
-					}
-				}
-				start_value = 0
-				end_value = 100
-			}
+			# range_modifier = {
+			# 	modifier = {
+			# 		vassal_forcelimit_bonus = 1.0
+			# 		diplomatic_annexation_cost = -0.25
+			# 	}
+			# 	trigger = {
+			# 		has_country_flag = THE_KEI_complete_5_12_mission_flag_with_vassal
+			# 		CRD = {
+			# 			is_subject_of = ROOT
+			# 		}
+			# 	}
+			# 	start_value = 0
+			# 	end_value = 100
+			# }
 			##任务
-			range_modifier = {
+			scaled_modifier = {
 				modifier = { 
-					development_cost = -0.075
+					development_cost = -0.15
 				}
 				trigger = {
 					mission_completed = THE_KEI_3_4
 				}
 				start_value = 0
-				end_value = 100
-			}
-			range_modifier = {
-				modifier = { 
-					development_cost = -0.075
-				}
-				trigger = {
-					mission_completed = THE_KEI_3_4
-				}
-				start_value = 50
 				end_value = 100
 			}
 			#防御
-			range_modifier = {
+			scaled_modifier = {
 				modifier = { 
-					global_manpower_modifier = 0.10
+					global_manpower_modifier = 0.2
 				}
 				trigger = {
 					mission_completed = THE_KEI_5_3
 				}
 				start_value = 0
-				end_value = 100
-			}
-			range_modifier = {
-				modifier = { 
-					global_manpower_modifier = 0.10
-				}
-				trigger = {
-					mission_completed = THE_KEI_5_3
-				}
-				start_value = 50
 				end_value = 100
 			}
 			####土袿  理念组加成
