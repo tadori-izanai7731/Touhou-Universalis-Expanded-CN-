@@ -326,10 +326,6 @@ THE_KEI_main_branch_2 = {
 				limit = {
 					ai = no
 				}
-				5045 = {
-					owned_by = ROOT
-					development = 30
-				}
 				OR = {
 					num_of_estate_agendas_completed = {
 						estate = estate_church
@@ -345,11 +341,9 @@ THE_KEI_main_branch_2 = {
 					}
 				}
 			}
-			else = {
-				5045 = {
-					owned_by = ROOT
-					development = 30
-				}
+			5045 = {
+				owned_by = ROOT
+				development = 30
 			}
 		} 
 		
@@ -1566,9 +1560,11 @@ THE_KEI_main_branch_4 = {
 		position = 8
 		required_missions = { THE_KEI_4_7 } 
 		provinces_to_highlight = { 
-			province_id = 4983
-			province_id = 5258
-			province_id = 5268
+			OR = {
+				province_id = 4983
+				province_id = 5258
+				province_id = 5268
+			}
 		} 
 		
 		trigger = { 
@@ -1694,7 +1690,6 @@ THE_KEI_main_branch_4 = {
 		icon = mission_touhou_th_more_shrines
 		position = 10
 		provinces_to_highlight = { 
-			is_capital_of = ROOT
 		} 
 		
 		trigger = { 
