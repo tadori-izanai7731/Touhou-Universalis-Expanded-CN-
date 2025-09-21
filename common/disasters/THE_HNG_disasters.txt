@@ -419,24 +419,14 @@ the_hng_disasters_four = {
 			tag = HNG
 			was_tag = HNG
 		}
-		OR = {
-			AND = {
-				has_country_flag = THE_HNG_can_disasters
-				is_emperor_of_china = yes
-				has_reform = THE_HNG_red_dragon_celestial_empire
-				NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army }
-				NOT = { has_country_flag = hng_do_the_change3_flag  }
-				NOT = { has_country_flag = THE_HNG_disasters_lose4 }
-				NOT = { has_country_flag = THE_HNG_disasters_end4 }
-				NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
-				NOT = { army_professionalism = 1 }	
-				army_size = 150	
-			}
-			AND = {
-				has_country_flag = THE_HNG_let_other_country_army_death
-				NOT = { has_country_flag = THE_HNG_disasters_end4 }
-			}
-		}	
+		has_country_flag = THE_HNG_can_disasters
+		is_emperor_of_china = yes
+		has_reform = THE_HNG_red_dragon_celestial_empire
+		NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army }
+		NOT = { has_country_flag = hng_do_the_change3_flag  }
+		NOT = { has_country_flag = THE_HNG_disasters_lose4 }
+		NOT = { has_country_flag = THE_HNG_disasters_end4 }
+		NOT = { has_country_flag = THE_HNG_finish_red_dragon_celestial_empire }
 	}
 	
 	can_start = {
@@ -447,13 +437,16 @@ the_hng_disasters_four = {
 		army_size = 150
 	}	
 	can_stop = {
-		NOT = { is_year = 1550 }
-		army_tradition = 85		
+		always = no
 	}
 	progress = {
 		modifier = {
 			factor = 1
 			always = yes
+		}
+		modifier = {
+			factor = -1
+			army_tradition = 85		
 		}
 		modifier = {
 			factor = 2
@@ -489,7 +482,7 @@ the_hng_disasters_four = {
 		}
 		modifier = {
 			factor = 10
-			NOT ={ imperial_mandate = 50 }
+			NOT = { imperial_mandate = 50 }
 		}
 		modifier = {
 			factor = 100
@@ -500,20 +493,10 @@ the_hng_disasters_four = {
 		}
 	}
 	can_end = {
-		OR = {
-			has_country_modifier = THE_HNG_modernization_gensokyo_army
-			custom_trigger_tooltip = {
-				tooltip = the_hng_disasters_two_lose_tt
-				has_country_flag = THE_HNG_disasters_lose4
-			}
-			AND = {
-				NOT = { tag = HNG }
-				NOT = { was_tag = HNG }
-				OR = {
-					army_professionalism = 0.5
-					army_tradition = 85
-				}
-			}
+		has_country_modifier = THE_HNG_modernization_gensokyo_army
+		custom_trigger_tooltip = {
+			tooltip = the_hng_disasters_two_lose_tt
+			has_country_flag = THE_HNG_disasters_lose4
 		}
 	}
 	modifier = {
@@ -527,42 +510,3 @@ the_hng_disasters_four = {
 	on_start = flavor_THE_HNG_events.90
 	on_end = flavor_THE_HNG_events.50          
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
