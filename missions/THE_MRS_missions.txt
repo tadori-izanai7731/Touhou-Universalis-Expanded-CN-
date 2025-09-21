@@ -26,12 +26,13 @@ THE_MRS_1_stage_branch_2 = {
 			MGT = {
 				has_opinion = {
 					who = ROOT
-					value = 120
+					value = 100
 				}
 			}
 		 } 
 
 		effect = { 
+			complete_mission = THE_MRS_mission_4_1
 			ENK = {
 				subtract_variable = {
 					which = the_fom_forest_influence_is_alice_var
@@ -48,6 +49,16 @@ THE_MRS_1_stage_branch_2 = {
 				subtract_variable = {
 					which = the_fom_forest_influence_is_alice_var
 					value = 10
+				}
+			}
+			HKR = {
+				add_historical_rival = ROOT
+			}
+			add_historical_rival = HKR
+			hidden_effect = {
+				remove_historical_friend = HKR
+				HKR = {
+					remove_historical_friend = MRS
 				}
 			}
 		 } 
@@ -115,9 +126,13 @@ THE_MRS_1_stage_branch_3 = {
 			THE_MRS_mission_4_1
 			THE_MRS_mission_2_1
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
 
-		trigger = {  } 
+		 } 
+
+		trigger = { 
+
+		 } 
 
 		effect = {
 			hidden_effect = { set_country_flag = THE_MRS_check_mgt_minor_branch_flag } 
@@ -135,11 +150,52 @@ THE_MRS_1_stage_branch_4 = {
 	THE_MRS_mission_4_1 = {
 		icon = mission_unknown_mission
 		position = 1
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			is_capital_of = HKR
+		 } 
 
-		trigger = {  } 
+		trigger = { 
+			alliance_with = HKR
+			marriage_with = HKR
+			HKR = {
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			complete_mission = THE_MRS_mission_2_1
+			ENK = {
+				change_variable = {
+					which = the_fom_forest_influence_is_marisa_var
+					value = 5
+				}
+			}
+			MST = {
+				change_variable = {
+					which = the_fom_forest_influence_is_marisa_var
+					value = 5
+				}
+			}
+			WRG = {
+				change_variable = {
+					which = the_fom_forest_influence_is_marisa_var
+					value = 5
+				}
+			}
+			MGT = {
+				add_historical_rival = ROOT
+			}
+			add_historical_rival = MGT
+			hidden_effect = {
+				remove_historical_friend = MGT
+				MGT = {
+					remove_historical_friend = ROOT
+				}
+			}
+		} 
 	}
 }
 THE_MRS_1_stage_branch_5 = {
