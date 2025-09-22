@@ -4,10 +4,15 @@ THE_IQU_this_province_had_been_explored_custom_trigger = {
 			tooltip = THE_IQU_this_province_had_been_explored_ctt_1
 			hidden_trigger = {
 				ROOT = {
-					any_owned_province = {
+					any_province = {
+						OR = {
+							owned_by = ROOT
+							owned_by_subject_of = ROOT
+						}
 						area = $area$
 						has_province_flag = THE_IQU_this_province_had_been_explored_flag
 					}
+					
 				}
 			}	
 		}
@@ -20,7 +25,11 @@ THE_IQU_this_province_had_been_explored_region_custom_trigger = {
 			tooltip = THE_IQU_this_province_had_been_explored_ctt_2
 			hidden_trigger = {
 				ROOT = {
-					any_owned_province = {
+					any_province = {
+						OR = {
+							owned_by = ROOT
+							owned_by_subject_of = ROOT
+						}
 						region = $region$
 						has_province_flag = THE_IQU_this_province_had_been_explored_flag
 					}
@@ -61,4 +70,23 @@ THE_IQU_has_any_province_wuxing_flag_trigger = {
 
 THE_IQU_any_province_point_has_wuxing_flag_trigger = {
 	has_province_flag = THE_IQU_has_get_unique_point_is_$wuxing$_flag
+}
+
+THE_IQU_check_province_modifier_trigger = {
+	IQU = {
+		AND = {
+			NOT = {
+				any_owned_province = {
+					has_province_modifier = $modifier$
+				}
+			}
+			NOT = {
+				any_subject_country = {
+					any_owned_province = {
+						has_province_modifier = $modifier$
+					}
+				}
+			}
+		}
+	}
 }

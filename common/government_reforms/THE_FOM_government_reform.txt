@@ -21,7 +21,7 @@ THE_FOM_Youkai_countries_reform = {
 		land_forcelimit = 5
 	}
 }
-#星色夜空
+#星色夜空 #MRS
 THE_MRS_magic_and_meteor_reform = {
 	lock_level_when_selected = yes
 	icon = "THE_MRS_reform_1_level"
@@ -52,30 +52,7 @@ THE_MRS_magic_and_meteor_reform = {
 	}
 }
 
-#人偶使君主制
-THE_FOM_Dolls_envoy_reform = {
-	lock_level_when_selected = yes
-	icon = "witch_government_reform"
-	potential = {
-		has_reform = THE_FOM_Dolls_envoy_reform
-	}
-	valid_for_new_country = no
-	valid_for_nation_designer = yes
-	nation_designer_cost = 40
-	modifiers = {
-		global_unrest = -1
-		morale_damage = 0.05
-		global_autonomy = -0.05
-		governing_capacity = 150
-	}
-	custom_attributes = {
-		enable_making_dolls_crops = yes 
-	}
-	government_abilities = {
-		THE_FOM_alice_dolls_making_mechanics
-	}
-}
-#系向辰光
+#系向辰光 #MRS
 THE_MRS_wish_upon_the_star_reform = {
 	lock_level_when_selected = yes
 	icon = "THE_MRS_reform_2_level"
@@ -95,6 +72,30 @@ THE_MRS_wish_upon_the_star_reform = {
 		THE_MRS_wish_upon_the_star_reform_mechanic
 	}
 }
+
+#光之形 #MGT
+THE_FOM_Dolls_envoy_reform = {
+	lock_level_when_selected = yes
+	icon = "witch_government_reform"
+	potential = {
+		has_reform = THE_FOM_Dolls_envoy_reform
+	}
+	valid_for_new_country = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+	modifiers = {
+		morale_damage = 0.05
+		global_autonomy = -0.05
+		governing_capacity = 150
+	}
+	custom_attributes = {
+		enable_making_dolls_crops = yes 
+	}
+	government_abilities = {
+		THE_FOM_alice_dolls_making_mechanics
+	}
+}
+
 #人偶2级
 THE_FOM_alice_dolls_influence_reform = {
 	lock_level_when_selected = yes
