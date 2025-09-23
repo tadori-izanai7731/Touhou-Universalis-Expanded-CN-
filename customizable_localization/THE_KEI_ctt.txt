@@ -13,18 +13,18 @@ defined_text = {
 		}
 	}
 }
-defined_text = {
-	name = THE_KEI_mechanic_extra_2_c_tt
-	random = no
-	text = { 
-		localisation_key = THE_KEI_mechanic_extra_2_c_tt_1
-		trigger = {
-			mission_completed = THE_KEI_2_10_create
-		}
-	}
-	text = { 
-		localisation_key = THE_KEI_mechanic_extra_2_c_tt_0
-		trigger = {
-		}
-	}
-}
+# defined_text = {
+# 	name = THE_KEI_mechanic_extra_2_c_tt
+# 	random = no
+# 	text = { 
+# 		localisation_key = THE_KEI_mechanic_extra_2_c_tt_1
+# 		trigger = {
+# 			mission_completed = THE_KEI_2_10_create
+# 		}
+# 	}
+# 	text = { 
+# 		localisation_key = THE_KEI_mechanic_extra_2_c_tt_0
+# 		trigger = {
+# 		}
+# 	}
+# }

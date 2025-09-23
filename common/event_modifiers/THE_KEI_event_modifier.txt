@@ -218,12 +218,11 @@ THE_KEI_cloaked_in_radiance_buff = {
 #不曾松懈的枷锁
 THE_KEI_all_animal_run_buff = {
 	min_local_autonomy = 100
-	local_autonomy = 0.05
 }
 #光辉岁月
 THE_KEI_all_animal_run_buff_V2 = {
 	local_tax_modifier = 0.15
-	local_development_cost = -0.10
+	local_autonomy = -0.2
 }
 #挣扎而生
 THE_KEI_the_new_life_mission_buff = {

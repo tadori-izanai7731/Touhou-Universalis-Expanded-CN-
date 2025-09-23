@@ -1747,6 +1747,7 @@ THE_KEI_main_branch_4 = {
 		
 		effect = { 
 			custom_tooltip = THE_KEI_4_11_c_tt1
+			custom_tooltip = empty_line_tt
 			if = {
 				limit = {
 					trading_bonus = {
@@ -2380,10 +2381,6 @@ THE_KEI_5_12 = {
 				add_historical_friend = ROOT
 			}
 			add_historical_friend = CRD
-			custom_tooltip = THE_KEI_5_12_c_tt3
-			hidden_effect = {
-				set_country_flag = THE_KEI_complete_5_12_mission_flag_with_vassal
-			}
 		}
 		else = {
 			custom_tooltip = THE_KEI_5_12_c_tt2_no
@@ -2392,10 +2389,6 @@ THE_KEI_5_12 = {
 					add_historical_friend = ROOT
 				}
 				add_historical_friend = CRD
-				custom_tooltip = THE_KEI_5_12_c_tt3
-				hidden_effect = {
-					set_country_flag = THE_KEI_complete_5_12_mission_flag_with_vassal
-				}
 			}
 		}
 	} 
@@ -3165,7 +3158,7 @@ THE_KEI_minor_branch_2_create = {
 		
 		effect = { 
 			custom_tooltip = THE_KEI_2_10_create_c_tt2
-			custom_tooltip = THE_KEI_2_10_create_c_tt1
+			# custom_tooltip = THE_KEI_2_10_create_c_tt1
 		} 
 	}
 	

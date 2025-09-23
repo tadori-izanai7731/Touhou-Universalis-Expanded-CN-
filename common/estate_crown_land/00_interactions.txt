@@ -454,9 +454,6 @@ interaction = {
 				}
 				add_years_of_income = 0.6
 				THE_KEI_interation_get_power_from_estate_effect = yes
-				country_event = {
-					id = THE_KEI_flavor_events.7
-				}
 				hidden_effect = {
 					change_estate_land_share = {
 						estate = estate_the_haniwa
