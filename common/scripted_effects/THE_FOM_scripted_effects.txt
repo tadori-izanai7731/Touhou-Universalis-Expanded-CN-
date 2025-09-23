@@ -12,12 +12,9 @@ THE_FOM_on_startup_scripted_effects = {
 		}
 		#初始变量
 		ENK = {
-			THE_FOM_on_start_random_list_set_influence_effects = {
-				marisa = 1
-				alice = 1
-				us = 50
-				other = 1
-			}
+			set_variable = { which = the_fom_forest_influence_is_marisa_var value = 150 }
+			set_variable = { which = the_fom_forest_influence_is_alice_var value = 15 }
+			set_variable = { which = the_fom_forest_influence_is_our_var value = 15 }
 		}
 		#
 		MST = {
@@ -25,7 +22,6 @@ THE_FOM_on_startup_scripted_effects = {
 				marisa = 10
 				alice = 15
 				us = 2
-				other = 2
 			}
 		}
 		#
@@ -34,7 +30,6 @@ THE_FOM_on_startup_scripted_effects = {
 				marisa = 15
 				alice = 5
 				us = 25
-				other = 5
 			}
 		}
 	}
@@ -71,11 +66,6 @@ THE_FOM_on_start_random_list_set_influence_effects = {
 		$us$ = {
 			set_variable = { which = the_fom_forest_influence_is_marisa_var value = 30 }
 			set_variable = { which = the_fom_forest_influence_is_alice_var value = 50 }
-			set_variable = { which = the_fom_forest_influence_is_our_var value = 30 }
-		}
-		$other$ = {
-			set_variable = { which = the_fom_forest_influence_is_marisa_var value = 30 }
-			set_variable = { which = the_fom_forest_influence_is_alice_var value = 30 }
 			set_variable = { which = the_fom_forest_influence_is_our_var value = 30 }
 		}
 	}

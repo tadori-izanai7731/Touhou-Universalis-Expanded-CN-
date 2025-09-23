@@ -1,0 +1,45 @@
+spriteTypes = {
+	progressbartype = {
+		name = "GFX_THE_MRS_wish_upon_the_star_reform_mechanic_bar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx\\interface\\government_mechanics\\the_mrs\\THE_MRS_mechanic_full.dds"
+		textureFile2 = "gfx\\interface\\government_mechanics\\the_mrs\\THE_MRS_mechanic_black.dds"
+		size = { x = 230 y = 30 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	spriteType = {
+		name = "GFX_THE_MRS_wish_upon_the_star_reform_mechanic_bar_frame"
+		texturefile = "gfx\\interface\\government_mechanics\\the_mrs\\THE_MRS_mechanic_flame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	
+	# spriteType = {
+	# 	name = "GFX_THE_FOM_marisa_witch_authority_mechanic_MRS_interface_1"
+	# 	texturefile = "gfx\\interface\\government_mechanics\\the_fom_witch_authority\\MRS_interface_1.dds"
+	# 	loadType = "INGAME"
+	# 	transparencecheck = yes
+	# }
+	# spriteType = {
+	# 	name = "GFX_THE_FOM_marisa_witch_authority_mechanic_MRS_interface_2"
+	# 	texturefile = "gfx\\interface\\government_mechanics\\the_fom_witch_authority\\MRS_interface_2.dds"
+	# 	loadType = "INGAME"
+	# 	transparencecheck = yes
+	# }
+	# spriteType = {
+	# 	name = "GFX_THE_FOM_marisa_witch_authority_mechanic_MRS_interface_3"
+	# 	texturefile = "gfx\\interface\\government_mechanics\\the_fom_witch_authority\\MRS_interface_3.dds"
+	# 	loadType = "INGAME"
+	# 	transparencecheck = yes
+	# }
+	##奇观
+	# spriteType = {
+    #     name = "GFX_great_project_the_mrs_golden_tree_elden"	
+    #     texturefile = "gfx//interface//great_projects//great_project_the_mrs_golden_tree_elden.dds"
+    # }
+	# spriteType = {
+    #     name = "GFX_great_project_the_mrs_kirisame_magic_store"	
+    #     texturefile = "gfx//interface//great_projects//great_project_the_mrs_kirisame_magic_store.dds"
+    # }
+}

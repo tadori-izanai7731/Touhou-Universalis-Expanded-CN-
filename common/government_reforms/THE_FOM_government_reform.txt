@@ -74,11 +74,14 @@ THE_MRS_wish_upon_the_star_reform = {
 }
 
 #光之形 #MGT
-THE_FOM_Dolls_envoy_reform = {
+THE_MGT_form_of_light_reform = {
 	lock_level_when_selected = yes
 	icon = "witch_government_reform"
 	potential = {
-		has_reform = THE_FOM_Dolls_envoy_reform
+		OR = {
+			has_reform = THE_MGT_form_of_light_reform
+			have_had_reform = THE_MGT_form_of_light_reform
+		}
 	}
 	valid_for_new_country = no
 	valid_for_nation_designer = yes
@@ -92,22 +95,25 @@ THE_FOM_Dolls_envoy_reform = {
 		enable_making_dolls_crops = yes 
 	}
 	government_abilities = {
-		THE_FOM_alice_dolls_making_mechanics
+		THE_MGT_form_of_light_reform_mechanic
 	}
 }
 
 #人偶2级
-THE_FOM_alice_dolls_influence_reform = {
+THE_MGT_eternal_radiance_reform = {
 	lock_level_when_selected = yes
 	icon = "witch_government_reform"
 	potential = {
-		has_reform = THE_FOM_Dolls_envoy_reform
+		OR = {
+			has_reform = THE_MGT_eternal_radiance_reform
+			have_had_reform = THE_MGT_eternal_radiance_reform
+		}
 	}
 	modifiers = {
 		morale_damage = 0.05
 	}
 	government_abilities = {
-		THE_FOM_alice_dolls_influence_mechanic
+		THE_MGT_eternal_radiance_reform_mechanic
 	}
 }
 #魔女的舞会

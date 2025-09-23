@@ -1,0 +1,36 @@
+spriteTypes = {
+	progressbartype = {
+		name = "GFX_THE_MGT_form_of_light_mechanic_bar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx\\interface\\government_mechanics\\the_mgt\\THE_MGT_mechanic_full.dds"
+		textureFile2 = "gfx\\interface\\government_mechanics\\the_mgt\\THE_MGT_mechanic_black.dds"
+		size = { x = 230 y = 30 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	spriteType = {
+		name = "GFX_THE_MGT_form_of_light_mechanic_bar_frame"
+		texturefile = "gfx\\interface\\government_mechanics\\the_mgt\\THE_MGT_mechanic_flame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_THE_MGT_form_of_light_upper"
+		texturefile = "gfx\\interface\\government_mechanics\\the_mgt\\THE_MGT_mechanic_upper.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_THE_MGT_form_of_light_mechanic_button"
+		texturefile = "gfx\\interface\\government_mechanics\\the_mgt\\THE_MGT_mechanic_button_icon.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	##省份UI
+	spriteType = {
+		name = "GFX_THE_MGT_making_dolls_button"
+		texturefile = "gfx\\interface\\government_mechanics\\the_mgt\\THE_MGT_province_button_1.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+}

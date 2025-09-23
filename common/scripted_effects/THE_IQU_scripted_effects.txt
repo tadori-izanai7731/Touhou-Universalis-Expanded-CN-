@@ -1643,25 +1643,49 @@ THE_IQU_scarlet_sky_government_effects = {
 				days = 2
 			}
 		}
-	}
-	if = {
-		limit = { 
-			owner = {
-				has_government_attribute = THE_IQU_scarlet_sky_reform_mechanic
-			}
-			region = {
-				type = all
-				NOT = {
-					has_country_modifier = THE_IQU_lonng_vein_head_province_buff
+		area = {
+			type = all
+			set_province_flag = THE_IQU_area_has_lock_the_loong_vein_flag
+		}
+		if = {
+			limit = {
+				region = {
+					type = all
+					NOT = {
+						has_province_modifier = THE_IQU_lonng_vein_head_province_buff
+					}	
 				}
 			}
+			add_permanent_province_modifier = {
+				name = THE_IQU_lonng_vein_head_province_buff
+				duration = -1
+			}
 		}
-		add_permanent_province_modifier = {
-			name = THE_IQU_lonng_vein_head_province_buff
-			duration = -1
-		}
-		set_province_flag = THE_IQU_area_has_lock_the_loong_vein_flag
 	}
+	# if = {
+	# 	limit = { 
+	# 		owner = {
+	# 			has_government_attribute = THE_IQU_scarlet_sky_reform_mechanic
+	# 		}
+	# 		NOT = {
+	# 			has_province_flag = THE_IQU_area_has_lock_the_loong_vein_flag
+	# 		}
+	# 		region = {
+	# 			type = all
+	# 			NOT = {
+	# 				has_country_modifier = THE_IQU_lonng_vein_head_province_buff
+	# 			}
+	# 		}
+	# 	}
+	# 	area = {
+	# 		type = all
+	# 		set_province_flag = THE_IQU_area_has_lock_the_loong_vein_flag
+	# 	}
+	# 	add_permanent_province_modifier = {
+	# 		name = THE_IQU_lonng_vein_head_province_buff
+	# 		duration = -1
+	# 	}
+	# }
 	if = {
 		limit = { 
 			owner = {
@@ -1724,43 +1748,6 @@ THE_IQU_number_explore_province_im_var_effect = {
 		}
 		owner = {
 			add_army_tradition = 1
-		}
-	}
-	#获得异常点
-	if = {
-		limit = { 
-			owner = {
-				mission_completed = THE_IQU_1_5
-			}
-			ROOT = {
-				has_port = yes
-				all_state_province = {
-					NOT = {
-						has_province_flag = THE_IQU_this_province_had_been_explored_flag
-					}
-					NOT = {
-						has_province_flag = THE_IQU_province_unique_point_flag
-					}
-				}
-				NOT = {
-					has_province_flag = THE_IQU_this_province_had_been_explored_flag
-				}
-				NOT = {
-					has_province_flag = THE_IQU_province_unique_point_flag
-				}
-			}
-		}
-		owner = {
-			random_list = {
-				50 = {
-					country_event = {
-						id = THE_IQU_flavor_events.1004
-					}
-				}
-				50 = {
-
-				}
-			}
 		}
 	}
 }
@@ -1890,6 +1877,42 @@ THE_IQU_panama_add_unique_point_event_effect = {
 				id = THE_IQU_flavor_events.65
 			}
 			set_country_flag = THE_IQU_find_unique_points_6
+		}
+	}
+
+	#
+	if = {
+		limit = { 
+			owner = {
+				OR = {
+					tag = IQU
+					was_tag = IQU
+				}
+				mission_completed = THE_IQU_1_5
+			}
+			has_port = yes
+			area = {
+				type = all
+				NOT = {
+					has_province_flag = THE_IQU_this_province_had_been_explored_flag
+				}
+				NOT = {
+					has_province_flag = THE_IQU_province_unique_point_flag
+				}
+			}
+		}
+		owner = {
+			random_list = {
+				50 = {
+					country_event = {
+						id = THE_IQU_flavor_events.1004
+					}
+				}
+
+				50 = {
+					
+				}
+			}
 		}
 	}
 }

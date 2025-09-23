@@ -6,6 +6,7 @@ THE_MRS_can_lock_cavalry_percentage_government_mechanic = {
 	}
 	powers = {
 		THE_MRS_lock_cavalry_percentage_government_power = {
+			gui = THE_mechanic_power_hidden_gui
 			max = 0
 			min = 0
 			scaled_modifier = {
@@ -65,6 +66,7 @@ THE_MRS_wish_upon_the_star_reform_mechanic = {
 	}
 	powers = {
 		THE_MRS_wish_upon_the_star_power = {
+			gui = "THE_MRS_wish_upon_the_star_mechanic_gui"
 			max = 100
 			min = 0
 			scaled_modifier = {
