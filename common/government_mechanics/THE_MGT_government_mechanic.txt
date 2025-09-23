@@ -1,0 +1,42 @@
+THE_MGT_form_of_light_reform_mechanic = {
+	# alert_icon_gfx = GFX_alerticons_government_mechanics
+	# alert_icon_index = 5
+	available = {
+		always = yes
+	}
+	interactions = {
+		THE_MGT_form_of_light_check_dolls = {
+			gui = "THE_KEI_government_interface_gui"
+			icon = GFX_THE_FOM_alice_dolls_start
+			trigger = {
+				ai = no
+			}
+			effect = {
+
+			}
+		}
+	}
+}
+THE_MGT_eternal_radiance_reform_mechanic = {
+	# alert_icon_gfx = GFX_alerticons_government_mechanics
+	# alert_icon_index = 5
+	available = {
+		always = yes
+	}
+	powers = {
+		THE_MGT_eternal_radiance_reform_mechanic_power = {
+			gui = THE_KEI_lonely_government_power_gui
+			min = 0
+			max = 100
+			base_monthly_growth = 0
+			scaled_modifier = {
+				modifier = {
+					idea_cost = -0.10
+					technology_cost = -0.10
+				}
+				start_value = 0
+				end_value = 100
+			}
+		}
+	}
+}

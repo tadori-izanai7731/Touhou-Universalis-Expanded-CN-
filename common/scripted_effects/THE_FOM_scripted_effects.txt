@@ -117,6 +117,9 @@ THE_FOM_won_rebel_im_var_effects = {
 			enemy_unit = {
 				unit_owner = {
 					tag = MRS
+					NOT = {
+						has_country_flag = THE_FOM_won_rebel_im_var_effects_lock_flag
+					}
 					check_variable = {
 						which = the_fom_check_won_rebel_im_var
 						value = 2
@@ -132,6 +135,7 @@ THE_FOM_won_rebel_im_var_effects = {
 		}
 		enemy_unit = {
 			unit_owner = {
+				set_country_flag = THE_FOM_won_rebel_im_var_effects_lock_flag
 				country_event = {
 					id = THE_FOM_flavor_events.5
 					days = 1

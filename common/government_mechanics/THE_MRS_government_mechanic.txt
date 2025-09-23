@@ -74,13 +74,6 @@ THE_MRS_wish_upon_the_star_reform_mechanic = {
 					available_province_loot = 0.25
 					all_estate_influence_modifier = -0.50
 				}
-				trigger = {
-					has_government_power = {
-						mechanic_type = THE_MRS_can_lock_cavalry_percentage_government_mechanic
-						power_type = THE_MRS_lock_cavalry_percentage_government_power
-						value = 0
-					}
-				}
 			}
 		}
 	}

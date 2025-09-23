@@ -739,12 +739,6 @@ THE_IQU_main_branch_3 = {
 				has_courthouse_building_trigger = yes
 			}
 			army_professionalism = 0.20
-			all_owned_province = {
-				is_prosperous = yes
-				NOT = {
-					devastation = 1
-				}
-			}
 		} 
 
 		effect = { 

@@ -10,10 +10,11 @@ country_event = {
 	}
 	immediate = {
 		hidden_effect = {
-			if = {
-				limit = { NOT = { has_saved_event_target = THE_IQU_province_unique_1_target } }
-				THE_IQU_define_expedition_target_effects = yes
-			}
+			# if = {
+			# 	limit = { NOT = { has_saved_event_target = THE_IQU_province_unique_1_target } }
+			# 	THE_IQU_define_expedition_target_effects = yes
+			# }
+			THE_IQU_define_expedition_target_effects = yes
 		}
 	}
 	option = {
@@ -23,6 +24,9 @@ country_event = {
 	option = {
 		name = THE_IQU_flavor_events.0.1
 		goto = THE_IQU_province_unique_1_target
+		trigger = {
+			has_saved_event_target = THE_IQU_province_unique_1_target
+		}
 		event_target:THE_IQU_province_unique_1_target = {
 			custom_tooltip = THE_IQU_event_0_c_tt1
 			province_event = {
@@ -88,7 +92,7 @@ country_event = {
 	}
 	#
 	option = {
-		name = THE_IQU_flavor_events.0.4
+		name = THE_IQU_flavor_events.0.5
 		goto = THE_IQU_province_unique_5_target
 		trigger = {
 			has_saved_event_target = THE_IQU_province_unique_5_target
@@ -106,7 +110,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = THE_IQU_flavor_events.0.4
+		name = THE_IQU_flavor_events.0.6
 		goto = THE_IQU_province_unique_6_target
 		trigger = {
 			has_saved_event_target = THE_IQU_province_unique_6_target
@@ -124,7 +128,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = THE_IQU_flavor_events.0.4
+		name = THE_IQU_flavor_events.0.7
 		goto = THE_IQU_province_unique_7_target
 		trigger = {
 			has_saved_event_target = THE_IQU_province_unique_7_target
@@ -142,7 +146,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = THE_IQU_flavor_events.0.4
+		name = THE_IQU_flavor_events.0.8
 		goto = THE_IQU_province_unique_8_target
 		trigger = {
 			has_saved_event_target = THE_IQU_province_unique_8_target
@@ -162,6 +166,11 @@ country_event = {
 	after = {
 		every_owned_province = {
 			clr_province_flag = THE_IQU_had_saved_unique_point_flag
+		}
+		every_subject_country = {
+			every_owned_province = {
+				clr_province_flag = THE_IQU_had_saved_unique_point_flag
+			}
 		}
 	}
 }
@@ -6276,16 +6285,15 @@ country_event = {
 		
 	}
 	immediate = {
-		if = {
-			limit = {
-				has_government_attribute = THE_IQU_scarlet_sky_reform_mechanic
+		FROM = {
+			area = {
+				type = all
+				create_colony = 1000
+				set_province_flag = THE_IQU_area_has_lock_the_loong_vein_flag
 			}
-			FROM = {
-				area = {
-					type = all
-					create_colony = 1000
-				}
-			}
+			# every_province_in_state = {
+			# 	create_colony = 1000
+			# }
 		}
 	}
 	option = {
