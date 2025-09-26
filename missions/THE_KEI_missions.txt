@@ -2060,43 +2060,41 @@ THE_KEI_main_branch_5 = {
 		provinces_to_highlight = {  } 
 		
 		trigger = { 
-			4982 = { #Antwerpen
-			trade_share = {
-				country = ROOT
-				share = 50
-			}
-		}
-		5244 = { #Antwerpen
-		trade_share = {
-			country = ROOT
-			share = 50
-		}
-	}
-	num_of_provinces_owned_or_owned_by_subjects_with = {
-		value = 10
-		province_has_center_of_trade_of_level = 2
-	}
-} 
-
-effect = { 
-	custom_tooltip = THE_KEI_5_9_c_tt1
-	add_country_modifier = {
-		name = THE_KEI_restore_contact_buff
-		duration = -1
-	}
-	hidden_effect = {
-		every_owned_province = {
-			limit = {
-				OR = {
-					region = hell_region
+			4982 = {
+				trade_share = {
+					country = ROOT
+					share = 50
 				}
 			}
-			add_local_autonomy = -30
-			add_nationalism = -10
-		}
+			5244 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 10
+				province_has_center_of_trade_of_level = 2
+			}
+		} 
+		
+		effect = { 
+			custom_tooltip = THE_KEI_5_9_c_tt1
+			add_country_modifier = {
+				name = THE_KEI_restore_contact_buff
+				duration = -1
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						region = hell_region
+					}
+					add_local_autonomy = -30
+					add_nationalism = -10
+				}
+			}
+		} 
 	}
-} 
-}
 
 THE_KEI_5_10 = {
 	icon = the_kei_mission_26
