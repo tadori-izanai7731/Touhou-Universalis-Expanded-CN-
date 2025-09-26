@@ -709,7 +709,7 @@ THE_KEI_main_branch_2 = {
 		
 		trigger = { 
 			num_of_owned_provinces_with = {
-				value = 30
+				value = 15
 				NOT = {
 					num_free_building_slots = 1
 				}
@@ -1077,9 +1077,9 @@ THE_KEI_main_branch_3 = {
 				value = 5
 				has_building = university
 			}
-			has_adm_advisor_2 = yes
-			has_dip_advisor_2 = yes
-			has_mil_advisor_2 = yes
+			THE_has_adm_advisor_with_level = { level = 3 }
+			THE_has_dip_advisor_with_level = { level = 3 }
+			THE_has_mil_advisor_with_level = { level = 3 }
 		}
 		effect = {
 			custom_tooltip = THE_KEI_3_12_c_t11
@@ -1666,18 +1666,10 @@ THE_KEI_main_branch_4 = {
 			else = {
 				custom_tooltip = THE_KEI_4_9_c_tt2_no
 				custom_tooltip = THE_KEI_4_9_c_tt3
-				add_country_modifier = {
-					name = THE_KEI_cloaked_in_radiance_buff
-					duration = -1
-				}
-				hidden_effect = {
-					every_owned_province = {
-						limit = {
-							region = hell_region
-						}
-						add_base_tax = 1
-						add_base_production = 1
-						add_base_manpower = 1
+				tooltip = {
+					add_country_modifier = {
+						name = THE_KEI_cloaked_in_radiance_buff
+						duration = -1
 					}
 				}
 			}
@@ -1892,7 +1884,7 @@ THE_KEI_main_branch_5 = {
 				tooltip = THE_KEI_5_5_c_tt2
 				check_variable = {
 					which = the_kei_the_leader_won_battle_im_var
-					value = 30
+					value = 15
 				}
 			}
 			has_global_modifier_value = {
@@ -3031,7 +3023,7 @@ THE_KEI_minor_branch_1_create = {
 				}
 			}
 			num_of_owned_provinces_with = {
-				value = 30
+				value = 15
 				development = 60
 				is_prosperous = yes
 				has_building = university
@@ -3048,6 +3040,8 @@ THE_KEI_minor_branch_1_create = {
 				name = THE_KEI_without_out_of_life_buff
 				duration = -1
 			}
+			custom_tooltip = THE_KEI_1_12_create_c_tt2_yes
+			custom_tooltip = empty_line_tt
 			if = {
 				limit = {
 					estate_loyalty = {
@@ -3064,7 +3058,6 @@ THE_KEI_minor_branch_1_create = {
 					}
 				}
 				custom_tooltip = THE_KEI_1_12_create_c_tt1_yes
-				custom_tooltip = THE_KEI_1_12_create_c_tt2_yes
 				custom_tooltip = THE_KEI_1_12_create_c_tt3
 				tooltip = {
 					add_country_modifier = {
@@ -3086,23 +3079,11 @@ THE_KEI_minor_branch_1_create = {
 			}
 			else = {
 				custom_tooltip = THE_KEI_1_12_create_c_tt1_no
-				custom_tooltip = THE_KEI_1_12_create_c_tt2_yes
 				custom_tooltip = THE_KEI_1_12_create_c_tt3
 				tooltip = {
 					add_country_modifier = {
 						name = THE_KEI_the_new_life_mission_buff
 						duration = -1
-					}
-				}
-				hidden_effect = {
-					every_country = {
-						limit = {
-							religion = THE_keiki_religion
-						}
-						add_country_modifier = {
-							name = THE_KEI_the_new_life_mission_buff
-							duration = -1
-						}
 					}
 				}
 			}
@@ -3135,7 +3116,7 @@ THE_KEI_minor_branch_2_create = {
 		
 		trigger = { 
 			num_of_owned_provinces_with = {
-				value = 30
+				value = 15
 				culture = Higanean
 				NOT = {
 					num_free_building_slots = 2

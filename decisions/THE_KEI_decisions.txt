@@ -639,25 +639,11 @@ country_decisions = {
 			mission_completed = THE_KEI_5_5
 		}
 		allow = {
-			custom_trigger_tooltip = {
-				tooltip = THE_KEI_create_mayumi_advisor_cooldown_tt
-				OR = {
-					NOT = {
-						has_country_flag = THE_KEI_create_mayumi_advisor_cooldown_flag
-					}
-					had_country_flag = {
-						flag = THE_KEI_create_mayumi_advisor_cooldown_flag
-						days = 7300
-					}
-				}
-			}
+			NOT = { has_advisor_type_in_pool = THE_mayumi_advisor }
+			NOT = { employed_advisor = { type = THE_mayumi_advisor } }
 		}
 		effect = {
 			THE_KEI_define_the_advisor_mayumi_effect = yes
-			hidden_effect = {
-				clr_country_flag = THE_KEI_create_mayumi_advisor_cooldown_flag
-				set_country_flag = THE_KEI_create_mayumi_advisor_cooldown_flag
-			}
 		}
 	}
 
