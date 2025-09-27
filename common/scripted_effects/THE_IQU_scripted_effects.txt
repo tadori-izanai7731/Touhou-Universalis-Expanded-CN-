@@ -1889,21 +1889,20 @@ THE_IQU_panama_add_unique_point_event_effect = {
 					was_tag = IQU
 				}
 				mission_completed = THE_IQU_1_5
-				any_subject_country = {
-					
-				}
 			}
 			ROOT = {
+				#THE_IQU_this_province_had_been_explored_flag 已经完成探索
+				#THE_IQU_province_unique_point_flag 异常点探索
 				has_port = yes
-				area = {
-					type = all
-					NOT = {
-						has_province_flag = THE_IQU_this_province_had_been_explored_flag
-					}
-					NOT = {
-						has_province_flag = THE_IQU_province_unique_point_flag
-					}
-				}
+				# area = {
+				# 	type = all
+				# 	NOT = {
+				# 		has_province_flag = THE_IQU_this_province_had_been_explored_flag
+				# 	}
+				# 	NOT = {
+				# 		has_province_flag = THE_IQU_province_unique_point_flag
+				# 	}
+				# }
 				# every_province_in_state = {
 				# 	NOT = {
 				# 		has_province_flag = THE_IQU_province_unique_point_flag
