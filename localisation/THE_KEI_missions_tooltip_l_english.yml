@@ -12,7 +12,7 @@
  mechanic_THE_KEI_can_not_create_allianece_yes: "ybkÓußv"
  mechanic_THE_KEI_dedicate_ourselves_governemnt_reform_yes: "SVbìNÞV6e†˜0Wöeÿ\n-·ƒ—V§G6§!*Ng6eeQ\n-§YëTsY§!Ïk	g§Y10§!àVÚ‹¦^·ƒ—V§G10§!£adm£\n-§YºN‰|up§!Ïk	g§Y10§!àVÚ‹¦^·ƒ—V§G10§!£dip£\n-§Y¨Rirup§!Ïk	g§Y10§!àVÚ‹¦^·ƒ—V§G10§!£mil£"
  ability_THE_KEI_save_the_masses_government_mechanic: "ˆmKNIQ"
- mechanic_THE_KEI_save_the_masses_government_CUSTOM_ability_yes: "ÏkSV‰^ó`aNýV¶Rmp¡NöeÿbìNGWO·ƒ—VåNNHeœg:\n--ekuQjObýw›R §G+0.5%§!\n--‘šuQjObýw›R §G+0.5%§!\n--®puQjObýw›R §G+0.5%§! \n--F–›QÄ‰!jNP– §G+2§!\n--eˆXT¦^ §G+2%§!"
+ mechanic_THE_KEI_save_the_masses_government_CUSTOM_ability_yes: "ÏkSV‰^ó`aNýV¶Rmp¡NöeÿbìNGWO·ƒ—VåNNHeœg:\n--ekuQjObýw›R:§G+0.5%§!\n--‘šuQjObýw›R:§G+0.5%§!\n--®puQjObýw›R:§G+0.5%§! \n--F–›QÄ‰!jNP–:§G+2.0§!\n--eˆXT¦^:§G+2.0%§!"
  THE_KEI_lonely_gods_can_not_alliance_c_tooltip: "0dRËzàeôc„v.bV^y0"
  THE_KEI_without_the_time_and_end_government_reform: "àeËYàeÈu"
  THE_KEI_without_the_time_and_end_government_reform_desc: ".‹W^yåNHa²`KNÃV:NjuuLu&^egQeNÿ:NbìNýV¦^&^eg†NENÝ„vyIyÿ©‹ÙGrW0WÍ‘qu:g0ByNb&^eg„vIQfS•EN0Wgqwÿ8lNOÈuÓu0"
@@ -121,6 +121,7 @@
  THE_KEI_stupid_human_buff: "™„S"
  THE_KEI_the_animal_road_buff: "juuKNS"
  monthly_THE_KEI_lonely_creation_mechanic_power: "ÏkgSužX•"
+ monthly_THE_KEI_masses_var_power: "Ïkg§Oˆm„vIQ’‚§!žX•"
  THE_KEI_eternal_joy_land_buff: "R`PN8^W"
  THE_KEI_impure_consumables_buff: "bIrÅN:NwPg"
  THE_KEI_subject_buff_add_idea_cost_buff: "Ue‹T0qu0"
@@ -145,6 +146,7 @@
  THE_KEI_thought_of_rebirth_buff: "ÞVuKNõV"
  THE_KEI_law_in_keiki_buff: "up•íV„v‹VÕl"
  THE_KEI_advance_fort_buff: " R:V2–¡VåT‹N"
+ THE_KEI_collect_glow_modifier: "GlÆ–®VIQ"
  ##religion
  THE_keiki_religion: "¦hó`.‹W"
  the_keiki_fervor_shapping: "QXbV"
@@ -163,7 +165,7 @@
  THE_KEI_change_workman_duixiang_decoisions_desc: "USûQ³Q®‹(W§Y‹NöN§!	y˜-N	éb—‰ú^¾‹„vú^Qr"
  THE_KEI_check_save_the_masses_im_var_decosions_title: "@KEI§M0Z†?ab‡k0§!îvMRˆm„vIQ’‚pe:Nÿ[Root.the_kei_masses_var_im_var.GetValue])"
  THE_KEI_check_save_the_masses_im_var_c_tt1: "§M7R°eSVMR¶r`§!"
- THE_KEI_check_save_the_masses_im_var_c_tt2: "SVMR0Z†?a0&^eg„vîOckÿ\n--ekuQjObýw›R +§G[Root.the_kei_decision_check_im_var_infi.GetValue]%§!\n--‘šuQjObýw›R +§G[Root.the_kei_decision_check_im_var_infi.GetValue]%§!\n--®puQjObýw›R +§G[Root.the_kei_decision_check_im_var_infi.GetValue]%§!\n--F–›QNP– +§G[Root.the_kei_decision_check_im_var_landfor.GetValue]§!\n--eˆXT¦^ +§G[Root.the_kei_decision_check_im_var_landfor.GetValue]§!"
+ THE_KEI_check_save_the_masses_im_var_c_tt2: "SVMR0Z†?a0&^eg„vîOckÿ\n--ekuQjObýw›R:§G+[Root.the_kei_decision_check_im_var_infi.GetValue]%§!\n--‘šuQjObýw›R:§G+[Root.the_kei_decision_check_im_var_infi.GetValue]%§!\n--®puQjObýw›R:§G+[Root.the_kei_decision_check_im_var_infi.GetValue]%§!\n--F–›QNP–:§G+[Root.the_kei_decision_check_im_var_landfor.GetValue]§!\n--eˆXT¦^:§G+[Root.the_kei_decision_check_im_var_landfor.GetValue]§!"
  THE_KEI_check_save_the_masses_im_var_decosions_desc: "US:g§Y³Q®‹§!7R°eSVMR0Z†?a0&^eg„vîOck"
  THE_KEI_the_subject_of_keiki_decosions_title: "ågwSVMR?a›R§Mÿ[From.the_kei_the_blessing_of_the_keiki.GetValue])§!"
  THE_KEI_the_subject_of_keiki_decosions_desc: ""
@@ -255,11 +257,11 @@
  THE_KEI_3_12_c_t11: "§YSu§!˜YÙuˆN`no.O­d:§G+33.0%§!ÿdkîOck–§YSu§!pe<PØSS"
  THE_KEI_4_12_c_tt1: "§YSu§!˜YÙuˆNýV¶RºN›RîOck:§G+33.0%§!0ºN›Rb`Y¦^:§G+15.0%§!ÿdkîOck–§YSu§!pe<PØSS"
  THE_KEI_2_10_alone_c_tt1: "(W‰^ó`aN–:gRú^3*N§O0¦hó`.‹W0§!9ei—-NÃV"
- THE_KEI_2_11_alone_c_tt1: "bìN(WeRJRwýNÑSUS¦^öe·ƒ—V§G2.5§!§OSu§!ÿv^M–NO§G10§!ÛSqN¦^åNÊS§G30%§!ê»l¦^"
- THE_KEI_1_10_alone_c_1: "˜YHeœg§OUe‹T0Âríp0§!\n--§gbìN(Wb‰N-N`S†˜„vNb	gwýNýOlYe:N0¦hó`.‹W0§!"
- THE_KEI_1_12_alone_c_tt1: "GSµu§OUe‹T0÷–Lˆ0§!\n--§MÇ³Q®‹Rbc§!\n--§g°sAQ¸‹bìN±‚95¹p§OSu§!ubbìNF–›QNP–§G10%§!„vekuQ§!"
+ THE_KEI_2_11_alone_c_tt1: "eRJRwýNÑSUS¦^öe·ƒ—V§G2.5§!§OSu§!ÿÙuˆNSV0W§G-10§!ÛSqN¦^ŒT§G-30%§!ê»l¦^"
+ THE_KEI_1_10_alone_c_1: "(Wb‰N-N`S†˜„vNb	gwýNSlØS:N§O0¦hó`.‹W0§!"
+ THE_KEI_1_12_alone_c_tt1: "GSµu§OUe‹T0÷–Lˆ0§!\n--§gAQ¸‹±‚9§Y5§!¹p§OSu§!ubF–›QNP–§Y10%§!„vekuQ§!\n--§MÇ³Q®‹Rbc§!"
  THE_KEI_2_11_alone_c_tt2: "åb	g§Y+7§!ckßuáOðN¹RÍV"
- THE_KEI_2_12_alone_c_tt1: "§Måb	gdkHeœgöeÿNb	gýV¶RGWàeÕlùRbìN±Rb§!"
+ THE_KEI_2_12_alone_c_tt1: "§Måb	gdkHeœgöeÿvQÖNýV¶RàeÕlùRbìN±Rb§!"
  THE_KEI_2_12_alone_c_tt2: "GSµu§O0qu0§!\n-§g0qu0ÑSUS¦^P–6RÐcØšó120N±‚9ÏQJS§!"
  THE_KEI_the_eternal_land_declare_tt: "1uŽN@KEI§YvPÏPKNƒX§!åb	gîOck§MR`PN8^W§!bìNàeÕlùRvQ±Rb"
  THE_KEI_5_12_c_tt1_yes: "£yes£‚YœgÇVg@CRD§Y[CRD.GetName]§!ŒRbûN¡R"
@@ -295,7 +297,7 @@
  THE_KEI_1_12_create_c_tt2: "0§YRLˆRu:Ru§!0˜Y·ƒ—V§G50000§!ºN›R"
  THE_KEI_4_1_c_tt_6_yes: "£yes£‚Yœg§Y[Root.Get^lName]§!6–BSåb	g§Y40%§!qVÍT›R:"
  THE_KEI_4_1_c_tt_6_no: "£no£‚Yœg§Y[Root.Get^lName]§!6–BSåb	g§Y40%§!qVÍT›R:"
- THE_KEI_4_5_c_tt1: "»lNNb	g&rTagöN„v§YjuuLu§!:SßWwýNÿ·ƒ—V§G10§!£adm£§G10§!£dip£§G10§!£mil£"
+ THE_KEI_4_5_c_tt1: "»lNNb	g&rTagöN„v§YjuuLu§!:SßWwýN·ƒ—V§G10§!£adm£0§G10§!£dip£0§G10§!£mil£"
  THE_KEI_4_5_c_tt2_yes: "£yes£‚Yœg»lNwýNåb	g20*N§Yz6e§!‰|ú^Qr"
  THE_KEI_4_5_c_tt2_no: "£no£‚Yœg»lNwýNåb	g20*N§YúR™^§!‰|ú^Qr"
  THE_KEI_3_2_c_tt1_yes: "£yes£‚YœgLˆ?eÑyŽb*g¾0R§Y4§!µu"

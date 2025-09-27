@@ -255,3 +255,7 @@ THE_KEI_advance_fort_buff = {
 	fort_level = 1
 	local_garrison_size = 0.25
 }
+
+THE_KEI_collect_glow_modifier = {
+	monthly_THE_KEI_masses_var_power = 0.01
+}

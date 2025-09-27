@@ -2031,7 +2031,7 @@ THE_KEI_main_branch_5 = {
 		trigger = { 
 			Gate_to_the_dead = {
 				type = all
-				owned_by = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			5051 = {
 				has_fort_building_trigger = yes	
@@ -2040,14 +2040,10 @@ THE_KEI_main_branch_5 = {
 		
 		effect = { 
 			5051 = {
-				add_province_modifier = {
+				add_or_upgrade_fort_building = yes
+				add_permanent_province_modifier = {
 					name = THE_KEI_the_gate_of_hell_buff
 					duration = -1
-				}
-			}
-			hidden_effect = {
-				5051 = {
-					add_or_upgrade_fort_building = yes
 				}
 			}
 		} 
@@ -2685,6 +2681,7 @@ THE_KEI_minor_branch_1_alone = {
 	potential = { 
 		tag = KEI 
 		has_country_flag = THE_KEI_branch_chose_alone_branch_flag
+		NOT = { has_country_flag = THE_KEI_branch_chose_create_branch_flag }
 	} 
 	
 	THE_KEI_1_10_alone = {
@@ -2745,10 +2742,8 @@ THE_KEI_minor_branch_1_alone = {
 		
 		trigger = { 
 			all_country = {
-				capital_scope = {
-					superregion = gensokyo_superregion
-				}
 				OR = {
+					NOT = { capital_scope = { superregion = gensokyo_superregion } }
 					is_rival = ROOT
 					is_threat = ROOT
 					is_subject_of = ROOT
@@ -2759,6 +2754,7 @@ THE_KEI_minor_branch_1_alone = {
 		
 		effect = { 
 			custom_tooltip = THE_KEI_1_12_alone_c_tt1
+			custom_tooltip = empty_line_tt
 			#buff
 			add_country_modifier = {
 				name = THE_KEI_impure_consumables_buff
@@ -2775,6 +2771,7 @@ THE_KEI_minor_branch_2_alone = {
 	potential = { 
 		tag = KEI 
 		has_country_flag = THE_KEI_branch_chose_alone_branch_flag
+		NOT = { has_country_flag = THE_KEI_branch_chose_create_branch_flag }
 	} 
 	
 	THE_KEI_2_10_alone = {
@@ -2902,9 +2899,6 @@ THE_KEI_minor_branch_2_alone = {
 				name = THE_KEI_the_animal_road_buff
 				duration = -1
 			}
-			hidden_effect = {
-				
-			}
 		} 
 	}
 	
@@ -2928,6 +2922,7 @@ THE_KEI_minor_branch_2_alone = {
 		
 		effect = { 
 			custom_tooltip = THE_KEI_2_12_alone_c_tt2
+			custom_tooltip = empty_line_tt
 			add_country_modifier = {
 				name = THE_KEI_eternal_joy_land_buff
 				duration = -1
@@ -2945,6 +2940,7 @@ THE_KEI_minor_branch_1_create = {
 	potential = { 
 		tag = KEI 
 		has_country_flag = THE_KEI_branch_chose_create_branch_flag
+		NOT = { has_country_flag = THE_KEI_branch_chose_alone_branch_flag }
 	} 
 	
 	THE_KEI_1_10_create = {
@@ -3096,6 +3092,7 @@ THE_KEI_minor_branch_2_create = {
 	potential = { 
 		tag = KEI 
 		has_country_flag = THE_KEI_branch_chose_create_branch_flag
+		NOT = { has_country_flag = THE_KEI_branch_chose_alone_branch_flag }
 	} 
 	
 	THE_KEI_2_10_create = {
@@ -3135,9 +3132,12 @@ THE_KEI_minor_branch_2_create = {
 			}
 		} 
 		
-		effect = { 
+		effect = {
 			custom_tooltip = THE_KEI_2_10_create_c_tt2
-			# custom_tooltip = THE_KEI_2_10_create_c_tt1
+			add_country_modifier = {
+				name = THE_KEI_collect_glow_modifier
+				duration = -1
+			}
 		} 
 	}
 	

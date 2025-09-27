@@ -1,6 +1,6 @@
 THE_KNE_another_professionalism_20_1 = {
 	hidden = yes
-	army_professionalism = 0.2
+	army_professionalism = 0
 
 	marker_sprite = GFX_pa_rank_0
 	unit_sprite_start = "GFX_ap1_"
@@ -8,6 +8,7 @@ THE_KNE_another_professionalism_20_1 = {
 	trigger = {
 		has_government_attribute = THE_KNE_mandate_reform_strengthen_professionalism_custom_attributes
 		empire_of_china_reform_passed = vassalize_tributaries_decision
+		army_professionalism = 0.2
 	}
 	vassal_forcelimit_bonus = 0.20
 	tributary_conversion_cost_modifier = -0.1
@@ -15,7 +16,7 @@ THE_KNE_another_professionalism_20_1 = {
 
 THE_KNE_another_professionalism_40_1 = {
 	hidden = yes
-	army_professionalism = 0.4
+	army_professionalism = 0
 
 	marker_sprite = GFX_pa_rank_0
 	unit_sprite_start = "GFX_ap1_"
@@ -23,6 +24,7 @@ THE_KNE_another_professionalism_40_1 = {
 	trigger = {
 		has_government_attribute = THE_KNE_mandate_reform_strengthen_professionalism_custom_attributes
 		empire_of_china_reform_passed = reform_civil_registration_decision
+		army_professionalism = 0.4
 	}
 	culture_conversion_time = -0.25
 	army_tradition = 1
@@ -30,7 +32,7 @@ THE_KNE_another_professionalism_40_1 = {
 
 THE_KNE_another_professionalism_60_1 = {
 	hidden = yes
-	army_professionalism = 0.6
+	army_professionalism = 0
 
 	marker_sprite = GFX_pa_rank_0
 	unit_sprite_start = "GFX_ap1_"
@@ -38,6 +40,7 @@ THE_KNE_another_professionalism_60_1 = {
 	trigger = {
 		has_government_attribute = THE_KNE_mandate_reform_strengthen_professionalism_custom_attributes
 		empire_of_china_reform_passed = promote_bureaucratic_faction_decision
+		army_professionalism = 0.6
 	}
 	culture_conversion_cost = -0.25
 	fort_maintenance_modifier = -0.25
@@ -45,14 +48,14 @@ THE_KNE_another_professionalism_60_1 = {
 
 THE_KNE_another_professionalism_60_2 = {
 	hidden = yes
-	army_professionalism = 0.6
-
+	army_professionalism = 0
 	marker_sprite = GFX_pa_rank_0
 	unit_sprite_start = "GFX_ap1_"
 
 	trigger = {
 		has_government_attribute = THE_KNE_mandate_reform_strengthen_professionalism_custom_attributes
 		empire_of_china_reform_passed = promote_military_faction_decision
+		army_professionalism = 0.6
 	}
 	global_attacker_dice_roll_bonus = 1
 	drill_gain_modifier = 0.5
@@ -60,7 +63,7 @@ THE_KNE_another_professionalism_60_2 = {
 
 THE_KNE_another_professionalism_80_1 = {
 	hidden = yes
-	army_professionalism = 0.8
+	army_professionalism = 0
 
 	marker_sprite = GFX_pa_rank_0
 	unit_sprite_start = "GFX_ap1_"
@@ -68,6 +71,7 @@ THE_KNE_another_professionalism_80_1 = {
 	trigger = {
 		has_government_attribute = THE_KNE_mandate_reform_strengthen_professionalism_custom_attributes
 		empire_of_china_reform_passed = modernize_the_banners_decision
+		army_professionalism = 0.8
 	}
 	cavalry_fire = 0.5
 	cavalry_shock = 0.5
@@ -75,7 +79,7 @@ THE_KNE_another_professionalism_80_1 = {
 
 THE_KNE_another_professionalism_100_1 = {
 	hidden = yes
-	army_professionalism = 1.0
+	army_professionalism = 0
 
 	marker_sprite = GFX_pa_rank_0
 	unit_sprite_start = "GFX_ap1_"
@@ -83,6 +87,7 @@ THE_KNE_another_professionalism_100_1 = {
 	trigger = {
 		has_government_attribute = THE_KNE_mandate_reform_strengthen_professionalism_custom_attributes
 		empire_of_china_reform_passed = reform_the_military_branch_decision
+		army_professionalism = 1.0
 	}
 	military_tactics = 0.2
 	danmaku_power_factor = 0.2

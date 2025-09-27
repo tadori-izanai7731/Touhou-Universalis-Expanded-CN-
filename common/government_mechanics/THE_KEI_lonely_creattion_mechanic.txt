@@ -263,6 +263,7 @@ THE_KEI_save_the_masses_government_mechanic = {
 			gui = THE_mechanic_power_hidden_gui
 			max = 1000
 			min = 0
+			increases_with_global = no
 			#变化
 			scaled_modifier = {
 				modifier = { 
