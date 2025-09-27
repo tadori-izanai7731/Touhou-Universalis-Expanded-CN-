@@ -1880,7 +1880,7 @@ THE_IQU_panama_add_unique_point_event_effect = {
 		}
 	}
 
-	#
+	#异常点
 	if = {
 		limit = { 
 			owner = {
@@ -1889,30 +1889,43 @@ THE_IQU_panama_add_unique_point_event_effect = {
 					was_tag = IQU
 				}
 				mission_completed = THE_IQU_1_5
-			}
-			has_port = yes
-			area = {
-				type = all
-				NOT = {
-					has_province_flag = THE_IQU_this_province_had_been_explored_flag
-				}
-				NOT = {
-					has_province_flag = THE_IQU_province_unique_point_flag
-				}
-			}
-		}
-		owner = {
-			random_list = {
-				50 = {
-					country_event = {
-						id = THE_IQU_flavor_events.1004
-					}
-				}
-
-				50 = {
+				any_subject_country = {
 					
 				}
 			}
+			ROOT = {
+				has_port = yes
+				area = {
+					type = all
+					NOT = {
+						has_province_flag = THE_IQU_this_province_had_been_explored_flag
+					}
+					NOT = {
+						has_province_flag = THE_IQU_province_unique_point_flag
+					}
+				}
+				# every_province_in_state = {
+				# 	NOT = {
+				# 		has_province_flag = THE_IQU_province_unique_point_flag
+				# 	}
+				# }
+			}
+
+		}
+		owner = {
+			country_event = {
+				id = THE_IQU_flavor_events.1004
+			}
+			# random_list = {
+			# 	50 = {
+			# 		country_event = {
+			# 			id = THE_IQU_flavor_events.1004
+			# 		}
+			# 	}
+			# 	50 = {
+					
+			# 	}
+			# }
 		}
 	}
 }
