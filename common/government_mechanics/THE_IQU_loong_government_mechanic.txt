@@ -47,76 +47,86 @@ THE_IQU_cloud_with_sky_mechanic = {
 	powers = {
 		THE_IQU_with_hvr_adm_power_power = {
 			gui = THE_mechanic_power_hidden_gui
-			max = 6
 			min = 0
+			max = 6
 			base_monthly_growth = 0
 			increases_with_global = no
 			scaled_modifier = {
-				trigger = {
-					HVR = {
-						overlord_of = ROOT
-					}
-				}
 				modifier = {
 					country_admin_power = 3
 				}
-			}
-			scaled_modifier = {
 				trigger = {
 					HVR = {
 						overlord_of = ROOT
 					}
-					mission_completed = THE_IQU_4_4
 				}
+				start_value = 0
+				end_value = 6
+			}
+			scaled_modifier = {
 				modifier = { 
 					global_trade_goods_size_modifier = 0.12
 					trade_efficiency = 0.12
 				}
-			}
-		}
-		THE_IQU_with_hvr_dip_power_power = {
-			gui = THE_mechanic_power_hidden_gui
-			max = 6
-			min = 0
-			base_monthly_growth = 0
-			increases_with_global = no
-			scaled_modifier = {
-				trigger = {
-					HVR = {
-						overlord_of = ROOT
-					}
-				}
-				modifier = {
-					country_diplomatic_power = 3
-				}
-			}
-			scaled_modifier = {
 				trigger = {
 					HVR = {
 						overlord_of = ROOT
 					}
 					mission_completed = THE_IQU_4_4
 				}
-				modifier = { 
-					global_sailors_modifier = 0.30
-				}
+				start_value = 0
+				end_value = 6
 			}
 		}
-		THE_IQU_with_hvr_mil_power_power = {
+		THE_IQU_with_hvr_dip_power_power = {
 			gui = THE_mechanic_power_hidden_gui
-			max = 6
 			min = 0
+			max = 6
 			base_monthly_growth = 0
 			increases_with_global = no
 			scaled_modifier = {
+				modifier = {
+					country_diplomatic_power = 3
+				}
 				trigger = {
 					HVR = {
 						overlord_of = ROOT
 					}
 				}
+				start_value = 0
+				end_value = 6
+			}
+			scaled_modifier = {
+				modifier = { 
+					global_sailors_modifier = 0.30
+				}
+				trigger = {
+					HVR = {
+						overlord_of = ROOT
+					}
+					mission_completed = THE_IQU_4_4
+				}
+				start_value = 0
+				end_value = 6
+			}
+		}
+		THE_IQU_with_hvr_mil_power_power = {
+			gui = THE_mechanic_power_hidden_gui
+			min = 0
+			max = 6
+			base_monthly_growth = 0
+			increases_with_global = no
+			scaled_modifier = {
 				modifier = {
 					country_military_power = 3
 				}
+				trigger = {
+					HVR = {
+						overlord_of = ROOT
+					}
+				}
+				start_value = 0
+				end_value = 6
 			}
 		}
 	}

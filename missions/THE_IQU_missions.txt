@@ -738,7 +738,7 @@ THE_IQU_main_branch_3 = {
 				development = 10
 				has_courthouse_building_trigger = yes
 			}
-			army_professionalism = 0.20
+			army_professionalism = 0.10
 		} 
 
 		effect = { 
@@ -1063,6 +1063,11 @@ THE_IQU_main_branch_4 = {
 					which = the_iqu_the_tenshi_teaching_experience_im_var
 					value = 0
 				}
+				HVR = {
+					every_ally = {
+						break_alliance = PREV
+					}
+				}
 			}
 		 } 
 	}
@@ -1080,7 +1085,7 @@ THE_IQU_main_branch_4 = {
 				tooltip = THE_IQU_4_3_c_tt1
 				check_variable = {
 					which = the_iqu_the_tenshi_obedience_im_var
-					value = 50
+					value = 25
 				}
 			}
 			THE_has_adm_advisor_with_level = { level = 3 }
@@ -1093,10 +1098,7 @@ THE_IQU_main_branch_4 = {
 		 } 
 
 		effect = { 
-			custom_tooltip = THE_IQU_4_3_c_tt2
-			tooltip = {
-				add_government_reform = THE_IQU_cloud_with_sky_reform
-			}
+			add_government_reform = THE_IQU_cloud_with_sky_reform
 			hidden_effect = {
 				THE_IQU_government_lvl3_cloud_with_sky_add_pwoer_effect_before = yes
 			}
@@ -1178,34 +1180,37 @@ THE_IQU_main_branch_4 = {
 				tooltip = THE_IQU_4_6_c_tt1
 				check_variable = {
 					which = the_iqu_had_explore_area_number_im_var
-					value = 25
+					value = 5
 				}
 			}
-			THE_IQU_this_province_had_been_explored_region_custom_trigger = {
-				region = peru_region
+			calc_true_if = {
+				amount = 3
+				THE_IQU_this_province_had_been_explored_region_custom_trigger = {
+					region = peru_region
+				}
+				THE_IQU_this_province_had_been_explored_region_custom_trigger = {
+					region = la_plata_region
+				}
+				THE_IQU_this_province_had_been_explored_region_custom_trigger = {
+					region = mississippi_region
+				}
+				THE_IQU_this_province_had_been_explored_region_custom_trigger = {
+					region = great_lakes_region
+				}
+				THE_IQU_this_province_had_been_explored_region_custom_trigger = {
+					region = brazil_region
+				}
+				THE_IQU_this_province_had_been_explored_region_custom_trigger = {
+					region = colombia_region
+				}
+				THE_IQU_this_province_had_been_explored_region_custom_trigger = {
+					region = australia_region
+				}
+				THE_IQU_this_province_had_been_explored_region_custom_trigger = {
+					region = british_isles_region
+				}
 			}
-			THE_IQU_this_province_had_been_explored_region_custom_trigger = {
-				region = la_plata_region
-			}
-			THE_IQU_this_province_had_been_explored_region_custom_trigger = {
-				region = mississippi_region
-			}
-			THE_IQU_this_province_had_been_explored_region_custom_trigger = {
-				region = great_lakes_region
-			}
-			THE_IQU_this_province_had_been_explored_region_custom_trigger = {
-				region = brazil_region
-			}
-			THE_IQU_this_province_had_been_explored_region_custom_trigger = {
-				region = colombia_region
-			}
-			THE_IQU_this_province_had_been_explored_region_custom_trigger = {
-				region = australia_region
-			}
-			THE_IQU_this_province_had_been_explored_region_custom_trigger = {
-				region = british_isles_region
-			}
-		 } 
+		} 
 
 		effect = { 
 			custom_tooltip = THE_IQU_4_6_c_tt3

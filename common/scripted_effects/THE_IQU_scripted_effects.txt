@@ -351,7 +351,7 @@ THE_IQU_explore_event_get_benifit_immeditate_script = {
 			which = the_iqu_base_treasury_gold_im_var
 			which = the_iqu_base_treasury_im_var
 		}
-		subtract_variable = {
+		multiply_variable = {
 			which = the_iqu_base_treasury_gold_im_var
 			value = 5
 		}
@@ -1894,6 +1894,9 @@ THE_IQU_panama_add_unique_point_event_effect = {
 				#THE_IQU_this_province_had_been_explored_flag 已经完成探索
 				#THE_IQU_province_unique_point_flag 异常点探索
 				has_port = yes
+				NOT = {
+					has_province_flag = THE_IQU_province_unique_point_flag
+				}
 				# area = {
 				# 	type = all
 				# 	NOT = {
@@ -1911,20 +1914,17 @@ THE_IQU_panama_add_unique_point_event_effect = {
 			}
 
 		}
-		owner = {
-			country_event = {
-				id = THE_IQU_flavor_events.1004
+		random_list = {
+			10 = {
+				owner = {
+					country_event = {
+						id = THE_IQU_flavor_events.1004
+					}
+				}
 			}
-			# random_list = {
-			# 	50 = {
-			# 		country_event = {
-			# 			id = THE_IQU_flavor_events.1004
-			# 		}
-			# 	}
-			# 	50 = {
-					
-			# 	}
-			# }
+			90 = {
+
+			}
 		}
 	}
 }

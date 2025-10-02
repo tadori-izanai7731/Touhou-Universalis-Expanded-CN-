@@ -543,6 +543,32 @@ allianceaction = {
 			}
 		}
 	}
+	condition = {
+		tooltip = THE_IQU_hvr_can_not_alliance_c_tooltip
+		potential = { 
+			IQU = {
+				mission_completed = THE_IQU_4_2
+			}
+			OR = {
+				FROM = {
+					OR = {
+						tag = HVR
+						was_tag = HVR
+					}
+				}
+				ROOT = {
+					OR = {
+						tag = HVR
+						was_tag = HVR
+					}
+				}
+			}
+			
+		}
+		allow = {
+			always = no
+		}
+	}
 	effect = {
 		change_asha_vahishta = { value = 2 }
 	}
@@ -788,7 +814,10 @@ insultaction = {
 		tooltip = THE_IQU_hvr_cannot_insult_iqu_c_yy1
 		potential = {
 			FROM = {
-				mission_completed = THE_IQU_4_2
+				has_government_attribute = THE_IQU_government_explore_coast_explore_mechanic
+			}
+			ROOT = {
+				tag = HVR
 			}
 		}
 		allow = {
