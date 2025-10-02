@@ -889,30 +889,11 @@ THE_KEI_main_branch_3 = {
 				}
 			}
 			hidden_effect = {
-				while = {
-					limit = { 
-						any_owned_province = {
-							has_fort_building_trigger = yes
-							NOT = {
-								has_province_flag = the_kei_the_mission_benifit_province_flag
-							}
-						}
-					}
-					random_owned_province = {
-						limit = {
-							has_fort_building_trigger = yes
-							NOT = {
-								has_province_flag = the_kei_the_mission_benifit_province_flag
-							}
-						}
-						set_province_flag = the_kei_the_mission_benifit_province_flag
-						owner = {
-							add_army_tradition = 5
-						}
-					}
-				}
 				every_owned_province = {
-					clr_country_flag = the_kei_the_mission_benifit_province_flag
+					limit = {
+						has_fort_building_trigger = yes
+					}
+					ROOT = { add_army_tradition = 5 }
 				}
 			}
 		} 
