@@ -549,10 +549,7 @@ THE_IQU_main_branch_2 = {
 				value = 100
 			}
 			835 = {
-				add_great_project = {
-					type = panama_canal
-					instant = no
-				}
+				add_canal = panama_canal
 			}
 		 } 
 	}
@@ -816,7 +813,7 @@ THE_IQU_main_branch_3 = {
 
 		trigger = { 
 			num_of_owned_provinces_with = {
-				value = 20
+				value = 10
 				region = moon_region
 				has_province_modifier = THE_IQU_lonng_vein_foot_province_buff
 			}
@@ -928,7 +925,7 @@ THE_IQU_main_branch_3 = {
 		 } 
 
 		effect = { 
-			custom_tooltip = THE_IQU_3_8_c_tt1
+			# custom_tooltip = THE_IQU_3_8_c_tt1
 			THE_IQU_add_diplomacal_experience_var_effect = yes
 			THE_IQU_add_learning_experience_var_effect = yes
 			THE_IQU_add_nautical_experience_var_effect = yes
@@ -1116,6 +1113,7 @@ THE_IQU_main_branch_4 = {
 			THE_IQU_4_3
 		}
 		provinces_to_highlight = { 
+			province_has_center_of_trade_of_level = 1
 			OR = {
 				owned_by = ROOT
 				owned_by_subject_of = ROOT
@@ -1229,8 +1227,8 @@ THE_IQU_main_branch_4 = {
 			owned_by = ROOT
 		 } 
 
-		trigger = { 
-			num_of_owned_provinces_with = {
+		trigger = {
+			num_of_provinces_owned_or_owned_by_subjects_with = {
 				value = 5
 				OR = {
 					has_province_modifier = THE_IQU_Feng_shui_jin_buff
@@ -1258,7 +1256,7 @@ THE_IQU_main_branch_4 = {
 				tooltip = THE_IQU_4_8_c_tt1
 				check_variable = {
 					which = the_iqu_jungle_province_has_been_teer_im_var
-					value = 25
+					value = 10
 				}
 			}
 		 } 
@@ -1411,22 +1409,28 @@ THE_IQU_main_branch_5 = {
 		trigger = { 
 			reform_level = 3
 			navy_tradition = 80
-			any_owned_province = {
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 1
 				continent = asia
 			}
-			any_owned_province = {
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 1
 				continent = south_america
 			}
-			any_owned_province = {
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 1
 				continent = north_america
 			}
-			any_owned_province = {
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 1
 				continent = africa
 			}
-			any_owned_province = {
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 1
 				continent = europe
 			}
-			any_owned_province = {
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 1
 				continent = oceania
 			}
 		 } 
@@ -1535,7 +1539,7 @@ THE_IQU_main_branch_5 = {
 				tooltip = THE_IQU_5_8_c_tt1
 				check_variable = {
 					which = the_iqu_mountain_province_has_been_teer_im_var
-					value = 25
+					value = 10
 				}
 			}
 		 } 

@@ -30,12 +30,12 @@ THE_IQU_this_province_had_been_explored_region_custom_trigger = {
 				ROOT = {
 					OR = {
 						any_owned_province = {
-							area = $region$
+							region = $region$
 							has_province_flag = THE_IQU_this_province_had_been_explored_flag
 						}
 						any_subject_country = {
 							any_owned_province = {
-								area = $region$
+								region = $region$
 								has_province_flag = THE_IQU_this_province_had_been_explored_flag
 							}
 						}

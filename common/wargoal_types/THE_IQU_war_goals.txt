@@ -3,7 +3,7 @@ THE_IQU_lunar_war_goals = {
 
 	attacker = {
 		badboy_factor = 0.5
-		peace_cost_factor = 0.8
+		peace_cost_factor = 0.50
 		prestige_factor = 2.0
 		peace_options = {
 			po_demand_provinces
@@ -43,7 +43,7 @@ THE_IQU_lunar_war_goals = {
 }
 #
 THE_IQU_england_war_goals = {
-	type = superiority
+	type = take_capital
 
 	attacker = {
 		badboy_factor = 0.75

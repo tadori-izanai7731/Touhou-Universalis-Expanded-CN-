@@ -148,6 +148,8 @@ THE_IQU_tennin_one_taoist_mechanic = {
 				modifier = { 
 					backrow_artillery_damage = 10.0
 				}
+				start_value = 0
+				end_value = 1000
 			}
 		}
 		#水
@@ -161,6 +163,8 @@ THE_IQU_tennin_one_taoist_mechanic = {
 				modifier = { 
 					trade_efficiency = 10.00
 				}
+				start_value = 0
+				end_value = 1000
 			}
 		}
 		#木
@@ -174,6 +178,8 @@ THE_IQU_tennin_one_taoist_mechanic = {
 				modifier = { 
 					development_cost = -10.00
 				}
+				start_value = 0
+				end_value = 1000
 			}
 		}
 		#火
@@ -187,6 +193,8 @@ THE_IQU_tennin_one_taoist_mechanic = {
 				modifier = { 
 					global_trade_goods_size_modifier = 10.00
 				}
+				start_value = 0
+				end_value = 1000
 			}
 		}
 		#土
@@ -200,6 +208,8 @@ THE_IQU_tennin_one_taoist_mechanic = {
 				modifier = { 
 					min_autonomy_in_territories = -10
 				}
+				start_value = 0
+				end_value = 1000
 			}
 		}
 	}

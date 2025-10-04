@@ -16,7 +16,7 @@ THE_IQU_lunar_war_cb = {
 
 	war_goal = THE_IQU_lunar_war_goals
 }
-#
+
 THE_IQU_england_war_cb = {
 	valid_for_subject = no
 
@@ -24,8 +24,20 @@ THE_IQU_england_war_cb = {
 		has_country_flag = THE_IQU_enable_england_war_cb_flag
 	}
 	prerequisites = {
+		FROM = {
+			OR = {
+				any_owned_province = {
+					has_port = yes
+				}
+				any_subject_country = {
+					any_owned_province = {
+						has_port = yes
+					}
+				}
+			}
+			is_subject = no
+		}
 		any_province = {
-			has_port = yes
 			OR = {
 				region = british_isles_region
 				region = scandinavia_region
@@ -38,7 +50,7 @@ THE_IQU_england_war_cb = {
 			}
 			owned_by = FROM
 		}
-	 }
+	}
 
-	 war_goal = THE_IQU_England_war_goals
+	 war_goal = THE_IQU_england_war_goals
 }

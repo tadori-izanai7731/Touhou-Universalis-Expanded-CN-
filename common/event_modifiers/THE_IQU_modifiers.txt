@@ -133,7 +133,7 @@ THE_IQU_favor_of_wind_buff = {
 }
 #龙之嗣
 THE_IQU_child_of_loong_buff = {
-	THE_IQU_guide_loong_vein_custom_modifier = -0.10
+	THE_IQU_guide_loong_vein_custom_modifier = -0.20
 	global_ship_trade_power = 0.50
 	has_voc_indiamen = yes
 	allowed_voc_indiamen_fraction = 0.25
@@ -175,7 +175,7 @@ THE_IQU_trade_paper_buff = {
 #贸易协定
 THE_IQU_trade_steer_100_buff = {
 	trade_efficiency = 0.10
-	THE_IQU_guide_loong_vein_custom_modifier = -0.10
+	THE_IQU_guide_loong_vein_custom_modifier = -0.15
 }
 #无念无想
 THE_IQU_have_no_mind_buff = {
@@ -219,4 +219,8 @@ THE_IQU_qing_hui_buff = {
 	THE_IQU_explore_treasury_get_cutom_modifier = 0.05
 	global_naval_engagement_modifier = 0.25
 	movement_speed_onto_off_boat_modifier = 0.50
+}
+
+THE_IQU_test_buff = {
+	THE_IQU_guide_loong_vein_custom_modifier = -0.75
 }
