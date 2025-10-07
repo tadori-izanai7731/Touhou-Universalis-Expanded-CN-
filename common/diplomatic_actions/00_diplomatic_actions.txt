@@ -331,13 +331,19 @@ declarewar = {
 				limit = { 
 					has_government_attribute = THE_IQU_the_world_all_will_be_known_reform_mechanic
 				}
-				every_war_enemy_country = {
+				every_country = {
+					limit = {
+						war_with = ROOT
+					}
 					remove_fow = 24
 				}
 			}
 			else = {
 				FROM = {
-					every_war_enemy_country = {
+					every_country = {
+						limit = {
+							war_with = ROOT
+						}
 						remove_fow = 24
 					}
 				}
