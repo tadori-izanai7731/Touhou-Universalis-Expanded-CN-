@@ -493,10 +493,12 @@ the_hng_disasters_four = {
 		}
 	}
 	can_end = {
-		has_country_modifier = THE_HNG_modernization_gensokyo_army
-		custom_trigger_tooltip = {
-			tooltip = the_hng_disasters_two_lose_tt
-			has_country_flag = THE_HNG_disasters_lose4
+		OR = {
+			has_country_modifier = THE_HNG_modernization_gensokyo_army
+			custom_trigger_tooltip = {
+				tooltip = the_hng_disasters_two_lose_tt
+				has_country_flag = THE_HNG_disasters_lose4
+			}
 		}
 	}
 	modifier = {
