@@ -1,0 +1,16 @@
+defined_text = {
+	name = THE_PRI_mission_4_4_title
+	random = no
+	text = {
+		localisation_key = THE_PRI_mission_4_4_title_0
+		trigger = {
+			NOT = { mission_completed = THE_PRI_mission_4_4 }
+		}
+	}
+	text = {
+		localisation_key = THE_PRI_mission_4_4_title_1
+		trigger = {
+			mission_completed = THE_PRI_mission_4_4
+		}
+	}
+}
