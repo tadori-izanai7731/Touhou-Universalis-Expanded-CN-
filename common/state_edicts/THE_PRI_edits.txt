@@ -1,0 +1,23 @@
+THE_PRI_test_edit = {
+	potential = {
+		tag = PRI
+		has_country_flag = THE_debug_flag
+	}
+	
+	allow = {
+		always = yes
+	}
+	
+	modifier = {
+		local_monthly_devastation = -10
+		local_prosperity_growth = 5
+		local_state_maintenance_modifier = 2
+	}
+	
+	color = {  113 11 43 }
+	
+	
+	ai_will_do = {
+		factor = 0
+	}
+}

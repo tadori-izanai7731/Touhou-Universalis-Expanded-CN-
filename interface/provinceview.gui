@@ -7003,21 +7003,21 @@ guiTypes = {
 
 		iconType = {
 			name = "edict_icon"
-			position = { x = -3 y = -6 }
+			position = { x = -10 y = -6 }
 			spriteType = "GFX_no_edict"
 		}
 
 		guiButtonType = {
 			name ="select_edicts_button"
-			quadTextureSprite = "gfx_button_base_button"
+			quadTextureSprite = "button_type_7"
 			buttonFont = "vic_18"
 			buttonText = "txt"
-			position = { x = 52 y = 0 }
+			position = { x = 231 y = 0 }
 		}
 
 		instantTextBoxType = {
 			name = "edicts_eff"
-			position = { x = 52 y = 30 }
+			position = { x = 40 y = 0 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 2 y = 2}
