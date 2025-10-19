@@ -1480,22 +1480,22 @@ claim_states = {
 ### THE
 
 callaction = {
-	condition = {
-		potential = {
-			FROM = {
-				is_defender_of_faith = yes
-				NOT = { alliance_with = ROOT }
-				NOT = { is_subject_of = ROOT }
-			}
-			NOT = { is_subject_of = FROM }
-		}
-		allow = {
-			custom_trigger_tooltip = {
-				tooltip = THE_forbid_defender_of_faith_enter_war_ttt
-				always = no
-			}
-		}
-	}
+	# condition = {
+	# 	potential = {
+	# 		FROM = {
+	# 			is_defender_of_faith = yes
+	# 			NOT = { alliance_with = ROOT }
+	# 			NOT = { is_subject_of = ROOT }
+	# 		}
+	# 		NOT = { is_subject_of = FROM }
+	# 	}
+	# 	allow = {
+	# 		custom_trigger_tooltip = {
+	# 			tooltip = THE_forbid_defender_of_faith_enter_war_ttt
+	# 			always = no
+	# 		}
+	# 	}
+	# }
 	condition = {
 		potential = { tag = TEU any_country = { has_country_flag = THE_ROD_cannot_call_ally_TEU_flag war_with = ROOT } }
 		allow = {
