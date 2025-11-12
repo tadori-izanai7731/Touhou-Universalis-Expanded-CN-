@@ -1,0 +1,6 @@
+THE_PRI_on_culture_promoted_scripted_effect = {
+	if = {
+		limit = { has_government_attribute = THE_PRI_accept_culture_complete_agenda_auto_custom_attributes }
+		set_country_flag = auto_complete_estate_agenda_all
+	}
+}

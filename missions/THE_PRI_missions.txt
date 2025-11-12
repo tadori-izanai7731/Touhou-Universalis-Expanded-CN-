@@ -193,9 +193,41 @@ THE_PRI_mission_branch_5 = {
 		position = 1
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			OR = {
+				tag = PRI
+				was_tag = PRI
+			}
+			stability = 1
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 30
+			}
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 30
+			}
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 30
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			if = {
+				limit = { NOT = { government = republic } }
+				change_government = republic
+			}
+			add_government_reform = THE_PRI_phantom_ensemble_reform
+			hidden_effect = {
+				every_owned_province = {
+					remove_core = ROOT
+					add_territorial_core = ROOT
+				}
+			}
+			custom_tooltip = THE_PRI_unlock_poltergeist_order_tt
+			set_country_flag = THE_PRI_unlock_poltergeist_order_flag
+		} 
 	}
 
 	THE_PRI_mission_5_4 = {

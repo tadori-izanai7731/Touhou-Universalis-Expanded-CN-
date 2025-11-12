@@ -1,5 +1,18 @@
 ﻿l_english:
 ### MISSION
  THE_PRI_mission_4_4_title_0: "恶魔与对岸的地灵"
- THE_PRI_mission_4_4_title_1: "圣乐与对岸的地灵"
+ THE_PRI_mission_4_4_title_1: "圣音与对岸的地灵"
 ### MISSION_END
+
+### TOOLTIP
+ THE_PRI_block_state_core_sf_tt: "由于改革「幽灵乐团」，无法建造直属州核心"
+ THE_PTI_unlock_default_order_tt: "启用地方组织§Y忧郁之音舞台§!、§Y幻想之音舞台§!、§Y躁动之音舞台§!"
+### TOOLTIP_END
+
+### GOVERNMENT
+ THE_PRI_phantom_ensemble_reform: "幽灵乐团"
+ THE_PRI_phantom_ensemble_reform_desc: ""
+
+ mechanic_THE_PRI_block_state_core_custom_attributes_yes: "禁止建造直属州核心"
+ mechanic_THE_PRI_accept_culture_complete_agenda_auto_custom_attributes_yes: "接纳文化自动完成当前或下一次阶层议程"
+### GOVERNMENT_END
