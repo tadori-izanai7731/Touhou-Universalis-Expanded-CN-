@@ -6,7 +6,37 @@
 
 ### TOOLTIP
  THE_PRI_block_state_core_sf_tt: "由于改革「幽灵乐团」，无法建造直属州核心"
- THE_PTI_unlock_default_order_tt: "启用地方组织§Y忧郁之音舞台§!、§Y幻想之音舞台§!、§Y躁动之音舞台§!"
+ THE_PRI_unlock_poltergeist_order_tt: "启用地方组织§Y忧郁之音舞台§!、§Y幻想之音舞台§!、§Y躁动之音舞台§!"
+ THE_PRI_unlock_public_misic_festival_decision_tt: "启用决议「§Y公共音乐节§!」"
+ THE_PRI_mission_5_4_effect_tt: "\n根据完成任务时满足的条件获得以下效果:"
+ THE_PRI_mission_5_4_effect_tt_case1: "在已接纳文化省份建立地方组织时获得§G1§!点对应发展度\n"
+ THE_PRI_mission_5_4_effect_tt_case1_yes: "£yes£接纳文化:"
+ THE_PRI_mission_5_4_effect_tt_case1_no: "£no£接纳文化:"
+ THE_PRI_mission_5_4_effect_tt_case2: "每个省份建立地方组织时减少所有国家对§Y[Root.GetName]§!的§G0.2§!侵略扩张\n"
+ THE_PRI_mission_5_4_effect_tt_case2_yes: "£yes£人文理念:"
+ THE_PRI_mission_5_4_effect_tt_case2_no: "£no£人文理念:"
+ THE_PRI_mission_5_4_effect_tt_case3: "出售王冠领地时从每个有地方组织的省份获得§G2§!点对应君主点数"
+ THE_PRI_mission_5_4_effect_tt_case3_yes: "£yes£阶层议程:"
+ THE_PRI_mission_5_4_effect_tt_case3_no: "£no£阶层议程:"
+ THE_PRI_mission_4_1_effect_tt: "每拥有§Y1§!支步兵，获得§G25§!£mil£军事点数和§G50§!¤（上限§Y20§!次）"
+ THE_PRI_mission_4_1_effect_tt_case: "\n根据当前的首选部队类型获得不同修正:"
+ THE_PRI_mission_4_1_effect_tt_case1_yes: "£yes£鸦:"
+ THE_PRI_mission_4_1_effect_tt_case1_no: "£no£鸦:"
+ THE_PRI_mission_4_1_effect_tt_case2_yes: "£yes£怨灵:"
+ THE_PRI_mission_4_1_effect_tt_case2_no: "£no£怨灵:"
+ THE_PRI_mission_4_1_effect_tt_case3_yes: "£yes£妖精:"
+ THE_PRI_mission_4_1_effect_tt_case3_no: "£no£妖精:"
+ THE_PRI_mission_4_1_effect_tt_case4_yes: "£yes£简易人偶:"
+ THE_PRI_mission_4_1_effect_tt_case4_no: "£no£简易人偶:"
+ THE_PRI_mission_3_2_effect_tt_case1: "从治下每个§Y妖精§!文化的省份获得§G2000§!£icon_manpower£和§G10§!¤"
+ THE_PRI_mission_3_2_effect_tt_case1_yes: "\n£yes£如果通过征服@LIL§Y[LIL.GetName]§!完成任务:"
+ THE_PRI_mission_3_2_effect_tt_case1_no: "\n£no£如果通过征服@LIL§Y[LIL.GetName]§!完成任务:"
+ THE_PRI_mission_3_2_effect_tt_case2_yes: "£yes£如果通过结盟@LIL§Y[LIL.GetName]§!完成任务:"
+ THE_PRI_mission_3_2_effect_tt_case2_no: "£no£如果通过结盟@LIL§Y[LIL.GetName]§!完成任务:"
+ THE_PRI_mission_3_3_effect_tt_case1: "「§Y春告的音乐§!」效果§G翻倍§!，持续时间改为§G永久§!\n每有一个主流文化是§Y妖精§!的属国或盟友，获得§G5000§!£icon_manpower£\n"
+ THE_PRI_mission_3_3_effect_tt_case1_yes: "£yes£如果拥有国家修正「§Y春告的音乐§!」:"
+ THE_PRI_mission_3_3_effect_tt_case1_no: "£no£如果拥有国家修正「§Y春告的音乐§!」:"
+ THE_PRI_order_tip_tt: "\n\n任务中有关地方组织的效果均只对§Y[Root.GetName]§!新增的6种§M音乐舞台§!生效，不写§M音乐舞台§!是防止玩家忘记§M音乐舞台§!是什么东西"
 ### TOOLTIP_END
 
 ### GOVERNMENT
@@ -16,3 +46,28 @@
  mechanic_THE_PRI_block_state_core_custom_attributes_yes: "禁止建造直属州核心"
  mechanic_THE_PRI_accept_culture_complete_agenda_auto_custom_attributes_yes: "接纳文化自动完成当前或下一次阶层议程"
 ### GOVERNMENT_END
+
+### ORDER
+ THE_PRI_music_stage: "§M音乐舞台§!"
+ THE_PRI_music_stage_short: "§M音乐舞台§!"
+ THE_PRI_music_stage_full: "§M音乐舞台§!"
+ THE_PRI_poltergeist_luna_order: "忧郁之音舞台"
+ THE_PRI_poltergeist_luna_order_desc: ""
+ THE_PRI_poltergeist_star_order: "幻想之音舞台"
+ THE_PRI_poltergeist_star_order_desc: ""
+ THE_PRI_poltergeist_sun_order: "躁动之音舞台"
+ THE_PRI_poltergeist_sun_order_desc: ""
+### HOLY_ORDER
+
+### MODIFIER
+ THE_PRI_celebration_music_modifier: "节庆的音乐"
+ THE_PRI_battle_music_modifier_1: "战斗的音乐: 妖怪"
+ THE_PRI_battle_music_modifier_2: "战斗的音乐: 幽灵"
+ THE_PRI_battle_music_modifier_3: "战斗的音乐: 妖精"
+ THE_PRI_battle_music_modifier_4: "战斗的音乐: 人偶"
+ THE_PRI_battle_music_modifier_5: "战斗的音乐"
+ THE_PRI_flower_music_modifier: "花束的音乐"
+ THE_PRI_spring_send_music_modifier: "春告的音乐"
+ THE_PRI_spring_send_music_modifier_upgrade: "春告的音乐"
+ THE_PRI_eternity_night_music_modifier: "常夜的音乐"
+### MODIFIER_END

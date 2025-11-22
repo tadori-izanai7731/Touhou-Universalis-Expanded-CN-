@@ -4,47 +4,47 @@ THE_PRI_mission_branch_1 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = PRI } 
-
+	
 	THE_PRI_mission_1_1 = {
 		icon = mission_unknown_mission
 		position = 1
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_PRI_mission_1_2 = {
 		icon = mission_unknown_mission
 		position = 2
 		required_missions = { THE_PRI_mission_1_1 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_PRI_mission_1_3 = {
 		icon = mission_unknown_mission
 		position = 3
 		required_missions = { THE_PRI_mission_1_2 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_PRI_mission_1_5 = {
 		icon = mission_unknown_mission
 		position = 5
 		required_missions = { THE_PRI_mission_2_4 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
 }
@@ -54,36 +54,36 @@ THE_PRI_mission_branch_2 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = PRI } 
-
+	
 	THE_PRI_mission_2_2 = {
 		icon = mission_unknown_mission
 		position = 2
 		required_missions = { THE_PRI_mission_1_1 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_PRI_mission_2_4 = {
 		icon = mission_unknown_mission
 		position = 4
 		required_missions = { THE_PRI_mission_2_2 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_PRI_mission_2_5 = {
 		icon = mission_unknown_mission
 		position = 5
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
 }
@@ -93,35 +93,204 @@ THE_PRI_mission_branch_3 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = PRI } 
-
+	
 	THE_PRI_mission_3_2 = {
 		icon = mission_unknown_mission
 		position = 2
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
+		provinces_to_highlight = {
+			if = {
+				limit = { exists = LIL }
+				is_capital_of = LIL
+			}
+			else = {
+				province_id = 5084
+			}
+		} 
+		
+		trigger = {
+			OR = {
+				AND = {
+					owns = 5084
+					NOT = { alliance_with = LIL }
+				}
+				AND = {
+					alliance_with = LIL
+					marriage_with = LIL
+					LIL = {
+						NOT = { num_of_cities = 3 }
+					}
+					if = { limit = { ai = yes } has_opinion = { who = LIL value = 150 } }
+				}
+			}
+		} 
+		
+		effect = {
+			add_dip_power = 100
+			add_mil_power = 100
+			if = {
+				limit = {
+					owns = 5084
+					NOT = { alliance_with = LIL }
+				}
+				custom_tooltip = THE_PRI_mission_3_2_effect_tt_case1_yes
+				#add_accepted_culture = Fairy
+				Northern_fairy_land = {
+					add_permanent_claim = ROOT
+				}
+				custom_tooltip = THE_PRI_mission_3_2_effect_tt_case1
+				hidden_effect = {
+					every_owned_province = {
+						limit = { culture = Fairy }
+						ROOT = { add_manpower = 2 add_treasury = 10 }
+					}
+				}
+				add_country_modifier = {
+					name = THE_PRI_flower_music_modifier
+					duration = 10950
+				}
+			}
+			else = {
+				custom_tooltip = THE_PRI_mission_3_2_effect_tt_case1_no
+				tooltip = {
+					#add_accepted_culture = Fairy
+					Northern_fairy_land = {
+						add_permanent_claim = ROOT
+					}
+					custom_tooltip = THE_PRI_mission_3_2_effect_tt_case1
+					add_country_modifier = {
+						name = THE_PRI_flower_music_modifier
+						duration = 10950
+					}
+				}
+			}
+			
+			if = {
+				limit = {					
+					alliance_with = LIL
+					marriage_with = LIL
+					LIL = {
+						NOT = { num_of_cities = 3 }
+					}
+					if = { limit = { ai = yes } has_opinion = { who = LIL value = 150 } }
+				}
+				custom_tooltip = THE_PRI_mission_3_2_effect_tt_case2_yes
+				vassalize = LIL
+				LIL = { add_liberty_desire = -100 }
+				add_country_modifier = {
+					name = THE_PRI_spring_send_music_modifier
+					duration = 10950
+				}
+			}
+			else = {
+				custom_tooltip = THE_PRI_mission_3_2_effect_tt_case2_no
+				tooltip = {
+					vassalize = LIL
+					LIL = { add_liberty_desire = -100 }
+					add_country_modifier = {
+						name = THE_PRI_spring_send_music_modifier
+						duration = 10950
+					}
+				}
+			}
+		} 
 	}
-
+	
 	THE_PRI_mission_3_3 = {
 		icon = mission_unknown_mission
 		position = 3
 		required_missions = { THE_PRI_mission_3_2 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
+		provinces_to_highlight = {
+			if = {
+				limit = {
+					exists = LRV
+					ROOT = { has_country_modifier = THE_PRI_spring_send_music_modifier }
+				}
+				is_capital_of = LRV
+			}
+			else = {
+				province_id = 5083
+			}
+		} 
+		
+		trigger = {
+			OR = {
+				AND = {
+					owns = 5083
+					NOT = { alliance_with = LRV }
+					NOT = { has_country_modifier = THE_PRI_spring_send_music_modifier }
+				}
+				AND = {
+					alliance_with = LRV
+					has_country_modifier = THE_PRI_spring_send_music_modifier
+				}
+			}
+		} 
+		
+		effect = {
+			add_adm_power = 200
+			Fairy_land = {
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = THE_PRI_eternity_night_music_modifier
+				duration = 10950
+			}
+			
+			if = {
+				limit = { has_country_modifier = THE_PRI_spring_send_music_modifier }
+				custom_tooltip = THE_PRI_mission_3_3_effect_tt_case1_yes
+				custom_tooltip = THE_PRI_mission_3_3_effect_tt_case1
+				hidden_effect = {
+					remove_country_modifier = THE_PRI_spring_send_music_modifier
+					add_country_modifier = {
+						name = THE_PRI_spring_send_music_modifier_upgrade
+						duration = -1
+					}
+					every_subject_country = {
+						limit = { primary_culture = Fairy }
+						ROOT = { add_manpower = 5 }
+					}
+					every_ally = {
+						limit = { primary_culture = Fairy }
+						ROOT = { add_manpower = 5 }
+					}
+				}
+				THE_add_historical_friend_and_reverse_scripted_effect = { tag = LRV }
+				THE_unlock_special_culture_ideas_scripted_effect = { type = fairy }
+			}
+			else = {
+				custom_tooltip = THE_PRI_mission_3_3_effect_tt_case1_no
+				tooltip = {
+					custom_tooltip = THE_PRI_mission_3_3_effect_tt_case1
+					hidden_effect = {
+						remove_country_modifier = THE_PRI_spring_send_music_modifier
+						add_country_modifier = {
+							name = THE_PRI_spring_send_music_modifier_upgrade
+							duration = -1
+						}
+						every_subject_country = {
+							limit = { primary_culture = Fairy }
+							ROOT = { add_manpower = 5 }
+						}
+						every_ally = {
+							limit = { primary_culture = Fairy }
+							ROOT = { add_manpower = 5 }
+						}
+					}
+					THE_add_historical_friend_and_reverse_scripted_effect = { tag = LRV }
+					THE_unlock_special_culture_ideas_scripted_effect = { type = fairy }
+				}
+			}
+		} 
 	}
-
+	
 	THE_PRI_mission_3_4 = {
 		icon = mission_unknown_mission
 		position = 4
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
 }
@@ -131,17 +300,110 @@ THE_PRI_mission_branch_4 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = PRI } 
-
+	
 	THE_PRI_mission_4_1 = {
 		icon = mission_unknown_mission
 		position = 1
 		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
+		
+		trigger = {
+			OR = {
+				num_of_infantry = 10
+				AND = {
+					army_size_percentage = 0.99
+					infantry_fraction = 0.99
+				}
+			}
+			num_of_generals = 1
+		} 
+		
+		effect = {
+			add_army_tradition = 50
+			custom_tooltip = THE_PRI_mission_4_1_effect_tt
+			hidden_effect = {
+				THE_PRI_THE_PRI_mission_4_1_scripted_effect = yes
+			}
+			if = {
+				limit = { NOT = { mil_tech = 5 } }
+				custom_tooltip = THE_PRI_mission_4_1_effect_tt_case
+				if = {
+					limit = { has_unit_type = infantry_gen_t1_01 }
+					custom_tooltip = THE_PRI_mission_4_1_effect_tt_case1_yes
+					add_country_modifier = {
+						name = THE_PRI_battle_music_modifier_1
+						duration = -1
+					}
+				}
+				else = {
+					custom_tooltip = THE_PRI_mission_4_1_effect_tt_case1_no
+					tooltip = {
+						add_country_modifier = {
+							name = THE_PRI_battle_music_modifier_1
+							duration = -1
+						}
+					}
+				}
+				if = {
+					limit = { has_unit_type = infantry_gen_t1_02 }
+					custom_tooltip = THE_PRI_mission_4_1_effect_tt_case2_yes
+					add_country_modifier = {
+						name = THE_PRI_battle_music_modifier_2
+						duration = -1
+					}
+				}
+				else = {
+					custom_tooltip = THE_PRI_mission_4_1_effect_tt_case2_no
+					tooltip = {
+						add_country_modifier = {
+							name = THE_PRI_battle_music_modifier_2
+							duration = -1
+						}
+					}
+				}
+				if = {
+					limit = { has_unit_type = infantry_gen_t1_03 }
+					custom_tooltip = THE_PRI_mission_4_1_effect_tt_case3_yes
+					add_country_modifier = {
+						name = THE_PRI_battle_music_modifier_3
+						duration = -1
+					}
+				}
+				else = {
+					custom_tooltip = THE_PRI_mission_4_1_effect_tt_case3_no
+					tooltip = {
+						add_country_modifier = {
+							name = THE_PRI_battle_music_modifier_3
+							duration = -1
+						}
+					}
+				}
+				if = {
+					limit = { has_unit_type = infantry_gen_t1_04 }
+					custom_tooltip = THE_PRI_mission_4_1_effect_tt_case4_yes
+					add_country_modifier = {
+						name = THE_PRI_battle_music_modifier_4
+						duration = -1
+					}
+				}
+				else = {
+					custom_tooltip = THE_PRI_mission_4_1_effect_tt_case4_no
+					tooltip = {
+						add_country_modifier = {
+							name = THE_PRI_battle_music_modifier_4
+							duration = -1
+						}
+					}
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = THE_PRI_battle_music_modifier_5
+					duration = -1
+				}
+			}
+		} 
 	}
-
+	
 	THE_PRI_mission_4_3 = {
 		icon = mission_unknown_mission
 		position = 3
@@ -150,23 +412,23 @@ THE_PRI_mission_branch_4 = {
 			THE_PRI_mission_3_2
 		}
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_PRI_mission_4_4 = {
 		icon = mission_unknown_mission
 		position = 4
 		required_missions = { THE_PRI_mission_4_3 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_PRI_mission_4_5 = {
 		icon = mission_unknown_mission
 		position = 5
@@ -175,9 +437,9 @@ THE_PRI_mission_branch_4 = {
 			THE_PRI_mission_5_4
 		}
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
 }
@@ -187,12 +449,12 @@ THE_PRI_mission_branch_5 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = PRI } 
-
+	
 	THE_PRI_mission_5_1 = {
 		icon = mission_unknown_mission
 		position = 1
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {
 			OR = {
 				tag = PRI
@@ -212,7 +474,7 @@ THE_PRI_mission_branch_5 = {
 				loyalty = 30
 			}
 		} 
-
+		
 		effect = {
 			if = {
 				limit = { NOT = { government = republic } }
@@ -227,17 +489,105 @@ THE_PRI_mission_branch_5 = {
 			}
 			custom_tooltip = THE_PRI_unlock_poltergeist_order_tt
 			set_country_flag = THE_PRI_unlock_poltergeist_order_flag
+			custom_tooltip = empty_line_tt
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			custom_tooltip = THE_PRI_order_tip_tt
 		} 
 	}
-
+	
 	THE_PRI_mission_5_4 = {
 		icon = mission_unknown_mission
 		position = 4
 		required_missions = { THE_PRI_mission_5_1 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { holy_order = THE_PRI_poltergeist_luna_order }
+			NOT = { holy_order = THE_PRI_poltergeist_star_order }
+			NOT = { holy_order = THE_PRI_poltergeist_sun_order }
+		} 
+		
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 30
+				OR = {
+					holy_order = THE_PRI_poltergeist_luna_order
+					holy_order = THE_PRI_poltergeist_star_order
+					holy_order = THE_PRI_poltergeist_sun_order
+				}
+			}
+			OR = {
+				num_accepted_cultures = 5
+				full_idea_group = humanist_ideas
+				AND = {
+					num_of_estate_agendas_completed = {
+						estate = estate_church
+						value = 1
+					}
+					num_of_estate_agendas_completed = {
+						estate = estate_burghers
+						value = 1
+					}
+					num_of_estate_agendas_completed = {
+						estate = estate_nobles
+						value = 1
+					}
+				}
+			}
+		} 
+		
+		effect = {
+			add_country_modifier = {
+				name = THE_PRI_celebration_music_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_PRI_unlock_public_misic_festival_decision_tt
+			set_country_flag = THE_PRI_unlock_public_misic_festival_decision_flag
+			
+			custom_tooltip = THE_PRI_mission_5_4_effect_tt
+			if = {
+				limit = { num_accepted_cultures = 5 }
+				custom_tooltip = THE_PRI_mission_5_4_effect_tt_case1_yes
+				set_country_flag = THE_PRI_mission_5_4_effect_case1_flag
+			}
+			else = {
+				custom_tooltip = THE_PRI_mission_5_4_effect_tt_case1_no
+			}
+			custom_tooltip = THE_PRI_mission_5_4_effect_tt_case1
+			if = {
+				limit = { full_idea_group = humanist_ideas }
+				custom_tooltip = THE_PRI_mission_5_4_effect_tt_case2_yes
+				set_country_flag = THE_PRI_mission_5_4_effect_case2_flag
+			}
+			else = {
+				custom_tooltip = THE_PRI_mission_5_4_effect_tt_case2_no
+			}
+			custom_tooltip = THE_PRI_mission_5_4_effect_tt_case2
+			if = {
+				limit = {
+					AND = {
+						num_of_estate_agendas_completed = {
+							estate = estate_church
+							value = 1
+						}
+						num_of_estate_agendas_completed = {
+							estate = estate_burghers
+							value = 1
+						}
+						num_of_estate_agendas_completed = {
+							estate = estate_nobles
+							value = 1
+						}
+					}
+				}
+				custom_tooltip = THE_PRI_mission_5_4_effect_tt_case3_yes
+				set_country_flag = THE_PRI_mission_5_4_effect_case3_flag
+			}
+			else = {
+				custom_tooltip = THE_PRI_mission_5_4_effect_tt_case3_no
+			}
+			custom_tooltip = THE_PRI_mission_5_4_effect_tt_case3
+		} 
 	}
 }

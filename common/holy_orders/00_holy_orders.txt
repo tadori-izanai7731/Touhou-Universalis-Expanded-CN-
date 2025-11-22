@@ -1,0 +1,75 @@
+THE_PRI_poltergeist_luna_order = {
+	icon = GFX_THE_PRI_poltergeist_luna_order
+	trigger = {
+		has_country_flag = THE_PRI_unlock_poltergeist_order_flag
+		NOT = { has_country_flag = THE_PRI_finish_poltergeist_luna_order_flag }
+	}
+	color = { 206 125 122 }
+	cost = 100
+	cost_type = adm_power
+	per_province_effect = {
+		THE_PRI_adm_order_per_province_scripted_effect = yes
+	}
+	per_province_abandon_effect = {
+		THE_PRI_adm_order_per_province_abandon_scripted_effect = yes
+	}
+	modifier = {
+		local_unrest = -2
+		local_core_creation = -0.15
+	}
+	ai_priority = {
+		factor = 0
+	}
+	localization = THE_PRI_music_stage
+}
+
+THE_PRI_poltergeist_star_order = {
+	icon = GFX_THE_PRI_poltergeist_star_order
+	trigger = {
+		has_country_flag = THE_PRI_unlock_poltergeist_order_flag
+		NOT = { has_country_flag = THE_PRI_finish_poltergeist_star_order_flag }
+	}
+	color = { 162 208 143 }
+	cost = 100
+	cost_type = dip_power
+	per_province_effect = {
+		THE_PRI_dip_order_per_province_scripted_effect = yes
+	}
+	per_province_abandon_effect = {
+		THE_PRI_dip_order_per_province_abandon_scripted_effect = yes
+	}
+	modifier = {
+		local_development_cost = -0.2
+		allowed_num_of_buildings = 1
+	}
+	ai_priority = {
+		factor = 0
+	}
+	localization = THE_PRI_music_stage
+}
+
+THE_PRI_poltergeist_sun_order = {
+	icon = GFX_THE_PRI_poltergeist_sun_order
+	trigger = {
+		has_country_flag = THE_PRI_unlock_poltergeist_order_flag
+		NOT = { has_country_flag = THE_PRI_finish_poltergeist_sun_order_flag }
+	}
+	color = { 169 216 232 }
+	cost = 100
+	cost_type = mil_power
+	per_province_effect = {
+		THE_PRI_mil_order_per_province_scripted_effect = yes
+	}
+	per_province_abandon_effect = {
+		THE_PRI_mil_order_per_province_abandon_scripted_effect = yes
+	}
+	modifier = {
+		local_manpower_modifier = 0.25
+		local_friendly_movement_speed = 0.2
+	}
+	ai_priority = {
+		factor = 0
+	}
+	localization = THE_PRI_music_stage
+}
+

@@ -4,3 +4,29 @@ THE_PRI_on_culture_promoted_scripted_effect = {
 		set_country_flag = auto_complete_estate_agenda_all
 	}
 }
+
+THE_PRI_THE_PRI_mission_4_1_scripted_effect = {
+	export_to_variable = {
+		which = the_pri_infantry_var
+		value = trigger_value:num_of_infantry
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = the_pri_infantry_var
+				value = 20
+			}
+		}
+		set_variable = {
+			which = the_pri_infantry_var
+			value = 20
+		}
+	}
+	for_variable_amount = {
+		variable = the_pri_infantry_var
+		effect = "
+			add_mil_power = 25
+			add_treasury = 50
+		"
+	}
+}

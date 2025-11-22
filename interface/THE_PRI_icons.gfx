@@ -1,0 +1,17 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_THE_PRI_poltergeist_luna_order"
+		texturefile = "gfx/interface/holy_orders/THE_PRI_poltergeist_luna_order.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_THE_PRI_poltergeist_star_order"
+		texturefile = "gfx/interface/holy_orders/THE_PRI_poltergeist_star_order.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_THE_PRI_poltergeist_sun_order"
+		texturefile = "gfx/interface/holy_orders/THE_PRI_poltergeist_sun_order.dds"
+		noOfFrames = 4
+	}
+}
