@@ -49,6 +49,7 @@ THE_PRI_spring_send_music_modifier = {
 	culture_conversion_cost = 1.0
 	global_manpower = 20
 	global_tax_income = 5
+	land_forcelimit = 5
 }
 
 # 常夜的音乐
@@ -64,4 +65,5 @@ THE_PRI_spring_send_music_modifier_upgrade = {
 	culture_conversion_cost = 1.0
 	global_manpower = 40
 	global_tax_income = 10
+	land_forcelimit = 10
 }

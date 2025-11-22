@@ -9,10 +9,10 @@
  THE_PRI_unlock_poltergeist_order_tt: "启用地方组织§Y忧郁之音舞台§!、§Y幻想之音舞台§!、§Y躁动之音舞台§!"
  THE_PRI_unlock_public_misic_festival_decision_tt: "启用决议「§Y公共音乐节§!」"
  THE_PRI_mission_5_4_effect_tt: "\n根据完成任务时满足的条件获得以下效果:"
- THE_PRI_mission_5_4_effect_tt_case1: "在已接纳文化省份建立地方组织时获得§G1§!点对应发展度\n"
+ THE_PRI_mission_5_4_effect_tt_case1: "在已接纳文化省份设立地方组织时获得§G1§!点对应发展度\n"
  THE_PRI_mission_5_4_effect_tt_case1_yes: "£yes£接纳文化:"
  THE_PRI_mission_5_4_effect_tt_case1_no: "£no£接纳文化:"
- THE_PRI_mission_5_4_effect_tt_case2: "每个省份建立地方组织时减少所有国家对§Y[Root.GetName]§!的§G0.2§!侵略扩张\n"
+ THE_PRI_mission_5_4_effect_tt_case2: "每个省份设立地方组织时减少所有国家对§Y[Root.GetName]§!的§G0.2§!侵略扩张\n"
  THE_PRI_mission_5_4_effect_tt_case2_yes: "£yes£人文理念:"
  THE_PRI_mission_5_4_effect_tt_case2_no: "£no£人文理念:"
  THE_PRI_mission_5_4_effect_tt_case3: "出售王冠领地时从每个有地方组织的省份获得§G2§!点对应君主点数"
@@ -36,7 +36,7 @@
  THE_PRI_mission_3_3_effect_tt_case1: "「§Y春告的音乐§!」效果§G翻倍§!，持续时间改为§G永久§!\n每有一个主流文化是§Y妖精§!的属国或盟友，获得§G5000§!£icon_manpower£\n"
  THE_PRI_mission_3_3_effect_tt_case1_yes: "£yes£如果拥有国家修正「§Y春告的音乐§!」:"
  THE_PRI_mission_3_3_effect_tt_case1_no: "£no£如果拥有国家修正「§Y春告的音乐§!」:"
- THE_PRI_order_tip_tt: "\n\n任务中有关地方组织的效果均只对§Y[Root.GetName]§!新增的6种§M音乐舞台§!生效，不写§M音乐舞台§!是防止玩家忘记§M音乐舞台§!是什么东西"
+ THE_PRI_order_tip_tt: "\n\n§O提示§!: 任务中有关地方组织的效果均只对§Y[Root.GetName]§!新增的6种§M音乐舞台§!生效，不写§M音乐舞台§!是防止玩家忘记§M音乐舞台§!是什么东西"
 ### TOOLTIP_END
 
 ### GOVERNMENT
