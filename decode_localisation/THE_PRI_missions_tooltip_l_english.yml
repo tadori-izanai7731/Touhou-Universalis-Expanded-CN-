@@ -37,6 +37,16 @@
  THE_PRI_mission_3_3_effect_tt_case1_yes: "£yes£如果拥有国家修正「§Y春告的音乐§!」:"
  THE_PRI_mission_3_3_effect_tt_case1_no: "£no£如果拥有国家修正「§Y春告的音乐§!」:"
  THE_PRI_order_tip_tt: "\n\n§O提示§!: 任务中有关地方组织的效果均只对§Y[Root.GetName]§!新增的6种§M音乐舞台§!生效，不写§M音乐舞台§!是防止玩家忘记§M音乐舞台§!是什么东西"
+ THE_PRI_mission_1_1_effect_tt: "在「§Y起始的音乐§!」持续时间内:\n  对@AKI§Y[AKI.GetName]§!宣战时双方无法召集盟友\n  @OKI§Y[OKI.GetName]§!无法对我们宣战"
+ THE_PRI_noh_kami_appreciation_tt: "正在欣赏音乐…"
+ THE_PRI_mission_1_2_effect_tt: "启用直属州法令「§Y公共服务:传达恩惠§!」"
+ THE_PRI_mission_1_3_effect_tt: "设立地方组织时减少当地§G10§!年分离主义\n\n启用直属州法令「§Y公共服务:堆积幸福§!」"
+ THE_PRI_mission_2_2_effect_case1_tt_yes: "£yes£如果完成任务时与@KKO§Y[KKO.GetName]§!结盟，且@KKO§Y[KKO.GetName]§!拥有的省份数量不大于§Y3§!:"
+ THE_PRI_mission_2_2_effect_case1_tt_no: "£no£如果完成任务时与@KKO§Y[KKO.GetName]§!结盟，且@KKO§Y[KKO.GetName]§!拥有的省份数量不大于§Y3§!:"
+ THE_PRI_mission_2_4_trigger_tt: "拥有至少§G+5§!异端容忍度"
+ THE_PRI_mission_2_4_effect_monument_tt: "伟大工程§Y命莲寺§!、§Y神灵庙§!在§Y3§!级时额外给予以下效果:\n直属州维护费: §G-10.0%§!\n设立地方组织花费: §G-5.0%§!\n直属州治理成本: §G-5.0%§!"
+ THE_PRI_mission_2_4_effect_case1_tt_yes: "\n£yes£如果完成任务时满足异端容忍条件: 启用直属州法令「§Y公共服务:迷失尽头§!」"
+ THE_PRI_mission_2_4_effect_case1_tt_no: "\n£no£如果完成任务时满足异端容忍条件: 启用直属州法令「§Y公共服务:迷失尽头§!」"
 ### TOOLTIP_END
 
 ### GOVERNMENT
@@ -70,4 +80,14 @@
  THE_PRI_spring_send_music_modifier: "春告的音乐"
  THE_PRI_spring_send_music_modifier_upgrade: "春告的音乐"
  THE_PRI_eternity_night_music_modifier: "常夜的音乐"
+ THE_PRI_first_music_modifier: "起始的音乐"
+ THE_PRI_alternation_music_modifier: "更迭的音乐"
+ THE_PRI_poltergeist_music_modifier: "喧闹的音乐"
+ THE_PRI_sukima_music_modifier: "隙间的音乐"
 ### MODIFIER_END
+
+### EDIT
+ THE_PRI_spread_favor_edit: "公共服务:传达恩惠"
+ THE_PRI_gather_misfortune_edit: "公共服务:堆积幸福"
+ THE_PRI_religion_peace_edit: "公共服务:迷失尽头"
+### EDIT_END

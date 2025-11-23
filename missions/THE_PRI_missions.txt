@@ -10,31 +10,106 @@ THE_PRI_mission_branch_1 = {
 		position = 1
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = {
+			num_of_allies = 1
+			if = {
+				limit = { ai = yes }
+				NOT = { exists = AKI }
+				NOT = { exists = OKI }
+			}
+		} 
 		
-		effect = {  } 
+		effect = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_stability = 1
+			Eastern_youkai_forest = {
+				add_permanent_claim = ROOT
+			}
+			Land_of_the_black_doors = {
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = THE_PRI_first_music_modifier
+				duration = 3650
+			}
+			custom_tooltip = THE_PRI_mission_1_1_effect_tt
+		} 
 	}
 	
 	THE_PRI_mission_1_2 = {
 		icon = mission_unknown_mission
 		position = 2
 		required_missions = { THE_PRI_mission_1_1 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			province_id = 5134
+		} 
 		
-		trigger = {  } 
+		trigger = {
+			5134 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
 		
-		effect = {  } 
+		effect = {
+			Great_youkai_forest = {
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = THE_PRI_alternation_music_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_PRI_mission_1_2_effect_tt
+			set_country_flag = THE_PRI_mission_1_2_effect_flag
+			
+			hidden_effect = {
+				Eastern_youkai_forest = {
+					change_religion = THE_minoriko_religion
+				}
+			}
+		} 
 	}
 	
 	THE_PRI_mission_1_3 = {
 		icon = mission_unknown_mission
 		position = 3
 		required_missions = { THE_PRI_mission_1_2 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			area = Great_youkai_forest
+		} 
 		
-		trigger = {  } 
+		trigger = {
+			Great_youkai_forest = {
+				type = all
+				owns = ROOT
+				NOT = { local_autonomy_above_min = 10 }
+				if = {
+					limit = { ROOT = { NOT = { has_country_flag = THE_PRI_public_misic_festival_decision_finish_flag } } }
+					OR = {
+						holy_order = THE_PRI_poltergeist_luna_order
+						holy_order = THE_PRI_poltergeist_star_order
+						holy_order = THE_PRI_poltergeist_sun_order
+					}
+				}
+			}
+		} 
 		
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = THE_PRI_poltergeist_music_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_PRI_mission_1_3_effect_tt
+			set_country_flag = THE_PRI_mission_1_3_effect_order_flag
+			set_country_flag = THE_PRI_mission_1_3_effect_edit_flag
+			
+			hidden_effect = {
+				Great_youkai_forest = {
+					change_religion = THE_kagiyama_religion
+				}
+			}
+		} 
 	}
 	
 	THE_PRI_mission_1_5 = {
@@ -59,22 +134,123 @@ THE_PRI_mission_branch_2 = {
 		icon = mission_unknown_mission
 		position = 2
 		required_missions = { THE_PRI_mission_1_1 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			if = {
+				limit = { exists = OKI }
+				area = Land_of_the_black_doors
+			}
+			else = {
+				province_id = 5132
+			}
+		} 
 		
-		trigger = {  } 
+		trigger = {
+			if = {
+				limit = { exists = OKI }
+				Land_of_the_black_doors = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			else = {
+				5132 = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		} 
 		
-		effect = {  } 
+		effect = {
+			Myouren_state = {
+				add_permanent_claim = ROOT
+			}
+			Eastern_myouren_state = {
+				add_permanent_claim = ROOT
+			}
+			Northern_myouren_state = {
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = THE_PRI_sukima_music_modifier
+				duration = 10950
+			}
+			if = {
+				limit = {
+					alliance_with = KKO
+					KKO = { NOT = { num_of_cities = 4 } }
+				}
+				custom_tooltip = THE_PRI_mission_2_2_effect_case1_tt_yes
+				vassalize = KKO
+			}
+			else = {
+				custom_tooltip = THE_PRI_mission_2_2_effect_case1_tt_no
+				tooltip = {
+					vassalize = KKO
+				}
+			}
+		} 
 	}
 	
 	THE_PRI_mission_2_4 = {
 		icon = mission_unknown_mission
 		position = 4
 		required_missions = { THE_PRI_mission_2_2 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				religion = th_buddhist
+				religion = th_taoist
+			}
+		} 
 		
-		trigger = {  } 
+		trigger = {
+			OR = {
+				AND = {
+					owns = 4987
+					owns = 5025
+				}
+				AND = {
+					custom_trigger_tooltip = {
+						tooltip = THE_PRI_mission_2_4_trigger_tt
+						has_global_modifier_value = {
+							which = tolerance_heretic
+							value = 5
+						}
+					}
+					num_of_owned_provinces_with = {
+						value = 5
+						religion = th_buddhist
+					}
+					num_of_owned_provinces_with = {
+						value = 5
+						religion = th_taoist
+					}
+				}
+			}
+		} 
 		
-		effect = {  } 
+		effect = {
+			custom_tooltip = THE_PRI_mission_2_4_effect_monument_tt
+			if = {
+				limit = {
+					custom_trigger_tooltip = {
+						tooltip = THE_PRI_mission_2_4_trigger_tt
+						has_global_modifier_value = {
+							which = tolerance_heretic
+							value = 3
+						}
+					}
+					num_of_owned_provinces_with = {
+						value = 5
+						religion = th_buddhist
+					}
+					num_of_owned_provinces_with = {
+						value = 5
+						religion = th_taoist
+					}
+				}
+				custom_tooltip = THE_PRI_mission_2_4_effect_case1_tt_yes
+				set_country_flag = THE_PRI_mission_2_4_effect_edit_flag
+			}
+			else = {
+				custom_tooltip = THE_PRI_mission_2_4_effect_case1_tt_no
+			}
+		} 
 	}
 	
 	THE_PRI_mission_2_5 = {

@@ -67,3 +67,35 @@ THE_PRI_spring_send_music_modifier_upgrade = {
 	global_tax_income = 10
 	land_forcelimit = 10
 }
+
+# 起始的音乐
+THE_PRI_first_music_modifier = {
+	global_regiment_cost = -0.5
+	global_regiment_recruit_speed = -0.5
+	military_tactics = 0.25
+	culture_conversion_cost = 1.0
+}
+
+# 更迭的音乐
+THE_PRI_alternation_music_modifier = {
+	tolerance_heretic = 3
+	tolerance_of_heretics_capacity = 3
+	all_estate_loyalty_equilibrium = 0.1
+	culture_conversion_cost = 1.0
+}
+
+# 喧闹的音乐
+THE_PRI_poltergeist_music_modifier = {
+	num_accepted_cultures = 2
+	promote_culture_cost = -0.1
+	establish_order_cost = -0.1
+	culture_conversion_cost = 1.0
+}
+
+# 隙间的音乐
+THE_PRI_sukima_music_modifier = {
+	global_trade_power = 0.5
+	state_maintenance_modifier = -0.2
+	religious_unity = 0.25
+	culture_conversion_cost = 1.0
+}
