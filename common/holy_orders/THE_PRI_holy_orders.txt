@@ -18,7 +18,7 @@ THE_PRI_poltergeist_luna_order = {
 		local_core_creation = -0.15
 	}
 	ai_priority = {
-		factor = 0
+		factor = 1000
 	}
 	localization = THE_PRI_music_stage
 }
@@ -43,7 +43,7 @@ THE_PRI_poltergeist_star_order = {
 		allowed_num_of_buildings = 1
 	}
 	ai_priority = {
-		factor = 0
+		factor = 1000
 	}
 	localization = THE_PRI_music_stage
 }
@@ -68,7 +68,7 @@ THE_PRI_poltergeist_sun_order = {
 		local_friendly_movement_speed = 0.2
 	}
 	ai_priority = {
-		factor = 0
+		factor = 1000
 	}
 	localization = THE_PRI_music_stage
 }
