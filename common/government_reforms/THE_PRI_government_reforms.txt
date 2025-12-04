@@ -37,3 +37,40 @@ THE_PRI_phantom_ensemble_reform = {
 		factor = 1000
 	}
 }
+
+
+THE_PRI_yougakudan_mirai_reform = {
+	icon = "parliament"
+	modifiers = {
+		diplomatic_upkeep = 5
+		improve_relation_modifier = 0.5
+		war_exhaustion = 0.2
+		inflation_reduction = -1
+	}
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			mission_completed = THE_PRI_mission_1_5
+			has_reform = THE_PRI_yougakudan_mirai_reform
+			have_had_reform = THE_PRI_yougakudan_mirai_reform
+		}
+	}
+	conditional = {
+		allow = { always = yes }
+		custom_attributes = {
+			THE_block_reduce_inflation_custom_attributes = yes
+			THE_block_reduce_exhaustion_custom_attributes = yes
+			THE_PRI_100_culture_for_fantasy_custom_attributes = yes
+		}
+	}
+	conditional = {
+		allow = { ROOT = { mission_completed = THE_PRI_mission_2_5 } }
+		custom_attributes = {
+			THE_PRI_unlock_order_for_related_country_custom_attributes = yes
+			THE_PRI_accept_culture_by_other_country_set_order_custom_attributes = yes
+		}
+	}
+	ai = {
+		factor = 1000
+	}
+}

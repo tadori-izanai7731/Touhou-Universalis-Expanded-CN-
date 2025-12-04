@@ -116,11 +116,30 @@ THE_PRI_mission_branch_1 = {
 		icon = mission_unknown_mission
 		position = 5
 		required_missions = { THE_PRI_mission_2_4 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			province_id = 4978
+		} 
 		
-		trigger = {  } 
+		trigger = {
+			4978 = {
+				owned_by = ROOT
+				has_great_project = {
+					type = th_monument_human_capital
+					tier = 3
+				}
+			}
+		} 
 		
-		effect = {  } 
+		effect = {
+			add_accepted_culture_or_dip_power = {
+				culture = Gensokyo_human
+				free = yes
+			}
+			custom_tooltip = THE_PRI_mission_1_5_effect_tt
+			tooltip = {
+				add_government_reform = THE_PRI_yougakudan_mirai_reform
+			}
+		} 
 	}
 }
 THE_PRI_mission_branch_2 = {
@@ -589,9 +608,38 @@ THE_PRI_mission_branch_4 = {
 		}
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = {
+			has_flagship = yes
+			OR = {
+				num_of_heavy_ship = 10
+				num_of_light_ship = 30
+			}
+		} 
 		
-		effect = {  } 
+		effect = {
+			Scarlet_island = {
+				add_permanent_claim = ROOT
+			}
+			custom_tooltip = THE_PRI_mission_4_3_effect_tt_1
+			tooltip = {
+				add_province_modifier = {
+					name = THE_PRI_illusion_misic_pmodifier
+					duration = -1
+				}
+			}
+			custom_tooltip = THE_PRI_mission_4_3_effect_tt_2
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						province_has_center_of_trade_of_level = 3
+					}
+					add_province_modifier = {
+						name = THE_PRI_illusion_misic_pmodifier
+						duration = -1
+					}
+				}
+			}
+		} 
 	}
 	
 	THE_PRI_mission_4_4 = {

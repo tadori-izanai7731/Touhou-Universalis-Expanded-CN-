@@ -47,14 +47,24 @@
  THE_PRI_mission_2_4_effect_monument_tt: "伟大工程§Y命莲寺§!、§Y神灵庙§!在§Y3§!级时额外给予以下效果:\n直属州维护费: §G-10.0%§!\n设立地方组织花费: §G-5.0%§!\n直属州治理成本: §G-5.0%§!"
  THE_PRI_mission_2_4_effect_case1_tt_yes: "\n£yes£如果完成任务时满足异端容忍条件: 启用直属州法令「§Y公共服务:迷失尽头§!」"
  THE_PRI_mission_2_4_effect_case1_tt_no: "\n£no£如果完成任务时满足异端容忍条件: 启用直属州法令「§Y公共服务:迷失尽头§!」"
+ THE_PRI_mission_1_5_effect_tt: "解锁共和制第§Y6§!级政府改革「§Y幺乐团的未来§!」，实行改革会带来以下效果:"
+ THE_PRI_mission_4_3_effect_tt_1: "治下所有拥有§Y3§!级贸易中心的省份获得以下效果:"
+ THE_PRI_mission_4_3_effect_tt_2: "未来获得的§Y3§!级贸易中心也会获得该修正\n\n提升外交科技时，减少(§Y重商主义§!/§Y10§!)的通货膨胀"
 ### TOOLTIP_END
 
 ### GOVERNMENT
  THE_PRI_phantom_ensemble_reform: "幽灵乐团"
  THE_PRI_phantom_ensemble_reform_desc: ""
+ THE_PRI_yougakudan_mirai_reform: "幺乐团的未来"
+ THE_PRI_yougakudan_mirai_reform_desc: ""
 
  mechanic_THE_PRI_block_state_core_custom_attributes_yes: "禁止建造直属州核心"
  mechanic_THE_PRI_accept_culture_complete_agenda_auto_custom_attributes_yes: "接纳文化自动完成当前或下一次阶层议程"
+ mechanic_THE_block_reduce_inflation_custom_attributes_yes: "禁止降低通货膨胀"
+ mechanic_THE_block_reduce_exhaustion_custom_attributes_yes: "禁止降低厌战度"
+ mechanic_THE_PRI_100_culture_for_fantasy_custom_attributes_yes: "接纳至少100种文化时可以使用幻想乡理念组"
+ mechanic_THE_PRI_unlock_order_for_related_country_custom_attributes_yes: "允许结盟/王室联姻/附属/有停战协议的国家使用已解锁的地方组织"
+ mechanic_THE_PRI_accept_culture_by_other_country_set_order_custom_attributes_yes: "其他国家设立地方组织会使我们接纳当地文化"
 ### GOVERNMENT_END
 
 ### ORDER
@@ -84,6 +94,7 @@
  THE_PRI_alternation_music_modifier: "更迭的音乐"
  THE_PRI_poltergeist_music_modifier: "喧闹的音乐"
  THE_PRI_sukima_music_modifier: "隙间的音乐"
+ THE_PRI_illusion_misic_pmodifier: "泡影的音乐"
 ### MODIFIER_END
 
 ### EDIT

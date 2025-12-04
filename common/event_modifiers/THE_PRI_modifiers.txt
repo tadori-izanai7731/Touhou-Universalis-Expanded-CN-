@@ -99,3 +99,9 @@ THE_PRI_sukima_music_modifier = {
 	religious_unity = 0.25
 	culture_conversion_cost = 1.0
 }
+
+# 泡影的音乐
+THE_PRI_illusion_misic_pmodifier = {
+	mercantilism_cost = -0.03
+	local_gold_depletion_chance_modifier = 0.5
+}
