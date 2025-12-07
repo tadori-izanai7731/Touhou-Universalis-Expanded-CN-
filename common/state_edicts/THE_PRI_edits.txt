@@ -66,3 +66,25 @@ THE_PRI_religion_peace_edit = {
 		factor = 0
 	}
 }
+
+THE_PRI_unknow_music_edit = {
+	potential = {
+		has_country_flag = THE_PRI_mission_2_5_effect_edit_flag
+	}
+	
+	allow = {
+		always = yes
+	}
+	
+	modifier = {
+		local_great_project_upgrade_cost = -1.0
+		local_great_project_upgrade_time = -1.0
+	}
+	
+	color = { 255 255 255 }
+	
+	
+	ai_will_do = {
+		factor = 0
+	}
+}

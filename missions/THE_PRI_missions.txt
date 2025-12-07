@@ -277,9 +277,30 @@ THE_PRI_mission_branch_2 = {
 		position = 5
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = THE_PRI_mission_2_5_trigger_tt_1
+				has_country_flag = THE_PRI_finish_poltergeist_luna_order_flag
+				has_country_flag = THE_PRI_finish_poltergeist_star_order_flag
+				has_country_flag = THE_PRI_finish_poltergeist_sun_order_flag
+			}
+			custom_trigger_tooltip = {
+				tooltip = THE_PRI_mission_2_5_trigger_tt_2
+				all_country = {
+					OR = {
+						NOT = { is_great_power = yes }
+						capital_scope = {
+							has_discovered = ROOT
+						}
+					}
+				}
+			}
+		} 
 		
-		effect = {  } 
+		effect = {
+			custom_tooltip = THE_PRI_mission_2_5_effect_tt
+			set_country_flag = THE_PRI_mission_2_5_effect_edit_flag
+		} 
 	}
 }
 THE_PRI_mission_branch_3 = {
@@ -482,11 +503,53 @@ THE_PRI_mission_branch_3 = {
 	THE_PRI_mission_3_4 = {
 		icon = mission_unknown_mission
 		position = 4
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			is_capital_of = RAI
+		} 
 		
-		trigger = {  } 
+		trigger = {
+			OR = {
+				RAI = {
+					has_opinion = {
+						who = ROOT
+						value = 200
+					}
+				}
+				AND = {
+					is_year = 1500
+					RAI = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+				}
+				AND = {
+					is_year = 1600
+					RAI = {
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
+					}
+				}
+				mission_completed = THE_PRI_mission_2_5
+			}
+		} 
 		
-		effect = {  } 
+		effect = {
+			custom_tooltip = THE_PRI_mission_3_4_effect1_tt
+			if = {
+				limit = { exists = RAI }
+				THE_add_historical_friend_and_reverse_scripted_effect = {
+					tag = RAI
+				}
+			}
+			custom_tooltip = THE_PRI_mission_3_4_effect2_tt
+			tooltip = {
+				add_government_reform = THE_PRI_illusionary_joururi_reform
+			}
+		} 
 	}
 }
 THE_PRI_mission_branch_4 = {
@@ -646,11 +709,70 @@ THE_PRI_mission_branch_4 = {
 		icon = mission_unknown_mission
 		position = 4
 		required_missions = { THE_PRI_mission_4_3 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4968
+				is_capital_of = CRD
+			}
+		} 
 		
-		trigger = {  } 
+		trigger = {
+			4968 = { country_or_non_sovereign_subject_holds = ROOT }
+			OR = {
+				CRD = {
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+				}
+				CRD = { is_enemy = ROOT }
+				is_rival = CRD
+				NOT = { exists = CRD }
+			}
+		} 
 		
-		effect = {  } 
+		effect = {
+			custom_tooltip = THE_PRI_mission_4_4_effect_tt
+			tooltip = {
+				add_government_reform = THE_PRI_dead_princess_septette_reform
+			}
+			if = {
+				limit = {
+					CRD = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+				}
+				custom_tooltip = THE_PRI_mission_4_4_effect_tt_case1_yes
+				add_country_modifier = {
+					name = THE_PRI_homecoming_music_modifier
+					duration = -1
+				}
+				custom_tooltip = THE_otherwise_tt_no
+				tooltip = {
+					add_country_modifier = {
+						name = THE_PRI_no_longer_music_modifier
+						duration = 10950
+					}
+				}
+			}
+			else = {
+				custom_tooltip = THE_PRI_mission_4_4_effect_tt_case1_no
+				tooltip = {
+					add_country_modifier = {
+						name = THE_PRI_homecoming_music_modifier
+						duration = -1
+					}
+				}
+				custom_tooltip = THE_otherwise_tt_yes
+				add_country_modifier = {
+					name = THE_PRI_no_longer_music_modifier
+					duration = 10950
+				}
+			}
+		} 
 	}
 	
 	THE_PRI_mission_4_5 = {
@@ -662,9 +784,27 @@ THE_PRI_mission_branch_4 = {
 		}
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = {
+			if = {
+				limit = { tag = PRI }
+				custom_trigger_tooltip = {
+					tooltip = THE_PRI_mission_4_5_trigger_tt
+					has_country_flag = THE_PRI_form_RAIPRI_decision_flag
+				}
+			}
+			NOT = { exists = RAI }
+		} 
 		
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = THE_PRI_concerto_music_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_PRI_mission_4_5_effect_tt
+			tooltip = {
+				add_government_reform = THE_PRI_pristine_beat_reform
+			}
+		} 
 	}
 }
 THE_PRI_mission_branch_5 = {

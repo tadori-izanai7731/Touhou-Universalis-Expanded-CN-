@@ -1,8 +1,21 @@
 THE_PRI_poltergeist_luna_order = {
 	icon = GFX_THE_PRI_poltergeist_luna_order
 	trigger = {
-		has_country_flag = THE_PRI_unlock_poltergeist_order_flag
-		NOT = { has_country_flag = THE_PRI_finish_poltergeist_luna_order_flag }
+		OR = {
+			AND = {
+				has_country_flag = THE_PRI_unlock_poltergeist_order_flag
+				NOT = { has_country_flag = THE_PRI_finish_poltergeist_luna_order_flag }
+			}
+			any_country = {
+				has_government_attribute = THE_PRI_unlock_order_for_related_country_custom_attributes
+				OR = {
+					alliance_with = ROOT
+					marriage_with = ROOT
+					overlord_of = ROOT
+					has_truce = ROOT
+				}
+			}
+		}
 	}
 	color = { 206 125 122 }
 	cost = 100
@@ -26,8 +39,21 @@ THE_PRI_poltergeist_luna_order = {
 THE_PRI_poltergeist_star_order = {
 	icon = GFX_THE_PRI_poltergeist_star_order
 	trigger = {
-		has_country_flag = THE_PRI_unlock_poltergeist_order_flag
-		NOT = { has_country_flag = THE_PRI_finish_poltergeist_star_order_flag }
+		OR = {
+			AND = {
+				has_country_flag = THE_PRI_unlock_poltergeist_order_flag
+				NOT = { has_country_flag = THE_PRI_finish_poltergeist_star_order_flag }
+			}
+			any_country = {
+				has_government_attribute = THE_PRI_unlock_order_for_related_country_custom_attributes
+				OR = {
+					alliance_with = ROOT
+					marriage_with = ROOT
+					overlord_of = ROOT
+					has_truce = ROOT
+				}
+			}
+		}
 	}
 	color = { 162 208 143 }
 	cost = 100
@@ -51,8 +77,21 @@ THE_PRI_poltergeist_star_order = {
 THE_PRI_poltergeist_sun_order = {
 	icon = GFX_THE_PRI_poltergeist_sun_order
 	trigger = {
-		has_country_flag = THE_PRI_unlock_poltergeist_order_flag
-		NOT = { has_country_flag = THE_PRI_finish_poltergeist_sun_order_flag }
+		OR = {
+			AND = {
+				has_country_flag = THE_PRI_unlock_poltergeist_order_flag
+				NOT = { has_country_flag = THE_PRI_finish_poltergeist_sun_order_flag }
+			}
+			any_country = {
+				has_government_attribute = THE_PRI_unlock_order_for_related_country_custom_attributes
+				OR = {
+					alliance_with = ROOT
+					marriage_with = ROOT
+					overlord_of = ROOT
+					has_truce = ROOT
+				}
+			}
+		}
 	}
 	color = { 169 216 232 }
 	cost = 100

@@ -37,7 +37,7 @@
  THE_PRI_mission_3_3_effect_tt_case1_yes: "£yes£如果拥有国家修正「§Y春告的音乐§!」:"
  THE_PRI_mission_3_3_effect_tt_case1_no: "£no£如果拥有国家修正「§Y春告的音乐§!」:"
  THE_PRI_order_tip_tt: "\n\n§O提示§!: 任务中有关地方组织的效果均只对§Y[Root.GetName]§!新增的6种§M音乐舞台§!生效，不写§M音乐舞台§!是防止玩家忘记§M音乐舞台§!是什么东西"
- THE_PRI_mission_1_1_effect_tt: "在「§Y起始的音乐§!」持续时间内:\n  对@AKI§Y[AKI.GetName]§!宣战时双方无法召集盟友\n  @OKI§Y[OKI.GetName]§!无法对我们宣战"
+ THE_PRI_mission_1_1_effect_tt: "在「§Y起始的音乐§!」持续时间内:\n对@AKI§Y[AKI.GetName]§!宣战时双方无法召集盟友\n@OKI§Y[OKI.GetName]§!无法对我们宣战"
  THE_PRI_noh_kami_appreciation_tt: "正在欣赏音乐…"
  THE_PRI_mission_1_2_effect_tt: "启用直属州法令「§Y公共服务:传达恩惠§!」"
  THE_PRI_mission_1_3_effect_tt: "设立地方组织时减少当地§G10§!年分离主义\n\n启用直属州法令「§Y公共服务:堆积幸福§!」"
@@ -50,6 +50,25 @@
  THE_PRI_mission_1_5_effect_tt: "解锁共和制第§Y6§!级政府改革「§Y幺乐团的未来§!」，实行改革会带来以下效果:"
  THE_PRI_mission_4_3_effect_tt_1: "治下所有拥有§Y3§!级贸易中心的省份获得以下效果:"
  THE_PRI_mission_4_3_effect_tt_2: "未来获得的§Y3§!级贸易中心也会获得该修正\n\n提升外交科技时，减少(§Y重商主义§!/§Y10§!)的通货膨胀"
+ THE_PRI_mission_4_4_effect_tt: "解锁共和制第§Y5§!级政府改革「§Y献给已逝公主的七重奏§!」，实行改革会带来以下效果:"
+ THE_PRI_mission_4_4_effect_tt_case1_yes: "\n£yes£如果@CRD§Y[CRD.GetName]§!对我们的好感度至少为§Y150§!:"
+ THE_PRI_mission_4_4_effect_tt_case1_no: "\n£no£如果@CRD§Y[CRD.GetName]§!对我们的好感度至少为§Y150§!:"
+ THE_PRI_mission_3_4_effect1_tt: "启用决议「§Y成立堀莉兹姆利巴乐团§!」\n"
+ THE_PRI_mission_3_4_effect2_tt: "\n解锁共和制第§Y4§!级政府改革「§Y幻想净琉璃§!」，实行改革会带来以下效果:"
+ THE_PRI_mission_4_5_trigger_tt: "已完成决议「§Y成立堀莉兹姆利巴乐团§!」"
+ THE_PRI_mission_4_5_effect_tt: "解锁共和制第§Y10§!级政府改革「§Y原初的节拍§!」，实行改革会带来以下效果:"
+ THE_PRI_finish_poltergeist_luna_order_tt_1: "£yes£「§Y忧郁之音舞台§!」已公共化\n"
+ THE_PRI_finish_poltergeist_luna_order_tt_2: "完成「§Y忧郁之音舞台§!」公共化并将其禁用\n"
+ THE_PRI_finish_poltergeist_luna_order_tt_3: "£no£当前「§Y忧郁之音舞台§!」的数量无法将其公共化\n"
+ THE_PRI_finish_poltergeist_star_order_tt_1: "£yes£「§Y幻想之音舞台§!」已公共化\n"
+ THE_PRI_finish_poltergeist_star_order_tt_2: "完成「§Y幻想之音舞台§!」公共化并将其禁用\n"
+ THE_PRI_finish_poltergeist_star_order_tt_3: "£no£当前「§Y幻想之音舞台§!」的数量无法将其公共化\n"
+ THE_PRI_finish_poltergeist_sun_order_tt_1: "£yes£「§Y躁动之音舞台§!」已公共化"
+ THE_PRI_finish_poltergeist_sun_order_tt_2: "完成「§Y躁动之音舞台§!」公共化并将其禁用"
+ THE_PRI_finish_poltergeist_sun_order_tt_3: "£no£当前「§Y躁动之音舞台§!」的数量无法将其公共化"
+ THE_PRI_mission_2_5_trigger_tt_1: "3种骚灵音乐舞台均已公共化"
+ THE_PRI_mission_2_5_trigger_tt_2: "已发现所有列强的首都"
+ THE_PRI_mission_2_5_effect_tt: "政府改革「§Y幺乐团的未来§!」获得以下机制:\n允许结盟/王室联姻/附属/有停战协议的国家使用骚灵音乐舞台\n其他国家设立地方组织会使我们接纳当地文化\n\n启用直属州法令「§Y未有之世:尘世遗音§!」"
 ### TOOLTIP_END
 
 ### GOVERNMENT
@@ -57,14 +76,25 @@
  THE_PRI_phantom_ensemble_reform_desc: ""
  THE_PRI_yougakudan_mirai_reform: "幺乐团的未来"
  THE_PRI_yougakudan_mirai_reform_desc: ""
+ THE_PRI_dead_princess_septette_reform: "献给已逝公主的七重奏"
+ THE_PRI_dead_princess_septette_reform_desc: ""
+ THE_PRI_illusionary_joururi_reform: "幻想净琉璃"
+ THE_PRI_illusionary_joururi_reform_desc: ""
+ THE_PRI_pristine_beat_reform: "原初的节拍"
+ THE_PRI_pristine_beat_reform_desc: ""
 
  mechanic_THE_PRI_block_state_core_custom_attributes_yes: "禁止建造直属州核心"
  mechanic_THE_PRI_accept_culture_complete_agenda_auto_custom_attributes_yes: "接纳文化自动完成当前或下一次阶层议程"
  mechanic_THE_block_reduce_inflation_custom_attributes_yes: "禁止降低通货膨胀"
  mechanic_THE_block_reduce_exhaustion_custom_attributes_yes: "禁止降低厌战度"
  mechanic_THE_PRI_100_culture_for_fantasy_custom_attributes_yes: "接纳至少100种文化时可以使用幻想乡理念组"
- mechanic_THE_PRI_unlock_order_for_related_country_custom_attributes_yes: "允许结盟/王室联姻/附属/有停战协议的国家使用已解锁的地方组织"
+ mechanic_THE_PRI_unlock_order_for_related_country_custom_attributes_yes: "允许结盟/王室联姻/附属/有停战协议的国家使用骚灵音乐舞台"
  mechanic_THE_PRI_accept_culture_by_other_country_set_order_custom_attributes_yes: "其他国家设立地方组织会使我们接纳当地文化"
+ mechanic_THE_PRI_set_mil_order_add_soldier_household_custom_attributes_yes: "在有工场的省份设立军事地方组织也会添加士兵之家"
+ mechanic_THE_PRI_set_7_mil_order_reduce_exhaustion_custom_attributes_yes: "每在7个省份设立军事地方组织，减少§G4§!厌战度并使所有与我们交战的国家获得§R4§!厌战度"
+ mechanic_THE_PRI_set_dip_order_generate_random_toho_religion_custom_attributes_yes: "设立外交地方组织会使当地宗教转变为幻想乡宗教组的随机宗教"
+ mechanic_THE_PRI_missionary_complete_convert_merchant_custom_attributes_yes: "传教完成时，将1传教士转换为1商人团"
+ mechanic_THE_PRI_set_adm_order_remove_other_core_custom_attributes_yes:  "设立行政地方组织会移除当地其他国家的核心"
 ### GOVERNMENT_END
 
 ### ORDER
@@ -95,10 +125,29 @@
  THE_PRI_poltergeist_music_modifier: "喧闹的音乐"
  THE_PRI_sukima_music_modifier: "隙间的音乐"
  THE_PRI_illusion_misic_pmodifier: "泡影的音乐"
+ THE_PRI_homecoming_music_modifier: "归家的音乐"
+ THE_PRI_no_longer_music_modifier: "阻绝的音乐"
+ THE_PRI_concerto_music_modifier: "协奏的音乐"
+ THE_PRI_poltergeist_luna_order_modifier: "忧郁之音"
+ THE_PRI_poltergeist_star_order_modifier: "幻想之音"
+ THE_PRI_poltergeist_sun_order_modifier: "躁动之音"
 ### MODIFIER_END
 
 ### EDIT
  THE_PRI_spread_favor_edit: "公共服务:传达恩惠"
  THE_PRI_gather_misfortune_edit: "公共服务:堆积幸福"
  THE_PRI_religion_peace_edit: "公共服务:迷失尽头"
+ THE_PRI_unknow_music_edit: "未有之世:尘世遗音"
 ### EDIT_END
+
+### DECISION
+ THE_PRI_form_RAIPRI_decision_title: "@PRI成立堀莉兹姆利巴乐团"
+ THE_PRI_form_RAIPRI_decision_desc: ""
+ THE_PRI_expand_public_music_stage_decision_title: "@PRI公共音乐节"
+ THE_PRI_expand_public_music_stage_decision_desc: ""
+### DECISION_END
+
+### COUNTRY
+ THE_RAIPRI: "堀莉兹姆利巴乐团"
+ THE_RAIPRI_ADJ: "堀莉兹姆利巴乐团"
+### COUNTRY_END

@@ -74,3 +74,66 @@ THE_PRI_yougakudan_mirai_reform = {
 		factor = 1000
 	}
 }
+
+THE_PRI_dead_princess_septette_reform = {
+	icon = "parliament"
+	modifiers = {
+		parliament_debate_duration = -5
+		manpower_in_accepted_culture_provinces = 0.25
+		assault_fort_cost_modifier = -1.0
+		discovered_relations_impact = -1.0
+	}
+
+	conditional = {
+		allow = { always = yes }
+		custom_attributes = {
+			THE_PRI_set_mil_order_add_soldier_household_custom_attributes = yes
+			THE_PRI_set_7_mil_order_reduce_exhaustion_custom_attributes = yes
+		}
+	}
+	ai = {
+		factor = 1000
+	}
+}
+
+THE_PRI_illusionary_joururi_reform = {
+	icon = "parliament"
+	modifiers = {
+		missionaries = 5
+		tolerance_of_heretics_capacity = 5
+		global_heretic_missionary_strength = 0.05
+		warscore_cost_vs_other_religion = -0.15
+	}
+
+	conditional = {
+		allow = { always = yes }
+		custom_attributes = {
+			THE_PRI_set_dip_order_generate_random_toho_religion_custom_attributes = yes
+			THE_PRI_missionary_complete_convert_merchant_custom_attributes = yes
+		}
+	}
+	ai = {
+		factor = 1000
+	}
+}
+
+THE_PRI_pristine_beat_reform = {
+	icon = "parliament"
+	modifiers = {
+		prestige_decay = -0.01
+		global_institution_spread = 0.5
+		free_policy = 1
+		national_focus_years = -10
+		governing_capacity = 200
+	}
+
+	conditional = {
+		allow = { always = yes }
+		custom_attributes = {
+			THE_PRI_set_adm_order_remove_other_core_custom_attributes = yes
+		}
+	}
+	ai = {
+		factor = 1000
+	}
+}

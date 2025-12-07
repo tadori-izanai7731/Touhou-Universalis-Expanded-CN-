@@ -105,3 +105,39 @@ THE_PRI_illusion_misic_pmodifier = {
 	mercantilism_cost = -0.03
 	local_gold_depletion_chance_modifier = 0.5
 }
+
+# 归家的音乐
+THE_PRI_homecoming_music_modifier = {
+	diplomatic_upkeep = 3
+	num_accepted_cultures = 3
+	culture_conversion_cost = 1.0
+}
+
+# 阻绝的音乐
+THE_PRI_no_longer_music_modifier = {
+	culture_conversion_cost = -1.0
+}
+
+# 协奏的音乐
+THE_PRI_concerto_music_modifier = {
+	culture_conversion_cost = 1.0
+	establish_order_cost = -0.2
+}
+
+# 忧郁之音
+THE_PRI_poltergeist_luna_order_modifier = {
+	global_unrest = -2
+	core_creation = -0.15
+}
+
+# 幻想之音
+THE_PRI_poltergeist_star_order_modifier = {
+	development_cost = -0.2
+	global_allowed_num_of_buildings = 1
+}
+
+# 躁动之音
+THE_PRI_poltergeist_sun_order_modifier = {
+	global_manpower_modifier = 0.25
+	movement_speed = 0.2
+}
