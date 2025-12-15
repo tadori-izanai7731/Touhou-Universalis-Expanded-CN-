@@ -1,5 +1,5 @@
 THE_PRI_phantom_ensemble_reform = {
-	icon = "parliament"
+	icon = "music_band_reform"
 	allow_normal_conversion = yes
 	lock_level_when_selected = yes
 	royal_marriage = yes
@@ -83,6 +83,13 @@ THE_PRI_dead_princess_septette_reform = {
 		assault_fort_cost_modifier = -1.0
 		discovered_relations_impact = -1.0
 	}
+	potential = {
+		OR = {
+			mission_completed = THE_PRI_mission_4_4
+			has_reform = THE_PRI_dead_princess_septette_reform
+			have_had_reform = THE_PRI_dead_princess_septette_reform
+		}
+	}
 
 	conditional = {
 		allow = { always = yes }
@@ -103,6 +110,13 @@ THE_PRI_illusionary_joururi_reform = {
 		tolerance_of_heretics_capacity = 5
 		global_heretic_missionary_strength = 0.05
 		warscore_cost_vs_other_religion = -0.15
+	}
+	potential = {
+		OR = {
+			mission_completed = THE_PRI_mission_3_4
+			has_reform = THE_PRI_illusionary_joururi_reform
+			have_had_reform = THE_PRI_illusionary_joururi_reform
+		}
 	}
 
 	conditional = {
@@ -126,11 +140,47 @@ THE_PRI_pristine_beat_reform = {
 		national_focus_years = -10
 		governing_capacity = 200
 	}
+	potential = {
+		OR = {
+			mission_completed = THE_PRI_mission_4_5
+			has_reform = THE_PRI_pristine_beat_reform
+			have_had_reform = THE_PRI_pristine_beat_reform
+		}
+	}
 
 	conditional = {
 		allow = { always = yes }
 		custom_attributes = {
 			THE_PRI_set_adm_order_remove_other_core_custom_attributes = yes
+		}
+	}
+	ai = {
+		factor = 1000
+	}
+}
+
+THE_PRI_lovely_great_war_reform = {
+	icon = "tfr_pirate_government_reform"
+	modifiers = {
+		establish_order_cost = -0.1
+		prestige = 1
+		has_voc_indiamen = yes
+		allowed_voc_indiamen_fraction = 0.5
+		global_ship_trade_power = 0.5
+		ship_power_propagation = 1.0
+	}
+	potential = {
+		OR = {
+			has_country_flag = THE_PRI_unlock_lovely_great_war_reform_flag
+			has_reform = THE_PRI_lovely_great_war_reform
+			have_had_reform = THE_PRI_lovely_great_war_reform
+		}
+	}
+
+	conditional = {
+		allow = { always = yes }
+		custom_attributes = {
+			THE_PRI_unlock_fairy_order_custom_attributes = yes
 		}
 	}
 	ai = {
