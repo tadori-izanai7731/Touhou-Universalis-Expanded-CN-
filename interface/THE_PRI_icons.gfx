@@ -14,4 +14,20 @@ spriteTypes = {
 		texturefile = "gfx/interface/holy_orders/THE_PRI_poltergeist_sun_order.dds"
 		noOfFrames = 4
 	}
+	spriteType = {
+		name = "government_reform_THE_PRI_yougakudan_mirai_reform"
+		texturefile = "gfx/interface/government_reform_icons/THE_PRI/THE_PRI_yougakudan_mirai_reform.dds"
+	}
+	spriteType = {
+		name = "government_reform_THE_PRI_dead_princess_septette_reform"
+		texturefile = "gfx/interface/government_reform_icons/THE_PRI/THE_PRI_dead_princess_septette_reform.dds"
+	}
+	spriteType = {
+		name = "government_reform_THE_PRI_illusionary_joururi_reform"
+		texturefile = "gfx/interface/government_reform_icons/THE_PRI/THE_PRI_illusionary_joururi_reform.dds"
+	}
+	spriteType = {
+		name = "government_reform_THE_PRI_pristine_beat_reform"
+		texturefile = "gfx/interface/government_reform_icons/THE_PRI/THE_PRI_pristine_beat_reform.dds"
+	}
 }

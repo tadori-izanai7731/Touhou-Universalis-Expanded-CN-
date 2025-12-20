@@ -40,7 +40,7 @@ THE_PRI_phantom_ensemble_reform = {
 
 
 THE_PRI_yougakudan_mirai_reform = {
-	icon = "parliament"
+	icon = "THE_PRI_yougakudan_mirai_reform"
 	modifiers = {
 		diplomatic_upkeep = 5
 		improve_relation_modifier = 0.5
@@ -76,7 +76,7 @@ THE_PRI_yougakudan_mirai_reform = {
 }
 
 THE_PRI_dead_princess_septette_reform = {
-	icon = "parliament"
+	icon = "THE_PRI_dead_princess_septette_reform"
 	modifiers = {
 		parliament_debate_duration = -5
 		manpower_in_accepted_culture_provinces = 0.25
@@ -104,7 +104,7 @@ THE_PRI_dead_princess_septette_reform = {
 }
 
 THE_PRI_illusionary_joururi_reform = {
-	icon = "parliament"
+	icon = "THE_PRI_illusionary_joururi_reform"
 	modifiers = {
 		missionaries = 5
 		tolerance_of_heretics_capacity = 5
@@ -132,7 +132,7 @@ THE_PRI_illusionary_joururi_reform = {
 }
 
 THE_PRI_pristine_beat_reform = {
-	icon = "parliament"
+	icon = "THE_PRI_pristine_beat_reform"
 	modifiers = {
 		prestige_decay = -0.01
 		global_institution_spread = 0.5
