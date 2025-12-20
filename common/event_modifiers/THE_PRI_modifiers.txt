@@ -102,7 +102,7 @@ THE_PRI_sukima_music_modifier = {
 
 # 泡影的音乐
 THE_PRI_illusion_misic_pmodifier = {
-	mercantilism_cost = -0.03
+	mercantilism_cost = -0.05
 	local_gold_depletion_chance_modifier = 0.5
 }
 
@@ -122,6 +122,18 @@ THE_PRI_no_longer_music_modifier = {
 THE_PRI_concerto_music_modifier = {
 	culture_conversion_cost = 1.0
 	establish_order_cost = -0.2
+}
+
+# 未来的音乐
+THE_PRI_future_music_modifier = {
+	war_exhaustion = -0.2
+	inflation_reduction = 1
+}
+
+# 变革的音乐
+THE_PRI_revolution_music_pmodifier = {
+	missionaries = -1
+	merchants = 2
 }
 
 # 忧郁之音

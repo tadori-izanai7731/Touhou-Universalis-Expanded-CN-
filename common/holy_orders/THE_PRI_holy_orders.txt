@@ -21,6 +21,7 @@ THE_PRI_poltergeist_luna_order = {
 	cost = 100
 	cost_type = adm_power
 	per_province_effect = {
+		THE_PRI_order_per_province_scripted_effect = yes
 		THE_PRI_adm_order_per_province_scripted_effect = yes
 	}
 	per_province_abandon_effect = {
@@ -59,6 +60,7 @@ THE_PRI_poltergeist_star_order = {
 	cost = 100
 	cost_type = dip_power
 	per_province_effect = {
+		THE_PRI_order_per_province_scripted_effect = yes
 		THE_PRI_dip_order_per_province_scripted_effect = yes
 	}
 	per_province_abandon_effect = {
@@ -97,6 +99,7 @@ THE_PRI_poltergeist_sun_order = {
 	cost = 100
 	cost_type = mil_power
 	per_province_effect = {
+		THE_PRI_order_per_province_scripted_effect = yes
 		THE_PRI_mil_order_per_province_scripted_effect = yes
 	}
 	per_province_abandon_effect = {
@@ -121,6 +124,7 @@ THE_PRI_fairy_luna_order = {
 	cost = 100
 	cost_type = adm_power
 	per_province_effect = {
+		THE_PRI_order_per_province_scripted_effect = yes
 		THE_PRI_adm_order_per_province_scripted_effect = yes
 	}
 	per_province_abandon_effect = {
@@ -145,6 +149,7 @@ THE_PRI_fairy_star_order = {
 	cost = 100
 	cost_type = dip_power
 	per_province_effect = {
+		THE_PRI_order_per_province_scripted_effect = yes
 		THE_PRI_dip_order_per_province_scripted_effect = yes
 	}
 	per_province_abandon_effect = {
@@ -169,6 +174,7 @@ THE_PRI_fairy_sun_order = {
 	cost = 100
 	cost_type = mil_power
 	per_province_effect = {
+		THE_PRI_order_per_province_scripted_effect = yes
 		THE_PRI_mil_order_per_province_scripted_effect = yes
 	}
 	per_province_abandon_effect = {

@@ -68,7 +68,9 @@
  THE_PRI_finish_poltergeist_sun_order_tt_3: "£no£SVMR0§YŽ¨RKNó—‚ðS§!0„vpeÏ‘àeÕlSvQlQqQS"
  THE_PRI_mission_2_5_trigger_tt_1: "3Íyššupó—PN‚ðSGWòTlQqQS"
  THE_PRI_mission_2_5_trigger_tt_2: "òTÑS°sNb	gR:V„v–™ý"
- THE_PRI_mission_2_5_effect_tt: "?eœ^9ei—0§Yz^PNâV„v*geg§!0·ƒ—VåNN:g6R:\nAQ¸‹Óußv/‹s²RTwûY/D–^S/	gjPbOS®‹„výV¶RO(uššupó—PN‚ðS\nvQÖNýV¶R¾‹Ëz0W¹eÄuÇuOObìN¥c³uSV0W‡eS\n\n=T(uôv^SÞTÕläN0§Y*g	gKNN:SNWó—§!0"
+ THE_PRI_mission_2_5_effect_tt: "?eœ^9ei—0§Yz^PNâV„v*geg§!0·ƒ—VåNN:g6R:\nAQ¸‹Óußv/‹s²RTwûY/D–^S/	gjPbOS®‹„výV¶RO(uššupó—PN‚ðS\nvQÖNýV¶R¾‹Ëz0W¹eÄuÇuOObìN¥c³uSV0W‡eS\n\n=T(uôv^SÞTÕläN0§YØ˜Gd‰^¦h:SNWó—§!0"
+ THE_PRI_mission_5_4_order_tt_case2: "Ïk*NwýNÏQSNb	gýV¶RùR§Y[Root.GetName]§!„v§G0.2§!µOeuib.V"
+ THE_PRI_events_3_tt: "§Y»lNNb	gåb	gY²N0W¹eÄuÇu„vwýNlØS:N‰^ó`aN—RYeÄu„v–:g—RYe§!"
 ### TOOLTIP_END
 
 ### GOVERNMENT
@@ -95,8 +97,8 @@
  mechanic_THE_PRI_set_mil_order_add_soldier_household_custom_attributes_yes: "(W	gåT:W„vwýN¾‹Ëz›Q‹N0W¹eÄuÇumNOûm RëXuQKN¶R"
  mechanic_THE_PRI_set_7_mil_order_reduce_exhaustion_custom_attributes_yes: "Ïk(W7*NwýN¾‹Ëz›Q‹N0W¹eÄuÇuÿÏQS§G4§!ŒSb¦^v^ONb	gNbìN²Nb„výV¶R·ƒ—V§R4§!ŒSb¦^"
  mechanic_THE_PRI_set_dip_order_generate_random_toho_religion_custom_attributes_yes: "¾‹ËzY²N0W¹eÄuÇuOOSV0W—RYelØS:N‰^ó`aN—RYeÄu„v–:g—RYe"
- mechanic_THE_PRI_missionary_complete_convert_merchant_custom_attributes_yes: ".OYeŒRböeÿS1.OYeëXlbc:N1FUºNâV"
- mechanic_THE_PRI_set_adm_order_remove_other_core_custom_attributes_yes:  "¾‹ËzLˆ?e0W¹eÄuÇuOûyd–SV0WvQÖNýV¶R„v8hÃV"
+ mechanic_THE_PRI_missionary_complete_convert_merchant_custom_attributes_yes: ".OYeŒRböeÿS1.OYeëXlbc:N2FUºNâV"
+ mechanic_THE_PRI_set_adm_order_remove_other_core_custom_attributes_yes:  "¾‹ËzLˆ?e0W¹eÄuÇu·ƒ—V§G1§!Ñ‘^0ºN›R04lKb0Zg0qQŒT.Oßu09ei—Û¦^0›RÏ‘•bS"
  mechanic_THE_PRI_unlock_fairy_order_custom_attributes_yes: "=T(u–Y¾|„v§Mó—PN‚ðS§!"
 ### GOVERNMENT_END
 
@@ -137,6 +139,8 @@
  THE_PRI_homecoming_music_modifier: "RV¶R„vó—PN"
  THE_PRI_no_longer_music_modifier: "I–Ýu„vó—PN"
  THE_PRI_concerto_music_modifier: "OSOY„vó—PN"
+ THE_PRI_future_music_modifier: "*geg„vó—PN"
+ THE_PRI_revolution_music_pmodifier: "ØSi—„vó—PN"
  THE_PRI_poltergeist_luna_order_modifier: "çVÁKNó—"
  THE_PRI_poltergeist_star_order_modifier: "‰^ó`KNó—"
  THE_PRI_poltergeist_sun_order_modifier: "Ž¨RKNó—"
@@ -160,3 +164,13 @@
  THE_RAIPRI: "X‰ƒyQÆY)RôTPNâV"
  THE_RAIPRI_ADJ: "X‰ƒyQÆY)RôTPNâV"
 ### COUNTRY_END
+
+### EVENT
+ THE_PRI_events.3.title: "nÀQòf0ÀQ	tƒtNLu0"
+ THE_PRI_events.3.desc: "0ÀQ	tƒtNLu0=f1ukNASkNÐY¹YoOY„vòfîvÿ0ÀQ	tƒtNLu0=fiOYe.Oô‹-N„vÝ„r‚Rów„gb„v	tƒtKN0WÿAm.Oóåe,gToSbVb„v0ÀQ	tƒt0R=fNÍy	NsT¿u„v4OOYÿ6qwkNASkNÐY¹Y=f5t6tŒT4t„vØN'N^yÿoOY.OßuŒTÎ˜„vòfPRÈS	gNN7h„vHeœg0\n\noOYdkòföeOäN,TO‚Y	tƒt,‚nÀQÿwT«ˆŒTÎ˜aÓgÞ‹u°e„váOðN0"
+ THE_PRI_events.3.a: "àeº‹=fÀNHNáOðNÿýOeg0Ró—PN‚ðS"
+### EVENT_END
+
+### POWER_PROJECTIION
+ THE_PRI_core_pp: "àeŒòf0ŸSRŒÍb0"
+### POWER_PROJECTIION_END

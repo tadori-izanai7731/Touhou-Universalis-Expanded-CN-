@@ -11,6 +11,10 @@ interaction = {
 	}
 	effect = {
 		if = {
+			limit = { has_country_flag = THE_PRI_mission_5_4_effect_case3_flag }
+			THE_PRI_before_sale_of_titles_scripted_effect = yes
+		}
+		if = {
 			limit = {
 				religion = inti
 				check_variable = {

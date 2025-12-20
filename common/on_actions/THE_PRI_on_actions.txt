@@ -1,3 +1,19 @@
 on_culture_promoted = {
 	THE_PRI_on_culture_promoted_scripted_effect = yes
 }
+
+on_center_of_trade_upgrade = {
+	THE_PRI_on_center_of_trade_upgrade_scripted_effect = yes
+}
+
+on_dip_tech_taken = {
+	THE_PRI_on_dip_tech_taken_scripted_effect = yes
+}
+
+on_five_year_pulse = {
+	THE_PRI_on_five_year_pulse_scripted_effect = yes
+}
+
+on_province_religion_converted = {
+	THE_PRI_on_province_religion_converted_scripted_effect = yes
+}

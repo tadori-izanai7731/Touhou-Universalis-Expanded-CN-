@@ -845,12 +845,6 @@ THE_PRI_mission_branch_5 = {
 				change_government = republic
 			}
 			add_government_reform = THE_PRI_phantom_ensemble_reform
-			hidden_effect = {
-				every_owned_province = {
-					remove_core = ROOT
-					add_territorial_core = ROOT
-				}
-			}
 			custom_tooltip = THE_PRI_unlock_poltergeist_order_tt
 			set_country_flag = THE_PRI_unlock_poltergeist_order_flag
 			custom_tooltip = empty_line_tt
