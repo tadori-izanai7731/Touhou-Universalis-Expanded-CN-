@@ -1,7 +1,6 @@
-THE_PRI_test_edit = {
+THE_PRI_spread_favor_edit = {
 	potential = {
-		tag = PRI
-		has_country_flag = THE_debug_flag
+		has_country_flag = THE_PRI_mission_1_2_effect_flag
 	}
 	
 	allow = {
@@ -11,10 +10,78 @@ THE_PRI_test_edit = {
 	modifier = {
 		local_monthly_devastation = -10
 		local_prosperity_growth = 5
-		local_state_maintenance_modifier = 2
+		local_state_maintenance_modifier = 4
 	}
 	
-	color = {  113 11 43 }
+	color = { 253 183 87 }
+	
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+THE_PRI_gather_misfortune_edit = {
+	potential = {
+		has_country_flag = THE_PRI_mission_1_3_effect_edit_flag
+	}
+	
+	allow = {
+		always = yes
+	}
+	
+	modifier = {
+		local_garrison_damage = 1.0
+		war_exhaustion = -0.01
+		stability_cost_modifier = -0.005
+	}
+	
+	color = { 37 191 41 }
+	
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+THE_PRI_religion_peace_edit = {
+	potential = {
+		has_country_flag = THE_PRI_mission_2_4_effect_edit_flag
+	}
+	
+	allow = {
+		always = yes
+	}
+	
+	modifier = {
+		local_missionary_strength = -1.0
+		local_tolerance_of_heretics = 20
+		tolerance_of_heretics_capacity = 0.05
+	}
+	
+	color = { 170 86 137 }
+	
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+THE_PRI_unknow_music_edit = {
+	potential = {
+		has_country_flag = THE_PRI_mission_2_5_effect_edit_flag
+	}
+	
+	allow = {
+		always = yes
+	}
+	
+	modifier = {
+		local_great_project_upgrade_cost = -1.0
+		local_great_project_upgrade_time = -1.0
+	}
+	
+	color = { 255 255 255 }
 	
 	
 	ai_will_do = {

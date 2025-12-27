@@ -1,0 +1,155 @@
+# 节庆的音乐
+THE_PRI_celebration_music_modifier = {
+	culture_conversion_cost = 1.0
+	establish_order_cost = -0.1
+	stability_cost_modifier = -0.2
+	republican_tradition = 1.0
+}
+
+# 战斗的音乐: 妖怪
+THE_PRI_battle_music_modifier_1 = {
+	culture_conversion_cost = 1.0
+	shock_damage = 0.1
+}
+
+# 战斗的音乐: 幽灵
+THE_PRI_battle_music_modifier_2 = {
+	culture_conversion_cost = 1.0
+	shock_damage_received = -0.1
+}
+
+# 战斗的音乐: 妖精
+THE_PRI_battle_music_modifier_3 = {
+	culture_conversion_cost = 1.0
+	fire_damage_received = -0.1
+}
+
+# 战斗的音乐: 人偶
+THE_PRI_battle_music_modifier_4 = {
+	culture_conversion_cost = 1.0
+	fire_damage = 0.1
+}
+
+# 战斗的音乐
+THE_PRI_battle_music_modifier_5 = {
+	culture_conversion_cost = 1.0
+	fire_damage = 0.05
+	fire_damage_received = -0.05
+	shock_damage_received = -0.05
+	shock_damage = 0.05
+}
+
+# 花束的音乐
+THE_PRI_flower_music_modifier = {
+	culture_conversion_cost = -1.0
+}
+
+# 春告的音乐
+THE_PRI_spring_send_music_modifier = {
+	culture_conversion_cost = 1.0
+	global_manpower = 20
+	global_tax_income = 5
+	land_forcelimit = 5
+}
+
+# 常夜的音乐
+THE_PRI_eternity_night_music_modifier = {
+	culture_conversion_cost = 1.0
+	global_spy_defence = 0.5
+	mercenary_cost = -0.25
+	own_territory_dice_roll_bonus = 1
+}
+
+# 春告的音乐
+THE_PRI_spring_send_music_modifier_upgrade = {
+	culture_conversion_cost = 1.0
+	global_manpower = 40
+	global_tax_income = 10
+	land_forcelimit = 10
+}
+
+# 起始的音乐
+THE_PRI_first_music_modifier = {
+	global_regiment_cost = -0.5
+	global_regiment_recruit_speed = -0.5
+	military_tactics = 0.25
+	culture_conversion_cost = 1.0
+}
+
+# 更迭的音乐
+THE_PRI_alternation_music_modifier = {
+	tolerance_heretic = 3
+	tolerance_of_heretics_capacity = 3
+	all_estate_loyalty_equilibrium = 0.1
+	culture_conversion_cost = 1.0
+}
+
+# 喧闹的音乐
+THE_PRI_poltergeist_music_modifier = {
+	num_accepted_cultures = 2
+	promote_culture_cost = -0.1
+	establish_order_cost = -0.1
+	culture_conversion_cost = 1.0
+}
+
+# 隙间的音乐
+THE_PRI_sukima_music_modifier = {
+	global_trade_power = 0.5
+	state_maintenance_modifier = -0.2
+	religious_unity = 0.25
+	culture_conversion_cost = 1.0
+}
+
+# 泡影的音乐
+THE_PRI_illusion_misic_pmodifier = {
+	mercantilism_cost = -0.05
+	local_gold_depletion_chance_modifier = 0.5
+}
+
+# 归家的音乐
+THE_PRI_homecoming_music_modifier = {
+	diplomatic_upkeep = 3
+	num_accepted_cultures = 3
+	culture_conversion_cost = 1.0
+}
+
+# 阻绝的音乐
+THE_PRI_no_longer_music_modifier = {
+	culture_conversion_cost = -1.0
+}
+
+# 协奏的音乐
+THE_PRI_concerto_music_modifier = {
+	culture_conversion_cost = 1.0
+	establish_order_cost = -0.2
+}
+
+# 未来的音乐
+THE_PRI_future_music_modifier = {
+	war_exhaustion = -0.2
+	inflation_reduction = 1
+}
+
+# 变革的音乐
+THE_PRI_revolution_music_pmodifier = {
+	missionaries = -1
+	merchants = 2
+}
+
+# 忧郁之音
+THE_PRI_poltergeist_luna_order_modifier = {
+	global_unrest = -2
+	core_creation = -0.15
+}
+
+# 幻想之音
+THE_PRI_poltergeist_star_order_modifier = {
+	development_cost = -0.2
+	global_allowed_num_of_buildings = 1
+}
+
+# 躁动之音
+THE_PRI_poltergeist_sun_order_modifier = {
+	global_manpower_modifier = 0.25
+	movement_speed = 0.2
+}

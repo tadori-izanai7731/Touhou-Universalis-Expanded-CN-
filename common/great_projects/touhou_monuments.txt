@@ -972,6 +972,16 @@ th_monument_myouren_temple = {
 		}
 		on_upgraded = {
 		}
+		conditional_modifier = {
+			trigger = {
+				owner = { mission_completed = THE_PRI_mission_2_4 }
+			}
+			modifier = {
+				state_maintenance_modifier = -0.1
+				establish_order_cost = -0.05
+				state_governing_cost = -0.05
+			}
+		}
 	}
 }
 
@@ -1442,6 +1452,16 @@ th_monument_divine_spirit_mausoleum = {
 			infantry_power = 0.1
 		}
 		on_upgraded = {
+		}
+		conditional_modifier = {
+			trigger = {
+				owner = { mission_completed = THE_PRI_mission_2_4 }
+			}
+			modifier = {
+				state_maintenance_modifier = -0.1
+				establish_order_cost = -0.05
+				state_governing_cost = -0.05
+			}
 		}
 	}
 }

@@ -215,6 +215,17 @@ declarewar = {
 			ai = no
 		}
 	}
+	condition = {
+		tooltip = THE_PRI_noh_kami_appreciation_tt
+		potential = { 
+			FROM = {
+				has_country_modifier = THE_PRI_first_music_modifier
+			}
+		}
+		allow = {
+			ai = no
+		}
+	}
 	### THE_END
 	effect = {
 		on_war_declaration_effect = yes
@@ -1542,6 +1553,23 @@ callaction = {
 		potential = {
 			is_in_war = {
 				casus_belli = THE_AKI_season_war_cb
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
+	condition = {
+		potential = {
+			OR = {
+				AND = {
+					tag = AKI
+					any_country = { has_country_modifier = THE_PRI_first_music_modifier war_with = ROOT }
+				}
+				AND = {
+					has_country_modifier = THE_PRI_first_music_modifier
+					war_with = AKI
+				}
 			}
 		}
 		allow = {

@@ -1,0 +1,190 @@
+THE_PRI_phantom_ensemble_reform = {
+	icon = "music_band_reform"
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	royal_marriage = yes
+	queen = yes
+	has_term_election = no
+	modifiers = {
+		governing_cost = 1.0
+		state_governing_cost = -1.25
+		num_accepted_cultures = 5
+		establish_order_cost = -0.1
+		min_autonomy = 40
+		governing_capacity = 100
+	}
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = THE_PRI_phantom_ensemble_reform
+			have_had_reform = THE_PRI_phantom_ensemble_reform
+		}
+	}
+	conditional = {
+		allow = { always = yes }
+		custom_attributes = {
+			enables_plutocratic_idea_group = yes
+			enables_aristocratic_idea_group = no
+			lottery_election = yes
+			election_on_death = yes
+			rulers_can_be_generals = no
+			block_cultural_union = yes
+			# THE_PRI_block_state_core_custom_attributes = yes
+			THE_PRI_accept_culture_complete_agenda_auto_custom_attributes = yes
+		}
+	}
+	ai = {
+		factor = 1000
+	}
+}
+
+
+THE_PRI_yougakudan_mirai_reform = {
+	icon = "THE_PRI_yougakudan_mirai_reform"
+	modifiers = {
+		diplomatic_upkeep = 5
+		improve_relation_modifier = 0.5
+		war_exhaustion = 0.2
+		inflation_reduction = -1
+		num_accepted_cultures = 99
+	}
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			mission_completed = THE_PRI_mission_1_5
+			has_reform = THE_PRI_yougakudan_mirai_reform
+			have_had_reform = THE_PRI_yougakudan_mirai_reform
+		}
+	}
+	conditional = {
+		allow = { always = yes }
+		custom_attributes = {
+			THE_block_reduce_inflation_custom_attributes = yes
+			THE_block_reduce_exhaustion_custom_attributes = yes
+			THE_PRI_100_culture_for_fantasy_custom_attributes = yes
+		}
+	}
+	conditional = {
+		allow = { ROOT = { mission_completed = THE_PRI_mission_2_5 } }
+		custom_attributes = {
+			THE_PRI_unlock_order_for_related_country_custom_attributes = yes
+			THE_PRI_accept_culture_by_other_country_set_order_custom_attributes = yes
+		}
+	}
+	ai = {
+		factor = 1000
+	}
+}
+
+THE_PRI_dead_princess_septette_reform = {
+	icon = "THE_PRI_dead_princess_septette_reform"
+	modifiers = {
+		parliament_debate_duration = -5
+		manpower_in_accepted_culture_provinces = 0.25
+		assault_fort_cost_modifier = -1.0
+		discovered_relations_impact = -1.0
+	}
+	potential = {
+		OR = {
+			mission_completed = THE_PRI_mission_4_4
+			has_reform = THE_PRI_dead_princess_septette_reform
+			have_had_reform = THE_PRI_dead_princess_septette_reform
+		}
+	}
+
+	conditional = {
+		allow = { always = yes }
+		custom_attributes = {
+			THE_PRI_set_mil_order_add_soldier_household_custom_attributes = yes
+			THE_PRI_set_7_mil_order_reduce_exhaustion_custom_attributes = yes
+		}
+	}
+	ai = {
+		factor = 1000
+	}
+}
+
+THE_PRI_illusionary_joururi_reform = {
+	icon = "THE_PRI_illusionary_joururi_reform"
+	modifiers = {
+		missionaries = 5
+		tolerance_of_heretics_capacity = 5
+		global_heretic_missionary_strength = 0.05
+		warscore_cost_vs_other_religion = -0.15
+	}
+	potential = {
+		OR = {
+			mission_completed = THE_PRI_mission_3_4
+			has_reform = THE_PRI_illusionary_joururi_reform
+			have_had_reform = THE_PRI_illusionary_joururi_reform
+		}
+	}
+
+	conditional = {
+		allow = { always = yes }
+		custom_attributes = {
+			THE_PRI_set_dip_order_generate_random_toho_religion_custom_attributes = yes
+			THE_PRI_missionary_complete_convert_merchant_custom_attributes = yes
+		}
+	}
+	ai = {
+		factor = 1000
+	}
+}
+
+THE_PRI_pristine_beat_reform = {
+	icon = "THE_PRI_pristine_beat_reform"
+	modifiers = {
+		prestige_decay = -0.01
+		global_institution_spread = 0.5
+		free_policy = 1
+		national_focus_years = -10
+		governing_capacity = 200
+	}
+	potential = {
+		OR = {
+			mission_completed = THE_PRI_mission_4_5
+			has_reform = THE_PRI_pristine_beat_reform
+			have_had_reform = THE_PRI_pristine_beat_reform
+		}
+	}
+
+	conditional = {
+		allow = { always = yes }
+		custom_attributes = {
+			THE_PRI_set_adm_order_remove_other_core_custom_attributes = yes
+		}
+	}
+	ai = {
+		factor = 1000
+	}
+}
+
+THE_PRI_lovely_great_war_reform = {
+	icon = "tfr_pirate_government_reform"
+	modifiers = {
+		establish_order_cost = -0.1
+		prestige = 1
+		has_voc_indiamen = yes
+		allowed_voc_indiamen_fraction = 0.5
+		global_ship_trade_power = 0.5
+		ship_power_propagation = 1.0
+	}
+	potential = {
+		OR = {
+			has_country_flag = THE_PRI_unlock_lovely_great_war_reform_flag
+			has_reform = THE_PRI_lovely_great_war_reform
+			have_had_reform = THE_PRI_lovely_great_war_reform
+		}
+	}
+
+	conditional = {
+		allow = { always = yes }
+		custom_attributes = {
+			THE_PRI_unlock_fairy_order_custom_attributes = yes
+		}
+	}
+	ai = {
+		factor = 1000
+	}
+}

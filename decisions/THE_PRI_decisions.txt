@@ -1,0 +1,161 @@
+country_decisions= {
+	THE_PRI_form_RAIPRI_decision = {
+		color = { 17 99 112 }
+		major = yes
+		potential = {
+			tag = PRI
+			mission_completed = THE_PRI_mission_3_4
+			NOT = { has_country_flag = THE_PRI_form_RAIPRI_decision_flag }
+		}
+		
+		allow = {
+			OR = {
+				AND = {
+					alliance_with = RAI
+					RAI = {
+						NOT = { num_of_cities = 10 }
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+				}
+				RAI = {
+					is_subject_of = ROOT
+					NOT = { is_subject_of_type = tributary_state }
+				}
+				AND = {
+					NOT = { exists = RAI }
+					5127 = { owned_by = ROOT }
+					5128 = { owned_by = ROOT }
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = { exists = RAI }
+				inherit = RAI
+			}
+			override_country_name = THE_RAIPRI
+			hidden_effect = {
+				set_country_flag = THE_PRI_form_RAIPRI_decision_flag
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		ai_importance = 1000
+	}
+	THE_PRI_expand_public_music_stage_decision = {
+		color = { 17 99 112 }
+		major = yes
+		potential = {
+			tag = PRI
+			mission_completed = THE_PRI_mission_5_4
+			NOT = { has_country_flag = THE_PRI_finish_poltergeist_luna_order_flag }
+			NOT = { has_country_flag = THE_PRI_finish_poltergeist_star_order_flag }
+			NOT = { has_country_flag = THE_PRI_finish_poltergeist_sun_order_flag }
+		}
+		
+		allow = {
+			OR = {
+				if = {
+					limit = { NOT = { has_country_flag = THE_PRI_finish_poltergeist_luna_order_flag } }
+					num_of_owned_provinces_with = {
+						value = 30
+						holy_order = THE_PRI_poltergeist_luna_order
+					}
+				}
+				if = {
+					limit = { NOT = { has_country_flag = THE_PRI_finish_poltergeist_star_order_flag } }
+					num_of_owned_provinces_with = {
+						value = 30
+						holy_order = THE_PRI_poltergeist_star_order
+					}
+				}
+				if = {
+					limit = { NOT = { has_country_flag = THE_PRI_finish_poltergeist_sun_order_flag } }
+					num_of_owned_provinces_with = {
+						value = 30
+						holy_order = THE_PRI_poltergeist_sun_order
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = THE_PRI_finish_poltergeist_luna_order_flag
+				}
+				custom_tooltip = THE_PRI_finish_poltergeist_luna_order_tt_1
+			}
+			else_if = {
+				limit = {
+					num_of_owned_provinces_with = {
+						value = 30
+						holy_order = THE_PRI_poltergeist_luna_order
+					}
+				}
+				add_country_modifier = {
+					name = THE_PRI_poltergeist_luna_order_modifier
+					duration = -1
+				}
+				set_country_flag = THE_PRI_finish_poltergeist_luna_order_flag
+				custom_tooltip = THE_PRI_finish_poltergeist_luna_order_tt_2
+			}
+			else = {
+				custom_tooltip = THE_PRI_finish_poltergeist_luna_order_tt_3
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_PRI_finish_poltergeist_star_order_flag
+				}
+				custom_tooltip = THE_PRI_finish_poltergeist_star_order_tt_1
+			}
+			else_if = {
+				limit = {
+					num_of_owned_provinces_with = {
+						value = 30
+						holy_order = THE_PRI_poltergeist_star_order
+					}
+				}
+				add_country_modifier = {
+					name = THE_PRI_poltergeist_star_order_modifier
+					duration = -1
+				}
+				set_country_flag = THE_PRI_finish_poltergeist_star_order_flag
+				custom_tooltip = THE_PRI_finish_poltergeist_star_order_tt_2
+			}
+			else = {
+				custom_tooltip = THE_PRI_finish_poltergeist_star_order_tt_3
+			}
+			if = {
+				limit = {
+					has_country_flag = THE_PRI_finish_poltergeist_sun_order_flag
+				}
+				custom_tooltip = THE_PRI_finish_poltergeist_sun_order_tt_1
+			}
+			else_if = {
+				limit = {
+					num_of_owned_provinces_with = {
+						value = 30
+						holy_order = THE_PRI_poltergeist_sun_order
+					}
+				}
+				add_country_modifier = {
+					name = THE_PRI_poltergeist_sun_order_modifier
+					duration = -1
+				}
+				set_country_flag = THE_PRI_finish_poltergeist_sun_order_flag
+				custom_tooltip = THE_PRI_finish_poltergeist_sun_order_tt_2
+			}
+			else = {
+				custom_tooltip = THE_PRI_finish_poltergeist_sun_order_tt_3
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		ai_importance = 1000
+	}
+}

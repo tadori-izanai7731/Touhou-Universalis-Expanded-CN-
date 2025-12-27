@@ -1,0 +1,75 @@
+namespace = THE_PRI_events
+
+country_event = {
+	id = THE_PRI_events.3
+	title = THE_PRI_events.3.title
+	desc = THE_PRI_events.3.desc
+	picture = DIPLOMACY_SIGNING_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		NOT = { has_country_flag = THE_PRI_events_3_flag }
+	}
+	
+	immediate = {
+		set_country_flag = THE_PRI_events_3_flag
+	}
+
+	option = {
+		name = THE_PRI_events.3.a
+		custom_tooltip = THE_PRI_events_3_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						holy_order = THE_PRI_poltergeist_star_order
+						holy_order = THE_PRI_fairy_star_order
+					}
+				}
+				random_variable = {
+					which = the_pri_r_religion_var
+					value = 12
+				}
+				if = { limit = { check_variable = { which = the_pri_r_religion_var value = 11 } } change_religion = THE_Seija_religion }
+				else_if = { limit = { check_variable = { which = the_pri_r_religion_var value = 10 } } change_religion = THE_keiki_religion }
+				else_if = { limit = { check_variable = { which = the_pri_r_religion_var value = 9 } } change_religion = THE_minoriko_religion }
+				else_if = { limit = { check_variable = { which = the_pri_r_religion_var value = 8 } } change_religion = THE_kagiyama_religion }
+				else_if = { limit = { check_variable = { which = the_pri_r_religion_var value = 7 } } change_religion = th_occultism }
+				else_if = { limit = { check_variable = { which = the_pri_r_religion_var value = 6 } } change_religion = th_scientistic }
+				else_if = { limit = { check_variable = { which = the_pri_r_religion_var value = 5 } } change_religion = th_shinkism }
+				else_if = { limit = { check_variable = { which = the_pri_r_religion_var value = 4 } } change_religion = th_oldhakurei }
+				else_if = { limit = { check_variable = { which = the_pri_r_religion_var value = 3 } } change_religion = th_moriyashinto }
+				else_if = { limit = { check_variable = { which = the_pri_r_religion_var value = 2 } } change_religion = th_buddhist }
+				else_if = { limit = { check_variable = { which = the_pri_r_religion_var value = 1 } } change_religion = th_taoist }
+				else = { change_religion = th_hakureishinto } 
+			}
+		}
+	}
+
+	after = {
+		clr_country_flag = THE_PRI_events_3_flag
+	}
+}
+province_event = {
+	id = THE_PRI_events.1000
+	title = NONE
+	desc = NONE
+	picture = DIPLOMACY_SIGNING_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		NOT = { has_country_flag = THE_PRI_events_3_flag }
+	}
+	
+	immediate = {
+		area = {
+			random = {
+				chance = x
+			}
+		}
+	}
+
+	option = {
+		name = NONE
+	}
+}

@@ -131,6 +131,16 @@ can_decrease_autonomy = {
 }
 
 can_make_core = {
+	condition = {
+		tooltip = THE_PRI_block_state_core_sf_tt
+		potential = { 
+			owner = { has_government_attribute = THE_PRI_block_state_core_custom_attributes }
+			is_state = yes
+		}
+		allow = {
+			always = no
+		}
+	}
 }
 
 can_make_state = {

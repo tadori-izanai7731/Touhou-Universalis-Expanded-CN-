@@ -1,0 +1,172 @@
+THE_PRI_on_culture_promoted_scripted_effect = {
+	if = {
+		limit = { has_government_attribute = THE_PRI_accept_culture_complete_agenda_auto_custom_attributes }
+		set_country_flag = auto_complete_estate_agenda_all
+	}
+}
+
+THE_PRI_on_center_of_trade_upgrade_scripted_effect = {
+	if = {
+		limit = {
+			owner = { mission_completed = THE_PRI_mission_4_3 }
+			province_has_center_of_trade_of_level = 3
+		}
+		add_province_modifier = {
+			name = THE_PRI_illusion_misic_pmodifier
+			duration = -1
+		}
+	}
+}
+
+THE_PRI_on_dip_tech_taken_scripted_effect = {
+	if = {
+		limit = { mission_completed = THE_PRI_mission_4_3 }
+		if = { limit = { mercantilism = 100 } add_inflation = -10 }
+		else_if = { limit = { mercantilism = 90 } add_inflation = -9 }
+		else_if = { limit = { mercantilism = 80 } add_inflation = -8 }
+		else_if = { limit = { mercantilism = 70 } add_inflation = -7 }
+		else_if = { limit = { mercantilism = 60 } add_inflation = -6 }
+		else_if = { limit = { mercantilism = 50 } add_inflation = -5 }
+		else_if = { limit = { mercantilism = 40 } add_inflation = -4 }
+		else_if = { limit = { mercantilism = 30 } add_inflation = -3 }
+		else_if = { limit = { mercantilism = 20 } add_inflation = -2 }
+		else_if = { limit = { mercantilism = 10 } add_inflation = -1 }
+	}
+}
+
+THE_PRI_on_five_year_pulse_scripted_effect = {
+	if = {
+		limit = { has_government_attribute = THE_PRI_set_dip_order_generate_random_toho_religion_custom_attributes }
+		country_event = { id = THE_PRI_events.3 }
+	}
+}
+
+THE_PRI_on_province_religion_converted_scripted_effect = {
+	if = {
+		limit = { owner = { has_government_attribute = THE_PRI_set_dip_order_generate_random_toho_religion_custom_attributes } }
+		add_province_modifier = {
+			name = THE_PRI_revolution_music_pmodifier
+			duration = -1
+		}
+	}
+}
+
+THE_PRI_THE_PRI_mission_4_1_scripted_effect = {
+	export_to_variable = {
+		which = the_pri_infantry_var
+		value = trigger_value:num_of_infantry
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = the_pri_infantry_var
+				value = 20
+			}
+		}
+		set_variable = {
+			which = the_pri_infantry_var
+			value = 20
+		}
+	}
+	for_variable_amount = {
+		variable = the_pri_infantry_var
+		effect = "
+			add_mil_power = 25
+			add_treasury = 50
+		"
+	}
+}
+
+THE_PRI_order_per_province_scripted_effect = {
+	if = {
+		limit = { owner = { mission_completed = THE_PRI_mission_1_3 } }
+		add_nationalism = -10
+	}
+	if = {
+		limit = { owner = { mission_completed = THE_PRI_mission_5_4_effect_case2_flag } }
+		custom_tooltip = THE_PRI_mission_5_4_order_tt_case2
+		hidden_effect = {
+			owner = {
+				every_country = {
+					add_aggressive_expansion = {
+						who = PREV
+						value = -0.5
+					}
+				}
+			}
+		}
+	}
+}
+
+THE_PRI_adm_order_per_province_scripted_effect = {
+	if = {
+		limit = { owner = { has_country_flag = THE_PRI_mission_5_4_effect_case1_flag } }
+		add_base_tax = 1
+	}
+	if = {
+		limit = { owner = { has_government_attribute = THE_PRI_set_adm_order_remove_other_core_custom_attributes } }
+		owner = {
+			add_prestige = 1
+			add_republican_tradition = 1
+			change_government_reform_progress = 1
+			add_treasury = 1
+			add_manpower = 0.01
+			add_sailors = 1
+			add_power_projection = {
+				type = THE_PRI_core_pp
+				amount = 1
+			}
+		}
+	}
+}
+
+THE_PRI_dip_order_per_province_scripted_effect = {
+	if = {
+		limit = { owner = { has_country_flag = THE_PRI_mission_5_4_effect_case1_flag } }
+		add_base_production = 1
+	}
+	if = {
+		limit = { owner = { has_government_attribute = THE_PRI_set_dip_order_generate_random_toho_religion_custom_attributes } }
+		owner = { country_event = { id = THE_PRI_events.3 } }
+	}
+}
+
+THE_PRI_mil_order_per_province_scripted_effect = {
+	if = {
+		limit = { owner = { has_country_flag = THE_PRI_mission_5_4_effect_case1_flag } }
+		add_base_manpower = 1
+	}
+}
+
+THE_PRI_before_sale_of_titles_scripted_effect = {
+	hidden_effect = {
+		every_owned_province = {
+			limit = {
+				OR = {
+					holy_order = THE_PRI_poltergeist_luna_order
+					holy_order = THE_PRI_fairy_luna_order
+				}
+			}
+			ROOT = { add_adm_power = 2 }
+		}
+		every_owned_province = {
+			limit = {
+				OR = {
+					holy_order = THE_PRI_poltergeist_star_order
+					holy_order = THE_PRI_fairy_star_order
+				}
+			}
+			ROOT = { add_dip_power = 2 }
+		}
+		every_owned_province = {
+			limit = {
+				OR = {
+					holy_order = THE_PRI_poltergeist_sun_order
+					holy_order = THE_PRI_fairy_sun_order
+				}
+			}
+			ROOT = { add_mil_power = 2 }
+		}
+	}
+}
+
