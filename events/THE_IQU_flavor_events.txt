@@ -6431,11 +6431,7 @@ country_event = {
 			area = {
 				type = all
 				create_colony = 1000
-				set_province_flag = THE_IQU_area_has_lock_the_loong_vein_flag
 			}
-			# every_province_in_state = {
-			# 	create_colony = 1000
-			# }
 		}
 	}
 	option = {

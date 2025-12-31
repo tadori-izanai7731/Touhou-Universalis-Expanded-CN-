@@ -138,44 +138,73 @@ country_decisions = {
 				clr_country_flag = THE_IQU_call_tenshi_advisor_cd_flag
 				set_country_flag = THE_IQU_call_tenshi_advisor_cd_flag
 			}
+			if = {
+				limit = {
+					NOT = { HVR = { adm = 6 } }
+				}
+				HVR = { change_adm = 1 }
+				hidden_effect = {
+					THE_IQU_add_government_power_lvl_3_effect = {
+						power = adm
+						value = 1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { HVR = { dip = 6 } }
+				}
+				HVR = { change_dip = 1 }
+				hidden_effect = {
+					THE_IQU_add_government_power_lvl_3_effect = {
+						power = dip
+						value = 1
+					}
+				}
+			}
+			else = {
+				add_adm_power = 25
+				add_dip_power = 25
+				add_mil_power = 25
+			}
 		}
 	}
 	#
-	THE_IQU_teach_the_tenshi_decisions = {
-		color = { 21 54 168 }
-		potential = {
-			OR = {
-				tag = IQU
-				was_tag = IQU
-			}
-			has_country_flag = THE_IQU_unlock_tenshi_advisor_flag
-			advisor = THE_tenshi_advisor
-		}
-		allow = {
-			ai = no
-			custom_trigger_tooltip = {
-				tooltip = THE_cd_type_decision_5_years_ttt
-				THE_cd_type_decision_scripted_trigger = {
-					flag = THE_IQU_teach_the_tenshi_cd_flag
-					days = 1825
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = THE_IQU_teach_the_tenshi_decisions_c_tt1
-				NOT = {
-					has_country_flag = THE_IQU_has_owneed_tenshi_teaching_event_flag
-				}
-			}
-		}	
-		effect = {
-			country_event = {
-				id = THE_IQU_flavor_events.1005
-			}
-			hidden_effect = {
-				set_country_flag = THE_IQU_has_owneed_tenshi_teaching_event_flag
-			}
-		}
-	}
+	# THE_IQU_teach_the_tenshi_decisions = {
+	# 	color = { 21 54 168 }
+	# 	potential = {
+	# 		OR = {
+	# 			tag = IQU
+	# 			was_tag = IQU
+	# 		}
+	# 		has_country_flag = THE_IQU_unlock_tenshi_advisor_flag
+	# 		advisor = THE_tenshi_advisor
+	# 	}
+	# 	allow = {
+	# 		ai = no
+	# 		custom_trigger_tooltip = {
+	# 			tooltip = THE_cd_type_decision_5_years_ttt
+	# 			THE_cd_type_decision_scripted_trigger = {
+	# 				flag = THE_IQU_teach_the_tenshi_cd_flag
+	# 				days = 1825
+	# 			}
+	# 		}
+	# 		custom_trigger_tooltip = {
+	# 			tooltip = THE_IQU_teach_the_tenshi_decisions_c_tt1
+	# 			NOT = {
+	# 				has_country_flag = THE_IQU_has_owneed_tenshi_teaching_event_flag
+	# 			}
+	# 		}
+	# 	}	
+	# 	effect = {
+	# 		country_event = {
+	# 			id = THE_IQU_flavor_events.1005
+	# 		}
+	# 		hidden_effect = {
+	# 			set_country_flag = THE_IQU_has_owneed_tenshi_teaching_event_flag
+	# 		}
+	# 	}
+	# }
 	#
 	THE_IQU_check_the_loong_vein_decisions = {
 		color = { 21 54 168 }

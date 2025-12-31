@@ -925,7 +925,7 @@ THE_IQU_main_branch_3 = {
 		 } 
 
 		effect = { 
-			# custom_tooltip = THE_IQU_3_8_c_tt1
+			custom_tooltip = THE_IQU_3_8_c_tt1
 			THE_IQU_add_diplomacal_experience_var_effect = yes
 			THE_IQU_add_learning_experience_var_effect = yes
 			THE_IQU_add_nautical_experience_var_effect = yes
@@ -1078,12 +1078,8 @@ THE_IQU_main_branch_4 = {
 		 } 
 
 		trigger = { 
-			custom_trigger_tooltip = {
-				tooltip = THE_IQU_4_3_c_tt1
-				check_variable = {
-					which = the_iqu_the_tenshi_obedience_im_var
-					value = 25
-				}
+			HVR = {
+				adm = 5
 			}
 			THE_has_adm_advisor_with_level = { level = 3 }
 			THE_has_dip_advisor_with_level = { level = 3 }
