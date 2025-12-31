@@ -158,4 +158,59 @@ country_decisions= {
 		}
 		ai_importance = 1000
 	}
+	THE_PRI_other_music_decision = {
+		color = { 17 99 112 }
+		major = yes
+		potential = {
+			OR = {
+				has_government_attribute = THE_PRI_set_adm_order_remove_other_core_custom_attributes
+				has_government_attribute = THE_PRI_set_dip_order_generate_random_toho_religion_custom_attributes
+				has_government_attribute = THE_PRI_set_7_mil_order_reduce_exhaustion_custom_attributes
+			}
+		}
+		
+		allow = {
+			always = yes
+		}
+		effect = {
+			country_event = {
+				id = THE_PRI_events.1
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = { has_government_attribute = THE_PRI_set_adm_order_remove_other_core_custom_attributes }
+				if = {
+					limit = { stability = 1 }
+					custom_tooltip = THE_PRI_other_music_decision_tt_1_yes
+				}
+				else = {
+					custom_tooltip = THE_PRI_other_music_decision_tt_1_no
+				}
+			}
+			if = {
+				limit = { has_government_attribute = THE_PRI_set_dip_order_generate_random_toho_religion_custom_attributes }
+				if = {
+					limit = { NOT = { has_country_modifier = THE_PRI_illusionary_joururi_cooldown_modifier } }
+					custom_tooltip = THE_PRI_other_music_decision_tt_2_yes
+				}
+				else = {
+					custom_tooltip = THE_PRI_other_music_decision_tt_2_no
+				}
+			}
+			if = {
+				limit = { has_government_attribute = THE_PRI_set_7_mil_order_reduce_exhaustion_custom_attributes }
+				if = {
+					limit = { check_variable = { which = the_pri_om3_var value = 1 } }
+					custom_tooltip = THE_PRI_other_music_decision_tt_3_yes
+				}
+				else = {
+					custom_tooltip = THE_PRI_other_music_decision_tt_3_no
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		ai_importance = 1000
+	}
 }

@@ -71,6 +71,17 @@
  THE_PRI_mission_2_5_effect_tt: "?eœ^9ei—0§Yz^PNâV„v*geg§!0·ƒ—VåNN:g6R:\nAQ¸‹Óußv/‹s²RTwûY/D–^S/	gjPbOS®‹„výV¶RO(uššupó—PN‚ðS\nvQÖNýV¶R¾‹Ëz0W¹eÄuÇuOObìN¥c³uSV0W‡eS\n\n=T(uôv^SÞTÕläN0§YØ˜Gd‰^¦h:SNWó—§!0"
  THE_PRI_mission_5_4_order_tt_case2: "Ïk*NwýNÏQSNb	gýV¶RùR§Y[Root.GetName]§!„v§G0.2§!µOeuib.V"
  THE_PRI_events_3_tt: "§Y»lNNb	gåb	gY²N0W¹eÄuÇu„vwýNlØS:N‰^ó`aN—RYeÄu„v–:g—RYe§!"
+ THE_PRI_events_1_a_tt: "åNNHeœgSgbLˆ§Y[Root.the_pri_om1_var.GetValue]§!!kÿÏkoOYN!k§OàeŒòf0ŸSRŒÍb0§!ÿgbLˆ!kpeýOžX R§Y1§!ôvó§Y10§!\n"
+ THE_PRI_events_1_b_tt: "»lNÏk*Nåb	g§Mó—PN‚ðS§!„vwýNlØS:N‰^ó`aN—RYeÄu„v–:g—RYe\n\nÏk§Y10§!t^êSýwoOYN!k§OnÀQòf0ÀQ	tƒtNLu0§!"
+ THE_PRI_events_1_c_tt: "Ïk(W§Y7§!*NwýNú^Ëz›Q‹N0W¹eÄuÇužX R§Y1§!oOY!kpe\n\noOY§Oluòf0IQw^yPKNýV0§!OˆmwNb	goOY!kpeÿSVMR§Y[Root.the_pri_om3_var.GetValue]§!	ÿÿÏkˆmw§Y1§!oOY!kpeÿÏQS§G2§!ŒSb¦^v^ONb	gYŽNb‰N„vLeºN·ƒ—V§R2§!ŒSb¦^"
+
+ THE_PRI_other_music_decision_tt_1_yes: "§OàeŒòf0ŸSRŒÍb0§!: £yes£§Yck3zšR§!"
+ THE_PRI_other_music_decision_tt_1_no: "§OàeŒòf0ŸSRŒÍb0§!: £no£§Y—‰ck3zšR§!"
+ THE_PRI_other_music_decision_tt_2_yes: "§OnÀQòf0ÀQ	tƒtNLu0§!: £yes£§YïSO(u§!"
+ THE_PRI_other_music_decision_tt_2_no: "§OnÀQòf0ÀQ	tƒtNLu0§!: £yes£§Y·QtS-N§!"
+ THE_PRI_other_music_decision_tt_3_yes: "§Oluòf0IQw^yPKNýV0§!: £yes£§Y[Root.the_pri_om3_var.GetValue]§!"
+ THE_PRI_other_music_decision_tt_3_no: "§OŒpxyòf0ff—fàeIQKNñr0§!: £no£§Yú^Ëz7*N›Q‹N0W¹eÄuÇuåNÛeQIQw^yPKNýV§!"
+ THE_PRI_other_music_decision_tt_404: "§OGY¦hòf0RY—HSYNúeÛv„vÃV0§!: (W¦h-Nÿ–Y¾|ìNžR°s†NêñT:nSwO'Y„v?ag"
 ### TOOLTIP_END
 
 ### GOVERNMENT
@@ -95,10 +106,10 @@
  mechanic_THE_PRI_unlock_order_for_related_country_custom_attributes_yes: "AQ¸‹Óußv/‹s²RTwûY/D–^S/	gjPbOS®‹„výV¶RO(uššupó—PN‚ðS"
  mechanic_THE_PRI_accept_culture_by_other_country_set_order_custom_attributes_yes: "vQÖNýV¶R¾‹Ëz0W¹eÄuÇuOObìN¥c³uSV0W‡eS"
  mechanic_THE_PRI_set_mil_order_add_soldier_household_custom_attributes_yes: "(W	gåT:W„vwýN¾‹Ëz›Q‹N0W¹eÄuÇumNOûm RëXuQKN¶R"
- mechanic_THE_PRI_set_7_mil_order_reduce_exhaustion_custom_attributes_yes: "Ïk(W7*NwýN¾‹Ëz›Q‹N0W¹eÄuÇuÿÏQS§G4§!ŒSb¦^v^ONb	gNbìN²Nb„výV¶R·ƒ—V§R4§!ŒSb¦^"
- mechanic_THE_PRI_set_dip_order_generate_random_toho_religion_custom_attributes_yes: "¾‹ËzY²N0W¹eÄuÇuOOSV0W—RYelØS:N‰^ó`aN—RYeÄu„v–:g—RYe"
+ mechanic_THE_PRI_set_7_mil_order_reduce_exhaustion_custom_attributes_yes: "ã‰•N*N°e„v§OYegòfîv§!"
+ mechanic_THE_PRI_set_dip_order_generate_random_toho_religion_custom_attributes_yes: "ã‰•N*N°e„v§OYegòfîv§!"
  mechanic_THE_PRI_missionary_complete_convert_merchant_custom_attributes_yes: ".OYeŒRböeÿS1.OYeëXlbc:N2FUºNâV"
- mechanic_THE_PRI_set_adm_order_remove_other_core_custom_attributes_yes:  "¾‹ËzLˆ?e0W¹eÄuÇu·ƒ—V§G1§!Ñ‘^0ºN›R04lKb0Zg0qQŒT.Oßu09ei—Û¦^0›RÏ‘•bS"
+ mechanic_THE_PRI_set_adm_order_remove_other_core_custom_attributes_yes:  "ã‰•N*N°e„v§OYegòfîv§!"
  mechanic_THE_PRI_unlock_fairy_order_custom_attributes_yes: "=T(u–Y¾|„v§Mó—PN‚ðS§!"
 ### GOVERNMENT_END
 
@@ -155,9 +166,11 @@
 
 ### DECISION
  THE_PRI_form_RAIPRI_decision_title: "@PRIbËzX‰ƒyQÆY)RôTPNâV"
- THE_PRI_form_RAIPRI_decision_desc: ""
+ THE_PRI_form_RAIPRI_decision_desc: "	NMOØN'N^y(WºNô•KNÌ‘„v‚ðSÛLˆoOYÿ°s(WbìNòTÏuÖS—V†NEQ³„vTwû|ÿ=föePÄuú^°e„vPNâV0"
  THE_PRI_expand_public_music_stage_decision_title: "@PRIlQqQó—PN‚‚"
- THE_PRI_expand_public_music_stage_decision_desc: ""
+ THE_PRI_expand_public_music_stage_decision_desc: "jO:NššupÿbìN„våe8^Im¨RÿmN=fbìNXR(W„vaINÿ1S=f©‹ôfY„vºN,T0RbìN„vó—PN0M^hQýV„v§Mó—PN‚ðS§!OSbìN„vó—PNØSbæ‰KbïSÊS„vlQqQDn0"
+ THE_PRI_other_music_decision_title: "@PRI‰^ØS0Võ—KNó—‹V-upSO=có—0"
+ THE_PRI_other_music_decision_desc: "sSObìN=fÅd•ó—PN„vššupÿfR`NegêvQÖNÍyÏeŒT0WßW„vPNhVŒTòfîvMbýwôf‹Y—VoOYó—PN0"
 ### DECISION_END
 
 ### COUNTRY
@@ -166,11 +179,11 @@
 ### COUNTRY_END
 
 ### EVENT
- THE_PRI_events.3.title: "nÀQòf0ÀQ	tƒtNLu0"
- THE_PRI_events.3.desc: "0ÀQ	tƒtNLu0=f1ukNASkNÐY¹YoOY„vòfîvÿ0ÀQ	tƒtNLu0=fiOYe.Oô‹-N„vÝ„r‚Rów„gb„v	tƒtKN0WÿAm.Oóåe,gToSbVb„v0ÀQ	tƒt0R=fNÍy	NsT¿u„v4OOYÿ6qwkNASkNÐY¹Y=f5t6tŒT4t„vØN'N^yÿoOY.OßuŒTÎ˜„vòfPRÈS	gNN7h„vHeœg0\n\noOYdkòföeOäN,TO‚Y	tƒt,‚nÀQÿwT«ˆŒTÎ˜aÓgÞ‹u°e„váOðN0"
- THE_PRI_events.3.a: "àeº‹=fÀNHNáOðNÿýOeg0Ró—PN‚ðS"
+ THE_PRI_events.1.title: "oOYYegòfîv"
+ THE_PRI_events.1.desc: "NTŽNššupêñT„vó—PNÿó`‰oOYÙ›NYegòfîvv^N¹Rfÿ—‰P©RvQÖN›RÏ‘MbýwÑS%c”^	g„vHeœgÿTêý	gNT„vP–6R0"
+ THE_PRI_events.1.a: "àeŒòf0ŸSRŒÍb0"
+ THE_PRI_events.1.b: "nÀQòf0ÀQ	tƒtNLu0"
+ THE_PRI_events.1.c1: "luòf0IQw^yPKNýV0"
+ THE_PRI_events.1.c2: "Œpxyòf0ff—fàeIQKNñr0"
+ THE_PRI_events.1.z: "ÖSˆm"
 ### EVENT_END
-
-### POWER_PROJECTIION
- THE_PRI_core_pp: "àeŒòf0ŸSRŒÍb0"
-### POWER_PROJECTIION_END

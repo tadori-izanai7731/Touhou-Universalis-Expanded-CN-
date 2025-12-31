@@ -125,10 +125,10 @@ THE_PRI_dip_order_per_province_scripted_effect = {
 		limit = { owner = { has_country_flag = THE_PRI_mission_5_4_effect_case1_flag } }
 		add_base_production = 1
 	}
-	if = {
-		limit = { owner = { has_government_attribute = THE_PRI_set_dip_order_generate_random_toho_religion_custom_attributes } }
-		owner = { country_event = { id = THE_PRI_events.3 } }
-	}
+	# if = {
+	# 	limit = { owner = { has_government_attribute = THE_PRI_set_dip_order_generate_random_toho_religion_custom_attributes } }
+	# 	owner = { country_event = { id = THE_PRI_events.3 } }
+	# }
 }
 
 THE_PRI_mil_order_per_province_scripted_effect = {
