@@ -145,6 +145,17 @@ THE_PRI_illusionary_joururi_reform = {
 			THE_PRI_missionary_complete_convert_merchant_custom_attributes = yes
 		}
 	}
+
+	removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = THE_PRI_revolution_music_pmodifier
+				}
+				remove_province_modifier = THE_PRI_revolution_music_pmodifier
+			}
+		}
+	}
 	ai = {
 		factor = 1000
 	}

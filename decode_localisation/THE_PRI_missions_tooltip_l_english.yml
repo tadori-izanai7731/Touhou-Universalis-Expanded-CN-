@@ -74,6 +74,7 @@
  THE_PRI_events_1_a_tt: "以上效果将执行§Y[Root.the_pri_om1_var.GetValue]§!次，每演奏一次§O无调曲「原初谐拍」§!，执行次数都会增加§Y1§!直至§Y10§!\n"
  THE_PRI_events_1_b_tt: "治下每个拥有§M音乐舞台§!的省份转变为幻想乡宗教组的随机宗教\n\n每§Y10§!年只能演奏一次§O清净曲「净琉璃世界」§!"
  THE_PRI_events_1_c_tt: "每在§Y7§!个省份建立军事地方组织增加§Y1§!演奏次数\n\n演奏§O沐生曲「光耀神赐之国」§!会消耗所有演奏次数（当前§Y[Root.the_pri_om3_var.GetValue]§!），每消耗§Y1§!演奏次数，减少§G2§!厌战度并使所有战争中的敌人获得§R2§!厌战度"
+ THE_PRI_event_2_effect_tt: "\n解锁共和制第§Y2§!级政府改革「§Y可爱的大战争叠奏曲§!」，实行改革会带来以下效果:"
 
  THE_PRI_other_music_decision_tt_1_yes: "§O无调曲「原初谐拍」§!: £yes£§Y正稳定§!"
  THE_PRI_other_music_decision_tt_1_no: "§O无调曲「原初谐拍」§!: £no£§Y需要正稳定§!"
@@ -187,4 +188,8 @@
  THE_PRI_events.1.c1: "沐生曲「光耀神赐之国」"
  THE_PRI_events.1.c2: "灾祸曲「晦暗无光之狱」"
  THE_PRI_events.1.z: "取消"
+
+ THE_PRI_events.2.title: "妖精的音乐"
+ THE_PRI_events.2.desc: "妖精的音乐会是什么样子。在这幻想的国度中，从来没有一位妖精创作过妖精的音乐，妖精们只是每天与其他人或事争斗。如果是我们骚灵为妖精作曲的话，难免会产生表象的理解，谁也不知道每天开朗的妖精内心究竟是什么样的。最为准确的，妖精是纯粹的好奇心，一切的乐趣都来源于探索的收获感。"
+ THE_PRI_events.2.a: "妖精们的战斗吗，不如说是妖精们的生活"
 ### EVENT_END

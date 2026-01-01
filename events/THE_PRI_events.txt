@@ -213,5 +213,16 @@ country_event = {
 
 	option = {
 		name = THE_PRI_events.2.a
+		add_accepted_culture_or_dip_power = {
+			culture = Tsukumogami_culture
+			free = yes
+		}
+		custom_tooltip = THE_PRI_event_2_effect_tt
+		tooltip = {
+			add_government_reform = THE_PRI_lovely_great_war_reform
+		}
+		hidden_effect = {
+			set_country_flag = THE_PRI_unlock_lovely_great_war_reform_flag
+		}
 	}
 }

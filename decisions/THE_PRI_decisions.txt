@@ -40,6 +40,10 @@ country_decisions= {
 			hidden_effect = {
 				set_country_flag = THE_PRI_form_RAIPRI_decision_flag
 			}
+			add_accepted_culture_or_dip_power = {
+				culture = Tsukumogami_culture
+				free = yes
+			}
 		}
 		ai_will_do = {
 			factor = 1000
