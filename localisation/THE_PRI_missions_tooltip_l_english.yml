@@ -31,8 +31,8 @@
  THE_PRI_mission_3_2_effect_tt_case1: "ÎN»lNÏk*N§Y–Y¾|§!‡eS„vwýN·ƒ—V§G2000§!£icon_manpower£ŒT§G10§!¤"
  THE_PRI_mission_3_2_effect_tt_case1_yes: "\n£yes£‚YœgÇVg@LIL§Y[LIL.GetName]§!ŒRbûN¡R:"
  THE_PRI_mission_3_2_effect_tt_case1_no: "\n£no£‚YœgÇVg@LIL§Y[LIL.GetName]§!ŒRbûN¡R:"
- THE_PRI_mission_3_2_effect_tt_case2_yes: "£yes£‚YœgÇÓußv@LIL§Y[LIL.GetName]§!ŒRbûN¡R:"
- THE_PRI_mission_3_2_effect_tt_case2_no: "£no£‚YœgÇÓußv@LIL§Y[LIL.GetName]§!ŒRbûN¡R:"
+ THE_PRI_mission_3_2_effect_tt_case2_yes: "£yes£‚YœgÇÓußvbD–¸^@LIL§Y[LIL.GetName]§!ŒRbûN¡R:"
+ THE_PRI_mission_3_2_effect_tt_case2_no: "£no£‚YœgÇÓußvbD–¸^@LIL§Y[LIL.GetName]§!ŒRbûN¡R:"
  THE_PRI_mission_3_3_effect_tt_case1: "0§Y%fJT„vó—PN§!0Heœg§GûP§!ÿcíuöeô•9e:N§G8lEN§!\nÏk	gN*NINAm‡eS=f§Y–Y¾|§!„v^SýVbßvËSÿ·ƒ—V§G5000§!£icon_manpower£\n"
  THE_PRI_mission_3_3_effect_tt_case1_yes: "£yes£‚Yœgåb	gýV¶RîOck0§Y%fJT„vó—PN§!0:"
  THE_PRI_mission_3_3_effect_tt_case1_no: "£no£‚Yœgåb	gýV¶RîOck0§Y%fJT„vó—PN§!0:"
@@ -73,7 +73,7 @@
  THE_PRI_events_3_tt: "§Y»lNNb	gåb	gY²N0W¹eÄuÇu„vwýNlØS:N‰^ó`aN—RYeÄu„v–:g—RYe§!"
  THE_PRI_events_1_a_tt: "åNNHeœgSgbLˆ§Y[Root.the_pri_om1_var.GetValue]§!!kÿÏkoOYN!k§OàeŒòf0ŸSRŒÍb0§!ÿgbLˆ!kpeýOžX R§Y1§!ôvó§Y10§!\n"
  THE_PRI_events_1_b_tt: "»lNÏk*Nåb	g§Mó—PN‚ðS§!„vwýNlØS:N‰^ó`aN—RYeÄu„v–:g—RYe\n\nÏk§Y10§!t^êSýwoOYN!k§OnÀQòf0ÀQ	tƒtNLu0§!"
- THE_PRI_events_1_c_tt: "Ïk(W§Y7§!*NwýNú^Ëz›Q‹N0W¹eÄuÇužX R§Y1§!oOY!kpe\n\noOY§Oluòf0IQw^yPKNýV0§!OˆmwNb	goOY!kpeÿSVMR§Y[Root.the_pri_om3_var.GetValue]§!	ÿÿÏkˆmw§Y1§!oOY!kpeÿÏQS§G2§!ŒSb¦^v^ONb	gYŽNb‰N„vLeºN·ƒ—V§R2§!ŒSb¦^"
+ THE_PRI_events_1_c_tt: "Ïk(W§Y7§!*NwýNú^Ëz›Q‹N0W¹eÄuÇužX R§Y1§!oOY!kpe\n\noOY§Oluòf0IQw^yPKNýV0§!OˆmwNb	goOY!kpeÿSVMR§Y[Root.the_pri_om3_var.GetValue]§!	ÿÿÏkˆmw§Y1§!oOY!kpeÿÏQS§G2§!ŒSb¦^v^ONb	gb‰N-N„vLeºN·ƒ—V§R2§!ŒSb¦^"
 
  THE_PRI_other_music_decision_tt_1_yes: "§OàeŒòf0ŸSRŒÍb0§!: £yes£§Yck3zšR§!"
  THE_PRI_other_music_decision_tt_1_no: "§OàeŒòf0ŸSRŒÍb0§!: £no£§Y—‰ck3zšR§!"
@@ -155,6 +155,7 @@
  THE_PRI_poltergeist_luna_order_modifier: "çVÁKNó—"
  THE_PRI_poltergeist_star_order_modifier: "‰^ó`KNó—"
  THE_PRI_poltergeist_sun_order_modifier: "Ž¨RKNó—"
+ THE_PRI_illusionary_joururi_cooldown_modifier: "nÀQòf0ÀQ	tƒtNLu0·QtS"
 ### MODIFIER_END
 
 ### EDIT

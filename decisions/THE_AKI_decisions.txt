@@ -4,11 +4,8 @@ country_decisions = {
 		potential = {
 			OR = {
 				mission_completed = THE_AKI_divine_virtue
-				AND = {
-					any_province = {
-						owned_by = ROOT
-						religion = THE_minoriko_religion
-					}
+				any_owned_province = {
+					religion = THE_minoriko_religion
 				}
 			}
 			NOT = { religion = THE_minoriko_religion }

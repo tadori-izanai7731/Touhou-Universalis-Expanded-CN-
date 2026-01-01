@@ -328,6 +328,7 @@ THE_PRI_mission_branch_3 = {
 				AND = {
 					owns = 5084
 					NOT = { alliance_with = LIL }
+					LIL = { NOT = { is_subject_of = ROOT } }
 				}
 				AND = {
 					alliance_with = LIL
@@ -337,6 +338,7 @@ THE_PRI_mission_branch_3 = {
 					}
 					if = { limit = { ai = yes } has_opinion = { who = LIL value = 150 } }
 				}
+				LIL = { is_subject_of = ROOT }
 			}
 		} 
 		
@@ -347,6 +349,7 @@ THE_PRI_mission_branch_3 = {
 				limit = {
 					owns = 5084
 					NOT = { alliance_with = LIL }
+					LIL = { NOT = { is_subject_of = ROOT } }
 				}
 				custom_tooltip = THE_PRI_mission_3_2_effect_tt_case1_yes
 				#add_accepted_culture = Fairy
