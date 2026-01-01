@@ -226,6 +226,21 @@ declarewar = {
 			ai = no
 		}
 	}
+	condition = {
+		tooltip = THE_IQU_hvr_can_not_be_declare_war_c_tooltip
+		potential = { 
+			IQU = { mission_completed = THE_IQU_3_3 }
+			FROM = {
+				OR = {
+					tag = HVR
+					was_tag = HVR
+				}
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
 	### THE_END
 	effect = {
 		on_war_declaration_effect = yes
@@ -751,6 +766,31 @@ guaranteeaction = {
 			FROM = {
 				capital_scope = { superregion = gensokyo_orbit_superregion }
 			}
+		}
+	}
+	#THE
+	condition = {
+		tooltip = THE_IQU_hvr_can_not_be_create_guaranteeaction_c_tooltip
+		potential = { 
+			IQU = { ai = no }
+			OR = {
+				FROM = {
+					OR = {
+						tag = HVR
+						was_tag = HVR
+					}
+				}
+				ROOT = {
+					OR = {
+						tag = HVR
+						was_tag = HVR
+					}
+				}
+			}
+			
+		}
+		allow = {
+			always = no
 		}
 	}
 	effect = {

@@ -301,11 +301,11 @@ country_event = {
 		every_owned_province = {
 			clr_province_flag = THE_IQU_had_saved_unique_point_flag
 		}
-		every_subject_country = {
-			every_owned_province = {
-				clr_province_flag = THE_IQU_had_saved_unique_point_flag
-			}
-		}
+		# every_subject_country = {
+		# 	every_owned_province = {
+		# 		clr_province_flag = THE_IQU_had_saved_unique_point_flag
+		# 	}
+		# }
 	}
 }
 country_event = {
@@ -338,14 +338,9 @@ country_event = {
 	option = {
 		name = THE_IQU_flavor_events.1.0
 		highlight = yes
-		# every_owned_province = {
-		# 	clr_province_flag = THE_IQU_this_provinces_is_exploring_now
-		# }
-		# every_subject_country = {
-		# 	every_owned_province = {
-		# 		clr_province_flag = THE_IQU_this_provinces_is_exploring_now
-		# 	}
-		# }
+		every_owned_province = {
+			clr_province_flag = THE_IQU_this_provinces_is_exploring_now
+		}
 	}
 	#开始探险
 	option = {
@@ -415,8 +410,8 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 15
-			danger = 0
+			explore = 20
+			danger = -5
 		}
 	}
 	option = {
@@ -436,7 +431,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 15
 			danger = 10
 		}
 	}
@@ -457,7 +452,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 15
 			danger = 5
 		}
 	}
@@ -569,7 +564,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
+			explore = 10
 			danger = 0
 		}
 	}
@@ -658,7 +653,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = -10
+			explore = 10
 			danger = 10
 		}
 	}
@@ -679,7 +674,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 20
+			explore = 25
 			danger = -5
 		}
 	}
@@ -700,7 +695,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 15
+			explore = 20
 			danger = 5
 		}
 	}
@@ -762,7 +757,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 15
+			explore = 20
 			danger = -5
 		}
 	}
@@ -783,7 +778,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 20
 			danger = 0
 		}
 	}
@@ -850,7 +845,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 20
+			explore = 25
 			danger = -5
 		}
 	}
@@ -871,7 +866,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 20
 			danger = 0
 		}
 	}
@@ -892,7 +887,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 15
+			explore = 20
 			danger = 0
 		}
 	}
@@ -913,7 +908,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 15
+			explore = 20
 			danger = 0
 		}
 	}
@@ -982,7 +977,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 25
 			danger = -5
 		}
 	}
@@ -1003,7 +998,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 15
+			explore = 25
 			danger = 5
 		}
 	}
@@ -1024,7 +1019,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 15
 			danger = 0
 		}
 	}
@@ -1044,7 +1039,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 15
+			explore = 20
 			danger = 10
 		}
 	}
@@ -1107,7 +1102,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 15
+			explore = 25
 			danger = -10
 		}
 	}
@@ -1128,7 +1123,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 20
 			danger = 5
 		}
 	}
@@ -1221,7 +1216,7 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = THE_IQU_flavor_events.35
-				days = 730
+				days = 365
 			}
 		}
 	}
@@ -1250,7 +1245,7 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = THE_IQU_flavor_events.35
-				days = 730
+				days = 365
 			}
 		}
 	}
@@ -1284,7 +1279,7 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = THE_IQU_flavor_events.35
-				days = 730
+				days = 365
 			}
 		}
 	}
@@ -1341,7 +1336,7 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = THE_IQU_flavor_events.40
-				days = 730
+				days = 365
 			}
 		}
 	}
@@ -1370,7 +1365,7 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = THE_IQU_flavor_events.40
-				days = 730
+				days = 365
 			}
 		}
 	}
@@ -1401,7 +1396,7 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = THE_IQU_flavor_events.40
-				days = 730
+				days = 365
 			}
 		}
 	}
@@ -1430,7 +1425,7 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = THE_IQU_flavor_events.40
-				days = 730
+				days = 365
 			}
 		}
 	}
@@ -1488,7 +1483,7 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = THE_IQU_flavor_events.45
-				days = 730
+				days = 365
 			}
 		}
 	}
@@ -1519,7 +1514,7 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = THE_IQU_flavor_events.45
-				days = 730
+				days = 365
 			}
 		}
 	}
@@ -1550,7 +1545,7 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = THE_IQU_flavor_events.45
-				days = 730
+				days = 365
 			}
 		}
 	}
@@ -1580,7 +1575,7 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = THE_IQU_flavor_events.45
-				days = 730
+				days = 365
 			}
 		}
 	}
@@ -1638,7 +1633,7 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = THE_IQU_flavor_events.50
-				days = 730
+				days = 365
 			}
 		}
 	}
@@ -1667,7 +1662,7 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = THE_IQU_flavor_events.50
-				days = 730
+				days = 365
 			}
 		}
 	}
@@ -1695,7 +1690,7 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = THE_IQU_flavor_events.50
-				days = 730
+				days = 365
 			}
 		}
 	}
@@ -1724,7 +1719,7 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = THE_IQU_flavor_events.50
-				days = 730
+				days = 365
 			}
 		}
 	}
@@ -1783,7 +1778,7 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = THE_IQU_flavor_events.55
-				days = 730
+				days = 365
 			}
 		}
 	}
@@ -1813,7 +1808,7 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = THE_IQU_flavor_events.55
-				days = 730
+				days = 365
 			}
 		}
 	}
@@ -1842,7 +1837,7 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = THE_IQU_flavor_events.55
-				days = 730
+				days = 365
 			}
 		}
 	}
@@ -1871,7 +1866,7 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = THE_IQU_flavor_events.55
-				days = 730
+				days = 365
 			}
 		}
 	}
@@ -1924,7 +1919,7 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = THE_IQU_flavor_events.58
-				days = 730
+				days = 365
 			}
 		}
 	}
@@ -1952,7 +1947,7 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = THE_IQU_flavor_events.58
-				days = 730
+				days = 30
 			}
 		}
 	}
@@ -2204,7 +2199,7 @@ country_event = {
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
 			explore = 15
-			danger = 0
+			danger = -5
 		}
 	}
 	option = {
@@ -2225,7 +2220,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
+			explore = 15
 			danger = 10
 		}
 	}
@@ -2248,7 +2243,7 @@ country_event = {
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
 			explore = 10
-			danger = 5
+			danger = -5
 		}
 	}
 	option = {
@@ -2301,8 +2296,8 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
-			danger = 5
+			explore = 20
+			danger = -5
 		}
 	}
 	option = {
@@ -2324,7 +2319,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 0
+			explore = 15
 			danger = 10
 		}
 	}
@@ -2348,7 +2343,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 15
 			danger = 0
 		}
 	}
@@ -2372,7 +2367,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 15
 			danger = 5
 		}
 	}
@@ -2423,7 +2418,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 20
+			explore = 25
 			danger = 5
 		}
 	}
@@ -2447,7 +2442,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 15
 			danger = 15
 		}
 	}
@@ -2470,7 +2465,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
+			explore = 15
 			danger = 0
 		}
 	}
@@ -2520,7 +2515,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 20
 			danger = 0
 		}
 	}
@@ -2556,7 +2551,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
+			explore = 15
 			danger = 10
 		}
 	}
@@ -2579,8 +2574,8 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
-			danger = 0
+			explore = 15
+			danger = 5
 		}
 	}
 	option = {
@@ -2649,7 +2644,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
+			explore = 15
 			danger = 10
 		}
 	}
@@ -2725,7 +2720,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
+			explore = 10
 			danger = 15
 		}
 	}
@@ -2749,7 +2744,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 15
 			danger = 0
 		}
 	}
@@ -4002,10 +3997,6 @@ country_event = {
 		
 	}
 	immediate = {
-		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
-			danger = -5
-		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.141.1
@@ -4027,8 +4018,8 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = -5
-			danger = 5
+			explore = 20
+			danger = -5
 		}
 	}
 	option = {
@@ -4050,7 +4041,10 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 15
+			danger = 5
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.143.1
@@ -4128,7 +4122,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 15
 			danger = 5
 		}
 	}
@@ -4151,7 +4145,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 15
 			danger = -5
 		}
 	}
@@ -4230,7 +4224,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
+			explore = 15
 			danger = 5
 		}
 	}
@@ -4253,7 +4247,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 15
 			danger = -5
 		}
 	}
@@ -4276,7 +4270,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
+			explore = 15
 			danger = 10
 		}
 	}
@@ -4320,7 +4314,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 15
 			danger = -5
 		}
 	}
@@ -4342,7 +4336,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
+			explore = 10
 			danger = 0
 		}
 	}
@@ -4415,7 +4409,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
+			explore = 15
 			danger = 0
 		}
 	}
@@ -4438,7 +4432,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
+			explore = 10
 			danger = -20
 		}
 	}
@@ -4508,7 +4502,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
+			explore = 10
 			danger = 15
 		}
 	}
@@ -4560,7 +4554,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 20
 			danger = 0
 		}
 	}
@@ -4583,7 +4577,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = -5
+			explore = 15
 			danger = 5
 		}
 	}
@@ -4629,7 +4623,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 15
 			danger = 10
 		}
 	}
@@ -4680,7 +4674,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 20
 			danger = -5
 		}
 	}
@@ -4703,7 +4697,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
+			explore = 15
 			danger = -5
 		}
 	}
@@ -4793,7 +4787,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 15
+			explore = 20
 			danger = -10
 		}
 	}
@@ -4816,7 +4810,7 @@ country_event = {
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
 			explore = 10
-			danger = 15
+			danger = 10
 		}
 	}
 	option = {
@@ -4863,8 +4857,8 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
-			danger = 15
+			explore = 15
+			danger = 5
 		}
 	}
 	option = {
@@ -4884,7 +4878,10 @@ country_event = {
 		
 	}
 	immediate = {
-
+		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
+			explore = 15
+			danger = 10
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.178.1
@@ -4955,7 +4952,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
+			explore = 10
 			danger = 0
 		}
 	}
@@ -5002,7 +4999,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
+			explore = 15
 			danger = 0
 		}
 	}
@@ -5046,7 +5043,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 15
 			danger = 0
 		}
 	}
@@ -5068,7 +5065,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
+			explore = 10
 			danger = 5
 		}
 	}
@@ -5141,8 +5138,8 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
-			danger = 5
+			explore = 15
+			danger = 10
 		}
 	}
 	option = {
@@ -5164,7 +5161,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 15
 			danger = -5
 		}
 	}
@@ -5187,7 +5184,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
+			explore = 10
 			danger = 5
 		}
 	}
@@ -5234,7 +5231,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 15
 			danger = -5
 		}
 	}
@@ -5257,7 +5254,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 15
 			danger = -5
 		}
 	}
@@ -5397,7 +5394,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 20
 			danger = -10
 		}
 	}
@@ -5419,7 +5416,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
+			explore = 10
 			danger = 5
 		}
 	}
@@ -5513,7 +5510,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
+			explore = 10
 			danger = -10
 		}
 	}
@@ -5562,7 +5559,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 20
 			danger = -5
 		}
 	}
@@ -5585,7 +5582,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
+			explore = 15
 			danger = -10
 		}
 	}
@@ -5635,7 +5632,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 15
 			danger = -5
 		}
 	}
@@ -5658,7 +5655,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
+			explore = 10
 			danger = 10
 		}
 	}
@@ -5680,8 +5677,8 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
-			danger = -10
+			explore = 10
+			danger = -5
 		}
 	}
 	option = {
@@ -5723,7 +5720,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 15
 			danger = -5
 		}
 	}
@@ -5746,7 +5743,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
+			explore = 10
 			danger = 0
 		}
 	}
@@ -5817,8 +5814,8 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
-			danger = 0
+			explore = 15
+			danger = 5
 		}
 	}
 	option = {
@@ -5840,8 +5837,8 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
-			danger = 0
+			explore = 10
+			danger = 5
 		}
 	}
 	option = {
@@ -5918,7 +5915,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
+			explore = 10
 			danger = 5
 		}
 	}
@@ -5941,7 +5938,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 0
+			explore = 10
 			danger = -10
 		}
 	}
@@ -5990,7 +5987,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 20
 			danger = -5
 		}
 	}
@@ -6013,7 +6010,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = -5
+			explore = 15
 			danger = 10
 		}
 	}
@@ -6035,7 +6032,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
+			explore = 10
 			danger = -5
 		}
 	}
@@ -6085,7 +6082,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 20
 			danger = -5
 		}
 	}
@@ -6108,7 +6105,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 15
 			danger = 5
 		}
 	}
@@ -6131,7 +6128,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 5
+			explore = 10
 			danger = -20
 		}
 	}
@@ -6154,7 +6151,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 15
 			danger = -10
 		}
 	}
@@ -6197,7 +6194,7 @@ country_event = {
 	}
 	immediate = {
 		THE_IQU_add_explore_progress_or_dangerous_progress_effects_before = {
-			explore = 10
+			explore = 15
 			danger = -10
 		}
 	}
