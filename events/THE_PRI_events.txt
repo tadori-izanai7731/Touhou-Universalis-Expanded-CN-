@@ -1,30 +1,142 @@
 namespace = THE_PRI_events
 
+# country_event = {
+# 	id = THE_PRI_events.3
+# 	title = THE_PRI_events.3.title
+# 	desc = THE_PRI_events.3.desc
+# 	picture = DIPLOMACY_SIGNING_eventPicture
+
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		NOT = { has_country_flag = THE_PRI_events_3_flag }
+# 	}
+	
+# 	immediate = {
+# 		set_country_flag = THE_PRI_events_3_flag
+# 	}
+
+# 	option = {
+# 		name = THE_PRI_events.3.a
+# 		custom_tooltip = THE_PRI_events_3_tt
+# 		hidden_effect = {
+# 			every_owned_province = {
+# 				limit = {
+# 					OR = {
+# 						holy_order = THE_PRI_poltergeist_star_order
+# 						holy_order = THE_PRI_fairy_star_order
+# 					}
+# 				}
+# 				random_variable = {
+# 					which = the_pri_r_religion_var
+# 					value = 12
+# 				}
+# 				if = { limit = { check_variable = { which = the_pri_r_religion_var value = 11 } } change_religion = THE_Seija_religion }
+# 				else_if = { limit = { check_variable = { which = the_pri_r_religion_var value = 10 } } change_religion = THE_keiki_religion }
+# 				else_if = { limit = { check_variable = { which = the_pri_r_religion_var value = 9 } } change_religion = THE_minoriko_religion }
+# 				else_if = { limit = { check_variable = { which = the_pri_r_religion_var value = 8 } } change_religion = THE_kagiyama_religion }
+# 				else_if = { limit = { check_variable = { which = the_pri_r_religion_var value = 7 } } change_religion = th_occultism }
+# 				else_if = { limit = { check_variable = { which = the_pri_r_religion_var value = 6 } } change_religion = th_scientistic }
+# 				else_if = { limit = { check_variable = { which = the_pri_r_religion_var value = 5 } } change_religion = th_shinkism }
+# 				else_if = { limit = { check_variable = { which = the_pri_r_religion_var value = 4 } } change_religion = th_oldhakurei }
+# 				else_if = { limit = { check_variable = { which = the_pri_r_religion_var value = 3 } } change_religion = th_moriyashinto }
+# 				else_if = { limit = { check_variable = { which = the_pri_r_religion_var value = 2 } } change_religion = th_buddhist }
+# 				else_if = { limit = { check_variable = { which = the_pri_r_religion_var value = 1 } } change_religion = th_taoist }
+# 				else = { change_religion = th_hakureishinto } 
+# 			}
+# 		}
+# 	}
+
+# 	after = {
+# 		clr_country_flag = THE_PRI_events_3_flag
+# 	}
+# }
+# province_event = {
+# 	id = THE_PRI_events.1000
+# 	title = NONE
+# 	desc = NONE
+# 	picture = DIPLOMACY_SIGNING_eventPicture
+
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		NOT = { has_country_flag = THE_PRI_events_3_flag }
+# 	}
+	
+# 	immediate = {
+# 		area = {
+# 			random = {
+# 				chance = x
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = NONE
+# 	}
+# }
+
 country_event = {
-	id = THE_PRI_events.3
-	title = THE_PRI_events.3.title
-	desc = THE_PRI_events.3.desc
+	id = THE_PRI_events.1
+	title = THE_PRI_events.1.title
+	desc = THE_PRI_events.1.desc
 	picture = DIPLOMACY_SIGNING_eventPicture
 
 	is_triggered_only = yes
-	trigger = {
-		NOT = { has_country_flag = THE_PRI_events_3_flag }
-	}
-	
-	immediate = {
-		set_country_flag = THE_PRI_events_3_flag
-	}
 
 	option = {
-		name = THE_PRI_events.3.a
-		custom_tooltip = THE_PRI_events_3_tt
+		name = THE_PRI_events.1.a
+		trigger = {
+			has_government_attribute = THE_PRI_set_adm_order_remove_other_core_custom_attributes
+			stability = 1
+		}
+		tooltip = {
+			add_dip_power = 20
+			add_mil_power = 20
+			add_inflation = -0.1
+			add_republican_tradition = 3
+			add_splendor = 10
+		}
+		custom_tooltip = THE_PRI_events_1_a_tt
+		hidden_effect = {
+			for_variable_amount = {
+				variable = the_pri_om1_var
+				effect = "
+					add_dip_power = 20
+					add_mil_power = 20
+					add_inflation = -0.1
+					add_republican_tradition = 3
+					add_splendor = 10
+				"
+			}
+			change_variable = {
+				which = the_pri_om1_var
+				value = 1
+			}
+		}
+		add_stability = -1
+		
+	}
+	option = {
+		name = THE_PRI_events.1.b
+		trigger = {
+			has_government_attribute = THE_PRI_set_dip_order_generate_random_toho_religion_custom_attributes
+			NOT = { has_country_modifier = THE_PRI_illusionary_joururi_cooldown_modifier }
+		}
+		custom_tooltip = THE_PRI_events_1_b_tt
 		hidden_effect = {
 			every_owned_province = {
 				limit = {
 					OR = {
+						holy_order = THE_PRI_poltergeist_luna_order
 						holy_order = THE_PRI_poltergeist_star_order
+						holy_order = THE_PRI_poltergeist_sun_order
+						holy_order = THE_PRI_fairy_luna_order
 						holy_order = THE_PRI_fairy_star_order
+						holy_order = THE_PRI_fairy_sun_order
 					}
+				}
+				set_variable = {
+					which = the_pri_r_religion_var
+					value = 0
 				}
 				random_variable = {
 					which = the_pri_r_religion_var
@@ -43,33 +155,38 @@ country_event = {
 				else_if = { limit = { check_variable = { which = the_pri_r_religion_var value = 1 } } change_religion = th_taoist }
 				else = { change_religion = th_hakureishinto } 
 			}
-		}
-	}
-
-	after = {
-		clr_country_flag = THE_PRI_events_3_flag
-	}
-}
-province_event = {
-	id = THE_PRI_events.1000
-	title = NONE
-	desc = NONE
-	picture = DIPLOMACY_SIGNING_eventPicture
-
-	is_triggered_only = yes
-	trigger = {
-		NOT = { has_country_flag = THE_PRI_events_3_flag }
-	}
-	
-	immediate = {
-		area = {
-			random = {
-				chance = x
+			add_country_modifier = {
+				name = THE_PRI_illusionary_joururi_cooldown_modifier
+				duration = 3650
+				hidden = yes
 			}
 		}
 	}
-
 	option = {
-		name = NONE
+		name = THE_PRI_events.1.c1
+		trigger = {
+			has_government_attribute = THE_PRI_set_mil_order_add_soldier_household_custom_attributes
+			check_variable = { which = the_pri_om3_var value = 1 }
+		}
+		custom_tooltip = THE_PRI_events_1_c_tt
+		hidden_effect = {
+			for_variable_amount = {
+				variable = the_pri_om3_var
+				effect = "
+					add_war_exhaustion = -2
+					every_country = {
+						limit = { war_with = ROOT }
+						add_war_exhaustion = 2
+					}
+				"
+			}
+			set_variable = {
+				which = the_pri_om3_var
+				value = 0
+			}
+		}
+	}
+	option = {
+		name = THE_PRI_events.1.z
 	}
 }

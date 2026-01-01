@@ -34,12 +34,12 @@ THE_PRI_on_dip_tech_taken_scripted_effect = {
 	}
 }
 
-THE_PRI_on_five_year_pulse_scripted_effect = {
-	if = {
-		limit = { has_government_attribute = THE_PRI_set_dip_order_generate_random_toho_religion_custom_attributes }
-		country_event = { id = THE_PRI_events.3 }
-	}
-}
+# THE_PRI_on_five_year_pulse_scripted_effect = {
+# 	if = {
+# 		limit = { has_government_attribute = THE_PRI_set_dip_order_generate_random_toho_religion_custom_attributes }
+# 		country_event = { id = THE_PRI_events.3 }
+# 	}
+# }
 
 THE_PRI_on_province_religion_converted_scripted_effect = {
 	if = {
@@ -103,21 +103,21 @@ THE_PRI_adm_order_per_province_scripted_effect = {
 		limit = { owner = { has_country_flag = THE_PRI_mission_5_4_effect_case1_flag } }
 		add_base_tax = 1
 	}
-	if = {
-		limit = { owner = { has_government_attribute = THE_PRI_set_adm_order_remove_other_core_custom_attributes } }
-		owner = {
-			add_prestige = 1
-			add_republican_tradition = 1
-			change_government_reform_progress = 1
-			add_treasury = 1
-			add_manpower = 0.01
-			add_sailors = 1
-			add_power_projection = {
-				type = THE_PRI_core_pp
-				amount = 1
-			}
-		}
-	}
+	# if = {
+	# 	limit = { owner = { has_government_attribute = THE_PRI_set_adm_order_remove_other_core_custom_attributes } }
+	# 	owner = {
+	# 		add_prestige = 1
+	# 		add_republican_tradition = 1
+	# 		change_government_reform_progress = 1
+	# 		add_treasury = 1
+	# 		add_manpower = 0.01
+	# 		add_sailors = 1
+	# 		add_power_projection = {
+	# 			type = THE_PRI_core_pp
+	# 			amount = 1
+	# 		}
+	# 	}
+	# }
 }
 
 THE_PRI_dip_order_per_province_scripted_effect = {
@@ -125,16 +125,43 @@ THE_PRI_dip_order_per_province_scripted_effect = {
 		limit = { owner = { has_country_flag = THE_PRI_mission_5_4_effect_case1_flag } }
 		add_base_production = 1
 	}
-	if = {
-		limit = { owner = { has_government_attribute = THE_PRI_set_dip_order_generate_random_toho_religion_custom_attributes } }
-		owner = { country_event = { id = THE_PRI_events.3 } }
-	}
+	# if = {
+	# 	limit = { owner = { has_government_attribute = THE_PRI_set_dip_order_generate_random_toho_religion_custom_attributes } }
+	# 	owner = { country_event = { id = THE_PRI_events.3 } }
+	# }
 }
 
 THE_PRI_mil_order_per_province_scripted_effect = {
 	if = {
 		limit = { owner = { has_country_flag = THE_PRI_mission_5_4_effect_case1_flag } }
 		add_base_manpower = 1
+	}
+	if = {
+		limit = { owner = { has_government_attribute = THE_PRI_set_7_mil_order_reduce_exhaustion_custom_attributes } }
+		owner = {
+			change_variable = {
+				which = the_pri_7mo_var
+				value = 1
+			}
+			if = {
+				limit = { check_variable = { which = the_pri_7mo_var value = 7 } }
+				subtract_variable = {
+					which = the_pri_7mo_var
+					value = 7
+				}
+				change_variable = {
+					which = the_pri_om3_var
+					value = 1
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			owner = { has_government_attribute = THE_PRI_set_mil_order_add_soldier_household_custom_attributes }
+			has_manufactory_trigger = yes
+		}
+		add_building = soldier_households
 	}
 }
 

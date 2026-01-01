@@ -95,10 +95,28 @@ THE_PRI_dead_princess_septette_reform = {
 	conditional = {
 		allow = { always = yes }
 		custom_attributes = {
-			THE_PRI_set_mil_order_add_soldier_household_custom_attributes = yes
 			THE_PRI_set_7_mil_order_reduce_exhaustion_custom_attributes = yes
+			THE_PRI_set_mil_order_add_soldier_household_custom_attributes = yes
 		}
 	}
+	
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_country_flag = THE_PRI_dead_princess_septette_effect_flag } }
+				set_country_flag = THE_PRI_dead_princess_septette_effect_flag
+				set_variable = {
+					which = the_pri_7mo_var
+					value = 0
+				}
+				set_variable = {
+					which = the_pri_om3_var
+					value = 0
+				}
+			}
+		}
+	}
+
 	ai = {
 		factor = 1000
 	}
@@ -135,6 +153,7 @@ THE_PRI_illusionary_joururi_reform = {
 THE_PRI_pristine_beat_reform = {
 	icon = "THE_PRI_pristine_beat_reform"
 	modifiers = {
+		country_admin_power = 1
 		prestige_decay = -0.01
 		global_institution_spread = 0.5
 		free_policy = 1
@@ -155,6 +174,20 @@ THE_PRI_pristine_beat_reform = {
 			THE_PRI_set_adm_order_remove_other_core_custom_attributes = yes
 		}
 	}
+
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_country_flag = THE_PRI_pristine_beat_effect_flag } }
+				set_country_flag = THE_PRI_pristine_beat_effect_flag
+				set_variable = {
+					which = the_pri_om1_var
+					value = 1
+				}
+			}
+		}
+	}
+
 	ai = {
 		factor = 1000
 	}

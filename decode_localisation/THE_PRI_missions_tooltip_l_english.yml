@@ -71,6 +71,17 @@
  THE_PRI_mission_2_5_effect_tt: "政府改革「§Y幺乐团的未来§!」获得以下机制:\n允许结盟/王室联姻/附属/有停战协议的国家使用骚灵音乐舞台\n其他国家设立地方组织会使我们接纳当地文化\n\n启用直属州法令「§Y飘摇幻梦:尘世遗音§!」"
  THE_PRI_mission_5_4_order_tt_case2: "每个省份减少所有国家对§Y[Root.GetName]§!的§G0.2§!侵略扩张"
  THE_PRI_events_3_tt: "§Y治下所有拥有外交地方组织的省份转变为幻想乡宗教组的随机宗教§!"
+ THE_PRI_events_1_a_tt: "以上效果将执行§Y[Root.the_pri_om1_var.GetValue]§!次，每演奏一次§O无调曲「原初谐拍」§!，执行次数都会增加§Y1§!直至§Y10§!\n"
+ THE_PRI_events_1_b_tt: "治下每个拥有§M音乐舞台§!的省份转变为幻想乡宗教组的随机宗教\n\n每§Y10§!年只能演奏一次§O清净曲「净琉璃世界」§!"
+ THE_PRI_events_1_c_tt: "每在§Y7§!个省份建立军事地方组织增加§Y1§!演奏次数\n\n演奏§O沐生曲「光耀神赐之国」§!会消耗所有演奏次数（当前§Y[Root.the_pri_om3_var.GetValue]§!），每消耗§Y1§!演奏次数，减少§G2§!厌战度并使所有战争中的敌人获得§R2§!厌战度"
+
+ THE_PRI_other_music_decision_tt_1_yes: "§O无调曲「原初谐拍」§!: £yes£§Y正稳定§!"
+ THE_PRI_other_music_decision_tt_1_no: "§O无调曲「原初谐拍」§!: £no£§Y需要正稳定§!"
+ THE_PRI_other_music_decision_tt_2_yes: "§O清净曲「净琉璃世界」§!: £yes£§Y可使用§!"
+ THE_PRI_other_music_decision_tt_2_no: "§O清净曲「净琉璃世界」§!: £yes£§Y冷却中§!"
+ THE_PRI_other_music_decision_tt_3_yes: "§O沐生曲「光耀神赐之国」§!: £yes£§Y[Root.the_pri_om3_var.GetValue]§!"
+ THE_PRI_other_music_decision_tt_3_no: "§O灾祸曲「晦暗无光之狱」§!: £no£§Y建立7个军事地方组织以进入光耀神赐之国§!"
+ THE_PRI_other_music_decision_tt_404: "§O奇梦曲「宁静午夜与旺盛的心」§!: 在梦中，妖精们实现了自己渺小而伟大的愿望"
 ### TOOLTIP_END
 
 ### GOVERNMENT
@@ -95,10 +106,10 @@
  mechanic_THE_PRI_unlock_order_for_related_country_custom_attributes_yes: "允许结盟/王室联姻/附属/有停战协议的国家使用骚灵音乐舞台"
  mechanic_THE_PRI_accept_culture_by_other_country_set_order_custom_attributes_yes: "其他国家设立地方组织会使我们接纳当地文化"
  mechanic_THE_PRI_set_mil_order_add_soldier_household_custom_attributes_yes: "在有工场的省份设立军事地方组织也会添加士兵之家"
- mechanic_THE_PRI_set_7_mil_order_reduce_exhaustion_custom_attributes_yes: "每在7个省份设立军事地方组织，减少§G4§!厌战度并使所有与我们交战的国家获得§R4§!厌战度"
- mechanic_THE_PRI_set_dip_order_generate_random_toho_religion_custom_attributes_yes: "设立外交地方组织会使当地宗教转变为幻想乡宗教组的随机宗教"
+ mechanic_THE_PRI_set_7_mil_order_reduce_exhaustion_custom_attributes_yes: "解锁一个新的§O外来曲目§!"
+ mechanic_THE_PRI_set_dip_order_generate_random_toho_religion_custom_attributes_yes: "解锁一个新的§O外来曲目§!"
  mechanic_THE_PRI_missionary_complete_convert_merchant_custom_attributes_yes: "传教完成时，将1传教士转换为2商人团"
- mechanic_THE_PRI_set_adm_order_remove_other_core_custom_attributes_yes:  "设立行政地方组织获得§G1§!金币、人力、水手、威望、共和传统、改革进度、力量投射"
+ mechanic_THE_PRI_set_adm_order_remove_other_core_custom_attributes_yes:  "解锁一个新的§O外来曲目§!"
  mechanic_THE_PRI_unlock_fairy_order_custom_attributes_yes: "启用妖精的§M音乐舞台§!"
 ### GOVERNMENT_END
 
@@ -144,6 +155,7 @@
  THE_PRI_poltergeist_luna_order_modifier: "忧郁之音"
  THE_PRI_poltergeist_star_order_modifier: "幻想之音"
  THE_PRI_poltergeist_sun_order_modifier: "躁动之音"
+ THE_PRI_illusionary_joururi_cooldown_modifier: "清净曲「净琉璃世界」冷却"
 ### MODIFIER_END
 
 ### EDIT
@@ -155,9 +167,11 @@
 
 ### DECISION
  THE_PRI_form_RAIPRI_decision_title: "@PRI成立堀莉兹姆利巴乐团"
- THE_PRI_form_RAIPRI_decision_desc: ""
+ THE_PRI_form_RAIPRI_decision_desc: "三位付丧神在人间之里的舞台进行演奏，现在我们已经取得了充足的联系，是时候组建新的乐团。"
  THE_PRI_expand_public_music_stage_decision_title: "@PRI公共音乐节"
- THE_PRI_expand_public_music_stage_decision_desc: ""
+ THE_PRI_expand_public_music_stage_decision_desc: "作为骚灵，我们的日常活动，也是我们存在的意义，就是让更多的人听到我们的音乐。遍布全国的§M音乐舞台§!会将我们的音乐变成触手可及的公共资源。"
+ THE_PRI_other_music_decision_title: "@PRI幻变「异韵之音律-灵体振音」"
+ THE_PRI_other_music_decision_desc: "即使我们是擅长音乐的骚灵，学习来自其他种族和地域的乐器和曲目才能更好得演奏音乐。"
 ### DECISION_END
 
 ### COUNTRY
@@ -166,11 +180,11 @@
 ### COUNTRY_END
 
 ### EVENT
- THE_PRI_events.3.title: "清净曲「净琉璃世界」"
- THE_PRI_events.3.desc: "《净琉璃世界》是由九十九姐妹演奏的曲目，「净琉璃世界」是佛教传说中的蓝色宝石构成的琉璃之地，流传至日本后演化形成的「净琉璃」则是一种三味线的伴奏，然而九十九姐妹是琵琶和琴的付丧神，演奏传统和风的曲子又有不一样的效果。\n\n演奏此曲时会令听众如琉璃般清净，而后被和风感染诞生新的信仰。"
- THE_PRI_events.3.a: "无论是什么信仰，都会来到音乐舞台"
+ THE_PRI_events.1.title: "演奏外来曲目"
+ THE_PRI_events.1.desc: "不同于骚灵自己的音乐，想要演奏这些外来曲目并不容易，需要借助其他力量才能发挥应有的效果，各自都有不同的限制。"
+ THE_PRI_events.1.a: "无调曲「原初谐拍」"
+ THE_PRI_events.1.b: "清净曲「净琉璃世界」"
+ THE_PRI_events.1.c1: "沐生曲「光耀神赐之国」"
+ THE_PRI_events.1.c2: "灾祸曲「晦暗无光之狱」"
+ THE_PRI_events.1.z: "取消"
 ### EVENT_END
-
-### POWER_PROJECTIION
- THE_PRI_core_pp: "无调曲「原初谐拍」"
-### POWER_PROJECTIION_END
