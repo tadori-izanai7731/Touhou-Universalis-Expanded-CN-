@@ -1142,9 +1142,9 @@ country_event = {
 
 ## #0 月球之行，起点
 country_event = {
-	id = THE_IQU_flavor_events.30
-	title = "THE_IQU_flavor_events.30.t"
-	desc = "THE_IQU_flavor_events.30.desc"
+	id = THE_IQU_flavor_events.1013
+	title = "THE_IQU_flavor_events.1013.t"
+	desc = "THE_IQU_flavor_events.1013.desc"
 	picture = ""
 	is_triggered_only = yes
 	trigger = {
@@ -1154,10 +1154,10 @@ country_event = {
 		
 	}
 	option = {
-		name = THE_IQU_flavor_events.30.1
+		name = THE_IQU_flavor_events.1013.1
 		goto = 5338
-		custom_tooltip = THE_IQU_event_30_c_tt1
-		add_prestige = -5
+		custom_tooltip = THE_IQU_event_1013_c_tt1
+		add_prestige = 5
 		add_dip_power = 20
 	}
 }

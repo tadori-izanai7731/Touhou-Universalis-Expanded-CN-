@@ -368,6 +368,14 @@ THE_IQU_main_branch_2 = {
 		 } 
 
 		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = THE_IQU_explore_the_unique_points_core_decisions_c_tt1
+				ROOT = {
+					NOT = {
+						has_country_flag = THE_IQU_now_is_exploring_flag
+					}
+				}
+			}
 			5320 = {
 				has_discovered = ROOT
 			}
@@ -378,7 +386,7 @@ THE_IQU_main_branch_2 = {
 
 		effect = { 
 			country_event = {
-				id = THE_IQU_flavor_events.30
+				id = THE_IQU_flavor_events.1013
 			}
 			custom_tooltip = THE_IQU_2_3_c_tt1
 			5338 = {
