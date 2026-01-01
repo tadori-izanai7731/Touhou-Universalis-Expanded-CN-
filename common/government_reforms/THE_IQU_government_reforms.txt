@@ -50,7 +50,10 @@ THE_IQU_cloud_with_sky_reform = {
 	lock_level_when_selected = yes
 	icon = "THE_IQU_government_5_reform"
 	potential = {
-		mission_completed = THE_IQU_4_3
+		OR = {
+			has_reform = THE_IQU_cloud_with_sky_reform
+			have_had_reform = THE_IQU_cloud_with_sky_reform
+		}
 	}
 	
 	modifiers = {

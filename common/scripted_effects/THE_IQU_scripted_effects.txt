@@ -1273,20 +1273,20 @@ THE_IQU_teaching_tenshi_add_power_effect = {
 # 		}
 # 	}
 # }
-# ##添加政府点数
-# THE_IQU_government_lvl3_cloud_with_sky_add_pwoer_effect_before = {
-# 	if = { limit = { HVR = { adm = 6 } } THE_IQU_add_government_power_lvl_3_effect = { value = 6 power = adm } }
-# 	else_if = { limit = { HVR = { adm = 5 } } THE_IQU_add_government_power_lvl_3_effect = { value = 5 power = adm } }
-# 	else_if = { limit = { HVR = { adm = 4 } } THE_IQU_add_government_power_lvl_3_effect = { value = 4 power = adm } }
-# 	else_if = { limit = { HVR = { adm = 3 } } THE_IQU_add_government_power_lvl_3_effect = { value = 3 power = adm } }
-# 	#
-# 	if = { limit = { HVR = { dip = 6 } } THE_IQU_add_government_power_lvl_3_effect = { value = 6 power = dip } }
-# 	else_if = { limit = { HVR = { dip = 5 } } THE_IQU_add_government_power_lvl_3_effect = { value = 5 power = dip } }
-# 	else_if = { limit = { HVR = { dip = 4 } } THE_IQU_add_government_power_lvl_3_effect = { value = 4 power = dip } }
-# 	else_if = { limit = { HVR = { dip = 3 } } THE_IQU_add_government_power_lvl_3_effect = { value = 3 power = dip } }
-# 	#
-# 	if = { limit = { HVR = { mil = 6 } } THE_IQU_add_government_power_lvl_3_effect = { value = 6 power = mil } }
-# }
+##添加政府点数
+THE_IQU_government_lvl3_cloud_with_sky_add_pwoer_effect_before = {
+	if = { limit = { HVR = { adm = 6 } } THE_IQU_add_government_power_lvl_3_effect = { value = 6 power = adm } }
+	else_if = { limit = { HVR = { adm = 5 } } THE_IQU_add_government_power_lvl_3_effect = { value = 5 power = adm } }
+	else_if = { limit = { HVR = { adm = 4 } } THE_IQU_add_government_power_lvl_3_effect = { value = 4 power = adm } }
+	else_if = { limit = { HVR = { adm = 3 } } THE_IQU_add_government_power_lvl_3_effect = { value = 3 power = adm } }
+	#
+	if = { limit = { HVR = { dip = 6 } } THE_IQU_add_government_power_lvl_3_effect = { value = 6 power = dip } }
+	else_if = { limit = { HVR = { dip = 5 } } THE_IQU_add_government_power_lvl_3_effect = { value = 5 power = dip } }
+	else_if = { limit = { HVR = { dip = 4 } } THE_IQU_add_government_power_lvl_3_effect = { value = 4 power = dip } }
+	else_if = { limit = { HVR = { dip = 3 } } THE_IQU_add_government_power_lvl_3_effect = { value = 3 power = dip } }
+	#
+	if = { limit = { HVR = { mil = 6 } } THE_IQU_add_government_power_lvl_3_effect = { value = 6 power = mil } }
+}
 
 THE_IQU_add_government_power_lvl_3_effect = {
 	add_government_power = {
