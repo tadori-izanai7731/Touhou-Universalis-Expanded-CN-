@@ -1891,7 +1891,7 @@ THE_IQU_panama_add_unique_point_event_effect = {
 	}
 }
 
-###2年脉冲
+###脉冲
 THE_IQU_explore_on_2_years_pluse_effect = {
 	if = {
 		limit = { 
@@ -2387,6 +2387,37 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 		}
 	}
 }
+THE_IQU_explore_on_2_years_pluse_effect_1 = {
+		if = {
+			limit = { 
+				OR = {
+					tag = IQU
+					was_tag = IQU
+				}
+				has_country_flag = THE_IQU_now_is_exploring_flag
+			}
+			random_list = {
+				10 = { country_event = { id = THE_IQU_flavor_events.66 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.70 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.75 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.79 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.83 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.86 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.90 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.95 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.99 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.102 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.107 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.110 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.114 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.117 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.121 } }
+				10 = { country_event = { id = THE_IQU_flavor_events.126 } }
+				#
+				20 = { country_event = { id = THE_IQU_flavor_events.236 } }
+			}
+		}
+	} 
 #设定收入
 THE_IQU_set_yearly_trade_income_with_hvr_effect = {
 	#衣玖总竞争力
