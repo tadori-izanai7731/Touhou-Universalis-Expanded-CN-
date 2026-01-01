@@ -384,13 +384,18 @@ THE_PRI_mission_branch_3 = {
 			}
 			
 			if = {
-				limit = {					
-					alliance_with = LIL
-					marriage_with = LIL
-					LIL = {
-						NOT = { num_of_cities = 3 }
+				limit = {
+					OR = {
+						AND = {
+							alliance_with = LIL
+							marriage_with = LIL
+							LIL = {
+								NOT = { num_of_cities = 3 }
+							}
+							if = { limit = { ai = yes } has_opinion = { who = LIL value = 150 } }
+						}
+						LIL = { is_subject_of = ROOT }
 					}
-					if = { limit = { ai = yes } has_opinion = { who = LIL value = 150 } }
 				}
 				custom_tooltip = THE_PRI_mission_3_2_effect_tt_case2_yes
 				vassalize = LIL
