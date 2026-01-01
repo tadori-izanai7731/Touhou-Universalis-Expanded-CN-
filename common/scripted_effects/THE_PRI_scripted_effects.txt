@@ -144,7 +144,7 @@ THE_PRI_mil_order_per_province_scripted_effect = {
 				value = 1
 			}
 			if = {
-				limit = { check_variable = { which = the_pri_7mo_var value = 1 } }
+				limit = { check_variable = { which = the_pri_7mo_var value = 7 } }
 				subtract_variable = {
 					which = the_pri_7mo_var
 					value = 7
@@ -155,6 +155,13 @@ THE_PRI_mil_order_per_province_scripted_effect = {
 				}
 			}
 		}
+	}
+	if = {
+		limit = {
+			owner = { has_government_attribute = THE_PRI_set_mil_order_add_soldier_household_custom_attributes }
+			has_manufactory_trigger = yes
+		}
+		add_building = soldier_households
 	}
 }
 
