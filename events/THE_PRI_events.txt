@@ -190,3 +190,28 @@ country_event = {
 		name = THE_PRI_events.1.z
 	}
 }
+
+country_event = {
+	id = THE_PRI_events.2
+	title = THE_PRI_events.2.title
+	desc = THE_PRI_events.2.desc
+	picture = DIPLOMACY_SIGNING_eventPicture
+
+	mean_time_to_happen = {
+		months = 360
+	}
+
+	trigger = {
+		OR = {
+			tag = PRI
+			was_tag = PRI
+		}
+		has_country_flag = THE_PRI_finish_poltergeist_luna_order_flag
+		has_country_flag = THE_PRI_finish_poltergeist_star_order_flag
+		has_country_flag = THE_PRI_finish_poltergeist_sun_order_flag
+	}
+
+	option = {
+		name = THE_PRI_events.2.a
+	}
+}

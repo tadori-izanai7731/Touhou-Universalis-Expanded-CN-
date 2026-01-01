@@ -96,13 +96,14 @@ THE_PRI_poltergeist_music_modifier = {
 THE_PRI_sukima_music_modifier = {
 	global_trade_power = 0.5
 	state_maintenance_modifier = -0.2
-	religious_unity = 0.25
+	ae_impact = -0.1
 	culture_conversion_cost = 1.0
 }
 
 # 泡影的音乐
 THE_PRI_illusion_misic_pmodifier = {
 	mercantilism_cost = -0.05
+	trade_goods_size_modifier = 0.25
 	local_gold_depletion_chance_modifier = 0.5
 }
 

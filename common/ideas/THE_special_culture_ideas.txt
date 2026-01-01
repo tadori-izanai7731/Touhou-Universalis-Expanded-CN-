@@ -372,6 +372,10 @@ THE_gensokyan_ideas = {
 			THE_can_use_special_culture_ideas_scripted_trigger = {
 				type = gensokyan
 			}
+			AND = {
+				has_government_attribute = THE_PRI_100_culture_for_fantasy_custom_attributes
+				num_accepted_cultures = 100
+			}
 		}
 	}
 	

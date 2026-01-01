@@ -82,7 +82,7 @@ THE_PRI_mission_branch_1 = {
 		trigger = {
 			Great_youkai_forest = {
 				type = all
-				owns = ROOT
+				owner = ROOT
 				NOT = { local_autonomy_above_min = 10 }
 				if = {
 					limit = { ROOT = { NOT = { has_country_flag = THE_PRI_public_misic_festival_decision_finish_flag } } }

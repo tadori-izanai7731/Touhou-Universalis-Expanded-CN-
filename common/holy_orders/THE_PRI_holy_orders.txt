@@ -131,7 +131,7 @@ THE_PRI_fairy_luna_order = {
 		THE_PRI_adm_order_per_province_abandon_scripted_effect = yes
 	}
 	modifier = {
-		min_local_autonomy = -25
+		min_local_autonomy = -15
 		local_religious_conversion_resistance = 1.0
 	}
 	ai_priority = {
