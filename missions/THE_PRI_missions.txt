@@ -876,7 +876,7 @@ THE_PRI_mission_branch_5 = {
 		
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 30
+				value = 20
 				OR = {
 					holy_order = THE_PRI_poltergeist_luna_order
 					holy_order = THE_PRI_poltergeist_star_order
