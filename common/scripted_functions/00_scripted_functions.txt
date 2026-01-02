@@ -49,9 +49,27 @@ can_reduce_war_exhaustion = {
 			}
 		}
 	}
+	condition = {
+		tooltip = THE_block_reduce_exhaustion_sf_tt
+		potential = {
+			has_government_attribute = THE_block_reduce_exhaustion_custom_attributes
+		}
+		allow = {
+			always = no
+		}
+	}
 }
 
 can_reduce_inflation = {
+	condition = {
+		tooltip = THE_block_reduce_inflation_sf_tt
+		potential = {
+			has_government_attribute = THE_block_reduce_inflation_custom_attributes
+		}
+		allow = {
+			always = no
+		}
+	}
 }
 
 can_declare_bankruptcy = {

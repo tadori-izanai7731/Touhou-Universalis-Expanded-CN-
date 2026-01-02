@@ -7,7 +7,8 @@ THE_PRI_poltergeist_luna_order = {
 				NOT = { has_country_flag = THE_PRI_finish_poltergeist_luna_order_flag }
 			}
 			any_country = {
-				has_government_attribute = THE_PRI_unlock_order_for_related_country_custom_attributes
+				has_reform = THE_PRI_yougakudan_mirai_reform
+				mission_completed = THE_PRI_mission_2_5
 				OR = {
 					alliance_with = ROOT
 					marriage_with = ROOT
@@ -32,7 +33,11 @@ THE_PRI_poltergeist_luna_order = {
 		local_core_creation = -0.15
 	}
 	ai_priority = {
-		factor = 1000
+		factor = 5
+		modifier = {
+			factor = 0
+			owner = { NOT = { adm_power = 200 } }
+		}
 	}
 	localization = THE_PRI_music_stage
 }
@@ -46,7 +51,8 @@ THE_PRI_poltergeist_star_order = {
 				NOT = { has_country_flag = THE_PRI_finish_poltergeist_star_order_flag }
 			}
 			any_country = {
-				has_government_attribute = THE_PRI_unlock_order_for_related_country_custom_attributes
+				has_reform = THE_PRI_yougakudan_mirai_reform
+				mission_completed = THE_PRI_mission_2_5
 				OR = {
 					alliance_with = ROOT
 					marriage_with = ROOT
@@ -71,7 +77,11 @@ THE_PRI_poltergeist_star_order = {
 		allowed_num_of_buildings = 1
 	}
 	ai_priority = {
-		factor = 1000
+		factor = 5
+		modifier = {
+			factor = 0
+			owner = { NOT = { dip_power = 200 } }
+		}
 	}
 	localization = THE_PRI_music_stage
 }
@@ -85,7 +95,8 @@ THE_PRI_poltergeist_sun_order = {
 				NOT = { has_country_flag = THE_PRI_finish_poltergeist_sun_order_flag }
 			}
 			any_country = {
-				has_government_attribute = THE_PRI_unlock_order_for_related_country_custom_attributes
+				has_reform = THE_PRI_yougakudan_mirai_reform
+				mission_completed = THE_PRI_mission_2_5
 				OR = {
 					alliance_with = ROOT
 					marriage_with = ROOT
@@ -110,7 +121,11 @@ THE_PRI_poltergeist_sun_order = {
 		local_friendly_movement_speed = 0.2
 	}
 	ai_priority = {
-		factor = 1000
+		factor = 5
+		modifier = {
+			factor = 0
+			owner = { NOT = { mil_power = 200 } }
+		}
 	}
 	localization = THE_PRI_music_stage
 }
@@ -135,7 +150,7 @@ THE_PRI_fairy_luna_order = {
 		local_religious_conversion_resistance = 1.0
 	}
 	ai_priority = {
-		factor = 1000
+		factor = 5
 	}
 	localization = THE_PRI_music_stage
 }
@@ -160,7 +175,7 @@ THE_PRI_fairy_star_order = {
 		local_build_time = -0.2
 	}
 	ai_priority = {
-		factor = 1000
+		factor = 5
 	}
 	localization = THE_PRI_music_stage
 }
@@ -185,7 +200,7 @@ THE_PRI_fairy_sun_order = {
 		local_garrison_size = 0.3
 	}
 	ai_priority = {
-		factor = 1000
+		factor = 5
 	}
 	localization = THE_PRI_music_stage
 }
