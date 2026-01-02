@@ -160,6 +160,19 @@ country_decisions= {
 			else = {
 				custom_tooltip = THE_PRI_finish_poltergeist_sun_order_tt_3
 			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = THE_PRI_finish_poltergeist_luna_order_flag
+						has_country_flag = THE_PRI_finish_poltergeist_star_order_flag
+						has_country_flag = THE_PRI_finish_poltergeist_sun_order_flag
+					}
+					country_event = {
+						id = THE_PRI_events.2
+						days = 10950
+					}
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1000
