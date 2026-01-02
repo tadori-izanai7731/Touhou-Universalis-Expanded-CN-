@@ -56,9 +56,13 @@ country_decisions= {
 		potential = {
 			tag = PRI
 			mission_completed = THE_PRI_mission_5_4
-			NOT = { has_country_flag = THE_PRI_finish_poltergeist_luna_order_flag }
-			NOT = { has_country_flag = THE_PRI_finish_poltergeist_star_order_flag }
-			NOT = { has_country_flag = THE_PRI_finish_poltergeist_sun_order_flag }
+			NOT = {
+				AND = {
+					has_country_flag = THE_PRI_finish_poltergeist_luna_order_flag
+					has_country_flag = THE_PRI_finish_poltergeist_star_order_flag
+					has_country_flag = THE_PRI_finish_poltergeist_sun_order_flag
+				}
+			}
 		}
 		
 		allow = {
