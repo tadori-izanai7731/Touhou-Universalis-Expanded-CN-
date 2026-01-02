@@ -55,7 +55,7 @@ THE_PRI_spring_send_music_modifier = {
 # 常夜的音乐
 THE_PRI_eternity_night_music_modifier = {
 	culture_conversion_cost = 1.0
-	global_spy_defence = 0.5
+	improve_relation_modifier = 0.5
 	mercenary_cost = -0.25
 	own_territory_dice_roll_bonus = 1
 }
@@ -74,6 +74,7 @@ THE_PRI_first_music_modifier = {
 	global_regiment_recruit_speed = -0.5
 	military_tactics = 0.25
 	culture_conversion_cost = 1.0
+	ae_impact = -0.25
 }
 
 # 更迭的音乐
@@ -86,7 +87,7 @@ THE_PRI_alternation_music_modifier = {
 
 # 喧闹的音乐
 THE_PRI_poltergeist_music_modifier = {
-	num_accepted_cultures = 2
+	improve_relation_modifier = 0.2
 	promote_culture_cost = -0.1
 	establish_order_cost = -0.1
 	culture_conversion_cost = 1.0

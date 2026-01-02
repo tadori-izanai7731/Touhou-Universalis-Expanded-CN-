@@ -224,13 +224,6 @@ THE_PRI_mission_branch_2 = {
 					owns = 5025
 				}
 				AND = {
-					custom_trigger_tooltip = {
-						tooltip = THE_PRI_mission_2_4_trigger_tt
-						has_global_modifier_value = {
-							which = tolerance_heretic
-							value = 5
-						}
-					}
 					num_of_owned_provinces_with = {
 						value = 5
 						religion = th_buddhist
@@ -238,6 +231,15 @@ THE_PRI_mission_branch_2 = {
 					num_of_owned_provinces_with = {
 						value = 5
 						religion = th_taoist
+					}
+				}
+				AND = {
+					custom_trigger_tooltip = {
+						tooltip = THE_PRI_mission_2_4_trigger_tt
+						has_global_modifier_value = {
+							which = tolerance_heretic
+							value = 5
+						}
 					}
 				}
 			}
@@ -876,7 +878,7 @@ THE_PRI_mission_branch_5 = {
 		
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 30
+				value = 20
 				OR = {
 					holy_order = THE_PRI_poltergeist_luna_order
 					holy_order = THE_PRI_poltergeist_star_order
