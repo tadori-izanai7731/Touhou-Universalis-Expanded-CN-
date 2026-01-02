@@ -96,6 +96,16 @@ THE_PRI_order_per_province_scripted_effect = {
 			}
 		}
 	}
+	if = {
+		limit = { owner = { NOT = { has_country_flag = THE_PRI_unlock_poltergeist_order_flag } } }
+		random_country = {
+			limit = {
+				has_reform = THE_PRI_yougakudan_mirai_reform
+				mission_completed = THE_PRI_mission_2_5
+			}
+			add_accepted_culture = ROOT
+		}
+	}
 }
 
 THE_PRI_adm_order_per_province_scripted_effect = {
