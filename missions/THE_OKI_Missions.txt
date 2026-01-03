@@ -1,842 +1,842 @@
-THE_OKI_Mission_branch_1 = {
-	slot = 1
-	generic = no
-	ai = yes
-	has_country_shield = yes
-	potential = { tag = OKI } 
-
-	THE_OKI_Mission_1_1 = {
-		icon = mission_unknown_mission
-		position = 1
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			AND = {
-				exist = KSE
-				KSE = {
-					OR = {
-						AND = {
-							has_opinion = {
-								who = OKI
-								value = 120
-							}
-							has_opinion_modifier = {
-								who = ROOT
-								modifier = sent_gift
-							}
-							alliance_with = OKI
-						}
-						vassal_of = OKI
-					}
-				}
-			}
-		}
-
-		effect = {
-			KSE = {
-				add_historical_friend = OKI
-				add_trust = {
-					who = OKI
-					value = 25
-				}
-			}
-			OKI = {
-				add_historical_friend = KSE
-				add_trust = {
-					who = KSE
-					value = 25
-				}
-			}
-			Great_youkai_forest = { add_permanent_claim = OKI } 
-			Eastern_youkai_forest = { add_permanent_claim = OKI } 
-		}
-	}
-
-	THE_OKI_Mission_1_2 = {
-		icon = mission_unknown_mission
-		position = 2
-		required_missions = { THE_OKI_Mission_1_1 } 
-		provinces_to_highlight = {
-			OR = {
-				area = Great_youkai_forest
-				area = Eastern_youkai_forest
-			}
-		}
-
-		trigger = {
-			OKI = {
-				owns_all_provinces = {
-					area = Eastern_youkai_forest
-				}
-			}
-			KSE = {
-				owns_all_provinces = {
-					area = Great_youkai_forest
-				}
-			}
-		}
-
-		effect = {
-			Great_youkai_forest = { cede_province = KSE } 
-			Eastern_youkai_forest = { cede_province = KSE } 
-			OKI = { create_march = KSE } 
-		}
-	}
-
-	THE_OKI_Mission_1_4 = {
-		icon = mission_dominate_trade_in_aden
-		position = 4
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			OKI = {
-				navy_size_percentage = 0.90
-				num_of_light_ship = 3
-			}
-		}
-
-		effect = {
-			define_explorer = {
-				shock = 0
-				fire = 0
-				manuever = 5
-				siege = 2
-			}
-			add_country_modifier = {
-				name = "THE_OKI_modifier_1"
-				duration = 7300
-				hidden = no
-				desc = THE_OKI_modifier_1.desc
-			}
-		}
-	}
-
-	THE_OKI_Mission_1_5 = {
-		icon = mission_rhine
-		position = 5
-		required_missions = { THE_OKI_Mission_1_4 } 
-		provinces_to_highlight = {
-			area = panama_area
-		} 
-
-		trigger = {
-			OKI = {
-				OR = {
-					has_discovered = 835
-					has_discovered = 2664
-					has_discovered = 2819
-					has_discovered = 4595
-				}
-			}
-		}
-
-		effect = {
-			835 = {
-				add_core = OKI
-				cede_province = OKI
-				change_religion = th_hakureishinto
-				change_culture = Youkai
-				add_base_tax = 3
-				add_base_production = 5
-				add_base_manpower = 3
-			}
-		}
-	}
-
-	THE_OKI_Mission_1_6 = {
-		icon = mng_jing_hang_grand_canal
-		position = 6
-		required_missions = { THE_OKI_Mission_1_5 } 
-		provinces_to_highlight = { prov = 835 } 
-
-		trigger = {
-			treasury = 30000
-			owns_or_non_sovereign_subject_of = 835
-			835 = {
-				AND = {
-					num_of_buildings_in_province = 3
-					development = 20
-					NOT = {
-						OR = {
-							has_construction = core
-							has_construction = culture
-							has_construction = building
-							has_construction = missionary
-							has_construction = army
-							has_construction = navy
-							has_construction = canal
-							has_construction = great_project
-						}
-					}
-				}
-			}
-		}
-
-		effect = {
-			add_great_project = {
-				type = panama_canal
-				instant = no
-			}
-			add_treasury = -30000
-		}
-	}
-
-	THE_OKI_Mission_1_10 = {
-		icon = mission_unknown_mission
-		position = 10
-		required_missions = { THE_OKI_Mission_3_9 } 
-		provinces_to_highlight = {
-			prov = 4987
-			prov = 5171
-		}
-
-		trigger = {
-			NOT = {
-				OR = {
-					exist = MYO
-					exist = SNK
-				}
-			}
-			OKI = {
-				AND = {
-					is_core = 4987
-					is_core = 5171
-				}
-			}
-		}
-
-		effect = {  } 
-	}
-
-	THE_OKI_Mission_1_11 = {
-		icon = mission_unknown_mission
-		position = 11
-		required_missions = { THE_OKI_Mission_1_10 } 
-		provinces_to_highlight = { prov = 5136 } 
-
-		trigger = {
-			OKI = { is_core = 5136 } 
-			5136 = {
-				AND = {
-					num_of_buildings_in_province = 3
-					development = 30
-				}
-			}
-		}
-
-		effect = {  } 
-	}
-}
-THE_OKI_Mission_branch_2 = {
-	slot = 2
-	generic = no
-	ai = yes
-	has_country_shield = yes
-	potential = { tag = OKI } 
-
-	THE_OKI_Mission_2_2 = {
-		icon = mission_unknown_mission
-		position = 2
-		required_missions = { THE_OKI_Mission_3_1 } 
-		provinces_to_highlight = { 
-			OR = {
-				area = Forest_of_magic
-				area = Forest_edge_state
-				area = Forest_coast_state
-			}
-		 } 
-
-		trigger = {
-			OR = {
-				AND = {
-					FOM = {
-						alliance_with = OKI
-						has_opinion = {
-							who = OKI
-							value = 150
-						}
-						trust = {
-							who = OKI
-							value = 75
-						}
-					}
-				}
-				owns_all_provinces = {
-					OR = {
-						area = Forest_of_magic
-						area = Forest_edge_state
-						area = Forest_coast_state
-					}
-				}
-			}
-		}
-
-		effect = {  } 
-	}
-
-	THE_OKI_Mission_2_3 = {
-		icon = mission_unknown_mission
-		position = 3
-		required_missions = { THE_OKI_Mission_2_2 } 
-		provinces_to_highlight = {
-			OR = {
-				area = Eastern_mountains
-				area = Mayohiga_state
-				area = Ran_state
-			}
-		}
-
-		trigger = {
-				owns_all_provinces = {
-					OR = {
-						area = Eastern_mountains
-						area = Mayohiga_state
-						area = Ran_state
-					}
-				}
-		}
-
-		effect = {
-			country_event = {
-				id = THE_OKI_events.2
-				days = 60
-				random = 30
-			}
-		}
-	}
-
-	THE_OKI_Mission_2_5 = {
-		icon = mission_unknown_mission
-		position = 5
-		required_missions = { THE_OKI_Mission_4_4 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_OKI_Mission_2_6 = {
-		icon = mission_unknown_mission
-		position = 6
-		required_missions = { THE_OKI_Mission_2_5 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_OKI_Mission_2_7 = {
-		icon = mission_unknown_mission
-		position = 7
-		required_missions = { THE_OKI_Mission_2_6 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_OKI_Mission_2_10 = {
-		icon = mission_peasantry
-		position = 10
-		required_missions = { THE_OKI_Mission_3_9 } 
-		provinces_to_highlight = { PROV = 5134 } 
-
-		trigger = { 5134 = { is_core = OKI }  } 
-
-		effect = {
-			if = {  } 
-			country_event = {
-				id = THE_OKI_events.7
-			}
-			if = {  } 
-		}
-	}
-
-	THE_OKI_Mission_2_11 = {
-		icon = mission_unknown_mission
-		position = 11
-		required_missions = { THE_OKI_Mission_2_10 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			num_of_owned_provinces_with = {
-				value = 50
-				OR = {
-					development = 15
-					num_of_buildings_in_province = 1
-				}
-			}
-		}
-
-		effect = {
-			add_country_modifier = {
-				name = "THE_OKI_modifier_3"
-				duration = -1
-				desc = THE_OKI_modifier_3.desc
-				hidden = no
-			}
-		}
-	}
-}
-THE_OKI_Mission_branch_3 = {
-	slot = 3
-	generic = no
-	ai = yes
-	has_country_shield = yes
-	potential = { tag = OKI } 
-
-	THE_OKI_Mission_3_1 = {
-		icon = mission_unknown_mission
-		position = 1
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = { country_event = { 
-			id = THE_OKI_events.1
-			}
-		}
-	}
-
-	THE_OKI_Mission_3_2 = {
-		icon = mission_unknown_mission
-		position = 2
-		required_missions = { THE_OKI_Mission_3_1 } 
-		provinces_to_highlight = { area =  Scarlet_island } 
-
-		trigger = { OKI = { owns_or_non_sovereign_subject_of = 5073 }  } 
-
-		effect = {
-			Scarlet_island = { add_core = FLR } 
-			Hakurei_state = { add_permanent_claim = OKI } 
-			Hakurei_peninsula_state = { add_permanent_claim = OKI } 
-			Hakurei_western_coast = { add_permanent_claim = OKI } 
-		}
-	}
-
-	THE_OKI_Mission_3_3 = {
-		icon = mission_unknown_mission
-		position = 3
-		required_missions = { THE_OKI_Mission_3_2 } 
-		provinces_to_highlight = {
-			OR = {
-				area = Hakurei_state
-				area = Hakurei_peninsula_state
-				area = Hakurei_western_coast
-			}
-		}
-
-		trigger = {
-			OKI = {
-				owns_all_provinces = {
-					OR = {
-					area = Hakurei_state
-					area = Hakurei_peninsula_state
-					area = Hakurei_western_coast
-					}
-				}
-			}
-		}
-
-		effect = {
-			add_power_projection = {
-				type = zim_african_great_power
-				amount = 10
-			}
-			add_adm_power = 150
-			add_dip_power = 150
-			add_mil_power = 150
-		}
-	}
-
-	THE_OKI_Mission_3_4 = {
-		icon = mission_unknown_mission
-		position = 4
-		required_missions = {
-			THE_OKI_Mission_2_3
-			THE_OKI_Mission_3_3
-		}
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {
-			inherit = KSE
-			inherit = MHG
-			add_power_projection = {
-				type = zim_african_great_power
-				amount = 50
-			}
-			add_prestige_or_monarch_power = 50
-			add_country_modifier = {
-				name = "THE_OKI_modifier_4"
-				duration = -1
-				desc = THE_OKI_modifier_4.desc
-				hidden = no
-			}
-		}
-	}
-
-	THE_OKI_Mission_3_5 = {
-		icon = mission_unknown_mission
-		position = 5
-		required_missions = { THE_OKI_Mission_4_4 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_OKI_Mission_3_6 = {
-		icon = mission_unknown_mission
-		position = 6
-		required_missions = { THE_OKI_Mission_3_5 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_OKI_Mission_3_7 = {
-		icon = mission_unknown_mission
-		position = 7
-		required_missions = { THE_OKI_Mission_3_6 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_OKI_Mission_3_8 = {
-		icon = mission_unknown_mission
-		position = 8
-		required_missions = {
-			THE_OKI_Mission_2_7
-			THE_OKI_Mission_3_7
-			THE_OKI_Mission_4_7
-			THE_OKI_Mission_5_7
-		}
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_OKI_Mission_3_9 = {
-		icon = mission_unknown_mission
-		position = 9
-		required_missions = {
-			THE_OKI_Mission_3_4
-			THE_OKI_Mission_3_8
-		}
-		provinces_to_highlight = {  } 
-
-		trigger = { is_great_power = yes } 
-
-		effect = { gensokyo_superregion = { add_permanent_claim = OKI }  } 
-	}
-
-	THE_OKI_Mission_3_11 = {
-		icon = mission_unknown_mission
-		position = 11
-		required_missions = { THE_OKI_Mission_3_9 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			OR = {
-				AND = {
-					total_development = 1500
-					monthly_income = 800
-					prestige = 90
-				}
-				AND = {
-					navy_size = 200
-					prestige = 90
-				}
-				AND = {
-					army_size = 75
-					num_of_owned_provinces_with = {
-						value = 125
-						SUPERREGION = gensokyo_superregion
-					}
-					prestige = 90
-				}
-			}
-		}
-
-		effect = {
-			add_power_projection = {
-				type = zim_african_great_power
-				amount = 25
-			}
-			add_country_modifier = {
-				name = "THE_OKI_modifier_5"
-				duration = -1
-				desc = THE_OKI_modifier_5.desc
-				hidden = no
-			}
-			if = {  } 
-		}
-	}
-
-	THE_OKI_Mission_3_12 = {
-		icon = mission_unknown_mission
-		position = 12
-		required_missions = {
-			THE_OKI_Mission_2_11
-			THE_OKI_Mission_3_11
-			THE_OKI_Mission_4_11
-		}
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			is_hegemon = yes
-		}
-
-		effect = {
-			country_event = {
-				id = THE_OKI_events.8
-			}
-		}
-	}
-}
-THE_OKI_Mission_branch_4 = {
-	slot = 4
-	generic = no
-	ai = yes
-	has_country_shield = yes
-	potential = { tag = OKI } 
-
-	THE_OKI_Mission_4_2 = {
-		icon = mission_unknown_mission
-		position = 2
-		required_missions = { THE_OKI_Mission_3_1 } 
-		provinces_to_highlight = {
-			OR = {
-				area = Fairy_land
-				area = Northern_fairy_land
-			}
-		}
-
-		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 4
-				OR = {
-					area = Fairy_land
-					area = Northern_fairy_land
-				}
-			}
-		}
-
-		effect = {
-			Forest_of_magic = { add_permanent_claim = OKI } 
-			Forest_edge_state = { add_permanent_claim = OKI } 
-			Forest_coast_state = { add_permanent_claim = OKI } 
-			Scarlett_domain = { add_permanent_claim = OKI } 
-			Scarlet_island = { add_permanent_claim = OKI } 
-			Scarlet_mountain = { add_permanent_claim = OKI } 
-		}
-	}
-
-	THE_OKI_Mission_4_3 = {
-		icon = mission_unknown_mission
-		position = 3
-		required_missions = { THE_OKI_Mission_5_2 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_OKI_Mission_4_4 = {
-		icon = mission_unknown_mission
-		position = 4
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  
-			set_country_flag = THE_OKI_unlocked_four_seasons 
-			custom_tooltip = THE_OKI_unlocked_four_seasons
-			add_government_reform = THE_OKI_war_of_free_four_seasons_reform
-		} 
-	}
-
-	THE_OKI_Mission_4_5 = {
-		icon = mission_unknown_mission
-		position = 5
-		required_missions = { THE_OKI_Mission_4_4 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_OKI_Mission_4_6 = {
-		icon = mission_unknown_mission
-		position = 6
-		required_missions = { THE_OKI_Mission_4_5 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_OKI_Mission_4_7 = {
-		icon = mission_unknown_mission
-		position = 7
-		required_missions = { THE_OKI_Mission_4_6 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	THE_OKI_Mission_4_10 = {
-		icon = mission_unknown_mission
-		position = 10
-		required_missions = { THE_OKI_Mission_3_9 } 
-		provinces_to_highlight = {  } 
+# THE_OKI_Mission_branch_1 = {
+# 	slot = 1
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 	potential = { tag = OKI } 
+
+# 	THE_OKI_Mission_1_1 = {
+# 		icon = mission_unknown_mission
+# 		position = 1
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {
+# 			AND = {
+# 				exist = KSE
+# 				KSE = {
+# 					OR = {
+# 						AND = {
+# 							has_opinion = {
+# 								who = OKI
+# 								value = 120
+# 							}
+# 							has_opinion_modifier = {
+# 								who = ROOT
+# 								modifier = sent_gift
+# 							}
+# 							alliance_with = OKI
+# 						}
+# 						vassal_of = OKI
+# 					}
+# 				}
+# 			}
+# 		}
+
+# 		effect = {
+# 			KSE = {
+# 				add_historical_friend = OKI
+# 				add_trust = {
+# 					who = OKI
+# 					value = 25
+# 				}
+# 			}
+# 			OKI = {
+# 				add_historical_friend = KSE
+# 				add_trust = {
+# 					who = KSE
+# 					value = 25
+# 				}
+# 			}
+# 			Great_youkai_forest = { add_permanent_claim = OKI } 
+# 			Eastern_youkai_forest = { add_permanent_claim = OKI } 
+# 		}
+# 	}
+
+# 	THE_OKI_Mission_1_2 = {
+# 		icon = mission_unknown_mission
+# 		position = 2
+# 		required_missions = { THE_OKI_Mission_1_1 } 
+# 		provinces_to_highlight = {
+# 			OR = {
+# 				area = Great_youkai_forest
+# 				area = Eastern_youkai_forest
+# 			}
+# 		}
+
+# 		trigger = {
+# 			OKI = {
+# 				owns_all_provinces = {
+# 					area = Eastern_youkai_forest
+# 				}
+# 			}
+# 			KSE = {
+# 				owns_all_provinces = {
+# 					area = Great_youkai_forest
+# 				}
+# 			}
+# 		}
+
+# 		effect = {
+# 			Great_youkai_forest = { cede_province = KSE } 
+# 			Eastern_youkai_forest = { cede_province = KSE } 
+# 			OKI = { create_march = KSE } 
+# 		}
+# 	}
+
+# 	THE_OKI_Mission_1_4 = {
+# 		icon = mission_dominate_trade_in_aden
+# 		position = 4
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {
+# 			OKI = {
+# 				navy_size_percentage = 0.90
+# 				num_of_light_ship = 3
+# 			}
+# 		}
+
+# 		effect = {
+# 			define_explorer = {
+# 				shock = 0
+# 				fire = 0
+# 				manuever = 5
+# 				siege = 2
+# 			}
+# 			add_country_modifier = {
+# 				name = "THE_OKI_modifier_1"
+# 				duration = 7300
+# 				hidden = no
+# 				desc = THE_OKI_modifier_1.desc
+# 			}
+# 		}
+# 	}
+
+# 	THE_OKI_Mission_1_5 = {
+# 		icon = mission_rhine
+# 		position = 5
+# 		required_missions = { THE_OKI_Mission_1_4 } 
+# 		provinces_to_highlight = {
+# 			area = panama_area
+# 		} 
+
+# 		trigger = {
+# 			OKI = {
+# 				OR = {
+# 					has_discovered = 835
+# 					has_discovered = 2664
+# 					has_discovered = 2819
+# 					has_discovered = 4595
+# 				}
+# 			}
+# 		}
+
+# 		effect = {
+# 			835 = {
+# 				add_core = OKI
+# 				cede_province = OKI
+# 				change_religion = th_hakureishinto
+# 				change_culture = Youkai
+# 				add_base_tax = 3
+# 				add_base_production = 5
+# 				add_base_manpower = 3
+# 			}
+# 		}
+# 	}
+
+# 	THE_OKI_Mission_1_6 = {
+# 		icon = mng_jing_hang_grand_canal
+# 		position = 6
+# 		required_missions = { THE_OKI_Mission_1_5 } 
+# 		provinces_to_highlight = { prov = 835 } 
+
+# 		trigger = {
+# 			treasury = 30000
+# 			owns_or_non_sovereign_subject_of = 835
+# 			835 = {
+# 				AND = {
+# 					num_of_buildings_in_province = 3
+# 					development = 20
+# 					NOT = {
+# 						OR = {
+# 							has_construction = core
+# 							has_construction = culture
+# 							has_construction = building
+# 							has_construction = missionary
+# 							has_construction = army
+# 							has_construction = navy
+# 							has_construction = canal
+# 							has_construction = great_project
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+
+# 		effect = {
+# 			add_great_project = {
+# 				type = panama_canal
+# 				instant = no
+# 			}
+# 			add_treasury = -30000
+# 		}
+# 	}
+
+# 	THE_OKI_Mission_1_10 = {
+# 		icon = mission_unknown_mission
+# 		position = 10
+# 		required_missions = { THE_OKI_Mission_3_9 } 
+# 		provinces_to_highlight = {
+# 			prov = 4987
+# 			prov = 5171
+# 		}
+
+# 		trigger = {
+# 			NOT = {
+# 				OR = {
+# 					exist = MYO
+# 					exist = SNK
+# 				}
+# 			}
+# 			OKI = {
+# 				AND = {
+# 					is_core = 4987
+# 					is_core = 5171
+# 				}
+# 			}
+# 		}
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_OKI_Mission_1_11 = {
+# 		icon = mission_unknown_mission
+# 		position = 11
+# 		required_missions = { THE_OKI_Mission_1_10 } 
+# 		provinces_to_highlight = { prov = 5136 } 
+
+# 		trigger = {
+# 			OKI = { is_core = 5136 } 
+# 			5136 = {
+# 				AND = {
+# 					num_of_buildings_in_province = 3
+# 					development = 30
+# 				}
+# 			}
+# 		}
+
+# 		effect = {  } 
+# 	}
+# }
+# THE_OKI_Mission_branch_2 = {
+# 	slot = 2
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 	potential = { tag = OKI } 
+
+# 	THE_OKI_Mission_2_2 = {
+# 		icon = mission_unknown_mission
+# 		position = 2
+# 		required_missions = { THE_OKI_Mission_3_1 } 
+# 		provinces_to_highlight = { 
+# 			OR = {
+# 				area = Forest_of_magic
+# 				area = Forest_edge_state
+# 				area = Forest_coast_state
+# 			}
+# 		 } 
+
+# 		trigger = {
+# 			OR = {
+# 				AND = {
+# 					FOM = {
+# 						alliance_with = OKI
+# 						has_opinion = {
+# 							who = OKI
+# 							value = 150
+# 						}
+# 						trust = {
+# 							who = OKI
+# 							value = 75
+# 						}
+# 					}
+# 				}
+# 				owns_all_provinces = {
+# 					OR = {
+# 						area = Forest_of_magic
+# 						area = Forest_edge_state
+# 						area = Forest_coast_state
+# 					}
+# 				}
+# 			}
+# 		}
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_OKI_Mission_2_3 = {
+# 		icon = mission_unknown_mission
+# 		position = 3
+# 		required_missions = { THE_OKI_Mission_2_2 } 
+# 		provinces_to_highlight = {
+# 			OR = {
+# 				area = Eastern_mountains
+# 				area = Mayohiga_state
+# 				area = Ran_state
+# 			}
+# 		}
+
+# 		trigger = {
+# 				owns_all_provinces = {
+# 					OR = {
+# 						area = Eastern_mountains
+# 						area = Mayohiga_state
+# 						area = Ran_state
+# 					}
+# 				}
+# 		}
+
+# 		effect = {
+# 			country_event = {
+# 				id = THE_OKI_events.2
+# 				days = 60
+# 				random = 30
+# 			}
+# 		}
+# 	}
+
+# 	THE_OKI_Mission_2_5 = {
+# 		icon = mission_unknown_mission
+# 		position = 5
+# 		required_missions = { THE_OKI_Mission_4_4 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_OKI_Mission_2_6 = {
+# 		icon = mission_unknown_mission
+# 		position = 6
+# 		required_missions = { THE_OKI_Mission_2_5 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_OKI_Mission_2_7 = {
+# 		icon = mission_unknown_mission
+# 		position = 7
+# 		required_missions = { THE_OKI_Mission_2_6 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_OKI_Mission_2_10 = {
+# 		icon = mission_peasantry
+# 		position = 10
+# 		required_missions = { THE_OKI_Mission_3_9 } 
+# 		provinces_to_highlight = { PROV = 5134 } 
+
+# 		trigger = { 5134 = { is_core = OKI }  } 
+
+# 		effect = {
+# 			if = {  } 
+# 			country_event = {
+# 				id = THE_OKI_events.7
+# 			}
+# 			if = {  } 
+# 		}
+# 	}
+
+# 	THE_OKI_Mission_2_11 = {
+# 		icon = mission_unknown_mission
+# 		position = 11
+# 		required_missions = { THE_OKI_Mission_2_10 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {
+# 			num_of_owned_provinces_with = {
+# 				value = 50
+# 				OR = {
+# 					development = 15
+# 					num_of_buildings_in_province = 1
+# 				}
+# 			}
+# 		}
+
+# 		effect = {
+# 			add_country_modifier = {
+# 				name = "THE_OKI_modifier_3"
+# 				duration = -1
+# 				desc = THE_OKI_modifier_3.desc
+# 				hidden = no
+# 			}
+# 		}
+# 	}
+# }
+# THE_OKI_Mission_branch_3 = {
+# 	slot = 3
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 	potential = { tag = OKI } 
+
+# 	THE_OKI_Mission_3_1 = {
+# 		icon = mission_unknown_mission
+# 		position = 1
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = { country_event = { 
+# 			id = THE_OKI_events.1
+# 			}
+# 		}
+# 	}
+
+# 	THE_OKI_Mission_3_2 = {
+# 		icon = mission_unknown_mission
+# 		position = 2
+# 		required_missions = { THE_OKI_Mission_3_1 } 
+# 		provinces_to_highlight = { area =  Scarlet_island } 
+
+# 		trigger = { OKI = { owns_or_non_sovereign_subject_of = 5073 }  } 
+
+# 		effect = {
+# 			Scarlet_island = { add_core = FLR } 
+# 			Hakurei_state = { add_permanent_claim = OKI } 
+# 			Hakurei_peninsula_state = { add_permanent_claim = OKI } 
+# 			Hakurei_western_coast = { add_permanent_claim = OKI } 
+# 		}
+# 	}
+
+# 	THE_OKI_Mission_3_3 = {
+# 		icon = mission_unknown_mission
+# 		position = 3
+# 		required_missions = { THE_OKI_Mission_3_2 } 
+# 		provinces_to_highlight = {
+# 			OR = {
+# 				area = Hakurei_state
+# 				area = Hakurei_peninsula_state
+# 				area = Hakurei_western_coast
+# 			}
+# 		}
+
+# 		trigger = {
+# 			OKI = {
+# 				owns_all_provinces = {
+# 					OR = {
+# 					area = Hakurei_state
+# 					area = Hakurei_peninsula_state
+# 					area = Hakurei_western_coast
+# 					}
+# 				}
+# 			}
+# 		}
+
+# 		effect = {
+# 			add_power_projection = {
+# 				type = zim_african_great_power
+# 				amount = 10
+# 			}
+# 			add_adm_power = 150
+# 			add_dip_power = 150
+# 			add_mil_power = 150
+# 		}
+# 	}
+
+# 	THE_OKI_Mission_3_4 = {
+# 		icon = mission_unknown_mission
+# 		position = 4
+# 		required_missions = {
+# 			THE_OKI_Mission_2_3
+# 			THE_OKI_Mission_3_3
+# 		}
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {
+# 			inherit = KSE
+# 			inherit = MHG
+# 			add_power_projection = {
+# 				type = zim_african_great_power
+# 				amount = 50
+# 			}
+# 			add_prestige_or_monarch_power = 50
+# 			add_country_modifier = {
+# 				name = "THE_OKI_modifier_4"
+# 				duration = -1
+# 				desc = THE_OKI_modifier_4.desc
+# 				hidden = no
+# 			}
+# 		}
+# 	}
+
+# 	THE_OKI_Mission_3_5 = {
+# 		icon = mission_unknown_mission
+# 		position = 5
+# 		required_missions = { THE_OKI_Mission_4_4 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_OKI_Mission_3_6 = {
+# 		icon = mission_unknown_mission
+# 		position = 6
+# 		required_missions = { THE_OKI_Mission_3_5 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_OKI_Mission_3_7 = {
+# 		icon = mission_unknown_mission
+# 		position = 7
+# 		required_missions = { THE_OKI_Mission_3_6 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_OKI_Mission_3_8 = {
+# 		icon = mission_unknown_mission
+# 		position = 8
+# 		required_missions = {
+# 			THE_OKI_Mission_2_7
+# 			THE_OKI_Mission_3_7
+# 			THE_OKI_Mission_4_7
+# 			THE_OKI_Mission_5_7
+# 		}
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_OKI_Mission_3_9 = {
+# 		icon = mission_unknown_mission
+# 		position = 9
+# 		required_missions = {
+# 			THE_OKI_Mission_3_4
+# 			THE_OKI_Mission_3_8
+# 		}
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = { is_great_power = yes } 
+
+# 		effect = { gensokyo_superregion = { add_permanent_claim = OKI }  } 
+# 	}
+
+# 	THE_OKI_Mission_3_11 = {
+# 		icon = mission_unknown_mission
+# 		position = 11
+# 		required_missions = { THE_OKI_Mission_3_9 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {
+# 			OR = {
+# 				AND = {
+# 					total_development = 1500
+# 					monthly_income = 800
+# 					prestige = 90
+# 				}
+# 				AND = {
+# 					navy_size = 200
+# 					prestige = 90
+# 				}
+# 				AND = {
+# 					army_size = 75
+# 					num_of_owned_provinces_with = {
+# 						value = 125
+# 						SUPERREGION = gensokyo_superregion
+# 					}
+# 					prestige = 90
+# 				}
+# 			}
+# 		}
+
+# 		effect = {
+# 			add_power_projection = {
+# 				type = zim_african_great_power
+# 				amount = 25
+# 			}
+# 			add_country_modifier = {
+# 				name = "THE_OKI_modifier_5"
+# 				duration = -1
+# 				desc = THE_OKI_modifier_5.desc
+# 				hidden = no
+# 			}
+# 			if = {  } 
+# 		}
+# 	}
+
+# 	THE_OKI_Mission_3_12 = {
+# 		icon = mission_unknown_mission
+# 		position = 12
+# 		required_missions = {
+# 			THE_OKI_Mission_2_11
+# 			THE_OKI_Mission_3_11
+# 			THE_OKI_Mission_4_11
+# 		}
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {
+# 			is_hegemon = yes
+# 		}
+
+# 		effect = {
+# 			country_event = {
+# 				id = THE_OKI_events.8
+# 			}
+# 		}
+# 	}
+# }
+# THE_OKI_Mission_branch_4 = {
+# 	slot = 4
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 	potential = { tag = OKI } 
+
+# 	THE_OKI_Mission_4_2 = {
+# 		icon = mission_unknown_mission
+# 		position = 2
+# 		required_missions = { THE_OKI_Mission_3_1 } 
+# 		provinces_to_highlight = {
+# 			OR = {
+# 				area = Fairy_land
+# 				area = Northern_fairy_land
+# 			}
+# 		}
+
+# 		trigger = {
+# 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+# 				value = 4
+# 				OR = {
+# 					area = Fairy_land
+# 					area = Northern_fairy_land
+# 				}
+# 			}
+# 		}
+
+# 		effect = {
+# 			Forest_of_magic = { add_permanent_claim = OKI } 
+# 			Forest_edge_state = { add_permanent_claim = OKI } 
+# 			Forest_coast_state = { add_permanent_claim = OKI } 
+# 			Scarlett_domain = { add_permanent_claim = OKI } 
+# 			Scarlet_island = { add_permanent_claim = OKI } 
+# 			Scarlet_mountain = { add_permanent_claim = OKI } 
+# 		}
+# 	}
+
+# 	THE_OKI_Mission_4_3 = {
+# 		icon = mission_unknown_mission
+# 		position = 3
+# 		required_missions = { THE_OKI_Mission_5_2 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_OKI_Mission_4_4 = {
+# 		icon = mission_unknown_mission
+# 		position = 4
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  
+# 			set_country_flag = THE_OKI_unlocked_four_seasons 
+# 			custom_tooltip = THE_OKI_unlocked_four_seasons
+# 			add_government_reform = THE_OKI_war_of_free_four_seasons_reform
+# 		} 
+# 	}
+
+# 	THE_OKI_Mission_4_5 = {
+# 		icon = mission_unknown_mission
+# 		position = 5
+# 		required_missions = { THE_OKI_Mission_4_4 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_OKI_Mission_4_6 = {
+# 		icon = mission_unknown_mission
+# 		position = 6
+# 		required_missions = { THE_OKI_Mission_4_5 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_OKI_Mission_4_7 = {
+# 		icon = mission_unknown_mission
+# 		position = 7
+# 		required_missions = { THE_OKI_Mission_4_6 } 
+# 		provinces_to_highlight = {  } 
+
+# 		trigger = {  } 
+
+# 		effect = {  } 
+# 	}
+
+# 	THE_OKI_Mission_4_10 = {
+# 		icon = mission_unknown_mission
+# 		position = 10
+# 		required_missions = { THE_OKI_Mission_3_9 } 
+# 		provinces_to_highlight = {  } 
 		
-		trigger = {
-			OR = {
-				owns_all_provinces = { culture = Tengu } 
-				# prov = {
-				# 	AND = {
-				# 		NOT = { culture = Tengu } 
-				# 		OR = {
-				# 			superregion = gensokyo_superregion
-				# 			superregion = gensokyo_orbit_superregion
-				# 		}
-				# 	}
-				# }
-				all_owned_province = {
-					NOT = {
-						culture = Tengu
-					}
-				}
-			}
-		}
+# 		trigger = {
+# 			OR = {
+# 				owns_all_provinces = { culture = Tengu } 
+# 				# prov = {
+# 				# 	AND = {
+# 				# 		NOT = { culture = Tengu } 
+# 				# 		OR = {
+# 				# 			superregion = gensokyo_superregion
+# 				# 			superregion = gensokyo_orbit_superregion
+# 				# 		}
+# 				# 	}
+# 				# }
+# 				all_owned_province = {
+# 					NOT = {
+# 						culture = Tengu
+# 					}
+# 				}
+# 			}
+# 		}
 		
-		effect = {
+# 		effect = {
 
-		} 
-	}
+# 		} 
+# 	}
 
-	THE_OKI_Mission_4_11 = {
-		icon = mission_unknown_mission
-		position = 11
-		required_missions = { THE_OKI_Mission_4_10 } 
-		provinces_to_highlight = { prov = 5251 } 
+# 	THE_OKI_Mission_4_11 = {
+# 		icon = mission_unknown_mission
+# 		position = 11
+# 		required_missions = { THE_OKI_Mission_4_10 } 
+# 		provinces_to_highlight = { prov = 5251 } 
 
-		trigger = {
-			5251 = { is_core = OKI } 
-			NOT = { exist = GYK } 
-		}
+# 		trigger = {
+# 			5251 = { is_core = OKI } 
+# 			NOT = { exist = GYK } 
+# 		}
 
-		effect = {
-			add_opinion = {
-				who = OKI
-				modifier = THE_OKI_modifier_7
-				years = 10
-			}
-		}
-	}
-}
-THE_OKI_Mission_branch_5 = {
-	slot = 5
-	generic = no
-	ai = yes
-	has_country_shield = yes
-	potential = { tag = OKI } 
+# 		effect = {
+# 			add_opinion = {
+# 				who = OKI
+# 				modifier = THE_OKI_modifier_7
+# 				years = 10
+# 			}
+# 		}
+# 	}
+# }
+# THE_OKI_Mission_branch_5 = {
+# 	slot = 5
+# 	generic = no
+# 	ai = yes
+# 	has_country_shield = yes
+# 	potential = { tag = OKI } 
 
-	THE_OKI_Mission_5_2 = {
-		icon = mission_unknown_mission
-		position = 2
-		provinces_to_highlight = {  } 
+# 	THE_OKI_Mission_5_2 = {
+# 		icon = mission_unknown_mission
+# 		position = 2
+# 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+# 		trigger = {  } 
 
-		effect = {  } 
-	}
+# 		effect = {  } 
+# 	}
 
-	THE_OKI_Mission_5_3 = {
-		icon = mission_unknown_mission
-		position = 3
-		required_missions = { THE_OKI_Mission_5_2 } 
-		provinces_to_highlight = {  } 
+# 	THE_OKI_Mission_5_3 = {
+# 		icon = mission_unknown_mission
+# 		position = 3
+# 		required_missions = { THE_OKI_Mission_5_2 } 
+# 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+# 		trigger = {  } 
 
-		effect = {  } 
-	}
+# 		effect = {  } 
+# 	}
 
-	THE_OKI_Mission_5_4 = {
-		icon = mission_unknown_mission
-		position = 4
-		required_missions = {
-			THE_OKI_Mission_4_3
-			THE_OKI_Mission_5_3
-		}
-		provinces_to_highlight = {  } 
+# 	THE_OKI_Mission_5_4 = {
+# 		icon = mission_unknown_mission
+# 		position = 4
+# 		required_missions = {
+# 			THE_OKI_Mission_4_3
+# 			THE_OKI_Mission_5_3
+# 		}
+# 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+# 		trigger = {  } 
 
-		effect = {  } 
-	}
+# 		effect = {  } 
+# 	}
 
-	THE_OKI_Mission_5_5 = {
-		icon = mission_unknown_mission
-		position = 5
-		required_missions = { THE_OKI_Mission_4_4 } 
-		provinces_to_highlight = {  } 
+# 	THE_OKI_Mission_5_5 = {
+# 		icon = mission_unknown_mission
+# 		position = 5
+# 		required_missions = { THE_OKI_Mission_4_4 } 
+# 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+# 		trigger = {  } 
 
-		effect = {  } 
-	}
+# 		effect = {  } 
+# 	}
 
-	THE_OKI_Mission_5_6 = {
-		icon = mission_unknown_mission
-		position = 6
-		required_missions = { THE_OKI_Mission_5_5 } 
-		provinces_to_highlight = {  } 
+# 	THE_OKI_Mission_5_6 = {
+# 		icon = mission_unknown_mission
+# 		position = 6
+# 		required_missions = { THE_OKI_Mission_5_5 } 
+# 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+# 		trigger = {  } 
 
-		effect = {  } 
-	}
+# 		effect = {  } 
+# 	}
 
-	THE_OKI_Mission_5_7 = {
-		icon = mission_unknown_mission
-		position = 7
-		required_missions = { THE_OKI_Mission_5_6 } 
-		provinces_to_highlight = {  } 
+# 	THE_OKI_Mission_5_7 = {
+# 		icon = mission_unknown_mission
+# 		position = 7
+# 		required_missions = { THE_OKI_Mission_5_6 } 
+# 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+# 		trigger = {  } 
 
-		effect = {  } 
-	}
+# 		effect = {  } 
+# 	}
 
-	THE_OKI_Mission_5_10 = {
-		icon = mission_secure_khandesh
-		position = 10
-		required_missions = { THE_OKI_Mission_3_9 } 
-		provinces_to_highlight = {  } 
+# 	THE_OKI_Mission_5_10 = {
+# 		icon = mission_secure_khandesh
+# 		position = 10
+# 		required_missions = { THE_OKI_Mission_3_9 } 
+# 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+# 		trigger = {  } 
 
-		effect = {  } 
-	}
-}
+# 		effect = {  } 
+# 	}
+# }
