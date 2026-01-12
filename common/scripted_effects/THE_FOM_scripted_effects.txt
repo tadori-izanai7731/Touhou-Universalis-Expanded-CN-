@@ -19,17 +19,33 @@ THE_FOM_on_startup_scripted_effects = {
 		#
 		MST = {
 			THE_FOM_on_start_random_list_set_influence_effects = {
-				marisa = 10
-				alice = 15
-				us = 2
+				marisa = 25
+				alice = 25
+				us = 0
 			}
 		}
 		#
-		WRG = {
-			THE_FOM_on_start_random_list_set_influence_effects = {
-				marisa = 15
-				alice = 5
-				us = 25
+		if = {
+			limit = {
+				MST = {
+					check_variable = { which = the_fom_forest_influence_is_alice_var value = 50 }
+				}
+			}
+			WRG = {
+				THE_FOM_on_start_random_list_set_influence_effects = {
+					marisa = 0
+					alice = 25
+					us = 0
+				}
+			}
+		}
+		else = {
+			WRG = {
+				THE_FOM_on_start_random_list_set_influence_effects = {
+					marisa = 0
+					alice = 0
+					us = 25
+				}
 			}
 		}
 		set_country_flag = THE_MRS_on_startup_set_variable_flag
@@ -89,13 +105,13 @@ THE_FOM_on_start_random_list_set_influence_effects = {
 		}
 		$alice$ = {
 			set_variable = { which = the_fom_forest_influence_is_marisa_var value = 30 }
-			set_variable = { which = the_fom_forest_influence_is_alice_var value = 30 }
-			set_variable = { which = the_fom_forest_influence_is_our_var value = 50 }
+			set_variable = { which = the_fom_forest_influence_is_alice_var value = 50 }
+			set_variable = { which = the_fom_forest_influence_is_our_var value = 30 }
 		}
 		$us$ = {
 			set_variable = { which = the_fom_forest_influence_is_marisa_var value = 30 }
-			set_variable = { which = the_fom_forest_influence_is_alice_var value = 50 }
-			set_variable = { which = the_fom_forest_influence_is_our_var value = 30 }
+			set_variable = { which = the_fom_forest_influence_is_alice_var value = 30 }
+			set_variable = { which = the_fom_forest_influence_is_our_var value = 50 }
 		}
 	}
 }
