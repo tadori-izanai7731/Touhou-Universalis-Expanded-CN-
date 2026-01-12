@@ -141,9 +141,9 @@ l_english:
  THE_MGT_estate_dolls_pools_power: "人偶容量修正"
  THE_MGT_province_button1_gui: "§O征募人偶军团§!"
  the_alc_dolls_manpower_pools_min_tt: "至少需要1000只§O后备人偶§!"
- THE_MGT_province_button1_gui_tt: "@ALC人偶之森§T后备人偶§!为[Root.Owner.the_alc_dolls_manpower_pools_total.GetValue]只"
+ THE_MGT_province_button1_gui_tt: "@MGT人偶之森§T后备人偶§!为[Root.Owner.the_alc_dolls_manpower_pools_total.GetValue]只"
  THE_MGT_form_of_light_check_dolls: "登台"
- THE_MGT_form_of_light_check_dolls_desc: " @ALC人偶之森:\n§T后备人偶§!为[Root.the_alc_dolls_manpower_pools_total.GetValue]只,\n§T后备人偶回复为§!§O每月§![Root.the_alc_dolls_manpower_pools_start.GetValue]只,\n§T后备人偶上限§!为[Root.the_alc_dolls_manpower_pools_max.GetValue]只\n"
+ THE_MGT_form_of_light_check_dolls_desc: " @MGT人偶之森:\n§T后备人偶§!为[Root.the_alc_dolls_manpower_pools_total.GetValue]只,\n§T后备人偶回复为§!§O每月§![Root.the_alc_dolls_manpower_pools_start.GetValue]只,\n§T后备人偶上限§!为[Root.the_alc_dolls_manpower_pools_max.GetValue]只\n"
 ###MODIFIER_END
 
 ###GOVERNMENT

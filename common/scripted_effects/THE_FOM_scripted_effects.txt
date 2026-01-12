@@ -382,3 +382,100 @@ THE_MGT_random_spawn_infantry_effects = {
 		voc_indiamen_infantry = ROOT
 	}
 }
+
+THE_MGT_monthly_recovery_manpower_dolls_pool_effects = {
+	if = {
+		limit = {
+			OR = {
+				tag = MGT
+				was_tag = MGT
+			}
+			has_government_attribute = enable_making_dolls_crops
+		}
+		########运算
+		#上限
+		export_to_variable = {
+			variable_name = the_alc_dolls_manpower_pools_max
+			value = max_manpower
+		}
+		multiply_variable = {
+			which = the_alc_dolls_manpower_pools_max
+			value = 1000
+		}
+		divide_variable = {
+			which = the_alc_dolls_manpower_pools_max
+			value = 2
+		}
+		#导出上限
+		export_to_variable = {
+			variable_name = the_alc_dolls_manpower_pools_max_modifier
+			value = modifier:THE_MGT_estate_dolls_pools_power
+		}
+		change_variable = {
+			which = the_alc_dolls_manpower_pools_max_modifier
+			value = 1
+		}
+		#上限 乘 修正
+		multiply_variable = {
+			which = the_alc_dolls_manpower_pools_max
+			which = the_alc_dolls_manpower_pools_max_modifier
+		}
+
+		#####
+		#回复
+		export_to_variable = {
+			variable_name = the_alc_dolls_manpower_pools_start
+			value = max_manpower
+		}
+		multiply_variable = {
+			which = the_alc_dolls_manpower_pools_start
+			value = 1000
+		}
+		divide_variable = {
+			which = the_alc_dolls_manpower_pools_start
+			value = 4
+		}
+		#导出上限
+		export_to_variable = {
+			variable_name = the_alc_dolls_manpower_pools_max_modifier
+			value = modifier:THE_MGT_estate_dolls_pools_power
+		}
+		change_variable = {
+			which = the_alc_dolls_manpower_pools_max_modifier
+			value = 1
+		}
+		#上限 乘 修正
+		multiply_variable = {
+			which = the_alc_dolls_manpower_pools_start
+			which = the_alc_dolls_manpower_pools_max_modifier
+		}
+		divide_variable = {
+			which = the_alc_dolls_manpower_pools_start
+			value = 100
+		}
+		#####
+
+		#导出回复
+		export_to_variable = {
+			variable_name = the_alc_dolls_manpower_pools_rescover_modifier
+			value = modifier:THE_MGT_estate_dolls_pools_rescover
+		}
+		change_variable = {
+			which = the_alc_dolls_manpower_pools_rescover_modifier
+			value = 1
+		}
+		#回复 乘 修正
+		multiply_variable = {
+			which = the_alc_dolls_manpower_pools_start
+			which = the_alc_dolls_manpower_pools_rescover_modifier
+		}
+
+
+		######
+		change_variable = {
+			which = the_alc_dolls_manpower_pools_total
+			which = the_alc_dolls_manpower_pools_start
+		}
+	}
+
+}
