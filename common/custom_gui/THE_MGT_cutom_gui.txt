@@ -1,0 +1,50 @@
+custom_button = {
+	name = THE_MGT_province_button1_gui
+	tooltip = THE_MGT_province_button1_gui_tt
+	potential = {
+		owner = {
+			or = {
+				was_tag = MGT
+				tag = MGT
+			}
+			has_government_attribute = enable_making_dolls_crops
+		}
+		owned_by = FROM
+	}
+	trigger = {
+		owner = {
+			custom_trigger_tooltip = {
+				tooltip = the_alc_dolls_manpower_pools_min_tt
+				check_variable = {
+					which = the_alc_dolls_manpower_pools_total
+					value = 1000
+				}
+			}
+		}
+	}
+	effect = {
+		owner = {
+			if = {
+				limit = {
+					not = {
+						has_country_modifier = THE_ALC_base_dolls_corps_buff
+					}
+				}
+				add_country_modifier = {
+					name = THE_ALC_base_dolls_corps_buff
+					duration = -1
+				}
+			}
+			
+		}
+		hidden_effect = {
+			owner = {
+				subtract_variable = {
+					which = the_alc_dolls_manpower_pools_total
+					value = 1000
+				}
+			}
+		}
+		THE_MGT_random_spawn_infantry_effects = yes
+	}
+}

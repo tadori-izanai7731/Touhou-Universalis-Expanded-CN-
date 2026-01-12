@@ -51,20 +51,20 @@
  THE_MST_ideas: "YÀ–ß˜XtõV"
  THE_MST_ideas_start: "YÀ–ß˜X.Oßu"
  THE_MST_ideas_bonus: "YÀ–ß˜XÎ‘ÃV"
- THE_MST_idea_1: "YKNh"
- THE_MST_idea_2: "SYòf"
+ THE_MST_idea_1: "NåwUOEeÿb=fÙ7h„v²`ÀT"
+ THE_MST_idea_2: "—gô•SYòf"
  THE_MST_idea_3: "YÀ–„vçpäpJd"
- THE_MST_idea_4: "1YfÊ†S"
- THE_MST_idea_5: "¢RRVÃV"
- THE_MST_idea_6: "YÀ–KNLk"
- THE_MST_idea_7: ":NêñTPTŠU"
- THE_MST_idea_1_desc: ""
+ THE_MST_idea_4: "àeºNµOîvÿàeºNµO3w"
+ THE_MST_idea_5: "1Yf„vÊ†S"
+ THE_MST_idea_6: "Lk1ŒÿYU^-NÞVó`"
+ THE_MST_idea_7: "Die Lorelei getan"
+ THE_MST_idea_1_desc: "NºN,TÁ‰s|¯e‚„šN„vLkÿI`‰àeïzw–Û÷+ƒÌ‘ÿÃV4Y+owô‹Nn„v²`ÀT0±›N÷ï„vÅeºNÿ±›NïÇ„vÇ¢Rÿ,TNw,TNw1SØV†Negöe„vïÿØV†N‰»S„v¹eT0ïSùRs|¯e‚„šNwŠÿÙNÇ=fQûR8^NÇ„vNµkŒPRb†N···"
  THE_MST_idea_2_desc: ""
- THE_MST_idea_3_desc: ""
- THE_MST_idea_4_desc: ""
+ THE_MST_idea_3_desc: "p‹QSöeÿýww0RN¶RcNw¢uop<r„vfJdÿpÇ»SMbÑS°sck=fYÀ–„vú”PRÿ–Y*`mNO‚Ydknò•Tÿ,TyYô‹äpkQîv×œýw»lYòvÇuÿPëSºNó`wyY±¹p©‹ºN<wòv„výw›R0"
+ THE_MST_idea_4_desc: "s|¯e‚„šNùˆc–Y›R„vLkðXÿI`«ˆºN‰|SVbqSi–„vVFQÿÜÜ,TÁ‰¿OLaÙV²ŽV0T›Õlîh—g„vYÌ‘ÿ±LkðXØ˜NwÿÏP¡lºNacþb„vK„öS0NºNêSSÙYÀ–„vLkÿán=fæpŽNÊ†Ñ`0tS¡lºNó`Çÿ±NÇ=fNêS–Y*`ÿ–ãSüTÙuêñT„vˆmc:NêñTw1Uÿ:NXR(W„vaINw1U0	g¡l	gºN,TÿÈSUO¨Yÿ"
  THE_MST_idea_5_desc: ""
  THE_MST_idea_6_desc: ""
- THE_MST_idea_7_desc: ""
+ THE_MST_idea_7_desc: "®fr‚‰lN»S„vöePÿT›Õlîh—g1SY—b†NNmo4l0h¢hNPWNw*NSsYÿyY„vqVPRLT(W&gçw„vgr‚Ì‘ÿïS1r—VNÏPÝ‹0yY1S±HNËzNwÿVãS1U†N···ŒPRVºN›N¸‹æpŽÿtS	gNwDdºNÃVD›„v›RÏ‘0SS±4Ypeg*NÅeºN0LkðX+oÇegöeÿÖNýV6q1S«ˆÀNHNN‰%eOO†N<O„vêSŒ˜NwªVNwLkðXpÿekŠegŠ‰lÿ²`ÀTŠegŠSm02„kp„vIQŠegŠÜÿhqV„vÑžŠegŠÑÿôv0RgTN¹p®NÿmN«ˆYr‚T†N*Nr^ÀQ0bøváOÅeºN1SÙ7hÿˆm1Y(Wîh—g„vñmY0dkCNLoreleiNb:N···"
  THE_ENK_ideas: "	N4Y¬rKN—gtõV"
  THE_ENK_ideas_start: "	N4Y¬rKN—g.Oßu"
  THE_ENK_ideas_bonus: "	N4Y¬rKN—gÎ‘ÃV"
@@ -139,6 +139,11 @@
 ###MODIFIER
  THE_MGT_estate_dolls_pools_rescover: "ºNvPÄuÅˆ¦^"
  THE_MGT_estate_dolls_pools_power: "ºNvP¹RÏ‘îOck"
+ THE_MGT_province_button1_gui: "§OVßRºNvP›QâV§!"
+ the_alc_dolls_manpower_pools_min_tt: "óS—‰1000êS§OTYºNvP§!"
+ THE_MGT_province_button1_gui_tt: "@ALCºNvPKNîh§TTYºNvP§!:N[Root.Owner.the_alc_dolls_manpower_pools_total.GetValue]êS"
+ THE_MGT_form_of_light_check_dolls: "‰vðS"
+ THE_MGT_form_of_light_check_dolls_desc: " @ALCºNvPKNîh:\n§TTYºNvP§!:N[Root.the_alc_dolls_manpower_pools_total.GetValue]êS,\n§TTYºNvPÞVY:N§!§OÏkg§![Root.the_alc_dolls_manpower_pools_start.GetValue]êS,\n§TTYºNvPNP–§!:N[Root.the_alc_dolls_manpower_pools_max.GetValue]êS\n"
 ###MODIFIER_END
 
 ###GOVERNMENT

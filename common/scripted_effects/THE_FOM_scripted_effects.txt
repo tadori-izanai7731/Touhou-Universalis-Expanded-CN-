@@ -5,7 +5,7 @@ THE_FOM_on_startup_scripted_effects = {
 	if = {
 		limit = { 
 			tag = MRS
-			NOT = { has_country_flag = THE_FOM_on_startup_set_variable_flag }
+			NOT = { has_country_flag = THE_MRS_on_startup_set_variable_flag }
 		}
 		country_event = {
 			id = THE_FOM_flavor_events.1
@@ -32,6 +32,7 @@ THE_FOM_on_startup_scripted_effects = {
 				us = 25
 			}
 		}
+		set_country_flag = THE_MRS_on_startup_set_variable_flag
 	}
 	if = {
 		limit = {
@@ -42,13 +43,41 @@ THE_FOM_on_startup_scripted_effects = {
 				tag = MST
 				tag = WRG
 			}
+			NOT = { has_country_flag = THE_FOM_on_startup_set_variable_flag }
 		}
 		set_variable = {
 			which = the_fom_check_won_rebel_im_var
 			value = 0
 		}
+		set_country_flag = THE_FOM_on_startup_set_variable_flag
 	}
-	set_country_flag = THE_FOM_on_startup_set_variable_flag
+	if = {
+		limit = {
+			tag = MGT
+			NOT = { has_country_flag = THE_MGT_on_startup_set_variable_flag }
+		}
+		set_variable = {
+			which = the_alc_dolls_manpower_pools_start
+			value = 0
+		}
+		set_variable = {
+			which = the_alc_dolls_manpower_pools_total
+			value = 10000
+		}
+		set_variable = {
+			which = the_alc_dolls_manpower_pools_max
+			value = 10000
+		}
+		set_variable = {
+			which = the_alc_dolls_manpower_pools_max_modifier
+			value = 0
+		}
+		set_variable = {
+			which = the_alc_dolls_manpower_pools_rescover_modifier
+			value = 0
+		}
+		NOT = { has_country_flag = THE_MGT_on_startup_set_variable_flag }
+	}
 }
 
 THE_FOM_on_start_random_list_set_influence_effects = {
@@ -195,24 +224,24 @@ THE_FOM_MGT_care_who_influence_by_her_effects = {
 			ENK = {
 				has_country_flag = THE_FOM_youkai_region_desire_for_liberate
 			}
-		 }
-		 custom_tooltip = THE_FOM_MGT_care_who_influence_by_her_effects_c_tt1
+		}
+		custom_tooltip = THE_FOM_MGT_care_who_influence_by_her_effects_c_tt1
 	}
 	if = {
 		limit = {
 			MST = {
 				has_country_flag = THE_FOM_youkai_region_desire_for_liberate
 			}
-		 }
-		 custom_tooltip = THE_FOM_MGT_care_who_influence_by_her_effects_c_tt2
+		}
+		custom_tooltip = THE_FOM_MGT_care_who_influence_by_her_effects_c_tt2
 	}
 	if = {
 		limit = {
 			WRG = {
 				has_country_flag = THE_FOM_youkai_region_desire_for_liberate
 			}
-		 }
-		 custom_tooltip = THE_FOM_MGT_care_who_influence_by_her_effects_c_tt3
+		}
+		custom_tooltip = THE_FOM_MGT_care_who_influence_by_her_effects_c_tt3
 	}
 }
 THE_FOM_care_who_desire_for_liberty_effects = {
@@ -221,24 +250,24 @@ THE_FOM_care_who_desire_for_liberty_effects = {
 			ENK = {
 				has_country_flag = THE_FOM_youkai_region_desire_for_liberate
 			}
-		 }
-		 custom_tooltip = THE_FOM_care_who_desire_for_liberty_effects_c_tt1
+		}
+		custom_tooltip = THE_FOM_care_who_desire_for_liberty_effects_c_tt1
 	}
 	if = {
 		limit = {
 			MST = {
 				has_country_flag = THE_FOM_youkai_region_desire_for_liberate
 			}
-		 }
-		 custom_tooltip = THE_FOM_care_who_desire_for_liberty_effects_c_tt2
+		}
+		custom_tooltip = THE_FOM_care_who_desire_for_liberty_effects_c_tt2
 	}
 	if = {
 		limit = {
 			WRG = {
 				has_country_flag = THE_FOM_youkai_region_desire_for_liberate
 			}
-		 }
-		 custom_tooltip = THE_FOM_care_who_desire_for_liberty_effects_c_tt3
+		}
+		custom_tooltip = THE_FOM_care_who_desire_for_liberty_effects_c_tt3
 	}
 }
 
@@ -274,13 +303,66 @@ THE_FOM_alice_give_tooltip_effects = {
 
 THE_FOM_fow_forest_error_option_effects = {
 	hidden_effect = {
-			change_variable = {
-				which = the_fom_check_error_in_forest_sounds_im_var
-				value = 1
-			}
-			country_event = {
-				id = THE_FOM_flavor_events.25
-				days = yes
+		change_variable = {
+			which = the_fom_check_error_in_forest_sounds_im_var
+			value = 1
+		}
+		country_event = {
+			id = THE_FOM_flavor_events.25
+			days = yes
+		}
+	}
+}
+
+THE_MGT_random_spawn_infantry_effects = {
+	owner = {
+		change_variable = {
+			which = THE_MGT_random_spawn_infantry_random_var
+			value = 1
+		}
+	}
+	if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_infantry_random_var value = 9 } } }
+		mercenary_infantry = ROOT
+		owner = {
+			set_variable = {
+				which = THE_MGT_random_spawn_infantry_random_var
+				value = 0
 			}
 		}
+	}
+	else_if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_infantry_random_var value = 8 } } }
+		cawa_infantry = ROOT
+	}
+	else_if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_infantry_random_var value = 7 } } }
+		cossack_infantry = ROOT
+	}
+	else_if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_infantry_random_var value = 6 } } }
+		rajput_infantry = ROOT
+	}
+	else_if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_infantry_random_var value = 5 } } }
+		carolean_infantry = ROOT
+	}
+	else_if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_infantry_random_var value = 4 } } }
+		tercio_infantry = ROOT
+	}
+	else_if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_infantry_random_var value = 3 } } }
+		samurai_infantry = ROOT
+	}
+	else_if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_infantry_random_var value = 2 } } }
+		streltsy_infantry = ROOT
+	}
+	else_if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_infantry_random_var value = 1 } } }
+		musketeer_infantry = ROOT
+		#
+		voc_indiamen_infantry = ROOT
+	}
 }

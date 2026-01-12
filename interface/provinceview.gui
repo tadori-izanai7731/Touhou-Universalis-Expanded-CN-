@@ -676,7 +676,16 @@ guiTypes = {
 				clicksound = "click"
 				scripted = yes
 			}
-
+			##THE_MGT 
+			guiButtonType = {
+				name = THE_MGT_province_button1_gui
+				position = { x = 375 y = 207 }
+				quadTextureSprite = "GFX_THE_MGT_making_dolls_button"
+				# buttonText = THE_MGT_province_button1_gui_tt
+				buttonFont = "vic_18"
+				clicksound = "click"
+				scripted = yes
+			}
 			### Core
 
 
