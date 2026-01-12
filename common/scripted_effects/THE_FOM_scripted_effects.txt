@@ -391,6 +391,12 @@ THE_MGT_monthly_recovery_manpower_dolls_pool_effects = {
 				was_tag = MGT
 			}
 			has_government_attribute = enable_making_dolls_crops
+			NOT = {
+				check_variable = {
+					which = the_alc_dolls_manpower_pools_total
+					which = the_alc_dolls_manpower_pools_max
+				}
+			}
 		}
 		########运算
 		#上限
