@@ -5,7 +5,7 @@ THE_FOM_on_startup_scripted_effects = {
 	if = {
 		limit = { 
 			tag = MRS
-			NOT = { has_country_flag = THE_FOM_on_startup_set_variable_flag }
+			NOT = { has_country_flag = THE_MRS_on_startup_set_variable_flag }
 		}
 		country_event = {
 			id = THE_FOM_flavor_events.1
@@ -19,19 +19,36 @@ THE_FOM_on_startup_scripted_effects = {
 		#
 		MST = {
 			THE_FOM_on_start_random_list_set_influence_effects = {
-				marisa = 10
-				alice = 15
-				us = 2
+				marisa = 25
+				alice = 25
+				us = 0
 			}
 		}
 		#
-		WRG = {
-			THE_FOM_on_start_random_list_set_influence_effects = {
-				marisa = 15
-				alice = 5
-				us = 25
+		if = {
+			limit = {
+				MST = {
+					check_variable = { which = the_fom_forest_influence_is_alice_var value = 50 }
+				}
+			}
+			WRG = {
+				THE_FOM_on_start_random_list_set_influence_effects = {
+					marisa = 0
+					alice = 25
+					us = 0
+				}
 			}
 		}
+		else = {
+			WRG = {
+				THE_FOM_on_start_random_list_set_influence_effects = {
+					marisa = 0
+					alice = 0
+					us = 25
+				}
+			}
+		}
+		set_country_flag = THE_MRS_on_startup_set_variable_flag
 	}
 	if = {
 		limit = {
@@ -42,13 +59,41 @@ THE_FOM_on_startup_scripted_effects = {
 				tag = MST
 				tag = WRG
 			}
+			NOT = { has_country_flag = THE_FOM_on_startup_set_variable_flag }
 		}
 		set_variable = {
 			which = the_fom_check_won_rebel_im_var
 			value = 0
 		}
+		set_country_flag = THE_FOM_on_startup_set_variable_flag
 	}
-	set_country_flag = THE_FOM_on_startup_set_variable_flag
+	if = {
+		limit = {
+			tag = MGT
+			NOT = { has_country_flag = THE_MGT_on_startup_set_variable_flag }
+		}
+		set_variable = {
+			which = the_alc_dolls_manpower_pools_start
+			value = 0
+		}
+		set_variable = {
+			which = the_alc_dolls_manpower_pools_total
+			value = 10000
+		}
+		set_variable = {
+			which = the_alc_dolls_manpower_pools_max
+			value = 10000
+		}
+		set_variable = {
+			which = the_alc_dolls_manpower_pools_max_modifier
+			value = 0
+		}
+		set_variable = {
+			which = the_alc_dolls_manpower_pools_rescover_modifier
+			value = 0
+		}
+		NOT = { has_country_flag = THE_MGT_on_startup_set_variable_flag }
+	}
 }
 
 THE_FOM_on_start_random_list_set_influence_effects = {
@@ -60,13 +105,13 @@ THE_FOM_on_start_random_list_set_influence_effects = {
 		}
 		$alice$ = {
 			set_variable = { which = the_fom_forest_influence_is_marisa_var value = 30 }
-			set_variable = { which = the_fom_forest_influence_is_alice_var value = 30 }
-			set_variable = { which = the_fom_forest_influence_is_our_var value = 50 }
+			set_variable = { which = the_fom_forest_influence_is_alice_var value = 50 }
+			set_variable = { which = the_fom_forest_influence_is_our_var value = 30 }
 		}
 		$us$ = {
 			set_variable = { which = the_fom_forest_influence_is_marisa_var value = 30 }
-			set_variable = { which = the_fom_forest_influence_is_alice_var value = 50 }
-			set_variable = { which = the_fom_forest_influence_is_our_var value = 30 }
+			set_variable = { which = the_fom_forest_influence_is_alice_var value = 30 }
+			set_variable = { which = the_fom_forest_influence_is_our_var value = 50 }
 		}
 	}
 }
@@ -195,24 +240,24 @@ THE_FOM_MGT_care_who_influence_by_her_effects = {
 			ENK = {
 				has_country_flag = THE_FOM_youkai_region_desire_for_liberate
 			}
-		 }
-		 custom_tooltip = THE_FOM_MGT_care_who_influence_by_her_effects_c_tt1
+		}
+		custom_tooltip = THE_FOM_MGT_care_who_influence_by_her_effects_c_tt1
 	}
 	if = {
 		limit = {
 			MST = {
 				has_country_flag = THE_FOM_youkai_region_desire_for_liberate
 			}
-		 }
-		 custom_tooltip = THE_FOM_MGT_care_who_influence_by_her_effects_c_tt2
+		}
+		custom_tooltip = THE_FOM_MGT_care_who_influence_by_her_effects_c_tt2
 	}
 	if = {
 		limit = {
 			WRG = {
 				has_country_flag = THE_FOM_youkai_region_desire_for_liberate
 			}
-		 }
-		 custom_tooltip = THE_FOM_MGT_care_who_influence_by_her_effects_c_tt3
+		}
+		custom_tooltip = THE_FOM_MGT_care_who_influence_by_her_effects_c_tt3
 	}
 }
 THE_FOM_care_who_desire_for_liberty_effects = {
@@ -221,24 +266,24 @@ THE_FOM_care_who_desire_for_liberty_effects = {
 			ENK = {
 				has_country_flag = THE_FOM_youkai_region_desire_for_liberate
 			}
-		 }
-		 custom_tooltip = THE_FOM_care_who_desire_for_liberty_effects_c_tt1
+		}
+		custom_tooltip = THE_FOM_care_who_desire_for_liberty_effects_c_tt1
 	}
 	if = {
 		limit = {
 			MST = {
 				has_country_flag = THE_FOM_youkai_region_desire_for_liberate
 			}
-		 }
-		 custom_tooltip = THE_FOM_care_who_desire_for_liberty_effects_c_tt2
+		}
+		custom_tooltip = THE_FOM_care_who_desire_for_liberty_effects_c_tt2
 	}
 	if = {
 		limit = {
 			WRG = {
 				has_country_flag = THE_FOM_youkai_region_desire_for_liberate
 			}
-		 }
-		 custom_tooltip = THE_FOM_care_who_desire_for_liberty_effects_c_tt3
+		}
+		custom_tooltip = THE_FOM_care_who_desire_for_liberty_effects_c_tt3
 	}
 }
 
@@ -274,13 +319,169 @@ THE_FOM_alice_give_tooltip_effects = {
 
 THE_FOM_fow_forest_error_option_effects = {
 	hidden_effect = {
-			change_variable = {
-				which = the_fom_check_error_in_forest_sounds_im_var
-				value = 1
-			}
-			country_event = {
-				id = THE_FOM_flavor_events.25
-				days = yes
+		change_variable = {
+			which = the_fom_check_error_in_forest_sounds_im_var
+			value = 1
+		}
+		country_event = {
+			id = THE_FOM_flavor_events.25
+			days = yes
+		}
+	}
+}
+
+THE_MGT_random_spawn_infantry_effects = {
+	owner = {
+		change_variable = {
+			which = THE_MGT_random_spawn_infantry_random_var
+			value = 1
+		}
+	}
+	if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_infantry_random_var value = 9 } } }
+		mercenary_infantry = ROOT
+		owner = {
+			set_variable = {
+				which = THE_MGT_random_spawn_infantry_random_var
+				value = 0
 			}
 		}
+	}
+	else_if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_infantry_random_var value = 8 } } }
+		cawa_infantry = ROOT
+	}
+	else_if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_infantry_random_var value = 7 } } }
+		cossack_infantry = ROOT
+	}
+	else_if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_infantry_random_var value = 6 } } }
+		rajput_infantry = ROOT
+	}
+	else_if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_infantry_random_var value = 5 } } }
+		carolean_infantry = ROOT
+	}
+	else_if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_infantry_random_var value = 4 } } }
+		tercio_infantry = ROOT
+	}
+	else_if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_infantry_random_var value = 3 } } }
+		samurai_infantry = ROOT
+	}
+	else_if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_infantry_random_var value = 2 } } }
+		streltsy_infantry = ROOT
+	}
+	else_if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_infantry_random_var value = 1 } } }
+		musketeer_infantry = ROOT
+		#
+		voc_indiamen_infantry = ROOT
+	}
+}
+
+THE_MGT_monthly_recovery_manpower_dolls_pool_effects = {
+	if = {
+		limit = {
+			OR = {
+				tag = MGT
+				was_tag = MGT
+			}
+			has_government_attribute = enable_making_dolls_crops
+			NOT = {
+				check_variable = {
+					which = the_alc_dolls_manpower_pools_total
+					which = the_alc_dolls_manpower_pools_max
+				}
+			}
+		}
+		########运算
+		#上限
+		export_to_variable = {
+			variable_name = the_alc_dolls_manpower_pools_max
+			value = max_manpower
+		}
+		multiply_variable = {
+			which = the_alc_dolls_manpower_pools_max
+			value = 1000
+		}
+		divide_variable = {
+			which = the_alc_dolls_manpower_pools_max
+			value = 2
+		}
+		#导出上限
+		export_to_variable = {
+			variable_name = the_alc_dolls_manpower_pools_max_modifier
+			value = modifier:THE_MGT_estate_dolls_pools_power
+		}
+		change_variable = {
+			which = the_alc_dolls_manpower_pools_max_modifier
+			value = 1
+		}
+		#上限 乘 修正
+		multiply_variable = {
+			which = the_alc_dolls_manpower_pools_max
+			which = the_alc_dolls_manpower_pools_max_modifier
+		}
+
+		#####
+		#回复
+		export_to_variable = {
+			variable_name = the_alc_dolls_manpower_pools_start
+			value = max_manpower
+		}
+		multiply_variable = {
+			which = the_alc_dolls_manpower_pools_start
+			value = 1000
+		}
+		divide_variable = {
+			which = the_alc_dolls_manpower_pools_start
+			value = 4
+		}
+		#导出上限
+		export_to_variable = {
+			variable_name = the_alc_dolls_manpower_pools_max_modifier
+			value = modifier:THE_MGT_estate_dolls_pools_power
+		}
+		change_variable = {
+			which = the_alc_dolls_manpower_pools_max_modifier
+			value = 1
+		}
+		#上限 乘 修正
+		multiply_variable = {
+			which = the_alc_dolls_manpower_pools_start
+			which = the_alc_dolls_manpower_pools_max_modifier
+		}
+		divide_variable = {
+			which = the_alc_dolls_manpower_pools_start
+			value = 100
+		}
+		#####
+
+		#导出回复
+		export_to_variable = {
+			variable_name = the_alc_dolls_manpower_pools_rescover_modifier
+			value = modifier:THE_MGT_estate_dolls_pools_rescover
+		}
+		change_variable = {
+			which = the_alc_dolls_manpower_pools_rescover_modifier
+			value = 1
+		}
+		#回复 乘 修正
+		multiply_variable = {
+			which = the_alc_dolls_manpower_pools_start
+			which = the_alc_dolls_manpower_pools_rescover_modifier
+		}
+
+
+		######
+		change_variable = {
+			which = the_alc_dolls_manpower_pools_total
+			which = the_alc_dolls_manpower_pools_start
+		}
+	}
+
 }

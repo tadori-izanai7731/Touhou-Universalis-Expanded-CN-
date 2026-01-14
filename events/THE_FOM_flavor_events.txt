@@ -142,7 +142,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 10
+			factor = 100
 		}
 	}
 	option = {
@@ -587,11 +587,19 @@ country_event = {
 		custom_tooltip = empty_line_tt
 		custom_tooltip = THE_FOM_flavor_events_15_c_tt3
 		THE_FOM_MGT_care_who_influence_by_her_effects = yes
+		hidden_effect = {
+			MRS = {
+				country_event = {
+					id = THE_FOM_flavor_events.17
+					days = 2
+				}
+			}
+		}
 		trigger = {
 			
 		}
 		ai_chance = {
-			factor = 100
+			factor = 1000
 			modifier = {
 				factor = 0
 				NOT = {
@@ -671,10 +679,18 @@ country_event = {
 				}
 			}
 		}
-		THE_FOM_alice_marriage_with_marisa_effect = yes
+		MGT = {
+			THE_FOM_alice_marriage_with_marisa_effect = yes
+		}
+		ai_chance = {
+			factor = 100
+		}
 	}
 	option = {
 		name = THE_FOM_flavor_events.17.2
+		ai_chance = {
+			factor = 0
+		}
 	}
 }
 

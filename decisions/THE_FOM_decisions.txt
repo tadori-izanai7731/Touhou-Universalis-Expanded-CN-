@@ -38,8 +38,8 @@ country_decisions = {
 			else_if = {
 				limit = {
 					tag = MGT
-				 }
-				 inherit = MRS
+				}
+				inherit = MRS
 			}
 			add_prestige = 25
 			hidden_effect = {
@@ -60,11 +60,28 @@ country_decisions = {
 				change_tag = FOM
 				swap_free_idea_group = yes
 				swap_non_generic_missions = yes
-				change_color = {
-					27
-					120
-					68
+				if = {
+					limit = {
+						was_tag = MGT
+					}
+					change_country_color = {
+						color = {
+							255
+							255
+							218
+						}
+					}
 				}
+				else = {
+					change_country_color = {
+						color = {
+							27
+							120
+							68
+						}
+					}
+				}
+				
 			}
 		}
 	}
