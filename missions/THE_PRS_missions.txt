@@ -1,0 +1,195 @@
+THE_PRS_mission_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = PRS } 
+
+	THE_PRS_mission_1_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_PRS_mission_2_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_PRS_mission_1_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_PRS_mission_1_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_PRS_mission_1_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { THE_PRS_mission_1_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_PRS_mission_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = PRS } 
+
+	THE_PRS_mission_2_1 = {
+		icon = mission_unknown_mission
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_PRS_mission_2_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_PRS_mission_2_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_PRS_mission_2_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_PRS_mission_2_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_PRS_mission_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = PRS } 
+
+	THE_PRS_mission_3_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_PRS_mission_2_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_PRS_mission_3_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_PRS_mission_2_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_PRS_mission_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = PRS } 
+
+	THE_PRS_mission_4_1 = {
+		icon = mission_unknown_mission
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_PRS_mission_4_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = {
+			THE_PRS_mission_2_1
+			THE_PRS_mission_4_1
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_PRS_mission_4_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = {
+			THE_PRS_mission_3_3
+			THE_PRS_mission_4_2
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_PRS_mission_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = PRS } 
+
+	THE_PRS_mission_5_1 = {
+		icon = mission_unknown_mission
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_PRS_mission_5_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = {
+			THE_PRS_mission_4_2
+			THE_PRS_mission_5_1
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_PRS_mission_5_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { THE_PRS_mission_5_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
