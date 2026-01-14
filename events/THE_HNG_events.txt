@@ -214,13 +214,13 @@ country_event = {
 		}
 	}
 	
-	after = {
-		hidden_effect = {
-			country_event = {
-				id = THE_HNG_power_var_events.6
-			}
-		}
-	}
+	# after = {
+	# 	hidden_effect = {
+	# 		country_event = {
+	# 			id = THE_HNG_power_var_events.6
+	# 		}
+	# 	}
+	# }
 }
 
 #妖怪武士集结
