@@ -1,262 +1,262 @@
 namespace = THE_HNG_power_var_events
 
-#行政讨债
-country_event = {
-	id = THE_HNG_power_var_events.1
-	title = "THE_HNG_power_var_events.1.t"
-	desc = "THE_HNG_power_var_events.1.desc"
-	picture = YUKARI2_eventPicture
+# #行政讨债
+# country_event = {
+# 	id = THE_HNG_power_var_events.1
+# 	title = "THE_HNG_power_var_events.1.t"
+# 	desc = "THE_HNG_power_var_events.1.desc"
+# 	picture = YUKARI2_eventPicture
 	
-	is_triggered_only = yes
-	option = {
-		name = THE_HNG_power_var_events.1.a
-		add_country_modifier = {
-			name = THE_HNG_adm_collapse
-			duration = 10950
-		}
-	}
-}
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = THE_HNG_power_var_events.1.a
+# 		add_country_modifier = {
+# 			name = THE_HNG_adm_collapse
+# 			duration = 10950
+# 		}
+# 	}
+# }
 
-#外交讨债
-country_event = {
-	id = THE_HNG_power_var_events.2
-	title = "THE_HNG_power_var_events.2.t"
-	desc = "THE_HNG_power_var_events.2.desc"
-	picture = YUKARI2_eventPicture
+# #外交讨债
+# country_event = {
+# 	id = THE_HNG_power_var_events.2
+# 	title = "THE_HNG_power_var_events.2.t"
+# 	desc = "THE_HNG_power_var_events.2.desc"
+# 	picture = YUKARI2_eventPicture
 	
-	is_triggered_only = yes
-	option = {
-		name = THE_HNG_power_var_events.2.a
-		add_country_modifier = {
-			name = THE_HNG_dip_collapse
-			duration = 10950
-		}
-	}
-}
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = THE_HNG_power_var_events.2.a
+# 		add_country_modifier = {
+# 			name = THE_HNG_dip_collapse
+# 			duration = 10950
+# 		}
+# 	}
+# }
 
-#军事讨债
-country_event = {
-	id = THE_HNG_power_var_events.3
-	title = "THE_HNG_power_var_events.3.t"
-	desc = "THE_HNG_power_var_events.3.desc"
-	picture = YUKARI2_eventPicture
+# #军事讨债
+# country_event = {
+# 	id = THE_HNG_power_var_events.3
+# 	title = "THE_HNG_power_var_events.3.t"
+# 	desc = "THE_HNG_power_var_events.3.desc"
+# 	picture = YUKARI2_eventPicture
 	
-	is_triggered_only = yes
-	option = {
-		name = THE_HNG_power_var_events.3.a
-		add_country_modifier = {
-			name = THE_HNG_mil_collapse
-			duration = 10950
-		}
-	}
-}
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = THE_HNG_power_var_events.3.a
+# 		add_country_modifier = {
+# 			name = THE_HNG_mil_collapse
+# 			duration = 10950
+# 		}
+# 	}
+# }
 
-#行政点债务翻倍隐藏事件
-country_event = {
-	id = THE_HNG_power_var_events.4
-	title = "THE_HNG_power_var_events.4.t"
-	desc = "THE_HNG_power_var_events.4.desc"
+# #行政点债务翻倍隐藏事件
+# country_event = {
+# 	id = THE_HNG_power_var_events.4
+# 	title = "THE_HNG_power_var_events.4.t"
+# 	desc = "THE_HNG_power_var_events.4.desc"
 	
-	is_triggered_only = yes
-	hidden = yes
-	trigger = {
-		had_country_flag = {
-			flag = THE_HNG_adm_power_var_negative_flag
-			days = 7299
-		}
-		NOT = {
-			check_variable = {
-				which = the_hng_adm_power_var
-				value = 0
-			}
-		}
-	}
-	immediate = {
-		country_event = {
-			id = THE_HNG_power_var_events.5
-		}
-	}
-	option = {
-		name = THE_HNG_power_var_events.4.a
-	}
-}
+# 	is_triggered_only = yes
+# 	hidden = yes
+# 	trigger = {
+# 		had_country_flag = {
+# 			flag = THE_HNG_adm_power_var_negative_flag
+# 			days = 7299
+# 		}
+# 		NOT = {
+# 			check_variable = {
+# 				which = the_hng_adm_power_var
+# 				value = 0
+# 			}
+# 		}
+# 	}
+# 	immediate = {
+# 		country_event = {
+# 			id = THE_HNG_power_var_events.5
+# 		}
+# 	}
+# 	option = {
+# 		name = THE_HNG_power_var_events.4.a
+# 	}
+# }
 
-#行政点债务翻倍事件
-country_event = {
-	id = THE_HNG_power_var_events.5
-	title = "THE_HNG_power_var_events.5.t"
-	desc = "THE_HNG_power_var_events.5.desc"
-	picture = YUKARI_eventPicture
+# #行政点债务翻倍事件
+# country_event = {
+# 	id = THE_HNG_power_var_events.5
+# 	title = "THE_HNG_power_var_events.5.t"
+# 	desc = "THE_HNG_power_var_events.5.desc"
+# 	picture = YUKARI_eventPicture
 	
-	is_triggered_only = yes
-	immediate = {
-		hidden_effect = {
-			clr_country_flag = THE_HNG_adm_power_var_negative_flag
-			THE_HNG_change_power_variable = {
-				which = adm
-				value = 2
-				type = multiply
-			}
-		}
-	}
-	option = {
-		name = THE_HNG_power_var_events.5.a
-		tooltip = {
-			THE_HNG_change_power_variable = {
-				which = adm
-				value = 2
-				type = multiply
-			}
-		}
-	}
-}
+# 	is_triggered_only = yes
+# 	immediate = {
+# 		hidden_effect = {
+# 			clr_country_flag = THE_HNG_adm_power_var_negative_flag
+# 			THE_HNG_change_power_variable = {
+# 				which = adm
+# 				value = 2
+# 				type = multiply
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = THE_HNG_power_var_events.5.a
+# 		tooltip = {
+# 			THE_HNG_change_power_variable = {
+# 				which = adm
+# 				value = 2
+# 				type = multiply
+# 			}
+# 		}
+# 	}
+# }
 
-#外交点债务翻倍隐藏事件
-country_event = {
-	id = THE_HNG_power_var_events.6
-	title = "THE_HNG_power_var_events.6.t"
-	desc = "THE_HNG_power_var_events.6.desc"
+# #外交点债务翻倍隐藏事件
+# country_event = {
+# 	id = THE_HNG_power_var_events.6
+# 	title = "THE_HNG_power_var_events.6.t"
+# 	desc = "THE_HNG_power_var_events.6.desc"
 	
-	is_triggered_only = yes
-	hidden = yes
-	trigger = {
-		had_country_flag = {
-			flag = THE_HNG_dip_power_var_negative_flag
-			days = 7299
-		}
-		NOT = {
-			check_variable = {
-				which = the_hng_dip_power_var
-				value = 0
-			}
-		}
-	}
-	immediate = {
-		country_event = {
-			id = THE_HNG_power_var_events.6
-		}
-	}
-	option = {
-		name = THE_HNG_power_var_events.6.a
-	}
-}
+# 	is_triggered_only = yes
+# 	hidden = yes
+# 	trigger = {
+# 		had_country_flag = {
+# 			flag = THE_HNG_dip_power_var_negative_flag
+# 			days = 7299
+# 		}
+# 		NOT = {
+# 			check_variable = {
+# 				which = the_hng_dip_power_var
+# 				value = 0
+# 			}
+# 		}
+# 	}
+# 	immediate = {
+# 		country_event = {
+# 			id = THE_HNG_power_var_events.6
+# 		}
+# 	}
+# 	option = {
+# 		name = THE_HNG_power_var_events.6.a
+# 	}
+# }
 
-#外交点债务翻倍事件
-country_event = {
-	id = THE_HNG_power_var_events.7
-	title = "THE_HNG_power_var_events.7.t"
-	desc = "THE_HNG_power_var_events.7.desc"
-	picture = YUKARI_eventPicture
+# #外交点债务翻倍事件
+# country_event = {
+# 	id = THE_HNG_power_var_events.7
+# 	title = "THE_HNG_power_var_events.7.t"
+# 	desc = "THE_HNG_power_var_events.7.desc"
+# 	picture = YUKARI_eventPicture
 	
-	is_triggered_only = yes
-	immediate = {
-		hidden_effect = {
-			clr_country_flag = THE_HNG_dip_power_var_negative_flag
-			THE_HNG_change_power_variable = {
-				which = dip
-				value = 2
-				type = multiply
-			}
-		}
-	}
-	option = {
-		name = THE_HNG_power_var_events.7.a
-		tooltip = {
-			THE_HNG_change_power_variable = {
-				which = dip
-				value = 2
-				type = multiply
-			}
-		}
-	}
-}
+# 	is_triggered_only = yes
+# 	immediate = {
+# 		hidden_effect = {
+# 			clr_country_flag = THE_HNG_dip_power_var_negative_flag
+# 			THE_HNG_change_power_variable = {
+# 				which = dip
+# 				value = 2
+# 				type = multiply
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = THE_HNG_power_var_events.7.a
+# 		tooltip = {
+# 			THE_HNG_change_power_variable = {
+# 				which = dip
+# 				value = 2
+# 				type = multiply
+# 			}
+# 		}
+# 	}
+# }
 
-#军事点债务翻倍隐藏事件
-country_event = {
-	id = THE_HNG_power_var_events.8
-	title = "THE_HNG_power_var_events.8.t"
-	desc = "THE_HNG_power_var_events.8.desc"
+# #军事点债务翻倍隐藏事件
+# country_event = {
+# 	id = THE_HNG_power_var_events.8
+# 	title = "THE_HNG_power_var_events.8.t"
+# 	desc = "THE_HNG_power_var_events.8.desc"
 	
-	is_triggered_only = yes
-	hidden = yes
-	trigger = {
-		had_country_flag = {
-			flag = THE_HNG_mil_power_var_negative_flag
-			days = 7299
-		}
-		NOT = {
-			check_variable = {
-				which = the_hng_mil_power_var
-				value = 0
-			}
-		}
-	}
-	immediate = {
-		country_event = {
-			id = THE_HNG_power_var_events.9
-		}
-	}
-	option = {
-		name = THE_HNG_power_var_events.8.a
-	}
-}
+# 	is_triggered_only = yes
+# 	hidden = yes
+# 	trigger = {
+# 		had_country_flag = {
+# 			flag = THE_HNG_mil_power_var_negative_flag
+# 			days = 7299
+# 		}
+# 		NOT = {
+# 			check_variable = {
+# 				which = the_hng_mil_power_var
+# 				value = 0
+# 			}
+# 		}
+# 	}
+# 	immediate = {
+# 		country_event = {
+# 			id = THE_HNG_power_var_events.9
+# 		}
+# 	}
+# 	option = {
+# 		name = THE_HNG_power_var_events.8.a
+# 	}
+# }
 
-#军事点债务翻倍事件
-country_event = {
-	id = THE_HNG_power_var_events.9
-	title = "THE_HNG_power_var_events.9.t"
-	desc = "THE_HNG_power_var_events.9.desc"
-	picture = YUKARI_eventPicture
+# #军事点债务翻倍事件
+# country_event = {
+# 	id = THE_HNG_power_var_events.9
+# 	title = "THE_HNG_power_var_events.9.t"
+# 	desc = "THE_HNG_power_var_events.9.desc"
+# 	picture = YUKARI_eventPicture
 	
-	is_triggered_only = yes
-	immediate = {
-		hidden_effect = {
-			clr_country_flag = THE_HNG_mil_power_var_negative_flag
-			THE_HNG_change_power_variable = {
-				which = mil
-				value = 2
-				type = multiply
-			}
-		}
-	}
-	option = {
-		name = THE_HNG_power_var_events.9.a
-		tooltip = {
-			THE_HNG_change_power_variable = {
-				which = mil
-				value = 2
-				type = multiply
-			}
-		}
-	}
-}
+# 	is_triggered_only = yes
+# 	immediate = {
+# 		hidden_effect = {
+# 			clr_country_flag = THE_HNG_mil_power_var_negative_flag
+# 			THE_HNG_change_power_variable = {
+# 				which = mil
+# 				value = 2
+# 				type = multiply
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = THE_HNG_power_var_events.9.a
+# 		tooltip = {
+# 			THE_HNG_change_power_variable = {
+# 				which = mil
+# 				value = 2
+# 				type = multiply
+# 			}
+# 		}
+# 	}
+# }
 
-#全点数都被讨债事件
-country_event = {
-	id = THE_HNG_power_var_events.10
-	title = "THE_HNG_power_var_events.10.t"
-	desc = "THE_HNG_power_var_events.10.desc"
-	fire_only_once = yes
-	picture = YUKARI2_eventPicture
+# #全点数都被讨债事件
+# country_event = {
+# 	id = THE_HNG_power_var_events.10
+# 	title = "THE_HNG_power_var_events.10.t"
+# 	desc = "THE_HNG_power_var_events.10.desc"
+# 	fire_only_once = yes
+# 	picture = YUKARI2_eventPicture
 	
-	trigger = {
-		has_country_modifier = THE_HNG_adm_collapse
-		has_country_modifier = THE_HNG_dip_collapse
-		has_country_modifier = THE_HNG_mil_collapse
-		NOT = { has_country_modifier = THE_HNG_HNG_all_collapse }
-	}
+# 	trigger = {
+# 		has_country_modifier = THE_HNG_adm_collapse
+# 		has_country_modifier = THE_HNG_dip_collapse
+# 		has_country_modifier = THE_HNG_mil_collapse
+# 		NOT = { has_country_modifier = THE_HNG_HNG_all_collapse }
+# 	}
 	
-	option = {
-		name = THE_HNG_power_var_events.10.a
-		remove_country_modifier = THE_HNG_adm_collapse
-		remove_country_modifier = THE_HNG_dip_collapse
-		remove_country_modifier = THE_HNG_mil_collapse	
-		add_country_modifier = {
-			name = THE_HNG_HNG_all_collapse
-			duration = -1
-		}	
-	}
-}
+# 	option = {
+# 		name = THE_HNG_power_var_events.10.a
+# 		remove_country_modifier = THE_HNG_adm_collapse
+# 		remove_country_modifier = THE_HNG_dip_collapse
+# 		remove_country_modifier = THE_HNG_mil_collapse	
+# 		add_country_modifier = {
+# 			name = THE_HNG_HNG_all_collapse
+# 			duration = -1
+# 		}	
+# 	}
+# }
 
 #选择点数类型事件
 country_event = {
@@ -1028,39 +1028,39 @@ country_event = {
 }
 
 #气之充沛
-country_event = {
-	id = THE_HNG_power_var_events.18
-	title = "THE_HNG_power_var_events.18.t"
-	desc = "THE_HNG_power_var_events.18.desc"
-	fire_only_once = yes
-	picture = MEILING_eventPicture
+# country_event = {
+# 	id = THE_HNG_power_var_events.18
+# 	title = "THE_HNG_power_var_events.18.t"
+# 	desc = "THE_HNG_power_var_events.18.desc"
+# 	fire_only_once = yes
+# 	picture = MEILING_eventPicture
 	
-	trigger = {
-		adm_power = 800
-		dip_power = 800
-		mil_power = 800
-		is_variable_equal = {
-			which = the_hng_adm_power_var
-			value = 300
-		}
-		is_variable_equal = {
-			which = the_hng_dip_power_var
-			value = 300
-		}
-		is_variable_equal = {
-			which = the_hng_mil_power_var
-			value = 300
-		}
-	}
+# 	trigger = {
+# 		adm_power = 800
+# 		dip_power = 800
+# 		mil_power = 800
+# 		is_variable_equal = {
+# 			which = the_hng_adm_power_var
+# 			value = 300
+# 		}
+# 		is_variable_equal = {
+# 			which = the_hng_dip_power_var
+# 			value = 300
+# 		}
+# 		is_variable_equal = {
+# 			which = the_hng_mil_power_var
+# 			value = 300
+# 		}
+# 	}
 	
-	option = {
-		name = THE_HNG_power_var_events.18.a
-		add_country_modifier = {
-			name = THE_HNG_all_qi_power_full
-			duration = -1
-		}
-	}
-}
+# 	option = {
+# 		name = THE_HNG_power_var_events.18.a
+# 		add_country_modifier = {
+# 			name = THE_HNG_all_qi_power_full
+# 			duration = -1
+# 		}
+# 	}
+# }
 
 #开局设置美铃气之变量隐藏事件
 country_event = {

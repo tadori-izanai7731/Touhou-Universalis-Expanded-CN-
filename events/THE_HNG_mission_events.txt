@@ -24,10 +24,7 @@ country_event = {
 		remove_country_modifier = THE_hng_mission_modifier2
 		if = {
 			limit = { 
-				OR ={
-				NOT = { has_country_flag = hng_do_the_change3_flag } 
 				NOT = { has_country_modifier = THE_HNG_believe_your_country }
-				}
 			}
 			add_country_modifier = {
 				name = THE_hng_mission_modifier3
@@ -1418,31 +1415,6 @@ country_event = {
 			duration = -1
 		}
 	}
-	option = {
-		name = flavor_THE_HNG_mission_events.41.c
-		trigger = {
-			has_country_flag = hng_do_the_change3_flag
-		}
-		add_country_modifier = {
-			name = THE_hng_mission_modifier79
-			duration = -1
-		}
-		add_country_modifier = {
-			name = THE_hng_mission_modifier78
-			duration = -1
-		}
-		hidden_effect = {
-			every_known_country = {
-				limit = {
-					capital_scope = { continent = gensokyo_continent }
-					is_subject = no
-				}
-				country_event = {
-					id = flavor_THE_HNG_mission_events.42
-				}
-			}
-		}
-	}
 }
 
 country_event = {
@@ -2533,40 +2505,35 @@ country_event = {
 	desc = "flavor_THE_HNG_mission_events.60.desc"
 	picture = THE_HNG_mission1
 	is_triggered_only = yes
-
+	
 	option = {
 		name = flavor_THE_HNG_mission_events.60.a
 		hidden_effect = {
-				remove_country_modifier = THE_hng_mission_modifier24 
-			}
-		add_country_modifier = {
-				name = THE_hng_mission_modifier24
-				duration = -1
-			}
+			remove_country_modifier = THE_hng_mission_modifier24 
 		}
-
-	option = {
-			name = flavor_THE_HNG_mission_events.60.b
-			hidden_effect = {
-					remove_country_modifier = THE_hng_mission_modifier24
-				}
-			add_country_modifier = {
-					name = THE_hng_mission_modifier145
-					duration = -1
-				}
-			}
-	option = {
-				name = flavor_THE_HNG_mission_events.60.c
-				trigger = {
-					has_country_flag = hng_do_the_change1_flag 
-				}
-				hidden_effect = {
-						remove_country_modifier = THE_hng_mission_modifier24
-					}
-				add_country_modifier = {
-						name = THE_hng_mission_modifier146
-						duration = -1
-					}
-			}
-		
+		add_country_modifier = {
+			name = THE_hng_mission_modifier24
+			duration = -1
+		}
 	}
+	option = {
+		name = flavor_THE_HNG_mission_events.60.b
+		hidden_effect = {
+			remove_country_modifier = THE_hng_mission_modifier24
+		}
+		add_country_modifier = {
+			name = THE_hng_mission_modifier145
+			duration = -1
+		}
+	}
+	option = {
+		name = flavor_THE_HNG_mission_events.60.c
+		hidden_effect = {
+			remove_country_modifier = THE_hng_mission_modifier24
+		}
+		add_country_modifier = {
+			name = THE_hng_mission_modifier146
+			duration = -1
+		}
+	}
+}
