@@ -22,11 +22,10 @@ THE_MRS_1_stage_branch_2 = {
 
 		trigger = { 	
 			alliance_with = MGT
-			marriage_with = MGT
 			MGT = {
 				has_opinion = {
 					who = ROOT
-					value = 100
+					value = 75
 				}
 			}
 		 } 
@@ -51,14 +50,14 @@ THE_MRS_1_stage_branch_2 = {
 					value = 10
 				}
 			}
-			HKR = {
-				add_historical_rival = ROOT
+			MGT = {
+				add_historical_friend = ROOT
 			}
-			add_historical_rival = HKR
+			add_historical_friend = MGT
 			hidden_effect = {
 				remove_historical_friend = HKR
 				HKR = {
-					remove_historical_friend = MRS
+					remove_historical_friend = ROOT
 				}
 			}
 		 } 
@@ -188,10 +187,10 @@ THE_MRS_1_stage_branch_4 = {
 					value = 5
 				}
 			}
-			MGT = {
-				add_historical_rival = ROOT
+			HKR = {
+				add_historical_friend = MRS
 			}
-			add_historical_rival = MGT
+			add_historical_friend = HKR
 			hidden_effect = {
 				remove_historical_friend = MGT
 				MGT = {
