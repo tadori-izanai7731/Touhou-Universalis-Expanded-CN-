@@ -13,7 +13,7 @@ THE_PRI_poltergeist_luna_order = {
 					alliance_with = ROOT
 					marriage_with = ROOT
 					overlord_of = ROOT
-					has_truce = ROOT
+					truce_with = ROOT
 				}
 			}
 		}
@@ -33,11 +33,7 @@ THE_PRI_poltergeist_luna_order = {
 		local_core_creation = -0.15
 	}
 	ai_priority = {
-		factor = 5
-		modifier = {
-			factor = 0
-			owner = { NOT = { adm_power = 200 } }
-		}
+		factor = 10
 	}
 	localization = THE_PRI_music_stage
 }
@@ -57,7 +53,7 @@ THE_PRI_poltergeist_star_order = {
 					alliance_with = ROOT
 					marriage_with = ROOT
 					overlord_of = ROOT
-					has_truce = ROOT
+					truce_with = ROOT
 				}
 			}
 		}
@@ -77,11 +73,7 @@ THE_PRI_poltergeist_star_order = {
 		allowed_num_of_buildings = 1
 	}
 	ai_priority = {
-		factor = 5
-		modifier = {
-			factor = 0
-			owner = { NOT = { dip_power = 200 } }
-		}
+		factor = 10
 	}
 	localization = THE_PRI_music_stage
 }
@@ -101,7 +93,7 @@ THE_PRI_poltergeist_sun_order = {
 					alliance_with = ROOT
 					marriage_with = ROOT
 					overlord_of = ROOT
-					has_truce = ROOT
+					truce_with = ROOT
 				}
 			}
 		}
@@ -121,11 +113,7 @@ THE_PRI_poltergeist_sun_order = {
 		local_friendly_movement_speed = 0.2
 	}
 	ai_priority = {
-		factor = 5
-		modifier = {
-			factor = 0
-			owner = { NOT = { mil_power = 200 } }
-		}
+		factor = 10
 	}
 	localization = THE_PRI_music_stage
 }
@@ -150,7 +138,7 @@ THE_PRI_fairy_luna_order = {
 		local_religious_conversion_resistance = 1.0
 	}
 	ai_priority = {
-		factor = 5
+		factor = 1
 	}
 	localization = THE_PRI_music_stage
 }
@@ -175,7 +163,7 @@ THE_PRI_fairy_star_order = {
 		local_build_time = -0.2
 	}
 	ai_priority = {
-		factor = 5
+		factor = 1
 	}
 	localization = THE_PRI_music_stage
 }
@@ -200,7 +188,7 @@ THE_PRI_fairy_sun_order = {
 		local_garrison_size = 0.3
 	}
 	ai_priority = {
-		factor = 5
+		factor = 1
 	}
 	localization = THE_PRI_music_stage
 }

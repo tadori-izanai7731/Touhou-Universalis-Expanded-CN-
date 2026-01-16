@@ -103,7 +103,7 @@ THE_PRI_order_per_province_scripted_effect = {
 				has_reform = THE_PRI_yougakudan_mirai_reform
 				mission_completed = THE_PRI_mission_2_5
 			}
-			add_accepted_culture = ROOT
+			add_accepted_culture = PREV
 		}
 	}
 }
