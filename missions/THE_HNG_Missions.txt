@@ -92,11 +92,7 @@ THE_HNG_1_1 = {
 	
 	potential = { 
 		tag = HNG 
-		OR = { 
-			has_country_flag = hng_do_the_change1_flag
-			has_country_flag = hng_do_the_change2_flag
-			has_country_flag = hng_do_the_change3_flag
-		}
+		has_country_flag = hng_do_the_change1_flag
 	} 
 	
 	THE_HNG_1_1_2 = {
@@ -166,15 +162,9 @@ THE_HNG_1_1 = {
 				id = flavor_THE_HNG_mission_events.2
 				effect_tooltip = "
 					custom_tooltip = THE_HNG_EXTRA_remove_modifier2_tt
-					if = {
-						limit = { NOT = { has_country_flag = hng_do_the_change3_flag } }
-						add_country_modifier = {
-							name = THE_hng_mission_modifier3
-							duration = -1
-						}
-					}
-					else = {
-						add_treasury = 200
+					add_country_modifier = {
+						name = THE_hng_mission_modifier3
+						duration = -1
 					}
 				"
 			}
@@ -601,11 +591,7 @@ THE_HNG_1_2 = {
 	
 	potential = { 
 		tag = HNG 
-		OR = { 
-			has_country_flag = hng_do_the_change1_flag
-			has_country_flag = hng_do_the_change2_flag
-			has_country_flag = hng_do_the_change3_flag
-		}
+		has_country_flag = hng_do_the_change1_flag
 	} 
 	
 	THE_HNG_1_2_4 = {
@@ -1182,11 +1168,7 @@ THE_HNG_1_3 = {
 	
 	potential = { 
 		tag = HNG 
-		OR = { 
-			has_country_flag = hng_do_the_change1_flag
-			has_country_flag = hng_do_the_change2_flag
-			has_country_flag = hng_do_the_change3_flag
-		}
+		has_country_flag = hng_do_the_change1_flag
 	} 
 	
 	THE_HNG_1_3_2 = {
@@ -1378,37 +1360,12 @@ THE_HNG_1_3 = {
 			th_increase_ruler_dip_stat = {
 				dip = 1
 			}
-			add_splendor = 800
-			if = {
-				limit = {
-					has_country_flag = hng_do_the_change1_flag
-				}
-				add_years_of_income = 1
-				add_manpower = 1
-			}
-			if = {
-				limit = {
-					has_country_flag = hng_do_the_change2_flag
-				}
-				custom_tooltip = MUG_more_chance_for_elephants
-				set_country_flag = MUG_more_chance_for_elephants_flag
-				add_country_modifier = {
-					name = THE_hng_mission_modifier141
-					duration = 18250
-				}
-			}
-			if = {
-				limit = {
-					has_country_flag = hng_do_the_change3_flag
-				}
-				add_years_of_income = 1
-				add_manpower = 1
-				custom_tooltip = MUG_more_chance_for_elephants
-				set_country_flag = MUG_more_chance_for_elephants_flag
-				add_country_modifier = {
-					name = THE_hng_mission_modifier141
-					duration = 18250
-				}
+			add_splendor = 200
+			custom_tooltip = MUG_more_chance_for_elephants
+			set_country_flag = MUG_more_chance_for_elephants_flag
+			add_country_modifier = {
+				name = THE_hng_mission_modifier141
+				duration = 18250
 			}
 			indo_china_region = {
 				limit = {
@@ -1699,11 +1656,7 @@ THE_HNG_1_4 = {
 	
 	potential = { 
 		tag = HNG 
-		OR = { 
-			has_country_flag = hng_do_the_change1_flag
-			has_country_flag = hng_do_the_change2_flag
-			has_country_flag = hng_do_the_change3_flag
-		}
+		has_country_flag = hng_do_the_change1_flag
 	} 
 	
 	THE_HNG_1_4_4 = {
@@ -1973,38 +1926,17 @@ THE_HNG_1_4 = {
 		position = 14
 		
 		trigger = { 
-			if = {
-				limit = {
-					has_country_flag = hng_do_the_change1_flag
+			OR = {
+				AND = {
+					is_emperor_of_china = yes
+					has_disaster = the_hng_disasters_one
+					has_estate_privilege = THE_HNG_not_believe
 				}
-				OR = {
-					AND = {
-						is_emperor_of_china = yes
-						has_disaster = the_hng_disasters_one
-						has_estate_privilege = THE_HNG_not_believe
-					}
-					AND = {
-						has_country_modifier = THE_HNG_more_efficient_land_system
-						has_country_modifier = THE_HNG_strict_and_complete_economic
-						has_country_modifier = THE_HNG_modernization_gensokyo_army
-					}
+				AND = {
+					has_country_modifier = THE_HNG_more_efficient_land_system
+					has_country_modifier = THE_HNG_strict_and_complete_economic
+					has_country_modifier = THE_HNG_modernization_gensokyo_army
 				}
-			}
-			if = {
-				limit = {
-					has_country_flag = hng_do_the_change2_flag
-				}
-				has_country_modifier = hng_army_come_from_gensokyo
-				has_estate_privilege = THE_HNG_not_believe 
-			}
-			if = {
-				limit = {
-					has_country_flag = hng_do_the_change3_flag
-				}
-				has_country_modifier = THE_HNG_more_efficient_land_system
-				has_country_modifier = THE_HNG_strict_and_complete_economic
-				has_country_modifier = THE_HNG_modernization_gensokyo_army
-				is_year = 1547
 			}
 			estate_loyalty = {
 				estate = all
@@ -2090,11 +2022,7 @@ THE_HNG_1_5 = {
 	
 	potential = { 
 		tag = HNG 
-		OR = { 
-			has_country_flag = hng_do_the_change1_flag
-			has_country_flag = hng_do_the_change2_flag
-			has_country_flag = hng_do_the_change3_flag
-		}
+		has_country_flag = hng_do_the_change1_flag
 	} 
 	
 	THE_HNG_1_5_2 = {
@@ -3963,20 +3891,9 @@ THE_HNG_2_3 = {
 					set_meritocracy = 100
 				}
 			}
-			if = {
-				limit = {
-					NOT = { has_country_flag = 	hng_do_the_change3_flag }
-				}
-				add_country_modifier = {
-					name = THE_hng_mission_modifier74
-					duration = 10950
-				}
-			}
-			else = {
-				add_country_modifier = {
-					name = THE_hng_mission_modifier139
-					duration = -1
-				}
+			add_country_modifier = {
+				name = THE_hng_mission_modifier74
+				duration = 10950
 			}
 		} 
 	}

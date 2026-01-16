@@ -54,7 +54,7 @@ aristocracy_ideas = {
 	
 
 	ai_will_do = {
-		factor = 3.75
+		factor = 3
 		
 		modifier = {
 			factor = 1.25
@@ -126,7 +126,7 @@ plutocracy_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 3.75
+		factor = 3
 		
 		modifier = {
 			factor = 1.25
@@ -187,7 +187,7 @@ horde_gov_ideas = {
 	}
 	
 	ai_will_do = {
-		factor = 8
+		factor = 6
 		modifier = {
 			factor = 1.5
 			personality = ai_militarist 
@@ -235,7 +235,7 @@ theocracy_gov_ideas = {
 		prestige_from_land = 0.5
 	}
 	ai_will_do = {
-		factor = 3.75
+		factor = 3
 		modifier = {
 			factor = 0
 			has_idea_group = humanist_ideas
@@ -298,7 +298,7 @@ indigenous_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 10
+		factor = 8
 	}
 }
 
@@ -625,9 +625,9 @@ offensive_ideas = {
 	#}
 
 	ai_will_do = {
-		factor = 3.51
+		factor = 3
 		modifier = {
-			factor = 1.1
+			factor = 0.9
 			has_global_modifier_value = {
 				which = discipline 
 				value = 0.1
@@ -766,14 +766,14 @@ defensive_ideas = {
 	ai_will_do = {
 		factor = 2.5
 		modifier = {
-			factor = 1.1
+			factor = 0.9
 			has_global_modifier_value = {
 				which = land_morale  
 				value = 0.2
 			}
 		}
 		modifier = {
-			factor = 1.1
+			factor = 0.9
 			has_global_modifier_value = {
 				which = defensiveness  
 				value = 0.2
@@ -1272,7 +1272,7 @@ quality_ideas = {
 	ai_will_do = {
 		factor = 3.5
 		modifier = {
-			factor = 2
+			factor = 0.8
 			has_strong_mil_national_ideas = yes 
 		}
 		modifier = { 
@@ -1280,7 +1280,7 @@ quality_ideas = {
 			NOT = { monthly_mil = 8 }
 		}
 		modifier = { 
-			factor = 1.05
+			factor = 0.9
 			is_great_power = yes 
 		}
 		modifier = { 
@@ -1299,7 +1299,7 @@ quality_ideas = {
 			}
 		}
 		modifier = { 
-			factor = 1.25
+			factor = 0.9
 			OR = { 
 				has_global_modifier_value = { 
 					which = infantry_power 
@@ -1365,7 +1365,7 @@ quantity_ideas = {
 	ai_will_do = {
 		factor = 3.5
 		modifier = {
-			factor = 2
+			factor = 0.8
 			has_strong_mil_national_ideas = yes 
 		}
 		modifier = { 
@@ -1373,7 +1373,7 @@ quantity_ideas = {
 			NOT = { monthly_mil = 8 }
 		}
 		modifier = { 
-			factor = 1.05
+			factor = 0.9
 			is_great_power = yes 
 		}
 		modifier = { 
@@ -1385,7 +1385,7 @@ quantity_ideas = {
 			personality = ai_militarist  
 		}
 		modifier = { 
-			factor = 1.25
+			factor = 0.9
 			OR = { 
 				has_global_modifier_value = { 
 					which = global_manpower_modifier 
@@ -1727,7 +1727,7 @@ naval_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.45
+		factor = 3
 		modifier = {
 			factor = 0
 			is_tribal = yes
@@ -1742,12 +1742,8 @@ naval_ideas = {
 			NOT = { is_colonial_nation = yes }
 		}
 		modifier = {
-			factor = 0.31
+			factor = 0.5
 			NOT = { num_of_ports = 10 }
-		}
-		modifier = {
-			factor = 0.31
-			num_of_cities = 50
 		}
 
 		modifier = {
