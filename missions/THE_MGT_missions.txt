@@ -1,0 +1,490 @@
+THE_MGT_minor_2_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MGT } 
+
+	THE_MGT_2_1 = {
+		icon = mission_unknown_mission
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_MGT_minor_3_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MGT } 
+
+	THE_MGT_3_1 = {
+		icon = mission_unknown_mission
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_MGT_3_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = {
+			THE_MGT_2_1
+			THE_MGT_3_1
+			THE_MGT_4_1
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = { 
+			hidden_effect = {
+				set_country_flag = THE_MGT_mission_unlock_main_flag
+			}
+			swap_non_generic_missions = yes
+		 } 
+	}
+}
+THE_MGT_minor_4_branch_2 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MGT } 
+
+	THE_MGT_4_1 = {
+		icon = mission_unknown_mission
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_MGT_minor_5_branch_2 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MGT } 
+
+}
+THE_MGT_main_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MGT has_country_flag = THE_MGT_mission_unlock_main_flag } 
+
+	THE_MGT_1_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_MGT_1_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { THE_MGT_1_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_MGT_1_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_MGT_1_7 = {
+		icon = mission_unknown_mission
+		position = 7
+		required_missions = {
+			THE_MGT_1_6
+			THE_MGT_2_6
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_MGT_main_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MGT has_country_flag = THE_MGT_mission_unlock_main_flag } 
+
+	THE_MGT_2_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_MGT_2_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = {
+			THE_MGT_2_3
+			THE_MGT_1_4
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_MGT_2_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = { THE_MGT_2_5 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_MGT_2_8 = {
+		icon = mission_unknown_mission
+		position = 8
+		required_missions = { THE_MGT_1_7 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_MGT_2_9 = {
+		icon = mission_unknown_mission
+		position = 9
+		required_missions = { THE_MGT_2_8 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_MGT_main_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MGT has_country_flag = THE_MGT_mission_unlock_main_flag } 
+
+	THE_MGT_3_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_MGT_3_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_MGT_3_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_MGT_main_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MGT has_country_flag = THE_MGT_mission_unlock_main_flag } 
+
+	THE_MGT_mission_4_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_MGT_mission_4_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { THE_MGT_mission_4_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_MGT_mission_4_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = { THE_MGT_mission_4_5 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_MGT_mission_4_8 = {
+		icon = mission_unknown_mission
+		position = 8
+		required_missions = { THE_MGT_mission_5_7 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_MGT_mission_4_9 = {
+		icon = mission_unknown_mission
+		position = 9
+		required_missions = { THE_MGT_mission_4_8 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_MGT_main_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MGT has_country_flag = THE_MGT_mission_unlock_main_flag } 
+
+	THE_MGT_mission_5_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_MGT_mission_5_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { THE_MGT_mission_5_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_MGT_mission_5_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = {
+			THE_MGT_mission_5_4
+			THE_MGT_mission_4_5
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_MGT_mission_5_7 = {
+		icon = mission_unknown_mission
+		position = 7
+		required_missions = { THE_MGT_mission_5_6 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_MGT_minor_step1_branch_b1 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MGT has_country_flag = THE_MGT_mission_unlock_main_flag has_country_flag = THE_MGT_mission_unlock_step1_b1_flag } 
+
+	THE_MGT_minor_step1_3_6_b1 = {
+		icon = mission_unknown_mission
+		position = 6
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_MGT_minor_step1_branch_b2 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MGT has_country_flag = THE_MGT_mission_unlock_main_flag has_country_flag = THE_MGT_mission_unlock_step1_b2_flag } 
+
+	THE_MGT_minor_step1_3_6_b2 = {
+		icon = mission_unknown_mission
+		position = 6
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_MGT_minor_step1_branch_lock = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MGT has_country_flag = THE_MGT_mission_unlock_main_flag NOT = { has_country_flag = THE_MGT_mission_unlock_step1_b1_flag } NOT = { has_country_flag = THE_MGT_mission_unlock_step1_b2_flag } } 
+
+	THE_MGT_minor_step1_3_6_lock = {
+		icon = mission_unknown_mission
+		position = 6
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_MGT_minor_step2_branch_b1 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MGT has_country_flag = THE_MGT_mission_unlock_main_flag has_country_flag = THE_MGT_mission_unlock_step2_b1_flag } 
+
+	THE_MGT_minor_step2_3_7_b1 = {
+		icon = mission_unknown_mission
+		position = 7
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_MGT_minor_step2_branch_b2 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MGT has_country_flag = THE_MGT_mission_unlock_main_flag has_country_flag = THE_MGT_mission_unlock_step2_b2_flag } 
+
+	THE_MGT_minor_step2_3_7_b2 = {
+		icon = mission_unknown_mission
+		position = 7
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_MGT_minor_step2_branch_lock = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MGT has_country_flag = THE_MGT_mission_unlock_main_flag NOT = { has_country_flag = THE_MGT_mission_unlock_step2_b1_flag } NOT = { has_country_flag = THE_MGT_mission_unlock_step2_b2_flag } } 
+
+	THE_MGT_minor_step2_3_7_lock = {
+		icon = mission_unknown_mission
+		position = 7
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_MGT_minor_step3_branch_b1 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MGT has_country_flag = THE_MGT_mission_unlock_main_flag  has_country_flag = THE_MGT_mission_unlock_step3_b1_flag } 
+
+	THE_MGT_minor_step3_3_9_b1 = {
+		icon = mission_unknown_mission
+		position = 9
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_MGT_minor_step3_branch_b2 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MGT has_country_flag = THE_MGT_mission_unlock_main_flag has_country_flag = THE_MGT_mission_unlock_step3_b2_flag } 
+
+	THE_MGT_minor_step3_3_9_b2 = {
+		icon = mission_unknown_mission
+		position = 9
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_MGT_minor_step3_branch_lock = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MGT has_country_flag = THE_MGT_mission_unlock_main_flag NOT = { has_country_flag = THE_MGT_mission_unlock_step3_b1_flag } NOT = { has_country_flag = THE_MGT_mission_unlock_step3_b1_flag } }
+
+	THE_MGT_minor_step3_3_9_lock = {
+		icon = mission_unknown_mission
+		position = 9
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
