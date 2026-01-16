@@ -207,13 +207,13 @@ mission_xiaomian_buff = {
 #}
 #宗教霸权
 kko_religions_hegemony1 = {
-    global_regiment_cost = 0.10
-    prestige = -0.5
+    prestige = 0.5
+    land_morale = 0.05
 }
 #丧失宗教权威
 kko_religions_hegemony2 = {
-    prestige = 0.5
-    land_morale = 0.05
+    global_regiment_cost = 0.10
+    prestige = -0.5
 }
 ##邻国希望丧失
 kko_hopless_neighbours_buff = {
