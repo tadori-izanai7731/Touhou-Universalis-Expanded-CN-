@@ -9,6 +9,12 @@ country_decisions = {
 			}
 		}
 		allow = {
+			if = {
+				limit = {
+					tag = MGT
+				 }
+				 NOT = { exists = MRS }
+			}
 			OR = {
 				MRS = {
 					is_subject_of = ROOT

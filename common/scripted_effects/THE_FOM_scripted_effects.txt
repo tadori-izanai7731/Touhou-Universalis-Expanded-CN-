@@ -329,8 +329,18 @@ THE_FOM_fow_forest_error_option_effects = {
 		}
 	}
 }
-
-THE_MGT_random_spawn_infantry_effects = {
+THE_MGT_random_spawn_infantry_2_effects = {
+	if = {
+		limit = {
+			mission_completed = THE_MGT_mission_5_4
+		 }
+		 THE_MGT_random_spawn_infantry_1_effects = yes
+	}
+	else = {
+		mercenary_infantry = ROOT
+	}
+}
+THE_MGT_random_spawn_infantry_1_effects = {
 	owner = {
 		change_variable = {
 			which = THE_MGT_random_spawn_infantry_random_var
@@ -378,8 +388,6 @@ THE_MGT_random_spawn_infantry_effects = {
 	else_if = {
 		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_infantry_random_var value = 1 } } }
 		musketeer_infantry = ROOT
-		#
-		voc_indiamen_infantry = ROOT
 	}
 }
 
@@ -484,4 +492,38 @@ THE_MGT_monthly_recovery_manpower_dolls_pool_effects = {
 		}
 	}
 
+}
+
+THE_MGT_on_battle_won_divide_manpower_effect = {
+	if = {
+		limit = { 
+			tag = MGT
+			has_government_attribute = THE_MGT_back_to_white_and_void_reform_mechanic
+		}
+		FROM = {
+			export_to_variable = {
+				variable_name = the_mgt_divide_enemy_manpower_won_battle_var
+				who = MGT
+				value = land_forcelimit
+			}
+			divide_variable = {
+				which = the_mgt_divide_enemy_manpower_won_battle_var
+				value = 10
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = the_mgt_divide_enemy_manpower_won_battle_var
+						value = 1
+					}
+				 }
+				 add_manpower = -1
+				 change_variable = {
+					which = the_mgt_divide_enemy_manpower_won_battle_var
+					value = -1
+				 }
+			}
+		}
+		
+	}
 }

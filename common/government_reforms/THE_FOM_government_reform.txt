@@ -111,6 +111,7 @@ THE_MGT_eternal_radiance_reform = {
 	}
 	modifiers = {
 		morale_damage = 0.05
+		mercenary_discipline = 0.05
 	}
 	government_abilities = {
 		THE_MGT_eternal_radiance_reform_mechanic
@@ -167,5 +168,27 @@ THE_FOM_Witch_marisa_conquer_and_expand_territories = {
 	}
 	custom_attributes = {
 		THE_FOM_enable_ae_break_through_the_encirclement_network_MRS = yes
+	}
+}
+
+#
+THE_MGT_back_to_white_and_void_reform = {
+	lock_level_when_selected = yes
+	icon = "witch_government_reform"
+	potential = {
+		OR = {
+			has_reform = THE_MGT_form_of_light_reform
+			have_had_reform = THE_MGT_form_of_light_reform
+		}
+	}
+	modifiers = {
+		great_project_upgrade_cost = -0.25
+		great_project_upgrade_time = -0.50
+		interest = -1
+	}
+	custom_attributes = {
+		THE_MGT_back_to_white_and_void_reform_mechanic = yes
+	}
+	government_abilities = {
 	}
 }
