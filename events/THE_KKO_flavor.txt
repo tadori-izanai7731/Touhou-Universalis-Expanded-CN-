@@ -1746,7 +1746,7 @@ country_event = {
 		custom_tooltip = KKO_flavor.38.a.tt
 		add_country_modifier = {
 			name = kko_hopless_neighbours_buff
-			duration = -1
+			duration = 10950
 		}
 	}
 }
