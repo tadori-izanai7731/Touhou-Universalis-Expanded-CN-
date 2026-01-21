@@ -364,3 +364,10 @@ THE_GSK_special_country_name_scripted_trigger_THE_LIL_GSK = {
 		mission_completed = THE_LIL_28_3
 	}
 }
+
+THE_GSK_special_country_name_scripted_trigger_THE_Shinto_GSK = {
+	AND = {
+		religion = shinto
+		shinto = 10
+	}
+}

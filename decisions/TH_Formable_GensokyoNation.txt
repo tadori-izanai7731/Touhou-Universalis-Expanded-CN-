@@ -79,10 +79,13 @@ country_decisions = {
 				}
 				override_country_name = THE_LIL_GSK
 			}
-			if = {
+			else_if = {
 				limit = {
-					NOT = { THE_GSK_special_country_name_scripted_trigger = { country_name = THE_LIL_GSK } }
+					THE_GSK_special_country_name_scripted_trigger = { country_name = THE_Shinto_GSK }
 				}
+				override_country_name = THE_Shinto_GSK
+			}
+			else = {
 				override_country_name = THE_GNK
 			}
 			custom_tooltip = Gensokyan_nation_tt
