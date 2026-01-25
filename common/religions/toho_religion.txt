@@ -755,7 +755,7 @@ Touhou = {
 		}
 	}
 
-	
+
 	th_hakureishinto = {	#Hakurei Shintoism
 		color = { 235 10 120 }
 		heretic = { th_heretic_lunar th_heretic_anime th_heretic_manga_elitists }
@@ -1219,7 +1219,7 @@ Touhou = {
 
 lunarian_religion_g = {
 	#Center of religions are always for the religion group as a whole
-		#center_of_religion = 4955
+	#center_of_religion = 4955
 	can_form_personal_unions = yes
 	defender_of_faith = yes
 	

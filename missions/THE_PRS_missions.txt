@@ -37,6 +37,28 @@ THE_PRS_mission_branch_1 = {
 
 		effect = {  } 
 	}
+
+	THE_PRS_mission_1_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { THE_PRS_mission_3_4 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_PRS_mission_1_7 = {
+		icon = mission_unknown_mission
+		position = 7
+		required_missions = { THE_PRS_mission_2_6 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
 }
 THE_PRS_mission_branch_2 = {
 	slot = 2
@@ -76,6 +98,28 @@ THE_PRS_mission_branch_2 = {
 
 		effect = {  } 
 	}
+
+	THE_PRS_mission_2_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { THE_PRS_mission_3_4 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_PRS_mission_2_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = { THE_PRS_mission_3_5 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
 }
 THE_PRS_mission_branch_3 = {
 	slot = 3
@@ -99,6 +143,39 @@ THE_PRS_mission_branch_3 = {
 		icon = mission_unknown_mission
 		position = 3
 		required_missions = { THE_PRS_mission_2_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_PRS_mission_3_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { THE_PRS_mission_3_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_PRS_mission_3_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { THE_PRS_mission_3_4 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_PRS_mission_3_7 = {
+		icon = mission_unknown_mission
+		position = 7
+		required_missions = { THE_PRS_mission_3_5 } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -150,6 +227,28 @@ THE_PRS_mission_branch_4 = {
 
 		effect = {  } 
 	}
+
+	THE_PRS_mission_4_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { THE_PRS_mission_3_4 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_PRS_mission_4_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = { THE_PRS_mission_4_5 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
 }
 THE_PRS_mission_branch_5 = {
 	slot = 5
@@ -186,6 +285,31 @@ THE_PRS_mission_branch_5 = {
 		icon = mission_unknown_mission
 		position = 4
 		required_missions = { THE_PRS_mission_5_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_PRS_mission_5_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = {
+			THE_PRS_mission_5_4
+			THE_PRS_mission_4_5
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_PRS_mission_5_7 = {
+		icon = mission_unknown_mission
+		position = 7
+		required_missions = { THE_PRS_mission_5_6 } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
