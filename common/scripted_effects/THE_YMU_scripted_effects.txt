@@ -1,0 +1,153 @@
+# $estate$
+# $event_id$
+THE_YMU_unlock_estate = {
+	custom_tooltip = THE_YMU_unlock_$estate$_tt
+	hidden_effect = {
+		add_country_modifier = {
+			name = THE_youmu_establish_$estate$
+			duration = 30
+		}
+		if = {
+			limit = {
+				government_reform_progress = 200
+			}
+			change_government_reform_progress = -200
+			set_country_flag = THE_YMU_event_$event_id$_200_gp
+		}
+		else_if = {
+			limit = {
+				government_reform_progress = 100
+			}
+			change_government_reform_progress = -100
+			set_country_flag = THE_YMU_event_$event_id$_100_gp
+		}
+		if = {
+			limit = {
+				crown_land_share = 40
+			}
+			change_estate_land_share = {
+				estate = estate_nomadic_tribes
+				share = 40 
+			}
+			set_country_flag = THE_YMU_event_$event_id$_40_crown
+		}
+		else_if = {
+			limit = {
+				crown_land_share = 20
+			}
+			change_estate_land_share = {
+				estate = estate_nomadic_tribes
+				share = 20 
+			}
+			set_country_flag = THE_YMU_event_$event_id$_20_crown
+		}
+		set_country_flag = enables_$estate$_flag
+		country_event = {
+			id = flavor_ymu.$event_id$
+			days = 3
+		}
+	}
+}
+
+# $estate$ # unused_parameter
+# $event_id$
+THE_YMU_unlock_estate_option_a = { # 200gp
+	custom_tooltip = THE_YMU_unlock_estate_a_tt
+    hidden_effect = {
+		custom_tooltip = THE_YMU_unused_parameter_$estate$
+    	clr_country_flag = THE_YMU_event_$event_id$_200_gp
+    }
+}
+
+# $estate$
+# $event_id$
+THE_YMU_unlock_estate_option_b = { # 20 crown land & 100gp
+	custom_tooltip = THE_YMU_unlock_estate_b_tt
+    hidden_effect = {
+		change_estate_land_share = {
+			estate = estate_nomadic_tribes
+			share = -20
+		}
+		change_estate_land_share = {
+			estate = $estate$
+			share = 20
+		}
+		if = {
+			limit = {
+				has_country_flag = THE_YMU_event_$event_id$_200_gp
+			}
+			clr_country_flag = THE_YMU_event_$event_id$_200_gp
+			set_country_flag = THE_YMU_event_$event_id$_100_gp
+		}
+		else = {
+			clr_country_flag = THE_YMU_event_$event_id$_100_gp
+		}
+		if = {
+			limit = {
+				has_country_flag = THE_YMU_event_$event_id$_40_crown
+			}
+			clr_country_flag = THE_YMU_event_$event_id$_40_crown
+			set_country_flag = THE_YMU_event_$event_id$_20_crown
+		}
+		else = {
+			clr_country_flag = THE_YMU_event_$event_id$_20_crown
+		}
+    }
+}
+
+# $estate$
+# $event_id$
+THE_YMU_unlock_estate_option_c = { # 40 crown land
+	custom_tooltip = THE_YMU_unlock_estate_c_tt
+    hidden_effect = {
+		change_estate_land_share = {
+		estate = estate_nomadic_tribes
+			share = -40
+		}
+		change_estate_land_share = {
+			estate = $estate$
+			share = 40
+		}
+		clr_country_flag = THE_YMU_event_$event_id$_40_crown
+    }
+}
+
+# $event_id$
+THE_YMU_unlock_estate_after_effect = {
+    hidden_effect = {
+		if = {
+			limit = {
+				has_country_flag = THE_YMU_event_$event_id$_40_crown
+			}
+			change_estate_land_share = {
+				estate = estate_nomadic_tribes
+				share = -40
+			}
+			clr_country_flag = THE_YMU_event_$event_id$_40_crown
+		}
+		if = {
+			limit = {
+				has_country_flag = THE_YMU_event_$event_id$_20_crown
+			}
+			change_estate_land_share = {
+			estate = estate_nomadic_tribes
+			share = -20
+			}
+			clr_country_flag = THE_YMU_event_$event_id$_20_crown
+		}
+		if = {
+			limit = {
+				has_country_flag = THE_YMU_event_$event_id$_200_gp
+			}
+			change_government_reform_progress = 200
+			clr_country_flag = THE_YMU_event_$event_id$_200_gp
+		}
+		if = {
+			limit = {
+				has_country_flag = THE_YMU_event_$event_id$_100_gp
+			}
+			change_government_reform_progress = 100
+			clr_country_flag = THE_YMU_event_$event_id$_100_gp
+		}
+    }
+}

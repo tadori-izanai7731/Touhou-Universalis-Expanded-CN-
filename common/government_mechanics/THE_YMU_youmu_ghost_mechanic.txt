@@ -1,0 +1,26 @@
+THE_YMU_youmu_ghost_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 10
+	available = {
+		always = yes
+	}
+	powers = {
+		# FIXME: UI bug
+		THE_YMU_youmu_modifier = {
+			gui = GFX_THE_YMU_mechanic_youmu_power_bar
+			show_before_interactions = yes
+			min = 0
+			max = 6
+			base_monthly_growth = 0
+			increases_with_global = no
+		}
+		THE_YMU_ghost_modifier = {
+			gui = GFX_THE_YMU_mechanic_ghost_power_bar
+			show_before_interactions = yes
+			min = 0
+			max = 6
+			base_monthly_growth = 0
+			increases_with_global = no
+		}
+	}
+}

@@ -1,0 +1,48 @@
+THE_steppe_youmu = {
+	# government mechanics flags go here
+	# TODO: full steppe horde content: great work & reform
+	icon = "THE_steppe_youmu"
+	can_change_primary_culture = no
+	lock_level_when_selected = yes
+	legacy_government = yes
+	valid_for_new_country = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	nomad = yes
+	raze_province = no
+	native_mechanic = no
+
+	potential = {
+		OR = {
+			th_is_or_was_tag = {
+				tag = YMU
+			}
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = THE_steppe_youmu
+			}
+		}
+	}
+	modifiers = {
+		horde_unity = 1
+		tolerance_heathen = 4
+		num_accepted_cultures = 4
+		development_cost = -0.2
+		cav_to_inf_ratio = 0.25
+		movement_speed = 0.2
+		global_manpower_modifier = 0.2
+		land_forcelimit_modifier = 0.2
+		years_of_nationalism = -5
+		reinforce_cost_modifier = -0.5
+	}
+	government_abilities = {
+		THE_YMU_youmu_ghost_mechanic
+	}
+	custom_attributes = {
+		locked_government_type = yes
+		enables_horde_idea_group = yes
+		THE_can_use_youkai_ideas_government_attribute = yes # TODO: change to ghost ideas
+		THE_can_use_human_ideas_government_attribute = yes
+		enables_aristocratic_idea_group = no
+	}
+}

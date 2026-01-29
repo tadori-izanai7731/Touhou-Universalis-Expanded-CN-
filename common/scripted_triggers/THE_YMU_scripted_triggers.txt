@@ -1,0 +1,21 @@
+# $event_id$
+THE_YMU_unlock_estate_option_a_trigger = { # 200gp
+	has_country_flag = THE_YMU_event_$event_id$_200_gp
+}
+
+# $event_id$
+THE_YMU_unlock_estate_option_b_trigger = { # 20 crown land & 100gp
+	OR = {
+		has_country_flag = THE_YMU_event_$event_id$_200_gp
+		has_country_flag = THE_YMU_event_$event_id$_100_gp
+	}
+	OR = {
+		has_country_flag = THE_YMU_event_$event_id$_40_crown
+		has_country_flag = THE_YMU_event_$event_id$_20_crown
+	}
+}
+
+# $event_id$
+THE_YMU_unlock_estate_option_c_trigger = { # 40 crown land
+	has_country_flag = THE_YMU_event_$event_id$_40_crown
+}
