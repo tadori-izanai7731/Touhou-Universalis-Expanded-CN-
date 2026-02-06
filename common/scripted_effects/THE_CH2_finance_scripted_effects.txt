@@ -617,7 +617,7 @@ THE_CH2_new_tradegoods_srcurities_prices_effects = {
 		else_if = { limit = { check_variable = { which = the_ch2_the_custom_goods_prices_custom_modifier_im_var_after value = 418 } } THE_CH2_new_tradegoods_srcurities_prices_effects_set_end_effects = { price = 4.18 } }
 		else_if = { limit = { check_variable = { which = the_ch2_the_custom_goods_prices_custom_modifier_im_var_after value = 417 } } THE_CH2_new_tradegoods_srcurities_prices_effects_set_end_effects = { price = 4.17 } }
 		else_if = { limit = { check_variable = { which = the_ch2_the_custom_goods_prices_custom_modifier_im_var_after value = 416 } } THE_CH2_new_tradegoods_srcurities_prices_effects_set_end_effects = { price = 4.16 } }
-		else_if = { limit = { check_variable = { which = the_ch2_the_custom_goods_prices_custom_modifier_im_var_after value = 415 } } THE_CH2_new_tradegoods_srcurities_prices_effects_set_end_effects = { price = 4.15 } }
+		else_if = { limit = { check_variable = { which = the_ch2_the_custom_goods_prices_custom_m odifier_im_var_after value = 415 } } THE_CH2_new_tradegoods_srcurities_prices_effects_set_end_effects = { price = 4.15 } }
 		else_if = { limit = { check_variable = { which = the_ch2_the_custom_goods_prices_custom_modifier_im_var_after value = 414 } } THE_CH2_new_tradegoods_srcurities_prices_effects_set_end_effects = { price = 4.14 } }
 		else_if = { limit = { check_variable = { which = the_ch2_the_custom_goods_prices_custom_modifier_im_var_after value = 413 } } THE_CH2_new_tradegoods_srcurities_prices_effects_set_end_effects = { price = 4.13 } }
 		else_if = { limit = { check_variable = { which = the_ch2_the_custom_goods_prices_custom_modifier_im_var_after value = 412 } } THE_CH2_new_tradegoods_srcurities_prices_effects_set_end_effects = { price = 4.12 } }
