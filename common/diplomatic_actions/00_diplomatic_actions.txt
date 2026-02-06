@@ -772,14 +772,8 @@ guaranteeaction = {
 	condition = {
 		tooltip = THE_IQU_hvr_can_not_be_create_guaranteeaction_c_tooltip
 		potential = { 
-			IQU = { ai = no }
+			HVR = { ai = yes }
 			OR = {
-				FROM = {
-					OR = {
-						tag = HVR
-						was_tag = HVR
-					}
-				}
 				ROOT = {
 					OR = {
 						tag = HVR

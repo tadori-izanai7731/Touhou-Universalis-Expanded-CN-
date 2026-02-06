@@ -753,6 +753,9 @@ THE_IQU_main_branch_3 = {
 		
 		effect = { 
 			custom_tooltip = THE_IQU_3_3_c_tt1
+			country_event = {
+				id = THE_IQU_flavor_events.1012
+			}
 			add_dip_power = 75
 			add_country_modifier = {
 				name = THE_IQU_iqu_declare_war_buff
