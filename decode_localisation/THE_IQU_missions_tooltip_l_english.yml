@@ -1047,6 +1047,7 @@ l_english:
  THE_IQU_flavor_events.1011.t: "额外收入"
  THE_IQU_flavor_events.1011.desc: "我们和天界通过联合贸易获得的额外收入"
  THE_IQU_flavor_events.1011.1: "了解"
+ THE_IQU_event_1011_c_tt2: "@IQU§Y[IQU.GetName]§!当前的贸易竞争力为§Y[Root.the_iqu_total_heaven_trade_power_im_var_iqu_view.GetValue]§!/n@HVR§Y[HVR.GetName]§!当前的贸易竞争力为§Y[Root.the_iqu_total_heaven_trade_power_im_var_hvr_view.GetValue]§!/n"
 ### SYS_EVENT_END
 
 ### SCRIPT_EFFECT

@@ -6740,6 +6740,7 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.1011.1
+		custom_tooltip = THE_IQU_event_1011_c_tt2
 		custom_tooltip = THE_IQU_event_1011_c_tt1
 		hidden_effect = {
 			while = {

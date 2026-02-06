@@ -2633,6 +2633,14 @@ THE_IQU_set_yearly_trade_income_with_hvr_effect = {
 	#得出变量
 	#龙宫省份贸易竞争力 the_iqu_total_heaven_trade_power_im_var_iqu
 	#天界省份贸易竞争力 the_iqu_total_heaven_trade_power_im_var_hvr
+	set_variable = {
+		which = the_iqu_total_heaven_trade_power_im_var_iqu_view
+		which = the_iqu_total_heaven_trade_power_im_var_iqu
+	}
+	set_variable = {
+		which = the_iqu_total_heaven_trade_power_im_var_hvr_view
+		which = the_iqu_total_heaven_trade_power_im_var_hvr
+	}
 	if = {
 		limit = {
 			check_variable = {
