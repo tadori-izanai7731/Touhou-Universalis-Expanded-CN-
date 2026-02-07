@@ -469,7 +469,7 @@ THE_IQU_main_branch_2 = {
 					has_production_building_trigger = yes
 				}
 				NOT = {
-					base_production = 7
+					base_production = 10
 				}
 			}
 		} 
@@ -479,17 +479,7 @@ THE_IQU_main_branch_2 = {
 				value = 5
 				trade_goods = paper
 				has_production_building_trigger = yes
-				base_production = 7
-			}
-			custom_trigger_tooltip = {
-				tooltip = THE_IQU_2_5_c_tt1
-				any_owned_province = {
-					has_province_flag = THE_IQU_loong_vein_get_wuxing_jin_flag
-					has_province_flag = THE_IQU_loong_vein_get_wuxing_shui_flag
-					has_province_flag = THE_IQU_loong_vein_get_wuxing_mu_flag
-					has_province_flag = THE_IQU_loong_vein_get_wuxing_huo_flag
-					has_province_flag = THE_IQU_loong_vein_get_wuxing_tu_flag
-				}
+				base_production = 10
 			}
 		} 
 		
@@ -1191,34 +1181,7 @@ THE_IQU_main_branch_4 = {
 				tooltip = THE_IQU_4_6_c_tt1
 				check_variable = {
 					which = the_iqu_had_explore_area_number_im_var
-					value = 5
-				}
-			}
-			calc_true_if = {
-				amount = 3
-				THE_IQU_this_province_had_been_explored_region_custom_trigger = {
-					region = peru_region
-				}
-				THE_IQU_this_province_had_been_explored_region_custom_trigger = {
-					region = la_plata_region
-				}
-				THE_IQU_this_province_had_been_explored_region_custom_trigger = {
-					region = mississippi_region
-				}
-				THE_IQU_this_province_had_been_explored_region_custom_trigger = {
-					region = great_lakes_region
-				}
-				THE_IQU_this_province_had_been_explored_region_custom_trigger = {
-					region = brazil_region
-				}
-				THE_IQU_this_province_had_been_explored_region_custom_trigger = {
-					region = colombia_region
-				}
-				THE_IQU_this_province_had_been_explored_region_custom_trigger = {
-					region = australia_region
-				}
-				THE_IQU_this_province_had_been_explored_region_custom_trigger = {
-					region = british_isles_region
+					value = 8
 				}
 			}
 		} 
