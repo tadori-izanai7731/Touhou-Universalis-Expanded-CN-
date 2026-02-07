@@ -38,7 +38,6 @@ THE_IQU_encriclied_the_montain_embrace_water_buff = {
 THE_IQU_Feng_shui_jin_buff = {
 	local_tax_modifier = 0.50
 	local_development_cost = -0.05
-	local_warscore_cost_modifier = -1.0
 	local_sailors_modifier = 0.50
 	local_build_cost = -0.15
 	local_production_efficiency = 0.10
@@ -48,7 +47,6 @@ THE_IQU_Feng_shui_jin_buff = {
 THE_IQU_Feng_shui_shui_buff = {
 	trade_goods_size_modifier = 0.33
 	local_development_cost = -0.05
-	local_warscore_cost_modifier = -1.0
 	local_sailors_modifier = 0.50
 	local_build_cost = -0.15
 	local_production_efficiency = 0.10
@@ -58,7 +56,6 @@ THE_IQU_Feng_shui_shui_buff = {
 THE_IQU_Feng_shui_mu_buff = {
 	local_institution_spread = 0.50
 	local_development_cost = -0.05
-	local_warscore_cost_modifier = -1.0
 	local_sailors_modifier = 0.50
 	local_build_cost = -0.15
 	local_production_efficiency = 0.10
@@ -68,7 +65,6 @@ THE_IQU_Feng_shui_mu_buff = {
 THE_IQU_Feng_shui_huo_buff = {
 	local_manpower_modifier = 0.50
 	local_development_cost = -0.05
-	local_warscore_cost_modifier = -1.0
 	local_sailors_modifier = 0.50
 	local_build_cost = -0.15
 	local_production_efficiency = 0.10
@@ -78,7 +74,6 @@ THE_IQU_Feng_shui_huo_buff = {
 THE_IQU_Feng_shui_tu_buff = {
 	local_defensiveness = 0.33
 	local_development_cost = -0.05
-	local_warscore_cost_modifier = -1.0
 	local_sailors_modifier = 0.50
 	local_build_cost = -0.15
 	local_production_efficiency = 0.10
@@ -87,20 +82,15 @@ THE_IQU_Feng_shui_tu_buff = {
 #龙脉-龙之首
 THE_IQU_lonng_vein_head_province_buff = {
 	supply_limit = 16
-	local_warscore_cost_modifier = -1.00
-	local_colonial_growth = 25
 	local_development_cost = -0.15
 	local_build_cost = -0.10
-	province_trade_power_modifier = 0.25
+	province_trade_power_modifier = 0.50
 }
 #龙脉-龙之迹
 THE_IQU_lonng_vein_foot_province_buff = {
 	supply_limit = 8
-	local_colonist_placement_chance = 0.10
-	local_colonial_growth = 50
-	local_warscore_cost_modifier = -1.00
 	local_production_efficiency = 0.1
-	province_trade_power_modifier = 0.25
+	province_trade_power_modifier = 0.50
 }
 #神谕宣告者
 THE_IQU_loong_proclamation_for_the_god_buff = {
@@ -223,6 +213,8 @@ THE_IQU_qing_hui_buff = {
 
 THE_IQU_test_buff = {
 	THE_IQU_guide_loong_vein_custom_modifier = -0.75
+	global_colonial_growth = 5000
+	colonist_placement_chance = 0.50
 }
 #新政
 THE_IQU_new_deal_buff = {

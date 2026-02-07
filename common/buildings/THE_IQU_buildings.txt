@@ -12,6 +12,9 @@ THE_IQU_guide_the_loong_vein_building = {
 	on_built = {
 		remove_building = THE_IQU_guide_the_loong_vein
 		THE_IQU_guide_the_loong_vein_building_construction_scripted = yes
+		owner = {
+			clr_country_flag = THE_IQU_the_loong_vein_building_now
+		}
 	}
 	on_destroyed = {
 		

@@ -146,67 +146,7 @@ THE_IQU_tennin_one_taoist_mechanic = {
 			increases_with_global = no
 			scaled_modifier = {
 				modifier = { 
-					backrow_artillery_damage = 10.0
-				}
-				start_value = 0
-				end_value = 1000
-			}
-		}
-		#水
-		THE_IQU_tennin_one_taoist_shui_power = {
-			gui = THE_mechanic_power_hidden_gui
-			max = 1000
-			min = 0
-			base_monthly_growth = 0
-			increases_with_global = no
-			scaled_modifier = {
-				modifier = { 
-					trade_efficiency = 10.00
-				}
-				start_value = 0
-				end_value = 1000
-			}
-		}
-		#木
-		THE_IQU_tennin_one_taoist_mu_power = {
-			gui = THE_mechanic_power_hidden_gui
-			max = 1000
-			min = 0
-			base_monthly_growth = 0
-			increases_with_global = no
-			scaled_modifier = {
-				modifier = { 
-					development_cost = -10.00
-				}
-				start_value = 0
-				end_value = 1000
-			}
-		}
-		#火
-		THE_IQU_tennin_one_taoist_huo_power = {
-			gui = THE_mechanic_power_hidden_gui
-			max = 1000
-			min = 0
-			base_monthly_growth = 0
-			increases_with_global = no
-			scaled_modifier = {
-				modifier = { 
-					global_trade_goods_size_modifier = 10.00
-				}
-				start_value = 0
-				end_value = 1000
-			}
-		}
-		#土
-		THE_IQU_tennin_one_taoist_tu_power = {
-			gui = THE_mechanic_power_hidden_gui
-			max = 1000
-			min = 0
-			base_monthly_growth = 0
-			increases_with_global = no
-			scaled_modifier = {
-				modifier = { 
-					min_autonomy_in_territories = -10
+					merchants = 1000
 				}
 				start_value = 0
 				end_value = 1000

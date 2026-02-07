@@ -822,6 +822,7 @@ THE_IQU_main_branch_3 = {
 		required_missions = { THE_IQU_3_5 } 
 		provinces_to_highlight = { 
 			owned_by = ROOT
+			region = moon_region
 			NOT = {
 				has_province_modifier = THE_IQU_lonng_vein_foot_province_buff
 			}
@@ -1254,6 +1255,25 @@ THE_IQU_main_branch_4 = {
 		
 		effect = { 
 			add_government_reform = THE_IQU_tennin_one_taoist_reform
+			hidden_effect = {
+				while = {
+					limit = {
+						check_variable = {
+							which = the_iqu_had_explore_area_number_im_var_ex
+							value = 1
+						}
+					}
+					add_government_power = {
+						mechanic_type = THE_IQU_tennin_one_taoist_mechanic
+						power_type = THE_IQU_tennin_one_taoist_jin_power
+						value = 1
+					}
+					change_variable = {
+						which = the_iqu_had_explore_area_number_im_var_ex
+						value = -1
+					}
+				}
+			}
 		} 
 	}
 	
