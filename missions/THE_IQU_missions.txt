@@ -649,13 +649,11 @@ THE_IQU_main_branch_3 = {
 			capital_scope = {
 				development = 35
 				has_production_building_trigger = yes
-				has_trade_building_trigger = yes
 			}
 			num_of_owned_provinces_with = {
 				value = 10
 				development = 20
 				has_production_building_trigger = yes
-				has_trade_building_trigger = yes
 			}
 		} 
 		
@@ -1244,7 +1242,10 @@ THE_IQU_main_branch_4 = {
 		icon = mission_touhou_forest_of_magic
 		position = 8
 		required_missions = { THE_IQU_4_7 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			has_terrain = jungle
+		 } 
 		
 		trigger = { 
 			custom_trigger_tooltip = {
