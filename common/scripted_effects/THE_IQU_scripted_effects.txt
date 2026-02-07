@@ -2644,47 +2644,23 @@ THE_IQU_set_yearly_trade_income_with_hvr_effect = {
 		clr_province_flag = THE_IQU_has_set_point_trade_province_power_flag
 	}
 	while = {
-		limit = { 
-			#天界的省份贸易
+		limit = {
 			HVR = {
-				any_owned_province = {
-					trade_company_region = th_trade_company_heaven
-					NOT = {
-						has_province_flag = THE_IQU_has_set_point_trade_province_power_flag2
-					}
+				check_variable = {
+					which = the_iqu_total_heaven_trade_power_im_var_iqu
+					value = 1
 				}
 			}
+		}
+		change_variable = {
+			which = the_iqu_total_heaven_trade_power_im_var_hvr
+			value = 1
 		}
 		HVR = {
-			random_owned_province = {
-				limit = {
-					trade_company_region = th_trade_company_heaven
-					NOT = {
-						has_province_flag = THE_IQU_has_set_point_trade_province_power_flag2
-					}
-				}
-				ROOT = {
-					export_to_variable = {
-						variable_name = the_iqu_total_heaven_trade_power_im_var_hvr_single_province
-						value = province_trade_power
-						who = PREV
-					}
-					#累加变量
-					change_variable = {
-						which = the_iqu_total_heaven_trade_power_im_var_hvr
-						which = the_iqu_total_heaven_trade_power_im_var_hvr_single_province
-					}
-				}
-				set_province_flag = THE_IQU_has_set_point_trade_province_power_flag2
+			change_variable = {
+				which = the_iqu_total_heaven_trade_power_im_var_iqu
+				value = -1
 			}
-		}
-	}
-	HVR = {
-		every_owned_province = {
-			limit = {
-				trade_company_region = th_trade_company_heaven
-			}
-			clr_province_flag = THE_IQU_has_set_point_trade_province_power_flag
 		}
 	}
 	#得出变量
@@ -2781,10 +2757,13 @@ THE_IQU_set_yearly_trade_income_with_hvr_effect = {
 THE_IQU_on_5_years_pluse_effect = {
 	if = {
 		limit = {
+			tag = IQU
 			mission_completed = THE_IQU_4_4
 		}
-		country_event = {
-			id = THE_IQU_flavor_events.1011
+		HVR = {
+			country_event = {
+				id = THE_IQU_flavor_events.1016
+			}
 		}
 	}
 }

@@ -6847,3 +6847,78 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = THE_IQU_flavor_events.1016
+	title = "THE_IQU_flavor_events.1016.t"
+	desc = "THE_IQU_flavor_events.1016.desc"
+	picture = ""
+	is_triggered_only = yes
+	hidden = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.1016.1
+		#衣玖总竞争力
+		set_variable = {
+			which = the_iqu_total_heaven_trade_power_im_var_iqu
+			value = 0
+		}
+		#天子总竞争力
+		set_variable = {
+			which = the_iqu_total_heaven_trade_power_im_var_hvr
+			value = 0
+		}
+		while = {
+			limit = { 
+				any_owned_province = {
+					trade_company_region = th_trade_company_heaven
+					NOT = {
+						has_province_flag = THE_IQU_has_set_point_trade_province_power_flag
+					}
+				}
+			}
+			random_owned_province = {
+				limit = {
+					trade_company_region = th_trade_company_heaven
+					NOT = {
+						has_province_flag = THE_IQU_has_set_point_trade_province_power_flag
+					}
+				}
+				ROOT = {
+					export_to_variable = {
+						variable_name = the_iqu_total_heaven_trade_power_im_var_iqu_single_province
+						value = province_trade_power
+						who = PREV
+					}
+					#累加变量
+					change_variable = {
+						which = the_iqu_total_heaven_trade_power_im_var_iqu
+						which = the_iqu_total_heaven_trade_power_im_var_iqu_single_province
+					}
+				}
+				set_province_flag = THE_IQU_has_set_point_trade_province_power_flag
+			}
+		}
+		every_owned_province = {
+			limit = {
+				trade_company_region = th_trade_company_heaven
+			}
+			clr_province_flag = THE_IQU_has_set_point_trade_province_power_flag
+		}
+		# set_variable = {
+		# 	which = the_iqu_total_heaven_trade_power_im_var_hvr_view
+		# 	which = the_iqu_total_heaven_trade_power_im_var_hvr
+		# }
+		IQU = {
+			country_event = {
+				id = THE_IQU_flavor_events.1011
+				days = 1
+			}
+		}
+	}
+}
