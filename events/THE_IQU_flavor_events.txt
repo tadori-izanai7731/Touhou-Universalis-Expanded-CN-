@@ -6821,3 +6821,29 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = THE_IQU_flavor_events.1015
+	title = "THE_IQU_flavor_events.1015.t"
+	desc = "THE_IQU_flavor_events.1015.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+	}
+	option = {
+		export_to_variable = {
+			variable_name = the_iqu_guide_loong_vein_export_im_var
+			value = modifier:THE_IQU_guide_loong_vein_custom_modifier
+		}
+		multiply_variable = {
+			which = the_iqu_guide_loong_vein_export_im_var
+			value = 10
+		}
+		set_variable = {
+			which = the_iqu_guide_loong_vein_export_im_var_test
+			which = the_iqu_guide_loong_vein_export_im_var
+		}
+	}
+}

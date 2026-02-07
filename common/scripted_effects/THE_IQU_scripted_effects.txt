@@ -785,27 +785,31 @@ THE_IQU_guide_the_lonng_vein_custom_gui_script = {
 	custom_tooltip = THE_IQU_guide_the_loong_vein_building_construction_scripted_c_tt1
 	hidden_effect = {
 		export_to_variable = {
-			value = the_iqu_guide_loong_vein_export_im_var
-			which = modifier:THE_IQU_guide_loong_vein_custom_modifier
+			variable_name = the_iqu_guide_loong_vein_export_im_var
+			value = modifier:THE_IQU_guide_loong_vein_custom_modifier
 		}
-		set_variable = {
-			which = the_iqu_base_guide_loong_vein_building_time_im_var
-			value = 1
-		}
-		subtract_variable = {
-			which = the_iqu_base_guide_loong_vein_building_time_im_var
+		multiply_variable = {
 			which = the_iqu_guide_loong_vein_export_im_var
+			value = -10
 		}
+		# set_variable = {
+		# 	which = the_iqu_base_guide_loong_vein_building_time_im_var
+		# 	value = 1
+		# }
+		# change_variable = {
+		# 	which = the_iqu_base_guide_loong_vein_building_time_im_var
+		# 	which = the_iqu_guide_loong_vein_export_im_var
+		# }
 	}
-	if = { limit = { check_variable = { which = the_iqu_base_guide_loong_vein_building_time_im_var value = 0.9 } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.9 } }
-	else_if = { limit = { check_variable = { which = the_iqu_base_guide_loong_vein_building_time_im_var value = 0.8 } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.8 } }
-	else_if = { limit = { check_variable = { which = the_iqu_base_guide_loong_vein_building_time_im_var value = 0.7 } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.7 } }
-	else_if = { limit = { check_variable = { which = the_iqu_base_guide_loong_vein_building_time_im_var value = 0.6 } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.6 } }
-	else_if = { limit = { check_variable = { which = the_iqu_base_guide_loong_vein_building_time_im_var value = 0.5 } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.5 } }
-	else_if = { limit = { check_variable = { which = the_iqu_base_guide_loong_vein_building_time_im_var value = 0.4 } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.4 } }
-	else_if = { limit = { check_variable = { which = the_iqu_base_guide_loong_vein_building_time_im_var value = 0.3 } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.3 } }
-	else_if = { limit = { check_variable = { which = the_iqu_base_guide_loong_vein_building_time_im_var value = 0.2 } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.2 } }
-	else_if = { limit = { check_variable = { which = the_iqu_base_guide_loong_vein_building_time_im_var value = 0.1 } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.1 } }
+	if = { limit = { check_variable = { which = the_iqu_guide_loong_vein_export_im_var value = -1 } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.9 } }
+	else_if = { limit = { check_variable = { which = the_iqu_guide_loong_vein_export_im_var value = -2 } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.8 } }
+	else_if = { limit = { check_variable = { which = the_iqu_guide_loong_vein_export_im_var value = -3 } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.7 } }
+	else_if = { limit = { check_variable = { which = the_iqu_guide_loong_vein_export_im_var value = -4 } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.6 } }
+	else_if = { limit = { check_variable = { which = the_iqu_guide_loong_vein_export_im_var value = -5 } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.5 } }
+	else_if = { limit = { check_variable = { which = the_iqu_guide_loong_vein_export_im_var value = -6 } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.4 } }
+	else_if = { limit = { check_variable = { which = the_iqu_guide_loong_vein_export_im_var value = -7 } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.3 } }
+	else_if = { limit = { check_variable = { which = the_iqu_guide_loong_vein_export_im_var value = -8 } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.2 } }
+	else_if = { limit = { check_variable = { which = the_iqu_guide_loong_vein_export_im_var value = -9 } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.1 } }
 }
 #建筑效果
 THE_IQU_guide_the_loong_vein_building_construction_scripted = {
@@ -2784,6 +2788,7 @@ THE_IQU_on_development_mil_effect = {
 			}
 		}
 	}
+	
 }
 #攻城
 THE_IQU_naval_on_brrange_effect = {

@@ -523,6 +523,7 @@ l_english:
  THE_IQU_flavor_events.86.t: "兽骇"
  THE_IQU_flavor_events.86.desc: "我们的探险队行入密林深处，腐叶与湿土的气息扑面而来。拨开最后一丛纠缠的荆棘，眼前出现一处以断枝与干草垒成的巢穴，而其主人是一头鬃毛如铁针般倒竖，獠牙森然弯曲的野猪，正发出沉闷而威胁的低吼。它很快察觉到了我们的气息。"
  THE_IQU_flavor_events.86.1: "尝试将其制服"
+ THE_IQU_flavor_events.86.2: "尝试直接离开"
  THE_IQU_flavor_events.87.t: "缚妖"
  THE_IQU_flavor_events.87.desc: "就在野猪猛冲而来的瞬间，数道流转着微光的云雾锁链自四方浮现，精准地缠缚住其四肢与躯干。野猪狂暴挣扎，吼声震林。数位天人共同用微光索制服了野猪，此兽体型庞大，足够船队食用多日。"
  THE_IQU_flavor_events.87.1: "就地处理"
@@ -1047,7 +1048,7 @@ l_english:
  THE_IQU_flavor_events.1011.t: "额外收入"
  THE_IQU_flavor_events.1011.desc: "我们和天界通过联合贸易获得的额外收入"
  THE_IQU_flavor_events.1011.1: "了解"
- THE_IQU_event_1011_c_tt2: "@IQU§Y[IQU.GetName]§!当前的贸易竞争力为§Y[Root.the_iqu_total_heaven_trade_power_im_var_iqu_view.GetValue]§!/n@HVR§Y[HVR.GetName]§!当前的贸易竞争力为§Y[Root.the_iqu_total_heaven_trade_power_im_var_hvr_view.GetValue]§!/n"
+ THE_IQU_event_1011_c_tt2: "@IQU§Y[IQU.GetName]§!当前的贸易竞争力为§Y[Root.the_iqu_total_heaven_trade_power_im_var_iqu_view.GetValue]§!\n@HVR§Y[HVR.GetName]§!当前的贸易竞争力为§Y[Root.the_iqu_total_heaven_trade_power_im_var_hvr_view.GetValue]§!"
 ### SYS_EVENT_END
 
 ### SCRIPT_EFFECT
@@ -1141,4 +1142,5 @@ l_english:
 ### CUSTOM_GUI
  THE_IQU_guide_the_loong_vein_province_button_gui_c_tt1: "§W引渡龙脉§!\n======================="
  THE_IQU_end_the_loong_vein_province_button_gui_c_tt1: "§W消止龙脉§!\n======================="
+ THE_IQU_guide_the_loong_vein_province_button_gui_c_tt2: "当前没有正在引导的龙脉"
 ### CUSTOM_GUI_END

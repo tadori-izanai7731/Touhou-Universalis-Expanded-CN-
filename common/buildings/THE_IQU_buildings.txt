@@ -4,25 +4,35 @@
 THE_IQU_guide_the_loong_vein_building = {
 	cost = 250
 	time = 24
-
+	
 	modifier = {
-
+		
 	}
-
+	
 	on_built = {
 		remove_building = THE_IQU_guide_the_loong_vein
 		THE_IQU_guide_the_loong_vein_building_construction_scripted = yes
 	}
 	on_destroyed = {
-
+		
 	}
-
-	on_construction_started = { } #Fires when you start the construction,  ROOT - Province FROM - Country that started
-	on_construction_canceled = { } #Fires when you cancel the construction, ROOT - Province FROM - Country that canceled
-
+	
+	on_construction_started = { 
+		owner = {
+			set_country_flag = THE_IQU_the_loong_vein_building_now
+		}
+		
+	} #Fires when you start the construction,  ROOT - Province FROM - Country that started
+	on_construction_canceled = { 
+		owner = {
+			clr_country_flag = THE_IQU_the_loong_vein_building_now
+		}
+		
+	} #Fires when you cancel the construction, ROOT - Province FROM - Country that canceled
+	
 	on_obsolete = {
 	}
-
+	
 	ai_will_do = {
 		factor = 1.5 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
 	}
