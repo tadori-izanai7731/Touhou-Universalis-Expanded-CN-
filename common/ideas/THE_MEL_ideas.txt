@@ -1,0 +1,40 @@
+THE_MEL_ideas = {
+	start = {
+		allow_mercenary_drill = yes
+		fire_damage = 0.15
+	}
+
+	bonus = {
+		development_cost = -0.10
+	}
+	
+	trigger = {
+		tag = MEL
+	}
+	free = yes
+
+	THE_MEL_idea_1 = {
+		mercenary_manpower= 0.15
+	}
+	THE_MEL_idea_2 = {
+		THE_MGT_estate_dolls_pools_rescover = 0.33
+		THE_MGT_estate_dolls_pools_power = 0.33
+	}
+	THE_MEL_idea_3 = {
+		advisor_cost = -0.10
+	}
+	THE_MEL_idea_4 = {
+		technology_cost = -0.05
+		embracement_cost = -0.15
+	}
+	THE_MEL_idea_5 = {
+		legitimacy = 1
+	}
+	THE_MEL_idea_6 = {
+		build_cost = -0.05
+		build_time = -0.05
+	}
+	THE_MEL_idea_7 = {
+		land_morale = 0.15
+	}
+}
