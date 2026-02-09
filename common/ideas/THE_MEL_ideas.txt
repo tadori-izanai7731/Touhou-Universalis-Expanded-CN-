@@ -1,7 +1,7 @@
 THE_MEL_ideas = {
 	start = {
-		development_cost = -0.10
-		defensiveness = 0.10
+		development_cost = -0.05
+		fort_maintenance_modifier = -0.25
 	}
 	
 	bonus = {
@@ -18,11 +18,11 @@ THE_MEL_ideas = {
 		manpower_recovery_speed = 0.10
 	}
 	THE_MEL_idea_2 = {
-		spy_offence = 0.50
+		spy_offence = 0.20
 		diplomats = 1
 	}
 	THE_MEL_idea_3 = {
-		accept_vassalization_reasons = 20
+		same_culture_advisor_cost = -0.25
 		diplomatic_reputation = 1
 	}
 	THE_MEL_idea_4 = {
@@ -30,15 +30,14 @@ THE_MEL_ideas = {
 		tolerance_heathen = 3
 	}
 	THE_MEL_idea_5 = {
-		embracement_cost = -0.15
-		technology_cost = -0.10
-		
-	}
-	THE_MEL_idea_6 = {
 		global_unrest = -2
 	}
+	THE_MEL_idea_6 = {
+		years_of_nationalism = -5
+		global_autonomy = -0.05
+	}
 	THE_MEL_idea_7 = {
-		province_warscore_cost = -0.15
+		province_warscore_cost = -0.10
 		core_creation = -0.10
 	}
 }

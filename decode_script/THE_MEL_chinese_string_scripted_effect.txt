@@ -1,0 +1,13 @@
+THE_MEL_define_ruler_medicine_melancholy_scripted_effect = {
+	define_ruler = {
+		name = "梅蒂欣"  # medicine
+		dynasty = "梅兰可莉"  # melancholy
+		age = 35
+		adm = 3
+		dip = 3
+		mil = 5
+		female = yes
+		culture = "Youkai"
+		religion = th_hakureishinto
+	}
+}
