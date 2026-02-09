@@ -53,6 +53,18 @@ THE_FOM_on_startup_scripted_effects = {
 	if = {
 		limit = {
 			OR = {
+				tag = MGT
+				was_tag = MGT
+			}
+		 }
+		 set_variable = {
+			which = the_mgt_s_spirit_gravity_var
+			value = 50
+		 }
+	}
+	if = {
+		limit = {
+			OR = {
 				tag = MRS
 				tag = MGT
 				tag = ENK

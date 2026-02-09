@@ -1,0 +1,193 @@
+defined_text = {
+	name = THE_MGT_s_spirit_gravity_point_displat_c_tt
+	random = no
+	text = { 
+		localisation_key = THE_MGT_s_spirit_gravity_point_displat_ctt_100
+		trigger = {
+			check_variable = {
+				which = the_mgt_s_spirit_gravity_var
+				value = 100
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_MGT_s_spirit_gravity_point_displat_ctt_95
+		trigger = {
+			check_variable = {
+				which = the_mgt_s_spirit_gravity_var
+				value = 95
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_MGT_s_spirit_gravity_point_displat_ctt_90
+		trigger = {
+			check_variable = {
+				which = the_mgt_s_spirit_gravity_var
+				value = 90
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_MGT_s_spirit_gravity_point_displat_ctt_85
+		trigger = {
+			check_variable = {
+				which = the_mgt_s_spirit_gravity_var
+				value = 85
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_MGT_s_spirit_gravity_point_displat_ctt_80
+		trigger = {
+			check_variable = {
+				which = the_mgt_s_spirit_gravity_var
+				value = 80
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_MGT_s_spirit_gravity_point_displat_ctt_75
+		trigger = {
+			check_variable = {
+				which = the_mgt_s_spirit_gravity_var
+				value = 75
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_MGT_s_spirit_gravity_point_displat_ctt_70
+		trigger = {
+			check_variable = {
+				which = the_mgt_s_spirit_gravity_var
+				value = 70
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_MGT_s_spirit_gravity_point_displat_ctt_65
+		trigger = {
+			check_variable = {
+				which = the_mgt_s_spirit_gravity_var
+				value = 65
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_MGT_s_spirit_gravity_point_displat_ctt_60
+		trigger = {
+			check_variable = {
+				which = the_mgt_s_spirit_gravity_var
+				value = 60
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_MGT_s_spirit_gravity_point_displat_ctt_55
+		trigger = {
+			check_variable = {
+				which = the_mgt_s_spirit_gravity_var
+				value = 55
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_MGT_s_spirit_gravity_point_displat_ctt_50
+		trigger = {
+			check_variable = {
+				which = the_mgt_s_spirit_gravity_var
+				value = 50
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_MGT_s_spirit_gravity_point_displat_ctt_45
+		trigger = {
+			check_variable = {
+				which = the_mgt_s_spirit_gravity_var
+				value = 45
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_MGT_s_spirit_gravity_point_displat_ctt_40
+		trigger = {
+			check_variable = {
+				which = the_mgt_s_spirit_gravity_var
+				value = 40
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_MGT_s_spirit_gravity_point_displat_ctt_35
+		trigger = {
+			check_variable = {
+				which = the_mgt_s_spirit_gravity_var
+				value = 35
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_MGT_s_spirit_gravity_point_displat_ctt_30
+		trigger = {
+			check_variable = {
+				which = the_mgt_s_spirit_gravity_var
+				value = 30
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_MGT_s_spirit_gravity_point_displat_ctt_25
+		trigger = {
+			check_variable = {
+				which = the_mgt_s_spirit_gravity_var
+				value = 25
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_MGT_s_spirit_gravity_point_displat_ctt_20
+		trigger = {
+			check_variable = {
+				which = the_mgt_s_spirit_gravity_var
+				value = 20
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_MGT_s_spirit_gravity_point_displat_ctt_15
+		trigger = {
+			check_variable = {
+				which = the_mgt_s_spirit_gravity_var
+				value = 15
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_MGT_s_spirit_gravity_point_displat_ctt_10
+		trigger = {
+			check_variable = {
+				which = the_mgt_s_spirit_gravity_var
+				value = 10
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_MGT_s_spirit_gravity_point_displat_ctt_5
+		trigger = {
+			check_variable = {
+				which = the_mgt_s_spirit_gravity_var
+				value = 5
+			}
+		}
+	}
+	text = { 
+		localisation_key = THE_MGT_s_spirit_gravity_point_displat_ctt_0
+		trigger = {
+			check_variable = {
+				which = the_mgt_s_spirit_gravity_var
+				value = 0
+			}
+		}
+	}
+}
