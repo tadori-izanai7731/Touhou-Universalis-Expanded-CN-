@@ -1165,14 +1165,14 @@ country_event = {
 	trigger = {
 		tag = IQU
 		has_country_flag = THE_IQU_now_is_exploring_flag
-		NOT = { has_country_flag = THE_IQU_had_explore_event }
+		NOT = { has_country_flag = THE_IQU_had_explore_luna_event }
 		any_owned_province = {
 			region = moon_region
 			has_province_flag = THE_IQU_this_provinces_is_exploring_now
 		}
 	}
 	immediate = {
-		set_country_flag = THE_IQU_had_explore_event
+		set_country_flag = THE_IQU_had_explore_luna_event
 	}
 	mean_time_to_happen = {
 		months = 24
