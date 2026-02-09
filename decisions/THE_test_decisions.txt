@@ -14,11 +14,6 @@ country_decisions = {
 		}
 	}
 	THE_testtest_decision = {
-		provinces_to_highlight = {
-			owner = {
-				is_defender_of_faith = yes
-			}
-		}
 		potential = {
 			ai = no
 			has_country_flag = THE_testtest_flag
@@ -29,21 +24,24 @@ country_decisions = {
 		}
 		effect = {
 			if = {
-				limit = { any_country = { has_reform = shogunate } }
-				if = {
-					limit = { NOT = { government = monarchy } }
-					change_government = monarchy
-				}
-				add_government_reform = daimyo
-				random_country = {
-					limit = {
-						has_reform = shogunate
-					}
-					create_subject = {
-						who = ROOT
-						subject_type = daimyo_vassal
+				limit = {
+					check_variable = {
+						which = the_test_var
+						value = 10
 					}
 				}
+				add_adm_power = 100
+			}
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = the_test_var
+							value = 10
+						}
+					}
+				}
+				add_mil_power = 100
 			}
 		}
 	}
