@@ -30,77 +30,73 @@ THE_IQU_yunn_prot_out_of_gensokyo_buff = {
 }
 #山环水抱
 THE_IQU_encriclied_the_montain_embrace_water_buff = {
-	development_cost = -0.05
 	build_cost = -0.10
 	envoy_travel_time = -0.10
+	min_autonomy_in_territories = -0.05
+	governing_cost = -0.05
 }
 #风水兴盛-金之行
 THE_IQU_Feng_shui_jin_buff = {
 	local_tax_modifier = 0.50
-	local_development_cost = -0.05
-	local_warscore_cost_modifier = -1.0
+	local_development_cost = -0.20
 	local_sailors_modifier = 0.50
 	local_build_cost = -0.15
 	local_production_efficiency = 0.10
 	province_trade_power_value = 5
+	local_governing_cost = -0.90
 }
 #风水兴盛-水之行
 THE_IQU_Feng_shui_shui_buff = {
 	trade_goods_size_modifier = 0.33
-	local_development_cost = -0.05
-	local_warscore_cost_modifier = -1.0
+	local_development_cost = -0.20
 	local_sailors_modifier = 0.50
 	local_build_cost = -0.15
 	local_production_efficiency = 0.10
 	province_trade_power_value = 5
+	local_governing_cost = -0.90
 }
 #风水兴盛-木之行
 THE_IQU_Feng_shui_mu_buff = {
 	local_institution_spread = 0.50
-	local_development_cost = -0.05
-	local_warscore_cost_modifier = -1.0
+	local_development_cost = -0.20
 	local_sailors_modifier = 0.50
 	local_build_cost = -0.15
 	local_production_efficiency = 0.10
 	province_trade_power_value = 5
+	local_governing_cost = -0.90
 }
 #风水兴盛-火之行
 THE_IQU_Feng_shui_huo_buff = {
 	local_manpower_modifier = 0.50
-	local_development_cost = -0.05
-	local_warscore_cost_modifier = -1.0
+	local_development_cost = -0.20
 	local_sailors_modifier = 0.50
 	local_build_cost = -0.15
 	local_production_efficiency = 0.10
 	province_trade_power_value = 5
+	local_governing_cost = -0.90
 }
 #风水兴盛-土之行
 THE_IQU_Feng_shui_tu_buff = {
 	local_defensiveness = 0.33
-	local_development_cost = -0.05
-	local_warscore_cost_modifier = -1.0
+	local_development_cost = -0.20
 	local_sailors_modifier = 0.50
 	local_build_cost = -0.15
 	local_production_efficiency = 0.10
 	province_trade_power_value = 5
+	local_governing_cost = -0.90
 }
 #龙脉-龙之首
 THE_IQU_lonng_vein_head_province_buff = {
 	supply_limit = 16
-	local_warscore_cost_modifier = -1.00
-	local_colonial_growth = 25
 	local_development_cost = -0.15
 	local_build_cost = -0.10
-	province_trade_power_modifier = 0.25
+	province_trade_power_modifier = 0.50
 }
 #龙脉-龙之迹
 THE_IQU_lonng_vein_foot_province_buff = {
 	supply_limit = 8
-	local_colonist_placement_chance = 0.10
-	local_colonial_growth = 50
-	local_warscore_cost_modifier = -1.00
 	local_production_efficiency = 0.1
-	province_trade_power_modifier = 0.25
+	province_trade_power_modifier = 0.50
 }
 #神谕宣告者
 THE_IQU_loong_proclamation_for_the_god_buff = {
@@ -160,12 +156,15 @@ THE_IQU_hvr_cannot_decalre_war_buff = {
 #天之纲
 THE_IQU_iqu_declare_war_buff = {
 	global_autonomy = -0.05
-	governing_cost = -0.10
+	governing_cost = -0.15
+	min_autonomy_in_territories = -0.10
 }
 #云港
 THE_IQU_cloud_port_buff = {
-	ship_recruit_speed = -0.25
-	local_great_project_upgrade_cost = -0.25
+	ship_recruit_speed = -0.75
+	trade_goods_size = 1.0
+	local_great_project_upgrade_cost = -0.75
+	local_great_project_upgrade_time = -0.25
 	local_institution_spread = 0.1
 }
 #纸张贸易
@@ -183,6 +182,7 @@ THE_IQU_have_no_mind_buff = {
 	leader_naval_manuever = 1
 	discipline = 0.05
 	trade_steering = 0.50
+	core_creation = -0.10
 }
 #舳舻相继
 THE_IQU_build_shipyard_buff = {
@@ -207,20 +207,29 @@ THE_IQU_grouth_air_buff = {
 	THE_IQU_explore_treasury_get_cutom_modifier = 0.25
 	colonists = 1
 	dip_tech_cost_modifier = -0.05
+	min_autonomy_in_territories = -0.1
 }
 #凝元
 THE_IQU_forze_air_buff = {
 	THE_IQU_explore_treasury_get_cutom_modifier = 0.25
 	fire_damage_received = -0.10
 	dip_tech_cost_modifier = -0.05
+	min_autonomy_in_territories = -0.10
 }
 #清辉 
 THE_IQU_qing_hui_buff = {
 	THE_IQU_explore_treasury_get_cutom_modifier = 0.05
 	global_naval_engagement_modifier = 0.25
 	movement_speed_onto_off_boat_modifier = 0.50
+	min_autonomy_in_territories = -0.1
 }
 
 THE_IQU_test_buff = {
 	THE_IQU_guide_loong_vein_custom_modifier = -0.75
+	global_colonial_growth = 5000
+	colonist_placement_chance = 0.50
+}
+#新政
+THE_IQU_new_deal_buff = {
+	trade_goods_size = 1
 }

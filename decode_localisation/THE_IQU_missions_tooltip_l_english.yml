@@ -50,7 +50,7 @@ l_english:
  mechanic_THE_IQU_the_world_all_will_be_known_reform_mechanic_yes: "--永久消除所有与我们§Y交战国家§!的§Y战争迷雾§!\n"
  THE_IQU_tennin_one_taoist_reform: "天人一道"
  THE_IQU_tennin_one_taoist_reform_desc: "很多天界的天人源于人类的修炼，对风水与龙脉自带强大亲和力，而我们的道法，也会在这种影响下变得更强。"
- mechanic_THE_IQU_tennin_one_taoist_reform_mechanic_yes: "启用省份按钮「§M引渡龙脉§!」允许我们将龙脉§Y引导§!至其他省份。\n且龙脉会受到「§Y风水之行§!」的影响而染上「§V五行§!」，通过省份按钮能其省份生成§O海图异常点§!\n当我们完成染上「§V五行§!」的§O海图异常点§!，将会获得「§V五行§!」之印\n---每点§W金之印§!将会带来 后排炮兵伤害 §G+1%§!\n---每点§M水之印§!将会带来 贸易效率 §G+1%§!\n---每点§J木之印§!将会带来 发展成本 §G-1%§!\n---每点§O火之印§!将会带来 商品产出修正 §G+1%§!\n---每点§V土之印§!将会带来 省份最低自治度 §G-1%§!"
+ mechanic_THE_IQU_tennin_one_taoist_reform_mechanic_yes: "启用省份按钮「§M引渡龙脉§!」允许我们将龙脉§Y引导§!至其他省份。且当我们每完成一个区域探索，都将会获得：商人团 §G+1§!"
  THE_IQU_with_hvr_adm_power_power: "来自天子行政能力"
  THE_IQU_with_hvr_dip_power_power: "来自天子外交能力"
  THE_IQU_with_hvr_mil_power_power: "来自天子军事能力"
@@ -129,6 +129,7 @@ l_english:
  THE_IQU_Feng_shui_mu_buff: "风水兴盛-§J木§!之行"
  THE_IQU_Feng_shui_huo_buff: "风水兴盛-§O火§!之行"
  THE_IQU_Feng_shui_tu_buff: "风水兴盛-§V土§!之行"
+ THE_IQU_new_deal_buff: "新政"
 ### MODIFIER_END
 
 ### ESTATE
@@ -174,7 +175,7 @@ l_english:
  THE_IQU_3_1_c_tt2: "随机§Y2§!个省份将商品变更为§Y纸张§!"
  THE_IQU_4_4_c_tt1: "现在每§Y5§!年将会额外结算§G1§!次贸易收入\n -贸易收入将会计为@IQU§Y[IQU.GetName]§!与@HVR§Y[HVR.GetName]§!收入的总和。\n -若@IQU§Y[IQU.GetName]§!与@HVR§Y[HVR.GetName]§!位于「§Y外部界域§!」贸易区的§M竞争力§!相等时，收入最大，随着@IQU§Y[IQU.GetName]§!与@HVR§Y[HVR.GetName]§!的§M竞争力§!的§Y差幅§!增大而§Y衰减§!"
  THE_IQU_event_1011_c_tt1: "@IQU§Y[IQU.GetName]§!与@HVR§Y[HVR.GetName]§!将会各获得金钱¤ [Root.the_iqu_iqu_years_of_income_im_var.GetValue]"
- THE_IQU_4_6_c_tt1: "通过「§M云游机制§!」已经完成探索§W5§!个§Y地区§!（目前：§Y[Root.the_iqu_had_explore_area_number_im_var.GetValue]§!）"
+ THE_IQU_4_6_c_tt1: "通过「§M云游机制§!」已经完成探索§W8§!个§Y地区§!（目前：§Y[Root.the_iqu_had_explore_area_number_im_var.GetValue]§!）"
  THE_IQU_4_4_c_tt2: "@HVR「§Y天子§!」的每点§Y行政点§!£adm£将会为我们带来§Y商品产出修正§!§G+2§!% §Y贸易效率§!§G+2§!%\n"
  THE_IQU_4_6_c_tt3: "@HVR「§Y天子§!」的每点§Y外交点§!£dip£将会为我们带来§Y全国水手修正§!§G+5§!%\n"
  THE_IQU_4_6_c_tt2: "发展拥有修正「§O龙脉-龙之迹§!」的省份将会有§Y50§!%的概率额外提升1点§Y发展度§!"
@@ -192,6 +193,7 @@ l_english:
  THE_IQU_hvr_cannot_insult_iqu_c_yy1: "@HVR[HVR.GetName]禁止§M羞辱§!@IQU[IQU.GetName]"
  THE_IQU_hvr_can_not_alliance_c_tooltip: "@HVR§Y[HVR.GetName]§!禁止§M结盟§!"
  THE_IQU_hvr_can_not_be_create_guaranteeaction_c_tooltip: "@HVR§Y[HVR.GetName]§!禁止§M保障独立§!"
+ THE_IQU_event_1012_c_tt1: "所有@HVR§Y[HVR.GetName]§!的非本土省份都会被割让予我们，并获得以下效果："
 ### MISSION_EXTRA_END
 
 ### DECISIONS
@@ -521,6 +523,7 @@ l_english:
  THE_IQU_flavor_events.86.t: "兽骇"
  THE_IQU_flavor_events.86.desc: "我们的探险队行入密林深处，腐叶与湿土的气息扑面而来。拨开最后一丛纠缠的荆棘，眼前出现一处以断枝与干草垒成的巢穴，而其主人是一头鬃毛如铁针般倒竖，獠牙森然弯曲的野猪，正发出沉闷而威胁的低吼。它很快察觉到了我们的气息。"
  THE_IQU_flavor_events.86.1: "尝试将其制服"
+ THE_IQU_flavor_events.86.2: "尝试直接离开"
  THE_IQU_flavor_events.87.t: "缚妖"
  THE_IQU_flavor_events.87.desc: "就在野猪猛冲而来的瞬间，数道流转着微光的云雾锁链自四方浮现，精准地缠缚住其四肢与躯干。野猪狂暴挣扎，吼声震林。数位天人共同用微光索制服了野猪，此兽体型庞大，足够船队食用多日。"
  THE_IQU_flavor_events.87.1: "就地处理"
@@ -1045,6 +1048,7 @@ l_english:
  THE_IQU_flavor_events.1011.t: "额外收入"
  THE_IQU_flavor_events.1011.desc: "我们和天界通过联合贸易获得的额外收入"
  THE_IQU_flavor_events.1011.1: "了解"
+ THE_IQU_event_1011_c_tt2: "@IQU§Y[IQU.GetName]§!当前的贸易竞争力为§Y[Root.the_iqu_total_heaven_trade_power_im_var_iqu_view.GetValue]§!\n@HVR§Y[HVR.GetName]§!当前的贸易竞争力为§Y[Root.the_iqu_total_heaven_trade_power_im_var_hvr_view.GetValue]§!"
 ### SYS_EVENT_END
 
 ### SCRIPT_EFFECT
@@ -1106,6 +1110,10 @@ l_english:
  THE_IQU_will_get_wuxing_point_after_explore_c_tt4: "--获得§G1§!点「金之印」"
  THE_IQU_will_get_wuxing_point_after_explore_c_tt5: "--获得§G1§!点「金之印」"
  THE_IQU_will_get_wuxing_point_after_explore_c_tt6: "根据当前省份的§O曾存在的龙脉§!，我们将："
+ THE_IQU_flavor_events.1012.t: "重新规划天界领地"
+ THE_IQU_flavor_events.1012.desc: "如今的天界，早已褪去了往日的纷乱，变得井然有序。龙宫使衣玖定下的新法，理顺了从前的诸多纠葛，纷争渐消，连云路上的气息都变得清净安稳。只是不过不少领地仍在天子的麾下，迟迟不入规制，终究得重新规整这些领地的疆界与权属才好。"
+ THE_IQU_flavor_events.1012.1: "交给手下人办吧"
+ THE_IQU_flavor_events.1011.2: "就随她去吧——"
 ### SCRIPT_EFFECT_END
 
 
@@ -1120,7 +1128,7 @@ l_english:
  THE_IQU_lunar_war_goals_desc: "战争目标: 夺取首都"
  THE_IQU_lunar_war_name: "月面战争"
  THE_IQU_england_war_cb: "鳕鱼战争"
- THE_IQU_england_war_cb_desc: ""§Y该宣战理由只能割让目标位于沿「§Y北太平洋海域§!」区域的沿海省份。§!"
+ THE_IQU_england_war_cb_desc: ""§Y该宣战理由只能割让目标位于沿「§Y北大西洋海域§!」区域的沿海省份。§!"
  THE_IQU_lunar_war_goals_desc: "战争目标: 展现霸权"
  THE_IQU_england_war_name: "鳕鱼战争"
  
@@ -1134,4 +1142,5 @@ l_english:
 ### CUSTOM_GUI
  THE_IQU_guide_the_loong_vein_province_button_gui_c_tt1: "§W引渡龙脉§!\n======================="
  THE_IQU_end_the_loong_vein_province_button_gui_c_tt1: "§W消止龙脉§!\n======================="
+ THE_IQU_guide_the_loong_vein_province_button_gui_c_tt2: "当前没有正在引导的龙脉"
 ### CUSTOM_GUI_END

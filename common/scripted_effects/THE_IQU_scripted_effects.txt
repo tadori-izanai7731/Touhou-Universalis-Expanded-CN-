@@ -308,7 +308,7 @@ THE_IQU_explore_event_get_benifit_immeditate_script = {
 		}
 		#导出奖励修正
 		export_to_variable = {
-			which = the_iqu_treasury_get_modifier_im_var
+			variable_name = the_iqu_treasury_get_modifier_im_var
 			value = modifier:THE_IQU_explore_treasury_get_cutom_modifier
 		}
 		change_variable = {
@@ -456,7 +456,7 @@ THE_IQU_clr_the_exploring_now_success_effect = {
 		# 		#设立完成标记
 		# 		set_province_flag = THE_IQU_this_province_had_been_explored_flag
 		# 		THE_IQU_add_fengshui_wuxing_province_permant_buff_effect = yes 
-				
+		
 		# 		#满足政体添加龙脉
 		# 		if = {
 		# 			limit = {
@@ -471,7 +471,7 @@ THE_IQU_clr_the_exploring_now_success_effect = {
 		# 				}
 		# 			}
 		# 		}
-				
+		
 		# 		#清除正在探索
 		# 		clr_province_flag = THE_IQU_this_provinces_is_exploring_now
 		# 	}
@@ -495,18 +495,40 @@ THE_IQU_clr_the_exploring_now_success_effect = {
 			#满足政体添加龙脉
 			if = {
 				limit = {
-					has_government_attribute = THE_IQU_scarlet_sky_reform_mechanic
+					ROOT = {
+						has_government_attribute = THE_IQU_scarlet_sky_reform_mechanic
+					}
 				}
-				random_list = {
-					25 = {
-						add_permanent_province_modifier = {
-							name = THE_IQU_lonng_vein_head_province_buff
-							duration = -1
+				THIS = {
+					random_list = {
+						25 = {
+							add_permanent_province_modifier = {
+								name = THE_IQU_lonng_vein_head_province_buff
+								duration = -1
+							}
+						}
+						75 = {
+							
 						}
 					}
 				}
 			}
-			
+			if = {
+				limit = { 
+					THIS = {
+						OR = {
+							province_id = 835
+							province_id = 2890
+						}
+					}
+				}
+				THIS = {
+					add_permanent_province_modifier = {
+						name = THE_IQU_lonng_vein_head_province_buff
+						duration = -1
+					}
+				}
+			}
 			#清除正在探索
 			clr_province_flag = THE_IQU_this_provinces_is_exploring_now
 		}
@@ -520,6 +542,20 @@ THE_IQU_clr_the_exploring_now_success_effect = {
 		change_variable = {
 			which = the_iqu_had_explore_area_number_im_var
 			value = 1
+		}
+		change_variable = {
+			which = the_iqu_had_explore_area_number_im_var_ex
+			value = 1
+		}
+		if = {
+			limit = { 
+				has_government_mechanic = THE_IQU_tennin_one_taoist_mechanic
+			}
+			add_government_power = {
+				mechanic_type = THE_IQU_tennin_one_taoist_mechanic
+				power_type = THE_IQU_tennin_one_taoist_jin_power
+				value = 1
+			}
 		}
 	}
 }
@@ -716,7 +752,7 @@ THE_IQU_add_fengshui_wuxing_province_permant_buff_effect = {
 	# 			}
 	# 		}
 	# 	}
-		
+	
 	# }
 }
 #「失败」的事件清除
@@ -784,28 +820,35 @@ THE_IQU_add_prestige_or_navy_tradition_effects = {
 THE_IQU_guide_the_lonng_vein_custom_gui_script = {
 	custom_tooltip = THE_IQU_guide_the_loong_vein_building_construction_scripted_c_tt1
 	hidden_effect = {
-		export_to_variable = {
-			value = the_iqu_guide_loong_vein_export_im_var
-			which = modifier:THE_IQU_guide_loong_vein_custom_modifier
+		FROM = {
+			export_to_variable = {
+				variable_name = the_iqu_guide_loong_vein_export_im_var
+				value = modifier:THE_IQU_guide_loong_vein_custom_modifier
+			}
+			multiply_variable = {
+				which = the_iqu_guide_loong_vein_export_im_var
+				value = 10
+			}
 		}
-		set_variable = {
-			which = the_iqu_base_guide_loong_vein_building_time_im_var
-			value = 1
-		}
-		subtract_variable = {
-			which = the_iqu_base_guide_loong_vein_building_time_im_var
-			which = the_iqu_guide_loong_vein_export_im_var
-		}
+		# set_variable = {
+		# 	which = the_iqu_base_guide_loong_vein_building_time_im_var
+		# 	value = 1
+		# }
+		# change_variable = {
+		# 	which = the_iqu_base_guide_loong_vein_building_time_im_var
+		# 	which = the_iqu_guide_loong_vein_export_im_var
+		# }
 	}
-	if = { limit = { check_variable = { which = the_iqu_base_guide_loong_vein_building_time_im_var value = 0.9 } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.9 } }
-	else_if = { limit = { check_variable = { which = the_iqu_base_guide_loong_vein_building_time_im_var value = 0.8 } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.8 } }
-	else_if = { limit = { check_variable = { which = the_iqu_base_guide_loong_vein_building_time_im_var value = 0.7 } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.7 } }
-	else_if = { limit = { check_variable = { which = the_iqu_base_guide_loong_vein_building_time_im_var value = 0.6 } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.6 } }
-	else_if = { limit = { check_variable = { which = the_iqu_base_guide_loong_vein_building_time_im_var value = 0.5 } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.5 } }
-	else_if = { limit = { check_variable = { which = the_iqu_base_guide_loong_vein_building_time_im_var value = 0.4 } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.4 } }
-	else_if = { limit = { check_variable = { which = the_iqu_base_guide_loong_vein_building_time_im_var value = 0.3 } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.3 } }
-	else_if = { limit = { check_variable = { which = the_iqu_base_guide_loong_vein_building_time_im_var value = 0.2 } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.2 } }
-	else_if = { limit = { check_variable = { which = the_iqu_base_guide_loong_vein_building_time_im_var value = 0.1 } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.1 } }
+	
+	if = { limit = { FROM = { check_variable = { which = the_iqu_guide_loong_vein_export_im_var value = -1 } } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.9 } }
+	else_if = { limit = { FROM = { check_variable = { which = the_iqu_guide_loong_vein_export_im_var value = -2 } } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.8 } }
+	else_if = { limit = { FROM = { check_variable = { which = the_iqu_guide_loong_vein_export_im_var value = -3 } } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.7 } }
+	else_if = { limit = { FROM = { check_variable = { which = the_iqu_guide_loong_vein_export_im_var value = -4 } } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.6 } }
+	else_if = { limit = { FROM = { check_variable = { which = the_iqu_guide_loong_vein_export_im_var value = -5 } } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.5 } }
+	else_if = { limit = { FROM = { check_variable = { which = the_iqu_guide_loong_vein_export_im_var value = -6 } } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.4 } }
+	else_if = { limit = { FROM = { check_variable = { which = the_iqu_guide_loong_vein_export_im_var value = -7 } } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.3 } }
+	else_if = { limit = { FROM = { check_variable = { which = the_iqu_guide_loong_vein_export_im_var value = -8 } } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.2 } }
+	else_if = { limit = { FROM = { check_variable = { which = the_iqu_guide_loong_vein_export_im_var value = -9 } } } add_building_construction = { building = THE_IQU_guide_the_loong_vein_building cost = 1.0 speed = 0.1 } }
 }
 #建筑效果
 THE_IQU_guide_the_loong_vein_building_construction_scripted = {
@@ -825,7 +868,7 @@ THE_IQU_guide_the_loong_vein_building_construction_scripted = {
 					name = THE_IQU_lonng_vein_foot_province_buff
 					duration = 7300
 				}
-				THE_IQU_move_wuxing_loong_province_flag_effect = yes
+				# THE_IQU_move_wuxing_loong_province_flag_effect = yes
 			}
 		}
 		else = {
@@ -839,7 +882,7 @@ THE_IQU_guide_the_loong_vein_building_construction_scripted = {
 						name = THE_IQU_lonng_vein_foot_province_buff
 						duration = 7300
 					}
-					THE_IQU_move_wuxing_loong_province_flag_effect = yes
+					# THE_IQU_move_wuxing_loong_province_flag_effect = yes
 				}	
 			}
 		}
@@ -855,10 +898,10 @@ THE_IQU_guide_the_loong_vein_building_construction_scripted = {
 						tag = IQU
 						mission_completed = THE_IQU_3_8
 					}
-					overlord = {
-						tag = IQU
-						mission_completed = THE_IQU_3_8
-					}
+					# overlord = {
+					# 	tag = IQU
+					# 	mission_completed = THE_IQU_3_8
+					# }
 				} 
 			}
 			every_neighbor_province = {
@@ -892,7 +935,7 @@ THE_IQU_guide_the_loong_vein_building_construction_scripted = {
 			}
 		}
 		###
-		THE_IQU_will_check_province_fengshui_and_add_next_flag_effect = yes
+		# THE_IQU_will_check_province_fengshui_and_add_next_flag_effect = yes
 	}
 }
 #建筑检测 当地风水，获得flag以及下一期五行
@@ -908,110 +951,124 @@ THE_IQU_guide_the_loong_vein_building_construction_scripted = {
 # THE_IQU_loong_vein_get_wuxing_mu_flag_next 下一期-木
 # THE_IQU_loong_vein_get_wuxing_huo_flag_next 下一期-火
 # THE_IQU_loong_vein_get_wuxing_tu_flag_next 下一期-土
-THE_IQU_will_check_province_fengshui_and_add_next_flag_effect = {
-	THE_IQU_will_check_province_fengshui_and_add_next_flag_script = { wuxing = jin next = shui }
-	THE_IQU_will_check_province_fengshui_and_add_next_flag_script = { wuxing = shui next = mu }
-	THE_IQU_will_check_province_fengshui_and_add_next_flag_script = { wuxing = mu next = huo }
-	THE_IQU_will_check_province_fengshui_and_add_next_flag_script = { wuxing = huo next = tu }
-	THE_IQU_will_check_province_fengshui_and_add_next_flag_script = { wuxing = tu next = jin }
-}
-THE_IQU_will_check_province_fengshui_and_add_next_flag_script = {
-	if = {
-		limit = { 
-			has_province_modifier = THE_IQU_Feng_shui_$wuxing$_buff
-			OR = {
-				has_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag_next
-				AND = {
-					NOT = { has_country_flag = THE_IQU_loong_vein_get_wuxing_jin_flag_next }
-					NOT = { has_country_flag = THE_IQU_loong_vein_get_wuxing_shui_flag_next }
-					NOT = { has_country_flag = THE_IQU_loong_vein_get_wuxing_mu_flag_next }
-					NOT = { has_country_flag = THE_IQU_loong_vein_get_wuxing_huo_flag_next }
-					NOT = { has_country_flag = THE_IQU_loong_vein_get_wuxing_tu_flag_next }
-				}
-			}
-			
-		}
-		THE_IQU_will_clr_all_next_wuxing_province_flag_effect = yes
-		set_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag
-		set_province_flag = THE_IQU_loong_vein_get_wuxing_$next$_flag_next
-	}
-}
-#清除所有下一期五行标签
-THE_IQU_will_clr_all_next_wuxing_province_flag_effect = {
-	clr_province_flag = THE_IQU_loong_vein_get_wuxing_jin_flag_next
-	clr_province_flag = THE_IQU_loong_vein_get_wuxing_shui_flag_next
-	clr_province_flag = THE_IQU_loong_vein_get_wuxing_mu_flag_next
-	clr_province_flag = THE_IQU_loong_vein_get_wuxing_huo_flag_next
-	clr_province_flag = THE_IQU_loong_vein_get_wuxing_tu_flag_next
-}
-#转移省份标签
-THE_IQU_move_wuxing_loong_province_flag_effect = {
-	THE_IQU_move_wuxing_loong_province_flag_script = { wuxing = jin }
-	THE_IQU_move_wuxing_loong_province_flag_script = { wuxing = shui }
-	THE_IQU_move_wuxing_loong_province_flag_script = { wuxing = mu }
-	THE_IQU_move_wuxing_loong_province_flag_script = { wuxing = huo }
-	THE_IQU_move_wuxing_loong_province_flag_script = { wuxing = tu }
-}
-THE_IQU_move_wuxing_loong_province_flag_script = {
-	if = {
-		limit = { 
-			any_neighbor_province = {
-				has_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag
-			}
-		}
-		random_neighbor_province = {
-			limit = {
-				has_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag
-			}
-			clr_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag
-		}
-		ROOT = {
-			set_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag
-		}
-	}
-	else = {
-		sea_zone = {
-			random_neighbor_province = {
-				limit = {
-					has_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag
-				}
-				clr_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag
-			}	
-			ROOT = {
-				set_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag
-			}
-		}
-	}
-	if = {
-		limit = { 
-			any_neighbor_province = {
-				has_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag_next
-			}
-		}
-		random_neighbor_province = {
-			limit = {
-				has_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag_next
-			}
-			clr_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag_next
-		}
-		ROOT = {
-			set_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag_next
-		}
-	}
-	else = {
-		sea_zone = {
-			random_neighbor_province = {
-				limit = {
-					has_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag_next
-				}
-				clr_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag_next
-			}
-			ROOT = {
-				set_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag_next
-			}	
-		}
-	}
-}
+# THE_IQU_will_check_province_fengshui_and_add_next_flag_effect = {
+# 	THE_IQU_will_check_province_fengshui_and_add_next_flag_script = { wuxing = jin next = shui }
+# 	THE_IQU_will_check_province_fengshui_and_add_next_flag_script = { wuxing = shui next = mu }
+# 	THE_IQU_will_check_province_fengshui_and_add_next_flag_script = { wuxing = mu next = huo }
+# 	THE_IQU_will_check_province_fengshui_and_add_next_flag_script = { wuxing = huo next = tu }
+# 	THE_IQU_will_check_province_fengshui_and_add_next_flag_script = { wuxing = tu next = jin }
+# }
+# THE_IQU_will_check_province_fengshui_and_add_next_flag_script = {
+# 	if = {
+# 		limit = { 
+# 			has_province_modifier = THE_IQU_Feng_shui_$wuxing$_buff
+# 			OR = {
+# 				has_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag_next
+# 				AND = {
+# 					NOT = { has_province_flag = THE_IQU_loong_vein_get_wuxing_jin_flag_next }
+# 					NOT = { has_province_flag = THE_IQU_loong_vein_get_wuxing_shui_flag_next }
+# 					NOT = { has_province_flag = THE_IQU_loong_vein_get_wuxing_mu_flag_next }
+# 					NOT = { has_province_flag = THE_IQU_loong_vein_get_wuxing_huo_flag_next }
+# 					NOT = { has_province_flag = THE_IQU_loong_vein_get_wuxing_tu_flag_next }
+# 				}
+# 			}
+
+# 		}
+# 		THE_IQU_will_clr_all_next_wuxing_province_flag_effect = yes
+# 		set_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag
+# 		set_province_flag = THE_IQU_loong_vein_get_wuxing_$next$_flag_next
+# 	}
+# }
+# #清除所有下一期五行标签
+# THE_IQU_will_clr_all_next_wuxing_province_flag_effect = {
+# 	clr_province_flag = THE_IQU_loong_vein_get_wuxing_jin_flag_next
+# 	clr_province_flag = THE_IQU_loong_vein_get_wuxing_shui_flag_next
+# 	clr_province_flag = THE_IQU_loong_vein_get_wuxing_mu_flag_next
+# 	clr_province_flag = THE_IQU_loong_vein_get_wuxing_huo_flag_next
+# 	clr_province_flag = THE_IQU_loong_vein_get_wuxing_tu_flag_next
+# }
+# #转移省份标签
+# THE_IQU_move_wuxing_loong_province_flag_effect = {
+# 	THE_IQU_move_wuxing_loong_province_flag_script = { wuxing = jin }
+# 	THE_IQU_move_wuxing_loong_province_flag_script = { wuxing = shui }
+# 	THE_IQU_move_wuxing_loong_province_flag_script = { wuxing = mu }
+# 	THE_IQU_move_wuxing_loong_province_flag_script = { wuxing = huo }
+# 	THE_IQU_move_wuxing_loong_province_flag_script = { wuxing = tu }
+# }
+# THE_IQU_move_wuxing_loong_province_flag_script = {
+# 	if = {
+# 		limit = { 
+# 			any_neighbor_province = {
+# 				has_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag
+# 			}
+# 		}
+# 		random_neighbor_province = {
+# 			limit = {
+# 				has_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag
+# 			}
+# 			clr_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag
+# 		}
+# 		ROOT = {
+# 			set_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag
+# 		}
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			sea_zone = {
+# 				any_neighbor_province = {
+# 					has_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag
+# 				}
+# 			}
+# 		}
+# 		sea_zone = {
+# 			random_neighbor_province = {
+# 				limit = {
+# 					has_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag
+# 				}
+# 				clr_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag
+# 			}	
+# 			ROOT = {
+# 				set_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag
+# 			}
+# 		}
+# 	}
+# 	if = {
+# 		limit = { 
+# 			any_neighbor_province = {
+# 				has_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag_next
+# 			}
+# 		}
+# 		random_neighbor_province = {
+# 			limit = {
+# 				has_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag_next
+# 			}
+# 			clr_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag_next
+# 		}
+# 		ROOT = {
+# 			set_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag_next
+# 		}
+# 	}
+# 	else_if = {
+# 		limit = { 
+# 			sea_zone = {
+# 				any_neighbor_province = {
+# 					has_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag_next
+# 				}
+# 			}
+# 		}
+# 		sea_zone = {
+# 			random_neighbor_province = {
+# 				limit = {
+# 					has_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag_next
+# 				}
+# 				clr_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag_next
+# 			}
+# 			ROOT = {
+# 				set_province_flag = THE_IQU_loong_vein_get_wuxing_$wuxing$_flag_next
+# 			}	
+# 		}
+# 	}
+# }
 ##天子规训 effect
 ##顺从度：0-100% the_iqu_the_tenshi_obedience_im_var
 ##教学经验：int the_iqu_the_tenshi_teaching_experience_im_var
@@ -1313,119 +1370,119 @@ THE_IQU_add_government_power_lvl_3_effect = {
 	}
 }
 #龙脉消止
-THE_IQU_end_the_loong_vein_effect = {
-	if = {
-		limit = { 
-			THE_IQU_num_of_wuxing_flag_province_with_trigger = {
-				value = 5
-			}
-		}
-		THE_IQU_add_unique_point_temporary_province_effects = {
-			level = 5
-		}
-	}
-	else_if = {
-		limit = {
-			THE_IQU_num_of_wuxing_flag_province_with_trigger = {
-				value = 4
-			}
-		}
-		THE_IQU_add_unique_point_temporary_province_effects = {
-			level = 4
-		}
-	}
-	else_if = {
-		limit = {
-			THE_IQU_num_of_wuxing_flag_province_with_trigger = {
-				value = 3
-			}
-		}
-		THE_IQU_add_unique_point_temporary_province_effects = {
-			level = 3
-		}
-	}
-	else_if = {
-		limit = {
-			THE_IQU_num_of_wuxing_flag_province_with_trigger = {
-				value = 2
-			}
-		}
-		THE_IQU_add_unique_point_temporary_province_effects = {
-			level = 2
-		}
-	}
-	else_if = {
-		limit = {
-			THE_IQU_num_of_wuxing_flag_province_with_trigger = {
-				value = 1
-			}
-		}
-		THE_IQU_add_unique_point_temporary_province_effects = {
-			level = 1
-		}
-	}
-	####获得特殊点五行
-	# THE_IQU_has_get_unique_point_is_jin_flag
-	# THE_IQU_has_get_unique_point_is_shui_flag
-	# THE_IQU_has_get_unique_point_is_mu_flag
-	# THE_IQU_has_get_unique_point_is_huo_flag
-	# THE_IQU_has_get_unique_point_is_tu_flag
-	hidden_effect = {
-		if = {
-			limit = { 
-				THE_IQU_has_any_province_wuxing_flag_trigger = {
-					wuxing = jin
-				}
-			}
-			set_country_flag = THE_IQU_has_get_unique_point_is_jin_flag
-		}
-		if = {
-			limit = { 
-				THE_IQU_has_any_province_wuxing_flag_trigger = {
-					wuxing = shui
-				}
-			}
-			set_country_flag = THE_IQU_has_get_unique_point_is_shui_flag
-		}
-		if = {
-			limit = { 
-				THE_IQU_has_any_province_wuxing_flag_trigger = {
-					wuxing = mu
-				}
-			}
-			set_country_flag = THE_IQU_has_get_unique_point_is_mu_flag
-		}
-		if = {
-			limit = { 
-				THE_IQU_has_any_province_wuxing_flag_trigger = {
-					wuxing = huo
-				}
-			}
-			set_country_flag = THE_IQU_has_get_unique_point_is_huo_flag
-		}
-		if = {
-			limit = { 
-				THE_IQU_has_any_province_wuxing_flag_trigger = {
-					wuxing = tu
-				}
-			}
-			set_country_flag = THE_IQU_has_get_unique_point_is_tu_flag
-		}
-		clr_country_flag = THE_IQU_loong_vein_get_wuxing_jin_flag
-		clr_country_flag = THE_IQU_loong_vein_get_wuxing_shui_flag
-		clr_country_flag = THE_IQU_loong_vein_get_wuxing_mu_flag
-		clr_country_flag = THE_IQU_loong_vein_get_wuxing_huo_flag
-		clr_country_flag = THE_IQU_loong_vein_get_wuxing_tu_flag
-		#
-		clr_country_flag = THE_IQU_loong_vein_get_wuxing_jin_flag_next
-		clr_country_flag = THE_IQU_loong_vein_get_wuxing_shui_flag_next
-		clr_country_flag = THE_IQU_loong_vein_get_wuxing_mu_flag_next
-		clr_country_flag = THE_IQU_loong_vein_get_wuxing_huo_flag_next
-		clr_country_flag = THE_IQU_loong_vein_get_wuxing_tu_flag_next
-		#
-		remove_province_modifier = THE_IQU_lonng_vein_head_province_buff
-	}
-}
+# THE_IQU_end_the_loong_vein_effect = {
+# 	if = {
+# 		limit = { 
+# 			THE_IQU_num_of_wuxing_flag_province_with_trigger = {
+# 				value = 5
+# 			}
+# 		}
+# 		THE_IQU_add_unique_point_temporary_province_effects = {
+# 			level = 5
+# 		}
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			THE_IQU_num_of_wuxing_flag_province_with_trigger = {
+# 				value = 4
+# 			}
+# 		}
+# 		THE_IQU_add_unique_point_temporary_province_effects = {
+# 			level = 4
+# 		}
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			THE_IQU_num_of_wuxing_flag_province_with_trigger = {
+# 				value = 3
+# 			}
+# 		}
+# 		THE_IQU_add_unique_point_temporary_province_effects = {
+# 			level = 3
+# 		}
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			THE_IQU_num_of_wuxing_flag_province_with_trigger = {
+# 				value = 2
+# 			}
+# 		}
+# 		THE_IQU_add_unique_point_temporary_province_effects = {
+# 			level = 2
+# 		}
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			THE_IQU_num_of_wuxing_flag_province_with_trigger = {
+# 				value = 1
+# 			}
+# 		}
+# 		THE_IQU_add_unique_point_temporary_province_effects = {
+# 			level = 1
+# 		}
+# 	}
+# 	####获得特殊点五行
+# 	# THE_IQU_has_get_unique_point_is_jin_flag
+# 	# THE_IQU_has_get_unique_point_is_shui_flag
+# 	# THE_IQU_has_get_unique_point_is_mu_flag
+# 	# THE_IQU_has_get_unique_point_is_huo_flag
+# 	# THE_IQU_has_get_unique_point_is_tu_flag
+# 	hidden_effect = {
+# 		if = {
+# 			limit = { 
+# 				THE_IQU_has_any_province_wuxing_flag_trigger = {
+# 					wuxing = jin
+# 				}
+# 			}
+# 			set_country_flag = THE_IQU_has_get_unique_point_is_jin_flag
+# 		}
+# 		if = {
+# 			limit = { 
+# 				THE_IQU_has_any_province_wuxing_flag_trigger = {
+# 					wuxing = shui
+# 				}
+# 			}
+# 			set_country_flag = THE_IQU_has_get_unique_point_is_shui_flag
+# 		}
+# 		if = {
+# 			limit = { 
+# 				THE_IQU_has_any_province_wuxing_flag_trigger = {
+# 					wuxing = mu
+# 				}
+# 			}
+# 			set_country_flag = THE_IQU_has_get_unique_point_is_mu_flag
+# 		}
+# 		if = {
+# 			limit = { 
+# 				THE_IQU_has_any_province_wuxing_flag_trigger = {
+# 					wuxing = huo
+# 				}
+# 			}
+# 			set_country_flag = THE_IQU_has_get_unique_point_is_huo_flag
+# 		}
+# 		if = {
+# 			limit = { 
+# 				THE_IQU_has_any_province_wuxing_flag_trigger = {
+# 					wuxing = tu
+# 				}
+# 			}
+# 			set_country_flag = THE_IQU_has_get_unique_point_is_tu_flag
+# 		}
+# 		clr_country_flag = THE_IQU_loong_vein_get_wuxing_jin_flag
+# 		clr_country_flag = THE_IQU_loong_vein_get_wuxing_shui_flag
+# 		clr_country_flag = THE_IQU_loong_vein_get_wuxing_mu_flag
+# 		clr_country_flag = THE_IQU_loong_vein_get_wuxing_huo_flag
+# 		clr_country_flag = THE_IQU_loong_vein_get_wuxing_tu_flag
+# 		#
+# 		clr_country_flag = THE_IQU_loong_vein_get_wuxing_jin_flag_next
+# 		clr_country_flag = THE_IQU_loong_vein_get_wuxing_shui_flag_next
+# 		clr_country_flag = THE_IQU_loong_vein_get_wuxing_mu_flag_next
+# 		clr_country_flag = THE_IQU_loong_vein_get_wuxing_huo_flag_next
+# 		clr_country_flag = THE_IQU_loong_vein_get_wuxing_tu_flag_next
+# 		#
+# 		remove_province_modifier = THE_IQU_lonng_vein_head_province_buff
+# 	}
+# }
 
 #
 THE_IQU_add_diplomacal_experience_var_effect = {
@@ -1456,198 +1513,198 @@ THE_IQU_add_nautical_experience_var_effect = {
 	}
 }
 
-THE_IQU_will_get_wuxing_point_after_explore_effect = {
-	if = {
-		limit = { 
-			ROOT = {
-				has_government_attribute = THE_IQU_tennin_one_taoist_reform_mechanic
-				OR = {
-					was_tag = IQU
-					tag = IQU
-				}
-			}
-		}
-		if = {
-			limit = { 
-				THIS = {
-					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
-						wuxing = jin
-					}
-				}
-			}
-			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt6
-			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt1
-		}
-		if = {
-			limit = { 
-				THIS = {
-					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
-						wuxing = shui
-					}
-				}
-			}
-			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt6
-			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt2
-		}
-		if = {
-			limit = { 
-				THIS = {
-					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
-						wuxing = mu
-					}
-				}
-			}
-			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt6
-			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt3
-		}
-		if = {
-			limit = { 
-				THIS = {
-					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
-						wuxing = huo
-					}
-				}
-			}
-			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt6
-			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt4
-		}
-		if = {
-			limit = { 
-				THIS = {
-					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
-						wuxing = tu
-					}
-				}
-			}
-			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt6
-			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt5
-		}
-	}
-}
+# THE_IQU_will_get_wuxing_point_after_explore_effect = {
+# 	if = {
+# 		limit = { 
+# 			ROOT = {
+# 				has_government_attribute = THE_IQU_tennin_one_taoist_reform_mechanic
+# 				OR = {
+# 					was_tag = IQU
+# 					tag = IQU
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = { 
+# 				THIS = {
+# 					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+# 						wuxing = jin
+# 					}
+# 				}
+# 			}
+# 			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt6
+# 			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt1
+# 		}
+# 		if = {
+# 			limit = { 
+# 				THIS = {
+# 					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+# 						wuxing = shui
+# 					}
+# 				}
+# 			}
+# 			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt6
+# 			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt2
+# 		}
+# 		if = {
+# 			limit = { 
+# 				THIS = {
+# 					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+# 						wuxing = mu
+# 					}
+# 				}
+# 			}
+# 			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt6
+# 			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt3
+# 		}
+# 		if = {
+# 			limit = { 
+# 				THIS = {
+# 					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+# 						wuxing = huo
+# 					}
+# 				}
+# 			}
+# 			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt6
+# 			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt4
+# 		}
+# 		if = {
+# 			limit = { 
+# 				THIS = {
+# 					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+# 						wuxing = tu
+# 					}
+# 				}
+# 			}
+# 			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt6
+# 			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt5
+# 		}
+# 	}
+# }
 #探险后结算
-THE_IQU_after_get_wuxing_point_after_explore_effect = {
-	if = {
-		limit = { 
-			ROOT = {
-				has_government_attribute = THE_IQU_tennin_one_taoist_reform_mechanic
-				OR = {
-					was_tag = IQU
-					tag = IQU
-				}
-			}
-		}
-		if = {
-			limit = { 
-				THIS = {
-					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
-						wuxing = jin
-					}
-				}
-			}
-			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt1
-			hidden_effect = {
-				random_country = {
-					limit = {
-						has_government_mechanic = THE_IQU_tennin_one_taoist_mechanic
-					}
-					add_government_power = {
-						mechanic_type = THE_IQU_tennin_one_taoist_mechanic
-						power_type = THE_IQU_tennin_one_taoist_jin_power
-						value = 1
-					}
-				}
-			}
-		}
-		if = {
-			limit = { 
-				THIS = {
-					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
-						wuxing = shui
-					}
-				}
-			}
-			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt2
-			hidden_effect = {
-				random_country = {
-					limit = {
-						has_government_mechanic = THE_IQU_tennin_one_taoist_mechanic
-					}
-					add_government_power = {
-						mechanic_type = THE_IQU_tennin_one_taoist_mechanic
-						power_type = THE_IQU_tennin_one_taoist_shui_power
-						value = 1
-					}
-				}
-			}
-		}
-		if = {
-			limit = { 
-				THIS = {
-					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
-						wuxing = mu
-					}
-				}
-			}
-			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt3
-			hidden_effect = {
-				random_country = {
-					limit = {
-						has_government_mechanic = THE_IQU_tennin_one_taoist_mechanic
-					}
-					add_government_power = {
-						mechanic_type = THE_IQU_tennin_one_taoist_mechanic
-						power_type = THE_IQU_tennin_one_taoist_mu_power
-						value = 1
-					}
-				}
-			}
-		}
-		if = {
-			limit = { 
-				THIS = {
-					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
-						wuxing = huo
-					}
-				}
-			}
-			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt4
-			hidden_effect = {
-				random_country = {
-					limit = {
-						has_government_mechanic = THE_IQU_tennin_one_taoist_mechanic
-					}
-					add_government_power = {
-						mechanic_type = THE_IQU_tennin_one_taoist_mechanic
-						power_type = THE_IQU_tennin_one_taoist_huo_power
-						value = 1
-					}
-				}
-			}
-		}
-		if = {
-			limit = { 
-				THIS = {
-					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
-						wuxing = tu
-					}
-				}
-			}
-			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt5
-			hidden_effect = {
-				random_country = {
-					limit = {
-						has_government_mechanic = THE_IQU_tennin_one_taoist_mechanic
-					}
-					add_government_power = {
-						mechanic_type = THE_IQU_tennin_one_taoist_mechanic
-						power_type = THE_IQU_tennin_one_taoist_tu_power
-						value = 1
-					}
-				}
-			}
-		}
-	}
-}
+# THE_IQU_after_get_wuxing_point_after_explore_effect = {
+# 	if = {
+# 		limit = { 
+# 			ROOT = {
+# 				has_government_attribute = THE_IQU_tennin_one_taoist_reform_mechanic
+# 				OR = {
+# 					was_tag = IQU
+# 					tag = IQU
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = { 
+# 				THIS = {
+# 					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+# 						wuxing = jin
+# 					}
+# 				}
+# 			}
+# 			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt1
+# 			hidden_effect = {
+# 				random_country = {
+# 					limit = {
+# 						has_government_mechanic = THE_IQU_tennin_one_taoist_mechanic
+# 					}
+# 					add_government_power = {
+# 						mechanic_type = THE_IQU_tennin_one_taoist_mechanic
+# 						power_type = THE_IQU_tennin_one_taoist_jin_power
+# 						value = 1
+# 					}
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = { 
+# 				THIS = {
+# 					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+# 						wuxing = shui
+# 					}
+# 				}
+# 			}
+# 			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt2
+# 			hidden_effect = {
+# 				random_country = {
+# 					limit = {
+# 						has_government_mechanic = THE_IQU_tennin_one_taoist_mechanic
+# 					}
+# 					add_government_power = {
+# 						mechanic_type = THE_IQU_tennin_one_taoist_mechanic
+# 						power_type = THE_IQU_tennin_one_taoist_shui_power
+# 						value = 1
+# 					}
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = { 
+# 				THIS = {
+# 					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+# 						wuxing = mu
+# 					}
+# 				}
+# 			}
+# 			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt3
+# 			hidden_effect = {
+# 				random_country = {
+# 					limit = {
+# 						has_government_mechanic = THE_IQU_tennin_one_taoist_mechanic
+# 					}
+# 					add_government_power = {
+# 						mechanic_type = THE_IQU_tennin_one_taoist_mechanic
+# 						power_type = THE_IQU_tennin_one_taoist_mu_power
+# 						value = 1
+# 					}
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = { 
+# 				THIS = {
+# 					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+# 						wuxing = huo
+# 					}
+# 				}
+# 			}
+# 			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt4
+# 			hidden_effect = {
+# 				random_country = {
+# 					limit = {
+# 						has_government_mechanic = THE_IQU_tennin_one_taoist_mechanic
+# 					}
+# 					add_government_power = {
+# 						mechanic_type = THE_IQU_tennin_one_taoist_mechanic
+# 						power_type = THE_IQU_tennin_one_taoist_huo_power
+# 						value = 1
+# 					}
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = { 
+# 				THIS = {
+# 					THE_IQU_any_province_point_has_wuxing_flag_trigger = {
+# 						wuxing = tu
+# 					}
+# 				}
+# 			}
+# 			custom_tooltip = THE_IQU_will_get_wuxing_point_after_explore_c_tt5
+# 			hidden_effect = {
+# 				random_country = {
+# 					limit = {
+# 						has_government_mechanic = THE_IQU_tennin_one_taoist_mechanic
+# 					}
+# 					add_government_power = {
+# 						mechanic_type = THE_IQU_tennin_one_taoist_mechanic
+# 						power_type = THE_IQU_tennin_one_taoist_tu_power
+# 						value = 1
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 ################################
 ##On Action Script
 ##############################
@@ -1942,18 +1999,18 @@ THE_IQU_panama_add_unique_point_event_effect = {
 			
 		}
 		random_list = {
-				10 = {
-					owner = {
-						country_event = {
-							id = THE_IQU_flavor_events.1004
-						}
+			10 = {
+				owner = {
+					country_event = {
+						id = THE_IQU_flavor_events.1004
 					}
 				}
-				90 = { }
 			}
+			90 = { }
+		}
 	}
-
-
+	
+	
 	# #巴拿马
 	# if = {
 	# 	limit = { 
@@ -2114,7 +2171,7 @@ THE_IQU_panama_add_unique_point_event_effect = {
 	# 	}
 	# 	set_province_flag = THE_IQU_has_first_discover_flag
 	# }
-
+	
 	
 }
 
@@ -2157,20 +2214,19 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 				20 = { country_event = { id = THE_IQU_flavor_events.133 } }
 				20 = { country_event = { id = THE_IQU_flavor_events.137 } }
 				20 = { country_event = { id = THE_IQU_flavor_events.141 } }
-				
 				20 = { country_event = { id = THE_IQU_flavor_events.236 } }
 			}
 		}
-		else_if = {
+		if = {
 			limit = { 
 				any_owned_province = {
-						OR = {
-							region = peru_region
-							region = upper_peru_region
-							region = la_plata_region
-						}
-						has_province_flag = THE_IQU_this_provinces_is_exploring_now
+					has_province_flag = THE_IQU_this_provinces_is_exploring_now
+					OR = {
+						region = peru_region
+						region = upper_peru_region
+						region = la_plata_region
 					}
+				}
 			}
 			random_list = {
 				10 = { country_event = { id = THE_IQU_flavor_events.66 } }
@@ -2194,20 +2250,19 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 				20 = { country_event = { id = THE_IQU_flavor_events.148 } }
 				20 = { country_event = { id = THE_IQU_flavor_events.153 } }
 				20 = { country_event = { id = THE_IQU_flavor_events.156 } }
-				
 				20 = { country_event = { id = THE_IQU_flavor_events.236 } }
 			}
 		}
-		else_if = {
+		if = {
 			limit = { 
 				any_owned_province = {
-						OR = {
-							region = caribbean_sea_region
-							region = southeast_america_region
-							region = mississippi_regio
-						}
-						has_province_flag = THE_IQU_this_provinces_is_exploring_now
+					has_province_flag = THE_IQU_this_provinces_is_exploring_now
+					OR = {
+						region = caribbean_sea_region
+						region = southeast_america_region
+						region = mississippi_region
 					}
+				}
 			}
 			random_list = {
 				10 = { country_event = { id = THE_IQU_flavor_events.66 } }
@@ -2231,7 +2286,6 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 				20 = { country_event = { id = THE_IQU_flavor_events.179 } }
 				20 = { country_event = { id = THE_IQU_flavor_events.184 } }
 				20 = { country_event = { id = THE_IQU_flavor_events.187 } }
-				
 				20 = { country_event = { id = THE_IQU_flavor_events.236 } }
 			}
 			#  random_events = {
@@ -2261,16 +2315,16 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 			# }
 			
 		}
-		else_if = {
+		if = {
 			limit = { 
 				any_owned_province = {
-						OR = {
-							region = canada_region
-							region = northeast_america_region
-							region = great_lakes_region
-						}
-						has_province_flag = THE_IQU_this_provinces_is_exploring_now
+					has_province_flag = THE_IQU_this_provinces_is_exploring_now
+					OR = {
+						region = canada_region
+						region = northeast_america_region
+						region = great_lakes_region
 					}
+				}
 			}
 			random_list = {
 				10 = { country_event = { id = THE_IQU_flavor_events.66 } }
@@ -2294,7 +2348,6 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 				20 = { country_event = { id = THE_IQU_flavor_events.195 } }
 				20 = { country_event = { id = THE_IQU_flavor_events.199 } }
 				20 = { country_event = { id = THE_IQU_flavor_events.202 } }
-				
 				20 = { country_event = { id = THE_IQU_flavor_events.236 } }
 			}
 			#  random_events = {
@@ -2324,15 +2377,16 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 			# }
 			
 		}
-		else_if = {
+		if = {
 			limit = { 
 				any_owned_province = {
-						OR = {
-							region = colombia_region
-							region = brazil_region
-						}
-						has_province_flag = THE_IQU_this_provinces_is_exploring_now
+					has_province_flag = THE_IQU_this_provinces_is_exploring_now
+					OR = {
+						region = colombia_region
+						region = brazil_region
+						region = central_america_region
 					}
+				}
 			}
 			random_list = {
 				10 = { country_event = { id = THE_IQU_flavor_events.66 } }
@@ -2356,7 +2410,6 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 				20 = { country_event = { id = THE_IQU_flavor_events.163 } }
 				20 = { country_event = { id = THE_IQU_flavor_events.168 } }
 				20 = { country_event = { id = THE_IQU_flavor_events.173 } }
-				
 				20 = { country_event = { id = THE_IQU_flavor_events.236 } }
 			}
 			#  random_events = {
@@ -2385,14 +2438,14 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 			# 	5 = THE_IQU_flavor_events.236
 			# }
 		}
-		else_if = {
+		if = {
 			limit = { 
 				any_owned_province = {
-						OR = {
-							region = australia_region
-						}
-						has_province_flag = THE_IQU_this_provinces_is_exploring_now
+					has_province_flag = THE_IQU_this_provinces_is_exploring_now
+					OR = {
+						region = australia_region
 					}
+				}
 			}
 			random_list = {
 				10 = { country_event = { id = THE_IQU_flavor_events.66 } }
@@ -2416,7 +2469,6 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 				20 = { country_event = { id = THE_IQU_flavor_events.209 } }
 				20 = { country_event = { id = THE_IQU_flavor_events.213 } }
 				20 = { country_event = { id = THE_IQU_flavor_events.216 } }
-				
 				20 = { country_event = { id = THE_IQU_flavor_events.236 } }
 			}
 			#  random_events = {
@@ -2445,14 +2497,14 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 			# 	5 = THE_IQU_flavor_events.236
 			# }
 		}
-		else_if = {
+		if = {
 			limit = { 
 				any_owned_province = {
-						OR = {
-							region = british_isles_region
-						}
-						has_province_flag = THE_IQU_this_provinces_is_exploring_now
+					has_province_flag = THE_IQU_this_provinces_is_exploring_now
+					OR = {
+						region = british_isles_region
 					}
+				}
 			}
 			random_list = {
 				10 = { country_event = { id = THE_IQU_flavor_events.66 } }
@@ -2480,7 +2532,29 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 				20 = { country_event = { id = THE_IQU_flavor_events.236 } }
 			}
 		}
-		else = {
+		if = {
+			limit = {
+				any_owned_province = {
+					has_province_flag = THE_IQU_this_provinces_is_exploring_now
+					NOT = { region = cascadia_region }
+					NOT = { region = peru_region }
+					NOT = { region = upper_peru_region }
+					NOT = { region = la_plata_region }
+					NOT = { region = caribbean_sea_region }
+					NOT = { region = southeast_america_region }
+					NOT = { region = mississippi_region }
+					NOT = { region = canada_region }
+					NOT = { region = northeast_america_region }
+					NOT = { region = great_lakes_region }
+					NOT = { region = colombia_region }
+					NOT = { region = brazil_region }
+					NOT = { region = central_america_region }
+					NOT = { region = australia_region }
+					NOT = { region = british_isles_region }
+					NOT = { region = orbital_region }
+					NOT = { region = moon_region }
+				}
+			}
 			random_list = {
 				10 = { country_event = { id = THE_IQU_flavor_events.66 } }
 				10 = { country_event = { id = THE_IQU_flavor_events.70 } }
@@ -2501,26 +2575,6 @@ THE_IQU_explore_on_2_years_pluse_effect = {
 				#
 				20 = { country_event = { id = THE_IQU_flavor_events.236 } }
 			}
-			# random_events = {
-			# 	10 = THE_IQU_flavor_events.66
-			# 	10 = THE_IQU_flavor_events.70
-			# 	10 = THE_IQU_flavor_events.75
-			# 	10 = THE_IQU_flavor_events.79
-			# 	10 = THE_IQU_flavor_events.83
-			# 	10 = THE_IQU_flavor_events.86
-			# 	10 = THE_IQU_flavor_events.90
-			# 	10 = THE_IQU_flavor_events.95
-			# 	10 = THE_IQU_flavor_events.99
-			# 	10 = THE_IQU_flavor_events.102
-			# 	10 = THE_IQU_flavor_events.107
-			# 	10 = THE_IQU_flavor_events.110
-			# 	10 = THE_IQU_flavor_events.114
-			# 	10 = THE_IQU_flavor_events.117
-			# 	10 = THE_IQU_flavor_events.121
-			# 	10 = THE_IQU_flavor_events.126
-			# 	#
-			# 	5 = THE_IQU_flavor_events.236
-			# }
 		}
 	}
 	if = {
@@ -2590,52 +2644,36 @@ THE_IQU_set_yearly_trade_income_with_hvr_effect = {
 		clr_province_flag = THE_IQU_has_set_point_trade_province_power_flag
 	}
 	while = {
-		limit = { 
-			#天界的省份贸易
+		limit = {
 			HVR = {
-				any_owned_province = {
-					trade_company_region = th_trade_company_heaven
-					NOT = {
-						has_province_flag = THE_IQU_has_set_point_trade_province_power_flag2
-					}
+				check_variable = {
+					which = the_iqu_total_heaven_trade_power_im_var_iqu
+					value = 1
 				}
 			}
+		}
+		change_variable = {
+			which = the_iqu_total_heaven_trade_power_im_var_hvr
+			value = 1
 		}
 		HVR = {
-			random_owned_province = {
-				limit = {
-					trade_company_region = th_trade_company_heaven
-					NOT = {
-						has_province_flag = THE_IQU_has_set_point_trade_province_power_flag2
-					}
-				}
-				ROOT = {
-					export_to_variable = {
-						variable_name = the_iqu_total_heaven_trade_power_im_var_hvr_single_province
-						value = province_trade_power
-						who = PREV
-					}
-					#累加变量
-					change_variable = {
-						which = the_iqu_total_heaven_trade_power_im_var_hvr
-						which = the_iqu_total_heaven_trade_power_im_var_hvr_single_province
-					}
-				}
-				set_province_flag = THE_IQU_has_set_point_trade_province_power_flag2
+			change_variable = {
+				which = the_iqu_total_heaven_trade_power_im_var_iqu
+				value = -1
 			}
-		}
-	}
-	HVR = {
-		every_owned_province = {
-			limit = {
-				trade_company_region = th_trade_company_heaven
-			}
-			clr_province_flag = THE_IQU_has_set_point_trade_province_power_flag
 		}
 	}
 	#得出变量
 	#龙宫省份贸易竞争力 the_iqu_total_heaven_trade_power_im_var_iqu
 	#天界省份贸易竞争力 the_iqu_total_heaven_trade_power_im_var_hvr
+	set_variable = {
+		which = the_iqu_total_heaven_trade_power_im_var_iqu_view
+		which = the_iqu_total_heaven_trade_power_im_var_iqu
+	}
+	set_variable = {
+		which = the_iqu_total_heaven_trade_power_im_var_hvr_view
+		which = the_iqu_total_heaven_trade_power_im_var_hvr
+	}
 	if = {
 		limit = {
 			check_variable = {
@@ -2719,10 +2757,13 @@ THE_IQU_set_yearly_trade_income_with_hvr_effect = {
 THE_IQU_on_5_years_pluse_effect = {
 	if = {
 		limit = {
+			tag = IQU
 			mission_completed = THE_IQU_4_4
 		}
-		country_event = {
-			id = THE_IQU_flavor_events.1011
+		HVR = {
+			country_event = {
+				id = THE_IQU_flavor_events.1016
+			}
 		}
 	}
 }
@@ -2779,6 +2820,7 @@ THE_IQU_on_development_mil_effect = {
 			}
 		}
 	}
+	
 }
 #攻城
 THE_IQU_naval_on_brrange_effect = {

@@ -361,7 +361,7 @@ declarewar = {
 					limit = {
 						war_with = ROOT
 					}
-					remove_fow = 24
+					remove_fow = 48
 				}
 			}
 			else = {
@@ -370,7 +370,7 @@ declarewar = {
 						limit = {
 							war_with = ROOT
 						}
-						remove_fow = 24
+						remove_fow = 48
 					}
 				}
 			}
@@ -772,14 +772,8 @@ guaranteeaction = {
 	condition = {
 		tooltip = THE_IQU_hvr_can_not_be_create_guaranteeaction_c_tooltip
 		potential = { 
-			IQU = { ai = no }
+			HVR = { ai = yes }
 			OR = {
-				FROM = {
-					OR = {
-						tag = HVR
-						was_tag = HVR
-					}
-				}
 				ROOT = {
 					OR = {
 						tag = HVR

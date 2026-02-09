@@ -4,14 +4,14 @@ THE_IQU_main_branch_1 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = IQU } 
-
+	
 	THE_IQU_1_1 = {
 		icon = mission_return_of_tenshi
 		position = 1
 		provinces_to_highlight = { 
 			is_capital_of = ROOT
-		 } 
-
+		} 
+		
 		trigger = { 
 			stability = 1
 			OR = {
@@ -26,8 +26,8 @@ THE_IQU_main_branch_1 = {
 					}
 				}
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			HVR = {
 				add_stability = 1
@@ -41,22 +41,22 @@ THE_IQU_main_branch_1 = {
 			}
 		} 
 	}
-
+	
 	THE_IQU_1_2 = {
 		icon = the_iqu_mission_2
 		position = 2
 		required_missions = { THE_IQU_1_1 } 
 		provinces_to_highlight = { 
 			is_capital_of = ROOT
-		 } 
-
+		} 
+		
 		trigger = { 
 			OR = {
 				navy_size_percentage = 1.00
 				num_of_light_ship = 15
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			#任意Dragon_islands区域的province_id
 			5032 = {
@@ -69,23 +69,23 @@ THE_IQU_main_branch_1 = {
 				name = THE_IQU_sail_and_sails_buff
 				duration = 5475
 			}
-		 } 
+		} 
 	}
-
+	
 	THE_IQU_1_3 = {
 		icon = the_iqu_mission_5
 		position = 3
 		required_missions = { THE_IQU_1_2 } 
 		provinces_to_highlight = { 
 			area = Dragon_islands
-		 } 
-
+		} 
+		
 		trigger = { 
 			THE_IQU_this_province_had_been_explored_custom_trigger = {
 				area = Dragon_islands
 			}
 		} 
-
+		
 		effect = { 
 			add_dip_power = 50
 			THE_IQU_add_prestige_or_navy_tradition_effects = {
@@ -93,7 +93,7 @@ THE_IQU_main_branch_1 = {
 			}
 		} 
 	}
-
+	
 	THE_IQU_1_4 = {
 		icon = the_iqu_mission_3
 		position = 4
@@ -101,7 +101,7 @@ THE_IQU_main_branch_1 = {
 			THE_IQU_1_3
 		} 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = { 
 			num_of_owned_provinces_with = {
 				value = 1
@@ -113,7 +113,7 @@ THE_IQU_main_branch_1 = {
 				}
 			}
 		} 
-
+		
 		effect = { 
 			custom_tooltip = THE_IQU_1_4_c_tt1
 			tooltip = {
@@ -143,9 +143,9 @@ THE_IQU_main_branch_1 = {
 					}
 				}
 			}
-		 } 
+		} 
 	}
-
+	
 	THE_IQU_1_5 = {
 		icon = the_iqu_mission_11
 		position = 5
@@ -175,22 +175,22 @@ THE_IQU_main_branch_1 = {
 			}
 		} 
 	}
-
+	
 	THE_IQU_1_6 = {
 		icon = the_iqu_mission_21
 		position = 6
 		required_missions = { THE_IQU_1_5 } 
 		provinces_to_highlight = { 
 			is_capital_of = ROOT
-		 } 
-
+		} 
+		
 		trigger = { 
 			num_of_provinces_owned_or_owned_by_subjects_with = {
 				value = 3
 				region = cascadia_region
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			add_government_reform = THE_IQU_scarlet_sky_reform
 			add_adm_power = 75
@@ -222,17 +222,17 @@ THE_IQU_main_branch_1 = {
 					level = 2
 				}
 			}
-		 } 
+		} 
 	}
-
+	
 	THE_IQU_1_7 = {
 		icon = mission_touhou_agni
 		position = 7
 		required_missions = { THE_IQU_1_6 } 
 		provinces_to_highlight = { 
 			region = colombia_region
-		 } 
-
+		} 
+		
 		trigger = { 
 			THE_IQU_this_province_had_been_explored_region_custom_trigger = {
 				region = colombia_region
@@ -241,8 +241,8 @@ THE_IQU_main_branch_1 = {
 				value = 10
 				region = colombia_region
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			custom_tooltip = THE_IQU_1_7_c_tt1
 			carribeans_region = {
@@ -252,17 +252,17 @@ THE_IQU_main_branch_1 = {
 				add_permanent_claim = ROOT
 			}
 			THE_IQU_add_diplomacal_experience_var_effect = yes
-		 } 
+		} 
 	}
-
+	
 	THE_IQU_1_8 = {
 		icon = mission_touhou_dragonduel
 		position = 8
 		required_missions = { THE_IQU_1_7 } 
 		provinces_to_highlight = { 
 			region = carribeans_region
-		 } 
-
+		} 
+		
 		trigger = { 
 			THE_IQU_this_province_had_been_explored_region_custom_trigger = {
 				region = carribeans_region
@@ -277,8 +277,8 @@ THE_IQU_main_branch_1 = {
 				base_production = 7
 			}
 			
-		 } 
-
+		} 
+		
 		effect = { 
 			custom_tooltip = THE_IQU_1_8_c_tt2
 			add_country_modifier = {
@@ -302,13 +302,13 @@ THE_IQU_main_branch_2 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = IQU } 
-
+	
 	THE_IQU_2_1 = {
 		icon = mission_iku_approaching_storm
 		position = 1
 		provinces_to_highlight = { 
 			is_capital_of = ROOT
-		 } 
+		} 
 		
 		trigger = { 
 			OR = {
@@ -329,7 +329,7 @@ THE_IQU_main_branch_2 = {
 			}
 		} 
 	}
-
+	
 	THE_IQU_2_2 = {
 		icon = the_iqu_mission_4
 		position = 2
@@ -339,15 +339,15 @@ THE_IQU_main_branch_2 = {
 			NOT = {
 				owned_by = ROOT
 			}
-		 } 
-
+		} 
+		
 		trigger = { 
 			Yumemi_space_state = {
 				type = all
 				owned_by = ROOT
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			THE_IQU_add_nautical_experience_var_effect = yes
 			THE_IQU_add_prestige_or_navy_tradition_effects = {
@@ -356,17 +356,17 @@ THE_IQU_main_branch_2 = {
 			add_adm_power = 75
 			add_dip_power = 75
 			add_mil_power = 75
-		 } 
+		} 
 	}
-
+	
 	THE_IQU_2_3 = {
 		icon = mission_dream_world_windows
 		position = 3
 		required_missions = { THE_IQU_1_2 } 
 		provinces_to_highlight = { 
 			region = moon_region
-		 } 
-
+		} 
+		
 		trigger = { 
 			custom_trigger_tooltip = {
 				tooltip = THE_IQU_explore_the_unique_points_core_decisions_c_tt1
@@ -382,8 +382,8 @@ THE_IQU_main_branch_2 = {
 			5338 = {
 				has_discovered = ROOT
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			country_event = {
 				id = THE_IQU_flavor_events.1013
@@ -424,23 +424,23 @@ THE_IQU_main_branch_2 = {
 					}
 				}
 			}
-		 } 
+		} 
 	}
-
+	
 	THE_IQU_2_4 = {
 		icon = mission_reisen
 		position = 4
 		required_missions = { THE_IQU_2_3 } 
 		provinces_to_highlight = { 
 			area = Uncolonized_moon_state
-		 } 
-
+		} 
+		
 		trigger = { 
 			THE_IQU_this_province_had_been_explored_custom_trigger = {
 				area = Uncolonized_moon_state
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			moon_region = {
 				add_permanent_claim = ROOT
@@ -457,7 +457,7 @@ THE_IQU_main_branch_2 = {
 			}
 		} 
 	}
-
+	
 	THE_IQU_2_5 = {
 		icon = the_iqu_mission_24
 		position = 5
@@ -469,30 +469,20 @@ THE_IQU_main_branch_2 = {
 					has_production_building_trigger = yes
 				}
 				NOT = {
-					base_production = 7
+					base_production = 10
 				}
 			}
-		 } 
-
+		} 
+		
 		trigger = { 
 			num_of_owned_provinces_with = {
 				value = 5
 				trade_goods = paper
 				has_production_building_trigger = yes
-				base_production = 7
+				base_production = 10
 			}
-			custom_trigger_tooltip = {
-				tooltip = THE_IQU_2_5_c_tt1
-				any_owned_province = {
-					has_province_flag = THE_IQU_loong_vein_get_wuxing_jin_flag
-					has_province_flag = THE_IQU_loong_vein_get_wuxing_shui_flag
-					has_province_flag = THE_IQU_loong_vein_get_wuxing_mu_flag
-					has_province_flag = THE_IQU_loong_vein_get_wuxing_huo_flag
-					has_province_flag = THE_IQU_loong_vein_get_wuxing_tu_flag
-				}
-			}
-		 } 
-
+		} 
+		
 		effect = { 
 			custom_tooltip = THE_IQU_2_5_c_tt2
 			add_country_modifier = {
@@ -524,14 +514,14 @@ THE_IQU_main_branch_2 = {
 			}
 		} 
 	}
-
+	
 	THE_IQU_2_6 = {
 		icon = mission_stairway_to_heaven
 		position = 6
 		provinces_to_highlight = { 
 			region = colombia_region
-		 } 
-
+		} 
+		
 		trigger = { 
 			THE_IQU_this_province_had_been_explored_region_custom_trigger = {
 				region = colombia_region
@@ -549,8 +539,8 @@ THE_IQU_main_branch_2 = {
 				region = colombia_region
 			}
 			treasury = 1000
-		 } 
-
+		} 
+		
 		effect = { 
 			add_treasury = -1000
 			THE_IQU_add_prestige_or_navy_tradition_effects = {
@@ -559,9 +549,9 @@ THE_IQU_main_branch_2 = {
 			835 = {
 				add_canal = panama_canal
 			}
-		 } 
+		} 
 	}
-
+	
 	THE_IQU_2_7 = {
 		icon = mission_iceland
 		position = 7
@@ -572,8 +562,8 @@ THE_IQU_main_branch_2 = {
 				region = cascadia_region
 			}
 			
-		 } 
-
+		} 
+		
 		trigger = { 
 			OR = {
 				THE_IQU_this_province_had_been_explored_region_custom_trigger = {
@@ -591,7 +581,7 @@ THE_IQU_main_branch_2 = {
 				}
 			}
 		} 
-
+		
 		effect = { 
 			custom_tooltip = THE_IQU_2_7_c_tt1
 			add_adm_power = 75
@@ -602,9 +592,9 @@ THE_IQU_main_branch_2 = {
 				name = THE_IQU_cold_wind_and_god_buff
 				duration = -1
 			}
-		 } 
+		} 
 	}
-
+	
 	THE_IQU_2_8 = {
 		icon = mission_fish_1
 		position = 8
@@ -616,24 +606,29 @@ THE_IQU_main_branch_2 = {
 			NOT = {
 				owned_by = ROOT
 			}
-		 } 
-
+		} 
+		
 		trigger = { 
 			5119 = {
-				owned_by = ROOT
-				owned_by_subject_of = ROOT
+				OR = {
+					owned_by = ROOT
+					owned_by_subject_of = ROOT
+				}
 			}
 			5120 = {
-				owned_by = ROOT
-				owned_by_subject_of = ROOT
+				OR = {
+					owned_by = ROOT
+					owned_by_subject_of = ROOT
+				}
+				
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			add_yearly_sailors = 0.5
 			add_dip_power = 75
 			THE_IQU_add_learning_experience_var_effect = yes
-		 } 
+		} 
 	}
 }
 THE_IQU_main_branch_3 = {
@@ -642,28 +637,26 @@ THE_IQU_main_branch_3 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = IQU } 
-
+	
 	THE_IQU_3_1 = {
 		icon = mission_touhou_tenshi_on_route_66
 		position = 1
 		provinces_to_highlight = { 
 			is_capital_of = ROOT
-		 } 
-
+		} 
+		
 		trigger = { 
 			capital_scope = {
 				development = 35
 				has_production_building_trigger = yes
-				has_trade_building_trigger = yes
 			}
 			num_of_owned_provinces_with = {
 				value = 10
 				development = 20
 				has_production_building_trigger = yes
-				has_trade_building_trigger = yes
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			custom_tooltip = THE_IQU_3_1_c_tt2
 			capital_scope = {
@@ -698,25 +691,25 @@ THE_IQU_main_branch_3 = {
 						full_idea_group = exploration_ideas
 						full_idea_group = trade_ideas
 					}
-				 }
-				 custom_tooltip = THE_IQU_3_1_c_tt1_yes
-				 add_country_modifier = {
-						name = THE_IQU_trade_paper_buff
-						duration = -1
-					}
+				}
+				custom_tooltip = THE_IQU_3_1_c_tt1_yes
+				add_country_modifier = {
+					name = THE_IQU_trade_paper_buff
+					duration = -1
+				}
 			}
 			else = {
-				 custom_tooltip = THE_IQU_3_1_c_tt1_no
-				 tooltip = {
+				custom_tooltip = THE_IQU_3_1_c_tt1_no
+				tooltip = {
 					add_country_modifier = {
 						name = THE_IQU_trade_paper_buff
 						duration = -1
 					}
-				 }
+				}
 			}
-		 } 
+		} 
 	}
-
+	
 	THE_IQU_3_3 = {
 		icon = mission_tenshi_empire
 		position = 3
@@ -734,8 +727,8 @@ THE_IQU_main_branch_3 = {
 					has_courthouse_building_trigger = yes
 				}
 			}
-		 } 
-
+		} 
+		
 		trigger = { 
 			stability = 1
 			num_of_provinces_owned_or_owned_by_subjects_with = {
@@ -745,9 +738,12 @@ THE_IQU_main_branch_3 = {
 			}
 			army_professionalism = 0.10
 		} 
-
+		
 		effect = { 
 			custom_tooltip = THE_IQU_3_3_c_tt1
+			country_event = {
+				id = THE_IQU_flavor_events.1012
+			}
 			add_dip_power = 75
 			add_country_modifier = {
 				name = THE_IQU_iqu_declare_war_buff
@@ -759,9 +755,9 @@ THE_IQU_main_branch_3 = {
 					duration = -1
 				}
 			}
-		 } 
+		} 
 	}
-
+	
 	THE_IQU_3_5 = {
 		icon = mission_retake_our_land
 		position = 5
@@ -775,7 +771,7 @@ THE_IQU_main_branch_3 = {
 				owned_by = ROOT
 			}
 		} 
-
+		
 		trigger = { 
 			5320 = {
 				owned_by = ROOT
@@ -787,8 +783,8 @@ THE_IQU_main_branch_3 = {
 					area = Southern_moon_state
 				}
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			add_country_modifier = {
 				name = THE_IQU_records_of_lunar_dust_buff
@@ -805,28 +801,29 @@ THE_IQU_main_branch_3 = {
 					duration = -1
 				}
 			}
-		 } 
+		} 
 	}
-
+	
 	THE_IQU_3_6 = {
 		icon = mission_lunar_empire
 		position = 6
 		required_missions = { THE_IQU_3_5 } 
 		provinces_to_highlight = { 
 			owned_by = ROOT
+			region = moon_region
 			NOT = {
 				has_province_modifier = THE_IQU_lonng_vein_foot_province_buff
 			}
-		 } 
-
+		} 
+		
 		trigger = { 
 			num_of_owned_provinces_with = {
 				value = 10
 				region = moon_region
 				has_province_modifier = THE_IQU_lonng_vein_foot_province_buff
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			THE_IQU_add_learning_experience_var_effect = yes
 			THE_IQU_add_nautical_experience_var_effect = yes
@@ -834,17 +831,17 @@ THE_IQU_main_branch_3 = {
 				name = THE_IQU_qing_hui_buff
 				duration = -1
 			}
-		 } 
+		} 
 	}
-
+	
 	THE_IQU_3_7 = {
 		icon = mission_touhou_kappa_swamp
 		position = 7
 		required_missions = { THE_IQU_1_6 } 
 		provinces_to_highlight = { 
 			region = southeast_america_region
-		 } 
-
+		} 
+		
 		trigger = { 
 			THE_IQU_this_province_had_been_explored_region_custom_trigger = {
 				region = southeast_america_region
@@ -854,7 +851,7 @@ THE_IQU_main_branch_3 = {
 				region = southeast_america_region
 			}
 		} 
-
+		
 		effect = { 
 			custom_tooltip = THE_IQU_3_7_c_tt1
 			236 = {
@@ -894,9 +891,9 @@ THE_IQU_main_branch_3 = {
 			hidden_effect = {
 				set_country_flag = THE_IQU_enable_england_war_cb_flag
 			}
-		 } 
+		} 
 	}
-
+	
 	THE_IQU_3_8 = {
 		icon = the_iqu_mission_22
 		position = 8
@@ -911,8 +908,8 @@ THE_IQU_main_branch_3 = {
 			NOT = {
 				owned_by = ROOT
 			}
-		 } 
-
+		} 
+		
 		trigger = { 
 			THE_IQU_this_province_had_been_explored_region_custom_trigger = {
 				region = british_isles_region
@@ -930,8 +927,8 @@ THE_IQU_main_branch_3 = {
 				owned_by = ROOT
 				has_port = yes
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			custom_tooltip = THE_IQU_3_8_c_tt1
 			THE_IQU_add_diplomacal_experience_var_effect = yes
@@ -944,7 +941,7 @@ THE_IQU_main_branch_3 = {
 				name = THE_IQU_child_of_loong_buff
 				duration = -1
 			}
-		 } 
+		} 
 	}
 }
 THE_IQU_main_branch_4 = {
@@ -953,14 +950,14 @@ THE_IQU_main_branch_4 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = IQU } 
-
+	
 	THE_IQU_4_1 = {
 		icon = the_iqu_mission_13
 		position = 1
 		provinces_to_highlight = { 
 			is_capital_of = ROOT
-		 } 
-
+		} 
+		
 		trigger = { 
 			stability = 1
 			OR = {
@@ -977,8 +974,8 @@ THE_IQU_main_branch_4 = {
 					loyalty = 50
 				}
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			custom_tooltip = THE_IQU_4_1_c_tt1
 			tooltip = {
@@ -1022,17 +1019,17 @@ THE_IQU_main_branch_4 = {
 					add_stability = 2
 				}
 			}
-		 } 
+		} 
 	}
-
+	
 	THE_IQU_4_2 = {
 		icon = the_iqu_mission_22
 		position = 2
 		required_missions = { THE_IQU_4_1 } 
 		provinces_to_highlight = { 
 			is_capital_of = ROOT
-		 } 
-
+		} 
+		
 		trigger = { 
 			NOT = {
 				has_estate_privilege = THE_IQU_tennin_government_loose_privileges
@@ -1048,8 +1045,8 @@ THE_IQU_main_branch_4 = {
 				THE_has_dip_advisor_with_level = { level = 2 }
 				THE_has_mil_advisor_with_level = { level = 2 }
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			custom_tooltip = THE_IQU_4_2_c_tt3
 			custom_tooltip = THE_IQU_4_2_c_tt1
@@ -1074,17 +1071,17 @@ THE_IQU_main_branch_4 = {
 					}
 				}
 			}
-		 } 
+		} 
 	}
-
+	
 	THE_IQU_4_3 = {
 		icon = the_iqu_mission_18
 		position = 3
 		required_missions = { THE_IQU_4_2 } 
 		provinces_to_highlight = { 
 			is_capital_of = ROOT
-		 } 
-
+		} 
+		
 		trigger = { 
 			HVR = {
 				adm = 5
@@ -1096,8 +1093,8 @@ THE_IQU_main_branch_4 = {
 			capital_scope = {
 				has_building = university
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			add_government_reform = THE_IQU_cloud_with_sky_reform
 			hidden_effect = {
@@ -1106,9 +1103,9 @@ THE_IQU_main_branch_4 = {
 			add_dip_power = 75
 			THE_IQU_add_diplomacal_experience_var_effect = yes
 			THE_IQU_add_learning_experience_var_effect = yes
-		 } 
+		} 
 	}
-
+	
 	THE_IQU_4_4 = {
 		icon = the_iqu_mission_8
 		position = 4
@@ -1130,12 +1127,12 @@ THE_IQU_main_branch_4 = {
 					province_has_center_of_trade_of_level = 2
 				}
 			}
-		 } 
-
+		} 
+		
 		trigger = { 
 			stability = 3
 			num_of_provinces_owned_or_owned_by_subjects_with = {
-				value = 20
+				value = 12
 				province_has_center_of_trade_of_level = 2
 				has_trade_building_trigger = yes
 			}
@@ -1147,8 +1144,8 @@ THE_IQU_main_branch_4 = {
 				value = 0.05
 			}
 			monthly_trade_income = 50
-		 } 
-
+		} 
+		
 		effect = { 
 			custom_tooltip = THE_IQU_4_4_c_tt2
 			custom_tooltip = THE_IQU_4_4_c_tt1
@@ -1159,7 +1156,7 @@ THE_IQU_main_branch_4 = {
 			add_adm_power = 75
 		} 
 	}
-
+	
 	THE_IQU_4_6 = {
 		icon = the_iqu_mission_12
 		position = 6
@@ -1175,45 +1172,18 @@ THE_IQU_main_branch_4 = {
 				region = australia_region
 				region = british_isles_region
 			}
-		 } 
-
+		} 
+		
 		trigger = { 
 			custom_trigger_tooltip = {
 				tooltip = THE_IQU_4_6_c_tt1
 				check_variable = {
 					which = the_iqu_had_explore_area_number_im_var
-					value = 5
-				}
-			}
-			calc_true_if = {
-				amount = 3
-				THE_IQU_this_province_had_been_explored_region_custom_trigger = {
-					region = peru_region
-				}
-				THE_IQU_this_province_had_been_explored_region_custom_trigger = {
-					region = la_plata_region
-				}
-				THE_IQU_this_province_had_been_explored_region_custom_trigger = {
-					region = mississippi_region
-				}
-				THE_IQU_this_province_had_been_explored_region_custom_trigger = {
-					region = great_lakes_region
-				}
-				THE_IQU_this_province_had_been_explored_region_custom_trigger = {
-					region = brazil_region
-				}
-				THE_IQU_this_province_had_been_explored_region_custom_trigger = {
-					region = colombia_region
-				}
-				THE_IQU_this_province_had_been_explored_region_custom_trigger = {
-					region = australia_region
-				}
-				THE_IQU_this_province_had_been_explored_region_custom_trigger = {
-					region = british_isles_region
+					value = 8
 				}
 			}
 		} 
-
+		
 		effect = { 
 			custom_tooltip = THE_IQU_4_6_c_tt3
 			custom_tooltip = THE_IQU_4_6_c_tt2
@@ -1221,16 +1191,16 @@ THE_IQU_main_branch_4 = {
 				name = THE_IQU_have_no_mind_buff
 				duration = -1
 			}
-		 } 
+		} 
 	}
-
+	
 	THE_IQU_4_7 = {
 		icon = mission_touhou_taoism_heresy
 		position = 7
 		provinces_to_highlight = { 
 			owned_by = ROOT
-		 } 
-
+		} 
+		
 		trigger = {
 			num_of_provinces_owned_or_owned_by_subjects_with = {
 				value = 5
@@ -1242,19 +1212,41 @@ THE_IQU_main_branch_4 = {
 					has_province_modifier = THE_IQU_Feng_shui_tu_buff
 				}
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			add_government_reform = THE_IQU_tennin_one_taoist_reform
-		 } 
+			hidden_effect = {
+				while = {
+					limit = {
+						check_variable = {
+							which = the_iqu_had_explore_area_number_im_var_ex
+							value = 1
+						}
+					}
+					add_government_power = {
+						mechanic_type = THE_IQU_tennin_one_taoist_mechanic
+						power_type = THE_IQU_tennin_one_taoist_jin_power
+						value = 1
+					}
+					change_variable = {
+						which = the_iqu_had_explore_area_number_im_var_ex
+						value = -1
+					}
+				}
+			}
+		} 
 	}
-
+	
 	THE_IQU_4_8 = {
 		icon = mission_touhou_forest_of_magic
 		position = 8
 		required_missions = { THE_IQU_4_7 } 
-		provinces_to_highlight = {  } 
-
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			has_terrain = jungle
+		 } 
+		
 		trigger = { 
 			custom_trigger_tooltip = {
 				tooltip = THE_IQU_4_8_c_tt1
@@ -1263,8 +1255,8 @@ THE_IQU_main_branch_4 = {
 					value = 10
 				}
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			THE_IQU_add_learning_experience_var_effect = yes
 			THE_IQU_add_nautical_experience_var_effect = yes
@@ -1281,7 +1273,7 @@ THE_IQU_main_branch_4 = {
 				power_type = THE_IQU_tennin_one_taoist_shui_power
 				value = 5
 			}
-		 } 
+		} 
 	}
 }
 THE_IQU_main_branch_5 = {
@@ -1290,7 +1282,7 @@ THE_IQU_main_branch_5 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = IQU } 
-
+	
 	THE_IQU_5_1 = {
 		icon = mission_great_navy
 		position = 1
@@ -1300,15 +1292,15 @@ THE_IQU_main_branch_5 = {
 			NOT = {
 				has_shipyard_building_trigger = yes
 			}
-		 } 
-
+		} 
+		
 		trigger = { 
 			num_of_owned_provinces_with = {
 				value = 15
 				has_shipyard_building_trigger = yes
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			add_country_modifier = {
 				name = THE_IQU_build_shipyard_buff
@@ -1318,9 +1310,9 @@ THE_IQU_main_branch_5 = {
 			THE_IQU_add_prestige_or_navy_tradition_effects = {
 				value = 25
 			}
-		 } 
+		} 
 	}
-
+	
 	THE_IQU_5_3 = {
 		icon = mission_rb_a_mighty_fleet
 		position = 3
@@ -1342,8 +1334,8 @@ THE_IQU_main_branch_5 = {
 					development = 20
 				}
 			}
-		 } 
-
+		} 
+		
 		trigger = { 
 			num_of_owned_provinces_with = {
 				value = 8
@@ -1353,8 +1345,8 @@ THE_IQU_main_branch_5 = {
 				is_prosperous = yes
 				development = 20
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			add_country_modifier = {
 				name = THE_IQU_moon_explore_range_buff
@@ -1375,7 +1367,7 @@ THE_IQU_main_branch_5 = {
 				custom_tooltip = THE_IQU_5_3_c_tt2
 				hidden_effect = {
 					for = {
-					amount = 15
+						amount = 15
 						effect = "
 							random_owned_province = {
 								limit = {
@@ -1391,9 +1383,9 @@ THE_IQU_main_branch_5 = {
 				custom_tooltip = THE_IQU_5_3_c_tt1_no
 				custom_tooltip = THE_IQU_5_3_c_tt2
 			}
-		 } 
+		} 
 	}
-
+	
 	THE_IQU_5_4 = {
 		icon = the_iqu_mission_7
 		position = 4
@@ -1408,8 +1400,8 @@ THE_IQU_main_branch_5 = {
 				continent = oceania
 			}
 			owned_by = ROOT
-		 } 
-
+		} 
+		
 		trigger = { 
 			reform_level = 3
 			navy_tradition = 80
@@ -1437,17 +1429,17 @@ THE_IQU_main_branch_5 = {
 				value = 1
 				continent = oceania
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			custom_tooltip = THE_IQU_5_4_c_tt1
 			add_prestige_or_monarch_power = 50
 			add_adm_power = 100
 			add_dip_power = 100
 			add_mil_power = 100
-		 } 
+		} 
 	}
-
+	
 	THE_IQU_5_5 = {
 		icon = the_iqu_mission_10
 		position = 5
@@ -1456,8 +1448,8 @@ THE_IQU_main_branch_5 = {
 			NOT = {
 				has_discovered = ROOT
 			}
-		 } 
-
+		} 
+		
 		trigger = { 
 			custom_trigger_tooltip = {
 				tooltip = THE_IQU_5_5_c_tt2
@@ -1465,8 +1457,8 @@ THE_IQU_main_branch_5 = {
 					has_discovered = ROOT
 				}
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			custom_tooltip = THE_IQU_5_5_c_tt1
 			tooltip = {
@@ -1474,16 +1466,16 @@ THE_IQU_main_branch_5 = {
 			}
 			add_dip_power = 75
 			change_government_reform_progress = 250
-		 } 
+		} 
 	}
-
+	
 	THE_IQU_5_6 = {
 		icon = mission_naval_dominance
 		position = 6
 		provinces_to_highlight = { 
 			owned_by = ROOT
-		 } 
-
+		} 
+		
 		trigger = { 
 			has_flagship = yes
 			num_of_light_ship = 50
@@ -1492,7 +1484,7 @@ THE_IQU_main_branch_5 = {
 				navy_size_percentage = 0.90
 			}
 		} 
-
+		
 		effect = { 
 			THE_IQU_add_prestige_or_navy_tradition_effects = {
 				value = 50
@@ -1502,15 +1494,15 @@ THE_IQU_main_branch_5 = {
 				name = THE_IQU_cloud_sail_on_sea_buff
 				duration = -1
 			}
-		 } 
+		} 
 	}
-
+	
 	THE_IQU_5_7 = {
 		icon = mission_tenshi_form_empire_2
 		position = 7
 		required_missions = { THE_IQU_5_6 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = { 
 			num_of_provinces_owned_or_owned_by_subjects_with = {
 				value = 200
@@ -1519,16 +1511,16 @@ THE_IQU_main_branch_5 = {
 			num_of_heavy_ship = 50
 			num_of_light_ship = 300
 			has_flagship = yes
-		 } 
-
+		} 
+		
 		effect = { 
 			custom_tooltip = THE_IQU_5_7_c_tt1
 			add_adm_power = 100
 			add_dip_power = 100
 			add_mil_power = 100
-		 } 
+		} 
 	}
-
+	
 	THE_IQU_5_8 = {
 		icon = mission_touhou_youkai_mountain
 		position = 8
@@ -1536,8 +1528,8 @@ THE_IQU_main_branch_5 = {
 		provinces_to_highlight = { 
 			owned_by = ROOT
 			has_terrain = mountain
-		 } 
-
+		} 
+		
 		trigger = { 
 			custom_trigger_tooltip = {
 				tooltip = THE_IQU_5_8_c_tt1
@@ -1546,8 +1538,8 @@ THE_IQU_main_branch_5 = {
 					value = 10
 				}
 			}
-		 } 
-
+		} 
+		
 		effect = { 
 			THE_IQU_add_learning_experience_var_effect = yes
 			THE_IQU_add_nautical_experience_var_effect = yes
@@ -1564,6 +1556,6 @@ THE_IQU_main_branch_5 = {
 				power_type = THE_IQU_tennin_one_taoist_tu_power
 				value = 5
 			}
-		 } 
+		} 
 	}
 }

@@ -81,7 +81,7 @@ country_event = {
 					id = THE_IQU_flavor_events.1
 				}
 			}
-				
+			
 			THE_IQU_will_get_wuxing_point_after_explore_effect = yes
 			hidden_effect = {
 				set_province_flag = THE_IQU_this_provinces_is_exploring_now
@@ -1165,14 +1165,14 @@ country_event = {
 	trigger = {
 		tag = IQU
 		has_country_flag = THE_IQU_now_is_exploring_flag
-		NOT = { has_country_flag = THE_IQU_had_explore_event }
+		NOT = { has_country_flag = THE_IQU_had_explore_luna_event }
 		any_owned_province = {
 			region = moon_region
 			has_province_flag = THE_IQU_this_provinces_is_exploring_now
 		}
 	}
 	immediate = {
-		set_country_flag = THE_IQU_had_explore_event
+		set_country_flag = THE_IQU_had_explore_luna_event
 	}
 	mean_time_to_happen = {
 		months = 24
@@ -3735,7 +3735,7 @@ country_event = {
 		
 	}
 	immediate = {
-
+		
 	}
 	option = {
 		name = THE_IQU_flavor_events.130.1
@@ -3801,7 +3801,7 @@ country_event = {
 		
 	}
 	immediate = {
-
+		
 	}
 	option = {
 		name = THE_IQU_flavor_events.133.1
@@ -3899,7 +3899,7 @@ country_event = {
 		
 	}
 	immediate = {
-
+		
 	}
 	option = {
 		name = THE_IQU_flavor_events.137.1
@@ -4069,7 +4069,7 @@ country_event = {
 		
 	}
 	immediate = {
-
+		
 	}
 	option = {
 		name = THE_IQU_flavor_events.144.1
@@ -4167,7 +4167,7 @@ country_event = {
 		
 	}
 	immediate = {
-
+		
 	}
 	option = {
 		name = THE_IQU_flavor_events.148.1
@@ -4292,7 +4292,7 @@ country_event = {
 		
 	}
 	immediate = {
-
+		
 	}
 	option = {
 		name = THE_IQU_flavor_events.153.1
@@ -4357,7 +4357,7 @@ country_event = {
 		
 	}
 	immediate = {
-
+		
 	}
 	option = {
 		name = THE_IQU_flavor_events.156.1
@@ -4458,7 +4458,7 @@ country_event = {
 		
 	}
 	immediate = {
-
+		
 	}
 	option = {
 		name = THE_IQU_flavor_events.160.1
@@ -4525,7 +4525,7 @@ country_event = {
 		
 	}
 	immediate = {
-
+		
 	}
 	option = {
 		name = THE_IQU_flavor_events.163.1
@@ -4645,7 +4645,7 @@ country_event = {
 		
 	}
 	immediate = {
-
+		
 	}
 	option = {
 		name = THE_IQU_flavor_events.168.1
@@ -4765,7 +4765,7 @@ country_event = {
 		
 	}
 	immediate = {
-
+		
 	}
 	option = {
 		name = THE_IQU_flavor_events.173.1
@@ -4835,7 +4835,7 @@ country_event = {
 		
 	}
 	immediate = {
-
+		
 	}
 	option = {
 		name = THE_IQU_flavor_events.176.1
@@ -4900,7 +4900,7 @@ country_event = {
 		
 	}
 	immediate = {
-
+		
 	}
 	option = {
 		name = THE_IQU_flavor_events.179.1
@@ -5021,7 +5021,7 @@ country_event = {
 		
 	}
 	immediate = {
-
+		
 	}
 	option = {
 		name = THE_IQU_flavor_events.184.1
@@ -5086,7 +5086,7 @@ country_event = {
 		
 	}
 	immediate = {
-
+		
 	}
 	option = {
 		name = THE_IQU_flavor_events.187.1
@@ -5209,7 +5209,7 @@ country_event = {
 		
 	}
 	immediate = {
-
+		
 	}
 	option = {
 		name = THE_IQU_flavor_events.192.1
@@ -5276,7 +5276,7 @@ country_event = {
 		
 	}
 	immediate = {
-
+		
 	}
 	option = {
 		name = THE_IQU_flavor_events.195.1
@@ -5372,7 +5372,7 @@ country_event = {
 		
 	}
 	immediate = {
-
+		
 	}
 	option = {
 		name = THE_IQU_flavor_events.199.1
@@ -5437,7 +5437,7 @@ country_event = {
 		
 	}
 	immediate = {
-
+		
 	}
 	option = {
 		name = THE_IQU_flavor_events.202.1
@@ -5537,7 +5537,7 @@ country_event = {
 		
 	}
 	immediate = {
-
+		
 	}
 	option = {
 		name = THE_IQU_flavor_events.206.1
@@ -5604,7 +5604,7 @@ country_event = {
 		
 	}
 	immediate = {
-
+		
 	}
 	option = {
 		name = THE_IQU_flavor_events.209.1
@@ -5698,7 +5698,7 @@ country_event = {
 		
 	}
 	immediate = {
-
+		
 	}
 	option = {
 		name = THE_IQU_flavor_events.213.1
@@ -5764,7 +5764,7 @@ country_event = {
 		
 	}
 	immediate = {
-
+		
 	}
 	option = {
 		name = THE_IQU_flavor_events.216.1
@@ -5864,7 +5864,7 @@ country_event = {
 		
 	}
 	immediate = {
-
+		
 	}
 	option = {
 		name = THE_IQU_flavor_events.220.1
@@ -5959,7 +5959,7 @@ country_event = {
 		
 	}
 	immediate = {
-
+		
 	}
 	option = {
 		name = THE_IQU_flavor_events.224.1
@@ -6053,7 +6053,7 @@ country_event = {
 		
 	}
 	immediate = {
-
+		
 	}
 	option = {
 		name = THE_IQU_flavor_events.228.1
@@ -6172,7 +6172,7 @@ country_event = {
 		
 	}
 	immediate = {
-
+		
 	}
 	option = {
 		name = THE_IQU_flavor_events.233.1
@@ -6361,18 +6361,20 @@ country_event = {
 	picture = ""
 	is_triggered_only = yes
 	trigger = {
-		
+		NOT = { has_country_flag = THE_IQU_had_benifit_events_flag }
 	}
 	immediate = {
 		THE_IQU_explore_event_get_benifit_immeditate_script = {
 			base = 120
 		}
+		set_country_flag = THE_IQU_had_benifit_events_flag
 	}
 	option = {
 		name = THE_IQU_flavor_events.1000.1
 		THE_IQU_explore_event_get_benifit_effect_effect = yes
 		THE_IQU_after_get_wuxing_point_after_explore_effect = yes
 		THE_IQU_clr_the_exploring_now_success_effect = yes
+		clr_country_flag = THE_IQU_had_benifit_events_flag
 	}
 }
 #「失败」
@@ -6409,7 +6411,7 @@ country_event = {
 		name = THE_IQU_flavor_events.1002.1
 		highlight = yes
 		custom_tooltip = THE_IQU_flavor_events_1002_c_tt1
-
+		
 	}
 }
 #殖民oa
@@ -6478,7 +6480,7 @@ country_event = {
 	}
 }
 #天人规训「菜单」
- country_event = {
+country_event = {
 	id = THE_IQU_flavor_events.1005
 	title = "THE_IQU_flavor_events.1005.t"
 	desc = "THE_IQU_flavor_events.1005.desc"
@@ -6512,7 +6514,7 @@ country_event = {
 	}
 }
 #对弈事件/龙宫侧
- country_event = {
+country_event = {
 	id = THE_IQU_flavor_events.1006
 	title = "THE_IQU_flavor_events.1006.t"
 	desc = {
@@ -6633,7 +6635,7 @@ country_event = {
 	}
 }
 #对弈事件/天界侧
- country_event = {
+country_event = {
 	id = THE_IQU_flavor_events.1007
 	title = "THE_IQU_flavor_events.1007.t"
 	desc = "THE_IQU_flavor_events.1007.desc"
@@ -6657,7 +6659,7 @@ country_event = {
 	}
 }
 #砸棋盘，彩蛋
- country_event = {
+country_event = {
 	id = THE_IQU_flavor_events.1008
 	title = "THE_IQU_flavor_events.1008.t"
 	desc = "THE_IQU_flavor_events.1008.desc"
@@ -6678,7 +6680,7 @@ country_event = {
 	}
 }
 #成功
- country_event = {
+country_event = {
 	id = THE_IQU_flavor_events.1009
 	title = "THE_IQU_flavor_events.1009.t"
 	desc = "THE_IQU_flavor_events.1009.desc"
@@ -6700,7 +6702,7 @@ country_event = {
 	}
 }
 #失败
- country_event = {
+country_event = {
 	id = THE_IQU_flavor_events.1010
 	title = "THE_IQU_flavor_events.1010.t"
 	desc = "THE_IQU_flavor_events.1010.desc"
@@ -6722,7 +6724,7 @@ country_event = {
 	}
 }
 #给钱
- country_event = {
+country_event = {
 	id = THE_IQU_flavor_events.1011
 	title = "THE_IQU_flavor_events.1011.t"
 	desc = "THE_IQU_flavor_events.1011.desc"
@@ -6738,6 +6740,7 @@ country_event = {
 	}
 	option = {
 		name = THE_IQU_flavor_events.1011.1
+		custom_tooltip = THE_IQU_event_1011_c_tt2
 		custom_tooltip = THE_IQU_event_1011_c_tt1
 		hidden_effect = {
 			while = {
@@ -6746,19 +6749,176 @@ country_event = {
 						which = the_iqu_iqu_years_of_income_im_var
 						value = 1
 					}
-				 }
-				 add_treasury = 1
-				 HVR = {
+				}
+				add_treasury = 1
+				HVR = {
 					add_treasury = 1
-				 }
-				 change_variable = {
+				}
+				change_variable = {
 					which = the_iqu_iqu_years_of_income_im_var
 					value = -1
-				 }
+				}
 			}
 		}
 	}
 	after = {
+		
+	}
+}
 
+#天界/分割领土
+country_event = {
+	id = THE_IQU_flavor_events.1012
+	title = "THE_IQU_flavor_events.1012.t"
+	desc = "THE_IQU_flavor_events.1012.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	
+	option = {
+		name = THE_IQU_flavor_events.1012.1
+		custom_tooltip = THE_IQU_event_1012_c_tt1
+		tooltip = {
+			add_province_modifier = {
+				name = THE_IQU_new_deal_buff
+				duration = 10950
+			}
+		}
+		hidden_effect = {
+			HVR = {
+				every_owned_province = {
+					limit = {
+						NOT = { province_id = 5306 }
+						NOT = { province_id = 5031 }
+						NOT = { province_id = 5309 }
+						NOT = { province_id = 5036 }
+						NOT = { province_id = 5308 }
+						NOT = { province_id = 5307 }
+						NOT = { province_id = 5000 }
+						NOT = { province_id = 5052 }
+						NOT = { province_id = 5310 }
+					}
+					cede_province = ROOT
+					remove_core = HVR
+					add_core = ROOT
+					hidden_effect = {
+						add_province_modifier = {
+							name = THE_IQU_new_deal_buff
+							duration = 18250
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = THE_IQU_flavor_events.1011.2
+		THE_IQU_add_prestige_or_navy_tradition_effects = {
+			value = 100
+		}
+	}
+}
+country_event = {
+	id = THE_IQU_flavor_events.1015
+	title = "THE_IQU_flavor_events.1015.t"
+	desc = "THE_IQU_flavor_events.1015.desc"
+	picture = ""
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	immediate = {
+	}
+	option = {
+		export_to_variable = {
+			variable_name = the_iqu_guide_loong_vein_export_im_var
+			value = modifier:THE_IQU_guide_loong_vein_custom_modifier
+		}
+		multiply_variable = {
+			which = the_iqu_guide_loong_vein_export_im_var
+			value = 10
+		}
+		set_variable = {
+			which = the_iqu_guide_loong_vein_export_im_var_test
+			which = the_iqu_guide_loong_vein_export_im_var
+		}
+	}
+}
+
+country_event = {
+	id = THE_IQU_flavor_events.1016
+	title = "THE_IQU_flavor_events.1016.t"
+	desc = "THE_IQU_flavor_events.1016.desc"
+	picture = ""
+	is_triggered_only = yes
+	hidden = yes
+	trigger = {
+		
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = THE_IQU_flavor_events.1016.1
+		#衣玖总竞争力
+		set_variable = {
+			which = the_iqu_total_heaven_trade_power_im_var_iqu
+			value = 0
+		}
+		#天子总竞争力
+		set_variable = {
+			which = the_iqu_total_heaven_trade_power_im_var_hvr
+			value = 0
+		}
+		while = {
+			limit = { 
+				any_owned_province = {
+					trade_company_region = th_trade_company_heaven
+					NOT = {
+						has_province_flag = THE_IQU_has_set_point_trade_province_power_flag
+					}
+				}
+			}
+			random_owned_province = {
+				limit = {
+					trade_company_region = th_trade_company_heaven
+					NOT = {
+						has_province_flag = THE_IQU_has_set_point_trade_province_power_flag
+					}
+				}
+				ROOT = {
+					export_to_variable = {
+						variable_name = the_iqu_total_heaven_trade_power_im_var_iqu_single_province
+						value = province_trade_power
+						who = PREV
+					}
+					#累加变量
+					change_variable = {
+						which = the_iqu_total_heaven_trade_power_im_var_iqu
+						which = the_iqu_total_heaven_trade_power_im_var_iqu_single_province
+					}
+				}
+				set_province_flag = THE_IQU_has_set_point_trade_province_power_flag
+			}
+		}
+		every_owned_province = {
+			limit = {
+				trade_company_region = th_trade_company_heaven
+			}
+			clr_province_flag = THE_IQU_has_set_point_trade_province_power_flag
+		}
+		# set_variable = {
+		# 	which = the_iqu_total_heaven_trade_power_im_var_hvr_view
+		# 	which = the_iqu_total_heaven_trade_power_im_var_hvr
+		# }
+		IQU = {
+			country_event = {
+				id = THE_IQU_flavor_events.1011
+				days = 1
+			}
+		}
 	}
 }

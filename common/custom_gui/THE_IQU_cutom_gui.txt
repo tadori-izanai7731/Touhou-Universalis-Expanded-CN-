@@ -13,8 +13,14 @@ custom_button = {
 			owned_by = FROM
 			owned_by_subject_of = FROM
 		}
-	 }
+	}
 	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = THE_IQU_guide_the_loong_vein_province_button_gui_c_tt2
+			FROM = {
+				NOT = { has_country_flag = THE_IQU_the_loong_vein_building_now }
+			}
+		}
 		FROM = {
 			ai = no
 		}
@@ -35,48 +41,48 @@ custom_button = {
 			}
 		}
 		
-	 }
+	}
 	effect = {
 		THE_IQU_guide_the_lonng_vein_custom_gui_script = yes
-	 }
+	}
 }
 
-custom_button = {
-	name = THE_IQU_end_the_loong_vein_province_button_gui
-	tooltip = THE_IQU_end_the_loong_vein_province_button_gui_c_tt1
-	potential = { 
-		FROM = {
-			OR = {
-				tag = IQU
-				was_tag = IQU
-			}
-			has_government_attribute = THE_IQU_tennin_one_taoist_reform_mechanic
-		}
-		OR = {
-			owned_by = FROM
-			owned_by_subject_of = FROM
-		}
-		has_province_modifier = THE_IQU_lonng_vein_head_province_buff
-	}
-	trigger = {
-		custom_trigger_tooltip = {
-			tooltip = THE_IQU_end_the_loong_vein_button_ctt1
-			OR = {
-				THE_IQU_has_any_province_wuxing_flag_trigger = { wuxing = jin }
-				THE_IQU_has_any_province_wuxing_flag_trigger = { wuxing = shui }
-				THE_IQU_has_any_province_wuxing_flag_trigger = { wuxing = mu }
-				THE_IQU_has_any_province_wuxing_flag_trigger = { wuxing = huo }
-				THE_IQU_has_any_province_wuxing_flag_trigger = { wuxing = tu }
-			}
-		}
-		owner = {
-			num_of_provinces_owned_or_owned_by_subjects_with = {
-				value = 10
-				has_province_modifier = THE_IQU_lonng_vein_foot_province_buff
-			}
-		}
-	 }
-	effect = { 
-		THE_IQU_end_the_loong_vein_effect = yes
-	}
-}
+# custom_button = {
+# 	name = THE_IQU_end_the_loong_vein_province_button_gui
+# 	tooltip = THE_IQU_end_the_loong_vein_province_button_gui_c_tt1
+# 	potential = { 
+# 		FROM = {
+# 			OR = {
+# 				tag = IQU
+# 				was_tag = IQU
+# 			}
+# 			has_government_attribute = THE_IQU_tennin_one_taoist_reform_mechanic
+# 		}
+# 		OR = {
+# 			owned_by = FROM
+# 			owned_by_subject_of = FROM
+# 		}
+# 		has_province_modifier = THE_IQU_lonng_vein_head_province_buff
+# 	}
+# 	trigger = {
+# 		custom_trigger_tooltip = {
+# 			tooltip = THE_IQU_end_the_loong_vein_button_ctt1
+# 			OR = {
+# 				THE_IQU_has_any_province_wuxing_flag_trigger = { wuxing = jin }
+# 				THE_IQU_has_any_province_wuxing_flag_trigger = { wuxing = shui }
+# 				THE_IQU_has_any_province_wuxing_flag_trigger = { wuxing = mu }
+# 				THE_IQU_has_any_province_wuxing_flag_trigger = { wuxing = huo }
+# 				THE_IQU_has_any_province_wuxing_flag_trigger = { wuxing = tu }
+# 			}
+# 		}
+# 		owner = {
+# 			num_of_provinces_owned_or_owned_by_subjects_with = {
+# 				value = 10
+# 				has_province_modifier = THE_IQU_lonng_vein_foot_province_buff
+# 			}
+# 		}
+# 	}
+# 	effect = { 
+# 		THE_IQU_end_the_loong_vein_effect = yes
+# 	}
+# }
