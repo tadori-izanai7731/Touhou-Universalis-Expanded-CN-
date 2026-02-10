@@ -13,7 +13,9 @@ country_decisions = {
 			always = yes
 		}
 		effect = {
-			
+			country_event = {
+				id = THE_MEL_events.0
+			}
 		}
 		ai_will_do = {
 			factor = 0
