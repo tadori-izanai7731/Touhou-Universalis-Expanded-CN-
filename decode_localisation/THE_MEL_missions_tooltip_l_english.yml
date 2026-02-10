@@ -20,11 +20,11 @@ l_english:
  THE_MEL_idea_4_desc: "梅蒂欣因曾被人类遗弃——憎恨那些欺骗、背叛她的人类。她了解，人偶总是被人类操纵着。因此，她渴望打破这层无形的枷锁，将所有人偶从人类的掌控中解放出来。"
  THE_MEL_idea_5_desc: "小小的铃兰田，对她而言是取之不尽的力量源泉，也是心灵的摇篮。只要铃兰依旧盛开，对她来说就没有什么匮乏的问题。纯粹无为生活着的她，在山丘上没有丝毫不自由。然而，出了这片山丘以后，该依靠什么来延续那份自由呢。"
  THE_MEL_idea_6_desc: "同一株毒物，既可以萃取出治愈之药，也能被提炼出致命之毒。毒与药界限不在物质本身，而在剂量与用法————正如梅蒂欣的存在，也同样可以作为「解药」。"
- THE_MEL_idea_7_desc: "可我还是不懂————为什么我听不懂大家说的话？喂，谁能告诉我···"
+ THE_MEL_idea_7_desc: "可我还是不懂————\n为什么我听不懂大家说的话？喂，谁能告诉我···"
 ###IDEA_END
 
 ###DECISION
- THE_MEL_release_country_decision_title: "=@MEL梅蒂欣的远行="
+ THE_MEL_release_country_decision_title: "@MEL梅蒂欣的远行"
  THE_MEL_release_country_decision_desc: ""
 ###DECISION_END
 
@@ -32,5 +32,4 @@ l_english:
  THE_MEL_events.0.t: "远行抉择"
  THE_MEL_events.0.desc: ""
  THE_MEL_events.0.a: "这里的铃兰需要你，我也需要一个帮手。"
- THE_MEL_events.0.b: "走吧。然后决定你手中的毒···究竟是成为他人的诅咒，还是找到作为解药的自我。"
-###EVENT_END
+ THE_MEL_events.0.b: "走吧。然后决定你手中的毒···究竟是成为他人的诅咒，还是解药."
