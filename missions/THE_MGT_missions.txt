@@ -382,11 +382,18 @@ THE_MGT_main_branch_4 = {
 	THE_MGT_mission_4_3 = {
 		icon = mission_unknown_mission
 		position = 3
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = MKI
+		 } 
 
 		trigger = {  } 
 
-		effect = {  } 
+		effect = { 
+			country_event = {
+				id = THE_MGT_events.1
+			}
+			custom_tooltip = THE_MGT_mission_desc_extend_4_3
+		 } 
 	}
 
 	THE_MGT_mission_4_5 = {

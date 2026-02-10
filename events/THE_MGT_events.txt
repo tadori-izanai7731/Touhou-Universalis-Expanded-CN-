@@ -13,3 +13,17 @@ country_event = {
 		name = THE_MGT_events.0.a
 	}
 }
+
+country_event = {
+	id = THE_MGT_events.1
+	title = THE_MGT_events.1.t
+	desc = THE_MGT_events.1.desc
+	picture = ""
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = THE_MGT_events.1.a
+	}
+}
