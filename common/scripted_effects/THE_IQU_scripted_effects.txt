@@ -495,38 +495,32 @@ THE_IQU_clr_the_exploring_now_success_effect = {
 			#满足政体添加龙脉
 			if = {
 				limit = {
-					ROOT = {
+					owner = {
 						has_government_attribute = THE_IQU_scarlet_sky_reform_mechanic
-					}
+					}	
 				}
-				THIS = {
-					random_list = {
-						25 = {
-							add_permanent_province_modifier = {
-								name = THE_IQU_lonng_vein_head_province_buff
-								duration = -1
-							}
+				random_list = {
+					25 = {
+						add_permanent_province_modifier = {
+							name = THE_IQU_lonng_vein_head_province_buff
+							duration = -1
 						}
-						75 = {
-							
-						}
+					}
+					75 = {
+						
 					}
 				}
 			}
 			if = {
 				limit = { 
-					THIS = {
-						OR = {
-							province_id = 835
-							province_id = 2890
-						}
+					OR = {
+						province_id = 2890
+						province_id = 835
 					}
 				}
-				THIS = {
-					add_permanent_province_modifier = {
-						name = THE_IQU_lonng_vein_head_province_buff
-						duration = -1
-					}
+				add_permanent_province_modifier = {
+					name = THE_IQU_lonng_vein_head_province_buff
+					duration = -1
 				}
 			}
 			#清除正在探索
@@ -569,7 +563,9 @@ THE_IQU_add_fengshui_wuxing_province_permant_buff_effect = {
 	}
 	if = {
 		limit = {
-			mission_completed = THE_IQU_2_5
+			owner = {
+				mission_completed = THE_IQU_2_5
+			}
 		}
 		change_trade_goods = paper
 	}
