@@ -1,0 +1,118 @@
+namespace = THE_MEL_events
+
+country_event = {
+	id = THE_MEL_events.0
+	title = THE_MEL_events.0.t
+	desc = THE_MEL_events.0.desc
+	picture = ""
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = THE_MEL_events.0.a
+		hidden_effect = {
+			5154 = {
+				add_core = MEL
+			}
+		}
+		release = MEL
+		hidden_effect = {
+			MEL = {
+				THE_MEL_define_ruler_medicine_melancholy_scripted_effect = yes
+				change_government = monarchy
+				add_government_reform = Gensokyan_monarchy
+				change_technology_group = tech_gensokyan
+				change_unit_type = tech_gensokyan
+				change_primary_culture = "Youkai"
+				capital_scope = {
+					infantry = MEL
+					infantry = MEL
+					infantry = MEL
+					infantry = MEL
+				}
+				add_treasury = 50
+				add_manpower = 10
+				add_adm_power = 84
+				add_dip_power = 84
+				add_mil_power = 112
+				set_ruler_flag = touhou_character_ruler
+				set_ruler_flag = touhou_original_ruler
+				add_ruler_personality = immortal_personality
+				change_estate_land_share = {
+					estate = estate_church
+					share = 14
+				}
+				change_estate_land_share = {
+					estate = estate_nobles
+					share = 14
+				}
+				change_estate_land_share = {
+					estate = estate_burghers
+					share = 31
+				}
+			}
+			vassalize = MEL
+		}
+		switch_tag = MEL
+	}
+	option = {
+		name = THE_MEL_events.0.b
+		hidden_effect = {
+			BUG = {
+				every_owned_province = {
+					kill_units = {
+						who = owner
+					}
+					add_core = MEL
+					remove_core = THIS
+					change_religion = th_hakureishinto
+				}
+			}
+			inherit = BUG
+			every_owned_province = {
+				limit = {
+					is_core = MEL
+				}
+				remove_core = ROOT
+			}
+		}
+		release = MEL
+		hidden_effect = {
+			MEL = {
+				THE_MEL_define_ruler_medicine_melancholy_scripted_effect = yes
+				change_government = monarchy
+				add_government_reform = Gensokyan_monarchy
+				change_technology_group = tech_gensokyan
+				change_unit_type = tech_gensokyan
+				change_primary_culture = "Youkai"
+				capital_scope = {
+					infantry = MEL
+					infantry = MEL
+					infantry = MEL
+					infantry = MEL
+				}
+				add_treasury = 50
+				add_manpower = 10
+				add_adm_power = 84
+				add_dip_power = 84
+				add_mil_power = 112
+				set_ruler_flag = touhou_character_ruler
+				set_ruler_flag = touhou_original_ruler
+				add_ruler_personality = immortal_personality
+				change_estate_land_share = {
+					estate = estate_church
+					share = 14
+				}
+				change_estate_land_share = {
+					estate = estate_nobles
+					share = 14
+				}
+				change_estate_land_share = {
+					estate = estate_burghers
+					share = 31
+				}
+			}
+		}
+		switch_tag = MEL
+	}
+}

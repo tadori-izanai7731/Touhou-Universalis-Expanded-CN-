@@ -24,6 +24,13 @@ l_english:
 ###IDEA_END
 
 ###DECISION
- THE_MEL_release_country_decision_title: "释放@MEL[MEL.GetName]"
+ THE_MEL_release_country_decision_title: "=@MEL梅蒂欣的远行="
  THE_MEL_release_country_decision_desc: ""
 ###DECISION_END
+
+###EVENT
+ THE_MEL_events.0.t: "远行抉择"
+ THE_MEL_events.0.desc: ""
+ THE_MEL_events.0.a: "这里的铃兰需要你，我也需要一个帮手。"
+ THE_MEL_events.0.b: "走吧。然后决定你手中的毒···究竟是成为他人的诅咒，还是找到作为解药的自我。"
+###EVENT_END
