@@ -83,7 +83,7 @@ country_event = {
 				change_government = monarchy
 				add_government_reform = Gensokyan_monarchy
 				change_technology_group = tech_gensokyan
-				change_unit_type = tech_gensokyan
+				change_unit_type = sub_saharan
 				change_primary_culture = "Youkai"
 				capital_scope = {
 					infantry = MEL
@@ -111,8 +111,10 @@ country_event = {
 					estate = estate_burghers
 					share = 31
 				}
+				set_country_flag = THE_MEL_earthfruit_idea_flag
 			}
 		}
 		switch_tag = MEL
+		swap_free_idea_group = yes
 	}
 }
