@@ -37,13 +37,32 @@ THE_MEL_performance_traveler_character_disaster = {
 				which = the_mel_complete_traveler_character_var
 				value = 1
 			}
+			add_prestige = 20
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 10
+			}
+			add_estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 10
+			}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 10
+			}
+			if = {
+				limit = {
+					mission_completed = THE_MEL_1_3
+				 }
+				 add_mercantilism_or_monarch_power = 4
+			}
 		}
 	}
 	on_end = THE_MEL_events.5
 	modifier = {
-		global_unrest = 5
-		manpower_recovery_speed = 0.33
-		stability_cost_modifier = -0.25
+		movement_speed = 0.10
+		trade_efficiency = 0.20
+		colonists = 1
 	}
 }
 
@@ -54,10 +73,12 @@ THE_MEL_performance_princess_character_disaster = {
 		has_country_flag = THE_MEL_set_princess_character_performance_flag
 	}
 	can_start = {
-		always = yes
+		stability = 1
 	}
 	can_stop = {
-		always = no
+		NOT = {
+			stability = 1
+		}
 	}
 	progress = {
 		modifier = {
@@ -224,10 +245,12 @@ THE_MEL_performance_lover_character_disaster = {
 		has_country_flag = THE_MEL_set_lover_character_performance_flag
 	}
 	can_start = {
-		always = yes
+		stability = 1
 	}
 	can_stop = {
-		always = no
+		NOT = {
+			stability = 1
+		}
 	}
 	progress = {
 		
@@ -239,9 +262,9 @@ THE_MEL_performance_lover_character_disaster = {
 		
 	}
 	modifier = {
-		global_unrest = 5
-		manpower_recovery_speed = 0.33
-		stability_cost_modifier = -0.25
+		improve_relation_modifier = 0.25
+		diplomatic_annexation_cost = -0.15
+		accept_vassalization_reasons = 15
 	}
 }
 

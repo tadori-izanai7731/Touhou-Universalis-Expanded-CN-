@@ -37,6 +37,8 @@ l_english:
  THE_MEL_events.0.b: "走吧。然后决定你手中的毒···究竟是成为他人的诅咒，还是解药."
  THE_MEL_events.1.a: "介绍"
  THE_MEL_events.1.b: "剧目-迷途的旅者"
+ THE_MEL_event_1_display_ctt_b_1: "「§Y剧目-迷途的旅者§!」的进程将会受到以下行动的影响：\n==雇佣顾问时：§G+2§!\n==召开议会时：§G+5§!\n==王室联姻时：§G+5§!\n==建造要塞时：§G+2§!"
+ THE_MEL_event_1_display_ctt_b_2: "当「§Y剧目-迷途的旅者§!」的进程达到§G100%§!时，我们将获得以下奖励：\n==§Y行政点§!£adm£§G+300§!\n==§Y外交点§!£dip£§G+300§!\n==§Y军事点§!£mil£§G+300§!\n==获得§Y威望§!§G+20§!\n==所有阶层忠诚度§G+10%§!"
  THE_MEL_events.1.c: "剧目-被囚禁的公主"
  THE_MEL_event_1_display_ctt_c_1: "「§Y剧目-被囚禁的公主§!」的进程将会受到以下行动的影响：\n==雇佣顾问时：§G+2§!\n==召开议会时：§G+5§!\n==王室联姻时：§G+5§!\n==建造要塞时：§G+2§!"
  THE_MEL_event_1_display_ctt_c_2: "当「§Y剧目-被囚禁的公主§!」的进程达到§G100%§!时，我们将获得以下奖励：\n==§Y行政点§!£adm£§G+300§!\n==§Y外交点§!£dip£§G+300§!\n==§Y军事点§!£mil£§G+300§!\n==根据我们治下每个§Y要塞§!省份获得§G5000§!人力\n==获得陆军职业度§G+5%§!"
@@ -63,6 +65,7 @@ l_english:
  THE_MEL_puppeteer_queen_of_the_soul_modifier: "缔结心灵的人偶女王"
  THE_MEL_puritry_girl_modifier: "纯洁无暇"
  THE_MEL_the_princess_was_imprisoned_modifier: "独自盛开的铃兰"
+ THE_MEL_the_traveler_was_modifier: "铃兰之旅"
 ###MODIFIER_END
 
 ###MISSION_EX
@@ -84,7 +87,7 @@ l_english:
  THE_MEL_1_3_c_tt1: "至少演绎过§Y1§!次「迷途的旅者」"
  THE_MEL_1_3_c_tt2_yes: "£yes£若「迷途的旅者」灾难仍未结束，我们将会获得以下效果："
  THE_MEL_1_3_c_tt2_no: "£no£若「迷途的旅者」灾难仍未结束，我们将会获得以下效果："
- HE_MEL_1_3_c_tt: "当「§Y剧目-迷途的旅者§!」的进程达到§G100%§!时，额外获得以下效果：\n=="
+ THE_MEL_1_3_c_tt3: "当「§Y剧目-迷途的旅者§!」的进程达到§G100%§!时，额外获得以下效果：\n==重商主义§G+4§!溢出的重商主义转化为君主点数"
 ###MISSION_EX_END
 
 ###DISASTER
