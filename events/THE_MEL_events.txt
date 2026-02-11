@@ -138,6 +138,8 @@ country_event = {
 	#旅者
 	option = {
 		name = THE_MEL_events.1.b
+		custom_tooltip = THE_MEL_event_1_display_ctt_b_1
+		custom_tooltip = THE_MEL_event_1_display_ctt_b_2
 		set_country_flag = THE_MEL_set_traveler_character_performance_flag
 	}
 	#公主
@@ -186,31 +188,6 @@ country_event = {
 		name = THE_MEL_events.2.a
 		clr_country_flag = THE_MEL_having_the_performance_event_flag
 		clr_country_flag = THE_MEL_set_queen_character_performance_flag
-		add_adm_power = 300
-		add_dip_power = 300
-		add_mil_power = 300
-		every_owned_province = {
-			add_prosperity = 100
-		}
-		hidden_effect = {
-			change_variable = {
-				which = the_mel_complete_queen_character_var
-				value = 1
-			}
-			if = {
-				limit = { 
-					mission_completed = THE_MEL_4_3
-				}
-				every_owned_province = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_territorial_core = ROOT }
-					}
-					add_territorial_core = ROOT
-					add_nationalism = -10
-				}
-			}
-		}
 	}
 }
 
@@ -226,35 +203,6 @@ country_event = {
 		name = THE_MEL_events.3.a
 		clr_country_flag = THE_MEL_having_the_performance_event_flag
 		clr_country_flag = THE_MEL_set_girl_character_performance_flag
-		add_adm_power = 300
-		add_dip_power = 300
-		add_mil_power = 300
-		hidden_effect = {
-			change_variable = {
-				which = the_mel_complete_girl_character_var
-				value = 1
-			}
-			for = {
-				amount = 20
-				effect = "
-					random_owned_province = {
-						limit = {
-							is_core = ROOT
-						}
-						add_base_production = 1
-					}
-				"
-			}
-			if = {
-				limit = { 
-					mission_completed = THE_MEL_5_3
-				}
-				add_years_of_owned_provinces_production_income = {
-					years = 8
-					custom_tooltip = MONOPOLY_INCOME_CLOTH_DESC
-				}
-			}
-		}
 	}
 }
 
@@ -270,19 +218,20 @@ country_event = {
 		name = THE_MEL_events.4.a
 		clr_country_flag = THE_MEL_having_the_performance_event_flag
 		clr_country_flag = THE_MEL_set_princess_character_performance_flag
-		add_adm_power = 300
-		add_dip_power = 300
-		add_mil_power = 300
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_fort_building_trigger = yes
-				}
-				ROOT = {
-					add_manpower = 5
-				}
-			}
-			add_army_professionalism = 0.05
-		}
+	}
+}
+
+country_event = {
+	id = THE_MEL_events.5
+	title = THE_MEL_events.5.t
+	desc = THE_MEL_events.5.desc
+	picture = "THE_MEL_event_picture_1"
+	hidden = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = THE_MEL_events.5.a
+		clr_country_flag = THE_MEL_having_the_performance_event_flag
+		clr_country_flag = THE_MEL_set_traveler_character_performance_flag
 	}
 }

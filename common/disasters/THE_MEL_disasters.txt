@@ -3,20 +3,43 @@ THE_MEL_performance_traveler_character_disaster = {
 		has_country_flag = THE_MEL_set_traveler_character_performance_flag
 	}
 	can_start = {
-		always = yes
+		stability = 1
 	}
 	can_stop = {
-		always = no
+		NOT = {
+			stability = 1
+		}
 	}
 	progress = {
 		
 	}
 	can_end = {
-		
+		custom_trigger_tooltip = {
+			tooltip = THE_MEL_performance_queen_character_disaster_c_tt1
+			had_country_flag = {
+				flag = THE_MEL_had_the_traveler_character_performance_flag
+				days = 18250
+			}
+		}
 	}
 	on_monthly = {
 		
 	}
+	on_start_effect = {
+		hidden_effect = {
+			set_country_flag = THE_MEL_had_the_traveler_character_performance_flag
+		}
+		add_adm_power = 300
+		add_dip_power = 300
+		add_mil_power = 300
+		hidden_effect = {
+			change_variable = {
+				which = the_mel_complete_traveler_character_var
+				value = 1
+			}
+		}
+	}
+	on_end = THE_MEL_events.5
 	modifier = {
 		global_unrest = 5
 		manpower_recovery_speed = 0.33
@@ -88,7 +111,7 @@ THE_MEL_performance_princess_character_disaster = {
 			custom_trigger_tooltip = {
 				tooltip = THE_MEL_performance_princess_character_disaster_trigger_c_tt1
 				check_variable = {
-					which = the_mel_won_war_number_var
+					which = the_mel_won_war_number_once_var
 					value = 2
 				}
 			}
@@ -98,7 +121,7 @@ THE_MEL_performance_princess_character_disaster = {
 			custom_trigger_tooltip = {
 				tooltip = THE_MEL_performance_princess_character_disaster_trigger_c_tt2
 				check_variable = {
-					which = the_mel_won_war_number_var
+					which = the_mel_won_war_number_once_var
 					value = 3
 				}
 			}
@@ -109,7 +132,7 @@ THE_MEL_performance_princess_character_disaster = {
 				tooltip = THE_MEL_performance_princess_character_disaster_trigger_c_tt3
 				NOT = {
 					check_variable = {
-						which = the_mel_won_war_number_var
+						which = the_mel_won_war_number_once_var
 						value = 1
 					}
 				}
@@ -146,8 +169,42 @@ THE_MEL_performance_princess_character_disaster = {
 		hidden_effect = {
 			set_country_flag = THE_MEL_had_the_princess_character_performance_flag
 			set_variable = {
-				which = the_mel_won_war_number_var
+				which = the_mel_won_war_number_once_var
 				value = 0
+			}
+		}
+		add_adm_power = 300
+		add_dip_power = 300
+		add_mil_power = 300
+		hidden_effect = {
+			change_variable = {
+				which = the_mel_complete_princess_character_var
+				value = 1
+			}
+			every_owned_province = {
+				limit = {
+					has_fort_building_trigger = yes
+				}
+				ROOT = {
+					add_manpower = 5
+				}
+			}
+			add_army_professionalism = 0.05
+			if = {
+				limit = {
+					mission_completed = THE_MEL_2_3
+				 }
+				 for = {
+					amount = 20
+					effect = "
+						random_owned_province = {
+							limit = {
+								NOT = { culture = ROOT }
+							}
+							change_culture = ROOT
+						}
+					"
+				 }
 			}
 		}
 	}
@@ -277,6 +334,31 @@ THE_MEL_performance_queen_character_disaster = {
 	on_start_effect = {
 		hidden_effect = {
 			set_country_flag = THE_MEL_had_the_queen_character_performance_flag
+		}
+		add_adm_power = 300
+		add_dip_power = 300
+		add_mil_power = 300
+		every_owned_province = {
+			add_prosperity = 100
+		}
+		hidden_effect = {
+			change_variable = {
+				which = the_mel_complete_queen_character_var
+				value = 1
+			}
+			if = {
+				limit = { 
+					mission_completed = THE_MEL_4_3
+				}
+				every_owned_province = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_territorial_core = ROOT }
+					}
+					add_territorial_core = ROOT
+					add_nationalism = -10
+				}
+			}
 		}
 	}
 	on_end = THE_MEL_events.2
@@ -419,6 +501,35 @@ THE_MEL_performance_girl_character_disaster = {
 			set_variable = {
 				which = the_mel_develop_the_province_once_var
 				value = 0
+			}
+		}
+		add_adm_power = 300
+		add_dip_power = 300
+		add_mil_power = 300
+		hidden_effect = {
+			change_variable = {
+				which = the_mel_complete_girl_character_var
+				value = 1
+			}
+			for = {
+				amount = 20
+				effect = "
+					random_owned_province = {
+						limit = {
+							is_core = ROOT
+						}
+						add_base_production = 1
+					}
+				"
+			}
+			if = {
+				limit = { 
+					mission_completed = THE_MEL_5_3
+				}
+				add_years_of_owned_provinces_production_income = {
+					years = 8
+					custom_tooltip = MONOPOLY_INCOME_CLOTH_DESC
+				}
 			}
 		}
 	}

@@ -11,9 +11,31 @@ THE_MEL_branch_1 = {
 		required_missions = { THE_MEL_3_2 } 
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = THE_MEL_1_3_c_tt1
+				check_variable = {
+					which = the_mel_complete_traveler_character_var
+					value = 1
+				}
+			}
+		 } 
 		
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_MEL_1_3_c_tt1
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			if = {
+				limit = { 
+					has_disaster = THE_MEL_performance_traveler_character_disaster
+				}
+				custom_tooltip = THE_MEL_1_3_c_tt2_yes
+			}
+			else = {
+				custom_tooltip = THE_MEL_1_3_c_tt2_no
+			}
+		 } 
 	}
 }
 THE_MEL_branch_2 = {
@@ -73,9 +95,46 @@ THE_MEL_branch_2 = {
 		required_missions = { THE_MEL_3_2 } 
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 5
+				has_fort_building_trigger = yes
+			}
+			grown_by_states = 3
+			custom_trigger_tooltip = {
+				tooltip = THE_MEL_2_3_c_tt1
+				check_variable = {
+					which = the_mel_complete_princess_character_var
+					value = 1
+				}
+			}
+		} 
 		
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_MEL_2_3_c_tt3
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			if = {
+				limit = { 
+					has_disaster = THE_MEL_performance_princess_character_disaster
+				}
+				custom_tooltip = THE_MEL_2_3_c_tt2_yes
+				add_country_modifier = {
+					name = THE_MEL_the_princess_was_imprisoned_modifier
+					duration = -1
+				}
+			}
+			else = {
+				custom_tooltip = THE_MEL_2_3_c_tt2_no
+				tooltip = {
+					add_country_modifier = {
+						name = THE_MEL_the_princess_was_imprisoned_modifier
+						duration = -1
+					}
+				}
+			}
+		} 
 	}
 }
 THE_MEL_branch_3 = {
@@ -300,7 +359,7 @@ THE_MEL_branch_5 = {
 					value = 1
 				}
 			}
-		 } 
+		} 
 		
 		effect = { 
 			custom_tooltip = THE_MEL_5_3_c_tt3
@@ -326,6 +385,6 @@ THE_MEL_branch_5 = {
 					}
 				}
 			}
-		 } 
+		} 
 	}
 }
