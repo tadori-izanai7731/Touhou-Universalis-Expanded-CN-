@@ -1,0 +1,154 @@
+THE_MEL_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MEL } 
+
+	THE_MEL_1_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_MEL_3_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_MEL_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MEL } 
+
+	THE_MEL_2_1 = {
+		icon = mission_unknown_mission
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_MEL_2_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_MEL_3_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_MEL_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MEL } 
+
+	THE_MEL_3_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = {
+			THE_MEL_2_1
+			THE_MEL_4_1
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = { 
+			add
+		 } 
+	}
+
+	THE_MEL_3_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_MEL_3_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_MEL_3_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = {
+			THE_MEL_1_3
+			THE_MEL_2_3
+			THE_MEL_3_3
+			THE_MEL_4_3
+			THE_MEL_5_3
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_MEL_3_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { THE_MEL_3_4 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_MEL_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MEL } 
+
+	THE_MEL_4_1 = {
+		icon = mission_unknown_mission
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_MEL_4_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_MEL_3_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_MEL_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MEL } 
+
+	THE_MEL_5_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_MEL_3_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}

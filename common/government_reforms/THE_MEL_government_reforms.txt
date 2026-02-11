@@ -1,0 +1,27 @@
+THE_MEL_sound_of_valley_lily_reform = {
+	lock_level_when_selected = yes
+	icon = "THE_MEL_government_1_reform"
+	potential = {
+		OR = {
+			has_reform = THE_MEL_sound_of_valley_lily_reform
+			have_had_reform = THE_MEL_sound_of_valley_lily_reform
+		}
+	}
+	valid_for_new_country = no
+	valid_for_nation_designer = no
+	rulers_can_be_generals = no
+	can_change_primary_culture = no
+	
+	modifiers = {
+		governing_capacity = 150
+		improve_relation_modifier = 0.30
+        envoy_travel_time = -0.10
+        diplomatic_upkeep = 1
+	}
+	government_abilities = {
+		
+	}
+	custom_attributes = {
+		THE_MEL_sound_of_valley_lily_reform_mechanic = yes
+	}
+}
