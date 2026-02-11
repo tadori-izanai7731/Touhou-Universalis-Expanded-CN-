@@ -27,8 +27,8 @@ THE_MEL_ideas = {
 		diplomatic_reputation = 1
 	}
 	THE_MEL_idea_4 = {
-		tolerance_heretic = 3
-		tolerance_heathen = 3
+		tolerance_heretic = 2
+		tolerance_heathen = 2
 	}
 	THE_MEL_idea_5 = {
 		global_unrest = -2
@@ -39,7 +39,7 @@ THE_MEL_ideas = {
 	}
 	THE_MEL_idea_7 = {
 		province_warscore_cost = -0.10
-		army_tradition = 0.5
+		global_trade_goods_size_modifier = 0.05
 	}
 }
 
