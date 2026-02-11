@@ -26,6 +26,8 @@ l_english:
 ###DECISION
  THE_MEL_release_country_decision_title: "@MEL梅蒂欣的远行"
  THE_MEL_release_country_decision_desc: ""
+ THE_MEL_will_call_performance_decision_title: "「幻想人形剧」开幕"
+ THE_MEL_will_call_performance_decision_desc: ""
 ###DECISION_END
 
 ###EVENT
@@ -33,3 +35,65 @@ l_english:
  THE_MEL_events.0.desc: ""
  THE_MEL_events.0.a: "这里的铃兰需要你，我也需要一个帮手。"
  THE_MEL_events.0.b: "走吧。然后决定你手中的毒···究竟是成为他人的诅咒，还是解药."
+ THE_MEL_events.1.a: "介绍"
+ THE_MEL_events.1.b: "剧目-迷途的旅者"
+ THE_MEL_events.1.c: "剧目-被囚禁的公主"
+ THE_MEL_event_1_display_ctt_c_1: "「§Y剧目-被囚禁的公主§!」的进程将会受到以下行动的影响：\n==雇佣顾问时：§G+2§!\n==召开议会时：§G+5§!\n==王室联姻时：§G+5§!\n==建造要塞时：§G+2§!"
+ THE_MEL_event_1_display_ctt_c_2: "当「§Y剧目-被囚禁的公主§!」的进程达到§G100%§!时，我们将获得以下奖励：\n==§Y行政点§!£adm£§G+300§!\n==§Y外交点§!£dip£§G+300§!\n==§Y军事点§!£mil£§G+300§!\n==根据我们治下每个§Y要塞§!省份获得§G5000§!人力\n==获得陆军职业度§G+5%§!"
+ THE_MEL_events.1.d: "剧目-我的恋人"
+ THE_MEL_events.1.e: "剧目-纯白的女王"
+ THE_MEL_event_1_display_ctt_e_1: "「§Y剧目-纯白的女王§!」的进程将会受到以下行动的影响：\n==核心化省份时：§G+2§!\n==召开议会时：§G+5§!\n==没收领地时：§G+1§!\n==偿还贷款时：§G+5§!"
+ THE_MEL_event_1_display_ctt_e_2: "当「§Y剧目-纯白的女王§!」的进程达到§G100%§!时，我们将获得以下奖励：\n==§Y行政点§!£adm£§G+300§!\n==§Y外交点§!£dip£§G+300§!\n==§Y军事点§!£mil£§G+300§!\n==治下所有省份§Y繁荣度§!§G+100%§!"
+ THE_MEL_events.1.f: "剧目-牧鹅的姑娘"
+ THE_MEL_event_1_display_ctt_f_1: "「§Y剧目-牧鹅的姑娘§!」的进程将会受到以下行动的影响：\n==发展省份时：§G+1§!\n==赠送礼物时：§G+5§!\n==召开议会时：§G+5§!\n==升级贸易中心时：§G+5§!"
+ THE_MEL_event_1_display_ctt_f_2: "当「§Y剧目-牧鹅的姑娘§!」的进程达到§G100%§!时，我们将获得以下奖励：\n==§Y行政点§!£adm£§G+300§!\n==§Y外交点§!£dip£§G+300§!\n==§Y军事点§!£mil£§G+300§!"
+ THE_MEL_event_1_display_ctt_f_3: "\n==随机§G20§!点§Y基础生产§!随机分配到治下所有省份"
+ THE_MEL_events.1.g: "返回"
+###EVENT_END
+
+###GOVERNMENT
+ THE_MEL_sound_of_valley_lily_reform: "铃兰轻语"
+ THE_MEL_sound_of_valley_lily_reform_desc: ""
+ mechanic_THE_MEL_sound_of_valley_lily_reform_mechanic_yes: "允许我们使用§Y决议§!选择并且启用「§Y幻想人形剧§!」"
+###GOVERNMENT_END
+
+###MODIFIER
+ THE_MEL_overture_of_adventure_modifier: "冒险的序曲"
+ THE_MEL_defeat_the_sum_flower_modifier: "击败太阳花"
+ THE_MEL_puppeteer_queen_of_the_soul_modifier: "缔结心灵的人偶女王"
+ THE_MEL_puritry_girl_modifier: "纯洁无暇"
+###MODIFIER_END
+
+###MISSION_EX
+ THE_MEL_4_1_c_tt1: "此效果持续到我们赢得§Y独立战争§!的胜利"
+ THE_MEL_3_2_c_tt1_yes: "£yes£若完成任务时，@SFF[SFF.GetName]§Y不存在§!或者§Y总发展度§!低于50,我们将会获得："
+ THE_MEL_3_2_c_tt1_no: "£no£若完成任务时，@SFF[SFF.GetName]§Y不存在§!或者§Y总发展度§!低于§Y50§!时,我们将会获得："
+ THE_MEL_4_3_c_tt1: "至少演绎过§Y1§!次「纯白的女王」"
+ THE_MEL_4_3_c_tt2_yes: "£yes£若「纯白的女王」灾难仍未结束，我们将会获得以下效果："
+ THE_MEL_4_3_c_tt2_no: "£no£若「纯白的女王」灾难仍未结束，我们将会获得以下效果："
+ THE_MEL_4_3_c_tt3: "当「§Y剧目-纯白的女王§!」的进程达到§G100%§!时，获得以下额外效果：\n==所有未完成核心化的省份获得§Y自治领核心§!\n==且减少§G10§!年§Y分离主义§!"
+ THE_MEL_5_3_c_tt1: "至少演绎过§Y1§!次「牧鹅的姑娘」"
+ THE_MEL_5_3_c_tt3: "当「§Y剧目-纯白的女王§!」的进程达到§G100%§!时，获得以下额外效果为：\n==根据治下所有省份§G8§!年的§Y生产收入§!获得§Y金钱§!"
+ THE_MEL_5_3_c_tt2_yes: "£yes£若「牧鹅的姑娘」灾难仍未结束，我们将会获得以下效果："
+ THE_MEL_5_3_c_tt2_no: "£no£若「牧鹅的姑娘」灾难仍未结束，我们将会获得以下效果："
+###MISSION_EX_END
+
+###DISASTER
+ THE_MEL_performance_traveler_character_disaster: "「迷途的旅者」"
+ THE_MEL_performance_princess_character_disaster: "「被囚禁的公主」"
+ THE_MEL_performance_lover_character_disaster: "「我的恋人」"
+ THE_MEL_performance_queen_character_disaster: "「纯白的女王」"
+ THE_MEL_performance_queen_character_disaster_desc: "当剧目-纯白的女王的进程达到100%时，我们将获得以下奖励：\n==§Y行政点§!£adm£§G+300§!\n==§Y外交点§!£dip£§G+300§!\n==§Y军事点§!£mil£§G+300§!\n==治下所有省份§Y繁荣度§!§G+100%§!\n并获得以下灾难修正持续§Y50§!年"
+ THE_MEL_performance_girl_character_disaster: "「牧鹅的姑娘」"
+ THE_MEL_performance_queen_character_disaster_c_tt1: "此演出已经持续§Y50§!年"
+ THE_MEL_performance_girl_character_disaster_c_tt1: ""
+ THE_MEL_performance_girl_character_disaster_trigger_c_tt1: "当前剧目下发展省份超过§Y10§!次（当前为[Root.the_mel_develop_the_province_once_var.GetValue]）"
+ THE_MEL_performance_girl_character_disaster_trigger_c_tt2: "当前剧目下发展省份超过§Y20§!次（当前为[Root.the_mel_develop_the_province_once_var.GetValue]）"
+ THE_MEL_performance_girl_character_disaster_trigger_c_tt3: "当前剧目下发展省份超过§Y30§!次（当前为[Root.the_mel_develop_the_province_once_var.GetValue]）"
+ THE_MEL_performance_girl_character_disaster_trigger_c_tt4: "当前剧目下领土被敌方占领超过§Y10§!次（当前为[Root.the_mel_seige_defeat_once_var.GetValue]）"
+ THE_MEL_performance_girl_character_disaster_trigger_c_tt5: "当前剧目下领土被敌方占领超过§Y20§!次（当前为[Root.the_mel_seige_defeat_once_var.GetValue]）"
+ THE_MEL_performance_girl_character_disaster_trigger_c_tt6: "当前剧目下领土被敌方占领超过§Y30§!次（当前为[Root.the_mel_seige_defeat_once_var.GetValue]）"
+ THE_MEL_performance_princess_character_disaster_trigger_c_tt1: "当前剧目下至少赢得§Y2§!场战争胜利（当前为[Root.the_mel_won_war_number_var.GetValue]）"
+ THE_MEL_performance_princess_character_disaster_trigger_c_tt2: "当前剧目下至少赢得§Y3§!场战争胜利（当前为[Root.the_mel_won_war_number_var.GetValue]）"
+ THE_MEL_performance_princess_character_disaster_trigger_c_tt3: "当前剧目下未曾赢得战争胜利"
+###DISASTER_END

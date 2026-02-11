@@ -1,0 +1,14 @@
+############################
+### OA script
+###############################
+THE_MEL_on_won_dependence_war_effect = {
+	if = {
+		limit = { 
+			FROM = {
+				tag = SFF
+			}
+			has_country_modifier = THE_MEL_overture_of_adventure_modifier
+		}
+		remove_country_modifier = THE_MEL_overture_of_adventure_modifier
+	}
+}

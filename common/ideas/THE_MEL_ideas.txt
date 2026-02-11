@@ -5,7 +5,7 @@ THE_MEL_ideas = {
 	}
 	
 	bonus = {
-		prestige = 1
+		prestige = 0.5
 	}
 	
 	trigger = {
@@ -39,7 +39,7 @@ THE_MEL_ideas = {
 	}
 	THE_MEL_idea_7 = {
 		province_warscore_cost = -0.10
-		core_creation = -0.25
+		army_tradition = 0.5
 	}
 }
 

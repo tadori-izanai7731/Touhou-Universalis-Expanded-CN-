@@ -1,0 +1,22 @@
+THE_MEL_overture_of_adventure_modifier = {
+	global_regiment_cost = -0.25
+	global_regiment_recruit_speed = -0.25
+	land_forcelimit = 6
+	global_tax_income = 24
+	diplomatic_reputation = 2
+}
+
+THE_MEL_defeat_the_sum_flower_modifier = {
+	core_creation = -0.10
+	diplomatic_upkeep = 1
+}
+
+THE_MEL_puppeteer_queen_of_the_soul_modifier = {
+	prestige = 1
+	yearly_corruption = -0.5
+}
+
+THE_MEL_puritry_girl_modifier = {
+	development_cost = -0.05
+	global_trade_goods_size_modifier = 0.10
+}

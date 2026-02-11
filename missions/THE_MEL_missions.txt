@@ -3,16 +3,16 @@ THE_MEL_branch_1 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = MEL } 
-
+	potential = { tag = MEL NOT = { has_country_flag = THE_MEL_earthfruit_idea_flag } } 
+	
 	THE_MEL_1_3 = {
 		icon = mission_unknown_mission
 		position = 3
 		required_missions = { THE_MEL_3_2 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
 }
@@ -21,26 +21,60 @@ THE_MEL_branch_2 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = MEL } 
-
+	potential = { tag = MEL NOT = { has_country_flag = THE_MEL_earthfruit_idea_flag } } 
+	
 	THE_MEL_2_1 = {
 		icon = mission_unknown_mission
 		position = 1
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
+		provinces_to_highlight = { 
+			is_capital_of = ROOT
+		} 
+		
+		trigger = { 
+			stability = 2
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 30
+			}
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 30
+			}
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 30
+			}
+			OR = {
+				num_of_estate_agendas_completed = {
+					estate = estate_nobles
+					value = 1
+				}
+				num_of_estate_agendas_completed = {
+					estate = estate_burghers
+					value = 1
+				}
+				num_of_estate_agendas_completed = {
+					estate = estate_church
+					value = 1
+				}
+			}
+		} 
+		
+		effect = { 
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+		} 
 	}
-
+	
 	THE_MEL_2_3 = {
 		icon = mission_unknown_mission
 		position = 3
 		required_missions = { THE_MEL_3_2 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
 }
@@ -49,8 +83,8 @@ THE_MEL_branch_3 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = MEL } 
-
+	potential = { tag = MEL NOT = { has_country_flag = THE_MEL_earthfruit_idea_flag } } 
+	
 	THE_MEL_3_2 = {
 		icon = mission_unknown_mission
 		position = 2
@@ -59,25 +93,62 @@ THE_MEL_branch_3 = {
 			THE_MEL_4_1
 		}
 		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
+		
+		trigger = { 
+			is_subject = no
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 5
+				region = sunflower_region
+			}
+		} 
+		
 		effect = { 
-			add
-		 } 
+			add_country_modifier = {
+				name = THE_MEL_defeat_the_sum_flower_modifier
+				duration = -1
+			}
+			add_government_reform = THE_MEL_sound_of_valley_lily_reform
+			if = {
+				limit = { 
+					OR = {
+						NOT = { exists = SFF }
+						SFF = {
+							NOT = {
+								total_development = 50
+							}
+						}
+					}
+					
+				}
+				custom_tooltip = THE_MEL_3_2_c_tt1_yes
+				add_army_tradition = 25
+				add_army_professionalism = 0.10
+			}
+			else = {
+				custom_tooltip = THE_MEL_3_2_c_tt1_no
+				tooltip = {
+					add_army_tradition = 25
+					add_army_professionalism = 0.10
+				}
+			}
+		} 
 	}
-
+	
 	THE_MEL_3_3 = {
 		icon = mission_unknown_mission
 		position = 3
 		required_missions = { THE_MEL_3_2 } 
 		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
+		
+		trigger = { 
+			
+		} 
+		
+		effect = { 
+			
+		} 
 	}
-
+	
 	THE_MEL_3_4 = {
 		icon = mission_unknown_mission
 		position = 4
@@ -89,20 +160,20 @@ THE_MEL_branch_3 = {
 			THE_MEL_5_3
 		}
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_MEL_3_5 = {
 		icon = mission_unknown_mission
 		position = 5
 		required_missions = { THE_MEL_3_4 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
 }
@@ -111,27 +182,91 @@ THE_MEL_branch_4 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = MEL } 
-
+	potential = { tag = MEL NOT = { has_country_flag = THE_MEL_earthfruit_idea_flag }  } 
+	
 	THE_MEL_4_1 = {
 		icon = mission_unknown_mission
 		position = 1
 		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
+		
+		trigger = { 
+			OR = {
+				army_size = 15
+				army_size_percentage = 1.00
+			}
+			any_country = {
+				capital_scope = {
+					continent = gensokyo_continent
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+			}
+		} 
+		
+		effect = { 
+			add_stability = 2
+			Sunny_plains = { add_permanent_claim = ROOT }
+			Gengetsu_state = { add_permanent_claim = ROOT }
+			Perfect_cut_coast = { add_core = ROOT }
+			add_manpower = 15
+			add_treasury = 100
+			add_country_modifier = {
+				name = THE_MEL_overture_of_adventure_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_MEL_4_1_c_tt1
+		} 
 	}
-
+	
 	THE_MEL_4_3 = {
 		icon = mission_unknown_mission
 		position = 3
 		required_missions = { THE_MEL_3_2 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
+		provinces_to_highlight = { 
+			
+		} 
+		
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 15
+				is_prosperous = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = THE_MEL_4_3_c_tt1
+				check_variable = {
+					which = the_mel_complete_queen_character_var
+					value = 1
+				}
+			}
+		} 
+		
+		effect = { 
+			custom_tooltip = THE_MEL_4_3_c_tt3
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			if = {
+				limit = {
+					has_disaster = THE_MEL_performance_queen_character_disaster
+				}
+				custom_tooltip = THE_MEL_4_3_c_tt2_yes
+				add_country_modifier = {
+					name = THE_MEL_puppeteer_queen_of_the_soul_modifier
+					duration = -1
+				}
+			}
+			else = {
+				custom_tooltip = THE_MEL_4_3_c_tt2_no
+				tooltip = {
+					add_country_modifier = {
+						name = THE_MEL_puppeteer_queen_of_the_soul_modifier
+						duration = -1
+					}
+				}
+			}
+		} 
 	}
 }
 THE_MEL_branch_5 = {
@@ -139,16 +274,58 @@ THE_MEL_branch_5 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = MEL } 
-
+	potential = { tag = MEL NOT = { has_country_flag = THE_MEL_earthfruit_idea_flag } } 
+	
 	THE_MEL_5_3 = {
 		icon = mission_unknown_mission
 		position = 3
 		required_missions = { THE_MEL_3_2 } 
 		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
+		
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 20
+				development = 17
+				has_trade_building_trigger = yes
+				has_production_building_trigger = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 4
+				province_has_center_of_trade_of_level = 2
+			}
+			custom_trigger_tooltip = {
+				tooltip = THE_MEL_5_3_c_tt1
+				check_variable = {
+					which = the_mel_complete_girl_character_var
+					value = 1
+				}
+			}
+		 } 
+		
+		effect = { 
+			custom_tooltip = THE_MEL_5_3_c_tt3
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			if = {
+				limit = {
+					has_disaster = THE_MEL_performance_girl_character_disaster
+				}
+				custom_tooltip = THE_MEL_5_3_c_tt2_yes
+				add_country_modifier = {
+					name = THE_MEL_puritry_girl_modifier
+					duration = -1
+				}
+			}
+			else = {
+				custom_tooltip = THE_MEL_5_3_c_tt2_no
+				tooltip = {
+					add_country_modifier = {
+						name = THE_MEL_puritry_girl_modifier
+						duration = -1
+					}
+				}
+			}
+		 } 
 	}
 }

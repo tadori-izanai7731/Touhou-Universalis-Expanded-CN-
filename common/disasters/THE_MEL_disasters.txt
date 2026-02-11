@@ -1,0 +1,432 @@
+THE_MEL_performance_traveler_character_disaster = {
+	potential = {
+		has_country_flag = THE_MEL_set_traveler_character_performance_flag
+	}
+	can_start = {
+		always = yes
+	}
+	can_stop = {
+		always = no
+	}
+	progress = {
+		
+	}
+	can_end = {
+		
+	}
+	on_monthly = {
+		
+	}
+	modifier = {
+		global_unrest = 5
+		manpower_recovery_speed = 0.33
+		stability_cost_modifier = -0.25
+	}
+}
+
+THE_MEL_performance_princess_character_disaster = {
+	potential = {
+		tag = MEL
+		has_government_attribute = THE_MEL_sound_of_valley_lily_reform_mechanic
+		has_country_flag = THE_MEL_set_princess_character_performance_flag
+	}
+	can_start = {
+		always = yes
+	}
+	can_stop = {
+		always = no
+	}
+	progress = {
+		modifier = {
+			factor = 0.5
+			total_development = 250
+		}
+		modifier = {
+			factor = 0.5
+			total_development = 500
+		}
+		modifier = {
+			factor = 0.5
+			total_development = 1000
+		}
+		modifier = {
+			factor = 0.25
+			stability = 1
+		}
+		modifier = {
+			factor = 0.25
+			stability = 2
+		}
+		modifier = {
+			factor = 1
+			is_subject = no
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				war_exhaustion = 2
+			}
+		}
+		modifier = {
+			factor = 0.25
+			num_of_royal_marriages = 1
+		}
+		modifier = {
+			factor = 0.25
+			num_of_royal_marriages = 2
+		}
+		modifier = {
+			factor = 0.25
+			num_of_royal_marriages = 3
+		}
+		modifier = {
+			factor = 0.25
+			num_of_royal_marriages = 4
+		}
+		modifier = {
+			factor = 0.5
+			custom_trigger_tooltip = {
+				tooltip = THE_MEL_performance_princess_character_disaster_trigger_c_tt1
+				check_variable = {
+					which = the_mel_won_war_number_var
+					value = 2
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			custom_trigger_tooltip = {
+				tooltip = THE_MEL_performance_princess_character_disaster_trigger_c_tt2
+				check_variable = {
+					which = the_mel_won_war_number_var
+					value = 3
+				}
+			}
+		}
+		modifier = {
+			factor = -1.5
+			custom_trigger_tooltip = {
+				tooltip = THE_MEL_performance_princess_character_disaster_trigger_c_tt3
+				NOT = {
+					check_variable = {
+						which = the_mel_won_war_number_var
+						value = 1
+					}
+				}
+			}
+		}
+		#
+		modifier = {
+			factor = -1
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = -2.5
+			is_subject = yes
+		}
+		modifier = {
+			factor = -1
+			war_exhaustion = 2
+		}
+		modifier = {
+			factor = -1
+			NOT = { any_country = { marriage_with = ROOT } }
+		}
+	}
+	can_end = {
+		custom_trigger_tooltip = {
+			tooltip = THE_MEL_performance_queen_character_disaster_c_tt1
+			had_country_flag = {
+				flag = THE_MEL_had_the_princess_character_performance_flag
+				days = 18250
+			}
+		}
+	}
+	on_start_effect = {
+		hidden_effect = {
+			set_country_flag = THE_MEL_had_the_princess_character_performance_flag
+			set_variable = {
+				which = the_mel_won_war_number_var
+				value = 0
+			}
+		}
+	}
+	
+	on_monthly = {
+		
+	}
+	modifier = {
+		stability_cost_modifier = -0.50
+		build_cost = -0.15
+		shock_damage_received = -0.10
+	}
+}
+
+THE_MEL_performance_lover_character_disaster = {
+	potential = {
+		has_country_flag = THE_MEL_set_lover_character_performance_flag
+	}
+	can_start = {
+		always = yes
+	}
+	can_stop = {
+		always = no
+	}
+	progress = {
+		
+	}
+	can_end = {
+		
+	}
+	on_monthly = {
+		
+	}
+	modifier = {
+		global_unrest = 5
+		manpower_recovery_speed = 0.33
+		stability_cost_modifier = -0.25
+	}
+}
+
+THE_MEL_performance_queen_character_disaster = {
+	potential = {
+		tag = MEL
+		has_government_attribute = THE_MEL_sound_of_valley_lily_reform_mechanic
+		has_country_flag = THE_MEL_set_queen_character_performance_flag
+	}
+	can_start = {
+		stability = 1
+	}
+	can_stop = {
+		NOT = {
+			stability = 1
+		}
+	}
+	progress = {
+		modifier = {
+			factor = 0.5
+			total_development = 250
+		}
+		modifier = {
+			factor = 0.5
+			total_development = 500
+		}
+		modifier = {
+			factor = 0.5
+			total_development = 1000
+		}
+		modifier = {
+			factor = 0.25
+			stability = 1
+		}
+		modifier = {
+			factor = 0.25
+			stability = 2
+		}
+		modifier = {
+			factor = 0.25
+			stability = 3
+		}
+		modifier = {
+			factor = 0.25
+			prestige = 50
+		}
+		modifier = {
+			factor = 0.25
+			prestige = 100
+		}
+		modifier = {
+			factor = -0.5
+			any_owned_province = {
+				devastation = 1
+			}
+		}
+		modifier = {
+			factor = -1
+			overextension_percentage = 0.80
+		}
+		modifier = {
+			factor = -100
+			is_bankrupt = yes
+		}
+		modifier = {
+			factor = -1
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = -0.5
+			NOT = { prestige = 0 }
+		}
+		modifier = {
+			factor = -0.5
+			NOT = { prestige = -50 }
+		}
+	}
+	can_end = {
+		custom_trigger_tooltip = {
+			tooltip = THE_MEL_performance_queen_character_disaster_c_tt1
+			had_country_flag = {
+				flag = THE_MEL_had_the_queen_character_performance_flag
+				days = 18250
+			}
+		}
+	}
+	on_monthly = {
+		
+	}
+	on_start_effect = {
+		hidden_effect = {
+			set_country_flag = THE_MEL_had_the_queen_character_performance_flag
+		}
+	}
+	on_end = THE_MEL_events.2
+	modifier = {
+		administrative_efficiency = 0.10
+		prestige = 2
+		global_tax_modifier = 0.20
+	}
+}
+
+THE_MEL_performance_girl_character_disaster = {
+	potential = {
+		tag = MEL
+		has_government_attribute = THE_MEL_sound_of_valley_lily_reform_mechanic
+		has_country_flag = THE_MEL_set_girl_character_performance_flag
+	}
+	can_start = {
+		stability = 1
+	}
+	can_stop = {
+		NOT = {
+			stability = 1
+		}
+	}
+	progress = {
+		modifier = {
+			factor = 0.5
+			total_development = 250
+		}
+		modifier = {
+			factor = 0.5
+			total_development = 500
+		}
+		modifier = {
+			factor = 0.5
+			total_development = 1000
+		}
+		modifier = {
+			factor = 0.25
+			stability = 1
+		}
+		modifier = {
+			factor = 0.25
+			stability = 2
+		}
+		modifier = {
+			factor = 0.5
+			custom_trigger_tooltip = {
+				tooltip = THE_MEL_performance_girl_character_disaster_trigger_c_tt1
+				check_variable = {
+					which = the_mel_develop_the_province_once_var
+					value = 10
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			custom_trigger_tooltip = {
+				tooltip = THE_MEL_performance_girl_character_disaster_trigger_c_tt2
+				check_variable = {
+					which = the_mel_develop_the_province_once_var
+					value = 20
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			custom_trigger_tooltip = {
+				tooltip = THE_MEL_performance_girl_character_disaster_trigger_c_tt3
+				check_variable = {
+					which = the_mel_develop_the_province_once_var
+					value = 30
+				}
+			}
+		}
+		modifier = {
+			factor = -1
+			custom_trigger_tooltip = {
+				tooltip = THE_MEL_performance_girl_character_disaster_trigger_c_tt4
+				check_variable = {
+					which = the_mel_seige_defeat_once_var
+					value = 10
+				}
+			}
+		}
+		modifier = {
+			factor = -1
+			custom_trigger_tooltip = {
+				tooltip = THE_MEL_performance_girl_character_disaster_trigger_c_tt5
+				check_variable = {
+					which = the_mel_seige_defeat_once_var
+					value = 20
+				}
+			}
+		}
+		modifier = {
+			factor = -1
+			custom_trigger_tooltip = {
+				tooltip = THE_MEL_performance_girl_character_disaster_trigger_c_tt6
+				check_variable = {
+					which = the_mel_seige_defeat_once_var
+					value = 30
+				}
+			}
+		}
+		modifier = {
+			factor = -1
+			any_owned_province = {
+				devastation = 1
+			}
+		}
+		modifier = {
+			factor = -100
+			is_bankrupt = yes
+		}
+		modifier = {
+			factor = -1
+			NOT = { stability = 0 }
+		}
+	}
+	can_end = {
+		custom_trigger_tooltip = {
+			tooltip = THE_MEL_performance_queen_character_disaster_c_tt1
+			had_country_flag = {
+				flag = THE_MEL_had_the_girl_character_performance_flag
+				days = 18250
+			}
+		}
+	}
+	on_monthly = {
+		
+	}
+	on_start_effect = {
+		hidden_effect = {
+			set_country_flag = THE_MEL_had_the_girl_character_performance_flag
+			set_variable = {
+				which = the_mel_seige_defeat_once_var
+				value = 0
+			}
+			set_variable = {
+				which = the_mel_develop_the_province_once_var
+				value = 0
+			}
+		}
+	}
+	on_end = THE_MEL_events.3
+	modifier = {
+		monthly_reform_progress_modifier = 0.10
+		development_cost = -0.20
+		build_cost = -0.15
+		production_efficiency = 0.25
+	}
+}

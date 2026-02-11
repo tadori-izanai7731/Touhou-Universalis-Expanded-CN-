@@ -1,6 +1,6 @@
 country_decisions = {
 	THE_MEL_release_country_decision = {
-		color = { 255 186 39 }
+		color = { 145 145 145 }
 		potential = {
 			ai = no
 			NOT = {
@@ -19,6 +19,23 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 0
+		}
+	}
+
+	THE_MEL_will_call_performance_decision = {
+		color = { 145 145 145 }
+		potential = {
+			tag = MEL
+			ai = no
+			has_government_attribute = THE_MEL_sound_of_valley_lily_reform_mechanic
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			country_event = {
+				id = THE_MEL_events.1
+			}
 		}
 	}
 }
