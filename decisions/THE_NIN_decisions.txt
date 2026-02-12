@@ -21,8 +21,8 @@ country_decisions = {
 					add_core = NIN
 					remove_core = owner
 					change_religion = th_hakureishinto
+					cede_province = ROOT
 				}
-				cede_province = ROOT
 				every_owned_province = {
 					limit = {
 						is_core = NIN
@@ -33,6 +33,18 @@ country_decisions = {
 			release = NIN
 			hidden_effect = {
 				NIN = {
+					horn_of_africa_region = {
+						discover_provinces = NIN
+					}
+					near_east_superregion = {
+						discover_provinces = NIN
+					}
+					horn_of_africa_region = {
+						discover_country = NIN
+					}
+					near_east_superregion = {
+						discover_country = NIN
+					}
 					THE_NIN_define_ruler_watari_nina_scripted_effect = yes
 					change_government = monarchy
 					add_government_reform = Gensokyan_monarchy

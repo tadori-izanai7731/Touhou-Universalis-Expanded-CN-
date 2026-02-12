@@ -1,0 +1,10 @@
+if = {
+	limit = { 
+		tag = NIN
+		NOT = { has_country_flag = THE_NIN_aishideru_nina_flag}
+	}
+	set_country_flag = THE_NIN_aishideru_nina_flag
+	change_adm = 6
+	change_dip = 6
+	change_mil = 6
+}
