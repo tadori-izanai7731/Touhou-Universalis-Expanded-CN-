@@ -67,14 +67,15 @@ THE_NIN_ideas = {
 	}
 	THE_NIN_idea_2 = {
 		trade_efficiency = 0.05
-		inflation_action_cost = -0.20
+		inflation_action_cost = -0.15
 	}
 	THE_NIN_idea_3 = {
 		vassal_income = 0.15
 		vassal_manpower_bonus = 0.15
 	}
 	THE_NIN_idea_4 = {
-		diplomatic_reputation = 1
+		innovativeness_gain = 0.05
+		free_adm_policy = 1
 	}
 	THE_NIN_idea_5 = {
 		advisor_pool = 1
