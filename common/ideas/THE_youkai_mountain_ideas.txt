@@ -41,3 +41,48 @@ THE_CH2_ideas = {
 		global_trade_power = 0.33
 	}
 }
+
+THE_NIN_ideas = {
+	start = {
+		merchants = 1
+		caravan_power = 0.2
+	}
+
+	bonus = {
+		le
+	}
+
+	trigger = {
+		tag = NIN
+	}
+
+	free = yes
+	
+	THE_NIN_idea_1 = {
+		trade_efficiency = 0.20
+	}
+	THE_NIN_idea_2 = {
+		production_efficiency = 0.15
+		global_trade_goods_size_modifier = 0.1
+	}
+	THE_NIN_idea_3 = {
+		ship_power_propagation = 0.33
+		trade_range_modifier = 0.20
+	}
+	THE_NIN_idea_4 = {
+		navy_tradition_decay = -0.025
+		naval_tradition_from_trade = 0.50
+	}
+	THE_NIN_idea_5 = {
+		trade_company_governing_cost = -0.50
+		colonist_placement_chance = 0.10
+		colonists = 2
+	}
+	THE_NIN_idea_6 = {
+		tolerance_heretic = 3
+		tolerance_heathen = 3
+	}
+	THE_NIN_idea_7 = {
+		global_trade_power = 0.33
+	}
+}
