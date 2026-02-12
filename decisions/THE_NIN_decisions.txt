@@ -34,15 +34,12 @@ country_decisions = {
 			hidden_effect = {
 				NIN = {
 					horn_of_africa_region = {
-						discover_provinces = NIN
-					}
-					near_east_superregion = {
-						discover_provinces = NIN
-					}
-					horn_of_africa_region = {
 						discover_country = NIN
 					}
 					near_east_superregion = {
+						discover_country = NIN
+					}
+					arabian_sea_region = {
 						discover_country = NIN
 					}
 					THE_NIN_define_ruler_watari_nina_scripted_effect = yes

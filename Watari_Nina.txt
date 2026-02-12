@@ -1,7 +1,7 @@
 if = {
 	limit = { 
 		tag = NIN
-		NOT = { has_country_flag = THE_NIN_aishideru_nina_flag}
+		NOT = { has_country_flag = THE_NIN_aishideru_nina_flag }
 	}
 	set_country_flag = THE_NIN_aishideru_nina_flag
 	change_adm = 6

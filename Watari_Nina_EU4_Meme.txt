@@ -1,0 +1,12 @@
+### 恭喜你发现了这个彩蛋，使用控制台输入run Watari_Nina_EU4_Meme.txt即可体验彩蛋内容
+### 彩蛋作者——SEKGY
+
+if = {
+	limit = {
+		tag = NIN
+		NOT = { has_country_flag = THE_NIN_colorfulegg_eu4_meme_flag }
+		NOT = { has_country_flag = THE_NIN_aishideru_nina_flag }
+	}
+	set_country_flag = THE_NIN_colorfulegg_eu4_meme_flag
+	swap_free_idea_group = yes
+}

@@ -54,6 +54,7 @@ THE_NIN_ideas = {
 	
 	trigger = {
 		tag = NIN
+		NOT = { has_country_flag = THE_NIN_colorfulegg_eu4_flag }
 	}
 	
 	free = yes
@@ -88,5 +89,80 @@ THE_NIN_ideas = {
 	THE_NIN_idea_7 = {
 		free_leader_pool = 1
 		prestige_from_land = 0.50
+	}
+}
+
+THE_NIN_colorfulegg_eu4_ideas = {
+	start = {
+		all_power_cost = -0.2
+		regiment_manpower_usage = -0.25
+	}
+	
+	bonus = {
+		min_autonomy_in_territories = -0.2
+	}
+	
+	trigger = {
+		tag = NIN
+		has_country_flag = THE_NIN_colorfulegg_eu4_meme_flag
+	}
+	
+	free = yes
+	
+	THE_NIN_colorfulegg_eu4_idea_1 = {
+		free_concentrate_development = yes
+		state_governing_cost = -0.25
+		development_cost_modifier = -0.1
+		expand_infrastructure_cost_modifier = -0.5
+		# TODO: 提升省份发展度时增加等同于扩建次数的相同发展度
+	}
+	THE_NIN_colorfulegg_eu4_idea_2 = {
+		movement_speed = 0.5
+		morale_damage = -0.5
+		fire_damage = 0.25
+		shock_damage = 0.25
+		discipline = 0.1
+		# TODO: 战役胜利减少敌方国家1年人力
+	}
+	THE_NIN_colorfulegg_eu4_idea_3 = {
+		siege_ability = 0.25
+		province_warscore_cost = -0.25
+		can_transfer_vassal_wargoal = yes
+		# TODO: 签订合约后将双方停战置为5年
+	}
+	THE_NIN_colorfulegg_eu4_idea_4 = {
+		improve_relation_modifier = 1.0
+		all_estate_loyalty_equilibrium = 0.2
+		stability_cost_modifier = -0.25
+		# TODO: 不会受到过度扩张负面事件
+	}
+	THE_NIN_colorfulegg_eu4_idea_5 = {
+		global_sailors_modifier = -0.5
+		sailors_recovery_speed = -0.5
+		global_manpower_modifier = 0.5
+		manpower_recovery_speed = 0.5
+		allowed_marine_fraction = 1.0
+		army_tradition = 2
+		leader_land_manuever = 2
+		# TODO: 每招募50队海军陆战队，提升1/1/1君主能力
+	}
+	THE_NIN_colorfulegg_eu4_idea_6 = {
+		reform_progress_growth = 0.33
+		core_creation = -0.25
+		has_streltsy = yes
+		allowed_streltsy_fraction = 0.5
+		# TODO: 解锁该理念时选择一个THE已有一级政体并使用
+		effect = {
+			hidden_effect = {
+				
+			}
+		}
+	}
+	THE_NIN_colorfulegg_eu4_idea_7 = {
+		colonists = 2
+		diplomats = 2
+		diplomatic_upkeep = 5
+		liberty_desire_from_subject_development = -0.5
+		# TODO: 进入存档时清除AE
 	}
 }
