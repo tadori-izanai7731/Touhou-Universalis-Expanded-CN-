@@ -1,0 +1,76 @@
+country_decisions = {
+	THE_NIN_release_country_decision = {
+		color = { 145 145 145 }
+		potential = {
+			ai = no
+			NOT = {
+				is_year = 1445
+			}
+			tag = SKT
+			NOT = { exists = NIN }
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			hidden_effect = {
+				1099 = {
+					kill_units = {
+						who = owner
+					}
+					add_core = NIN
+					remove_core = owner
+					change_religion = th_hakureishinto
+				}
+				cede_province = ROOT
+				every_owned_province = {
+					limit = {
+						is_core = NIN
+					}
+					remove_core = ROOT
+				}
+			}
+			release = NIN
+			hidden_effect = {
+				NIN = {
+					THE_NIN_define_ruler_watari_nina_scripted_effect = yes
+					change_government = monarchy
+					add_government_reform = Gensokyan_monarchy
+					change_technology_group = tech_gensokyan
+					change_unit_type = tech_gensokyan
+					change_primary_culture = "Youkai"
+					capital_scope = {
+						infantry = NIN
+						infantry = NIN
+						infantry = NIN
+						infantry = NIN
+					}
+					add_treasury = 100
+					add_manpower = 20
+					add_adm_power = 52
+					add_dip_power = 52
+					add_mil_power = 52
+					set_ruler_flag = touhou_character_ruler
+					set_ruler_flag = touhou_original_ruler
+					add_ruler_personality = immortal_personality
+					change_estate_land_share = {
+						estate = estate_church
+						share = 20
+					}
+					change_estate_land_share = {
+						estate = estate_nobles
+						share = 20
+					}
+					change_estate_land_share = {
+						estate = estate_burghers
+						share = 20
+					}
+				}
+			}
+			switch_tag = NIN
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

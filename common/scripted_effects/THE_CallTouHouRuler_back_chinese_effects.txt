@@ -12,3 +12,18 @@ THE_CH2_respawn_ruler_effects = {
 	add_ruler_personality = immortal_personality
 	set_ruler_flag = THE_CH2_respawn_ruler_ruler_flag
 }
+
+
+THE_NIN_define_ruler_watari_nina_scripted_effect = {
+	define_ruler = {
+		name = "!nÌ"  # medicine
+		dynasty = "ýÿPR"  # melancholy
+		age = 15
+		adm = 0
+		dip = 0
+		mil = 0
+		female = yes
+		culture = "Youkai"
+		religion = th_hakureishinto
+	}
+}
