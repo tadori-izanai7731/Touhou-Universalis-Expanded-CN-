@@ -131,8 +131,7 @@ THE_QQQ_ideas = {
 	}
 	
 	bonus = {
-		spy_offence = 0.50
-		global_spy_defence = 0.50
+		global_spy_defence = 1.00
 	}
 	
 	trigger = {
@@ -151,7 +150,7 @@ THE_QQQ_ideas = {
 	}
 	
 	THE_QQQ_idea_3 = {
-		relation_with_same_culture_group = 35
+		relation_with_same_culture_group = 100
 		num_accepted_cultures = 4
 	}
 	
