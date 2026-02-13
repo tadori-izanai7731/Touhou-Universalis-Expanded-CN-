@@ -12,6 +12,8 @@ THE_MEL_branch_1 = {
 		provinces_to_highlight = {  } 
 		
 		trigger = { 
+			mercantilism = 10
+			monthly_income = 25
 			custom_trigger_tooltip = {
 				tooltip = THE_MEL_1_3_c_tt1
 				check_variable = {
