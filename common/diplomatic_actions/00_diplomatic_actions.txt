@@ -375,6 +375,10 @@ declarewar = {
 				}
 			}
 		}
+		THE_MEL_change_disaster_progress_script_if_effect = {
+			acter = lover
+			value = 2
+		}
 	}
 }
 support_independence_action = {
@@ -753,6 +757,12 @@ royal_marriage = {
 			}
 		}
 		change_asha_vahishta = { value = 0.5 }
+		###THE
+		THE_MEL_change_disaster_progress_script_if_effect = {
+			acter = princess
+			value = 5
+		}
+		###THE_END
 	}
 }
 

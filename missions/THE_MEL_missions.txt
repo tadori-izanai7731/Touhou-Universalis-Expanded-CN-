@@ -210,11 +210,24 @@ THE_MEL_branch_3 = {
 		provinces_to_highlight = {  } 
 		
 		trigger = { 
-			
+			mission_completed = THE_MEL_1_3
+			mission_completed = THE_MEL_2_3
+			mission_completed = THE_MEL_4_3
+			mission_completed = THE_MEL_5_3
+			total_development = 300
+			government_rank = 2
+			legitimacy = 85
 		} 
 		
 		effect = { 
-			
+			custom_tooltip = THE_MEL_3_3_c_tt1
+			custom_tooltip = THE_MEL_3_3_c_tt2
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			hidden_effect = {
+				set_country_flag = THE_MEL_unlock_lover_character_performance_flag
+			}
 		} 
 	}
 	
@@ -230,9 +243,51 @@ THE_MEL_branch_3 = {
 		}
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = { 
+			OR = {
+				is_great_power = yes
+				any_country = {
+					humiliated_by = ROOT
+				}
+			}
+			army_size = 50
+			custom_trigger_tooltip = {
+				tooltip = THE_MEL_3_4_c_tt1
+				check_variable = {
+					which = the_mel_complete_lover_character_var
+					value = 1
+				}
+			}
+		} 
 		
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_MEL_3_4_c_tt3
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			if = {
+				limit = {
+					has_disaster = THE_MEL_performance_lover_character_disaster
+				}
+				custom_tooltip = THE_MEL_3_4_c_tt2_yes
+				add_country_modifier = {
+					name = THE_MEL_the_lover_was_modifier
+					duration = -1
+				}
+			}
+			else = {
+				custom_tooltip = THE_MEL_3_4_c_tt2_no
+				tooltip = {
+					add_country_modifier = {
+						name = THE_MEL_the_lover_was_modifier
+						duration = -1
+					}
+				}
+			}
+			hidden_effect = {
+				set_country_flag = THE_MEL_unlock_poison_declare_war_cb_flag
+			}
+		} 
 	}
 	
 	THE_MEL_3_5 = {
@@ -241,9 +296,52 @@ THE_MEL_branch_3 = {
 		required_missions = { THE_MEL_3_4 } 
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = { 
+			prestige = 100
+			custom_trigger_tooltip = {
+				tooltip = THE_MEL_3_5_c_tt1
+				check_variable = {
+					which = the_mel_complete_lover_character_owns_new_province_once_var
+					value = 200
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = THE_MEL_3_5_c_tt2
+				OR = {
+					check_variable = {
+						which = the_mel_complete_girl_character_var
+						value = 2
+					}
+					check_variable = {
+						which = the_mel_complete_queen_character_var
+						value = 2
+					}
+					check_variable = {
+						which = the_mel_complete_lover_character_var
+						value = 2
+					}
+					check_variable = {
+						which = the_mel_complete_princess_character_var
+						value = 2
+					}
+					check_variable = {
+						which = the_mel_complete_traveler_character_var
+						value = 2
+					}
+				}
+
+			}
+		} 
 		
-		effect = {  } 
+		effect = { 
+			add_adm_power = 300
+			add_dip_power = 300
+			add_mil_power = 300
+			add_country_modifier = {
+				name = THE_MEL_the_end_modifier
+				duration = -1
+			}
+		} 
 	}
 }
 THE_MEL_branch_4 = {

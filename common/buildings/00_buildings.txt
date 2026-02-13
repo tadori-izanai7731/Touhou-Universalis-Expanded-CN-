@@ -101,6 +101,11 @@ workshop = {
 			type = production
 			value = 1
 		}
+		###THE
+		THE_MEL_change_disaster_progress_script_if_province_effect = {
+			acter = traveler
+			value = 1
+		}
 	}
 	on_destroyed = {
 		remove_development_from_building = {
@@ -587,6 +592,10 @@ fort_15th = {
 		}
 		### THE
 		THE_ROD_fort_build_effect = yes
+		THE_MEL_change_disaster_progress_script_if_province_effect = {
+			acter = princess
+			value = 2
+		}
 	}
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
@@ -1073,6 +1082,10 @@ fort_16th = {
 		}
 		### THE
 		THE_ROD_fort_build_effect = yes
+		THE_MEL_change_disaster_progress_script_if_province_effect = {
+			acter = princess
+			value = 2
+		}
 	}
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
@@ -1718,6 +1731,10 @@ fort_17th = {
 		}
 		### THE
 		THE_ROD_fort_build_effect = yes
+		THE_MEL_change_disaster_progress_script_if_province_effect = {
+			acter = princess
+			value = 2
+		}
 	}
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
@@ -1841,6 +1858,11 @@ counting_house = {
 			type = production
 			value = 2
 			upgrade_value = 1
+		}
+		###THE
+		THE_MEL_change_disaster_progress_script_if_province_effect = {
+			acter = traveler
+			value = 1
 		}
 	}
 	on_destroyed = {
@@ -2258,6 +2280,10 @@ fort_18th = {
 		}
 		### THE
 		THE_ROD_fort_build_effect = yes
+		THE_MEL_change_disaster_progress_script_if_province_effect = {
+			acter = princess
+			value = 2
+		}
 	}
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!

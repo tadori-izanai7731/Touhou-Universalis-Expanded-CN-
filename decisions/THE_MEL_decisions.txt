@@ -30,7 +30,12 @@ country_decisions = {
 			has_government_attribute = THE_MEL_sound_of_valley_lily_reform_mechanic
 		}
 		allow = {
-			always = yes
+			custom_trigger_tooltip = {
+				tooltip = THE_MEL_will_call_performance_decision_c_tt1
+				NOT = {
+					has_country_flag = THE_MEL_having_the_performance_event_flag
+				}
+			}
 		}
 		effect = {
 			country_event = {

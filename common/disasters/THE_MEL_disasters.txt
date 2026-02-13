@@ -11,7 +11,118 @@ THE_MEL_performance_traveler_character_disaster = {
 		}
 	}
 	progress = {
-		
+		modifier = {
+			factor = 0.5
+			total_development = 250
+		}
+		modifier = {
+			factor = 0.5
+			total_development = 500
+		}
+		modifier = {
+			factor = 0.5
+			total_development = 1000
+		}
+		modifier = {
+			factor = 0.25
+			stability = 1
+		}
+		modifier = {
+			factor = 0.25
+			stability = 2
+		}
+		modifier = {
+			factor = -100
+			is_bankrupt = yes
+		}
+		modifier = {
+			factor = -1
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = -1
+			any_neighbor_province = {
+				is_core = ROOT
+			}
+		}
+		modifier = {
+			factor = -1
+			NOT = {
+				any_neighbor_province = {
+					is_core = ROOT
+				}
+			}
+		}
+		modifier = {
+			factor = -1
+			any_owned_province = {
+				devastation = 1
+			}
+		}
+		modifier = {
+			factor = 0.25
+			legitimacy = 90
+		}
+		modifier = {
+			factor = -0.5
+			NOT = {
+				legitimacy = 80
+			}
+		}
+		modifier = {
+			factor = 0.25
+			years_of_income = 2.0
+		}
+		modifier = {
+			factor = 0.25
+			years_of_income = 4
+		}
+		modifier = {
+			factor = 0.5
+			years_of_income = 8
+		}
+		modifier = {
+			factor = 0.5
+			years_of_income = 12
+		}
+		modifier = {
+			factor = -0.5
+			NOT = {
+				years_of_income = 0.5
+			}
+		}
+		modifier = {
+			factor = -0.5
+			NOT = {
+				years_of_income = 0.5
+			}
+		}
+		modifier = {
+			factor = -1
+			NOT = {
+				years_of_income = 0.2
+			}
+		}
+		modifier = {
+			factor = 0.25
+			monthly_income = 25
+		}
+		modifier = {
+			factor = 0.25
+			monthly_income = 50
+		}
+		modifier = {
+			factor = 0.5
+			monthly_income = 100
+		}
+		modifier = {
+			factor = 0.5
+			monthly_income = 200
+		}
+		modifier = {
+			factor = 1.5
+			monthly_income = 100
+		}
 	}
 	can_end = {
 		custom_trigger_tooltip = {
@@ -27,6 +138,7 @@ THE_MEL_performance_traveler_character_disaster = {
 	}
 	on_start_effect = {
 		hidden_effect = {
+			clr_country_flag = THE_MEL_having_the_performance_event_flag
 			set_country_flag = THE_MEL_had_the_traveler_character_performance_flag
 		}
 		add_adm_power = 300
@@ -53,8 +165,8 @@ THE_MEL_performance_traveler_character_disaster = {
 			if = {
 				limit = {
 					mission_completed = THE_MEL_1_3
-				 }
-				 add_mercantilism_or_monarch_power = 4
+				}
+				add_mercantilism_or_monarch_power = 4
 			}
 		}
 	}
@@ -188,6 +300,7 @@ THE_MEL_performance_princess_character_disaster = {
 	}
 	on_start_effect = {
 		hidden_effect = {
+			clr_country_flag = THE_MEL_having_the_performance_event_flag
 			set_country_flag = THE_MEL_had_the_princess_character_performance_flag
 			set_variable = {
 				which = the_mel_won_war_number_once_var
@@ -214,8 +327,8 @@ THE_MEL_performance_princess_character_disaster = {
 			if = {
 				limit = {
 					mission_completed = THE_MEL_2_3
-				 }
-				 for = {
+				}
+				for = {
 					amount = 20
 					effect = "
 						random_owned_province = {
@@ -225,7 +338,7 @@ THE_MEL_performance_princess_character_disaster = {
 							change_culture = ROOT
 						}
 					"
-				 }
+				}
 			}
 		}
 	}
@@ -253,14 +366,182 @@ THE_MEL_performance_lover_character_disaster = {
 		}
 	}
 	progress = {
-		
+		modifier = {
+			factor = 0.5
+			total_development = 250
+		}
+		modifier = {
+			factor = 0.5
+			total_development = 500
+		}
+		modifier = {
+			factor = 0.5
+			total_development = 1000
+		}
+		modifier = {
+			factor = 0.25
+			stability = 1
+		}
+		modifier = {
+			factor = 0.25
+			stability = 2
+		}
+		modifier = {
+			factor = -100
+			is_bankrupt = yes
+		}
+		modifier = {
+			factor = -1
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = -1
+			any_neighbor_province = {
+				is_core = ROOT
+			}
+		}
+		modifier = {
+			factor = -1
+			NOT = {
+				any_neighbor_province = {
+					is_core = ROOT
+				}
+			}
+		}
+		modifier = {
+			factor = -1
+			any_owned_province = {
+				devastation = 1
+			}
+		}
+		modifier = {
+			factor = 0.25
+			legitimacy = 90
+		}
+		modifier = {
+			factor = -0.5
+			NOT = {
+				legitimacy = 80
+			}
+		}
+		modifier = {
+			factor = 0.25
+			custom_trigger_tooltip = {
+				tooltip = THE_MEL_performance_lover_character_disaster_trigger_c_tt1
+				check_variable = {
+					which = the_mel_owns_new_province_once_var
+					value = 10
+				}
+			}
+		}
+		modifier = {
+			factor = 0.25
+			custom_trigger_tooltip = {
+				tooltip = THE_MEL_performance_lover_character_disaster_trigger_c_tt2
+				check_variable = {
+					which = the_mel_owns_new_province_once_var
+					value = 20
+				}
+			}
+		}
+		modifier = {
+			factor = 0.25
+			custom_trigger_tooltip = {
+				tooltip = THE_MEL_performance_lover_character_disaster_trigger_c_tt3
+				check_variable = {
+					which = the_mel_owns_new_province_once_var
+					value = 30
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			custom_trigger_tooltip = {
+				tooltip = THE_MEL_performance_lover_character_disaster_trigger_c_tt4
+				check_variable = {
+					which = the_mel_owns_new_province_once_var
+					value = 40
+				}
+			}
+		}
+		modifier = {
+			factor = -1
+			custom_trigger_tooltip = {
+				tooltip = THE_MEL_performance_lover_character_disaster_trigger_c_tt5
+				NOT = {
+					check_variable = {
+						which = the_mel_owns_new_province_once_var
+						value = 5
+					}
+				}
+			}
+		}
 	}
 	can_end = {
-		
+		custom_trigger_tooltip = {
+			tooltip = THE_MEL_had_the_lover_character_performance_flag
+			had_country_flag = {
+				flag = THE_MEL_had_the_queen_character_performance_flag
+				days = 18250
+			}
+		}
 	}
 	on_monthly = {
 		
 	}
+	on_start_effect = {
+		hidden_effect = {
+			clr_country_flag = THE_MEL_having_the_performance_event_flag
+			set_country_flag = THE_MEL_had_the_lover_character_performance_flag
+			set_variable = {
+				which = the_mel_owns_new_province_once_var
+				value = 0
+			}
+		}
+		add_adm_power = 300
+		add_dip_power = 300
+		add_mil_power = 300
+		hidden_effect = {
+			change_variable = {
+				which = the_mel_complete_lover_character_var
+				value = 1
+			}
+			# change_variable = {
+			# 	which = the_mel_complete_lover_character_owns_new_province_once_var
+			# 	value = 1
+			# }
+			add_legitimacy = 10
+			while = {
+				limit = { 
+					check_variable = {
+						which = the_mel_owns_new_province_once_var
+						value = 1
+					}
+				}
+				every_country = {
+					reverse_add_aggressive_expansion = {
+						who = ROOT
+						value = -1
+					}
+				}
+				change_variable = {
+					which = the_mel_owns_new_province_once_var
+					value = -1
+				}
+			}
+			if = {
+				limit = {
+					mission_completed = THE_MEL_4_3
+				}
+				every_neighbor_province = {
+					area = {
+						add_core = ROOT
+					}
+				}
+			}
+		}
+	}
+	on_end = THE_MEL_events.6
 	modifier = {
 		improve_relation_modifier = 0.25
 		diplomatic_annexation_cost = -0.15
@@ -356,15 +637,16 @@ THE_MEL_performance_queen_character_disaster = {
 	}
 	on_start_effect = {
 		hidden_effect = {
+			clr_country_flag = THE_MEL_having_the_performance_event_flag
 			set_country_flag = THE_MEL_had_the_queen_character_performance_flag
 		}
 		add_adm_power = 300
 		add_dip_power = 300
 		add_mil_power = 300
-		every_owned_province = {
-			add_prosperity = 100
-		}
 		hidden_effect = {
+			every_owned_province = {
+				add_prosperity = 100
+			}
 			change_variable = {
 				which = the_mel_complete_queen_character_var
 				value = 1
@@ -379,6 +661,8 @@ THE_MEL_performance_queen_character_disaster = {
 						NOT = { is_territorial_core = ROOT }
 					}
 					add_territorial_core = ROOT
+				}
+				every_owned_province = {
 					add_nationalism = -10
 				}
 			}
@@ -489,6 +773,19 @@ THE_MEL_performance_girl_character_disaster = {
 		}
 		modifier = {
 			factor = -1
+			custom_trigger_tooltip = {
+				tooltip = THE_MEL_performance_girl_character_disaster_trigger_c_tt7
+				NOT = {
+					check_variable = {
+						which = the_mel_develop_the_province_once_var
+						value = 5
+					}
+				}
+				
+			}
+		}
+		modifier = {
+			factor = -1
 			any_owned_province = {
 				devastation = 1
 			}
@@ -516,6 +813,7 @@ THE_MEL_performance_girl_character_disaster = {
 	}
 	on_start_effect = {
 		hidden_effect = {
+			clr_country_flag = THE_MEL_having_the_performance_event_flag
 			set_country_flag = THE_MEL_had_the_girl_character_performance_flag
 			set_variable = {
 				which = the_mel_seige_defeat_once_var

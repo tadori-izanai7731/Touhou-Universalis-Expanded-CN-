@@ -1,0 +1,16 @@
+cb_THE_MEL_poison_revenge_war = {
+	valid_for_subject = no
+
+	prerequisites_self = {
+		has_country_flag = THE_MEL_unlock_poison_declare_war_cb_flag
+	}
+	prerequisites = {
+		FROM = {
+			any_owned_province = {
+				is_core = ROOT
+			}
+		}
+	}
+
+	war_goal = THE_MEL_poison_revenge_war
+}

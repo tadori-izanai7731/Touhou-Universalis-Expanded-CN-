@@ -1,3 +1,32 @@
 on_war_won = {
 	THE_MEL_on_won_dependence_war_effect = yes
+	THE_MEL_won_war_number_once_var_effect = yes
+}
+on_province_owner_change = {
+	THE_MEL_demand_core_province_in_war_effect = yes
+	THE_MEL_demand_province_once_in_war_effect = yes
+}
+on_adm_development = {
+	THE_MEL_develop_province_once_var_effect = yes
+}
+on_dip_development = {
+	THE_MEL_develop_province_once_var_effect = yes
+}
+on_mil_development = {
+	THE_MEL_develop_province_once_var_effect = yes
+}
+on_siege_won_province = {
+	THE_MEL_siege_won_country_once_var_effect = yes
+}
+on_center_of_trade_downgrade = {
+	THE_MEL_center_of_trade_value_effect = yes
+}
+on_core = {
+	THE_MEL_create_core_value_effect = yes
+}
+on_advisor_hired = {
+	THE_MEL_hired_the_advisor_value_effect = yes
+}
+on_expanded_infrastructure = {
+	THE_MEL_expanded_infrastructure_value_effect = yes
 }

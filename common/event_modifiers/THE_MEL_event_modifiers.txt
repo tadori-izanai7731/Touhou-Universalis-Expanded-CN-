@@ -30,3 +30,14 @@ THE_MEL_the_traveler_was_modifier = {
 	placed_merchant_power = 25
 	center_of_trade_upgrade_cost = -0.25
 }
+
+THE_MEL_the_lover_was_modifier = {
+	years_of_nationalism = -5
+	global_unrest = -1
+}
+
+THE_MEL_the_end_modifier = {
+	core_creation = -0.05
+	monthly_splendor = 2
+	country_admin_power = 1
+}

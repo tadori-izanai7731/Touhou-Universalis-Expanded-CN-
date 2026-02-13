@@ -153,6 +153,11 @@ country_event = {
 	#恋人
 	option = {
 		name = THE_MEL_events.1.d
+		trigger = {
+			has_country_flag = THE_MEL_unlock_lover_character_performance_flag
+		}
+		custom_tooltip = THE_MEL_event_1_display_ctt_d_1
+		custom_tooltip = THE_MEL_event_1_display_ctt_d_2
 		set_country_flag = THE_MEL_set_lover_character_performance_flag
 	}
 	#女王
@@ -177,6 +182,9 @@ country_event = {
 		clr_country_flag = THE_MEL_having_the_performance_event_flag
 	}
 }
+
+
+##########
 country_event = {
 	id = THE_MEL_events.2
 	title = THE_MEL_events.2.t
@@ -187,7 +195,6 @@ country_event = {
 	
 	option = {
 		name = THE_MEL_events.2.a
-		clr_country_flag = THE_MEL_having_the_performance_event_flag
 		clr_country_flag = THE_MEL_set_queen_character_performance_flag
 	}
 }
@@ -202,7 +209,6 @@ country_event = {
 	
 	option = {
 		name = THE_MEL_events.3.a
-		clr_country_flag = THE_MEL_having_the_performance_event_flag
 		clr_country_flag = THE_MEL_set_girl_character_performance_flag
 	}
 }
@@ -217,7 +223,6 @@ country_event = {
 	
 	option = {
 		name = THE_MEL_events.4.a
-		clr_country_flag = THE_MEL_having_the_performance_event_flag
 		clr_country_flag = THE_MEL_set_princess_character_performance_flag
 	}
 }
@@ -232,7 +237,20 @@ country_event = {
 	
 	option = {
 		name = THE_MEL_events.5.a
-		clr_country_flag = THE_MEL_having_the_performance_event_flag
 		clr_country_flag = THE_MEL_set_traveler_character_performance_flag
+	}
+}
+
+country_event = {
+	id = THE_MEL_events.6
+	title = THE_MEL_events.6.t
+	desc = THE_MEL_events.6.desc
+	picture = "THE_MEL_event_picture_1"
+	hidden = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = THE_MEL_events.5.a
+		clr_country_flag = THE_MEL_set_lover_character_performance_flag
 	}
 }

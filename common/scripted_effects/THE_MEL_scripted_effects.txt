@@ -12,3 +12,296 @@ THE_MEL_on_won_dependence_war_effect = {
 		remove_country_modifier = THE_MEL_overture_of_adventure_modifier
 	}
 }
+
+THE_MEL_demand_core_province_in_war_effect = {
+	if = {
+		limit = { 
+			is_core = owner
+			owner = {
+				tag = MEL
+				mission_completed = THE_MEL_3_3
+			}
+		}
+		owner = {
+			change_variable = {
+				which = the_mel_complete_lover_character_owns_new_province_once_var
+				value = 1
+			}
+		}
+	}
+}
+
+THE_MEL_demand_province_once_in_war_effect = {
+	if = {
+		limit = {
+			owner = {
+				tag = MEL
+				has_government_attribute = THE_MEL_sound_of_valley_lily_reform_mechanic
+			}
+		}
+		owner = {
+			change_variable = {
+				which = the_mel_owns_new_province_once_var
+				value = 1
+			}
+			THE_MEL_change_disaster_progress_script = {
+				acter = lover
+				value = 0.5
+			}
+		}
+	}
+}
+
+THE_MEL_develop_province_once_var_effect = {
+	if = {
+		limit = {
+			owner = {
+				tag = MEL
+				has_government_attribute = THE_MEL_sound_of_valley_lily_reform_mechanic
+			}
+		}
+		owner = {
+			change_variable = {
+				which = the_mel_develop_the_province_once_var
+				value = 1
+			}
+			THE_MEL_change_disaster_progress_script = {
+				acter = girl
+				value = 1
+			}
+		}
+	}
+}
+
+THE_MEL_siege_won_country_once_var_effect = {
+	if = {
+		limit = {
+			FROM = {
+				tag = MEL
+				has_government_attribute = THE_MEL_sound_of_valley_lily_reform_mechanic
+			}
+			
+		}
+		FROM = {
+			change_variable = {
+				which = the_mel_seige_defeat_once_var
+				value = 1
+			}
+		}
+	}
+}
+
+THE_MEL_won_war_number_once_var_effect = {
+	if = {
+		limit = {
+			ROOT = {
+				tag = MEL
+				has_government_attribute = THE_MEL_sound_of_valley_lily_reform_mechanic
+			}
+			
+		}
+		ROOT = {
+			change_variable = {
+				which = the_mel_won_war_number_once_var
+				value = 1
+			}
+		}
+	}
+}
+
+THE_MEL_center_of_trade_value_effect = {
+	if = {
+		limit = {
+			owner = {
+				tag = MEL
+				has_government_attribute = THE_MEL_sound_of_valley_lily_reform_mechanic
+			}
+		}
+		owner = {
+			THE_MEL_change_disaster_progress_script = {
+				acter = traveler
+				value = 5
+			}
+			THE_MEL_change_disaster_progress_script = {
+				acter = girl
+				value = 5
+			}
+		}
+	}
+}
+
+THE_MEL_create_core_value_effect = {
+	if = {
+		limit = {
+			FROM = {
+				tag = MEL
+				has_government_attribute = THE_MEL_sound_of_valley_lily_reform_mechanic
+			}
+		}
+		FROM = {
+			THE_MEL_change_disaster_progress_script = {
+				acter = queen
+				value = 5
+			}
+		}
+	}
+}
+
+THE_MEL_hired_the_advisor_value_effect = {
+	if = {
+		limit = {
+			ROOT = {
+				tag = MEL
+				has_government_attribute = THE_MEL_sound_of_valley_lily_reform_mechanic
+			}
+		}
+		ROOT = {
+			THE_MEL_change_disaster_progress_script = {
+				acter = princess
+				value = 2
+			}
+		}
+	}
+}
+
+THE_MEL_repaid_the_loan_value_effect = {
+	if = {
+		limit = {
+			THIS = {
+				tag = MEL
+				has_government_attribute = THE_MEL_sound_of_valley_lily_reform_mechanic
+			}
+		}
+		THIS = {
+			THE_MEL_change_disaster_progress_script = {
+				acter = queen
+				value = 5
+			}
+		}
+	}
+}
+
+THE_MEL_expanded_infrastructure_value_effect = {
+	if = {
+		limit = { 
+			FROM = {
+				tag = MEL
+				has_government_attribute = THE_MEL_sound_of_valley_lily_reform_mechanic
+			}
+		}
+		FROM = {
+			THE_MEL_change_disaster_progress_script = {
+				acter = girl
+				value = 5
+			}
+		}
+	}
+}
+
+THE_MEL_on_start_effect = {
+	if = {
+		limit = { 
+			tag = MEL
+			NOT = { has_country_flag = THE_MEL_on_startup_set_variable_flag }
+		}
+		set_variable = { which = the_mel_won_war_number_once_var value = 0 }
+		set_variable = { which = the_mel_owns_new_province_once_var value = 0 }
+		set_variable = { which = the_mel_complete_lover_character_owns_new_province_once_var value = 0 }
+		set_variable = { which = the_mel_seige_defeat_once_var value = 0 }
+		set_variable = { which = the_mel_develop_the_province_once_var value = 0 }
+		set_country_flag = THE_MEL_on_startup_set_variable_flag
+	}
+}
+
+############################
+### Common Script
+###############################
+
+THE_MEL_change_disaster_progress_script = {
+	###Character
+	#lover
+	#queen
+	#girl
+	#traveler
+	#princess
+	add_disaster_progress = {
+		disaster = THE_MEL_performance_$acter$_character_disaster
+		value = $value$
+	}
+}
+
+THE_MEL_change_disaster_progress_script_if_effect = {
+	###Character
+	#lover
+	#queen
+	#girl
+	#traveler
+	#princess
+	if = {
+		limit = {
+			ROOT = {
+				tag = MEL
+				has_government_attribute = THE_MEL_sound_of_valley_lily_reform_mechanic
+			}
+		}
+		add_disaster_progress = {
+			disaster = THE_MEL_performance_$acter$_character_disaster
+			value = $value$
+		}
+	}
+}
+
+
+THE_MEL_change_disaster_progress_script_if_province_effect = {
+	###Character
+	#lover
+	#queen
+	#girl
+	#traveler
+	#princess
+	if = {
+		limit = {
+			owner = {
+				tag = MEL
+				has_government_attribute = THE_MEL_sound_of_valley_lily_reform_mechanic
+			}
+		}
+		owner = {
+			add_disaster_progress = {
+				disaster = THE_MEL_performance_$acter$_character_disaster
+				value = $value$
+			}
+		}
+	}
+}
+
+THE_MEL_change_disaster_progress_all_script = {
+	if = {
+		limit = {
+			ROOT = {
+				tag = MEL
+				has_government_attribute = THE_MEL_sound_of_valley_lily_reform_mechanic
+			}
+		}
+		add_disaster_progress = {	
+			disaster = THE_MEL_performance_girl_character_disaster
+			value = $value$
+		}
+		add_disaster_progress = {	
+			disaster = THE_MEL_performance_lover_character_disaster
+			value = $value$
+		}
+		add_disaster_progress = {	
+			disaster = THE_MEL_performance_princess_character_disaster
+			value = $value$
+		}
+		add_disaster_progress = {	
+			disaster = THE_MEL_performance_queen_character_disaster
+			value = $value$
+		}
+		add_disaster_progress = {	
+			disaster = THE_MEL_performance_traveler_character_disaster
+			value = $value$
+		}
+	}
+}

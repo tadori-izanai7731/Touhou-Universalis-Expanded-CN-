@@ -81,6 +81,12 @@ interaction = {
 		}
 		set_country_flag = recent_land_distribution
 		on_sale_of_titles_effect = yes
+		### THE_BEFORE_EFFECT
+		THE_MEL_change_disaster_progress_script_if_effect = {
+			acter = traveler
+			value = 10
+		}
+		### THE_BEFORE_EFFECT_END
 	}
 	ai_will_do = {
 		factor = 25
@@ -260,6 +266,11 @@ interaction = {
 			add_scaled_republican_tradition = 2
 		}
 		on_summon_the_diet_effect = yes
+		### THE_BEFORE_EFFECT
+			THE_MEL_change_disaster_progress_all_script = {
+				value = 5
+			}
+		### THE_BEFORE_EFFECT_END
 	}
 	ai_will_do = {
 		# Only use if it will bring loyalty above 50 for all estates
@@ -464,6 +475,14 @@ interaction = {
 						share = 1
 					}
 				}
+			}
+			THE_MEL_change_disaster_progress_script_if_effect = {
+				acter = queen
+				value = 5
+			}
+			THE_MEL_change_disaster_progress_script_if_effect = {
+				acter = lover
+				value = 5
 			}
 			### THE_BEFORE_EFFECT_END
 			
