@@ -147,6 +147,8 @@ THE_IQU_tennin_one_taoist_mechanic = {
 			scaled_modifier = {
 				modifier = { 
 					merchants = 1000
+					global_colonial_growth = 10000
+					native_assimilation = 50
 				}
 				start_value = 0
 				end_value = 1000

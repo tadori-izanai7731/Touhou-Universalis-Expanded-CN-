@@ -339,12 +339,6 @@ declarewar = {
 			}
 		}
 		if = {
-			limit = { mission_completed = THE_IQU_3_3 }
-			HVR = {
-				join_all_offensive_wars_of = ROOT
-			}
-		}
-		if = {
 			limit = {
 				OR = {
 					has_government_attribute = THE_IQU_the_world_all_will_be_known_reform_mechanic
