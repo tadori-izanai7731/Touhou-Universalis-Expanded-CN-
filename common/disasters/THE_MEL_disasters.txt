@@ -1,9 +1,14 @@
 THE_MEL_performance_traveler_character_disaster = {
 	potential = {
-		has_country_flag = THE_MEL_set_traveler_character_performance_flag
+		tag = MEL
+		has_government_attribute = THE_MEL_sound_of_valley_lily_reform_mechanic
 	}
 	can_start = {
 		stability = 1
+		custom_trigger_tooltip = {
+			tooltip = THE_MEL_disaster_perfermance_trigger_c_tt1
+			has_country_flag = THE_MEL_set_traveler_character_performance_flag
+		}
 	}
 	can_stop = {
 		NOT = {
@@ -182,10 +187,13 @@ THE_MEL_performance_princess_character_disaster = {
 	potential = {
 		tag = MEL
 		has_government_attribute = THE_MEL_sound_of_valley_lily_reform_mechanic
-		has_country_flag = THE_MEL_set_princess_character_performance_flag
 	}
 	can_start = {
 		stability = 1
+		custom_trigger_tooltip = {
+			tooltip = THE_MEL_disaster_perfermance_trigger_c_tt2
+			has_country_flag = THE_MEL_set_princess_character_performance_flag
+		}
 	}
 	can_stop = {
 		NOT = {
@@ -355,10 +363,15 @@ THE_MEL_performance_princess_character_disaster = {
 
 THE_MEL_performance_lover_character_disaster = {
 	potential = {
-		has_country_flag = THE_MEL_set_lover_character_performance_flag
+		tag = MEL
+		has_government_attribute = THE_MEL_sound_of_valley_lily_reform_mechanic
 	}
 	can_start = {
 		stability = 1
+		custom_trigger_tooltip = {
+			tooltip = THE_MEL_disaster_perfermance_trigger_c_tt3
+			has_country_flag = THE_MEL_set_lover_character_performance_flag
+		}
 	}
 	can_stop = {
 		NOT = {
@@ -553,10 +566,13 @@ THE_MEL_performance_queen_character_disaster = {
 	potential = {
 		tag = MEL
 		has_government_attribute = THE_MEL_sound_of_valley_lily_reform_mechanic
-		has_country_flag = THE_MEL_set_queen_character_performance_flag
 	}
 	can_start = {
 		stability = 1
+		custom_trigger_tooltip = {
+			tooltip = THE_MEL_disaster_perfermance_trigger_c_tt4
+			has_country_flag = THE_MEL_set_queen_character_performance_flag
+		}
 	}
 	can_stop = {
 		NOT = {
@@ -632,58 +648,26 @@ THE_MEL_performance_queen_character_disaster = {
 			}
 		}
 	}
-	on_monthly = {
-		
-	}
-	on_start_effect = {
-		hidden_effect = {
-			clr_country_flag = THE_MEL_having_the_performance_event_flag
-			set_country_flag = THE_MEL_had_the_queen_character_performance_flag
-		}
-		add_adm_power = 300
-		add_dip_power = 300
-		add_mil_power = 300
-		hidden_effect = {
-			every_owned_province = {
-				add_prosperity = 100
-			}
-			change_variable = {
-				which = the_mel_complete_queen_character_var
-				value = 1
-			}
-			if = {
-				limit = { 
-					mission_completed = THE_MEL_4_3
-				}
-				every_owned_province = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_territorial_core = ROOT }
-					}
-					add_territorial_core = ROOT
-				}
-				every_owned_province = {
-					add_nationalism = -10
-				}
-			}
-		}
-	}
-	on_end = THE_MEL_events.2
 	modifier = {
 		administrative_efficiency = 0.10
 		prestige = 2
 		global_tax_modifier = 0.20
 	}
+	on_start = THE_MEL_events.7
+	on_end = THE_MEL_events.2
 }
 
 THE_MEL_performance_girl_character_disaster = {
 	potential = {
 		tag = MEL
 		has_government_attribute = THE_MEL_sound_of_valley_lily_reform_mechanic
-		has_country_flag = THE_MEL_set_girl_character_performance_flag
 	}
 	can_start = {
 		stability = 1
+		custom_trigger_tooltip = {
+			tooltip = THE_MEL_disaster_perfermance_trigger_c_tt5
+			has_country_flag = THE_MEL_set_girl_character_performance_flag
+		}
 	}
 	can_stop = {
 		NOT = {
