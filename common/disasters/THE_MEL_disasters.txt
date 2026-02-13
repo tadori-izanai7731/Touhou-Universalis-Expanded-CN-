@@ -401,7 +401,7 @@ THE_MEL_performance_lover_character_disaster = {
 			}
 		}
 		modifier = {
-			factor = -1
+			factor = 1
 			NOT = {
 				any_neighbor_province = {
 					is_core = ROOT
@@ -543,9 +543,9 @@ THE_MEL_performance_lover_character_disaster = {
 	}
 	on_end = THE_MEL_events.6
 	modifier = {
-		improve_relation_modifier = 0.25
-		diplomatic_annexation_cost = -0.15
-		accept_vassalization_reasons = 15
+		province_warscore_cost = -0.15
+		diplomatic_annexation_cost = -0.25
+		accept_vassalization_reasons = 20
 	}
 }
 

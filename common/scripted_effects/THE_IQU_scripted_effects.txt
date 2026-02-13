@@ -1747,6 +1747,7 @@ THE_IQU_scarlet_sky_government_effects = {
 				has_province_flag = THE_IQU_area_has_lock_the_loong_vein_flag
 			}
 		}
+		change_culture = owner
 		owner = {
 			country_event = {
 				id = THE_IQU_flavor_events.1003

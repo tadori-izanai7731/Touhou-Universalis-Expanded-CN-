@@ -15,21 +15,31 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_disaster_THE_MEL_performance_traveler_character_disaster"
 		texturefile = "gfx//interface//disasters//THE_MEL//THE_MEL_disaster_1.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_disaster_THE_MEL_performance_princess_character_disaster"
 		texturefile = "gfx//interface//disasters//THE_MEL//THE_MEL_disaster_1.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_disaster_THE_MEL_performance_lover_character_disaster"
 		texturefile = "gfx//interface//disasters//THE_MEL//THE_MEL_disaster_1.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_disaster_THE_MEL_performance_queen_character_disaster"
 		texturefile = "gfx//interface//disasters//THE_MEL//THE_MEL_disaster_1.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_disaster_THE_MEL_performance_girl_character_disaster"
 		texturefile = "gfx//interface//disasters//THE_MEL//THE_MEL_disaster_1.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
 	}
 }
