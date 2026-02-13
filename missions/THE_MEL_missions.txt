@@ -366,11 +366,11 @@ THE_MEL_branch_4 = {
 			any_country = {
 				capital_scope = {
 					continent = gensokyo_continent
-					has_opinion = {
+				}
+				has_opinion = {
 						who = ROOT
 						value = 100
 					}
-				}
 			}
 		} 
 		
