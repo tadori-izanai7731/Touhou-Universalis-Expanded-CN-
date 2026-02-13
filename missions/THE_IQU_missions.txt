@@ -1132,11 +1132,11 @@ THE_IQU_main_branch_4 = {
 		trigger = { 
 			stability = 3
 			num_of_provinces_owned_or_owned_by_subjects_with = {
-				value = 12
+				value = 10
 				province_has_center_of_trade_of_level = 2
 				has_trade_building_trigger = yes
 			}
-			5032 = {
+			capital_scope = {
 				highest_value_trade_node = yes
 			}
 			trading_part = {
@@ -1245,7 +1245,7 @@ THE_IQU_main_branch_4 = {
 		provinces_to_highlight = { 
 			owned_by = ROOT
 			has_terrain = jungle
-		 } 
+		} 
 		
 		trigger = { 
 			custom_trigger_tooltip = {
@@ -1404,7 +1404,7 @@ THE_IQU_main_branch_5 = {
 		
 		trigger = { 
 			reform_level = 3
-			navy_tradition = 80
+			navy_tradition = 60
 			num_of_provinces_owned_or_owned_by_subjects_with = {
 				value = 1
 				continent = asia
@@ -1505,11 +1505,13 @@ THE_IQU_main_branch_5 = {
 		
 		trigger = { 
 			num_of_provinces_owned_or_owned_by_subjects_with = {
-				value = 200
+				value = 100
 				has_port = yes
 			}
-			num_of_heavy_ship = 50
-			num_of_light_ship = 300
+			OR = {
+				num_of_heavy_ship = 50
+				num_of_light_ship = 300
+			}
 			has_flagship = yes
 		} 
 		
