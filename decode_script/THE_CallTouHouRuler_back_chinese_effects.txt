@@ -27,3 +27,31 @@ THE_NIN_define_ruler_watari_nina_scripted_effect = {
 		religion = th_hakureishinto
 	}
 }
+
+THE_QQQ_define_ruler_hieda_akyuu_scripted_effect = {
+	define_ruler = {
+		name = "阿求"  # Akyuu
+		dynasty = "稗田"  # Hieda
+		age = 15
+		adm = 6
+		dip = 4
+		mil = 0
+		female = yes
+		culture = "Gensokyo_human"
+		religion = th_hakureishinto
+	}
+}
+
+THE_QQQ_define_ruler_hieda_Q_scripted_effect = {
+	define_ruler = {
+		name = "阿加莎"  # Akyuu
+		dynasty = "克里斯Q"  # Hieda
+		age = 15
+		adm = 6
+		dip = 4
+		mil = 0
+		female = yes
+		culture = "Gensokyo_human"
+		religion = th_hakureishinto
+	}
+}

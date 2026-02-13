@@ -1,0 +1,9 @@
+if = {
+	limit = {
+		tag = HMC
+		NOT = { has_country_flag = THE_QQQ_colorfulegg_eu4_flag }
+	}
+	set_country_flag = THE_QQQ_colorfulegg_eu4_flag
+	change_tag = QQQ
+	swap_free_idea_group = yes
+}

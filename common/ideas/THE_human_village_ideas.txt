@@ -126,7 +126,7 @@ THE_HMC_upgrade_ideas = {
 #
 THE_QQQ_ideas = {
 	start = {
-		technology_cost = -0.10
+		idea_cost = -0.10
 		innovativeness_gain = 0.5
 	}
 	
@@ -174,5 +174,6 @@ THE_QQQ_ideas = {
 	
 	THE_QQQ_idea_7 = {
 		all_power_cost = -0.05
+		spy_offence = 0.50
 	}
 }
