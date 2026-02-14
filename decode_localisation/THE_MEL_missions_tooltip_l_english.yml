@@ -56,6 +56,7 @@ l_english:
  THE_MEL_event_1_display_ctt_f_2: "当「§Y剧目-牧鹅的姑娘§!」的进程达到§G100%§!时，我们将获得以下奖励：\n==§Y行政点§!£adm£§G+300§!\n==§Y外交点§!£dip£§G+300§!\n==§Y军事点§!£mil£§G+300§!"
  THE_MEL_event_1_display_ctt_f_3: "\n==随机§G20§!点§Y基础生产§!随机分配到治下所有省份"
  THE_MEL_events.1.g: "返回"
+ THE_MEL_event_1_display_ctt_desc_tt1: "========================\n==£no£§O当前剧目仍未演绎结束§!=\n========================"
 ###EVENT_END
 
 ###GOVERNMENT
@@ -101,7 +102,7 @@ l_english:
  THE_MEL_3_4_c_tt2_yes: "£yes£若「复仇的魔女」灾难仍未结束，我们将会获得以下效果："
  THE_MEL_3_4_c_tt2_no: "£no£若「复仇的魔女」灾难仍未结束，我们将会获得以下效果："
  THE_MEL_3_4_c_tt3: "当「§Y剧目-复仇的魔女§!」的进程达到§G100%§!时，额外获得以下效果：\n==获得所有相邻区域的§Y核心§!，并对持有我们§Y核心省份§!的国家获得宣战理由「§Y复仇之毒§!」"
- THE_MEL_3_5_c_tt1: "通过「§Y复仇的魔女§!」灾难时，夺取超过§Y200§!个我们拥有核心的省份（当前：[Root.the_mel_complete_lover_character_owns_new_province_once_var.GetValue]）"
+ THE_MEL_3_5_c_tt1: "通过「§Y复仇的魔女§!」灾难时，夺取超过§Y50§!个我们拥有核心的省份（当前：[Root.the_mel_complete_lover_character_owns_new_province_once_var.GetValue]）"
  THE_MEL_3_5_c_tt2: "任意「剧目」至少演绎过§Y2§!次"
 ###MISSION_EX_END
 
@@ -110,9 +111,9 @@ l_english:
  THE_MEL_performance_princess_character_disaster: "「被囚禁的公主」"
  THE_MEL_performance_lover_character_disaster: "「复仇的魔女」"
  THE_MEL_performance_queen_character_disaster: "「纯白的女王」"
- THE_MEL_performance_queen_character_disaster_desc: "当剧目-纯白的女王的进程达到100%时，我们将获得以下奖励：\n==§Y行政点§!£adm£§G+300§!\n==§Y外交点§!£dip£§G+300§!\n==§Y军事点§!£mil£§G+300§!\n==治下所有省份§Y繁荣度§!§G+100%§!\n并获得以下灾难修正持续§Y50§!年"
+ THE_MEL_performance_queen_character_disaster_desc: "当剧目-纯白的女王的进程达到100%时，我们将获得以下奖励：\n==§Y行政点§!£adm£§G+300§!\n==§Y外交点§!£dip£§G+300§!\n==§Y军事点§!£mil£§G+300§!\n==治下所有省份§Y繁荣度§!§G+100%§!\n并获得以下灾难修正持续§Y30§!年"
  THE_MEL_performance_girl_character_disaster: "「牧鹅的姑娘」"
- THE_MEL_performance_queen_character_disaster_c_tt1: "此演出已经持续§Y50§!年"
+ THE_MEL_performance_queen_character_disaster_c_tt1: "此演出已经持续§Y30§!年"
  THE_MEL_performance_girl_character_disaster_c_tt1: ""
  THE_MEL_performance_girl_character_disaster_trigger_c_tt1: "当前剧目下发展省份超过§Y10§!次（当前为：[Root.the_mel_develop_the_province_once_var.GetValue]）"
  THE_MEL_performance_girl_character_disaster_trigger_c_tt2: "当前剧目下发展省份超过§Y20§!次（当前为：[Root.the_mel_develop_the_province_once_var.GetValue]）"
@@ -121,8 +122,8 @@ l_english:
  THE_MEL_performance_girl_character_disaster_trigger_c_tt5: "当前剧目下领土被敌方占领超过§Y20§!次（当前为：[Root.the_mel_seige_defeat_once_var.GetValue]）"
  THE_MEL_performance_girl_character_disaster_trigger_c_tt6: "当前剧目下领土被敌方占领超过§Y30§!次（当前为：[Root.the_mel_seige_defeat_once_var.GetValue]）"
  THE_MEL_performance_girl_character_disaster_trigger_c_tt7: "当前剧目下领土未被发展超过§Y5§!次（当前为：[Root.the_mel_seige_defeat_once_var.GetValue]）"
- THE_MEL_performance_princess_character_disaster_trigger_c_tt1: "当前剧目下至少赢得§Y2§!场战争胜利（当前为：[Root.the_mel_won_war_number_var.GetValue]）"
- THE_MEL_performance_princess_character_disaster_trigger_c_tt2: "当前剧目下至少赢得§Y3§!场战争胜利（当前为：[Root.the_mel_won_war_number_var.GetValue]）"
+ THE_MEL_performance_princess_character_disaster_trigger_c_tt1: "当前剧目下至少赢得§Y2§!场战争胜利（当前为：[Root.the_mel_won_war_number_once_var.GetValue]）"
+ THE_MEL_performance_princess_character_disaster_trigger_c_tt2: "当前剧目下至少赢得§Y3§!场战争胜利（当前为：[Root.the_mel_won_war_number_once_var.GetValue]）"
  THE_MEL_performance_princess_character_disaster_trigger_c_tt3: "当前剧目下未曾赢得战争胜利"
  THE_MEL_performance_lover_character_disaster_trigger_c_tt1: "当前剧目下已征服§Y10§!个省份（当前为:[Root.the_mel_owns_new_province_once_var.GetValue]）"
  THE_MEL_performance_lover_character_disaster_trigger_c_tt2: "当前剧目下已征服§Y20§!个省份（当前为:[Root.the_mel_owns_new_province_once_var.GetValue]）"
@@ -139,4 +140,5 @@ l_english:
 ###CB
  cb_THE_MEL_poison_revenge_war: "复仇之毒"
  THE_MEL_poison_revenge_war: "复仇之毒战争"
+ cb_THE_MEL_poison_revenge_war_desc: "复仇之毒战争"
 ###CB_END

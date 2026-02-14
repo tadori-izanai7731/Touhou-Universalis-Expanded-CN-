@@ -56,6 +56,7 @@
  THE_MEL_event_1_display_ctt_f_2: "SV0§YgRîv-grEž„vÑYZ§!0„vÛz¾0R§G100%§!öeÿbìNS·ƒ—VåNNVY±Rÿ\n==§YLˆ?e¹p§!£adm£§G+300§!\n==§YY²N¹p§!£dip£§G+300§!\n==§Y›Q‹N¹p§!£mil£§G+300§!"
  THE_MEL_event_1_display_ctt_f_3: "\n==–:g§G20§!¹p§YúWNxuµN§!–:gRM‘0R»lNNb	gwýN"
  THE_MEL_events.1.g: "ÔÞV"
+ THE_MEL_event_1_display_ctt_desc_tt1: "========================\n==£no£§OSVMRgRîvÍN*goÎuÓumg§!=\n========================"
 ###EVENT_END
 
 ###GOVERNMENT
@@ -101,7 +102,7 @@
  THE_MEL_3_4_c_tt2_yes: "£yes£å‚0YÇN„vT›sY0Œp¾–ÍN*gÓumgÿbìNSO·ƒ—VåNNHeœgÿ"
  THE_MEL_3_4_c_tt2_no: "£no£å‚0YÇN„vT›sY0Œp¾–ÍN*gÓumgÿbìNSO·ƒ—VåNNHeœgÿ"
  THE_MEL_3_4_c_tt3: "SV0§YgRîv-YÇN„vT›sY§!0„vÛz¾0R§G100%§!öeÿ˜Y·ƒ—VåNNHeœgÿ\n==·ƒ—VNb	gøv»:SßW„v§Y8hÃV§!ÿv^ùRc	gbìN§Y8hÃVwýN§!„výV¶R·ƒ—V±Rbt1u0§YYÇNKNÒk§!0"
- THE_MEL_3_5_c_tt1: "Ç0§YYÇN„vT›sY§!0Œp¾–öeÿ:YÖS…Ç§Y200§!*NbìNåb	g8hÃV„vwýNÿSVMRÿ[Root.the_mel_complete_lover_character_owns_new_province_once_var.GetValue]	ÿ"
+ THE_MEL_3_5_c_tt1: "Ç0§YYÇN„vT›sY§!0Œp¾–öeÿ:YÖS…Ç§Y50§!*NbìNåb	g8hÃV„vwýNÿSVMRÿ[Root.the_mel_complete_lover_character_owns_new_province_once_var.GetValue]	ÿ"
  THE_MEL_3_5_c_tt2: "ûNa0gRîv0óSoÎuÇ§Y2§!!k"
 ###MISSION_EX_END
 
@@ -110,9 +111,9 @@
  THE_MEL_performance_princess_character_disaster: "0«ˆÚVy„vlQIN0"
  THE_MEL_performance_lover_character_disaster: "0YÇN„vT›sY0"
  THE_MEL_performance_queen_character_disaster: "0¯u‹v„vsY‹s0"
- THE_MEL_performance_queen_character_disaster_desc: "SVgRîv-¯u‹v„vsY‹s„vÛz¾0R100%öeÿbìNS·ƒ—VåNNVY±Rÿ\n==§YLˆ?e¹p§!£adm£§G+300§!\n==§YY²N¹p§!£dip£§G+300§!\n==§Y›Q‹N¹p§!£mil£§G+300§!\n==»lNNb	gwýN§YAucƒ¦^§!§G+100%§!\nv^·ƒ—VåNNŒp¾–îOckcíu§Y50§!t^"
+ THE_MEL_performance_queen_character_disaster_desc: "SVgRîv-¯u‹v„vsY‹s„vÛz¾0R100%öeÿbìNS·ƒ—VåNNVY±Rÿ\n==§YLˆ?e¹p§!£adm£§G+300§!\n==§YY²N¹p§!£dip£§G+300§!\n==§Y›Q‹N¹p§!£mil£§G+300§!\n==»lNNb	gwýN§YAucƒ¦^§!§G+100%§!\nv^·ƒ—VåNNŒp¾–îOckcíu§Y30§!t^"
  THE_MEL_performance_girl_character_disaster: "0grEž„vÑYZ0"
- THE_MEL_performance_queen_character_disaster_c_tt1: "dkoúQòTÏucíu§Y50§!t^"
+ THE_MEL_performance_queen_character_disaster_c_tt1: "dkoúQòTÏucíu§Y30§!t^"
  THE_MEL_performance_girl_character_disaster_c_tt1: ""
  THE_MEL_performance_girl_character_disaster_trigger_c_tt1: "SVMRgRîvNÑSUSwýN…Ç§Y10§!!kÿSVMR:Nÿ[Root.the_mel_develop_the_province_once_var.GetValue]	ÿ"
  THE_MEL_performance_girl_character_disaster_trigger_c_tt2: "SVMRgRîvNÑSUSwýN…Ç§Y20§!!kÿSVMR:Nÿ[Root.the_mel_develop_the_province_once_var.GetValue]	ÿ"
@@ -121,17 +122,23 @@
  THE_MEL_performance_girl_character_disaster_trigger_c_tt5: "SVMRgRîvN†˜W«ˆLe¹e`S†˜…Ç§Y20§!!kÿSVMR:Nÿ[Root.the_mel_seige_defeat_once_var.GetValue]	ÿ"
  THE_MEL_performance_girl_character_disaster_trigger_c_tt6: "SVMRgRîvN†˜W«ˆLe¹e`S†˜…Ç§Y30§!!kÿSVMR:Nÿ[Root.the_mel_seige_defeat_once_var.GetValue]	ÿ"
  THE_MEL_performance_girl_character_disaster_trigger_c_tt7: "SVMRgRîvN†˜W*g«ˆÑSUS…Ç§Y5§!!kÿSVMR:Nÿ[Root.the_mel_seige_defeat_once_var.GetValue]	ÿ"
- THE_MEL_performance_princess_character_disaster_trigger_c_tt1: "SVMRgRîvNóSb—V§Y2§!:Wb‰NÜw)RÿSVMR:Nÿ[Root.the_mel_won_war_number_var.GetValue]	ÿ"
- THE_MEL_performance_princess_character_disaster_trigger_c_tt2: "SVMRgRîvNóSb—V§Y3§!:Wb‰NÜw)RÿSVMR:Nÿ[Root.the_mel_won_war_number_var.GetValue]	ÿ"
+ THE_MEL_performance_princess_character_disaster_trigger_c_tt1: "SVMRgRîvNóSb—V§Y2§!:Wb‰NÜw)RÿSVMR:Nÿ[Root.the_mel_won_war_number_once_var.GetValue]	ÿ"
+ THE_MEL_performance_princess_character_disaster_trigger_c_tt2: "SVMRgRîvNóSb—V§Y3§!:Wb‰NÜw)RÿSVMR:Nÿ[Root.the_mel_won_war_number_once_var.GetValue]	ÿ"
  THE_MEL_performance_princess_character_disaster_trigger_c_tt3: "SVMRgRîvN*gþfb—Vb‰NÜw)R"
  THE_MEL_performance_lover_character_disaster_trigger_c_tt1: "SVMRgRîvNòTVg§Y10§!*NwýNÿSVMR:N:[Root.the_mel_owns_new_province_once_var.GetValue]	ÿ"
  THE_MEL_performance_lover_character_disaster_trigger_c_tt2: "SVMRgRîvNòTVg§Y20§!*NwýNÿSVMR:N:[Root.the_mel_owns_new_province_once_var.GetValue]	ÿ"
  THE_MEL_performance_lover_character_disaster_trigger_c_tt3: "SVMRgRîvNòTVg§Y30§!*NwýNÿSVMR:N:[Root.the_mel_owns_new_province_once_var.GetValue]	ÿ"
  THE_MEL_performance_lover_character_disaster_trigger_c_tt4: "SVMRgRîvNòTVg§Y40§!*NwýNÿSVMR:N:[Root.the_mel_owns_new_province_once_var.GetValue]	ÿ"
  THE_MEL_performance_lover_character_disaster_trigger_c_tt5: "SVMRgRîvN*gVg§Y5§!*NwýNÿSVMR:N:[Root.the_mel_owns_new_province_once_var.GetValue]	ÿ"
+ THE_MEL_disaster_perfermance_trigger_c_tt1: "	ébgRîv0÷„vÅew0"
+ THE_MEL_disaster_perfermance_trigger_c_tt2: "	ébgRîv0«ˆÚVy„vlQIN0"
+ THE_MEL_disaster_perfermance_trigger_c_tt3: "	ébgRîv0YÇN„vT›sY0"
+ THE_MEL_disaster_perfermance_trigger_c_tt4: "	ébgRîv0¯u‹v„vsY‹s0"
+ THE_MEL_disaster_perfermance_trigger_c_tt5: "	ébgRîv0grEž„vÑYZ0"
 ###DISASTER_END
 
 ###CB
  cb_THE_MEL_poison_revenge_war: "YÇNKNÒk"
  THE_MEL_poison_revenge_war: "YÇNKNÒkb‰N"
+ cb_THE_MEL_poison_revenge_war_desc: "YÇNKNÒkb‰N"
 ###CB_END

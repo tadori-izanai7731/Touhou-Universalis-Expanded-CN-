@@ -304,7 +304,7 @@ THE_MEL_branch_3 = {
 				tooltip = THE_MEL_3_5_c_tt1
 				check_variable = {
 					which = the_mel_complete_lover_character_owns_new_province_once_var
-					value = 200
+					value = 50
 				}
 			}
 			custom_trigger_tooltip = {

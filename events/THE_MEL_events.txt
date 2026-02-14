@@ -143,13 +143,41 @@ country_event = {
 		custom_tooltip = THE_MEL_event_1_display_ctt_b_1
 		custom_tooltip = THE_MEL_event_1_display_ctt_b_2
 		set_country_flag = THE_MEL_set_traveler_character_performance_flag
+		if = {
+			limit = {
+				has_disaster = THE_MEL_performance_traveler_character_disaster
+			}
+			clr_country_flag = THE_MEL_having_the_performance_event_flag
+			custom_tooltip = THE_MEL_event_1_display_ctt_desc_tt1
+		}
 	}
 	#公主
 	option = {
 		name = THE_MEL_events.1.c
 		custom_tooltip = THE_MEL_event_1_display_ctt_c_1
 		custom_tooltip = THE_MEL_event_1_display_ctt_c_2
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = THE_MEL_set_princess_character_performance_flag
+				}
+			}
+			hidden_effect = {
+				set_variable = {
+					which = the_mel_won_war_number_once_var
+					value = 0
+				}
+			}
+		}
 		set_country_flag = THE_MEL_set_princess_character_performance_flag
+		if = {
+			limit = {
+				has_disaster = THE_MEL_performance_princess_character_disaster
+			}
+			clr_country_flag = THE_MEL_having_the_performance_event_flag
+			custom_tooltip = THE_MEL_event_1_display_ctt_desc_tt1
+		}
+		
 	}
 	#恋人
 	option = {
@@ -159,7 +187,28 @@ country_event = {
 		}
 		custom_tooltip = THE_MEL_event_1_display_ctt_d_1
 		custom_tooltip = THE_MEL_event_1_display_ctt_d_2
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = THE_MEL_set_lover_character_performance_flag
+				}
+			}
+			hidden_effect = {
+				set_variable = {
+					which = the_mel_owns_new_province_once_var
+					value = 0
+				}
+			}
+		}
 		set_country_flag = THE_MEL_set_lover_character_performance_flag
+		if = {
+			limit = {
+				has_disaster = THE_MEL_performance_lover_character_disaster
+			}
+			clr_country_flag = THE_MEL_having_the_performance_event_flag
+			custom_tooltip = THE_MEL_event_1_display_ctt_desc_tt1
+		}
+		
 	}
 	#女王
 	option = {
@@ -167,6 +216,13 @@ country_event = {
 		custom_tooltip = THE_MEL_event_1_display_ctt_e_1
 		custom_tooltip = THE_MEL_event_1_display_ctt_e_2
 		set_country_flag = THE_MEL_set_queen_character_performance_flag
+		if = {
+			limit = {
+				has_disaster = THE_MEL_performance_queen_character_disaster
+			}
+			clr_country_flag = THE_MEL_having_the_performance_event_flag
+			custom_tooltip = THE_MEL_event_1_display_ctt_desc_tt1
+		}
 	}
 	#姑娘
 	option = {
@@ -174,7 +230,31 @@ country_event = {
 		custom_tooltip = THE_MEL_event_1_display_ctt_f_1
 		custom_tooltip = THE_MEL_event_1_display_ctt_f_2
 		custom_tooltip = THE_MEL_event_1_display_ctt_f_3
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = THE_MEL_set_girl_character_performance_flag
+				}
+			}
+			hidden_effect = {
+				set_variable = {
+					which = the_mel_seige_defeat_once_var
+					value = 0
+				}
+				set_variable = {
+					which = the_mel_develop_the_province_once_var
+					value = 0
+				}
+			}
+		}
 		set_country_flag = THE_MEL_set_girl_character_performance_flag
+		if = {
+			limit = {
+				has_disaster = THE_MEL_performance_girl_character_disaster
+			}
+			clr_country_flag = THE_MEL_having_the_performance_event_flag
+			custom_tooltip = THE_MEL_event_1_display_ctt_desc_tt1
+		}
 	}
 	#返回
 	option = {

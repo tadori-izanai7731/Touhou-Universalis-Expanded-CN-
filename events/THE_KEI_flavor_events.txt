@@ -1387,15 +1387,16 @@ country_event = {
 		custom_tooltip = THE_KEI_r_13_b_tt2
 		add_trust = {
 			who = KEI
-			value = 20
+			value = 100
 		}
+		create_alliance = KEI
 		hidden_effect = {
 			every_owned_province = {
 				add_local_autonomy = -25
 			}
 		}
 		ai_chance = {
-			factor = 25
+			factor = 75
 		}
 	}
 }
