@@ -6,7 +6,7 @@ THE_MEL_branch_1 = {
 	potential = { tag = MEL NOT = { has_country_flag = THE_MEL_earthfruit_idea_flag } } 
 	
 	THE_MEL_1_3 = {
-		icon = mission_unknown_mission
+		icon = the_mel_mission_10
 		position = 3
 		required_missions = { THE_MEL_3_2 } 
 		provinces_to_highlight = {  } 
@@ -58,7 +58,7 @@ THE_MEL_branch_2 = {
 	potential = { tag = MEL NOT = { has_country_flag = THE_MEL_earthfruit_idea_flag } } 
 	
 	THE_MEL_2_1 = {
-		icon = mission_unknown_mission
+		icon = the_mel_mission_3
 		position = 1
 		provinces_to_highlight = { 
 			is_capital_of = ROOT
@@ -102,7 +102,7 @@ THE_MEL_branch_2 = {
 	}
 	
 	THE_MEL_2_3 = {
-		icon = mission_unknown_mission
+		icon = the_mel_mission_5
 		position = 3
 		required_missions = { THE_MEL_3_2 } 
 		provinces_to_highlight = {  } 
@@ -157,7 +157,7 @@ THE_MEL_branch_3 = {
 	potential = { tag = MEL NOT = { has_country_flag = THE_MEL_earthfruit_idea_flag } } 
 	
 	THE_MEL_3_2 = {
-		icon = mission_unknown_mission
+		icon = the_mel_mission_7
 		position = 2
 		required_missions = {
 			THE_MEL_2_1
@@ -206,7 +206,7 @@ THE_MEL_branch_3 = {
 	}
 	
 	THE_MEL_3_3 = {
-		icon = mission_unknown_mission
+		icon = the_mel_mission_4
 		position = 3
 		required_missions = { THE_MEL_3_2 } 
 		provinces_to_highlight = {  } 
@@ -234,7 +234,7 @@ THE_MEL_branch_3 = {
 	}
 	
 	THE_MEL_3_4 = {
-		icon = mission_unknown_mission
+		icon = the_mel_mission_2
 		position = 4
 		required_missions = {
 			THE_MEL_1_3
@@ -293,7 +293,7 @@ THE_MEL_branch_3 = {
 	}
 	
 	THE_MEL_3_5 = {
-		icon = mission_unknown_mission
+		icon = the_mel_mission_1
 		position = 5
 		required_missions = { THE_MEL_3_4 } 
 		provinces_to_highlight = {  } 
@@ -354,7 +354,7 @@ THE_MEL_branch_4 = {
 	potential = { tag = MEL NOT = { has_country_flag = THE_MEL_earthfruit_idea_flag }  } 
 	
 	THE_MEL_4_1 = {
-		icon = mission_unknown_mission
+		icon = the_mel_mission_8
 		position = 1
 		provinces_to_highlight = {  } 
 		
@@ -390,7 +390,7 @@ THE_MEL_branch_4 = {
 	}
 	
 	THE_MEL_4_3 = {
-		icon = mission_unknown_mission
+		icon = the_mel_mission_6
 		position = 3
 		required_missions = { THE_MEL_3_2 } 
 		provinces_to_highlight = { 
@@ -446,7 +446,7 @@ THE_MEL_branch_5 = {
 	potential = { tag = MEL NOT = { has_country_flag = THE_MEL_earthfruit_idea_flag } } 
 	
 	THE_MEL_5_3 = {
-		icon = mission_unknown_mission
+		icon = the_mel_mission_9
 		position = 3
 		required_missions = { THE_MEL_3_2 } 
 		provinces_to_highlight = {  } 
