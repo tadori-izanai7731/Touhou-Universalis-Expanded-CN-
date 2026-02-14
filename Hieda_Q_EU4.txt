@@ -5,5 +5,13 @@ if = {
 	}
 	set_country_flag = THE_QQQ_colorfulegg_eu4_flag
 	change_tag = QQQ
+	random_list = {
+		1 = {
+			THE_QQQ_define_ruler_hieda_Q_scripted_effect = yes
+		}
+		1 = {
+			THE_QQQ_define_ruler_hieda_akyuu_scripted_effect = yes
+		}
+	}
 	swap_free_idea_group = yes
 }

@@ -917,15 +917,13 @@ THE_IQU_main_branch_3 = {
 			87 = {
 				has_most_province_trade_power = ROOT
 			}
-			british_isles_region = {
-				type = all
+			num_of_owned_provinces_with = {
+				value = 30
 				owned_by = ROOT
-				has_port = yes
-			}
-			low_countries_region = {
-				type = all
-				owned_by = ROOT
-				has_port = yes
+				OR = {
+					region = british_isles_region
+					region = low_countries_region
+				}
 			}
 		} 
 		
@@ -1243,17 +1241,16 @@ THE_IQU_main_branch_4 = {
 		position = 8
 		required_missions = { THE_IQU_4_7 } 
 		provinces_to_highlight = { 
-			owned_by = ROOT
+			NOT = {
+				owned_by = ROOT
+			}
 			has_terrain = jungle
 		} 
 		
 		trigger = { 
-			custom_trigger_tooltip = {
-				tooltip = THE_IQU_4_8_c_tt1
-				check_variable = {
-					which = the_iqu_jungle_province_has_been_teer_im_var
-					value = 10
-				}
+			num_of_owned_provinces_with = {
+				value = 25
+				has_terrain = jungle
 			}
 		} 
 		
@@ -1528,17 +1525,16 @@ THE_IQU_main_branch_5 = {
 		position = 8
 		required_missions = { THE_IQU_4_7 } 
 		provinces_to_highlight = { 
-			owned_by = ROOT
+			NOT = {
+				owned_by = ROOT
+			}
 			has_terrain = mountain
 		} 
 		
 		trigger = { 
-			custom_trigger_tooltip = {
-				tooltip = THE_IQU_5_8_c_tt1
-				check_variable = {
-					which = the_iqu_mountain_province_has_been_teer_im_var
-					value = 10
-				}
+			num_of_owned_provinces_with = {
+				value = 25
+				has_terrain = mountain
 			}
 		} 
 		
