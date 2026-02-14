@@ -81,6 +81,12 @@ country_decisions = {
 			}
 			else_if = {
 				limit = {
+					THE_GSK_special_country_name_scripted_trigger = { country_name = THE_QQQ_GSK }
+				}
+				override_country_name = THE_QQQ_GSK
+			}
+			else_if = {
+				limit = {
 					THE_GSK_special_country_name_scripted_trigger = { country_name = THE_Shinto_GSK }
 				}
 				override_country_name = THE_Shinto_GSK
