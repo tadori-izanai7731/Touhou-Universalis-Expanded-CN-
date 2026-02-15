@@ -28,10 +28,14 @@ THE_IQU_main_branch_1 = {
 			}
 		} 
 		
-		effect = { 
-			HVR = {
-				add_stability = 1
+		effect = {
+			if = {
+				limit = { 
+					HVR = { overlord_of = ROOT }
+				}
+				HVR = { add_stability = 1 }
 			}
+			
 			custom_tooltip = THE_IQU_1_1_c_tt
 			tooltip = {
 				set_estate_privilege = THE_IQU_tennin_delegate_power_privileges
@@ -57,8 +61,7 @@ THE_IQU_main_branch_1 = {
 			}
 		} 
 		
-		effect = { 
-			#任意Dragon_islands区域的province_id
+		effect = {
 			5032 = {
 				THE_IQU_add_unique_point_temporary_province_effects = {
 					level = 1
