@@ -43,15 +43,25 @@
  THE_NIN_god_athena_opinion_modifier: "Å–xQZRVeg"
  THE_NIN_with_tur_opinion_modifier: "egêWlš„vZQa"
  THE_NIN_victory_godness_opinion_modifier: "Üw)RsY^y"
+ THE_NIN_with_ven_opinion_modifier: "g'Y„v:PIN"
 ###OPINION_END
 
 ###MISSION
  THE_NIN_4_1_c_tt1: "·ƒ—VNb	g§Y^J‡eS§!„v§G8hÃV§!"
  THE_NIN_4_3_c_tt1_yes: "£yes£å‚SVMR@BYZ§Y[BYZ.GetName]§!ÑSUS¦^NOŽN§Y100§!NùRbìNåb	g§Y100§!¹p§Y‹Ya¦^§!"
  THE_NIN_4_3_c_tt1_no: "£no£å‚SVMR@BYZ§Y[BYZ.GetName]§!ÑSUS¦^NOŽN§Y100§!NùRbìNåb	g§Y100§!¹p§Y‹Ya¦^§!"
- THE_NIN_5_4_c_tt1_yes: "£yes£å‚SVMR@TUR§Y[TUR.GetName]§!ùR@BYZ§Y[BYZ.GetName]§!„váOûN¦^¾0R§G80§!N:N§YìrËzýV¶R§!ÿRÿ"
- THE_NIN_5_4_c_tt1_no: "£no£å‚SVMR@TUR§Y[TUR.GetName]§!ùR@BYZ§Y[BYZ.GetName]§!„váOûN¦^¾0R§G80§!N:N§YìrËzýV¶R§!ÿRÿ"
+ THE_NIN_5_4_c_tt1_yes: "£yes£å‚bìNÇáOûN¦^N@TUR§Y[TUR.GetName]§!„vÑSUS¦^NOŽN§Y200§!ŒRbûN¡RÿRÿ"
+ THE_NIN_5_4_c_tt1_no: "£no£å‚bìNÇáOûN¦^N@TUR§Y[TUR.GetName]§!„vÑSUS¦^NOŽN§Y200§!ŒRbûN¡RÿRÿ"
  THE_NIN_4_2_c_tt1: "åb	gdk§YîOck§!öeÿVg„v†˜WýSlØS:N§Y^J§!‡eS"
+ THE_NIN_1_4_c_tt1_yes: "£yes£å‚SVMR@BYZ§Y[BYZ.GetName]§!b@TUR§Y[TUR.GetName]§!=fbìN„v§Y^SýV§!ÿNÑSUS¦^NØšŽN§Y200§!ÿRÿ"
+ THE_NIN_1_4_c_tt1_no: "£no£å‚SVMR@BYZ§Y[BYZ.GetName]§!b@TUR§Y[TUR.GetName]§!=fbìN„v§Y^SýV§!ÿNÑSUS¦^NØšŽN§Y200§!ÿRÿ"
+ THE_NIN_1_4_c_tt2: "çub@BYZ§Y[BYZ.GetName]§!N@TUR§Y[TUR.GetName]§!„v§YWµN§!"
+ THE_NIN_5_4_c_tt2_yes: "£yes£å‚bìNÇˆmmp@TUR§Y[TUR.GetName]§!bOvQÑSUS¦^NOŽN§Y50§!ŒRbûN¡RÿRÿ"
+ THE_NIN_5_4_c_tt2_no: "£no£å‚bìNÇˆmmp@TUR§Y[TUR.GetName]§!bOvQÑSUS¦^NOŽN§Y50§!ŒRbûN¡RÿRÿ"
+ THE_NIN_5_2_c_tt1_yes: "£yes£å‚ÇûQ%@TUR§Y[TUR.GetName]§!ŒRbûN¡R"
+ THE_NIN_5_2_c_tt1_no: "£no£å‚ÇûQ%@TUR§Y[TUR.GetName]§!ŒRbûN¡R"
+ THE_NIN_5_2_c_tt2: "·ƒ—V»lNNb	gåb	g@TUR§Y[TUR.GetName]§!8hÃVwýN„v§Y8hÃV§!"
+ THE_NIN_5_4_c_tt3: "–:g§Y20§!¹p§YúWNxuµN§!RM‘óbìN»lN„vNb	g§Y^J§!‡eS„vwýN"
 ###MISSION_END
 
 ###DIPOMATIC_ACTIONS
@@ -78,13 +88,35 @@
  THE_NIN_events.4.t: "ôTSr^'YZZ"
  THE_NIN_events.4.desc: "àQ*NgÿNRRƒÞ‹NÏu0Æu‚‚•qN„v1ŒŠ8naƒ(W‰R³uXb)RšNNôTSr^„v^•NKNô•0ƒRáO“Šæeæe0W±RðyÿO'Y„vÏ‚9N[From.Monarch.GetName]ÿwIN(W'Y0W„vqVPRÿvQ…QÃVñmYßzjoÏ…NwùRWlš‡v^ÑNNNˆ	,gýw„vãgÿeY¯eüf„vQRÿueg¿O=f:NˆRkS[Root.Dynasty.GetName]„v‡v Qw%c0\n\nÙAmŠ=f‚YdkïSrÿNŒvt^eguQbøvT„v°sžR0N^ýV¸„¸„åeN„výV¿RhQ6qøv–`ÿˆVëV¿O«ˆzfwäUKNåNIŸ0\n\n6qw···öeIQAmlÿÊNöeÊNåeÿNïS`®‹„vþVofßz(WNb	gºN<wMRVVUSV0^ýV„vÁ”‘šNQcT±äSw„vÎW™XÿÏ‚9N„vOwåNÑNNQS®V„v<y‚‚úQ°s(WTëXfWN!X„vÎWè•KNMR0\n\nck‚YOÔk)RšNJS›SN±2N*NNãN:NÇN„v‹sýVÿgÈutS(W‹TÐ„vbVNpTTwTN,‚ÿÙN¹egNïSýw„vÓuTÿckåNäNºNÃV¸`„v¹eVb:N°sžR0=f¿R‹Tÿ=fZ†‰^ÿØ=f©srÿ"
  THE_NIN_events.4.a: ".sNãgKNQR"
+ THE_NIN_events.6.t: "R»yININw„v1ŒŠ"
+ THE_NIN_events.6.desc: "1uŽNbìN„vTðXÿbìN„v»ýV²‹:NbìN=fªv`„vÞ‹u0WÿƒRìNýó`Ç4–Œá‹¡‹eg©‹bìNýV¶RpˆK„0$LIKELYREBELS$4–Œ¶Rck(W$PROVINCENAME$ce^ŒŠv^cwÛSqN···"
+ THE_NIN_events.6.a: "SS„vðV¾–"
+ THE_NIN_events.7.t: "ªcžØšÅ–„váO"
+ THE_NIN_events.7.a: "§Y`O„vv`LˆÎN1rSpQ0RQY9NàeºNNåwàeºNNSf§!"
+ THE_NIN_events.7.b: "§Yky5ýV+o)Yý=fkbŠbf§!"
 ###EVENT_END
+
+###MISSION_EVENT
+ THE_NIN_events.100.t: "Z<S¯e„v:PQY"
+ THE_NIN_events.100.desc: "NSáOýQ«ˆ0R†NZ<S¯eI`cw„v«R¸0áO-NÿÅ–xQ„vsYlQ5råNN¹Rn‘u„vãSITÿý0tNr01uMRûNI`cwŽNŒvYOt^MRËzN„v0åN^ýVáO‰ŠÅbÝO„vèT˜P>kÿv^D–N†N)Ro`¡‹—rfÆuÿI`˜äNºN wîv00\n\nchHh˜RûM†NÏkN*NwS—R²R,—VúQ„vÓuº‹NôÿÙ¯u^SàeKzKNŒ0\n\n6qwÿ*`‹NÑSu†N0HQ=fx4Y„v4lKb(WR‘‰‘TŒwVy6rþfÐcÊS±rÙu^Jw7r„vÄžÑ‘ÿ¥cNwÿÐgMOfoP„vlQÁ‹ºNTãNÿvP6q(Wçe…R™X-NÑS°s†NN.VÛlÄž„v0WRù!jÊ|„vŠ®v¸uŽxGrÿvQ‹kYu„vag>kßzNáO-NNbŠ–¦uITT0"
+ THE_NIN_events.100.a: "bìNO	c‰BlPØ0"
+ THE_NIN_events.101.t: "Z<S¯eI`cw„vµbPÐcHh"
+ THE_NIN_events.101.desc: "I`cw„vÞVáOªcž(ŒNaÿrù-NNwNNUÁ‰„v0ÑNNHS±„v˜zë00S5„vsYlQ5r–Nÿ0áO-N™QSÿ0qQŒTýVb²‹···ÙýNz‚YvQeg„v0?eIN¡R06qwÿcíu„vb‰NN8fâl¨RÿObìN„vÑ‘“^‚föe¾–åNb×S‚YdkèT˜„vN!k'`PØN0bìNs`÷‹¨`wQ†N*NôfwQú^¾‹'`„vã‰³Q¹eHhÿZ<S¯e?aåNvQÖNbVV„v.^©RÿegµbPèRbhQè:P¡R0ÙÝu^—¨cÿ‹ÿw=fúWŽN°sžRðVƒX„v0Ú‹s`„vÐc®‹00"
+ THE_NIN_events.100.a: "bìNêS‰îSSVÍT„v±”0"
+ THE_NIN_events.100.b: "±HNÿ÷‹S5„vqQŒTýVÿ:NbÌwfN'T"
+ THE_NIN_events.100.c: "(u1r4twm„vW0WHQµbP'T0"
+###MISSION_EVENT_END
 
 ###MODIFIER
  THE_NIN_tur_desire_modifier: "^ýVKNPR"
  THE_NIN_the_senate_and_the_people_modifier: "CQwb–NºNl"
  THE_NIN_the_victory_godness_modifier: "ZWáO:NÜw)RsY^y"
- THE_NIN_renaissance_modifier: "ŒN¦^‡ez‚YtQ"
+ THE_NIN_renaissance_modifier: "‡ez‚YtQ„v,rŒNÑSn0W"
+ THE_NIN_unrest_protagonist_modifier: "ÛSqN„v1ŒŠ"
+ THE_NIN_acropolis_of_athens_modifier: "Å–xQkSÎW"
+ THE_NIN_the_duchesss_coronet_modifier: "WlšlQ5r„v Q•Q"
+ THE_NIN_aegean_new_land_modifier: "1r4twm°eW0W"
+ THE_NIN_won_war_the_tur_modifier: "bÜwz¥SºN"
 ###MODIFIER_END
 
 ###DECISIONS

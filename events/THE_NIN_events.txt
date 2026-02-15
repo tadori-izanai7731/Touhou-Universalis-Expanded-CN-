@@ -33,6 +33,14 @@ country_event = {
 	#联合统治
 	option = {
 		name = THE_NIN_events.1.c
+		tooltip = {
+			event_target:THE_NIN_the_first_narrative_protagonist_global_event_target = {
+				create_union = event_target:THE_NIN_the_second_narrative_protagonist_global_event_target
+			}
+		}
+		hidden_effect = {
+			
+		}
 	}
 	#宣战
 	option = {
@@ -49,6 +57,11 @@ country_event = {
 	#分离主义者的谣言
 	option = {
 		name = THE_NIN_events.1.g
+		event_target:THE_NIN_the_first_narrative_protagonist_global_event_target = {
+			country_event = {
+				id = THE_NIN_events.6
+			}
+		}
 	}
 }
 
@@ -135,7 +148,7 @@ country_event = {
 	picture = ""
 	is_triggered_only = yes
 	major = yes
-
+	
 	option = {
 		name = THE_NIN_events.4.a
 		BYZ = {
@@ -151,12 +164,138 @@ country_event = {
 	picture = ""
 	is_triggered_only = yes
 	hidden = yes
-
+	
 	option = {
 		name = THE_NIN_events.5.a
 		BYZ = {
 			country_event = {
 				id = THE_NIN_events.4
+			}
+		}
+	}
+}
+
+country_event = {
+	id = THE_NIN_events.6
+	title = THE_NIN_events.6.t
+	desc = THE_NIN_events.6.desc
+	picture = ""
+	is_triggered_only = yes
+	option = {
+		name = THE_NIN_events.6.a
+		tooltip = {
+			random_owned_province = {
+				add_province_modifier = {
+					name = THE_NIN_unrest_protagonist_modifier
+					duration = 7300
+				}
+			}
+			random_owned_province = {
+				add_province_modifier = {
+					name = THE_NIN_unrest_protagonist_modifier
+					duration = 7300
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = THE_NIN_events.7
+	title = THE_NIN_events.7.t
+	desc = THE_NIN_events.7.desc
+	picture = ""
+	is_triggered_only = yes
+	major = yes
+	major_trigger = {
+		OR = {
+			has_government_attribute = THE_NIN_fictional_goddess_reform_mechanic
+			tag = event_target:THE_NIN_the_second_narrative_protagonist_global_event_target
+		}
+	}
+	option = {
+		name = THE_NIN_events.7.a
+	}
+	option = {
+		name = THE_NIN_events.7.b
+	}
+}
+
+
+#威尼斯的债契
+country_event = {
+	id = THE_NIN_events.100
+	title = THE_NIN_events.100.t
+	desc = THE_NIN_events.100.desc
+	picture = ""
+	is_triggered_only = yes
+	major = yes
+	major_trigger = {
+		tag = NIN
+	}
+	option = {
+		name = THE_NIN_events.100.a
+		hidden_effect = {
+			NIN = {
+				country_event = {
+					id = THE_NIN_events.101
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = THE_NIN_events.101
+	title = THE_NIN_events.101.t
+	desc = THE_NIN_events.101.desc
+	picture = ""
+	is_triggered_only = yes
+	option = {
+		name = THE_NIN_events.100.a
+		add_treasury = 1000
+	}
+	option = {
+		name = THE_NIN_events.100.b
+		VEN = {
+			add_opinion = {
+				who = ROOT
+				modifier = THE_NIN_with_ven_opinion_modifier
+			}
+			add_historical_friend = ROOT
+			add_trust = {
+				who = ROOT
+				value = 25
+			}
+		}
+		add_historical_friend = VEN
+		create_alliance = VEN
+	}
+	option = {
+		name = THE_NIN_events.100.c
+		VEN = {
+			every_owned_province = {
+				limit = {
+					area = aegean_archipelago_area
+				}
+				cede_province = ROOT
+				add_province_modifier = {
+					name = THE_NIN_aegean_new_land_modifier
+					duration = -1
+				}
+			}
+			every_subject_country = {
+				every_owned_province = {
+					limit = {
+						area = aegean_archipelago_area
+					}
+					cede_province = ROOT
+					add_province_modifier = {
+						name = THE_NIN_aegean_new_land_modifier
+						duration = -1
+					}
+				}
 			}
 		}
 	}

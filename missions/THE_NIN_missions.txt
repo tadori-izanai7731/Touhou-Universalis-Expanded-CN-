@@ -10,24 +10,27 @@ THE_NIN_branch_1 = {
 		position = 1
 		provinces_to_highlight = { 
 			owned_by = ROOT
-		 } 
+		} 
 		
 		trigger = { 
 			total_development = 50
-			stability = 1
-			capital_scope = {
+			146 = {
 				development = 20
 				OR = {
 					has_tax_building_trigger = yes
 					has_production_building_trigger = yes
 				}
 			}
-		 } 
+		} 
 		
 		effect = { 
+			add_country_modifier = {
+				name = THE_NIN_the_duchesss_coronet_modifier
+				duration = 7300
+			}
 			add_prestige = 25
 			add_dip_power = 75
-		 } 
+		} 
 	}
 	
 	THE_NIN_1_3 = {
@@ -36,9 +39,25 @@ THE_NIN_branch_1 = {
 		required_missions = { THE_NIN_1_1 } 
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = { 
+			stability = 1
+			146 = {
+				development = 30
+				has_fort_building_trigger = yes
+			}
+		} 
 		
-		effect = {  } 
+		effect = { 
+			add_adm_power = 75
+			add_dip_power = 75
+			add_mil_power = 75
+			146 = {
+				add_province_modifier = {
+					name = THE_NIN_acropolis_of_athens_modifier
+					duration = -1
+				}
+			}
+		} 
 	}
 	
 	THE_NIN_1_4 = {
@@ -49,7 +68,31 @@ THE_NIN_branch_1 = {
 		
 		trigger = {  } 
 		
-		effect = {  } 
+		effect = { 
+			if = {
+				limit = { 
+					OR = {
+						BYZ = { is_subject_of = ROOT }
+						TUR = { is_subject_of = ROOT }
+					}
+					OR = {
+						BYZ = { NOT = { total_development = 200 } }
+						TUR = { NOT = { total_development = 200 } }
+						is_year = 1500
+					}
+				}
+				custom_tooltip = THE_NIN_1_4_c_tt1_yes
+				custom_tooltip = THE_NIN_1_4_c_tt2
+				hidden_effect = {
+					inherit = BYZ
+					inherit = TUR
+				}
+			}
+			else = {
+				custom_tooltip = THE_NIN_1_4_c_tt1_no
+				custom_tooltip = THE_NIN_1_4_c_tt2
+			}
+		} 
 	}
 	
 	THE_NIN_1_6 = {
@@ -100,9 +143,25 @@ THE_NIN_branch_2 = {
 		required_missions = { THE_NIN_1_1 } 
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = { 
+			total_development = 100
+			is_neighbor_of = VEN
+			OR = {
+				num_of_light_ship = 4
+				mercantilism = 12
+			}
+		} 
 		
-		effect = {  } 
+		effect = { 
+			VEN = {
+				country_event = {
+					id = THE_NIN_events.100
+				}
+			}
+			carinthia_area = { add_permanent_claim = ROOT }
+			east_adriatic_coast_area = { add_permanent_claim = ROOT }
+			venetia_area = { add_permanent_claim = ROOT }
+		} 
 	}
 	
 	THE_NIN_2_3 = {
@@ -111,7 +170,9 @@ THE_NIN_branch_2 = {
 		required_missions = { THE_NIN_2_2 } 
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = { 
+			
+		} 
 		
 		effect = {  } 
 	}
@@ -213,7 +274,7 @@ THE_NIN_branch_3 = {
 			capital_scope = {
 				add_base_tax = 1
 				add_base_production = 3
-				add_base_manpower = 3
+				add_base_manpower = 2
 			}
 		} 
 	}
@@ -380,7 +441,6 @@ THE_NIN_branch_4 = {
 		position = 3
 		required_missions = {
 			THE_NIN_3_2
-			THE_NIN_5_2
 		}
 		provinces_to_highlight = {  } 
 		
@@ -488,19 +548,54 @@ THE_NIN_branch_5 = {
 		provinces_to_highlight = {  } 
 		
 		trigger = { 
-			TUR = {
-				has_opinion_modifier = {
-					who = ROOT
-					modifier = scornfully_insulted
+			OR = {
+				total_development = TUR
+				has_won_war_against = {
+					who = TUR
+					max_years_since = 20
 				}
 			}
+			
 		} 
 		
 		effect = { 
+			add_dip_power = 100
 			TUR = {
 				add_opinion = {
 					who = ROOT
 					modifier = THE_NIN_with_tur_opinion_modifier
+				}
+			}
+			if = {
+				limit = { 
+					has_won_war_against = {
+						who = TUR
+						max_years_since = 20
+					}
+				}
+				custom_tooltip = THE_NIN_5_2_c_tt1_yes
+				custom_tooltip = THE_NIN_5_2_c_tt2
+				add_country_modifier = {
+					name = THE_NIN_won_war_the_tur_modifier
+					duration = 7300
+				}
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							is_core = TUR
+						}
+						add_core = ROOT
+					}
+				}
+			}
+			else = {
+				custom_tooltip = THE_NIN_5_2_c_tt1_no
+				custom_tooltip = THE_NIN_5_2_c_tt2
+				tooltip = {
+					add_country_modifier = {
+						name = THE_NIN_won_war_the_tur_modifier
+						duration = 7300
+					}
 				}
 			}
 		} 
@@ -516,7 +611,29 @@ THE_NIN_branch_5 = {
 		provinces_to_highlight = {  } 
 		
 		trigger = { 
-			
+			OR = {
+				OR = {
+					TUR = { NOT = { total_development = 50 } }
+					NOT = { exists = TUR }
+				}
+				AND = {
+					TUR = { NOT = { total_development = 200 } }
+					OR = {
+						TUR = {
+							trust = {
+								who = BYZ
+								value = 80
+							}
+						}
+						TUR = {
+							trust = {
+								who = ROOT
+								value = 80
+							}
+						}
+					}
+				}
+			}
 		} 
 		
 		effect = { 
@@ -525,12 +642,16 @@ THE_NIN_branch_5 = {
 			add_mil_power = 100
 			if = {
 				limit = {
-					TUR = {
+					TUR = { NOT = { total_development = 200 } }
+					OR = {
 						trust = {
 							who = BYZ
-							value = 60
+							value = 80
 						}
-						is_subject = no
+						trust = {
+							who = ROOT
+							value = 80
+						}
 					}
 				}
 				custom_tooltip = THE_NIN_5_4_c_tt1_yes
@@ -574,6 +695,37 @@ THE_NIN_branch_5 = {
 						}
 					}
 				}
+			}
+			if = {
+				limit = { 
+					OR = {
+						NOT = { exists = TUR }
+						TUR = {
+							NOT = { total_development = 50 }
+						}
+					}
+				}
+				custom_tooltip = THE_NIN_5_4_c_tt2_yes
+				add_adm_power = 100
+				custom_tooltip = THE_NIN_5_4_c_tt3
+				hidden_effect = {
+					for = {
+						amount = 20
+						effect = "
+						random_owned_province = {
+							limit = {
+								culture = greek
+							}
+							add_base_production = 1
+						}
+					"
+					}
+				}
+			}
+			else = {
+				custom_tooltip = THE_NIN_5_4_c_tt2_no
+				add_adm_power = 100
+				custom_tooltip = THE_NIN_5_4_c_tt3
 			}
 		} 
 	}

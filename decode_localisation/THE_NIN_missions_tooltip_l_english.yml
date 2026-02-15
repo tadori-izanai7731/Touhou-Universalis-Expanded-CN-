@@ -43,15 +43,25 @@ l_english:
  THE_NIN_god_athena_opinion_modifier: "雅典娜归来"
  THE_NIN_with_tur_opinion_modifier: "来自罗马的威慑"
  THE_NIN_victory_godness_opinion_modifier: "胜利女神"
+ THE_NIN_with_ven_opinion_modifier: "最大的债主"
 ###OPINION_END
 
 ###MISSION
  THE_NIN_4_1_c_tt1: "获得所有§Y希腊文化§!的§G核心§!"
  THE_NIN_4_3_c_tt1_yes: "£yes£若当前@BYZ§Y[BYZ.GetName]§!发展度低于§Y100§!且对我们拥有§Y100§!点§Y好感度§!"
  THE_NIN_4_3_c_tt1_no: "£no£若当前@BYZ§Y[BYZ.GetName]§!发展度低于§Y100§!且对我们拥有§Y100§!点§Y好感度§!"
- THE_NIN_5_4_c_tt1_yes: "£yes£若当前@TUR§Y[TUR.GetName]§!对@BYZ§Y[BYZ.GetName]§!的信任度达到§G80§!且为§Y独立国家§!，则："
- THE_NIN_5_4_c_tt1_no: "£no£若当前@TUR§Y[TUR.GetName]§!对@BYZ§Y[BYZ.GetName]§!的信任度达到§G80§!且为§Y独立国家§!，则："
+ THE_NIN_5_4_c_tt1_yes: "£yes£若我们通过信任度且@TUR§Y[TUR.GetName]§!的发展度低于§Y200§!完成任务，则："
+ THE_NIN_5_4_c_tt1_no: "£no£若我们通过信任度且@TUR§Y[TUR.GetName]§!的发展度低于§Y200§!完成任务，则："
  THE_NIN_4_2_c_tt1: "拥有此§Y修正§!时，征服的领土都将转变为§Y希腊§!文化"
+ THE_NIN_1_4_c_tt1_yes: "£yes£若当前@BYZ§Y[BYZ.GetName]§!或@TUR§Y[TUR.GetName]§!是我们的§Y属国§!，且发展度不高于§Y200§!，则："
+ THE_NIN_1_4_c_tt1_no: "£no£若当前@BYZ§Y[BYZ.GetName]§!或@TUR§Y[TUR.GetName]§!是我们的§Y属国§!，且发展度不高于§Y200§!，则："
+ THE_NIN_1_4_c_tt2: "继承@BYZ§Y[BYZ.GetName]§!与@TUR§Y[TUR.GetName]§!的§Y遗产§!"
+ THE_NIN_5_4_c_tt2_yes: "£yes£若我们通过消灭@TUR§Y[TUR.GetName]§!或使其发展度低于§Y50§!完成任务，则："
+ THE_NIN_5_4_c_tt2_no: "£no£若我们通过消灭@TUR§Y[TUR.GetName]§!或使其发展度低于§Y50§!完成任务，则："
+ THE_NIN_5_2_c_tt1_yes: "£yes£若通过击败@TUR§Y[TUR.GetName]§!完成任务"
+ THE_NIN_5_2_c_tt1_no: "£no£若通过击败@TUR§Y[TUR.GetName]§!完成任务"
+ THE_NIN_5_2_c_tt2: "获得治下所有拥有@TUR§Y[TUR.GetName]§!核心省份的§Y核心§!"
+ THE_NIN_5_4_c_tt3: "随机§Y20§!点§Y基础生产§!£dip£分配至我们治下的所有§Y希腊§!文化的省份"
 ###MISSION_END
 
 ###DIPOMATIC_ACTIONS
@@ -78,16 +88,43 @@ l_english:
  THE_NIN_events.4.t: "巴尔干大婚"
  THE_NIN_events.4.desc: "几个月，一则荒诞不经、细节错乱的谣言游荡在安纳托利亚与巴尔干的市井之间。它信誓旦旦地宣称：伟大的苏丹[From.Monarch.GetName]，真主在大地的影子，其内心深处竟潜藏着对罗马皇帝近乎血脉本能的臣服；奥斯曼的剑，生来便是为守卫[Root.Dynasty.GetName]的皇冠而挥。\n\n这流言是如此可笑，与百年来兵戈相向的现实、与帝国蒸蒸日上的国势全然相悖，很快便被智者嗤之以鼻。\n\n然而···时光流转，今时今日，不可思议的图景竟在所有人眼前徐徐展开。帝国的铁骑不再指向那古老的城墙，苏丹的使者以近乎卑微的礼节出现在君士坦丁堡的城门之前。\n\n正如伊比利亚半岛上那两个世代为仇的王国，最终却在命运的戏弄下走向联合一般，这东方最不可能的结合，正以令人心悸的方式成为现实。是宿命？是虚幻？还是玩笑？"
  THE_NIN_events.4.a: "献上臣服之剑"
+ THE_NIN_events.6.t: "分离主义者的谣言"
+ THE_NIN_events.6.desc: "由于我们的名声，我们的邻国认为我们是邪恶的诞生地，它们都想通过阴谋诡计来让我们国家衰落。$LIKELYREBELS$阴谋家正在$PROVINCENAME$散布谎言并挑起叛乱···"
+ THE_NIN_events.6.a: "小小的困难"
+ THE_NIN_events.7.t: "措辞高雅的信"
+ THE_NIN_events.7.a: "§Y你的恶行从爱尔兰到契丹无人不知无人不晓§!"
+ THE_NIN_events.7.b: "§Y祝贵国漫天都是扫把星§!"
 ###EVENT_END
+
+###MISSION_EVENT
+ THE_NIN_events.100.t: "威尼斯的债契"
+ THE_NIN_events.100.desc: "一封信函被送到了威尼斯总督的宫邸。信中，雅典的女公爵以不容置疑的口吻，追索一笔「由前任总督于百余年前立下的、以帝国信誉担保的巨额借款”，并附上了利息计算明细，总额令人瞠目。」\n\n档案官翻遍了每一个卷宗室,得出的结论一致：这纯属无稽之谈。\n\n然而，怪事发生了。先是码头的水手在酒醉后谈起祖父曾提及“那笔给希腊老爷的黄金”；接着，某位潦倒的公证人后代，“偶然”在旧宅墙缝中发现了一张泛黄的、字迹模糊的羊皮纸碎片，其残留的条款竟与信中所言隐约吻合。"
+ THE_NIN_events.100.a: "我们会按要求偿还。"
+ THE_NIN_events.101.t: "威尼斯总督的抵偿提案"
+ THE_NIN_events.101.desc: "总督的回信措辞谨慎，笔迹中透着一丝罕见的、近乎屈辱的窘迫。「尊贵的女公爵阁下，」信中写道，「共和国承认···这份突如其来的财政义务。然而，持续的战争与贸易波动，使我们的金库暂时难以承受如此巨额的一次性偿付。我们恳请您考虑一个更具建设性的解决方案：威尼斯愿以其他形式的帮助，来抵偿部分或全部债务。这绝非推诿，而是基于现实困境的、诚恳的提议。」"
+ THE_NIN_events.100.a: "我们只要叮当响的钱。"
+ THE_NIN_events.100.b: "那么，请尊贵的共和国，为我背书吧"
+ THE_NIN_events.100.c: "用爱琴海的土地先抵偿吧。"
+###MISSION_EVENT_END
 
 ###MODIFIER
  THE_NIN_tur_desire_modifier: "帝国之子"
  THE_NIN_the_senate_and_the_people_modifier: "元老院与人民"
  THE_NIN_the_victory_godness_modifier: "坚信为胜利女神"
- THE_NIN_renaissance_modifier: "二度文艺复兴"
+ THE_NIN_renaissance_modifier: "文艺复兴的第二发源地"
+ THE_NIN_unrest_protagonist_modifier: "叛乱的谣言"
+ THE_NIN_acropolis_of_athens_modifier: "雅典卫城"
+ THE_NIN_the_duchesss_coronet_modifier: "罗马公爵的冠冕"
+ THE_NIN_aegean_new_land_modifier: "爱琴海新土地"
+ THE_NIN_won_war_the_tur_modifier: "战胜突厥人"
 ###MODIFIER_END
 
 ###DECISIONS
  THE_NIN_narrative_protagonist_set_decision_title: "「虚构叙事」"
  THE_NIN_narrative_protagonist_set_decision_desc: ""
 ###DECISIONS_END
+
+###ADVISOR
+ THE_suleiman_advisor: "苏莱曼"
+ THE_suleiman_advisor_desc: ""
+###ADVISOR_END

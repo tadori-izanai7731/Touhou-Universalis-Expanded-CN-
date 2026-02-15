@@ -206,3 +206,31 @@ THE_tenshi_advisor = {
 		factor = 100
 	}
 }
+
+#苏莱曼「奥斯曼」
+THE_suleiman_ottoman_advisor = {
+	monarch_power = DIP
+	# Bonus
+	trade_efficiency = 0.20
+
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				is_emperor_of_china = yes 
+			}
+		}
+		modifier = {
+			meritocracy = 0.25
+		}
+	}
+
+	allow_only_male = yes
+
+	chance = {
+		factor = 0
+	}
+
+	ai_will_do = {
+		factor = 100
+	}
+}
