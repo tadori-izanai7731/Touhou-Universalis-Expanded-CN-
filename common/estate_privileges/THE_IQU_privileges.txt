@@ -1,8 +1,8 @@
 #眠龙帖
 THE_IQU_tennin_delegate_power_privileges = {
-	icon = THE_IQU_privilege_tennin_delegate_power
+	icon = privilege_demand_more_troops
 	max_absolutism = -10
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	influence = 0
 	loyalty = 0
 	land_share = 0
@@ -49,9 +49,9 @@ THE_IQU_tennin_delegate_power_privileges = {
 }
 #松散的天界政权
 THE_IQU_tennin_government_loose_privileges = {
-	icon = privilege_broken_crown
+	icon = privilege_demand_more_troops
 	max_absolutism = -25
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 5 } }
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	influence = 0.15
 	loyalty = 0.15
 	land_share = 5
@@ -66,46 +66,21 @@ THE_IQU_tennin_government_loose_privileges = {
 		always = yes
 	}
 	on_granted = {
-		
+
 	}
-	can_revoke = {
-		if = {
-			limit = { 
-				OR = {
-					has_country_flag = THE_debug_flag
-					AND = {
-						NOT = { has_estate = estate_church }
-						NOT = { has_estate = estate_burghers }
-						NOT = { has_estate = estate_nobles }
-					}
-				}
-				
+	can_revoke = { 
+		AND = {
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 80
 			}
-			always = yes
-		}
-		else = {
-			AND = {
-				if = {
-					limit = { has_estate = estate_church }
-					estate_loyalty = {
-						estate = estate_church
-						loyalty = 70
-					}
-				}
-				if = {
-					limit = { has_estate = estate_burghers }
-					estate_loyalty = {
-						estate = estate_burghers
-						loyalty = 70
-					}
-				}
-				if = {
-					limit = { has_estate = estate_nobles }
-					estate_loyalty = {
-						estate = estate_nobles
-						loyalty = 70
-					}
-				}
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 80
+			}
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 80
 			}
 		}
 	} 

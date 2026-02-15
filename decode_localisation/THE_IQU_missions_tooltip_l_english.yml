@@ -145,7 +145,7 @@ l_english:
 ### ESTATE_END
 
 ### MISSION_EXTRA
- THE_IQU_1_1_c_tt: "\n解锁§Y天人§!阶层特权「§Y眠龙帖§!」，将获得以下效果：\n "
+ THE_IQU_1_1_c_tt: "解锁§Y天人§!阶层特权「§Y眠龙帖§!」，将获得以下效果：\n "
  THE_IQU_1_2_c_tt1: " 当§Y任意省份§!拥有§O海图异常点§!时，我们即可解锁§Y决议§!「探险菜单」"
  THE_IQU_2_3_extra_c_tt1_yes: "\n£yes£若完成任务时,@LCU[LCU.GetName]拥有对我们的好感度修正「§Y轻蔑的侮辱§!」，将会获得以下效果："
  THE_IQU_2_3_extra_c_tt1_no: "\n£no£若完成任务时,@LCU[LCU.GetName]拥有对我们的好感度修正「§Y轻蔑的侮辱§!」，将会获得以下效果："
@@ -197,12 +197,12 @@ l_english:
 ### MISSION_EXTRA_END
 
 ### DECISIONS
- THE_IQU_etate_privileges_add_navy_leaders_decisions_title: "@IQU§Y天人：召集探险家§!"
+ THE_IQU_etate_privileges_add_navy_leaders_decisions_title: "阶层决议§Y天人:召集探险家§!"
  THE_IQU_etate_privileges_add_navy_leaders_decisions_desc: ""
  THE_IQU_etate_privileges_add_navy_leaders_decisions_c_trigger_t: "此决议未在20年内使用过"
- THE_IQU_explore_the_unique_points_core_decisions_title: "@IQU「探险菜单」"
+ THE_IQU_explore_the_unique_points_core_decisions_title: "「探险菜单」"
  THE_IQU_explore_the_unique_points_core_decisions_desc: ""
- THE_IQU_unlock_tenshi_advisor_decisions_title: "@IQU招募外交顾问§Y「比那名居天子」§!"
+ THE_IQU_unlock_tenshi_advisor_decisions_title: "招募外交顾问§Y「比那名居天子」§!"
  THE_IQU_unlock_tenshi_advisor_decisions_desc: ""
  THE_IQU_explore_the_unique_points_core_decisions_c_tt1: "当前没有正在§M探索§!的省份"
  THE_IQU_teach_the_tenshi_decisions_title: "「§M规训天人§!」与天子弈棋"
@@ -214,7 +214,7 @@ l_english:
  THE_IQU_check_the_fengshui_xingsheng_decisions_title: "查询所有拥有「§O风水兴盛-「」之行§!」的§Y省份§!"
  THE_IQU_check_the_fengshui_xingsheng_decisions_desc: ""
  THE_IQU_check_decision_c_tt1: "切换查询状态"
- THE_IQU_check_the_explore_rule_decisions_title: "@IQU查询「§M云游机制§!」教程"
+ THE_IQU_check_the_explore_rule_decisions_title: "查询@IQU§Y[IQU.GetName]§!「§M云游机制§!」教程"
  THE_IQU_check_the_explore_rule_decisions_desc: ""
  THE_IQU_teach_the_tenshi_decisions_c_tt1: "没有已经发生的事件"
  THE_IQU_explore_the_unique_points_core_decisions_c_tt2: ""
