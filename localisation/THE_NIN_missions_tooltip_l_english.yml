@@ -8,7 +8,7 @@
  THE_NIN_ideas: "‡l|itõV"
  THE_NIN_ideas_start: "‡l|i.Oßu"
  THE_NIN_ideas_bonus: "‡l|iÎ‘ÃV"
- THE_NIN_idea_1: "Paradox(Clausewitz)VÎd"
+ THE_NIN_idea_1: "ParadoxVÎd0Clausewitz0"
  THE_NIN_idea_2: "ôu³u¯e„v°eu"
  THE_NIN_idea_3: "Z†„gÙS‹N"
  THE_NIN_idea_4: "ñm¦^fR`N!jWW"
@@ -28,3 +28,66 @@
  THE_NIN_release_country_decision_title: "Ê‘>e@NIN[NIN.GetName]"
  THE_NIN_release_country_decision_desc: ""
 ###DECISION_END
+
+###REFORM
+ THE_NIN_fictional_goddess_reform: "Z†‰^KNwm"
+ THE_NIN_fictional_goddess_reform_desc: ""
+ mechanic_THE_NIN_fictional_goddess_reform_mechanic_yes: "=T(u0Z†„gáOo`0ýw›R"
+###REFORM_END
+
+###NAME
+ THE_NIN_RULER: "Å–xQ„vˆR²bsY^y"
+###NAME_END
+
+###OPINION
+ THE_NIN_god_athena_opinion_modifier: "Å–xQZRVeg"
+ THE_NIN_with_tur_opinion_modifier: "egêWlš„vZQa"
+ THE_NIN_victory_godness_opinion_modifier: "Üw)RsY^y"
+###OPINION_END
+
+###MISSION
+ THE_NIN_4_1_c_tt1: "·ƒ—VNb	g§Y^J‡eS§!„v§G8hÃV§!"
+ THE_NIN_4_3_c_tt1_yes: "£yes£å‚SVMR@BYZ§Y[BYZ.GetName]§!ÑSUS¦^NOŽN§Y100§!NùRbìNåb	g§Y100§!¹p§Y‹Ya¦^§!"
+ THE_NIN_4_3_c_tt1_no: "£no£å‚SVMR@BYZ§Y[BYZ.GetName]§!ÑSUS¦^NOŽN§Y100§!NùRbìNåb	g§Y100§!¹p§Y‹Ya¦^§!"
+ THE_NIN_5_4_c_tt1_yes: "£yes£å‚SVMR@TUR§Y[TUR.GetName]§!ùR@BYZ§Y[BYZ.GetName]§!„váOûN¦^¾0R§G80§!N:N§YìrËzýV¶R§!ÿRÿ"
+ THE_NIN_5_4_c_tt1_no: "£no£å‚SVMR@TUR§Y[TUR.GetName]§!ùR@BYZ§Y[BYZ.GetName]§!„váOûN¦^¾0R§G80§!N:N§YìrËzýV¶R§!ÿRÿ"
+ THE_NIN_4_2_c_tt1: "åb	gdk§YîOck§!öeÿVg„v†˜WýSlØS:N§Y^J§!‡eS"
+###MISSION_END
+
+###DIPOMATIC_ACTIONS
+ THE_NIN_narrative_protagonist_set_the_first_tooltip: "¾‹šR:NÙS‹N,rNîvh"
+ THE_NIN_narrative_protagonist_set_the_second_tooltip: "¾‹šR:NÙS‹N,rŒNîvh"
+ THE_NIN_narrative_protagonist_set_the_first_title: "¾‹šR:NÙS‹N,rNîvh"
+ THE_NIN_narrative_protagonist_set_the_second_title: "¾‹šR:NÙS‹N,rŒNîvh"
+###DIPOMATIC_ACTIONS_END
+
+
+###EVENT
+ THE_NIN_events.1.t: "Z†„gÙS‹N"
+ THE_NIN_events.1.desc: ""
+ THE_NIN_events.1.a: "ÔÞV"
+ THE_NIN_events.1.b: "Óußv"
+ THE_NIN_events.1.c: "TwTßu»l"
+ THE_NIN_events.1.d: "±Rb"
+ THE_NIN_events.1.e: ":V6RŒTs^"
+ THE_NIN_events.1.f: "ªcžØšÅ–"
+ THE_NIN_events.1.g: "R»yININw„v1ŒŠ"
+ THE_NIN_events.3.t: "0Óußv01ŒŠ"
+ THE_NIN_events.3.desc: "ÑåeÿNRegnbŒ0Æu‚‚tS)h)h‚Yu„vAmŠÿ„`6q,rán†NR‘†™„vÒ‰K„N^Æ–„vƒzí‹0ƒR±Rðyÿ[Root.GetName]„v[Root.Monarch.GetName]òTN [From.GetName]„v[From.Monarch.GetName]ØyÆRÓu†NZWNïSgd„vßv¦uÿsSSqQT”^ùRëÑ„vZÁw0\n\nÙ.OŠ,g«ŽomŒvúQÿâeàeO‚‚ŽVeg„v°‹UVÿ¦NàeûNUOckV‡eJT„vqVPRÿvQº‹ŒKN8Y.VÿàQÑŽN^•N.OGY0"
+ THE_NIN_events.3.a: "w=f*S7YNb`"
+ THE_NIN_events.4.t: "ôTSr^'YZZ"
+ THE_NIN_events.4.desc: "àQ*NgÿNRRƒÞ‹NÏu0Æu‚‚•qN„v1ŒŠ8naƒ(W‰R³uXb)RšNNôTSr^„v^•NKNô•0ƒRáO“Šæeæe0W±RðyÿO'Y„vÏ‚9N[From.Monarch.GetName]ÿwIN(W'Y0W„vqVPRÿvQ…QÃVñmYßzjoÏ…NwùRWlš‡v^ÑNNNˆ	,gýw„vãgÿeY¯eüf„vQRÿueg¿O=f:NˆRkS[Root.Dynasty.GetName]„v‡v Qw%c0\n\nÙAmŠ=f‚YdkïSrÿNŒvt^eguQbøvT„v°sžR0N^ýV¸„¸„åeN„výV¿RhQ6qøv–`ÿˆVëV¿O«ˆzfwäUKNåNIŸ0\n\n6qw···öeIQAmlÿÊNöeÊNåeÿNïS`®‹„vþVofßz(WNb	gºN<wMRVVUSV0^ýV„vÁ”‘šNQcT±äSw„vÎW™XÿÏ‚9N„vOwåNÑNNQS®V„v<y‚‚úQ°s(WTëXfWN!X„vÎWè•KNMR0\n\nck‚YOÔk)RšNJS›SN±2N*NNãN:NÇN„v‹sýVÿgÈutS(W‹TÐ„vbVNpTTwTN,‚ÿÙN¹egNïSýw„vÓuTÿckåNäNºNÃV¸`„v¹eVb:N°sžR0=f¿R‹Tÿ=fZ†‰^ÿØ=f©srÿ"
+ THE_NIN_events.4.a: ".sNãgKNQR"
+###EVENT_END
+
+###MODIFIER
+ THE_NIN_tur_desire_modifier: "^ýVKNPR"
+ THE_NIN_the_senate_and_the_people_modifier: "CQwb–NºNl"
+ THE_NIN_the_victory_godness_modifier: "ZWáO:NÜw)RsY^y"
+ THE_NIN_renaissance_modifier: "ŒN¦^‡ez‚YtQ"
+###MODIFIER_END
+
+###DECISIONS
+ THE_NIN_narrative_protagonist_set_decision_title: "0Z†„gÙS‹N0"
+ THE_NIN_narrative_protagonist_set_decision_desc: ""
+###DECISIONS_END

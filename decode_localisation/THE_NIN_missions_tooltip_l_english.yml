@@ -8,7 +8,7 @@ l_english:
  THE_NIN_ideas: "蜃气楼理念"
  THE_NIN_ideas_start: "蜃气楼传统"
  THE_NIN_ideas_bonus: "蜃气楼野心"
- THE_NIN_idea_1: "Paradox(Clausewitz)引擎"
+ THE_NIN_idea_1: "Paradox引擎「Clausewitz」"
  THE_NIN_idea_2: "维纳斯的新生"
  THE_NIN_idea_3: "虚构叙事"
  THE_NIN_idea_4: "深度学习模块"
@@ -28,3 +28,66 @@ l_english:
  THE_NIN_release_country_decision_title: "释放@NIN[NIN.GetName]"
  THE_NIN_release_country_decision_desc: ""
 ###DECISION_END
+
+###REFORM
+ THE_NIN_fictional_goddess_reform: "虚幻之海"
+ THE_NIN_fictional_goddess_reform_desc: ""
+ mechanic_THE_NIN_fictional_goddess_reform_mechanic_yes: "启用「虚构信息」能力"
+###REFORM_END
+
+###NAME
+ THE_NIN_RULER: "雅典的守护女神"
+###NAME_END
+
+###OPINION
+ THE_NIN_god_athena_opinion_modifier: "雅典娜归来"
+ THE_NIN_with_tur_opinion_modifier: "来自罗马的威慑"
+ THE_NIN_victory_godness_opinion_modifier: "胜利女神"
+###OPINION_END
+
+###MISSION
+ THE_NIN_4_1_c_tt1: "获得所有§Y希腊文化§!的§G核心§!"
+ THE_NIN_4_3_c_tt1_yes: "£yes£若当前@BYZ§Y[BYZ.GetName]§!发展度低于§Y100§!且对我们拥有§Y100§!点§Y好感度§!"
+ THE_NIN_4_3_c_tt1_no: "£no£若当前@BYZ§Y[BYZ.GetName]§!发展度低于§Y100§!且对我们拥有§Y100§!点§Y好感度§!"
+ THE_NIN_5_4_c_tt1_yes: "£yes£若当前@TUR§Y[TUR.GetName]§!对@BYZ§Y[BYZ.GetName]§!的信任度达到§G80§!且为§Y独立国家§!，则："
+ THE_NIN_5_4_c_tt1_no: "£no£若当前@TUR§Y[TUR.GetName]§!对@BYZ§Y[BYZ.GetName]§!的信任度达到§G80§!且为§Y独立国家§!，则："
+ THE_NIN_4_2_c_tt1: "拥有此§Y修正§!时，征服的领土都将转变为§Y希腊§!文化"
+###MISSION_END
+
+###DIPOMATIC_ACTIONS
+ THE_NIN_narrative_protagonist_set_the_first_tooltip: "设定为叙事第一目标"
+ THE_NIN_narrative_protagonist_set_the_second_tooltip: "设定为叙事第二目标"
+ THE_NIN_narrative_protagonist_set_the_first_title: "设定为叙事第一目标"
+ THE_NIN_narrative_protagonist_set_the_second_title: "设定为叙事第二目标"
+###DIPOMATIC_ACTIONS_END
+
+
+###EVENT
+ THE_NIN_events.1.t: "虚构叙事"
+ THE_NIN_events.1.desc: ""
+ THE_NIN_events.1.a: "返回"
+ THE_NIN_events.1.b: "结盟"
+ THE_NIN_events.1.c: "联合统治"
+ THE_NIN_events.1.d: "宣战"
+ THE_NIN_events.1.e: "强制和平"
+ THE_NIN_events.1.f: "措辞高雅"
+ THE_NIN_events.1.g: "分离主义者的谣言"
+ THE_NIN_events.3.t: "「结盟」谣言"
+ THE_NIN_events.3.desc: "近日，一则来源成谜、细节却栩栩如生的流言，悄然爬满了酒馆的角落与市集的窃语。它宣称，[Root.GetName]的[Root.Monarch.GetName]已与 [From.GetName]的[From.Monarch.GetName]秘密缔结了坚不可摧的盟约，即将共同应对迫近的威胁。\n\n这传言本身漏洞百出，既无使节往来的记录，亦无任何正式文告的影子，其论调之夸张，几近于市井传奇。"
+ THE_NIN_events.3.a: "真是匪夷所思"
+ THE_NIN_events.4.t: "巴尔干大婚"
+ THE_NIN_events.4.desc: "几个月，一则荒诞不经、细节错乱的谣言游荡在安纳托利亚与巴尔干的市井之间。它信誓旦旦地宣称：伟大的苏丹[From.Monarch.GetName]，真主在大地的影子，其内心深处竟潜藏着对罗马皇帝近乎血脉本能的臣服；奥斯曼的剑，生来便是为守卫[Root.Dynasty.GetName]的皇冠而挥。\n\n这流言是如此可笑，与百年来兵戈相向的现实、与帝国蒸蒸日上的国势全然相悖，很快便被智者嗤之以鼻。\n\n然而···时光流转，今时今日，不可思议的图景竟在所有人眼前徐徐展开。帝国的铁骑不再指向那古老的城墙，苏丹的使者以近乎卑微的礼节出现在君士坦丁堡的城门之前。\n\n正如伊比利亚半岛上那两个世代为仇的王国，最终却在命运的戏弄下走向联合一般，这东方最不可能的结合，正以令人心悸的方式成为现实。是宿命？是虚幻？还是玩笑？"
+ THE_NIN_events.4.a: "献上臣服之剑"
+###EVENT_END
+
+###MODIFIER
+ THE_NIN_tur_desire_modifier: "帝国之子"
+ THE_NIN_the_senate_and_the_people_modifier: "元老院与人民"
+ THE_NIN_the_victory_godness_modifier: "坚信为胜利女神"
+ THE_NIN_renaissance_modifier: "二度文艺复兴"
+###MODIFIER_END
+
+###DECISIONS
+ THE_NIN_narrative_protagonist_set_decision_title: "「虚构叙事」"
+ THE_NIN_narrative_protagonist_set_decision_desc: ""
+###DECISIONS_END

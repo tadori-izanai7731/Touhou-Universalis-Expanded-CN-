@@ -1,0 +1,611 @@
+THE_NIN_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NIN } 
+	
+	THE_NIN_1_1 = {
+		icon = mission_unknown_mission
+		position = 1
+		provinces_to_highlight = { 
+			owned_by = ROOT
+		 } 
+		
+		trigger = { 
+			total_development = 50
+			stability = 1
+			capital_scope = {
+				development = 20
+				OR = {
+					has_tax_building_trigger = yes
+					has_production_building_trigger = yes
+				}
+			}
+		 } 
+		
+		effect = { 
+			add_prestige = 25
+			add_dip_power = 75
+		 } 
+	}
+	
+	THE_NIN_1_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_NIN_1_1 } 
+		provinces_to_highlight = {  } 
+		
+		trigger = {  } 
+		
+		effect = {  } 
+	}
+	
+	THE_NIN_1_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { THE_NIN_1_3 } 
+		provinces_to_highlight = {  } 
+		
+		trigger = {  } 
+		
+		effect = {  } 
+	}
+	
+	THE_NIN_1_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		provinces_to_highlight = {  } 
+		
+		trigger = {  } 
+		
+		effect = {  } 
+	}
+	
+	THE_NIN_1_8 = {
+		icon = mission_unknown_mission
+		position = 8
+		required_missions = { THE_NIN_1_6 } 
+		provinces_to_highlight = {  } 
+		
+		trigger = {  } 
+		
+		effect = {  } 
+	}
+	
+	THE_NIN_1_9 = {
+		icon = mission_unknown_mission
+		position = 9
+		required_missions = {
+			THE_NIN_1_8
+			THE_NIN_2_8
+		}
+		provinces_to_highlight = {  } 
+		
+		trigger = {  } 
+		
+		effect = {  } 
+	}
+}
+THE_NIN_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NIN } 
+	
+	THE_NIN_2_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_NIN_1_1 } 
+		provinces_to_highlight = {  } 
+		
+		trigger = {  } 
+		
+		effect = {  } 
+	}
+	
+	THE_NIN_2_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_NIN_2_2 } 
+		provinces_to_highlight = {  } 
+		
+		trigger = {  } 
+		
+		effect = {  } 
+	}
+	
+	THE_NIN_2_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { THE_NIN_2_3 } 
+		provinces_to_highlight = {  } 
+		
+		trigger = {  } 
+		
+		effect = {  } 
+	}
+	
+	THE_NIN_2_7 = {
+		icon = mission_unknown_mission
+		position = 7
+		required_missions = { THE_NIN_1_6 } 
+		provinces_to_highlight = {  } 
+		
+		trigger = {  } 
+		
+		effect = {  } 
+	}
+	
+	THE_NIN_2_8 = {
+		icon = mission_unknown_mission
+		position = 8
+		required_missions = { THE_NIN_2_7 } 
+		provinces_to_highlight = {  } 
+		
+		trigger = {  } 
+		
+		effect = {  } 
+	}
+}
+THE_NIN_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NIN } 
+	
+	THE_NIN_3_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_NIN_4_1 } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+		} 
+		
+		trigger = { 
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 30
+			}
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 30
+			}
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 30
+			}
+			OR = {
+				num_of_estate_agendas_completed = {
+					estate = estate_nobles
+					value = 1
+				}
+				num_of_estate_agendas_completed = {
+					estate = estate_burghers
+					value = 1
+				}
+				num_of_estate_agendas_completed = {
+					estate = estate_church
+					value = 1
+				}
+			}
+		} 
+		
+		effect = { 
+			add_country_modifier = {
+				name = THE_NIN_the_senate_and_the_people_modifier
+				duration = 7300
+			}
+			change_estate_land_share = {
+				estate = estate_burghers
+				share = -2
+			}
+			change_estate_land_share = {
+				estate = estate_church
+				share = -2
+			}
+			change_estate_land_share = {
+				estate = estate_nobles
+				share = -2
+			}
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+		} 
+	}
+	
+	THE_NIN_3_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		provinces_to_highlight = { 
+			province_id = 146
+		} 
+		
+		trigger = { 
+			has_institution = renaissance
+			THE_has_adm_advisor_with_level = {
+				level = 2
+			}
+			146 = {
+				development = 18
+			}
+		} 
+		
+		effect = { 
+			add_adm_power = 75
+			146 = {
+				add_country_modifier = {
+					name = THE_NIN_renaissance_modifier
+					duration = -1
+				}
+			}
+		} 
+	}
+	
+	THE_NIN_3_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = {
+			THE_NIN_2_3
+			THE_NIN_3_3
+		}
+		provinces_to_highlight = {  } 
+		
+		trigger = {  } 
+		
+		effect = {  } 
+	}
+	
+	THE_NIN_3_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { THE_NIN_3_4 } 
+		provinces_to_highlight = {  } 
+		
+		trigger = {  } 
+		
+		effect = {  } 
+	}
+	
+	THE_NIN_3_7 = {
+		icon = mission_unknown_mission
+		position = 7
+		required_missions = { THE_NIN_3_5 } 
+		provinces_to_highlight = {  } 
+		
+		trigger = {  } 
+		
+		effect = {  } 
+	}
+	
+	THE_NIN_3_9 = {
+		icon = mission_unknown_mission
+		position = 9
+		required_missions = {
+			THE_NIN_4_8
+			THE_NIN_3_7
+		}
+		provinces_to_highlight = {  } 
+		
+		trigger = {  } 
+		
+		effect = {  } 
+	}
+}
+THE_NIN_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NIN } 
+	
+	THE_NIN_4_1 = {
+		icon = mission_unknown_mission
+		position = 1
+		provinces_to_highlight = { 
+			province_id = 146
+		} 
+		
+		trigger = { 
+			146 = {
+				owned_by = ROOT
+			}
+		} 
+		
+		effect = { 
+			custom_tooltip = THE_NIN_4_1_c_tt1
+			add_accepted_culture = greek
+			add_prestige = 10
+			add_trust = {
+				who = BYZ
+				value = 100
+				mutual = yes
+			}
+			BYZ = {
+				add_opinion = {
+					who = ROOT
+					modifier = THE_NIN_god_athena_opinion_modifier
+				}
+				hidden_effect = {
+					add_prestige = 10
+				}
+			}
+			hidden_effect = {
+				every_province = {
+					limit = {
+						culture = greek
+					}
+					add_core = ROOT
+				}
+			}
+		} 
+	}
+	
+	THE_NIN_4_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_NIN_4_1 } 
+		provinces_to_highlight = { 
+			culture = greek
+			NOT = {
+				owned_by = ROOT
+			}
+		} 
+		
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 8
+				culture = greek
+			}
+		} 
+		
+		effect = { 
+			add_adm_power = 100
+			add_dip_power = 100
+			add_dip_power = 100
+			add_country_modifier = {
+				name = THE_NIN_the_victory_godness_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_NIN_4_2_c_tt1
+		} 
+	}
+	
+	THE_NIN_4_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = {
+			THE_NIN_3_2
+			THE_NIN_5_2
+		}
+		provinces_to_highlight = {  } 
+		
+		trigger = { 
+			stability = 1
+		} 
+		
+		effect = { 
+			add_government_reform = THE_NIN_fictional_goddess_reform
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			if = {
+				limit = { 
+					BYZ = {
+						NOT = { total_development = 100 }
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
+					}
+					
+				}
+				custom_tooltip = THE_NIN_4_3_c_tt1_yes
+				hidden_effect = {
+					grant_independence = yes
+				}
+				vassalize = BYZ
+			}
+			else = {
+				custom_tooltip = THE_NIN_4_3_c_tt1_no
+				tooltip = {
+					vassalize = BYZ
+				}
+			}
+		} 
+	}
+	
+	THE_NIN_4_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { THE_NIN_2_3 } 
+		provinces_to_highlight = {  } 
+		
+		trigger = {  } 
+		
+		effect = {  } 
+	}
+	
+	THE_NIN_4_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { THE_NIN_3_4 } 
+		provinces_to_highlight = {  } 
+		
+		trigger = {  } 
+		
+		effect = {  } 
+	}
+	
+	THE_NIN_4_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = { THE_NIN_4_5 } 
+		provinces_to_highlight = {  } 
+		
+		trigger = {  } 
+		
+		effect = {  } 
+	}
+	
+	THE_NIN_4_7 = {
+		icon = mission_unknown_mission
+		position = 7
+		required_missions = { THE_NIN_5_6 } 
+		provinces_to_highlight = {  } 
+		
+		trigger = {  } 
+		
+		effect = {  } 
+	}
+	
+	THE_NIN_4_8 = {
+		icon = mission_unknown_mission
+		position = 8
+		required_missions = { THE_NIN_4_7 } 
+		provinces_to_highlight = {  } 
+		
+		trigger = {  } 
+		
+		effect = {  } 
+	}
+}
+THE_NIN_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = NIN } 
+	
+	THE_NIN_5_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_NIN_4_1 } 
+		provinces_to_highlight = {  } 
+		
+		trigger = { 
+			TUR = {
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = scornfully_insulted
+				}
+			}
+		} 
+		
+		effect = { 
+			TUR = {
+				add_opinion = {
+					who = ROOT
+					modifier = THE_NIN_with_tur_opinion_modifier
+				}
+			}
+		} 
+	}
+	
+	THE_NIN_5_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = {
+			THE_NIN_4_3
+			THE_NIN_5_2
+		}
+		provinces_to_highlight = {  } 
+		
+		trigger = { 
+			
+		} 
+		
+		effect = { 
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			if = {
+				limit = {
+					TUR = {
+						trust = {
+							who = BYZ
+							value = 60
+						}
+						is_subject = no
+					}
+				}
+				custom_tooltip = THE_NIN_5_4_c_tt1_yes
+				tooltip = {
+					BYZ = {
+						country_event = {
+							id = THE_NIN_events.4
+							days = 2
+						}
+					}
+				}
+				TUR = {
+					add_country_modifier = {
+						name = THE_NIN_tur_desire_modifier
+						duration = -1
+					}
+				}
+				hidden_effect = {
+					TUR = {
+						country_event = {
+							id = THE_NIN_events.5
+							days = 2
+						}
+					}
+				}
+			}
+			else = {
+				custom_tooltip = THE_NIN_5_4_c_tt1_no
+				tooltip = {
+					TUR = {
+						add_country_modifier = {
+							name = THE_NIN_tur_desire_modifier
+							duration = -1
+						}
+					}
+					BYZ = {
+						country_event = {
+							id = THE_NIN_events.4
+							days = 2
+						}
+					}
+				}
+			}
+		} 
+	}
+	
+	THE_NIN_5_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		provinces_to_highlight = {  } 
+		
+		trigger = {  } 
+		
+		effect = {  } 
+	}
+	
+	THE_NIN_5_7 = {
+		icon = mission_unknown_mission
+		position = 7
+		required_missions = { THE_NIN_5_6 } 
+		provinces_to_highlight = {  } 
+		
+		trigger = {  } 
+		
+		effect = {  } 
+	}
+	
+	THE_NIN_5_9 = {
+		icon = mission_unknown_mission
+		position = 9
+		required_missions = { THE_NIN_5_7 } 
+		provinces_to_highlight = {  } 
+		
+		trigger = {  } 
+		
+		effect = {  } 
+	}
+}

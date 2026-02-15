@@ -1,0 +1,22 @@
+THE_NIN_tur_desire_modifier = {
+	liberty_desire = -200
+	core_creation = -0.10
+}
+
+THE_NIN_the_senate_and_the_people_modifier = {
+	all_estate_loyalty_equilibrium = 0.10
+	global_tax_modifier = 0.10
+}
+
+THE_NIN_the_victory_godness_modifier = {
+	reduced_liberty_desire = 25
+	land_morale = 0.10
+	core_creation = -0.10
+}
+
+THE_NIN_renaissance_modifier = {
+	local_prosperity_growth = 1
+	local_development_cost = -0.10
+	local_institution_spread = 1.00
+	local_production_efficiency = 0.10
+}

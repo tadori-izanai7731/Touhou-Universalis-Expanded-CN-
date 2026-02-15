@@ -1,0 +1,38 @@
+THE_NIN_government_names = {
+	rank = {
+		1 = TOUHOU_DOMAIN
+		2 = TOUHOU_REALM
+		3 = TOUHOU_EMPIRE
+	}
+	
+	ruler_male = {
+		3 = THE_NIN_RULER
+		2 = THE_NIN_RULER
+		1 = THE_NIN_RULER
+	}
+	
+	ruler_female = {
+		3 = THE_NIN_RULER
+		2 = THE_NIN_RULER
+		1 = THE_NIN_RULER
+	}
+	
+	heir_male = {
+		1 = THE_KEI_HEIR
+		2 = THE_KEI_HEIR
+		3 = THE_KEI_HEIR
+	}
+
+	heir_female = {
+		1 = THE_KEI_HEIR
+		2 = THE_KEI_HEIR
+		3 = THE_KEI_HEIR
+	}
+
+	trigger = {
+		OR = {
+			tag = NIN
+		}
+		owns = 146
+	}
+}

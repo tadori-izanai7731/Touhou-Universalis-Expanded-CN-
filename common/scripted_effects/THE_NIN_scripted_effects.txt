@@ -1,0 +1,14 @@
+###################################################
+#### OA Script
+###################################################
+THE_NIN_on_get_new_province_effect = {
+	if = {
+		limit = { 
+			owner = {
+				tag = NIN
+				has_country_modifier = THE_NIN_the_victory_godness_modifier
+			}
+		}
+		change_culture = greek
+	}
+}

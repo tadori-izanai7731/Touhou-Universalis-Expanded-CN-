@@ -1,0 +1,28 @@
+THE_NIN_fictional_goddess_reform = {
+	lock_level_when_selected = yes
+	icon = "THE_NIN_government_1_reform"
+	potential = {
+		OR = {
+			has_reform = THE_NIN_fictional_goddess_reform
+			have_had_reform = THE_NIN_fictional_goddess_reform
+		}
+	}
+	valid_for_new_country = no
+	valid_for_nation_designer = no
+	rulers_can_be_generals = no
+	can_change_primary_culture = no
+	
+	modifiers = {
+		governing_capacity = 150
+		country_admin_power = 4
+		country_diplomatic_power = 4
+		country_military_power = 4
+		global_institution_spread = 0.50
+	}
+	government_abilities = {
+		
+	}
+	custom_attributes = {
+		THE_NIN_fictional_goddess_reform_mechanic = yes
+	}
+}

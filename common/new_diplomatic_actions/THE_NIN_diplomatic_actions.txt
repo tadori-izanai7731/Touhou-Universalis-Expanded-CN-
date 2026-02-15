@@ -1,0 +1,49 @@
+THE_NIN_narrative_protagonist_set_the_first = {
+	category = th_diplo_action
+	
+	is_visible = {
+		ai = no
+		tag = NIN
+		has_government_attribute = THE_NIN_fictional_goddess_reform_mechanic
+	}
+	
+	is_allowed = {
+		always = yes
+	}
+	
+	on_accept = {
+		hidden_effect = {
+			every_country = {
+				clear_global_event_target = THE_NIN_the_first_narrative_protagonist_global_event_target
+			}
+			FROM = {
+				save_global_event_target_as = THE_NIN_the_first_narrative_protagonist_global_event_target
+			}	
+		}
+	}
+}
+
+THE_NIN_narrative_protagonist_set_the_second = {
+	category = th_diplo_action
+	
+	is_visible = {
+		ai = no
+		tag = NIN
+		has_government_attribute = THE_NIN_fictional_goddess_reform_mechanic
+	}
+	
+	is_allowed = {
+		always = yes
+	}
+	
+	on_accept = {
+		hidden_effect = {
+			every_country = {
+				clear_global_event_target = THE_NIN_the_second_narrative_protagonist_global_event_target
+			}
+			FROM = {
+				save_global_event_target_as = THE_NIN_the_second_narrative_protagonist_global_event_target
+			}
+		}
+	}
+}
