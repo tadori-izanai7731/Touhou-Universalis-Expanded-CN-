@@ -27,3 +27,16 @@ THE_NIN_change_cloth_to_silk_province_effect = {
 		}
 	}
 }
+
+THE_NIN_won_war_with_ven_effect = {
+	if = {
+		limit = {
+			tag = NIN
+			has_country_flag = THE_NIN_cannot_call_ally_VEN_flag
+			FROM = {
+				tag = VEN
+			}
+		 }
+		 clr_country_flag = THE_NIN_cannot_call_ally_VEN_flag
+	}
+}

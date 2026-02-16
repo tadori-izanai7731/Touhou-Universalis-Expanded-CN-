@@ -41,6 +41,7 @@
 ###NAME
  THE_NIN_RULER: "Å–xQ„vˆR²bsY^y"
  THE_TUR_cooperative: "eY¯eüf¶RÏelQøS"
+ THE_TUR_cooperative_ADJ: "eY¯eüf¶RÏelQøS"
 ###NAME_END
 
 ###OPINION
@@ -48,6 +49,7 @@
  THE_NIN_with_tur_opinion_modifier: "egêWlš„vZQa"
  THE_NIN_victory_godness_opinion_modifier: "Üw)RsY^y"
  THE_NIN_with_ven_opinion_modifier: "g'Y„v:PIN"
+ THE_NIN_contemptuous_humiliation_modifier: "‰…„vž±"
 ###OPINION_END
 
 ###MISSION
@@ -78,7 +80,8 @@
  THE_NIN_4_4_c_tt3_no: "£no£å‚bìNÇÓußv@VEN§Y[VEN.GetName]§!ŒRbûN¡RÿRÿ"
  THE_NIN_4_5_c_tt1: "Nb	gán³‰Bl„v§Y^™e§!wýNFUÁTlØS:N§YNøu§!ÿv^·ƒ—VåNNHeœgÿ"
  THE_NIN_4_5_c_tt2: "°s(W(W§Y^™e§!wýNú^.§YuµN§!ú^QrýOSµNirlØS:N§YNøu§!ÿN·ƒ—V§YÍ‘FUININ§!§G+2§!"
- THE_NIN_5_6_c_tt1: "ã‰•±Rbt1u0§YeY¯eüfeQµO§!0ÿ:YÖS§YÃWÊS§!N§YlšÀNÌ‘KQ§!0W:S„vwýN"
+ THE_NIN_5_6_c_tt1: "ã‰•§Y±Rbt1u§!0§MeY¯eüfeQµO§!0ÿ:YÖS§YÃWÊS§!N§YlšÀNÌ‘KQ§!:SßW„vwýN"
+ THE_NIN_5_7_c_tt1: "SbìN(W§YÃWÊS§!N§YlšÀNÌ‘KQ§!:SßW„vNb	gwýNl©‹Ùu@TUR§Y[TUR.GetName]§!jO:NbìN„v§YD–¸^§!"
  
 ###MISSION_END
 
@@ -110,8 +113,10 @@
  THE_NIN_events.6.desc: "1uŽNbìN„vTðXÿbìN„v»ýV²‹:NbìN=fªv`„vÞ‹u0WÿƒRìNýó`Ç4–Œá‹¡‹eg©‹bìNýV¶RpˆK„0$LIKELYREBELS$4–Œ¶Rck(W$PROVINCENAME$ce^ŒŠv^cwÛSqN···"
  THE_NIN_events.6.a: "SS„vðV¾–"
  THE_NIN_events.7.t: "ªcžØšÅ–„váO"
+ THE_NIN_events.7.0: "§YbòTÏuåwS`O[From.Monarch.GetName]„vTWRŒT`OìN[From.Dynasty.GetName]¶RÏe„vNb	g*NºNáOo`§!\n§Y`O„vv`LˆÎN1rSpQ0RQY9NàeºNNåwàeºNNSf§!\n§Yky5ýV+o)Yý=fkbŠbf§!\n§YØ	gb²‹:N[From.GetName]ÅV‰˜«ˆÁkmpÿ§!\n§Y`OìNAm„vNˆïSåNObìNÎN`OìN±Ì‘:YÖS„vW0Wôf¥wƒl§!\n§Y(WbìNN„v'YËhÌ‘ÿ`O1S=fN—˜SRSPRÿ§!\n§Y0[From.GetName]‡eS01S=fNÍyÛwþvîOž`Oô‹=f'Tÿ§!\n§YëVwÿ±¹	gNShWïS1r„vN‰ÿ§!\n§Y[From.GetName]Ù*NýV¶RhQý=fî•˜˜ÿb`‘uŸSàV=f`OìNÙ›N[From.GetName]ºN§!"
  THE_NIN_events.7.a: "§Y`O„vv`LˆÎN1rSpQ0RQY9NàeºNNåwàeºNNSf§!"
  THE_NIN_events.7.b: "§Yky5ýV+o)Yý=fkbŠbf§!"
+ THE_NIN_events.8.t: "ªcžØšÅ–01ŒŠ0"
 ###EVENT_END
 
 ###MISSION_EVENT
@@ -140,6 +145,7 @@
  THE_NIN_won_war_the_tur_modifier: "bÜwz¥SºN"
  THE_NIN_trader_come_from_ven_modifier: "Z<S¯eFUºN"
  THE_NIN_silk_trade_goods_in_byz_modifier: "Üb`S­^Nøu"
+ THE_NIN_ottoman_enterprises_modifier: "eY¯eüf¶RÏeON"
 ###MODIFIER_END
 
 ###DECISIONS

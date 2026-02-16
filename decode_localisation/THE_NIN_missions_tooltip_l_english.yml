@@ -49,6 +49,7 @@ l_english:
  THE_NIN_with_tur_opinion_modifier: "来自罗马的威慑"
  THE_NIN_victory_godness_opinion_modifier: "胜利女神"
  THE_NIN_with_ven_opinion_modifier: "最大的债主"
+ THE_NIN_contemptuous_humiliation_modifier: "轻蔑的羞辱"
 ###OPINION_END
 
 ###MISSION
@@ -112,8 +113,10 @@ l_english:
  THE_NIN_events.6.desc: "由于我们的名声，我们的邻国认为我们是邪恶的诞生地，它们都想通过阴谋诡计来让我们国家衰落。$LIKELYREBELS$阴谋家正在$PROVINCENAME$散布谎言并挑起叛乱···"
  THE_NIN_events.6.a: "小小的困难"
  THE_NIN_events.7.t: "措辞高雅的信"
+ THE_NIN_events.7.0: "§Y我已经知道你[From.Monarch.GetName]的名字和你们[From.Dynasty.GetName]家族的所有个人信息§!\n§Y你的恶行从爱尔兰到契丹无人不知无人不晓§!\n§Y祝贵国漫天都是扫把星§!\n§Y还有我认为[From.GetName]必须被毁灭！§!\n§Y你们流的血可以使我们从你们那里夺取的土地更肥沃§!\n§Y在我们下的大棋里，你就是一颗小卒子！§!\n§Y「[From.GetName]文化」就是一种矛盾修辞你说是吧？§!\n§Y快看，那边有一小坨可爱的脏东西！§!\n§Y[From.GetName]这个国家全都是问题，我怀疑原因是你们这些[From.GetName]人§!"
  THE_NIN_events.7.a: "§Y你的恶行从爱尔兰到契丹无人不知无人不晓§!"
  THE_NIN_events.7.b: "§Y祝贵国漫天都是扫把星§!"
+ THE_NIN_events.8.t: "措辞高雅「谣言」"
 ###EVENT_END
 
 ###MISSION_EVENT
@@ -128,6 +131,7 @@ l_english:
  THE_NIN_events.102.t: "罗马之臣"
  THE_NIN_events.102.desc: "「···自曼努埃尔陛下驾崩后，帝国的苦难与你们的背离，皆已成为过往云烟。如今，新生的罗马已在旧都的基石上重铸辉煌。那游离于亚得里亚海的浪子，是时候重归其法理与血脉的源头了。这不是征服，而是秩序的复归——正如潮水终将归于大海。」"
  THE_NIN_events.102.a: "要求无条件归附"
+ THE_NIN_events_102_c_tt1: "在此战争中双方均无法召唤盟友"
 ###MISSION_EVENT_END
 
 ###MODIFIER
