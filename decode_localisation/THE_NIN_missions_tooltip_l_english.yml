@@ -33,10 +33,15 @@ l_english:
  THE_NIN_fictional_goddess_reform: "虚幻之海"
  THE_NIN_fictional_goddess_reform_desc: ""
  mechanic_THE_NIN_fictional_goddess_reform_mechanic_yes: "启用「虚构信息」能力"
+ THE_NIN_art_and_venus_reform: "我等所坚信"
+ THE_NIN_art_and_venus_reform_desc: ""
+ mechanic_THE_NIN_art_and_venus_reform_mechanic_yes: "每当我们赢得战争时，永久获得§Y每月威望§!+§G0.005§!"
 ###REFORM_END
 
 ###NAME
  THE_NIN_RULER: "雅典的守护女神"
+ THE_TUR_cooperative: "奥斯曼家族公司"
+ THE_TUR_cooperative_ADJ: "奥斯曼家族公司"
 ###NAME_END
 
 ###OPINION
@@ -44,6 +49,7 @@ l_english:
  THE_NIN_with_tur_opinion_modifier: "来自罗马的威慑"
  THE_NIN_victory_godness_opinion_modifier: "胜利女神"
  THE_NIN_with_ven_opinion_modifier: "最大的债主"
+ THE_NIN_contemptuous_humiliation_modifier: "轻蔑的羞辱"
 ###OPINION_END
 
 ###MISSION
@@ -62,6 +68,21 @@ l_english:
  THE_NIN_5_2_c_tt1_no: "£no£若通过击败@TUR§Y[TUR.GetName]§!完成任务"
  THE_NIN_5_2_c_tt2: "获得治下所有拥有@TUR§Y[TUR.GetName]§!核心省份的§Y核心§!"
  THE_NIN_5_4_c_tt3: "随机§Y20§!点§Y基础生产§!£dip£分配至我们治下的所有§Y希腊§!文化的省份"
+ THE_NIN_1_6_c_tt1_yes: "£yes£若我们通过征服@VEN[VEN.GetName]完成任务，则："
+ THE_NIN_1_6_c_tt1_no: "£no£若我们通过征服@VEN[VEN.GetName]完成任务，则："
+ THE_NIN_1_6_c_tt2_yes: "£yes£若我们通过结盟@VEN[VEN.GetName]完成任务，则："
+ THE_NIN_1_6_c_tt2_no: "£no£若我们通过结盟@VEN[VEN.GetName]完成任务，则："
+ THE_NIN_1_6_c_tt3: "升级贸易中心时，将提升此省份§Y2§!点§Y基础生产§!£dip£"
+ THE_NIN_4_4_c_tt1: "解锁虚构叙事「§Y高雅措辞§!」能力，允许我们肆意§M羞辱§!他国并败坏其国际名声"
+ THE_NIN_4_4_c_tt2_yes: "£yes£若我们通过消灭@VEN§Y[VEN.GetName]§!或使其发展度低于§Y50§!完成任务，则："
+ THE_NIN_4_4_c_tt2_no: "£no£若我们通过消灭@VEN§Y[VEN.GetName]§!或使其发展度低于§Y50§!完成任务，则："
+ THE_NIN_4_4_c_tt3_yes: "£yes£若我们通过结盟@VEN§Y[VEN.GetName]§!完成任务，则："
+ THE_NIN_4_4_c_tt3_no: "£no£若我们通过结盟@VEN§Y[VEN.GetName]§!完成任务，则："
+ THE_NIN_4_5_c_tt1: "所有满足要求的§Y布料§!省份商品转变为§Y丝绸§!，并获得以下效果："
+ THE_NIN_4_5_c_tt2: "现在在§Y布料§!省份建造§Y生产§!建筑都会将产物转变为§Y丝绸§!，且获得§Y重商主义§!§G+2§!"
+ THE_NIN_5_6_c_tt1: "解锁§Y宣战理由§!「§M奥斯曼入侵§!」，夺取§Y埃及§!与§Y马什里克§!区域的省份"
+ THE_NIN_5_7_c_tt1: "将我们在§Y埃及§!与§Y马什里克§!区域的所有省份转让给@TUR§Y[TUR.GetName]§!作为我们的§Y附庸§!"
+ 
 ###MISSION_END
 
 ###DIPOMATIC_ACTIONS
@@ -92,8 +113,10 @@ l_english:
  THE_NIN_events.6.desc: "由于我们的名声，我们的邻国认为我们是邪恶的诞生地，它们都想通过阴谋诡计来让我们国家衰落。$LIKELYREBELS$阴谋家正在$PROVINCENAME$散布谎言并挑起叛乱···"
  THE_NIN_events.6.a: "小小的困难"
  THE_NIN_events.7.t: "措辞高雅的信"
+ THE_NIN_events.7.0: "§Y我已经知道你[From.Monarch.GetName]的名字和你们[From.Dynasty.GetName]家族的所有个人信息§!\n§Y你的恶行从爱尔兰到契丹无人不知无人不晓§!\n§Y祝贵国漫天都是扫把星§!\n§Y还有我认为[From.GetName]必须被毁灭！§!\n§Y你们流的血可以使我们从你们那里夺取的土地更肥沃§!\n§Y在我们下的大棋里，你就是一颗小卒子！§!\n§Y「[From.GetName]文化」就是一种矛盾修辞你说是吧？§!\n§Y快看，那边有一小坨可爱的脏东西！§!\n§Y[From.GetName]这个国家全都是问题，我怀疑原因是你们这些[From.GetName]人§!"
  THE_NIN_events.7.a: "§Y你的恶行从爱尔兰到契丹无人不知无人不晓§!"
  THE_NIN_events.7.b: "§Y祝贵国漫天都是扫把星§!"
+ THE_NIN_events.8.t: "措辞高雅「谣言」"
 ###EVENT_END
 
 ###MISSION_EVENT
@@ -102,9 +125,13 @@ l_english:
  THE_NIN_events.100.a: "我们会按要求偿还。"
  THE_NIN_events.101.t: "威尼斯总督的抵偿提案"
  THE_NIN_events.101.desc: "总督的回信措辞谨慎，笔迹中透着一丝罕见的、近乎屈辱的窘迫。「尊贵的女公爵阁下，」信中写道，「共和国承认···这份突如其来的财政义务。然而，持续的战争与贸易波动，使我们的金库暂时难以承受如此巨额的一次性偿付。我们恳请您考虑一个更具建设性的解决方案：威尼斯愿以其他形式的帮助，来抵偿部分或全部债务。这绝非推诿，而是基于现实困境的、诚恳的提议。」"
- THE_NIN_events.100.a: "我们只要叮当响的钱。"
- THE_NIN_events.100.b: "那么，请尊贵的共和国，为我背书吧"
- THE_NIN_events.100.c: "用爱琴海的土地先抵偿吧。"
+ THE_NIN_events.101.a: "我们只要叮当响的钱。"
+ THE_NIN_events.101.b: "那么，请尊贵的共和国，为我背书吧"
+ THE_NIN_events.101.c: "用爱琴海的土地先抵偿吧。"
+ THE_NIN_events.102.t: "罗马之臣"
+ THE_NIN_events.102.desc: "「···自曼努埃尔陛下驾崩后，帝国的苦难与你们的背离，皆已成为过往云烟。如今，新生的罗马已在旧都的基石上重铸辉煌。那游离于亚得里亚海的浪子，是时候重归其法理与血脉的源头了。这不是征服，而是秩序的复归——正如潮水终将归于大海。」"
+ THE_NIN_events.102.a: "要求无条件归附"
+ THE_NIN_events_102_c_tt1: "在此战争中双方均无法召唤盟友"
 ###MISSION_EVENT_END
 
 ###MODIFIER
@@ -117,6 +144,9 @@ l_english:
  THE_NIN_the_duchesss_coronet_modifier: "罗马公爵的冠冕"
  THE_NIN_aegean_new_land_modifier: "爱琴海新土地"
  THE_NIN_won_war_the_tur_modifier: "战胜突厥人"
+ THE_NIN_trader_come_from_ven_modifier: "威尼斯商人"
+ THE_NIN_silk_trade_goods_in_byz_modifier: "拜占庭丝绸"
+ THE_NIN_ottoman_enterprises_modifier: "奥斯曼家族企业"
 ###MODIFIER_END
 
 ###DECISIONS
@@ -125,6 +155,6 @@ l_english:
 ###DECISIONS_END
 
 ###ADVISOR
- THE_suleiman_advisor: "苏莱曼"
- THE_suleiman_advisor_desc: ""
+ THE_suleiman_ottoman_advisor: "企业家"
+ THE_suleiman_ottoman_desc: ""
 ###ADVISOR_END

@@ -12,3 +12,31 @@ THE_NIN_on_get_new_province_effect = {
 		change_culture = greek
 	}
 }
+
+THE_NIN_change_cloth_to_silk_province_effect = {
+	if = {
+		limit = { 
+			trade_goods = cloth
+			owner = {
+				mission_completed = THE_NIN_4_5
+			}
+		}
+		change_trade_goods = silk
+		owner = {
+			add_mercantilism = 2
+		}
+	}
+}
+
+THE_NIN_won_war_with_ven_effect = {
+	if = {
+		limit = {
+			tag = NIN
+			has_country_flag = THE_NIN_cannot_call_ally_VEN_flag
+			FROM = {
+				tag = VEN
+			}
+		 }
+		 clr_country_flag = THE_NIN_cannot_call_ally_VEN_flag
+	}
+}

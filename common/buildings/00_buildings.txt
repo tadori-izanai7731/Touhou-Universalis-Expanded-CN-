@@ -106,6 +106,7 @@ workshop = {
 			acter = traveler
 			value = 1
 		}
+		THE_NIN_change_cloth_to_silk_province_effect = yes
 	}
 	on_destroyed = {
 		remove_development_from_building = {
@@ -1864,6 +1865,7 @@ counting_house = {
 			acter = traveler
 			value = 1
 		}
+		THE_NIN_change_cloth_to_silk_province_effect = yes
 	}
 	on_destroyed = {
 		remove_development_from_building = {

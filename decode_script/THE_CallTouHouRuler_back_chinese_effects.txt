@@ -28,6 +28,20 @@ THE_NIN_define_ruler_watari_nina_scripted_effect = {
 	}
 }
 
+THE_NIN_define_ruler_suleiman_ottoman_scripted_effect = {
+	define_ruler = {
+		name = "苏莱曼"  # medicine
+		dynasty = "奥斯曼奥卢"  # melancholy
+		age = 15
+		adm = 6
+		dip = 5
+		mil = 6
+		female = no
+		culture = "turkish"
+		religion = th_hakureishinto
+	}
+}
+
 THE_QQQ_define_ruler_hieda_akyuu_scripted_effect = {
 	define_ruler = {
 		name = "阿求"  # Akyuu

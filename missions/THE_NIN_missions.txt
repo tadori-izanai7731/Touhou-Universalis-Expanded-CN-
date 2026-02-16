@@ -37,7 +37,9 @@ THE_NIN_branch_1 = {
 		icon = mission_unknown_mission
 		position = 3
 		required_missions = { THE_NIN_1_1 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			province_id = 146
+		} 
 		
 		trigger = { 
 			stability = 1
@@ -100,9 +102,14 @@ THE_NIN_branch_1 = {
 		position = 6
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = { 
+			
+			
+		} 
 		
-		effect = {  } 
+		effect = { 
+			
+		} 
 	}
 	
 	THE_NIN_1_8 = {
@@ -141,7 +148,9 @@ THE_NIN_branch_2 = {
 		icon = mission_unknown_mission
 		position = 2
 		required_missions = { THE_NIN_1_1 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			is_capital_of = VEN
+		} 
 		
 		trigger = { 
 			total_development = 100
@@ -168,13 +177,98 @@ THE_NIN_branch_2 = {
 		icon = mission_unknown_mission
 		position = 3
 		required_missions = { THE_NIN_2_2 } 
-		provinces_to_highlight = {  } 
-		
-		trigger = { 
-			
+		provinces_to_highlight = { 
+			area = venetia_area
 		} 
 		
-		effect = {  } 
+		trigger = { 
+			151 = {
+				is_strongest_trade_power = ROOT
+			}
+			OR = {
+				venetia_area = {
+					type = all
+					owned_by = ROOT
+				}
+				AND = {
+					alliance_with = VEN
+					VEN = {
+						trust = {
+							who = ROOT
+							value = 70
+						}
+					}
+				}
+			}
+		} 
+		
+		effect = { 
+			THE_IQU_add_prestige_or_navy_tradition_effects = {
+				value = 50
+			}
+			anatolia_region = {
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = {
+					venetia_area = {
+						type = all
+						owned_by = ROOT
+					}
+				}
+				custom_tooltip = THE_NIN_1_6_c_tt1_yes
+				add_dip_power = 200
+				add_mercantilism = 20
+			}
+			else = {
+				custom_tooltip = THE_NIN_1_6_c_tt1_no
+				tooltip = {
+					add_dip_power = 200
+					add_mercantilism = 20
+				}
+			}
+			if = {
+				limit = {
+					alliance_with = VEN
+					VEN = {
+						trust = {
+							who = ROOT
+							value = 75
+						}
+					}
+				}
+				custom_tooltip = THE_NIN_1_6_c_tt2_yes
+				custom_tooltip = THE_NIN_1_6_c_tt3
+				add_country_modifier = {
+					name = THE_NIN_trader_come_from_ven_modifier
+					duration = -1
+				}
+				VEN = {
+					add_trust = {
+						who = ROOT
+						value = 20
+						mutual = yes
+					}
+				}
+			}
+			else = {
+				custom_tooltip = THE_NIN_1_6_c_tt2_no
+				custom_tooltip = THE_NIN_1_6_c_tt3
+				tooltip = {
+					add_country_modifier = {
+						name = THE_NIN_trader_come_from_ven_modifier
+						duration = -1
+					}
+					VEN = {
+						add_trust = {
+							who = ROOT
+							value = 20
+							mutual = yes
+						}
+					}
+				}
+			}
+		} 
 	}
 	
 	THE_NIN_2_5 = {
@@ -314,11 +408,41 @@ THE_NIN_branch_3 = {
 			THE_NIN_2_3
 			THE_NIN_3_3
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			OR = {
+				area = morea_area
+				area = aegean_archipelago_area
+				area = thrace_area
+				area = hudavendigar_area
+				area = germiyan_area
+				area = aydin_area
+			}
+		} 
 		
-		trigger = {  } 
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 20
+				owned_by = ROOT
+				development = 11
+				OR = {
+					area = morea_area
+					area = aegean_archipelago_area
+					area = thrace_area
+					area = hudavendigar_area
+					area = germiyan_area
+					area = aydin_area
+				}
+			}
+		} 
 		
-		effect = {  } 
+		effect = { 
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			italy_region = {
+				add_permanent_claim = ROOT
+			}
+		} 
 	}
 	
 	THE_NIN_3_5 = {
@@ -485,9 +609,65 @@ THE_NIN_branch_4 = {
 		required_missions = { THE_NIN_2_3 } 
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = { 
+			OR = {
+				OR = {
+					NOT = { exists = VEN }
+					VEN = { NOT = { total_development = 50 } }
+				}
+				AND = {
+					alliance_with = VEN
+					monthly_income = VEN
+					navy_size = VEN
+					total_development = VEN
+				}
+			}
+		} 
 		
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_NIN_4_4_c_tt1
+			if = {
+				limit = {
+					NOT = { exists = VEN }
+					VEN = { NOT = { total_development = 50 } }
+				}
+				custom_tooltip = THE_NIN_4_4_c_tt2_yes
+				add_adm_power = 100
+				add_dip_power = 100
+				add_mil_power = 100
+			}
+			else = {
+				custom_tooltip = THE_NIN_4_4_c_tt2_no
+				tooltip = {
+					add_adm_power = 100
+					add_dip_power = 100
+					add_mil_power = 100
+				}
+			}
+			if = {
+				limit = { 
+					alliance_with = VEN
+					monthly_income = VEN
+					navy_size = VEN
+					total_development = VEN
+				}
+				custom_tooltip = THE_NIN_4_4_c_tt3_yes
+				add_prestige = 10
+				country_event = {
+					id = THE_NIN_events.102
+				}
+			}
+			else = {
+				custom_tooltip = THE_NIN_4_4_c_tt3_no
+				tooltip = {
+					add_prestige = 10
+					country_event = {
+						id = THE_NIN_events.102
+					}
+				}
+			}
+			
+		} 
 	}
 	
 	THE_NIN_4_5 = {
@@ -496,9 +676,35 @@ THE_NIN_branch_4 = {
 		required_missions = { THE_NIN_3_4 } 
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 5
+				trade_goods = cloth
+				base_production = 7
+				has_production_building_trigger = yes
+			}
+		} 
 		
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_NIN_4_5_c_tt1
+			tooltip = {
+				add_province_modifier = {
+					name = THE_NIN_silk_trade_goods_in_byz_modifier
+					duration = -1
+				}
+			}
+			custom_tooltip = THE_NIN_4_5_c_tt2
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						trade_goods = cloth
+						base_production = 7
+						has_production_building_trigger = yes
+					}
+					change_trade_goods = silk
+				}
+			}
+		} 
 	}
 	
 	THE_NIN_4_6 = {
@@ -509,7 +715,9 @@ THE_NIN_branch_4 = {
 		
 		trigger = {  } 
 		
-		effect = {  } 
+		effect = { 
+			add_government_reform = THE_NIN_art_and_venus_reform
+		} 
 	}
 	
 	THE_NIN_4_7 = {
@@ -622,13 +830,13 @@ THE_NIN_branch_5 = {
 						TUR = {
 							trust = {
 								who = BYZ
-								value = 80
+								value = 60
 							}
 						}
 						TUR = {
 							trust = {
 								who = ROOT
-								value = 80
+								value = 60
 							}
 						}
 					}
@@ -637,9 +845,9 @@ THE_NIN_branch_5 = {
 		} 
 		
 		effect = { 
-			add_adm_power = 100
-			add_dip_power = 100
-			add_mil_power = 100
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
 			if = {
 				limit = {
 					TUR = { NOT = { total_development = 200 } }
@@ -724,7 +932,7 @@ THE_NIN_branch_5 = {
 			}
 			else = {
 				custom_tooltip = THE_NIN_5_4_c_tt2_no
-				add_adm_power = 100
+				add_adm_power = 200
 				custom_tooltip = THE_NIN_5_4_c_tt3
 			}
 		} 
@@ -735,20 +943,112 @@ THE_NIN_branch_5 = {
 		position = 6
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = { 
+			317 = {
+				development = 30
+				has_production_building_trigger = yes
+				has_trade_building_trigger = yes
+				province_has_center_of_trade_of_level = 2
+			}
+			151 = {
+				province_has_center_of_trade_of_level = 2
+			}
+			NOT = { exists = TUR }
+			is_year = 1495
+		} 
 		
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_NIN_5_6_c_tt1
+			THE_NIN_define_the_suleiman_ottoman_advisor_effect = yes
+			add_dip_power = 100
+			add_prestige = 10
+			egypt_region = {
+				add_permanent_claim = ROOT
+			}
+			mashriq_region = {
+				add_permanent_claim = ROOT
+			}
+			hidden_effect = {
+				set_country_flag = THE_NIN_unlock_cb_with_mam_flag
+			}
+		} 
 	}
 	
 	THE_NIN_5_7 = {
 		icon = mission_unknown_mission
 		position = 7
 		required_missions = { THE_NIN_5_6 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			OR = {
+				region = mashriq_region
+				region = egypt_region
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		} 
 		
-		trigger = {  } 
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 20
+				OR = {
+					region = mashriq_region
+					region = egypt_region
+				}
+				owned_by = ROOT
+			}
+			NOT = { exists = TUR }
+		} 
 		
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_NIN_5_7_c_tt1
+			add_country_modifier = {
+				name = THE_NIN_ottoman_enterprises_modifier
+				duration = -1
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							region = mashriq_region
+							region = egypt_region
+						}
+					}
+					cede_province = TUR
+					change_religion = ROOT
+					remove_core = ROOT
+					add_core = TUR
+				}
+				TUR = {
+					change_government = monarchy
+					add_government_reform = Gensokyan_monarchy
+					change_technology_group = tech_gensokyan
+					change_unit_type = tech_gensokyan
+					change_religion = ROOT
+					change_culture = turkish
+					THE_NIN_define_ruler_suleiman_ottoman_scripted_effect = yes
+					add_ruler_personality = immortal_personality
+					set_country_flag = THE_NIN_unlock_cb_with_mam_flag
+					override_country_name = THE_TUR_cooperative
+					add_country_modifier = {
+						name = THE_NIN_tur_desire_modifier
+						duration = -1
+					}
+					add_country_modifier = {
+						name = THE_NIN_ottoman_enterprises_modifier
+						duration = -1
+					}
+					THE_change_color_to_colony = yes
+					egypt_region = {
+						add_permanent_claim = TUR
+					}
+					mashriq_region = {
+						add_permanent_claim = TUR
+					}
+				}
+				vassalize = TUR
+			}
+		} 
 	}
 	
 	THE_NIN_5_9 = {

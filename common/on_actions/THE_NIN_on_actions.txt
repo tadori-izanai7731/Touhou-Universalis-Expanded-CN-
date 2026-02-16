@@ -1,3 +1,6 @@
 on_province_owner_change = {
 	THE_NIN_on_get_new_province_effect = yes
 }
+on_war_won = {
+	THE_NIN_won_war_with_ven_effect = yes
+}
