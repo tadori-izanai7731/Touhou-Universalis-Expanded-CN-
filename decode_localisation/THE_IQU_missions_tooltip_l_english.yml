@@ -44,7 +44,7 @@ l_english:
  THE_IQU_cloud_with_sky_reform: "云佑天合"
  THE_IQU_cloud_with_sky_reform_desc: "在衣玖的监护下，天子已具有了天人品行和修行，也能真正的当好天界执政官。两人配合的执政，如白云伴佑苍天。"
  ability_THE_IQU_cloud_with_sky_mechanic: "天人辅政"
- mechanic_THE_IQU_cloud_with_sky_mechanic_2_yes: "==@HVR「§Y天子§!」的每点§Y行政点§!£adm£转化为我们§G0.5§!每月额外§Y行政点§!£adm£\n==@HVR「§Y天子§!」的每点§Y外交点§!£dip£转化为我们§G0.5§!每月额外§Y外交点§!£dip£\n==@HVR「§Y天子§!」的每点§Y军事点§!£mil£转化为我们§G0.5§!每月额外§Y军事点§!£mil£"
+ mechanic_THE_IQU_cloud_with_sky_mechanic_2_yes: "==@HVR「§Y天子§!」的每点§Y行政能力§!£adm£使我们获得§G+0.5§!每月行政点数\n==@HVR「§Y天子§!」的每点§Y外交能力§!£dip£使我们获得§G+0.5§!每月外交点数\n==@HVR「§Y天子§!」的每点§Y军事能力§!£mil£使我们获得§G+0.5§!每月军事点数"
  THE_IQU_the_world_all_will_be_known_reform: "观澜测天"
  THE_IQU_the_world_all_will_be_known_reform_desc: "当我们已经控制全球大部分地脉位点后，天人的信息导航系统覆盖了地表，但凡在这苍天之下，一切都将尽在我们视野中。"
  mechanic_THE_IQU_the_world_all_will_be_known_reform_mechanic_yes: "--永久消除所有与我们§Y交战国家§!的§Y战争迷雾§!\n"
@@ -61,7 +61,7 @@ l_english:
  THE_IQU_tennin_one_taoist_tu_power: "§V土之印§!"
  THE_IQU_end_the_loong_vein_button_ctt1: "当前「§O龙脉-龙之首§!」至少已获得1种「§V五行§!」"
  ability_THE_IQU_tennin_one_taoist_mechanic: "天人一道"
- 
+ mechanic_THE_can_not_have_colonial_nations_government_attribute_yes: "无法拥有殖民地"
 ### GOVERNMENT_END
 
 ### GOVERNMENT_NAME
@@ -170,14 +170,14 @@ l_english:
  THE_IQU_3_3_c_tt1: "@HVR§Y[HVR.GetName]§!将§O无法宣战§!"
  THE_IQU_5_5_c_tt1: "解锁第§Y6§!层政府改革：「§O观澜测天§!」"
  THE_IQU_4_3_c_tt2: "解锁第§Y3§!层政府改革：「§O云佑天合§!」"
- THE_IQU_3_1_c_tt1_yes: "£yes£若§M完成任务§!时，已完成「§Y探索理念组§!」或「§Y贸易理念组§!」，将获得以下效果："
- THE_IQU_3_1_c_tt1_no: "£no£若§M完成任务§!时，已完成「§Y探索理念组§!」或「§Y贸易理念组§!」，将获得以下效果："
+ THE_IQU_3_1_c_tt1_yes: "£yes£如果已完成「§Y探索理念组§!」或「§Y贸易理念组§!」，获得以下效果："
+ THE_IQU_3_1_c_tt1_no: "£no£如果已完成「§Y探索理念组§!」或「§Y贸易理念组§!」，获得以下效果："
  THE_IQU_3_1_c_tt2: "随机§Y2§!个省份将商品变更为§Y纸张§!"
- THE_IQU_4_4_c_tt1: "现在每§Y5§!年将会额外结算§G1§!次贸易收入\n -贸易收入将会计为@IQU§Y[IQU.GetName]§!与@HVR§Y[HVR.GetName]§!收入的总和。\n -若@IQU§Y[IQU.GetName]§!与@HVR§Y[HVR.GetName]§!位于「§Y外部界域§!」贸易区的§M竞争力§!相等时，收入最大，随着@IQU§Y[IQU.GetName]§!与@HVR§Y[HVR.GetName]§!的§M竞争力§!的§Y差幅§!增大而§Y衰减§!"
- THE_IQU_event_1011_c_tt1: "@IQU§Y[IQU.GetName]§!与@HVR§Y[HVR.GetName]§!将会各获得金钱¤ [Root.the_iqu_iqu_years_of_income_im_var.GetValue]"
+ THE_IQU_4_4_c_tt1: "现在每§Y5§!年将会额外结算§G1§!次贸易收入\n -贸易收入将会计为@IQU§Y[IQU.GetName]§!与@HVR§Y[HVR.GetName]§!收入的总和。\n -当@IQU§Y[IQU.GetName]§!与@HVR§Y[HVR.GetName]§!位于「§Y外部界域§!」贸易区的§M竞争力§!相等时，收入最大，随着@IQU§Y[IQU.GetName]§!与@HVR§Y[HVR.GetName]§!的§M竞争力§!百分比的差值增大而衰减"
+ THE_IQU_event_1011_c_tt1: "@IQU§Y[IQU.GetName]§!与@HVR§Y[HVR.GetName]§!将会各获得 [Root.the_iqu_iqu_years_of_income_im_var.GetValue]¤"
  THE_IQU_4_6_c_tt1: "通过「§M云游机制§!」已经完成探索§W8§!个§Y地区§!（目前：§Y[Root.the_iqu_had_explore_area_number_im_var.GetValue]§!）"
- THE_IQU_4_4_c_tt2: "@HVR「§Y天子§!」的每点§Y行政点§!£adm£将会为我们带来§Y商品产出修正§!§G+2§!% §Y贸易效率§!§G+2§!%\n"
- THE_IQU_4_6_c_tt3: "@HVR「§Y天子§!」的每点§Y外交点§!£dip£将会为我们带来§Y全国水手修正§!§G+5§!%\n"
+ THE_IQU_4_4_c_tt2: "@HVR「§Y天子§!」的每点§Y行政能力§!£adm£将会为我们带来§G+2.0%§!§Y商品产出修正§!和§G+2.0%§!§Y贸易效率§!\n"
+ THE_IQU_4_6_c_tt3: "@HVR「§Y天子§!」的每点§Y外交能力§!£dip£将会为我们带来§G+5.0%§!§Y全国水手修正§!\n"
  THE_IQU_4_6_c_tt2: "发展拥有修正「§O龙脉-龙之迹§!」的省份将会有§Y50§!%的概率额外提升1点§Y发展度§!"
  THE_IQU_5_3_c_tt1_yes: "£yes£若§M完成任务§!时，我们拥有「§Y月面§!」区域的所有省份,将会获得以下效果："
  THE_IQU_5_3_c_tt1_no: "£no£若§M完成任务§!时，我们拥有「§Y月面§!」区域的所有省份,将会获得以下效果："
@@ -1131,7 +1131,6 @@ l_english:
  THE_IQU_england_war_cb_desc: ""§Y该宣战理由只能割让目标位于沿「§Y北大西洋海域§!」区域的沿海省份。§!"
  THE_IQU_lunar_war_goals_desc: "战争目标: 展现霸权"
  THE_IQU_england_war_name: "鳕鱼战争"
- 
 ### CB_TYPES_END
 
 ### BUILDING

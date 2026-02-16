@@ -747,7 +747,7 @@ THE_IQU_main_branch_3 = {
 			country_event = {
 				id = THE_IQU_flavor_events.1012
 			}
-			add_dip_power = 75
+			add_dip_power = 100
 			add_country_modifier = {
 				name = THE_IQU_iqu_declare_war_buff
 				duration = -1
@@ -793,7 +793,7 @@ THE_IQU_main_branch_3 = {
 				name = THE_IQU_records_of_lunar_dust_buff
 				duration = -1
 			}
-			add_adm_power = 75
+			add_adm_power = 100
 			random_owned_province = {
 				limit = {
 					region = moon_region
@@ -1101,7 +1101,7 @@ THE_IQU_main_branch_4 = {
 			hidden_effect = {
 				THE_IQU_government_lvl3_cloud_with_sky_add_pwoer_effect_before = yes
 			}
-			add_dip_power = 75
+			add_dip_power = 100
 			THE_IQU_add_diplomacal_experience_var_effect = yes
 			THE_IQU_add_learning_experience_var_effect = yes
 		} 
@@ -1215,7 +1215,13 @@ THE_IQU_main_branch_4 = {
 			}
 		} 
 		
-		effect = { 
+		effect = {
+			if = {
+				limit = { ai = no }	
+				set_defender_of_the_faith = {
+					who = ROOT
+				}
+			}
 			add_government_reform = THE_IQU_tennin_one_taoist_reform
 			hidden_effect = {
 				while = {

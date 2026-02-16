@@ -93,7 +93,7 @@ can_claim_defender_of_faith = {
 			ai = yes
 		}
 		allow = {
-			ai = no
+			always = no
 		}
 	}
 }
@@ -367,7 +367,10 @@ can_have_colonial_nations = {
 	condition = {
 		potential = {
 			FROM = {
-				has_country_flag = no_colonial_nations
+				OR = {
+					has_country_flag = no_colonial_nations
+					has_government_attribute = THE_can_not_have_colonial_nations_government_attribute
+				}
 			}
 		}
 		allow = {
