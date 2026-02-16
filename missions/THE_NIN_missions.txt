@@ -674,7 +674,17 @@ THE_NIN_branch_4 = {
 		icon = mission_unknown_mission
 		position = 5
 		required_missions = { THE_NIN_3_4 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			trade_goods = cloth
+			OR = {
+				NOT = {
+					base_production = 7
+				}
+				NOT = {
+					has_production_building_trigger = yes
+				}
+			}
+		} 
 		
 		trigger = { 
 			num_of_owned_provinces_with = {
@@ -713,7 +723,9 @@ THE_NIN_branch_4 = {
 		required_missions = { THE_NIN_4_5 } 
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = { 
+
+		 } 
 		
 		effect = { 
 			add_government_reform = THE_NIN_art_and_venus_reform
@@ -1021,7 +1033,7 @@ THE_NIN_branch_5 = {
 				}
 				TUR = {
 					change_government = monarchy
-					add_government_reform = Gensokyan_monarchy
+					add_government_reform = THE_NIN_TUR_cooperation_reform
 					change_technology_group = tech_gensokyan
 					change_unit_type = tech_gensokyan
 					change_religion = ROOT
@@ -1032,10 +1044,6 @@ THE_NIN_branch_5 = {
 					override_country_name = THE_TUR_cooperative
 					add_country_modifier = {
 						name = THE_NIN_tur_desire_modifier
-						duration = -1
-					}
-					add_country_modifier = {
-						name = THE_NIN_ottoman_enterprises_modifier
 						duration = -1
 					}
 					THE_change_color_to_colony = yes

@@ -65,4 +65,12 @@ THE_NIN_silk_trade_goods_in_byz_modifier = {
 THE_NIN_ottoman_enterprises_modifier = {
 	global_trade_goods_size_modifier = 0.20
 	placed_merchant_power = 50
+	merchants = 2
+}
+#埃及中兴
+THE_NIN_ottoman_in_egypt_region_modifier = {
+	global_trade_goods_size_modifier = 0.33
+	placed_merchant_power = 50
+	merchants = 2
+	global_trade_power = 0.50
 }
