@@ -118,12 +118,6 @@ defined_text = {
 	}
 	text = { 
 		localisation_key = THE_IQU_now_explore_progress_view_displat_ctt_0
-		trigger = {
-			check_variable = {
-				which = the_iqu_now_explore_progress
-				value = 0
-			}
-		}
 	}
 }
 defined_text = {
@@ -212,12 +206,6 @@ defined_text = {
 	}
 	text = { 
 		localisation_key = THE_IQU_now_dangerous_progress_view_displat_ctt_0
-		trigger = {
-			check_variable = {
-				which = the_iqu_now_danger_progress
-				value = 0
-			}
-		}
 	}
 }
 #金-之期
