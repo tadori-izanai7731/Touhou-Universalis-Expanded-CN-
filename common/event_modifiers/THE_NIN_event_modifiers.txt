@@ -50,3 +50,19 @@ THE_NIN_won_war_the_tur_modifier = {
 	development_cost = -0.05
 	core_creation = -0.10
 }
+#威尼斯商人
+THE_NIN_trader_come_from_ven_modifier = {
+	trade_efficiency = 0.05
+	global_trade_power = 0.20
+}
+#拜占庭丝绸
+THE_NIN_silk_trade_goods_in_byz_modifier = {
+	trade_goods_size = 1
+	local_tax_modifier = 0.25
+	local_development_cost = -0.15
+}
+#奥斯曼企业
+THE_NIN_ottoman_enterprises_modifier = {
+	global_trade_goods_size_modifier = 0.20
+	placed_merchant_power = 50
+}

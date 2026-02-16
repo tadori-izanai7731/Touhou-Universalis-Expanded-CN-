@@ -253,11 +253,11 @@ country_event = {
 	picture = ""
 	is_triggered_only = yes
 	option = {
-		name = THE_NIN_events.100.a
+		name = THE_NIN_events.101.a
 		add_treasury = 1000
 	}
 	option = {
-		name = THE_NIN_events.100.b
+		name = THE_NIN_events.101.b
 		VEN = {
 			add_opinion = {
 				who = ROOT
@@ -273,7 +273,7 @@ country_event = {
 		create_alliance = VEN
 	}
 	option = {
-		name = THE_NIN_events.100.c
+		name = THE_NIN_events.101.c
 		VEN = {
 			every_owned_province = {
 				limit = {
@@ -297,6 +297,23 @@ country_event = {
 					}
 				}
 			}
+		}
+	}
+}
+
+###威尼斯臣服
+country_event = {
+	id = THE_NIN_events.102
+	title = THE_NIN_events.102.t
+	desc = THE_NIN_events.102.desc
+	picture = ""
+	is_triggered_only = yes
+	option = {
+		name = THE_NIN_events.102.a
+		custom_tooltip = THE_NIN_eventS_101_c_tt1
+		declare_war_with_cb = {
+			casus_belli = cb_vassalize_mission
+			who = VEN
 		}
 	}
 }

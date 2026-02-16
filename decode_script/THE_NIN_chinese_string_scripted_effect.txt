@@ -1,0 +1,11 @@
+THE_NIN_define_the_suleiman_ottoman_advisor_effect = {
+	define_advisor = {
+		type = THE_suleiman_ottoman_advisor
+		name = "苏莱曼·奥斯曼奥卢"
+		skill = 2
+		cost_multiplier = 0.25
+		culture = turkish
+		religion = ROOT
+		female = no
+	}
+}
