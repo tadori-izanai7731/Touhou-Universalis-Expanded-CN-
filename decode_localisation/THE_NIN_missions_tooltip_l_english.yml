@@ -36,12 +36,16 @@ l_english:
  THE_NIN_art_and_venus_reform: "我等所坚信"
  THE_NIN_art_and_venus_reform_desc: ""
  mechanic_THE_NIN_art_and_venus_reform_mechanic_yes: "每当我们赢得战争时，永久获得§Y每月威望§!+§G0.005§!"
+ THE_NIN_TUR_cooperation_reform: "奥斯曼企业政府"
+ THE_NIN_TUR_cooperation_reform_desc: ""
 ###REFORM_END
 
 ###NAME
  THE_NIN_RULER: "雅典的守护女神"
  THE_TUR_cooperative: "奥斯曼家族公司"
  THE_TUR_cooperative_ADJ: "奥斯曼家族公司"
+ THE_NIN_TUR_RULER: "执行董事"
+ THE_NIN_TUR_HEIR: "公子"
 ###NAME_END
 
 ###OPINION
@@ -82,7 +86,11 @@ l_english:
  THE_NIN_4_5_c_tt2: "现在在§Y布料§!省份建造§Y生产§!建筑都会将产物转变为§Y丝绸§!，且获得§Y重商主义§!§G+2§!"
  THE_NIN_5_6_c_tt1: "解锁§Y宣战理由§!「§M奥斯曼入侵§!」，夺取§Y埃及§!与§Y马什里克§!区域的省份"
  THE_NIN_5_7_c_tt1: "将我们在§Y埃及§!与§Y马什里克§!区域的所有省份转让给@TUR§Y[TUR.GetName]§!作为我们的§Y附庸§!"
- 
+ THE_NIN_1_6_c_tt1_yes: "£yes£如果我们完成§Y1§!项§Y教士§!阶层提议："
+ THE_NIN_1_6_c_tt1_no: "£no£如果我们完成§Y1§!项§Y教士§!阶层提议："
+ THE_NIN_2_7_c_tt1: "§Y罗马§!，§Y君士坦丁堡§!，§Y安条克§!，§Y亚历山大§!，§Y耶路撒冷§!将会获得以下效果："
+ THE_NIN_2_7_c_tt2_yes: "£yes£若@PAP§Y[PAP.GetName]§!是我们的§Y属国§!"
+ THE_NIN_2_7_c_tt2_no: "£no£若@PAP§Y[PAP.GetName]§!是我们的§Y属国§!"
 ###MISSION_END
 
 ###DIPOMATIC_ACTIONS
@@ -132,6 +140,9 @@ l_english:
  THE_NIN_events.102.desc: "「···自曼努埃尔陛下驾崩后，帝国的苦难与你们的背离，皆已成为过往云烟。如今，新生的罗马已在旧都的基石上重铸辉煌。那游离于亚得里亚海的浪子，是时候重归其法理与血脉的源头了。这不是征服，而是秩序的复归——正如潮水终将归于大海。」"
  THE_NIN_events.102.a: "要求无条件归附"
  THE_NIN_events_102_c_tt1: "在此战争中双方均无法召唤盟友"
+ THE_NIN_events.103.t: "预言"
+ THE_NIN_events.103.desc: "阿纳尼修道院修士呈上一卷密藏文献——据鉴定，是卜尼法斯八世1303年被囚禁时写下的末日幻视。这位曾宣称「教皇权威至高无上」之人，在羊皮纸上记述：「当圣座沦于尘泥···将有一位自污秽诞生却怀纯爱之女神踏足七丘之城。她将如维纳斯自海浪中新生，但这份爱不归于十字架，而将唤醒沉睡在七丘之下的万神殿。朱庇特的雷霆、密涅瓦的智慧、维纳斯的美丽——这些我们曾斥为伪神的名字，将因她的到来再次显现神迹。」一切的神迹都罗马的民众更加确信。很快，民众们开始在街上游行，呼唤着「博丽」之名。"
+ THE_NIN_events.103.a: "此乃天命。"
 ###MISSION_EVENT_END
 
 ###MODIFIER
@@ -147,6 +158,10 @@ l_english:
  THE_NIN_trader_come_from_ven_modifier: "威尼斯商人"
  THE_NIN_silk_trade_goods_in_byz_modifier: "拜占庭丝绸"
  THE_NIN_ottoman_enterprises_modifier: "奥斯曼家族企业"
+ THE_NIN_ottoman_in_egypt_region_modifier: "在埃及复兴"
+ THE_NIN_greece_rome_belonged_to_polytheism_modifier: "希腊&罗马重归于多神教"
+ THE_NIN_hakurei_shinto_in_rome_ex_modifier: "博丽首座"
+ THE_NIN_regain_trust_modifier: "重拾相信"
 ###MODIFIER_END
 
 ###DECISIONS

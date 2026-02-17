@@ -65,4 +65,31 @@ THE_NIN_silk_trade_goods_in_byz_modifier = {
 THE_NIN_ottoman_enterprises_modifier = {
 	global_trade_goods_size_modifier = 0.20
 	placed_merchant_power = 50
+	merchants = 2
+}
+#埃及中兴
+THE_NIN_ottoman_in_egypt_region_modifier = {
+	global_trade_goods_size_modifier = 0.33
+	placed_merchant_power = 50
+	merchants = 2
+	global_trade_power = 0.50
+}
+#重拾相信
+THE_NIN_regain_trust_modifier = {
+	global_unrest = -1
+	religious_unity = 0.25
+	global_missionary_strength = 0.04
+	missionaries = 1
+}
+#希腊&罗马归于多神教
+THE_NIN_greece_rome_belonged_to_polytheism_modifier = {
+	missionaries = 2
+	global_missionary_strength = 0.02
+	religious_unity = 0.15
+}
+#博丽牧首
+THE_NIN_hakurei_shinto_in_rome_ex_modifier = {
+	local_tax_modifier = 0.25
+	tax_income = 12
+	local_development_cost = -0.15
 }

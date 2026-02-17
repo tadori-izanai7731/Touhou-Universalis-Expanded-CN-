@@ -36,12 +36,16 @@
  THE_NIN_art_and_venus_reform: "bIrNbZWáO"
  THE_NIN_art_and_venus_reform_desc: ""
  mechanic_THE_NIN_art_and_venus_reform_mechanic_yes: "ÏkSVbìNb—Vb‰Nöeÿ8lEN·ƒ—V§YÏkgZg§!+§G0.005§!"
+ THE_NIN_TUR_cooperation_reform: "eY¯eüfON?eœ^"
+ THE_NIN_TUR_cooperation_reform_desc: ""
 ###REFORM_END
 
 ###NAME
  THE_NIN_RULER: "Å–xQ„vˆR²bsY^y"
  THE_TUR_cooperative: "eY¯eüf¶RÏelQøS"
  THE_TUR_cooperative_ADJ: "eY¯eüf¶RÏelQøS"
+ THE_NIN_TUR_RULER: "gbLˆc„‹N"
+ THE_NIN_TUR_HEIR: "lQPR"
 ###NAME_END
 
 ###OPINION
@@ -82,7 +86,11 @@
  THE_NIN_4_5_c_tt2: "°s(W(W§Y^™e§!wýNú^.§YuµN§!ú^QrýOSµNirlØS:N§YNøu§!ÿN·ƒ—V§YÍ‘FUININ§!§G+2§!"
  THE_NIN_5_6_c_tt1: "ã‰•§Y±Rbt1u§!0§MeY¯eüfeQµO§!0ÿ:YÖS§YÃWÊS§!N§YlšÀNÌ‘KQ§!:SßW„vwýN"
  THE_NIN_5_7_c_tt1: "SbìN(W§YÃWÊS§!N§YlšÀNÌ‘KQ§!:SßW„vNb	gwýNl©‹Ùu@TUR§Y[TUR.GetName]§!jO:NbìN„v§YD–¸^§!"
- 
+ THE_NIN_1_6_c_tt1_yes: "£yes£‚YœgbìNŒRb§Y1§!y˜§YYeëX§!6–BSÐc®‹ÿ"
+ THE_NIN_1_6_c_tt1_no: "£no£‚YœgbìNŒRb§Y1§!y˜§YYeëX§!6–BSÐc®‹ÿ"
+ THE_NIN_2_7_c_tt1: "§YWlš§!ÿ§YTëXfWN!X§!ÿ§Y‰RagKQ§!ÿ§YšN†SqS'Y§!ÿ§Y6wï’d·Q§!SO·ƒ—VåNNHeœgÿ"
+ THE_NIN_2_7_c_tt2_yes: "£yes£å‚@PAP§Y[PAP.GetName]§!=fbìN„v§Y^SýV§!"
+ THE_NIN_2_7_c_tt2_no: "£no£å‚@PAP§Y[PAP.GetName]§!=fbìN„v§Y^SýV§!"
 ###MISSION_END
 
 ###DIPOMATIC_ACTIONS
@@ -131,6 +139,10 @@
  THE_NIN_events.102.t: "WlšKNã"
  THE_NIN_events.102.desc: "0···êüfªRÃWSi–NŒš)TTÿ^ýV„væ‚¾–N`OìN„vÌw»yÿ†vòTb:NÇŽV‘Nßp0‚YÊNÿ°eu„vWlšòT(Wçeý„vúWówNÍ‘ø”‰Lq0±8n»yŽNšN—VÌ‘šNwm„vjmPRÿ=föePÍ‘RVvQÕltNNˆ	„vn4Y†N0ÙN=fVgÿw=féy^„vYRVck‚Yno4lÈuSRVŽN'Ywm00"
  THE_NIN_events.102.a: "‰BlàeagöNRVD–"
+ THE_NIN_events_102_c_tt1: "(Wdkb‰N-NÌS¹eGWàeÕlìS2UßvËS"
+ THE_NIN_events.103.t: "„˜Š"
+ THE_NIN_events.103.desc: "?–³u<SîOSb–îOëXHTNNwSÆRÏ…‡e.snct’šRÿ=fjS<SÕl¯ekQN1303t^«ˆÚVyöe™QN„v+gåe‰^Æ‰0ÙMOþf±Rðy0Ye‡vCgZóØšàeN0KNºNÿ(WŠ®v¸uN°‹ðÿ0SV1Wµ^¦lŽNSål···S	gNMOêalýyÞ‹utS`¯u1rKNsY^yŽ³NNKNÎW0yYS‚Yôu³u¯eêwmjm-N°euÿFOÙýN1rNRVŽNASWR¶gÿwS2U’‘‰law(WNNKNN„vN^y¿k01g‡^yr„v÷–—0ÆR…mæt„vzfga0ôu³u¯e„vŽKNÙ›NbìNþf¥e:N*O^y„vTWRÿSàVyY„v0RegQ!k>f°s^yù00NR„v^yùýWlš„vlOôf RnxáO0ˆVëVÿlOìNVËY(WWˆN8nLˆÿ|T2UNw0ZSKN0KNT0"
+ THE_NIN_events.103.a: "dkCN)Y‹T0"
 ###MISSION_EVENT_END
 
 ###MODIFIER
@@ -146,6 +158,10 @@
  THE_NIN_trader_come_from_ven_modifier: "Z<S¯eFUºN"
  THE_NIN_silk_trade_goods_in_byz_modifier: "Üb`S­^Nøu"
  THE_NIN_ottoman_enterprises_modifier: "eY¯eüf¶RÏeON"
+ THE_NIN_ottoman_in_egypt_region_modifier: "(WÃWÊSYtQ"
+ THE_NIN_greece_rome_belonged_to_polytheism_modifier: "^J&WlšÍ‘RVŽNY^yYe"
+ THE_NIN_hakurei_shinto_in_rome_ex_modifier: "ZSKN–™µ^"
+ THE_NIN_regain_trust_modifier: "Í‘þbøváO"
 ###MODIFIER_END
 
 ###DECISIONS

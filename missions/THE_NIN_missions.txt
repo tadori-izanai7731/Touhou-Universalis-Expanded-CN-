@@ -100,14 +100,69 @@ THE_NIN_branch_1 = {
 	THE_NIN_1_6 = {
 		icon = mission_unknown_mission
 		position = 6
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			is_capital_of = ROOT
+		} 
 		
 		trigger = { 
-			
-			
+			OR = {
+				num_of_estate_privileges = {
+					estate = estate_church
+					value = 4
+				}
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 70
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 4
+				has_tax_building_trigger = yes
+			}
 		} 
 		
 		effect = { 
+			add_adm_power = 100
+			add_country_modifier = {
+				name = THE_NIN_regain_trust_modifier
+				duration = 10950
+			}
+			if = {
+				limit = { 
+					num_of_estate_agendas_completed = {
+						estate = estate_church
+						value = 1
+					}
+				}
+				custom_tooltip = THE_NIN_1_6_c_tt1_yes
+				change_estate_land_share = {
+					estate = estate_church
+					share = -5
+				}
+				define_advisor = {
+					type = inquisitor
+					skill = 2
+					culture = greek
+					religion = ROOT
+					cost_multiplier = 0.25
+				}
+			}
+			else = {
+				custom_tooltip = THE_NIN_1_6_c_tt1_no
+				tooltip = {
+					change_estate_land_share = {
+						estate = estate_church
+						share = -5
+					}
+					define_advisor = {
+						type = inquisitor
+						skill = 2
+						culture = greek
+						religion = ROOT
+						cost_multiplier = 0.25
+					}
+				}
+			}
 			
 		} 
 	}
@@ -118,9 +173,38 @@ THE_NIN_branch_1 = {
 		required_missions = { THE_NIN_1_6 } 
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = { 
+			OR = {
+				num_of_owned_provinces_with = {
+					value = 18
+					region = italy_region
+					religion = th_hakureishinto
+				}
+				calc_true_if = {
+					all_country = {
+						religion = th_hakureishinto
+					}
+					amount = 4
+				}
+			}
+			PAP = { NOT = { development = 50 } }
+			PAP = { is_neighbor_of = ROOT }
+			has_won_war_against = {
+				who = PAP
+				max_years_since = 50
+			}
+		} 
 		
-		effect = {  } 
+		effect = { 
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			PAP = {
+				country_event = {
+					id = THE_NIN_events.103
+				}
+			}
+		} 
 	}
 	
 	THE_NIN_1_9 = {
@@ -132,9 +216,23 @@ THE_NIN_branch_1 = {
 		}
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = { 
+			total_development = 800
+			118 = {
+				OR = {
+					owned_by = ROOT
+					owned_by_subject_of = ROOT
+				}
+			}
+
+		 } 
 		
-		effect = {  } 
+		effect = { 
+			set_religion_papacy_active = {
+				religion = catholic
+				active = no
+			}
+		} 
 	}
 }
 THE_NIN_branch_2 = {
@@ -286,11 +384,144 @@ THE_NIN_branch_2 = {
 		icon = mission_unknown_mission
 		position = 7
 		required_missions = { THE_NIN_1_6 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			OR = {
+				province_id = 151
+				province_id = 2313
+				province_id = 379
+				province_id = 358
+				province_id = 118
+			}
+			OR = {
+				NOT = { development = 20 }
+				NOT = { has_tax_building_trigger = yes }
+				NOT = { religion = th_hakureishinto }
+			}
+		} 
 		
-		trigger = {  } 
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 20
+				religion = th_hakureishinto
+				owned_by = ROOT
+			}
+			151 = {
+				development = 20
+				has_tax_building_trigger = yes
+				OR = {
+					owned_by = ROOT
+					owned_by_subject_of = ROOT
+				}
+				religion = ROOT
+			}
+			2313 = {
+				development = 20
+				has_tax_building_trigger = yes
+				OR = {
+					owned_by = ROOT
+					owned_by_subject_of = ROOT
+				}
+				religion = ROOT
+			}
+			379 = {
+				development = 20
+				has_tax_building_trigger = yes
+				OR = {
+					owned_by = ROOT
+					owned_by_subject_of = ROOT
+				}
+				religion = ROOT
+			}
+			358 = {
+				development = 20
+				has_tax_building_trigger = yes
+				OR = {
+					owned_by = ROOT
+					owned_by_subject_of = ROOT
+				}
+				religion = ROOT
+			}
+			118 = {
+				development = 20
+				has_tax_building_trigger = yes
+				OR = {
+					owned_by = ROOT
+					owned_by_subject_of = ROOT
+				}
+				religion = ROOT
+			}
+		} 
 		
-		effect = {  } 
+		effect = { 
+			add_stability = 1
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			custom_tooltip = THE_NIN_2_7_c_tt1
+			tooltip = {
+				add_province_modifier = {
+					name = THE_NIN_hakurei_shinto_in_rome_ex_modifier
+					duration = -1
+				}
+			}
+			if = {
+				limit = { 
+					PAP = {
+						is_subject_of = ROOT
+					}
+				}
+				custom_tooltip = THE_NIN_2_7_c_tt2_yes
+				add_country_modifier = {
+					name = THE_NIN_greece_rome_belonged_to_polytheism_modifier
+					duration = -1
+				}
+			}
+			else = {
+				custom_tooltip = THE_NIN_2_7_c_tt2_no
+				tooltip = {
+					add_country_modifier = {
+						name = THE_NIN_greece_rome_belonged_to_polytheism_modifier
+						duration = -1
+					}
+				}
+			}
+			hidden_effect = {
+				151 = {
+					add_province_modifier = {
+						name = THE_NIN_hakurei_shinto_in_rome_ex_modifier
+						duration = -1
+					}
+				}
+				118 = {
+					add_province_modifier = {
+						name = THE_NIN_hakurei_shinto_in_rome_ex_modifier
+						duration = -1
+					}
+				}
+				358 = {
+					add_province_modifier = {
+						name = THE_NIN_hakurei_shinto_in_rome_ex_modifier
+						duration = -1
+					}
+				}
+				379 = {
+					add_province_modifier = {
+						name = THE_NIN_hakurei_shinto_in_rome_ex_modifier
+						duration = -1
+					}
+				}
+				2313 = {
+					add_province_modifier = {
+						name = THE_NIN_hakurei_shinto_in_rome_ex_modifier
+						duration = -1
+					}
+				}
+			}
+			# set_religion_papacy_active = {
+			# 			religion = catholic
+			# 			active = no
+			# 		}
+		} 
 	}
 	
 	THE_NIN_2_8 = {
@@ -674,7 +905,17 @@ THE_NIN_branch_4 = {
 		icon = mission_unknown_mission
 		position = 5
 		required_missions = { THE_NIN_3_4 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			trade_goods = cloth
+			OR = {
+				NOT = {
+					base_production = 7
+				}
+				NOT = {
+					has_production_building_trigger = yes
+				}
+			}
+		} 
 		
 		trigger = { 
 			num_of_owned_provinces_with = {
@@ -713,7 +954,9 @@ THE_NIN_branch_4 = {
 		required_missions = { THE_NIN_4_5 } 
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = { 
+			
+		} 
 		
 		effect = { 
 			add_government_reform = THE_NIN_art_and_venus_reform
@@ -1021,7 +1264,7 @@ THE_NIN_branch_5 = {
 				}
 				TUR = {
 					change_government = monarchy
-					add_government_reform = Gensokyan_monarchy
+					add_government_reform = THE_NIN_TUR_cooperation_reform
 					change_technology_group = tech_gensokyan
 					change_unit_type = tech_gensokyan
 					change_religion = ROOT
@@ -1032,10 +1275,6 @@ THE_NIN_branch_5 = {
 					override_country_name = THE_TUR_cooperative
 					add_country_modifier = {
 						name = THE_NIN_tur_desire_modifier
-						duration = -1
-					}
-					add_country_modifier = {
-						name = THE_NIN_ottoman_enterprises_modifier
 						duration = -1
 					}
 					THE_change_color_to_colony = yes
