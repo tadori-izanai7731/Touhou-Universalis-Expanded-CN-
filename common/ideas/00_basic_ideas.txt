@@ -638,7 +638,7 @@ offensive_ideas = {
 			monthly_mil = 7 
 		}
 		modifier = {
-			factor = 1.05
+			factor = 0.9
 			is_great_power = yes 
 		}
 		modifier = {
@@ -646,7 +646,7 @@ offensive_ideas = {
 			personality = ai_militarist
 		}
 		modifier = {
-			factor = 1.5
+			factor = 0.9
 			OR = {
 				num_of_artillery = 30
 				num_of_galley = 50
@@ -654,7 +654,7 @@ offensive_ideas = {
 			}
 		}
 		modifier = {
-			factor = 1.1 
+			factor = 1.1
 			national_focus = MIL 
 		}
 		modifier = {
@@ -1272,7 +1272,7 @@ quality_ideas = {
 	ai_will_do = {
 		factor = 3.5
 		modifier = {
-			factor = 0.8
+			factor = 0.5
 			has_strong_mil_national_ideas = yes 
 		}
 		modifier = { 
@@ -1365,7 +1365,7 @@ quantity_ideas = {
 	ai_will_do = {
 		factor = 3.5
 		modifier = {
-			factor = 0.8
+			factor = 0.5
 			has_strong_mil_national_ideas = yes 
 		}
 		modifier = { 
