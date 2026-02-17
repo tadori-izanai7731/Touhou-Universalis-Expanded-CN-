@@ -40,6 +40,8 @@ THE_IQU_scarlet_sky_reform = {
 	modifiers = {
 		native_assimilation = 0.25
 		reform_progress_growth = 0.10
+		movement_speed = 0.25
+		colonist_placement_chance = 0.1
 	}
 	custom_attributes = {
 		THE_IQU_scarlet_sky_reform_mechanic = yes
@@ -61,6 +63,7 @@ THE_IQU_cloud_with_sky_reform = {
 		country_military_power = -1
 		monthly_heir_claim_increase = 0.05
 		THE_IQU_guide_loong_vein_custom_modifier = -0.10
+		diplomatic_reputation = 1
 	}
 
 	government_abilities = {

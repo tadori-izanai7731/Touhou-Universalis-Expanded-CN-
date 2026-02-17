@@ -61,7 +61,7 @@ l_english:
  THE_IQU_tennin_one_taoist_tu_power: "§V土之印§!"
  THE_IQU_end_the_loong_vein_button_ctt1: "当前「§O龙脉-龙之首§!」至少已获得1种「§V五行§!」"
  ability_THE_IQU_tennin_one_taoist_mechanic: "天人一道"
- mechanic_THE_can_not_have_colonial_nations_government_attribute_yes: "无法拥有殖民地"
+ mechanic_THE_can_not_have_colonial_nations_government_attribute_yes: "无法拥有殖民领"
 ### GOVERNMENT_END
 
 ### GOVERNMENT_NAME
@@ -194,6 +194,9 @@ l_english:
  THE_IQU_hvr_can_not_alliance_c_tooltip: "@HVR§Y[HVR.GetName]§!禁止§M结盟§!"
  THE_IQU_hvr_can_not_be_create_guaranteeaction_c_tooltip: "@HVR§Y[HVR.GetName]§!禁止§M保障独立§!"
  THE_IQU_event_1012_c_tt1: "所有@HVR§Y[HVR.GetName]§!的非本土省份都会被割让予我们，并获得以下效果："
+ THE_able_hegemon_without_great_power_tt: "允许以非列强宣称霸权"
+ THE_IQU_coffee_island_price_tt: "咖啡醇酿"
+ THE_IQU_paper_indeed_price_tt: "纸用宣天"
 ### MISSION_EXTRA_END
 
 ### DECISIONS
@@ -1100,7 +1103,7 @@ l_english:
  THE_IQU_now_dangerous_progress_view_displat_ctt_1: " §R=§! = = = = = = = = ="
  THE_IQU_now_dangerous_progress_view_displat_ctt_0: " = = = = = = = = = ="
  THE_IQU_add_prestige_or_navy_tradition_c_tt1: "溢出的威望转化为§Y海军传统§!"
- THE_IQU_guide_the_loong_vein_building_construction_scripted_c_tt1: "引渡完成后将§Y相邻省份§!或§Y共同沿海省份§!的§O龙脉-龙之首§!修正转移到此省份，且原省份获得§O龙脉-龙之迹§!修正- -持续20年"
+ THE_IQU_guide_the_loong_vein_building_construction_scripted_c_tt1: "引渡完成后将§Y相邻省份§!或§Y共同沿海省份§!的§O龙脉-龙之首§!修正转移到此省份，并使原省份获得§O龙脉-龙之迹§!修正持续20年"
  THE_IQU_add_experience_var_c_tt1: "为@IQU§Y衣玖§!添加1点「§M外交经验§!」"
  THE_IQU_add_experience_var_c_tt2: "为@IQU§Y衣玖§!添加1点「§M才学经验§!」"
  THE_IQU_add_experience_var_c_tt3: "为@IQU§Y衣玖§!添加1点「§M航海经验§!」"

@@ -290,7 +290,7 @@ THE_IQU_main_branch_1 = {
 			}
 			change_price = {
 				trade_goods = coffee
-				key = grain_shortage
+				key = THE_IQU_coffee_island_price_tt
 				value = 0.50
 				duration = -1
 			}
@@ -494,7 +494,7 @@ THE_IQU_main_branch_2 = {
 			}
 			change_price = {
 				trade_goods = paper
-				key = grain_shortage
+				key = THE_IQU_paper_indeed_price_modifier
 				value = 0.25
 				duration = -1
 			}
@@ -834,6 +834,8 @@ THE_IQU_main_branch_3 = {
 				name = THE_IQU_qing_hui_buff
 				duration = -1
 			}
+			custom_tooltip = THE_able_hegemon_without_great_power_tt
+			set_country_flag = THE_able_hegemon_without_great_power_flag
 		} 
 	}
 	
