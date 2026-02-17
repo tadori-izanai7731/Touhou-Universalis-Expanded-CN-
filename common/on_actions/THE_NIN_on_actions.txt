@@ -13,3 +13,6 @@ on_dip_development = {
 on_mil_development = {
 	THE_NIN_add_institution_progress_effect = yes
 }
+on_startup = {
+	THE_NIN_on_start_change_price_effect = yes
+}

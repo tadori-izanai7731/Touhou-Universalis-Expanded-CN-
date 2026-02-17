@@ -68,25 +68,39 @@ THE_NIN_branch_1 = {
 		required_missions = { THE_NIN_1_3 } 
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = { 
+			OR = {
+				AND = {
+					TUR = { is_subject_of = ROOT }
+					TUR = {
+						trust = {
+							who = ROOT
+							value = 70
+						}
+					}
+				}
+				NOT = { exists = TUR }
+			}
+		} 
 		
 		effect = { 
+			add_prestige = 25
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
 			if = {
 				limit = { 
-					OR = {
-						BYZ = { is_subject_of = ROOT }
-						TUR = { is_subject_of = ROOT }
-					}
-					OR = {
-						BYZ = { NOT = { total_development = 200 } }
-						TUR = { NOT = { total_development = 200 } }
-						is_year = 1500
+					TUR = { is_subject_of = ROOT }
+					TUR = {
+						trust = {
+							who = ROOT
+							value = 70
+						}
 					}
 				}
 				custom_tooltip = THE_NIN_1_4_c_tt1_yes
 				custom_tooltip = THE_NIN_1_4_c_tt2
 				hidden_effect = {
-					inherit = BYZ
 					inherit = TUR
 				}
 			}
@@ -263,11 +277,46 @@ THE_NIN_branch_1 = {
 					owned_by_subject_of = ROOT
 				}
 			}
+			calc_true_if = {
+				amount = 200
+				all_province = {
+					OR = {
+						continent = europe
+					}
+					religion = th_hakureishinto
+					owner = {
+						religion = th_hakureishinto
+					}
+				}
+			}
 			
 		} 
 		
 		effect = { 
-			
+			custom_tooltip = THE_NIN_1_9_c_tt1
+			custom_tooltip = THE_NIN_1_9_c_tt2
+			add_adm_power = 300
+			add_dip_power = 300
+			add_mil_power = 300
+			add_stability = 3
+			hidden_effect = {
+				set_country_flag = THE_NIN_unlock_nina_deities_flag
+				if = {
+					limit = {
+						religion = th_hakureishinto
+					}
+					every_country = {
+						limit = { 
+							OR = {
+								religion = catholic 
+								religion = orthodox
+							}
+							knows_country = NIN
+						}
+						country_event = { id = THE_NIN_events.104 }
+					}
+				}
+			}
 		} 
 	}
 }
@@ -409,11 +458,53 @@ THE_NIN_branch_2 = {
 		icon = mission_unknown_mission
 		position = 5
 		required_missions = { THE_NIN_2_3 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			OR = {
+				area = thrace_area
+				area = hudavendigar_area
+			}
+			NOT = { is_prosperous = yes }
+		} 
 		
-		trigger = {  } 
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 5
+				trade_goods = fish
+				has_production_building_trigger = yes
+				base_production = 7
+			}
+			thrace_area = {
+				type = all
+				development = 10
+				is_prosperous = yes
+				has_production_building_trigger = yes
+			}
+			hudavendigar_area = {
+				type = all
+				development = 10
+				is_prosperous = yes
+				has_production_building_trigger = yes
+			}
+		} 
 		
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_NIN_2_5_c_tt1
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_prestige = 15
+			custom_tooltip = THE_NIN_2_5_c_tt2
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						trade_goods = fish
+						has_production_building_trigger = yes
+						base_production = 7
+					}
+					change_trade_goods = THE_pearls_tradegoods
+				}
+			}
+		} 
 	}
 	
 	THE_NIN_2_7 = {
@@ -566,9 +657,28 @@ THE_NIN_branch_2 = {
 		required_missions = { THE_NIN_2_7 } 
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = { 
+			full_idea_group = humanist_ideas
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 50
+				has_tax_building_trigger = yes
+			}
+		} 
 		
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_NIN_2_8_c_tt1
+			add_government_reform = THE_NIN_tide_returns_to_the_sea_reform
+			hidden_effect = {
+				if = { limit = {  num_of_estate_privileges = { estate = estate_church value = 8 } } add_adm_power = 800 }
+				else_if = { limit = {  num_of_estate_privileges = { estate = estate_church value = 7 } } add_adm_power = 700 }
+				else_if = { limit = {  num_of_estate_privileges = { estate = estate_church value = 6 } } add_adm_power = 600 }
+				else_if = { limit = {  num_of_estate_privileges = { estate = estate_church value = 5 } } add_adm_power = 500 }
+				else_if = { limit = {  num_of_estate_privileges = { estate = estate_church value = 4 } } add_adm_power = 400 }
+				else_if = { limit = {  num_of_estate_privileges = { estate = estate_church value = 3 } } add_adm_power = 300 }
+				else_if = { limit = {  num_of_estate_privileges = { estate = estate_church value = 2 } } add_adm_power = 200 }
+				else_if = { limit = {  num_of_estate_privileges = { estate = estate_church value = 1 } } add_adm_power = 100 }
+			}
+		} 
 	}
 }
 THE_NIN_branch_3 = {
@@ -751,12 +861,23 @@ THE_NIN_branch_3 = {
 		provinces_to_highlight = {  } 
 		
 		trigger = { 
-			prestige = 100
-			legitimacy = 80
+			prestige = 0
+			legitimacy = 100
 			stability = 3
-		 } 
+			total_development = 1000
+			trading_bonus = {
+				trade_goods = THE_pearls_tradegoods
+				value = yes
+			}
+		} 
 		
 		effect = { 
+			add_adm_power = 100
+			add_country_modifier = {
+				name = THE_NIN_black_curtain_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_NIN_3_7_c_tt1
 			add_government_reform = THE_NIN_fictional_foam_reform
 		} 
 	}
@@ -772,7 +893,9 @@ THE_NIN_branch_3 = {
 		
 		trigger = {  } 
 		
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_NIN_3_9_c_tt1
+		 } 
 	}
 }
 THE_NIN_branch_4 = {
@@ -1015,10 +1138,25 @@ THE_NIN_branch_4 = {
 		icon = mission_unknown_mission
 		position = 6
 		required_missions = { THE_NIN_4_5 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			OR = {
+				trade_goods = cloth
+				trade_goods = fish
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		 } 
 		
 		trigger = { 
-			
+			num_of_owned_provinces_with = {
+				value = 12
+				trade_goods = silk
+			}
+			num_of_owned_provinces_with = {
+				value = 12
+				trade_goods = THE_pearls_tradegoods
+			}
 		} 
 		
 		effect = { 
@@ -1109,7 +1247,12 @@ THE_NIN_branch_4 = {
 		icon = mission_unknown_mission
 		position = 8
 		required_missions = { THE_NIN_4_7 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			region = maghreb_region
+			NOT = {
+				owned_by = ROOT
+			}
+		 } 
 		
 		trigger = { 
 			OR = {
@@ -1412,9 +1555,9 @@ THE_NIN_branch_5 = {
 		} 
 	}
 	
-	THE_NIN_5_7 = {
+	THE_NIN_5_9 = {
 		icon = mission_unknown_mission
-		position = 7
+		position = 9
 		required_missions = { THE_NIN_5_6 } 
 		provinces_to_highlight = { 
 			OR = {
@@ -1483,16 +1626,5 @@ THE_NIN_branch_5 = {
 				vassalize = TUR
 			}
 		} 
-	}
-	
-	THE_NIN_5_9 = {
-		icon = mission_unknown_mission
-		position = 9
-		required_missions = { THE_NIN_5_7 } 
-		provinces_to_highlight = {  } 
-		
-		trigger = {  } 
-		
-		effect = {  } 
 	}
 }

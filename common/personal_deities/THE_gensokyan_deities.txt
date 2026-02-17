@@ -1,0 +1,28 @@
+#Nina
+
+THE_Nina_deities = {
+	potential = { 
+		religion = th_hakureishinto 
+		NIN = {
+			has_country_flag = THE_NIN_unlock_nina_deities_flag 
+		}
+	}
+	prestige = 1
+	ae_impact = -0.10
+	sprite = 28
+	trigger = {
+	}
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+	 	factor = 1
+	 	modifier = {
+	        factor = 4
+	        personality = ai_colonialist
+	 	}
+	 	modifier = {
+	        factor = 0.5
+	        personality = ai_militarist
+	 	}
+	}	
+}

@@ -394,3 +394,54 @@ country_event = {
 		THE_change_color_to_colony = yes
 	}
 }
+
+###信仰的选择
+country_event = {
+	id = THE_NIN_events.104
+	title = THE_NIN_events.104.t
+	desc = THE_NIN_events.104.desc
+	picture = ""
+	is_triggered_only = yes
+	option = {
+		name = THE_NIN_events.104.a
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				ai_attitude = {
+					who = NIN
+					attitude = attitude_rivalry
+				}
+			}
+			modifier = {
+				factor = 0
+				ai_attitude = {
+					who = NIN
+					attitude = attitude_hostile
+				}
+			}
+			modifier = {
+				factor = 0
+				ai_attitude = {
+					who = NIN
+					attitude = attitude_outraged
+				}
+			}
+		}
+		change_religion = th_hakureishinto
+		capital_scope = {
+			if = {
+				limit = {
+					NOT = { religion = th_hakureishinto }
+				}
+				change_religion = th_hakureishinto
+			}
+		}
+		add_stability = -1
+		add_prestige = -30
+	}
+	option = {
+		name = THE_NIN_events.104.b
+		add_stability = -3
+	}
+}

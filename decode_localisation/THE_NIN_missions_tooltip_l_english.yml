@@ -39,6 +39,14 @@ l_english:
  THE_NIN_fictional_foam_reform: "污秽孕育纯洁"
  THE_NIN_fictional_foam_reform_desc: ""
  mechanic_THE_NIN_fictional_foam_reform_mechanic_yes: "若我们拥有每月威望§G+0.5§!，将允许§Y虚构叙事§!的同时附加§Y现实效果§!，并获得每月威望§R-0.5§!的修正，该修正会随时间衰减。"
+ ability_THE_NIN_fictional_foam_reform_mechanic_ex: "共识为真实"
+ THE_NIN_fictional_foam_reform_mechanic_ex_power: "由共识所消耗"
+ THE_NIN_tide_returns_to_the_sea_reform: "潮水归于大海"
+ THE_NIN_tide_returns_to_the_sea_reform_desc: ""
+ mechanic_THE_NIN_tide_returns_to_the_sea_reform_mechanic_yes: "每§Y1§!点§Y异端容忍度§!和§Y异教容忍度§!都将转化为§Y1§!点正统信仰容忍度和§G0.5%§!的§Y传教强度§!"
+ ability_THE_NIN_tide_returns_to_the_sea_reform_mechanic_ex: "博丽圣座"
+ THE_NIN_tide_returns_to_the_sea_reform_mechanic_ex_1_power: "来自异端容忍"
+ THE_NIN_tide_returns_to_the_sea_reform_mechanic_ex_2_power: "来自异教容忍"
  THE_NIN_TUR_cooperation_reform: "奥斯曼企业政府"
  THE_NIN_TUR_cooperation_reform_desc: ""
  THE_NIN_PAP_hakurei_shrine_reform: "博丽教廷"
@@ -72,9 +80,9 @@ l_english:
  THE_NIN_5_4_c_tt1_yes: "£yes£若我们通过信任度且@TUR§Y[TUR.GetName]§!的发展度低于§Y200§!完成任务，则："
  THE_NIN_5_4_c_tt1_no: "£no£若我们通过信任度且@TUR§Y[TUR.GetName]§!的发展度低于§Y200§!完成任务，则："
  THE_NIN_4_2_c_tt1: "拥有此§Y修正§!时，征服的领土都将转变为§Y希腊§!文化"
- THE_NIN_1_4_c_tt1_yes: "£yes£若当前@BYZ§Y[BYZ.GetName]§!或@TUR§Y[TUR.GetName]§!是我们的§Y属国§!，且发展度不高于§Y200§!，则："
- THE_NIN_1_4_c_tt1_no: "£no£若当前@BYZ§Y[BYZ.GetName]§!或@TUR§Y[TUR.GetName]§!是我们的§Y属国§!，且发展度不高于§Y200§!，则："
- THE_NIN_1_4_c_tt2: "继承@BYZ§Y[BYZ.GetName]§!与@TUR§Y[TUR.GetName]§!的§Y遗产§!"
+ THE_NIN_1_4_c_tt1_yes: "£yes£如果通过§Y信任度§!完成任务，则："
+ THE_NIN_1_4_c_tt1_no: "£no£如果通过§Y信任度§!完成任务，则："
+ THE_NIN_1_4_c_tt2: "继承@TUR§Y[TUR.GetName]§!的§Y遗产§!"
  THE_NIN_5_4_c_tt2_yes: "£yes£若我们通过消灭@TUR§Y[TUR.GetName]§!或使其发展度低于§Y50§!完成任务，则："
  THE_NIN_5_4_c_tt2_no: "£no£若我们通过消灭@TUR§Y[TUR.GetName]§!或使其发展度低于§Y50§!完成任务，则："
  THE_NIN_5_2_c_tt1_yes: "£yes£若通过击败@TUR§Y[TUR.GetName]§!完成任务"
@@ -112,6 +120,13 @@ l_english:
  THE_NIN_4_8_c_tt2_yes: "£yes£若我们通过附庸@TUN§Y[TUN.GetName]§!完成任务，则："
  THE_NIN_4_8_c_tt2_no: "£no£若我们通过附庸@TUN§Y[TUN.GetName]§!完成任务，则："
  THE_NIN_4_8_c_tt3: "将@TUN§Y[TUN.GetName]§!更名为§Y迦太基§!，并获得以下效果："
+ THE_NIN_2_5_c_tt1: "解锁虚构叙事「§Y鼓吹价格§!」能力，允许我们肆意鼓吹提高§Y珍珠§!的价格"
+ THE_NIN_2_5_c_tt2: "所有符合条件的省份贸易品转变为§Y珍珠§!，且现在在§Y鱼类§!省份建造§Y生产§!建筑都会将产物转变为§Y珍珠§!，且获得§Y基础生产发展度§!§G+2§!"
+ THE_NIN_3_7_c_tt1: "拥有此修正时，每次§Y读取存档§!都会使§Y珍珠§!价格提升§G100%§!，并持续§G20§!年"
+ THE_NIN_2_8_c_tt1: "§Y巫女§!阶层每有§Y1§!个特权，获得§G100§!§Y行政点数§!"
+ THE_NIN_1_9_c_tt1: "解锁博丽神道神像「§Y贝子§!」"
+ THE_NIN_1_9_c_tt2: "所有的§Y天主教§!与§Y东正教§!国家将会转变为§Y博丽神道§!，但我们的§Y宿敌§!及对[Root.GetName]态度为§Y敌意§!和§Y愤怒§!的国家除外"
+ THE_NIN_3_9_c_tt1: "解锁决议「§Y信息轰炸§!」，请确保您的paradox§Y日志§!文件不在§YC§!盘，否则会被填满"
 ###MISSION_END
 
 ###DIPOMATIC_ACTIONS
@@ -164,6 +179,9 @@ l_english:
  THE_NIN_events.103.t: "预言"
  THE_NIN_events.103.desc: "阿纳尼修道院修士呈上一卷密藏文献——据鉴定，是卜尼法斯八世1303年被囚禁时写下的末日幻视。这位曾宣称「教皇权威至高无上」之人，在羊皮纸上记述：「当圣座沦于尘泥···将有一位自污秽诞生却怀纯爱之女神踏足七丘之城。她将如维纳斯自海浪中新生，但这份爱不归于十字架，而将唤醒沉睡在七丘之下的万神殿。朱庇特的雷霆、密涅瓦的智慧、维纳斯的美丽——这些我们曾斥为伪神的名字，将因她的到来再次显现神迹。」一切的神迹都罗马的民众更加确信。很快，民众们开始在街上游行，呼唤着「博丽」之名。"
  THE_NIN_events.103.a: "此乃天命。"
+ THE_NIN_events.104.t: ""
+ THE_NIN_events.104.desc: ""
+ THE_NIN_events.104.b: ""
 ###MISSION_EVENT_END
 
 ###MODIFIER
@@ -186,6 +204,7 @@ l_english:
  THE_NIN_silver_salt_art_modifier: "盐仿石像"
  THE_NIN_latin_country_modifier: "拉丁诸国"
  THE_NIN_new_city_modifier: "新城"
+ THE_NIN_black_curtain_modifier: "幕后操盘"
 ###MODIFIER_END
 
 ###DECISIONS
@@ -198,11 +217,17 @@ l_english:
  THE_suleiman_ottoman_desc: ""
 ###ADVISOR_END
 
-###GAIN
+###SHORTAGE
  THE_silver_shortage_gain: "白银之路"
-###GAIN
+ THE_pearls_tradegoods_shortage_1: "幕后操盘"
+###SHORTAGE_END
 
 ###GOODS
  THE_pearls_tradegoods: "珍珠"
  THE_pearls_tradegoods_desc: ""
 ###GOODS_END
+
+###DEITIES
+ THE_Nina_deities: "贝子"
+ THE_Nina_deities_desc: ""
+###DEITIES_END

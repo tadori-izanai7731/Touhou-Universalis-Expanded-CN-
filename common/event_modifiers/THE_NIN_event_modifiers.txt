@@ -109,3 +109,8 @@ THE_NIN_new_city_modifier = {
 	placed_merchant_power = 50
 	global_trade_power = 0.20
 }
+#幕后操盘
+THE_NIN_black_curtain_modifier = {
+	global_trade_goods_size_modifier = 0.05
+	production_efficiency = 0.05
+}

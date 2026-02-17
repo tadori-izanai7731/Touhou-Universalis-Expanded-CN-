@@ -26,6 +26,16 @@ THE_NIN_change_cloth_to_silk_province_effect = {
 			add_mercantilism = 2
 		}
 	}
+	if = {
+		limit = {
+			trade_goods = fish
+			owner = {
+				mission_completed = THE_NIN_2_5
+			}
+		 }
+		 change_trade_goods = THE_pearls_tradegoods
+		 add_base_production = 2
+	}
 }
 
 THE_NIN_won_war_with_ven_effect = {
@@ -38,6 +48,21 @@ THE_NIN_won_war_with_ven_effect = {
 			}
 		}
 		clr_country_flag = THE_NIN_cannot_call_ally_VEN_flag
+	}
+}
+
+THE_NIN_on_start_change_price_effect = {
+	if = {
+		limit = {
+			tag = NIN
+			has_country_modifier = THE_NIN_black_curtain_modifier
+		}
+		change_price = {
+			trade_goods = THE_pearls_tradegoods
+			key = THE_pearls_tradegoods_shortage_1
+			value = 1.0
+			duration = 7300
+		}
 	}
 }
 

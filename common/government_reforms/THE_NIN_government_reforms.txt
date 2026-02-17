@@ -45,6 +45,9 @@ THE_NIN_fictional_foam_reform = {
 		prestige_from_naval = 1.00
 		prestige_per_development_from_conversion = 1.00
 	}
+	government_abilities = {
+		THE_NIN_fictional_foam_reform_mechanic_ex
+	}
 	custom_attributes = {
 		THE_NIN_fictional_foam_reform_mechanic = yes
 	}
@@ -67,6 +70,31 @@ THE_NIN_art_and_venus_reform = {
 		THE_NIN_art_and_venus_reform_mechanic = yes
 	}
 }
+#4级 潮水归于大海
+THE_NIN_tide_returns_to_the_sea_reform = {
+	lock_level_when_selected = yes
+	icon = "THE_NIN_government_1_reform"
+	potential = {
+		OR = {
+			has_reform = THE_NIN_tide_returns_to_the_sea_reform
+			have_had_reform = THE_NIN_tide_returns_to_the_sea_reform
+		}
+	}
+	
+	modifiers = {
+		religious_unity = 0.10
+		all_estate_loyalty_equilibrium = 0.10
+		all_estate_possible_privileges = 1
+
+	}
+	government_abilities = {
+		THE_NIN_tide_returns_to_the_sea_reform_mechanic_ex
+	}
+	custom_attributes = {
+		THE_NIN_tide_returns_to_the_sea_reform_mechanic = yes
+	}
+}
+
 #奥斯曼企业政府
 THE_NIN_TUR_cooperation_reform = {
 	lock_level_when_selected = yes
