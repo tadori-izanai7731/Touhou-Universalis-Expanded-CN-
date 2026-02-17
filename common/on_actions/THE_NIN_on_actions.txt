@@ -4,3 +4,12 @@ on_province_owner_change = {
 on_war_won = {
 	THE_NIN_won_war_with_ven_effect = yes
 }
+on_adm_development = {
+	THE_NIN_add_institution_progress_effect = yes
+}
+on_dip_development = {
+	THE_NIN_add_institution_progress_effect = yes
+}
+on_mil_development = {
+	THE_NIN_add_institution_progress_effect = yes
+}

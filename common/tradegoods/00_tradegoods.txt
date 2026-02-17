@@ -2312,3 +2312,21 @@ THE_securities_tradegoods = {
 		}
 	}
 }
+#珍珠
+THE_pearls_tradegoods = {
+	is_valuable = yes
+	color = { 0.79 0.99 0.90 }
+	modifier = { 
+		monarch_diplomatic_power = 1
+	}
+	province = { 
+		trade_goods_size_modifier = 0.15
+	}
+	chance = {
+		factor = 0
+		modifier = {
+			factor = 0
+			always = yes
+		}
+	}
+}

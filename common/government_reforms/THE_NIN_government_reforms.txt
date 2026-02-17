@@ -37,15 +37,16 @@ THE_NIN_fictional_foam_reform = {
 			have_had_reform = THE_NIN_fictional_foam_reform
 		}
 	}
-	valid_for_new_country = no
-	valid_for_nation_designer = no
-	rulers_can_be_generals = no
-	can_change_primary_culture = no
-	
+
 	modifiers = {
+		prestige_decay = 0.02
+		prestige = 0.5
+		prestige_from_land = 1.00
+		prestige_from_naval = 1.00
+		prestige_per_development_from_conversion = 1.00
 	}
 	custom_attributes = {
-		THE_NIN_fictional_goddess_reform_mechanic = yes
+		THE_NIN_fictional_foam_reform_mechanic = yes
 	}
 }
 #3级
@@ -74,6 +75,36 @@ THE_NIN_TUR_cooperation_reform = {
 		OR = {
 			has_reform = THE_NIN_TUR_cooperation_reform
 			have_had_reform = THE_NIN_TUR_cooperation_reform
+		}
+	}
+	valid_for_new_country = no
+	valid_for_nation_designer = no
+	rulers_can_be_generals = no
+	can_change_primary_culture = no
+	
+	modifiers = {
+		governing_capacity = 150
+		global_unrest = -1
+		global_autonomy = -0.05
+		global_trade_goods_size_modifier = 0.33
+		placed_merchant_power = 50
+		global_trade_power = 0.50
+		land_morale = 0.10
+	}
+	government_abilities = {
+		
+	}
+	custom_attributes = {
+	}
+}
+#
+THE_NIN_PAP_hakurei_shrine_reform = {
+	lock_level_when_selected = yes
+	icon = "ottoman_government"
+	potential = {
+		OR = {
+			has_reform = THE_NIN_PAP_hakurei_shrine_reform
+			have_had_reform = THE_NIN_PAP_hakurei_shrine_reform
 		}
 	}
 	valid_for_new_country = no
