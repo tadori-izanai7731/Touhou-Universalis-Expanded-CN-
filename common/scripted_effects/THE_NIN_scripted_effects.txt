@@ -36,7 +36,39 @@ THE_NIN_won_war_with_ven_effect = {
 			FROM = {
 				tag = VEN
 			}
-		 }
-		 clr_country_flag = THE_NIN_cannot_call_ally_VEN_flag
+		}
+		clr_country_flag = THE_NIN_cannot_call_ally_VEN_flag
+	}
+}
+
+
+##################################
+#####
+#################################
+THE_NIN_add_institution_progress_effect = {
+	if = {
+		limit = {
+			owner = {
+				mission_completed = THE_NIN_3_5
+			}
+		}
+		THE_NIN_add_institution_progress_script = { institution = renaissance }
+		THE_NIN_add_institution_progress_script = { institution = new_world_i }
+		THE_NIN_add_institution_progress_script = { institution = printing_press }
+		THE_NIN_add_institution_progress_script = { institution = global_trade }
+		THE_NIN_add_institution_progress_script = { institution = manufactories }
+		THE_NIN_add_institution_progress_script = { institution = enlightenment }
+		THE_NIN_add_institution_progress_script = { institution = industrialization }
+	}
+}
+THE_NIN_add_institution_progress_script = {
+	if = {
+		limit = {
+			is_institution_enabled = $institution$
+		}
+		add_institution_embracement = {
+			which = $institution$
+			value = 10
+		}
 	}
 }

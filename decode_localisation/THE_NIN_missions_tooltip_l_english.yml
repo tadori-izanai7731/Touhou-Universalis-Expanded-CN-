@@ -36,16 +36,25 @@ l_english:
  THE_NIN_art_and_venus_reform: "我等所坚信"
  THE_NIN_art_and_venus_reform_desc: ""
  mechanic_THE_NIN_art_and_venus_reform_mechanic_yes: "每当我们赢得战争时，永久获得§Y每月威望§!+§G0.005§!"
+ THE_NIN_fictional_foam_reform: "污秽孕育纯洁"
+ THE_NIN_fictional_foam_reform_desc: ""
+ mechanic_THE_NIN_fictional_foam_reform_mechanic_yes: "若我们拥有每月威望§G+0.5§!，将允许§Y虚构叙事§!的同时附加§Y现实效果§!，并获得每月威望§R-0.5§!的修正，该修正会随时间衰减。"
  THE_NIN_TUR_cooperation_reform: "奥斯曼企业政府"
  THE_NIN_TUR_cooperation_reform_desc: ""
+ THE_NIN_PAP_hakurei_shrine_reform: "博丽教廷"
+ THE_NIN_PAP_hakurei_shrine_reform_desc: ""
 ###REFORM_END
 
 ###NAME
  THE_NIN_RULER: "雅典的守护女神"
- THE_TUR_cooperative: "奥斯曼家族公司"
- THE_TUR_cooperative_ADJ: "奥斯曼家族公司"
+ THE_NIN_TUR_cooperative_name: "奥斯曼家族公司"
+ THE_NIN_TUR_cooperative_name_ADJ: "奥斯曼家族公司"
+ THE_NIN_TUN_name: "迦太基"
+ THE_NIN_TUN_name_ADJ: "迦太基"
  THE_NIN_TUR_RULER: "执行董事"
  THE_NIN_TUR_HEIR: "公子"
+ THE_NIN_PAP_RULER: "教宗"
+ THE_NIN_PAP_HEIR: ""
 ###NAME_END
 
 ###OPINION
@@ -91,6 +100,18 @@ l_english:
  THE_NIN_2_7_c_tt1: "§Y罗马§!，§Y君士坦丁堡§!，§Y安条克§!，§Y亚历山大§!，§Y耶路撒冷§!将会获得以下效果："
  THE_NIN_2_7_c_tt2_yes: "£yes£若@PAP§Y[PAP.GetName]§!是我们的§Y属国§!"
  THE_NIN_2_7_c_tt2_no: "£no£若@PAP§Y[PAP.GetName]§!是我们的§Y属国§!"
+ THE_NIN_1_8_c_tt1_yes: "£yes£如果§Y教士§!阶层忠诚度达到§Y60§!"
+ THE_NIN_1_8_c_tt1_no: "£no£如果§Y教士§!阶层忠诚度达到§Y60§!"
+ THE_NIN_1_8_c_tt2: "随机20个省份获得§Y神社§!"
+ THE_NIN_4_7_c_tt1_yes: "£yes£如果拥有§Y盐§!的贸易奖励："
+ THE_NIN_4_7_c_tt1_no: "£no£如果拥有§Y盐§!的贸易奖励："
+ THE_NIN_3_4_c_tt1: "解锁§Y宣战理由§!「七丘之土」，争对首都位于§Y意大利§!区域的所有国家，允许§Y附庸§!并转变为我们的§Y宗教§!"
+ THE_NIN_3_5_c_tt1: "当§Y发展§!省份时，该省份将会获得§G10%§!§Y思潮进度§!"
+ THE_NIN_4_8_c_tt1_yes: "£yes£若我们通过§Y征服省份§!完成任务，则："
+ THE_NIN_4_8_c_tt1_no: "£no£若我们通过§Y征服省份§!完成任务，则："
+ THE_NIN_4_8_c_tt2_yes: "£yes£若我们通过附庸@TUN§Y[TUN.GetName]§!完成任务，则："
+ THE_NIN_4_8_c_tt2_no: "£no£若我们通过附庸@TUN§Y[TUN.GetName]§!完成任务，则："
+ THE_NIN_4_8_c_tt3: "将@TUN§Y[TUN.GetName]§!更名为§Y迦太基§!，并获得以下效果："
 ###MISSION_END
 
 ###DIPOMATIC_ACTIONS
@@ -162,6 +183,9 @@ l_english:
  THE_NIN_greece_rome_belonged_to_polytheism_modifier: "希腊&罗马重归于多神教"
  THE_NIN_hakurei_shinto_in_rome_ex_modifier: "博丽首座"
  THE_NIN_regain_trust_modifier: "重拾相信"
+ THE_NIN_silver_salt_art_modifier: "盐仿石像"
+ THE_NIN_latin_country_modifier: "拉丁诸国"
+ THE_NIN_new_city_modifier: "新城"
 ###MODIFIER_END
 
 ###DECISIONS
@@ -173,3 +197,12 @@ l_english:
  THE_suleiman_ottoman_advisor: "企业家"
  THE_suleiman_ottoman_desc: ""
 ###ADVISOR_END
+
+###GAIN
+ THE_silver_shortage_gain: "白银之路"
+###GAIN
+
+###GOODS
+ THE_pearls_tradegoods: "珍珠"
+ THE_pearls_tradegoods_desc: ""
+###GOODS_END

@@ -76,3 +76,43 @@ THE_NIN_tur_government_names = {
 		}
 	}
 }
+
+THE_NIN_pap_government_names = {
+	rank = {
+		1 = TOUHOU_DOMAIN
+		2 = TOUHOU_REALM
+		3 = TOUHOU_EMPIRE
+	}
+	
+	ruler_male = {
+		3 = THE_NIN_PAP_RULER
+		2 = THE_NIN_PAP_RULER
+		1 = THE_NIN_PAP_RULER
+	}
+	
+	ruler_female = {
+		3 = THE_NIN_PAP_RULER
+		2 = THE_NIN_PAP_RULER
+		1 = THE_NIN_PAP_RULER
+	}
+	
+	heir_male = {
+		1 = THE_NIN_PAP_HEIR
+		2 = THE_NIN_PAP_HEIR
+		3 = THE_NIN_PAP_HEIR
+	}
+	
+	heir_female = {
+		1 = THE_KEI_HEIR
+		2 = THE_KEI_HEIR
+		3 = THE_KEI_HEIR
+	}
+	
+	trigger = {
+		AND = {
+			tag = PAP
+			is_subject_of = NIN
+			has_reform = THE_NIN_PAP_hakurei_shrine_reform
+		}
+	}
+}

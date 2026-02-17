@@ -93,3 +93,19 @@ THE_NIN_hakurei_shinto_in_rome_ex_modifier = {
 	tax_income = 12
 	local_development_cost = -0.15
 }
+#盐仿石像
+THE_NIN_silver_salt_art_modifier = {
+	defensiveness = 0.15
+	development_cost = -0.05
+}
+#拉丁诸国
+THE_NIN_latin_country_modifier = {
+	leader_cost = -0.1
+}
+#新城
+THE_NIN_new_city_modifier = {
+	core_creation = -0.15
+	liberty_desire = -200
+	placed_merchant_power = 50
+	global_trade_power = 0.20
+}

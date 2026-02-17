@@ -36,16 +36,25 @@
  THE_NIN_art_and_venus_reform: "bIrNbZWáO"
  THE_NIN_art_and_venus_reform_desc: ""
  mechanic_THE_NIN_art_and_venus_reform_mechanic_yes: "ÏkSVbìNb—Vb‰Nöeÿ8lEN·ƒ—V§YÏkgZg§!+§G0.005§!"
+ THE_NIN_fictional_foam_reform: "alýyUR²w¯um"
+ THE_NIN_fictional_foam_reform_desc: ""
+ mechanic_THE_NIN_fictional_foam_reform_mechanic_yes: "å‚bìNåb	gÏkgZg§G+0.5§!ÿSAQ¸‹§YZ†„gÙS‹N§!„vTöeD– R§Y°sžRHeœg§!ÿv^·ƒ—VÏkgZg§R-0.5§!„vîOckÿå‹îOckO–öeô•pˆÏQ0"
  THE_NIN_TUR_cooperation_reform: "eY¯eüfON?eœ^"
  THE_NIN_TUR_cooperation_reform_desc: ""
+ THE_NIN_PAP_hakurei_shrine_reform: "ZSKNYe÷^"
+ THE_NIN_PAP_hakurei_shrine_reform_desc: ""
 ###REFORM_END
 
 ###NAME
  THE_NIN_RULER: "Å–xQ„vˆR²bsY^y"
- THE_TUR_cooperative: "eY¯eüf¶RÏelQøS"
- THE_TUR_cooperative_ADJ: "eY¯eüf¶RÏelQøS"
+ THE_NIN_TUR_cooperative_name: "eY¯eüf¶RÏelQøS"
+ THE_NIN_TUR_cooperative_name_ADJ: "eY¯eüf¶RÏelQøS"
+ THE_NIN_TUN_name: "æ*YúW"
+ THE_NIN_TUN_name_ADJ: "æ*YúW"
  THE_NIN_TUR_RULER: "gbLˆc„‹N"
  THE_NIN_TUR_HEIR: "lQPR"
+ THE_NIN_PAP_RULER: "Ye—R"
+ THE_NIN_PAP_HEIR: ""
 ###NAME_END
 
 ###OPINION
@@ -91,6 +100,18 @@
  THE_NIN_2_7_c_tt1: "§YWlš§!ÿ§YTëXfWN!X§!ÿ§Y‰RagKQ§!ÿ§YšN†SqS'Y§!ÿ§Y6wï’d·Q§!SO·ƒ—VåNNHeœgÿ"
  THE_NIN_2_7_c_tt2_yes: "£yes£å‚@PAP§Y[PAP.GetName]§!=fbìN„v§Y^SýV§!"
  THE_NIN_2_7_c_tt2_no: "£no£å‚@PAP§Y[PAP.GetName]§!=fbìN„v§Y^SýV§!"
+ THE_NIN_1_8_c_tt1_yes: "£yes£‚Yœg§YYeëX§!6–BSàVÚ‹¦^¾0R§Y60§!"
+ THE_NIN_1_8_c_tt1_no: "£no£‚Yœg§YYeëX§!6–BSàVÚ‹¦^¾0R§Y60§!"
+ THE_NIN_1_8_c_tt2: "–:g20*NwýN·ƒ—V§Y^y>y§!"
+ THE_NIN_4_7_c_tt1_yes: "£yes£‚Yœgåb	g§YÐv§!„v8fVY±Rÿ"
+ THE_NIN_4_7_c_tt1_no: "£no£‚Yœgåb	g§YÐv§!„v8fVY±Rÿ"
+ THE_NIN_3_4_c_tt1: "ã‰•§Y±Rbt1u§!0NNKNW0ÿ‰NùR–™ýMOŽN§Ya'Y)R§!:SßW„vNb	gýV¶RÿAQ¸‹§YD–¸^§!v^lØS:NbìN„v§Y—RYe§!"
+ THE_NIN_3_5_c_tt1: "SV§YÑSUS§!wýNöeÿå‹wýNSO·ƒ—V§G10%§!§Y`noÛ¦^§!"
+ THE_NIN_4_8_c_tt1_yes: "£yes£å‚bìNÇ§YVgwýN§!ŒRbûN¡RÿRÿ"
+ THE_NIN_4_8_c_tt1_no: "£no£å‚bìNÇ§YVgwýN§!ŒRbûN¡RÿRÿ"
+ THE_NIN_4_8_c_tt2_yes: "£yes£å‚bìNÇD–¸^@TUN§Y[TUN.GetName]§!ŒRbûN¡RÿRÿ"
+ THE_NIN_4_8_c_tt2_no: "£no£å‚bìNÇD–¸^@TUN§Y[TUN.GetName]§!ŒRbûN¡RÿRÿ"
+ THE_NIN_4_8_c_tt3: "S@TUN§Y[TUN.GetName]§!ôfT:N§Yæ*YúW§!ÿv^·ƒ—VåNNHeœgÿ"
 ###MISSION_END
 
 ###DIPOMATIC_ACTIONS
@@ -162,6 +183,9 @@
  THE_NIN_greece_rome_belonged_to_polytheism_modifier: "^J&WlšÍ‘RVŽNY^yYe"
  THE_NIN_hakurei_shinto_in_rome_ex_modifier: "ZSKN–™µ^"
  THE_NIN_regain_trust_modifier: "Í‘þbøváO"
+ THE_NIN_silver_salt_art_modifier: "ÐvÿNówÏP"
+ THE_NIN_latin_country_modifier: "ÉbNø‹ýV"
+ THE_NIN_new_city_modifier: "°eÎW"
 ###MODIFIER_END
 
 ###DECISIONS
@@ -173,3 +197,12 @@
  THE_suleiman_ottoman_advisor: "ON¶R"
  THE_suleiman_ottoman_desc: ""
 ###ADVISOR_END
+
+###GAIN
+ THE_silver_shortage_gain: "‹vö”KNï"
+###GAIN
+
+###GOODS
+ THE_pearls_tradegoods: "Ísàs"
+ THE_pearls_tradegoods_desc: ""
+###GOODS_END
