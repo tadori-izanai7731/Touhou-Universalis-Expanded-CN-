@@ -2087,7 +2087,6 @@ THE_ROD_branch_3 = {
 		trigger = {
 			1926 = {
 				has_most_province_trade_power = ROOT
-				NOT = { has_privateer_share_in_trade_node = { share = 0.01 }  } 
 			}
 			OR = {
 				num_of_estate_agendas_completed = {
