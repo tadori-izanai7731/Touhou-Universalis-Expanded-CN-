@@ -23,20 +23,20 @@ custom_button = {
 		}
 	}
 	effect = {
-		owner = {
-			if = {
-				limit = {
-					not = {
-						has_country_modifier = THE_ALC_base_dolls_corps_buff
-					}
-				}
-				add_country_modifier = {
-					name = THE_ALC_base_dolls_corps_buff
-					duration = -1
-				}
-			}
-			
-		}
+		# owner = {
+		# 	if = {
+		# 		limit = {
+		# 			not = {
+		# 				has_country_modifier = THE_ALC_base_dolls_corps_buff
+		# 			}
+		# 		}
+		# 		add_country_modifier = {
+		# 			name = THE_ALC_base_dolls_corps_buff
+		# 			duration = -1
+		# 		}
+		# 	}
+		# }
+		# @Fasterliya 此效果的相关修正已不存在
 		hidden_effect = {
 			owner = {
 				subtract_variable = {

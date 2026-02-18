@@ -1,17 +1,17 @@
-country_decisions = {
-	THE_CRD_chaos_display_mechanic_decision = {
-		potential = {
-			ai = no
-			mission_completed = THE_CRD_chaos_3_4
-			NOT = { has_country_flag = THE_CRD_chaos_view_mechanic_flag }
-		}
-		allow = {
-			always = yes
-		}
-		effect = {
-			country_event = {
-				id = THE_CRD_chaos_events.1
-			}
-		}
-	}
-}
+# country_decisions = {
+# 	THE_CRD_chaos_display_mechanic_decision = {
+# 		potential = {
+# 			ai = no
+# 			mission_completed = THE_CRD_chaos_3_4
+# 			NOT = { has_country_flag = THE_CRD_chaos_view_mechanic_flag }
+# 		}
+# 		allow = {
+# 			always = yes
+# 		}
+# 		effect = {
+# 			country_event = {
+# 				id = THE_CRD_chaos_events.1
+# 			}
+# 		}
+# 	}
+# }

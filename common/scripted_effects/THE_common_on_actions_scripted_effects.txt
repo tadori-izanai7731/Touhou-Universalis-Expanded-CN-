@@ -17,7 +17,7 @@ THE_on_government_change_scripted_effect_effects = {
 	}
 }
 
-THE_on_battle_won_country_scripted_effects = {
+THE_on_battle_won_country_scripted_effect = {
 	if = {
 		limit = { has_country_modifier = THE_common_season_secret_power_spring_modifier }
 		change_innovativeness = 0.3

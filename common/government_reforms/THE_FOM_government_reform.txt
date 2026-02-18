@@ -123,7 +123,8 @@ THE_FOM_Witch_paticipate_political = {
 	has_parliament = yes
 	icon = "witch_government_reform"
 	potential = {
-		has_reform = THE_FOM_Magic_envoy_reform
+		# has_reform = THE_FOM_Magic_envoy_reform
+		# @Fasterliya 此条件所需的改革已不存在
 		has_reform = THE_FOM_Witch_paticipate_political
 	}
 	modifiers = {
@@ -143,8 +144,10 @@ THE_FOM_Witch_marisa_plundering_by_magician = {
 	lock_level_when_selected = yes
 	icon = "witch_government_reform"
 	potential = {
-		has_reform = THE_FOM_Magic_envoy_reform
-		mission_completed = THE_FOM_repacious_witch 
+		# has_reform = THE_FOM_Magic_envoy_reform
+		# @Fasterliya 此条件所需的改革已不存在
+		# mission_completed = THE_FOM_repacious_witch 
+		# @Fasterliya 此条件所需的任务已不存在
 	}
 	modifiers = {
 		governing_cost = -0.20
@@ -159,7 +162,8 @@ THE_FOM_Witch_marisa_conquer_and_expand_territories = {
 	lock_level_when_selected = yes
 	icon = "witch_government_reform"
 	potential = {
-		has_reform = THE_FOM_Magic_envoy_reform
+		# has_reform = THE_FOM_Magic_envoy_reform
+		# @Fasterliya 此条件所需的改革已不存在
 		mission_completed = THE_FOM_Kirisame_marisa
 	}
 	modifiers = {

@@ -1,13 +1,13 @@
 #$which$|变量类型，支持adm、dip、mil
 #$value$|运算数值
 #$type$|运算类型，支持set、change、subtract、multiply、divide
-# THE_HNG_change_power_variable = {
-# 	$type$_variable = {
-# 		which = the_hng_$which$_power_var
-# 		value = $value$
-# 	}
-# 	THE_HNG_change_power_variable_scripted_effects = yes
-# }
+THE_HNG_change_power_variable = {
+	$type$_variable = {
+		which = the_hng_$which$_power_var
+		value = $value$
+	}
+	THE_HNG_change_power_variable_scripted_effects = yes
+}
 
 # THE_HNG_change_power_variable_scripted_effects = {
 # 	if = {

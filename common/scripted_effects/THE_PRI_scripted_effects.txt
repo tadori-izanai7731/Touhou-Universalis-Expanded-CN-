@@ -83,7 +83,7 @@ THE_PRI_order_per_province_scripted_effect = {
 		add_nationalism = -10
 	}
 	if = {
-		limit = { owner = { mission_completed = THE_PRI_mission_5_4_effect_case2_flag } }
+		limit = { owner = { has_country_flag = THE_PRI_mission_5_4_effect_case2_flag } }
 		custom_tooltip = THE_PRI_mission_5_4_order_tt_case2
 		hidden_effect = {
 			owner = {

@@ -836,16 +836,16 @@ country_event = {
 	}
 }
 #Haniwa敕命 （2槽）
-country_event = {
-	id = THE_KEI_flavor_events.5
-	title = "THE_KEI_flavor_events.5.t"
-	desc = "THE_KEI_flavor_events.5.desc"
-	picture = ""
-	is_triggered_only = yes
-	trigger = {
+# country_event = {
+# 	id = THE_KEI_flavor_events.5
+# 	title = "THE_KEI_flavor_events.5.t"
+# 	desc = "THE_KEI_flavor_events.5.desc"
+# 	picture = ""
+# 	is_triggered_only = yes
+# 	trigger = {
 		
-	}
-}
+# 	}
+# }
 #天工决议）
 country_event = {
 	id = THE_KEI_flavor_events.6

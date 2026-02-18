@@ -1266,17 +1266,17 @@ THE_IQU_play_chess_end_add_point_effects = {
 	}
 	THE_IQU_teaching_tenshi_add_power_effect = yes
 }
-THE_IQU_teaching_tenshi_add_power_effect = {
-	if = {
-		limit = {
-			check_variable = {
-				which = the_iqu_the_tenshi_teaching_experience_im_var
-				value = 100
-			}
-		}
-		THE_IQU_teaching_tenshi_add_power_script = yes
-	}
-}
+# THE_IQU_teaching_tenshi_add_power_effect = {
+# 	if = {
+# 		limit = {
+# 			check_variable = {
+# 				which = the_iqu_the_tenshi_teaching_experience_im_var
+# 				value = 100
+# 			}
+# 		}
+# 		THE_IQU_teaching_tenshi_add_power_script = yes
+# 	}
+# }
 # THE_IQU_teaching_tenshi_add_power_script = {
 # 	if = {
 # 		limit = { 
