@@ -1,0 +1,36 @@
+cb_THE_NIN_ottoman_revenge_war = {
+    valid_for_subject = no
+    
+    prerequisites_self = {
+        has_country_flag = THE_NIN_unlock_cb_with_mam_flag
+    }
+    prerequisites = {
+        FROM = {
+            any_owned_province = {
+                OR = {
+                    region = mashriq_region
+                    region = egypt_region
+                }
+            }
+        }
+    }
+    
+    war_goal = THE_NIN_ottoman_revenge_war
+}
+
+cb_THE_NIN_italy_vassal_war = {
+    valid_for_subject = no
+    
+    prerequisites_self = {
+        has_country_flag = THE_NIN_unlock_cb_vassal_italy_flag
+    }
+    prerequisites = {
+        FROM = {
+            capital_scope = {
+                region = italy_region
+            }
+        }
+    }
+    
+    war_goal = THE_NIN_italy_vassal_war
+}

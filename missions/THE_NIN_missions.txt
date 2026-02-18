@@ -821,7 +821,7 @@ THE_NIN_branch_3 = {
 			}
 			custom_tooltip = THE_NIN_3_4_c_tt1
 			hidden_effect = {
-				
+				set_country_flag = THE_NIN_unlock_cb_vassal_italy_flag
 			}
 		} 
 	}
