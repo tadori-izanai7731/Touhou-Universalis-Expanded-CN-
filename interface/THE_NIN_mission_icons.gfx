@@ -4,4 +4,21 @@ spriteTypes = {
 		name = "government_reform_THE_NIN_government_1_reform"
 		texturefile = "gfx\\interface\\government_reform_icons\\THE_NIN\\THE_NIN_government_reform_1.dds"
 	}
+	spriteType = {
+		name = "government_reform_THE_NIN_government_2_reform"
+		texturefile = "gfx\\interface\\government_reform_icons\\THE_NIN\\THE_NIN_government_reform_2.dds"
+	}
+	spriteType = {
+		name = "government_reform_THE_NIN_government_3_reform"
+		texturefile = "gfx\\interface\\government_reform_icons\\THE_NIN\\THE_NIN_government_reform_3.dds"
+	}
+	spriteType = {
+		name = "government_reform_THE_NIN_government_4_reform"
+		texturefile = "gfx\\interface\\government_reform_icons\\THE_NIN\\THE_NIN_government_reform_4.dds"
+	}
+	##EVENT
+	spriteType = {
+		name = "THE_NIN_event_picture_1"
+		texturefile = "gfx//event_pictures//THE_IQU//THE_NIN_event_picture_1.dds"
+	}
 }

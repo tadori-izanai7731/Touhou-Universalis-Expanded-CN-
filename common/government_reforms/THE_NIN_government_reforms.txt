@@ -30,7 +30,7 @@ THE_NIN_fictional_goddess_reform = {
 #2级
 THE_NIN_fictional_foam_reform = {
 	lock_level_when_selected = yes
-	icon = "THE_NIN_government_1_reform"
+	icon = "THE_NIN_government_2_reform"
 	potential = {
 		OR = {
 			has_reform = THE_NIN_fictional_foam_reform
@@ -54,7 +54,7 @@ THE_NIN_fictional_foam_reform = {
 #3级
 THE_NIN_art_and_venus_reform = {
 	lock_level_when_selected = yes
-	icon = "THE_NIN_government_1_reform"
+	icon = "THE_NIN_government_3_reform"
 	potential = {
 		OR = {
 			has_reform = THE_NIN_art_and_venus_reform
@@ -77,7 +77,7 @@ THE_NIN_art_and_venus_reform = {
 #4级 潮水归于大海
 THE_NIN_tide_returns_to_the_sea_reform = {
 	lock_level_when_selected = yes
-	icon = "THE_NIN_government_1_reform"
+	icon = "THE_NIN_government_4_reform"
 	potential = {
 		OR = {
 			has_reform = THE_NIN_tide_returns_to_the_sea_reform
