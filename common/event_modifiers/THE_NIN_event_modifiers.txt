@@ -125,3 +125,12 @@ THE_NIN_international_bad_boy_modifier = {
 	ae_impact = 0.33
 	diplomatic_reputation = -5
 }
+#信息通讯
+THE_NIN_deities_army_modifier = {
+	land_morale = 0.10
+	yearly_army_professionalism = 0.5
+}
+THE_NIN_deities_government_modifier = {
+	advisor_cost = -0.15
+	build_cost = -0.15
+}

@@ -23,3 +23,8 @@ THE_NIN_contemptuous_humiliation_modifier = {
 	opinion = -200
 	yearly_decay = 5
 }
+
+THE_NIN_deities_modifier = {
+	opinion = 75
+	yearly_decay = -1
+}

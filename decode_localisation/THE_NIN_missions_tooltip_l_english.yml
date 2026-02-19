@@ -73,6 +73,7 @@ l_english:
  THE_NIN_victory_godness_opinion_modifier: "胜利女神"
  THE_NIN_with_ven_opinion_modifier: "最大的债主"
  THE_NIN_contemptuous_humiliation_modifier: "轻蔑的羞辱"
+ THE_NIN_deities_modifier: "周边关系改善"
 ###OPINION_END
 
 ###MISSION
@@ -204,6 +205,17 @@ l_english:
  THE_NIN_events.104.desc: "长期以来撕裂基督教世界的教义分歧与管辖权争端，其实际影响力正在迅速消退。在罗马与君士坦丁堡，一种源自远东的、被称为「博丽神道」的信仰，正通过贸易，学者及民间交流开始影响欧洲的土地。\n\n东西方教会高层对此发展反应迟缓且无力。大量基层神职人员与普通信众，尤其是对长期宗教冲突感到厌倦的群体，开始在实践中将本地传统与博丽神道的某些仪式和观念相融合。"
  THE_NIN_events.104.a: "接受信仰"
  THE_NIN_events.104.b: "尝试压制"
+ THE_NIN_events.105.t: "改善的周边氛围"
+ THE_NIN_events.105.desc: "近来，在我们神明的影响下，邻国对我国的敌意与戒备出现了明显的消退。这并非源于我国近期具体的军事或外交行动，而更像是一种普遍性的认知软化。邻国的官员与民众，似乎正逐渐将我国的存在，视为某种「既成事实」，甚至带着一种难以言明的、模糊的好感。"
+ THE_NIN_events.105.a: "甚好"
+ THE_NIN_events_105_c_tt1: "所有国家对我们的§Y侵略扩张§!影响§G-50§!"
+ THE_NIN_events.106.t: "王室血脉传闻"
+ THE_NIN_events.106.desc: "近期，我国的民间流传起一些来源不明的传言。传言所说，曾在数代人之前与我国王室有过隐秘的联姻。由于战乱、继承危机或政治避祸，这一支后裔的身份被刻意掩盖，但其法理上的继承权却并未消失。我国的群臣也认为道「若传言为真，则在极其特定的继承顺位假设下，我国可以对此邻国发起王位宣称。」\n\n尽管史官们坚称在官方档案中找不到确凿证据，但一种奇特的认知共识似乎正在形成。许多人开始真的觉得，我国与他国之间存在某种关系。"
+ THE_NIN_events.106.a: "我们应该着手准备"
+ THE_NIN_events.107.t: "高效的行政"
+ THE_NIN_events.107.desc: "近日，不同机构之间的文书流转速度加快，信息传递中的误解与拖延大幅减少。财政、军事、司法等部门在制定政策时，展现出罕见的默契与同步。朝堂上的无谓争执明显下降，即便存在分歧，也很快达成切实可行的妥协。"
+ THE_NIN_events.107.a: "鼓励政府办公"
+ THE_NIN_events.107.b: "鼓励军队协作"
 ###MISSION_EVENT_END
 
 ###MODIFIER
@@ -230,6 +242,8 @@ l_english:
  monthly_THE_NIN_fictional_foam_reform_mechanic_ex_power: "每月威望负面修正衰减"
  THE_NIN_believe_the_nina_modifier: "我等所坚信"
  THE_NIN_international_bad_boy_modifier: "国际败类"
+ THE_NIN_deities_army_modifier: "信息通信"
+ THE_NIN_deities_government_modifier: "信息通信"
 ###MODIFIER_END
 
 ###DECISIONS
