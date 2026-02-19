@@ -32,9 +32,9 @@ THE_NIN_change_cloth_to_silk_province_effect = {
 			owner = {
 				mission_completed = THE_NIN_2_5
 			}
-		 }
-		 change_trade_goods = THE_pearls_tradegoods
-		 add_base_production = 2
+		}
+		change_trade_goods = THE_pearls_tradegoods
+		add_base_production = 2
 	}
 }
 
@@ -66,10 +66,6 @@ THE_NIN_on_start_change_price_effect = {
 	}
 }
 
-
-##################################
-#####
-#################################
 THE_NIN_add_institution_progress_effect = {
 	if = {
 		limit = {
@@ -95,5 +91,84 @@ THE_NIN_add_institution_progress_script = {
 			which = $institution$
 			value = 10
 		}
+	}
+}
+
+THE_NIN_develop_province_to_add_prestige_effect = {
+	if = {
+		limit = { 
+			owner = {
+				tag = NIN
+				has_government_attribute = THE_NIN_art_and_venus_reform_mechanic
+			}
+		}
+		owner = {
+			add_government_power = {
+				mechanic_type = THE_NIN_art_and_venus_reform_mechanic_ex
+				power_type = THE_NIN_art_and_venus_reform_mechanic_ex_power
+				value = 1
+			}
+		}
+	}
+	if = {
+		limit = { 
+			owner = {
+				overlord = {
+					tag = NIN
+					has_government_attribute = THE_NIN_art_and_venus_reform_mechanic
+				}
+			}
+		}
+		owner = {
+			overlord = {
+				add_government_power = {
+					mechanic_type = THE_NIN_art_and_venus_reform_mechanic_ex
+					power_type = THE_NIN_art_and_venus_reform_mechanic_ex_power
+					value = 1
+				}
+			}
+		}
+	}
+}
+
+
+##################################
+##### Common Script
+#################################
+
+THE_NIN_check_prestige_monthly_event_effect = {
+	if = {
+		limit = { 
+			has_government_attribute = THE_NIN_fictional_foam_reform_mechanic
+		}
+		if = {
+			limit = { 
+				prestige = 50
+				NOT = {
+					has_government_power = {
+						mechanic_type = THE_NIN_fictional_foam_reform_mechanic_ex
+						power_type = THE_NIN_fictional_foam_reform_mechanic_ex_power
+						value = 4
+					}
+				}
+			}
+			custom_tooltip = THE_NIN_check_prestige_monthly_event_effect_c_tt1_yes
+			custom_tooltip = THE_NIN_check_prestige_monthly_event_effect_c_tt3
+		}
+		else = {
+			custom_tooltip = THE_NIN_check_prestige_monthly_event_effect_c_tt1_no
+			custom_tooltip = THE_NIN_check_prestige_monthly_event_effect_c_tt3
+		}
+	}
+	else = {
+		custom_tooltip = THE_NIN_check_prestige_monthly_event_effect_c_tt2
+	}
+}
+
+THE_NIN_add_government_power_foam_effect = {
+	add_government_power = {
+		mechanic_type = THE_NIN_fictional_foam_reform_mechanic_ex
+		power_type = THE_NIN_fictional_foam_reform_mechanic_ex_power
+		value = 1
 	}
 }

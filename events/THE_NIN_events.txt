@@ -12,14 +12,20 @@ country_event = {
 	option = {
 		name = THE_NIN_events.1.a
 		highlight = yes
-		custom_tooltip = THE_NIN_events_1_a_c_tt1
 	}
 	#结盟
 	option = {
 		name = THE_NIN_events.1.b
-		tooltip = {
-			event_target:THE_NIN_the_first_narrative_protagonist_global_event_target = {
-				create_alliance = event_target:THE_NIN_the_second_narrative_protagonist_global_event_target
+		custom_tooltip = THE_NIN_events_1_b_ctt1
+		THE_NIN_check_prestige_monthly_event_effect = yes
+		if = {
+			limit = {
+				has_government_attribute = THE_NIN_fictional_foam_reform_mechanic
+			}
+			tooltip = {
+				event_target:THE_NIN_the_first_narrative_protagonist_global_event_target = {
+					create_alliance = event_target:THE_NIN_the_second_narrative_protagonist_global_event_target
+				}
 			}
 		}
 		hidden_effect = {
@@ -33,23 +39,48 @@ country_event = {
 	#联合统治
 	option = {
 		name = THE_NIN_events.1.c
-		tooltip = {
-			event_target:THE_NIN_the_first_narrative_protagonist_global_event_target = {
-				create_union = event_target:THE_NIN_the_second_narrative_protagonist_global_event_target
+		custom_tooltip = THE_NIN_events_1_c_ctt1
+		THE_NIN_check_prestige_monthly_event_effect = yes
+		if = {
+			limit = {
+				has_government_attribute = THE_NIN_fictional_foam_reform_mechanic
 			}
-		}
-		hidden_effect = {
-			
+			tooltip = {
+				event_target:THE_NIN_the_first_narrative_protagonist_global_event_target = {
+					create_union = event_target:THE_NIN_the_second_narrative_protagonist_global_event_target
+				}
+			}
+			hidden_effect = {
+				event_target:THE_NIN_the_second_narrative_protagonist_global_event_target = {
+					country_event = {
+						id = THE_NIN_events.10
+					}
+				}
+			}
 		}
 	}
 	#宣战
 	option = {
 		name = THE_NIN_events.1.d
-		tooltip = {
-			event_target:THE_NIN_the_first_narrative_protagonist_global_event_target = {
-				declare_war_with_cb = {
-					casus_belli = cb_imperial
-					who = event_target:THE_NIN_the_second_narrative_protagonist_global_event_target
+		custom_tooltip = THE_NIN_events_1_d_ctt1
+		THE_NIN_check_prestige_monthly_event_effect = yes
+		if = {
+			limit = {
+				has_government_attribute = THE_NIN_fictional_foam_reform_mechanic
+			}
+			tooltip = {
+				event_target:THE_NIN_the_first_narrative_protagonist_global_event_target = {
+					declare_war_with_cb = {
+						casus_belli = cb_imperial
+						who = event_target:THE_NIN_the_second_narrative_protagonist_global_event_target
+					}
+				}
+			}
+			hidden_effect = {
+				event_target:THE_NIN_the_second_narrative_protagonist_global_event_target = {
+					country_event = {
+						id = THE_NIN_events.12
+					}
 				}
 			}
 		}
@@ -57,28 +88,114 @@ country_event = {
 	#强制和平
 	option = {
 		name = THE_NIN_events.1.e
-		tooltip = {
-			event_target:THE_NIN_the_first_narrative_protagonist_global_event_target = {
-				white_peace = event_target:THE_NIN_the_second_narrative_protagonist_global_event_target
+		custom_tooltip = THE_NIN_events_1_e_ctt1
+		THE_NIN_check_prestige_monthly_event_effect = yes
+		if = {
+			limit = {
+				has_government_attribute = THE_NIN_fictional_foam_reform_mechanic
+			}
+			tooltip = {
+				event_target:THE_NIN_the_first_narrative_protagonist_global_event_target = {
+					white_peace = event_target:THE_NIN_the_second_narrative_protagonist_global_event_target
+				}
+			}
+			hidden_effect = {
+				event_target:THE_NIN_the_second_narrative_protagonist_global_event_target = {
+					country_event = {
+						id = THE_NIN_events.14
+					}
+				}
 			}
 		}
 	}
 	#措辞高雅
 	option = {
 		name = THE_NIN_events.1.f
-		event_target:THE_NIN_the_second_narrative_protagonist_global_event_target = {
-			country_event = {
-				id = THE_NIN_events.8
+		custom_tooltip = THE_NIN_events_1_f_ctt1
+		trigger = {
+			mission_completed = THE_NIN_4_4
+		}
+		THE_NIN_check_prestige_monthly_event_effect = yes
+		if = {
+			limit = {
+				has_government_attribute = THE_NIN_fictional_foam_reform_mechanic
+			}
+			hidden_effect = {
+				event_target:THE_NIN_the_second_narrative_protagonist_global_event_target = {
+					country_event = {
+						id = THE_NIN_events.8
+					}
+				}
 			}
 		}
 	}
 	#分离主义者的谣言
 	option = {
 		name = THE_NIN_events.1.g
-		event_target:THE_NIN_the_second_narrative_protagonist_global_event_target = {
-			country_event = {
-				id = THE_NIN_events.6
+		trigger = {
+			mission_completed = THE_NIN_1_4
+		}
+		custom_tooltip = THE_NIN_events_1_g_ctt1
+		THE_NIN_check_prestige_monthly_event_effect = yes
+		if = {
+			limit = {
+				has_government_attribute = THE_NIN_fictional_foam_reform_mechanic
 			}
+			tooltip = {
+				event_target:THE_NIN_the_second_narrative_protagonist_global_event_target = {
+					country_event = {
+						id = THE_NIN_events.6
+					}
+				}
+			}
+			hidden_effect = {
+				event_target:THE_NIN_the_second_narrative_protagonist_global_event_target = {
+					country_event = {
+						id = THE_NIN_events.6
+					}
+				}
+			}
+		}
+	}
+	#鼓吹价格
+	option = {
+		name = THE_NIN_events.1.h
+		custom_tooltip = THE_NIN_events_1_h_ctt1
+		trigger = {
+			mission_completed = THE_NIN_2_5
+		}
+		THE_NIN_check_prestige_monthly_event_effect = yes
+		if = {
+			limit = {
+				has_government_attribute = THE_NIN_fictional_foam_reform_mechanic
+				prestige = 40
+				NOT = {
+					has_government_power = {
+						mechanic_type = THE_NIN_fictional_foam_reform_mechanic_ex
+						power_type = THE_NIN_fictional_foam_reform_mechanic_ex_power
+						value = 4
+					}
+				}
+			}
+			change_price = {
+				trade_goods = THE_pearls_tradegoods
+				key = THE_pearls_tradegoods_shortage_2
+				value = 0.25
+				duration = -1
+			}
+			hidden_effect = {
+				THE_NIN_add_government_power_foam_effect = yes
+			}
+		}
+		else = {
+			tooltip = {
+				change_price = {
+					trade_goods = THE_pearls_tradegoods
+					key = THE_pearls_tradegoods_shortage_2
+					value = 0.25
+					duration = -1
+				}
+			}	
 		}
 	}
 }
@@ -119,40 +236,65 @@ country_event = {
 	
 	option = {
 		name = THE_NIN_events.3.a
-		event_target:THE_NIN_the_second_narrative_protagonist_global_event_target = {
-			add_trust = {
-				who = ROOT
-				value = 20
-				mutual = yes
-			}
-		}
 		if = {
 			limit = { 
-				OR = {
-					AND = {
-						tag = TUR
-						FROM = {
-							tag = BYZ
-						}
-					}
-					AND = {
-						tag = BYZ
-						FROM = {
-							tag = TUR
+				NIN = {
+					has_government_attribute = THE_NIN_fictional_foam_reform_mechanic
+					prestige = 50
+					NOT = {
+						has_government_power = {
+							mechanic_type = THE_NIN_fictional_foam_reform_mechanic_ex
+							power_type = THE_NIN_fictional_foam_reform_mechanic_ex_power
+							value = 4
 						}
 					}
 				}
 			}
-			FROM = {
+			event_target:THE_NIN_the_second_narrative_protagonist_global_event_target = {
+				create_alliance = ROOT
 				add_trust = {
 					who = ROOT
-					value = 80
+					value = 50
+					mutual = yes
 				}
-				add_historical_friend = ROOT
-				remove_historical_rival = ROOT
 			}
-			add_historical_friend = FROM
-			remove_historical_rival = FROM
+		}
+		else = {
+			event_target:THE_NIN_the_second_narrative_protagonist_global_event_target = {
+				add_trust = {
+					who = ROOT
+					value = 20
+					mutual = yes
+				}
+			}
+			if = {
+				limit = { 
+					OR = {
+						AND = {
+							tag = TUR
+							FROM = {
+								tag = BYZ
+							}
+						}
+						AND = {
+							tag = BYZ
+							FROM = {
+								tag = TUR
+							}
+						}
+					}
+				}
+				FROM = {
+					add_trust = {
+						who = ROOT
+						value = 80
+					}
+					add_historical_friend = ROOT
+					remove_historical_rival = ROOT
+				}
+				add_historical_friend = FROM
+				remove_historical_rival = FROM
+			}
 		}
 	}
 }
@@ -202,11 +344,18 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = THE_NIN_events.6.a
-		tooltip = {
-			random_owned_province = {
-				add_province_modifier = {
-					name = THE_NIN_unrest_protagonist_modifier
-					duration = 7300
+		if = {
+			limit = {
+				NIN = {
+					has_government_attribute = THE_NIN_fictional_foam_reform_mechanic
+					prestige = 50
+					NOT = {
+						has_government_power = {
+							mechanic_type = THE_NIN_fictional_foam_reform_mechanic_ex
+							power_type = THE_NIN_fictional_foam_reform_mechanic_ex_power
+							value = 4
+						}
+					}
 				}
 			}
 			random_owned_province = {
@@ -215,6 +364,33 @@ country_event = {
 					duration = 7300
 				}
 			}
+			random_owned_province = {
+				add_province_modifier = {
+					name = THE_NIN_unrest_protagonist_modifier
+					duration = 7300
+				}
+			}
+			hidden_effect = {
+				NIN = {
+					THE_NIN_add_government_power_foam_effect = yes
+				}
+			}
+		}
+		else = {
+			tooltip = {
+				random_owned_province = {
+					add_province_modifier = {
+						name = THE_NIN_unrest_protagonist_modifier
+						duration = 7300
+					}
+				}
+				random_owned_province = {
+					add_province_modifier = {
+						name = THE_NIN_unrest_protagonist_modifier
+						duration = 7300
+					}
+				}
+			}	
 		}
 	}
 }
@@ -252,6 +428,36 @@ country_event = {
 			factor = 0
 		}
 	}
+	after = {
+		if = {
+			limit = { 
+				NIN = {
+					has_government_attribute = THE_NIN_fictional_foam_reform_mechanic
+					prestige = 50
+					NOT = {
+						has_government_power = {
+							mechanic_type = THE_NIN_fictional_foam_reform_mechanic_ex
+							power_type = THE_NIN_fictional_foam_reform_mechanic_ex_power
+							value = 4
+						}
+					}
+				}
+			}
+			add_prestige = -10
+			add_country_modifier = {
+				name = THE_NIN_international_bad_boy_modifier
+				duration = 7300
+			}
+			hidden_effect = {
+				NIN = {
+					THE_NIN_add_government_power_foam_effect = yes
+				}
+			}
+		}
+		else = {
+			add_prestige = -10
+		}
+	}
 }
 #隐藏
 country_event = {
@@ -272,7 +478,188 @@ country_event = {
 	}
 }
 
+##强制联合统治事件
+country_event = {
+	id = THE_NIN_events.9
+	title = THE_NIN_events.9.t
+	desc = THE_NIN_events.9.desc
+	picture = ""
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = THE_NIN_events.9.a
+		if = {
+			limit = {
+				NIN = {
+					has_government_attribute = THE_NIN_fictional_foam_reform_mechanic
+					prestige = 50
+					NOT = {
+						has_government_power = {
+							mechanic_type = THE_NIN_fictional_foam_reform_mechanic_ex
+							power_type = THE_NIN_fictional_foam_reform_mechanic_ex_power
+							value = 4
+						}
+					}
+				}
+			}
+			create_union = FROM
+			FROM = {
+				change_religion = ROOT
+			}
+			hidden_effect = {
+				NIN = {
+					THE_NIN_add_government_power_foam_effect = yes
+				}
+			}
+		}
+		else = {
+			add_prestige = -5
+		}
+	}
+}
+#隐匿
+country_event = {
+	id = THE_NIN_events.10
+	title = THE_NIN_events.10.t
+	desc = THE_NIN_events.10.desc
+	picture = ""
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		name = THE_NIN_events.10.a
+		event_target:THE_NIN_the_first_narrative_protagonist_global_event_target = {
+			country_event = {
+				id = THE_NIN_events.9
+				days = 1
+			}
+		}
+	}
+}
 
+##强制宣战事件
+country_event = {
+	id = THE_NIN_events.11
+	title = THE_NIN_events.11.t
+	desc = THE_NIN_events.11.desc
+	picture = ""
+	is_triggered_only = yes
+	major = yes
+	major_trigger = {
+		OR = {
+			has_government_attribute = THE_NIN_fictional_goddess_reform_mechanic
+			tag = event_target:THE_NIN_the_second_narrative_protagonist_global_event_target
+		}
+	}
+	option = {
+		name = THE_NIN_events.11.a
+		if = {
+			limit = {
+				NIN = {
+					has_government_attribute = THE_NIN_fictional_foam_reform_mechanic
+					prestige = 50
+					NOT = {
+						has_government_power = {
+							mechanic_type = THE_NIN_fictional_foam_reform_mechanic_ex
+							power_type = THE_NIN_fictional_foam_reform_mechanic_ex_power
+							value = 4
+						}
+					}
+				}
+			}
+			declare_war_with_cb = {
+				casus_belli = cb_imperial
+				who = FROM
+			}
+			hidden_effect = {
+				NIN = {
+					THE_NIN_add_government_power_foam_effect = yes
+				}
+			}
+		}
+		else = {
+			add_prestige = -5
+		}
+	}
+}
+#隐匿
+country_event = {
+	id = THE_NIN_events.12
+	title = THE_NIN_events.12.t
+	desc = THE_NIN_events.12.desc
+	picture = ""
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		name = THE_NIN_events.12.a
+		event_target:THE_NIN_the_first_narrative_protagonist_global_event_target = {
+			country_event = {
+				id = THE_NIN_events.11
+				days = 1
+			}
+		}
+	}
+}
+
+##强制和平
+country_event = {
+	id = THE_NIN_events.13
+	title = THE_NIN_events.13.t
+	desc = THE_NIN_events.13.desc
+	picture = ""
+	is_triggered_only = yes
+	major = yes
+	major_trigger = {
+		OR = {
+			has_government_attribute = THE_NIN_fictional_goddess_reform_mechanic
+			tag = event_target:THE_NIN_the_second_narrative_protagonist_global_event_target
+		}
+	}
+	option = {
+		name = THE_NIN_events.13.a
+		if = {
+			limit = {
+				NIN = {
+					has_government_attribute = THE_NIN_fictional_foam_reform_mechanic
+					prestige = 50
+					NOT = {
+						has_government_power = {
+							mechanic_type = THE_NIN_fictional_foam_reform_mechanic_ex
+							power_type = THE_NIN_fictional_foam_reform_mechanic_ex_power
+							value = 4
+						}
+					}
+				}
+			}
+			white_peace = FROM
+			hidden_effect = {
+				NIN = {
+					THE_NIN_add_government_power_foam_effect = yes
+				}
+			}
+		}
+		else = {
+			add_prestige = -5
+		}
+	}
+}
+#隐匿
+country_event = {
+	id = THE_NIN_events.14
+	title = THE_NIN_events.14.t
+	desc = THE_NIN_events.14.desc
+	picture = ""
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		name = THE_NIN_events.14.a
+		event_target:THE_NIN_the_first_narrative_protagonist_global_event_target = {
+			country_event = {
+				id = THE_NIN_events.13
+				days = 1
+			}
+		}
+	}
+}
 
 #威尼斯的债契
 country_event = {

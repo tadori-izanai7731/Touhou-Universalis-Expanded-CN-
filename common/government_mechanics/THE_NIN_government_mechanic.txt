@@ -4,15 +4,17 @@ THE_NIN_fictional_foam_reform_mechanic_ex = {
 	}
 	powers = {
 		THE_NIN_fictional_foam_reform_mechanic_ex_power = {
-			gui = THE_mechanic_power_hidden_gui
+			# gui = THE_mechanic_power_hidden_gui
 			max = 1000
 			min = 0
-			base_monthly_growth = -0.02
+			base_monthly_growth = -0.05
 			increases_with_global = no
 			scaled_modifier = {
 				modifier = {
 					prestige = -500
 				}
+				start_value = 0
+				end_value = 1000
 			}
 		}
 	}
@@ -35,6 +37,8 @@ THE_NIN_tide_returns_to_the_sea_reform_mechanic_ex = {
 					global_missionary_strength = 5
 					tolerance_heretic = -1000
 				}
+				start_value = 0
+				end_value = 1000
 			}
 			range_modifier = {
 				trigger = {
@@ -46,6 +50,8 @@ THE_NIN_tide_returns_to_the_sea_reform_mechanic_ex = {
 				modifier = { 
 					monthly_THE_NIN_tide_returns_to_the_sea_reform_mechanic_ex_1_power = 1
 				}
+				start_value = 0
+				end_value = 1000
 			}
 		}
 		THE_NIN_tide_returns_to_the_sea_reform_mechanic_ex_2_power = {
@@ -60,6 +66,8 @@ THE_NIN_tide_returns_to_the_sea_reform_mechanic_ex = {
 					global_missionary_strength = 5
 					tolerance_heathen = -1000
 				}
+				start_value = 0
+				end_value = 1000
 			}
 			range_modifier = {
 				trigger = {
@@ -71,6 +79,29 @@ THE_NIN_tide_returns_to_the_sea_reform_mechanic_ex = {
 				modifier = { 
 					monthly_THE_NIN_tide_returns_to_the_sea_reform_mechanic_ex_2_power = 1
 				}
+				start_value = 0
+				end_value = 1000
+			}
+		}
+	}
+}
+
+THE_NIN_art_and_venus_reform_mechanic_ex = {
+	available = {
+		always = yes
+	}
+	powers = {
+		THE_NIN_art_and_venus_reform_mechanic_ex_power = {
+			gui = THE_mechanic_power_hidden_gui
+			max = 1000
+			min = 0
+			increases_with_global = no
+			scaled_modifier = {
+				modifier = {
+					prestige = 5
+				}
+				start_value = 0
+				end_value = 1000
 			}
 		}
 	}

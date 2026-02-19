@@ -33,13 +33,15 @@ l_english:
  THE_NIN_fictional_goddess_reform: "虚幻之海"
  THE_NIN_fictional_goddess_reform_desc: ""
  mechanic_THE_NIN_fictional_goddess_reform_mechanic_yes: "启用「虚构信息」能力"
- THE_NIN_art_and_venus_reform: "我等所坚信"
+ THE_NIN_art_and_venus_reform: "海水承载百川"
  THE_NIN_art_and_venus_reform_desc: ""
- mechanic_THE_NIN_art_and_venus_reform_mechanic_yes: "每当我们赢得战争时，永久获得§Y每月威望§!+§G0.005§!"
+ mechanic_THE_NIN_art_and_venus_reform_mechanic_yes: "当我们发展省份或属国的省份时，永久获得§Y年度威望§!+§G0.005§!"
+ ability_THE_NIN_art_and_venus_reform_mechanic_ex: "认知与现实"
+ THE_NIN_art_and_venus_reform_mechanic_ex_power: "来自于认知"
  THE_NIN_fictional_foam_reform: "污秽孕育纯洁"
  THE_NIN_fictional_foam_reform_desc: ""
- mechanic_THE_NIN_fictional_foam_reform_mechanic_yes: "若我们拥有每月威望§G+0.5§!，将允许§Y虚构叙事§!的同时附加§Y现实效果§!，并获得每月威望§R-0.5§!的修正，该修正会随时间衰减。"
- ability_THE_NIN_fictional_foam_reform_mechanic_ex: "共识为真实"
+ mechanic_THE_NIN_fictional_foam_reform_mechanic_yes: "若我们拥有威望至少为§Y50§!，将允许§Y虚构叙事§!的同时附加§Y现实效果§!，并获得年度威望§R-0.5§!的修正，该修正会随时间衰减。"
+ ability_THE_NIN_fictional_foam_reform_mechanic_ex: "共识即真实"
  THE_NIN_fictional_foam_reform_mechanic_ex_power: "由共识所消耗"
  THE_NIN_tide_returns_to_the_sea_reform: "潮水归于大海"
  THE_NIN_tide_returns_to_the_sea_reform_desc: ""
@@ -127,6 +129,7 @@ l_english:
  THE_NIN_1_9_c_tt1: "解锁博丽神道神像「§Y贝子§!」"
  THE_NIN_1_9_c_tt2: "所有的§Y天主教§!与§Y东正教§!国家将会转变为§Y博丽神道§!，但我们的§Y宿敌§!及对[Root.GetName]态度为§Y敌意§!和§Y愤怒§!的国家除外"
  THE_NIN_3_9_c_tt1: "解锁决议「§Y信息轰炸§!」，请确保您的paradox§Y日志§!文件不在§YC§!盘，否则会被填满"
+ THE_NIN_1_4_c_tt3: "解锁虚构叙事「§Y操纵分离主义§!」能力"
 ###MISSION_END
 
 ###DIPOMATIC_ACTIONS
@@ -142,11 +145,19 @@ l_english:
  THE_NIN_events.1.desc: ""
  THE_NIN_events.1.a: "返回"
  THE_NIN_events.1.b: "结盟"
+ THE_NIN_events_1_b_ctt1: "由第一叙事目标对第二叙事目标发起"
  THE_NIN_events.1.c: "联合统治"
+ THE_NIN_events_1_c_ctt1: "由第一叙事目标对第二叙事目标发起"
  THE_NIN_events.1.d: "宣战"
+ THE_NIN_events_1_d_ctt1: "由第一叙事目标对第二叙事目标发起"
  THE_NIN_events.1.e: "强制和平"
+ THE_NIN_events_1_e_ctt1: "由第一叙事目标对第二叙事目标发起"
  THE_NIN_events.1.f: "措辞高雅"
- THE_NIN_events.1.g: "分离主义者的谣言"
+ THE_NIN_events_1_f_ctt1: "由第一叙事目标对第二叙事目标发起"
+ THE_NIN_events.1.g: "操纵分离主义"
+ HE_NIN_events_1_g_ctt: "由第一叙事目标获得"
+ THE_NIN_events.1.h: "鼓吹价格"
+ THE_NIN_events_1_h_ctt1: "全局获得"
  THE_NIN_events.3.t: "「结盟」谣言"
  THE_NIN_events.3.desc: "近日，一则来源成谜、细节却栩栩如生的流言，悄然爬满了酒馆的角落与市集的窃语。它宣称，[Root.GetName]的[Root.Monarch.GetName]已与 [From.GetName]的[From.Monarch.GetName]秘密缔结了坚不可摧的盟约，即将共同应对迫近的威胁。\n\n这传言本身漏洞百出，既无使节往来的记录，亦无任何正式文告的影子，其论调之夸张，几近于市井传奇。"
  THE_NIN_events.3.a: "真是匪夷所思"
@@ -161,6 +172,16 @@ l_english:
  THE_NIN_events.7.a: "§Y你的恶行从爱尔兰到契丹无人不知无人不晓§!"
  THE_NIN_events.7.b: "§Y祝贵国漫天都是扫把星§!"
  THE_NIN_events.8.t: "措辞高雅「谣言」"
+ THE_NIN_events.9.t: "联合统治「谣言」"
+ THE_NIN_events.9.desc: "不知从何时起，酒馆与市集开始流传一个细节详尽的秘密：[From.GetName]的老国王，竟是我国[Root.Dynasty.GetName]王室流落在外的血脉至亲。传言描绘了数十年前一场隐秘的政治联姻、一次迫于战乱的婴儿调换、甚至是一段不为人知的宫廷恋情。每个版本都栩栩如生，仿佛讲述者亲眼所见。\n\n起初，[Root.Monarch.GetName]斥之为无稽之谈。但随着流言愈演愈烈，甚至连[From.GetName]的边境领主也开始用异样的眼神打量我们的使节。更蹊跷的是，从[From.GetName]都城传来密报——他们的老国王病重，恐将不久于人世。"
+ THE_NIN_events.9.a: "这不会成为事实吧。"
+ THE_NIN_events.11.t: "战争「谣言」"
+ THE_NIN_events.11.desc: "近日，一则言辞凿凿的流言笼罩了两国边境。酒馆里的醉汉拍着桌子，信誓旦旦地描述着一段「被掩盖的国耻」：[From.GetName]某位早已作古的先王，曾如何羞辱[Root.Dynasty.GetName]的先祖，并且还经常劫掠边境村庄。\n\n更令人不安的是，流言的核心断言：「我们的君主[Root.Monarch.GetName]已忍无可忍，正在秘密集结大军，战书不日即将送达！」"
+ THE_NIN_events.11.a: "希望不会是真的。"
+ THE_NIN_events.13.t: "和平「谣言」"
+ THE_NIN_events.13.desc: "战争陷入泥沼。但此时，人们开始回忆起：原来我们与[From.GetName]开战的理由，是一场 「可悲的误会」。传闻中那个被劫杀的使团，其实遭遇的是山贼；那个被焚毁的村庄，其实是毁于雷火；甚至，两国的开国君主，曾在百年前歃血为盟，约定后世永为 「兄弟之邦」。"
+ THE_NIN_events.13.a: "和平到来了吗？"
+ 
 ###EVENT_END
 
 ###MISSION_EVENT
@@ -179,9 +200,10 @@ l_english:
  THE_NIN_events.103.t: "预言"
  THE_NIN_events.103.desc: "阿纳尼修道院修士呈上一卷密藏文献——据鉴定，是卜尼法斯八世1303年被囚禁时写下的末日幻视。这位曾宣称「教皇权威至高无上」之人，在羊皮纸上记述：「当圣座沦于尘泥···将有一位自污秽诞生却怀纯爱之女神踏足七丘之城。她将如维纳斯自海浪中新生，但这份爱不归于十字架，而将唤醒沉睡在七丘之下的万神殿。朱庇特的雷霆、密涅瓦的智慧、维纳斯的美丽——这些我们曾斥为伪神的名字，将因她的到来再次显现神迹。」一切的神迹都罗马的民众更加确信。很快，民众们开始在街上游行，呼唤着「博丽」之名。"
  THE_NIN_events.103.a: "此乃天命。"
- THE_NIN_events.104.t: ""
- THE_NIN_events.104.desc: ""
- THE_NIN_events.104.b: ""
+ THE_NIN_events.104.t: "弥合东西教会分裂"
+ THE_NIN_events.104.desc: "长期以来撕裂基督教世界的教义分歧与管辖权争端，其实际影响力正在迅速消退。在罗马与君士坦丁堡，一种源自远东的、被称为「博丽神道」的信仰，正通过贸易，学者及民间交流开始影响欧洲的土地。\n\n东西方教会高层对此发展反应迟缓且无力。大量基层神职人员与普通信众，尤其是对长期宗教冲突感到厌倦的群体，开始在实践中将本地传统与博丽神道的某些仪式和观念相融合。"
+ THE_NIN_events.104.a: "接受信仰"
+ THE_NIN_events.104.b: "尝试压制"
 ###MISSION_EVENT_END
 
 ###MODIFIER
@@ -205,6 +227,9 @@ l_english:
  THE_NIN_latin_country_modifier: "拉丁诸国"
  THE_NIN_new_city_modifier: "新城"
  THE_NIN_black_curtain_modifier: "幕后操盘"
+ monthly_THE_NIN_fictional_foam_reform_mechanic_ex_power: "每月威望负面修正衰减"
+ THE_NIN_believe_the_nina_modifier: "我等所坚信"
+ THE_NIN_international_bad_boy_modifier: "国际败类"
 ###MODIFIER_END
 
 ###DECISIONS
@@ -220,6 +245,7 @@ l_english:
 ###SHORTAGE
  THE_silver_shortage_gain: "白银之路"
  THE_pearls_tradegoods_shortage_1: "幕后操盘"
+ THE_pearls_tradegoods_shortage_2: "鼓吹价格"
 ###SHORTAGE_END
 
 ###GOODS
@@ -239,9 +265,16 @@ l_english:
  cb_THE_NIN_italy_vassal_war_desc: ""
  THE_NIN_ottoman_revenge_war: "夺取首都"
  THE_NIN_italy_vassal_war: "夺取首都"
- THE_NIN_vassal_italy_war_bad_po: "§M收为邦国§!"
+ PEACE_THE_NIN_vassal_italy_war_bad_po: "§M收为邦国§!"
  THE_NIN_italy_vassal_title: "伊特鲁里亚邦国"
  THE_NIN_italy_vassal_desc: ""
  THE_NIN_italy_vassal_title_plural: "§Y伊特鲁里亚邦国§!"
  THE_NIN_italy_vassal_is_our: "§Y$NAME$§!是我们的§Y伊特鲁里亚邦国§!"
 ###CB_END
+
+###SCRIPT
+ THE_NIN_check_prestige_monthly_event_effect_c_tt1_yes: "£yes£若我们至少拥有威望为§Y50§!,且没有因为共识消耗超过§Y年度威望§!§R-2§!的负面修正，将会对现实造成以下效果"
+ THE_NIN_check_prestige_monthly_event_effect_c_tt1_no: "£no£若我们至少拥有威望为§Y50§!,且没有因为共识消耗超过§Y年度威望§!§R-2§!的负面修正,将会对现实造成以下效果"
+ THE_NIN_check_prestige_monthly_event_effect_c_tt2: "£no£我们的虚构尚不具有任何效果"
+ THE_NIN_check_prestige_monthly_event_effect_c_tt3: "且使用效果后，将会获得§Y年度威望§!§R-0.5§!的负面修正，此修正会随时间§Y衰减§!"
+###SCRIPT_END

@@ -84,6 +84,7 @@ THE_NIN_branch_1 = {
 		} 
 		
 		effect = { 
+			custom_tooltip = THE_NIN_1_4_c_tt3
 			add_prestige = 25
 			add_adm_power = 100
 			add_dip_power = 100
@@ -895,6 +896,9 @@ THE_NIN_branch_3 = {
 		
 		effect = { 
 			custom_tooltip = THE_NIN_3_9_c_tt1
+			add_adm_power = 300
+			add_dip_power = 300
+			add_mil_power = 300
 		 } 
 	}
 }
@@ -1154,13 +1158,19 @@ THE_NIN_branch_4 = {
 				trade_goods = silk
 			}
 			num_of_owned_provinces_with = {
-				value = 12
+				value = 15
 				trade_goods = THE_pearls_tradegoods
 			}
 		} 
 		
 		effect = { 
+			add_prestige = 25
+			add_dip_power = 200
 			add_government_reform = THE_NIN_art_and_venus_reform
+			add_country_modifier = {
+				name = THE_NIN_believe_the_nina_modifier
+				duration = -1
+			}
 		} 
 	}
 	

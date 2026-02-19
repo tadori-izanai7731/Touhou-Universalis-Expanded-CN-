@@ -6,12 +6,15 @@ on_war_won = {
 }
 on_adm_development = {
 	THE_NIN_add_institution_progress_effect = yes
+	THE_NIN_develop_province_to_add_prestige_effect = yes
 }
 on_dip_development = {
 	THE_NIN_add_institution_progress_effect = yes
+	THE_NIN_develop_province_to_add_prestige_effect = yes
 }
 on_mil_development = {
 	THE_NIN_add_institution_progress_effect = yes
+	THE_NIN_develop_province_to_add_prestige_effect = yes
 }
 on_startup = {
 	THE_NIN_on_start_change_price_effect = yes

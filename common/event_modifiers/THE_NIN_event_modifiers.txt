@@ -114,3 +114,14 @@ THE_NIN_black_curtain_modifier = {
 	global_trade_goods_size_modifier = 0.05
 	production_efficiency = 0.05
 }
+#我等所坚信
+THE_NIN_believe_the_nina_modifier = {
+	core_creation = -0.05
+	num_accepted_cultures = 99
+	monthly_THE_NIN_fictional_foam_reform_mechanic_ex_power = -0.05
+}
+#国际败类
+THE_NIN_international_bad_boy_modifier = {
+	ae_impact = 0.33
+	diplomatic_reputation = -5
+}

@@ -39,11 +39,10 @@ THE_NIN_fictional_foam_reform = {
 	}
 
 	modifiers = {
-		prestige_decay = 0.02
 		prestige = 0.5
-		prestige_from_land = 1.00
-		prestige_from_naval = 1.00
-		prestige_per_development_from_conversion = 1.00
+		development_cost = -0.5
+		build_cost = -0.20
+
 	}
 	government_abilities = {
 		THE_NIN_fictional_foam_reform_mechanic_ex
@@ -64,7 +63,12 @@ THE_NIN_art_and_venus_reform = {
 	}
 	
 	modifiers = {
+		prestige_decay = -0.01
 		legitimacy = 1
+		development_cost_modifier = -0.10
+	}
+	government_abilities = {
+		THE_NIN_art_and_venus_reform_mechanic_ex
 	}
 	custom_attributes = {
 		THE_NIN_art_and_venus_reform_mechanic = yes
