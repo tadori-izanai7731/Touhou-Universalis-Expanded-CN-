@@ -177,3 +177,93 @@ THE_QQQ_ideas = {
 		spy_offence = 0.50
 	}
 }
+#猯藏
+THE_FUT_ideas = {
+	start = {
+		improve_relation_modifier = 0.2
+		spy_offence = 0.2
+	}
+	
+	bonus = {
+		diplomatic_reputation = 1
+	}
+	
+	trigger = {
+		tag = FUT
+	}
+	free = yes
+	
+	THE_FUT_idea_1 = {
+		development_cost_in_primary_culture = -0.15
+	}
+	
+	THE_FUT_idea_2 = {
+		prestige = 1
+	}
+	
+	THE_FUT_idea_3 = {
+		defensiveness = 0.05
+		shock_damage_received = -0.05
+	}
+	
+	THE_FUT_idea_4 = {
+		idea_cost = -0.05
+	}
+	
+	THE_FUT_idea_5 = {
+		movement_speed = 0.10
+	}
+	
+	THE_FUT_idea_6 = {
+		war_exhaustion = -0.1
+	}
+	
+	THE_FUT_idea_7 = {
+		can_chain_claim = yes
+		ae_impact = -0.10
+	}
+}
+#小铃
+THE_Q00_ideas = {
+	start = {
+		idea_cost = -0.10
+		innovativeness_gain = 0.5
+	}
+	
+	bonus = {
+		global_spy_defence = 1.00
+	}
+	
+	trigger = {
+		tag = Q00
+	}
+	free = yes
+	
+	THE_Q00_idea_1 = {
+		
+	}
+	
+	THE_Q00_idea_2 = {
+		
+	}
+	
+	THE_Q00_idea_3 = {
+		
+	}
+	
+	THE_Q00_idea_4 = {
+		
+	}
+	
+	THE_Q00_idea_5 = {
+		
+	}
+	
+	THE_Q00_idea_6 = {
+		
+	}
+	
+	THE_Q00_idea_7 = {
+		
+	}
+}

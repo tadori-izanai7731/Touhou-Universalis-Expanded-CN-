@@ -1,25 +1,25 @@
 government = monarchy
 add_government_reform = Gensokyan_monarchy
 government_rank = 1
-primary_culture = "Gensokyo_human"
+primary_culture = "Youkai"
 religion = th_hakureishinto
 technology_group = tech_gensokyan
-capital = 5124
+capital = 5154
 th_discover_default = yes
-add_historical_friend = Q00
 1443.1.1 = {
 	monarch = {
-		name = "?–Bl"  	#Akyuu
-		monarch_name = "?–Bl"  #Akyuu
-		dynasty = "z0u"  #Hieda
-		birth_date = 1429.7.4
+		name = "=sÏ…"  	#Mamiz? 
+		monarch_name = "=sÏ…"  #Mamiz? 
+		dynasty = "ŒN©S"  #Futatsuiwa 
+		birth_date = 859.3.4
 		death_date = 9999.1.5
-		claim = 99
-		adm = 6
+		claim = 90
+		adm = 5
 		dip = 4
-		mil = 0
+		mil = 4
 		female = yes
 	}
+	add_ruler_personality = immortal_personality
 	set_ruler_flag = touhou_character_ruler
 	set_ruler_flag = touhou_original_heir
 }
