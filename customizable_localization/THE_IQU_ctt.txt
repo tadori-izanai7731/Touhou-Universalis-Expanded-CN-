@@ -305,32 +305,32 @@ defined_text = {
 		trigger = {
 			has_province_flag = THE_IQU_loong_vein_get_wuxing_jin_flag_next
 		}
-	 }
+	}
 	text = {
 		localisation_key = THE_IQU_Wu_Xing_loong_vein_get_next_displat_ctt_1
 		trigger = {
 			has_province_flag = THE_IQU_loong_vein_get_wuxing_shui_flag_next
 		}
-	 }
+	}
 	text = {
 		localisation_key = THE_IQU_Wu_Xing_loong_vein_get_next_displat_ctt_2
 		trigger = {
 			has_province_flag = THE_IQU_loong_vein_get_wuxing_mu_flag_next
 		}
-	 }
+	}
 	text = {
 		localisation_key = THE_IQU_Wu_Xing_loong_vein_get_next_displat_ctt_3
 		trigger = {
 			has_province_flag = THE_IQU_loong_vein_get_wuxing_huo_flag_next
 		}
-	 }
+	}
 	text = {
 		localisation_key = THE_IQU_Wu_Xing_loong_vein_get_next_displat_ctt_4
 		trigger = {
 			has_province_flag = THE_IQU_loong_vein_get_wuxing_tu_flag_next
 		}
-	 }
-	 text = {
+	}
+	text = {
 		localisation_key = THE_IQU_Wu_Xing_loong_vein_get_next_displat_ctt_5
 		trigger = {
 			NOT = {
@@ -349,5 +349,22 @@ defined_text = {
 				has_province_flag = THE_IQU_loong_vein_get_wuxing_tu_flag_next
 			}
 		}
-	 }
+	}
+}
+
+defined_text = {
+	random = no
+	name = THE_IQU_check_decision_title_ctt
+	text = {
+		localisation_key = THE_IQU_check_the_loong_vein_decisions_title_ctt
+		trigger = { has_country_flag = THE_IQU_check_decision_flag_1 }
+	}
+	text = {
+		localisation_key = THE_IQU_check_the_unique_point_has_done_decisions_title_ctt
+		trigger = { has_country_flag = THE_IQU_check_decision_flag_2 }
+	}
+	text = {
+		localisation_key = THE_IQU_check_the_fengshui_xingsheng_decisions_title_ctt
+		trigger = { has_country_flag = THE_IQU_check_decision_flag_3 }
+	}
 }

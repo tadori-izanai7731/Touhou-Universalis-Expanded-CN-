@@ -98,6 +98,8 @@ THE_IQU_main_branch_1 = {
 			THE_IQU_add_prestige_or_navy_tradition_effects = {
 				value = 25
 			}
+			THE_IQU_change_base_explore_progress_scripted_effect = { value = 10 }
+			custom_tooltip = THE_IQU_change_base_explore_progress_tt_10
 		} 
 	}
 	
@@ -173,13 +175,15 @@ THE_IQU_main_branch_1 = {
 		
 		effect = { 
 			custom_tooltip = THE_IQU_1_5_c_tt2
-			add_adm_power = 50
-			add_dip_power = 50
-			add_mil_power = 50
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
 			add_country_modifier = {
 				name = THE_IQU_encriclied_the_montain_embrace_water_buff
 				duration = -1
 			}
+			THE_IQU_change_base_explore_progress_scripted_effect = { value = 10 }
+			custom_tooltip = THE_IQU_change_base_explore_progress_tt_10
 		} 
 	}
 	
@@ -259,6 +263,8 @@ THE_IQU_main_branch_1 = {
 				add_permanent_claim = ROOT
 			}
 			THE_IQU_add_diplomacal_experience_var_effect = yes
+			THE_IQU_change_base_explore_progress_scripted_effect = { value = 5 }
+			custom_tooltip = THE_IQU_change_base_explore_progress_tt_5
 		} 
 	}
 	
@@ -300,6 +306,8 @@ THE_IQU_main_branch_1 = {
 			}
 			THE_IQU_add_nautical_experience_var_effect = yes
 			THE_IQU_add_diplomacal_experience_var_effect = yes
+			THE_IQU_change_base_explore_progress_scripted_effect = { value = 5 }
+			custom_tooltip = THE_IQU_change_base_explore_progress_tt_5
 		} 
 	}
 }
@@ -462,6 +470,8 @@ THE_IQU_main_branch_2 = {
 					duration = -1
 				}
 			}
+			THE_IQU_change_base_explore_progress_scripted_effect = { value = 5 }
+			custom_tooltip = THE_IQU_change_base_explore_progress_tt_5
 		} 
 	}
 	
@@ -599,6 +609,8 @@ THE_IQU_main_branch_2 = {
 				name = THE_IQU_cold_wind_and_god_buff
 				duration = -1
 			}
+			THE_IQU_change_base_explore_progress_scripted_effect = { value = 5 }
+			custom_tooltip = THE_IQU_change_base_explore_progress_tt_5
 		} 
 	}
 	
@@ -878,6 +890,8 @@ THE_IQU_main_branch_3 = {
 				name = THE_IQU_fish_swim_recycle_buff
 				duration = 18250
 			}
+			THE_IQU_change_base_explore_progress_scripted_effect = { value = 5 }
+			custom_tooltip = THE_IQU_change_base_explore_progress_tt_5
 			if = {
 				limit = { 
 					num_of_light_ship = 50
@@ -948,6 +962,8 @@ THE_IQU_main_branch_3 = {
 				name = THE_IQU_child_of_loong_buff
 				duration = -1
 			}
+			THE_IQU_change_base_explore_progress_scripted_effect = { value = 5 }
+			custom_tooltip = THE_IQU_change_base_explore_progress_tt_5
 		} 
 	}
 }
@@ -1117,7 +1133,7 @@ THE_IQU_main_branch_4 = {
 						share = 20
 					}
 				}
-				
+
 				custom_tooltip = THE_IQU_4_2_effect_case2_tt_yes
 				if = {
 					limit = { NOT = { crown_land_share = 90 } }
@@ -1386,6 +1402,7 @@ THE_IQU_main_branch_5 = {
 		provinces_to_highlight = { 
 			owned_by = ROOT
 			region = moon_region
+			has_port = yes
 			OR = {
 				NOT = {
 					has_shipyard_building_trigger = yes

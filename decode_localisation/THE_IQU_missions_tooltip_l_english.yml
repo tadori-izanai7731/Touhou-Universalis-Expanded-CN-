@@ -4,10 +4,10 @@ l_english:
  IQU_ADJ: "龙宫"
 ### COUNTRY_END
 
-###ADVISOR
+### ADVISOR
  THE_tenshi_advisor: "比那名居 天子"
  THE_tenshi_advisor_desc: "居住在天界有顶天的天人，比那名居一族的大小姐"
-###ADVISOR_END
+### ADVISOR_END
 
 ### IDEA
  THE_IQU_ideas: "龙宫理念"
@@ -152,7 +152,7 @@ l_english:
  THE_IQU_2_3_c_tt1: "当§Y月面§!区域以「§M云游§!」机制完成探索后，§Y月面防御机制§!将会失效。"
  THE_IQU_1_4_c_tt1: "§Y目标省份§!将获得以下效果：\n 添加§O海图异常点§!\n  若该省份为§Y殖民地§!，立即完成殖民"
  THE_IQU_1_5_c_tt1: "§Y[This.GetAreaName]§!地区已经通过「§M云游机制§!」§Y完成探索§!"
- THE_IQU_1_5_c_tt2: "现在征服非「§Y幻想乡§!」大陆与「§Y月面§!」大陆的§M海岸§!省份时，有§M10%§!的概率在该省份添加§O海图异常点§!"
+ THE_IQU_1_5_c_tt2: "征服非「§Y幻想乡§!」大陆与「§Y月面§!」大陆的§M沿海§!省份时，有§M10%§!的概率添加§O海图异常点§!"
  THE_IQU_1_6_c_tt1: "通过§Y探险家§!探索超过（[Root.the_iqu_explore_province_number_im_var.GetValue]/75）个省份"
  THE_IQU_2_5_c_tt1: "任意省份修正§O龙脉-龙之首§!已齐集§Y五行§!"
  THE_IQU_2_5_c_tt2: "当前或未来拥有修正§Y风水兴盛-「」之行§!的省份将会开始生产§Y纸张§!"
@@ -201,6 +201,8 @@ l_english:
  THE_IQU_4_2_effect_case1_tt_no: "£no£如果未撤销阶层特权「§Y混乱的天界政局§!」:"
  THE_IQU_4_2_effect_case2_tt_yes: "\n£yes£否则:"
  THE_IQU_4_2_effect_case2_tt_no: "\n£no£否则:"
+ THE_IQU_change_base_explore_progress_tt_10: "\n基础探险进度增加§G10%§!（当前§Y[Root.the_iqu_base_explore_progress_var.GetValue]%§!）"
+ THE_IQU_change_base_explore_progress_tt_5: "\n基础探险进度增加§G5%§!（当前§Y[Root.the_iqu_base_explore_progress_var.GetValue]%§!）"
 ### MISSION_EXTRA_END
 
 ### DECISIONS
@@ -214,13 +216,12 @@ l_english:
  THE_IQU_explore_the_unique_points_core_decisions_c_tt1: "当前没有正在§M探索§!的省份"
  THE_IQU_teach_the_tenshi_decisions_title: "@IQU「§M规训天人§!」与天子弈棋"
  THE_IQU_teach_the_tenshi_decisions_desc: "与天子弈棋"
- THE_IQU_check_the_loong_vein_decisions_title: "@IQU查询所有拥有「§O龙脉-龙之首§!」的§Y省份§!"
+ THE_IQU_check_the_loong_vein_decisions_title: "@IQU查询特定类型的省份"
  THE_IQU_check_the_loong_vein_decisions_desc: ""
- THE_IQU_check_the_unique_point_has_done_decisions_title: "@IQU查询所有完成「§O航海异常点§!」的§Y省份§!"
- THE_IQU_check_the_unique_point_has_done_decisions_desc: ""
- THE_IQU_check_the_fengshui_xingsheng_decisions_title: "@IQU查询所有拥有「§O风水兴盛-「」之行§!」的§Y省份§!"
- THE_IQU_check_the_fengshui_xingsheng_decisions_desc: ""
- THE_IQU_check_decision_c_tt1: "切换查询状态"
+ THE_IQU_check_the_loong_vein_decisions_title_ctt: "当前查询目标:\n拥有「§O龙脉-龙之首§!」的§Y省份§!"
+ THE_IQU_check_the_unique_point_has_done_decisions_title_ctt: "当前查询目标:\n完成「§O航海异常点§!」探险的§Y省份§!"
+ THE_IQU_check_the_fengshui_xingsheng_decisions_title_ctt: "当前查询目标:\n拥有「§O风水兴盛-「」之行§!」的§Y省份§!"
+ THE_IQU_check_decision_c_tt1: "\n单击£THE_LIL_info_decision_icon£高亮显示查询的目标省份\n单击£THE_LIL_execute_decision_icon£切换查询目标类型"
  THE_IQU_check_the_explore_rule_decisions_title: "@IQU查询「§M云游机制§!」教程"
  THE_IQU_check_the_explore_rule_decisions_desc: ""
  THE_IQU_teach_the_tenshi_decisions_c_tt1: "没有已经发生的事件"
