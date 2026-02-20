@@ -1,0 +1,74 @@
+THE_ai_personality_conqueror = {
+	nation_designer_cost = 800
+	static = yes
+	ruler_allow = {
+		allow = {
+			always = no
+		}
+
+		chance = {
+			modifier = {
+				factor = 10000
+			}
+		}
+	}
+	heir_allow = {
+		allow = {
+			always = no
+		}
+
+		chance = {
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+	consort_allow = {
+		allow = {
+			always = no
+		}
+
+		chance = {
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+
+	war_priority = {
+		modifier = {
+			factor = 0.5
+			is_part_of_hre = yes
+		}
+		modifier = {
+			factor = 1.2
+			ai = yes
+		}
+		modifier = {
+			factor = 3.0
+			is_bankrupt = yes
+		}
+		modifier = {
+			factor = 4.5
+			NOT = { imperial_mandate = 40 }
+		}
+	}
+	custom_ai_explanation = "THE_AI_EXPL"
+	global_regiment_cost = -0.20
+	core_creation = -0.15
+	can_claim_states = yes	
+	
+	other_ai_peace_term_bonus = 5
+	building_budget_multiplier = 5.0
+	war_chance_multiplier = 100.0
+	easy_war_chance_multiplier = 10.0
+	enemy_strength_multiplier = 0.5
+	wants_disclose_attack = yes
+	razing = yes
+	wants_land = yes
+	underestimate_ae = yes
+	knowledge_sharing = yes
+	wants_condottieri = yes
+	lower_autonomy = yes
+	wants_avoid_ugly_borders = yes
+}

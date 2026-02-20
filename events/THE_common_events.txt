@@ -113,3 +113,54 @@ country_event = {
 	}
 
 }
+
+country_event = {
+	id = THE_common_events.3
+	title = THE_common_events.3.title
+	desc = THE_common_events.3.desc
+	picture = GENSOKYOSGUARDIAN_eventPicture
+
+	trigger = {
+		ai = no
+		NOT = { has_global_flag = THE_startup_event_flag }
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = THE_common_events.3.a
+		hidden_effect = {
+			set_global_flag = THE_common_ai_difficulty_conqueror_flag
+			for = {
+				amount = 2
+				effect = "
+					random_country = {
+						limit = {
+							culture_group = Gensokyan_culture
+							total_development = 187
+							NOT = { tag = HIG }
+							NOT = { tag = CRD }
+						}
+						add_ruler_personality = THE_ai_personality_conqueror
+					}
+				"
+			}
+			# add_ruler_personality = THE_ai_personality_conqueror
+			# random_country = {
+			# 	limit = {
+			# 		culture_group = Gensokyan_culture
+			# 	}
+			# 	set_ruler_flag = THE_can_have_ai_personality_conqueror_flag
+			# }
+		}
+	}
+	option = {
+		name = THE_common_events.3.b
+		hidden_effect = {
+			set_global_flag = THE_common_ai_difficulty_enhance_chance_flag
+		}
+	}
+	option = {
+		name = THE_common_events.3.c
+		highlight = yes
+	}
+}

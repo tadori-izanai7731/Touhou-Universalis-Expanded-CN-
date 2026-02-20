@@ -131,6 +131,11 @@ l_english:
  THE_common_events.2.c: "解放秋之力"
  THE_common_events.2.d: "解放冬之力"
  THE_common_events.2.e: "解放土用之力"
+ THE_common_events.3.title: "关于幻想乡的征服者"
+ THE_common_events.3.desc: "本模组已默认降低了AI启用数量等强力军事理念的倾向，以确保舒适性。若您希望调整游戏难度，并面临更多的挑战，可自行选择以下选项："
+ THE_common_events.3.a: "启用神话征服者，并且让幻想乡的AI将更主动地选择侵略性理念。"
+ THE_common_events.3.b: "仅增加AI启用部分核心军事理念的倾向。"
+ THE_common_events.3.c: "无需调整，继续当前游戏设定。"
 ###EVENT_END
 
 ###DECISION
@@ -539,3 +544,7 @@ l_english:
  HOLY_SITE_558_DESC: "巴连弗邑是传说中释迦牟尼成佛悟道之地，之后佛教在印度北部发展并一路向东传播至东南亚、中国甚至日本，并在其中衍生出众多教派。佛教的发源地印度却在长久的分裂与征服中成为印度教和伊斯兰教的宗教战场。"
  HOLY_SITE_5320_DESC: "根据《幻想乡缘起》的相关记载，月球之上存在一个被结界保护的月之都，拥有远超当代的科技和无上伟力的神明，但居住在其中的月之民重视纯洁因而极度排外，想要探访神秘的月之都并不容易。"
 ###RELIGION_END
+
+###PERSONALITIES
+ THE_ai_personality_conqueror: "无暇遂梦"
+###PERSONALITIES_END
