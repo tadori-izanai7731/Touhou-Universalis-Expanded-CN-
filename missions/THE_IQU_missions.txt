@@ -470,8 +470,8 @@ THE_IQU_main_branch_2 = {
 					duration = -1
 				}
 			}
-			THE_IQU_change_base_explore_progress_scripted_effect = { value = 5 }
-			custom_tooltip = THE_IQU_change_base_explore_progress_tt_5
+			THE_IQU_change_base_explore_progress_scripted_effect = { value = 10 }
+			custom_tooltip = THE_IQU_change_base_explore_progress_tt_10
 		} 
 	}
 	
@@ -566,6 +566,8 @@ THE_IQU_main_branch_2 = {
 			835 = {
 				add_canal = panama_canal
 			}
+			THE_IQU_change_base_explore_progress_scripted_effect = { value = 5 }
+			custom_tooltip = THE_IQU_change_base_explore_progress_tt_5
 		} 
 	}
 	
