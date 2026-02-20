@@ -127,6 +127,14 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
+		name = THE_common_events.3.x
+		custom_tooltip = THE_common_ai_difficulty_conqueror_all_tt
+		hidden_effect = {
+			set_global_flag = THE_common_ai_difficulty_conqueror_flag
+			set_global_flag = THE_common_ai_difficulty_conqueror_all_flag
+		}
+	}
+	option = {
 		name = THE_common_events.3.a
 		hidden_effect = {
 			set_global_flag = THE_common_ai_difficulty_conqueror_flag

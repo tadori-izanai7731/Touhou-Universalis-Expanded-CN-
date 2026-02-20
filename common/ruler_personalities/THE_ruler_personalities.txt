@@ -3,7 +3,8 @@ THE_ai_personality_conqueror = {
 	static = yes
 	ruler_allow = {
 		allow = {
-			always = no
+			has_global_flag = THE_common_ai_difficulty_conqueror_all_flag
+			ai = yes
 		}
 
 		chance = {
@@ -63,7 +64,7 @@ THE_ai_personality_conqueror = {
 	war_chance_multiplier = 100.0
 	easy_war_chance_multiplier = 10.0
 	enemy_strength_multiplier = 0.5
-	wants_disclose_attack = yes
+	# wants_disclose_attack = yes
 	razing = yes
 	wants_land = yes
 	underestimate_ae = yes

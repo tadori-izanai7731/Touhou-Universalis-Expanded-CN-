@@ -104,6 +104,8 @@ l_english:
 
  THE_block_reduce_exhaustion_sf_tt: "由于特定政府机制，禁止手动降低厌战度"
  THE_block_reduce_inflation_sf_tt: "由于特定政府机制，禁止手动降低通货膨胀"
+
+ THE_common_ai_difficulty_conqueror_all_tt: "所有AI统治者获得特质时有极大概率获得「§Y无暇遂梦§!」"
 ###CUSTOM_TOOLTIP_END
 
 ### MERC_DESC
@@ -136,6 +138,7 @@ l_english:
  THE_common_events.3.a: "启用神话征服者，并且让幻想乡的AI将更主动地选择侵略性理念。"
  THE_common_events.3.b: "仅增加AI启用部分核心军事理念的倾向。"
  THE_common_events.3.c: "无需调整，继续当前游戏设定。"
+ THE_common_events.3.x: "这个游戏太简单了，给所有AI都加上神话征服者。"
 ###EVENT_END
 
 ###DECISION
