@@ -123,7 +123,7 @@ THE_HMC_upgrade_ideas = {
 	}
 }
 
-#
+#阿求
 THE_QQQ_ideas = {
 	start = {
 		idea_cost = -0.10
@@ -227,11 +227,11 @@ THE_FUT_ideas = {
 THE_Q00_ideas = {
 	start = {
 		idea_cost = -0.10
-		innovativeness_gain = 0.5
+		diplomats = 1
 	}
 	
 	bonus = {
-		global_spy_defence = 1.00
+		unjustified_demands = -0.30
 	}
 	
 	trigger = {
@@ -240,30 +240,78 @@ THE_Q00_ideas = {
 	free = yes
 	
 	THE_Q00_idea_1 = {
-		
+		global_institution_spread = 0.25
 	}
 	
 	THE_Q00_idea_2 = {
-		
+		improve_relation_modifier = 0.33
 	}
 	
 	THE_Q00_idea_3 = {
-		
+		global_spy_defence = 0.50
 	}
 	
 	THE_Q00_idea_4 = {
-		
+		prestige = 1
 	}
 	
 	THE_Q00_idea_5 = {
-		
+		diplomatic_upkeep = 1
+		dip_advisor_cost = -0.15
 	}
 	
 	THE_Q00_idea_6 = {
-		
+		technology_cost = -0.10
 	}
 	
 	THE_Q00_idea_7 = {
-		
+		possible_policy = 1
+	}
+}
+#美宵
+THE_MYI_ideas = {
+	start = {
+		diplomatic_reputation = 1
+		improve_relation_modifier = 0.25
+	}
+	
+	bonus = {
+		religious_unity = 0.33
+	}
+	
+	trigger = {
+		tag = MYI
+	}
+	free = yes
+	
+	THE_MYI_idea_1 = {
+		prestige = 0.5
+	}
+	
+	THE_MYI_idea_2 = {
+		global_trade_goods_size_modifier = 0.10
+		morale_damage_received = -0.10
+	}
+	
+	THE_MYI_idea_3 = {
+		defensiveness = 0.15
+		move_capital_cost_modifier = -0.25
+	}
+	
+	THE_MYI_idea_4 = {
+		global_spy_defence = 0.50
+	}
+	
+	THE_MYI_idea_5 = {
+		manpower_recovery_speed = 0.10
+	}
+	
+	THE_MYI_idea_6 = {
+		global_trade_power = 0.20
+	}
+	
+	THE_MYI_idea_7 = {
+		diplomats = 1
+		merchants = 1
 	}
 }
