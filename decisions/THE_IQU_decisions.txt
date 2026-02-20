@@ -197,7 +197,24 @@ country_decisions = {
 	THE_IQU_check_the_loong_vein_decisions = {
 		color = { 21 54 168 }
 		provinces_to_highlight = {
-			has_province_modifier = THE_IQU_lonng_vein_head_province_buff
+			if = {
+				limit = { ROOT = { has_country_flag = THE_IQU_check_decision_flag_1 } }
+				has_province_modifier = THE_IQU_lonng_vein_head_province_buff
+			}
+			if = {
+				limit = { ROOT = { has_country_flag = THE_IQU_check_decision_flag_2 } }
+				has_province_modifier = THE_IQU_this_province_had_been_explored_flag
+			}
+			if = {
+				limit = { ROOT = { has_country_flag = THE_IQU_check_decision_flag_3 } }
+				OR = {
+					has_province_modifier = THE_IQU_Feng_shui_jin_buff
+					has_province_modifier = THE_IQU_Feng_shui_shui_buff
+					has_province_modifier = THE_IQU_Feng_shui_mu_buff
+					has_province_modifier = THE_IQU_Feng_shui_huo_buff
+					has_province_modifier = THE_IQU_Feng_shui_tu_buff
+				}
+			}
 		}
 		potential = {
 			ai = no
@@ -205,88 +222,37 @@ country_decisions = {
 				tag = IQU
 				was_tag = IQU
 			}
-			OR = {
-				AND = {
-					NOT = { has_country_flag = THE_IQU_check_decision_flag_1 }
-					NOT = { has_country_flag = THE_IQU_check_decision_flag_2 }
-					NOT = { has_country_flag = THE_IQU_check_decision_flag_3 }
-				}
-				has_country_flag = THE_IQU_check_decision_flag_1
-			}
 		}
-
+		
 		allow = {
 			always = yes
 		}
 		effect = {
-			custom_tooltip = THE_IQU_check_decision_c_tt1
-			hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = THE_IQU_check_decision_flag_1
+				}
+				custom_tooltip = THE_IQU_check_the_loong_vein_decisions_title_ctt
 				clr_country_flag = THE_IQU_check_decision_flag_1
-				clr_country_flag = THE_IQU_check_decision_flag_2
-				clr_country_flag = THE_IQU_check_decision_flag_3
-				#
 				set_country_flag = THE_IQU_check_decision_flag_2
 			}
-		}
-	}
-	THE_IQU_check_the_unique_point_has_done_decisions = {
-		color = { 21 54 168 }
-		provinces_to_highlight = {
-			has_province_flag = THE_IQU_this_province_had_been_explored_flag
-		}
-		potential = {
-			ai = no
-			OR = {
-				tag = IQU
-				was_tag = IQU
-			}
-			has_country_flag = THE_IQU_check_decision_flag_2
-		}
-		allow = {
-			always = yes
-		}
-		effect = {
-			custom_tooltip = THE_IQU_check_decision_c_tt1
-			hidden_effect = {
-				clr_country_flag = THE_IQU_check_decision_flag_1
+			else_if = {
+				limit = {
+					has_country_flag = THE_IQU_check_decision_flag_2
+				}
+				custom_tooltip = THE_IQU_check_the_unique_point_has_done_decisions_title_ctt
 				clr_country_flag = THE_IQU_check_decision_flag_2
-				clr_country_flag = THE_IQU_check_decision_flag_3
-				#
 				set_country_flag = THE_IQU_check_decision_flag_3
 			}
-		}
-	}
-	THE_IQU_check_the_fengshui_xingsheng_decisions = {
-		color = { 21 54 168 }
-		provinces_to_highlight = {
-			OR = {
-				has_province_modifier = THE_IQU_Feng_shui_jin_buff
-				has_province_modifier = THE_IQU_Feng_shui_shui_buff
-				has_province_modifier = THE_IQU_Feng_shui_mu_buff
-				has_province_modifier = THE_IQU_Feng_shui_huo_buff
-				has_province_modifier = THE_IQU_Feng_shui_tu_buff
-			}
-		}
-		potential = {
-			ai = no
-			OR = {
-				tag = IQU
-				was_tag = IQU
-			}
-			has_country_flag = THE_IQU_check_decision_flag_3
-		}
-		allow = {
-			always = yes
-		}
-		effect = {
-			custom_tooltip = THE_IQU_check_decision_c_tt1
-			hidden_effect = {
-				clr_country_flag = THE_IQU_check_decision_flag_1
-				clr_country_flag = THE_IQU_check_decision_flag_2
+			else_if = {
+				limit = {
+					has_country_flag = THE_IQU_check_decision_flag_3
+				}
+				custom_tooltip = THE_IQU_check_the_fengshui_xingsheng_decisions_title_ctt
 				clr_country_flag = THE_IQU_check_decision_flag_3
-				#
 				set_country_flag = THE_IQU_check_decision_flag_1
 			}
+			custom_tooltip = THE_IQU_check_decision_c_tt1
 		}
 	}
 	THE_IQU_check_the_explore_rule_decisions = {

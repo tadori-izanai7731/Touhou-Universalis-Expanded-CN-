@@ -4,10 +4,10 @@
  IQU_ADJ: "™Ÿ«R"
 ### COUNTRY_END
 
-###ADVISOR
+### ADVISOR
  THE_tenshi_advisor: "Ôk±TES )YPR"
  THE_tenshi_advisor_desc: "ESOO(W)YLu	gv˜)Y„v)YºNÿÔk±TESNÏe„v'YSÐY"
-###ADVISOR_END
+### ADVISOR_END
 
 ### IDEA
  THE_IQU_ideas: "™Ÿ«RtõV"
@@ -152,7 +152,7 @@
  THE_IQU_2_3_c_tt1: "SV§Ygb—§!:SßWåN0§M‘N8n§!0:g6RŒRb¢c0tTÿ§Ygb—2–¡V:g6R§!SO1YHe0"
  THE_IQU_1_4_c_tt1: "§YîvhwýN§!S·ƒ—VåNNHeœgÿ\n ûm R§OwmþVV8^¹p§!\n  å‚å‹wýN:N§Y–kl0W§!ÿËzsSŒRb–kl"
  THE_IQU_1_5_c_tt1: "§Y[This.GetAreaName]§!0W:SòTÏuÇ0§M‘N8n:g6R§!0§YŒRb¢c0t§!"
- THE_IQU_1_5_c_tt2: "°s(WVg^—0§Y‰^ó`aN§!0'YF–N0§Ygb—§!0'YF–„v§Mwm¸S§!wýNöeÿ	g§M10%§!„v‚i‡s(Wå‹wýNûm R§OwmþVV8^¹p§!"
+ THE_IQU_1_5_c_tt2: "Vg^—0§Y‰^ó`aN§!0'YF–N0§Ygb—§!0'YF–„v§M¿lwm§!wýNöeÿ	g§M10%§!„v‚i‡sûm R§OwmþVV8^¹p§!"
  THE_IQU_1_6_c_tt1: "Ç§Y¢ci–¶R§!¢c0t…Çÿ[Root.the_iqu_explore_province_number_im_var.GetValue]/75	ÿ*NwýN"
  THE_IQU_2_5_c_tt1: "ûNawýNîOck§O™Ÿ	-™ŸKN–™§!òTPŸÆ–§Y”NLˆ§!"
  THE_IQU_2_5_c_tt2: "SVMRb*gegåb	gîOck§YÎ˜4ltQÛv-00KNLˆ§!„vwýNSOVËYuµN§Y¸u.V§!"
@@ -201,6 +201,8 @@
  THE_IQU_4_2_effect_case1_tt_no: "£no£‚Yœg*g²d•6–BSyrCg0§Y÷mqN„v)YLu?eNS§!0:"
  THE_IQU_4_2_effect_case2_tt_yes: "\n£yes£&TR:"
  THE_IQU_4_2_effect_case2_tt_no: "\n£no£&TR:"
+ THE_IQU_change_base_explore_progress_tt_10: "\núWNx¢ci–Û¦^žX R§G10%§!ÿSVMR§Y[Root.the_iqu_base_explore_progress_var.GetValue]%§!	ÿ"
+ THE_IQU_change_base_explore_progress_tt_5: "\núWNx¢ci–Û¦^žX R§G5%§!ÿSVMR§Y[Root.the_iqu_base_explore_progress_var.GetValue]%§!	ÿ"
 ### MISSION_EXTRA_END
 
 ### DECISIONS
@@ -214,13 +216,12 @@
  THE_IQU_explore_the_unique_points_core_decisions_c_tt1: "SVMR¡l	gck(W§M¢c0t§!„vwýN"
  THE_IQU_teach_the_tenshi_decisions_title: "@IQU0§MÄ‰­‹)YºN§!0N)YPRVËh"
  THE_IQU_teach_the_tenshi_decisions_desc: "N)YPRVËh"
- THE_IQU_check_the_loong_vein_decisions_title: "@IQUågâ‹Nb	gåb	g0§O™Ÿ	-™ŸKN–™§!0„v§YwýN§!"
+ THE_IQU_check_the_loong_vein_decisions_title: "@IQUågâ‹yršR‰|‹W„vwýN"
  THE_IQU_check_the_loong_vein_decisions_desc: ""
- THE_IQU_check_the_unique_point_has_done_decisions_title: "@IQUågâ‹Nb	gŒRb0§O*‚wmV8^¹p§!0„v§YwýN§!"
- THE_IQU_check_the_unique_point_has_done_decisions_desc: ""
- THE_IQU_check_the_fengshui_xingsheng_decisions_title: "@IQUågâ‹Nb	gåb	g0§OÎ˜4ltQÛv-00KNLˆ§!0„v§YwýN§!"
- THE_IQU_check_the_fengshui_xingsheng_decisions_desc: ""
- THE_IQU_check_decision_c_tt1: "Rbcågâ‹¶r`"
+ THE_IQU_check_the_loong_vein_decisions_title_ctt: "SVMRågâ‹îvh:\nåb	g0§O™Ÿ	-™ŸKN–™§!0„v§YwýN§!"
+ THE_IQU_check_the_unique_point_has_done_decisions_title_ctt: "SVMRågâ‹îvh:\nŒRb0§O*‚wmV8^¹p§!0¢ci–„v§YwýN§!"
+ THE_IQU_check_the_fengshui_xingsheng_decisions_title_ctt: "SVMRågâ‹îvh:\nåb	g0§OÎ˜4ltQÛv-00KNLˆ§!0„v§YwýN§!"
+ THE_IQU_check_decision_c_tt1: "\nUSûQ£THE_LIL_info_decision_icon£Øš®N>f:yågâ‹„vîvhwýN\nUSûQ£THE_LIL_execute_decision_icon£Rbcågâ‹îvh‰|‹W"
  THE_IQU_check_the_explore_rule_decisions_title: "@IQUågâ‹0§M‘N8n:g6R§!0Yez"
  THE_IQU_check_the_explore_rule_decisions_desc: ""
  THE_IQU_teach_the_tenshi_decisions_c_tt1: "¡l	gòTÏuÑSu„v‹NöN"
