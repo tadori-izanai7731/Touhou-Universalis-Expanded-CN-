@@ -26,7 +26,7 @@ THE_PRI_poltergeist_luna_order = {
 		THE_PRI_adm_order_per_province_scripted_effect = yes
 	}
 	per_province_abandon_effect = {
-		THE_PRI_adm_order_per_province_abandon_scripted_effect = yes
+		# THE_PRI_adm_order_per_province_abandon_scripted_effect = yes
 	}
 	modifier = {
 		local_unrest = -2
@@ -66,7 +66,7 @@ THE_PRI_poltergeist_star_order = {
 		THE_PRI_dip_order_per_province_scripted_effect = yes
 	}
 	per_province_abandon_effect = {
-		THE_PRI_dip_order_per_province_abandon_scripted_effect = yes
+		# THE_PRI_dip_order_per_province_abandon_scripted_effect = yes
 	}
 	modifier = {
 		local_development_cost = -0.2
@@ -106,7 +106,7 @@ THE_PRI_poltergeist_sun_order = {
 		THE_PRI_mil_order_per_province_scripted_effect = yes
 	}
 	per_province_abandon_effect = {
-		THE_PRI_mil_order_per_province_abandon_scripted_effect = yes
+		# THE_PRI_mil_order_per_province_abandon_scripted_effect = yes
 	}
 	modifier = {
 		local_manpower_modifier = 0.25
@@ -131,7 +131,7 @@ THE_PRI_fairy_luna_order = {
 		THE_PRI_adm_order_per_province_scripted_effect = yes
 	}
 	per_province_abandon_effect = {
-		THE_PRI_adm_order_per_province_abandon_scripted_effect = yes
+		# THE_PRI_adm_order_per_province_abandon_scripted_effect = yes
 	}
 	modifier = {
 		supply_limit = 5
@@ -156,7 +156,7 @@ THE_PRI_fairy_star_order = {
 		THE_PRI_dip_order_per_province_scripted_effect = yes
 	}
 	per_province_abandon_effect = {
-		THE_PRI_dip_order_per_province_abandon_scripted_effect = yes
+		# THE_PRI_dip_order_per_province_abandon_scripted_effect = yes
 	}
 	modifier = {
 		local_institution_spread = 1.0
@@ -181,7 +181,7 @@ THE_PRI_fairy_sun_order = {
 		THE_PRI_mil_order_per_province_scripted_effect = yes
 	}
 	per_province_abandon_effect = {
-		THE_PRI_mil_order_per_province_abandon_scripted_effect = yes
+		# THE_PRI_mil_order_per_province_abandon_scripted_effect = yes
 	}
 	modifier = {
 		trade_value = 0.5

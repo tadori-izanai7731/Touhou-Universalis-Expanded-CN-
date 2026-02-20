@@ -2046,7 +2046,6 @@ THE_ROD_branch_3 = {
 		}
 
 		trigger = {
-			add_dip_power = 100
 			43 = {
 				owned_by = ROOT
 				has_coast_defense_building_trigger = yes
