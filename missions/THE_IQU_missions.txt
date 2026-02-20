@@ -59,6 +59,10 @@ THE_IQU_main_branch_1 = {
 				navy_size_percentage = 1.00
 				num_of_light_ship = 15
 			}
+			if = {
+				limit = { NOT = { owns = 5032 } }
+				owns = 5032
+			}
 		} 
 		
 		effect = {
@@ -391,7 +395,7 @@ THE_IQU_main_branch_2 = {
 			country_event = {
 				id = THE_IQU_flavor_events.1013
 			}
-			custom_tooltip = THE_IQU_2_3_c_tt1
+			# custom_tooltip = THE_IQU_2_3_c_tt1
 			5338 = {
 				cede_province = ROOT
 				change_culture = ROOT
@@ -1034,8 +1038,9 @@ THE_IQU_main_branch_4 = {
 		} 
 		
 		trigger = { 
-			NOT = {
-				has_estate_privilege = THE_IQU_tennin_government_loose_privileges
+			OR = {
+				NOT = { has_estate_privilege = THE_IQU_tennin_government_loose_privileges }
+				stability = 3
 			}
 			HVR = {
 				has_opinion = {
@@ -1053,7 +1058,7 @@ THE_IQU_main_branch_4 = {
 		effect = { 
 			custom_tooltip = THE_IQU_4_2_c_tt3
 			custom_tooltip = THE_IQU_4_2_c_tt1
-			custom_tooltip = THE_IQU_4_2_c_tt2
+			# custom_tooltip = THE_IQU_4_2_c_tt2
 			add_country_modifier = {
 				name = THE_IQU_teach_tennin_buff
 				duration = -1
@@ -1072,6 +1077,59 @@ THE_IQU_main_branch_4 = {
 					every_ally = {
 						break_alliance = PREV
 					}
+				}
+			}
+			if = {
+				limit = { has_estate_privilege = THE_IQU_tennin_government_loose_privileges }
+				custom_tooltip = THE_IQU_4_2_effect_case1_tt_yes
+				remove_estate_privilege = THE_IQU_tennin_government_loose_privileges
+				add_prestige = -50
+				add_stability = -3
+				change_estate_land_share = {
+					estate = all
+					share = 20
+				}
+				
+				custom_tooltip = THE_IQU_4_2_effect_case2_tt_no
+				tooltip = {
+					if = {
+						limit = { NOT = { crown_land_share = 90 } }
+						change_estate_land_share = {
+							estate = all
+							share = -10
+						}
+					}
+					else = {
+						add_adm_power = 100
+						add_dip_power = 100
+						add_mil_power = 100
+					}
+				}
+			}
+			else = {
+				custom_tooltip = THE_IQU_4_2_effect_case1_tt_no
+				tooltip = {
+					remove_estate_privilege = THE_IQU_tennin_government_loose_privileges
+					add_prestige = -50
+					add_stability = -3
+					change_estate_land_share = {
+						estate = all
+						share = 20
+					}
+				}
+				
+				custom_tooltip = THE_IQU_4_2_effect_case2_tt_yes
+				if = {
+					limit = { NOT = { crown_land_share = 90 } }
+					change_estate_land_share = {
+						estate = all
+						share = -10
+					}
+				}
+				else = {
+					add_adm_power = 100
+					add_dip_power = 100
+					add_mil_power = 100
 				}
 			}
 		} 

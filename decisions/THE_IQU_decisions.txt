@@ -92,11 +92,8 @@ country_decisions = {
 		allow = {
 			custom_trigger_tooltip = {
 				tooltip = THE_IQU_explore_the_unique_points_core_decisions_c_tt1
-				ROOT = {
-					NOT = {
-						has_country_flag = THE_IQU_now_is_exploring_flag
-					}
-				}
+				NOT = { has_country_flag = THE_IQU_now_is_exploring_flag }
+				NOT = { has_country_flag = THE_IQU_on_explore_event_flag }
 			}
 		}
 		effect = {
@@ -128,6 +125,7 @@ country_decisions = {
 		}
 		effect = {
 			THE_IQU_define_the_tenshi_advisor_effect = yes
+			custom_tooltip = THE_IQU_4_2_c_tt2
 			if = {
 				limit = {
 					NOT = { HVR = { adm = 6 } }

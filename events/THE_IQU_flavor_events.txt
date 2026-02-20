@@ -15,11 +15,15 @@ country_event = {
 			# 	THE_IQU_define_expedition_target_effects = yes
 			# }
 			THE_IQU_define_expedition_target_effects = yes
+			set_country_flag = THE_IQU_on_explore_event_flag
 		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.0.0
 		highlight = yes
+		hidden_effect = {
+			clr_country_flag = THE_IQU_on_explore_event_flag
+		}
 	}
 	option = {
 		name = THE_IQU_flavor_events.0.1
@@ -29,15 +33,7 @@ country_event = {
 		}
 		event_target:THE_IQU_province_unique_1_target = {
 			custom_tooltip = THE_IQU_event_0_c_tt1
-			random_country = {
-				limit = {
-					has_government_attribute = THE_IQU_government_explore_coast_explore_mechanic
-				}
-				country_event = {
-					id = THE_IQU_flavor_events.1
-				}
-			}
-			# THE_IQU_will_get_wuxing_point_after_explore_effect = yes
+			ROOT = { country_event = { id = THE_IQU_flavor_events.1 } }
 			hidden_effect = {
 				set_province_flag = THE_IQU_this_provinces_is_exploring_now
 			}
@@ -51,15 +47,7 @@ country_event = {
 		}
 		event_target:THE_IQU_province_unique_2_target = {
 			custom_tooltip = THE_IQU_event_0_c_tt1
-			random_country = {
-				limit = {
-					has_government_attribute = THE_IQU_government_explore_coast_explore_mechanic
-				}
-				country_event = {
-					id = THE_IQU_flavor_events.1
-				}
-			}
-			# THE_IQU_will_get_wuxing_point_after_explore_effect = yes
+			ROOT = { country_event = { id = THE_IQU_flavor_events.1 } }
 			hidden_effect = {
 				set_province_flag = THE_IQU_this_provinces_is_exploring_now
 			}
@@ -73,16 +61,7 @@ country_event = {
 		}
 		event_target:THE_IQU_province_unique_3_target = {
 			custom_tooltip = THE_IQU_event_0_c_tt1
-			random_country = {
-				limit = {
-					has_government_attribute = THE_IQU_government_explore_coast_explore_mechanic
-				}
-				country_event = {
-					id = THE_IQU_flavor_events.1
-				}
-			}
-			
-			# THE_IQU_will_get_wuxing_point_after_explore_effect = yes
+			ROOT = { country_event = { id = THE_IQU_flavor_events.1 } }
 			hidden_effect = {
 				set_province_flag = THE_IQU_this_provinces_is_exploring_now
 			}
@@ -96,15 +75,7 @@ country_event = {
 		}
 		event_target:THE_IQU_province_unique_4_target = {
 			custom_tooltip = THE_IQU_event_0_c_tt1
-			random_country = {
-				limit = {
-					has_government_attribute = THE_IQU_government_explore_coast_explore_mechanic
-				}
-				country_event = {
-					id = THE_IQU_flavor_events.1
-				}
-			}
-			# THE_IQU_will_get_wuxing_point_after_explore_effect = yes
+			ROOT = { country_event = { id = THE_IQU_flavor_events.1 } }
 			hidden_effect = {
 				#省份标记正在探索
 				set_province_flag = THE_IQU_this_provinces_is_exploring_now
@@ -120,15 +91,7 @@ country_event = {
 		}
 		event_target:THE_IQU_province_unique_5_target = {
 			custom_tooltip = THE_IQU_event_0_c_tt1
-			random_country = {
-				limit = {
-					has_government_attribute = THE_IQU_government_explore_coast_explore_mechanic
-				}
-				country_event = {
-					id = THE_IQU_flavor_events.1
-				}
-			}
-			# THE_IQU_will_get_wuxing_point_after_explore_effect = yes
+			ROOT = { country_event = { id = THE_IQU_flavor_events.1 } }
 			hidden_effect = {
 				#省份标记正在探索
 				set_province_flag = THE_IQU_this_provinces_is_exploring_now
@@ -143,15 +106,7 @@ country_event = {
 		}
 		event_target:THE_IQU_province_unique_6_target = {
 			custom_tooltip = THE_IQU_event_0_c_tt1
-			random_country = {
-				limit = {
-					has_government_attribute = THE_IQU_government_explore_coast_explore_mechanic
-				}
-				country_event = {
-					id = THE_IQU_flavor_events.1
-				}
-			}
-			# THE_IQU_will_get_wuxing_point_after_explore_effect = yes
+			ROOT = { country_event = { id = THE_IQU_flavor_events.1 } }
 			hidden_effect = {
 				#省份标记正在探索
 				set_province_flag = THE_IQU_this_provinces_is_exploring_now
@@ -166,15 +121,7 @@ country_event = {
 		}
 		event_target:THE_IQU_province_unique_7_target = {
 			custom_tooltip = THE_IQU_event_0_c_tt1
-			random_country = {
-				limit = {
-					has_government_attribute = THE_IQU_government_explore_coast_explore_mechanic
-				}
-				country_event = {
-					id = THE_IQU_flavor_events.1
-				}
-			}
-			# THE_IQU_will_get_wuxing_point_after_explore_effect = yes
+			ROOT = { country_event = { id = THE_IQU_flavor_events.1 } }
 			hidden_effect = {
 				#省份标记正在探索
 				set_province_flag = THE_IQU_this_provinces_is_exploring_now
@@ -189,15 +136,7 @@ country_event = {
 		}
 		event_target:THE_IQU_province_unique_8_target = {
 			custom_tooltip = THE_IQU_event_0_c_tt1
-			random_country = {
-				limit = {
-					has_government_attribute = THE_IQU_government_explore_coast_explore_mechanic
-				}
-				country_event = {
-					id = THE_IQU_flavor_events.1
-				}
-			}
-			# THE_IQU_will_get_wuxing_point_after_explore_effect = yes
+			ROOT = { country_event = { id = THE_IQU_flavor_events.1 } }
 			hidden_effect = {
 				#省份标记正在探索
 				set_province_flag = THE_IQU_this_provinces_is_exploring_now
@@ -213,15 +152,7 @@ country_event = {
 		}
 		event_target:THE_IQU_province_unique_9_target = {
 			custom_tooltip = THE_IQU_event_0_c_tt1
-			random_country = {
-				limit = {
-					has_government_attribute = THE_IQU_government_explore_coast_explore_mechanic
-				}
-				country_event = {
-					id = THE_IQU_flavor_events.1
-				}
-			}
-			# THE_IQU_will_get_wuxing_point_after_explore_effect = yes
+			ROOT = { country_event = { id = THE_IQU_flavor_events.1 } }
 			hidden_effect = {
 				#省份标记正在探索
 				set_province_flag = THE_IQU_this_provinces_is_exploring_now
@@ -236,15 +167,7 @@ country_event = {
 		}
 		event_target:THE_IQU_province_unique_10_target = {
 			custom_tooltip = THE_IQU_event_0_c_tt1
-			random_country = {
-				limit = {
-					has_government_attribute = THE_IQU_government_explore_coast_explore_mechanic
-				}
-				country_event = {
-					id = THE_IQU_flavor_events.1
-				}
-			}
-			# THE_IQU_will_get_wuxing_point_after_explore_effect = yes
+			ROOT = { country_event = { id = THE_IQU_flavor_events.1 } }
 			hidden_effect = {
 				#省份标记正在探索
 				set_province_flag = THE_IQU_this_provinces_is_exploring_now
@@ -259,15 +182,7 @@ country_event = {
 		}
 		event_target:THE_IQU_province_unique_11_target = {
 			custom_tooltip = THE_IQU_event_0_c_tt1
-			random_country = {
-				limit = {
-					has_government_attribute = THE_IQU_government_explore_coast_explore_mechanic
-				}
-				country_event = {
-					id = THE_IQU_flavor_events.1
-				}
-			}
-			# THE_IQU_will_get_wuxing_point_after_explore_effect = yes
+			ROOT = { country_event = { id = THE_IQU_flavor_events.1 } }
 			hidden_effect = {
 				#省份标记正在探索
 				set_province_flag = THE_IQU_this_provinces_is_exploring_now
@@ -282,15 +197,7 @@ country_event = {
 		}
 		event_target:THE_IQU_province_unique_12_target = {
 			custom_tooltip = THE_IQU_event_0_c_tt1
-			random_country = {
-				limit = {
-					has_government_attribute = THE_IQU_government_explore_coast_explore_mechanic
-				}
-				country_event = {
-					id = THE_IQU_flavor_events.1
-				}
-			}
-			# THE_IQU_will_get_wuxing_point_after_explore_effect = yes
+			ROOT = { country_event = { id = THE_IQU_flavor_events.1 } }
 			hidden_effect = {
 				#省份标记正在探索
 				set_province_flag = THE_IQU_this_provinces_is_exploring_now
@@ -298,7 +205,10 @@ country_event = {
 		}
 	}
 	after = {
-		every_owned_province = {
+		every_province = {
+			limit = {
+				has_province_flag = THE_IQU_had_saved_unique_point_flag
+			}
 			clr_province_flag = THE_IQU_had_saved_unique_point_flag
 		}
 		# every_subject_country = {
@@ -338,7 +248,10 @@ country_event = {
 	option = {
 		name = THE_IQU_flavor_events.1.0
 		highlight = yes
-		every_owned_province = {
+		every_province = {
+			limit = {
+				has_province_flag = THE_IQU_this_provinces_is_exploring_now
+			}
 			clr_province_flag = THE_IQU_this_provinces_is_exploring_now
 		}
 	}
@@ -348,6 +261,12 @@ country_event = {
 		ROOT = {
 			set_country_flag = THE_IQU_now_is_exploring_flag
 			THE_IQU_on_start_the_explore_event_effects = yes
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			clr_country_flag = THE_IQU_on_explore_event_flag
 		}
 	}
 }

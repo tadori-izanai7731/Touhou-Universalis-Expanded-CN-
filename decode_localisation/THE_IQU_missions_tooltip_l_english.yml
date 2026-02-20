@@ -164,8 +164,8 @@ l_english:
  THE_IQU_3_7_c_tt1: "解锁§M「鳕鱼战争」§!宣战理由，允许我们夺取所有沿§Y北大西洋§!地区的§Y沿海省份§!"
  THE_IQU_3_8_c_tt1: "现当§O龙脉-龙之首§!被§Y引渡§!的省份相邻存在殖民地省份时，该殖民地省份获得以下效果：\n- -当地定居者数量§G+100§!\n- -当地原住民数量§G+4000§!\n- -当地原住民野蛮度§G-2§!\n- -当地原住民侵略性§G-2§!"
  THE_IQU_4_1_c_tt1: "@HVR§Y[HVR.GetName]§!将会移除所有§O动荡时代§!修正"
- THE_IQU_4_2_c_tt1: "解锁特殊外交顾问§Y「比那名居天子」§!\n"
- THE_IQU_4_2_c_tt2: "执行该决议召集§Y「天子」§!进入我们内阁中时，§Y「天子」§!将获得§G1§!随机§Y君主能力§!。\n若天子的全部君主能力均已达到最大值，则获得§G25§!§Y行政点数§!、£adm£§G25§!§Y外交点数§!£dip£、§G25§!§Y军事点数§!£mil£\n"
+ THE_IQU_4_2_c_tt1: "解锁决议「§Y招募外交顾问『比那名居天子』§!」\n"
+ THE_IQU_4_2_c_tt2: "\n@HVR§Y「天子」§!将获得§G1§!随机§Y君主能力§!。\n若§Y君主能力§!均已达到最大值，获得§G25§!§Y行政点数§!、£adm£§G25§!§Y外交点数§!£dip£、§G25§!§Y军事点数§!£mil£\n"
  THE_IQU_4_3_c_tt1: "在召集「§Y天人规训§!」中已让天子获得§Y25§!点教养(目前：[Root.the_iqu_the_tenshi_obedience_im_var.GetValue])"
  THE_IQU_3_3_c_tt1: "@HVR§Y[HVR.GetName]§!将§O无法宣战§!"
  THE_IQU_5_5_c_tt1: "解锁第§Y6§!层政府改革：「§O观澜测天§!」"
@@ -188,7 +188,7 @@ l_english:
  THE_IQU_4_7_c_tt1: "通过§Y探险家§!探索超过（[Root.the_iqu_explore_province_number_im_var.GetValue]/150）个省份"
  THE_IQU_5_8_c_tt1: "当前引渡龙脉越过10次丛林省份（目前：[Root.the_iqu_jungle_province_has_been_teer_im_var.GetValue]）"
  THE_IQU_4_8_c_tt1: "当前引渡龙脉越过10次山脉省份（目前：[Root.the_iqu_mountain_province_has_been_teer_im_var.GetValue]）"
- THE_IQU_4_2_c_tt3: "现在@HVR§Y[HVR.GetName]§!禁止§M结盟§!并断绝所有同盟关系"
+ THE_IQU_4_2_c_tt3: "现在@HVR§Y[HVR.GetName]§!禁止§M结盟§!并断绝所有同盟关系\n"
  THE_IQU_hvr_can_not_be_declare_war_c_tooltip: "@HVR§Y[HVR.GetName]§!受到@IQU§Y龙宫使§!庇佑无法被宣战"
  THE_IQU_hvr_cannot_insult_iqu_c_yy1: "@HVR[HVR.GetName]禁止§M羞辱§!@IQU[IQU.GetName]"
  THE_IQU_hvr_can_not_alliance_c_tooltip: "@HVR§Y[HVR.GetName]§!禁止§M结盟§!"
@@ -197,6 +197,10 @@ l_english:
  THE_able_hegemon_without_great_power_tt: "允许以非列强宣称霸权"
  THE_IQU_coffee_island_price_tt: "咖啡醇酿"
  THE_IQU_paper_indeed_price_tt: "纸用宣天"
+ THE_IQU_4_2_effect_case1_tt_yes: "£yes£如果未撤销阶层特权「§Y混乱的天界政局§!」:"
+ THE_IQU_4_2_effect_case1_tt_no: "£no£如果未撤销阶层特权「§Y混乱的天界政局§!」:"
+ THE_IQU_4_2_effect_case2_tt_yes: "\n£yes£否则:"
+ THE_IQU_4_2_effect_case2_tt_no: "\n£no£否则:"
 ### MISSION_EXTRA_END
 
 ### DECISIONS
