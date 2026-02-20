@@ -566,6 +566,10 @@ diplomatic_ideas = {
 			factor = 1.25
 			personality = ai_diplomat 
 		}
+		modifier = {
+			factor = 1.05
+			THE_ai_difficulty_enhance_chance_priority_trigger = yes
+		}
 	}
 }
 
@@ -625,7 +629,7 @@ offensive_ideas = {
 	#}
 
 	ai_will_do = {
-		factor = 3
+		factor = 2.5
 		modifier = {
 			factor = 0.9
 			has_global_modifier_value = {
@@ -658,16 +662,28 @@ offensive_ideas = {
 			national_focus = MIL 
 		}
 		modifier = {
-			factor = 1.15
+			factor = 1.25
 			OR = {
-				has_idea_group = economic_ideas 
 				has_idea_group = innovativeness_ideas 
-				has_idea_group = infrastructure_ideas
+				has_idea_group = economic_ideas 
+				has_idea_group = aristocracy_ideas
 			}
 		}
 		modifier = {
 			factor = 1.25
 			is_march = yes
+		}
+		modifier = {
+			factor = 2.5
+			THE_ai_difficulty_enhance_chance_priority_trigger = yes
+		}
+		modifier = {
+			factor = 10.0
+			THE_ai_difficulty_turn_on_offensive_ideas_priority_trigger = yes
+		}
+		modifier = {
+			factor = 2.0
+			ruler_has_personality = THE_ai_personality_conqueror
 		}
 	}
 }
@@ -764,7 +780,7 @@ defensive_ideas = {
 	#}
 	
 	ai_will_do = {
-		factor = 2.5
+		factor = 2.0
 		modifier = {
 			factor = 0.9
 			has_global_modifier_value = {
@@ -804,6 +820,14 @@ defensive_ideas = {
 		modifier = {
 			factor = 1.25
 			is_march = yes
+		}
+		modifier = {
+			factor = 1.5
+			THE_ai_difficulty_enhance_chance_priority_trigger = yes
+		}
+		modifier = {
+			factor = 15
+			THE_ai_difficulty_turn_on_defensive_ideas_priority_trigger = yes
 		}
 	}
 }
@@ -868,11 +892,16 @@ trade_ideas = {
 			}
 		}
 		modifier = {
-			factor = 1.25
+			factor = 1.75
 			OR = {
-				has_idea_group = infrastructure_ideas
-				has_idea_group = economic_ideas
+				has_idea_group = defensive_ideas
+				has_idea_group = quantity_ideas
+				has_idea_group = plutocracy_ideas
 			}
+		}
+		modifier = {
+			factor = 2.5
+			THE_ai_difficulty_enhance_chance_priority_trigger = yes
 		}
 	}
 }
@@ -1270,7 +1299,7 @@ quality_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 3.5
+		factor = 3.0
 		modifier = {
 			factor = 0.5
 			has_strong_mil_national_ideas = yes 
@@ -1292,11 +1321,24 @@ quality_ideas = {
 			personality = ai_militarist  
 		}
 		modifier = {
-			factor = 1.05
-			OR = {
-				has_idea_group = infrastructure_ideas
-				has_idea_group = economic_ideas
-			}
+			factor = 2.5
+			THE_ai_difficulty_enhance_chance_priority_trigger = yes
+		}
+		modifier = {
+			factor = 2.0
+			total_development = 100
+		}
+		modifier = {
+			factor = 1.6
+			has_idea_group = innovativeness_ideas
+		}
+		modifier = {
+			factor = 1.6
+			has_idea_group = economic_ideas
+		}
+		modifier = {
+			factor = 1.6
+			has_idea_group = expansion_ideas
 		}
 		modifier = { 
 			factor = 0.9
@@ -1327,6 +1369,10 @@ quality_ideas = {
 				}
 			}
 			
+		}
+		modifier = {
+			factor = 5.0
+			THE_ai_difficulty_turn_on_quality_ideas_priority_trigger = yes
 		}
 	}
 }
@@ -1363,7 +1409,7 @@ quantity_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 3.5
+		factor = 3.0
 		modifier = {
 			factor = 0.5
 			has_strong_mil_national_ideas = yes 
@@ -1398,11 +1444,28 @@ quantity_ideas = {
 			}
 		}
 		modifier = {
-			factor = 1.05
-			OR = {
-				has_idea_group = trade_ideas
-				has_idea_group = economic_ideas
-			}
+			factor = 1.5
+			has_idea_group = economic_ideas
+		}
+		modifier = {
+			factor = 2.0
+			has_idea_group = religious_ideas
+		}
+		modifier = {
+			factor = 2.0
+			has_idea_group = trade_ideas
+		}
+		modifier = {
+			factor = 4.0
+			THE_ai_difficulty_enhance_chance_priority_trigger = yes
+		}
+		modifier = {
+			factor = 15.0
+			THE_ai_difficulty_turn_on_quantity_ideas_priority_trigger = yes
+		}
+		modifier = {
+			factor = 4.0
+			ruler_has_personality = THE_ai_personality_conqueror
 		}
 	}
 }
@@ -1558,6 +1621,10 @@ administrative_ideas = {
 				has_reform = prussian_monarchy_base
 				governing_capacity_percentage = 0.9
 			}
+		}
+		modifier = {
+			factor = 1.25
+			THE_ai_difficulty_enhance_chance_priority_trigger = yes
 		}
 	}
 }
@@ -1750,6 +1817,10 @@ naval_ideas = {
 			factor = 10
 			has_government_attribute = is_pirate_republic_reform
 		}
+		modifier = {
+			factor = 10
+			THE_ai_difficulty_turn_on_naval_ideas_priority_trigger = yes
+		}
 	}
 }
 
@@ -1929,6 +2000,14 @@ infrastructure_ideas = {
 				has_idea_group = trade_ideas
 				has_idea_group = naval_ideas
 			}
+		}
+		modifier = {
+			factor = 10.0
+			THE_ai_difficulty_turn_on_infrastructure_ideas_priority_trigger = yes
+		}
+		modifier = {
+			factor = 3.0
+			ruler_has_personality = THE_ai_personality_conqueror
 		}
 	}
 }

@@ -5,7 +5,7 @@ country_event = {
 	id = THE_FOM_flavor_events.1
 	title = THE_FOM_flavor_events.1.t
 	desc = THE_FOM_flavor_events.1.desc
-
+	
 	is_triggered_only = yes
 	trigger = {
 		
@@ -29,7 +29,7 @@ country_event = {
 	id = THE_FOM_flavor_events.2
 	title = THE_FOM_flavor_events.2.t
 	desc = THE_FOM_flavor_events.2.desc
-
+	
 	is_triggered_only = yes
 	trigger = {
 		
@@ -51,7 +51,7 @@ country_event = {
 	id = THE_FOM_flavor_events.3
 	title = THE_FOM_flavor_events.3.t
 	desc = THE_FOM_flavor_events.3.desc
-
+	
 	is_triggered_only = yes
 	trigger = {
 		
@@ -69,7 +69,7 @@ country_event = {
 	id = THE_FOM_flavor_events.4
 	title = THE_FOM_flavor_events.4.t
 	desc = THE_FOM_flavor_events.4.desc
-
+	
 	is_triggered_only = yes
 	trigger = {
 		
@@ -79,8 +79,8 @@ country_event = {
 			if = {
 				limit = {
 					th_is_or_was_tag = { tag = MRS }
-				 }
-				 clr_global_flag = THE_FOM_disaster_first_start_flag
+				}
+				clr_global_flag = THE_FOM_disaster_first_start_flag
 			}
 		}
 	}
@@ -90,8 +90,8 @@ country_event = {
 			if = {
 				limit = {
 					th_is_or_was_tag = { tag = MRS }
-				 }
-				 set_global_flag = THE_FOM_disaster_second_start_flag
+				}
+				set_global_flag = THE_FOM_disaster_second_start_flag
 			}
 		}
 	}
@@ -101,7 +101,7 @@ country_event = {
 	id = THE_FOM_flavor_events.5
 	title = THE_FOM_flavor_events.5.t
 	desc = THE_FOM_flavor_events.5.desc
-
+	
 	is_triggered_only = yes
 	trigger = {
 		
@@ -124,7 +124,7 @@ country_event = {
 	id = THE_FOM_flavor_events.6
 	title = THE_FOM_flavor_events.6.t
 	desc = THE_FOM_flavor_events.6.desc
-
+	
 	is_triggered_only = yes
 	trigger = {
 		
@@ -164,7 +164,7 @@ country_event = {
 	id = THE_FOM_flavor_events.7
 	title = THE_FOM_flavor_events.7.t
 	desc = THE_FOM_flavor_events.7.desc
-
+	
 	is_triggered_only = yes
 	trigger = {
 		
@@ -206,7 +206,7 @@ country_event = {
 	id = THE_FOM_flavor_events.8
 	title = THE_FOM_flavor_events.8.t
 	desc = THE_FOM_flavor_events.8.desc
-
+	
 	is_triggered_only = yes
 	trigger = {
 		
@@ -224,7 +224,7 @@ country_event = {
 	id = THE_FOM_flavor_events.9
 	title = THE_FOM_flavor_events.9.t
 	desc = THE_FOM_flavor_events.9.desc
-
+	
 	is_triggered_only = yes
 	trigger = {
 		
@@ -266,7 +266,7 @@ country_event = {
 	id = THE_FOM_flavor_events.10
 	title = THE_FOM_flavor_events.10.t
 	desc = THE_FOM_flavor_events.10.desc
-
+	
 	is_triggered_only = yes
 	trigger = {
 		
@@ -301,7 +301,7 @@ country_event = {
 	id = THE_FOM_flavor_events.11
 	title = THE_FOM_flavor_events.11.t
 	desc = THE_FOM_flavor_events.11.desc
-
+	
 	is_triggered_only = yes
 	trigger = {
 		
@@ -328,7 +328,7 @@ country_event = {
 	id = THE_FOM_flavor_events.12
 	title = THE_FOM_flavor_events.12.t
 	desc = THE_FOM_flavor_events.12.desc
-
+	
 	is_triggered_only = yes
 	trigger = {
 		
@@ -362,7 +362,7 @@ country_event = {
 	id = THE_FOM_flavor_events.13
 	title = THE_FOM_flavor_events.13.t
 	desc = THE_FOM_flavor_events.13.desc
-
+	
 	is_triggered_only = yes
 	hidden = yes
 	trigger = {
@@ -536,7 +536,7 @@ country_event = {
 			was_tag = MRS
 		}
 	}
-
+	
 	is_triggered_only = yes
 	trigger = {
 		
@@ -764,11 +764,11 @@ country_event = {
 	title = THE_FOM_flavor_events.19.t
 	desc = THE_FOM_flavor_events.19.desc
 	is_triggered_only = yes
-
+	
 	trigger = {
 		
 	}
-
+	
 	option = {
 		name = THE_FOM_flavor_events.19.1
 		hidden_effect = {
@@ -778,7 +778,7 @@ country_event = {
 			}
 		}
 	}
-
+	
 }
 ##奇怪的蘑菇
 country_event = {
@@ -786,18 +786,18 @@ country_event = {
 	title = THE_FOM_flavor_events.20.t
 	desc = THE_FOM_flavor_events.20.desc
 	is_triggered_only = yes
-
+	
 	trigger = {
 		
 	}
-
+	
 	option = {
 		name = THE_FOM_flavor_events.20.1
 		hidden_effect = {
 			set_country_flag = THE_FOM_marisa_has_the_unique_mushroom_flag
 		}
 	}
-
+	
 }
 #观察，奇怪的蘑菇
 country_event = {
@@ -805,11 +805,11 @@ country_event = {
 	title = THE_FOM_flavor_events.21.t
 	desc = THE_FOM_flavor_events.21.desc
 	is_triggered_only = yes
-
+	
 	trigger = {
 		
 	}
-
+	
 	option = {
 		name = THE_FOM_flavor_events.21.1
 		highlight = yes
@@ -832,16 +832,16 @@ country_event = {
 	title = THE_FOM_flavor_events.22.t
 	desc = THE_FOM_flavor_events.22.desc
 	is_triggered_only = yes
-
+	
 	trigger = {
 		
 	}
-
+	
 	option = {
 		name = THE_FOM_flavor_events.22.1
-
+		
 	}
-
+	
 }
 #雾霭与荆棘
 country_event = {
@@ -849,11 +849,11 @@ country_event = {
 	title = THE_FOM_flavor_events.23.t
 	desc = THE_FOM_flavor_events.23.desc
 	is_triggered_only = yes
-
+	
 	trigger = {
 		
 	}
-
+	
 	option = {
 		name = THE_FOM_flavor_events.23.1
 		hidden_effect = {
@@ -862,7 +862,7 @@ country_event = {
 			}
 		}
 	}
-
+	
 }
 #迷雾森林 初见
 country_event = {
@@ -870,11 +870,11 @@ country_event = {
 	title = THE_FOM_flavor_events.24.t
 	desc = THE_FOM_flavor_events.24.desc
 	is_triggered_only = yes
-
+	
 	trigger = {
 		
 	}
-
+	
 	option = {
 		name = THE_FOM_flavor_events.24.1
 		trigger = {
@@ -908,11 +908,11 @@ country_event = {
 	title = THE_FOM_flavor_events.25.t
 	desc = THE_FOM_flavor_events.25.desc
 	is_triggered_only = yes
-
+	
 	trigger = {
 		
 	}
-
+	
 	option = {
 		name = THE_FOM_flavor_events.25.1
 		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt1
@@ -920,32 +920,32 @@ country_event = {
 		THE_FOM_fow_forest_error_option_effects = yes
 	}
 	option = { #正确答案
-		name = THE_FOM_flavor_events.25.2
-		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt1
-		THE_FOM_alice_give_tooltip_effects = yes
-		hidden_effect = {
-			country_event = {
-				id = THE_FOM_flavor_events.26
-				days = 30
-			}
+	name = THE_FOM_flavor_events.25.2
+	custom_tooltip = THE_FOM_flavor_event_25_question_c_tt1
+	THE_FOM_alice_give_tooltip_effects = yes
+	hidden_effect = {
+		country_event = {
+			id = THE_FOM_flavor_events.26
+			days = 30
 		}
 	}
-	option = { 
-		name = THE_FOM_flavor_events.25.3
-		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt1
-		THE_FOM_alice_give_tooltip_effects = yes
-		THE_FOM_fow_forest_error_option_effects = yes
-	}
-	option = {
-		name = THE_FOM_flavor_events.25.4
-		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt1
-		THE_FOM_alice_give_tooltip_effects = yes
-		THE_FOM_fow_forest_error_option_effects = yes
-	}
-	#ai专用通道
-	option = {
-		name = THE_FOM_flavor_events.25.5
-	}
+}
+option = { 
+	name = THE_FOM_flavor_events.25.3
+	custom_tooltip = THE_FOM_flavor_event_25_question_c_tt1
+	THE_FOM_alice_give_tooltip_effects = yes
+	THE_FOM_fow_forest_error_option_effects = yes
+}
+option = {
+	name = THE_FOM_flavor_events.25.4
+	custom_tooltip = THE_FOM_flavor_event_25_question_c_tt1
+	THE_FOM_alice_give_tooltip_effects = yes
+	THE_FOM_fow_forest_error_option_effects = yes
+}
+#ai专用通道
+option = {
+	name = THE_FOM_flavor_events.25.5
+}
 }
 
 #迷雾森林 轮回第二次
@@ -954,11 +954,11 @@ country_event = {
 	title = THE_FOM_flavor_events.25.t
 	desc = THE_FOM_flavor_events.25.desc
 	is_triggered_only = yes
-
+	
 	trigger = {
 		
 	}
-
+	
 	option = { 
 		name = THE_FOM_flavor_events.25.1
 		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt2
@@ -972,22 +972,22 @@ country_event = {
 		THE_FOM_fow_forest_error_option_effects = yes
 	}
 	option = { #正确答案
-		name = THE_FOM_flavor_events.25.3 
-		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt2
-		THE_FOM_alice_give_tooltip_effects = yes
-		hidden_effect = {
-			country_event = {
-				id = THE_FOM_flavor_events.27
-				days = 30
-			}
+	name = THE_FOM_flavor_events.25.3 
+	custom_tooltip = THE_FOM_flavor_event_25_question_c_tt2
+	THE_FOM_alice_give_tooltip_effects = yes
+	hidden_effect = {
+		country_event = {
+			id = THE_FOM_flavor_events.27
+			days = 30
 		}
 	}
-	option = {
-		name = THE_FOM_flavor_events.25.4
-		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt2
-		THE_FOM_alice_give_tooltip_effects = yes
-		THE_FOM_fow_forest_error_option_effects = yes
-	}
+}
+option = {
+	name = THE_FOM_flavor_events.25.4
+	custom_tooltip = THE_FOM_flavor_event_25_question_c_tt2
+	THE_FOM_alice_give_tooltip_effects = yes
+	THE_FOM_fow_forest_error_option_effects = yes
+}
 }
 
 #迷雾森林 轮回第三次
@@ -996,41 +996,41 @@ country_event = {
 	title = THE_FOM_flavor_events.25.t
 	desc = THE_FOM_flavor_events.25.desc
 	is_triggered_only = yes
-
+	
 	trigger = {
 		
 	}
-
+	
 	option = { #正确答案
-		name = THE_FOM_flavor_events.25.1
-		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt3
-		THE_FOM_alice_give_tooltip_effects = yes
-		THE_FOM_fow_forest_error_option_effects = yes
-		hidden_effect = {
-			country_event = {
-				id = THE_FOM_flavor_events.28
-				days = 30
-			}
+	name = THE_FOM_flavor_events.25.1
+	custom_tooltip = THE_FOM_flavor_event_25_question_c_tt3
+	THE_FOM_alice_give_tooltip_effects = yes
+	THE_FOM_fow_forest_error_option_effects = yes
+	hidden_effect = {
+		country_event = {
+			id = THE_FOM_flavor_events.28
+			days = 30
 		}
 	}
-	option = {
-		name = THE_FOM_flavor_events.25.2
-		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt3
-		THE_FOM_alice_give_tooltip_effects = yes
-		THE_FOM_fow_forest_error_option_effects = yes
-	}
-	option = {
-		name = THE_FOM_flavor_events.25.3
-		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt3
-		THE_FOM_alice_give_tooltip_effects = yes
-		THE_FOM_fow_forest_error_option_effects = yes
-	}
-	option = {
-		name = THE_FOM_flavor_events.25.4
-		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt3
-		THE_FOM_alice_give_tooltip_effects = yes
-		THE_FOM_fow_forest_error_option_effects = yes
-	}
+}
+option = {
+	name = THE_FOM_flavor_events.25.2
+	custom_tooltip = THE_FOM_flavor_event_25_question_c_tt3
+	THE_FOM_alice_give_tooltip_effects = yes
+	THE_FOM_fow_forest_error_option_effects = yes
+}
+option = {
+	name = THE_FOM_flavor_events.25.3
+	custom_tooltip = THE_FOM_flavor_event_25_question_c_tt3
+	THE_FOM_alice_give_tooltip_effects = yes
+	THE_FOM_fow_forest_error_option_effects = yes
+}
+option = {
+	name = THE_FOM_flavor_events.25.4
+	custom_tooltip = THE_FOM_flavor_event_25_question_c_tt3
+	THE_FOM_alice_give_tooltip_effects = yes
+	THE_FOM_fow_forest_error_option_effects = yes
+}
 }
 
 #迷雾森林 轮回第四次
@@ -1039,11 +1039,11 @@ country_event = {
 	title = THE_FOM_flavor_events.25.t
 	desc = THE_FOM_flavor_events.25.desc
 	is_triggered_only = yes
-
+	
 	trigger = {
 		
 	}
-
+	
 	option = {
 		name = THE_FOM_flavor_events.25.1
 		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt4
@@ -1051,28 +1051,28 @@ country_event = {
 		THE_FOM_fow_forest_error_option_effects = yes
 	}
 	option = { #正确答案
-		name = THE_FOM_flavor_events.25.2
-		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt4
-		THE_FOM_alice_give_tooltip_effects = yes
-		hidden_effect = {
-			country_event = {
-				id = THE_FOM_flavor_events.29
-				days = 30
-			}
+	name = THE_FOM_flavor_events.25.2
+	custom_tooltip = THE_FOM_flavor_event_25_question_c_tt4
+	THE_FOM_alice_give_tooltip_effects = yes
+	hidden_effect = {
+		country_event = {
+			id = THE_FOM_flavor_events.29
+			days = 30
 		}
 	}
-	option = {
-		name = THE_FOM_flavor_events.25.3
-		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt4
-		THE_FOM_alice_give_tooltip_effects = yes
-		THE_FOM_fow_forest_error_option_effects = yes
-	}
-	option = {
-		name = THE_FOM_flavor_events.25.4
-		custom_tooltip = THE_FOM_flavor_event_25_question_c_tt4
-		THE_FOM_alice_give_tooltip_effects = yes
-		THE_FOM_fow_forest_error_option_effects = yes
-	}
+}
+option = {
+	name = THE_FOM_flavor_events.25.3
+	custom_tooltip = THE_FOM_flavor_event_25_question_c_tt4
+	THE_FOM_alice_give_tooltip_effects = yes
+	THE_FOM_fow_forest_error_option_effects = yes
+}
+option = {
+	name = THE_FOM_flavor_events.25.4
+	custom_tooltip = THE_FOM_flavor_event_25_question_c_tt4
+	THE_FOM_alice_give_tooltip_effects = yes
+	THE_FOM_fow_forest_error_option_effects = yes
+}
 }
 
 #森林的考验
@@ -1081,11 +1081,11 @@ country_event = {
 	title = THE_FOM_flavor_events.29.t
 	desc = THE_FOM_flavor_events.29.desc
 	is_triggered_only = yes
-
+	
 	trigger = {
 		
 	}
-
+	
 	option = {
 		name = THE_FOM_flavor_events.29.1
 		add_adm_power = 75
@@ -1105,7 +1105,7 @@ country_event = {
 	title = THE_FOM_flavor_events.30.t
 	desc = THE_FOM_flavor_events.30.desc
 	is_triggered_only = yes
-
+	
 	trigger = {
 		
 	}
@@ -1125,7 +1125,7 @@ country_event = {
 			}
 		}
 	}
-
+	
 	option = {
 		name = THE_FOM_flavor_events.30.1
 		th_danmaku_incident_fight_ruler_and_opponent = yes
@@ -1147,7 +1147,7 @@ country_event = {
 	trigger = {
 		
 	}
-
+	
 	option = {
 		name = THE_FOM_flavor_events.31.1
 		custom_tooltip = THE_FOM_flavor_events_31_c_tt1
@@ -1162,8 +1162,19 @@ country_event = {
 			if = {
 				limit = {
 					ai = yes
-				 }
-				 add_ruler_personality = conqueror_personality
+				}
+				if = {
+					limit = { 
+						OR = {
+							has_global_flag = THE_common_ai_difficulty_enhance_chance_flag
+							has_global_flag = THE_common_ai_difficulty_conqueror_flag
+						}
+					}
+					add_ruler_personality = THE_ai_personality_conqueror
+				}
+				else = {
+					add_ruler_personality = conqueror_personality
+				}
 			}
 		}
 	}
@@ -1174,11 +1185,11 @@ country_event = {
 	title = THE_FOM_flavor_events.32.t
 	desc = THE_FOM_flavor_events.32.desc
 	is_triggered_only = yes
-
+	
 	trigger = {
 		
 	}
-
+	
 	option = {
 		name = THE_FOM_flavor_events.32.1
 		hidden_effect = {
@@ -1197,11 +1208,11 @@ country_event = {
 	title = THE_FOM_flavor_events.33.t
 	desc = THE_FOM_flavor_events.33.desc
 	is_triggered_only = yes
-
+	
 	trigger = {
 		
 	}
-
+	
 	option = {
 		name = THE_FOM_flavor_events.33.1
 		add_government_reform = THE_MRS_wish_upon_the_star_reform
@@ -1217,7 +1228,7 @@ country_event = {
 	id = THE_FOM_flavor_events.1000
 	title = THE_FOM_flavor_events.1000.t
 	desc = THE_FOM_flavor_events.1000.desc
-
+	
 	is_triggered_only = yes
 	trigger = {
 		
@@ -1248,8 +1259,8 @@ country_event = {
 				FROM = {
 					th_is_or_was_tag = { tag = MGT }
 				}
-			 }
-			 change_variable = {
+			}
+			change_variable = {
 				which = the_fom_forest_influence_is_alice_var
 				value = 5
 			}
