@@ -14,10 +14,10 @@ THE_HMC_human_trade_league = {
         
 
 	# Properties:
-	can_be_annexed = yes
+	can_be_annexed = no
 	forms_trade_companies = no
 	can_fight_independence_war = no
-	joins_overlords_wars = yes
+	joins_overlords_wars = no
 	joins_colonial_wars = no
 	opinion_on_subject_integration = 0 #Determines how much opinion they actually lose when a fellow subject gets integrated.
 	overlord_can_attack = no

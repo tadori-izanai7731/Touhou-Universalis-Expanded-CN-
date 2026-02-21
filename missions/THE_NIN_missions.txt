@@ -727,10 +727,24 @@ THE_NIN_branch_3 = {
 		} 
 		
 		effect = { 
-			create_general = { tradition = 80 add_fire = 1 culture = greek }
+			create_general = { tradition = 80 add_fire = 1 add_shock = 2 culture = greek }
 			add_country_modifier = {
 				name = THE_NIN_the_senate_and_the_people_modifier
 				duration = 7300
+			}
+			add_adm_power = 100
+			add_treasury = 500
+			add_manpower = 50
+			146 = {
+				limit = { has_port = yes }
+				galley = ROOT
+				galley = ROOT
+				galley = ROOT
+				galley = ROOT
+				galley = ROOT
+				galley = ROOT
+				galley = ROOT
+				galley = ROOT
 			}
 			change_estate_land_share = {
 				estate = estate_burghers
@@ -748,6 +762,25 @@ THE_NIN_branch_3 = {
 				add_base_tax = 1
 				add_base_production = 3
 				add_base_manpower = 2
+			}
+			if = {
+				limit = { 
+					mil_tech = 4
+				}
+				custom_tooltip = THE_NIN_3_2_c_tt1_no
+				tooltip = {
+					add_mil_tech = 1
+				}
+				custom_tooltip = THE_NIN_3_2_c_tt2
+				add_mil_power = 200
+			}
+			else = {
+				custom_tooltip = THE_NIN_3_2_c_tt1_yes
+				add_mil_tech = 1
+				custom_tooltip = THE_NIN_3_2_c_tt2
+				tooltip = {
+					add_mil_power = 200
+				}
 			}
 		} 
 	}
@@ -900,7 +933,7 @@ THE_NIN_branch_3 = {
 			add_adm_power = 300
 			add_dip_power = 300
 			add_mil_power = 300
-		 } 
+		} 
 	}
 }
 THE_NIN_branch_4 = {
@@ -1158,7 +1191,7 @@ THE_NIN_branch_4 = {
 			NOT = {
 				owned_by = ROOT
 			}
-		 } 
+		} 
 		
 		trigger = { 
 			num_of_owned_provinces_with = {
@@ -1270,7 +1303,7 @@ THE_NIN_branch_4 = {
 			NOT = {
 				owned_by = ROOT
 			}
-		 } 
+		} 
 		
 		trigger = { 
 			OR = {
@@ -1437,16 +1470,7 @@ THE_NIN_branch_5 = {
 			if = {
 				limit = {
 					TUR = { NOT = { total_development = 200 } }
-					OR = {
-						trust = {
-							who = BYZ
-							value = 80
-						}
-						trust = {
-							who = ROOT
-							value = 80
-						}
-					}
+					BYZ = { is_subject_of = ROOT }
 				}
 				custom_tooltip = THE_NIN_5_4_c_tt1_yes
 				tooltip = {
