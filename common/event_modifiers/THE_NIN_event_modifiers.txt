@@ -4,9 +4,12 @@ THE_NIN_tur_desire_modifier = {
 }
 
 THE_NIN_the_senate_and_the_people_modifier = {
-	all_estate_loyalty_equilibrium = 0.10
-	global_tax_modifier = 0.25
-	diplomatic_reputation = 2
+	all_estate_loyalty_equilibrium = 0.20
+	tax_income = 48
+	land_forcelimit = 6
+	land_morale = 0.10
+	global_regiment_cost = -0.25
+	global_regiment_recruit_speed = -0.25
 }
 
 THE_NIN_the_victory_godness_modifier = {
@@ -134,4 +137,8 @@ THE_NIN_deities_army_modifier = {
 THE_NIN_deities_government_modifier = {
 	advisor_cost = -0.15
 	build_cost = -0.15
+}
+#罗马的臣子
+THE_NIN_loyal_modifier = {
+	liberty_desire = 100
 }

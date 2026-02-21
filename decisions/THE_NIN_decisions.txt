@@ -44,9 +44,13 @@ country_decisions = {
 					# arabian_sea_region = {
 					# 	discover_country = NIN
 					# }
-					# BYZ = {
-					# 	vassalize = NIN
-					# }
+					BYZ = {
+						vassalize = NIN
+					}
+					add_country_modifier = {
+						name = THE_NIN_loyal_modifier
+						duration = -1
+					}
 					THE_NIN_define_ruler_watari_nina_scripted_effect = yes
 					change_government = monarchy
 					add_government_reform = Gensokyan_monarchy

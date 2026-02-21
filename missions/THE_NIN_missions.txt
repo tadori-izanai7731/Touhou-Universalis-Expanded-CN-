@@ -1019,6 +1019,7 @@ THE_NIN_branch_4 = {
 				custom_tooltip = THE_NIN_4_3_c_tt1_yes
 				hidden_effect = {
 					grant_independence = yes
+					remove_country_modifier = THE_NIN_loyal_modifier
 				}
 				vassalize = BYZ
 			}
@@ -1424,20 +1425,7 @@ THE_NIN_branch_5 = {
 				}
 				AND = {
 					TUR = { NOT = { total_development = 200 } }
-					OR = {
-						TUR = {
-							trust = {
-								who = BYZ
-								value = 60
-							}
-						}
-						TUR = {
-							trust = {
-								who = ROOT
-								value = 60
-							}
-						}
-					}
+					BYZ = { is_subject_of = ROOT }
 				}
 			}
 		} 
