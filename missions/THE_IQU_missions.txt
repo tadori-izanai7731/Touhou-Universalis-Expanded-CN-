@@ -837,12 +837,23 @@ THE_IQU_main_branch_3 = {
 			}
 		} 
 		
-		trigger = { 
-			num_of_owned_provinces_with = {
-				value = 10
-				region = moon_region
-				has_province_modifier = THE_IQU_lonng_vein_foot_province_buff
+		trigger = {
+			moon_region = {
+				type = all
+				NOT = { religion = th_lunarian_religion }
 			}
+			5320 = {
+				owned_by = ROOT
+				has_great_project = {
+					type = th_monument_lunar_capital
+					tier = 3
+				}
+			}
+			# num_of_owned_provinces_with = {
+			# 	value = 10
+			# 	region = moon_region
+			# 	has_province_modifier = THE_IQU_lonng_vein_foot_province_buff
+			# }
 		} 
 		
 		effect = { 
