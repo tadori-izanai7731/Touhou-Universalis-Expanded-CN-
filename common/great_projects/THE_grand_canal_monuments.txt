@@ -154,7 +154,6 @@ THE_grand_canal_hejian = {
 			num_of_times_expanded_infrastructure = 3
 			has_building = counting_house
 			has_building = fort_18th
-			owner = { NOT = { is_subject = yes } }
 		}
 	}
 	
@@ -1269,9 +1268,9 @@ THE_grand_canal_hangzhou = {
 		on_upgraded = {
 			owner = { add_treasury = 5000 }
 			THE_KNE_grand_canal_mandate_3 = yes
-			add_base_tax = 1 
-			add_base_production = 1 
-			add_base_manpower = 1 
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
 			hidden_effect = {
 				owner = { set_country_flag = THE_common_grand_canal_flag_hangzhou }
 			}
