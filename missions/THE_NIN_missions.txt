@@ -1437,16 +1437,7 @@ THE_NIN_branch_5 = {
 			if = {
 				limit = {
 					TUR = { NOT = { total_development = 200 } }
-					OR = {
-						trust = {
-							who = BYZ
-							value = 80
-						}
-						trust = {
-							who = ROOT
-							value = 80
-						}
-					}
+					BYZ = { is_subject_of = ROOT }
 				}
 				custom_tooltip = THE_NIN_5_4_c_tt1_yes
 				tooltip = {
