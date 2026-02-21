@@ -596,5 +596,27 @@ THE_ai_conqueror_cheat_effect = {
 				add_building = workshop
 			}
 		}
+		if = {
+			limit = { adm_tech = 22 }
+			random_owned_province = {
+				limit = { NOT = { has_building = town_hall } }
+				add_building = town_hall
+			}
+			random_owned_province = {
+				limit = { NOT = { has_building = town_hall } }
+				add_building = town_hall
+			}
+		}
+		else_if = {
+			limit = { adm_tech = 7 }
+			random_owned_province = {
+				limit = { NOT = { has_building = courthouse } }
+				add_building = courthouse
+			}
+			random_owned_province = {
+				limit = { NOT = { has_building = courthouse } }
+				add_building = courthouse
+			}
+		}
 	}
 }
