@@ -727,6 +727,7 @@ THE_NIN_branch_3 = {
 		} 
 		
 		effect = { 
+			create_general = { tradition = 80 add_fire = 1 culture = greek }
 			add_country_modifier = {
 				name = THE_NIN_the_senate_and_the_people_modifier
 				duration = 7300
@@ -946,6 +947,12 @@ THE_NIN_branch_4 = {
 						culture = greek
 					}
 					add_core = ROOT
+				}
+			}
+			add_truce_with = TUR
+			hidden_effect = {
+				overlord = {
+					add_truce_with = TUR
 				}
 			}
 		} 
