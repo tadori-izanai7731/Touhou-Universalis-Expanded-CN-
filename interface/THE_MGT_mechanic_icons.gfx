@@ -27,9 +27,22 @@ spriteTypes = {
 		transparencecheck = yes
 	}
 	##省份UI
+	####彩色
 	spriteType = {
-		name = "GFX_THE_MGT_making_dolls_button"
+		name = "GFX_THE_MGT_THE_MGT_province_1_button"
 		texturefile = "gfx\\interface\\government_mechanics\\the_mgt\\THE_MGT_province_button_1.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_THE_MGT_THE_MGT_province_2_button"
+		texturefile = "gfx\\interface\\government_mechanics\\the_mgt\\THE_MGT_province_button_2.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_THE_MGT_THE_MGT_province_3_button"
+		texturefile = "gfx\\interface\\government_mechanics\\the_mgt\\THE_MGT_province_button_3.dds"
 		loadType = "INGAME"
 		transparencecheck = yes
 	}

@@ -14,7 +14,20 @@
  THE_MGT_back_to_white_and_void_reform: "【创造】世界"
  THE_MGT_back_to_white_and_void_reform_desc: ""
  mechanic_THE_MGT_back_to_white_and_void_reform_mechanic_yes: "当战斗胜利时，扣除对方我方陆军上限的§O10%§!的国家人力"
+ THE_MGT_estate_dolls_pools_rescover: "人偶组装速度"
+ THE_MGT_estate_dolls_pools_power: "人偶容量修正"
+ the_alc_dolls_manpower_pools_min_tt: "至少需要1000只§O后备人偶§!"
+ THE_MGT_form_of_light_check_dolls: "登台"
+ THE_MGT_form_of_light_check_dolls_desc: " @MGT人偶之森:\n§T后备人偶§!为[Root.the_alc_dolls_manpower_pools_total.GetValue]只,\n§T后备人偶回复为§!§O每月§![Root.the_alc_dolls_manpower_pools_start.GetValue]只,\n§T后备人偶上限§!为[Root.the_alc_dolls_manpower_pools_max.GetValue]只\n"
 ###GOVERNMENT_REFOM_END
+ THE_MGT_province_button_1_gui: "征募人偶军团「步兵」"
+ THE_MGT_province_button_1_gui_tt: "征募人偶军团「步兵」\n- - - - - - - - - - - - - - - -\n- -@MGT人偶之森§T后备人偶§!为[Root.Owner.the_alc_dolls_manpower_pools_total.GetValue]只- -\n- - - - - - - - - - - - - - - -"
+ THE_MGT_province_button_2_gui: "由人偶帮助升级建筑"
+ THE_MGT_province_button_2_gui_tt: "由人偶帮助升级建筑\n- - - - - - - - - - - - - - - -\n@MGT人偶之森§T后备人偶§!为[Root.Owner.the_alc_dolls_manpower_pools_total.GetValue]只- -\n- - - - - - - - - - - - - - - -"
+ THE_MGT_province_button_3_gui: "征募人偶军团「骑兵」"
+ THE_MGT_province_button_3_gui_tt: "征募人偶军团「骑兵」\n- - - - - - - - - - - - - - - -\n- -@MGT人偶之森§T后备人偶§!为[Root.Owner.the_alc_dolls_manpower_pools_total.GetValue]只- -\n- - - - - - - - - - - - - - - -"
+###PROVINCE_BUTTON
+
 
 ##EVENT_MODIFIER
  THE_MGT_dolls_advance_buff: "人偶工坊"

@@ -1,3 +1,252 @@
 THE_MGT_s_spirit_gravity_point_display_effect = {
 	custom_tooltip = THE_MGT_s_spirit_gravity_point_displat_ctt
 }
+
+
+THE_MGT_random_spawn_infantry_2_effects = {
+	if = {
+		limit = {
+			owner = {
+				mission_completed = THE_MGT_mission_5_4
+			}
+		 }
+		 THE_MGT_random_spawn_infantry_1_effects = yes
+	}
+	else = {
+		mercenary_infantry = ROOT
+	}
+}
+THE_MGT_random_spawn_infantry_1_effects = {
+	owner = {
+		change_variable = {
+			which = THE_MGT_random_spawn_infantry_random_var
+			value = 1
+		}
+	}
+	if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_infantry_random_var value = 9 } } }
+		mercenary_infantry = ROOT
+		owner = {
+			set_variable = {
+				which = THE_MGT_random_spawn_infantry_random_var
+				value = 0
+			}
+		}
+	}
+	else_if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_infantry_random_var value = 8 } } }
+		cawa_infantry = ROOT
+	}
+	else_if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_infantry_random_var value = 7 } } }
+		cossack_infantry = ROOT
+	}
+	else_if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_infantry_random_var value = 6 } } }
+		rajput_infantry = ROOT
+	}
+	else_if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_infantry_random_var value = 5 } } }
+		carolean_infantry = ROOT
+	}
+	else_if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_infantry_random_var value = 4 } } }
+		tercio_infantry = ROOT
+	}
+	else_if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_infantry_random_var value = 3 } } }
+		samurai_infantry = ROOT
+	}
+	else_if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_infantry_random_var value = 2 } } }
+		streltsy_infantry = ROOT
+	}
+	else_if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_infantry_random_var value = 1 } } }
+		musketeer_infantry = ROOT
+	}
+}
+
+
+THE_MGT_random_spawn_cavalry_1_effects = {
+	owner = {
+		change_variable = {
+			which = THE_MGT_random_spawn_cavalry_random_var
+			value = 1
+		}
+	}
+	if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_cavalry_random_var value = 7 } } }
+		mercenary_cavalry = ROOT
+		owner = {
+			set_variable = {
+				which = THE_MGT_random_spawn_cavalry_random_var
+				value = 0
+			}
+		}
+	}
+	else_if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_cavalry_random_var value = 6 } } }
+		hussars_cavalry = ROOT
+	}
+	else_if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_cavalry_random_var value = 5 } } }
+		cossack_cavalry = ROOT
+	}
+	else_if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_cavalry_random_var value = 4 } } }
+		banner_cavalry = ROOT
+	}
+	else_if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_cavalry_random_var value = 3 } } }
+		mamluks_cavalry = ROOT
+	}
+	else_if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_cavalry_random_var value = 2 } } }
+		qizilbash_cavalry = ROOT
+	}
+	else_if = {
+		limit = { owner = { check_variable = { which = THE_MGT_random_spawn_cavalry_random_var value = 1 } } }
+		revolutionary_guard_cavalry = ROOT
+	}
+}
+
+THE_MGT_on_battle_won_divide_manpower_effect = {
+	if = {
+		limit = { 
+			tag = MGT
+			has_government_attribute = THE_MGT_back_to_white_and_void_reform_mechanic
+		}
+		FROM = {
+			export_to_variable = {
+				variable_name = the_mgt_divide_enemy_manpower_won_battle_var
+				who = MGT
+				value = land_forcelimit
+			}
+			divide_variable = {
+				which = the_mgt_divide_enemy_manpower_won_battle_var
+				value = 10
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = the_mgt_divide_enemy_manpower_won_battle_var
+						value = 1
+					}
+				 }
+				 add_manpower = -1
+				 change_variable = {
+					which = the_mgt_divide_enemy_manpower_won_battle_var
+					value = -1
+				 }
+			}
+		}
+		
+	}
+}
+##############################
+##### OA Script 
+################################
+THE_MGT_monthly_recovery_manpower_dolls_pool_effects = {
+	if = {
+		limit = {
+			OR = {
+				tag = MGT
+				was_tag = MGT
+			}
+			has_government_attribute = THE_MGT_enable_making_dolls_crops_mechanic
+			NOT = {
+				check_variable = {
+					which = the_alc_dolls_manpower_pools_total
+					which = the_alc_dolls_manpower_pools_max
+				}
+			}
+		}
+		########运算
+		#上限
+		export_to_variable = {
+			variable_name = the_alc_dolls_manpower_pools_max
+			value = max_manpower
+		}
+		multiply_variable = {
+			which = the_alc_dolls_manpower_pools_max
+			value = 1000
+		}
+		divide_variable = {
+			which = the_alc_dolls_manpower_pools_max
+			value = 2
+		}
+		#导出上限
+		export_to_variable = {
+			variable_name = the_alc_dolls_manpower_pools_max_modifier
+			value = modifier:THE_MGT_estate_dolls_pools_power
+		}
+		change_variable = {
+			which = the_alc_dolls_manpower_pools_max_modifier
+			value = 1
+		}
+		#上限 乘 修正
+		multiply_variable = {
+			which = the_alc_dolls_manpower_pools_max
+			which = the_alc_dolls_manpower_pools_max_modifier
+		}
+
+		#####
+		#回复
+		export_to_variable = {
+			variable_name = the_alc_dolls_manpower_pools_start
+			value = max_manpower
+		}
+		multiply_variable = {
+			which = the_alc_dolls_manpower_pools_start
+			value = 1000
+		}
+		divide_variable = {
+			which = the_alc_dolls_manpower_pools_start
+			value = 4
+		}
+		#导出上限
+		export_to_variable = {
+			variable_name = the_alc_dolls_manpower_pools_max_modifier
+			value = modifier:THE_MGT_estate_dolls_pools_power
+		}
+		change_variable = {
+			which = the_alc_dolls_manpower_pools_max_modifier
+			value = 1
+		}
+		#上限 乘 修正
+		multiply_variable = {
+			which = the_alc_dolls_manpower_pools_start
+			which = the_alc_dolls_manpower_pools_max_modifier
+		}
+		divide_variable = {
+			which = the_alc_dolls_manpower_pools_start
+			value = 100
+		}
+		#####
+
+		#导出回复
+		export_to_variable = {
+			variable_name = the_alc_dolls_manpower_pools_rescover_modifier
+			value = modifier:THE_MGT_estate_dolls_pools_rescover
+		}
+		change_variable = {
+			which = the_alc_dolls_manpower_pools_rescover_modifier
+			value = 1
+		}
+		#回复 乘 修正
+		multiply_variable = {
+			which = the_alc_dolls_manpower_pools_start
+			which = the_alc_dolls_manpower_pools_rescover_modifier
+		}
+
+
+		######
+		change_variable = {
+			which = the_alc_dolls_manpower_pools_total
+			which = the_alc_dolls_manpower_pools_start
+		}
+	}
+
+}
+

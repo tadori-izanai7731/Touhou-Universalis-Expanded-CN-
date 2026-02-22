@@ -678,9 +678,27 @@ guiTypes = {
 			# }
 			##THE_MGT 
 			guiButtonType = {
-				name = THE_MGT_province_button1_gui
-				position = { x = 375 y = 207 }
-				quadTextureSprite = "GFX_THE_MGT_making_dolls_button"
+				name = THE_MGT_province_button_1_gui
+				position = { x = 317 y = 200 }
+				quadTextureSprite = "GFX_THE_MGT_THE_MGT_province_1_button"
+				# buttonText = THE_MGT_province_button1_gui_tt
+				buttonFont = "vic_18"
+				clicksound = "click"
+				scripted = yes
+			}
+			guiButtonType = {
+				name = THE_MGT_province_button_2_gui
+				position = { x = 372 y = 200 }
+				quadTextureSprite = "GFX_THE_MGT_THE_MGT_province_2_button"
+				# buttonText = THE_MGT_province_button1_gui_tt
+				buttonFont = "vic_18"
+				clicksound = "click"
+				scripted = yes
+			}
+			guiButtonType = {
+				name = THE_MGT_province_button_3_gui
+				position = { x = 427 y = 200 }
+				quadTextureSprite = "GFX_THE_MGT_THE_MGT_province_3_button"
 				# buttonText = THE_MGT_province_button1_gui_tt
 				buttonFont = "vic_18"
 				clicksound = "click"

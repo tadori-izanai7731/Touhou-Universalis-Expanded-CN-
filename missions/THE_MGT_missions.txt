@@ -469,6 +469,11 @@ THE_MGT_main_branch_4 = {
 		
 		effect = { 
 			add_prestige = 25
+			add_adm_power = 150
+			Makai_area = { add_permanent_claim = ROOT }
+			Makai_peninsula_state = { add_permanent_claim = ROOT }
+			Western_makai_state = { add_permanent_claim = ROOT }
+			Makai_coast_state = { add_permanent_claim = ROOT }
 			if = {
 				limit = { 
 					HKR = { is_subject_of = ROOT }
@@ -521,7 +526,9 @@ THE_MGT_main_branch_4 = {
 		icon = mission_unknown_mission
 		position = 6
 		required_missions = { THE_MGT_mission_4_5 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			MKI
+		 } 
 		
 		trigger = {  } 
 		

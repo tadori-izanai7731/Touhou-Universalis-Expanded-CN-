@@ -1,13 +1,13 @@
 custom_button = {
-	name = THE_MGT_province_button1_gui
-	tooltip = THE_MGT_province_button1_gui_tt
+	name = THE_MGT_province_button_1_gui
+	tooltip = THE_MGT_province_button_1_gui_tt
 	potential = {
 		owner = {
-			or = {
+			OR = {
 				was_tag = MGT
 				tag = MGT
 			}
-			has_government_attribute = enable_making_dolls_crops
+			has_government_attribute = THE_MGT_enable_making_dolls_crops_mechanic
 		}
 		owned_by = FROM
 	}
@@ -44,7 +44,67 @@ custom_button = {
 					value = 1000
 				}
 			}
+			THE_MGT_random_spawn_infantry_2_effects = yes
 		}
-		THE_MGT_random_spawn_infantry_1_effects = yes
+	}
+}
+
+custom_button = {
+	name = THE_MGT_province_button_2_gui
+	tooltip = THE_MGT_province_button_2_gui_tt
+
+	potential = {
+		owner = {
+			OR = {
+				was_tag = MGT
+				tag = MGT
+			}
+			has_government_attribute = THE_MGT_enable_making_dolls_crops_mechanic
+		}
+		owned_by = FROM
+	}
+	trigger = {
+		
+	}
+	effect = {
+		
+	}
+}
+
+custom_button = {
+	name = THE_MGT_province_button_3_gui
+	tooltip = THE_MGT_province_button_3_gui_tt
+
+	potential = {
+		owner = {
+			OR = {
+				was_tag = MGT
+				tag = MGT
+			}
+			has_government_attribute = THE_MGT_enable_making_dolls_crops_mechanic
+		}
+		owned_by = FROM
+	}
+	trigger = {
+		owner = {
+			custom_trigger_tooltip = {
+				tooltip = the_alc_dolls_manpower_pools_min_tt
+				check_variable = {
+					which = the_alc_dolls_manpower_pools_total
+					value = 1000
+				}
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			owner = {
+				subtract_variable = {
+					which = the_alc_dolls_manpower_pools_total
+					value = 1000
+				}
+			}
+			THE_MGT_random_spawn_cavalry_1_effects = yes
+		}
 	}
 }
