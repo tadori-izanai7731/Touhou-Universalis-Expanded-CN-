@@ -3,7 +3,10 @@ THE_NIN_branch_1 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = NIN } 
+	potential = {
+		tag = NIN
+		NOT = { has_country_flag = THE_NIN_colorfulegg_eu4_meme_flag }
+	} 
 	
 	THE_NIN_1_1 = {
 		icon = mission_unknown_mission
@@ -326,7 +329,10 @@ THE_NIN_branch_2 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = NIN } 
+	potential = {
+		tag = NIN
+		NOT = { has_country_flag = THE_NIN_colorfulegg_eu4_meme_flag }
+	} 
 	
 	THE_NIN_2_2 = {
 		icon = mission_unknown_mission
@@ -687,7 +693,10 @@ THE_NIN_branch_3 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = NIN } 
+	potential = {
+		tag = NIN
+		NOT = { has_country_flag = THE_NIN_colorfulegg_eu4_meme_flag }
+	} 
 	
 	THE_NIN_3_2 = {
 		icon = mission_unknown_mission
@@ -941,7 +950,10 @@ THE_NIN_branch_4 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = NIN } 
+	potential = {
+		tag = NIN
+		NOT = { has_country_flag = THE_NIN_colorfulegg_eu4_meme_flag }
+	} 
 	
 	THE_NIN_4_1 = {
 		icon = mission_unknown_mission
@@ -1379,7 +1391,10 @@ THE_NIN_branch_5 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = NIN } 
+	potential = {
+		tag = NIN
+		NOT = { has_country_flag = THE_NIN_colorfulegg_eu4_meme_flag }
+	} 
 	
 	THE_NIN_5_2 = {
 		icon = mission_unknown_mission

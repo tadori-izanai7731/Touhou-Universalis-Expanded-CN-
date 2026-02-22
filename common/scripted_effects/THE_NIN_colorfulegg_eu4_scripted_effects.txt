@@ -1,0 +1,71 @@
+THE_NIN_colorfulegg_eu4_on_adm_development_scripted_effect = {
+	if = {
+		limit = { owner = { has_idea = THE_NIN_colorfulegg_eu4_idea_1 } }
+		export_to_variable = {
+			which = the_nin_eu4_expand_var
+			value = trigger_value:num_of_times_expanded_infrastructure
+			who = ROOT
+		}
+		for_variable_amount = {
+			variable = the_nin_eu4_expand_var
+			effect = "
+				add_base_tax = 3
+			"
+		}
+	}
+}
+
+THE_NIN_colorfulegg_eu4_on_dip_development_scripted_effect = {
+	if = {
+		limit = { owner = { has_idea = THE_NIN_colorfulegg_eu4_idea_1 } }
+		export_to_variable = {
+			which = the_nin_eu4_expand_var
+			value = trigger_value:num_of_times_expanded_infrastructure
+			who = ROOT
+		}
+		for_variable_amount = {
+			variable = the_nin_eu4_expand_var
+			effect = "
+				add_base_production = 3
+			"
+		}
+	}
+}
+
+THE_NIN_colorfulegg_eu4_on_mil_development_scripted_effect = {
+	if = {
+		limit = { owner = { has_idea = THE_NIN_colorfulegg_eu4_idea_1 } }
+		export_to_variable = {
+			which = the_nin_eu4_expand_var
+			value = trigger_value:num_of_times_expanded_infrastructure
+			who = ROOT
+		}
+		for_variable_amount = {
+			variable = the_nin_eu4_expand_var
+			effect = "
+				add_base_manpower = 3
+			"
+		}
+	}
+}
+
+THE_NIN_colorfulegg_eu4_on_battle_won_country_scripted_effect = {
+	if = {
+		limit = { has_idea = THE_NIN_colorfulegg_eu4_idea_2 }
+		every_country = {
+			limit = {
+				war_with = ROOT
+			}
+			add_yearly_manpower = -2
+			add_years_of_income = -2
+		}
+	}
+}
+
+THE_NIN_colorfulegg_eu4_on_war_lost_scripted_effect = {
+	if = {
+		limit = { FROM = { has_idea = THE_NIN_colorfulegg_eu4_idea_3 } }
+		declare_war = FROM
+		white_peace = FROM
+	}
+}
