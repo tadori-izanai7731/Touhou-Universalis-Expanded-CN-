@@ -317,4 +317,50 @@ THE_MYI_ideas = {
 	}
 }
 #朱鹭子
+THE_TKK_ideas = {
+	start = {
+		diplomatic_reputation = 1
+		improve_relation_modifier = 0.25
+	}
+	
+	bonus = {
+		religious_unity = 0.33
+	}
+	
+	trigger = {
+		tag = MYI
+	}
+	free = yes
+	
+	THE_TKK_idea_1 = {
+		prestige = 0.5
+	}
+	
+	THE_TKK_idea_2 = {
+		global_trade_goods_size_modifier = 0.10
+		morale_damage_received = -0.10
+	}
+	
+	THE_TKK_idea_3 = {
+		defensiveness = 0.15
+		move_capital_cost_modifier = -0.25
+	}
+	
+	THE_TKK_idea_4 = {
+		global_spy_defence = 0.50
+	}
+	
+	THE_TKK_idea_5 = {
+		manpower_recovery_speed = 0.10
+	}
+	
+	THE_TKK_idea_6 = {
+		global_trade_power = 0.20
+	}
+	
+	THE_TKK_idea_7 = {
+		diplomats = 1
+		merchants = 1
+	}
+}
 #香霖

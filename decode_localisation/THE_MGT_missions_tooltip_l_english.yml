@@ -4,6 +4,10 @@
 
 
 ##GOVERNMENT_REFOM
+ THE_MGT_form_of_light_reform: "光之形"
+ THE_MGT_form_of_light_reform_desc: ""
+ ability_THE_MGT_form_of_light_reform_mechanic: "制造人偶"
+ mechanic_THE_MGT_enable_making_dolls_crops_mechanic_yes: "允许我们通过「§Y省份行动§!」消耗人偶征募军队"
  THE_MGT_eternal_radiance_reform: ""
  THE_MGT_eternal_radiance_reform_desc: ""
  ability_THE_MGT_eternal_radiance_reform_mechanic: ""
@@ -18,6 +22,8 @@
  THE_MGT_cure_quanlity_buff: "人形：注重数量"
  THE_MGT_cure_defender_buff: "人形：注重护盾"
  THE_MGT_cure_attacker_buff: "人形：注重火力"
+ THE_MGT_past_bonds_modifier: "往昔的纽带"
+ THE_MGT_past_firend_modifier: "老友"
 ##EVENT_MODIFIER_END
 
 ##MISSION_EXTRA
@@ -31,6 +37,13 @@
  THE_MGT_mission_5_3_defender_no: "£no£防守："
  THE_MGT_mission_5_3_attacker_yes: "£yes£进攻："
  THE_MGT_mission_5_3_attacker_no: "£no£进攻："
+ THE_MGT_mission_4_3_c_tt1_yes: "£yes£如果我们未成立@FOM§Y[FOM.GetName]§!且@MRS§Y[MRS.GetName]§!不为我们的属国，则："
+ THE_MGT_mission_4_3_c_tt1_no: "£no£如果我们未成立@FOM§Y[FOM.GetName]§!且@MRS§Y[MRS.GetName]§!不为我们的属国，则："
+ THE_MGT_mission_4_3_c_tt2: "我们将不再能成立@FOM§Y[FOM.GetName]§!"
+ THE_MGT_mission_4_5_c_tt1_yes: "£yes£如果@HKR§Y[HKR.GetName]§!是我们的属国，则："
+ THE_MGT_mission_4_5_c_tt1_no: "£no£如果@HKR§Y[HKR.GetName]§!是我们的属国，则："
+ THE_MGT_mission_4_5_c_tt2_yes: "£yes£如果我们通过征服@HKR§Y[HKR.GetName]§!完成任务，则："
+ THE_MGT_mission_4_5_c_tt2_no: "£no£如果我们通过征服@HKR§Y[HKR.GetName]§!完成任务，则："
 ##MISSION_EXTRA_END
 
 ##MISSION_ATTRIABUTE

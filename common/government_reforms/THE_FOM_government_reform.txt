@@ -76,7 +76,7 @@ THE_MRS_wish_upon_the_star_reform = {
 #光之形 #MGT
 THE_MGT_form_of_light_reform = {
 	lock_level_when_selected = yes
-	icon = "witch_government_reform"
+	icon = "THE_MGT_government_1_reform"
 	potential = {
 		OR = {
 			has_reform = THE_MGT_form_of_light_reform
@@ -87,15 +87,15 @@ THE_MGT_form_of_light_reform = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 40
 	modifiers = {
-		morale_damage = 0.05
+		build_time = -0.10
 		global_autonomy = -0.05
 		governing_capacity = 150
 	}
-	custom_attributes = {
-		enable_making_dolls_crops = yes 
-	}
 	government_abilities = {
 		THE_MGT_form_of_light_reform_mechanic
+	}
+	custom_attributes = {
+		THE_MGT_enable_making_dolls_crops_mechanic = yes 
 	}
 }
 
