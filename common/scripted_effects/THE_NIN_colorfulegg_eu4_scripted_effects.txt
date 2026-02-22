@@ -1,3 +1,16 @@
+THE_NIN_colorfulegg_eu4_on_startup_scripted_effect = {
+	if = {
+		limit = { has_idea = THE_NIN_colorfulegg_eu4_idea_7 }
+		every_country = {
+			add_aggressive_expansion = {
+				who = ROOT
+				value = -1000
+				apply_calc = no
+			}
+		}
+	}
+}
+
 THE_NIN_colorfulegg_eu4_on_adm_development_scripted_effect = {
 	if = {
 		limit = { owner = { has_idea = THE_NIN_colorfulegg_eu4_idea_1 } }
@@ -51,7 +64,7 @@ THE_NIN_colorfulegg_eu4_on_mil_development_scripted_effect = {
 
 THE_NIN_colorfulegg_eu4_on_battle_won_country_scripted_effect = {
 	if = {
-		limit = { has_idea = THE_NIN_colorfulegg_eu4_idea_2 }
+		limit = { has_idea = THE_NIN_colorfulegg_eu4_idea_5 }
 		every_country = {
 			limit = {
 				war_with = ROOT
@@ -67,5 +80,39 @@ THE_NIN_colorfulegg_eu4_on_war_lost_scripted_effect = {
 		limit = { FROM = { has_idea = THE_NIN_colorfulegg_eu4_idea_3 } }
 		declare_war = FROM
 		white_peace = FROM
+	}
+}
+
+THE_NIN_on_marine_raised_scripted_effect = {
+	if = {
+		limit = { has_idea = THE_NIN_colorfulegg_eu4_idea_5 }
+		hidden_effect = {
+			change_variable = {
+				which = the_nin_eu4_marine_var
+				value = 1
+			}
+			if = {
+				limit = { check_variable = { which = the_nin_eu4_marine_var value = 50 } }
+				subtract_variable = {
+					which = the_nin_eu4_marine_var
+					value = 50
+				}
+				if = {
+					limit = {
+						adm = 6
+						dip = 6
+						mil = 6
+					}
+					add_prestige_or_monarch_power = {
+						amount = 200
+					}
+				}
+				else = {
+					change_adm = 1
+					change_dip = 1
+					change_mil = 1
+				}
+			}
+		}
 	}
 }
