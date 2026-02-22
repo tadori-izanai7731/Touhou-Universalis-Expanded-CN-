@@ -151,10 +151,9 @@ THE_NIN_colorfulegg_eu4_ideas = {
 		core_creation = -0.25
 		has_streltsy = yes
 		allowed_streltsy_fraction = 0.5
-		# 解锁该理念时选择一个THE已有一级政体并使用
+		# 允许使用所有「东方风云拓展」已有的一级改革（不保证相关机制和后续内容）
 		effect = {
 			hidden_effect = {
-				
 			}
 		}
 	}

@@ -2,10 +2,15 @@ THE_HNG_red_dragon_celestial_empire = {
 	lock_level_when_selected = yes
 	icon = "the_red_dragon_celestial_empire_reform"
 	potential = {
-		has_country_flag = THE_HNG_red_dragon_celestial_empire_can_use
-		OR ={
-			tag = HNG
-			was_tag = HNG
+		OR = {
+			AND = {
+				has_country_flag = THE_HNG_red_dragon_celestial_empire_can_use
+				OR ={
+					tag = HNG
+					was_tag = HNG
+				}
+			}
+			has_idea = THE_NIN_colorfulegg_eu4_idea_6
 		}
 	}
 	
@@ -58,10 +63,15 @@ THE_HNG_red_dragon_steppe_celestial_empire = {
 	lock_level_when_selected = yes
 	icon = "horde_riding"
 	potential = {
-		has_country_flag = flavor_THE_HNG_events67
-		OR ={
-			tag = HNG
-			was_tag = HNG
+		OR = {
+			AND = {
+				has_country_flag = flavor_THE_HNG_events67
+				OR ={
+					tag = HNG
+					was_tag = HNG
+				}
+			}
+			has_idea = THE_NIN_colorfulegg_eu4_idea_6
 		}
 	}
 
