@@ -1,0 +1,25 @@
+government = monarchy
+add_government_reform = Gensokyan_monarchy
+government_rank = 1
+primary_culture = "Gensokyo_human"
+religion = th_hakureishinto
+technology_group = tech_gensokyan
+capital = 5122
+th_discover_default = yes
+add_historical_friend = QQQ
+1443.1.1 = {
+	monarch = {
+		name = "小铃"  	#Kosuzu
+		monarch_name = "小铃"  #Kosuzu
+		dynasty = "本居"  #Motoori 
+		birth_date = 1429.7.4
+		death_date = 9999.1.5
+		claim = 99
+		adm = 4
+		dip = 2
+		mil = 5
+		female = yes
+	}
+	set_ruler_flag = touhou_character_ruler
+	set_ruler_flag = touhou_original_heir
+}

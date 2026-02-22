@@ -1,0 +1,26 @@
+government = monarchy
+add_government_reform = Gensokyan_monarchy
+government_rank = 1
+primary_culture = "Youkai"
+religion = th_hakureishinto
+technology_group = tech_gensokyan
+capital = 5351
+th_discover_default = yes
+add_accepted_culture = Gensokyo_human
+1443.1.1 = {
+	monarch = {
+		name = "美宵"  	#Miyoi
+		monarch_name = "美宵"  #Miyoi
+		dynasty = "奥野田"  #Okunoda 
+		birth_date = 1337.3.4
+		death_date = 9999.1.5
+		claim = 90
+		adm = 3
+		dip = 5
+		mil = 2
+		female = yes
+	}
+	add_ruler_personality = immortal_personality
+	set_ruler_flag = touhou_character_ruler
+	set_ruler_flag = touhou_original_heir
+}
