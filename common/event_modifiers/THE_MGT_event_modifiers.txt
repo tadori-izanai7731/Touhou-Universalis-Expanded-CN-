@@ -13,3 +13,15 @@ THE_MGT_cure_defender_buff = {
 THE_MGT_cure_attacker_buff = {
 	siege_ability = 0.10
 }
+#老友
+THE_MGT_past_firend_modifier = {
+	core_creation = -0.05
+	free_land_leader_pool = 1
+	army_tradition_decay = -0.01
+}
+#往昔的纽带
+THE_MGT_past_bonds_modifier = {
+	stability_cost_modifier = -0.20
+	global_unrest = -1
+	missionaries = 1
+}

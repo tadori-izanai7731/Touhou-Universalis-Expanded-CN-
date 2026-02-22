@@ -4,12 +4,12 @@ THE_MGT_minor_2_branch_2 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = MGT } 
-
+	
 	THE_MGT_2_1 = {
 		icon = mission_unknown_mission
 		position = 1
 		provinces_to_highlight = { is_capital_of = MRS } 
-
+		
 		trigger = {
 			alliance_with = MRS
 			MRS = {
@@ -19,7 +19,7 @@ THE_MGT_minor_2_branch_2 = {
 				}
 			}
 		}
-
+		
 		effect = {
 			complete_mission = THE_MGT_4_1
 			ENK = {
@@ -55,7 +55,7 @@ THE_MGT_minor_2_branch_3 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = MGT } 
-
+	
 	THE_MGT_3_1 = {
 		icon = mission_unknown_mission
 		position = 1
@@ -65,7 +65,7 @@ THE_MGT_minor_2_branch_3 = {
 				owned_by_subject_of = ROOT
 			}
 		}
-
+		
 		trigger = {
 			OR = {
 				custom_trigger_tooltip = {
@@ -81,7 +81,7 @@ THE_MGT_minor_2_branch_3 = {
 				}
 			}
 		}
-
+		
 		effect = {
 			if = {
 				limit = { NOT = { has_global_flag = THE_FOM_forest_awaken_the_first_xxx_come_down_flag }  } 
@@ -98,7 +98,7 @@ THE_MGT_minor_2_branch_3 = {
 			}
 		}
 	}
-
+	
 	THE_MGT_3_2 = {
 		icon = mission_unknown_mission
 		position = 2
@@ -108,9 +108,9 @@ THE_MGT_minor_2_branch_3 = {
 			THE_MGT_4_1
 		}
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {
 			hidden_effect = { set_country_flag = THE_MGT_mission_unlock_main_flag } 
 			swap_non_generic_missions = yes
@@ -123,12 +123,12 @@ THE_MGT_minor_2_branch_4 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = MGT } 
-
+	
 	THE_MGT_4_1 = {
 		icon = mission_unknown_mission
 		position = 1
 		provinces_to_highlight = { is_capital_of = HKR } 
-
+		
 		trigger = {
 			alliance_with = HKR
 			HKR = {
@@ -138,7 +138,7 @@ THE_MGT_minor_2_branch_4 = {
 				}
 			}
 		}
-
+		
 		effect = {
 			complete_mission = THE_MGT_2_1
 			ENK = {
@@ -174,7 +174,7 @@ THE_MGT_minor_2_branch_5 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = MGT } 
-
+	
 }
 THE_MGT_main_branch_1 = {
 	slot = 1
@@ -185,7 +185,7 @@ THE_MGT_main_branch_1 = {
 		tag = MGT
 		has_country_flag = THE_MGT_mission_unlock_main_flag
 	}
-
+	
 	THE_MGT_1_3 = {
 		icon = mission_unknown_mission
 		position = 3
@@ -195,7 +195,7 @@ THE_MGT_main_branch_1 = {
 				area = Eastern_youkai_forest
 			}
 		}
-
+		
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 4
@@ -205,35 +205,35 @@ THE_MGT_main_branch_1 = {
 				}
 			}
 		}
-
+		
 		effect = {
 			add_adm_power = 100
 			add_dip_power = 100
 			add_mil_power = 100
 		}
 	}
-
+	
 	THE_MGT_1_4 = {
 		icon = mission_unknown_mission
 		position = 4
 		required_missions = { THE_MGT_1_3 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_MGT_1_6 = {
 		icon = mission_unknown_mission
 		position = 6
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_MGT_1_7 = {
 		icon = mission_unknown_mission
 		position = 7
@@ -242,9 +242,9 @@ THE_MGT_main_branch_1 = {
 			THE_MGT_2_6
 		}
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
 }
@@ -257,17 +257,17 @@ THE_MGT_main_branch_2 = {
 		tag = MGT
 		has_country_flag = THE_MGT_mission_unlock_main_flag
 	}
-
+	
 	THE_MGT_2_3 = {
 		icon = mission_unknown_mission
 		position = 3
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_MGT_2_5 = {
 		icon = mission_unknown_mission
 		position = 5
@@ -276,42 +276,42 @@ THE_MGT_main_branch_2 = {
 			THE_MGT_1_4
 		}
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_MGT_2_6 = {
 		icon = mission_unknown_mission
 		position = 6
 		required_missions = { THE_MGT_2_5 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_MGT_2_8 = {
 		icon = mission_unknown_mission
 		position = 8
 		required_missions = { THE_MGT_1_7 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = { add_government_reform = THE_MGT_back_to_white_and_void_reform } 
 	}
-
+	
 	THE_MGT_2_9 = {
 		icon = mission_unknown_mission
 		position = 9
 		required_missions = { THE_MGT_2_8 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
 }
@@ -324,20 +324,20 @@ THE_MGT_main_branch_3 = {
 		tag = MGT
 		has_country_flag = THE_MGT_mission_unlock_main_flag
 	}
-
+	
 	THE_MGT_3_3 = {
 		icon = mission_unknown_mission
 		position = 3
 		required_missions = { THE_MGT_3_2 } 
 		provinces_to_highlight = { owned_by = ROOT } 
-
+		
 		trigger = {
 			OR = {
 				MRS = { is_subject_of = ROOT } 
 				NOT = { exists = MRS } 
 			}
 		}
-
+		
 		effect = {
 			add_government_reform = THE_MGT_eternal_radiance_reform
 			add_adm_power = 75
@@ -345,17 +345,17 @@ THE_MGT_main_branch_3 = {
 			add_mil_power = 75
 		}
 	}
-
+	
 	THE_MGT_3_4 = {
 		icon = mission_unknown_mission
 		position = 4
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {
 			stability = 1
 			all_subject_country = { NOT = { liberty_desire = 20 }  } 
 		}
-
+		
 		effect = {
 			country_event = {
 				id = THE_MGT_events.0
@@ -378,24 +378,65 @@ THE_MGT_main_branch_4 = {
 		tag = MGT
 		has_country_flag = THE_MGT_mission_unlock_main_flag
 	}
-
+	
 	THE_MGT_mission_4_3 = {
 		icon = mission_unknown_mission
 		position = 3
 		provinces_to_highlight = { 
 			owned_by = MKI
-		 } 
-
-		trigger = {  } 
-
+		} 
+		
+		trigger = { 
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 15
+				OR = {
+					area = Forest_coast_state
+					area = Forest_edge_state
+					area = Forest_of_magic
+				}
+			}
+		} 
+		
 		effect = { 
 			country_event = {
 				id = THE_MGT_events.1
 			}
 			custom_tooltip = THE_MGT_mission_desc_extend_4_3
-		 } 
+			add_adm_power = 100
+			add_stability = 1
+			Hakurei_peninsula_state = { add_permanent_claim = ROOT }
+			Hakurei_state = { add_permanent_claim = ROOT }
+			Hakurei_western_coast = { add_permanent_claim = ROOT }
+			Eastern_mountains = { add_permanent_claim = ROOT }
+			Ran_state = { add_permanent_claim = ROOT }
+			Mayohiga_state = { add_permanent_claim = ROOT }
+			if = {
+				limit = { 
+					NOT = { tag = FOM }
+					MRS = { NOT = { is_subject_of = ROOT } }
+				}
+				custom_tooltip = THE_MGT_mission_4_3_c_tt1_yes
+				custom_tooltip = THE_MGT_mission_4_3_c_tt2
+				add_casus_belli = {
+					type = cb_restore_personal_union
+					target = HKR
+					months = 1200
+				}
+			}
+			else = {
+				custom_tooltip = THE_MGT_mission_4_3_c_tt1_no
+				custom_tooltip = THE_MGT_mission_4_3_c_tt2
+				tooltip = {
+					add_casus_belli = {
+						type = cb_restore_personal_union
+						target = HKR
+						months = 1200
+					}
+				}
+			}
+		} 
 	}
-
+	
 	THE_MGT_mission_4_5 = {
 		icon = mission_unknown_mission
 		position = 5
@@ -403,43 +444,109 @@ THE_MGT_main_branch_4 = {
 			THE_MGT_mission_4_3
 			THE_MGT_mission_5_4
 		}
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
+		provinces_to_highlight = { 
+			OR = {
+				area = Hakurei_peninsula_state
+				area = Hakurei_state
+				area = Hakurei_western_coast
+			}
+			NOT = { owned_by = ROOT }
+		} 
+		
+		trigger = { 
+			OR = {
+				HKR = { is_subject_of = ROOT }
+				num_of_owned_provinces_with = {
+					value = 10
+					OR = {
+						area = Hakurei_peninsula_state
+						area = Hakurei_state
+						area = Hakurei_western_coast
+					}
+				}
+			}
+		} 
+		
+		effect = { 
+			add_prestige = 25
+			if = {
+				limit = { 
+					HKR = { is_subject_of = ROOT }
+				}
+				custom_tooltip = THE_MGT_mission_4_5_c_tt1_yes
+				add_country_modifier = {
+					name = THE_MGT_past_bonds_modifier
+					duration = -1
+				}
+			}
+			else = {
+				custom_tooltip = THE_MGT_mission_4_5_c_tt1_no
+				tooltip = {
+					add_country_modifier = {
+						name = THE_MGT_past_bonds_modifier
+						duration = -1
+					}
+				}
+			}
+			if = {
+				limit = {
+					num_of_owned_provinces_with = {
+						value = 10
+						OR = {
+							area = Hakurei_peninsula_state
+							area = Hakurei_state
+							area = Hakurei_western_coast
+						}
+					}
+				}
+				custom_tooltip = THE_MGT_mission_4_5_c_tt2_yes
+				add_country_modifier = {
+					name = THE_MGT_past_firend_modifier
+					duration = -1
+				}
+			}
+			else = {
+				custom_tooltip = THE_MGT_mission_4_5_c_tt2_no
+				tooltip = {
+					add_country_modifier = {
+						name = THE_MGT_past_firend_modifier
+						duration = -1
+					}
+				}
+			}
+		} 
 	}
-
+	
 	THE_MGT_mission_4_6 = {
 		icon = mission_unknown_mission
 		position = 6
 		required_missions = { THE_MGT_mission_4_5 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_MGT_mission_4_8 = {
 		icon = mission_unknown_mission
 		position = 8
 		required_missions = { THE_MGT_mission_5_7 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_MGT_mission_4_9 = {
 		icon = mission_unknown_mission
 		position = 9
 		required_missions = { THE_MGT_mission_4_8 } 
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
 }
@@ -452,7 +559,7 @@ THE_MGT_main_branch_5 = {
 		tag = MGT
 		has_country_flag = THE_MGT_mission_unlock_main_flag
 	}
-
+	
 	THE_MGT_mission_5_3 = {
 		icon = mission_unknown_mission
 		position = 3
@@ -464,10 +571,10 @@ THE_MGT_main_branch_5 = {
 				area = Forest_of_magic
 			}
 		}
-
+		
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 8
+				value = 4
 				has_manpower_building_trigger = yes
 				OR = {
 					area = Forest_coast_state
@@ -476,7 +583,7 @@ THE_MGT_main_branch_5 = {
 				}
 			}
 			num_of_owned_provinces_with = {
-				value = 15
+				value = 8
 				base_manpower = 4
 				OR = {
 					area = Forest_coast_state
@@ -485,7 +592,7 @@ THE_MGT_main_branch_5 = {
 				}
 			}
 		}
-
+		
 		effect = {
 			add_country_modifier = {
 				name = "THE_MGT_dolls_advance_buff"
@@ -494,15 +601,15 @@ THE_MGT_main_branch_5 = {
 			add_mil_power = 100
 		}
 	}
-
+	
 	THE_MGT_mission_5_4 = {
 		icon = mission_unknown_mission
 		position = 4
 		required_missions = { THE_MGT_mission_5_3 } 
 		provinces_to_highlight = { owned_by = ROOT } 
-
+		
 		trigger = {
-			max_manpower = 75
+			max_manpower = 35
 			OR = {
 				full_idea_group = quality_ideas
 				full_idea_group = quantity_ideas
@@ -510,7 +617,7 @@ THE_MGT_main_branch_5 = {
 				full_idea_group = offensive_ideas
 			}
 		}
-
+		
 		effect = {
 			custom_tooltip = THE_MGT_mission_5_4_t1
 			custom_tooltip = THE_MGT_mission_5_4_t2
@@ -584,17 +691,17 @@ THE_MGT_main_branch_5 = {
 			}
 		}
 	}
-
+	
 	THE_MGT_mission_5_6 = {
 		icon = mission_unknown_mission
 		position = 6
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
-
+	
 	THE_MGT_mission_5_7 = {
 		icon = mission_unknown_mission
 		position = 7
@@ -603,9 +710,9 @@ THE_MGT_main_branch_5 = {
 			THE_MGT_mission_4_6
 		}
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
 }
@@ -619,14 +726,14 @@ THE_MGT_minor_step1_branch_b1 = {
 		has_country_flag = THE_MGT_mission_unlock_main_flag
 		has_country_flag = THE_MGT_mission_unlock_step1_b1_flag
 	}
-
+	
 	THE_MGT_minor_step1_3_6_b1 = {
 		icon = mission_unknown_mission
 		position = 6
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
 }
@@ -640,14 +747,14 @@ THE_MGT_minor_step1_branch_b2 = {
 		has_country_flag = THE_MGT_mission_unlock_main_flag
 		has_country_flag = THE_MGT_mission_unlock_step1_b2_flag
 	}
-
+	
 	THE_MGT_minor_step1_3_6_b2 = {
 		icon = mission_unknown_mission
 		position = 6
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
 }
@@ -662,14 +769,14 @@ THE_MGT_minor_step1_branch_lock = {
 		NOT = { has_country_flag = THE_MGT_mission_unlock_step1_b1_flag } 
 		NOT = { has_country_flag = THE_MGT_mission_unlock_step1_b2_flag } 
 	}
-
+	
 	THE_MGT_minor_step1_3_6_lock = {
 		icon = mission_unknown_mission
 		position = 6
 		provinces_to_highlight = {  } 
-
+		
 		trigger = { always = no } 
-
+		
 		effect = {  } 
 	}
 }
@@ -683,14 +790,14 @@ THE_MGT_minor_step2_branch_b1 = {
 		has_country_flag = THE_MGT_mission_unlock_main_flag
 		has_country_flag = THE_MGT_mission_unlock_step2_b1_flag
 	}
-
+	
 	THE_MGT_minor_step2_3_7_b1 = {
 		icon = mission_unknown_mission
 		position = 7
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
 }
@@ -704,14 +811,14 @@ THE_MGT_minor_step2_branch_b2 = {
 		has_country_flag = THE_MGT_mission_unlock_main_flag
 		has_country_flag = THE_MGT_mission_unlock_step2_b2_flag
 	}
-
+	
 	THE_MGT_minor_step2_3_7_b2 = {
 		icon = mission_unknown_mission
 		position = 7
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
 }
@@ -726,14 +833,14 @@ THE_MGT_minor_step2_branch_lock = {
 		NOT = { has_country_flag = THE_MGT_mission_unlock_step2_b1_flag } 
 		NOT = { has_country_flag = THE_MGT_mission_unlock_step2_b2_flag } 
 	}
-
+	
 	THE_MGT_minor_step2_3_7_lock = {
 		icon = mission_unknown_mission
 		position = 7
 		provinces_to_highlight = {  } 
-
+		
 		trigger = { always = no } 
-
+		
 		effect = {  } 
 	}
 }
@@ -747,14 +854,14 @@ THE_MGT_minor_step3_branch_b1 = {
 		has_country_flag = THE_MGT_mission_unlock_main_flag
 		has_country_flag = THE_MGT_mission_unlock_step3_b1_flag
 	}
-
+	
 	THE_MGT_minor_step3_3_9_b1 = {
 		icon = mission_unknown_mission
 		position = 9
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
 }
@@ -768,14 +875,14 @@ THE_MGT_minor_step3_branch_b2 = {
 		has_country_flag = THE_MGT_mission_unlock_main_flag
 		has_country_flag = THE_MGT_mission_unlock_step3_b2_flag
 	}
-
+	
 	THE_MGT_minor_step3_3_9_b2 = {
 		icon = mission_unknown_mission
 		position = 9
 		provinces_to_highlight = {  } 
-
+		
 		trigger = {  } 
-
+		
 		effect = {  } 
 	}
 }
@@ -790,14 +897,14 @@ THE_MGT_minor_step3_branch_lock = {
 		NOT = { has_country_flag = THE_MGT_mission_unlock_step3_b1_flag } 
 		NOT = { has_country_flag = THE_MGT_mission_unlock_step3_b1_flag } 
 	}
-
+	
 	THE_MGT_minor_step3_3_9_lock = {
 		icon = mission_unknown_mission
 		position = 9
 		provinces_to_highlight = {  } 
-
+		
 		trigger = { always = no } 
-
+		
 		effect = {  } 
 	}
 }
@@ -807,7 +914,7 @@ THE_MGT_hidden_branch_2 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = MGT } 
-
+	
 }
 THE_MGT_hidden_branch_3 = {
 	slot = 3
@@ -815,7 +922,7 @@ THE_MGT_hidden_branch_3 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = MGT } 
-
+	
 }
 THE_MGT_hidden_branch_4 = {
 	slot = 4
@@ -823,5 +930,5 @@ THE_MGT_hidden_branch_4 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = MGT } 
-
+	
 }
