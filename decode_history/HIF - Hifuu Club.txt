@@ -1,0 +1,24 @@
+government = monarchy
+add_government_reform = Gensokyan_hif_hifuu_club
+government_rank = 1
+primary_culture = Gensokyo_human
+religion = th_hakureishinto
+technology_group = tech_gensokyan
+capital = 5252
+th_discover_default = yes
+1443.1.1 = {
+  monarch = {
+    name = "堇子"  # Sumireko
+    dynasty = "宇佐见"  # Usami
+    birth_date = 1429.8.20
+    adm = 4
+    dip = 4
+    mil = 4
+    female = yes
+    religion = th_hakureishinto
+    culture = Gensokyo_human
+  }
+  add_ruler_personality = th_longevity_personality
+  set_ruler_flag = touhou_character_ruler
+  set_ruler_flag = touhou_original_ruler
+}

@@ -25,3 +25,29 @@ THE_MGT_past_bonds_modifier = {
 	global_unrest = -1
 	missionaries = 1
 }
+#森林建筑工场
+THE_MGT_woods_construct_modifier = {
+	build_cost = -0.10
+	production_efficiency = 0.10
+}
+#点点微光
+THE_MGT_magic_light_modifier = {
+	liberty_desire_from_subject_development = -0.25
+	development_cost = -0.10
+	production_efficiency = 0.05
+}
+#澄澈明光
+THE_MGT_clear_light_modifier = {
+	development_cost = -0.10
+	build_cost = -0.15
+	build_time = -0.25
+}
+#被描绘之光
+THE_MGT_draw_with_light_modifier = {
+	great_project_upgrade_cost = -0.15
+	great_project_upgrade_time = -0.15
+}
+THE_MGT_draw_with_light_me_modifier = {
+	great_project_upgrade_cost = -0.25
+	great_project_upgrade_time = -0.25
+}

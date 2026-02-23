@@ -37,6 +37,11 @@
  THE_MGT_cure_attacker_buff: "人形：注重火力"
  THE_MGT_past_bonds_modifier: "往昔的纽带"
  THE_MGT_past_firend_modifier: "老友"
+ THE_MGT_woods_construct_modifier: "森林建筑工厂"
+ THE_MGT_magic_light_modifier: "点点微光"
+ THE_MGT_clear_light_modifier: "澄澈明光"
+ THE_MGT_draw_with_light_modifier: "被描绘之光"
+ THE_MGT_draw_with_light_me_modifier: "我所描绘之光"
 ##EVENT_MODIFIER_END
 
 ##MISSION_EXTRA
@@ -57,6 +62,17 @@
  THE_MGT_mission_4_5_c_tt1_no: "£no£如果@HKR§Y[HKR.GetName]§!是我们的属国，则："
  THE_MGT_mission_4_5_c_tt2_yes: "£yes£如果我们通过征服@HKR§Y[HKR.GetName]§!完成任务，则："
  THE_MGT_mission_4_5_c_tt2_no: "£no£如果我们通过征服@HKR§Y[HKR.GetName]§!完成任务，则："
+ THE_MGT_mission_5_6_c_tt1_yes: "£yes£如果我们的§Y妖怪§!忠诚度至少为§G60§!，则："
+ THE_MGT_mission_5_6_c_tt1_no: "£no£如果我们的§Y妖怪§!忠诚度至少为§G60§!，则："
+ THE_MGT_mission_5_6_c_tt2: "所有符合条件的§Y省份§!的§Y工坊§!建筑获得§Y升级§!"
+ THE_MGT_mission_4_6_c_tt1_yes: "£yes£如果我们与@MKI§Y[MKI.GetName]§!结盟，则："
+ THE_MGT_mission_4_6_c_tt1_no: "£no£如果我们与@MKI§Y[MKI.GetName]§!结盟，则："
+ THE_MGT_mission_4_6_c_tt2_yes: "£yes£如果我们通过征服@MKI§Y[MKI.GetName]§!完成任务，则："
+ THE_MGT_mission_4_6_c_tt2_no: "£no£如果我们通过征服@MKI§Y[MKI.GetName]§!完成任务，则："
+ THE_MGT_mission_4_6_c_tt4: "获得所有§Y魔界§!文化的省份的§G核心§!"
+ THE_MGT_mission_4_8_c_tt1: "解锁省份行动「§Y由人偶帮助升级建筑§!」，允许我们花费人偶升级该省份所有的建筑"
+ THE_MGT_mission_4_9_tt1_yes: "£yes£如果我们拥有修正§Y被描绘之光§!，则会获得升级彼并变为永久效果："
+ THE_MGT_mission_4_9_tt1_no: "£no£如果我们拥有修正§Y被描绘之光§!，则会获得升级彼并变为永久效果："
 ##MISSION_EXTRA_END
 
 ##MISSION_ATTRIABUTE
@@ -97,3 +113,14 @@
  THE_MGT_mission_desc_extend_3_4: "当「」那双清澈无神的眼珠对上她的视线时，一种复杂的情绪蔓延开来。是期待？或是警觉？她会成为赋予生命的造物主————「正如母亲那样」。还是创造的是一个自己也无法掌控的「§R另一个我§!」。"
  THE_MGT_mission_desc_extend_4_3: "洋馆深处，那扇许久不曾触碰的门扉静静伫立。门框上缠绕着早已干枯的藤蔓与褪色的魔法印记——这是通往魔法之国、通往母亲神绮领域的门。"
 ##MISSION_DESC_EX_END
+
+###PRICE
+ THE_MGT_tropical_wood_shortge: "建筑材料"
+###
+
+###SCRIPT
+ THE_MGT_s_spirit_gravity_point_change_pick_script_c_tt1: "将理性向右推进§Y5%§!"
+ THE_MGT_s_spirit_gravity_point_change_pick_script_c_tt2: "将理性向右推进§Y10%§!"
+ THE_MGT_s_spirit_gravity_point_change_erode_script_c_tt1: "将理性向左推进§M5%§!"
+ THE_MGT_s_spirit_gravity_point_change_erode_script_c_tt2: "将理性向左推进§M10%§!"
+###SCRIPT_END

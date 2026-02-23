@@ -1472,7 +1472,7 @@ THE_NIN_branch_5 = {
 					NOT = { exists = TUR }
 				}
 				AND = {
-					TUR = { NOT = { total_development = 200 } }
+					TUR = { NOT = { total_development = 300 } }
 					BYZ = { is_subject_of = ROOT }
 				}
 			}
@@ -1484,7 +1484,7 @@ THE_NIN_branch_5 = {
 			add_mil_power = 50
 			if = {
 				limit = {
-					TUR = { NOT = { total_development = 200 } }
+					TUR = { NOT = { total_development = 300 } }
 					BYZ = { is_subject_of = ROOT }
 				}
 				custom_tooltip = THE_NIN_5_4_c_tt1_yes

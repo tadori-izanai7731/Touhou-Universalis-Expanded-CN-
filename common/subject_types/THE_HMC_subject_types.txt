@@ -17,7 +17,7 @@ THE_HMC_human_trade_league = {
 	can_be_annexed = no
 	forms_trade_companies = no
 	can_fight_independence_war = no
-	joins_overlords_wars = no
+	joins_overlords_wars = yes
 	joins_colonial_wars = no
 	opinion_on_subject_integration = 0 #Determines how much opinion they actually lose when a fellow subject gets integrated.
 	overlord_can_attack = no
@@ -51,6 +51,23 @@ THE_HMC_human_trade_league = {
 	block_settlement_growth = no
 	allow_settlement_growth = no
 	divert_trade = yes
+
+	can_fight = {
+		independent_nations = yes
+		same_overlord = THE_HMC_human_trade_league
+	}
+	can_ally = {
+		independent_nations = yes
+		same_overlord = THE_HMC_human_trade_league
+	}
+	can_rival = {
+		independent_nations = yes
+		same_overlord = THE_HMC_human_trade_league
+	}
+	can_marry = {
+		independent_nations = yes
+		same_overlord = THE_HMC_human_trade_league
+	}
 
 	# Modifiers:
 	modifier_subject = clear # Trade Protectorate don't get the ordinary subject_nation penalty 
