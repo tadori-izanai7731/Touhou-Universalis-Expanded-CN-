@@ -51,3 +51,19 @@ THE_MGT_draw_with_light_me_modifier = {
 	great_project_upgrade_cost = -0.25
 	great_project_upgrade_time = -0.25
 }
+#隐没之光
+THE_MGT_hidden_light_modifier = {
+	ae_impact = -0.05
+	core_creation = -0.10
+	shock_damage = 0.05
+}
+#降临于世
+THE_MGT_hidden_light_ex_modifier = {
+	ae_impact = -0.10
+	core_creation = -0.15
+	shock_damage = 0.05
+	THE_MGT_estate_dolls_pools_power = 0.25
+}
+#祈求这份希望
+#自律的事务
+#渴求，正如所期望

@@ -42,6 +42,8 @@
  THE_MGT_clear_light_modifier: "澄澈明光"
  THE_MGT_draw_with_light_modifier: "被描绘之光"
  THE_MGT_draw_with_light_me_modifier: "我所描绘之光"
+ THE_MGT_hidden_light_modifier: "隐没之光"
+ THE_MGT_hidden_light_ex_modifier: "降临于世"
 ##EVENT_MODIFIER_END
 
 ##MISSION_EXTRA
@@ -73,6 +75,11 @@
  THE_MGT_mission_4_8_c_tt1: "解锁省份行动「§Y由人偶帮助升级建筑§!」，允许我们花费人偶升级该省份所有的建筑"
  THE_MGT_mission_4_9_tt1_yes: "£yes£如果我们拥有修正§Y被描绘之光§!，则会获得升级彼并变为永久效果："
  THE_MGT_mission_4_9_tt1_no: "£no£如果我们拥有修正§Y被描绘之光§!，则会获得升级彼并变为永久效果："
+ THE_MGT_2_3_c_tt1: "将我们在§Y太阳花田§!地区的所有省份转移给@MEL§Y[MEL.GetName]§!作为我们的附庸"
+ THE_MGT_2_3_c_tt2: "@MEL§Y[MEL.GetName]§!获得太阳花田地区的所有§G核心§!"
+ THE_MGT_2_6_c_tt1: "解锁省份行动「§Y征募人偶军团「骑兵」§!」，允许我们花费人偶招募骑兵"
+ THE_MGT_2_6_c_tt2_yes: "£yes£如果我们拥有修正§Y隐没之光§!，则会获得升级彼并变为永久效果："
+ THE_MGT_2_6_c_tt2_no: "£no£如果我们拥有修正§Y隐没之光§!，则会获得升级彼并变为永久效果："
 ##MISSION_EXTRA_END
 
 ##MISSION_ATTRIABUTE
