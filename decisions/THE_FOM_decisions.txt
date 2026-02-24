@@ -59,7 +59,7 @@ country_decisions = {
 				}
 				change_tag = FOM
 				swap_free_idea_group = yes
-				swap_non_generic_missions = yes
+				# swap_non_generic_missions = yes
 				if = {
 					limit = {
 						was_tag = MGT

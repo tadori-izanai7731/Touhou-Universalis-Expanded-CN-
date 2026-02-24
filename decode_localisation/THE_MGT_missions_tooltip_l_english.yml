@@ -44,10 +44,15 @@
  THE_MGT_draw_with_light_me_modifier: "我所描绘之光"
  THE_MGT_hidden_light_modifier: "隐没之光"
  THE_MGT_hidden_light_ex_modifier: "降临于世"
+ THE_MGT_pray_for_this_hope_modifier: "祈求这份希望"
+ THE_MGT_pray_for_be_god_modifier: "成为神,成为光"
+ THE_MGT_pray_as_pray_modifier: "渴求，正如所期望"
+ THE_MGT_yof_doll_modifier: "厄的涡流"
+ THE_MGT_un_colorful_dolls_modifier: "无色人形"
 ##EVENT_MODIFIER_END
 
 ##MISSION_EXTRA
- THE_MGT_mission_5_4_t1: "现在通过「§Y省份行动§!」创造的步兵将会为§O随机特殊兵种§!"
+ THE_MGT_mission_5_4_t1: "现在通过「§Y省份行动§!」创造的步兵可以为§O随机特殊兵种§!"
  THE_MGT_mission_5_4_t2: "根据完成任务所完成的理念获得不同修正："
  THE_MGT_mission_5_3_quality_yes: "£yes£质量："
  THE_MGT_mission_5_3_quality_no: "£no£质量："
@@ -80,6 +85,15 @@
  THE_MGT_2_6_c_tt1: "解锁省份行动「§Y征募人偶军团「骑兵」§!」，允许我们花费人偶招募骑兵"
  THE_MGT_2_6_c_tt2_yes: "£yes£如果我们拥有修正§Y隐没之光§!，则会获得升级彼并变为永久效果："
  THE_MGT_2_6_c_tt2_no: "£no£如果我们拥有修正§Y隐没之光§!，则会获得升级彼并变为永久效果："
+ THE_MGT_1_6_c_tt1: "人偶每月恢复基础值增加§G100§!（当前：§Y[Root.the_mgt_dolls_rescovey_base_var.GetValue]§!）"
+ THE_MGT_1_6_c_tt2: "§Y魔女§!阶层每拥有§Y10%§!的忠诚度，获得§G5%§!陆军职业度"
+ THE_MGT_1_7_c_tt1: "至少剥削省份发展度25次（当前：§Y[Root.the_mgt_reserve_development_var.GetValue]§!）"
+ THE_MGT_1_7_c_tt2: "现在通过「§Y省份行动§!」创造的骑兵可以为§O随机特殊兵种§!"
+ THE_MGT_1_7_c_tt3: "从治下每个拥有§Y要塞§!建筑的省份获得§G5§!陆军传统"
+ THE_MGT_1_3_c_tt1: "治下的所有省份获得§G100§!%点繁荣度"
+ THE_MGT_1_4_c_tt1_yes: "£yes£如果§Y魔女§!阶层至少有§Y50§!忠诚度，则："
+ THE_MGT_1_4_c_tt1_no: "£no£如果§Y魔女§!阶层至少有§Y50§!忠诚度，则："
+ THE_MGT_2_9_c_tt1: "人偶每月恢复基础值增加§G1000§!（当前：§Y[Root.the_mgt_dolls_rescovey_base_var.GetValue]§!）"
 ##MISSION_EXTRA_END
 
 ##MISSION_ATTRIABUTE
@@ -131,3 +145,18 @@
  THE_MGT_s_spirit_gravity_point_change_erode_script_c_tt1: "将理性向左推进§M5%§!"
  THE_MGT_s_spirit_gravity_point_change_erode_script_c_tt2: "将理性向左推进§M10%§!"
 ###SCRIPT_END
+
+###DECISION
+ THE_MGT_change_raise_5_dolls_province_button_number_decision_titile: "省份行动「征募人偶军队」单次招募数量（当前为§Y1§!队）"
+ THE_MGT_change_raise_5_dolls_province_button_number_decision_desc: ""
+ THE_MGT_change_raise_5_dolls_province_button_number_decision_c_tt1: "将省份行动「§Y征募人偶军队§!」单次招募数量设置为§Y5§!队"
+ THE_MGT_change_raise_1_dolls_province_button_number_decision_title: "省份行动「征募人偶军队」单次招募数量（当前为§Y5§!队）"
+ THE_MGT_change_raise_1_dolls_province_button_number_decision_desc: ""
+ THE_MGT_change_raise_1_dolls_province_button_number_decision_c_tt1: "将省份行动「§Y征募人偶军队§!」单次招募数量设置为§Y1§!队"
+ THE_MGT_change_colorful_unit_raise_white_decision_title: "省份行动「征募人偶军队」招募不启用§Y特殊兵种§!"
+ THE_MGT_change_colorful_unit_raise_white_decision_desc: ""
+ THE_MGT_change_colorful_unit_raise_white_decision_c_tt1: "启用§Y特殊兵种§!"
+ THE_MGT_change_colorful_unit_raise_colorful_decision_title: "省份行动「征募人偶军队」招募启用§Y特殊兵种§!"
+ THE_MGT_change_colorful_unit_raise_colorful_decision_desc: ""
+ THE_MGT_change_colorful_unit_raise_colorful_decision_c_tt1: "不启用§Y特殊兵种§!"
+###DECISION_END

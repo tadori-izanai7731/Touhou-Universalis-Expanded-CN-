@@ -44,10 +44,15 @@
  THE_MGT_draw_with_light_me_modifier: "bNbÏcØuKNIQ"
  THE_MGT_hidden_light_modifier: "–¡lKNIQ"
  THE_MGT_hidden_light_ex_modifier: "M–4NŽNN"
+ THE_MGT_pray_for_this_hope_modifier: "HyBlÙýN^g"
+ THE_MGT_pray_for_be_god_modifier: "b:N^y,b:NIQ"
+ THE_MGT_pray_as_pray_modifier: "4nBlÿck‚YNbgg"
+ THE_MGT_yof_doll_modifier: "„S„v¡mAm"
+ THE_MGT_un_colorful_dolls_modifier: "àer‚ºNbV"
 ##EVENT_MODIFIER_END
 
 ##MISSION_EXTRA
- THE_MGT_mission_5_4_t1: "°s(WÇ0§YwýNLˆ¨R§!0R.„vekuQSO:N§O–:gyrŠkuQÍy§!"
+ THE_MGT_mission_5_4_t1: "°s(WÇ0§YwýNLˆ¨R§!0R.„vekuQïSåN:N§O–:gyrŠkuQÍy§!"
  THE_MGT_mission_5_4_t2: "9hncŒRbûN¡RNbŒRb„vtõV·ƒ—VNTîOckÿ"
  THE_MGT_mission_5_3_quality_yes: "£yes£(Ï‘ÿ"
  THE_MGT_mission_5_3_quality_no: "£no£(Ï‘ÿ"
@@ -80,6 +85,15 @@
  THE_MGT_2_6_c_tt1: "ã‰•wýNLˆ¨R0§YVßRºNvP›QâV0‘šuQ0§!0ÿAQ¸‹bìN±‚9ºNvPÛbßR‘šuQ"
  THE_MGT_2_6_c_tt2_yes: "£yes£‚YœgbìNåb	gîOck§Y–¡lKNIQ§!ÿRO·ƒ—VGSµu|Vv^ØS:N8lENHeœgÿ"
  THE_MGT_2_6_c_tt2_no: "£no£‚YœgbìNåb	gîOck§Y–¡lKNIQ§!ÿRO·ƒ—VGSµu|Vv^ØS:N8lENHeœgÿ"
+ THE_MGT_1_6_c_tt1: "ºNvPÏkgb`YúWNx<PžX R§G100§!ÿSVMRÿ§Y[Root.the_mgt_dolls_rescovey_base_var.GetValue]§!	ÿ"
+ THE_MGT_1_6_c_tt2: "§YT›sY§!6–BSÏkåb	g§Y10%§!„vàVÚ‹¦^ÿ·ƒ—V§G5%§!F–›QLwN¦^"
+ THE_MGT_1_7_c_tt1: "óSeRJRwýNÑSUS¦^25!kÿSVMRÿ§Y[Root.the_mgt_reserve_development_var.GetValue]§!	ÿ"
+ THE_MGT_1_7_c_tt2: "°s(WÇ0§YwýNLˆ¨R§!0R.„v‘šuQïSåN:N§O–:gyrŠkuQÍy§!"
+ THE_MGT_1_7_c_tt3: "ÎN»lNÏk*Nåb	g§Y‰^X§!ú^Qr„vwýN·ƒ—V§G5§!F–›Q.Oßu"
+ THE_MGT_1_3_c_tt1: "»lN„vNb	gwýN·ƒ—V§G100§!%¹pAucƒ¦^"
+ THE_MGT_1_4_c_tt1_yes: "£yes£‚Yœg§YT›sY§!6–BSóS	g§Y50§!àVÚ‹¦^ÿRÿ"
+ THE_MGT_1_4_c_tt1_no: "£no£‚Yœg§YT›sY§!6–BSóS	g§Y50§!àVÚ‹¦^ÿRÿ"
+ THE_MGT_2_9_c_tt1: "ºNvPÏkgb`YúWNx<PžX R§G1000§!ÿSVMRÿ§Y[Root.the_mgt_dolls_rescovey_base_var.GetValue]§!	ÿ"
 ##MISSION_EXTRA_END
 
 ##MISSION_ATTRIABUTE
@@ -131,3 +145,18 @@
  THE_MGT_s_spirit_gravity_point_change_erode_script_c_tt1: "St'`TæT¨cÛ§M5%§!"
  THE_MGT_s_spirit_gravity_point_change_erode_script_c_tt2: "St'`TæT¨cÛ§M10%§!"
 ###SCRIPT_END
+
+###DECISION
+ THE_MGT_change_raise_5_dolls_province_button_number_decision_titile: "wýNLˆ¨R0VßRºNvP›Q–0US!kÛbßRpeÏ‘ÿSVMR:N§Y1§!–	ÿ"
+ THE_MGT_change_raise_5_dolls_province_button_number_decision_desc: ""
+ THE_MGT_change_raise_5_dolls_province_button_number_decision_c_tt1: "SwýNLˆ¨R0§YVßRºNvP›Q–§!0US!kÛbßRpeÏ‘¾‹n:N§Y5§!–"
+ THE_MGT_change_raise_1_dolls_province_button_number_decision_title: "wýNLˆ¨R0VßRºNvP›Q–0US!kÛbßRpeÏ‘ÿSVMR:N§Y5§!–	ÿ"
+ THE_MGT_change_raise_1_dolls_province_button_number_decision_desc: ""
+ THE_MGT_change_raise_1_dolls_province_button_number_decision_c_tt1: "SwýNLˆ¨R0§YVßRºNvP›Q–§!0US!kÛbßRpeÏ‘¾‹n:N§Y1§!–"
+ THE_MGT_change_colorful_unit_raise_white_decision_title: "wýNLˆ¨R0VßRºNvP›Q–0ÛbßRN=T(u§YyrŠkuQÍy§!"
+ THE_MGT_change_colorful_unit_raise_white_decision_desc: ""
+ THE_MGT_change_colorful_unit_raise_white_decision_c_tt1: "=T(u§YyrŠkuQÍy§!"
+ THE_MGT_change_colorful_unit_raise_colorful_decision_title: "wýNLˆ¨R0VßRºNvP›Q–0ÛbßR=T(u§YyrŠkuQÍy§!"
+ THE_MGT_change_colorful_unit_raise_colorful_decision_desc: ""
+ THE_MGT_change_colorful_unit_raise_colorful_decision_c_tt1: "N=T(u§YyrŠkuQÍy§!"
+###DECISION_END

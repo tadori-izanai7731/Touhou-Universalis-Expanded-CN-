@@ -38,12 +38,6 @@ custom_button = {
 		# }
 		# @Fasterliya 此效果的相关修正已不存在
 		hidden_effect = {
-			owner = {
-				subtract_variable = {
-					which = the_alc_dolls_manpower_pools_total
-					value = 1000
-				}
-			}
 			THE_MGT_random_spawn_infantry_2_effects = yes
 		}
 	}
@@ -98,13 +92,8 @@ custom_button = {
 	}
 	effect = {
 		hidden_effect = {
-			owner = {
-				subtract_variable = {
-					which = the_alc_dolls_manpower_pools_total
-					value = 1000
-				}
-			}
-			THE_MGT_random_spawn_cavalry_1_effects = yes
+			
+			THE_MGT_random_spawn_cavalry_2_effects = yes
 		}
 	}
 }

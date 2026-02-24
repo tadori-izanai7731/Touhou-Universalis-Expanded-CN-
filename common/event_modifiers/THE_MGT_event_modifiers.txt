@@ -65,5 +65,33 @@ THE_MGT_hidden_light_ex_modifier = {
 	THE_MGT_estate_dolls_pools_power = 0.25
 }
 #祈求这份希望
+THE_MGT_pray_for_this_hope_modifier = {
+	THE_MGT_estate_dolls_pools_power = 0.25
+	all_estate_loyalty_equilibrium = 0.20
+	prestige = 1
+	core_creation = -0.05
+}
+#成为神,成为光
+THE_MGT_pray_for_be_god_modifier = {
+	infantry_fire = 1
+	core_creation = -0.25
+	governing_capacity_modifier = 0.25
+}
 #自律的事务
 #渴求，正如所期望
+THE_MGT_pray_as_pray_modifier = {
+	prestige_decay = -0.01
+}
+#厄的涡流
+THE_MGT_yof_doll_modifier = {
+	global_prosperity_growth = 1
+	global_monthly_devastation = -1
+	fort_maintenance_modifier = -0.25
+}
+#无色人形
+THE_MGT_un_colorful_dolls_modifier = {
+	reinforce_speed = 0.33
+	fire_damage = 0.10
+	shock_damage = 0.10
+	is_mercenary_modifier = yes
+}

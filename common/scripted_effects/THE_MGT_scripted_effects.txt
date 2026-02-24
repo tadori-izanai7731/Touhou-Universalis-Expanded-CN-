@@ -133,15 +133,73 @@ THE_MGT_random_spawn_infantry_2_effects = {
 		limit = {
 			owner = {
 				mission_completed = THE_MGT_mission_5_4
+				has_country_flag = THE_MGT_change_colorful_unit_raise_colorful_decision_flag
 			}
-		 }
-		 THE_MGT_random_spawn_infantry_1_effects = yes
+		}
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_country_flag = THE_MGT_change_raise_1_dolls_province_button_number_decision_flag
+						AND = {
+							NOT = { has_country_flag = THE_MGT_change_raise_1_dolls_province_button_number_decision_flag }
+							NOT = { has_country_flag = THE_MGT_change_raise_5_dolls_province_button_number_decision_flag }
+						}
+					}
+				}
+			}
+			THE_MGT_random_spawn_infantry_1_effects = yes
+		}
+		else_if = {
+			limit = {
+				owner = {
+					has_country_flag = THE_MGT_change_raise_5_dolls_province_button_number_decision_flag
+				}
+			}
+			for = {
+				amount = 5
+				effect = "
+					THE_MGT_random_spawn_infantry_1_effects = yes
+				"
+			}
+		}
 	}
 	else = {
-		mercenary_infantry = ROOT
+		if = {
+			limit = { 
+				owner = {
+					OR = {
+						has_country_flag = THE_MGT_change_raise_1_dolls_province_button_number_decision_flag
+						AND = {
+							NOT = { has_country_flag = THE_MGT_change_raise_1_dolls_province_button_number_decision_flag }
+							NOT = { has_country_flag = THE_MGT_change_raise_5_dolls_province_button_number_decision_flag }
+						}
+					}
+				}
+			}
+			mercenary_infantry = ROOT
+			THE_MGT_raise_dolls_cost_script = yes
+		}
+		else_if = {
+			limit = { 
+				owner = {
+					has_country_flag = THE_MGT_change_raise_5_dolls_province_button_number_decision_flag
+				}
+			}
+			for = {
+				amount = 5
+				effect = "
+					mercenary_infantry = ROOT
+					THE_MGT_raise_dolls_cost_script = yes
+				"
+			}
+		}
+		
 	}
 }
+
 THE_MGT_random_spawn_infantry_1_effects = {
+	THE_MGT_raise_dolls_cost_script = yes
 	owner = {
 		change_variable = {
 			which = THE_MGT_random_spawn_infantry_random_var
@@ -193,7 +251,78 @@ THE_MGT_random_spawn_infantry_1_effects = {
 }
 
 
+THE_MGT_random_spawn_cavalry_2_effects = {
+	if = {
+		limit = {
+			owner = {
+				mission_completed = THE_MGT_mission_1_7
+				has_country_flag = THE_MGT_change_colorful_unit_raise_colorful_decision_flag
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_country_flag = THE_MGT_change_raise_1_dolls_province_button_number_decision_flag
+						AND = {
+							NOT = { has_country_flag = THE_MGT_change_raise_1_dolls_province_button_number_decision_flag }
+							NOT = { has_country_flag = THE_MGT_change_raise_5_dolls_province_button_number_decision_flag }
+						}
+					}
+				}
+			}
+			THE_MGT_random_spawn_cavalry_1_effects = yes
+		}
+		else_if = {
+			limit = {
+				owner = {
+					has_country_flag = THE_MGT_change_raise_5_dolls_province_button_number_decision_flag
+				}
+			}
+			for = {
+				amount = 5
+				effect = "
+					THE_MGT_random_spawn_cavalry_1_effects = yes
+				"
+			}
+		}
+	}
+	else = {
+		if = {
+			limit = { 
+				owner = {
+					OR = {
+						has_country_flag = THE_MGT_change_raise_1_dolls_province_button_number_decision_flag
+						AND = {
+							NOT = { has_country_flag = THE_MGT_change_raise_1_dolls_province_button_number_decision_flag }
+							NOT = { has_country_flag = THE_MGT_change_raise_5_dolls_province_button_number_decision_flag }
+						}
+					}
+				}
+			}
+			mercenary_cavalry = ROOT
+			THE_MGT_raise_dolls_cost_script = yes
+		}
+		else_if = {
+			limit = { 
+				owner = {
+					has_country_flag = THE_MGT_change_raise_5_dolls_province_button_number_decision_flag
+				}
+			}
+			for = {
+				amount = 5
+				effect = "
+					mercenary_cavalry = ROOT
+					THE_MGT_raise_dolls_cost_script = yes
+				"
+			}
+		}
+		
+	}
+}
+
 THE_MGT_random_spawn_cavalry_1_effects = {
+	THE_MGT_raise_dolls_cost_script = yes
 	owner = {
 		change_variable = {
 			which = THE_MGT_random_spawn_cavalry_random_var
@@ -235,6 +364,32 @@ THE_MGT_random_spawn_cavalry_1_effects = {
 		revolutionary_guard_cavalry = ROOT
 	}
 }
+#cost
+THE_MGT_raise_dolls_cost_script = {
+	hidden_effect = {
+		if = {
+			limit = { 
+				owner = {
+					has_government_attribute = THE_MGT_enable_making_dolls_crops_mechanic
+				}
+			}
+			owner = {
+				subtract_variable = {
+					which = the_alc_dolls_manpower_pools_total
+					value = 1000
+				}
+			}
+		}
+		else = {
+			owner = {
+				subtract_variable = {
+					which = the_alc_dolls_manpower_pools_total
+					value = 500
+				}
+			}
+		}
+	}
+}
 
 THE_MGT_on_battle_won_divide_manpower_effect = {
 	if = {
@@ -258,12 +413,12 @@ THE_MGT_on_battle_won_divide_manpower_effect = {
 						which = the_mgt_divide_enemy_manpower_won_battle_var
 						value = 1
 					}
-				 }
-				 add_manpower = -1
-				 change_variable = {
+				}
+				add_manpower = -1
+				change_variable = {
 					which = the_mgt_divide_enemy_manpower_won_battle_var
 					value = -1
-				 }
+				}
 			}
 		}
 		
@@ -315,7 +470,7 @@ THE_MGT_monthly_recovery_manpower_dolls_pool_effects = {
 			which = the_alc_dolls_manpower_pools_max
 			which = the_alc_dolls_manpower_pools_max_modifier
 		}
-
+		
 		#####
 		#回复
 		export_to_variable = {
@@ -349,7 +504,7 @@ THE_MGT_monthly_recovery_manpower_dolls_pool_effects = {
 			value = 100
 		}
 		#####
-
+		
 		#导出回复
 		export_to_variable = {
 			variable_name = the_alc_dolls_manpower_pools_rescover_modifier
@@ -359,19 +514,23 @@ THE_MGT_monthly_recovery_manpower_dolls_pool_effects = {
 			which = the_alc_dolls_manpower_pools_rescover_modifier
 			value = 1
 		}
+		#额外恢复的基础值
+		change_variable = {
+			which = the_alc_dolls_manpower_pools_start
+			which = the_mgt_dolls_rescovey_base_var
+		}
 		#回复 乘 修正
 		multiply_variable = {
 			which = the_alc_dolls_manpower_pools_start
 			which = the_alc_dolls_manpower_pools_rescover_modifier
 		}
-
-
+		
+		
 		######
 		change_variable = {
 			which = the_alc_dolls_manpower_pools_total
 			which = the_alc_dolls_manpower_pools_start
 		}
 	}
-
+	
 }
-
