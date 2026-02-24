@@ -87,4 +87,19 @@ country_decisions = {
 			}
 		}
 	}
+	#AI
+	# THE_MGT_ai_raise_unit_infantry_decision = {
+	# 	color = { 255 255 218 }
+	# 	potential = {
+	# 		OR = {
+	# 			tag = MGT
+	# 			was_tag = MGT
+	# 		}
+	# 		has_government_attribute = THE_MGT_enable_making_dolls_crops_mechanic
+	# 		ai = yes
+	# 	}
+	# 	allow = {
+			
+	# 	}
+	# }
 }

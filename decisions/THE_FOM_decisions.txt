@@ -9,22 +9,23 @@ country_decisions = {
 			}
 		}
 		allow = {
-			OR = {
-				MRS = {
-					is_subject_of = ROOT
-				}
-				MGT = {
-					is_subject_of = ROOT
-				}
-			}
-			num_of_provinces_owned_or_owned_by_subjects_with = {
-				value = 10
-				OR = {
-					area = Forest_coast_state
-					area = Forest_of_magic
-					area = Forest_edge_state
-				}
-			}
+			always = no
+			# OR = {
+			# 	MRS = {
+			# 		is_subject_of = ROOT
+			# 	}
+			# 	MGT = {
+			# 		is_subject_of = ROOT
+			# 	}
+			# }
+			# num_of_provinces_owned_or_owned_by_subjects_with = {
+			# 	value = 10
+			# 	OR = {
+			# 		area = Forest_coast_state
+			# 		area = Forest_of_magic
+			# 		area = Forest_edge_state
+			# 	}
+			# }
 		}
 		effect = {
 			custom_tooltip = THE_FOM_create_FOM_country_decision_c_tt1

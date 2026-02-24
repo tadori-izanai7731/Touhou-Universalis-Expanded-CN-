@@ -583,7 +583,10 @@ THE_MGT_main_branch_2 = {
 		icon = mission_unknown_mission
 		position = 9
 		required_missions = { THE_MGT_2_8 } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			region = gensokyan_forest_region
+			NOT = { owned_by = ROOT }
+		 } 
 		
 		trigger = { 
 			gensokyan_forest_region = {
@@ -1282,9 +1285,17 @@ THE_MGT_minor_step1_branch_b1 = {
 		position = 6
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = { 
+			always = yes
+		 } 
 		
-		effect = {  } 
+		effect = { 
+			add_government_reform = THE_MGT_eternal_radiance_reform
+			add_country_modifier = {
+				name = THE_MGT_color_modifier
+				duration = -1
+			}
+		 } 
 	}
 }
 THE_MGT_minor_step1_branch_b2 = {
@@ -1303,9 +1314,17 @@ THE_MGT_minor_step1_branch_b2 = {
 		position = 6
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = { 
+			always = yes
+		 } 
 		
-		effect = {  } 
+		effect = { 
+			add_government_reform = THE_MGT_eternal_radiance_reform
+			add_country_modifier = {
+				name = THE_MGT_dark_modifier
+				duration = -1
+			}
+		 } 
 	}
 }
 THE_MGT_minor_step1_branch_lock = {
@@ -1346,9 +1365,13 @@ THE_MGT_minor_step2_branch_b1 = {
 		position = 7
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = { 
+			always = yes
+		 } 
 		
-		effect = {  } 
+		effect = { 
+			add_government_reform = THE_MGT_go_to_color_and_exist_reform
+		 } 
 	}
 }
 THE_MGT_minor_step2_branch_b2 = {
@@ -1367,9 +1390,13 @@ THE_MGT_minor_step2_branch_b2 = {
 		position = 7
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = { 
+			always = yes
+		 } 
 		
-		effect = {  } 
+		effect = { 
+			add_government_reform = THE_MGT_back_to_white_and_void_reform
+		 } 
 	}
 }
 THE_MGT_minor_step2_branch_lock = {
@@ -1410,9 +1437,16 @@ THE_MGT_minor_step3_branch_b1 = {
 		position = 9
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = { 
+			always = yes
+		 } 
 		
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_MGT_minor_step3_branch_b1_c_tt1
+			add_adm_power = 300
+			add_dip_power = 300
+			add_mil_power = 300
+		 } 
 	}
 }
 THE_MGT_minor_step3_branch_b2 = {
@@ -1431,9 +1465,16 @@ THE_MGT_minor_step3_branch_b2 = {
 		position = 9
 		provinces_to_highlight = {  } 
 		
-		trigger = {  } 
+		trigger = { 
+			always = yes
+		 } 
 		
-		effect = {  } 
+		effect = { 
+			custom_tooltip = THE_MGT_minor_step3_branch_b2_c_tt1
+			add_adm_power = 300
+			add_dip_power = 300
+			add_mil_power = 300
+		 } 
 	}
 }
 THE_MGT_minor_step3_branch_lock = {

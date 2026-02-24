@@ -389,6 +389,10 @@ country_event = {
 			MGT = {
 				country_event = { id = THE_FOM_flavor_events.15 days = 8 }
 			}
+			country_event = {
+				id = THE_FOM_flavor_events.18
+				days = 730
+			}
 		}
 	}
 }
@@ -418,6 +422,7 @@ country_event = {
 	}
 	option = {
 		name = THE_FOM_flavor_events.14.1
+		custom_tooltip = THE_FOM_flavor_events_14_1_c_tt1
 		hidden_effect = {
 			set_country_flag = THE_FOM_youkai_region_desire_for_liberate
 		}
@@ -586,6 +591,7 @@ country_event = {
 		custom_tooltip = THE_FOM_flavor_events_15_c_tt2
 		custom_tooltip = empty_line_tt
 		custom_tooltip = THE_FOM_flavor_events_15_c_tt3
+		custom_tooltip = THE_FOM_flavor_events_15_c_tt4
 		THE_FOM_MGT_care_who_influence_by_her_effects = yes
 		hidden_effect = {
 			MRS = {
@@ -594,6 +600,7 @@ country_event = {
 					days = 2
 				}
 			}
+			set_country_flag = THE_FOM_MGT_can_use_union_mrs_po_flag
 		}
 		trigger = {
 			
@@ -626,6 +633,33 @@ country_event = {
 			}
 		}
 	}
+	option = {
+		name = THE_FOM_flavor_events.15.3
+		custom_tooltip = THE_FOM_flavor_events_15_c_3_tt1
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_country_flag = THE_FOM_youkai_region_desire_for_alice
+				}
+				grant_independence = yes
+				ROOT = {
+					create_subject = {
+						subject_type = THE_FOM_youkai_territory_of_forest
+						who = PREV
+					}
+				}
+			}
+			ROOT = {
+				declare_war_with_cb = {
+					casus_belli = cb_THE_FOM_MGT_create_union_war
+					who = MRS
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
 }
 #森林的见证
 country_event = {
@@ -651,9 +685,9 @@ country_event = {
 	title = THE_FOM_flavor_events.17.t
 	desc = THE_FOM_flavor_events.17.desc
 	major = yes
-	major_trigger = {
-		th_is_or_was_tag = { tag = MGT }
-	}
+	# major_trigger = {
+	# 	th_is_or_was_tag = { tag = MGT }
+	# }
 	is_triggered_only = yes
 	trigger = {
 		
@@ -688,8 +722,29 @@ country_event = {
 	}
 	option = {
 		name = THE_FOM_flavor_events.17.2
+		custom_tooltip = THE_FOM_flavor_events_15_c_3_tt1
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_country_flag = THE_FOM_youkai_region_desire_for_alice
+				}
+				grant_independence = yes
+				MGT = {
+					create_subject = {
+						subject_type = THE_FOM_youkai_territory_of_forest
+						who = PREV
+					}
+				}
+			}
+			MGT = {
+				declare_war_with_cb = {
+					casus_belli = cb_THE_FOM_MGT_create_union_war
+					who = MRS
+				}
+			}
+		}
 		ai_chance = {
-			factor = 0
+			factor = 50
 		}
 	}
 }
@@ -721,13 +776,21 @@ country_event = {
 		custom_tooltip = THE_FOM_flavor_events_18_c_tt1
 		custom_tooltip = empty_line_tt
 		THE_FOM_care_who_desire_for_liberty_effects = yes
-		random_subject_country = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_country_flag = THE_FOM_youkai_region_desire_for_liberate
+				}
+				grant_independence = yes
+			}
+		}
+		random_country = {
 			limit = {
 				has_country_flag = THE_FOM_youkai_region_desire_for_liberate
 			}
 			declare_war_with_cb = {
-				who = MRS
-				casus_belli = cb_annex
+				who = ROOT
+				casus_belli = cb_THE_FOM_secret_forest_war
 			}
 			add_treasury = 100
 			add_manpower = 20

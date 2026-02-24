@@ -1,0 +1,24 @@
+cb_THE_FOM_MGT_create_union_war = {
+	valid_for_subject = no
+
+	prerequisites_self = {
+		always = no
+	}
+	prerequisites = {
+		always = no
+	}
+
+	war_goal = THE_FOM_MGT_create_union_war
+}
+cb_THE_FOM_secret_forest_war = {
+	valid_for_subject = no
+
+	prerequisites_self = {
+		always = no
+	}
+	prerequisites = {
+		always = no
+	}
+
+	war_goal = THE_FOM_secret_forest_war
+}

@@ -370,7 +370,7 @@ THE_MGT_raise_dolls_cost_script = {
 		if = {
 			limit = { 
 				owner = {
-					has_government_attribute = THE_MGT_enable_making_dolls_crops_mechanic
+					mission_completed = THE_MGT_minor_step3_3_9_b2
 				}
 			}
 			owner = {
@@ -424,6 +424,83 @@ THE_MGT_on_battle_won_divide_manpower_effect = {
 		
 	}
 }
+
+THE_MGT_province_button_upgrade_effect = {
+	hidden_effect = {
+		owner = {
+			subtract_variable = {
+				which = the_alc_dolls_manpower_pools_total
+				value = 1000
+			}
+		}
+		change_variable = {
+			which = the_mgt_province_upgrade_construction_var
+			value = 1
+		}
+		if = {
+			limit = { 
+				mission_completed = THE_MGT_minor_step3_3_9_b2
+			}
+			change_variable = {
+				which = the_mgt_province_upgrade_construction_var
+				value = 1
+			}
+		}
+		if = {
+			limit = { 
+				check_variable = {
+					which = the_mgt_province_upgrade_construction_var
+					value = 5
+				}
+			}
+			subtract_variable = {
+				which = the_mgt_province_upgrade_construction_var
+				value = -5
+			}
+			###建造建筑
+			THE_MGT_province_button_upgrade_1_script = yes
+		}
+	}
+}
+
+THE_MGT_province_button_upgrade_1_script = {
+	#conscription_center
+	#drydock
+	#town_hall
+	#counting_house
+	#stock_exchange
+	#training_fields
+	#grand_shipyard
+	#cathedral
+	if = {
+		limit = { 
+			OR = {
+				NOT = { has_building = conscription_center }
+				NOT = { has_building = drydock }
+				NOT = { has_building = town_hall }
+				NOT = { has_building = counting_house }
+				NOT = { has_building = stock_exchange }
+				NOT = { has_building = training_fields }
+				NOT = { has_building = grand_shipyard }
+				NOT = { has_building = cathedral }
+			}
+		}
+		if = { limit = { NOT = { has_building = conscription_center } } upgrade_forcelimit_building = yes }
+		if = { limit = { NOT = { has_building = drydock } } upgrade_dock_building = yes }
+		if = { limit = { NOT = { has_building = town_hall } } upgrade_courthouse_building = yes }
+		if = { limit = { NOT = { has_building = counting_house } } upgrade_production_building = yes }
+		if = { limit = { NOT = { has_building = stock_exchange } } upgrade_trade_building = yes }
+		if = { limit = { NOT = { has_building = training_fields } } upgrade_manpower_building = yes }
+		if = { limit = { NOT = { has_building = grand_shipyard } } upgrade_shipyard_building = yes }
+		if = { limit = { NOT = { has_building = cathedral } } upgrade_tax_building = yes }
+	}
+	else = {
+		add_base_tax = 1
+		add_base_production = 1
+		add_base_manpower = 1
+	}
+}
+
 ##############################
 ##### OA Script 
 ################################

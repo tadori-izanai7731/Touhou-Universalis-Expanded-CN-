@@ -11,21 +11,27 @@
  THE_MGT_eternal_radiance_reform: ""
  THE_MGT_eternal_radiance_reform_desc: ""
  ability_THE_MGT_eternal_radiance_reform_mechanic: ""
- THE_MGT_back_to_white_and_void_reform: "【创造】世界"
+ THE_MGT_back_to_white_and_void_reform: "漆黑与罪恶"
  THE_MGT_back_to_white_and_void_reform_desc: ""
+ THE_MGT_go_to_color_and_exist_reform: "绮彩与原点"
+ THE_MGT_go_to_color_and_exist_reform_desc: ""
  mechanic_THE_MGT_back_to_white_and_void_reform_mechanic_yes: "当战斗胜利时，扣除对方我方陆军上限的§O10%§!的国家人力"
+ mechanic_THE_MGT_go_to_color_and_exist_reform_mechanic_yes: "使用省份行动「由人偶帮助升级建筑」时，我们当前省份的奇观§Y建设§!进度增加§G100%§!"
  THE_MGT_estate_dolls_pools_rescover: "人偶组装速度"
  THE_MGT_estate_dolls_pools_power: "人偶容量修正"
- the_alc_dolls_manpower_pools_min_tt: "至少需要1000只§O后备人偶§!"
+ the_mgt_dolls_manpower_pools_min_tt1: "至少需要1000只§O后备人偶§!"
+ the_mgt_dolls_manpower_pools_min_tt2: "至少需要5000只§O后备人偶§!"
  THE_MGT_form_of_light_check_dolls: "登台"
  THE_MGT_form_of_light_check_dolls_desc: " @MGT人偶之森:\n§T后备人偶§!为[Root.the_alc_dolls_manpower_pools_total.GetValue]只,\n§T后备人偶回复为§!§O每月§![Root.the_alc_dolls_manpower_pools_start.GetValue]只,\n§T后备人偶上限§!为[Root.the_alc_dolls_manpower_pools_max.GetValue]只\n"
 ###GOVERNMENT_REFOM_END
  THE_MGT_province_button_1_gui: "征募人偶军团「步兵」"
- THE_MGT_province_button_1_gui_tt: "征募人偶军团「步兵」\n- - - - - - - - - - - - - - - -\n- -@MGT人偶之森§T后备人偶§!为[Root.Owner.the_alc_dolls_manpower_pools_total.GetValue]只- -\n- - - - - - - - - - - - - - - -"
+ THE_MGT_province_button_1_gui_tt: "征募人偶军团「步兵」\n- - - - - - - - - - - - - - - -\n- -消耗人偶征募步兵- -\n- - - - - - - - - - - - - - - -\n- -@MGT人偶之森§T后备人偶§!为[Root.Owner.the_alc_dolls_manpower_pools_total.GetValue]只"
  THE_MGT_province_button_2_gui: "由人偶帮助升级建筑"
- THE_MGT_province_button_2_gui_tt: "由人偶帮助升级建筑\n- - - - - - - - - - - - - - - -\n@MGT人偶之森§T后备人偶§!为[Root.Owner.the_alc_dolls_manpower_pools_total.GetValue]只- -\n- - - - - - - - - - - - - - - -"
+ THE_MGT_province_button_2_gui_tt: "由人偶帮助升级建筑\n- - - - - - - - - - - - - - - -\n消耗人偶升级此省份的非要塞建筑【[Root.the_mgt_province_upgrade_construction_displat_c_tt]/5】- -\n- - - - - - - - - - - - - - - -\n- -@MGT人偶之森§T后备人偶§!为[Root.Owner.the_alc_dolls_manpower_pools_total.GetValue]只"
  THE_MGT_province_button_3_gui: "征募人偶军团「骑兵」"
- THE_MGT_province_button_3_gui_tt: "征募人偶军团「骑兵」\n- - - - - - - - - - - - - - - -\n- -@MGT人偶之森§T后备人偶§!为[Root.Owner.the_alc_dolls_manpower_pools_total.GetValue]只- -\n- - - - - - - - - - - - - - - -"
+ THE_MGT_province_button_3_gui_tt: "征募人偶军团「骑兵」\n- - - - - - - - - - - - - - - -\n- -消耗人偶征募骑兵- -\n- - - - - - - - - - - - - - - -\n- -@MGT人偶之森§T后备人偶§!为[Root.Owner.the_alc_dolls_manpower_pools_total.GetValue]只"
+ the_mgt_province_upgrade_construction_displat_ctt_0: "0"
+ the_mgt_province_upgrade_construction_displat_ctt_x: "[Root.the_mgt_province_upgrade_construction_var.GetValue]"
 ###PROVINCE_BUTTON
 
 
@@ -49,6 +55,8 @@
  THE_MGT_pray_as_pray_modifier: "渴求，正如所期望"
  THE_MGT_yof_doll_modifier: "厄的涡流"
  THE_MGT_un_colorful_dolls_modifier: "无色人形"
+ THE_MGT_color_modifier: "有色"
+ THE_MGT_dark_modifier: "无色"
 ##EVENT_MODIFIER_END
 
 ##MISSION_EXTRA
@@ -94,6 +102,8 @@
  THE_MGT_1_4_c_tt1_yes: "£yes£如果§Y魔女§!阶层至少有§Y50§!忠诚度，则："
  THE_MGT_1_4_c_tt1_no: "£no£如果§Y魔女§!阶层至少有§Y50§!忠诚度，则："
  THE_MGT_2_9_c_tt1: "人偶每月恢复基础值增加§G1000§!（当前：§Y[Root.the_mgt_dolls_rescovey_base_var.GetValue]§!）"
+ THE_MGT_minor_step3_branch_b1_c_tt1: "通过§Y省份行动§!征募人偶军队的花费§Y减半§!"
+ THE_MGT_minor_step3_branch_b2_c_tt1: "通过§Y省份行动§!升级建筑的进度额外§G+1§!"
 ##MISSION_EXTRA_END
 
 ##MISSION_ATTRIABUTE

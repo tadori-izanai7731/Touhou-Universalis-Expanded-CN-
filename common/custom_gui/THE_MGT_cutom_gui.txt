@@ -12,31 +12,35 @@ custom_button = {
 		owned_by = FROM
 	}
 	trigger = {
-		owner = {
-			custom_trigger_tooltip = {
-				tooltip = the_alc_dolls_manpower_pools_min_tt
-				check_variable = {
-					which = the_alc_dolls_manpower_pools_total
-					value = 1000
+		if = {
+			limit = { 
+				owner = {
+					has_country_flag = THE_MGT_change_raise_5_dolls_province_button_number_decision_flag
+				}
+			}
+			owner = {
+				custom_trigger_tooltip = {
+					tooltip = the_mgt_dolls_manpower_pools_min_tt2
+					check_variable = {
+						which = the_alc_dolls_manpower_pools_total
+						value = 5000
+					}
+				}
+			}
+		}
+		else = {
+			owner = {
+				custom_trigger_tooltip = {
+					tooltip = the_mgt_dolls_manpower_pools_min_tt1
+					check_variable = {
+						which = the_alc_dolls_manpower_pools_total
+						value = 1000
+					}
 				}
 			}
 		}
 	}
 	effect = {
-		# owner = {
-		# 	if = {
-		# 		limit = {
-		# 			not = {
-		# 				has_country_modifier = THE_ALC_base_dolls_corps_buff
-		# 			}
-		# 		}
-		# 		add_country_modifier = {
-		# 			name = THE_ALC_base_dolls_corps_buff
-		# 			duration = -1
-		# 		}
-		# 	}
-		# }
-		# @Fasterliya 此效果的相关修正已不存在
 		hidden_effect = {
 			THE_MGT_random_spawn_infantry_2_effects = yes
 		}
@@ -46,29 +50,7 @@ custom_button = {
 custom_button = {
 	name = THE_MGT_province_button_2_gui
 	tooltip = THE_MGT_province_button_2_gui_tt
-
-	potential = {
-		owner = {
-			OR = {
-				was_tag = MGT
-				tag = MGT
-			}
-			has_government_attribute = THE_MGT_enable_making_dolls_crops_mechanic
-		}
-		owned_by = FROM
-	}
-	trigger = {
-		
-	}
-	effect = {
-		
-	}
-}
-
-custom_button = {
-	name = THE_MGT_province_button_3_gui
-	tooltip = THE_MGT_province_button_3_gui_tt
-
+	
 	potential = {
 		owner = {
 			OR = {
@@ -82,10 +64,59 @@ custom_button = {
 	trigger = {
 		owner = {
 			custom_trigger_tooltip = {
-				tooltip = the_alc_dolls_manpower_pools_min_tt
+				tooltip = the_mgt_dolls_manpower_pools_min_tt2
 				check_variable = {
 					which = the_alc_dolls_manpower_pools_total
-					value = 1000
+					value = 5000
+				}
+			}
+		}
+	}
+	effect = {
+		THE_MGT_province_button_upgrade_effect = yes
+	}
+}
+
+custom_button = {
+	name = THE_MGT_province_button_3_gui
+	tooltip = THE_MGT_province_button_3_gui_tt
+	
+	potential = {
+		owner = {
+			OR = {
+				was_tag = MGT
+				tag = MGT
+			}
+			mission_completed = THE_MGT_2_6
+			has_government_attribute = THE_MGT_enable_making_dolls_crops_mechanic
+		}
+		owned_by = FROM
+	}
+	trigger = {
+		if = {
+			limit = { 
+				owner = {
+					has_country_flag = THE_MGT_change_raise_5_dolls_province_button_number_decision_flag
+				}
+			}
+			owner = {
+				custom_trigger_tooltip = {
+					tooltip = the_mgt_dolls_manpower_pools_min_tt2
+					check_variable = {
+						which = the_alc_dolls_manpower_pools_total
+						value = 5000
+					}
+				}
+			}
+		}
+		else = {
+			owner = {
+				custom_trigger_tooltip = {
+					tooltip = the_mgt_dolls_manpower_pools_min_tt1
+					check_variable = {
+						which = the_alc_dolls_manpower_pools_total
+						value = 1000
+					}
 				}
 			}
 		}

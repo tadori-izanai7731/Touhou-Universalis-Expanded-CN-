@@ -1,0 +1,82 @@
+#光之形 #MGT
+THE_MGT_form_of_light_reform = {
+	lock_level_when_selected = yes
+	icon = "THE_MGT_government_1_reform"
+	potential = {
+		OR = {
+			has_reform = THE_MGT_form_of_light_reform
+			have_had_reform = THE_MGT_form_of_light_reform
+		}
+	}
+	valid_for_new_country = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+	modifiers = {
+		build_time = -0.10
+		global_autonomy = -0.05
+		governing_capacity = 150
+	}
+	government_abilities = {
+		THE_MGT_form_of_light_reform_mechanic
+	}
+	custom_attributes = {
+		THE_MGT_enable_making_dolls_crops_mechanic = yes 
+	}
+}
+
+#MGT 二级
+THE_MGT_eternal_radiance_reform = {
+	lock_level_when_selected = yes
+	icon = "witch_government_reform"
+	potential = {
+		OR = {
+			has_reform = THE_MGT_eternal_radiance_reform
+			have_had_reform = THE_MGT_eternal_radiance_reform
+		}
+	}
+	modifiers = {
+		morale_damage = 0.05
+		mercenary_discipline = 0.05
+	}
+	government_abilities = {
+		THE_MGT_eternal_radiance_reform_mechanic
+	}
+}
+#MGT 四级
+THE_MGT_back_to_white_and_void_reform = {
+	lock_level_when_selected = yes
+	icon = "THE_MGT_government_4_reform"
+	potential = {
+		OR = {
+			has_reform = THE_MGT_back_to_white_and_void_reform
+			have_had_reform = THE_MGT_back_to_white_and_void_reform
+		}
+	}
+	modifiers = {
+		global_manpower_modifier = 0.30
+		manpower_recovery_speed = 0.30
+	}
+	custom_attributes = {
+		THE_MGT_back_to_white_and_void_reform_mechanic = yes
+	}
+	government_abilities = {
+	}
+}
+THE_MGT_go_to_color_and_exist_reform = {
+	lock_level_when_selected = yes
+	icon = "THE_MGT_government_3_reform"
+
+	potential = {
+		OR = {
+			has_reform = THE_MGT_go_to_color_and_exist_reform
+			have_had_reform = THE_MGT_go_to_color_and_exist_reform
+		}
+	}
+	modifiers = {
+		great_project_upgrade_cost = -0.50
+		interest = -1
+	}
+	custom_attributes = {
+		THE_MGT_go_to_color_and_exist_reform_mechanic = yes
+	}
+}

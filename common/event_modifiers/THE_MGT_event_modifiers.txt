@@ -95,3 +95,13 @@ THE_MGT_un_colorful_dolls_modifier = {
 	shock_damage = 0.10
 	is_mercenary_modifier = yes
 }
+#有色
+THE_MGT_color_modifier = {
+	governing_cost = -0.10
+	global_prosperity_growth = 1
+}
+#无色
+THE_MGT_dark_modifier = {
+	all_estate_loyalty_equilibrium = 0.10
+	all_estate_influence_modifier = -0.10
+}

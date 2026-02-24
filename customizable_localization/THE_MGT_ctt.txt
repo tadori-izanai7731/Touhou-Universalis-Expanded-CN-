@@ -191,3 +191,27 @@ defined_text = {
 		}
 	}
 }
+
+defined_text = {
+	name = the_mgt_province_upgrade_construction_displat_c_tt
+	text = { 
+		localisation_key = the_mgt_province_upgrade_construction_displat_ctt_0
+		trigger = {
+			NOT = {
+				check_variable = {
+					which = the_mgt_province_upgrade_construction_var
+					value = 1
+				}
+			}
+		}
+	}
+	text = { 
+		localisation_key = the_mgt_province_upgrade_construction_displat_ctt_x
+		trigger = {
+			check_variable = {
+				which = the_mgt_province_upgrade_construction_var
+				value = 1
+			}
+		}
+	}
+}
