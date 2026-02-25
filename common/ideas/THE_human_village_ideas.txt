@@ -184,7 +184,7 @@ THE_FUT_ideas = {
 	}
 	
 	bonus = {
-		diplomatic_reputation = 1
+		global_spy_defence = 0.50
 	}
 	
 	trigger = {
@@ -201,7 +201,7 @@ THE_FUT_ideas = {
 	}
 	
 	THE_FUT_idea_3 = {
-		defensiveness = 0.05
+		defensiveness = 0.10
 		shock_damage_received = -0.05
 	}
 	

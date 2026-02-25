@@ -186,8 +186,11 @@ THE_WRG_ideas = {
 		army_tradition_decay = -0.01
 	}
 	THE_WRG_idea_4 = {
-		leader_siege = 1
-		max_general_siege = 1
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+		republican_tradition = 0.5
 	}
 	THE_WRG_idea_5 = {
 		all_estate_loyalty_equilibrium = 0.10
@@ -197,7 +200,8 @@ THE_WRG_ideas = {
 		min_autonomy_in_territories = -0.05
 	}
 	THE_WRG_idea_7 = {
-		administrative_efficiency = 0.05
+		garrison_size = 0.15
+		defensiveness = 0.15
 	}
 }
 THE_FOM1_ideas = {
