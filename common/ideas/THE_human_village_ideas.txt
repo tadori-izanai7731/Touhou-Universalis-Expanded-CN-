@@ -140,7 +140,7 @@ THE_QQQ_ideas = {
 	free = yes
 	
 	THE_QQQ_idea_1 = {
-		fabricate_claims_cost= -0.25
+		fabricate_claims_cost= -0.20
 		diplomatic_reputation = 2
 	}
 	
@@ -150,8 +150,7 @@ THE_QQQ_ideas = {
 	}
 	
 	THE_QQQ_idea_3 = {
-		relation_with_same_culture_group = 100
-		num_accepted_cultures = 4
+		spy_offence = 0.50
 	}
 	
 	THE_QQQ_idea_4 = {
@@ -164,7 +163,7 @@ THE_QQQ_ideas = {
 		devotion = 2
 		horde_unity = 2
 		meritocracy = 2
-		republican_tradition = 0.5
+		republican_tradition = 1
 	}
 	
 	THE_QQQ_idea_6 = {
@@ -174,7 +173,7 @@ THE_QQQ_ideas = {
 	
 	THE_QQQ_idea_7 = {
 		all_power_cost = -0.05
-		spy_offence = 0.50
+		relation_with_same_culture_group = 100
 	}
 }
 #猯藏
@@ -252,12 +251,13 @@ THE_Q00_ideas = {
 	}
 	
 	THE_Q00_idea_4 = {
-		prestige = 1
+		diplomatic_upkeep = 1
+		dip_advisor_cost = -0.15
 	}
 	
 	THE_Q00_idea_5 = {
-		diplomatic_upkeep = 1
-		dip_advisor_cost = -0.15
+		prestige = 1
+		prestige_decay = -0.01
 	}
 	
 	THE_Q00_idea_6 = {

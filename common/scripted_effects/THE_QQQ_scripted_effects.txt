@@ -1,12 +1,13 @@
 THE_QQQ_on_start_effect = {
 	if = {
 		limit = { 
-			tag = MEL
+			tag = QQQ
 			NOT = { has_country_flag = THE_QQQ_on_startup_set_variable_flag }
 		}
-		set_variable = {
-			which = the_qqq_hieda_era_var
-			value = 9
-		}
+		set_country_flag = THE_QQQ_on_startup_set_variable_flag
+		# set_variable = {
+		# 	which = the_qqq_hieda_era_var
+		# 	value = 9
+		# }
 	}
 }
