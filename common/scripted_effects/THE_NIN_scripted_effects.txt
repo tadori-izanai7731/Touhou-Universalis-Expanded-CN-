@@ -64,6 +64,16 @@ THE_NIN_on_start_change_price_effect = {
 			duration = 7300
 		}
 	}
+	if = {
+		limit = {
+			has_government_mechanic = THE_NIN_tide_returns_to_the_sea_reform_mechanic_ex
+		 }
+		 add_government_power = {
+			mechanic_type = THE_NIN_tide_returns_to_the_sea_reform_mechanic_ex
+			power_type = THE_NIN_tide_returns_to_the_sea_reform_mechanic_ex_1_power
+			value = 1
+		 }
+	}
 }
 
 THE_NIN_add_institution_progress_effect = {

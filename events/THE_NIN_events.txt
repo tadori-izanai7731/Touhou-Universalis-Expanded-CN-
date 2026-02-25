@@ -838,7 +838,7 @@ country_event = {
 	title = THE_NIN_events.105.t
 	desc = THE_NIN_events.105.desc
 	picture = "THE_NIN_event_picture_2"
-
+	
 	trigger = {
 		religion = th_hakureishinto
 		has_personal_deity = THE_Nina_deities
@@ -853,21 +853,21 @@ country_event = {
 		NOT = { has_country_flag = th_having_a_deity_event }
 		NOT = { has_country_modifier = th_deity_war_misfortune }
 	}
-
+	
 	immediate = {
 		clr_country_flag = th_had_deity_event
 		set_country_flag = th_having_a_deity_event
 	}
-
+	
 	after = {
 		set_country_flag = th_had_deity_event
 		clr_country_flag = th_having_a_deity_event
 	}
-
+	
 	mean_time_to_happen = {
 		months = 24
 	}
-
+	
 	option = {
 		name = THE_NIN_events.105.a
 		custom_tooltip = THE_NIN_events_105_c_tt1
@@ -895,7 +895,7 @@ country_event = {
 	title = THE_NIN_events.106.t
 	desc = THE_NIN_events.106.desc
 	picture = "THE_NIN_event_picture_2"
-
+	
 	trigger = {
 		religion = th_hakureishinto
 		has_personal_deity = THE_Nina_deities
@@ -913,21 +913,21 @@ country_event = {
 			NOT = { has_truce = ROOT }
 		}
 	}
-
+	
 	immediate = {
 		clr_country_flag = th_had_deity_event
 		set_country_flag = th_having_a_deity_event
 	}
-
+	
 	after = {
 		set_country_flag = th_had_deity_event
 		clr_country_flag = th_having_a_deity_event
 	}
-
+	
 	mean_time_to_happen = {
 		months = 24
 	}
-
+	
 	option = {
 		name = THE_NIN_events.106.a
 		add_prestige = 10
@@ -944,7 +944,7 @@ country_event = {
 			}
 		}
 	}
-
+	
 }
 #威望
 country_event = {
@@ -952,7 +952,7 @@ country_event = {
 	title = THE_NIN_events.107.t
 	desc = THE_NIN_events.107.desc
 	picture = "THE_NIN_event_picture_2"
-
+	
 	trigger = {
 		religion = th_hakureishinto
 		has_personal_deity = THE_Nina_deities
@@ -967,21 +967,21 @@ country_event = {
 		NOT = { has_country_flag = th_having_a_deity_event }
 		NOT = { has_country_modifier = th_deity_war_misfortune }
 	}
-
+	
 	immediate = {
 		clr_country_flag = th_had_deity_event
 		set_country_flag = th_having_a_deity_event
 	}
-
+	
 	after = {
 		set_country_flag = th_had_deity_event
 		clr_country_flag = th_having_a_deity_event
 	}
-
+	
 	mean_time_to_happen = {
 		months = 24
 	}
-
+	
 	option = {
 		name = THE_NIN_events.107.a
 		add_prestige = 25
@@ -1001,5 +1001,23 @@ country_event = {
 			name = THE_NIN_deities_army_modifier
 			duration = 10950
 		}
+	}
+}
+
+country_event = {
+	id = THE_NIN_events.108
+	title = THE_NIN_events.108.t
+	desc = THE_NIN_events.108.desc
+	picture = "THE_NIN_event_picture_2"
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_modifier_value = {
+			which = tolerance_heretic
+			value = 2
+		}
+	}
+	option = {
+		name = THE_NIN_events.108.a
 	}
 }

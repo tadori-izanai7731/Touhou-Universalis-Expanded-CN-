@@ -742,19 +742,8 @@ THE_NIN_branch_3 = {
 				duration = 7300
 			}
 			add_adm_power = 100
-			add_treasury = 500
-			add_manpower = 50
-			146 = {
-				limit = { has_port = yes }
-				galley = ROOT
-				galley = ROOT
-				galley = ROOT
-				galley = ROOT
-				galley = ROOT
-				galley = ROOT
-				galley = ROOT
-				galley = ROOT
-			}
+			add_treasury = 300
+			add_manpower = 25
 			change_estate_land_share = {
 				estate = estate_burghers
 				share = -2

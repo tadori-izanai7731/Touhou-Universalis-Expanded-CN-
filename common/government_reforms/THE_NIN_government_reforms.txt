@@ -38,12 +38,12 @@ THE_NIN_fictional_foam_reform = {
 			have_had_reform = THE_NIN_fictional_foam_reform
 		}
 	}
-
+	
 	modifiers = {
 		prestige = 0.5
 		development_cost = -0.5
 		build_cost = -0.20
-
+		
 	}
 	government_abilities = {
 		THE_NIN_fictional_foam_reform_mechanic_ex
@@ -87,10 +87,10 @@ THE_NIN_tide_returns_to_the_sea_reform = {
 	}
 	
 	modifiers = {
-		religious_unity = 0.10
-		all_estate_loyalty_equilibrium = 0.10
+		religious_unity = 0.25
 		all_estate_possible_privileges = 1
-
+		tolerance_own = 2
+		missionaries = 1
 	}
 	government_abilities = {
 		THE_NIN_tide_returns_to_the_sea_reform_mechanic_ex
@@ -134,7 +134,7 @@ THE_NIN_TUR_cooperation_reform = {
 #
 THE_NIN_PAP_hakurei_shrine_reform = {
 	lock_level_when_selected = yes
-	icon = "ottoman_government"
+	icon = "THE_NIN_government_4_reform"
 	potential = {
 		OR = {
 			has_reform = THE_NIN_PAP_hakurei_shrine_reform
@@ -157,8 +157,9 @@ THE_NIN_PAP_hakurei_shrine_reform = {
 		land_morale = 0.10
 	}
 	government_abilities = {
-		
+		THE_NIN_tide_returns_to_the_sea_reform_mechanic_ex
 	}
 	custom_attributes = {
+		THE_NIN_tide_returns_to_the_sea_reform_mechanic = yes
 	}
 }

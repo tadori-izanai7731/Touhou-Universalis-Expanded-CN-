@@ -4,12 +4,9 @@ THE_NIN_tur_desire_modifier = {
 }
 
 THE_NIN_the_senate_and_the_people_modifier = {
-	all_estate_loyalty_equilibrium = 0.20
+	all_estate_loyalty_equilibrium = 0.15
 	tax_income = 48
-	land_forcelimit = 6
 	land_morale = 0.10
-	global_regiment_cost = -0.25
-	global_regiment_recruit_speed = -0.25
 }
 
 THE_NIN_the_victory_godness_modifier = {

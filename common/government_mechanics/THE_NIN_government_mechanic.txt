@@ -27,60 +27,17 @@ THE_NIN_tide_returns_to_the_sea_reform_mechanic_ex = {
 	powers = {
 		THE_NIN_tide_returns_to_the_sea_reform_mechanic_ex_1_power = {
 			gui = THE_mechanic_power_hidden_gui
-			max = 1000
+			max = 100
 			min = 0
-			base_monthly_growth = -0.02
+			base_monthly_growth = 0
 			increases_with_global = no
 			scaled_modifier = {
 				modifier = {
-					tolerance_own = 1000
-					global_missionary_strength = 5
-					tolerance_heretic = -1000
+					tolerance_own = 100
+					global_missionary_strength = 0.5
 				}
 				start_value = 0
-				end_value = 1000
-			}
-			range_modifier = {
-				trigger = {
-					has_global_modifier_value = {
-						which = tolerance_heretic
-						value = 1
-					}
-				}
-				modifier = { 
-					monthly_THE_NIN_tide_returns_to_the_sea_reform_mechanic_ex_1_power = 1
-				}
-				start_value = 0
-				end_value = 1000
-			}
-		}
-		THE_NIN_tide_returns_to_the_sea_reform_mechanic_ex_2_power = {
-			gui = THE_mechanic_power_hidden_gui
-			max = 1000
-			min = 0
-			base_monthly_growth = -0.02
-			increases_with_global = no
-			scaled_modifier = {
-				modifier = {
-					tolerance_own = 1000
-					global_missionary_strength = 5
-					tolerance_heathen = -1000
-				}
-				start_value = 0
-				end_value = 1000
-			}
-			range_modifier = {
-				trigger = {
-					has_global_modifier_value = {
-						which = tolerance_heathen
-						value = 1
-					}
-				}
-				modifier = { 
-					monthly_THE_NIN_tide_returns_to_the_sea_reform_mechanic_ex_2_power = 1
-				}
-				start_value = 0
-				end_value = 1000
+				end_value = 100
 			}
 		}
 	}
