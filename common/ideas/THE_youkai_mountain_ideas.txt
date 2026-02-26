@@ -165,3 +165,47 @@ THE_NIN_colorfulegg_eu4_ideas = {
 		# 进入存档时清除AE
 	}
 }
+
+THE_LIZ_ideas = {
+	start = {
+		ae_impact = -0.10
+		spy_offence = 0.25
+	}
+	bonus = {
+		naval_maintenance_modifier = -0.15
+	}
+
+	trigger = {
+		tag = TGU
+		has_country_flag = THE_LIZ_unlock_ideas_flag
+	}
+
+	free = yes
+
+	THE_LIZ_ideaa_1 = {
+		diplomats = 1
+		global_unrest = -1
+	}
+	THE_LIZ_ideaa_2 = {
+		sailors_recovery_speed = 0.10
+		global_ship_recruit_speed = -0.25
+	}
+	THE_LIZ_ideaa_3 = {
+		blockade_efficiency = 0.25
+		leader_naval_manuever = 1
+	}
+	THE_LIZ_ideaa_4 = {
+		garrison_size = 0.25
+		fort_maintenance_modifier = -0.10
+	}
+	THE_LIZ_ideaa_5 = {
+		naval_morale_damage = 0.15
+	}
+	THE_LIZ_ideaa_6 = {
+		global_spy_defence = 0.25
+		naval_attrition = -0.05
+	}
+	THE_LIZ_ideaa_7 = {
+		possible_policy = 1
+	}
+}

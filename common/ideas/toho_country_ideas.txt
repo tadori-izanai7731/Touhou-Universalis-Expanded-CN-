@@ -60,6 +60,7 @@ TGU_ideas = {
 	
 	trigger = {
 		tag = TGU
+		NOT = { has_country_flag = THE_LIZ_unlock_ideas_flag }
 	}
 	free = yes
 
