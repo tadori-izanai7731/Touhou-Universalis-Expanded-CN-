@@ -65,8 +65,14 @@ THE_FOM_forest_awaken_the_second = {
 	}
 	progress = {
 		modifier = {
-			factor = 10
+			factor = 8
 			always = yes
+		}
+		modifier = {
+			factor = -5
+			MGT = {
+				war_with = MRS
+			}
 		}
 	}
 	can_end = {
@@ -83,6 +89,6 @@ THE_FOM_forest_awaken_the_second = {
 		army_tradition = 5
 		manpower_recovery_speed = 0.50
 	}
-	on_start = THE_FOM_flavor_events.13
-	# on_end = THE_FOM_core_flavor_events.33
+	on_start = THE_FOM_flavor_events.33
+	on_end = THE_FOM_flavor_events.36
 }

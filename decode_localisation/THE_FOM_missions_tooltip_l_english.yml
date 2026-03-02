@@ -239,7 +239,7 @@ l_english:
  THE_FOM_flavor_events.14.t: "森林的命运"
  THE_FOM_flavor_events.14.desc: "尽管「森林之守护」已经平定的骚乱，魔女们的野心也明晃晃地展现出来，请帖递到我们这些领主手里时，封蜡还带着热意，字里行间却满是挑唆，邀我们加入这场叛乱，并且许诺给予我们更多的好处。我们需要在此抉择森林的命运走向。"
  THE_FOM_flavor_events.14.1: "我们的命运应该紧握在自己手中。"
- THE_FOM_flavor_events_14_1_c_tt1: "我们将会在§Y2§!年后对宗主国宣战，且无法召唤魔法森林以外的盟友"
+ THE_FOM_flavor_events_14_1_c_tt1: "我们将会在灾难爆发后对宗主国宣战，且无法召唤魔法森林以外的盟友"
  THE_FOM_flavor_events.14.2: "我们仍会与魔理沙站在一起。"
  THE_FOM_flavor_events.14.3: "还是另一片森林的人偶师更加靠谱。"
  THE_FOM_flavor_events.15.t: "森林的命运"
@@ -312,6 +312,21 @@ l_english:
  THE_FOM_flavor_event_25_question_c_tt2: "§g花开花残，夺时三霄。§!"
  THE_FOM_flavor_event_25_question_c_tt3: "§g群芳迟放，延时六律。§!"
  THE_FOM_flavor_event_25_question_c_tt4: "§g花开之时，首日无二。§!"
+ THE_FOM_flavor_events.34.t: "幕初"
+ THE_FOM_flavor_events.34.desc: "我们已经观望与隐忍已经太久。那个依靠人类与魔法使维持虚名的秩序，早已布满裂痕。看吧，越来越多的同伴已经看清——这片森林不需要异族来指手画脚，更不需要她那套天真的、一厢情愿的规则。魔法森林的统治权，本就该归于妖怪之手。今天，我们将亲手终结这段错误的插曲。"
+ THE_FOM_flavor_events.34.a: "用我们的方式，夺回属于我们的时代。"
+ THE_FOM_flavor_events_34_c_tt1: "我们将连同所有§O渴望独立§!的§Y森林领地§!向宗主国宣战"
+ THE_FOM_flavor_events.35.t: "幕初"
+ THE_FOM_flavor_events.35.desc_1: "随着魔理沙在弹幕战斗中击败了慧之子，一切的真相都已经浮出水面——————残无，一切骚乱的源头，皆来自于那位大人物的授意与拨弄。真相来了，却来得太迟。叛军已成燎原之势。现在，她只需要做一件事————正面击溃他们吗，用这最直接的方式。"
+ THE_FOM_flavor_events.35.desc_2: "据魔理沙的口述，她在弹幕战斗中击败了慧之子——————残无，一切骚乱的源头，皆来自于那位大人物的授意与拨弄。但是此刻叛军汇集，魔理沙的目光里仍带着未熄的战斗疲惫。「剩下的，就放心交给我吧」"
+ THE_FOM_flavor_events.35.a: "这场闹剧也该回归秩序了。"
+ THE_FOM_flavor_events.36.t: "终局"
+ THE_FOM_flavor_events.36.desc: "短暂的动荡时期结束了。被践踏的草叶会重新生长，折断的枝桠将萌发新芽。魔法森林重归静谧与祥和，秩序恢复了其原有的轮廓。"
+ THE_FOM_flavor_events.36.a: "终于，这一切纷扰得以告终。"
+ THE_FOM_flavor_events.37.t: "魔法森林秩序"
+ THE_FOM_flavor_events.37.desc: "表面的骚乱虽然被平息，但森林深藏的弱点却因此暴露。旧的、松散的平衡已被证明不堪一击。若要这片森林获得长久的安宁，仅靠口头的臣服远远不够。\n\n我们需要更稳固的根基。\n\n这不是重建，而是铸造一个前所未有的的秩序。让魔法森林的意志，真正成为不可分割的脉络。"
+ THE_FOM_flavor_events.37.a: "重建森林"
+ THE_FOM_flavor_events_37_c_tt1: "启用成立@FOM§Y[FOM.GetName]§!决议,允许我们在满足条件后成立§Y[FOM.GetName]§!"
 
 ###EVENT_END
 
@@ -372,5 +387,6 @@ l_english:
  THE_FOM_secret_forest_war_name: "颠覆森林战争"
  PEACE_THE_FOM_secret_forest_war_po_title: "@FOM颠覆§M魔法森林§!"
  THE_FOM_secret_forest_war_po_c_tt1: "将所有省份根据§Y占领区§!情况分割魔法森林的省份"
+ THE_FOM_war_in_forest_decalre_war_c_tooltip: "[From.GetName]深陷魔法森林的战争中"
 ### CB_END
 

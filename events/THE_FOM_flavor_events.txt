@@ -91,7 +91,11 @@ country_event = {
 				limit = {
 					th_is_or_was_tag = { tag = MRS }
 				}
-				set_global_flag = THE_FOM_disaster_second_start_flag
+				# set_global_flag = THE_FOM_disaster_second_start_flag
+				country_event = {
+					id = THE_FOM_flavor_events.13
+					days = 60
+				}
 			}
 		}
 	}
@@ -389,10 +393,7 @@ country_event = {
 			MGT = {
 				country_event = { id = THE_FOM_flavor_events.15 days = 8 }
 			}
-			country_event = {
-				id = THE_FOM_flavor_events.18
-				days = 730
-			}
+			set_global_flag = THE_FOM_disaster_second_start_flag
 		}
 	}
 }
@@ -773,52 +774,7 @@ country_event = {
 	}
 	option = {
 		name = THE_FOM_flavor_events.18.1
-		custom_tooltip = THE_FOM_flavor_events_18_c_tt1
-		custom_tooltip = empty_line_tt
-		THE_FOM_care_who_desire_for_liberty_effects = yes
-		hidden_effect = {
-			every_country = {
-				limit = {
-					has_country_flag = THE_FOM_youkai_region_desire_for_liberate
-				}
-				grant_independence = yes
-			}
-		}
-		random_country = {
-			limit = {
-				has_country_flag = THE_FOM_youkai_region_desire_for_liberate
-			}
-			declare_war_with_cb = {
-				who = ROOT
-				casus_belli = cb_THE_FOM_secret_forest_war
-			}
-			add_treasury = 100
-			add_manpower = 20
-			capital_scope = {
-				PREV = { infantry = PREV }
-				PREV = { infantry = PREV }
-				PREV = { infantry = PREV }
-			}
-			hidden_effect = {
-				set_country_flag = THE_FOM_desire_liberty_youkai_enemy_leader_flag
-			}
-			every_country = {
-				limit = {
-					NOT = {
-						has_country_flag = THE_FOM_desire_liberty_youkai_enemy_leader_flag
-					}
-					has_country_flag = THE_FOM_youkai_region_desire_for_liberate
-				}
-				join_all_offensive_wars_of = PREV
-				add_treasury = 100
-				add_manpower = 20
-				capital_scope = {
-					PREV = { infantry = PREV }
-					PREV = { infantry = PREV }
-					PREV = { infantry = PREV }
-				}
-			}
-		}
+		
 	}
 }
 ###森林之声
@@ -1263,14 +1219,14 @@ country_event = {
 		}
 	}
 }
-##################
-##魔女威权
-############
+
+#第二次灾难幕起
 country_event = {
 	id = THE_FOM_flavor_events.33
 	title = THE_FOM_flavor_events.33.t
 	desc = THE_FOM_flavor_events.33.desc
 	is_triggered_only = yes
+	hidden = yes
 	
 	trigger = {
 		
@@ -1278,10 +1234,260 @@ country_event = {
 	
 	option = {
 		name = THE_FOM_flavor_events.33.1
-		add_government_reform = THE_MRS_wish_upon_the_star_reform
+		if = {
+			limit = { 
+				MRS = {
+					is_subject = no
+				}
+			}
+			if = {
+				limit = { 
+					th_is_or_was_tag = { tag = MRS }
+				}
+				MRS = {
+					country_event = {
+						id = THE_FOM_flavor_events.35
+						days = 1
+					}
+				}
+				if = {
+					limit = { 
+						any_subject_country = {
+							has_country_flag = THE_FOM_youkai_region_desire_for_liberate
+							ai = no
+						}
+					}
+					random_subject_country = {
+						limit = {
+							has_country_flag = THE_FOM_youkai_region_desire_for_liberate
+							ai = no
+						}
+						country_event = {
+							id = THE_FOM_flavor_events.34
+							days = 1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						all_subject_country = {
+							ai = yes
+						}
+					}
+					random_subject_country = {
+						limit = {
+							has_country_flag = THE_FOM_youkai_region_desire_for_liberate
+						}
+						country_event = {
+							id = THE_FOM_flavor_events.34
+							days = 1
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { 
+				MRS = {
+					is_subject_of = MGT
+				}
+			}
+			if = {
+				limit = { 
+					th_is_or_was_tag = { tag = MGT }
+				}
+				MGT = {
+					country_event = {
+						id = THE_FOM_flavor_events.35
+						days = 1
+					}
+				}
+				if = {
+					limit = { 
+						any_subject_country = {
+							has_country_flag = THE_FOM_youkai_region_desire_for_liberate
+							ai = no
+						}
+					}
+					random_subject_country = {
+						limit = {
+							has_country_flag = THE_FOM_youkai_region_desire_for_liberate
+							ai = no
+						}
+						country_event = {
+							id = THE_FOM_flavor_events.34
+							days = 1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						all_subject_country = {
+							ai = yes
+						}
+					}
+					random_subject_country = {
+						limit = {
+							has_country_flag = THE_FOM_youkai_region_desire_for_liberate
+						}
+						country_event = {
+							id = THE_FOM_flavor_events.34
+							days = 1
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
+#妖怪侧
+country_event = {
+	id = THE_FOM_flavor_events.34
+	title = THE_FOM_flavor_events.34.t
+	desc = THE_FOM_flavor_events.34.desc
+	is_triggered_only = yes
+	
+	major = yes
+	major_trigger = {
+		is_subject_of = MRS
+		has_country_flag = THE_FOM_youkai_region_desire_for_liberate
+	}
+	option = {
+		name = THE_FOM_flavor_events.34.a
+		custom_tooltip = THE_FOM_flavor_events_34_c_tt1
+		custom_tooltip = empty_line_tt
+		THE_FOM_care_who_desire_for_liberty_effects = yes
+		overlord = {
+			save_event_target_as = THE_FOM_overlord_target
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_country_flag = THE_FOM_youkai_region_desire_for_liberate
+				}
+				grant_independence = yes
+			}
+		}
+		declare_war_with_cb = {
+			who = event_target:THE_FOM_overlord_target
+			casus_belli = cb_THE_FOM_secret_forest_war
+		}
+		add_treasury = 250
+		add_manpower = 25
+		capital_scope = {
+			PREV = { infantry = PREV }
+			PREV = { infantry = PREV }
+			PREV = { infantry = PREV }
+		}
+		set_country_flag = THE_FOM_desire_liberty_youkai_enemy_leader_flag
+		every_country = {
+			limit = {
+				NOT = {
+					has_country_flag = THE_FOM_desire_liberty_youkai_enemy_leader_flag
+				}
+				has_country_flag = THE_FOM_youkai_region_desire_for_liberate
+			}
+			join_all_offensive_wars_of = ROOT
+			add_treasury = 200
+			add_manpower = 25
+			capital_scope = {
+				PREV = { infantry = PREV }
+				PREV = { infantry = PREV }
+				PREV = { infantry = PREV }
+			}
+		}
+		hidden_effect = {
+			set_country_flag = THE_FOM_start_secret_forest_war_flag
+		}
+	}
+}
+
+#主角侧
+country_event = {
+	id = THE_FOM_flavor_events.35
+	title = THE_FOM_flavor_events.35.t
+	desc = {
+		trigger = {
+			tag = MRS
+		}
+		desc = THE_FOM_flavor_events.35.desc_1
+	}
+	desc = {
+		trigger = {
+			tag = MGT
+		}
+		desc = THE_FOM_flavor_events.35.desc_2
+	}
+	desc = THE_FOM_flavor_events.35.desc
+	is_triggered_only = yes
+	
+	major = yes
+	major_trigger = {
+		is_subject_of = ROOT
+	}
+	option = {
+		name = THE_FOM_flavor_events.35.a
+		custom_tooltip = THE_FOM_flavor_events_18_c_tt1
+		custom_tooltip = empty_line_tt
+		THE_FOM_care_who_desire_for_liberty_effects = yes
+		hidden_effect = {
+			set_country_flag = THE_FOM_start_secret_forest_war_overlord_flag
+		}
+	}
+}
+#一切告终
+country_event = {
+	id = THE_FOM_flavor_events.36
+	title = THE_FOM_flavor_events.36.t
+	desc = THE_FOM_flavor_events.36.desc
+	is_triggered_only = yes
+	immediate = {
+		clr_global_flag = THE_FOM_disaster_second_start_flag
+		clr_country_flag = THE_FOM_desire_fight_can_not_be_declare_war_flag
+	}
+	option = {
+		name = THE_FOM_flavor_events.36.a
+		if = {
+			limit = { 
+				has_country_flag = THE_FOM_start_secret_forest_war_overlord_won_flag
+			}
+			hidden_effect = {
+				country_event = {
+					id = THE_FOM_flavor_events.37
+					days = 1
+				}
+			}
+			
+		}
+	}
+}
+#主角侧介绍事件
+country_event = {
+	id = THE_FOM_flavor_events.37
+	title = THE_FOM_flavor_events.37.t
+	desc = THE_FOM_flavor_events.37.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = THE_FOM_flavor_events.37.a
+		custom_tooltip = THE_FOM_flavor_events_37_c_tt1
+		hidden_effect = {
+			set_country_flag = THE_FOM_unlock_form_forest_of_magic_flag
+		}
+	}
+}
+#通用事件1
+country_event = {
+	id = THE_FOM_flavor_events.38
+	title = THE_FOM_flavor_events.38.t
+	desc = THE_FOM_flavor_events.38.desc
+	is_triggered_only = yes
+	
+	option = {
+		name = THE_FOM_flavor_events.38.a
+	}
+}
 
 #######################
 ##other event

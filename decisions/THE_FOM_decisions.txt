@@ -3,6 +3,7 @@ country_decisions = {
 		color = { 44 145 70 }
 		potential = {
 			# always = yes
+			has_country_flag = THE_FOM_unlock_form_forest_of_magic_flag
 			OR = {
 				tag = MRS
 				tag = MGT

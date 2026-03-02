@@ -241,6 +241,25 @@ declarewar = {
 			always = no
 		}
 	}
+	condition = {
+		tooltip = THE_FOM_war_in_forest_decalre_war_c_tooltip
+		potential = { 
+			FROM = {
+				OR = {
+					is_in_war = {
+						casus_belli = cb_THE_FOM_secret_forest_war
+					}
+					is_in_war = {
+						casus_belli = cb_THE_FOM_MGT_create_union_war
+					}
+					has_country_flag = THE_FOM_desire_fight_can_not_be_declare_war_flag
+				}
+			}
+		}
+		allow = { 
+			always = no
+		}
+	}
 	### THE_END
 	effect = {
 		on_war_declaration_effect = yes
@@ -1595,6 +1614,75 @@ callaction = {
 		}
 		allow = {
 			always = no
+		}
+	}
+	condition = {
+		potential = {
+			OR = {
+				FROM = {
+					is_in_war = {
+						casus_belli = cb_THE_FOM_secret_forest_war
+					}
+				}
+				is_in_war = {
+					casus_belli = cb_THE_FOM_secret_forest_war
+				}
+			}
+		}
+		allow = {
+			FROM = {
+				capital_scope = {
+					OR = {
+						area = Forest_coast_state
+						area = Forest_edge_state
+						area = Forest_of_magic
+					}
+				}
+			}
+		}
+	}
+	condition = {
+		potential = { 
+			FROM = {
+				has_country_flag = THE_FOM_desire_fight_can_not_be_declare_war_flag
+			}
+			NOT = {
+				capital_scope = {
+					OR = {
+						area = Forest_coast_state
+						area = Forest_edge_state
+						area = Forest_of_magic
+					}
+				}
+			}
+		}
+		allow = { 
+			always = no
+		}
+	}
+	condition = {
+		potential = {
+			OR = {
+				FROM = {
+					is_in_war = {
+						casus_belli = cb_THE_FOM_MGT_create_union_war
+					}
+				}
+				is_in_war = {
+					casus_belli = cb_THE_FOM_MGT_create_union_war
+				}
+			}
+		}
+		allow = {
+			FROM = {
+				capital_scope = {
+					OR = {
+						area = Forest_coast_state
+						area = Forest_edge_state
+						area = Forest_of_magic
+					}
+				}
+			}
 		}
 	}
 	condition = {

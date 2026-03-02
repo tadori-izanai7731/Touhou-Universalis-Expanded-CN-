@@ -27,9 +27,11 @@
  THE_MGT_province_button_1_gui: "VßRºNvP›QâV0ekuQ0"
  THE_MGT_province_button_1_gui_tt: "VßRºNvP›QâV0ekuQ0\n- - - - - - - - - - - - - - - -\n- -ˆmwºNvPVßRekuQ- -\n- - - - - - - - - - - - - - - -\n- -@MGTºNvPKNîh§TTYºNvP§!:N[Root.Owner.the_alc_dolls_manpower_pools_total.GetValue]êS"
  THE_MGT_province_button_2_gui: "1uºNvP.^©RGSµuú^Qr"
- THE_MGT_province_button_2_gui_tt: "1uºNvP.^©RGSµuú^Qr\n- - - - - - - - - - - - - - - -\nˆmwºNvPGSµudkwýN„vNb	g^—‰^Xú^Qr- -\n- - - - - - - - - - - - - - - -\n- -@MGTºNvPKNîh§TTYºNvP§!:N[Root.Owner.the_alc_dolls_manpower_pools_total.GetValue]êS"
+ THE_MGT_province_button_2_gui_tt: "1uºNvP.^©RGSµuú^Qr\n- - - - - - - - - - - - - - - -\nˆmwºNvPGSµudkwýN„v^—‰^Xú^Qr0[Root.the_mgt_province_upgrade_construction_displat_c_tt]/50- -\n- - - - - - - - - - - - - - - -\n- -@MGTºNvPKNîh§TTYºNvP§!:N[Root.Owner.the_alc_dolls_manpower_pools_total.GetValue]êS"
  THE_MGT_province_button_3_gui: "VßRºNvP›QâV0‘šuQ0"
  THE_MGT_province_button_3_gui_tt: "VßRºNvP›QâV0‘šuQ0\n- - - - - - - - - - - - - - - -\n- -ˆmwºNvPVßR‘šuQ- -\n- - - - - - - - - - - - - - - -\n- -@MGTºNvPKNîh§TTYºNvP§!:N[Root.Owner.the_alc_dolls_manpower_pools_total.GetValue]êS"
+ the_mgt_province_upgrade_construction_displat_ctt_0: "0"
+ the_mgt_province_upgrade_construction_displat_ctt_x: "[Root.the_mgt_province_upgrade_construction_var.GetValue]"
 ###PROVINCE_BUTTON
 
 
@@ -53,6 +55,8 @@
  THE_MGT_pray_as_pray_modifier: "4nBlÿck‚YNbgg"
  THE_MGT_yof_doll_modifier: "„S„v¡mAm"
  THE_MGT_un_colorful_dolls_modifier: "àer‚ºNbV"
+ THE_MGT_color_modifier: "	gr‚"
+ THE_MGT_dark_modifier: "àer‚"
 ##EVENT_MODIFIER_END
 
 ##MISSION_EXTRA
@@ -98,6 +102,8 @@
  THE_MGT_1_4_c_tt1_yes: "£yes£‚Yœg§YT›sY§!6–BSóS	g§Y50§!àVÚ‹¦^ÿRÿ"
  THE_MGT_1_4_c_tt1_no: "£no£‚Yœg§YT›sY§!6–BSóS	g§Y50§!àVÚ‹¦^ÿRÿ"
  THE_MGT_2_9_c_tt1: "ºNvPÏkgb`YúWNx<PžX R§G1000§!ÿSVMRÿ§Y[Root.the_mgt_dolls_rescovey_base_var.GetValue]§!	ÿ"
+ THE_MGT_minor_step3_branch_b1_c_tt1: "Ç§YwýNLˆ¨R§!VßRºNvP›Q–„v±‚9§YÏQJS§!"
+ THE_MGT_minor_step3_branch_b2_c_tt1: "Ç§YwýNLˆ¨R§!GSµuú^Qr„vÛ¦^˜Y§G+1§!"
 ##MISSION_EXTRA_END
 
 ##MISSION_ATTRIABUTE
@@ -151,10 +157,10 @@
 ###SCRIPT_END
 
 ###DECISION
- THE_MGT_change_raise_5_dolls_province_button_number_decision_title: "wýNLˆ¨R0VßRºNvP›Q–0US!kÛbßRpeÏ‘ÿSVMR:N§Y1§!–	ÿ"
+ THE_MGT_change_raise_5_dolls_province_button_number_decision_title: "wýNLˆ¨R0VßRºNvP›Q–0US!kÛbßRpeÏ‘"
  THE_MGT_change_raise_5_dolls_province_button_number_decision_desc: ""
  THE_MGT_change_raise_5_dolls_province_button_number_decision_c_tt1: "SwýNLˆ¨R0§YVßRºNvP›Q–§!0US!kÛbßRpeÏ‘¾‹n:N§Y5§!–"
- THE_MGT_change_raise_1_dolls_province_button_number_decision_title: "wýNLˆ¨R0VßRºNvP›Q–0US!kÛbßRpeÏ‘ÿSVMR:N§Y5§!–	ÿ"
+ THE_MGT_change_raise_1_dolls_province_button_number_decision_title: "wýNLˆ¨R0VßRºNvP›Q–0US!kÛbßRpeÏ‘"
  THE_MGT_change_raise_1_dolls_province_button_number_decision_desc: ""
  THE_MGT_change_raise_1_dolls_province_button_number_decision_c_tt1: "SwýNLˆ¨R0§YVßRºNvP›Q–§!0US!kÛbßRpeÏ‘¾‹n:N§Y1§!–"
  THE_MGT_change_colorful_unit_raise_white_decision_title: "wýNLˆ¨R0VßRºNvP›Q–0ÛbßRN=T(u§YyrŠkuQÍy§!"

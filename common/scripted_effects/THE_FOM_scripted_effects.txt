@@ -53,18 +53,6 @@ THE_FOM_on_startup_scripted_effects = {
 	if = {
 		limit = {
 			OR = {
-				tag = MGT
-				was_tag = MGT
-			}
-		 }
-		 set_variable = {
-			which = the_mgt_s_spirit_gravity_var
-			value = 50
-		 }
-	}
-	if = {
-		limit = {
-			OR = {
 				tag = MRS
 				tag = MGT
 				tag = ENK
@@ -77,6 +65,7 @@ THE_FOM_on_startup_scripted_effects = {
 			which = the_fom_check_won_rebel_im_var
 			value = 0
 		}
+		set_country_flag = THE_FOM_desire_fight_can_not_be_declare_war_flag
 		set_country_flag = THE_FOM_on_startup_set_variable_flag
 	}
 	if = {
@@ -104,7 +93,11 @@ THE_FOM_on_startup_scripted_effects = {
 			which = the_alc_dolls_manpower_pools_rescover_modifier
 			value = 0
 		}
-		NOT = { has_country_flag = THE_MGT_on_startup_set_variable_flag }
+		set_variable = {
+			which = the_mgt_s_spirit_gravity_var
+			value = 50
+		}
+		set_country_flag = THE_MGT_on_startup_set_variable_flag
 	}
 }
 
@@ -192,20 +185,20 @@ THE_FOM_won_rebel_im_var_effects = {
 	}
 }
 THE_FOM_won_youkai_enemy_leader_effects = {
-	if = {
-		limit = {
-			ROOT = {
-				tag = MRS
-				was_tag = MRS
-			}
-			FROM = {
-				has_country_flag = THE_FOM_desire_liberty_youkai_enemy_leader_flag
-			}
-		}
-		country_event = {
-			id = THE_FOM_flavor_events.33
-		}
-	}
+	# if = {
+	# 	limit = {
+	# 		ROOT = {
+	# 			tag = MRS
+	# 			was_tag = MRS
+	# 		}
+	# 		FROM = {
+	# 			has_country_flag = THE_FOM_desire_liberty_youkai_enemy_leader_flag
+	# 		}
+	# 	}
+	# 	# country_event = {
+	# 	# 	id = THE_FOM_flavor_events.33
+	# 	# }
+	# }
 	if = {
 		limit = { 
 			OR = {
@@ -243,6 +236,33 @@ THE_FOM_won_youkai_enemy_leader_effects = {
 	}
 }
 
+THE_FOM_won_war_secret_forest_war_effects = {
+	if = {
+		limit = { 
+			ROOT = {
+				OR = {
+					has_country_flag = THE_FOM_start_secret_forest_war_overlord_flag 
+					has_country_flag = THE_FOM_start_secret_forest_war_flag 
+				}
+			}
+		}
+		set_global_flag = THE_FOM_the_second_disaster_need_ended_flag
+		if = {
+			limit = {
+				has_country_flag = THE_FOM_start_secret_forest_war_overlord_flag
+			 }
+			 clr_country_flag = THE_FOM_start_secret_forest_war_overlord_flag
+			 set_country_flag = THE_FOM_start_secret_forest_war_overlord_won_flag
+		}
+		if = {
+			limit = {
+				has_country_flag = THE_FOM_start_secret_forest_war_flag
+			 }
+			 clr_country_flag = THE_FOM_start_secret_forest_war_flag
+			 set_country_flag = THE_FOM_start_secret_forest_war_won_flag
+		}
+	}
+}
 #######################
 ## OTHER SCRIPT
 ########################
