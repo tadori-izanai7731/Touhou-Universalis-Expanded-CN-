@@ -204,4 +204,45 @@ country_decisions = {
 			}
 		}
 	}
+
+	THE_common_execute_celestial_empire_decision = {
+		major = yes
+		potential = {
+			is_emperor_of_china = yes
+			NOT = { has_reform = celestial_empire }
+			NOT = { has_reform = Gensokyan_celestial_empire }
+			NOT = { has_reform = THE_HNG_red_dragon_celestial_empire }
+			NOT = { has_reform = THE_HNG_red_dragon_steppe_celestial_empire }
+			NOT = { has_reform = THE_KNE_hakutaku_mandate_reform }
+		}
+
+		allow = {
+			is_emperor_of_china = yes
+			NOT = { has_reform = celestial_empire }
+			NOT = { has_reform = Gensokyan_celestial_empire }
+			NOT = { has_reform = THE_HNG_red_dragon_celestial_empire }
+			NOT = { has_reform = THE_HNG_red_dragon_steppe_celestial_empire }
+			NOT = { has_reform = THE_KNE_hakutaku_mandate_reform }
+		}
+
+		effect = {
+			if = {
+				limit = { NOT = { government = monarchy } }
+				change_government = monarchy
+			}
+			if = {
+				limit = {
+					th_is_touhou_culture_group = yes
+				}
+				add_government_reform = Gensokyan_celestial_empire
+			}
+			else = {
+				add_government_reform = celestial_empire
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

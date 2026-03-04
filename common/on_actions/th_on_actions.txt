@@ -636,14 +636,14 @@ on_heir_needed_theocracy = {
 
 # When a nation gains the Mandate of Heaven (becomes the Emperor of China)
 # FROM = Old Emperor, ROOT = New Emperor
-on_mandate_of_heaven_gained = {
-	if = {
-		limit = {
-			th_is_touhou_culture_group = yes
-		}
-		add_government_reform = Gensokyan_celestial_empire
-	}
-}
+# on_mandate_of_heaven_gained = {
+# 	if = {
+# 		limit = {
+# 			th_is_touhou_culture_group = yes
+# 		}
+# 		add_government_reform = Gensokyan_celestial_empire
+# 	}
+# }
 
 # When a nation loses the Mandate of Heaven
 # FROM = New Emperor, ROOT = Old Emperor
