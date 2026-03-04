@@ -223,13 +223,7 @@ THE_KEI_main_branch_1 = {
 						value = 20
 					}
 				}
-				religious_unity = 0.9
 				has_reform = THE_KEI_lonely_creation_government_reform
-				has_government_power = {
-					mechanic_type = THE_KEI_lonely_creation_mechanic
-					power_type = THE_KEI_lonely_creation_mechanic_power
-					value = 50
-				}
 				estate_loyalty = {
 					estate = estate_burghers
 					loyalty = 60
@@ -240,13 +234,13 @@ THE_KEI_main_branch_1 = {
 				}
 			}
 			else = {
-				religious_unity = 0.75
 				is_year = 1490
-				has_government_power = {
-					mechanic_type = THE_KEI_lonely_creation_mechanic
-					power_type = THE_KEI_lonely_creation_mechanic_power
-					value = 20
-				}
+			}
+			religious_unity = 0.9
+			has_government_power = {
+				mechanic_type = THE_KEI_lonely_creation_mechanic
+				power_type = THE_KEI_lonely_creation_mechanic_power
+				value = 50
 			}
 		} 
 		
@@ -750,17 +744,17 @@ THE_KEI_main_branch_3 = {
 				}
 			}
 			else = {
-				# total_development = 350
-				# num_of_provinces_owned_or_owned_by_subjects_with = {
-				# 	value = 4
-				# 	OR = {
-				# 		area = Yachie_state
-				# 		area = Saki_state
-				# 	}
-				# }
-				KEI = {
-					has_country_flag = THE_KEI_unlock_government_refonm_extra_flag
+				total_development = 350
+				num_of_provinces_owned_or_owned_by_subjects_with = {
+					value = 4
+					OR = {
+						area = Yachie_state
+						area = Saki_state
+					}
 				}
+				# KEI = {
+				# 	has_country_flag = THE_KEI_unlock_government_refonm_extra_flag
+				# }
 			}
 		} 
 		
@@ -1299,38 +1293,18 @@ THE_KEI_main_branch_4 = {
 		} 
 		
 		trigger = { 
-			if = {
-				limit = { 
-					ai = no
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 25
+				OR = {
+					area = Sea_of_petroleum
+					area = Gate_to_the_dead 
+					area = Yachie_state
+					area = Saki_state
+					area = Sanzu_upstream
+					area = Hifuu_club
 				}
-				num_of_provinces_owned_or_owned_by_subjects_with = {
-					value = 25
-					OR = {
-						area = Sea_of_petroleum
-						area = Gate_to_the_dead 
-						area = Yachie_state
-						area = Saki_state
-						area = Sanzu_upstream
-						area = Hifuu_club
-					}
-					development = 15
-					is_core = ROOT
-				}
-			}
-			else = {
-				num_of_provinces_owned_or_owned_by_subjects_with = {
-					value = 15
-					OR = {
-						area = Sea_of_petroleum
-						area = Gate_to_the_dead 
-						area = Yachie_state
-						area = Saki_state
-						area = Sanzu_upstream
-						area = Hifuu_club
-					}
-					development = 15
-					is_core = ROOT
-				}
+				development = 15
+				is_core = ROOT
 			}
 		} 
 		
@@ -1664,16 +1638,8 @@ THE_KEI_main_branch_4 = {
 		} 
 		
 		trigger = { 
-			if = {
-				limit = { 
-					ai = no
-				}
-				army_size = 75
-				army_professionalism = 0.10
-			}
-			else = {
-				army_size = 75
-			}
+			army_size = 75
+			army_professionalism = 0.10
 		} 
 		
 		effect = { 
