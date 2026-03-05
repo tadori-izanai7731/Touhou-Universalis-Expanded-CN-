@@ -182,44 +182,44 @@ country_decisions = {
 		}
 	}
 
-	THE_ROD_pap_add_saint_cross_opinion_modifier_decision = {
-		color = { 32  32  32 }
-		provinces_to_highlight = {
-			owner = {
-				has_country_flag = THE_ROD_saint_cross_opinion_target_flag
-			}
-		}
-		potential = {
-			tag = PAP
-			has_global_flag = THE_ROD_saint_cross_opinion_available_global_flag
-			NOT = { has_country_flag = THE_ROD_saint_cross_opinion_available_flag }
-			any_country = {
-				has_country_flag = THE_ROD_saint_cross_opinion_target_flag
-			}
-		}
-		allow = {
-			any_country = {
-				has_country_flag = THE_ROD_saint_cross_opinion_target_flag
-			}
-		}
-		effect = {
-			random_country = {
-				limit = {
-					has_country_flag = THE_ROD_saint_cross_opinion_target_flag
-				}
-				ROOT = {
-					add_opinion = {
-						who = PREV
-						modifier = THE_ROD_saint_cross_opinion_modifier
-					}
-				}
-			}
-			set_country_flag = THE_ROD_saint_cross_opinion_available_flag
-		}
-		ai_will_do = {
-			factor = 1000
-		}
-	}
+	# THE_ROD_pap_add_saint_cross_opinion_modifier_decision = {
+	# 	color = { 32  32  32 }
+	# 	provinces_to_highlight = {
+	# 		owner = {
+	# 			has_country_flag = THE_ROD_saint_cross_opinion_target_flag
+	# 		}
+	# 	}
+	# 	potential = {
+	# 		tag = PAP
+	# 		has_global_flag = THE_ROD_saint_cross_opinion_available_global_flag
+	# 		NOT = { has_country_flag = THE_ROD_saint_cross_opinion_available_flag }
+	# 		any_country = {
+	# 			has_country_flag = THE_ROD_saint_cross_opinion_target_flag
+	# 		}
+	# 	}
+	# 	allow = {
+	# 		any_country = {
+	# 			has_country_flag = THE_ROD_saint_cross_opinion_target_flag
+	# 		}
+	# 	}
+	# 	effect = {
+	# 		random_country = {
+	# 			limit = {
+	# 				has_country_flag = THE_ROD_saint_cross_opinion_target_flag
+	# 			}
+	# 			ROOT = {
+	# 				add_opinion = {
+	# 					who = PREV
+	# 					modifier = THE_ROD_saint_cross_opinion_modifier
+	# 				}
+	# 			}
+	# 		}
+	# 		set_country_flag = THE_ROD_saint_cross_opinion_available_flag
+	# 	}
+	# 	ai_will_do = {
+	# 		factor = 1000
+	# 	}
+	# }
 
 	THE_ROD_restore_country_name_decision = {
 		color = { 32  32  32 }
