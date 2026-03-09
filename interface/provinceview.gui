@@ -572,15 +572,15 @@ guiTypes = {
 			#####
 			#THE
 			#####
-			guiButtonType = {
-				name = THE_ROD_province_button_gui
-				position = { x = 155 y = 280 }
-				quadTextureSprite = "GFX_THE_ROD_province_button"
-				# buttonText = SKC_neo_super_express_move_to_province_button_tt
-				# buttonFont = "vic_18"
-				clicksound = "click"
-				scripted = yes
-			}
+			# guiButtonType = {
+			# 	name = THE_ROD_province_button_gui
+			# 	position = { x = 155 y = 280 }
+			# 	quadTextureSprite = "GFX_THE_ROD_province_button"
+			# 	# buttonText = SKC_neo_super_express_move_to_province_button_tt
+			# 	# buttonFont = "vic_18"
+			# 	clicksound = "click"
+			# 	scripted = yes
+			# }
 
 			guiButtonType = {
 				name = THE_YOF_distribute_hina_dolls_province_button
