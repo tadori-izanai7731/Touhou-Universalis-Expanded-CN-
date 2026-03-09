@@ -61,5 +61,12 @@ estate_danmaku = {
 			always = yes
 		}
 	}
+	modifier_definition = {
+		type = loyalty
+		key = THE_HVR_desolate_create_core_modifier
+		trigger = {
+			always = yes
+		}
+	}
 }
 

@@ -1,0 +1,38 @@
+THE_HVR_desolate_vast_wilderness_of_heaven_and_earth_reform = {
+	lock_level_when_selected = yes
+	icon = "THE_MEL_government_1_reform"
+	potential = {
+		OR = {
+			has_reform = THE_HVR_desolate_vast_wilderness_of_heaven_and_earth_reform
+			have_had_reform = THE_HVR_desolate_vast_wilderness_of_heaven_and_earth_reform
+		}
+	}
+	valid_for_new_country = no
+	valid_for_nation_designer = no
+	rulers_can_be_generals = no
+	can_change_primary_culture = no
+	
+	modifiers = {
+		legitimacy = 10
+		prestige = 10
+		prestige_decay = -0.05
+		navy_tradition = 10
+		navy_tradition_decay = -0.05
+		army_tradition = 10
+		army_tradition_decay = -0.05
+		governing_capacity = 2000
+		province_warscore_cost = -0.25
+		discipline = 0.10
+		THE_HVR_desolate_create_core_modifier = -0.50
+		min_autonomy = 50
+		min_autonomy_in_territories = 1.0
+		diplomatic_upkeep = -5
+		diplomatic_reputation = -10
+	}
+	government_abilities = {
+		THE_HVR_vast_wilderness_of_heaven_and_earth_reform_mechanic_ex
+	}
+	custom_attributes = {
+		THE_HVR_vast_wilderness_of_heaven_and_earth_reform_mechanic = yes
+	}
+}
