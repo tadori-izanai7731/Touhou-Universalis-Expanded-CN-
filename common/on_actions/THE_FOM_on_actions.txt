@@ -13,3 +13,18 @@ on_monthly_pulse = {
 on_war_won = {
 	THE_FOM_won_war_secret_forest_war_effects = yes
 }
+on_adm_development = {
+	THE_FOM_change_var_forest_adm_effects = {
+		value = 3
+	}
+}
+on_dip_development = {
+	THE_FOM_change_var_forest_adm_effects = {
+		value = 3
+	}
+}
+on_mil_development = {
+	THE_FOM_change_var_forest_adm_effects = {
+		value = 3
+	}
+}

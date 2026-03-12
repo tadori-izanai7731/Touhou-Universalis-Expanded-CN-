@@ -173,6 +173,7 @@
  THE_FOM_create_FOM_country_decision_desc: ""
  THE_FOM_create_FOM_country_decision_c_tt1: "çubbìNNb	g„v§Oîh—g†˜ýV§!"
  THE_FOM_create_FOM_country_decision_c_tt2: "·ƒ—V°e„v§MtõV§!"
+ THE_FOM_create_FOM_country_decision_c_tt3: "îh—gâVÓu1uåNN¹eV·ƒ—Vÿ\n===hTg‹NöN\n===ú^.ú^Qr +3\n===ÑSUSwýN +3"
  THE_FOM_check_all_vassal_decisions_title: "ågâ‹T0§Mîh—g†˜0W§!0SVMR§YqVÍT›R§!"
  THE_FOM_check_all_vassal_decisions_desc: ""
  THE_FOM_check_all_vassal_decisions_c_tt1: "SVMR@ENK§Y[ENK.GetName]§!„v§MqVÍT›R§!¶rµQ:N\n= =@MRS§Y[MRS.GetName]§!qVÍT›Rÿ §Y[ENK.the_fom_forest_influence_is_marisa_var.GetValue]§!\n= =@MGT§Y[MGT.GetName]§!qVÍT›Rÿ §Y[ENK.the_fom_forest_influence_is_alice_var.GetValue]§!\n= =@ENK§Y[ENK.GetName]§!ìrËzqVÍT›Rÿ §Y[ENK.the_fom_forest_influence_is_our_var.GetValue]§!"
@@ -312,20 +313,37 @@
  THE_FOM_flavor_event_25_question_c_tt2: "§g±‚V±‚‹kÿ:Yöe	N—0§!"
  THE_FOM_flavor_event_25_question_c_tt3: "§g²³‚ß>eÿö^öemQ‹V0§!"
  THE_FOM_flavor_event_25_question_c_tt4: "§g±‚VKNöeÿ–™åeàeŒN0§!"
- THE_FOM_flavor_events.34.t: ""
- THE_FOM_flavor_events.34.desc: ""
- THE_FOM_flavor_events.34.a: ""
+ THE_FOM_flavor_events.34.t: "U^R"
+ THE_FOM_flavor_events.34.desc: "bìNòTÏuÂ‰gN–ÍVòTÏu*YEN0±*NO`—ºN‰|NT›ÕlOôucZ†T„véy^ÿéeòT^ánÂˆÕu0w'TÿŠegŠY„vT4OòTÏuwnÙGrîh—gN—‰VÏeegcKbIuÿôfN—‰yY±WY)Yw„v0N¢SÅ`?a„vÄ‰R0T›Õlîh—g„vßu»lCgÿ,g1Så‹RVŽN–Y*`KNKb0ÊN)YÿbìNS²NKbÈuÓuÙµk•ï‹„vÒcòf0"
+ THE_FOM_flavor_events.34.a: "(ubìN„v¹eVÿ:YÞV^SŽNbìN„vöeãN0"
  THE_FOM_flavor_events_34_c_tt1: "bìNSÞTNb	g§O4ngìrËz§!„v§Yîh—g†˜0W§!T—RINýV±Rb"
- THE_FOM_flavor_events.35.t: ""
- THE_FOM_flavor_events.35.desc: ""
- THE_FOM_flavor_events.35.a: ""
- THE_FOM_flavor_events.36.t: ""
- THE_FOM_flavor_events.36.desc: ""
+ THE_FOM_flavor_events.35.t: "U^R"
+ THE_FOM_flavor_events.35.desc_1: "–NwT›t™l(W9VU^b—e-NûQ%†NgaKNPRÿNR„vwøvýòTÏunmúQ4lb—‹kàeÿNRššqN„vn4Yÿ†vegêŽN±MO'YºNir„vˆcaNèbV0wøveg†NÿtSeg—V*Yß0ÛS›QòTbÎqŸSKN¿R0°s(WÿyYêS—‰ZPNöN‹Nckb—ûQƒnÖNìNTÿ(uÙgôv¥c„v¹eV0"
+ THE_FOM_flavor_events.35.desc_2: "ncT›t™l„vãSðÿyY(W9VU^b—e-NûQ%†NgaKNPR‹kàeÿNRššqN„vn4Yÿ†vegêŽN±MO'YºNir„vˆcaNèbV0FO=fdkIRÛS›QGlÆ–ÿT›t™l„vîvIQÌ‘ÍN&^Nw*g„q„vb—e²uë`00iRN„vÿ1S>eÃV²NÙub'T0"
+ THE_FOM_flavor_events.35.a: "Ù:Wù•gRmNå‹ÞVRVéy^†N0"
+ THE_FOM_flavor_events.36.t: "ÈuNS"
+ THE_FOM_flavor_events.36.desc: "íw‚f„v¨RaƒöegÓumg†N0«ˆõŽ„vIƒöSOÍ‘°eu•ÿ˜b­e„vg`hS„ÑS°eË‚0T›Õlîh—gÍ‘RVY—'ŒNeyŒTÿéy^b`Y†NvQŸS	g„vnÓ^0"
  THE_FOM_flavor_events.36.a: "ÈuŽNÿÙNR·upb—VåNJTÈu0"
- THE_FOM_flavor_events.37.t: ""
- THE_FOM_flavor_events.37.desc: ""
- THE_FOM_flavor_events.37.a: ""
+ THE_FOM_flavor_events.37.t: "T›Õlîh—géy^"
+ THE_FOM_flavor_events.37.desc: "hˆb—„vššqN‹†6q«ˆs^o`ÿFOîh—gñmÏ…„v1V¹ptSàVdk´f2—0çe„v0Œgce„vs^aˆòT«ˆÁ‹fN*XNûQ0å‚‰ÙGrîh—g·ƒ—V•EN„v‰RRÿÅN`—ãS4Y„vãgÜÜNY0\n\nbìN—‰ôf3zúV„v9húW0\n\nÙN=fÍ‘ú^ÿw=fø”.N*NMRNb*g	g„v„véy^0©‹T›Õlîh—g„va×Vÿwckb:NNïSRrR„v	Üu0"
+ THE_FOM_flavor_events.37.a: "Í‘ú^îh—g"
  THE_FOM_flavor_events_37_c_tt1: "=T(ubËz@FOM§Y[FOM.GetName]§!³Q®‹,AQ¸‹bìN(Wán³agöNTbËz§Y[FOM.GetName]§!"
+ THE_FOM_flavor_events.38.t: "y†IQ"
+ THE_FOM_flavor_events.38.desc: "(WÙ)n–fNn¦mlo`„vT›Õlîh—g-Nÿ¬wo`ØSS„v)YaŒŒT–Y¾|N7h©‹ºNæp÷•0N:WÆuè–‰Ôg0WÂbÇÿNirltmTôf>fu:gÃRÃR0–Tÿè–6e‘Nceÿ3–IQzîh—g„vhöSÿ‘esšF–»y0Wm(W0WN0(WÙIQqV²N•ô•ÿNmgmgIQ¿uçT™Y0WzÇöS™–ÿ>f2—úQÚuÂpYiV„vNr‚iVy†ÿ‰‰cŽN—gô•0Ù=fîh—gÈTtQÛv„vhˆ°sTÿ"
+ THE_FOM_flavor_events.38.a: "äNºNÃV‰‘^y÷0"
+ THE_FOM_flavor_events.38.b: "ÏuNmÿ»PÜt(Wî•˜˜ÿ"
+ THE_FOM_flavor_events.39.t: ""
+ THE_FOM_flavor_events.39.desc: "ÑgÿNMOT›ÕlOVw†N'Y¶R„vèla0yY„vT›Õlxvz:Nîh—gESlìNú^.†NNÞ2N„vyIyÿb1Se6qÿb—V†N^Ûl„v^‰ŠNleðN0b—ùRÙ7hNMOpgúQ„v!.swÿbìN”^SV‚YUOhˆ¾aÀoKNÅ`ÿv^ÙuˆNvQ”^	g„vSObTÿ"
+ THE_FOM_flavor_events.39.a: "Ç–cOyYjO:NNTF–›QS†˜"
+ THE_FOM_flavor_events.39.b: "Ç–cOyYjO:NbìN„vŒ˜î•"
+ THE_FOM_flavor_events.40.t: "°eú^„vºNvPåTJW"
+ THE_FOM_flavor_events.40.desc: "ÏuÇ1rKNN„vªR›RÿN*NhQ°e„vºNvPåTJW(Wîh—g-Nz˜)Rú^b0'Y¶Rýg…VNwƒRìNýw'Y>f«ŽKbbTÿ"
+ THE_FOM_flavor_events.40.a: "©‹yYìN…©R›Q–'Tÿ"
+ THE_FOM_flavor_events.40.b: "©‹yYìN.^©RuµN'Tÿ"
+ THE_FOM_flavor_events.41.t: "è–ðX"
+ THE_FOM_flavor_events.41.desc: "T›Õlîh—g„v)Yzzz6q4–‘NÆR^ÿ–NwLN‘N„vZwÆ–ÿN:W'Yè–>PÆvwN0è–4l²Q7RNwhöSÿônK„(Wn¦m„vW0WNÿ4O–Nw÷–ðX„vp1žÿzzl-N%V+oNwn°e„vålW™™sT0±:W²š6qwó„v´fè–ÿ‹†6qeg—VÅsÿtS&^eg†NMRNb*g	g„vu:gNAucƒ0\n\n(WÙ:W'Yè–ÇTÿT›ÕliirNß˜PgØS—Vôf R0NÈv0T›ÕlOìNÑS°sÿÙ:Wè–&^eg†NÖNìNg…VòTEN„v‹Yˆmo`0"
+ THE_FOM_flavor_events.41.a: "©‹Ùu–Y*`ìN(u'T0"
+ THE_FOM_flavor_events.41.b: "T›ÕlO”^å‹	gCg›ROHQÇ‘Æ–0"
 
 ###EVENT_END
 
@@ -388,4 +406,8 @@
  THE_FOM_secret_forest_war_po_c_tt1: "SNb	gwýN9hnc§Y`S†˜:S§!Å`µQRrRT›Õlîh—g„vwýN"
  THE_FOM_war_in_forest_decalre_war_c_tooltip: "[From.GetName]ñmw–T›Õlîh—g„vb‰N-N"
 ### CB_END
+
+### MODIFIER 
+ THE_FOM_forest_rain_modifier: "è–ðX"
+### MODIFIER_END
 

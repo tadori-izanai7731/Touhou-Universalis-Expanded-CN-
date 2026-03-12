@@ -101,6 +101,18 @@ THE_FOM_on_startup_scripted_effects = {
 	}
 }
 
+THE_FOM_change_var_forest_adm_effects = {
+	if = {
+		limit = {
+			has_country_flag = THE_FOM_unlock_form_forest_of_magic_flag
+		 }
+		 change_variable = {
+			which = the_fom_forest_adm_var
+			value = $value$
+		 }
+	}
+}
+
 THE_FOM_on_start_random_list_set_influence_effects = {
 	random_list = {
 		$marisa$ = {

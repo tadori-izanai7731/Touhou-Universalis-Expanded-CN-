@@ -1448,6 +1448,10 @@ country_event = {
 	}
 	option = {
 		name = THE_FOM_flavor_events.36.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_army_tradition = 20
 		if = {
 			limit = { 
 				has_country_flag = THE_FOM_start_secret_forest_war_overlord_won_flag
@@ -1484,8 +1488,199 @@ country_event = {
 	desc = THE_FOM_flavor_events.38.desc
 	is_triggered_only = yes
 	
+	mean_time_to_happen = {
+		months = 160
+	}
+
+	trigger = {
+		has_country_flag = THE_FOM_unlock_form_forest_of_magic_flag
+	}
+
 	option = {
 		name = THE_FOM_flavor_events.38.a
+		add_dip_power = 50
+		change_variable = {
+			which = the_fom_forest_adm_var
+			value = 10
+		}
+	}
+	option = {
+		name = THE_FOM_flavor_events.38.b
+		highlight = yes
+		add_stability = 1
+		change_variable = {
+			which = the_fom_forest_adm_var
+			value = 5
+		}
+	}
+
+}
+country_event = {
+	id = THE_FOM_flavor_events.39
+	title = THE_FOM_flavor_events.39.t
+	desc = THE_FOM_flavor_events.39.desc
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	trigger = {
+		has_country_flag = THE_FOM_unlock_form_forest_of_magic_flag
+	}
+
+	option = {
+		name = THE_FOM_flavor_events.39.a
+		change_variable = {
+			which = the_fom_forest_adm_var
+			value = 4
+		}
+		add_years_of_income = -0.10
+		create_general = {
+			tradition = 70
+			add_fire = 1
+			add_shock = 1
+			add_siege = 1
+		}
+	}
+	option = {
+		name = THE_FOM_flavor_events.39.b
+		change_variable = {
+			which = the_fom_forest_adm_var
+			value = 4
+		}
+		add_years_of_income = -0.10
+		random_list = {
+			33 = {
+				define_advisor = {
+					type = natural_scientist
+					skill = 2
+					cost_multiplier = 0.25
+				}
+			}
+			33 = {
+				define_advisor = {
+					type = spymaster
+					skill = 2
+					cost_multiplier = 0.25
+				}
+			}
+			33 = {
+				define_advisor = {
+					type = commandant
+					skill = 2
+					cost_multiplier = 0.25
+				}
+			}
+		}
+	}
+	
+}
+
+country_event = {
+	id = THE_FOM_flavor_events.40
+	title = THE_FOM_flavor_events.40.t
+	desc = THE_FOM_flavor_events.40.desc
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	trigger = {
+		has_country_flag = THE_FOM_unlock_form_forest_of_magic_flag
+	}
+
+	option = {
+		name = THE_FOM_flavor_events.40.a
+		change_variable = {
+			which = the_fom_forest_adm_var
+			value = 5
+		}
+		add_mil_power = 50
+		add_manpower = 10
+	}
+	option = {
+		name = THE_FOM_flavor_events.40.b
+		change_variable = {
+			which = the_fom_forest_adm_var
+			value = 5
+		}
+		add_dip_power = 50
+		random_province = {
+			limit = {
+				is_core = ROOT
+				owned_by = ROOT
+				NOT = {
+					has_production_building_trigger = yes
+				}
+			}
+			add_or_upgrade_production_building = yes
+			add_base_production = 3
+		}
+
+	}
+}
+
+country_event = {
+	id = THE_FOM_flavor_events.41
+	title = THE_FOM_flavor_events.41.t
+	desc = THE_FOM_flavor_events.41.desc
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		months = 160
+	}
+
+	trigger = {
+		has_country_flag = THE_FOM_unlock_form_forest_of_magic_flag
+	}
+
+	option = {
+		name = THE_FOM_flavor_events.41.a
+		change_variable = {
+			which = the_fom_forest_adm_var
+			value = 5
+		}
+		add_dip_power = 100
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = 20
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+		every_province = {
+			limit = {
+				OR = {
+					area = Forest_of_magic
+					area = Forest_edge_state
+					area = Forest_coast_state
+				}
+			}
+			add_province_modifier = {
+				name = THE_FOM_forest_rain_modifier
+				duration = 1825
+			}
+		}
+	}
+	option = {
+		name = THE_FOM_flavor_events.41.b
+		change_variable = {
+			which = the_fom_forest_adm_var
+			value = 5
+		}
+		add_army_tradition = 20
+		add_army_professionalism = 0.05
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 20
+		}
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = -10
+		}
 	}
 }
 

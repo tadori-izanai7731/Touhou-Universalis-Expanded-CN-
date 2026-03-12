@@ -1,3 +1,10 @@
 THE_FOM_luna_gems_modifier = {
 	land_morale = 0.10
 }
+
+#雨声
+THE_FOM_forest_rain_modifier = {
+	local_development_cost = -0.15
+	local_build_cost = -0.25
+	local_prosperity_growth = 2.0
+}

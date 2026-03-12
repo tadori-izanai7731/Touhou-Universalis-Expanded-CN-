@@ -8,9 +8,10 @@
  THE_MGT_form_of_light_reform_desc: ""
  ability_THE_MGT_form_of_light_reform_mechanic: "6R.ºNvP"
  mechanic_THE_MGT_enable_making_dolls_crops_mechanic_yes: "AQ¸‹bìNÇ0§YwýNLˆ¨R§!0ˆmwºNvPVßR›Q–"
- THE_MGT_eternal_radiance_reform: ""
+ THE_MGT_eternal_radiance_reform: "8l¦h„vIQ+ƒ"
  THE_MGT_eternal_radiance_reform_desc: ""
- ability_THE_MGT_eternal_radiance_reform_mechanic: ""
+ THE_MGT_eternal_radiance_reform_mechanic_power: "¦hKNIQ"
+ ability_THE_MGT_eternal_radiance_reform_mechanic: "¦hKNIQ"
  THE_MGT_back_to_white_and_void_reform: "oÑžNjv`"
  THE_MGT_back_to_white_and_void_reform_desc: ""
  THE_MGT_go_to_color_and_exist_reform: "îuiVNŸS¹p"
@@ -140,14 +141,14 @@
  THE_MGT_events.1.a: "‰æ‰è•Ib···eÜ„vqQ1ž"
 ##EVENT_END
 
-##MISSION_DESC_EX
+## MISSION_DESC_EX
  THE_MGT_mission_desc_extend_3_4: "SV00±ÌSnˆoàe^y„v<wàsùRNyY„vÆ‰¿uöeÿNÍyYBg„vÅ`êu…ö^Veg0=fg…Vÿb=ff‹É‰ÿyYOb:NKˆNu‹T„v.irIN0ck‚YÍk²N±7h00Ø=fR.„v=fN*NêñTmNàeÕlŒcµc„v0§RæSN*Nb§!00"
  THE_MGT_mission_desc_extend_4_3: "m†™ñmYÿ±Gb¸‹ENNþfæ‰°x„vè•IbY—Y—+OËz0è•FhN.ÕuNwéeòTr^¯g„vä……N*‰r‚„vT›ÕlpS°‹Ù=fŽVT›ÕlKNýV0ŽVÍk²N^yîu†˜ßW„vè•0"
 ##MISSION_DESC_EX_END
 
-###PRICE
+### PRICE
  THE_MGT_tropical_wood_shortge: "ú^QrPg™e"
-###
+### PRICE_END
 
 ###SCRIPT
  THE_MGT_s_spirit_gravity_point_change_pick_script_c_tt1: "St'`TóS¨cÛ§Y5%§!"
@@ -159,10 +160,10 @@
 ###DECISION
  THE_MGT_change_raise_5_dolls_province_button_number_decision_title: "wýNLˆ¨R0VßRºNvP›Q–0US!kÛbßRpeÏ‘"
  THE_MGT_change_raise_5_dolls_province_button_number_decision_desc: ""
- THE_MGT_change_raise_5_dolls_province_button_number_decision_c_tt1: "SwýNLˆ¨R0§YVßRºNvP›Q–§!0US!kÛbßRpeÏ‘¾‹n:N§Y5§!–"
+ THE_MGT_change_raise_5_dolls_province_button_number_decision_c_tt1: "SwýNLˆ¨R0§YVßRºNvP›Q–§!0US!kÛbßRpeÏ‘¾‹n:N§Y5§!–ÿSVMR:N§Y1§!	ÿ"
  THE_MGT_change_raise_1_dolls_province_button_number_decision_title: "wýNLˆ¨R0VßRºNvP›Q–0US!kÛbßRpeÏ‘"
  THE_MGT_change_raise_1_dolls_province_button_number_decision_desc: ""
- THE_MGT_change_raise_1_dolls_province_button_number_decision_c_tt1: "SwýNLˆ¨R0§YVßRºNvP›Q–§!0US!kÛbßRpeÏ‘¾‹n:N§Y1§!–"
+ THE_MGT_change_raise_1_dolls_province_button_number_decision_c_tt1: "SwýNLˆ¨R0§YVßRºNvP›Q–§!0US!kÛbßRpeÏ‘¾‹n:N§Y1§!–ÿSVMR:N§Y5§!	ÿ"
  THE_MGT_change_colorful_unit_raise_white_decision_title: "wýNLˆ¨R0VßRºNvP›Q–0ÛbßRN=T(u§YyrŠkuQÍy§!"
  THE_MGT_change_colorful_unit_raise_white_decision_desc: ""
  THE_MGT_change_colorful_unit_raise_white_decision_c_tt1: "=T(u§YyrŠkuQÍy§!"
@@ -170,3 +171,7 @@
  THE_MGT_change_colorful_unit_raise_colorful_decision_desc: ""
  THE_MGT_change_colorful_unit_raise_colorful_decision_c_tt1: "N=T(u§YyrŠkuQÍy§!"
 ###DECISION_END
+
+### VAR
+ the_fom_forest_adm_var: "îh—gâVÓu"
+### VAR_END

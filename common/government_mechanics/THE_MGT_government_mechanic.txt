@@ -32,7 +32,8 @@ THE_MGT_eternal_radiance_reform_mechanic = {
 			scaled_modifier = {
 				modifier = {
 					idea_cost = -0.10
-					technology_cost = -0.10
+					shock_damage_received = -0.20
+					mercenary_discipline = 0.10
 				}
 				start_value = 0
 				end_value = 100

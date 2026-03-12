@@ -376,7 +376,7 @@ THE_MGT_raise_dolls_cost_script = {
 			owner = {
 				subtract_variable = {
 					which = the_alc_dolls_manpower_pools_total
-					value = 1000
+					value = 500
 				}
 			}
 		}
@@ -384,7 +384,7 @@ THE_MGT_raise_dolls_cost_script = {
 			owner = {
 				subtract_variable = {
 					which = the_alc_dolls_manpower_pools_total
-					value = 500
+					value = 1000
 				}
 			}
 		}
@@ -430,7 +430,7 @@ THE_MGT_province_button_upgrade_effect = {
 		owner = {
 			subtract_variable = {
 				which = the_alc_dolls_manpower_pools_total
-				value = 1000
+				value = 5000
 			}
 		}
 		change_variable = {
@@ -455,7 +455,7 @@ THE_MGT_province_button_upgrade_effect = {
 			}
 			subtract_variable = {
 				which = the_mgt_province_upgrade_construction_var
-				value = -5
+				value = 5
 			}
 			###建造建筑
 			THE_MGT_province_button_upgrade_1_script = yes
@@ -498,6 +498,14 @@ THE_MGT_province_button_upgrade_1_script = {
 		add_base_tax = 1
 		add_base_production = 1
 		add_base_manpower = 1
+	}
+	if = {
+		limit = {
+			owner = {
+				has_government_attribute = THE_MGT_go_to_color_and_exist_reform_mechanic
+			}
+		 }
+		 add_construction_progress = 1.00
 	}
 }
 

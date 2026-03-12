@@ -173,6 +173,7 @@ l_english:
  THE_FOM_create_FOM_country_decision_desc: ""
  THE_FOM_create_FOM_country_decision_c_tt1: "继承我们所有的§O森林领国§!"
  THE_FOM_create_FOM_country_decision_c_tt2: "获得新的§M理念§!"
+ THE_FOM_create_FOM_country_decision_c_tt3: "森林团结由以下方式获得：\n===周期事件\n===建造建筑 +3\n===发展省份 +3"
  THE_FOM_check_all_vassal_decisions_title: "查询各「§M森林领地§!」当前§Y影响力§!"
  THE_FOM_check_all_vassal_decisions_desc: ""
  THE_FOM_check_all_vassal_decisions_c_tt1: "当前@ENK§Y[ENK.GetName]§!的§M影响力§!状况为\n= =@MRS§Y[MRS.GetName]§!影响力： §Y[ENK.the_fom_forest_influence_is_marisa_var.GetValue]§!\n= =@MGT§Y[MGT.GetName]§!影响力： §Y[ENK.the_fom_forest_influence_is_alice_var.GetValue]§!\n= =@ENK§Y[ENK.GetName]§!独立影响力： §Y[ENK.the_fom_forest_influence_is_our_var.GetValue]§!"
@@ -327,6 +328,22 @@ l_english:
  THE_FOM_flavor_events.37.desc: "表面的骚乱虽然被平息，但森林深藏的弱点却因此暴露。旧的、松散的平衡已被证明不堪一击。若要这片森林获得长久的安宁，仅靠口头的臣服远远不够。\n\n我们需要更稳固的根基。\n\n这不是重建，而是铸造一个前所未有的的秩序。让魔法森林的意志，真正成为不可分割的脉络。"
  THE_FOM_flavor_events.37.a: "重建森林"
  THE_FOM_flavor_events_37_c_tt1: "启用成立@FOM§Y[FOM.GetName]§!决议,允许我们在满足条件后成立§Y[FOM.GetName]§!"
+ THE_FOM_flavor_events.38.t: "虹光"
+ THE_FOM_flavor_events.38.desc: "在这温暖与湿润气息的魔法森林中，瞬息变化的天象和妖精一样让人烦闷。一场细雨轻柔地拂过，万物沐浴后更显生机勃勃。随后，雨收云散，阳光穿透森林的树叶，斑驳陆离地洒在地上。在这光影交错间，一束束光线巧妙地穿过叶隙，显露出绚烂多彩的七色彩虹，轻轻挂于林间。这是森林迈向兴盛的表现吗？"
+ THE_FOM_flavor_events.38.a: "令人心醉神迷。"
+ THE_FOM_flavor_events.38.b: "经济！傻瓜在问题！"
+ THE_FOM_flavor_events.39.t: ""
+ THE_FOM_flavor_events.39.desc: "近期，一位魔法使引起了大家的注意。她的魔法研究为森林居民们建造了一连串的福祉，成就斐然，赢得了广泛的赞誉与敬仰。面对这样一位杰出的贡献者，我们应当如何表达感激之情，并给予其应有的封赏呢？"
+ THE_FOM_flavor_events.39.a: "雇佣她作为一名陆军将领"
+ THE_FOM_flavor_events.39.b: "雇佣她作为我们的顾问"
+ THE_FOM_flavor_events.40.t: "新建的人偶工坊"
+ THE_FOM_flavor_events.40.desc: "经过爱丽丝的努力，一个全新的人偶工坊在森林中顺利建成。大家都期待着它们能大显身手呢！"
+ THE_FOM_flavor_events.40.a: "让她们辅助军队吧！"
+ THE_FOM_flavor_events.40.b: "让她们帮助生产吧！"
+ THE_FOM_flavor_events.41.t: "雨声"
+ THE_FOM_flavor_events.41.desc: "魔法森林的天空突然阴云密布，随着乌云的聚集，一场大雨倾盆而下。雨水冲刷着树叶，滴落在湿润的土地上，伴随着雷声的轰鸣，空气中弥漫着清新的泥土香味。那场骤然而至的暴雨，虽然来得迅猛，却带来了前所未有的生机与繁荣。\n\n在这场大雨过后，魔法植物与食材变得更加丰盈。魔法使们发现，这场雨带来了他们期待已久的好消息。"
+ THE_FOM_flavor_events.41.a: "让给妖怪们用吧。"
+ THE_FOM_flavor_events.41.b: "魔法使应该有权力优先采集。"
 
 ###EVENT_END
 
@@ -389,4 +406,8 @@ l_english:
  THE_FOM_secret_forest_war_po_c_tt1: "将所有省份根据§Y占领区§!情况分割魔法森林的省份"
  THE_FOM_war_in_forest_decalre_war_c_tooltip: "[From.GetName]深陷魔法森林的战争中"
 ### CB_END
+
+### MODIFIER 
+ THE_FOM_forest_rain_modifier: "雨声"
+### MODIFIER_END
 
