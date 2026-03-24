@@ -13,20 +13,20 @@ country_decisions = {
 			if = {
 				limit = {
 					ai = yes
-				 }
-				 OR = {
+				}
+				OR = {
 					is_year = 1460
 					check_variable = {
 						which = the_fom_forest_adm_var
 						value = 100
 					}
-				 }
+				}
 			}
 			else = {
 				check_variable = {
-						which = the_fom_forest_adm_var
-						value = 100
-					}
+					which = the_fom_forest_adm_var
+					value = 100
+				}
 			}
 		}
 		effect = {
@@ -98,7 +98,14 @@ country_decisions = {
 			}
 		}
 		allow = {
-			ai = no
+			treasury = 25
+			OR = {
+				NOT = { has_country_flag = THE_FOM_check_all_vassal_decisions_cool_down_flag }
+				had_country_flag = {
+					flag = THE_FOM_check_all_vassal_decisions_cool_down_flag
+					days = 60
+				}
+			}
 		}
 		effect = {
 			custom_tooltip = THE_FOM_check_all_vassal_decisions_c_tt1
@@ -106,6 +113,22 @@ country_decisions = {
 			custom_tooltip = THE_FOM_check_all_vassal_decisions_c_tt2
 			custom_tooltip = empty_line_tt
 			custom_tooltip = THE_FOM_check_all_vassal_decisions_c_tt3
+			custom_tooltip = empty_line_tt
+			add_treasury = -20
+			if = {
+				limit = { 
+					tag = MRS
+				}
+				MST = { change_variable = { which = the_fom_forest_influence_is_marisa_var value = 10 } }
+				WRG = { change_variable = { which = the_fom_forest_influence_is_marisa_var value = 10 } }
+				ENK = { change_variable = { which = the_fom_forest_influence_is_marisa_var value = 10 } }
+			}
+			else = {
+				MST = { change_variable = { which = the_fom_forest_influence_is_alice_var value = 10 } }
+				WRG = { change_variable = { which = the_fom_forest_influence_is_alice_var value = 10 } }
+				ENK = { change_variable = { which = the_fom_forest_influence_is_alice_var value = 10 } }
+			}
+			set_country_flag = THE_FOM_check_all_vassal_decisions_cool_down_flag
 		}
 	}
 	THE_FOM_check_the_mushroom_decisions = {

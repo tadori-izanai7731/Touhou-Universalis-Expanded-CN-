@@ -367,6 +367,7 @@ l_english:
  THE_FOM_add_influence_send_manpower_diplomatic_actions_title: "为§Y[From.GetName]§!资助人手"
  THE_FOM_add_influence_send_manpower_diplomatic_actions_tooltip: "当前§Y[From.GetName]§!影响力状态\n==@MRS§Y[MRS.GetName]§!影响力： §Y[From.the_fom_forest_influence_is_marisa_var.GetValue]§!\n==@MGT§Y[MGT.GetName]§!影响力： §Y[From.the_fom_forest_influence_is_alice_var.GetValue]§!\n==§Y己方§!独立影响力： §Y[From.the_fom_forest_influence_is_our_var.GetValue]§!"
  THE_FOM_add_influence_send_manpower_diplomatic_actions_desc: "§Y[Root.GetName]§!对§Y[From.GetName]§!的影响力将改变§Y5§!"
+ THE_FOM_check_all_vassal_decisions_cool_down_flag: "影响决议冷却"
 ###DIP_ACTION_END
 
 ###MRS_MISSION_EXTRA
