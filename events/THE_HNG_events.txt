@@ -19,7 +19,7 @@ country_event = {
 		change_unit_type = chinese
 		set_country_flag = hng_do_the_change1_flag 
 		custom_tooltip = THE_HNG_you_are_not_challenger_tt
-		set_estate_privilege = THE_HNG_not_believe
+		# set_estate_privilege = THE_HNG_not_believe
 		2165 = {
 			add_permanent_province_modifier = {
 				name = HTE_HNG_samurai_home
@@ -156,7 +156,7 @@ country_event = {
 			add_stability = -2
 			add_mandate = -30
 			add_corruption = 5
-			set_estate_privilege = THE_HNG_not_believe
+			# set_estate_privilege = THE_HNG_not_believe
 			every_country = {
 				limit = {
 					has_casus_belli_against = ROOT
@@ -164,7 +164,12 @@ country_event = {
 				add_truce_with = ROOT
 			}
 			THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 5 type = nationalist_rebels size = 4 }
-			set_country_flag = THE_HNG_disasters_lose_prepare1
+			hidden_effect = {
+				country_event = {
+					id = flavor_THE_HNG_events.7
+					days = 10950
+				}
+			}
 		}
 	}
 	option = {
@@ -175,7 +180,7 @@ country_event = {
 			add_stability = -2
 			add_mandate = -30
 			add_corruption = 5
-			set_estate_privilege = THE_HNG_not_believe
+			# set_estate_privilege = THE_HNG_not_believe
 		}
 	}
 }
@@ -250,35 +255,21 @@ country_event = {
 	desc = "flavor_THE_HNG_events.7.desc"
 	picture = HIGAN_eventPicture
 	fire_only_once = yes
+	is_triggered_only = yes
 	
 	trigger = {
 		has_disaster = the_hng_disasters_one
-		NOT = { has_country_modifier = THE_HNG_believe_your_country }
-		OR = {
-			tag = HNG
-			was_tag = HNG
-		}
-		OR = {
-			AND = {
-				OR = {
-					had_country_flag = {
-						flag = THE_HNG_disasters_lose_prepare1
-						days = 10950
-					}	
-					NOT = { total_development = 1000 }	
-				}
-			}
-			has_country_flag = THE_HNG_disasters_lose1	
-		}
+		NOT = { has_country_flag = THE_HNG_disasters_end1 }
 	}
 	
 	immediate = {
 		hidden_effect = {
-			set_country_flag = THE_HNG_disasters_lose1
+			set_country_flag = THE_HNG_disasters_end1
 		}
 	}
 	option = {
 		name = flavor_THE_HNG_events.7.a
+		end_disaster = the_hng_disasters_one
 	}
 }
 
@@ -289,6 +280,12 @@ country_event = {
 	desc = "flavor_THE_HNG_events.8.desc"
 	picture = DRAGON_eventPicture
 	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = THE_HNG_disasters_end1
+		}
+	}
 	
 	option = {
 		name = flavor_THE_HNG_events.8.a
@@ -297,96 +294,97 @@ country_event = {
 		every_owned_province = {
 			add_devastation = -100
 		}
-		remove_estate_privilege = THE_HNG_not_believe
-		end_disaster = the_hng_disasters_one
+		# remove_estate_privilege = THE_HNG_not_believe
+		# end_disaster = the_hng_disasters_one
+		
 	}
 }
 
 #人妖隔阂灾难和兼并度灾难失败事件
-country_event = {
-	id = flavor_THE_HNG_events.9
-	title = "flavor_THE_HNG_events.9.t"
-	desc = "flavor_THE_HNG_events.9.desc"
-	picture = HIGAN_eventPicture
-	fire_only_once = yes
+# country_event = {
+# 	id = flavor_THE_HNG_events.9
+# 	title = "flavor_THE_HNG_events.9.t"
+# 	desc = "flavor_THE_HNG_events.9.desc"
+# 	picture = HIGAN_eventPicture
+# 	fire_only_once = yes
 	
-	trigger = {
-		OR = {
-			has_country_flag = THE_HNG_disasters_lose1
-			has_country_flag = THE_HNG_disasters_lose2
-		}
-		OR = {
-			tag = HNG	
-			was_tag = HNG	
-		}
-	}
+# 	trigger = {
+# 		OR = {
+# 			has_country_flag = THE_HNG_disasters_lose1
+# 			has_country_flag = THE_HNG_disasters_lose2
+# 		}
+# 		OR = {
+# 			tag = HNG	
+# 			was_tag = HNG	
+# 		}
+# 	}
 	
-	immediate = {
-		hidden_effect = {
-			2436 = {
-				add_core = ROOT
-				cede_province = ROOT
-			}
-			RUS = {
-				add_truce_with = ROOT	
-			}
-			MKN = {
-				add_truce_with = ROOT	
-			}
-			MKI = {
-				add_truce_with = ROOT	
-			}
-			every_known_country = {
-				add_truce_with = ROOT	
-			}
-			set_country_flag = THE_HNG_HNG_is_death
-			set_country_flag = THE_HNG_finish_red_dragon_celestial_empire
-			remove_country_modifier = THE_hng_mission_modifier115
-			remove_country_modifier = THE_hng_mission_modifier121
-			release_all_possible_countries = yes
-			release_all_subjects = yes
-		}
-	}
+# 	immediate = {
+# 		hidden_effect = {
+# 			2436 = {
+# 				add_core = ROOT
+# 				cede_province = ROOT
+# 			}
+# 			RUS = {
+# 				add_truce_with = ROOT	
+# 			}
+# 			MKN = {
+# 				add_truce_with = ROOT	
+# 			}
+# 			MKI = {
+# 				add_truce_with = ROOT	
+# 			}
+# 			every_known_country = {
+# 				add_truce_with = ROOT	
+# 			}
+# 			set_country_flag = THE_HNG_HNG_is_death
+# 			set_country_flag = THE_HNG_finish_red_dragon_celestial_empire
+# 			remove_country_modifier = THE_hng_mission_modifier115
+# 			remove_country_modifier = THE_hng_mission_modifier121
+# 			release_all_possible_countries = yes
+# 			release_all_subjects = yes
+# 		}
+# 	}
 	
-	option = {
-		name = flavor_THE_HNG_events.9.a
-		add_stability = -6
-		add_loan = {
-			fixed_interest = 1
-			duration = 60
-			estate_loan = yes
-		}
-		random_country = {
-			limit = {
-				is_neighbor_of = ROOT
-			}
-			set_emperor_of_china = THIS
-		}
-		kill_ruler = yes
-		add_adm_power = -999
-		add_dip_power = -999
-		add_mil_power = -999
-		# THE_HNG_define_ruler_death_meirin = yes
-		add_ruler_personality = immortal_personality
-	}
+# 	option = {
+# 		name = flavor_THE_HNG_events.9.a
+# 		add_stability = -6
+# 		add_loan = {
+# 			fixed_interest = 1
+# 			duration = 60
+# 			estate_loan = yes
+# 		}
+# 		random_country = {
+# 			limit = {
+# 				is_neighbor_of = ROOT
+# 			}
+# 			set_emperor_of_china = THIS
+# 		}
+# 		kill_ruler = yes
+# 		add_adm_power = -999
+# 		add_dip_power = -999
+# 		add_mil_power = -999
+# 		# THE_HNG_define_ruler_death_meirin = yes
+# 		add_ruler_personality = immortal_personality
+# 	}
 	
-	after = {
-		hidden_effect = {
-			country_event = {
-				id = flavor_THE_HNG_events.60
-				days = 365
-			}
-			country_event = {
-				id = flavor_THE_HNG_events.61
-				days = 1095
-			}
-			country_event = {
-				id = flavor_THE_HNG_events.62
-				days = 1820
-			}
-		}
-	}
-}
+# 	after = {
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = flavor_THE_HNG_events.60
+# 				days = 365
+# 			}
+# 			country_event = {
+# 				id = flavor_THE_HNG_events.61
+# 				days = 1095
+# 			}
+# 			country_event = {
+# 				id = flavor_THE_HNG_events.62
+# 				days = 1820
+# 			}
+# 		}
+# 	}
+# }
 
 
 #人妖隔阂灾难事件1：忠诚者
@@ -424,10 +422,6 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		had_country_flag = {
-			flag = THE_HNG_disasters_lose_prepare1
-			days = 730
-		}	
 		OR = {
 			tag = HNG
 			was_tag = HNG
@@ -475,10 +469,6 @@ country_event = {
 	picture = DRAGONDARK_eventPicture
 	
 	trigger = {
-		had_country_flag = {
-			flag = THE_HNG_disasters_lose_prepare1
-			days = 730
-		}	
 		OR = {
 			tag = HNG
 			was_tag = HNG
@@ -522,10 +512,6 @@ country_event = {
 	picture = DRAGONDARK_eventPicture
 	
 	trigger = {
-		had_country_flag = {
-			flag = THE_HNG_disasters_lose_prepare1
-			days = 730
-		}	
 		OR = {
 			tag = HNG
 			was_tag = HNG
@@ -569,10 +555,6 @@ country_event = {
 	picture = DRAGONDARK_eventPicture
 	
 	trigger = {
-		had_country_flag = {
-			flag = THE_HNG_disasters_lose_prepare1
-			days = 730
-		}	
 		OR = {
 			tag = HNG
 			was_tag = HNG
@@ -841,7 +823,6 @@ country_event = {
 			}
 			THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 5 type = nationalist_rebels size = 5 }
 			THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 1 type = pretender_rebels size = 5 }
-			set_country_flag = THE_HNG_disasters_lose_prepare2
 		}
 	}
 	option = {
@@ -849,6 +830,12 @@ country_event = {
 		add_stability = -2
 		add_mandate = -30
 		add_corruption = 5
+		hidden_effect = {
+			country_event = {
+				id = flavor_THE_HNG_events.25
+				days = 10950
+			}
+		}
 	}
 }
 
@@ -859,35 +846,17 @@ country_event = {
 	desc = "flavor_THE_HNG_events.25.desc"
 	picture = HIGAN_eventPicture
 	fire_only_once = yes
+	is_triggered_only = yes
 	
 	trigger = {
 		has_disaster = the_hng_disasters_two
 		NOT = { has_country_modifier = THE_HNG_more_efficient_land_system }
-		OR = {
-			tag = HNG
-			was_tag = HNG
-		}
-		OR = {
-			AND = {
-				OR = {
-					tag = HNG
-					was_tag = HNG
-				}
-				OR = {
-					NOT = { total_development = 1000 }
-					had_country_flag = {
-						flag = THE_HNG_disasters_lose_prepare2
-						days = 10950
-					}	
-				}		
-			}
-			has_country_flag = THE_HNG_disasters_lose2
-		}
+		NOT = { has_country_flag = THE_HNG_disasters_end2 }
 	}
 	
 	immediate = {
 		hidden_effect = {
-			set_country_flag = THE_HNG_disasters_lose2
+			set_country_flag = THE_HNG_disasters_end2
 			THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 2 type = nationalist_rebels size = 5 }
 			THE_hng_spawn_rebel_not_in_Gensokyan_culture = { amount = 1 type = pretender_rebels size = 5 }
 		}
@@ -895,6 +864,7 @@ country_event = {
 	option = {
 		name = flavor_THE_HNG_events.25.a
 		add_stability = -1
+		end_disaster = the_hng_disasters_two
 	}
 }
 
@@ -905,6 +875,9 @@ country_event = {
 	desc = "flavor_THE_HNG_events.26.desc"
 	picture = DRAGON_eventPicture
 	is_triggered_only = yes
+	immediate = {
+		set_country_flag = THE_HNG_disasters_end2
+	}
 	
 	option = {
 		name = flavor_THE_HNG_events.26.a
@@ -913,7 +886,7 @@ country_event = {
 		every_owned_province = {
 			add_devastation = -100
 		}	
-		end_disaster = the_hng_disasters_two
+		# end_disaster = the_hng_disasters_two
 	}
 }
 
@@ -925,10 +898,6 @@ country_event = {
 	picture = DRAGONDARK_eventPicture
 	fire_only_once = yes
 	trigger = {
-		had_country_flag = {
-			flag = THE_HNG_disasters_lose_prepare2
-			days = 730
-		}	
 		OR = {
 			tag = HNG
 			was_tag = HNG
@@ -979,10 +948,6 @@ country_event = {
 	picture = DRAGON_eventPicture
 	
 	trigger = {
-		had_country_flag = {
-			flag = THE_HNG_disasters_lose_prepare2
-			days = 730
-		}	
 		OR = {
 			tag = HNG
 			was_tag = HNG
@@ -1021,10 +986,6 @@ country_event = {
 	picture = DRAGONDARK_eventPicture
 	fire_only_once = yes
 	trigger = {
-		had_country_flag = {
-			flag = THE_HNG_disasters_lose_prepare2
-			days = 730
-		}	
 		OR = {
 			tag = HNG
 			was_tag = HNG
@@ -1062,10 +1023,6 @@ country_event = {
 	picture = DRAGONDARK_eventPicture
 	
 	trigger = {
-		had_country_flag = {
-			flag = THE_HNG_disasters_lose_prepare2
-			days = 730
-		}	
 		OR = {
 			tag = HNG
 			was_tag = HNG
@@ -1119,8 +1076,8 @@ country_event = {
 			was_tag = HNG
 		}
 		has_disaster = the_hng_disasters_two
-		is_year = 1540
-		NOT = { is_year = 1586 }
+		is_year = 1530
+		NOT = { is_year = 1600 }
 	}
 	
 	option = {
@@ -1174,11 +1131,7 @@ country_event = {
 	title = "flavor_THE_HNG_events.32.t"
 	desc = "flavor_THE_HNG_events.32.desc"
 	picture = DRAGONDARK_eventPicture
-	trigger = {
-		had_country_flag = {
-			flag = THE_HNG_disasters_lose_prepare2
-			days = 730
-		}	
+	trigger = {	
 		OR = {
 			tag = HNG
 			was_tag = HNG
@@ -1233,10 +1186,6 @@ country_event = {
 	desc = "flavor_THE_HNG_events.33.desc"
 	picture = DRAGONDARK_eventPicture
 	trigger = {
-		had_country_flag = {
-			flag = THE_HNG_disasters_lose_prepare2
-			days = 730
-		}	
 		OR = {
 			tag = HNG
 			was_tag = HNG
@@ -1354,6 +1303,12 @@ country_event = {
 		name = flavor_THE_HNG_events.37.a
 		add_inflation = 10
 		add_stability = -1
+		hidden_effect = {
+			country_event = {
+				id = flavor_THE_HNG_events.38
+				days = 7300
+			}
+		}
 	}
 }
 
@@ -1364,27 +1319,16 @@ country_event = {
 	desc = "flavor_THE_HNG_events.38.desc"
 	picture = HIGAN_eventPicture
 	fire_only_once = yes
+	is_triggered_only = yes
 	
 	trigger = {
 		has_disaster = the_hng_disasters_three
 		NOT = { has_country_modifier = THE_HNG_strict_and_complete_economic }
-		OR = {
-			tag = HNG
-			was_tag = HNG
-		}
-		OR = {
-			AND = {
-				had_country_flag = {
-					flag = THE_HNG_disasters_lose_prepare3
-					days = 7300
-				}
-			}
-			has_country_flag = THE_HNG_disasters_lose3
-		}
+		NOT = { has_country_flag = THE_HNG_disasters_end3 }
 	}
 	immediate = {
 		hidden_effect = {
-			set_country_flag = THE_HNG_disasters_lose3
+			set_country_flag = THE_HNG_disasters_end3
 		}
 	}
 	option = {
@@ -1394,7 +1338,8 @@ country_event = {
 		add_country_modifier = {
 			name = THE_hng_mission_modifier115
 			duration = -1
-		}	
+		}
+		end_disaster = the_hng_disasters_three
 	}
 }
 
@@ -1405,12 +1350,18 @@ country_event = {
 	desc = "flavor_THE_HNG_events.39.desc"
 	picture = DRAGON_eventPicture
 	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = THE_HNG_disasters_end3
+		}
+	}
 	
 	option = {
 		name = flavor_THE_HNG_events.39.a
 		add_stability = 1
 		add_years_of_income = 10
-		end_disaster = the_hng_disasters_three
+		# end_disaster = the_hng_disasters_three
 	}
 }
 
@@ -1539,13 +1490,6 @@ country_event = {
 			was_tag = HNG
 		}
 		has_disaster = the_hng_disasters_three
-		any_country = {
-			OR = {
-				capital_scope = { superregion = europe_superregion }
-				capital_scope = { continent = gensokyo_continent }
-			}
-			colony = 1
-		}
 	}
 	
 	option = {
@@ -1875,27 +1819,11 @@ country_event = {
 	trigger = {
 		has_disaster = the_hng_disasters_four
 		NOT = { has_country_modifier = THE_HNG_modernization_gensokyo_army }
-		OR = {
-			tag = HNG
-			was_tag = HNG
-		}
-		OR = {
-			AND ={
-				OR = {
-					tag = HNG
-					was_tag = HNG
-				}
-				had_country_flag = {
-					flag = THE_HNG_disasters_lose_prepare4
-					days = 7300
-				}
-			}
-			has_country_flag = THE_HNG_disasters_lose4
-		}
+		NOT = { has_country_flag = THE_HNG_disasters_end4 }
 	}
 	immediate = {
 		hidden_effect = {
-			set_country_flag = THE_HNG_disasters_lose4
+			set_country_flag = THE_HNG_disasters_end4
 		}
 	}
 	option = {
@@ -1904,7 +1832,8 @@ country_event = {
 		add_country_modifier = {
 			name = THE_hng_mission_modifier121
 			duration = -1
-		}	
+		}
+		end_disaster = the_hng_disasters_four
 	}
 }
 
@@ -1915,13 +1844,17 @@ country_event = {
 	desc = "flavor_THE_HNG_events.50.desc"
 	picture = DRAGON_eventPicture
 	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = THE_HNG_disasters_end4
+		}
+	}
 	
 	option = {
 		name = flavor_THE_HNG_events.50.a
 		add_stability = 1
 		add_army_professionalism = 0.1
-		end_disaster = the_hng_disasters_four
-		set_country_flag = THE_HNG_disasters_end4
 	}
 }
 
@@ -2280,417 +2213,417 @@ country_event = {
 }
 
 #过去的美铃
-country_event = {
-	id = flavor_THE_HNG_events.60
-	title = "flavor_THE_HNG_events.60.t"
-	desc = "flavor_THE_HNG_events.60.desc"
-	picture =  THE_HNG_mission10
-	fire_only_once = yes
-	is_triggered_only = yes
+# country_event = {
+# 	id = flavor_THE_HNG_events.60
+# 	title = "flavor_THE_HNG_events.60.t"
+# 	desc = "flavor_THE_HNG_events.60.desc"
+# 	picture =  THE_HNG_mission10
+# 	fire_only_once = yes
+# 	is_triggered_only = yes
 	
-	option = {
-		name = flavor_THE_HNG_events.60.a
-		set_country_flag = THE_HNG_china_haihuang
-	}
-	option = {
-		name = flavor_THE_HNG_events.60.b
-		set_country_flag = THE_HNG_zujie_wuzhe
-	}
-	option = {
-		name = flavor_THE_HNG_events.60.c
-		set_country_flag = THE_HNG_chinese_red_dragon
-	}
-}
+# 	option = {
+# 		name = flavor_THE_HNG_events.60.a
+# 		set_country_flag = THE_HNG_china_haihuang
+# 	}
+# 	option = {
+# 		name = flavor_THE_HNG_events.60.b
+# 		set_country_flag = THE_HNG_zujie_wuzhe
+# 	}
+# 	option = {
+# 		name = flavor_THE_HNG_events.60.c
+# 		set_country_flag = THE_HNG_chinese_red_dragon
+# 	}
+# }
 
 #黑暗/光明
-country_event = {
-	id = flavor_THE_HNG_events.61
-	title = "flavor_THE_HNG_events.61.t"
-	desc = "flavor_THE_HNG_events.61.desc"
-	picture =  DRAGONDARK_eventPicture
-	fire_only_once = yes
-	is_triggered_only = yes
+# country_event = {
+# 	id = flavor_THE_HNG_events.61
+# 	title = "flavor_THE_HNG_events.61.t"
+# 	desc = "flavor_THE_HNG_events.61.desc"
+# 	picture =  DRAGONDARK_eventPicture
+# 	fire_only_once = yes
+# 	is_triggered_only = yes
 	
-	option = {
-		name = flavor_THE_HNG_events.61.a
-		trigger = {
-			OR = {
-				SCR = {
-					has_opinion = {
-						who = ROOT
-						value = 200
-					}
-				}
-				AND = {
-					NOT = { exists = SCR }
-					has_country_modifier = THE_HNG_help_from_Scarlet_new_home
-				}
-			}
-		}
-		set_country_flag = THE_HNG_choose_light
-	}
-	option = {
-		name = flavor_THE_HNG_events.61.b
-		set_country_flag = THE_HNG_choose_dark
-	}
-}
+# 	option = {
+# 		name = flavor_THE_HNG_events.61.a
+# 		trigger = {
+# 			OR = {
+# 				SCR = {
+# 					has_opinion = {
+# 						who = ROOT
+# 						value = 200
+# 					}
+# 				}
+# 				AND = {
+# 					NOT = { exists = SCR }
+# 					has_country_modifier = THE_HNG_help_from_Scarlet_new_home
+# 				}
+# 			}
+# 		}
+# 		set_country_flag = THE_HNG_choose_light
+# 	}
+# 	option = {
+# 		name = flavor_THE_HNG_events.61.b
+# 		set_country_flag = THE_HNG_choose_dark
+# 	}
+# }
 
 #黑暗中的呼唤
-country_event = {
-	id = flavor_THE_HNG_events.62
-	title = "flavor_THE_HNG_events.62.t"
-	desc = "flavor_THE_HNG_events.62.desc"
-	picture =  THE_HNG_mission11
-	fire_only_once = yes
-	is_triggered_only = yes
+# country_event = {
+# 	id = flavor_THE_HNG_events.62
+# 	title = "flavor_THE_HNG_events.62.t"
+# 	desc = "flavor_THE_HNG_events.62.desc"
+# 	picture =  THE_HNG_mission11
+# 	fire_only_once = yes
+# 	is_triggered_only = yes
 	
-	option = {
-		name = flavor_THE_HNG_events.62.a
-		trigger = {
-			has_country_flag = THE_HNG_zujie_wuzhe
-		}
-		country_event = {
-			id = flavor_THE_HNG_events.63
-		}
-	}
-	option = {
-		name = flavor_THE_HNG_events.62.b
-		trigger = {
-			has_country_flag = THE_HNG_china_haihuang
-		}
-		country_event = {
-			id = flavor_THE_HNG_events.64
-		}
-	}
-	option = {
-		name = flavor_THE_HNG_events.62.c
-		trigger = {
-			has_country_flag = THE_HNG_choose_light
-		}
-		country_event = {
-			id = flavor_THE_HNG_events.65
-		}
-	}
-	option = {
-		name = flavor_THE_HNG_events.62.d
-		trigger = {
-			has_country_flag = THE_HNG_chinese_red_dragon
-		}
-		country_event = {
-			id = flavor_THE_HNG_events.66
-		}
-	}
-	option = {
-		name = flavor_THE_HNG_events.62.e
-		trigger = {
-			has_country_flag = THE_HNG_choose_dark
-		}
-		country_event = {
-			id = flavor_THE_HNG_events.69
-		}
-	}
-	option = {
-		name = flavor_THE_HNG_events.62.f
-		trigger = {
-			has_country_flag = THE_HNG_choose_dark
-			has_country_flag = THE_HNG_chinese_red_dragon
-		}
-		country_event = {
-			id = flavor_THE_HNG_events.70
-		}
-	}
-}
+# 	option = {
+# 		name = flavor_THE_HNG_events.62.a
+# 		trigger = {
+# 			has_country_flag = THE_HNG_zujie_wuzhe
+# 		}
+# 		country_event = {
+# 			id = flavor_THE_HNG_events.63
+# 		}
+# 	}
+# 	option = {
+# 		name = flavor_THE_HNG_events.62.b
+# 		trigger = {
+# 			has_country_flag = THE_HNG_china_haihuang
+# 		}
+# 		country_event = {
+# 			id = flavor_THE_HNG_events.64
+# 		}
+# 	}
+# 	option = {
+# 		name = flavor_THE_HNG_events.62.c
+# 		trigger = {
+# 			has_country_flag = THE_HNG_choose_light
+# 		}
+# 		country_event = {
+# 			id = flavor_THE_HNG_events.65
+# 		}
+# 	}
+# 	option = {
+# 		name = flavor_THE_HNG_events.62.d
+# 		trigger = {
+# 			has_country_flag = THE_HNG_chinese_red_dragon
+# 		}
+# 		country_event = {
+# 			id = flavor_THE_HNG_events.66
+# 		}
+# 	}
+# 	option = {
+# 		name = flavor_THE_HNG_events.62.e
+# 		trigger = {
+# 			has_country_flag = THE_HNG_choose_dark
+# 		}
+# 		country_event = {
+# 			id = flavor_THE_HNG_events.69
+# 		}
+# 	}
+# 	option = {
+# 		name = flavor_THE_HNG_events.62.f
+# 		trigger = {
+# 			has_country_flag = THE_HNG_choose_dark
+# 			has_country_flag = THE_HNG_chinese_red_dragon
+# 		}
+# 		country_event = {
+# 			id = flavor_THE_HNG_events.70
+# 		}
+# 	}
+# }
 
 #大小姐的呼唤
-country_event = {
-	id = flavor_THE_HNG_events.63
-	title = "flavor_THE_HNG_events.63.t"
-	desc = "flavor_THE_HNG_events.63.desc"
-	picture =  REMILIAVICTORY_eventPicture
-	is_triggered_only = yes
+# country_event = {
+# 	id = flavor_THE_HNG_events.63
+# 	title = "flavor_THE_HNG_events.63.t"
+# 	desc = "flavor_THE_HNG_events.63.desc"
+# 	picture =  REMILIAVICTORY_eventPicture
+# 	is_triggered_only = yes
 	
-	option = {
-		name = flavor_THE_HNG_events.63.a
-		clr_country_flag = THE_HNG_red_dragon_celestial_empire_can_use
-		add_adm_power = 1998
-		add_dip_power = 1998
-		add_mil_power = 1998
-		add_treasury = 5000
-		add_manpower = 100
-		remove_country_modifier = THE_hng_mission_modifier115
-		remove_country_modifier = THE_hng_mission_modifier121
-		remove_country_modifier = lost_mandate_of_heaven
-		th_respawn_ruler_with_new_stats_effect = yes
-	}
-}
+# 	option = {
+# 		name = flavor_THE_HNG_events.63.a
+# 		clr_country_flag = THE_HNG_red_dragon_celestial_empire_can_use
+# 		add_adm_power = 1998
+# 		add_dip_power = 1998
+# 		add_mil_power = 1998
+# 		add_treasury = 5000
+# 		add_manpower = 100
+# 		remove_country_modifier = THE_hng_mission_modifier115
+# 		remove_country_modifier = THE_hng_mission_modifier121
+# 		remove_country_modifier = lost_mandate_of_heaven
+# 		th_respawn_ruler_with_new_stats_effect = yes
+# 	}
+# }
 
 #红魔馆的呼唤
-country_event = {
-	id = flavor_THE_HNG_events.64
-	title = "flavor_THE_HNG_events.64.t"
-	desc = "flavor_THE_HNG_events.64.desc"
-	picture =  THE_HNG_help_from_Scarlet_new_home_picture
-	is_triggered_only = yes
-	option = {
-		name = flavor_THE_HNG_events.64.a
-		clr_country_flag = THE_HNG_red_dragon_celestial_empire_can_use
-		add_adm_power = 1998
-		add_dip_power = 1998
-		add_mil_power = 1998
-		add_adm_tech = 1
-		add_dip_tech = 1
-		add_mil_tech = 1
-		add_treasury = 5000
-		add_manpower = 100
-		remove_country_modifier = THE_hng_mission_modifier115
-		remove_country_modifier = THE_hng_mission_modifier121
-		remove_country_modifier = lost_mandate_of_heaven
-		th_respawn_ruler_with_new_stats_effect = yes
-	}
-}
+# country_event = {
+# 	id = flavor_THE_HNG_events.64
+# 	title = "flavor_THE_HNG_events.64.t"
+# 	desc = "flavor_THE_HNG_events.64.desc"
+# 	picture =  THE_HNG_help_from_Scarlet_new_home_picture
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = flavor_THE_HNG_events.64.a
+# 		clr_country_flag = THE_HNG_red_dragon_celestial_empire_can_use
+# 		add_adm_power = 1998
+# 		add_dip_power = 1998
+# 		add_mil_power = 1998
+# 		add_adm_tech = 1
+# 		add_dip_tech = 1
+# 		add_mil_tech = 1
+# 		add_treasury = 5000
+# 		add_manpower = 100
+# 		remove_country_modifier = THE_hng_mission_modifier115
+# 		remove_country_modifier = THE_hng_mission_modifier121
+# 		remove_country_modifier = lost_mandate_of_heaven
+# 		th_respawn_ruler_with_new_stats_effect = yes
+# 	}
+# }
 
 
 #烈海王的话语
-country_event = {
-	id = flavor_THE_HNG_events.65
-	title = "flavor_THE_HNG_events.65.t"
-	desc = "flavor_THE_HNG_events.65.desc"
-	picture =  THE_HNG_mission9
-	is_triggered_only = yes
+# country_event = {
+# 	id = flavor_THE_HNG_events.65
+# 	title = "flavor_THE_HNG_events.65.t"
+# 	desc = "flavor_THE_HNG_events.65.desc"
+# 	picture =  THE_HNG_mission9
+# 	is_triggered_only = yes
 	
-	option = {
-		name = flavor_THE_HNG_events.65.a
-		add_adm_power = 1998
-		add_dip_power = 1998
-		add_mil_power = 1998
-		add_treasury = 5000
-		add_manpower = 100
-		remove_country_modifier = THE_hng_mission_modifier115
-		remove_country_modifier = THE_hng_mission_modifier121
-		remove_country_modifier = lost_mandate_of_heaven
-		clr_country_flag = THE_HNG_finish_red_dragon_celestial_empire
-		set_emperor_of_china = ROOT
-		th_respawn_ruler_with_new_stats_effect = yes
-	}
-}
+# 	option = {
+# 		name = flavor_THE_HNG_events.65.a
+# 		add_adm_power = 1998
+# 		add_dip_power = 1998
+# 		add_mil_power = 1998
+# 		add_treasury = 5000
+# 		add_manpower = 100
+# 		remove_country_modifier = THE_hng_mission_modifier115
+# 		remove_country_modifier = THE_hng_mission_modifier121
+# 		remove_country_modifier = lost_mandate_of_heaven
+# 		clr_country_flag = THE_HNG_finish_red_dragon_celestial_empire
+# 		set_emperor_of_china = ROOT
+# 		th_respawn_ruler_with_new_stats_effect = yes
+# 	}
+# }
 
 #牧民
-country_event = {
-	id = flavor_THE_HNG_events.66
-	title = "flavor_THE_HNG_events.66.t"
-	desc = "flavor_THE_HNG_events.66.desc"
-	picture =  THE_HNG_mission12
-	is_triggered_only = yes
+# country_event = {
+# 	id = flavor_THE_HNG_events.66
+# 	title = "flavor_THE_HNG_events.66.t"
+# 	desc = "flavor_THE_HNG_events.66.desc"
+# 	picture =  THE_HNG_mission12
+# 	is_triggered_only = yes
 	
-	option = { 
-		name = flavor_THE_HNG_events.66.a
-		add_adm_power = 1998
-		add_dip_power = 1998
-		add_mil_power = 1998
-		add_treasury = 5000
-		add_manpower = 100
-		remove_country_modifier = THE_hng_mission_modifier115
-		remove_country_modifier = THE_hng_mission_modifier121
-		remove_country_modifier = lost_mandate_of_heaven
-		set_emperor_of_china = ROOT
-		th_respawn_ruler_with_new_stats_effect = yes
-		set_country_flag = flavor_THE_HNG_events66
-	}
-}
+# 	option = { 
+# 		name = flavor_THE_HNG_events.66.a
+# 		add_adm_power = 1998
+# 		add_dip_power = 1998
+# 		add_mil_power = 1998
+# 		add_treasury = 5000
+# 		add_manpower = 100
+# 		remove_country_modifier = THE_hng_mission_modifier115
+# 		remove_country_modifier = THE_hng_mission_modifier121
+# 		remove_country_modifier = lost_mandate_of_heaven
+# 		set_emperor_of_china = ROOT
+# 		th_respawn_ruler_with_new_stats_effect = yes
+# 		set_country_flag = flavor_THE_HNG_events66
+# 	}
+# }
 
 #统一游牧
-country_event = {
-	id = flavor_THE_HNG_events.67
-	title = "flavor_THE_HNG_events.67.t"
-	desc = "flavor_THE_HNG_events.67.desc"
-	picture =  THE_HNG_mission12
-	fire_only_once = yes
+# country_event = {
+# 	id = flavor_THE_HNG_events.67
+# 	title = "flavor_THE_HNG_events.67.t"
+# 	desc = "flavor_THE_HNG_events.67.desc"
+# 	picture =  THE_HNG_mission12
+# 	fire_only_once = yes
 	
-	trigger = {
-		had_country_flag = {
-			flag = flavor_THE_HNG_events66
-			days = 1
-		}
-		OR = {
-			tag = HNG
-			was_tag = HNG
-		}
-	}
+# 	trigger = {
+# 		had_country_flag = {
+# 			flag = flavor_THE_HNG_events66
+# 			days = 1
+# 		}
+# 		OR = {
+# 			tag = HNG
+# 			was_tag = HNG
+# 		}
+# 	}
 	
-	option = {
-		name = flavor_THE_HNG_events.67.a
-		clr_country_flag = THE_HNG_red_dragon_celestial_empire_can_use
-		set_country_flag = flavor_THE_HNG_events67
-		add_government_reform = THE_HNG_red_dragon_steppe_celestial_empire
-		every_country = {
-			limit = {
-				has_reform = steppe_horde
-			}
-			country_event = {
-				id = flavor_THE_HNG_events.68
-			}
-		}
-		hidden_effect = {
-			add_accepted_culture_or_dip_power = { culture = mongol free = yes }
-			add_accepted_culture_or_dip_power = { culture = chahar free = yes }
-			add_accepted_culture_or_dip_power = { culture = khalkha free = yes }
-			add_accepted_culture_or_dip_power = { culture = oirats free = yes }
-			add_accepted_culture_or_dip_power = { culture = uzbehk free = yes }
-			add_accepted_culture_or_dip_power = { culture = turkmeni free = yes }
-			add_accepted_culture_or_dip_power = { culture = uyghur free = yes }
-			add_accepted_culture_or_dip_power = { culture = khazak free = yes }
-			add_accepted_culture_or_dip_power = { culture = kirgiz free = yes }
-			add_accepted_culture_or_dip_power = { culture = manchu free = yes }
-			add_accepted_culture_or_dip_power = { culture = manchu_new free = yes }
-			add_accepted_culture_or_dip_power = { culture = astrakhani free = yes }
-			add_accepted_culture_or_dip_power = { culture = bashkir free = yes }
-			add_accepted_culture_or_dip_power = { culture = crimean free = yes }
-			add_accepted_culture_or_dip_power = { culture = kazani free = yes }
-			add_accepted_culture_or_dip_power = { culture = mishary free = yes }
-			add_accepted_culture_or_dip_power = { culture = nogaybak free = yes }
-			add_accepted_culture_or_dip_power = { culture = siberian free = yes }
-		}
-	}
-}
+# 	option = {
+# 		name = flavor_THE_HNG_events.67.a
+# 		clr_country_flag = THE_HNG_red_dragon_celestial_empire_can_use
+# 		set_country_flag = flavor_THE_HNG_events67
+# 		add_government_reform = THE_HNG_red_dragon_steppe_celestial_empire
+# 		every_country = {
+# 			limit = {
+# 				has_reform = steppe_horde
+# 			}
+# 			country_event = {
+# 				id = flavor_THE_HNG_events.68
+# 			}
+# 		}
+# 		hidden_effect = {
+# 			add_accepted_culture_or_dip_power = { culture = mongol free = yes }
+# 			add_accepted_culture_or_dip_power = { culture = chahar free = yes }
+# 			add_accepted_culture_or_dip_power = { culture = khalkha free = yes }
+# 			add_accepted_culture_or_dip_power = { culture = oirats free = yes }
+# 			add_accepted_culture_or_dip_power = { culture = uzbehk free = yes }
+# 			add_accepted_culture_or_dip_power = { culture = turkmeni free = yes }
+# 			add_accepted_culture_or_dip_power = { culture = uyghur free = yes }
+# 			add_accepted_culture_or_dip_power = { culture = khazak free = yes }
+# 			add_accepted_culture_or_dip_power = { culture = kirgiz free = yes }
+# 			add_accepted_culture_or_dip_power = { culture = manchu free = yes }
+# 			add_accepted_culture_or_dip_power = { culture = manchu_new free = yes }
+# 			add_accepted_culture_or_dip_power = { culture = astrakhani free = yes }
+# 			add_accepted_culture_or_dip_power = { culture = bashkir free = yes }
+# 			add_accepted_culture_or_dip_power = { culture = crimean free = yes }
+# 			add_accepted_culture_or_dip_power = { culture = kazani free = yes }
+# 			add_accepted_culture_or_dip_power = { culture = mishary free = yes }
+# 			add_accepted_culture_or_dip_power = { culture = nogaybak free = yes }
+# 			add_accepted_culture_or_dip_power = { culture = siberian free = yes }
+# 		}
+# 	}
+# }
 
 #新的天可汗
-country_event = {
-	id = flavor_THE_HNG_events.68
-	title = "flavor_THE_HNG_events.68.t"
-	desc = "flavor_THE_HNG_events.68.desc"
-	picture =  THE_HNG_mission12
-	is_triggered_only = yes
+# country_event = {
+# 	id = flavor_THE_HNG_events.68
+# 	title = "flavor_THE_HNG_events.68.t"
+# 	desc = "flavor_THE_HNG_events.68.desc"
+# 	picture =  THE_HNG_mission12
+# 	is_triggered_only = yes
 	
-	option = {
-		name = flavor_THE_HNG_events.68.a
-		HNG = {
-			inherit = ROOT
-		}
-	}
-}
+# 	option = {
+# 		name = flavor_THE_HNG_events.68.a
+# 		HNG = {
+# 			inherit = ROOT
+# 		}
+# 	}
+# }
 
 #世界之喰煞
-country_event = {
-	id = flavor_THE_HNG_events.69
-	title = "flavor_THE_HNG_events.69.t"
-	desc = "flavor_THE_HNG_events.69.desc"
-	picture =  THE_HNG_mission13
-	is_triggered_only = yes
+# country_event = {
+# 	id = flavor_THE_HNG_events.69
+# 	title = "flavor_THE_HNG_events.69.t"
+# 	desc = "flavor_THE_HNG_events.69.desc"
+# 	picture =  THE_HNG_mission13
+# 	is_triggered_only = yes
 	
-	option = {
-		name = flavor_THE_HNG_events.69.a
-		add_adm_power = 1998
-		add_dip_power = 1998
-		add_mil_power = 1998
-		add_treasury = 5000
-		add_manpower = 100
-		remove_country_modifier = THE_hng_mission_modifier115
-		remove_country_modifier = THE_hng_mission_modifier121
-		remove_country_modifier = lost_mandate_of_heaven
-		set_emperor_of_china = ROOT
-		th_respawn_ruler_with_new_stats_effect = yes
-		hidden_effect = {
-			add_country_modifier = {
-				name = THE_hng_mission_modifier125
-				duration = -1
-			}
-		}
+# 	option = {
+# 		name = flavor_THE_HNG_events.69.a
+# 		add_adm_power = 1998
+# 		add_dip_power = 1998
+# 		add_mil_power = 1998
+# 		add_treasury = 5000
+# 		add_manpower = 100
+# 		remove_country_modifier = THE_hng_mission_modifier115
+# 		remove_country_modifier = THE_hng_mission_modifier121
+# 		remove_country_modifier = lost_mandate_of_heaven
+# 		set_emperor_of_china = ROOT
+# 		th_respawn_ruler_with_new_stats_effect = yes
+# 		hidden_effect = {
+# 			add_country_modifier = {
+# 				name = THE_hng_mission_modifier125
+# 				duration = -1
+# 			}
+# 		}
 		
-	}
-	option = {
-		name = flavor_THE_HNG_events.69.b
-		add_adm_power = 1998
-		add_dip_power = 1998
-		add_mil_power = 1998
-		add_treasury = 5000
-		add_manpower = 100
-		remove_country_modifier = THE_hng_mission_modifier115
-		remove_country_modifier = THE_hng_mission_modifier121
-		remove_country_modifier = lost_mandate_of_heaven
-		set_emperor_of_china = ROOT
-		th_respawn_ruler_with_new_stats_effect = yes
-	}
-}
+# 	}
+# 	option = {
+# 		name = flavor_THE_HNG_events.69.b
+# 		add_adm_power = 1998
+# 		add_dip_power = 1998
+# 		add_mil_power = 1998
+# 		add_treasury = 5000
+# 		add_manpower = 100
+# 		remove_country_modifier = THE_hng_mission_modifier115
+# 		remove_country_modifier = THE_hng_mission_modifier121
+# 		remove_country_modifier = lost_mandate_of_heaven
+# 		set_emperor_of_china = ROOT
+# 		th_respawn_ruler_with_new_stats_effect = yes
+# 	}
+# }
 
 #轮回之终末
-country_event = {
-	id = flavor_THE_HNG_events.70
-	title = "flavor_THE_HNG_events.70.t"
-	desc = "flavor_THE_HNG_events.70.desc"
-	picture =  THE_HNG_mission14
-	is_triggered_only = yes
+# country_event = {
+# 	id = flavor_THE_HNG_events.70
+# 	title = "flavor_THE_HNG_events.70.t"
+# 	desc = "flavor_THE_HNG_events.70.desc"
+# 	picture =  THE_HNG_mission14
+# 	is_triggered_only = yes
 	
-	option = {
-		name = flavor_THE_HNG_events.70.a
-		add_adm_power = 1998
-		add_dip_power = 1998
-		add_mil_power = 1998
-		add_treasury = 5000
-		add_manpower = 100
-		remove_country_modifier = THE_hng_mission_modifier115
-		remove_country_modifier = THE_hng_mission_modifier121
-		remove_country_modifier = lost_mandate_of_heaven
-		inherit = event_target:EmperorOfChina 
-		set_emperor_of_china = ROOT
-		th_respawn_ruler_with_new_stats_effect = yes
-		hidden_effect = {
-			set_country_flag = flavor_THE_HNG_events70
-			add_country_modifier = {
-				name = THE_hng_mission_modifier126
-				duration = -1
-			}
-		}
-	}
+# 	option = {
+# 		name = flavor_THE_HNG_events.70.a
+# 		add_adm_power = 1998
+# 		add_dip_power = 1998
+# 		add_mil_power = 1998
+# 		add_treasury = 5000
+# 		add_manpower = 100
+# 		remove_country_modifier = THE_hng_mission_modifier115
+# 		remove_country_modifier = THE_hng_mission_modifier121
+# 		remove_country_modifier = lost_mandate_of_heaven
+# 		inherit = event_target:EmperorOfChina 
+# 		set_emperor_of_china = ROOT
+# 		th_respawn_ruler_with_new_stats_effect = yes
+# 		hidden_effect = {
+# 			set_country_flag = flavor_THE_HNG_events70
+# 			add_country_modifier = {
+# 				name = THE_hng_mission_modifier126
+# 				duration = -1
+# 			}
+# 		}
+# 	}
 	
-	option = {
-		name = flavor_THE_HNG_events.70.b
-		add_adm_power = 1998
-		add_dip_power = 1998
-		add_mil_power = 1998
-		add_treasury = 5000
-		add_manpower = 100
-		remove_country_modifier = THE_hng_mission_modifier115
-		remove_country_modifier = THE_hng_mission_modifier121
-		remove_country_modifier = lost_mandate_of_heaven
-		inherit = event_target:EmperorOfChina 
-		set_emperor_of_china = ROOT
-		th_respawn_ruler_with_new_stats_effect = yes
-	}
+# 	option = {
+# 		name = flavor_THE_HNG_events.70.b
+# 		add_adm_power = 1998
+# 		add_dip_power = 1998
+# 		add_mil_power = 1998
+# 		add_treasury = 5000
+# 		add_manpower = 100
+# 		remove_country_modifier = THE_hng_mission_modifier115
+# 		remove_country_modifier = THE_hng_mission_modifier121
+# 		remove_country_modifier = lost_mandate_of_heaven
+# 		inherit = event_target:EmperorOfChina 
+# 		set_emperor_of_china = ROOT
+# 		th_respawn_ruler_with_new_stats_effect = yes
+# 	}
 	
-	after = {
-		hidden_effect = {
-			country_event = {
-				id = flavor_THE_HNG_events.71
-				days = 18250
-			}
-		}
-	}
-}
+# 	after = {
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = flavor_THE_HNG_events.71
+# 				days = 18250
+# 			}
+# 		}
+# 	}
+# }
 
 #轮回之终末
-country_event = {
-	id = flavor_THE_HNG_events.71
-	title = "flavor_THE_HNG_events.71.t"
-	desc = "flavor_THE_HNG_events.71.desc"
-	picture =  THE_HNG_mission14
-	is_triggered_only = yes
-	fire_only_once = yes
-	trigger = {
-		any_province = {
-			is_empty = no
-			is_wasteland = no
-			is_sea = no
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}	
-	}
+# country_event = {
+# 	id = flavor_THE_HNG_events.71
+# 	title = "flavor_THE_HNG_events.71.t"
+# 	desc = "flavor_THE_HNG_events.71.desc"
+# 	picture =  THE_HNG_mission14
+# 	is_triggered_only = yes
+# 	fire_only_once = yes
+# 	trigger = {
+# 		any_province = {
+# 			is_empty = no
+# 			is_wasteland = no
+# 			is_sea = no
+# 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+# 		}	
+# 	}
 	
-	option = {
-		name = flavor_THE_HNG_events.71.a
-		every_owned_province = {
-			cede_province = ZZZZ
-		}
-	}
-}
+# 	option = {
+# 		name = flavor_THE_HNG_events.71.a
+# 		every_owned_province = {
+# 			cede_province = ZZZZ
+# 		}
+# 	}
+# }
 
 #美铃睡觉事件
 country_event = {
@@ -3416,12 +3349,18 @@ country_event = {
 	desc = "flavor_THE_HNG_events.90.desc"
 	picture =  THE_HNG_sleeping_hong
 	is_triggered_only = yes
-	major = yes
+	# major = yes
 	
 	option = {
 		name = flavor_THE_HNG_events.90.a
 		add_war_exhaustion = 2
 		add_army_tradition = -100
+		hidden_effect = {
+			country_event = {
+				id = flavor_THE_HNG_events.49
+				days = 7300
+			}
+		}
 	}
 }
 
