@@ -84,11 +84,7 @@ THE_kami_ideas = {
 		church_loyalty_modifier = 0.2
 		brahmins_hindu_loyalty_modifier = 0.2
 		brahmins_muslim_loyalty_modifier = 0.2
-		legitimacy = 2
-		republican_tradition = 1
-		devotion = 2
-		horde_unity = 2
-		meritocracy = 2
+		no_religion_penalty = yes
 	}
 
 	trigger = {
@@ -107,7 +103,6 @@ THE_kami_ideas = {
 	}
 	
 	THE_kami_ideas_1 = {
-		cb_on_religious_enemies = yes
 		papal_influence = 2
 		monthly_fervor_increase = 0.25
 		church_power_modifier = 0.1
@@ -118,22 +113,22 @@ THE_kami_ideas = {
 		yearly_patriarch_authority = 0.005
 	}	
 	THE_kami_ideas_2 = {
-		missionaries = 2
-		imperial_mandate = 0.2
-		imperial_authority_value = 0.2
-		yearly_harmony = 1
+		imperial_mandate = 0.1
+		imperial_authority_value = 0.1
+		prestige_decay = -0.01
 	}	
 	THE_kami_ideas_3 = {
 		unjustified_demands = -0.25
 		monthly_splendor = 3
 	}	
 	THE_kami_ideas_4 = {
-		tolerance_own = 3
 		global_missionary_strength = 0.02
 		harmonization_speed = 0.25
+		yearly_corruption = -0.1
+		yearly_absolutism = 0.5
 	}	
 	THE_kami_ideas_5 = {
-		manpower_in_true_faith_provinces = 0.25
+		manpower_in_true_faith_provinces = 0.2
 		institution_spread_from_true_faith = 0.5
 	}	
 	THE_kami_ideas_6 = {
