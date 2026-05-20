@@ -1691,169 +1691,31 @@ THE_KNE_mission_branch_4 = {
 			}
 		} 
 	}
-	
-	THE_KNE_mission_4_7 = {
+
+	THE_KNE_mission_5_7 = {
 		icon = mission_unknown_mission
 		position = 7
 		required_missions = { THE_KNE_mission_4_6 } 
-		provinces_to_highlight = {
-			superregion = china_superregion
-			OR = {
-				NOT = { owned_by = ROOT }
-				AND = {
-					NOT = { has_fort_building_trigger = yes }
-					all_neighbor_province = {
-						NOT = { has_fort_building_trigger = yes }
-					}
-				}
-			}
-		} 
-		
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = THE_KNE_all_grand_canal_level_3_tt
-				has_country_flag = THE_common_grand_canal_flag_beijin
-				has_country_flag = THE_common_grand_canal_flag_hejian
-				has_country_flag = THE_common_grand_canal_flag_jinan
-				has_country_flag = THE_common_grand_canal_flag_yanzhou
-				has_country_flag = THE_common_grand_canal_flag_xuzhou
-				has_country_flag = THE_common_grand_canal_flag_huaian
-				has_country_flag = THE_common_grand_canal_flag_yangzhou
-				has_country_flag = THE_common_grand_canal_flag_zhenjiang
-				has_country_flag = THE_common_grand_canal_flag_suzhou
-				has_country_flag = THE_common_grand_canal_flag_hangzhou
-			}
-			china_superregion = {
-				type = all
-				owned_by = ROOT
-				custom_trigger_tooltip = {
-					tooltip = THE_ROD_in_fort_zone_ttt
-					OR = {
-						has_fort_building_trigger = yes
-						any_neighbor_province = {
-							has_fort_building_trigger = yes
-						}
-					}
-				}
-			}
-		} 
-		
-		effect = {
-			custom_tooltip = flavor_jnk.15.a.tt
-			hidden_effect = {
-			  set_country_flag = jnk_no_more_flood
-			}
-			custom_tooltip = empty_line_tt
-			custom_tooltip = THE_KNE_every_grand_canal_province_tt
-			tooltip = {
-				add_province_modifier = {
-					name = THE_KNE_now_age_province_modifier
-					duration = -1
-				}
-			}
-			hidden_effect = {
-				set_country_flag = THE_KNE_grand_canal_rebuikd_flag
-				THE_KNE_add_now_age_province_modifier_scripted_effect = { province_id = 1816 province = beijin }
-				THE_KNE_add_now_age_province_modifier_scripted_effect = { province_id = 695 province = hejian }
-				THE_KNE_add_now_age_province_modifier_scripted_effect = { province_id = 691 province = jinan }
-				THE_KNE_add_now_age_province_modifier_scripted_effect = { province_id = 2140 province = yanzhou }
-				THE_KNE_add_now_age_province_modifier_scripted_effect = { province_id = 2141 province = xuzhou }
-				THE_KNE_add_now_age_province_modifier_scripted_effect = { province_id = 2142 province = huaian }
-				THE_KNE_add_now_age_province_modifier_scripted_effect = { province_id = 685 province = yangzhou }
-				THE_KNE_add_now_age_province_modifier_scripted_effect = { province_id = 2145 province = zhenjiang }
-				THE_KNE_add_now_age_province_modifier_scripted_effect = { province_id = 1822 province = suzhou }
-				THE_KNE_add_now_age_province_modifier_scripted_effect = { province_id = 684 province = hangzhou }
-			}
-			add_country_modifier = {
-				name = THE_KNE_next_age_modifier
-				duration = -1
-			}
-			custom_tooltip = THE_KNE_china_province_tax_tt
-			tooltip = {
-				add_base_tax = 2
-			}
-			custom_tooltip = empty_line_tt
-			custom_tooltip = THE_KNE_china_province_production_tt
-			tooltip = {
-				add_base_production = 2
-			}
-			custom_tooltip = empty_line_tt
-			custom_tooltip = THE_KNE_china_province_manpower_tt
-			tooltip = {
-				add_base_manpower = 2
-			}
-			hidden_effect = {
-				china_superregion = {
-					limit = {
-						is_prosperous = yes
-					}
-					add_base_tax = 2
-				}
-				china_superregion = {
-					limit = {
-						num_of_times_expanded_infrastructure = 1
-					}
-					add_base_production = 2
-				}
-				china_superregion = {
-					limit = {
-						has_fort_building_trigger = yes
-					}
-					add_base_manpower = 2
-				}
-			}
-		} 
-	}
-	
-	THE_KNE_mission_4_8 = {
-		icon = mission_unknown_mission
-		position = 8
-		required_missions = { THE_KNE_mission_4_7 } 
 		provinces_to_highlight = {  } 
 		
 		trigger = {
-			absolutism = 100
-			is_hegemon = yes
-			total_development = 3000
-			empire_of_china_reform_passed = establish_gaituguiliu_decision
-			empire_of_china_reform_passed = seaban_decision
-			empire_of_china_reform_passed = reform_land_tax_decision
-			empire_of_china_reform_passed = military_governors_decision
-			empire_of_china_reform_passed = centralizing_top_government_decision
-			empire_of_china_reform_passed = vassalize_tributaries_decision
-			empire_of_china_reform_passed = codify_single_whip_law_decision
-			empire_of_china_reform_passed = reign_in_estates_decision
-			empire_of_china_reform_passed = reform_civil_registration_decision
-			empire_of_china_reform_passed = establish_silver_standard_decision
-			empire_of_china_reform_passed = kanhe_certificate_decision
+			stability = 2
 			empire_of_china_reform_passed = new_keju_formats_decision
-			empire_of_china_reform_passed = inclusive_monarchy_decision
-			OR = {
-				empire_of_china_reform_passed = promote_bureaucratic_faction_decision
-				empire_of_china_reform_passed = promote_military_faction_decision
-			}
-			empire_of_china_reform_passed = unifed_trade_market_decision
-			empire_of_china_reform_passed = reform_the_military_branch_decision
-			empire_of_china_reform_passed = modernize_the_banners_decision
-			empire_of_china_reform_passed = study_foreign_ship_designs_decision
-			empire_of_china_reform_passed = tributary_embassies_decision
-			empire_of_china_reform_passed = new_world_discovery_decision
-			empire_of_china_reform_passed = zz_THE_KNE_china_reform_0_hakutaku
-			empire_of_china_reform_passed = zz_THE_KNE_china_reform_1_human
+			reform_level = 4
+			has_reform = THE_KNE_hakutaku_mandate_reform
 		} 
 		
 		effect = {
-			THE_country_event_with_insight = {
-				id = THE_KNE_events.10
-				effect_tooltip = "
-					add_prestige_or_monarch_power = {
-						amount = 50
-					}
-				"
+			add_government_reform = THE_KNE_new_keju_formats_reform
+			hidden_effect = {
+				country_event = {
+					id = THE_KNE_events.5
+				}
 			}
 		} 
 	}
 }
+
 THE_KNE_mission_branch_5 = {
 	slot = 5
 	generic = no
@@ -1984,7 +1846,7 @@ THE_KNE_mission_branch_5 = {
 		} 
 		
 		effect = {
-			custom_tooltip = THE_KNE_province_action_2_upgrade_building_tt
+			# custom_tooltip = THE_KNE_province_action_2_upgrade_building_tt
 			custom_tooltip = THE_KNE_every_province_meet_trigger
 			tooltip = {
 				add_province_modifier = {
@@ -2106,25 +1968,167 @@ THE_KNE_mission_branch_5 = {
 		} 
 	}
 	
-	THE_KNE_mission_5_7 = {
+	THE_KNE_mission_4_7 = {
 		icon = mission_unknown_mission
-		position = 7
-		required_missions = { THE_KNE_mission_4_6 } 
-		provinces_to_highlight = {  } 
+		position = 6
+		required_missions = { } 
+		provinces_to_highlight = {
+			superregion = china_superregion
+			OR = {
+				NOT = { owned_by = ROOT }
+				AND = {
+					NOT = { has_fort_building_trigger = yes }
+					all_neighbor_province = {
+						NOT = { has_fort_building_trigger = yes }
+					}
+				}
+			}
+		} 
 		
 		trigger = {
-			stability = 2
-			empire_of_china_reform_passed = new_keju_formats_decision
-			reform_level = 4
-			has_reform = THE_KNE_hakutaku_mandate_reform
+			custom_trigger_tooltip = {
+				tooltip = THE_KNE_all_grand_canal_level_3_tt
+				has_country_flag = THE_common_grand_canal_flag_beijin
+				has_country_flag = THE_common_grand_canal_flag_hejian
+				has_country_flag = THE_common_grand_canal_flag_jinan
+				has_country_flag = THE_common_grand_canal_flag_yanzhou
+				has_country_flag = THE_common_grand_canal_flag_xuzhou
+				has_country_flag = THE_common_grand_canal_flag_huaian
+				has_country_flag = THE_common_grand_canal_flag_yangzhou
+				has_country_flag = THE_common_grand_canal_flag_zhenjiang
+				has_country_flag = THE_common_grand_canal_flag_suzhou
+				has_country_flag = THE_common_grand_canal_flag_hangzhou
+			}
+			china_superregion = {
+				type = all
+				owned_by = ROOT
+				custom_trigger_tooltip = {
+					tooltip = THE_ROD_in_fort_zone_ttt
+					OR = {
+						has_fort_building_trigger = yes
+						any_neighbor_province = {
+							has_fort_building_trigger = yes
+						}
+					}
+				}
+			}
 		} 
 		
 		effect = {
-			add_government_reform = THE_KNE_new_keju_formats_reform
+			custom_tooltip = flavor_jnk.15.a.tt
 			hidden_effect = {
-				country_event = {
-					id = THE_KNE_events.5
+			  set_country_flag = jnk_no_more_flood
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_KNE_every_grand_canal_province_tt
+			tooltip = {
+				add_province_modifier = {
+					name = THE_KNE_now_age_province_modifier
+					duration = -1
 				}
+			}
+			hidden_effect = {
+				set_country_flag = THE_KNE_grand_canal_rebuikd_flag
+				THE_KNE_add_now_age_province_modifier_scripted_effect = { province_id = 1816 province = beijin }
+				THE_KNE_add_now_age_province_modifier_scripted_effect = { province_id = 695 province = hejian }
+				THE_KNE_add_now_age_province_modifier_scripted_effect = { province_id = 691 province = jinan }
+				THE_KNE_add_now_age_province_modifier_scripted_effect = { province_id = 2140 province = yanzhou }
+				THE_KNE_add_now_age_province_modifier_scripted_effect = { province_id = 2141 province = xuzhou }
+				THE_KNE_add_now_age_province_modifier_scripted_effect = { province_id = 2142 province = huaian }
+				THE_KNE_add_now_age_province_modifier_scripted_effect = { province_id = 685 province = yangzhou }
+				THE_KNE_add_now_age_province_modifier_scripted_effect = { province_id = 2145 province = zhenjiang }
+				THE_KNE_add_now_age_province_modifier_scripted_effect = { province_id = 1822 province = suzhou }
+				THE_KNE_add_now_age_province_modifier_scripted_effect = { province_id = 684 province = hangzhou }
+			}
+			add_country_modifier = {
+				name = THE_KNE_next_age_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_KNE_china_province_tax_tt
+			tooltip = {
+				add_base_tax = 2
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_KNE_china_province_production_tt
+			tooltip = {
+				add_base_production = 2
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_KNE_china_province_manpower_tt
+			tooltip = {
+				add_base_manpower = 2
+			}
+			hidden_effect = {
+				china_superregion = {
+					limit = {
+						is_prosperous = yes
+					}
+					add_base_tax = 2
+				}
+				china_superregion = {
+					limit = {
+						num_of_times_expanded_infrastructure = 1
+					}
+					add_base_production = 2
+				}
+				china_superregion = {
+					limit = {
+						has_fort_building_trigger = yes
+					}
+					add_base_manpower = 2
+				}
+			}
+		} 
+	}
+	
+	THE_KNE_mission_4_8 = {
+		icon = mission_unknown_mission
+		position = 7
+		required_missions = {
+			THE_KNE_mission_4_7
+			THE_KNE_mission_4_6
+		} 
+		provinces_to_highlight = {  } 
+		
+		trigger = {
+			absolutism = 100
+			is_hegemon = yes
+			total_development = 3000
+			empire_of_china_reform_passed = establish_gaituguiliu_decision
+			empire_of_china_reform_passed = seaban_decision
+			empire_of_china_reform_passed = reform_land_tax_decision
+			empire_of_china_reform_passed = military_governors_decision
+			empire_of_china_reform_passed = centralizing_top_government_decision
+			empire_of_china_reform_passed = vassalize_tributaries_decision
+			empire_of_china_reform_passed = codify_single_whip_law_decision
+			empire_of_china_reform_passed = reign_in_estates_decision
+			empire_of_china_reform_passed = reform_civil_registration_decision
+			empire_of_china_reform_passed = establish_silver_standard_decision
+			empire_of_china_reform_passed = kanhe_certificate_decision
+			empire_of_china_reform_passed = new_keju_formats_decision
+			empire_of_china_reform_passed = inclusive_monarchy_decision
+			OR = {
+				empire_of_china_reform_passed = promote_bureaucratic_faction_decision
+				empire_of_china_reform_passed = promote_military_faction_decision
+			}
+			empire_of_china_reform_passed = unifed_trade_market_decision
+			empire_of_china_reform_passed = reform_the_military_branch_decision
+			empire_of_china_reform_passed = modernize_the_banners_decision
+			empire_of_china_reform_passed = study_foreign_ship_designs_decision
+			empire_of_china_reform_passed = tributary_embassies_decision
+			empire_of_china_reform_passed = new_world_discovery_decision
+			empire_of_china_reform_passed = zz_THE_KNE_china_reform_0_hakutaku
+			empire_of_china_reform_passed = zz_THE_KNE_china_reform_1_human
+		} 
+		
+		effect = {
+			THE_country_event_with_insight = {
+				id = THE_KNE_events.10
+				effect_tooltip = "
+					add_prestige_or_monarch_power = {
+						amount = 50
+					}
+				"
 			}
 		} 
 	}

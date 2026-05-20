@@ -64,6 +64,10 @@ l_english:
  THE_KNE_japan_province_tt: "之后获得的§Y日本§!地区省份也会获得此修正"
  THE_KNE_old_genso_history_modifier: "旧秘境史"
  THE_KNE_every_province_meet_trigger: "治下每个满足条件的省份:"
+ THE_KNE_province_button_cd10_tt: "每个省份10年可执行一次省份行动"
+ THE_KNE_province_button_consume_history_effect_tt: "失去等同于当前省份发展度§R10§!倍的¤"
+ THE_KNE_province_button_create_history_effect_tt: "获得等同于当前省份税收、生产、人力§G2§!倍的对应君主点数"
+ THE_KNE_province_button_teaching_effect_tt: "从治下每个拥有§Y大学§!的省份获得§G0.01§!天命"
 ### CUSTOM_TOOLTIP_END
 
 ### DECISION
@@ -193,3 +197,9 @@ l_english:
 ### CULTURE
  THE_hakutaku_culture: "白泽"
 ### CULTURE_END
+
+### GUI
+ THE_KNE_province_button_consume_history_tt: "吞噬历史"
+ THE_KNE_province_button_create_history_tt: "创造历史"
+ THE_KNE_province_button_teaching_tt: "传授知识"
+### GUI_END

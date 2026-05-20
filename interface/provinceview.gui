@@ -629,6 +629,34 @@ guiTypes = {
 				clicksound = "click"
 				scripted = yes
 			}
+			##THE_KNE
+			guiButtonType = {
+				name = THE_KNE_province_button_consume_history
+				position = { x = 317 y = 200 }
+				quadTextureSprite = "GFX_THE_KNE_province_button_consume_history_icon"
+				# buttonText = THE_ALC_province_button1_gui_tt
+				buttonFont = "vic_18"
+				clicksound = "click"
+				scripted = yes
+			}
+			guiButtonType = {
+				name = THE_KNE_province_button_teaching
+				position = { x = 372 y = 180 }
+				quadTextureSprite = "GFX_THE_KNE_province_button_teaching_icon"
+				# buttonText = THE_ALC_province_button1_gui_tt
+				buttonFont = "vic_18"
+				clicksound = "click"
+				scripted = yes
+			}
+			guiButtonType = {
+				name = THE_KNE_province_button_create_history
+				position = { x = 427 y = 200 }
+				quadTextureSprite = "GFX_THE_KNE_province_button_create_history_icon"
+				# buttonText = THE_ALC_province_button1_gui_tt
+				buttonFont = "vic_18"
+				clicksound = "click"
+				scripted = yes
+			}
 			##THE_KEI
 			guiButtonType = {
 				name = THE_KEI_decrese_workman_gui

@@ -4,4 +4,16 @@ spriteTypes = {
 		name = "THE_KNE_privilege_banners"
 		texturefile = "gfx/interface/privilege/THE_KNE_privilege_banners.dds"
 	}
+	spriteType = {
+		name = "GFX_THE_KNE_province_button_consume_history_icon"
+		texturefile = "gfx\\interface\\province_gui\\THE_KNE\\THE_KNE_province_button_create_history_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_THE_KNE_province_button_create_history_icon"
+		texturefile = "gfx\\interface\\province_gui\\THE_KNE\\THE_KNE_province_button_consume_history_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_THE_KNE_province_button_teaching_icon"
+		texturefile = "gfx\\interface\\province_gui\\THE_KNE\\THE_KNE_province_button_teaching_icon.dds"
+	}
 }

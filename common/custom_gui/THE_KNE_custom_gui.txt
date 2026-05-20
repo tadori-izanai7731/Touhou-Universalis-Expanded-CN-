@@ -1,0 +1,159 @@
+custom_button = {
+	name = THE_KNE_province_button_consume_history
+	tooltip = THE_KNE_province_button_consume_history_tt
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = {
+				has_country_flag = THE_KNE_enable_province_action_1_3_flag
+				has_country_flag = THE_debug_flag
+			}
+		}
+	}
+	trigger = {
+		is_state_core = FROM
+		custom_trigger_tooltip = {
+			tooltip = THE_KNE_province_button_cd10_tt
+			NOT = { has_province_modifier = THE_KNE_province_action_cd_pmodifier }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			add_province_modifier = {
+				name = THE_KNE_province_action_cd_pmodifier
+				duration = 3650
+				hidden = yes
+			}
+			export_to_variable = {
+				which = the_kne_province_dev_var
+				value = development
+				who = ROOT
+			}
+			for_variable_amount = {
+				variable = the_kne_province_dev_var
+				effect = "
+					FROM = {
+						add_treasury = -10
+					}
+				"
+			}
+		}
+		custom_tooltip = THE_KNE_province_button_consume_history_effect_tt
+		add_nationalism = -10
+		add_devastation = -25
+		add_local_autonomy = -25
+	}
+}
+
+custom_button = {
+	name = THE_KNE_province_button_create_history
+	tooltip = THE_KNE_province_button_create_history_tt
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = {
+				has_country_flag = THE_KNE_enable_province_action_1_3_flag
+				has_country_flag = THE_debug_flag
+			}
+		}
+	}
+	trigger = {
+		is_state_core = FROM
+		custom_trigger_tooltip = {
+			tooltip = THE_KNE_province_button_cd10_tt
+			NOT = { has_province_modifier = THE_KNE_province_action_cd_pmodifier }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			add_province_modifier = {
+				name = THE_KNE_province_action_cd_pmodifier
+				duration = 3650
+				hidden = yes
+			}
+			export_to_variable = {
+				which = the_kne_province_adm_var
+				value = base_tax
+				who = ROOT
+			}
+			export_to_variable = {
+				which = the_kne_province_dip_var
+				value = base_production
+				who = ROOT
+			}
+			export_to_variable = {
+				which = the_kne_province_mil_var
+				value = base_manpower
+				who = ROOT
+			}
+			for_variable_amount = {
+				variable = the_kne_province_adm_var
+				effect = "
+					FROM = {
+						add_adm_power = 2
+					}
+				"
+			}
+			for_variable_amount = {
+				variable = the_kne_province_dip_var
+				effect = "
+					FROM = {
+						add_dip_power = 2
+					}
+				"
+			}
+			for_variable_amount = {
+				variable = the_kne_province_mil_var
+				effect = "
+					FROM = {
+						add_mil_power = 2
+					}
+				"
+			}
+		}
+		custom_tooltip = THE_KNE_province_button_create_history_effect_tt
+		add_nationalism = 10
+	}
+}
+
+custom_button = {
+	name = THE_KNE_province_button_teaching
+	tooltip = THE_KNE_province_button_teaching_tt
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = {
+				has_country_flag = THE_KNE_enable_province_action_2_flag
+				has_country_flag = THE_debug_flag
+			}
+		}
+	}
+	trigger = {
+		NOT = { has_building = university }
+		is_state_core = FROM
+		custom_trigger_tooltip = {
+			tooltip = THE_KNE_province_button_cd10_tt
+			NOT = { has_province_modifier = THE_KNE_province_action_cd_pmodifier }
+		}
+	}
+	effect = {
+		add_treasury = -300
+		add_building = university
+		hidden_effect = {
+			add_province_modifier = {
+				name = THE_KNE_province_action_cd_pmodifier
+				duration = 3650
+				hidden = yes
+			}
+			FROM = {
+				every_owned_province = {
+					limit = {
+						has_building = university
+					}
+					PREV = { add_mandate = 0.01 }
+				}
+			}
+		}
+		custom_tooltip = THE_KNE_province_button_teaching_effect_tt
+	}
+}
