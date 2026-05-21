@@ -137,7 +137,9 @@ custom_button = {
 		}
 	}
 	effect = {
-		add_treasury = -300
+		FROM = {
+			add_treasury = -300
+		}
 		add_building = university
 		hidden_effect = {
 			add_province_modifier = {

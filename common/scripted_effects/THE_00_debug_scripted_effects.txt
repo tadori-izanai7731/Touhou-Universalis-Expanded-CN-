@@ -1,0 +1,7 @@
+THE_set_modifier_to_eternal = {
+	remove_country_modifier = $modifier$
+	add_country_modifier = {
+		name = $modifier$
+		duration = -1
+	}
+}
