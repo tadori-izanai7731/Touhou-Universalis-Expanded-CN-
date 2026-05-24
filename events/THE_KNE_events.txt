@@ -1,6 +1,6 @@
 namespace = THE_KNE_events
 
-country_event = {
+country_event = {	#夺取天命事件
 	id = THE_KNE_events.1
 	title = THE_KNE_events.1.title
 	desc = THE_KNE_events.1.desc
@@ -23,10 +23,12 @@ country_event = {
 		add_government_reform = THE_KNE_hakutaku_mandate_reform
 		add_meritocracy = 50
 		add_mandate = 50
+
+		
 	}
 }
 
-country_event = {
+country_event = {	#殖民台湾事件
 	id = THE_KNE_events.2
 	title = THE_KNE_events.2.title
 	desc = THE_KNE_events.2.desc
@@ -190,7 +192,7 @@ country_event = {
 }
 
 
-country_event = {
+country_event = {	#接纳中华事件
 	id = THE_KNE_events.3
 	title = THE_KNE_events.3.title
 	desc = THE_KNE_events.3.desc
@@ -229,7 +231,7 @@ country_event = {
 }
 
 
-country_event = {
+country_event = {	#隐藏事件
 	id = THE_KNE_events.4
 	title = NONE
 	desc = NONE
@@ -248,7 +250,7 @@ country_event = {
 	}
 }
 
-country_event = {
+country_event = {	#科举事件
 	id = THE_KNE_events.5
 	title = THE_KNE_events.5.title
 	desc = THE_KNE_events.5.desc
@@ -299,7 +301,7 @@ country_event = {
 	}
 }
 
-country_event = {
+country_event = {	#科举事件-行政顾问
 	id = THE_KNE_events.6
 	title = THE_KNE_events.5.title
 	desc = THE_KNE_events.6.desc
@@ -341,7 +343,7 @@ country_event = {
 	}
 }
 
-country_event = {
+country_event = {	#科举事件-外交顾问
 	id = THE_KNE_events.7
 	title = THE_KNE_events.5.title
 	desc = THE_KNE_events.7.desc
@@ -383,7 +385,7 @@ country_event = {
 	}
 }
 
-country_event = {
+country_event = {	#科举事件-军事顾问
 	id = THE_KNE_events.8
 	title = THE_KNE_events.5.title
 	desc = THE_KNE_events.8.desc
@@ -425,7 +427,7 @@ country_event = {
 	}
 }
 
-country_event = {
+country_event = {	#科举隐藏事件
 	id = THE_KNE_events.9
 	title = NONE
 	desc = NONE
@@ -452,7 +454,7 @@ country_event = {
 	}
 }
 
-country_event = {
+country_event = {	#新世纪
 	id = THE_KNE_events.10
 	title = THE_KNE_events.10.title
 	desc = THE_KNE_events.10.desc
@@ -468,13 +470,13 @@ country_event = {
 	}
 }
 
-country_event = {
+country_event = {	#自动获得文艺复兴事件
 	id = THE_KNE_events.11
 	title = THE_KNE_events.11.title
 	desc = THE_KNE_events.11.desc
 	# picture = none
 	mean_time_to_happen = {
-		months = 12
+		months = 24
 	}
 
 	fire_only_once = yes
@@ -507,7 +509,7 @@ country_event = {
 	}
 }
 
-country_event = {
+country_event = {	#人里朝贡事件
 	id = THE_KNE_events.12
 	title = THE_KNE_events.12.title
 	desc = THE_KNE_events.12.desc
@@ -531,13 +533,7 @@ country_event = {
 				is_subject_of = ROOT
 			}
 		}
-		NOT = { has_country_flag = THE_KNE_event12_happened_flag }
-	}
-
-	immediate = {
-		hidden_effect = {
-			set_country_flag = THE_KNE_event12_happened_flag
-		}
+		mission_completed = THE_KNE_mission_3_1
 	}
 
 	option = {

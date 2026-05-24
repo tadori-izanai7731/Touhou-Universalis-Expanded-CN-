@@ -106,10 +106,10 @@ THE_KNE_mission_branch_1 = {
 						trade_goods = iron
 					}
 					add_building = weapons
-				}
-				add_province_modifier = {
-					name = THE_KNE_grand_furnace_province_modifier
-					duration = 7300
+					add_province_modifier = {
+						name = THE_KNE_grand_furnace_province_modifier
+						duration = 7300
+					}
 				}
 			}
 		} 
@@ -281,11 +281,11 @@ THE_KNE_mission_branch_1 = {
 			}
 			OR = {
 				any_ally = {
-					total_development = 1000
+					total_development = 500
 					culture_group = Gensokyan_culture
 				}
 				any_subject_country = {
-					total_development = 1000
+					total_development = 500
 					culture_group = Gensokyan_culture
 				}
 			}
@@ -868,7 +868,12 @@ THE_KNE_mission_branch_3 = {
 					exists = HMC
 				}
 				if = {
-					limit = { NOT = { alliance_with = HMC } }
+					limit = {
+						HMC = {
+							NOT = { alliance_with = ROOT }
+							NOT = { is_subject_of = ROOT }
+						}
+					}
 					create_alliance = HMC
 				}
 				THE_add_historical_friend_and_reverse_scripted_effect = { tag = HMC }
@@ -1091,21 +1096,21 @@ THE_KNE_mission_branch_3 = {
 					is_emperor_of_china = yes
 					war_with = ROOT
 				}
-				726 = {
-					OR = {
-						controlled_by = ROOT
-						owned_by = ROOT
-					}
-				}
-				1816 = {
-					OR = {
-						controlled_by = ROOT
-						owned_by = ROOT
-					}
-				}
 			}
 			else = {
 				is_emperor_of_china = yes
+			}
+			726 = {
+				OR = {
+					controlled_by = ROOT
+					owned_by = ROOT
+				}
+			}
+			1816 = {
+				OR = {
+					controlled_by = ROOT
+					owned_by = ROOT
+				}
 			}
 		} 
 		
