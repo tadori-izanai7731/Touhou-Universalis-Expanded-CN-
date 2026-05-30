@@ -2857,13 +2857,10 @@ THE_KEI_minor_branch_2_alone = {
 			is_capital_of = ROOT
 		} 
 		
-		trigger = { 
-			all_province = {
-				superregion = gensokyo_superregion
-				OR = {
-					owned_by = ROOT
-					owned_by_subject_of = ROOT
-				}
+		trigger = {
+			gensokyo_superregion = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		} 
 		
