@@ -461,7 +461,7 @@
  flavor_THE_HNG_mission_events.13.b: "bìNýV…Q„v2NMO2–¡VOžR(W=fäNºN³R`..."
  flavor_THE_HNG_mission_events.14.t: "'YfKNLˆ"
  flavor_THE_HNG_mission_events.14.desc: "(W6e0RÛ¬Nb—1W„v‹TäNTÿŽÃ”ASRØštQÿ¡lÇYEN1S»yV†N'Yt0Ù!kyY¡l	g&^ûNUO–ÎNÿÕkßz(W‚YÊN„v'Yfÿ¡l	gûNUOºNïSåN2O³R0RyY0\n(WïNÿyYn‰lØž†NNegÿÙ*NýV¶RgúWNx„v6R¦^XR(WNw%NÍ‘„vî•˜˜ÿ‹†6q°s(WØ*g>f°súQegÿFO=fŽÃ”„vÜÁ‰òTÏuïSåNw0R±Íy*geg†N0‹†6qyYée1SåwS'Yf„vÓuNSÿFO=fSVfN-N„v…Q¹Rb:NImuu„v°sžRÿÙêSOôf©‹ºNÃVÛu0FO=fÕkßzÙ*N‹sg„vú^Ëzw,g«Ž1SêS=fœQlÿýV¶R6R¦^ØSbÙ7hmN=fïSåNtã‰„v0\n6qwÿ(Wb—Á‰0R)YPRTÿyY„v…QÃVôf RÃVÒR†Nÿ:NÀNHNN*N2ãýw1SÙ7h«ˆY‰kbTÿyYNtã‰ÿyYmNNó`tã‰0\n)YPRùRŽNyY„vŸRéuv^*ghˆ°súQ*YY(WaÿFO=fÙòTÏuŒTŽÃ”¡l	gsQû|†NÿSìbhTôVvQÖN˜RXT„v2VË‹Ý‹í‹ŒT)YPRÙuˆNŽÃ”„vOPyYmNÿNiO¡l	g,TÁ‰0\n§R°s(WÿyYòTÏuZPúQ†NN*NÍ‘‰„v	éb0§!"
- flavor_THE_HNG_mission_events.14.a: "bOZP‹YNRÆQY...ÿ§Y”Nt^TbìNOIN¨R±Rb'Yf§!	ÿ"
+ flavor_THE_HNG_mission_events.14.a: "bOZP‹YNRÆQY..."
  flavor_THE_HNG_mission_events.15.t: ")Y‹TKNb"
  flavor_THE_HNG_mission_events.15.desc: "bìNòTÏuZP‹Y†NÆQYÿ=föeP©‹Ù*NPKg„v‹sg(W¡l	g2O³R0RŒvÓYKNMR‰V•^Ákmp†Nÿ¢uŽÃ”òTÏuÍSY:VŒN‰2O³RŒvÓYÿyYåwS–Y*`fkëXyYìNŒRhQïSåNZP0R0"
  flavor_THE_HNG_mission_events.15.a: "§YÛ‹mp*O^§!"
@@ -890,8 +890,8 @@
  THE_HNG_power_var_events.19.t: "¾‹nØSÏ‘–Ï…‹NöN"
  THE_HNG_power_var_events.19.desc: "`O=f`HNw0RÙ*N‹NöN„vÿ"
  THE_HNG_power_var_events.19.a: "N¹pSS„v~"
- the_hng_disasters_one_lose_tt: "Œp¾–cíu30t^SåN1Y%ÓumgŒp¾–"
- the_hng_disasters_two_lose_tt: "Œp¾–cíu20t^SåN1Y%ÓumgŒp¾–"
+ the_hng_disasters_one_lose_tt: "\nŒp¾–cíu30t^SåN1Y%ÓumgŒp¾–ÿv^·ƒ—V8lENé`Z"
+ the_hng_disasters_two_lose_tt: "\nŒp¾–cíu20t^SåN1Y%ÓumgŒp¾–ÿv^·ƒ—V8lENé`Z"
  flavor_THE_HNG_mission_events.58.t: "T)Yg±Rb"
  flavor_THE_HNG_mission_events.58.desc: "=föeP©‹)YgÁ‰Æ‹NNbìN‰^ó`aN„v:V'Y†Nÿ\n©‹ÖNìNÁ‰Æ‹NNbìNwck„v›RÏ‘ÿ"
  flavor_THE_HNG_mission_events.58.a: "bÿbÿbÿÿÿ"
@@ -1479,6 +1479,10 @@
  desc_THE_hng_mission_modifier145:"ÇkphV(WßuN-NýVÇz-N„vúQr‚hˆ°sÿ‚YÊNbìNŠbƒRìNÐ(u0R†NNb	g›Q–KN-N"
  THE_hng_mission_modifier146:"fkëX›RÏ‘"
  desc_THE_hng_mission_modifier146:"ÇkphV(WßuN-NýVÇz-N„vúQr‚hˆ°sÿ‚YÊNbìNŠbƒRìNNè•Ð(u0R†N–Y*`fkëXKN-Nÿ‚YÊN–Y*`fkëXìN„v›RÏ‘çuíuîX'Y"
+ THE_HNG_disaster1_fall_modifier: "8lEN„v2OÕu"
+ THE_HNG_disaster2_fall_modifier: "*jZ„v9hû|"
+ THE_HNG_disaster3_fall_modifier: "*bbk„vmlAm"
+ THE_HNG_disaster4_fall_modifier: "µOŽ†„vxów"
 ### MODIFIER_END
 
 ### VARIABLE

@@ -1,3 +1,4 @@
+#人妖隔阂
 the_hng_disasters_one = {
 	potential = {
 		OR = {
@@ -113,11 +114,11 @@ the_hng_disasters_one = {
 		movement_speed = 1
 		can_not_declare_war = no
 	}
-	on_start = flavor_THE_HNG_events.5 
-	on_end = flavor_THE_HNG_events.8                
+	on_start = flavor_THE_HNG_events.5
+	on_end = flavor_THE_HNG_events.8
 }
 
-
+#土地兼并
 the_hng_disasters_two = {
 	potential = {
 		OR = {
@@ -230,9 +231,10 @@ the_hng_disasters_two = {
 		global_trade_goods_size_modifier = -0.2
 	}
 	on_start = flavor_THE_HNG_events.24
-	on_end = flavor_THE_HNG_events.26              
+	on_end = flavor_THE_HNG_events.26
 }
 
+#通胀崩溃
 the_hng_disasters_three = {
 	potential = {
 		OR = {
@@ -367,9 +369,10 @@ the_hng_disasters_three = {
 		interest = 5
 	}
 	on_start = flavor_THE_HNG_events.37
-	on_end = flavor_THE_HNG_events.39            
+	on_end = flavor_THE_HNG_events.39
 }
 
+#军队腐化
 the_hng_disasters_four = {
 	potential = {
 		OR = {
@@ -400,7 +403,7 @@ the_hng_disasters_four = {
 		}
 		modifier = {
 			factor = -1
-			army_tradition = 85		
+			army_tradition = 85
 		}
 		modifier = {
 			factor = 2
@@ -464,5 +467,5 @@ the_hng_disasters_four = {
 		yearly_army_professionalism = -0.01
 	}
 	on_start = flavor_THE_HNG_events.90
-	on_end = flavor_THE_HNG_events.50          
+	on_end = flavor_THE_HNG_events.50
 }

@@ -576,57 +576,64 @@ country_event = {
 	
 	after = {
 		hidden_effect = {
-			country_event = {
-				id = flavor_THE_HNG_mission_events.15
-				days = 1825
+			# country_event = {
+			# 	id = flavor_THE_HNG_mission_events.15
+			# 	days = 1825
+			# }
+			if = {
+				limit = {
+					is_subject_of = MNG
+					is_subject_of_type = tributary_state
+				}
+				MNG = { free_vassal = ROOT }
 			}
 		}
 	}
 }
 
-country_event = {
-	id = flavor_THE_HNG_mission_events.15
-	title = "flavor_THE_HNG_mission_events.15.t"
-	desc = "flavor_THE_HNG_mission_events.15.desc"
-	picture = DRAGON_eventPicture
-	is_triggered_only = yes
-	trigger = {
-		NOT = { is_emperor_of_china = yes }
-		any_country = {
-			is_emperor_of_china = yes
-			NOT = { war_with = ROOT }
-		}
-	}
+# country_event = {
+# 	id = flavor_THE_HNG_mission_events.15
+# 	title = "flavor_THE_HNG_mission_events.15.t"
+# 	desc = "flavor_THE_HNG_mission_events.15.desc"
+# 	picture = DRAGON_eventPicture
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		NOT = { is_emperor_of_china = yes }
+# 		any_country = {
+# 			is_emperor_of_china = yes
+# 			NOT = { war_with = ROOT }
+# 		}
+# 	}
 	
-	immediate = {
-		hidden_effect = {
-			declare_war_with_cb = {
-				who = event_target:EmperorOfChina
-				casus_belli = cb_chinese_unification
-			}
-			add_stability = 5
-			add_war_exhaustion = -5
-			every_known_country = {
-				add_aggressive_expansion = {
-					who = ROOT
-					value = -50
-				}	
-			}
-		}
-	}
-	option = {
-		name = flavor_THE_HNG_mission_events.15.a
-		tooltip = {
-			custom_tooltip = THE_HNG_decrease_50_ae_tt
-			declare_war_with_cb = {
-				who = event_target:EmperorOfChina 
-				casus_belli = cb_chinese_unification
-			}
-			add_stability = 5
-			add_war_exhaustion = -5
-		}
-	}
-}
+# 	immediate = {
+# 		hidden_effect = {
+# 			declare_war_with_cb = {
+# 				who = event_target:EmperorOfChina
+# 				casus_belli = cb_chinese_unification
+# 			}
+# 			add_stability = 5
+# 			add_war_exhaustion = -5
+# 			every_known_country = {
+# 				add_aggressive_expansion = {
+# 					who = ROOT
+# 					value = -50
+# 				}	
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = flavor_THE_HNG_mission_events.15.a
+# 		tooltip = {
+# 			custom_tooltip = THE_HNG_decrease_50_ae_tt
+# 			declare_war_with_cb = {
+# 				who = event_target:EmperorOfChina 
+# 				casus_belli = cb_chinese_unification
+# 			}
+# 			add_stability = 5
+# 			add_war_exhaustion = -5
+# 		}
+# 	}
+# }
 
 country_event = {
 	id = flavor_THE_HNG_mission_events.16
@@ -2288,215 +2295,215 @@ country_event = {
 }
 
 #大红的独立
-country_event = {
-	id = flavor_THE_HNG_mission_events.57
-	title = "flavor_THE_HNG_mission_events.57.t"
-	desc = "flavor_THE_HNG_mission_events.57.desc"
-	picture = RESORT_PARADISE_eventPicture
-	fire_only_once = yes
+# country_event = {
+# 	id = flavor_THE_HNG_mission_events.57
+# 	title = "flavor_THE_HNG_mission_events.57.t"
+# 	desc = "flavor_THE_HNG_mission_events.57.desc"
+# 	picture = RESORT_PARADISE_eventPicture
+# 	fire_only_once = yes
 	
-	major = yes
-	major_trigger = {
-		capital_scope = {
-			OR = {
-				continent = asia
-				continent = gensokyo_continent
-				continent = moon_continent
-			}
-		}
-	}
+# 	major = yes
+# 	major_trigger = {
+# 		capital_scope = {
+# 			OR = {
+# 				continent = asia
+# 				continent = gensokyo_continent
+# 				continent = moon_continent
+# 			}
+# 		}
+# 	}
 	
-	trigger = {
-		is_emperor_of_china = yes
-		war_with = HNG
-	}
-	option = {
-		name = flavor_THE_HNG_mission_events.57.a
-		add_mandate = -50
-		remove_country_modifier = THE_hng_mission_modifier39
-		667 = {
-			if = {
-				limit = {
-					controlled_by = ROOT
-				}
-				add_permanent_province_modifier = {
-					name = THE_hng_mission_modifier108
-					duration = 7300
-				}
-			}	
-		}
-		669 = {
-			if = {
-				limit = {
-					controlled_by = ROOT
-				}
-				add_permanent_province_modifier = {
-					name = THE_hng_mission_modifier108
-					duration = 7300
-				}
-			}	
-		}
-		1821 = {
-			if = {
-				limit = {
-					controlled_by = ROOT
-				}
-				add_permanent_province_modifier = {
-					name = THE_hng_mission_modifier108
-					duration = 7300
-				}
-			}	
-		}
-		682 = {
-			if = {
-				limit = {
-					controlled_by = ROOT
-				}
-				add_permanent_province_modifier = {
-					name = THE_hng_mission_modifier108
-					duration = 7300
-				}
-			}	
-		}
-		667 = {
-			if = {
-				limit = {
-					controlled_by = ROOT
-				}
-				add_permanent_province_modifier = {
-					name = THE_hng_mission_modifier108
-					duration = 7300
-				}
-			}	
-		}
-		671 = {
-			if = {
-				limit = {
-					controlled_by = ROOT
-				}
-				add_permanent_province_modifier = {
-					name = THE_hng_mission_modifier108
-					duration = 7300
-				}
-			}	
-		}
-		700 = {
-			if = {
-				limit = {
-					controlled_by = ROOT
-				}
-				add_permanent_province_modifier = {
-					name = THE_hng_mission_modifier108
-					duration = 7300
-				}
-			}	
-		}
-		1836 = {
-			if = {
-				limit = {
-					controlled_by = ROOT
-				}
-				add_permanent_province_modifier = {
-					name = THE_hng_mission_modifier108
-					duration = 7300
-				}
-			}	
-		}
-		2140 = {
-			if = {
-				limit = {
-					controlled_by = ROOT
-				}
-				add_permanent_province_modifier = {
-					name = THE_hng_mission_modifier108
-					duration = 7300
-				}
-			}	
-		}
-		679 = {
-			if = {
-				limit = {
-					controlled_by = ROOT
-				}
-				add_permanent_province_modifier = {
-					name = THE_hng_mission_modifier108
-					duration = 7300
-				}
-			}	
-		}
-		1816 = {
-			if = {
-				limit = {
-					controlled_by = ROOT
-				}
-				add_permanent_province_modifier = {
-					name = THE_hng_mission_modifier108
-					duration = 7300
-				}
-			}	
-		}
-	}
-}
+# 	trigger = {
+# 		is_emperor_of_china = yes
+# 		war_with = HNG
+# 	}
+# 	option = {
+# 		name = flavor_THE_HNG_mission_events.57.a
+# 		add_mandate = -50
+# 		remove_country_modifier = THE_hng_mission_modifier39
+# 		667 = {
+# 			if = {
+# 				limit = {
+# 					controlled_by = ROOT
+# 				}
+# 				add_permanent_province_modifier = {
+# 					name = THE_hng_mission_modifier108
+# 					duration = 7300
+# 				}
+# 			}	
+# 		}
+# 		669 = {
+# 			if = {
+# 				limit = {
+# 					controlled_by = ROOT
+# 				}
+# 				add_permanent_province_modifier = {
+# 					name = THE_hng_mission_modifier108
+# 					duration = 7300
+# 				}
+# 			}	
+# 		}
+# 		1821 = {
+# 			if = {
+# 				limit = {
+# 					controlled_by = ROOT
+# 				}
+# 				add_permanent_province_modifier = {
+# 					name = THE_hng_mission_modifier108
+# 					duration = 7300
+# 				}
+# 			}	
+# 		}
+# 		682 = {
+# 			if = {
+# 				limit = {
+# 					controlled_by = ROOT
+# 				}
+# 				add_permanent_province_modifier = {
+# 					name = THE_hng_mission_modifier108
+# 					duration = 7300
+# 				}
+# 			}	
+# 		}
+# 		667 = {
+# 			if = {
+# 				limit = {
+# 					controlled_by = ROOT
+# 				}
+# 				add_permanent_province_modifier = {
+# 					name = THE_hng_mission_modifier108
+# 					duration = 7300
+# 				}
+# 			}	
+# 		}
+# 		671 = {
+# 			if = {
+# 				limit = {
+# 					controlled_by = ROOT
+# 				}
+# 				add_permanent_province_modifier = {
+# 					name = THE_hng_mission_modifier108
+# 					duration = 7300
+# 				}
+# 			}	
+# 		}
+# 		700 = {
+# 			if = {
+# 				limit = {
+# 					controlled_by = ROOT
+# 				}
+# 				add_permanent_province_modifier = {
+# 					name = THE_hng_mission_modifier108
+# 					duration = 7300
+# 				}
+# 			}	
+# 		}
+# 		1836 = {
+# 			if = {
+# 				limit = {
+# 					controlled_by = ROOT
+# 				}
+# 				add_permanent_province_modifier = {
+# 					name = THE_hng_mission_modifier108
+# 					duration = 7300
+# 				}
+# 			}	
+# 		}
+# 		2140 = {
+# 			if = {
+# 				limit = {
+# 					controlled_by = ROOT
+# 				}
+# 				add_permanent_province_modifier = {
+# 					name = THE_hng_mission_modifier108
+# 					duration = 7300
+# 				}
+# 			}	
+# 		}
+# 		679 = {
+# 			if = {
+# 				limit = {
+# 					controlled_by = ROOT
+# 				}
+# 				add_permanent_province_modifier = {
+# 					name = THE_hng_mission_modifier108
+# 					duration = 7300
+# 				}
+# 			}	
+# 		}
+# 		1816 = {
+# 			if = {
+# 				limit = {
+# 					controlled_by = ROOT
+# 				}
+# 				add_permanent_province_modifier = {
+# 					name = THE_hng_mission_modifier108
+# 					duration = 7300
+# 				}
+# 			}	
+# 		}
+# 	}
+# }
 
 #向天朝宣战
-country_event = {
-	id = flavor_THE_HNG_mission_events.58
-	title = "flavor_THE_HNG_mission_events.58.t"
-	desc = "flavor_THE_HNG_mission_events.58.desc"
-	picture = THE_HNG_mission1
-	fire_only_once = yes
+# country_event = {
+# 	id = flavor_THE_HNG_mission_events.58
+# 	title = "flavor_THE_HNG_mission_events.58.t"
+# 	desc = "flavor_THE_HNG_mission_events.58.desc"
+# 	picture = THE_HNG_mission1
+# 	fire_only_once = yes
 	
-	trigger = {
-		OR = {
-			tag = HNG
-			was_tag = HNG
-		}
-		war_with = event_target:EmperorOfChina 
-		NOT = { mission_completed = THE_HNG_1_3_32 }
-	}
-	immediate = {
-		hidden_effect = {
-			complete_mission = THE_HNG_1_3_32
-		}
-	}
-	option = {
-		name = flavor_THE_HNG_mission_events.58.a
-		set_country_flag = THE_HNG_country_flag_mission2
-		add_stability = 5
-		add_war_exhaustion = -20
-		swap_non_generic_missions = yes
-	}
-}
+# 	trigger = {
+# 		OR = {
+# 			tag = HNG
+# 			was_tag = HNG
+# 		}
+# 		war_with = event_target:EmperorOfChina 
+# 		NOT = { mission_completed = THE_HNG_1_3_32 }
+# 	}
+# 	immediate = {
+# 		hidden_effect = {
+# 			complete_mission = THE_HNG_1_3_32
+# 		}
+# 	}
+# 	option = {
+# 		name = flavor_THE_HNG_mission_events.58.a
+# 		set_country_flag = THE_HNG_country_flag_mission2
+# 		add_stability = 5
+# 		add_war_exhaustion = -20
+# 		swap_non_generic_missions = yes
+# 	}
+# }
 
 #自动解锁任务事件
-country_event = {
-	id = flavor_THE_HNG_mission_events.59
-	title = "flavor_THE_HNG_mission_events.59.t"
-	desc = "flavor_THE_HNG_mission_events.59.desc"
-	picture = THE_HNG_mission1
-	fire_only_once = yes
+# country_event = {
+# 	id = flavor_THE_HNG_mission_events.59
+# 	title = "flavor_THE_HNG_mission_events.59.t"
+# 	desc = "flavor_THE_HNG_mission_events.59.desc"
+# 	picture = THE_HNG_mission1
+# 	fire_only_once = yes
 	
-	trigger = {
-		OR = {
-			tag = HNG
-			was_tag = HNG
-		}
-		NOT = { has_country_flag = flavor_THE_HNG_events59 }
-		OR = {
-			is_year = 1570
-			AND = {
-				is_year = 1547
-				army_professionalism = 1
-			}
-		}
-		is_emperor_of_china = yes
-	}
-	option = {
-		name = flavor_THE_HNG_mission_events.59.a
-		swap_non_generic_missions = yes
-		set_country_flag = flavor_THE_HNG_mission_events59
-	}
-}
+# 	trigger = {
+# 		OR = {
+# 			tag = HNG
+# 			was_tag = HNG
+# 		}
+# 		NOT = { has_country_flag = flavor_THE_HNG_events59 }
+# 		OR = {
+# 			is_year = 1570
+# 			AND = {
+# 				is_year = 1547
+# 				army_professionalism = 1
+# 			}
+# 		}
+# 		is_emperor_of_china = yes
+# 	}
+# 	option = {
+# 		name = flavor_THE_HNG_mission_events.59.a
+# 		swap_non_generic_missions = yes
+# 		set_country_flag = flavor_THE_HNG_mission_events59
+# 	}
+# }
 
 #道路的分歧
 country_event = {

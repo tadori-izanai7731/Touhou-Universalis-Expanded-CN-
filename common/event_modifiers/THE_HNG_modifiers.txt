@@ -1184,11 +1184,11 @@ THE_hng_mission_modifier114 = {
 }
 
 #无法抑制通胀
-THE_hng_mission_modifier115 = {
-	inflation_reduction = -1
-	monthly_THE_HNG_Inflation_rate_adm_power = 2
-	global_trade_goods_size_modifier = -0.1
-}
+# THE_hng_mission_modifier115 = {
+# 	inflation_reduction = -1
+# 	monthly_THE_HNG_Inflation_rate_adm_power = 2
+# 	global_trade_goods_size_modifier = -0.1
+# }
 
 #物价飞涨
 THE_hng_mission_modifier116 = {
@@ -1559,4 +1559,32 @@ THE_hng_mission_modifier146 = {
 	fire_damage_received = -0.25
 	land_maintenance_modifier = 0.05
 	is_samurai_modifier = yes 
+}
+
+#永久的伤痕
+THE_HNG_disaster1_fall_modifier = {
+	global_unrest = 5
+	administrative_efficiency = -0.1
+	religious_unity = -0.5
+}
+
+#贪婪的根系
+THE_HNG_disaster2_fall_modifier = {
+	global_prosperity_growth = -1
+	min_autonomy = 20
+	governing_cost = 0.25
+}
+
+#截止的江流
+THE_HNG_disaster3_fall_modifier = {
+	global_trade_power = -0.25
+	development_cost = 0.2
+	trade_steering = -0.33
+}
+
+#侵蚀的砂石
+THE_HNG_disaster4_fall_modifier = {
+	discipline = -0.1
+	yearly_corruption = 0.25
+	army_tradition = -3
 }

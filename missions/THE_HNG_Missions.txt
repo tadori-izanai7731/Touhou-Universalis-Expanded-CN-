@@ -1607,14 +1607,15 @@ THE_HNG_1_3 = {
 		effect = {
 			custom_tooltip = THE_HNG_mission5_tt
 			add_country_modifier = {
+				name = THE_HNG_disasters1_reform1_completed
+				duration = 1825
+			}
+			add_country_modifier = {
 				name = THE_hng_mission_modifier45
 				duration = -1
 			}
 			hidden_effect = {
-				add_country_modifier = {
-					name = THE_hng_mission_modifier45
-					duration = -1
-				}
+				set_country_flag = THE_HNG_disasters1_reform1_had_completed
 			}
 		}
 	}
@@ -1968,14 +1969,15 @@ THE_HNG_1_4 = {
 		effect = {
 			custom_tooltip = THE_HNG_mission6_tt
 			add_country_modifier = {
+				name = THE_HNG_disasters1_reform2_completed
+				duration = 1825
+			}
+			add_country_modifier = {
 				name = THE_hng_mission_modifier46
 				duration = -1
 			}
 			hidden_effect = {
-				add_country_modifier = {
-					name = THE_hng_mission_modifier46
-					duration = -1
-				}
+				set_country_flag = THE_HNG_disasters1_reform2_had_completed
 			}
 		}
 	}
@@ -1996,17 +1998,17 @@ THE_HNG_1_4 = {
 		
 		effect = {
 			custom_tooltip = THE_HNG_mission7_tt
-			remove_country_modifier = THE_hng_mission_modifier44
+			add_country_modifier = {
+				name = THE_HNG_disasters1_reform3_completed
+				duration = 1825
+			}
 			add_country_modifier = {
 				name = THE_hng_mission_modifier47
 				duration = -1
 			}
+			remove_country_modifier = THE_hng_mission_modifier44
 			hidden_effect = {
-				remove_country_modifier = THE_hng_mission_modifier44
-				add_country_modifier = {
-					name = THE_hng_mission_modifier47
-					duration = -1
-				}
+				set_country_flag = THE_HNG_disasters1_reform3_had_completed
 			}
 		}
 	}
@@ -2532,12 +2534,8 @@ THE_HNG_1_5 = {
 		}
 		
 		trigger = { 
-			NOT = {
-				num_of_loans = 1
-			}
-			NOT ={
-				corruption = 0.01
-			}
+			NOT = { num_of_loans = 1 }
+			NOT = { corruption = 0.01 }
 		} 
 		
 		effect = {
@@ -2547,10 +2545,7 @@ THE_HNG_1_5 = {
 				duration = -1
 			}
 			hidden_effect = {
-				add_country_modifier = {
-					name = THE_hng_mission_modifier48
-					duration = -1
-				}
+				set_country_flag = THE_HNG_disasters1_reform4_had_completed
 			}
 		}
 	}
@@ -2563,11 +2558,7 @@ THE_HNG_1_5 = {
 			THE_HNG_1_2_29
 		}
 		
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = THE_HNG_mission9_tt
-				has_country_flag = THE_HNG_disasters1_reform4_had_completed
-			}			
+		trigger = {		
 			OR ={
 				legitimacy = 100
 				imperial_mandate = 50
@@ -3895,6 +3886,7 @@ THE_HNG_2_3 = {
 				name = THE_hng_mission_modifier74
 				duration = 10950
 			}
+			swap_non_generic_missions = yes
 		} 
 	}
 	
@@ -5864,6 +5856,15 @@ THE_HNG_3_1 = {
 		
 		effect = {
 			custom_tooltip = THE_HNG_mission16_tt
+			add_country_modifier = {
+				name = THE_HNG_disasters3_reform1_completed
+				duration = 1825
+			}
+			add_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Inflation_rate_adm_power
+				value = -10
+			}
 			THE_country_event_with_insight = {
 				id = flavor_THE_HNG_events.46
 				effect_tooltip = "
@@ -5871,6 +5872,9 @@ THE_HNG_3_1 = {
 					add_stability = 1
 					add_splendor = 400
 				"
+			}
+			hidden_effect = {
+				set_country_flag = THE_HNG_disasters3_reform1_had_completed
 			}
 		}
 	}
@@ -5889,8 +5893,20 @@ THE_HNG_3_1 = {
 		effect = { 
 			custom_tooltip = THE_HNG_mission17_tt
 			add_country_modifier = {
+				name = THE_HNG_disasters3_reform2_completed
+				duration = 1825
+			}
+			add_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Inflation_rate_adm_power
+				value = -15
+			}
+			add_country_modifier = {
 				name = THE_hng_mission_modifier118
 				duration = 7300
+			}
+			hidden_effect = {
+				set_country_flag = THE_HNG_disasters3_reform2_had_completed
 			}
 		} 
 	}
@@ -5921,11 +5937,7 @@ THE_HNG_3_1 = {
 		} 
 		
 		trigger = { 
-			custom_trigger_tooltip = {
-				tooltip = THE_HNG_mission19_tt
-				has_country_flag = THE_HNG_disasters3_reform3_had_completed
-			}
-			NOT = { 	corruption = 0.01 }
+			NOT = { corruption = 0.01 }
 			NOT = { inflation = 0.01 }
 			NOT = { has_country_modifier = THE_HNG_disasters3_reform_to_confusion }
 		}
@@ -5988,6 +6000,15 @@ THE_HNG_3_2 = {
 		
 		effect = { 
 			custom_tooltip = THE_HNG_mission18_tt
+			add_country_modifier = {
+				name = THE_HNG_disasters3_reform3_completed
+				duration = 1825
+			}
+			add_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Inflation_rate_adm_power
+				value = -25
+			}
 			THE_country_event_with_insight = {
 				id = flavor_THE_HNG_events.47
 				effect_tooltip = "
@@ -6007,6 +6028,9 @@ THE_HNG_3_2 = {
 					}
 				"
 			}
+			hidden_effect = {
+				set_country_flag = THE_HNG_disasters3_reform3_had_completed
+			}
 		} 
 	}
 	
@@ -6019,19 +6043,28 @@ THE_HNG_3_2 = {
 			trade_goods = grain
 			AND = {
 				owned_by = ROOT
-				NOT = {	has_production_building_trigger = yes	}
+				NOT = {	has_production_building_trigger = yes }
 			}
 		}
 		trigger = {
 			num_of_owned_provinces_with = {
 				trade_goods = grain
-				has_production_building_trigger = yes	
+				has_production_building_trigger = yes
 				value = 12
 			}
 		}
 		
 		effect = {
 			custom_tooltip = THE_HNG_mission13_tt
+			add_country_modifier = {
+				name = THE_HNG_disasters2_reform2_completed
+				duration = 1825
+			}
+			add_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Merger_degree_dip_power
+				value = -25
+			}
 			custom_tooltip = THE_HNG_every_province_meet_trigger_tt
 			tooltip = {
 				add_or_upgrade_production_building = yes
@@ -6044,6 +6077,7 @@ THE_HNG_3_2 = {
 					}
 					add_or_upgrade_production_building = yes
 				}
+				set_country_flag = THE_HNG_disasters2_reform2_had_completed
 			}
 		}
 	}
@@ -6082,9 +6116,18 @@ THE_HNG_3_3 = {
 		
 		effect = {
 			custom_tooltip = THE_HNG_mission12_tt
+			add_country_modifier = {
+				name = THE_HNG_disasters2_reform1_completed
+				duration = 1825
+			}
+			add_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Merger_degree_dip_power
+				value = -20
+			}
 			add_meritocracy = 10
 			hidden_effect = {
-				add_meritocracy = 10
+				set_country_flag = THE_HNG_disasters2_reform1_had_completed
 			}
 		}
 	}
@@ -6116,6 +6159,15 @@ THE_HNG_3_3 = {
 		
 		effect = {
 			custom_tooltip = THE_HNG_mission14_tt
+			add_country_modifier = {
+				name = THE_HNG_disasters2_reform3_completed
+				duration = 1825
+			}
+			add_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Merger_degree_dip_power
+				value = -30
+			}
 			THE_country_event_with_insight = {
 				id = flavor_THE_HNG_events.35
 				effect_tooltip = "
@@ -6126,6 +6178,9 @@ THE_HNG_3_3 = {
 					}
 					add_years_of_income = -0.25
 				"
+			}
+			hidden_effect = {
+				set_country_flag = THE_HNG_disasters2_reform3_had_completed
 			}
 		}
 	}
@@ -6198,7 +6253,15 @@ THE_HNG_3_4 = {
 		} 
 		
 		effect = { 
-			custom_tooltip = THE_HNG_mission22_tt	
+			custom_tooltip = THE_HNG_mission22_tt
+			add_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Army_corruption_mil_power
+				value = -20
+			}
+			hidden_effect = {
+				set_country_flag = THE_HNG_disasters4_reform3_had_completed
+			}
 		} 
 	}	
 	
@@ -6257,7 +6320,15 @@ THE_HNG_3_5 = {
 		} 
 		
 		effect = { 
-			custom_tooltip = THE_HNG_mission20_tt		
+			custom_tooltip = THE_HNG_mission20_tt
+			add_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Army_corruption_mil_power
+				value = -10
+			}
+			hidden_effect = {
+				set_country_flag = THE_HNG_disasters4_reform1_had_completed
+			}
 		} 
 	}
 	
@@ -6277,7 +6348,15 @@ THE_HNG_3_5 = {
 		} 
 		
 		effect = { 
-			custom_tooltip = THE_HNG_mission21_tt	
+			custom_tooltip = THE_HNG_mission21_tt
+			add_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Army_corruption_mil_power
+				value = -15
+			}
+			hidden_effect = {
+				set_country_flag = THE_HNG_disasters4_reform2_had_completed
+			}
 		} 
 	}
 	
@@ -6308,9 +6387,17 @@ THE_HNG_3_5 = {
 		
 		effect = { 
 			custom_tooltip = THE_HNG_mission23_tt
+			add_government_power = {
+				mechanic_type = THE_HNG_celestial_empire_Third_degree_mechanic
+				power_type = THE_HNG_Army_corruption_mil_power
+				value = -25
+			}
 			add_country_modifier = {
 				name = THE_hng_mission_modifier123
 				duration = -1
+			}
+			hidden_effect = {
+				set_country_flag = THE_HNG_disasters4_reform4_had_completed
 			}
 		} 
 	}
@@ -6325,10 +6412,6 @@ THE_HNG_3_5 = {
 		} 
 		
 		trigger = { 
-			custom_trigger_tooltip = {
-				tooltip = THE_HNG_mission24_tt
-				has_country_flag = THE_HNG_disasters4_reform4_had_completed
-			}
 			OR = {
 				army_professionalism = 0.60
 				army_tradition = 75

@@ -461,7 +461,7 @@ l_english:
  flavor_THE_HNG_mission_events.13.b: "我们国内的两位防御使实在是令人害怕..."
  flavor_THE_HNG_mission_events.14.t: "大明之行"
  flavor_THE_HNG_mission_events.14.desc: "在收到进京面圣的命令后，美铃十分高兴，没过多久就离开了大理。这次她没有带任何随从，毕竟在如今的大明，没有任何人可以伤害到她。\n在路上，她逐渐沉默了下来，这个国家最基础的制度存在着严重的问题，虽然现在还未显现出来，但是美铃的远见已经可以看到那种未来了。虽然她早就知道大明的结局，但是当书中的内容成为活生生的现实，这只会更让人心痛。但是毕竟这个王朝的建立者本身就只是农民，国家制度变成这样也是可以理解的。\n然而，在面见到天子后，她的内心更加心寒了，为什么一个贤臣能就这样被处死呢？她不理解，她也不想理解。\n天子对于她的功绩并未表现出太多在意，但是这已经和美铃没有关系了，包括周围其他官员的嘲讽话语和天子给予美铃的赏赐她也仿佛没有听见。\n§R现在，她已经做出了一个重要的选择。§!"
- flavor_THE_HNG_mission_events.14.a: "我会做好一切准备...（§Y五年后我们会主动宣战大明§!）"
+ flavor_THE_HNG_mission_events.14.a: "我会做好一切准备..."
  flavor_THE_HNG_mission_events.15.t: "天命之战"
  flavor_THE_HNG_mission_events.15.desc: "我们已经做好了准备，是时候让这个腐朽的王朝在没有伤害到百姓之前彻底毁灭了，红美铃已经反复强调不要伤害百姓，她知道妖怪武士她们完全可以做到。"
  flavor_THE_HNG_mission_events.15.a: "§Y诛灭伪帝§!"
@@ -890,8 +890,8 @@ l_english:
  THE_HNG_power_var_events.19.t: "设置变量隐藏事件"
  THE_HNG_power_var_events.19.desc: "你是怎么看到这个事件的？"
  THE_HNG_power_var_events.19.a: "一点小小的~"
- the_hng_disasters_one_lose_tt: "灾难持续30年将以失败结束灾难"
- the_hng_disasters_two_lose_tt: "灾难持续20年将以失败结束灾难"
+ the_hng_disasters_one_lose_tt: "\n灾难持续30年将以失败结束灾难，并获得永久惩罚"
+ the_hng_disasters_two_lose_tt: "\n灾难持续20年将以失败结束灾难，并获得永久惩罚"
  flavor_THE_HNG_mission_events.58.t: "向天朝宣战"
  flavor_THE_HNG_mission_events.58.desc: "是时候让天朝见识一下我们幻想乡的强大了！\n让他们见识一下我们真正的力量！"
  flavor_THE_HNG_mission_events.58.a: "战！战！战！！！"
@@ -1479,6 +1479,10 @@ l_english:
  desc_THE_hng_mission_modifier145:"通过火器在统一中国过程中的出色表现，如今我们把它们运用到了所有军队之中"
  THE_hng_mission_modifier146:"武士力量"
  desc_THE_hng_mission_modifier146:"通过火器在统一中国过程中的出色表现，如今我们把它们专门运用到了妖怪武士之中，如今妖怪武士们的力量继续壮大"
+ THE_HNG_disaster1_fall_modifier: "永久的伤痕"
+ THE_HNG_disaster2_fall_modifier: "贪婪的根系"
+ THE_HNG_disaster3_fall_modifier: "截止的江流"
+ THE_HNG_disaster4_fall_modifier: "侵蚀的砂石"
 ### MODIFIER_END
 
 ### VARIABLE

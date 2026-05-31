@@ -403,6 +403,7 @@ Gensokyan_hng_realm_of_the_dragon = {
 	allow_force_tributary = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 10
+	rulers_can_be_generals = no
 	modifiers = {
 		manpower_recovery_speed = 0.25
 		governing_capacity = 500
