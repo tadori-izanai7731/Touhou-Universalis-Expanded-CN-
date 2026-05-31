@@ -116,6 +116,7 @@ the_hng_disasters_one = {
 	}
 	on_start = flavor_THE_HNG_events.5
 	on_end = flavor_THE_HNG_events.8
+	# on_fall = flavor_THE_HNG_events.7
 }
 
 #土地兼并
@@ -232,6 +233,7 @@ the_hng_disasters_two = {
 	}
 	on_start = flavor_THE_HNG_events.24
 	on_end = flavor_THE_HNG_events.26
+	# on_fall = flavor_THE_HNG_events.25
 }
 
 #通胀崩溃
@@ -370,6 +372,7 @@ the_hng_disasters_three = {
 	}
 	on_start = flavor_THE_HNG_events.37
 	on_end = flavor_THE_HNG_events.39
+	# on_fall = flavor_THE_HNG_events.38
 }
 
 #军队腐化
@@ -468,4 +471,5 @@ the_hng_disasters_four = {
 	}
 	on_start = flavor_THE_HNG_events.90
 	on_end = flavor_THE_HNG_events.50
+	# on_fall = flavor_THE_HNG_events.49
 }
