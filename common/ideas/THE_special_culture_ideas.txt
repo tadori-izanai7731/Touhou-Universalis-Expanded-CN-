@@ -50,7 +50,7 @@ THE_youkai_ideas = {
 		reserves_organisation = 0.15
 	}	
 	THE_youkai_ideas_4 = {
-		prestige = 2
+		prestige = 1
 		power_projection_from_insults = 0.5
 	}	
 	THE_youkai_ideas_5 = {
@@ -58,7 +58,7 @@ THE_youkai_ideas = {
 		overextension_impact_modifier = -0.3
 	}	
 	THE_youkai_ideas_6 = {
-		yearly_corruption = -0.2
+		yearly_corruption = -0.1
 		global_autonomy = -0.05
 	}	
 	THE_youkai_ideas_7 = {
@@ -81,9 +81,9 @@ THE_kami_ideas = {
 	category = ADM
 
 	bonus = {
-		church_loyalty_modifier = 0.2
-		brahmins_hindu_loyalty_modifier = 0.2
-		brahmins_muslim_loyalty_modifier = 0.2
+		church_loyalty_modifier = 0.1
+		brahmins_hindu_loyalty_modifier = 0.1
+		brahmins_muslim_loyalty_modifier = 0.1
 		no_religion_penalty = yes
 	}
 
@@ -118,8 +118,7 @@ THE_kami_ideas = {
 		prestige_decay = -0.01
 	}	
 	THE_kami_ideas_3 = {
-		unjustified_demands = -0.25
-		monthly_splendor = 3
+		missionary_maintenance_cost = -0.5
 	}	
 	THE_kami_ideas_4 = {
 		global_missionary_strength = 0.02
@@ -149,12 +148,63 @@ THE_kami_ideas = {
 	}
 }
 
+# sennin
+THE_sennin_ideas = {
+	category = ADM
+
+	bonus = {
+		free_concentrate_development = yes
+	}
+
+	trigger = {
+		NOT = { THE_forbid_special_culture_ideas_scripted_trigger = { type = sennin } }
+		OR = {
+			primary_culture = Senkaian
+			THE_can_use_special_culture_ideas_scripted_trigger = {
+				type = sennin
+			}
+			AND = {
+				full_idea_group = THE_gensokyan_ideas
+				NOT = { was_tag = LCU }
+				NOT = { tag = LCU }
+			}
+		}
+	}
+
+	THE_sennin_ideas_1 = {
+		country_diplomatic_power = 1
+	}
+	THE_sennin_ideas_2 = {
+		production_efficiency = 0.1
+		artillery_barrage_cost = -0.1
+	}
+	THE_sennin_ideas_3 = {
+		inflation_reduction = 0.05
+		gold_depletion_chance_modifier = -0.25
+	}
+	THE_sennin_ideas_4 = {
+		unjustified_demands = -0.2
+	}
+	THE_sennin_ideas_5 = {
+		prestige_per_development_from_conversion = 0.2
+		build_cost = -0.1
+	}
+	THE_sennin_ideas_6 = {
+		monarch_lifespan = 0.5
+		election_cycle = 5
+		monthly_reform_progress = 0.2
+	}
+	THE_sennin_ideas_7 = {
+		embracement_cost = -0.2
+	}
+}
+
 # human
 THE_human_ideas = {
 	category = DIP
 
 	bonus = {
-		global_monthly_devastation = -2
+		global_monthly_devastation = -1
 		governing_cost = -0.1
 	}
 
@@ -163,9 +213,8 @@ THE_human_ideas = {
 		OR = {
 			primary_culture = Magician
 			primary_culture = Gensokyo_human
-			primary_culture = Senkaian
-			primary_culture = Heavenish
 			primary_culture = Eientei
+			primary_culture = Gensokyo_chinese
 			THE_can_use_special_culture_ideas_scripted_trigger = {
 				type = human
 			}
@@ -179,19 +228,18 @@ THE_human_ideas = {
 	
 	THE_human_ideas_1 = {
 		diplomats = 2
-		envoy_travel_time = -0.33
+		diplomatic_reputation = 1
 	}	
 	THE_human_ideas_2 = {
-		num_accepted_cultures = 5
-		promote_culture_cost = -0.5
+		num_accepted_cultures = 3
+		promote_culture_cost = -0.25
 	}	
 	THE_human_ideas_3 = {
-		development_cost = -0.15
+		development_cost = -0.1
 		reform_progress_growth = 0.3
 	}	
 	THE_human_ideas_4 = {
 		improve_relation_modifier = 0.5
-		diplomatic_reputation = 2
 	}	
 	THE_human_ideas_5 = {
 		fort_maintenance_modifier = -0.3
@@ -199,7 +247,7 @@ THE_human_ideas = {
 	}	
 	THE_human_ideas_6 = {
 		expand_administration_cost = -1
-		estate_interaction_cooldown_modifier = -0.5
+		estate_interaction_cooldown_modifier = -0.25
 	}	
 	THE_human_ideas_7 = {
 		monthly_favor_modifier = 0.25
@@ -279,6 +327,110 @@ THE_fairy_ideas = {
 			factor = 0
 			THE_ai_difficulty_enhance_chance_priority_trigger = yes
 		}
+	}
+}
+
+# tennin
+THE_tennin_ideas = {
+	category = DIP
+
+	bonus = {
+		range = 0.5
+		envoy_travel_time = -0.25
+	}
+
+	trigger = {
+		NOT = { THE_forbid_special_culture_ideas_scripted_trigger = { type = tennin } }
+		OR = {
+			primary_culture = Heavenish
+			THE_can_use_special_culture_ideas_scripted_trigger = {
+				type = tennin
+			}
+			AND = {
+				full_idea_group = THE_gensokyan_ideas
+				NOT = { was_tag = LCU }
+				NOT = { tag = LCU }
+			}
+		}
+	}
+
+	THE_tennin_ideas_1 = {
+		colonists = 1
+	}
+	THE_tennin_ideas_2 = {
+		colony_development_boost = 1
+		native_uprising_chance = -0.5
+	}
+	THE_tennin_ideas_3 = {
+		monthly_splendor = 2
+		country_diplomatic_power = 1
+	}
+	THE_tennin_ideas_4 = {
+		interest = -1
+		light_ship_cost = -0.33
+	}
+	THE_tennin_ideas_5 = {
+		vassal_naval_forcelimit_bonus = 0.5
+	}
+	THE_tennin_ideas_6 = {
+		trade_company_governing_cost = -0.2
+	}
+	THE_tennin_ideas_7 = {
+		may_explore = yes
+		accept_vassalization_reasons = 20
+	}
+}
+
+#rei
+THE_rei_ideas = {
+	category = MIL
+
+	bonus = {
+		may_return_manpower_on_disband = yes
+	}
+
+	trigger = {
+		NOT = { THE_forbid_special_culture_ideas_scripted_trigger = { type = rei } }
+		OR = {
+			primary_culture = Netherlandish
+			primary_culture = Higanean
+			primary_culture = Poltergeist_culture
+			THE_can_use_special_culture_ideas_scripted_trigger = {
+				type = rei
+			}
+			AND = {
+				full_idea_group = THE_gensokyan_ideas
+				NOT = { was_tag = LCU }
+				NOT = { tag = LCU }
+			}
+		}
+	}
+
+	THE_rei_ideas_1 = {
+		attack_bonus_in_capital_terrain = 1
+	}
+	THE_rei_ideas_2 = {
+		loot_amount = 0.25
+		global_regiment_recruit_speed = -0.25
+	}
+	THE_rei_ideas_3 = {
+		shock_damage_received = -0.1
+	}
+	THE_rei_ideas_4 = {
+		leader_land_manuever = 1
+		leader_cost = -0.1
+	}
+	THE_rei_ideas_5 = {
+		assault_fort_cost_modifier = -0.25
+		war_taxes_cost_modifier = -0.5
+	}
+	THE_rei_ideas_6 = {
+		rival_change_cost = -1.0
+		rival_border_fort_maintenance = -0.5
+	}
+	THE_rei_ideas_7 = {
+		centralize_state_cost = -0.25
+		ignore_coring_distance = yes
 	}
 }
 
