@@ -169,7 +169,7 @@ THE_sennin_ideas = {
 	}
 
 	THE_sennin_ideas_1 = {
-		country_diplomatic_power = 1
+		country_admin_power = 1
 	}
 	THE_sennin_ideas_2 = {
 		production_efficiency = 0.1
@@ -193,6 +193,10 @@ THE_sennin_ideas = {
 	}
 	THE_sennin_ideas_7 = {
 		embracement_cost = -0.2
+	}
+	
+	ai_will_do = {
+		factor = 5
 	}
 }
 
@@ -376,6 +380,10 @@ THE_tennin_ideas = {
 		may_explore = yes
 		accept_vassalization_reasons = 20
 	}
+	
+	ai_will_do = {
+		factor = 5
+	}
 }
 
 #rei
@@ -428,6 +436,10 @@ THE_rei_ideas = {
 	THE_rei_ideas_7 = {
 		centralize_state_cost = -0.25
 		ignore_coring_distance = yes
+	}
+
+	ai_will_do = {
+		factor = 5
 	}
 }
 
