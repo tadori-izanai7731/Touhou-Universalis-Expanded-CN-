@@ -1931,7 +1931,6 @@ THE_HNG_1_4 = {
 				AND = {
 					is_emperor_of_china = yes
 					has_disaster = the_hng_disasters_one
-					has_estate_privilege = THE_HNG_not_believe
 				}
 				AND = {
 					has_country_modifier = THE_HNG_more_efficient_land_system
@@ -6364,7 +6363,7 @@ THE_HNG_3_5 = {
 	THE_HNG_3_3_75 = {
 		icon = mission_touhou_remilia
 		position = 36
-		required_missions = {
+		required_missions = {THE_HNG_can_disasters
 			THE_HNG_3_1_74
 		}
 		
