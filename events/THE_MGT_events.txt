@@ -1,5 +1,10 @@
 namespace = THE_MGT_events
 
+# 爱丽丝·玛格特罗依德 任务触发事件
+# [注] 这些是爱丽丝个人的任务系统事件，不属于森林灾难体系
+# 森林灾难相关内容请见 THE_FOM_flavor_events (前缀 THE_FOM)
+
+# 任务 THE_MGT_3_4 触发
 country_event = {
 	id = THE_MGT_events.0
 	title = THE_MGT_events.0.t
@@ -11,9 +16,15 @@ country_event = {
 
 	option = {
 		name = THE_MGT_events.0.a
+		custom_tooltip = THE_MGT_events_0_c_tt1
+		add_prestige = 5
+		hidden_effect = {
+			set_country_flag = THE_MGT_dolls_resonate_with_forest_flag
+		}
 	}
 }
 
+# 任务 THE_MGT_4_3 触发
 country_event = {
 	id = THE_MGT_events.1
 	title = THE_MGT_events.1.t
@@ -25,5 +36,10 @@ country_event = {
 
 	option = {
 		name = THE_MGT_events.1.a
+		custom_tooltip = THE_MGT_events_1_c_tt1
+		add_army_professionalism = 0.05
+		hidden_effect = {
+			set_country_flag = THE_MGT_alice_feels_forest_power_flag
+		}
 	}
 }

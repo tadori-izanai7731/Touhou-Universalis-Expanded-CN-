@@ -1,3 +1,9 @@
+# 魔法之森灾难体系
+# 剧情：日白残无通过代理人三头慧之子在森林中「种下种子」
+# 傲慢的魔法使们被蛊惑，试图篡夺垂死的「森林之永恒」
+# 浩劫 → 森林之灵叹息 → 荆棘瓦解 → 恶狼觊觎神格
+
+## 第一次灾难：森林觉醒
 THE_FOM_forest_awaken_the_first = {
 	potential = {
 		OR = {
@@ -16,10 +22,15 @@ THE_FOM_forest_awaken_the_first = {
 		has_any_disaster = yes
 	}
 	progress = {
-		#魔法森林
+		# 基础进度：傲慢魔法使的禁术在阴影中蔓延
 		modifier = {
 			factor = 25
 			always = yes
+		}
+		# 魔理沙积极调查可减缓进度
+		modifier = {
+			factor = -2
+			has_country_flag = THE_FOM_marisa_investigating_flag
 		}
 	}
 	can_end = {
@@ -28,24 +39,30 @@ THE_FOM_forest_awaken_the_first = {
 			has_global_flag = THE_FOM_forest_awaken_the_first_xxx_come_down_flag
 		}
 	}
+	# 月度随机事件
 	on_monthly = {
 		random_events = {
 			2000 = 0
-			100 = THE_FOM_flavor_events.9
-			100 = THE_FOM_flavor_events.10
-			100 = THE_FOM_flavor_events.11
-			100 = THE_FOM_flavor_events.12
+			100 = THE_FOM_flavor_events.42	# 魔法波动
+			100 = THE_FOM_flavor_events.43	# 傲慢魔法使的密会
+			100 = THE_FOM_flavor_events.44	# 可疑痕迹
+			100 = THE_FOM_flavor_events.9	# 妖怪起义
+			100 = THE_FOM_flavor_events.10	# 森林自由权派系
+			100 = THE_FOM_flavor_events.11	# 狂乱的妖精
+			100 = THE_FOM_flavor_events.12	# 最后通牒
 		}
 	}
 	modifier = {
 		global_unrest = 5
-		manpower_recovery_speed = 0.33
+		manpower_recovery_speed = -0.33
 		stability_cost_modifier = -0.25
 	}
 	on_start = THE_FOM_flavor_events.3
 	on_end = THE_FOM_flavor_events.4
 }
-##第二次灾难
+
+## 第二次灾难：森林的命运 —— 瓦解与恶狼
+## 荆棘瓦解后，妖怪们面临选择，外部势力（恶狼）觊觎神格
 THE_FOM_forest_awaken_the_second = {
 	potential = {
 		OR = {
@@ -64,15 +81,22 @@ THE_FOM_forest_awaken_the_second = {
 		has_any_disaster = yes
 	}
 	progress = {
+		# 基础进度：瓦解蔓延
 		modifier = {
-			factor = 8
+			factor = 7
 			always = yes
 		}
+		# MRS与MGT交战时，各方互相牵制，瓦解减缓
 		modifier = {
-			factor = -5
+			factor = -4
 			MGT = {
 				war_with = MRS
 			}
+		}
+		# 如果玩家积极镇压独立，恶化加速（反弹）
+		modifier = {
+			factor = 3
+			has_country_flag = THE_FOM_suppress_youkai_harshly_flag
 		}
 	}
 	can_end = {
@@ -82,12 +106,23 @@ THE_FOM_forest_awaken_the_second = {
 		}
 		is_at_war = no
 	}
+	# 月度事件：瓦解与恶狼
+	on_monthly = {
+		random_events = {
+			2000 = 0
+			100 = THE_FOM_flavor_events.18		# 森林的命运幕起
+			100 = THE_FOM_flavor_events.220		# 恶狼的窥视
+			100 = THE_FOM_flavor_events.221		# 边境的阴影
+		}
+	}
+	# 「荆棘瓦解」——森林不再保护它的子民
 	modifier = {
 		leader_land_fire = 1
 		leader_land_shock = 1
 		army_tradition_decay = -0.05
 		army_tradition = 5
 		manpower_recovery_speed = 0.50
+		defensiveness = -0.15
 	}
 	on_start = THE_FOM_flavor_events.33
 	on_end = THE_FOM_flavor_events.36

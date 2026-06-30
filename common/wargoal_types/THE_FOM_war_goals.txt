@@ -7,7 +7,7 @@ THE_FOM_MGT_create_union_war = {
 		prestige_factor = 2.0
 		peace_options = {
 			THE_FOM_MGT_can_use_union_mrs_po
-			po_demand_provinces
+			
 			po_revoke_cores
 			po_release_vassals
 			po_gold
@@ -15,18 +15,16 @@ THE_FOM_MGT_create_union_war = {
 			po_trade_power
 			po_steer_trade
 		}
-
 		allowed_provinces = {
-			always = yes
+			always = no
 		}
 	}
-
 	defender = {
 		badboy_factor = 0.5
 		peace_cost_factor = 0.75
 		prestige_factor = 2.0
 		peace_options = {
-			po_demand_provinces
+			
 			po_revoke_cores
 			po_release_vassals
 			po_gold
@@ -34,12 +32,10 @@ THE_FOM_MGT_create_union_war = {
 			po_trade_power
 			po_steer_trade
 		}
-
 		allowed_provinces = {
-			always = yes
+			always = no
 		}
 	}
-
 	war_name = THE_FOM_create_union_war_name
 }
 
