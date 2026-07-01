@@ -2,12 +2,11 @@ THE_FOM_MGT_create_union_war = {
 	type = take_capital
 
 	attacker = {
-		badboy_factor = 0.5
+		badboy_factor = 0.0
 		peace_cost_factor = 0.75
 		prestige_factor = 2.0
 		peace_options = {
 			THE_FOM_MGT_can_use_union_mrs_po
-			po_demand_provinces
 			po_revoke_cores
 			po_release_vassals
 			po_gold
@@ -17,16 +16,15 @@ THE_FOM_MGT_create_union_war = {
 		}
 
 		allowed_provinces = {
-			always = yes
+			always = no
 		}
 	}
 
 	defender = {
-		badboy_factor = 0.5
+		badboy_factor = 0.0
 		peace_cost_factor = 0.75
 		prestige_factor = 2.0
 		peace_options = {
-			po_demand_provinces
 			po_revoke_cores
 			po_release_vassals
 			po_gold
@@ -36,7 +34,7 @@ THE_FOM_MGT_create_union_war = {
 		}
 
 		allowed_provinces = {
-			always = yes
+			always = no
 		}
 	}
 
