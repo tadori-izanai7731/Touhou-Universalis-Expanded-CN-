@@ -12,9 +12,9 @@ THE_FOM_on_startup_scripted_effects = {
 		}
 		#初始变量
 		ENK = {
-			set_variable = { which = the_fom_forest_influence_is_marisa_var value = 150 }
+			set_variable = { which = the_fom_forest_influence_is_marisa_var value = 15 }
 			set_variable = { which = the_fom_forest_influence_is_alice_var value = 15 }
-			set_variable = { which = the_fom_forest_influence_is_our_var value = 15 }
+			set_variable = { which = the_fom_forest_influence_is_our_var value = 150 }
 		}
 		#
 		MST = {
