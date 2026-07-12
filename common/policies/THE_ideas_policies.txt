@@ -1,29 +1,5 @@
 
 ### youkai ideas policies
-THE_youkai_kami_policy= {
-	monarch_power = ADM
-
-	potential = {
-		has_idea_group = THE_youkai_ideas
-		has_idea_group = THE_kami_ideas
-	}
-	allow = {
-		full_idea_group = THE_youkai_ideas
-		full_idea_group = THE_kami_ideas
-	}
-	
-	# modifier
-	global_missionary_strength = 0.02
-	prestige_per_development_from_conversion = 1
-	harmonization_speed = 0.1
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
 THE_youkai_court_policy= {
 	monarch_power = ADM
 
@@ -44,7 +20,7 @@ THE_youkai_court_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -67,7 +43,7 @@ THE_youkai_diplomatic_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -89,7 +65,7 @@ THE_youkai_spy_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -112,7 +88,7 @@ THE_youkai_exploration_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -134,7 +110,7 @@ THE_youkai_influence_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -157,7 +133,7 @@ THE_youkai_maritime_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -179,30 +155,7 @@ THE_youkai_trade_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
-	}
-}
-
-THE_youkai_human_policy= {
-	monarch_power = ADM
-
-	potential = {
-		has_idea_group = THE_youkai_ideas
-		has_idea_group = THE_human_ideas
-	}
-	allow = {
-		full_idea_group = THE_youkai_ideas
-		full_idea_group = THE_human_ideas
-	}
-	
-	# modifier
-	harsh_treatment_cost = -0.3
-	stability_cost_modifier = -0.15
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -220,12 +173,12 @@ THE_youkai_fairy_policy= {
 	
 	# modifier
 	global_trade_goods_size_modifier = 0.1
-	production_efficiency = 0.1
+	production_efficiency = 0.2
 
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -248,7 +201,7 @@ THE_youkai_aristocracy_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -271,7 +224,7 @@ THE_youkai_plutocracy_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -294,7 +247,7 @@ THE_youkai_theocracy_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -316,7 +269,7 @@ THE_youkai_indigenous_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -338,7 +291,7 @@ THE_youkai_horde_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -361,7 +314,7 @@ THE_youkai_defensive_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -384,7 +337,7 @@ THE_youkai_mercenary_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -407,7 +360,7 @@ THE_youkai_naval_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -429,7 +382,7 @@ THE_youkai_offensive_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -451,7 +404,7 @@ THE_youkai_quality_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -473,34 +426,34 @@ THE_youkai_quantity_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
-THE_kami_youkai_policy= {
+THE_youkai_gensokyan_policy= {
 	monarch_power = ADM
 
 	potential = {
-		has_idea_group = THE_kami_ideas
 		has_idea_group = THE_youkai_ideas
+		has_idea_group = THE_gensokyan_ideas
 	}
 	allow = {
-		full_idea_group = THE_kami_ideas
 		full_idea_group = THE_youkai_ideas
+		full_idea_group = THE_gensokyan_ideas
 	}
 	
 	# modifier
-	missionaries = 1
-	shock_damage_received = -0.1
-	yearly_harmony = 0.25
+	global_unrest = -10
+	max_absolutism = 50
 
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
+### kami ideas policies
 THE_kami_court_policy= {
 	monarch_power = DIP
 
@@ -521,7 +474,7 @@ THE_kami_court_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -545,7 +498,7 @@ THE_kami_diplomatic_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -568,7 +521,7 @@ THE_kami_spy_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -591,7 +544,7 @@ THE_kami_exploration_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -614,7 +567,7 @@ THE_kami_influence_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -637,7 +590,7 @@ THE_kami_maritime_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -662,29 +615,7 @@ THE_kami_trade_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
-	}
-}
-
-THE_kami_human_policy= {
-	monarch_power = ADM
-
-	potential = {
-		has_idea_group = THE_kami_ideas
-		has_idea_group = THE_human_ideas
-	}
-	allow = {
-		full_idea_group = THE_kami_ideas
-		full_idea_group = THE_human_ideas
-	}
-	
-	# modifier
-	global_tax_modifier = 0.2
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -701,13 +632,13 @@ THE_kami_fairy_policy= {
 	}
 	
 	# modifier
-	years_of_nationalism = -5
 	land_morale_constant = 0.25
+	manpower_in_true_faith_provinces = 0.2
 
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -729,7 +660,7 @@ THE_kami_aristocracy_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -752,7 +683,7 @@ THE_kami_plutocracy_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -775,7 +706,7 @@ THE_kami_theocracy_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -797,7 +728,7 @@ THE_kami_indigenous_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -820,7 +751,7 @@ THE_kami_horde_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -843,7 +774,7 @@ THE_kami_defensive_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -866,7 +797,7 @@ THE_kami_mercenary_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -890,7 +821,7 @@ THE_kami_naval_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -913,7 +844,7 @@ THE_kami_offensive_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -936,7 +867,7 @@ THE_kami_quality_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -960,7 +891,30 @@ THE_kami_quantity_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
+	}
+}
+
+THE_kami_gensokyan_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_kami_ideas
+		has_idea_group = THE_gensokyan_ideas
+	}
+	allow = {
+		full_idea_group = THE_kami_ideas
+		full_idea_group = THE_gensokyan_ideas
+	}
+	
+	# modifier
+	diplomatic_reputation = 5
+	religious_unity = 1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 0
 	}
 }
 
@@ -987,7 +941,7 @@ THE_human_administrative_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1010,7 +964,7 @@ THE_human_economic_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1032,7 +986,7 @@ THE_human_expansion_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1055,7 +1009,7 @@ THE_human_humanist_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1078,7 +1032,7 @@ THE_human_infrastructure_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1101,7 +1055,7 @@ THE_human_innovativeness_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1124,7 +1078,7 @@ THE_human_religious_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1142,11 +1096,12 @@ THE_human_youkai_policy= {
 	
 	# modifier
 	global_unrest = -2
+	stability_cost_modifier = -0.15
 
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1163,36 +1118,13 @@ THE_human_kami_policy= {
 	}
 	
 	# modifier
-	state_maintenance_modifier = -0.2
+	state_maintenance_modifier = -0.33
 	tolerance_own = 1
 
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
-	}
-}
-
-THE_human_fairy_policy= {
-	monarch_power = DIP
-
-	potential = {
-		has_idea_group = THE_human_ideas
-		has_idea_group = THE_fairy_ideas
-	}
-	allow = {
-		full_idea_group = THE_human_ideas
-		full_idea_group = THE_fairy_ideas
-	}
-	
-	# modifier
-	spy_offence = 0.15
-	production_efficiency = 0.15
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1215,7 +1147,7 @@ THE_human_aristocracy_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1238,7 +1170,7 @@ THE_human_plutocracy_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1261,7 +1193,7 @@ THE_human_theocracy_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1283,7 +1215,7 @@ THE_human_indigenous_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1306,7 +1238,7 @@ THE_human_horde_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1329,7 +1261,7 @@ THE_human_defensive_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1352,7 +1284,7 @@ THE_human_mercenary_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1374,7 +1306,7 @@ THE_human_naval_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1397,7 +1329,7 @@ THE_human_offensive_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1420,7 +1352,7 @@ THE_human_quality_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1443,7 +1375,30 @@ THE_human_quantity_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
+	}
+}
+
+THE_human_gensokyan_policy= {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_human_ideas
+		has_idea_group = THE_gensokyan_ideas
+	}
+	allow = {
+		full_idea_group = THE_human_ideas
+		full_idea_group = THE_gensokyan_ideas
+	}
+	
+	# modifier
+	technology_cost = -0.25
+	diplomats = 3
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 0
 	}
 }
 
@@ -1466,7 +1421,7 @@ THE_fairy_administrative_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1489,7 +1444,7 @@ THE_fairy_economic_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1511,7 +1466,7 @@ THE_fairy_expansion_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1534,7 +1489,7 @@ THE_fairy_humanist_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1556,7 +1511,7 @@ THE_fairy_infrastructure_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1579,7 +1534,7 @@ THE_fairy_innovativeness_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1603,77 +1558,7 @@ THE_fairy_religious_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
-	}
-}
-
-THE_fairy_youkai_policy= {
-	monarch_power = ADM
-
-	potential = {
-		has_idea_group = THE_fairy_ideas
-		has_idea_group = THE_youkai_ideas
-	}
-	allow = {
-		full_idea_group = THE_fairy_ideas
-		full_idea_group = THE_youkai_ideas
-	}
-	
-	# modifier
-	country_diplomatic_power = 1
-	spy_offence = 0.3
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-THE_fairy_kami_policy= {
-	monarch_power = ADM
-
-	potential = {
-		has_idea_group = THE_fairy_ideas
-		has_idea_group = THE_kami_ideas
-	}
-	allow = {
-		full_idea_group = THE_fairy_ideas
-		full_idea_group = THE_kami_ideas
-	}
-	
-	# modifier
-	global_missionary_strength = 0.02
-	manpower_in_true_faith_provinces = 0.2
-	harmonization_speed = 0.1
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-THE_fairy_human_policy= {
-	monarch_power = DIP
-
-	potential = {
-		has_idea_group = THE_fairy_ideas
-		has_idea_group = THE_human_ideas
-	}
-	allow = {
-		full_idea_group = THE_fairy_ideas
-		full_idea_group = THE_human_ideas
-	}
-	
-	# modifier
-	governing_capacity_modifier = 0.1
-	manpower_recovery_speed = 0.2
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1696,7 +1581,7 @@ THE_fairy_aristocracy_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1719,7 +1604,7 @@ THE_fairy_plutocracy_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1742,7 +1627,7 @@ THE_fairy_theocracy_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1765,7 +1650,7 @@ THE_fairy_indigenous_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1787,7 +1672,7 @@ THE_fairy_horde_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1810,7 +1695,7 @@ THE_fairy_defensive_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1833,7 +1718,7 @@ THE_fairy_mercenary_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1856,7 +1741,7 @@ THE_fairy_naval_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1879,7 +1764,7 @@ THE_fairy_offensive_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1902,7 +1787,7 @@ THE_fairy_quality_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1925,7 +1810,31 @@ THE_fairy_quantity_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
+	}
+}
+
+THE_fairy_gensokyan_policy= {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_fairy_ideas
+		has_idea_group = THE_gensokyan_ideas
+	}
+	allow = {
+		full_idea_group = THE_fairy_ideas
+		full_idea_group = THE_gensokyan_ideas
+	}
+	
+	# modifier
+	land_attrition = -0.5
+	parliament_backing_chance = 0.5
+	allow_free_estate_privilege_revocation = yes
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 0
 	}
 }
 
@@ -1947,7 +1856,7 @@ THE_lunarian_administrative_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1969,7 +1878,7 @@ THE_lunarian_economic_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -1992,7 +1901,7 @@ THE_lunarian_expansion_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -2014,7 +1923,7 @@ THE_lunarian_humanist_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -2036,7 +1945,7 @@ THE_lunarian_infrastructure_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -2058,7 +1967,7 @@ THE_lunarian_innovativeness_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -2081,7 +1990,7 @@ THE_lunarian_religious_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -2103,7 +2012,7 @@ THE_lunarian_court_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -2126,7 +2035,7 @@ THE_lunarian_diplomatic_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -2148,7 +2057,7 @@ THE_lunarian_spy_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -2171,7 +2080,7 @@ THE_lunarian_exploration_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -2194,7 +2103,7 @@ THE_lunarian_influence_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -2216,7 +2125,7 @@ THE_lunarian_maritime_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -2239,256 +2148,7 @@ THE_lunarian_trade_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
-	}
-}
-
-THE_lunarian_aristocracy_policy= {
-	monarch_power = MIL
-
-	potential = {
-		has_idea_group = THE_lunarian_ideas
-		has_idea_group = aristocracy_ideas
-	}
-	allow = {
-		full_idea_group = THE_lunarian_ideas
-		full_idea_group = aristocracy_ideas
-	}
-	
-	# modifier
-	own_territory_dice_roll_bonus = 1
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-THE_lunarian_plutocracy_policy= {
-	monarch_power = MIL
-
-	potential = {
-		has_idea_group = THE_lunarian_ideas
-		has_idea_group = plutocracy_ideas
-	}
-	allow = {
-		full_idea_group = THE_lunarian_ideas
-		full_idea_group = plutocracy_ideas
-	}
-	
-	# modifier
-	gold_depletion_chance_modifier = -5
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-THE_lunarian_theocracy_policy= {
-	monarch_power = MIL
-
-	potential = {
-		has_idea_group = THE_lunarian_ideas
-		has_idea_group = theocracy_gov_ideas
-	}
-	allow = {
-		full_idea_group = THE_lunarian_ideas
-		full_idea_group = theocracy_gov_ideas
-	}
-	
-	# modifier
-	missionaries = 2
-	missionary_maintenance_cost = -0.5
-	yearly_harmony = 0.5
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-THE_lunarian_indigenous_policy= {
-	monarch_power = MIL
-
-	potential = {
-		has_idea_group = THE_lunarian_ideas
-		has_idea_group = indigenous_ideas
-	}
-	allow = {
-		full_idea_group = THE_lunarian_ideas
-		full_idea_group = indigenous_ideas
-	}
-	
-	# modifier
-	military_tactics = 0.25
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-THE_lunarian_horde_policy= {
-	monarch_power = MIL
-
-	potential = {
-		has_idea_group = THE_lunarian_ideas
-		has_idea_group = horde_gov_ideas
-	}
-	allow = {
-		full_idea_group = THE_lunarian_ideas
-		full_idea_group = horde_gov_ideas
-	}
-	
-	# modifier
-	assault_fort_cost_modifier = -0.5
-	assault_fort_ability = 0.5
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-THE_lunarian_defensive_policy= {
-	monarch_power = MIL
-
-	potential = {
-		has_idea_group = THE_lunarian_ideas
-		has_idea_group = defensive_ideas
-	}
-	allow = {
-		full_idea_group = THE_lunarian_ideas
-		full_idea_group = defensive_ideas
-	}
-	
-	# modifier
-	may_refill_garrison = yes
-	global_garrison_growth = 0.5
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-THE_lunarian_mercenary_policy= {
-	monarch_power = MIL
-
-	potential = {
-		has_idea_group = THE_lunarian_ideas
-		has_idea_group = mercenary_ideas
-	}
-	allow = {
-		full_idea_group = THE_lunarian_ideas
-		full_idea_group = mercenary_ideas
-	}
-	
-	# modifier
-	possible_condottieri = 1
-	possible_mil_policy = 2
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-THE_lunarian_naval_policy= {
-	monarch_power = MIL
-
-	potential = {
-		has_idea_group = THE_lunarian_ideas
-		has_idea_group = naval_ideas
-	}
-	allow = {
-		full_idea_group = THE_lunarian_ideas
-		full_idea_group = naval_ideas
-	}
-	
-	# modifier
-	own_coast_naval_combat_bonus = 1
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-THE_lunarian_offensive_policy= {
-	monarch_power = MIL
-
-	potential = {
-		has_idea_group = THE_lunarian_ideas
-		has_idea_group = offensive_ideas
-	}
-	allow = {
-		full_idea_group = THE_lunarian_ideas
-		full_idea_group = offensive_ideas
-	}
-	
-	# modifier
-	siege_ability = 0.3
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-THE_lunarian_quality_policy= {
-	monarch_power = MIL
-
-	potential = {
-		has_idea_group = THE_lunarian_ideas
-		has_idea_group = quality_ideas
-	}
-	allow = {
-		full_idea_group = THE_lunarian_ideas
-		full_idea_group = quality_ideas
-	}
-	
-	# modifier
-	infantry_power = 0.2
-	artillery_power = 0.2
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-THE_lunarian_quantity_policy= {
-	monarch_power = MIL
-
-	potential = {
-		has_idea_group = THE_lunarian_ideas
-		has_idea_group = quantity_ideas
-	}
-	allow = {
-		full_idea_group = THE_lunarian_ideas
-		full_idea_group = quantity_ideas
-	}
-	
-	# modifier
-	army_tradition = 2
-	navy_tradition = 2
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
+		factor = 0
 	}
 }
 
@@ -2511,6 +2171,98 @@ THE_lunarian_gensokyan_policy= {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0
+	}
+}
+
+THE_lunarian_youkai_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_lunarian_ideas
+		has_idea_group = THE_youkai_ideas
+	}
+	allow = {
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = THE_youkai_ideas
+	}
+	
+	# modifier
+	global_rebel_suppression_efficiency = 1
+	autonomy_change_time = -0.5
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+THE_lunarian_kami_policy= {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_lunarian_ideas
+		has_idea_group = THE_kami_ideas
+	}
+	allow = {
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = THE_kami_ideas
+	}
+	
+	# modifier
+	unjustified_demands = -0.25
+	global_heretic_missionary_strength = 0.03
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+THE_lunarian_fairy_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_lunarian_ideas
+		has_idea_group = THE_fairy_ideas
+	}
+	allow = {
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = THE_fairy_ideas
+	}
+	
+	# modifier
+	rebel_support_efficiency = 1
+	spy_offence = 0.25
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+THE_lunarian_humnan_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_lunarian_ideas
+		has_idea_group = THE_human_ideas
+	}
+	allow = {
+		full_idea_group = THE_lunarian_ideas
+		full_idea_group = THE_human_ideas
+	}
+	
+	# modifier
+	culture_conversion_time = -0.25
+	global_tax_modifier = 0.5
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 0
 	}
 }
