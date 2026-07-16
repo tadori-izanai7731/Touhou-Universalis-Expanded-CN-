@@ -208,6 +208,10 @@ Touhou = {
 			THE_minoriko_religion
 			THE_keiki_religion
 		}
+
+		will_get_center = {
+			always = yes
+		}
 		
 		country_as_secondary = {
 			infantry_power = 0.1

@@ -1,110 +1,156 @@
-THE_SEJ_revolutionary_seija = {
-	lock_level_when_selected = yes
-	# government mechanics flags go here
+THE_SEJ_p0_chaotic_society_reform = {
 	icon = "rioting_burning"
 	potential = {
 		OR = {
-			tag = SEJ
-			was_tag = SEJ
+			has_reform = THE_SEJ_p0_chaotic_society_reform
+			have_had_reform = THE_SEJ_p0_chaotic_society_reform
+			AND = {
+				OR = {
+					tag = SEJ
+					was_tag = SEJ
+				}
+				NOT = { has_country_flag = THE_SEJ_rework_opening_complete }
+			}
 		}
-		has_country_modifier =	THE_sej_mission_modifier12
 	}
 	allow_normal_conversion = no
+	allow_convert = no
 	legacy_government = yes
 	valid_for_new_country = no
 	valid_for_nation_designer = no
-	# monarchy = yes
-	revolutionary = yes
+	can_change_primary_culture = no
 	is_eligible_for_hre_emperor = no
+	lock_level_when_selected = yes
+	custom_attributes = {
+		locked_government_type = yes
+	}
 	modifiers = {
-		governing_capacity = 250
-		global_manpower_modifier = 0.25
-		land_morale = 0.20
-		global_autonomy = -0.2
-		culture_conversion_time = -0.25
-		culture_conversion_cost = -0.25
+		church_loyalty_modifier = -0.30
+		nobles_loyalty_modifier = -0.30
+		burghers_loyalty_modifier = -0.30
+		global_unrest = 2
+		land_morale = -0.10
 	}
 	ai = {
 		factor = 0
 	}
 }
-### LEVEL 5 ###
-THE_SEJ_revolutionary_guard	= {
-	lock_level_when_selected = yes
-	icon = "feuillant_reform"
-	
+
+THE_SEJ_rebellious_confederation_reform = {
+	icon = "rioting_burning"
 	potential = {
 		OR = {
-			has_reform = THE_SEJ_revolutionary_guard
-			have_had_reform = THE_SEJ_revolutionary_guard
-			has_country_flag = THE_SEJ_enable_THE_SEJ_revolutionary_guard_flag
+			has_reform = THE_SEJ_rebellious_confederation_reform
+			have_had_reform = THE_SEJ_rebellious_confederation_reform
+			AND = {
+				OR = {
+					tag = SEJ
+					was_tag = SEJ
+				}
+				has_country_flag = THE_SEJ_rework_opening_complete
+			}
 		}
 	}
-	
+	allow_normal_conversion = no
+	allow_convert = no
+	legacy_government = yes
+	valid_for_new_country = no
+	valid_for_nation_designer = no
+	can_change_primary_culture = no
+	is_eligible_for_hre_emperor = no
+	lock_level_when_selected = yes
 	government_abilities = {
-		THE_SEJ_revolutionary_guard_militarization_mechanic
+		THE_SEJ_magic_charge_mechanic
 	}
-
+	custom_attributes = {
+		locked_government_type = yes
+		enables_aristocratic_idea_group = no
+		disables_estate_nobles = yes
+		enables_estate_sej_downfall_guard = yes
+	}
+	conditional = {
+		allow = {
+			ROOT = {
+				OR = {
+					has_country_flag = THE_SEJ_p1_black_palace_native_ideas_unlocked_flag
+					953 = {
+						owned_by = ROOT
+						has_great_project = {
+							type = THE_SEJ_black_palace
+							tier = 3
+						}
+					}
+				}
+			}
+		}
+		custom_attributes = {
+			enables_natives_idea_group = yes
+		}
+	}
 	modifiers = {
-		yearly_revolutionary_zeal = 1
-		allowed_rev_guard_fraction = 0.2
-		governing_capacity_modifier = -0.75
+		governing_capacity = 400
+		global_manpower_modifier = 0.10
+		global_unrest = 4
+		num_accepted_cultures = 1
+		culture_conversion_cost = -0.20
+		culture_conversion_time = -0.25
+		reform_progress_growth = 0.05
+		max_absolutism = -100
+	}
+	ai = {
+		factor = 0
 	}
 }
 
-### LEVEL 3 ###
+THE_SEJ_p0_establish_downfall_guard_reform = {
+	icon = "feuillant_reform"
+	potential = {
+		OR = {
+			tag = SEJ
+			was_tag = SEJ
+			has_reform = THE_SEJ_p0_establish_downfall_guard_reform
+			have_had_reform = THE_SEJ_p0_establish_downfall_guard_reform
+		}
+	}
+	lock_level_when_selected = yes
+	modifiers = {
+		allowed_rev_guard_fraction = 0.20
+		fire_damage_received = -0.10
+		shock_damage_received = -0.10
+		is_revolutionary_guard_modifier = yes
+	}
+	custom_attributes = {
+		locked_government_type = yes
+		enables_estate_sej_downfall_guard = yes
+		THE_SEJ_p0_downfall_guard_loyalty_mechanic = yes
+	}
+	ai = { factor = 0 }
+}
+
 THE_SEJ_expand_seija_paradise_reform = {
 	icon = "THE_SEJ_expand_seija_paradise_reform"
-
 	potential = {
 		OR = {
 			has_reform = THE_SEJ_expand_seija_paradise_reform
 			have_had_reform = THE_SEJ_expand_seija_paradise_reform
-			has_country_flag = THE_SEJ_enable_expand_seija_paradise_reform_flag
+			AND = {
+				OR = {
+					tag = SEJ
+					was_tag = SEJ
+				}
+				has_country_flag = THE_SEJ_enable_expand_seija_paradise_reform_flag
+			}
+			has_country_flag = THE_SEJ_rework_enable_cooperation_reform
 		}
 	}
-
 	trigger = {
 		primary_culture = Youkai
 	}
-
+	modifiers = {
+		global_unrest = 1
+		tolerance_own = 1
+	}
 	custom_attributes = {
-		# THE_SEJ_converte_province_add_estate_loyalty_custom_attribute = yes
 		THE_SEJ_converte_province_add_reform_progress_custom_attribute = yes
-	}
-
-	modifiers = {
-		culture_conversion_cost = -0.2
-		diplomats = 1
-		improve_relation_modifier = 0.2
-		institution_spread_from_true_faith = 0.5
-	}
-}
-
-### LEVEL 4 ###
-THE_SEJ_seija_union_reform = {
-	icon = "THE_SEJ_expand_seija_paradise_reform"
-
-	potential = {
-		OR = {
-			has_reform = THE_SEJ_seija_union_reform
-			have_had_reform = THE_SEJ_seija_union_reform
-			has_country_flag = THE_SEJ_enable_seija_union_reform_flag
-		}
-	}
-
-	trigger = {
-		religion = THE_Seija_religion
-	}
-
-	custom_attributes = {
-		THE_SEJ_enable_spread_seija_religion_diplomatic_action_custom_attribute = yes
-		THE_SEJ_converte_province_religion_reduce_nationlism_custom_attribute = yes
-	}
-
-	modifiers = {
-		manpower_in_true_faith_provinces = 0.5
-		institution_spread_from_true_faith = 1.0
-		church_loyalty_modifier = 0.1
 	}
 }

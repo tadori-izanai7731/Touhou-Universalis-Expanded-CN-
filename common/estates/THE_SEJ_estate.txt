@@ -1,5 +1,100 @@
-estate_nobles = {
+estate_sej_downfall_guard = {
+	icon = 25
+	base_influence = 10
+	color = {
+		168
+		42
+		57
+	}
+	trigger = {
+		OR = {
+			tag = SEJ
+			was_tag = SEJ
+		}
+		OR = {
+			has_country_flag = THE_SEJ_downfall_guard_estate_unlocked_flag
+			has_government_attribute = enables_estate_sej_downfall_guard
+		}
+	}
+	custom_name = {
+		desc = estate_sej_downfall_guard
+		trigger = {
+			OR = {
+				tag = SEJ
+				was_tag = SEJ
+			}
+		}
+	}
+	country_modifier_happy = {
+		land_morale = 0.05
+		global_manpower_modifier = 0.10
+	}
+	country_modifier_neutral = {
+		global_manpower_modifier = 0.05
+	}
+	loyalty_modifier = {
+		desc = mechanic_THE_SEJ_p0_downfall_guard_loyalty_mechanic
+		trigger = {
+			has_government_attribute = THE_SEJ_p0_downfall_guard_loyalty_mechanic
+		}
+		loyalty = 10
+	}
+	country_modifier_angry = {
+		global_unrest = 1
+		land_maintenance_modifier = 0.05
+	}
+	land_ownership_modifier = {
+		manpower_recovery_speed = 0.10
+	}
+	influence_from_dev_modifier = 1.0
+	influence_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER
+		trigger = {
+			OR = {
+				has_disaster = estate_nobility_disaster
+				has_disaster = estate_church_disaster
+				has_disaster = estate_burghers_disaster
+				has_disaster = estate_brahmins_disaster
+				has_disaster = estate_vaisyas_disaster
+				has_disaster = estate_jains_disaster
+				has_disaster = estate_lunarian_rabbits_disaster
+				has_disaster = estate_great_tengu_disaster
+				has_disaster = estate_wolf_tengu_disaster
+				has_disaster = estate_crow_tengu_disaster
+			}
+		}
+		influence = -40
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
+		trigger = {
+			OR = {
+				has_disaster = estate_nobility_disaster
+				has_disaster = estate_church_disaster
+				has_disaster = estate_burghers_disaster
+				has_disaster = estate_brahmins_disaster
+				has_disaster = estate_vaisyas_disaster
+				has_disaster = estate_jains_disaster
+				has_disaster = estate_lunarian_rabbits_disaster
+				has_disaster = estate_great_tengu_disaster
+				has_disaster = estate_wolf_tengu_disaster
+				has_disaster = estate_crow_tengu_disaster
+			}
+		}
+		loyalty = -20
+	}
 	privileges = {
-		THE_SEJ_develop_obsidian_estate_privilege
+		THE_SEJ_p1_5_downfall_guard_appointed_captains_privilege
+		THE_SEJ_p1_5_downfall_guard_merit_recruitment_privilege
+		THE_SEJ_p1_5_downfall_guard_professional_guard_privilege
+		THE_SEJ_p1_5_downfall_guard_oath_discipline_privilege
+		THE_SEJ_p1_5_downfall_guard_standardized_pay_privilege
+		THE_SEJ_p1_5_downfall_guard_draconic_training_privilege
+		THE_SEJ_p1_5_downfall_guard_charter_loyalty_privilege
+		THE_SEJ_p1_5_downfall_guard_strict_recruitment_privilege
+		THE_SEJ_downfall_guard_nobility_primacy_privilege
+		# THE_SEJ_downfall_guard_arrow_banner_privilege
+		# THE_SEJ_downfall_guard_inverted_judgement_privilege
+		# THE_SEJ_downfall_guard_grain_right_privilege
 	}
 }

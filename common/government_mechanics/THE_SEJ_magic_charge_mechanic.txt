@@ -1,0 +1,115 @@
+THE_SEJ_magic_charge_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 10
+	available = {
+	}
+
+	powers = {
+		THE_SEJ_magic_charge = {
+			gui = THE_SEJ_magic_charge_mechanic_gui
+			show_before_interactions = yes
+			min = 0
+			max = 100
+			base_monthly_growth = 0 # No base yearly growth.
+			scaled_modifier = {
+				modifier = {
+					# Migrated from vanilla revolutionary zeal values at 100.
+					administrative_efficiency = 0.30
+					special_unit_forcelimit = 0.20
+					min_autonomy_in_territories = -0.20
+					tolerance_own = 7
+					ae_impact = 0.5
+					great_project_upgrade_cost = -0.20
+					great_project_upgrade_time = -0.20
+					monthly_THE_SEJ_magic_charge = -0.25
+				}
+				start_value = 0
+				end_value = 100
+			}
+			range_modifier = {
+				trigger = {
+					has_government_power = {
+						mechanic_type = THE_SEJ_magic_charge_mechanic
+						power_type = THE_SEJ_magic_charge
+						value = 100
+					}
+				}
+				modifier = { province_warscore_cost = -0.10 }
+			}
+			range_modifier = {
+				trigger = { is_at_war = no }
+				modifier = { monthly_THE_SEJ_magic_charge = -0.4166667 } # Additional -5 per year at peace.
+			}
+			range_modifier = {
+				trigger = { unrest = 1 }
+				modifier = { monthly_THE_SEJ_magic_charge = 0.0833333 }
+			}
+			range_modifier = {
+				trigger = { unrest = 2 }
+				modifier = { monthly_THE_SEJ_magic_charge = 0.0833333 }
+			}
+			range_modifier = {
+				trigger = { unrest = 3 }
+				modifier = { monthly_THE_SEJ_magic_charge = 0.0833333 }
+			}
+			range_modifier = {
+				trigger = { unrest = 4 }
+				modifier = { monthly_THE_SEJ_magic_charge = 0.0833333 }
+			}
+			range_modifier = {
+				trigger = { unrest = 5 }
+				modifier = { monthly_THE_SEJ_magic_charge = 0.0833333 }
+			}
+			range_modifier = {
+				trigger = { NOT = { unrest = 0 } }
+				modifier = { monthly_THE_SEJ_magic_charge = -0.0833333 }
+			}
+			range_modifier = {
+				trigger = { NOT = { unrest = -1 } }
+				modifier = { monthly_THE_SEJ_magic_charge = -0.0833333 }
+			}
+			range_modifier = {
+				trigger = { NOT = { unrest = -2 } }
+				modifier = { monthly_THE_SEJ_magic_charge = -0.0833333 }
+			}
+			range_modifier = {
+				trigger = { NOT = { unrest = -3 } }
+				modifier = { monthly_THE_SEJ_magic_charge = -0.0833333 }
+			}
+			range_modifier = {
+				trigger = { NOT = { unrest = -4 } }
+				modifier = { monthly_THE_SEJ_magic_charge = -0.0833333 }
+			}
+		}
+	}
+
+	interactions = {
+		# Temporarily disabled; keep the interaction here for later restoration.
+		# THE_SEJ_open_panama_canal_with_umbrella = {
+		# 	icon = GFX_THE_SEJ_gap_folding_umbrella
+		# 	cost_type = THE_SEJ_magic_charge
+		# 	cost = 50
+		# 	trigger = {
+		# 		owns = 835
+		# 		custom_trigger_tooltip = {
+		# 			tooltip = THE_SEJ_need_aztec_destroyed_tt
+		# 			NOT = { exists = AZT }
+		# 		}
+		# 		custom_trigger_tooltip = {
+		# 			tooltip = THE_SEJ_panama_canal_umbrella_not_active_tt
+		# 			NOT = { has_country_flag = THE_SEJ_panama_canal_umbrella_active_flag }
+		# 		}
+		# 	}
+		# 	effect = {
+		# 		custom_tooltip = THE_SEJ_open_panama_canal_with_umbrella_effect_tt
+		# 		hidden_effect = {
+		# 			country_event = { id = THE_SEJ_p1_5_events.60 }
+		# 		}
+		# 	}
+		# 	cooldown_years = 5
+		# 	ai_chance = {
+		# 		factor = 0
+		# 	}
+		# }
+	}
+}
