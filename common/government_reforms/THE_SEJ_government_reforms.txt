@@ -148,8 +148,9 @@ THE_SEJ_expand_seija_paradise_reform = {
 		primary_culture = Youkai
 	}
 	modifiers = {
-		global_unrest = 1
+		global_tax_modifier = -0.1
 		tolerance_own = 1
+		global_autonomy = -0.05
 	}
 	custom_attributes = {
 		THE_SEJ_converte_province_add_reform_progress_custom_attribute = yes

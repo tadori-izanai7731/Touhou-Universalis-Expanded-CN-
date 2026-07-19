@@ -519,8 +519,8 @@ THE_SEJ_p0_inverted_tribunal_conversion_unrest_modifier = {
 }
 
 THE_SEJ_p0_noble_hostility_modifier = {
-	global_unrest = 2
-	land_maintenance_modifier = 0.20
+	#global_unrest = 2
+	global_regiment_recruit_speed = 0.25
 	nobles_loyalty_modifier = -0.20
 }
 

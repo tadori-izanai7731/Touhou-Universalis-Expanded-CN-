@@ -36,12 +36,13 @@ THE_SEJ_p0_slot_1_trade = {
 		}
 
 		effect = {
-			846 = { add_building = workshop } 
+			add_treasury = 50
+			846 = { add_or_upgrade_production_building = yes } 
 			2652 = {
-				add_building = workshop
+				add_or_upgrade_production_building = yes
 				add_center_of_trade_level = 1
 			}
-			4591 = { add_building = workshop } 
+			4591 = { add_or_upgrade_production_building = yes } 
 			add_country_modifier = {
 				name = "THE_SEJ_p0_restored_old_capital_modifier"
 				duration = 9125
@@ -60,27 +61,39 @@ THE_SEJ_p0_slot_1_trade = {
 				estate = estate_burghers
 				influence = 50
 			}
-			estate_loyalty = {
-				estate = estate_burghers
-				loyalty = 65
-			}
 			OR = {
+				estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 50
+				}
 				trader = 1
-				has_dip_advisor_2 = yes
 			}
-			dip_power = 100
 		}
 
 		effect = {
+			add_estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 10
+			}
 			add_country_modifier = {
 				name = "THE_SEJ_p0_ppolom_trust_modifier"
 				duration = -1
 			}
 			if = {
 				limit = { has_estate_privilege = estate_burghers_land_of_commerce } 
+				custom_tooltip = THE_SEJ_1_3_effect_case1_tt_yes
 				change_estate_land_share = {
 					estate = estate_burghers
 					share = -10
+				}
+			}
+			else = {
+				custom_tooltip = THE_SEJ_1_3_effect_case1_tt_no
+				tooltip = {
+					change_estate_land_share = {
+						estate = estate_burghers
+						share = -10
+					}
 				}
 			}
 		}
@@ -136,11 +149,21 @@ THE_SEJ_p0_slot_2_market = {
 		required_missions = { THE_SEJ_p0_fallen_arrow } 
 		provinces_to_highlight = {  } 
 
-		trigger = { dip_power = 200 } 
+		trigger = {
+			num_of_estate_privileges = {
+				estate = estate_burghers
+				value = 2
+			}
+		} 
 
 		effect = {
-			add_dip_power = -200
-			custom_tooltip = THE_SEJ_p0_unified_measures_remove_chaos_burghers_tt
+			add_dip_power = 200
+			define_advisor = {
+				type = trader
+				skill = 1
+				cost_multiplier = 0.25
+			}
+			# custom_tooltip = THE_SEJ_p0_unified_measures_remove_chaos_burghers_tt
 			add_country_modifier = {
 				name = "THE_SEJ_p0_unified_measures_modifier"
 				duration = 9125
@@ -159,33 +182,33 @@ THE_SEJ_p0_slot_2_market = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			estate_loyalty = {
-				estate = estate_burghers
-				loyalty = 50
-			}
-			estate_influence = {
-				estate = estate_burghers
-				influence = 40
-			}
-			estate_loyalty = {
-				estate = estate_church
-				loyalty = 50
-			}
-			estate_influence = {
-				estate = estate_church
-				influence = 40
+			any_owned_province = {
+				trade_goods = cocoa
+				has_production_building_trigger = yes
+				NOT = { unrest = 0 }
 			}
 		}
 
 		effect = {
+			random_owned_province = {
+				limit = {
+					trade_goods = cocoa
+					has_production_building_trigger = yes
+					NOT = { unrest = 0 }
+				}
+				add_or_upgrade_trade_building = yes
+				add_or_upgrade_production_building = yes
+			}
 			add_country_modifier = {
 				name = "THE_SEJ_p0_inverted_market_modifier"
 				duration = -1
 			}
-			custom_tooltip = THE_SEJ_p0_four_color_dyes_autonomy_compensation_tt
+			custom_tooltip = THE_SEJ_every_owned_province_tt
+			custom_tooltip = THE_SEJ_remove_chaotic_society_tt
 			hidden_effect = {
-				set_country_flag = THE_SEJ_p0_four_color_dyes_autonomy_compensation_flag
-				THE_SEJ_p0_apply_chaotic_society_autonomy_effect = yes
+				every_owned_province = {
+					remove_province_modifier = THE_SEJ_p0_chaotic_society_min_autonomy_modifier
+				}
 			}
 		}
 	}
@@ -243,6 +266,7 @@ THE_SEJ_p0_slot_3_main = {
 		trigger = { always = yes } 
 
 		effect = {
+			add_manpower = 10
 			central_america_region = { add_permanent_claim = ROOT } 
 			2631 = { add_permanent_claim = ROOT } 
 			2630 = { add_permanent_claim = ROOT } 
@@ -303,12 +327,21 @@ THE_SEJ_p0_slot_4_faith = {
 		required_missions = { THE_SEJ_p0_fallen_arrow } 
 		provinces_to_highlight = {  } 
 
-		trigger = { army_size_percentage = 1.0 } 
+		trigger = {
+			OR = {
+				army_size_percentage = 1.0
+				army_size = 20
+			}
+		} 
 
 		effect = {
 			add_adm_power = 100
-			add_stability = 1
-			custom_tooltip = THE_SEJ_p0_shenli_remove_chaos_church_tt
+			define_advisor = {
+				type = inquisitor
+				skill = 1
+				cost_multiplier = 0.25
+			}
+			#custom_tooltip = THE_SEJ_p0_shenli_remove_chaos_church_tt
 			add_country_modifier = {
 				name = "THE_SEJ_p0_loyal_priests_modifier"
 				duration = -1
@@ -335,12 +368,13 @@ THE_SEJ_p0_slot_4_faith = {
 			}
 			estate_loyalty = {
 				estate = estate_church
-				loyalty = 50
+				loyalty = 30
 			}
 			stability = 1
 		}
 
 		effect = {
+			add_adm_power = 100
 			add_country_modifier = {
 				name = "THE_SEJ_p0_inverted_scripture_modifier"
 				duration = -1
@@ -359,10 +393,14 @@ THE_SEJ_p0_slot_4_faith = {
 		required_missions = { THE_SEJ_p0_downfall_scripture } 
 		provinces_to_highlight = {  } 
 
-		trigger = { dip_power = 200 } 
+		trigger = {
+			capital_scope = {
+				culture = ROOT
+				units_in_province = ROOT
+			}
+		} 
 
 		effect = {
-			add_dip_power = -200
 			add_country_modifier = {
 				name = "THE_SEJ_p0_weak_paradise_priest_modifier"
 				duration = -1
@@ -391,6 +429,13 @@ THE_SEJ_p0_slot_4_faith = {
 				duration = -1
 			}
 			custom_tooltip = THE_SEJ_p0_inverted_tribunal_conversion_tt
+			tooltip = {
+				add_nationalism = -10
+				add_province_modifier = {
+					name = THE_SEJ_p0_inverted_tribunal_conversion_unrest_modifier
+					duration = 1825
+				}
+			}
 			hidden_effect = { set_country_flag = THE_SEJ_p0_inverted_tribunal_conversion_enabled_flag } 
 		}
 	}
@@ -421,12 +466,15 @@ THE_SEJ_p0_slot_5_guard = {
 		}
 
 		effect = {
-			add_manpower = 10
+			create_conquistador = {
+				tradition = 60
+				add_manuever = 6
+			}
+			custom_tooltip = THE_SEJ_p0_gain_five_revolutionary_guards_tt
 			add_country_modifier = {
 				name = "THE_SEJ_p0_join_downfall_forcelimit_modifier"
 				duration = -1
 			}
-			custom_tooltip = THE_SEJ_p0_gain_five_revolutionary_guards_tt
 			hidden_effect = {
 				for = {
 					amount = 5
@@ -445,7 +493,7 @@ THE_SEJ_p0_slot_5_guard = {
 			}
 			change_estate_land_share = {
 				estate = estate_nobles
-				share = -5
+				share = -10
 			}
 			custom_tooltip = THE_SEJ_p0_yucatan_noble_rebels_by_privileges_tt
 			hidden_effect = { 846 = { THE_SEJ_p0_spawn_other_noble_rebels_effect = yes }  } 
@@ -454,10 +502,6 @@ THE_SEJ_p0_slot_5_guard = {
 			add_country_modifier = {
 				name = "THE_SEJ_p0_noble_hostility_modifier"
 				duration = -1
-			}
-			create_conquistador = {
-				tradition = 60
-				add_manuever = 6
 			}
 		}
 	}

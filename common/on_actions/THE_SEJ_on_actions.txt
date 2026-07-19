@@ -1,36 +1,36 @@
-on_startup = {
-	events = {
-		THE_SEJ_events.153
-	}
-	if = {
-		limit = {
-			tag = SEJ
-			NOT = { has_country_flag = THE_SEJ_p0_starting_setup_done_flag }
-		}
-		if = {
-			limit = { has_country_flag = THE_SEJ_rework_opening_complete }
-			set_government_rank = 3
-		}
-		else = {
-			set_government_rank = 2
-		}
-		set_country_flag = THE_SEJ_p0_starting_setup_done_flag
-	}
-	if = {
-		limit = {
-			tag = SEJ
-			NOT = { has_country_flag = THE_SEJ_enable_such_mission_flag }
-		}
-		set_country_flag = THE_SEJ_enable_such_mission_flag
-	}
-	if = {
-		limit = {
-			tag = SEJ
-			ai = no
-		}
-		THE_SEJ_ai_boss_setup_effect = yes
-	}
-}
+# on_startup = {
+# 	events = {
+# 		THE_SEJ_events.153
+# 	}
+# 	if = {
+# 		limit = {
+# 			tag = SEJ
+# 			NOT = { has_country_flag = THE_SEJ_p0_starting_setup_done_flag }
+# 		}
+# 		if = {
+# 			limit = { has_country_flag = THE_SEJ_rework_opening_complete }
+# 			set_government_rank = 3
+# 		}
+# 		else = {
+# 			set_government_rank = 2
+# 		}
+# 		set_country_flag = THE_SEJ_p0_starting_setup_done_flag
+# 	}
+# 	if = {
+# 		limit = {
+# 			tag = SEJ
+# 			NOT = { has_country_flag = THE_SEJ_enable_such_mission_flag }
+# 		}
+# 		set_country_flag = THE_SEJ_enable_such_mission_flag
+# 	}
+# 	if = {
+# 		limit = {
+# 			tag = SEJ
+# 			ai = no
+# 		}
+# 		THE_SEJ_ai_boss_setup_effect = yes
+# 	}
+# }
 
 on_war_ended = {
 	THE_SEJ_p0_on_war_ended_scripted_effect = yes
@@ -60,6 +60,13 @@ on_province_owner_change = {
 			}
 		}
 		remove_province_modifier = THE_SEJ_p1_mayan_spread_center_modifier
+	}
+	if = {
+		limit = { has_global_flag = THE_SEJ_downfall_revolution_active_global_flag }
+		every_country = {
+			limit = { THE_SEJ_downfall_revolution_active_st = yes }
+			country_event = { id = THE_SEJ_events.155 }
+		}
 	}
 }
 
@@ -172,15 +179,5 @@ on_yearly_pulse = {
 on_bi_yearly_pulse = {
 	events = {
 		THE_SEJ_p1_disaster_events.9
-	}
-}
-
-on_province_owner_change = {
-	if = {
-		limit = { has_global_flag = THE_SEJ_downfall_revolution_active_global_flag }
-		every_country = {
-			limit = { THE_SEJ_downfall_revolution_active_st = yes }
-			country_event = { id = THE_SEJ_events.155 }
-		}
 	}
 }
