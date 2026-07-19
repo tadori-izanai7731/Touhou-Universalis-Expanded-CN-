@@ -195,8 +195,7 @@ monarchy = {
 				# THE_SHI_forest_monarchy
 				THE_KNE_hakutaku_mandate_reform
 				THE_IQU_sky_beyond_clouds_reform
-				THE_SEJ_p0_chaotic_society_reform
-				THE_SEJ_rebellious_confederation_reform
+				THE_SEJ_revolutionary_seija
 				THE_CH2_luna_prosperous_market_reform
 				THE_MRS_magic_and_meteor_reform
 				THE_MGT_form_of_light_reform
@@ -278,7 +277,6 @@ monarchy = {
 				THE_MRS_wish_upon_the_star_reform
 				THE_MGT_eternal_radiance_reform
 				THE_NIN_fictional_foam_reform
-				THE_SEJ_p0_establish_downfall_guard_reform
 			}
 		}
 		bureaucracy = {
@@ -397,6 +395,7 @@ monarchy = {
 				THE_YOF_comprehensive_religion_reform
 				THE_AKI_abundance_patriarch_reform
 				# THE_SHI_ERCIYUAN_reform1
+				THE_SEJ_seija_union_reform
 				THE_IQU_tennin_one_taoist_reform
 				THE_NIN_tide_returns_to_the_sea_reform
 				THE_MGT_back_to_white_and_void_reform
@@ -479,6 +478,7 @@ monarchy = {
 				THE_season_secret_power_reform
 				SHI_tercio_reform
 				THE_KNE_726_JAP_monarch_reform
+				THE_SEJ_revolutionary_guard
 			}
 		}
 		deliberative_assembly = {
@@ -553,7 +553,6 @@ monarchy = {
 			}
 		}
 		economical_matters = {
-
 			reforms = {
 				empower_the_burghers_reform
 				curtail_the_burghers_reform
@@ -2010,7 +2009,6 @@ theocracy = {
 			}
 		}
 		economical_matters = {
-
 			reforms = {
 				empower_the_burghers_reform
 				curtail_the_burghers_reform
@@ -2334,5 +2332,3 @@ pre_dharma_mapping = {
 		legacy_government = despotic_monarchy
 	}
 }
-
-
