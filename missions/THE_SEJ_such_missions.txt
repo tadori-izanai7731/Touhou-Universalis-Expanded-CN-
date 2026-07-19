@@ -1,888 +1,888 @@
-# THE_SEJ_such_mission_branch_1 = {
-# 	slot = 1
-# 	generic = no
-# 	ai = yes
-# 	has_country_shield = yes
-# 	potential = {
-# 		tag = SEJ
-# 		has_country_flag = THE_SEJ_enable_such_mission_flag
-# 	}
-
-# 	THE_SEJ_such_mission_1_2 = {
-# 		icon = mission_unknown_mission
-# 		position = 2
-# 		required_missions = { THE_SEJ_such_mission_2_1 } 
-# 		provinces_to_highlight = {  } 
-
-# 		trigger = { num_of_ports = 5 } 
-
-# 		effect = {
-# 			random_owned_province = {
-# 				limit = {
-# 					has_port = yes
-# 					OR = {
-# 						area = yucatan_area
-# 						area = east_yucatan_area
-# 					}
-# 				}
-# 				add_unit_construction = {
-# 					type = light_ship
-# 					amount = 5
-# 					speed = 0.1
-# 					cost = 0
-# 				}
-# 			}
-# 			create_explorer = { tradition = 60 } 
-# 		}
-# 	}
-
-# 	THE_SEJ_such_mission_1_3 = {
-# 		icon = mission_unknown_mission
-# 		position = 3
-# 		required_missions = { THE_SEJ_such_mission_1_2 } 
-# 		provinces_to_highlight = {  } 
-
-# 		trigger = {
-# 			OR = {
-# 				dip_tech = 6
-# 				national_focus = DIP
-# 			}
-# 			num_of_light_ship = 10
-# 		}
-
-# 		effect = {
-# 			cuba_area = { add_permanent_claim = ROOT } 
-# 			east_cuba_area = { add_permanent_claim = ROOT } 
-# 			add_country_modifier = {
-# 				name = "THE_SEJ_sea_chance_modifier"
-# 				duration = -1
-# 			}
-# 			custom_tooltip = THE_SEJ_explore_sea_province_improve_explor_tt
-# 		}
-# 	}
-
-# 	THE_SEJ_such_mission_1_5 = {
-# 		icon = mission_unknown_mission
-# 		position = 5
-# 		required_missions = { THE_SEJ_such_mission_1_3 } 
-# 		provinces_to_highlight = {
-# 			province_id = 782
-# 		} 
-
-# 		trigger = {
-# 			has_discovered = 782
-# 		} 
-
-# 		effect = {
-# 			782 = {
-# 				cede_province = ROOT
-# 				add_core = ROOT
-# 			}
-# 			add_country_modifier = {
-# 				name = THE_SEJ_southest_point_modifier
-# 				duration = -1
-# 			}
-# 			custom_tooltip = THE_SEJ_colonize_complete_create_neighbor_siberia_tt
-# 			hidden_effect = {
-# 				set_country_flag = THE_SEJ_colonize_complete_create_neighbor_siberia_flag
-# 			}
-# 		} 
-# 	}
-
-# 	THE_SEJ_such_mission_1_6 = {
-# 		icon = mission_unknown_mission
-# 		position = 6
-# 		required_missions = {
-# 			THE_SEJ_such_mission_1_5
-# 			THE_SEJ_such_mission_2_5
-# 		}
-# 		provinces_to_highlight = {  } 
-
-# 		trigger = {  } 
-
-# 		effect = {  } 
-# 	}
-
-# 	THE_SEJ_such_mission_1_8 = {
-# 		icon = mission_unknown_mission
-# 		position = 8
-# 		provinces_to_highlight = {  } 
-
-# 		trigger = {  } 
-
-# 		effect = {  } 
-# 	}
-
-# 	THE_SEJ_such_mission_1_9 = {
-# 		icon = mission_unknown_mission
-# 		position = 9
-# 		required_missions = { THE_SEJ_such_mission_1_8 } 
-# 		provinces_to_highlight = {  } 
-
-# 		trigger = {  } 
-
-# 		effect = {  } 
-# 	}
-
-# 	THE_SEJ_such_mission_1_10 = {
-# 		icon = mission_unknown_mission
-# 		position = 10
-# 		required_missions = { THE_SEJ_such_mission_2_9 } 
-# 		provinces_to_highlight = {  } 
-
-# 		trigger = {  } 
-
-# 		effect = {  } 
-# 	}
-
-# 	THE_SEJ_such_mission_1_11 = {
-# 		icon = mission_unknown_mission
-# 		position = 11
-# 		provinces_to_highlight = {  } 
-
-# 		trigger = {
-# 			always = yes
-# 		} 
-
-# 		effect = {
-# 			custom_tooltip = THE_SEJ_such_mission_1_11_reward_by_completed_mission_tt
-# 		} 
-# 	}
-# }
-# THE_SEJ_such_mission_branch_2 = {
-# 	slot = 2
-# 	generic = no
-# 	ai = yes
-# 	has_country_shield = yes
-# 	potential = {
-# 		tag = SEJ
-# 		has_country_flag = THE_SEJ_enable_such_mission_flag
-# 	}
-
-# 	THE_SEJ_such_mission_2_1 = {
-# 		icon = mission_unknown_mission
-# 		position = 1
-# 		provinces_to_highlight = {  } 
-
-# 		trigger = {
-# 			OR = {
-# 				army_size_percentage = 1.0
-# 				num_of_cities = 6
-# 			}
-# 			stability = 1
-# 		}
-
-# 		effect = {
-# 			add_stability = 1
-# 			add_adm_power = 200
-# 			add_manpower = 5
-# 			yucatan_area = { add_permanent_claim = ROOT } 
-# 			east_yucatan_area = { add_permanent_claim = ROOT } 
-# 			if = {
-# 				limit = { primary_culture = Youkai } 
-# 				if = {
-# 					limit = {
-# 						owns = 846
-# 						846 = { NOT = { culture = Youkai }  } 
-# 					}
-# 					846 = { change_culture = ROOT } 
-# 				}
-# 				if = {
-# 					limit = {
-# 						owns = 2652
-# 						2652 = { NOT = { culture = Youkai }  } 
-# 					}
-# 					2652 = { change_culture = ROOT } 
-# 				}
-# 				if = {
-# 					limit = {
-# 						owns = 4591
-# 						4591 = { NOT = { culture = Youkai }  } 
-# 					}
-# 					4591 = { change_culture = ROOT } 
-# 				}
-# 			}
-# 		}
-# 	}
-
-# 	THE_SEJ_such_mission_2_3 = {
-# 		icon = mission_unknown_mission
-# 		position = 3
-# 		required_missions = { THE_SEJ_such_mission_3_2 } 
-# 		provinces_to_highlight = {
-# 			OR = {
-# 				province_id = 846
-# 				province_id = 842
-# 			}
-# 			OR = {
-# 				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
-# 				NOT = { development = 20 } 
-# 			}
-# 		}
-
-# 		trigger = {
-# 			846 = {
-# 				country_or_non_sovereign_subject_holds = ROOT
-# 				development = 20
-# 			}
-# 			842 = {
-# 				country_or_non_sovereign_subject_holds = ROOT
-# 				development = 20
-# 			}
-# 		}
-
-# 		effect = {
-# 			custom_tooltip = THE_SEJ_maya_gerat_project_accept_Youkai_culture_tt
-# 			hidden_effect = { set_country_flag = THE_SEJ_maya_gerat_project_accept_Youkai_culture_flag } 
-# 			custom_tooltip = empty_line_tt
-# 			custom_tooltip = THE_SEJ_maya_gerat_project_neighbor_province_add_3_dev_tt
-# 			hidden_effect = {
-# 				846 = {
-# 					every_neighbor_province = {
-# 						limit = { country_or_non_sovereign_subject_holds = ROOT } 
-# 						add_base_tax = 1
-# 						add_base_production = 1
-# 						add_base_manpower = 1
-# 					}
-# 				}
-# 				842 = {
-# 					every_neighbor_province = {
-# 						limit = { country_or_non_sovereign_subject_holds = ROOT } 
-# 						add_base_tax = 1
-# 						add_base_production = 1
-# 						add_base_manpower = 1
-# 					}
-# 				}
-# 			}
-# 		}
-# 	}
-
-# 	THE_SEJ_such_mission_2_4 = {
-# 		icon = mission_unknown_mission
-# 		position = 4
-# 		required_missions = { THE_SEJ_such_mission_1_3 } 
-# 		provinces_to_highlight = {  } 
-
-# 		trigger = {
-# 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-# 				value = 5
-# 				region = carribeans_region
-# 				is_city = yes
-# 			}
-# 		}
-
-# 		effect = {
-# 			carribeans_region = {
-# 				discover_country = ROOT
-# 				add_permanent_claim = ROOT
-# 			}
-# 			add_country_modifier = {
-# 				name = "THE_SEJ_colony_island_modifier"
-# 				duration = 7300
-# 			}
-# 			custom_tooltip = THE_SEJ_carribeans_region_may_produce_clove_tt
-# 			hidden_effect = {
-# 				set_country_flag = THE_SEJ_carribeans_region_may_produce_clove_flag
-# 			}
-# 		}
-# 	}
-
-# 	THE_SEJ_such_mission_2_5 = {
-# 		icon = mission_unknown_mission
-# 		position = 5
-# 		required_missions = { THE_SEJ_such_mission_3_4 } 
-# 		provinces_to_highlight = {  } 
-
-# 		trigger = {
-
-# 		} 
-
-# 		effect = {
-
-# 		} 
-# 	}
-
-# 	THE_SEJ_such_mission_2_6 = {
-# 		icon = mission_unknown_mission
-# 		position = 6
-# 		required_missions = { THE_SEJ_such_mission_2_5 } 
-# 		provinces_to_highlight = {  } 
-
-# 		trigger = {  } 
-
-# 		effect = {  } 
-# 	}
-
-# 	THE_SEJ_such_mission_2_9 = {
-# 		icon = mission_unknown_mission
-# 		position = 9
-# 		required_missions = { THE_SEJ_such_mission_1_8 } 
-# 		provinces_to_highlight = {  } 
-
-# 		trigger = {  } 
-
-# 		effect = {  } 
-# 	}
-
-# 	THE_SEJ_such_mission_2_10 = {
-# 		icon = mission_unknown_mission
-# 		position = 10
-# 		required_missions = { THE_SEJ_such_mission_2_9 } 
-# 		provinces_to_highlight = {  } 
-
-# 		trigger = {  } 
-
-# 		effect = {  } 
-# 	}
-# }
-# THE_SEJ_such_mission_branch_3 = {
-# 	slot = 3
-# 	generic = no
-# 	ai = yes
-# 	has_country_shield = yes
-# 	potential = {
-# 		tag = SEJ
-# 		has_country_flag = THE_SEJ_enable_such_mission_flag
-# 	}
-
-# 	THE_SEJ_such_mission_3_2 = {
-# 		icon = mission_unknown_mission
-# 		position = 2
-# 		required_missions = { THE_SEJ_such_mission_2_1 } 
-# 		provinces_to_highlight = {
-# 			is_capital = yes
-# 			owner = { religion = mesoamerican_religion } 
-# 		}
-
-# 		trigger = {
-# 			if = {
-# 				limit = { any_country = { religion = mesoamerican_religion }  } 
-# 				any_country = {
-# 					religion = mesoamerican_religion
-# 					has_spy_network_from = {
-# 						who = ROOT
-# 						value = 20
-# 					}
-# 				}
-# 			}
-# 			else = {
-# 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-# 					value = 20
-# 					region = central_america_region
-# 				}
-# 			}
-# 		}
-
-# 		effect = {
-# 			add_dip_power = 200
-# 			add_country_modifier = {
-# 				name = "THE_SEJ_adaptive_training_modifier"
-# 				duration = -1
-# 			}
-# 			custom_tooltip = THE_SEJ_create_60_conquistador_add_6_manuever_tt
-# 			hidden_effect = {
-# 				create_conquistador = {
-# 					tradition = 60
-# 					add_manuever = 6
-# 				}
-# 			}
-# 			custom_tooltip = empty_line_tt
-# 			custom_tooltip = THE_SEJ_add_claim_in_spy_network_country_and_neighbor_tt
-# 			hidden_effect = {
-# 				every_country = {
-# 					limit = {
-# 						religion = mesoamerican_religion
-# 						has_spy_network_from = {
-# 							who = ROOT
-# 							value = 20
-# 						}
-# 					}
-# 					every_owned_province = { add_permanent_claim = ROOT } 
-# 					every_neighbor_country = { every_owned_province = { add_permanent_claim = ROOT }  } 
-# 				}
-# 			}
-# 		}
-# 	}
-
-# 	THE_SEJ_such_mission_3_4 = {
-# 		icon = mission_unknown_mission
-# 		position = 4
-# 		required_missions = { THE_SEJ_such_mission_3_2 } 
-# 		provinces_to_highlight = {  } 
-
-# 		trigger = {
-# 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-# 				value = 20
-# 				OR = {
-# 					area = yucatan_area
-# 					area = east_yucatan_area
-# 					area = campeche_area
-# 					area = guatemala_lowlands_area
-# 					area = chiapas_area
-# 					area = guatemala_area
-# 				}
-# 			}
-# 		} 
-
-# 		effect = {
-# 			central_america_region = {
-# 				add_permanent_claim = ROOT
-# 			}
-# 			mexico_region = {
-# 				add_permanent_claim = ROOT
-# 			}
-# 			custom_tooltip = THE_SEJ_enable_develop_obsidian_estate_privilege_tt
-# 			hidden_effect = {
-# 				set_country_flag = THE_SEJ_enable_develop_obsidian_estate_privilege_flag
-# 			}
-# 		} 
-# 	}
-
-# 	THE_SEJ_such_mission_3_5 = {
-# 		icon = mission_unknown_mission
-# 		position = 5
-# 		required_missions = { THE_SEJ_such_mission_3_4 } 
-# 		provinces_to_highlight = {  } 
-
-# 		trigger = {  } 
-
-# 		effect = {  } 
-# 	}
-
-# 	THE_SEJ_such_mission_3_7 = {
-# 		icon = mission_unknown_mission
-# 		position = 7
-# 		required_missions = {
-# 			THE_SEJ_such_mission_2_6
-# 			THE_SEJ_such_mission_3_5
-# 			THE_SEJ_such_mission_5_6
-# 		}
-# 		provinces_to_highlight = {  } 
-
-# 		trigger = {  } 
-
-# 		effect = {  } 
-# 	}
-
-# 	THE_SEJ_such_mission_3_10 = {
-# 		icon = mission_unknown_mission
-# 		position = 10
-# 		required_missions = {
-# 			THE_SEJ_such_mission_2_9
-# 			THE_SEJ_such_mission_4_9
-# 		}
-# 		provinces_to_highlight = {  } 
-
-# 		trigger = {  } 
-
-# 		effect = {  } 
-# 	}
-
-# 	THE_SEJ_such_mission_3_11 = {
-# 		icon = mission_unknown_mission
-# 		position = 11
-# 		required_missions = { THE_SEJ_such_mission_3_10 } 
-# 		provinces_to_highlight = {  } 
-
-# 		trigger = {  } 
-
-# 		effect = {  } 
-# 	}
-# }
-# THE_SEJ_such_mission_branch_4 = {
-# 	slot = 4
-# 	generic = no
-# 	ai = yes
-# 	has_country_shield = yes
-# 	potential = {
-# 		tag = SEJ
-# 		has_country_flag = THE_SEJ_enable_such_mission_flag
-# 	}
-
-# 	THE_SEJ_such_mission_4_2 = {
-# 		icon = mission_unknown_mission
-# 		position = 2
-# 		required_missions = { THE_SEJ_such_mission_5_1 } 
-# 		provinces_to_highlight = {
-# 			owned_by = ROOT
-# 			NOT = { base_production = 8 }
-# 		} 
-
-# 		trigger = {
-# 			num_of_owned_provinces_with = {
-# 				value = 5
-# 				base_production = 8
-# 			}
-# 		} 
-
-# 		effect = {
-# 			custom_tooltip = THE_SEJ_every_8_production_add_production_building_tt
-# 			tooltip = {
-# 				add_or_upgrade_production_building = yes
-# 			}
-# 			hidden_effect = {
-# 				every_owned_province = {
-# 					limit = {
-# 						base_production = 8
-# 					}
-# 					add_or_upgrade_production_building = yes
-# 				}
-# 			}
-# 			custom_tooltip = empty_line_tt
-# 			if = {
-# 				limit = { has_country_flag = THE_SEJ_Four_Foot_Magic_Bomb_blessing_flag }
-# 				custom_tooltip = THE_SEJ_such_mission_4_2_tt_case1_yes
-# 				add_country_modifier = {
-# 					name = THE_SEJ_bomb_for_development_modifier
-# 					duration = 7300
-# 				}
-# 			}
-# 			else = {
-# 				custom_tooltip = THE_SEJ_such_mission_4_2_tt_case1_no
-# 				tooltip = {
-# 					add_country_modifier = {
-# 						name = THE_SEJ_bomb_for_development_modifier
-# 						duration = 7300
-# 					}
-# 				}
-# 			}
-# 		} 
-# 	}
-
-# 	THE_SEJ_such_mission_4_3 = {
-# 		icon = mission_unknown_mission
-# 		position = 3
-# 		required_missions = {
-# 			THE_SEJ_such_mission_3_2
-# 			THE_SEJ_such_mission_4_2
-# 		}
-# 		provinces_to_highlight = {
-# 			has_discovered = ROOT
-# 			trade_goods = cocoa
-# 		} 
-
-# 		trigger = {
-# 			trade_goods_produced_amount = {
-# 				trade_goods = cocoa
-# 				amount = 7
-# 			}
-# 		} 
-
-# 		effect = {
-# 			add_country_modifier = {
-# 				name = THE_SEJ_cocoa_trader_modifier
-# 				duration = -1
-# 			}
-# 			THE_country_event_with_insight = {
-# 				id = THE_SEJ_events.5
-# 				days = 365
-# 				insight_tooltip = THE_SEJ_events_5_tt
-# 			}
-# 			custom_tooltip = empty_line_tt
-# 			if = {
-# 				limit = { has_country_flag = THE_SEJ_Gap_Folding_Umbrella_blessing_flag }
-# 				custom_tooltip = THE_SEJ_such_mission_4_3_tt_case1_yes
-# 			}
-# 			else = {
-# 				custom_tooltip = THE_SEJ_such_mission_4_3_tt_case1_no
-# 			}
-# 			custom_tooltip = THE_SEJ_events_6_tt
-# 		} 
-# 	}
-
-# 	THE_SEJ_such_mission_4_4 = {
-# 		icon = mission_unknown_mission
-# 		position = 4
-# 		required_missions = { THE_SEJ_such_mission_5_3 } 
-# 		provinces_to_highlight = {  } 
-
-# 		trigger = {
-# 			if = {
-# 				limit = { exists = NCS }
-# 				NCS = {
-# 					has_opinion = {
-# 						who = ROOT
-# 						value = 150
-# 					}
-# 				}
-# 			}
-# 			else = {
-# 				5035 = {
-# 					owner = {
-# 						has_opinion = {
-# 							who = ROOT
-# 							value = 150
-# 						}
-# 					}
-# 				}
-# 			}
-# 		} 
-
-# 		effect = {
-# 			if = {
-# 				limit = { exists = NCS }
-# 				THE_add_historical_friend_and_reverse_scripted_effect = {
-# 					tag = NCS
-# 				}
-# 				NCS = {
-# 					change_religion = THE_Seija_religion
-# 					hidden_effect = {
-# 						every_owned_province = {
-# 							change_religion = THE_Seija_religion
-# 						}
-# 					}
-# 				}
-# 				custom_tooltip = empty_line_tt
-# 				if = {
-# 					limit = { has_country_flag = THE_SEJ_Cursed_Decoy_Doll_blessing_flag }
-# 					custom_tooltip = THE_SEJ_such_mission_4_4_case1_tt_yes
-# 					create_subject = {
-# 						subject_type = crown_colony
-# 						who = NCS
-# 					}
-# 					custom_tooltip = THE_SEJ_such_mission_4_4_case1_tt
-# 					hidden_effect = {
-# 						NCS = {  set_country_flag = THE_only_player_enable_declare_war_flag }
-# 					}
-# 				}
-# 				else = {
-# 					custom_tooltip = THE_SEJ_such_mission_4_4_case1_tt_no
-# 					tooltip = {
-# 						create_subject = {
-# 							subject_type = crown_colony
-# 							who = NCS
-# 						}
-# 						custom_tooltip = THE_SEJ_such_mission_4_4_case1_tt
-# 					}
-# 				}
-# 			}
-# 			else = {
-# 				add_country_modifier = {
-# 					name = THE_SEJ_ncs_idea_1_modifier
-# 					duration = 7300
-# 				}
-# 				add_country_modifier = {
-# 					name = THE_SEJ_ncs_idea_7_modifier
-# 					duration = 7300
-# 				}
-# 			}
-# 		} 
-# 	}
-
-# 	THE_SEJ_such_mission_4_5 = {
-# 		icon = mission_unknown_mission
-# 		position = 5
-# 		required_missions = { THE_SEJ_such_mission_3_4 } 
-# 		provinces_to_highlight = {  } 
-
-# 		trigger = {  } 
-
-# 		effect = {  } 
-# 	}
-
-# 	THE_SEJ_such_mission_4_6 = {
-# 		icon = mission_unknown_mission
-# 		position = 6
-# 		required_missions = { THE_SEJ_such_mission_4_5 } 
-# 		provinces_to_highlight = {  } 
-
-# 		trigger = {  } 
-
-# 		effect = {  } 
-# 	}
-
-# 	THE_SEJ_such_mission_4_9 = {
-# 		icon = mission_unknown_mission
-# 		position = 9
-# 		required_missions = { THE_SEJ_such_mission_5_8 } 
-# 		provinces_to_highlight = {  } 
-
-# 		trigger = {  } 
-
-# 		effect = {  } 
-# 	}
-
-# 	THE_SEJ_such_mission_4_10 = {
-# 		icon = mission_unknown_mission
-# 		position = 10
-# 		required_missions = { THE_SEJ_such_mission_4_9 } 
-# 		provinces_to_highlight = {  } 
-
-# 		trigger = {  } 
-
-# 		effect = {  } 
-# 	}
-# }
-# THE_SEJ_such_mission_branch_5 = {
-# 	slot = 5
-# 	generic = no
-# 	ai = yes
-# 	has_country_shield = yes
-# 	potential = {
-# 		tag = SEJ
-# 		has_country_flag = THE_SEJ_enable_such_mission_flag
-# 	}
-
-# 	THE_SEJ_such_mission_5_1 = {
-# 		icon = mission_unknown_mission
-# 		position = 1
-# 		provinces_to_highlight = {  } 
-
-# 		trigger = {
-# 			grown_by_development = 25
-# 		} 
-
-# 		effect = {
-# 			custom_tooltip = THE_SEJ_enable_negative_influence_decision_tt
-# 			hidden_effect = {
-# 				set_country_flag = THE_SEJ_enable_negative_influence_decision_flag
-# 			}
-# 		} 
-# 	}
-
-# 	THE_SEJ_such_mission_5_3 = {
-# 		icon = mission_unknown_mission
-# 		position = 3
-# 		required_missions = { THE_SEJ_such_mission_5_1 } 
-# 		provinces_to_highlight = {  } 
-
-# 		trigger = {
-# 			religion = THE_Seija_religion
-# 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-# 				value = 10
-# 				religion = THE_Seija_religion
-# 			}
-# 			custom_trigger_tooltip = {
-# 				tooltip = THE_SEJ_has_ni_level_ttt_3
-# 				has_country_flag = THE_SEJ_negative_influence_level_3_flag
-# 			}
-# 		} 
-
-# 		effect = {
-# 			if = {
-# 				limit = { is_defender_of_faith = yes }
-# 				add_treasury = 500
-# 			}
-# 			else = {
-# 				set_defender_of_the_faith = {
-# 					who = ROOT
-# 				}
-# 			}
-# 			add_country_modifier = {
-# 				name = THE_SEJ_replace_pagan_religion_modifier
-# 				duration = -1
-# 			}
-# 			custom_tooltip = THE_SEJ_change_religion_province_add_ni_tt
-# 			hidden_effect = {
-# 				set_country_flag = THE_SEJ_change_religion_province_add_ni_flag
-# 			}
-# 			custom_tooltip = THE_SEJ_every_seija_religion_add_100_all_power_tt
-# 			hidden_effect = {
-# 				every_country_including_inactive = {
-# 					limit = {
-# 						religion = THE_Seija_religion
-# 					}
-# 					ROOT = {
-# 						add_adm_power = 100
-# 						add_dip_power = 100
-# 						add_mil_power = 100
-# 					}
-# 				}
-# 			}
-# 		} 
-# 	}
-
-# 	THE_SEJ_such_mission_5_5 = {
-# 		icon = mission_unknown_mission
-# 		position = 5
-# 		required_missions = { THE_SEJ_such_mission_5_3 } 
-# 		provinces_to_highlight = {  } 
-
-# 		trigger = {
-# 			religion = THE_Seija_religion
-# 			OR = {
-# 				is_defender_of_faith_of_tier = 3
-# 				calc_true_if = {
-# 					desc = THE_SEJ_num_of_break_rule_prop_has_select_tt
-# 					has_country_flag = THE_SEJ_A_Miracle_Mallet_Replica_blessing_flag
-# 					has_country_flag = THE_SEJ_Bloodthirsty_Yin_Yang_Orb_blessing_flag
-# 					has_country_flag = THE_SEJ_Nimble_Fabric_blessing_flag
-# 					has_country_flag = THE_SEJ_Substitute_Jizo_blessing_flag
-# 					has_country_flag = THE_SEJ_Ghastly_Send_Off_Lantern_blessing_flag
-# 					has_country_flag = THE_SEJ_Four_Foot_Magic_Bomb_blessing_flag
-# 					has_country_flag = THE_SEJ_Gap_Folding_Umbrella_blessing_flag
-# 					has_country_flag = THE_SEJ_Cursed_Decoy_Doll_blessing_flag
-# 					has_country_flag = THE_SEJ_Tengus_Toy_Camera_blessing_flag
-# 					amount = 6
-# 				}
-# 			}
-# 			reform_level = 4
-# 		}
-
-# 		effect = {
-# 			custom_tooltip = THE_SEJ_enable_pagan_state_tt
-# 			hidden_effect = {
-# 				set_country_flag = THE_SEJ_enable_pagan_state_flag
-# 			}
-# 			custom_tooltip = empty_line_tt
-# 			if = {
-# 				limit = { government = monarchy }
-# 				add_government_reform = THE_SEJ_seija_union_reform
-# 				hidden_effect = {
-# 					set_country_flag = THE_SEJ_enable_seija_union_reform_flag
-# 				}
-# 			}
-# 			else = {
-# 				hidden_effect = {
-# 					set_country_flag = THE_SEJ_enable_seija_union_reform_flag
-# 				}
-# 			}
-# 		}
-# 	}
-
-# 	THE_SEJ_such_mission_5_6 = {
-# 		icon = mission_unknown_mission
-# 		position = 6
-# 		required_missions = { THE_SEJ_such_mission_4_5 } 
-# 		provinces_to_highlight = {  } 
-
-# 		trigger = {  } 
-
-# 		effect = {  } 
-# 	}
-
-# 	THE_SEJ_such_mission_5_8 = {
-# 		icon = mission_unknown_mission
-# 		position = 8
-# 		provinces_to_highlight = {  } 
-
-# 		trigger = {  } 
-
-# 		effect = {  } 
-# 	}
-
-# 	THE_SEJ_such_mission_5_9 = {
-# 		icon = mission_unknown_mission
-# 		position = 9
-# 		required_missions = { THE_SEJ_such_mission_5_8 } 
-# 		provinces_to_highlight = {  } 
-
-# 		trigger = {  } 
-
-# 		effect = {  } 
-# 	}
-
-# 	THE_SEJ_such_mission_5_11 = {
-# 		icon = mission_unknown_mission
-# 		position = 11
-# 		required_missions = {
-# 			THE_SEJ_such_mission_4_10
-# 			THE_SEJ_such_mission_5_9
-# 		}
-# 		provinces_to_highlight = {  } 
-
-# 		trigger = {  } 
-
-# 		effect = {  } 
-# 	}
-# }
+THE_SEJ_such_mission_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = SEJ
+		has_country_flag = THE_SEJ_enable_such_mission_flag
+	}
+
+	THE_SEJ_such_mission_1_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_SEJ_such_mission_2_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = { num_of_ports = 5 } 
+
+		effect = {
+			random_owned_province = {
+				limit = {
+					has_port = yes
+					OR = {
+						area = yucatan_area
+						area = east_yucatan_area
+					}
+				}
+				add_unit_construction = {
+					type = light_ship
+					amount = 5
+					speed = 0.1
+					cost = 0
+				}
+			}
+			create_explorer = { tradition = 60 } 
+		}
+	}
+
+	THE_SEJ_such_mission_1_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_SEJ_such_mission_1_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				dip_tech = 6
+				national_focus = DIP
+			}
+			num_of_light_ship = 10
+		}
+
+		effect = {
+			cuba_area = { add_permanent_claim = ROOT } 
+			east_cuba_area = { add_permanent_claim = ROOT } 
+			add_country_modifier = {
+				name = "THE_SEJ_sea_chance_modifier"
+				duration = -1
+			}
+			custom_tooltip = THE_SEJ_explore_sea_province_improve_explor_tt
+		}
+	}
+
+	THE_SEJ_such_mission_1_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { THE_SEJ_such_mission_1_3 } 
+		provinces_to_highlight = {
+			province_id = 782
+		} 
+
+		trigger = {
+			has_discovered = 782
+		} 
+
+		effect = {
+			782 = {
+				cede_province = ROOT
+				add_core = ROOT
+			}
+			add_country_modifier = {
+				name = THE_SEJ_southest_point_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_SEJ_colonize_complete_create_neighbor_siberia_tt
+			hidden_effect = {
+				set_country_flag = THE_SEJ_colonize_complete_create_neighbor_siberia_flag
+			}
+		} 
+	}
+
+	THE_SEJ_such_mission_1_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = {
+			THE_SEJ_such_mission_1_5
+			THE_SEJ_such_mission_2_5
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_1_8 = {
+		icon = mission_unknown_mission
+		position = 8
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_1_9 = {
+		icon = mission_unknown_mission
+		position = 9
+		required_missions = { THE_SEJ_such_mission_1_8 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_1_10 = {
+		icon = mission_unknown_mission
+		position = 10
+		required_missions = { THE_SEJ_such_mission_2_9 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_1_11 = {
+		icon = mission_unknown_mission
+		position = 11
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			always = yes
+		} 
+
+		effect = {
+			custom_tooltip = THE_SEJ_such_mission_1_11_reward_by_completed_mission_tt
+		} 
+	}
+}
+THE_SEJ_such_mission_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = SEJ
+		has_country_flag = THE_SEJ_enable_such_mission_flag
+	}
+
+	THE_SEJ_such_mission_2_1 = {
+		icon = mission_unknown_mission
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				army_size_percentage = 1.0
+				num_of_cities = 6
+			}
+			stability = 1
+		}
+
+		effect = {
+			add_stability = 1
+			add_adm_power = 200
+			add_manpower = 5
+			yucatan_area = { add_permanent_claim = ROOT } 
+			east_yucatan_area = { add_permanent_claim = ROOT } 
+			if = {
+				limit = { primary_culture = Youkai } 
+				if = {
+					limit = {
+						owns = 846
+						846 = { NOT = { culture = Youkai }  } 
+					}
+					846 = { change_culture = ROOT } 
+				}
+				if = {
+					limit = {
+						owns = 2652
+						2652 = { NOT = { culture = Youkai }  } 
+					}
+					2652 = { change_culture = ROOT } 
+				}
+				if = {
+					limit = {
+						owns = 4591
+						4591 = { NOT = { culture = Youkai }  } 
+					}
+					4591 = { change_culture = ROOT } 
+				}
+			}
+		}
+	}
+
+	THE_SEJ_such_mission_2_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_SEJ_such_mission_3_2 } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 846
+				province_id = 842
+			}
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+				NOT = { development = 20 } 
+			}
+		}
+
+		trigger = {
+			846 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 20
+			}
+			842 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 20
+			}
+		}
+
+		effect = {
+			custom_tooltip = THE_SEJ_maya_gerat_project_accept_Youkai_culture_tt
+			hidden_effect = { set_country_flag = THE_SEJ_maya_gerat_project_accept_Youkai_culture_flag } 
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_SEJ_maya_gerat_project_neighbor_province_add_3_dev_tt
+			hidden_effect = {
+				846 = {
+					every_neighbor_province = {
+						limit = { country_or_non_sovereign_subject_holds = ROOT } 
+						add_base_tax = 1
+						add_base_production = 1
+						add_base_manpower = 1
+					}
+				}
+				842 = {
+					every_neighbor_province = {
+						limit = { country_or_non_sovereign_subject_holds = ROOT } 
+						add_base_tax = 1
+						add_base_production = 1
+						add_base_manpower = 1
+					}
+				}
+			}
+		}
+	}
+
+	THE_SEJ_such_mission_2_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { THE_SEJ_such_mission_1_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				region = carribeans_region
+				is_city = yes
+			}
+		}
+
+		effect = {
+			carribeans_region = {
+				discover_country = ROOT
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "THE_SEJ_colony_island_modifier"
+				duration = 7300
+			}
+			custom_tooltip = THE_SEJ_carribeans_region_may_produce_clove_tt
+			hidden_effect = {
+				set_country_flag = THE_SEJ_carribeans_region_may_produce_clove_flag
+			}
+		}
+	}
+
+	THE_SEJ_such_mission_2_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { THE_SEJ_such_mission_3_4 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+
+		} 
+
+		effect = {
+
+		} 
+	}
+
+	THE_SEJ_such_mission_2_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = { THE_SEJ_such_mission_2_5 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_2_9 = {
+		icon = mission_unknown_mission
+		position = 9
+		required_missions = { THE_SEJ_such_mission_1_8 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_2_10 = {
+		icon = mission_unknown_mission
+		position = 10
+		required_missions = { THE_SEJ_such_mission_2_9 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_SEJ_such_mission_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = SEJ
+		has_country_flag = THE_SEJ_enable_such_mission_flag
+	}
+
+	THE_SEJ_such_mission_3_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_SEJ_such_mission_2_1 } 
+		provinces_to_highlight = {
+			is_capital = yes
+			owner = { religion = mesoamerican_religion } 
+		}
+
+		trigger = {
+			if = {
+				limit = { any_country = { religion = mesoamerican_religion }  } 
+				any_country = {
+					religion = mesoamerican_religion
+					has_spy_network_from = {
+						who = ROOT
+						value = 20
+					}
+				}
+			}
+			else = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 20
+					region = central_america_region
+				}
+			}
+		}
+
+		effect = {
+			add_dip_power = 200
+			add_country_modifier = {
+				name = "THE_SEJ_adaptive_training_modifier"
+				duration = -1
+			}
+			custom_tooltip = THE_SEJ_create_60_conquistador_add_6_manuever_tt
+			hidden_effect = {
+				create_conquistador = {
+					tradition = 60
+					add_manuever = 6
+				}
+			}
+			custom_tooltip = empty_line_tt
+			custom_tooltip = THE_SEJ_add_claim_in_spy_network_country_and_neighbor_tt
+			hidden_effect = {
+				every_country = {
+					limit = {
+						religion = mesoamerican_religion
+						has_spy_network_from = {
+							who = ROOT
+							value = 20
+						}
+					}
+					every_owned_province = { add_permanent_claim = ROOT } 
+					every_neighbor_country = { every_owned_province = { add_permanent_claim = ROOT }  } 
+				}
+			}
+		}
+	}
+
+	THE_SEJ_such_mission_3_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { THE_SEJ_such_mission_3_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				OR = {
+					area = yucatan_area
+					area = east_yucatan_area
+					area = campeche_area
+					area = guatemala_lowlands_area
+					area = chiapas_area
+					area = guatemala_area
+				}
+			}
+		} 
+
+		effect = {
+			central_america_region = {
+				add_permanent_claim = ROOT
+			}
+			mexico_region = {
+				add_permanent_claim = ROOT
+			}
+			custom_tooltip = THE_SEJ_enable_develop_obsidian_estate_privilege_tt
+			hidden_effect = {
+				set_country_flag = THE_SEJ_enable_develop_obsidian_estate_privilege_flag
+			}
+		} 
+	}
+
+	THE_SEJ_such_mission_3_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { THE_SEJ_such_mission_3_4 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_3_7 = {
+		icon = mission_unknown_mission
+		position = 7
+		required_missions = {
+			THE_SEJ_such_mission_2_6
+			THE_SEJ_such_mission_3_5
+			THE_SEJ_such_mission_5_6
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_3_10 = {
+		icon = mission_unknown_mission
+		position = 10
+		required_missions = {
+			THE_SEJ_such_mission_2_9
+			THE_SEJ_such_mission_4_9
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_3_11 = {
+		icon = mission_unknown_mission
+		position = 11
+		required_missions = { THE_SEJ_such_mission_3_10 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_SEJ_such_mission_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = SEJ
+		has_country_flag = THE_SEJ_enable_such_mission_flag
+	}
+
+	THE_SEJ_such_mission_4_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_SEJ_such_mission_5_1 } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { base_production = 8 }
+		} 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				base_production = 8
+			}
+		} 
+
+		effect = {
+			custom_tooltip = THE_SEJ_every_8_production_add_production_building_tt
+			tooltip = {
+				add_or_upgrade_production_building = yes
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						base_production = 8
+					}
+					add_or_upgrade_production_building = yes
+				}
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = { has_country_flag = THE_SEJ_Four_Foot_Magic_Bomb_blessing_flag }
+				custom_tooltip = THE_SEJ_such_mission_4_2_tt_case1_yes
+				add_country_modifier = {
+					name = THE_SEJ_bomb_for_development_modifier
+					duration = 7300
+				}
+			}
+			else = {
+				custom_tooltip = THE_SEJ_such_mission_4_2_tt_case1_no
+				tooltip = {
+					add_country_modifier = {
+						name = THE_SEJ_bomb_for_development_modifier
+						duration = 7300
+					}
+				}
+			}
+		} 
+	}
+
+	THE_SEJ_such_mission_4_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = {
+			THE_SEJ_such_mission_3_2
+			THE_SEJ_such_mission_4_2
+		}
+		provinces_to_highlight = {
+			has_discovered = ROOT
+			trade_goods = cocoa
+		} 
+
+		trigger = {
+			trade_goods_produced_amount = {
+				trade_goods = cocoa
+				amount = 7
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = THE_SEJ_cocoa_trader_modifier
+				duration = -1
+			}
+			THE_country_event_with_insight = {
+				id = THE_SEJ_events.5
+				days = 365
+				insight_tooltip = THE_SEJ_events_5_tt
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = { has_country_flag = THE_SEJ_Gap_Folding_Umbrella_blessing_flag }
+				custom_tooltip = THE_SEJ_such_mission_4_3_tt_case1_yes
+			}
+			else = {
+				custom_tooltip = THE_SEJ_such_mission_4_3_tt_case1_no
+			}
+			custom_tooltip = THE_SEJ_events_6_tt
+		} 
+	}
+
+	THE_SEJ_such_mission_4_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { THE_SEJ_such_mission_5_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			if = {
+				limit = { exists = NCS }
+				NCS = {
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+				}
+			}
+			else = {
+				5035 = {
+					owner = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+				}
+			}
+		} 
+
+		effect = {
+			if = {
+				limit = { exists = NCS }
+				THE_add_historical_friend_and_reverse_scripted_effect = {
+					tag = NCS
+				}
+				NCS = {
+					change_religion = THE_Seija_religion
+					hidden_effect = {
+						every_owned_province = {
+							change_religion = THE_Seija_religion
+						}
+					}
+				}
+				custom_tooltip = empty_line_tt
+				if = {
+					limit = { has_country_flag = THE_SEJ_Cursed_Decoy_Doll_blessing_flag }
+					custom_tooltip = THE_SEJ_such_mission_4_4_case1_tt_yes
+					create_subject = {
+						subject_type = crown_colony
+						who = NCS
+					}
+					custom_tooltip = THE_SEJ_such_mission_4_4_case1_tt
+					hidden_effect = {
+						NCS = {  set_country_flag = THE_only_player_enable_declare_war_flag }
+					}
+				}
+				else = {
+					custom_tooltip = THE_SEJ_such_mission_4_4_case1_tt_no
+					tooltip = {
+						create_subject = {
+							subject_type = crown_colony
+							who = NCS
+						}
+						custom_tooltip = THE_SEJ_such_mission_4_4_case1_tt
+					}
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = THE_SEJ_ncs_idea_1_modifier
+					duration = 7300
+				}
+				add_country_modifier = {
+					name = THE_SEJ_ncs_idea_7_modifier
+					duration = 7300
+				}
+			}
+		} 
+	}
+
+	THE_SEJ_such_mission_4_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { THE_SEJ_such_mission_3_4 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_4_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = { THE_SEJ_such_mission_4_5 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_4_9 = {
+		icon = mission_unknown_mission
+		position = 9
+		required_missions = { THE_SEJ_such_mission_5_8 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_4_10 = {
+		icon = mission_unknown_mission
+		position = 10
+		required_missions = { THE_SEJ_such_mission_4_9 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+THE_SEJ_such_mission_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = SEJ
+		has_country_flag = THE_SEJ_enable_such_mission_flag
+	}
+
+	THE_SEJ_such_mission_5_1 = {
+		icon = mission_unknown_mission
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			grown_by_development = 25
+		} 
+
+		effect = {
+			custom_tooltip = THE_SEJ_enable_negative_influence_decision_tt
+			hidden_effect = {
+				set_country_flag = THE_SEJ_enable_negative_influence_decision_flag
+			}
+		} 
+	}
+
+	THE_SEJ_such_mission_5_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_SEJ_such_mission_5_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			religion = THE_Seija_religion
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				religion = THE_Seija_religion
+			}
+			custom_trigger_tooltip = {
+				tooltip = THE_SEJ_has_ni_level_ttt_3
+				has_country_flag = THE_SEJ_negative_influence_level_3_flag
+			}
+		} 
+
+		effect = {
+			if = {
+				limit = { is_defender_of_faith = yes }
+				add_treasury = 500
+			}
+			else = {
+				set_defender_of_the_faith = {
+					who = ROOT
+				}
+			}
+			add_country_modifier = {
+				name = THE_SEJ_replace_pagan_religion_modifier
+				duration = -1
+			}
+			custom_tooltip = THE_SEJ_change_religion_province_add_ni_tt
+			hidden_effect = {
+				set_country_flag = THE_SEJ_change_religion_province_add_ni_flag
+			}
+			custom_tooltip = THE_SEJ_every_seija_religion_add_100_all_power_tt
+			hidden_effect = {
+				every_country_including_inactive = {
+					limit = {
+						religion = THE_Seija_religion
+					}
+					ROOT = {
+						add_adm_power = 100
+						add_dip_power = 100
+						add_mil_power = 100
+					}
+				}
+			}
+		} 
+	}
+
+	THE_SEJ_such_mission_5_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { THE_SEJ_such_mission_5_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			religion = THE_Seija_religion
+			OR = {
+				is_defender_of_faith_of_tier = 3
+				calc_true_if = {
+					desc = THE_SEJ_num_of_break_rule_prop_has_select_tt
+					has_country_flag = THE_SEJ_A_Miracle_Mallet_Replica_blessing_flag
+					has_country_flag = THE_SEJ_Bloodthirsty_Yin_Yang_Orb_blessing_flag
+					has_country_flag = THE_SEJ_Nimble_Fabric_blessing_flag
+					has_country_flag = THE_SEJ_Substitute_Jizo_blessing_flag
+					has_country_flag = THE_SEJ_Ghastly_Send_Off_Lantern_blessing_flag
+					has_country_flag = THE_SEJ_Four_Foot_Magic_Bomb_blessing_flag
+					has_country_flag = THE_SEJ_Gap_Folding_Umbrella_blessing_flag
+					has_country_flag = THE_SEJ_Cursed_Decoy_Doll_blessing_flag
+					has_country_flag = THE_SEJ_Tengus_Toy_Camera_blessing_flag
+					amount = 6
+				}
+			}
+			reform_level = 4
+		}
+
+		effect = {
+			custom_tooltip = THE_SEJ_enable_pagan_state_tt
+			hidden_effect = {
+				set_country_flag = THE_SEJ_enable_pagan_state_flag
+			}
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = { government = monarchy }
+				add_government_reform = THE_SEJ_seija_union_reform
+				hidden_effect = {
+					set_country_flag = THE_SEJ_enable_seija_union_reform_flag
+				}
+			}
+			else = {
+				hidden_effect = {
+					set_country_flag = THE_SEJ_enable_seija_union_reform_flag
+				}
+			}
+		}
+	}
+
+	THE_SEJ_such_mission_5_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = { THE_SEJ_such_mission_4_5 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_5_8 = {
+		icon = mission_unknown_mission
+		position = 8
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_5_9 = {
+		icon = mission_unknown_mission
+		position = 9
+		required_missions = { THE_SEJ_such_mission_5_8 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	THE_SEJ_such_mission_5_11 = {
+		icon = mission_unknown_mission
+		position = 11
+		required_missions = {
+			THE_SEJ_such_mission_4_10
+			THE_SEJ_such_mission_5_9
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}

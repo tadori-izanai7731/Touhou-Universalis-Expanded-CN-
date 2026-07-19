@@ -1,2076 +1,617 @@
-THE_SEJ_p0_slot_1_trade = {
+THE_SEJ_missions_1 = {
 	slot = 1
 	generic = no
 	ai = yes
 	has_country_shield = yes
 	potential = {
 		tag = SEJ
-		NOT = { has_country_flag = THE_SEJ_rework_opening_complete } 
-	}
-
-	THE_SEJ_p0_restore_old_capital = {
+		NOT = { has_country_flag = THE_SEJ_enable_such_mission_flag }
+	} 
+	
+	THE_SEJ_missions_1_2 = {
 		icon = mission_unknown_mission
 		position = 2
-		required_missions = { THE_SEJ_p0_fallen_arrow } 
+		required_missions = { THE_SEJ_missions_3_1 } 
+		provinces_to_highlight = {  } 
+		
+		trigger = { dip_power = 200 } 
+		
+		effect = {
+			add_dip_power = -200
+			add_country_modifier = {
+				name = "THE_sej_mission_modifier1"
+				duration = 7300
+			}
+		}
+	}
+	
+	THE_SEJ_missions_1_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_SEJ_missions_1_2 } 
 		provinces_to_highlight = {
 			OR = {
-				AND = {
-					province_id = 846
-					NOT = { development = 18 } 
-				}
-				AND = {
-					province_id = 2652
-					NOT = { development = 10 } 
-				}
-				AND = {
-					province_id = 4591
-					NOT = { development = 10 } 
-				}
+				province_id = 2652
+				province_id = 4591
 			}
-		}
-
+			NOT = { culture = Youkai }
+		} 
+		
 		trigger = {
-			846 = { development = 18 } 
-			2652 = { development = 10 } 
-			4591 = { development = 10 } 
+			2652 = { culture = Youkai } 
+			4591 = { culture = Youkai } 
+			reform_level = 3
 		}
-
-		effect = {
-			846 = { add_building = workshop } 
-			2652 = {
-				add_building = workshop
-				add_center_of_trade_level = 1
-			}
-			4591 = { add_building = workshop } 
-			add_country_modifier = {
-				name = "THE_SEJ_p0_restored_old_capital_modifier"
-				duration = 9125
-			}
-		}
-	}
-
-	THE_SEJ_p0_protect_ppolom = {
-		icon = mission_unknown_mission
-		position = 3
-		required_missions = { THE_SEJ_p0_restore_old_capital } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			estate_influence = {
-				estate = estate_burghers
-				influence = 50
-			}
-			estate_loyalty = {
-				estate = estate_burghers
-				loyalty = 65
-			}
-			OR = {
-				trader = 1
-				has_dip_advisor_2 = yes
-			}
-			dip_power = 100
-		}
-
+		
 		effect = {
 			add_country_modifier = {
-				name = "THE_SEJ_p0_ppolom_trust_modifier"
-				duration = -1
+				name = "THE_sej_mission_modifier2"
+				duration = 7300
 			}
 			if = {
-				limit = { has_estate_privilege = estate_burghers_land_of_commerce } 
-				change_estate_land_share = {
-					estate = estate_burghers
-					share = -10
-				}
+				limit = { NOT = { government = monarchy } }
+				change_government = monarchy
 			}
-		}
-	}
-
-	THE_SEJ_p0_east_coast = {
-		icon = mission_unknown_mission
-		position = 5
-		required_missions = { THE_SEJ_p0_protect_ppolom } 
-		provinces_to_highlight = { province_id = 4624 } 
-
-		trigger = { num_of_ports = 5 } 
-
-		effect = {
-			4624 = {
-				cede_province = ROOT
-				add_core = ROOT
-				change_religion = THE_Seija_religion
-				change_culture = yucatec
-				change_trade_goods = cocoa
-			}
-			846 = {
-				add_unit_construction = {
-					type = light_ship
-					amount = 5
-					speed = 0.1
-					cost = 0
-				}
-			}
-			add_country_modifier = {
-				name = "THE_SEJ_p0_east_coast_colonial_modifier"
-				duration = 7300
-			}
-			custom_tooltip = THE_SEJ_p0_east_coast_caribbean_vision_tt
-			hidden_effect = { carribeans_region = { discover_country = ROOT }  } 
-			create_explorer = { tradition = 60 } 
-		}
-	}
-}
-THE_SEJ_p0_slot_2_market = {
-	slot = 2
-	generic = no
-	ai = yes
-	has_country_shield = yes
-	potential = {
-		tag = SEJ
-		NOT = { has_country_flag = THE_SEJ_rework_opening_complete } 
-	}
-
-	THE_SEJ_p0_standard_measures = {
-		icon = mission_unknown_mission
-		position = 2
-		required_missions = { THE_SEJ_p0_fallen_arrow } 
-		provinces_to_highlight = {  } 
-
-		trigger = { dip_power = 200 } 
-
-		effect = {
-			add_dip_power = -200
-			custom_tooltip = THE_SEJ_p0_unified_measures_remove_chaos_burghers_tt
-			add_country_modifier = {
-				name = "THE_SEJ_p0_unified_measures_modifier"
-				duration = 9125
-			}
-			add_country_modifier = {
-				name = "THE_SEJ_p0_unified_measures_burgher_modifier"
-				duration = -1
-			}
-		}
-	}
-
-	THE_SEJ_p0_inverted_market = {
-		icon = mission_unknown_mission
-		position = 3
-		required_missions = { THE_SEJ_p0_standard_measures } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			estate_loyalty = {
-				estate = estate_burghers
-				loyalty = 50
-			}
-			estate_influence = {
-				estate = estate_burghers
-				influence = 40
-			}
-			estate_loyalty = {
-				estate = estate_church
-				loyalty = 50
-			}
-			estate_influence = {
-				estate = estate_church
-				influence = 40
-			}
-		}
-
-		effect = {
-			add_country_modifier = {
-				name = "THE_SEJ_p0_inverted_market_modifier"
-				duration = -1
-			}
-			custom_tooltip = THE_SEJ_p0_four_color_dyes_autonomy_compensation_tt
 			hidden_effect = {
-				set_country_flag = THE_SEJ_p0_four_color_dyes_autonomy_compensation_flag
-				THE_SEJ_p0_apply_chaotic_society_autonomy_effect = yes
+				set_country_flag = THE_SEJ_enable_expand_seija_paradise_reform_flag
 			}
-		}
-	}
-
-	THE_SEJ_p0_city_state_cooperation = {
-		icon = mission_unknown_mission
-		position = 5
-		required_missions = { THE_SEJ_p0_inverted_market } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			NOT = { any_owned_province = { unrest = 0 }  } 
-			num_of_loans = 0
-			stability = 2
-		}
-
-		effect = {
-			change_dip = 1
-			add_country_modifier = {
-				name = "THE_SEJ_p0_cooperation_institution_modifier"
-				duration = -1
-			}
-			add_country_modifier = {
-				name = "THE_SEJ_p0_mayapan_trade_pass_modifier"
-				duration = -1
-			}
-			custom_tooltip = THE_SEJ_p0_mayapan_pass_direct_reward_tt
-			hidden_effect = {
-				every_country = {
-					limit = { religion = mesoamerican_religion } 
-					add_opinion = {
-						who = ROOT
-						modifier = THE_SEJ_p0_mayan_goodwill
-					}
-				}
-			}
-		}
-	}
-}
-THE_SEJ_p0_slot_3_main = {
-	slot = 3
-	generic = no
-	ai = yes
-	has_country_shield = yes
-	potential = {
-		tag = SEJ
-		NOT = { has_country_flag = THE_SEJ_rework_opening_complete } 
-	}
-
-	THE_SEJ_p0_fallen_arrow = {
-		icon = mission_unknown_mission
-		position = 1
-		provinces_to_highlight = {  } 
-
-		trigger = { always = yes } 
-
-		effect = {
-			central_america_region = { add_permanent_claim = ROOT } 
-			2631 = { add_permanent_claim = ROOT } 
-			2630 = { add_permanent_claim = ROOT } 
-			country_event = {
-				id = THE_SEJ_rework_events.1
-				tooltip = THE_SEJ_p0_opening_event_preview_tt
-			}
-		}
-	}
-
-	THE_SEJ_p0_reconciliation_festival = {
-		icon = mission_unknown_mission
-		position = 6
-		required_missions = {
-			THE_SEJ_p0_east_coast
-			THE_SEJ_p0_city_state_cooperation
-			THE_SEJ_p0_inverted_tribunal
-			THE_SEJ_p0_bloody_purge_nobles
-		}
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_flip_chichen_itza_no_construction_tt
-				846 = {
-					NOT = { has_construction = culture } 
-					NOT = { has_construction = building } 
-					NOT = { has_construction = great_project } 
-				}
-			}
-		}
-
-		effect = {
-			custom_tooltip = THE_SEJ_p0_reconciliation_festival_claims_tt
-			hidden_effect = {
-				central_america_region = { add_permanent_claim = ROOT } 
-				mexico_region = { add_permanent_claim = ROOT } 
-			}
-			country_event = {
-				id = THE_SEJ_rework_events.12
-				tooltip = THE_SEJ_p0_reverse_chichen_itza_preview_tt
-			}
-		}
-	}
-}
-THE_SEJ_p0_slot_4_faith = {
-	slot = 4
-	generic = no
-	ai = yes
-	has_country_shield = yes
-	potential = {
-		tag = SEJ
-		NOT = { has_country_flag = THE_SEJ_rework_opening_complete } 
-	}
-
-	THE_SEJ_p0_divine_power = {
-		icon = mission_unknown_mission
-		position = 2
-		required_missions = { THE_SEJ_p0_fallen_arrow } 
-		provinces_to_highlight = {  } 
-
-		trigger = { army_size_percentage = 1.0 } 
-
-		effect = {
-			add_adm_power = 100
-			add_stability = 1
-			custom_tooltip = THE_SEJ_p0_shenli_remove_chaos_church_tt
-			add_country_modifier = {
-				name = "THE_SEJ_p0_loyal_priests_modifier"
-				duration = -1
-			}
-			add_country_modifier = {
-				name = "THE_SEJ_p0_cultural_inversion_modifier"
-				duration = 7300
-			}
-			custom_tooltip = THE_SEJ_p0_first_war_xiu_no_allies_tt
-			hidden_effect = { set_country_flag = THE_SEJ_p0_cannot_call_ally_XIU_flag } 
-		}
-	}
-
-	THE_SEJ_p0_downfall_scripture = {
-		icon = mission_unknown_mission
-		position = 3
-		required_missions = { THE_SEJ_p0_divine_power } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			num_of_owned_provinces_with = {
-				value = 5
-				religion = THE_Seija_religion
-			}
-			estate_loyalty = {
-				estate = estate_church
-				loyalty = 50
-			}
-			stability = 1
-		}
-
-		effect = {
-			add_country_modifier = {
-				name = "THE_SEJ_p0_inverted_scripture_modifier"
-				duration = -1
-			}
-			custom_tooltip = THE_SEJ_p0_first_war_ctm_itz_no_allies_tt
-			hidden_effect = {
-				set_country_flag = THE_SEJ_p0_cannot_call_ally_CTM_flag
-				set_country_flag = THE_SEJ_p0_cannot_call_ally_ITZ_flag
-			}
-		}
-	}
-
-	THE_SEJ_p0_priest_school = {
-		icon = mission_unknown_mission
-		position = 4
-		required_missions = { THE_SEJ_p0_downfall_scripture } 
-		provinces_to_highlight = {  } 
-
-		trigger = { dip_power = 200 } 
-
-		effect = {
-			add_dip_power = -200
-			add_country_modifier = {
-				name = "THE_SEJ_p0_weak_paradise_priest_modifier"
-				duration = -1
-			}
-			custom_tooltip = THE_SEJ_p0_clear_current_ae_tt
-			hidden_effect = { THE_SEJ_p0_clear_current_ae_effect = yes } 
-			set_country_flag = THE_SEJ_enable_expand_seija_paradise_reform_flag
 			add_government_reform = THE_SEJ_expand_seija_paradise_reform
 		}
 	}
-
-	THE_SEJ_p0_inverted_tribunal = {
+	
+	THE_SEJ_missions_1_4 = {
 		icon = mission_unknown_mission
-		position = 5
-		required_missions = { THE_SEJ_p0_priest_school } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			religious_unity = 1
-			num_of_cities = 10
-		}
-
+		position = 4
+		required_missions = { THE_SEJ_missions_1_3 } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { religion = ROOT }
+		} 
+		
+		trigger = { religious_unity = 0.99 } 
+		
 		effect = {
+			change_adm = 1
 			add_country_modifier = {
-				name = "THE_SEJ_p0_inverted_tribunal_modifier"
+				name = "THE_sej_mission_modifier3"
 				duration = -1
 			}
-			custom_tooltip = THE_SEJ_p0_inverted_tribunal_conversion_tt
-			hidden_effect = { set_country_flag = THE_SEJ_p0_inverted_tribunal_conversion_enabled_flag } 
+			custom_tooltip = THE_SEJ_converte_province_religion_add_2_unrest_tt
+			hidden_effect = {
+				set_country_flag = THE_SEJ_converte_province_religion_add_2_unrest_flag
+			}
 		}
 	}
 }
-THE_SEJ_p0_slot_5_guard = {
+THE_SEJ_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = SEJ
+		NOT = { has_country_flag = THE_SEJ_enable_such_mission_flag }
+	} 
+	
+	THE_SEJ_missions_2_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_SEJ_missions_3_1 } 
+		provinces_to_highlight = {  } 
+		
+		trigger = {
+			stability = 1
+			num_of_generals = 1
+		} 
+		
+		effect = {
+			add_country_modifier = {
+				name = "THE_sej_mission_modifier4"
+				duration = 7300
+			}
+		}
+	}
+	
+	THE_SEJ_missions_2_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_SEJ_missions_2_2 } 
+		provinces_to_highlight = {  } 
+		
+		trigger = {
+			NOT = {
+				any_owned_province = {
+					unrest = 0
+					local_autonomy_above_min = 5
+				}
+			}
+			NOT = { num_of_loans = 1 } 
+		}
+		
+		effect = {
+			change_dip = 1
+			add_country_modifier = {
+				name = "THE_sej_mission_modifier5"
+				duration = -1
+			}
+		}
+	}
+	
+	THE_SEJ_missions_2_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { THE_SEJ_missions_2_3 } 
+		provinces_to_highlight = {  } 
+		
+		trigger = {
+			OR = {
+				is_revolution_target = yes
+				absolutism = 80
+				NOT = { average_unrest = -15 }
+			}
+		}
+		
+		effect = {
+			# remove_country_modifier = THE_sej_mission_modifier5
+			add_country_modifier = {
+				name = "THE_sej_mission_modifier6"
+				duration = -1
+			}
+		}
+	}
+	
+	THE_SEJ_missions_2_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = { THE_SEJ_missions_3_5 } 
+		provinces_to_highlight = {  } 
+		
+		trigger = {
+			num_of_total_ports = 20
+			num_of_heavy_ship = 10
+		}
+		
+		effect = {
+			change_dip = 1
+			add_country_modifier = {
+				name = "THE_sej_mission_modifier11"
+				duration = 7300
+			}
+		}
+	}
+}
+THE_SEJ_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = SEJ
+		NOT = { has_country_flag = THE_SEJ_enable_such_mission_flag }
+	} 
+	
+	THE_SEJ_missions_3_1 = {
+		icon = mission_unknown_mission
+		position = 1
+		provinces_to_highlight = {  } 
+		
+		trigger = { tag = SEJ } 
+		
+		effect = {
+			central_america_region = {
+				add_permanent_claim = ROOT
+			}
+			2631 = {
+				add_permanent_claim = ROOT
+			}
+			2630 = {
+				add_permanent_claim = ROOT
+			}
+			add_treasury = 100
+			add_country_modifier = {
+				name = "THE_sej_mission_modifier_a"
+				duration = 7300
+			}
+		}
+	}
+	
+	THE_SEJ_missions_3_2 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_SEJ_missions_3_1 } 
+		provinces_to_highlight = {
+			region = central_america_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+		
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				region = central_america_region
+			}
+		}
+		
+		effect = {
+			mexico_region = {
+				add_permanent_claim = ROOT
+			}
+			rio_grande_region = {
+				add_permanent_claim = ROOT
+			}
+			california_region = {
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "THE_sej_mission_modifier7"
+				duration = -1
+			}
+			custom_tooltip = THE_SEJ_maya_gerat_project_accept_Youkai_culture_tt
+			hidden_effect = {
+				set_country_flag = THE_SEJ_maya_gerat_project_accept_Youkai_culture_flag
+			}
+		}
+	}
+	
+	THE_SEJ_missions_3_3 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_SEJ_missions_3_2 } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					region = mexico_region
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				owned_by = AZT
+			}
+		} 
+		
+		trigger = {
+			NOT = { exists = AZT } 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				region = mexico_region
+			}
+			852 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		effect = {
+			colombia_region = {
+				add_permanent_claim = ROOT
+			}
+			peru_region = {
+				add_permanent_claim = ROOT
+			}
+			852 = {
+				add_permanent_province_modifier = {
+					name = "THE_sej_mission_modifier_852"
+					duration = -1
+				}
+			}
+			custom_tooltip = THE_SEJ_aztek_gerat_project_accept_Youkai_culture_tt
+			hidden_effect = {
+				set_country_flag = THE_SEJ_aztek_gerat_project_accept_Youkai_culture_flag
+			}
+		}
+	}
+	
+	THE_SEJ_missions_3_4 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { THE_SEJ_missions_3_3 } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 808
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				owned_by = CSU
+			}
+		} 
+		
+		trigger = {
+			808 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			NOT = { exists = CSU } 
+		}
+		
+		effect = {
+			change_adm = 1
+			add_country_modifier = {
+				name = "THE_sej_mission_modifier9"
+				duration = -1
+			}
+			custom_tooltip = THE_SEJ_inca_gerat_project_accept_Youkai_culture_tt
+			hidden_effect = {
+				set_country_flag = THE_SEJ_inca_gerat_project_accept_Youkai_culture_flag
+			}
+		}
+	}
+	
+	THE_SEJ_missions_3_5 = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { THE_SEJ_missions_3_4 } 
+		provinces_to_highlight = {  } 
+		
+		trigger = {
+			OR = {
+				any_war_enemy_country = { is_colonial_empire_trigger = yes } 
+				custom_trigger_tooltip = {
+					tooltip = SUN_befriended_europeans
+					any_known_country = {
+						capital_scope = { continent = europe } 
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
+					}
+				}
+				any_neighbor_country = { is_colonial_empire_trigger = yes } 
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "THE_sej_mission_modifier10"
+				duration = 7300
+			}
+			custom_tooltip = THE_SEJ_enable_THE_SEJ_revolutionary_guard_tt
+			hidden_effect = {
+				set_country_flag = THE_SEJ_enable_THE_SEJ_revolutionary_guard_flag
+			}
+		}
+	}
+	
+	THE_SEJ_missions_3_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = { THE_SEJ_missions_3_5 } 
+		provinces_to_highlight = {  } 
+		
+		trigger = {
+			adm_power = 300
+			dip_power = 300
+			mil_power = 300
+		}
+		
+		effect = {
+			add_adm_power = -300
+			add_dip_power = -300
+			add_mil_power = -300
+			add_stability = 1
+			add_country_modifier = {
+				name = "THE_sej_mission_modifier12"
+				duration = -1
+			}
+			remove_plague_events = yes
+		}
+	}
+	THE_SEJ_missions_3_7 = {
+		icon = mission_unknown_mission
+		position = 7
+		required_missions = {
+			THE_SEJ_missions_3_6
+			THE_SEJ_missions_2_6
+			THE_SEJ_missions_4_6
+		}
+		provinces_to_highlight = {
+			continent = europe
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+		
+		trigger = {
+			OR = {
+				if = { limit = { exists = FRA } has_won_war_against = { max_years_since = 25 who = FRA } }
+				else = { hidden_trigger = { always = no } }
+				if = { limit = { exists = CAS } has_won_war_against = { max_years_since = 25 who = CAS } }
+				else = { hidden_trigger = { always = no } }
+				if = { limit = { exists = SPA } has_won_war_against = { max_years_since = 25 who = SPA } }
+				else = { hidden_trigger = { always = no } }
+				if = { limit = { exists = POR } has_won_war_against = { max_years_since = 25 who = POR } }
+				else = { hidden_trigger = { always = no } }
+				if = { limit = { exists = ENG } has_won_war_against = { max_years_since = 25 who = ENG } }
+				else = { hidden_trigger = { always = no } }
+				if = { limit = { exists = GBR } has_won_war_against = { max_years_since = 25 who = GBR } }
+				else = { hidden_trigger = { always = no } }
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 15
+					continent = europe
+				}
+			}
+		}
+		
+		effect = {
+			THE_country_event_with_insight = { id = flavor_THE_SEJ.10 }
+			846 ={
+				spawn_center_of_revolution = 846
+			}  
+		} 
+	}
+}
+THE_SEJ_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = SEJ
+		NOT = { has_country_flag = THE_SEJ_enable_such_mission_flag }
+	} 
+	
+	THE_SEJ_missions_4_1 = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { THE_SEJ_missions_3_1 } 
+		provinces_to_highlight = {  } 
+		
+		trigger = {
+			is_at_war = no
+			OR = {
+				navy_size_percentage = 0.5
+				num_of_light_ship = 10
+			}
+		}
+		
+		effect = {
+			change_government_reform_progress = 100
+			create_explorer = {
+				tradition = 80
+				add_manuever = 6
+			}
+			add_country_modifier = {
+				name = "THE_sej_mission_modifier17"
+				duration = -1
+			}
+		}
+	}
+	
+	THE_SEJ_missions_4_2 = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { THE_SEJ_missions_4_1 } 
+		provinces_to_highlight = {  } 
+		
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = th_discovers_europe.tooltip
+				OR = {
+					iberia_region = { has_discovered = ROOT } 
+					france_region = { has_discovered = ROOT } 
+					low_countries_region = { has_discovered = ROOT } 
+					british_isles_region = { has_discovered = ROOT } 
+				}
+			}
+		}
+		
+		effect = {
+			add_navy_tradition = 30
+			add_dip_power = 100
+			change_government_reform_progress = 200
+			368 = {
+				add_core = ROOT
+				cede_province = ROOT
+				change_religion = ROOT
+				change_culture = ROOT
+			}
+		}
+	}
+	
+	THE_SEJ_missions_4_3 = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { THE_SEJ_missions_4_2 } 
+		provinces_to_highlight = {
+			continent = europe
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+		
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				continent = europe
+			}
+		}
+		
+		effect = {
+			change_government_reform_progress = 300
+			custom_tooltip = SUN_enable_establishment_of_european_colonies
+			set_country_flag = SUN_enable_european_colonies_flag
+		}
+	}
+	
+	THE_SEJ_missions_4_6 = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = { THE_SEJ_missions_3_5 } 
+		provinces_to_highlight = {  } 
+		
+		trigger = {
+			OR = {
+				is_ahead_of_time_in_technology = { tech = mil } 
+				monthly_mil = 12
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "THE_sej_mission_modifier13"
+				duration = -1
+			}
+		}
+	}
+}
+THE_SEJ_missions_5 = {
 	slot = 5
 	generic = no
 	ai = yes
 	has_country_shield = yes
 	potential = {
 		tag = SEJ
-		NOT = { has_country_flag = THE_SEJ_rework_opening_complete } 
-	}
-
-	THE_SEJ_p0_join_downfall = {
+		NOT = { has_country_flag = THE_SEJ_enable_such_mission_flag }
+	} 
+	
+	THE_SEJ_missions_5_2 = {
 		icon = mission_unknown_mission
 		position = 2
-		required_missions = { THE_SEJ_p0_fallen_arrow } 
+		required_missions = { THE_SEJ_missions_3_1 } 
 		provinces_to_highlight = {  } 
-
-		trigger = {
-			num_of_special_units = {
-				special_unit_category = revolutionary_guard
-				type = infantry
-				value = 1
-			}
-			num_of_generals = 1
-		}
-
+		
+		trigger = { is_year = 1445 } 
+		
 		effect = {
-			add_manpower = 10
 			add_country_modifier = {
-				name = "THE_SEJ_p0_join_downfall_forcelimit_modifier"
-				duration = -1
-			}
-			custom_tooltip = THE_SEJ_p0_gain_five_revolutionary_guards_tt
-			hidden_effect = {
-				for = {
-					amount = 5
-					effect = "
-						create_unit_forcelimit_percentage = {
-							type = infantry
-							special_unit_category = revolutionary_guard
-							force_limit_percentage = 0.00000001
-						}
-					"
-				}
-			}
-			add_estate_loyalty = {
-				estate = estate_nobles
-				loyalty = -20
-			}
-			change_estate_land_share = {
-				estate = estate_nobles
-				share = -5
-			}
-			custom_tooltip = THE_SEJ_p0_yucatan_noble_rebels_by_privileges_tt
-			hidden_effect = { 846 = { THE_SEJ_p0_spawn_other_noble_rebels_effect = yes }  } 
-			set_country_flag = THE_SEJ_downfall_guard_estate_unlocked_flag
-			set_country_flag = THE_SEJ_downfall_guard_estate_empowered_flag
-			add_country_modifier = {
-				name = "THE_SEJ_p0_noble_hostility_modifier"
-				duration = -1
-			}
-			create_conquistador = {
-				tradition = 60
-				add_manuever = 6
+				name = THE_sej_mission_modifier15
+				duration = 3650
 			}
 		}
 	}
-
-	THE_SEJ_p0_red_black_principles = {
-		icon = mission_unknown_mission
-		position = 3
-		required_missions = { THE_SEJ_p0_join_downfall } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			num_of_estate_privileges = {
-				estate = estate_sej_downfall_guard
-				value = 3
-			}
-		}
-
-		effect = {
-			add_estate_loyalty = {
-				estate = estate_nobles
-				loyalty = -20
-			}
-			change_estate_land_share = {
-				estate = estate_nobles
-				share = -5
-			}
-			change_estate_land_share = {
-				estate = estate_sej_downfall_guard
-				share = 15
-			}
-			custom_tooltip = THE_SEJ_p0_extra_noble_rebels_by_privileges_tt
-			add_country_modifier = {
-				name = "THE_SEJ_p0_immature_revolutionary_guard_modifier"
-				duration = -1
-			}
-			custom_tooltip = THE_SEJ_p0_gain_five_revolutionary_guards_tt
-			hidden_effect = {
-				846 = { THE_SEJ_p0_spawn_other_noble_rebels_effect = yes } 
-				2652 = { THE_SEJ_p0_spawn_other_noble_rebels_effect = yes } 
-				4591 = { THE_SEJ_p0_spawn_other_noble_rebels_effect = yes } 
-				for = {
-					amount = 5
-					effect = "
-						create_unit_forcelimit_percentage = {
-							type = infantry
-							special_unit_category = revolutionary_guard
-							force_limit_percentage = 0.00000001
-						}
-					"
-				}
-			}
-		}
-	}
-
-	THE_SEJ_p0_absorb_old_noble_supporters = {
+	
+	THE_SEJ_missions_5_4 = {
 		icon = mission_unknown_mission
 		position = 4
-		required_missions = { THE_SEJ_p0_red_black_principles } 
-		provinces_to_highlight = {  } 
-
+		required_missions = { THE_SEJ_missions_5_2 } 
+		provinces_to_highlight = {
+			superregion = north_america_superregion
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+		
 		trigger = {
-			army_size_percentage = 0.9
-			NOT = { num_of_rebel_armies = 1 } 
-			all_owned_province = { controlled_by = ROOT } 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				superregion = north_america_superregion
+				value = 15
+			}
 		}
-
+		
 		effect = {
-			change_estate_land_share = {
-				estate = estate_nobles
-				share = -5
-			}
-			remove_country_modifier = THE_SEJ_p0_noble_hostility_modifier
-			add_country_modifier = {
-				name = "THE_SEJ_p0_declining_nobility_modifier"
-				duration = -1
-			}
-			custom_tooltip = THE_SEJ_p0_old_noble_supporters_morale_compensation_tt
-			add_country_modifier = {
-				name = "THE_SEJ_p0_old_noble_supporters_morale_compensation_modifier"
-				duration = -1
-			}
-			set_country_flag = THE_SEJ_p0_purge_nobility_decision_unlocked
-			custom_tooltip = THE_SEJ_p0_purge_nobility_decision_unlocked_tt
+			set_country_flag = mesoamerica_american_frontiers_flag
+			custom_tooltip = AZT_UNLOCKS_ESTABLISHMENT_OF_AMERICAN_FRONTIERS
+			custom_tooltip = SEPERATOR_TOOLTIP
 		}
 	}
-
-	THE_SEJ_p0_bloody_purge_nobles = {
+	
+	THE_SEJ_missions_5_5 = {
 		icon = mission_unknown_mission
 		position = 5
-		required_missions = { THE_SEJ_p0_absorb_old_noble_supporters } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_p0_purge_nobility_completed_tt
-				has_country_flag = THE_SEJ_p0_purge_nobility_completed
-			}
-			grown_by_development = 50
-			NOT = { num_of_rebel_armies = 1 } 
-			all_owned_province = { controlled_by = ROOT } 
-		}
-
-		effect = {
-			remove_country_modifier = THE_SEJ_p0_declining_nobility_modifier
-			set_country_flag = THE_SEJ_p0_establish_downfall_guard_reform_unlocked
-			add_government_reform = THE_SEJ_p0_establish_downfall_guard_reform
-			add_estate_influence_modifier = {
-				estate = estate_sej_downfall_guard
-				desc = THE_SEJ_p0_establish_downfall_guard_influence
-				influence = 10
-				duration = -1
-			}
-			add_country_modifier = {
-				name = "THE_SEJ_p0_established_revolutionary_guard_modifier"
-				duration = -1
-			}
-		}
-	}
-}
-THE_SEJ_p1_slot_1_north_trade = {
-	slot = 1
-	generic = no
-	ai = yes
-	has_country_shield = yes
-	potential = { has_country_flag = THE_SEJ_rework_opening_complete } 
-
-	THE_SEJ_p1_trade_cocoa_road = {
-		icon = mission_unknown_mission
-		position = 1
+		required_missions = { THE_SEJ_missions_5_4 } 
 		provinces_to_highlight = {
-			owned_by = ROOT
-			trade_goods = cocoa
-			NOT = { base_production = 10 } 
-			NOT = { has_province_modifier = THE_SEJ_p0_cocoa_road_modifier } 
-		}
-
+			superregion = south_america_superregion
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+		
 		trigger = {
-			num_of_owned_provinces_with = {
-				value = 3
-				trade_goods = cocoa
-				base_production = 10
-				NOT = { has_province_modifier = THE_SEJ_p0_cocoa_road_modifier } 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				superregion = south_america_superregion
+				value = 15
 			}
 		}
-
-		effect = { set_country_flag = THE_SEJ_p0_cocoa_road_decision_unlocked } 
-	}
-
-	THE_SEJ_p1_faith_four_color_dyes = {
-		icon = mission_unknown_mission
-		position = 2
-		required_missions = {
-			THE_SEJ_p1_trade_cocoa_road
-			THE_SEJ_p1_city_chichen_workshop
-		}
-		provinces_to_highlight = {
-			OR = {
-				AND = {
-					province_id = 4581
-					NOT = {
-						AND = {
-							owned_by = ROOT
-							is_core = ROOT
-							base_production = 10
-						}
-					}
-				}
-				AND = {
-					province_id = 4582
-					NOT = {
-						AND = {
-							owned_by = ROOT
-							is_core = ROOT
-							base_production = 10
-						}
-					}
-				}
-				AND = {
-					province_id = 2646
-					NOT = {
-						AND = {
-							owned_by = ROOT
-							is_core = ROOT
-							base_production = 10
-						}
-					}
-				}
-			}
-		}
-
-		trigger = {
-			4581 = {
-				owned_by = ROOT
-				is_core = ROOT
-				base_production = 10
-			}
-			4582 = {
-				owned_by = ROOT
-				is_core = ROOT
-				base_production = 10
-			}
-			2646 = {
-				owned_by = ROOT
-				is_core = ROOT
-				base_production = 10
-			}
-		}
-
-		effect = {
-			846 = { change_trade_goods = dyes } 
-			2652 = { change_trade_goods = dyes } 
-			change_price = {
-				trade_goods = dyes
-				key = THE_SEJ_p0_dyes_boom
-				value = 0.5
-				duration = 18250
-			}
-			custom_tooltip = THE_SEJ_p1_faith_four_color_dyes_south_american_dyes_tt
-			hidden_effect = { set_country_flag = THE_SEJ_p1_four_color_dyes_south_america_dyes_flag } 
-		}
-	}
-
-	THE_SEJ_p1_faith_four_color_farming = {
-		icon = mission_unknown_mission
-		position = 3
-		required_missions = { THE_SEJ_p1_faith_four_color_dyes } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			religious_unity = 1
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_p1_faith_four_color_farming_fifty_nine_finished_tt
-				has_country_flag = THE_SEJ_p1_fifty_nine_theses_finished_flag
-			}
-		}
-
-		effect = {
-			custom_tooltip = THE_SEJ_p1_faith_four_color_farming_grain_tt
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
-						is_core = ROOT
-						trade_goods = grain
-						culture = Youkai
-						religion = THE_Seija_religion
-						NOT = { has_province_modifier = THE_SEJ_p1_four_color_farming_grain_modifier } 
-					}
-					add_permanent_province_modifier = {
-						name = "THE_SEJ_p1_four_color_farming_grain_modifier"
-						duration = -1
-					}
-				}
-			}
-		}
-	}
-
-	THE_SEJ_p1_expansion_panama_gap = {
-		icon = mission_unknown_mission
-		position = 6
-		provinces_to_highlight = {
-			province_id = 835
-			NOT = { owned_by = ROOT } 
-		}
-
-		trigger = {
-			owns_core_province = 835
-			NOT = { exists = AZT } 
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_p1_expansion_panama_gap_umbrella_requirement_tt
-				has_country_modifier = THE_SEJ_p1_recovered_gap_folding_umbrella_modifier
-			}
-		}
-
-		effect = {
-			custom_tooltip = THE_SEJ_p1_expansion_panama_gap_decision_tt
-			hidden_effect = {
-				set_country_flag = THE_SEJ_p1_expansion_panama_gap_flag
-				set_country_flag = THE_SEJ_p1_panama_umbrella_decision_unlocked_flag
-			}
-		}
-	}
-
-	THE_SEJ_p1_expansion_desert_march = {
-		icon = mission_unknown_mission
-		position = 7
-		required_missions = { THE_SEJ_p1_expansion_lost_items } 
-		provinces_to_highlight = {  } 
-
-		trigger = { NOT = { exists = NAH }  } 
-
+		
 		effect = {
 			add_country_modifier = {
-				name = "THE_SEJ_p1_recovered_gap_folding_umbrella_modifier"
-				duration = -1
-			}
-			hidden_effect = { set_country_flag = THE_SEJ_p1_expansion_desert_march_flag } 
-		}
-	}
-
-	THE_SEJ_p1_expansion_navajo_reversal = {
-		icon = mission_unknown_mission
-		position = 8
-		required_missions = { THE_SEJ_p1_expansion_desert_march } 
-		provinces_to_highlight = {
-			province_id = 875
-			NOT = {
-				AND = {
-					owned_by = ROOT
-					is_core = ROOT
-					culture = Youkai
-					religion = THE_Seija_religion
-					has_great_project = {
-						type = mesa_verde
-						tier = 1
-					}
-				}
-			}
-		}
-
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_p1_magic_charge_15_requirement_tt
-				has_government_power = {
-					mechanic_type = THE_SEJ_magic_charge_mechanic
-					power_type = THE_SEJ_magic_charge
-					value = 15
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_flip_mesa_verde_no_construction_tt
-				875 = {
-					NOT = { has_construction = culture } 
-					NOT = { has_construction = building } 
-					NOT = { has_construction = great_project } 
-				}
-			}
-			owns_core_province = 875
-			875 = {
-				culture = Youkai
-				religion = THE_Seija_religion
-				has_great_project = {
-					type = mesa_verde
-					tier = 1
-				}
-			}
-		}
-
-		effect = {
-			custom_tooltip = THE_SEJ_p1_expansion_navajo_reversal_effect_tt
-			hidden_effect = {
-				set_country_flag = THE_SEJ_p1_expansion_navajo_reversal_flag
-				THE_SEJ_magic_charge_change_effect = { value = -15 } 
-				country_event = { id = THE_SEJ_great_project_recovery_events.2 } 
-			}
-		}
-	}
-
-	THE_SEJ_p1_expansion_black_palace = {
-		icon = mission_unknown_mission
-		position = 9
-		required_missions = {
-			THE_SEJ_p1_expansion_navajo_reversal
-			THE_SEJ_p1_expansion_cherokee
-		}
-		provinces_to_highlight = {
-			province_id = 953
-			NOT = {
-				AND = {
-					owned_by = ROOT
-					is_core = ROOT
-					culture = Youkai
-					religion = THE_Seija_religion
-					has_great_project = {
-						type = white_house
-						tier = 1
-					}
-				}
-			}
-		}
-
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_p1_magic_charge_15_requirement_tt
-				has_government_power = {
-					mechanic_type = THE_SEJ_magic_charge_mechanic
-					power_type = THE_SEJ_magic_charge
-					value = 15
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_flip_white_house_no_construction_tt
-				953 = {
-					NOT = { has_construction = culture } 
-					NOT = { has_construction = building } 
-					NOT = { has_construction = great_project } 
-				}
-			}
-			owns_core_province = 953
-			953 = {
-				culture = Youkai
-				religion = THE_Seija_religion
-				has_great_project = {
-					type = white_house
-					tier = 1
-				}
-			}
-		}
-
-		effect = {
-			custom_tooltip = THE_SEJ_p1_expansion_black_palace_effect_tt
-			hidden_effect = {
-				set_country_flag = THE_SEJ_p1_expansion_black_palace_flag
-				THE_SEJ_magic_charge_change_effect = { value = -15 } 
-				country_event = { id = THE_SEJ_great_project_recovery_events.3 } 
-			}
-		}
-	}
-
-	THE_SEJ_p1_navy_unknown_lands = {
-		icon = mission_unknown_mission
-		position = 11
-		required_missions = { THE_SEJ_p1_navy_found_downfall_navy } 
-		provinces_to_highlight = {
-			province_id = 1240
-			NOT = { owned_by = ROOT } 
-		}
-
-		trigger = { owns = 1240 } 
-
-		effect = {
-			hidden_effect = { set_country_flag = THE_SEJ_p1_navy_unknown_lands_flag } 
-			1992 = { cede_province = ROOT } 
-			add_country_modifier = {
-				name = "THE_SEJ_p1_pacific_navigation_modifier"
-				duration = -1
-			}
-		}
-	}
-
-	THE_SEJ_p1_navy_caribbean_supply = {
-		icon = mission_unknown_mission
-		position = 12
-		required_missions = { THE_SEJ_p1_navy_unknown_lands } 
-		provinces_to_highlight = {
-			OR = {
-				AND = {
-					province_id = 835
-					NOT = {
-						trade_share = {
-							country = ROOT
-							share = 50
-						}
-					}
-				}
-				AND = {
-					province_id = 1516
-					NOT = {
-						trade_share = {
-							country = ROOT
-							share = 50
-						}
-					}
-				}
-			}
-		}
-
-		trigger = {
-			835 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
-			1516 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
-			}
-		}
-
-		effect = {
-			hidden_effect = { set_country_flag = THE_SEJ_p1_navy_caribbean_supply_flag } 
-			custom_tooltip = THE_SEJ_p1_navy_caribbean_supply_upgrade_cot_tt
-			hidden_effect = {
-				835 = { save_event_target_as = THE_SEJ_p1_panama_trade_node_location } 
-				1516 = { save_event_target_as = THE_SEJ_p1_caribbean_trade_node_location } 
-				every_province = {
-					limit = {
-						controlled_by = ROOT
-						OR = {
-							same_trade_node_as = event_target:THE_SEJ_p1_panama_trade_node_location
-							same_trade_node_as = event_target:THE_SEJ_p1_caribbean_trade_node_location
-						}
-						OR = {
-							province_has_center_of_trade_of_level = 1
-							province_has_center_of_trade_of_level = 2
-						}
-					}
-					add_center_of_trade_level = 1
-				}
-			}
-			add_country_modifier = {
-				name = "THE_SEJ_p1_no_stealing_our_money_modifier"
-				duration = -1
-			}
-		}
-	}
-}
-THE_SEJ_p1_slot_2_navy_city = {
-	slot = 2
-	generic = no
-	ai = yes
-	has_country_shield = yes
-	potential = { has_country_flag = THE_SEJ_rework_opening_complete } 
-
-	THE_SEJ_p1_city_chichen_workshop = {
-		icon = mission_unknown_mission
-		position = 1
-		provinces_to_highlight = {
-			province_id = 846
-			OR = {
-				NOT = { owned_by = ROOT } 
-				NOT = { is_state = yes } 
-				NOT = { development = 30 } 
-				NOT = { has_building = temple } 
-				NOT = { has_building = workshop } 
-			}
-		}
-
-		trigger = {
-			846 = {
-				owned_by = ROOT
-				is_state = yes
-				development = 30
-				has_building = temple
-				has_building = workshop
-			}
-		}
-
-		effect = {
-			hidden_effect = { set_country_flag = THE_SEJ_p1_city_chichen_workshop_flag } 
-			846 = {
-				every_province_in_state = {
-					limit = { owned_by = ROOT } 
-					add_permanent_province_modifier = {
-						name = "THE_SEJ_rework_chichen_itza_modifier"
-						duration = -1
-					}
-					add_base_production = 2
-					add_base_tax = 1
-				}
-			}
-		}
-	}
-
-	THE_SEJ_p1_disaster_fifty_nine_theses = {
-		icon = mission_unknown_mission
-		position = 2
-		required_missions = { THE_SEJ_p1_disaster_item_rampage_start } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			stability = 2
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_p1_disaster_fifty_nine_theses_requirement_tt
-				OR = {
-					has_disaster = THE_SEJ_p1_fifty_nine_theses_disaster
-					has_country_flag = THE_SEJ_p1_fifty_nine_theses_finished_flag
-				}
-			}
-		}
-
-		effect = {
-			add_country_modifier = {
-				name = "THE_SEJ_p1_disaster_fifty_nine_theses_missionary_modifier"
-				duration = 7300
-			}
-			custom_tooltip = THE_SEJ_p1_disaster_fifty_nine_theses_effect_tt
-			hidden_effect = {
-				set_country_flag = THE_SEJ_p1_guard_missionary_mechanic_enabled_flag
-				set_country_flag = THE_SEJ_p1_disaster_fifty_nine_theses_mission_flag
-			}
-		}
-	}
-
-	THE_SEJ_p1_disaster_power_reversal = {
-		icon = mission_unknown_mission
-		position = 3
-		required_missions = { THE_SEJ_p1_disaster_fifty_nine_theses } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_p1_disaster_power_reversal_requirement_tt
-				has_country_flag = THE_SEJ_p1_fifty_nine_theses_finished_flag
-			}
-		}
-
-		effect = {
-			custom_tooltip = THE_SEJ_p1_disaster_power_reversal_effect_tt
-			hidden_effect = {
-				set_country_flag = THE_SEJ_p1_territorial_core_missionary_enabled_flag
-				set_country_flag = THE_SEJ_p1_disaster_power_reversal_mission_flag
-				country_event = { id = THE_SEJ_p1_events.2 } 
-			}
-			change_adm = 1
-		}
-	}
-
-	THE_SEJ_p1_power = {
-		icon = mission_unknown_mission
-		position = 6
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_p1_item_controllable_yin_yang_orb_requirement_tt
-				has_country_modifier = THE_SEJ_p1_recovered_bloodthirsty_yin_yang_orb_modifier
-			}
-		}
-
-		effect = {
-			custom_tooltip = THE_SEJ_p1_item_controllable_yin_yang_orb_effect_tt
-			hidden_effect = {
-				set_country_flag = THE_SEJ_p1_power_decision_unlocked_flag
-				set_country_flag = THE_SEJ_p1_power_flag
-			}
-		}
-	}
-
-	THE_SEJ_p1_expansion_cahokia = {
-		icon = mission_unknown_mission
-		position = 7
-		required_missions = { THE_SEJ_p1_expansion_lost_items } 
-		provinces_to_highlight = {
-			OR = {
-				AND = {
-					province_id = 915
-					NOT = {
-						AND = {
-							owned_by = ROOT
-							is_core = ROOT
-						}
-					}
-				}
-				AND = {
-					province_id = 916
-					NOT = {
-						AND = {
-							owned_by = ROOT
-							is_core = ROOT
-						}
-					}
-				}
-				AND = {
-					province_id = 917
-					NOT = {
-						AND = {
-							owned_by = ROOT
-							is_core = ROOT
-						}
-					}
-				}
-				AND = {
-					province_id = 4903
-					NOT = {
-						AND = {
-							owned_by = ROOT
-							is_core = ROOT
-						}
-					}
-				}
-			}
-		}
-
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_p1_expansion_cahokia_requirement_tt
-				915 = {
-					owned_by = ROOT
-					is_core = ROOT
-				}
-				916 = {
-					owned_by = ROOT
-					is_core = ROOT
-				}
-				917 = {
-					owned_by = ROOT
-					is_core = ROOT
-				}
-				4903 = {
-					owned_by = ROOT
-					is_core = ROOT
-				}
-			}
-		}
-
-		effect = {
-			custom_tooltip = THE_SEJ_p1_expansion_cahokia_great_project_tt
-			add_country_modifier = {
-				name = "THE_SEJ_p1_east_coast_run_modifier"
-				duration = 18250
-			}
-			hidden_effect = {
-				set_country_flag = THE_SEJ_p1_expansion_cahokia_flag
-				set_country_flag = THE_SEJ_enable_cahokia_great_project_rewards_flag
-			}
-		}
-	}
-
-	THE_SEJ_p1_expansion_cherokee = {
-		icon = mission_unknown_mission
-		position = 8
-		required_missions = { THE_SEJ_p1_expansion_cahokia } 
-		provinces_to_highlight = {  } 
-
-		trigger = { NOT = { exists = CHE }  } 
-
-		effect = {
-			add_country_modifier = {
-				name = "THE_SEJ_p1_recovered_tengu_toy_camera_modifier"
-				duration = -1
-			}
-			hidden_effect = { set_country_flag = THE_SEJ_p1_expansion_cherokee_flag } 
-		}
-	}
-
-	THE_SEJ_p1_navy_found_downfall_navy = {
-		icon = mission_unknown_mission
-		position = 10
-		provinces_to_highlight = {
-			has_port = yes
-			owned_by = ROOT
-		}
-
-		trigger = { navy_size = 15 } 
-
-		effect = {
-			hidden_effect = { set_country_flag = THE_SEJ_p1_navy_found_downfall_navy_flag } 
-			create_explorer = { tradition = 50 } 
-			4621 = {
-				cede_province = ROOT
-				add_core = ROOT
-				change_culture = Youkai
-				change_religion = THE_Seija_religion
-			}
-			add_country_modifier = {
-				name = "THE_SEJ_p1_downward_fleet_modifier"
-				duration = -1
-			}
-		}
-	}
-
-	THE_SEJ_p1_navy_admirals_from_below = {
-		icon = mission_unknown_mission
-		position = 11
-		required_missions = { THE_SEJ_p1_navy_found_downfall_navy } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			navy_tradition = 45
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_p1_navy_admirals_from_below_advisor_requirement_tt
-				employed_advisor = {
-					type = naval_reformer
-					skill = 3
-				}
-			}
-		}
-
-		effect = {
-			hidden_effect = { set_country_flag = THE_SEJ_p1_navy_admirals_from_below_flag } 
-			add_country_modifier = {
-				name = "THE_SEJ_p1_everyone_admiral_modifier"
-				duration = -1
-			}
-		}
-	}
-
-	THE_SEJ_p1_navy_fleet_for_weak = {
-		icon = mission_unknown_mission
-		position = 12
-		required_missions = { THE_SEJ_p1_navy_admirals_from_below } 
-		provinces_to_highlight = {
-			OR = {
-				has_building = dock
-				has_building = drydock
-			}
-			owned_by = ROOT
-		}
-
-		trigger = {
-			num_of_heavy_ship = 20
-			num_of_owned_provinces_with = {
-				value = 10
-				OR = {
-					has_building = dock
-					has_building = drydock
-				}
-			}
-		}
-
-		effect = {
-			custom_tooltip = THE_SEJ_p1_navy_fleet_for_weak_admiral_tradition_tt
-			hidden_effect = {
-				set_country_flag = THE_SEJ_p1_navy_fleet_for_weak_flag
-				set_country_flag = THE_SEJ_p1_ruozhejiandui_admiral_tradition_flag
-			}
-			add_country_modifier = {
-				name = "THE_SEJ_p1_heavy_fleet_modifier"
-				duration = -1
-			}
-		}
-	}
-}
-THE_SEJ_p1_slot_3_main = {
-	slot = 3
-	generic = no
-	ai = yes
-	has_country_shield = yes
-	potential = { has_country_flag = THE_SEJ_rework_opening_complete } 
-
-	THE_SEJ_p1_disaster_item_rampage_start = {
-		icon = mission_unknown_mission
-		position = 1
-		provinces_to_highlight = {  } 
-
-		trigger = { has_disaster = THE_SEJ_p1_fifty_nine_theses_disaster } 
-
-		effect = {
-			custom_tooltip = THE_SEJ_p1_disaster_item_rampage_start_effect_tt
-			add_country_modifier = {
-				name = "THE_SEJ_p1_amanojaku_downfall_modifier"
-				duration = 7300
-			}
-		}
-	}
-
-	THE_SEJ_p1_disaster_weak_wish = {
-		icon = mission_unknown_mission
-		position = 2
-		required_missions = { THE_SEJ_p1_disaster_item_rampage_start } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_p1_disaster_weak_wish_guard_disaster_requirement_tt
-				has_disaster = THE_SEJ_p1_bloodthirsty_guard_disaster
-			}
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_p1_disaster_weak_wish_magic_charge_requirement_tt
-				has_government_power = {
-					mechanic_type = THE_SEJ_magic_charge_mechanic
-					power_type = THE_SEJ_magic_charge
-					value = 20
-				}
-			}
-		}
-
-		effect = {
-			custom_tooltip = THE_SEJ_p1_disaster_weak_wish_effect_tt
-			hidden_effect = {
-				set_country_flag = THE_SEJ_p1_faith_replace_magic_decision_unlocked_flag
-				set_country_flag = THE_SEJ_p1_disaster_weak_wish_flag
-			}
-		}
-	}
-
-	THE_SEJ_p1_disaster_shaped_amanojaku = {
-		icon = mission_unknown_mission
-		position = 4
-		required_missions = {
-			THE_SEJ_p1_disaster_power_reversal
-			THE_SEJ_p1_disaster_faith_replaces_magic
-		}
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {
-			add_country_modifier = {
-				name = "THE_SEJ_p1_disaster_shaped_amanojaku_modifier"
-				duration = -1
-			}
-			custom_tooltip = THE_SEJ_p1_disaster_shaped_amanojaku_center_tt
-			hidden_effect = {
-				set_country_flag = THE_SEJ_p1_disaster_shaped_amanojaku_flag
-				846 = {
-					if = {
-						limit = {
-							religion = mesoamerican_religion
-							is_reformation_center = yes
-						}
-						remove_reform_center = mesoamerican_religion
-					}
-					if = {
-						limit = {
-							religion = THE_Seija_religion
-							is_reformation_center = yes
-						}
-						remove_reform_center = THE_Seija_religion
-					}
-					change_religion = THE_Seija_religion
-					if = {
-						limit = { NOT = { is_reformation_center = yes }  } 
-						add_reform_center = THE_Seija_religion
-					}
-				}
-			}
-		}
-	}
-
-	THE_SEJ_p1_revolution_declaration = {
-		icon = mission_unknown_mission
-		position = 5
-		required_missions = { THE_SEJ_p1_disaster_shaped_amanojaku } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {
-			custom_tooltip = THE_SEJ_p1_revolution_declaration_revolution_tt
-			hidden_effect = {
-				set_country_flag = THE_SEJ_p1_revolution_declaration_flag
-				THE_SEJ_downfall_revolution_initialize_effect = yes
-			}
-		}
-	}
-
-	THE_SEJ_p1_expansion_lost_items = {
-		icon = mission_unknown_mission
-		position = 6
-		provinces_to_highlight = {  } 
-
-		trigger = { army_size_percentage = 0.9 } 
-
-		effect = {
-			custom_tooltip = THE_SEJ_p1_expansion_lost_items_effect_tt
-			hidden_effect = {
-				set_country_flag = THE_SEJ_p1_expansion_lost_items_flag
-				set_country_flag = THE_SEJ_p1_ai_boss_item_recovery_cb_unlocked_flag
-				THE_SEJ_p1_ai_boss_item_recovery_unlock_effect = yes
-			}
-		}
-	}
-
-	THE_SEJ_p1_expansion_aztec_item_recovery = {
-		icon = mission_unknown_mission
-		position = 7
-		required_missions = { THE_SEJ_p1_expansion_lost_items } 
-		provinces_to_highlight = {  } 
-
-		trigger = { NOT = { exists = AZT }  } 
-
-		effect = {
-			add_country_modifier = {
-				name = "THE_SEJ_p1_recovered_bloodthirsty_yin_yang_orb_modifier"
-				duration = -1
-			}
-			hidden_effect = { set_country_flag = THE_SEJ_p1_expansion_aztec_item_recovery_flag } 
-		}
-	}
-
-	THE_SEJ_p1_expansion_flip_tenochtitlan = {
-		icon = mission_unknown_mission
-		position = 8
-		required_missions = { THE_SEJ_p1_expansion_aztec_item_recovery } 
-		provinces_to_highlight = {
-			province_id = 852
-			NOT = {
-				AND = {
-					owned_by = ROOT
-					is_core = ROOT
-					culture = Youkai
-					religion = THE_Seija_religion
-					has_great_project = {
-						type = tenochtitlan
-						tier = 1
-					}
-				}
-			}
-		}
-
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_p1_magic_charge_15_requirement_tt
-				has_government_power = {
-					mechanic_type = THE_SEJ_magic_charge_mechanic
-					power_type = THE_SEJ_magic_charge
-					value = 15
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_flip_tenochtitlan_no_construction_tt
-				852 = {
-					NOT = { has_construction = culture } 
-					NOT = { has_construction = building } 
-					NOT = { has_construction = great_project } 
-				}
-			}
-			owns_core_province = 852
-			852 = {
-				culture = Youkai
-				religion = THE_Seija_religion
-				has_great_project = {
-					type = tenochtitlan
-					tier = 1
-				}
-			}
-		}
-
-		effect = {
-			custom_tooltip = THE_SEJ_p1_expansion_flip_tenochtitlan_effect_tt
-			hidden_effect = {
-				set_country_flag = THE_SEJ_p1_expansion_flip_tenochtitlan_flag
-				THE_SEJ_magic_charge_change_effect = { value = -15 } 
-				country_event = { id = THE_SEJ_great_project_recovery_events.4 } 
-			}
-		}
-	}
-
-	THE_SEJ_p1_expansion_ultimate_reversal = {
-		icon = mission_unknown_mission
-		position = 10
-		required_missions = {
-			THE_SEJ_p1_expansion_black_palace
-			THE_SEJ_p1_expansion_potosi_wealth
-		}
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {
-			custom_tooltip = THE_SEJ_p1_expansion_ultimate_reversal_title_tt
-			add_country_modifier = {
-				name = "THE_SEJ_p1_ultimate_cheat_creature_modifier"
-				duration = -1
-			}
-			hidden_effect = {
-				set_country_flag = THE_SEJ_p1_expansion_ultimate_reversal_flag
-				set_country_flag = THE_SEJ_ultimate_cheat_creature_title_adopted
-			}
-		}
-	}
-
-	THE_SEJ_p1_navy_red_black_ocean = {
-		icon = mission_unknown_mission
-		position = 13
-		required_missions = {
-			THE_SEJ_p1_navy_fleet_for_weak
-			THE_SEJ_p1_ideas_worldward_push
-		}
-		provinces_to_highlight = {
-			OR = {
-				has_building = dock
-				has_building = drydock
-				has_building = shipyard
-				has_building = grand_shipyard
-			}
-			owned_by = ROOT
-		}
-
-		trigger = {
-			navy_size = 200
-			num_of_owned_provinces_with = {
-				value = 50
-				OR = {
-					has_building = dock
-					has_building = drydock
-				}
-			}
-			num_of_owned_provinces_with = {
-				value = 50
-				OR = {
-					has_building = shipyard
-					has_building = grand_shipyard
-				}
-			}
-			navy_tradition = 75
-		}
-
-		effect = {
-			hidden_effect = { set_country_flag = THE_SEJ_p1_navy_red_black_ocean_flag } 
-			add_country_modifier = {
-				name = "THE_SEJ_p1_red_black_ocean_modifier"
-				duration = -1
-			}
-		}
-	}
-}
-THE_SEJ_p1_slot_4_ideas_south = {
-	slot = 4
-	generic = no
-	ai = yes
-	has_country_shield = yes
-	potential = { has_country_flag = THE_SEJ_rework_opening_complete } 
-
-	THE_SEJ_p1_disaster_bloodthirsty_guard = {
-		icon = mission_unknown_mission
-		position = 2
-		required_missions = { THE_SEJ_p1_disaster_item_rampage_start } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_p1_disaster_bloodthirsty_guard_requirement_tt
-				has_disaster = THE_SEJ_p1_bloodthirsty_guard_disaster
-			}
-		}
-
-		effect = {
-			custom_tooltip = THE_SEJ_p1_disaster_bloodthirsty_guard_effect_tt
-			hidden_effect = { set_country_flag = THE_SEJ_p1_disaster_bloodthirsty_guard_mission_flag } 
-		}
-	}
-
-	THE_SEJ_p1_disaster_faith_replaces_magic = {
-		icon = mission_unknown_mission
-		position = 3
-		required_missions = {
-			THE_SEJ_p1_disaster_bloodthirsty_guard
-			THE_SEJ_p1_disaster_weak_wish
-		}
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_p1_disaster_faith_replaces_magic_requirement_tt
-				has_country_flag = THE_SEJ_p1_bloodthirsty_guard_finished_flag
-			}
-		}
-
-		effect = {
-			add_country_modifier = {
-				name = "THE_SEJ_p1_faith_replaces_corruptive_magic_modifier"
-				duration = -1
-			}
-			change_dip = 1
-		}
-	}
-
-	THE_SEJ_p1_expansion_speed = {
-		icon = mission_unknown_mission
-		position = 6
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_p1_item_super_tengu_requirement_tt
-				has_country_modifier = THE_SEJ_p1_recovered_tengu_toy_camera_modifier
-			}
-		}
-
-		effect = {
-			custom_tooltip = THE_SEJ_p1_item_super_tengu_effect_tt
-			hidden_effect = {
-				set_country_flag = THE_SEJ_p1_expansion_speed_decision_unlocked_flag
-				set_country_flag = THE_SEJ_p1_expansion_speed_flag
-			}
-		}
-	}
-
-	THE_SEJ_p1_expansion_chan_chan = {
-		icon = mission_unknown_mission
-		position = 7
-		required_missions = { THE_SEJ_p1_expansion_lost_items } 
-		provinces_to_highlight = {
-			province_id = 812
-			NOT = {
-				AND = {
-					owned_by = ROOT
-					is_core = ROOT
-					culture = Youkai
-					religion = THE_Seija_religion
-					has_great_project = {
-						type = chan_chan_citadel
-						tier = 1
-					}
-				}
-			}
-		}
-
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_p1_magic_charge_15_requirement_tt
-				has_government_power = {
-					mechanic_type = THE_SEJ_magic_charge_mechanic
-					power_type = THE_SEJ_magic_charge
-					value = 15
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_flip_chan_chan_no_construction_tt
-				812 = {
-					NOT = { has_construction = culture } 
-					NOT = { has_construction = building } 
-					NOT = { has_construction = great_project } 
-				}
-			}
-			owns_core_province = 812
-			812 = {
-				culture = Youkai
-				religion = THE_Seija_religion
-				has_great_project = {
-					type = chan_chan_citadel
-					tier = 1
-				}
-			}
-		}
-
-		effect = {
-			custom_tooltip = THE_SEJ_p1_expansion_chan_chan_effect_tt
-			hidden_effect = {
-				set_country_flag = THE_SEJ_p1_expansion_chan_chan_flag
-				THE_SEJ_magic_charge_change_effect = { value = -15 } 
-				country_event = { id = THE_SEJ_great_project_recovery_events.5 } 
-			}
-		}
-	}
-
-	THE_SEJ_p1_expansion_flip_colonial_symbol = {
-		icon = mission_unknown_mission
-		position = 8
-		required_missions = { THE_SEJ_p1_expansion_chan_chan } 
-		provinces_to_highlight = {
-			province_id = 756
-			NOT = {
-				AND = {
-					owned_by = ROOT
-					is_core = ROOT
-					culture = Youkai
-					religion = THE_Seija_religion
-					has_great_project = {
-						type = salvador_da_bahia
-						tier = 1
-					}
-				}
-			}
-		}
-
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_p1_magic_charge_15_requirement_tt
-				has_government_power = {
-					mechanic_type = THE_SEJ_magic_charge_mechanic
-					power_type = THE_SEJ_magic_charge
-					value = 15
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_flip_salvador_da_bahia_no_construction_tt
-				756 = {
-					NOT = { has_construction = culture } 
-					NOT = { has_construction = building } 
-					NOT = { has_construction = great_project } 
-				}
-			}
-			owns_core_province = 756
-			756 = {
-				culture = Youkai
-				religion = THE_Seija_religion
-				has_great_project = {
-					type = salvador_da_bahia
-					tier = 1
-				}
-			}
-		}
-
-		effect = {
-			custom_tooltip = THE_SEJ_p1_expansion_flip_colonial_symbol_effect_tt
-			hidden_effect = {
-				set_country_flag = THE_SEJ_p1_expansion_flip_colonial_symbol_flag
-				THE_SEJ_magic_charge_change_effect = { value = -15 } 
-				country_event = { id = THE_SEJ_great_project_recovery_events.6 } 
-			}
-		}
-	}
-
-	THE_SEJ_p1_ideas_feudal_records = {
-		icon = mission_unknown_mission
-		position = 10
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			OR = {
-				dip_power = 200
-				has_institution = feudalism
-			}
-		}
-
-		effect = {
-			hidden_effect = { set_country_flag = THE_SEJ_p1_ideas_feudal_records_flag } 
-			complex_dynamic_effect = {
-				first_custom_tooltip = THE_SEJ_p1_ideas_feudal_records_embraced_effect_tt
-				first_limit = "has_institution = feudalism"
-				first_effect = "
-					add_splendor = 100
-				"
-				second_custom_tooltip = THE_SEJ_p1_ideas_feudal_records_diplomatic_effect_tt
-				second_limit = "
-					NOT = { has_institution = feudalism }
-					dip_power = 200
-				"
-				second_effect = "
-					add_dip_power = -200
-					add_country_modifier = {
-						name = THE_SEJ_p1_feudal_thought_spread_modifier
-						duration = 3650
-					}
-					every_owned_province = {
-						limit = { area = yucatan_area }
-						add_institution_embracement = {
-							which = feudalism
-							value = 100
-						}
-					}
-				"
-			}
-		}
-	}
-
-	THE_SEJ_p1_ideas_renaissance_spread = {
-		icon = mission_unknown_mission
-		position = 11
-		required_missions = { THE_SEJ_p1_ideas_feudal_records } 
-		provinces_to_highlight = {
-			area = yucatan_area
-			owned_by = ROOT
-		}
-
-		trigger = {
-			OR = {
-				has_institution = renaissance
-				custom_trigger_tooltip = {
-					tooltip = THE_SEJ_p1_ideas_renaissance_spread_yucatan_dev_tt
-					check_variable = {
-						which = sej_p1_yucatan_owned_development
-						value = 40
-					}
-				}
-			}
-		}
-
-		effect = {
-			define_advisor = {
-				type = artist
-				skill = 2
-				culture = ROOT
-				religion = ROOT
-				cost_multiplier = 0.25
-			}
-			hidden_effect = { set_country_flag = THE_SEJ_p1_ideas_renaissance_spread_flag } 
-			if = {
-				limit = { has_institution = renaissance } 
-				add_country_modifier = {
-					name = "THE_SEJ_p1_american_renaissance_modifier"
-					duration = 3650
-				}
-			}
-			else = {
-				custom_tooltip = THE_SEJ_p1_ideas_renaissance_spread_yucatan_institution_tt
-				hidden_effect = {
-					every_owned_province = {
-						limit = { area = yucatan_area } 
-						add_institution_embracement = {
-							which = renaissance
-							value = 90
-						}
-					}
-				}
-			}
-		}
-	}
-
-	THE_SEJ_p1_ideas_worldward_push = {
-		icon = mission_unknown_mission
-		position = 12
-		required_missions = { THE_SEJ_p1_ideas_renaissance_spread } 
-		provinces_to_highlight = {  } 
-
-		trigger = { has_institution = new_world_i } 
-
-		effect = {
-			hidden_effect = { set_country_flag = THE_SEJ_p1_ideas_worldward_push_flag } 
-			add_dip_power = 100
-			add_country_modifier = {
-				name = "THE_SEJ_p1_worldward_sails_modifier"
-				duration = -1
-			}
-		}
-	}
-}
-THE_SEJ_p1_slot_5_andean = {
-	slot = 5
-	generic = no
-	ai = yes
-	has_country_shield = yes
-	potential = { has_country_flag = THE_SEJ_rework_opening_complete } 
-
-	THE_SEJ_p1_m1 = {
-		icon = mission_unknown_mission
-		position = 1
-		provinces_to_highlight = {  } 
-
-		trigger = { land_maintenance = 0.99 } 
-
-		effect = {
-			add_country_modifier = {
-				name = "THE_SEJ_p1_m1_prepared_army_modifier"
-				duration = 7300
-			}
-			add_manpower = 10
-			create_general = { tradition = 80 }
-		}
-	}
-
-	THE_SEJ_p1_m2 = {
-		icon = mission_unknown_mission
-		position = 2
-		required_missions = { THE_SEJ_p1_m1 } 
-		provinces_to_highlight = {  } 
-
-		trigger = { war_with = AZT } 
-
-		effect = {
-			add_country_modifier = {
-				name = "THE_SEJ_p1_m2_cheating_barrage_modifier"
-				duration = -1
-			}
-			add_country_modifier = {
-				name = "THE_SEJ_p1_m2_cheating_barrage_guard_modifier"
-				duration = -1
-			}
-			add_manpower = 10
-			custom_tooltip = THE_SEJ_p1_m2_gain_ten_revolutionary_guards_tt
-			hidden_effect = {
-				for = {
-					amount = 10
-					effect = "
-						create_unit_forcelimit_percentage = {
-							type = infantry
-							special_unit_category = revolutionary_guard
-							force_limit_percentage = 0.00000001
-						}
-					"
-				}
-			}
-		}
-	}
-
-	THE_SEJ_p1_m3 = {
-		icon = mission_unknown_mission
-		position = 3
-		required_missions = { THE_SEJ_p1_m2 } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			OR = {
-				any_country = {
-					war_with = ROOT
-					is_colonial_empire_trigger = yes
-				}
-				any_neighbor_country = {
-					is_colonial_empire_trigger = yes
-				}
-			}
-		}
-
-		effect = {
-			add_country_modifier = {
-				name = "THE_SEJ_p1_m3_against_everyone_modifier"
-				duration = -1
-			}
-		}
-	}
-
-	THE_SEJ_p1_gun = {
-		icon = mission_unknown_mission
-		position = 6
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_p1_gun_four_foot_bomb_requirement_tt
-				has_country_modifier = THE_SEJ_p1_recovered_four_foot_magic_bomb_modifier
-			}
-			num_of_artillery = 10
-		}
-
-		effect = {
-			add_country_modifier = {
-				name = "THE_SEJ_p1_four_foot_lightning_stick_modifier"
-				duration = -1
-			}
-			hidden_effect = { set_country_flag = THE_SEJ_p1_gun_flag } 
-		}
-	}
-
-	THE_SEJ_p1_expansion_island_frontier = {
-		icon = mission_unknown_mission
-		position = 7
-		required_missions = { THE_SEJ_p1_expansion_lost_items } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_p1_expansion_island_frontier_caribbean_requirement_tt
-				num_of_owned_provinces_with = {
-					value = 5
-					region = carribeans_region
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_p1_expansion_island_frontier_navy_requirement_tt
-				navy_size_percentage = 0.50
-			}
-		}
-
-		effect = {
-			add_country_modifier = {
-				name = "THE_SEJ_p1_island_frontier_modifier"
-				duration = -1
-			}
-			hidden_effect = { set_country_flag = THE_SEJ_p1_expansion_island_frontier_flag } 
-		}
-	}
-
-	THE_SEJ_p1_expansion_face_pachacuti = {
-		icon = mission_unknown_mission
-		position = 8
-		required_missions = { THE_SEJ_p1_expansion_chan_chan } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			NOT = { exists = CSU } 
-			NOT = { exists = INC } 
-		}
-
-		effect = {
-			add_country_modifier = {
-				name = "THE_SEJ_p1_recovered_four_foot_magic_bomb_modifier"
-				duration = -1
-			}
-			hidden_effect = { set_country_flag = THE_SEJ_p1_expansion_face_pachacuti_flag } 
-		}
-	}
-
-	THE_SEJ_p1_expansion_potosi_wealth = {
-		icon = mission_unknown_mission
-		position = 9
-		required_missions = {
-			THE_SEJ_p1_expansion_flip_colonial_symbol
-			THE_SEJ_p1_expansion_face_pachacuti
-		}
-		provinces_to_highlight = {
-			province_id = 795
-			NOT = {
-				AND = {
-					owned_by = ROOT
-					is_core = ROOT
-					has_great_project = {
-						type = potosi
-						tier = 3
-					}
-				}
-			}
-		}
-
-		trigger = {
-			owns_core_province = 795
-			795 = {
-				has_great_project = {
-					type = potosi
-					tier = 3
-				}
-			}
-		}
-
-		effect = {
-			add_country_modifier = {
-				name = "THE_SEJ_p1_potosi_wealth_modifier"
-				duration = -1
-			}
-			hidden_effect = { set_country_flag = THE_SEJ_p1_expansion_potosi_wealth_flag } 
-		}
-	}
-
-	THE_SEJ_p1_ideas_enlightenment_vanguard = {
-		icon = mission_unknown_mission
-		position = 12
-		required_missions = { THE_SEJ_p1_ideas_renaissance_spread } 
-		provinces_to_highlight = {
-			has_building = university
-			owned_by = ROOT
-		}
-
-		trigger = {
-			OR = {
-				innovativeness = 50
-				has_institution = enlightenment
-			}
-			num_of_owned_provinces_with = {
-				value = 20
-				has_building = university
-			}
-		}
-
-		effect = {
-			hidden_effect = { set_country_flag = THE_SEJ_p1_ideas_enlightenment_vanguard_flag } 
-			add_country_modifier = {
-				name = "THE_SEJ_p1_patron_of_thinkers_modifier"
+				name = THE_SEJ_south_land_modifier
 				duration = -1
 			}
 		}
