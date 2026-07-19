@@ -1752,32 +1752,32 @@ THE_SEJ_p1_slot_4_ideas_south = {
 
 		effect = {
 			hidden_effect = { set_country_flag = THE_SEJ_p1_ideas_feudal_records_flag } 
-			# complex_dynamic_effect = {
-			# 	first_custom_tooltip = THE_SEJ_p1_ideas_feudal_records_embraced_effect_tt
-			# 	first_limit = "has_institution = feudalism"
-			# 	first_effect = "
-			# 		add_splendor = 100
-			# 	"
-			# 	second_custom_tooltip = THE_SEJ_p1_ideas_feudal_records_diplomatic_effect_tt
-			# 	second_limit = "
-			# 		NOT = { has_institution = feudalism }
-			# 		dip_power = 200
-			# 	"
-			# 	second_effect = "
-			# 		add_dip_power = -200
-			# 		add_country_modifier = {
-			# 			name = THE_SEJ_p1_feudal_thought_spread_modifier
-			# 			duration = 3650
-			# 		}
-			# 		every_owned_province = {
-			# 			limit = { area = yucatan_area }
-			# 			add_institution_embracement = {
-			# 				which = feudalism
-			# 				value = 100
-			# 			}
-			# 		}
-			# 	"
-			# }
+			complex_dynamic_effect = {
+				first_custom_tooltip = THE_SEJ_p1_ideas_feudal_records_embraced_effect_tt
+				first_limit = "has_institution = feudalism"
+				first_effect = "
+					add_splendor = 100
+				"
+				second_custom_tooltip = THE_SEJ_p1_ideas_feudal_records_diplomatic_effect_tt
+				second_limit = "
+					NOT = { has_institution = feudalism }
+					dip_power = 200
+				"
+				second_effect = "
+					add_dip_power = -200
+					add_country_modifier = {
+						name = THE_SEJ_p1_feudal_thought_spread_modifier
+						duration = 3650
+					}
+					every_owned_province = {
+						limit = { area = yucatan_area }
+						add_institution_embracement = {
+							which = feudalism
+							value = 100
+						}
+					}
+				"
+			}
 		}
 	}
 
