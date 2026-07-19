@@ -21,10 +21,10 @@ country_event = {
 		add_estate_loyalty = { estate = estate_church loyalty = -30 }
 		add_estate_loyalty = { estate = estate_burghers loyalty = -30 }
 		add_estate_loyalty = { estate = estate_nobles loyalty = -30 }
+		add_army_tradition = 20
+		THE_SEJ_p0_apply_chaotic_society_autonomy_effect = yes
 		hidden_effect = {
-			add_army_tradition = 20
 			set_country_flag = THE_SEJ_residual_magic_started
-			THE_SEJ_p0_apply_chaotic_society_autonomy_effect = yes
 		}
 	}
 }

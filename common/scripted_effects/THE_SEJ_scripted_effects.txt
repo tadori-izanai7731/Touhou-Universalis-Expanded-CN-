@@ -222,20 +222,22 @@ THE_SEJ_p1_mayan_spread_center_conversion_cleanup_effect = {
 
 THE_SEJ_p0_apply_chaotic_society_autonomy_effect = {
 	if = {
-		limit = { has_reform = THE_SEJ_p0_chaotic_society_reform }
-		every_owned_province = {
-			remove_province_modifier = THE_SEJ_p0_chaotic_society_min_autonomy_modifier
+		limit = { 
+			has_reform = THE_SEJ_p0_chaotic_society_reform
+			NOT = { has_country_flag = THE_SEJ_p0_four_color_dyes_autonomy_compensation_flag }
+		}
+		custom_tooltip = THE_SEJ_every_owned_province_tt
+		tooltip = {
 			add_province_modifier = {
 				name = "THE_SEJ_p0_chaotic_society_min_autonomy_modifier"
 				duration = 730
 			}
 		}
-		if = {
-			limit = { has_country_flag = THE_SEJ_p0_four_color_dyes_autonomy_compensation_flag }
+		hidden_effect = {
 			every_owned_province = {
-				remove_province_modifier = THE_SEJ_p0_four_color_dyes_autonomy_compensation_modifier
+				remove_province_modifier = THE_SEJ_p0_chaotic_society_min_autonomy_modifier
 				add_province_modifier = {
-					name = "THE_SEJ_p0_four_color_dyes_autonomy_compensation_modifier"
+					name = "THE_SEJ_p0_chaotic_society_min_autonomy_modifier"
 					duration = 730
 				}
 			}
