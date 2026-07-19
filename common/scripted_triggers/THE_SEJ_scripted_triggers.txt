@@ -1,12 +1,70 @@
-### value = $value$
-THE_SEJ_check_ni_st = {
-	check_variable = {
-		which = the_sej_negative_influence_var
-		value = $value$
+THE_SEJ_is_downfall_revolution_actor_st = {
+	OR = {
+		tag = SEJ
+		was_tag = SEJ
 	}
 }
 
-### level = $level$
-THE_SEJ_check_nifl_st = {
-	has_country_flag = THE_SEJ_negative_influence_level_$level$_flag
+THE_SEJ_downfall_revolution_active_st = {
+	THE_SEJ_is_downfall_revolution_actor_st = yes
+	has_country_flag = THE_SEJ_downfall_revolution_target_flag
+}
+
+THE_SEJ_can_proclaim_downfall_revolution_st = {
+	THE_SEJ_is_downfall_revolution_actor_st = yes
+	NOT = { has_country_flag = THE_SEJ_downfall_revolution_target_flag }
+	has_country_flag = THE_SEJ_p1_revolution_declaration_flag
+}
+
+THE_SEJ_downfall_revolution_foreign_target_st = {
+	NOT = { tag = SEJ }
+	NOT = { was_tag = SEJ }
+	NOT = { has_country_flag = THE_SEJ_downfall_revolution_target_flag }
+}
+
+can_have_center_of_reformation_trigger = { # Province scope
+	OR = {
+		AND = {
+			OR = {
+				religion = THE_Seija_religion
+				religion = mesoamerican_religion
+			}
+			is_reformation_center = no
+			expelling_minorities = no
+		}
+		AND = {
+			continent = europe
+			OR = {
+				religion = protestant
+				religion = catholic
+				religion = reformed
+			}
+			NOT = { province_id = 118 }
+			is_in_capital_area = yes
+			is_reformation_center = no
+			is_island = no
+			expelling_minorities = no
+			development = 10
+			NOT = {
+				any_neighbor_province = {
+					is_reformation_center = yes
+				}
+			}
+			NOT = {
+				any_province = {
+					area = PREV
+					is_reformation_center = yes
+					religion = $RELIGION$
+				}
+			}
+			NOT = { has_climate = arctic }
+			NOT = { has_climate = arid }
+			NOT = { has_terrain = coastline }
+			NOT = { has_terrain = coastal_desert }
+			NOT = { has_terrain = steppe }
+			NOT = { has_terrain = desert }
+			NOT = { has_terrain = glacier }
+			NOT = { has_climate = tropical }
+		}
+	}
 }

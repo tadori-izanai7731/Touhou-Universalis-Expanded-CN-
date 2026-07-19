@@ -1,0 +1,253 @@
+namespace = THE_SEJ_internal_test_events
+
+country_event = {
+	id = THE_SEJ_internal_test_events.1
+	title = NONE
+	desc = NONE
+	picture = IMPORTANT_STATUE_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		name = NONE
+		# Each outer guard short-circuits future test executions before the engine
+		# ever reads the original great project that was deleted by an earlier flip.
+		if = {
+			limit = {
+				owns = 846
+				NOT = { has_country_flag = THE_SEJ_chichen_itza_replaced_by_chayiqinqi }
+				846 = {
+					NOT = { has_construction = culture }
+					NOT = { has_construction = building }
+					NOT = { has_construction = great_project }
+				}
+			}
+			if = {
+				limit = { 846 = { has_great_project = { type = chichen_itza tier = 0 } } }
+				set_country_flag = THE_SEJ_enable_chayiqinqi_great_project
+				846 = {
+					if = {
+						limit = { has_great_project = { type = chichen_itza tier = 0 } }
+						destroy_great_project = { type = chichen_itza }
+					}
+					if = {
+						limit = { NOT = { has_great_project = { type = THE_SEJ_chayiqinqi tier = 0 } } }
+						add_great_project = { type = THE_SEJ_chayiqinqi instant = yes }
+						add_great_project_tier = { type = THE_SEJ_chayiqinqi tier = 1 }
+					}
+				}
+				set_country_flag = THE_SEJ_chichen_itza_replaced_by_chayiqinqi
+			}
+		}
+		if = {
+			limit = {
+				owns = 875
+				NOT = { has_country_flag = THE_SEJ_mesa_verde_replaced_by_devisame_cliff_palace }
+			}
+			if = {
+				limit = { 875 = { has_great_project = { type = mesa_verde tier = 0 } } }
+				set_country_flag = THE_SEJ_enable_devisame_cliff_palace_great_project
+				clr_country_flag = THE_SEJ_p1_flip_mesa_verde_great_project_effect_tier_1_flag
+				clr_country_flag = THE_SEJ_p1_flip_mesa_verde_great_project_effect_tier_2_flag
+				clr_country_flag = THE_SEJ_p1_flip_mesa_verde_great_project_effect_tier_3_flag
+				875 = {
+					if = {
+						limit = { has_great_project = { type = mesa_verde tier = 3 } }
+						owner = { set_country_flag = THE_SEJ_p1_flip_mesa_verde_great_project_effect_tier_3_flag }
+					}
+					else_if = {
+						limit = { has_great_project = { type = mesa_verde tier = 2 } }
+						owner = { set_country_flag = THE_SEJ_p1_flip_mesa_verde_great_project_effect_tier_2_flag }
+					}
+					else_if = {
+						limit = { has_great_project = { type = mesa_verde tier = 1 } }
+						owner = { set_country_flag = THE_SEJ_p1_flip_mesa_verde_great_project_effect_tier_1_flag }
+					}
+					destroy_great_project = { type = mesa_verde }
+					add_great_project = { type = THE_SEJ_devisame_cliff_palace instant = yes }
+					if = {
+						limit = { owner = { has_country_flag = THE_SEJ_p1_flip_mesa_verde_great_project_effect_tier_3_flag } }
+						add_great_project_tier = { type = THE_SEJ_devisame_cliff_palace tier = 3 }
+					}
+					else_if = {
+						limit = { owner = { has_country_flag = THE_SEJ_p1_flip_mesa_verde_great_project_effect_tier_2_flag } }
+						add_great_project_tier = { type = THE_SEJ_devisame_cliff_palace tier = 2 }
+					}
+					else = { add_great_project_tier = { type = THE_SEJ_devisame_cliff_palace tier = 1 } }
+				}
+				clr_country_flag = THE_SEJ_p1_flip_mesa_verde_great_project_effect_tier_1_flag
+				clr_country_flag = THE_SEJ_p1_flip_mesa_verde_great_project_effect_tier_2_flag
+				clr_country_flag = THE_SEJ_p1_flip_mesa_verde_great_project_effect_tier_3_flag
+				set_country_flag = THE_SEJ_mesa_verde_replaced_by_devisame_cliff_palace
+			}
+		}
+		if = {
+			limit = {
+				owns = 953
+				NOT = { has_country_flag = THE_SEJ_white_house_replaced_by_black_palace }
+			}
+			if = {
+				limit = { 953 = { has_great_project = { type = white_house tier = 0 } } }
+				set_country_flag = THE_SEJ_enable_black_palace_great_project
+				clr_country_flag = THE_SEJ_p1_flip_white_house_great_project_effect_tier_1_flag
+				clr_country_flag = THE_SEJ_p1_flip_white_house_great_project_effect_tier_2_flag
+				clr_country_flag = THE_SEJ_p1_flip_white_house_great_project_effect_tier_3_flag
+				953 = {
+					if = {
+						limit = { has_great_project = { type = white_house tier = 3 } }
+						owner = { set_country_flag = THE_SEJ_p1_flip_white_house_great_project_effect_tier_3_flag }
+					}
+					else_if = {
+						limit = { has_great_project = { type = white_house tier = 2 } }
+						owner = { set_country_flag = THE_SEJ_p1_flip_white_house_great_project_effect_tier_2_flag }
+					}
+					else_if = {
+						limit = { has_great_project = { type = white_house tier = 1 } }
+						owner = { set_country_flag = THE_SEJ_p1_flip_white_house_great_project_effect_tier_1_flag }
+					}
+					destroy_great_project = { type = white_house }
+					add_great_project = { type = THE_SEJ_black_palace instant = yes }
+					if = {
+						limit = { owner = { has_country_flag = THE_SEJ_p1_flip_white_house_great_project_effect_tier_3_flag } }
+						add_great_project_tier = { type = THE_SEJ_black_palace tier = 3 }
+					}
+					else_if = {
+						limit = { owner = { has_country_flag = THE_SEJ_p1_flip_white_house_great_project_effect_tier_2_flag } }
+						add_great_project_tier = { type = THE_SEJ_black_palace tier = 2 }
+					}
+					else = { add_great_project_tier = { type = THE_SEJ_black_palace tier = 1 } }
+				}
+				clr_country_flag = THE_SEJ_p1_flip_white_house_great_project_effect_tier_1_flag
+				clr_country_flag = THE_SEJ_p1_flip_white_house_great_project_effect_tier_2_flag
+				clr_country_flag = THE_SEJ_p1_flip_white_house_great_project_effect_tier_3_flag
+				set_country_flag = THE_SEJ_white_house_replaced_by_black_palace
+			}
+		}
+		if = {
+			limit = {
+				owns = 852
+				NOT = { has_country_flag = THE_SEJ_tenochtitlan_replaced_by_lantediqinote }
+			}
+			if = {
+				limit = { 852 = { has_great_project = { type = tenochtitlan tier = 0 } } }
+				set_country_flag = THE_SEJ_enable_lantediqinote_great_project
+				clr_country_flag = THE_SEJ_p1_flip_tenochtitlan_great_project_effect_tier_1_flag
+				clr_country_flag = THE_SEJ_p1_flip_tenochtitlan_great_project_effect_tier_2_flag
+				clr_country_flag = THE_SEJ_p1_flip_tenochtitlan_great_project_effect_tier_3_flag
+				852 = {
+					if = {
+						limit = { has_great_project = { type = tenochtitlan tier = 3 } }
+						owner = { set_country_flag = THE_SEJ_p1_flip_tenochtitlan_great_project_effect_tier_3_flag }
+					}
+					else_if = {
+						limit = { has_great_project = { type = tenochtitlan tier = 2 } }
+						owner = { set_country_flag = THE_SEJ_p1_flip_tenochtitlan_great_project_effect_tier_2_flag }
+					}
+					else_if = {
+						limit = { has_great_project = { type = tenochtitlan tier = 1 } }
+						owner = { set_country_flag = THE_SEJ_p1_flip_tenochtitlan_great_project_effect_tier_1_flag }
+					}
+					destroy_great_project = { type = tenochtitlan }
+					add_great_project = { type = THE_SEJ_lantediqinote instant = yes }
+					if = {
+						limit = { owner = { has_country_flag = THE_SEJ_p1_flip_tenochtitlan_great_project_effect_tier_3_flag } }
+						add_great_project_tier = { type = THE_SEJ_lantediqinote tier = 3 }
+					}
+					else_if = {
+						limit = { owner = { has_country_flag = THE_SEJ_p1_flip_tenochtitlan_great_project_effect_tier_2_flag } }
+						add_great_project_tier = { type = THE_SEJ_lantediqinote tier = 2 }
+					}
+					else = { add_great_project_tier = { type = THE_SEJ_lantediqinote tier = 1 } }
+				}
+				clr_country_flag = THE_SEJ_p1_flip_tenochtitlan_great_project_effect_tier_1_flag
+				clr_country_flag = THE_SEJ_p1_flip_tenochtitlan_great_project_effect_tier_2_flag
+				clr_country_flag = THE_SEJ_p1_flip_tenochtitlan_great_project_effect_tier_3_flag
+				set_country_flag = THE_SEJ_tenochtitlan_replaced_by_lantediqinote
+			}
+		}
+		if = {
+			limit = {
+				owns = 756
+				NOT = { has_country_flag = THE_SEJ_salvador_da_bahia_replaced_by_bahia_amanojaku_castle }
+			}
+			if = {
+				limit = { 756 = { has_great_project = { type = salvador_da_bahia tier = 0 } } }
+				set_country_flag = THE_SEJ_enable_bahia_amanojaku_castle_great_project
+				clr_country_flag = THE_SEJ_p1_flip_salvador_da_bahia_great_project_effect_tier_1_flag
+				clr_country_flag = THE_SEJ_p1_flip_salvador_da_bahia_great_project_effect_tier_2_flag
+				clr_country_flag = THE_SEJ_p1_flip_salvador_da_bahia_great_project_effect_tier_3_flag
+				756 = {
+					if = {
+						limit = { has_great_project = { type = salvador_da_bahia tier = 3 } }
+						owner = { set_country_flag = THE_SEJ_p1_flip_salvador_da_bahia_great_project_effect_tier_3_flag }
+					}
+					else_if = {
+						limit = { has_great_project = { type = salvador_da_bahia tier = 2 } }
+						owner = { set_country_flag = THE_SEJ_p1_flip_salvador_da_bahia_great_project_effect_tier_2_flag }
+					}
+					else_if = {
+						limit = { has_great_project = { type = salvador_da_bahia tier = 1 } }
+						owner = { set_country_flag = THE_SEJ_p1_flip_salvador_da_bahia_great_project_effect_tier_1_flag }
+					}
+					destroy_great_project = { type = salvador_da_bahia }
+					add_great_project = { type = THE_SEJ_bahia_amanojaku_castle instant = yes }
+					if = {
+						limit = { owner = { has_country_flag = THE_SEJ_p1_flip_salvador_da_bahia_great_project_effect_tier_3_flag } }
+						add_great_project_tier = { type = THE_SEJ_bahia_amanojaku_castle tier = 3 }
+					}
+					else_if = {
+						limit = { owner = { has_country_flag = THE_SEJ_p1_flip_salvador_da_bahia_great_project_effect_tier_2_flag } }
+						add_great_project_tier = { type = THE_SEJ_bahia_amanojaku_castle tier = 2 }
+					}
+					else = { add_great_project_tier = { type = THE_SEJ_bahia_amanojaku_castle tier = 1 } }
+				}
+				clr_country_flag = THE_SEJ_p1_flip_salvador_da_bahia_great_project_effect_tier_1_flag
+				clr_country_flag = THE_SEJ_p1_flip_salvador_da_bahia_great_project_effect_tier_2_flag
+				clr_country_flag = THE_SEJ_p1_flip_salvador_da_bahia_great_project_effect_tier_3_flag
+				set_country_flag = THE_SEJ_salvador_da_bahia_replaced_by_bahia_amanojaku_castle
+			}
+		}
+		if = {
+			limit = {
+				owns = 812
+				NOT = { has_country_flag = THE_SEJ_chan_chan_citadel_replaced_by_mememe }
+			}
+			if = {
+				limit = { 812 = { has_great_project = { type = chan_chan_citadel tier = 0 } } }
+				set_country_flag = THE_SEJ_enable_mememe_great_project
+				clr_country_flag = THE_SEJ_p1_flip_chan_chan_great_project_effect_tier_1_flag
+				clr_country_flag = THE_SEJ_p1_flip_chan_chan_great_project_effect_tier_2_flag
+				clr_country_flag = THE_SEJ_p1_flip_chan_chan_great_project_effect_tier_3_flag
+				812 = {
+					if = {
+						limit = { has_great_project = { type = chan_chan_citadel tier = 3 } }
+						owner = { set_country_flag = THE_SEJ_p1_flip_chan_chan_great_project_effect_tier_3_flag }
+					}
+					else_if = {
+						limit = { has_great_project = { type = chan_chan_citadel tier = 2 } }
+						owner = { set_country_flag = THE_SEJ_p1_flip_chan_chan_great_project_effect_tier_2_flag }
+					}
+					else_if = {
+						limit = { has_great_project = { type = chan_chan_citadel tier = 1 } }
+						owner = { set_country_flag = THE_SEJ_p1_flip_chan_chan_great_project_effect_tier_1_flag }
+					}
+					destroy_great_project = { type = chan_chan_citadel }
+					add_great_project = { type = THE_SEJ_mememe instant = yes }
+					if = {
+						limit = { owner = { has_country_flag = THE_SEJ_p1_flip_chan_chan_great_project_effect_tier_3_flag } }
+						add_great_project_tier = { type = THE_SEJ_mememe tier = 3 }
+					}
+					else_if = {
+						limit = { owner = { has_country_flag = THE_SEJ_p1_flip_chan_chan_great_project_effect_tier_2_flag } }
+						add_great_project_tier = { type = THE_SEJ_mememe tier = 2 }
+					}
+					else = { add_great_project_tier = { type = THE_SEJ_mememe tier = 1 } }
+				}
+				clr_country_flag = THE_SEJ_p1_flip_chan_chan_great_project_effect_tier_1_flag
+				clr_country_flag = THE_SEJ_p1_flip_chan_chan_great_project_effect_tier_2_flag
+				clr_country_flag = THE_SEJ_p1_flip_chan_chan_great_project_effect_tier_3_flag
+				set_country_flag = THE_SEJ_chan_chan_citadel_replaced_by_mememe
+			}
+		}
+	}
+}

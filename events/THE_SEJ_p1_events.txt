@@ -1,0 +1,111 @@
+namespace = THE_SEJ_p1_events
+
+country_event = {
+	id = THE_SEJ_p1_events.1
+	title = "THE_SEJ_p1_events.1.t"
+	desc = "THE_SEJ_p1_events.1.d"
+	picture = IMPORTANT_STATUE_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			tag = SEJ
+			was_tag = SEJ
+		}
+		has_country_flag = THE_SEJ_rework_opening_complete
+	}
+
+	immediate = {
+		set_variable = {
+			which = sej_p1_yucatan_owned_development
+			value = 0
+		}
+		every_owned_province = {
+			limit = { area = yucatan_area }
+			export_to_variable = {
+				which = sej_p1_yucatan_owned_development
+				value = trigger_value:development
+			}
+			ROOT = {
+				change_variable = {
+					which = sej_p1_yucatan_owned_development
+					which = PREV
+				}
+			}
+		}
+	}
+
+	option = {
+		name = NONE
+	}
+}
+
+country_event = {
+	id = THE_SEJ_p1_events.2
+	title = NONE
+	desc = NONE
+	picture = IMPORTANT_STATUE_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			tag = SEJ
+			was_tag = SEJ
+		}
+		has_country_flag = THE_SEJ_p1_territorial_core_missionary_enabled_flag
+	}
+
+	immediate = {
+		every_owned_province = {
+			if = {
+				limit = {
+					is_territorial_core = owner
+					NOT = { is_state_core = owner }
+				}
+				remove_province_modifier = THE_SEJ_p1_territorial_core_missionary_modifier
+				add_province_modifier = {
+					name = "THE_SEJ_p1_territorial_core_missionary_modifier"
+					duration = 60
+				}
+			}
+			else = {
+				remove_province_modifier = THE_SEJ_p1_territorial_core_missionary_modifier
+			}
+		}
+	}
+
+	option = {
+		name = NONE
+	}
+}
+
+country_event = {
+	id = THE_SEJ_p1_events.3
+	title = NONE
+	desc = NONE
+	picture = IMPORTANT_STATUE_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			tag = SEJ
+			was_tag = SEJ
+		}
+		has_country_flag = THE_SEJ_enable_black_palace_great_project
+	}
+
+	immediate = {
+		set_country_flag = THE_SEJ_p1_black_palace_native_ideas_unlocked_flag
+		add_country_modifier = {
+			name = THE_SEJ_p1_black_palace_native_ideas_modifier
+			duration = -1
+		}
+	}
+
+	option = {
+		name = NONE
+	}
+}

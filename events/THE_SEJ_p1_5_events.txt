@@ -1,0 +1,90 @@
+namespace = THE_SEJ_p1_5_events
+
+# Current Panama Canal umbrella support events.
+country_event = {
+	id = THE_SEJ_p1_5_events.60
+	title = NONE
+	desc = NONE
+	picture = IMPORTANT_STATUE_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = { tag = SEJ was_tag = SEJ }
+		owns = 835
+		NOT = { exists = AZT }
+		NOT = { has_country_flag = THE_SEJ_panama_canal_umbrella_active_flag }
+	}
+
+	option = {
+		name = NONE
+		clr_country_flag = THE_SEJ_panama_canal_umbrella_original_open_flag
+		if = {
+			limit = {
+				835 = {
+					has_great_project = {
+						type = panama_canal
+						tier = 3
+					}
+				}
+			}
+			set_country_flag = THE_SEJ_panama_canal_umbrella_original_open_flag
+		}
+		set_country_flag = THE_SEJ_panama_canal_umbrella_active_flag
+		835 = { add_canal = panama_canal }
+		country_event = { id = THE_SEJ_p1_5_events.61 days = 1825 }
+	}
+}
+
+country_event = {
+	id = THE_SEJ_p1_5_events.61
+	title = NONE
+	desc = NONE
+	picture = IMPORTANT_STATUE_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = { tag = SEJ was_tag = SEJ }
+		has_country_flag = THE_SEJ_panama_canal_umbrella_active_flag
+	}
+
+	option = {
+		name = NONE
+		if = {
+			limit = {
+				NOT = { has_country_flag = THE_SEJ_panama_canal_umbrella_original_open_flag }
+				835 = {
+					NOT = {
+						has_great_project = {
+							type = panama_canal
+							tier = 3
+						}
+					}
+				}
+			}
+			835 = { remove_canal = panama_canal }
+		}
+		clr_country_flag = THE_SEJ_panama_canal_umbrella_active_flag
+		clr_country_flag = THE_SEJ_panama_canal_umbrella_original_open_flag
+	}
+}
+
+country_event = {
+	id = THE_SEJ_p1_5_events.62
+	title = NONE
+	desc = NONE
+	picture = IMPORTANT_STATUE_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = { tag = SEJ was_tag = SEJ }
+		has_country_flag = THE_SEJ_panama_canal_umbrella_cooldown_flag
+	}
+
+	option = {
+		name = NONE
+		clr_country_flag = THE_SEJ_panama_canal_umbrella_cooldown_flag
+	}
+}

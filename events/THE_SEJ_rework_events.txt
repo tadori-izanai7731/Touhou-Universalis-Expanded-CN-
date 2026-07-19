@@ -1,0 +1,259 @@
+namespace = THE_SEJ_rework_events
+
+
+country_event = {
+	id = THE_SEJ_rework_events.1
+	title = THE_SEJ_rework_events.1.t
+	desc = THE_SEJ_rework_events.1.d
+	picture = book_2_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		tag = SEJ
+		NOT = { has_country_flag = THE_SEJ_residual_magic_started }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = THE_SEJ_rework_events.1.a
+		add_government_reform = THE_SEJ_p0_chaotic_society_reform
+		add_estate_loyalty = { estate = estate_church loyalty = -30 }
+		add_estate_loyalty = { estate = estate_burghers loyalty = -30 }
+		add_estate_loyalty = { estate = estate_nobles loyalty = -30 }
+		hidden_effect = {
+			add_army_tradition = 20
+			set_country_flag = THE_SEJ_residual_magic_started
+			THE_SEJ_p0_apply_chaotic_society_autonomy_effect = yes
+		}
+	}
+}
+
+country_event = {
+	id = THE_SEJ_rework_events.12
+	title = THE_SEJ_rework_events.12.t
+	desc = THE_SEJ_rework_events.12.d
+	picture = IMPORTANT_STATUE_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = THE_SEJ_rework_events.12.a
+		custom_tooltip = THE_SEJ_p0_reverse_chichen_itza_preview_tt
+		custom_tooltip = THE_SEJ_p1_disasters_start_tt
+		hidden_effect = {
+			set_country_flag = THE_SEJ_rework_opening_complete
+			add_government_reform = THE_SEJ_rebellious_confederation_reform
+			country_event = { id = THE_SEJ_rework_events.16 days = 1 }
+			set_government_rank = 3
+			THE_SEJ_p0_remove_chaotic_society_compensation_effect = yes
+			remove_country_modifier = THE_SEJ_p0_immature_revolutionary_guard_modifier
+			846 = { change_culture = Youkai }
+
+			# Subjects of the confederation are inherited regardless of opinion.
+			every_subject_country = {
+				limit = { religion = mesoamerican_religion }
+				ROOT = { inherit = PREV }
+			}
+
+			# Friendly independent Mayan countries are inherited.
+			every_country = {
+				limit = {
+					religion = mesoamerican_religion
+					is_subject = no
+					NOT = { tag = ROOT }
+					has_opinion = { who = ROOT value = 100 }
+				}
+				ROOT = { inherit = PREV }
+			}
+
+			# Independent hostile Mayan countries declare a holy war.
+			every_country = {
+				limit = {
+					religion = mesoamerican_religion
+					is_subject = no
+					NOT = { has_opinion = { who = ROOT value = 100 } }
+				}
+				declare_war_with_cb = {
+					who = ROOT
+					casus_belli = cb_crusade
+				}
+			}
+			# Do not nest the conversion through a second triggered event here.
+			# The mission reward must create the new wonder in this same effect chain.
+			if = {
+				limit = {
+					846 = {
+						NOT = { has_construction = culture }
+						NOT = { has_construction = building }
+						NOT = { has_construction = great_project }
+					}
+				}
+				set_country_flag = THE_SEJ_enable_chayiqinqi_great_project
+				clr_country_flag = THE_SEJ_chichen_itza_replaced_by_chayiqinqi
+				846 = {
+					if = {
+						limit = { NOT = { has_province_modifier = THE_SEJ_rework_inversion_origin_modifier } }
+						add_permanent_province_modifier = {
+							name = THE_SEJ_rework_inversion_origin_modifier
+							duration = -1
+						}
+					}
+					if = {
+						limit = { has_great_project = { type = chichen_itza tier = 0 } }
+						destroy_great_project = { type = chichen_itza }
+					}
+					if = {
+						limit = { NOT = { has_great_project = { type = THE_SEJ_chayiqinqi tier = 0 } } }
+						add_great_project = { type = THE_SEJ_chayiqinqi instant = yes }
+						add_great_project_tier = { type = THE_SEJ_chayiqinqi tier = 1 }
+					}
+				}
+				set_country_flag = THE_SEJ_chichen_itza_replaced_by_chayiqinqi
+			}
+			swap_non_generic_missions = yes
+		}
+	}
+}
+
+country_event = {
+	id = THE_SEJ_rework_events.16
+	title = NONE
+	desc = NONE
+	picture = IMPORTANT_STATUE_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			tag = SEJ
+			was_tag = SEJ
+		}
+		has_country_flag = THE_SEJ_rework_opening_complete
+	}
+
+	option = {
+		name = NONE
+		if = {
+			limit = { has_country_flag = THE_SEJ_p0_establish_downfall_guard_reform_unlocked }
+			add_government_reform = THE_SEJ_p0_establish_downfall_guard_reform
+		}
+		if = {
+			limit = { has_country_flag = THE_SEJ_enable_expand_seija_paradise_reform_flag }
+			add_government_reform = THE_SEJ_expand_seija_paradise_reform
+		}
+	}
+}
+
+country_event = {
+	id = THE_SEJ_rework_events.14
+	title = NONE
+	desc = NONE
+	picture = IMPORTANT_STATUE_eventPicture
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		THE_SEJ_p0_yearly_pulse_scripted_effect = yes
+	}
+
+	option = {
+		name = NONE
+	}
+}
+
+country_event = {
+	id = THE_SEJ_rework_events.15
+	title = THE_SEJ_rework_events.15.t
+	desc = THE_SEJ_rework_events.15.d
+	picture = book_2_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		has_government_mechanic = THE_SEJ_magic_charge_mechanic
+	}
+
+	option = {
+		name = THE_SEJ_rework_events.15.a
+	}
+}
+
+country_event = {
+	id = THE_SEJ_rework_events.10
+	title = NONE
+	desc = NONE
+	picture = IMPORTANT_STATUE_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			tag = SEJ
+			was_tag = SEJ
+		}
+		has_country_flag = THE_SEJ_rework_opening_complete
+		846 = {
+			owned_by = ROOT
+			NOT = { has_construction = culture }
+			NOT = { has_construction = building }
+			NOT = { has_construction = great_project }
+		}
+		OR = {
+			NOT = { has_country_flag = THE_SEJ_chichen_itza_replaced_by_chayiqinqi }
+			846 = {
+				NOT = {
+					has_great_project = {
+						type = THE_SEJ_chayiqinqi
+						tier = 0
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = NONE
+		set_country_flag = THE_SEJ_enable_chayiqinqi_great_project
+		clr_country_flag = THE_SEJ_chichen_itza_replaced_by_chayiqinqi
+		846 = {
+			if = {
+				limit = {
+					NOT = { has_province_modifier = THE_SEJ_rework_inversion_origin_modifier }
+				}
+				add_permanent_province_modifier = {
+					name = THE_SEJ_rework_inversion_origin_modifier
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					has_great_project = {
+						type = chichen_itza
+						tier = 0
+					}
+				}
+				destroy_great_project = {
+					type = chichen_itza
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_great_project = {
+							type = THE_SEJ_chayiqinqi
+							tier = 0
+						}
+					}
+				}
+				add_great_project = {
+					type = THE_SEJ_chayiqinqi
+					instant = yes
+				}
+				add_great_project_tier = {
+					type = THE_SEJ_chayiqinqi
+					tier = 1
+				}
+			}
+		}
+		set_country_flag = THE_SEJ_chichen_itza_replaced_by_chayiqinqi
+	}
+}

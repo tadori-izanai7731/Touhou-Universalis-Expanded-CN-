@@ -1,0 +1,149 @@
+THE_SEJ_magic_charge_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 10
+	available = {
+	}
+
+	powers = {
+		THE_SEJ_magic_charge = {
+			gui = THE_SEJ_magic_charge_mechanic_gui
+			show_before_interactions = yes
+			min = 0
+			max = 100
+			base_monthly_growth = 0 # No base yearly growth.
+			scaled_modifier = {
+				modifier = {
+					# Migrated from vanilla revolutionary zeal values at 100.
+					administrative_efficiency = 0.30
+					special_unit_forcelimit = 0.20
+					min_autonomy_in_territories = -0.20
+					tolerance_own = 7
+					ae_impact = 0.5
+					great_project_upgrade_cost = -0.20
+					great_project_upgrade_time = -0.20
+					monthly_THE_SEJ_magic_charge = -0.25
+				}
+				start_value = 0
+				end_value = 100
+			}
+			range_modifier = {
+				trigger = {
+					has_government_power = {
+						mechanic_type = THE_SEJ_magic_charge_mechanic
+						power_type = THE_SEJ_magic_charge
+						value = 100
+					}
+				}
+				modifier = { province_warscore_cost = -0.10 }
+			}
+		}
+	}
+
+	interactions = {
+		THE_SEJ_open_panama_canal_with_umbrella = {
+			icon = GFX_THE_SEJ_gap_folding_umbrella
+			potential = {
+				has_country_flag = THE_SEJ_p1_panama_umbrella_decision_unlocked_flag
+			}
+			trigger = {
+				owns_core_province = 835
+				NOT = { exists = AZT }
+				custom_trigger_tooltip = {
+					tooltip = THE_SEJ_p1_expansion_panama_gap_umbrella_requirement_tt
+					has_country_modifier = THE_SEJ_p1_recovered_gap_folding_umbrella_modifier
+				}
+				custom_trigger_tooltip = {
+					tooltip = THE_SEJ_panama_canal_umbrella_not_active_tt
+					NOT = { has_country_flag = THE_SEJ_panama_canal_umbrella_active_flag }
+				}
+				custom_trigger_tooltip = {
+					tooltip = THE_SEJ_panama_canal_umbrella_cooldown_tt
+					NOT = { has_country_flag = THE_SEJ_panama_canal_umbrella_cooldown_flag }
+				}
+			}
+			effect = {
+				custom_tooltip = THE_SEJ_open_panama_canal_with_umbrella_effect_tt
+				hidden_effect = {
+					set_country_flag = THE_SEJ_panama_canal_umbrella_cooldown_flag
+					country_event = { id = THE_SEJ_p1_5_events.60 }
+					country_event = { id = THE_SEJ_p1_5_events.62 days = 3650 }
+				}
+			}
+			ai_chance = { factor = 0 }
+		}
+
+		THE_SEJ_p1_expansion_speed = {
+			icon = GFX_THE_SEJ_tengu_toy_camera
+			potential = {
+				has_country_flag = THE_SEJ_p1_expansion_speed_decision_unlocked_flag
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = THE_SEJ_p1_item_super_tengu_requirement_tt
+					has_country_modifier = THE_SEJ_p1_recovered_tengu_toy_camera_modifier
+				}
+				custom_trigger_tooltip = {
+					tooltip = THE_SEJ_p1_item_super_tengu_cooldown_tt
+					NOT = { has_country_modifier = THE_SEJ_p1_super_tengu_cooldown_modifier }
+				}
+			}
+			effect = {
+				custom_tooltip = THE_SEJ_p1_item_super_tengu_decision_effect_tt
+				hidden_effect = {
+					define_general = {
+						fire = 0
+						shock = 0
+						manuever = 30
+						siege = 0
+						female = yes
+					}
+					add_country_modifier = {
+						name = THE_SEJ_p1_super_tengu_cooldown_modifier
+						duration = 7300
+					}
+				}
+			}
+			ai_chance = { factor = 0 }
+		}
+
+		THE_SEJ_p1_power = {
+			icon = GFX_THE_SEJ_bloodthirsty_yin_yang_orb
+			potential = {
+				has_country_flag = THE_SEJ_p1_power_decision_unlocked_flag
+			}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = THE_SEJ_p1_item_controllable_yin_yang_orb_requirement_tt
+					has_country_modifier = THE_SEJ_p1_recovered_bloodthirsty_yin_yang_orb_modifier
+				}
+				mil_power = 200
+				custom_trigger_tooltip = {
+					tooltip = THE_SEJ_p1_item_controllable_yin_yang_orb_cooldown_tt
+					NOT = { has_country_modifier = THE_SEJ_p1_controllable_yin_yang_orb_cooldown_modifier }
+				}
+			}
+			effect = {
+				add_mil_power = -200
+				custom_tooltip = THE_SEJ_p1_item_controllable_yin_yang_orb_decision_effect_tt
+				hidden_effect = {
+					for = {
+						amount = 10
+						effect = "
+							create_unit_forcelimit_percentage = {
+								type = infantry
+								special_unit_category = revolutionary_guard
+								force_limit_percentage = 0.00000001
+							}
+						"
+					}
+					add_yearly_manpower = 1.5
+					add_country_modifier = {
+						name = THE_SEJ_p1_controllable_yin_yang_orb_cooldown_modifier
+						duration = 3650
+					}
+				}
+			}
+			ai_chance = { factor = 0 }
+		}
+	}
+}

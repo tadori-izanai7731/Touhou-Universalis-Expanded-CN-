@@ -1,0 +1,156 @@
+namespace = THE_SEJ_great_project_recovery_events
+
+# The player-facing recovery decision only enters this hidden event.  Keeping
+# the actual checks here prevents the decision tooltip from expanding complex
+# great-project effects, which is unsafe in debug mode.
+country_event = {
+	id = THE_SEJ_great_project_recovery_events.1
+	title = NONE
+	desc = NONE
+	picture = IMPORTANT_STATUE_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				mission_completed = THE_SEJ_p0_reconciliation_festival
+				846 = {
+					owned_by = ROOT
+					NOT = { has_great_project = { type = THE_SEJ_chayiqinqi tier = 0 } }
+				}
+			}
+			country_event = { id = THE_SEJ_rework_events.10 }
+		}
+		if = {
+			limit = {
+				mission_completed = THE_SEJ_p1_expansion_navajo_reversal
+				875 = {
+					owned_by = ROOT
+					NOT = { has_great_project = { type = THE_SEJ_devisame_cliff_palace tier = 0 } }
+				}
+			}
+			THE_SEJ_p1_flip_mesa_verde_great_project_effect = yes
+		}
+		if = {
+			limit = {
+				mission_completed = THE_SEJ_p1_expansion_black_palace
+				953 = {
+					owned_by = ROOT
+					NOT = { has_great_project = { type = THE_SEJ_black_palace tier = 0 } }
+				}
+			}
+			THE_SEJ_p1_flip_white_house_great_project_effect = yes
+		}
+		if = {
+			limit = {
+				mission_completed = THE_SEJ_p1_expansion_flip_tenochtitlan
+				852 = {
+					owned_by = ROOT
+					NOT = { has_great_project = { type = THE_SEJ_lantediqinote tier = 0 } }
+				}
+			}
+			THE_SEJ_p1_flip_tenochtitlan_great_project_effect = yes
+		}
+		if = {
+			limit = {
+				mission_completed = THE_SEJ_p1_expansion_chan_chan
+				812 = {
+					owned_by = ROOT
+					NOT = { has_great_project = { type = THE_SEJ_mememe tier = 0 } }
+				}
+			}
+			THE_SEJ_p1_flip_chan_chan_great_project_effect = yes
+		}
+		if = {
+			limit = {
+				mission_completed = THE_SEJ_p1_expansion_flip_colonial_symbol
+				756 = {
+					owned_by = ROOT
+					NOT = { has_great_project = { type = THE_SEJ_bahia_amanojaku_castle tier = 0 } }
+				}
+			}
+			THE_SEJ_p1_flip_salvador_da_bahia_great_project_effect = yes
+		}
+	}
+
+	option = { name = NONE }
+}
+
+# Formal mission rewards enter these hidden events instead of directly calling
+# the complex great-project effects.  This prevents mission reward tooltips from
+# expanding destroy/add great-project operations, which can crash the game.
+country_event = {
+	id = THE_SEJ_great_project_recovery_events.2
+	title = NONE
+	desc = NONE
+	picture = IMPORTANT_STATUE_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		THE_SEJ_p1_flip_mesa_verde_great_project_effect = yes
+	}
+
+	option = { name = NONE }
+}
+
+country_event = {
+	id = THE_SEJ_great_project_recovery_events.3
+	title = NONE
+	desc = NONE
+	picture = IMPORTANT_STATUE_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		THE_SEJ_p1_flip_white_house_great_project_effect = yes
+	}
+
+	option = { name = NONE }
+}
+
+country_event = {
+	id = THE_SEJ_great_project_recovery_events.4
+	title = NONE
+	desc = NONE
+	picture = IMPORTANT_STATUE_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		THE_SEJ_p1_flip_tenochtitlan_great_project_effect = yes
+	}
+
+	option = { name = NONE }
+}
+
+country_event = {
+	id = THE_SEJ_great_project_recovery_events.5
+	title = NONE
+	desc = NONE
+	picture = IMPORTANT_STATUE_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		THE_SEJ_p1_flip_chan_chan_great_project_effect = yes
+	}
+
+	option = { name = NONE }
+}
+
+country_event = {
+	id = THE_SEJ_great_project_recovery_events.6
+	title = NONE
+	desc = NONE
+	picture = IMPORTANT_STATUE_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		THE_SEJ_p1_flip_salvador_da_bahia_great_project_effect = yes
+	}
+
+	option = { name = NONE }
+}

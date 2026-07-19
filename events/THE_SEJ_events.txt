@@ -41,7 +41,7 @@ country_event = {
 		hidden_effect = {
 			SEJ = {
 				change_government = monarchy
-				add_government_reform = Gensokyan_monarchy
+				add_government_reform = THE_SEJ_p0_chaotic_society_reform
 				adopt_reform_progress = ROOT
 				change_technology_group = tech_gensokyan
 				change_unit_type = tech_gensokyan
@@ -83,7 +83,6 @@ country_event = {
 					add_base_tax = 2
 					add_base_production = 2
 					add_base_manpower = 2
-					# change_culture = "Youkai"
 					change_religion = THE_Seija_religion
 					build_to_forcelimit = {
 						infantry = 0.9
@@ -107,6 +106,9 @@ country_event = {
 					id = th_religion_events.4
 					days = 7
 				}
+				set_country_flag = THE_SEJ_p0_starting_setup_done_flag
+				set_country_flag = THE_SEJ_enable_such_mission_flag
+				THE_SEJ_ai_boss_setup_effect = yes
 			}
 		}
 		ai_chance = {
@@ -115,196 +117,140 @@ country_event = {
 	}
 }
 
-province_event = {
-	id = THE_SEJ_events.1000
-	title = flavor_THE_SEJ.1000.name
-	desc = flavor_THE_SEJ.1000.desc
-	picture = REVOLUTION_eventPicture
-	major = yes
-	goto = ROOT
-	is_triggered_only = yes
-	
-	trigger = {
-		has_dlc = "Emperor"
-		development = 20
-		owner = {
-			is_great_power = yes
-			is_free_or_tributary_trigger = yes
-			NOT = { tag = PAP }
-			#NOT = { has_reform = celestial_empire }
-		}
-		NOT = { has_province_modifier = religious_center }
-	}
-	fire_only_once = yes
-	immediate = {
-		hidden_effect = {
-			save_global_event_target_as = revolution_center
-			save_global_event_target_as = first_revolution_center
-		}
-	}
-	
-	option = {
-		name = SEJ_center_of_revolution.1000.A
-		spawn_center_of_revolution = root
-		set_province_flag = first_revolution_center
-		set_global_flag = first_revolution_center_spawned #to check time since spawn for backup center
-		
-		log = "Center of Revolution spawned in [Root.GetName] (owner: [Root.Owner.GetName]) in [GetYear]"
-	}
-}
-
 country_event = {
-	id = THE_SEJ_events.10
-	title = "flavor_THE_SEJ.EVTNAME101"
-	desc = "flavor_THE_SEJ.EVTDESC101"
+	id = THE_SEJ_events.150
+	title = NONE
+	desc = NONE
 	picture = IMPORTANT_STATUE_eventPicture
-	is_triggered_only = yes
-	option = {
-		name = "flavor_THE_SEJ.EVTOPTA101"
-		add_stability = -2
-		if = {
-			limit = { NOT = { government = monarchy } }
-			change_government_to_monarchy = yes
+	hidden = yes
+
+	trigger = {
+		OR = {
+			tag = SEJ
+			was_tag = SEJ
 		}
-		add_government_reform = THE_SEJ_revolutionary_seija
-		random_owned_province = {
-			limit = {
-				continent = root
-				is_core = ROOT
-				is_capital = no
-				highest_supply_limit_in_area = yes
-			}
-			spawn_rebels = {
-				type = revolutionary_rebels
-				size = 3
-			}
+		OR = {
+			mission_completed = THE_SEJ_missions_3_1
+			mission_completed = THE_SEJ_p1_city_chichen_workshop
+			mission_completed = THE_SEJ_p1_navy_caribbean_supply
+		}
+		NOT = { has_country_flag = THE_SEJ_p1_arrow_banner_frontier_flag }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = NONE
+		set_country_flag = mesoamerica_american_frontiers_flag
+		set_country_flag = THE_SEJ_p1_arrow_banner_frontier_flag
+		add_country_modifier = {
+			name = THE_SEJ_arrow_banner_frontier_modifier
+			duration = -1
 		}
 	}
 }
 
 country_event = {
-	id = THE_SEJ_events.4
+	id = THE_SEJ_events.153
 	title = NONE
 	desc = NONE
 	picture = IMPORTANT_STATUE_eventPicture
 	hidden = yes
 	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		OR = {
+			tag = SEJ
+			was_tag = SEJ
+		}
+		NOT = { has_country_flag = THE_SEJ_ai_boss_setup_done_flag }
+	}
+
+	immediate = {
+		THE_SEJ_ai_boss_setup_effect = yes
+	}
+
 	option = {
 		name = NONE
-		every_owned_province = {
-			limit = {
-				has_province_flag = THE_SEJ_neighbor_siberia_target_province_flag
-			}
-			clr_province_flag = THE_SEJ_neighbor_siberia_target_province_flag
-			every_empty_neighbor_province = {
-				add_siberian_construction = 1
-				set_province_flag = THE_SEJ_not_trigger_colony_finished_oa_province_flag
-			}
-		}
 	}
 }
 
 country_event = {
-	id = THE_SEJ_events.5
-	title = THE_SEJ_events.5.title
-	desc = THE_SEJ_events.5.desc
+	id = THE_SEJ_events.154
+	title = NONE
+	desc = NONE
 	picture = IMPORTANT_STATUE_eventPicture
-
-	is_triggered_only = yes
-
-	option = {
-		name = THE_SEJ_events.5.a
-		add_country_modifier = {
-			name = THE_SEJ_north_trade_modifier
-			duration = -1
-		}
-		if = {
-			limit = { has_country_flag = THE_SEJ_Gap_Folding_Umbrella_blessing_flag }
-			custom_tooltip = THE_SEJ_enable_events_6_tt
-			country_event = {
-				id = THE_SEJ_events.6
-				days = 730
-			}
-		}
-	}
-}
-
-country_event = {
-	id = THE_SEJ_events.6
-	title = THE_SEJ_events.6.title
-	desc = THE_SEJ_events.6.desc
-	picture = IMPORTANT_STATUE_eventPicture
-
-	is_triggered_only = yes
-
-	option = {
-		name = THE_SEJ_events.6.a
-		add_country_modifier = {
-			name = THE_SEJ_north_trade_extra_modifier
-			duration = -1
-		}
-	}
-}
-
-country_event = {
-	id = THE_SEJ_events.7
-	title = THE_SEJ_events.7.title
-	desc = THE_SEJ_events.7.desc
-	picture = IMPORTANT_STATUE_eventPicture
-
 	hidden = yes
-	mean_time_to_happen = {
-		months = 6
-	}
+	is_triggered_only = yes
+
 	trigger = {
-		has_country_modifier = THE_SEJ_spread_seija_religion_target_modifier
+		ai = yes
+		has_country_flag = THE_SEJ_ai_boss_country_flag
+		has_country_modifier = THE_SEJ_ai_boss_far_modifier
+		NOT = {
+			any_owned_province = {
+				is_colony = yes
+				has_province_flag = THE_SEJ_ai_boss_frontier_province_flag
+			}
+		}
+		any_owned_province = {
+			is_colony = no
+			any_empty_neighbor_province = {
+				OR = {
+					continent = north_america
+					continent = south_america
+				}
+			}
+		}
 	}
 
 	option = {
-		if = {
-			limit = { total_development = 1000 }
-			for = {
-				amount = 5
-				effect = "
-					THE_SEJ_spawn_seija_religion_rebels_se = yes
-				"
+		name = NONE
+		random_owned_province = {
+			limit = {
+				is_colony = no
+				any_empty_neighbor_province = {
+					OR = {
+						continent = north_america
+						continent = south_america
+					}
+				}
 			}
-		}
-		else_if = {
-			limit = { total_development = 750 }
-			for = {
-				amount = 4
-				effect = "
-					THE_SEJ_spawn_seija_religion_rebels_se = yes
-				"
+			random_empty_neighbor_province = {
+				limit = {
+					OR = {
+						continent = north_america
+						continent = south_america
+					}
+				}
+				add_siberian_construction = 100
+				set_province_flag = THE_SEJ_ai_boss_frontier_province_flag
 			}
-		}
-		else_if = {
-			limit = { total_development = 500 }
-			for = {
-				amount = 3
-				effect = "
-					THE_SEJ_spawn_seija_religion_rebels_se = yes
-				"
-			}
-		}
-		else_if = {
-			limit = { total_development = 250 }
-			for = {
-				amount = 2
-				effect = "
-					THE_SEJ_spawn_seija_religion_rebels_se = yes
-				"
-			}
-		}
-		else = {
-			THE_SEJ_spawn_seija_religion_rebels_se = yes
-		}
-	}
-
-	after = {
-		every_owned_province = {
-			clr_province_flag = THE_SEJ_had_spawn_seija_religion_rebel_province_flag
 		}
 	}
 }
+
+country_event = {
+	id = THE_SEJ_events.155
+	title = NONE
+	desc = NONE
+	picture = IMPORTANT_STATUE_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		THE_SEJ_downfall_revolution_active_st = yes
+	}
+
+	immediate = {
+		THE_SEJ_downfall_revolution_refresh_border_opinion_effect = yes
+	}
+
+	option = {
+		name = NONE
+	}
+}
+# END SEJ P1 EVENTS

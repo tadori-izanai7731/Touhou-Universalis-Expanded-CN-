@@ -1,109 +1,921 @@
-############################################################
-### on_actions' scripted effects
-############################################################
-THE_SEJ_on_province_religion_converted_scripted_effect = {
-	if = {
-		limit = {
-			owner = {
-				religion = THE_Seija_religion
-				has_country_flag = THE_SEJ_converte_province_religion_add_2_unrest_flag
-			}
-		}
-		add_nationalism = -10
-		add_unrest = 2
+THE_SEJ_downfall_guard_clear_rebel_spawn_marks_effect = {
+	every_owned_province = {
+		limit = { has_province_flag = THE_SEJ_downfall_guard_rebel_spawn_mark }
+		clr_province_flag = THE_SEJ_downfall_guard_rebel_spawn_mark
 	}
 }
 
-THE_SEJ_on_province_culture_converted_scripted_effect = {
-	if = {
-		limit = {
-			culture = owner
-		}
-		# if = {
-		# 	limit = {
-		# 		owner = {
-		# 			has_government_attribute = THE_SEJ_converte_province_add_estate_loyalty_custom_attribute
-		# 		}
-		# 	}
-		# 	owner = {
-		# 		add_estate_loyalty = {
-		# 			estate = all
-		# 			loyalty = 5
-		# 		}
-		# 	}
-		# }
-		if = {
-			limit = {
-				owner = {
-					has_government_attribute = THE_SEJ_converte_province_add_reform_progress_custom_attribute
-				}
-			}
-			owner = {
-				change_government_reform_progress = 2
-			}
-		}
-	}
-}
-
-THE_SEJ_on_colony_finished_scripted_effect = {
-	if = {
-		limit = {
-			owner = { has_country_flag = THE_SEJ_colonize_complete_create_neighbor_siberia_flag }
-			NOT = { has_province_flag = THE_SEJ_not_trigger_colony_finished_oa_province_flag }
-		}
-		set_province_flag = THE_SEJ_neighbor_siberia_target_province_flag
-		owner = {
-			country_event = {
-				id = THE_SEJ_events.4
-			}
-		}
-	}
-}
-
-THE_SEJ_on_abandon_colony_scripted_effect = {
-	if = {
-		limit = { has_province_flag = THE_SEJ_not_trigger_colony_finished_oa_province_flag }
-		clr_province_flag = THE_SEJ_not_trigger_colony_finished_oa_province_flag
-	}
-}
-
-
-############################################################
-### NOT on_actions' scripted effects
-############################################################
-
-THE_SEJ_remove_all_ni_modifier = {
-	hidden_effect = {
-		remove_country_modifier = THE_SEJ_negative_influence_modifier_1
-		remove_country_modifier = THE_SEJ_negative_influence_modifier_2
-		remove_country_modifier = THE_SEJ_negative_influence_modifier_3
-		remove_country_modifier = THE_SEJ_negative_influence_modifier_4
-		remove_country_modifier = THE_SEJ_negative_influence_modifier_5
-		remove_country_modifier = THE_SEJ_negative_influence_modifier_6
-		remove_country_modifier = THE_SEJ_negative_influence_modifier_7
-		remove_country_modifier = THE_SEJ_negative_influence_modifier_8
-		remove_country_modifier = THE_SEJ_negative_influence_modifier_9
-		remove_country_modifier = THE_SEJ_negative_influence_modifier_10
-	}
-}
-
-THE_SEJ_check_ni_se = {
-	set_country_flag = THE_SEJ_negative_influence_level_$level$_flag
-	add_country_modifier = {
-		name = THE_SEJ_negative_influence_modifier_$level$
-		duration = -1
-	}
-}
-
-THE_SEJ_spawn_seija_religion_rebels_se = {
+THE_SEJ_downfall_guard_spawn_rebels_size_2_effect = {
 	random_owned_province = {
 		limit = {
-			NOT = { has_province_flag = THE_SEJ_had_spawn_seija_religion_rebel_province_flag }
+			controlled_by = ROOT
+			NOT = { is_capital = yes }
+			NOT = { has_province_flag = THE_SEJ_downfall_guard_rebel_spawn_mark }
+		}
+		set_province_flag = THE_SEJ_downfall_guard_rebel_spawn_mark
+		spawn_rebels = {
+			type = THE_SEJ_downfall_guard_rebels
+			size = 2
+			win = no
+		}
+	}
+}
+
+THE_SEJ_spawn_downfall_guard_rebel_wave_1_effect = {
+	THE_SEJ_downfall_guard_clear_rebel_spawn_marks_effect = yes
+	capital_scope = {
+		spawn_rebels = {
+			type = THE_SEJ_downfall_guard_rebels
+			size = 3
+			win = no
+		}
+	}
+	THE_SEJ_downfall_guard_spawn_rebels_size_2_effect = yes
+	THE_SEJ_downfall_guard_spawn_rebels_size_2_effect = yes
+	THE_SEJ_downfall_guard_clear_rebel_spawn_marks_effect = yes
+}
+
+THE_SEJ_spawn_downfall_guard_rebel_wave_2_effect = {
+	THE_SEJ_downfall_guard_clear_rebel_spawn_marks_effect = yes
+	capital_scope = {
+		spawn_rebels = {
+			type = THE_SEJ_downfall_guard_rebels
+			size = 4
+			win = no
+		}
+	}
+	THE_SEJ_downfall_guard_spawn_rebels_size_2_effect = yes
+	THE_SEJ_downfall_guard_spawn_rebels_size_2_effect = yes
+	THE_SEJ_downfall_guard_spawn_rebels_size_2_effect = yes
+	THE_SEJ_downfall_guard_clear_rebel_spawn_marks_effect = yes
+}
+
+THE_SEJ_spawn_downfall_guard_rebel_wave_3_effect = {
+	THE_SEJ_downfall_guard_clear_rebel_spawn_marks_effect = yes
+	capital_scope = {
+		spawn_rebels = {
+			type = THE_SEJ_downfall_guard_rebels
+			size = 4
+			win = no
 		}
 		spawn_rebels = {
-			type = THE_seija_religion_rebels
-			size = 2
+			type = THE_SEJ_downfall_guard_rebels
+			size = 4
+			win = no
 		}
-		set_province_flag = THE_SEJ_had_spawn_seija_religion_rebel_province_flag
 	}
+	THE_SEJ_downfall_guard_spawn_rebels_size_2_effect = yes
+	THE_SEJ_downfall_guard_spawn_rebels_size_2_effect = yes
+	THE_SEJ_downfall_guard_spawn_rebels_size_2_effect = yes
+	THE_SEJ_downfall_guard_clear_rebel_spawn_marks_effect = yes
+}
+
+THE_SEJ_downfall_revolution_initialize_effect = {
+	set_country_flag = THE_SEJ_downfall_revolution_target_flag
+	set_global_flag = THE_SEJ_downfall_revolution_active_global_flag
+	remove_country_modifier = THE_SEJ_downfall_revolution_target_modifier
+	add_country_modifier = {
+		name = THE_SEJ_downfall_revolution_target_modifier
+		duration = -1
+	}
+	capital_scope = {
+		remove_province_modifier = THE_SEJ_downfall_revolution_center_modifier
+		add_province_modifier = {
+			name = THE_SEJ_downfall_revolution_center_modifier
+			duration = -1
+		}
+	}
+	THE_SEJ_downfall_revolution_refresh_border_opinion_effect = yes
+}
+
+THE_SEJ_downfall_revolution_refresh_border_opinion_effect = {
+	every_country = {
+		limit = {
+			THE_SEJ_downfall_revolution_foreign_target_st = yes
+			NOT = { is_neighbor_of = ROOT }
+			has_opinion_modifier = {
+				who = ROOT
+				modifier = THE_SEJ_downfall_revolution_pressure_opinion
+			}
+		}
+		remove_opinion = {
+			who = ROOT
+			modifier = THE_SEJ_downfall_revolution_pressure_opinion
+		}
+	}
+	every_neighbor_country = {
+		limit = {
+			THE_SEJ_downfall_revolution_foreign_target_st = yes
+			NOT = {
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = THE_SEJ_downfall_revolution_pressure_opinion
+				}
+			}
+		}
+		add_opinion = {
+			who = ROOT
+			modifier = THE_SEJ_downfall_revolution_pressure_opinion
+		}
+	}
+}
+
+THE_SEJ_p0_on_war_ended_scripted_effect = {
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					has_country_flag = THE_SEJ_p0_cannot_call_ally_CTM_flag
+					has_country_flag = THE_SEJ_p0_once_declarewar_CTM_flag
+					NOT = { war_with = CTM }
+				}
+				FROM = {
+					AND = {
+						has_country_flag = THE_SEJ_p0_cannot_call_ally_CTM_flag
+						has_country_flag = THE_SEJ_p0_once_declarewar_CTM_flag
+						NOT = { war_with = CTM }
+					}
+				}
+			}
+		}
+		ROOT = { clr_country_flag = THE_SEJ_p0_cannot_call_ally_CTM_flag }
+		FROM = { clr_country_flag = THE_SEJ_p0_cannot_call_ally_CTM_flag }
+	}
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					has_country_flag = THE_SEJ_p0_cannot_call_ally_ITZ_flag
+					has_country_flag = THE_SEJ_p0_once_declarewar_ITZ_flag
+					NOT = { war_with = ITZ }
+				}
+				FROM = {
+					AND = {
+						has_country_flag = THE_SEJ_p0_cannot_call_ally_ITZ_flag
+						has_country_flag = THE_SEJ_p0_once_declarewar_ITZ_flag
+						NOT = { war_with = ITZ }
+					}
+				}
+			}
+		}
+		ROOT = { clr_country_flag = THE_SEJ_p0_cannot_call_ally_ITZ_flag }
+		FROM = { clr_country_flag = THE_SEJ_p0_cannot_call_ally_ITZ_flag }
+	}
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					has_country_flag = THE_SEJ_p0_cannot_call_ally_XIU_flag
+					has_country_flag = THE_SEJ_p0_once_declarewar_XIU_flag
+					NOT = { war_with = XIU }
+				}
+				FROM = {
+					AND = {
+						has_country_flag = THE_SEJ_p0_cannot_call_ally_XIU_flag
+						has_country_flag = THE_SEJ_p0_once_declarewar_XIU_flag
+						NOT = { war_with = XIU }
+					}
+				}
+			}
+		}
+		ROOT = { clr_country_flag = THE_SEJ_p0_cannot_call_ally_XIU_flag }
+		FROM = { clr_country_flag = THE_SEJ_p0_cannot_call_ally_XIU_flag }
+	}
+}
+
+THE_SEJ_magic_charge_change_effect = {
+	if = {
+		limit = { has_government_mechanic = THE_SEJ_magic_charge_mechanic }
+		add_government_power = {
+			mechanic_type = THE_SEJ_magic_charge_mechanic
+			power_type = THE_SEJ_magic_charge
+			value = $value$
+		}
+	}
+}
+
+THE_SEJ_magic_charge_war_lost_effect = {
+	THE_SEJ_magic_charge_change_effect = { value = -50 }
+}
+
+THE_SEJ_magic_charge_province_religion_converted_effect = {
+	if = {
+		limit = {
+			religion = THE_Seija_religion
+			owner = { has_government_mechanic = THE_SEJ_magic_charge_mechanic }
+		}
+		owner = {
+			THE_SEJ_magic_charge_change_effect = { value = 3 }
+		}
+	}
+}
+
+THE_SEJ_p1_mayan_spread_center_conversion_cleanup_effect = {
+	if = {
+		limit = {
+			has_province_modifier = THE_SEJ_p1_mayan_spread_center_modifier
+			NOT = { religion = mesoamerican_religion }
+		}
+		remove_province_modifier = THE_SEJ_p1_mayan_spread_center_modifier
+	}
+}
+
+THE_SEJ_p0_apply_chaotic_society_autonomy_effect = {
+	if = {
+		limit = { has_reform = THE_SEJ_p0_chaotic_society_reform }
+		every_owned_province = {
+			remove_province_modifier = THE_SEJ_p0_chaotic_society_min_autonomy_modifier
+			add_province_modifier = {
+				name = "THE_SEJ_p0_chaotic_society_min_autonomy_modifier"
+				duration = 730
+			}
+		}
+		if = {
+			limit = { has_country_flag = THE_SEJ_p0_four_color_dyes_autonomy_compensation_flag }
+			every_owned_province = {
+				remove_province_modifier = THE_SEJ_p0_four_color_dyes_autonomy_compensation_modifier
+				add_province_modifier = {
+					name = "THE_SEJ_p0_four_color_dyes_autonomy_compensation_modifier"
+					duration = 730
+				}
+			}
+		}
+	}
+}
+
+THE_SEJ_p0_remove_chaotic_society_compensation_effect = {
+	remove_country_modifier = THE_SEJ_p0_unified_measures_burgher_modifier
+	remove_country_modifier = THE_SEJ_p0_loyal_priests_modifier
+	remove_country_modifier = THE_SEJ_p0_old_noble_supporters_morale_compensation_modifier
+	clr_country_flag = THE_SEJ_p0_four_color_dyes_autonomy_compensation_flag
+	every_owned_province = {
+		remove_province_modifier = THE_SEJ_p0_chaotic_society_min_autonomy_modifier
+		remove_province_modifier = THE_SEJ_p0_four_color_dyes_autonomy_compensation_modifier
+	}
+}
+
+THE_SEJ_p0_mayapan_trade_pass_yearly_effect = {
+	every_owned_province = {
+		limit = {
+			OR = {
+				has_building = marketplace
+				has_building = trade_depot
+			}
+			NOT = { has_province_flag = THE_SEJ_p0_mayapan_trade_pass_building_rewarded }
+		}
+		add_base_production = 2
+		add_local_autonomy = -10
+		set_province_flag = THE_SEJ_p0_mayapan_trade_pass_building_rewarded
+	}
+}
+
+THE_SEJ_p0_yearly_pulse_scripted_effect = {
+	if = {
+		limit = {
+			OR = { tag = SEJ was_tag = SEJ }
+			has_reform = THE_SEJ_p0_chaotic_society_reform
+		}
+		THE_SEJ_p0_apply_chaotic_society_autonomy_effect = yes
+	}
+}
+
+THE_SEJ_p0_tribunal_conversion_effect = {
+	if = {
+		limit = { owner = { has_country_flag = THE_SEJ_p0_inverted_tribunal_conversion_enabled_flag } }
+		add_nationalism = -10
+		add_province_modifier = {
+			name = "THE_SEJ_p0_inverted_tribunal_conversion_unrest_modifier"
+			duration = 3650
+		}
+	}
+}
+
+THE_SEJ_p0_clear_current_ae_effect = {
+	every_country = {
+		add_aggressive_expansion = {
+			who = ROOT
+			value = -999
+			apply_calc = no
+		}
+	}
+}
+
+THE_SEJ_p0_spawn_noble_rebels_with_size_effect = {
+	spawn_rebels = {
+		type = noble_rebels
+		size = $size$
+		estate = estate_nobles
+	}
+}
+
+THE_SEJ_p0_spawn_scaled_noble_rebels_effect = {
+	if = {
+		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 12 } } }
+		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 15 }
+	}
+	else_if = {
+		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 11 } } }
+		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 14 }
+	}
+	else_if = {
+		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 10 } } }
+		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 13 }
+	}
+	else_if = {
+		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 9 } } }
+		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 12 }
+	}
+	else_if = {
+		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 8 } } }
+		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 11 }
+	}
+	else_if = {
+		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 7 } } }
+		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 10 }
+	}
+	else_if = {
+		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 6 } } }
+		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 9 }
+	}
+	else_if = {
+		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 5 } } }
+		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 8 }
+	}
+	else_if = {
+		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 4 } } }
+		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 7 }
+	}
+	else_if = {
+		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 3 } } }
+		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 6 }
+	}
+	else_if = {
+		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 2 } } }
+		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 5 }
+	}
+	else_if = {
+		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 1 } } }
+		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 4 }
+	}
+	else = {
+		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 3 }
+	}
+}
+
+THE_SEJ_p0_spawn_other_noble_rebels_effect = {
+	if = {
+		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 12 } } }
+		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 13 }
+	}
+	else_if = {
+		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 11 } } }
+		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 12 }
+	}
+	else_if = {
+		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 10 } } }
+		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 11 }
+	}
+	else_if = {
+		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 9 } } }
+		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 10 }
+	}
+	else_if = {
+		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 8 } } }
+		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 9 }
+	}
+	else_if = {
+		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 7 } } }
+		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 8 }
+	}
+	else_if = {
+		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 6 } } }
+		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 7 }
+	}
+	else_if = {
+		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 5 } } }
+		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 6 }
+	}
+	else_if = {
+		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 4 } } }
+		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 5 }
+	}
+	else_if = {
+		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 3 } } }
+		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 4 }
+	}
+	else_if = {
+		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 2 } } }
+		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 3 }
+	}
+	else_if = {
+		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 1 } } }
+		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 2 }
+	}
+	else = {
+		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 1 }
+	}
+}
+
+THE_SEJ_ai_boss_setup_effect = {
+	if = {
+		limit = {
+			ai = no
+			OR = {
+				tag = SEJ
+				was_tag = SEJ
+			}
+			NOT = { has_country_flag = THE_SEJ_ai_boss_setup_done_flag }
+		}
+		set_country_flag = THE_SEJ_ai_boss_setup_done_flag
+		save_event_target_as = THE_SEJ_ai_boss_seija
+		if = {
+			limit = { exists = AZT }
+			AZT = {
+				if = {
+					limit = { ai = yes }
+					THE_SEJ_ai_boss_apply_mid_effect = yes
+				}
+			}
+		}
+		if = {
+			limit = { exists = CHE }
+			CHE = {
+				if = {
+					limit = { ai = yes }
+					country_event = { id = THE_SEJ_ai_boss_events.1 days = 1 }
+					change_government = tribal
+					add_government_reform = steppe_horde
+					change_religion = animism
+					THE_SEJ_ai_boss_apply_far_effect = yes
+				}
+			}
+		}
+		if = {
+			limit = { exists = NAH }
+			NAH = {
+				if = {
+					limit = { ai = yes }
+					country_event = { id = THE_SEJ_ai_boss_events.2 days = 1 }
+					change_government = tribal
+					add_government_reform = steppe_horde
+					change_religion = animism
+					THE_SEJ_ai_boss_apply_far_effect = yes
+				}
+			}
+		}
+		if = {
+			limit = { exists = CSU }
+			CSU = {
+				if = {
+					limit = { ai = yes }
+					set_primitive = no
+					THE_SEJ_ai_boss_apply_far_effect = yes
+				}
+			}
+		}
+		if = {
+			limit = { exists = INC }
+			INC = {
+				if = {
+					limit = {
+						ai = yes
+						was_tag = CSU
+					}
+					set_primitive = no
+					THE_SEJ_ai_boss_apply_far_effect = yes
+				}
+			}
+		}
+	}
+}
+
+THE_SEJ_ai_boss_apply_great_conqueror_effect = {
+	if = {
+		limit = { NOT = { ruler_has_personality = legendary_conqueror_personality } }
+		add_ruler_personality = legendary_conqueror_personality
+	}
+	if = {
+		limit = {
+			ruler_has_personality = legendary_conqueror_personality
+			ruler_has_personality = conqueror_personality
+		}
+		remove_ruler_personality = conqueror_personality
+	}
+}
+
+THE_SEJ_ai_boss_apply_mid_effect = {
+	set_country_flag = THE_SEJ_ai_boss_country_flag
+	change_technology_group = high_american
+	change_unit_type = high_american
+	set_ai_personality = {
+		personality = ai_militarist
+		locked = yes
+	}
+	THE_SEJ_ai_boss_apply_great_conqueror_effect = yes
+	remove_country_modifier = THE_SEJ_ai_boss_mid_modifier
+	remove_country_modifier = THE_SEJ_ai_boss_far_modifier
+	add_country_modifier = {
+		name = THE_SEJ_ai_boss_mid_modifier
+		duration = -1
+	}
+	THE_SEJ_ai_boss_apply_rivalry_effect = yes
+	every_owned_province = {
+		add_institution_embracement = {
+			which = feudalism
+			value = 100
+		}
+	}
+}
+
+THE_SEJ_ai_boss_apply_far_effect = {
+	set_country_flag = THE_SEJ_ai_boss_country_flag
+	change_technology_group = high_american
+	change_unit_type = high_american
+	set_ai_personality = {
+		personality = ai_militarist
+		locked = yes
+	}
+	THE_SEJ_ai_boss_apply_great_conqueror_effect = yes
+	remove_country_modifier = THE_SEJ_ai_boss_mid_modifier
+	remove_country_modifier = THE_SEJ_ai_boss_far_modifier
+	add_country_modifier = {
+		name = THE_SEJ_ai_boss_far_modifier
+		duration = -1
+	}
+	THE_SEJ_ai_boss_apply_rivalry_effect = yes
+	every_owned_province = {
+		add_institution_embracement = {
+			which = feudalism
+			value = 100
+		}
+	}
+}
+
+THE_SEJ_ai_boss_apply_rivalry_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_opinion_modifier = {
+					who = event_target:THE_SEJ_ai_boss_seija
+					modifier = THE_SEJ_ai_boss_rivalry_opinion
+				}
+			}
+		}
+		add_opinion = {
+			who = event_target:THE_SEJ_ai_boss_seija
+			modifier = THE_SEJ_ai_boss_rivalry_opinion
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				reverse_has_opinion_modifier = {
+					who = event_target:THE_SEJ_ai_boss_seija
+					modifier = THE_SEJ_ai_boss_rivalry_opinion
+				}
+			}
+		}
+		reverse_add_opinion = {
+			who = event_target:THE_SEJ_ai_boss_seija
+			modifier = THE_SEJ_ai_boss_rivalry_opinion
+		}
+	}
+}
+
+THE_SEJ_ai_boss_relationship_maintenance_effect = {
+	save_event_target_as = THE_SEJ_ai_boss_seija
+	every_country = {
+		limit = { has_country_flag = THE_SEJ_ai_boss_country_flag }
+		if = {
+			limit = {
+				OR = {
+					tag = CHE
+					tag = NAH
+				}
+				NOT = { religion = animism }
+			}
+			change_religion = animism
+		}
+		if = {
+			limit = { alliance_with = event_target:THE_SEJ_ai_boss_seija }
+			break_alliance = event_target:THE_SEJ_ai_boss_seija
+		}
+		if = {
+			limit = { is_subject_of = event_target:THE_SEJ_ai_boss_seija }
+			grant_independence = yes
+		}
+		set_ai_personality = {
+			personality = ai_militarist
+			locked = yes
+		}
+		THE_SEJ_ai_boss_apply_great_conqueror_effect = yes
+		THE_SEJ_ai_boss_apply_rivalry_effect = yes
+	}
+}
+
+THE_SEJ_ai_boss_expansion_maintenance_effect = {
+	every_country = {
+		limit = {
+			ai = yes
+			has_country_flag = THE_SEJ_ai_boss_country_flag
+		}
+		save_event_target_as = THE_SEJ_current_ai_boss
+		every_owned_province = {
+			every_neighbor_province = {
+				limit = {
+					is_empty = no
+					NOT = { owned_by = event_target:THE_SEJ_current_ai_boss }
+				}
+				add_permanent_claim = event_target:THE_SEJ_current_ai_boss
+			}
+		}
+	}
+}
+
+THE_SEJ_p1_ai_boss_item_recovery_unlock_effect = {
+	every_country = {
+		limit = { has_country_flag = THE_SEJ_ai_boss_country_flag }
+		set_country_flag = THE_SEJ_ai_boss_item_recovery_cb_target_flag
+		capital_scope = { discover_country = ROOT }
+	}
+}
+
+THE_SEJ_p1_flip_mesa_verde_great_project_effect = {
+	set_country_flag = THE_SEJ_enable_devisame_cliff_palace_great_project
+	clr_country_flag = THE_SEJ_p1_flip_mesa_verde_great_project_effect_tier_1_flag
+	clr_country_flag = THE_SEJ_p1_flip_mesa_verde_great_project_effect_tier_2_flag
+	clr_country_flag = THE_SEJ_p1_flip_mesa_verde_great_project_effect_tier_3_flag
+	875 = {
+		if = {
+			limit = { has_great_project = { type = mesa_verde tier = 3 } }
+			owner = { set_country_flag = THE_SEJ_p1_flip_mesa_verde_great_project_effect_tier_3_flag }
+		}
+		else_if = {
+			limit = { has_great_project = { type = mesa_verde tier = 2 } }
+			owner = { set_country_flag = THE_SEJ_p1_flip_mesa_verde_great_project_effect_tier_2_flag }
+		}
+		else_if = {
+			limit = { has_great_project = { type = mesa_verde tier = 1 } }
+			owner = { set_country_flag = THE_SEJ_p1_flip_mesa_verde_great_project_effect_tier_1_flag }
+		}
+		if = {
+			limit = { has_great_project = { type = mesa_verde tier = 0 } }
+			destroy_great_project = { type = mesa_verde }
+		}
+		if = {
+			limit = { NOT = { has_great_project = { type = THE_SEJ_devisame_cliff_palace tier = 0 } } }
+			add_great_project = {
+				type = THE_SEJ_devisame_cliff_palace
+				instant = yes
+			}
+		}
+		if = {
+			limit = { owner = { has_country_flag = THE_SEJ_p1_flip_mesa_verde_great_project_effect_tier_3_flag } }
+			add_great_project_tier = {
+				type = THE_SEJ_devisame_cliff_palace
+				tier = 3
+			}
+		}
+		else_if = {
+			limit = { owner = { has_country_flag = THE_SEJ_p1_flip_mesa_verde_great_project_effect_tier_2_flag } }
+			add_great_project_tier = {
+				type = THE_SEJ_devisame_cliff_palace
+				tier = 2
+			}
+		}
+		else = {
+			add_great_project_tier = {
+				type = THE_SEJ_devisame_cliff_palace
+				tier = 1
+			}
+		}
+	}
+	clr_country_flag = THE_SEJ_p1_flip_mesa_verde_great_project_effect_tier_1_flag
+	clr_country_flag = THE_SEJ_p1_flip_mesa_verde_great_project_effect_tier_2_flag
+	clr_country_flag = THE_SEJ_p1_flip_mesa_verde_great_project_effect_tier_3_flag
+	set_country_flag = THE_SEJ_mesa_verde_replaced_by_devisame_cliff_palace
+}
+
+THE_SEJ_p1_flip_white_house_great_project_effect = {
+	set_country_flag = THE_SEJ_enable_black_palace_great_project
+	clr_country_flag = THE_SEJ_p1_flip_white_house_great_project_effect_tier_1_flag
+	clr_country_flag = THE_SEJ_p1_flip_white_house_great_project_effect_tier_2_flag
+	clr_country_flag = THE_SEJ_p1_flip_white_house_great_project_effect_tier_3_flag
+	953 = {
+		if = {
+			limit = { has_great_project = { type = white_house tier = 3 } }
+			owner = { set_country_flag = THE_SEJ_p1_flip_white_house_great_project_effect_tier_3_flag }
+		}
+		else_if = {
+			limit = { has_great_project = { type = white_house tier = 2 } }
+			owner = { set_country_flag = THE_SEJ_p1_flip_white_house_great_project_effect_tier_2_flag }
+		}
+		else_if = {
+			limit = { has_great_project = { type = white_house tier = 1 } }
+			owner = { set_country_flag = THE_SEJ_p1_flip_white_house_great_project_effect_tier_1_flag }
+		}
+		if = {
+			limit = { has_great_project = { type = white_house tier = 0 } }
+			destroy_great_project = { type = white_house }
+		}
+		if = {
+			limit = { NOT = { has_great_project = { type = THE_SEJ_black_palace tier = 0 } } }
+			add_great_project = {
+				type = THE_SEJ_black_palace
+				instant = yes
+			}
+		}
+		if = {
+			limit = { owner = { has_country_flag = THE_SEJ_p1_flip_white_house_great_project_effect_tier_3_flag } }
+			add_great_project_tier = {
+				type = THE_SEJ_black_palace
+				tier = 3
+			}
+		}
+		else_if = {
+			limit = { owner = { has_country_flag = THE_SEJ_p1_flip_white_house_great_project_effect_tier_2_flag } }
+			add_great_project_tier = {
+				type = THE_SEJ_black_palace
+				tier = 2
+			}
+		}
+		else = {
+			add_great_project_tier = {
+				type = THE_SEJ_black_palace
+				tier = 1
+			}
+		}
+	}
+	clr_country_flag = THE_SEJ_p1_flip_white_house_great_project_effect_tier_1_flag
+	clr_country_flag = THE_SEJ_p1_flip_white_house_great_project_effect_tier_2_flag
+	clr_country_flag = THE_SEJ_p1_flip_white_house_great_project_effect_tier_3_flag
+	set_country_flag = THE_SEJ_white_house_replaced_by_black_palace
+}
+
+THE_SEJ_p1_flip_tenochtitlan_great_project_effect = {
+	set_country_flag = THE_SEJ_enable_lantediqinote_great_project
+	clr_country_flag = THE_SEJ_p1_flip_tenochtitlan_great_project_effect_tier_1_flag
+	clr_country_flag = THE_SEJ_p1_flip_tenochtitlan_great_project_effect_tier_2_flag
+	clr_country_flag = THE_SEJ_p1_flip_tenochtitlan_great_project_effect_tier_3_flag
+	852 = {
+		if = {
+			limit = { has_great_project = { type = tenochtitlan tier = 3 } }
+			owner = { set_country_flag = THE_SEJ_p1_flip_tenochtitlan_great_project_effect_tier_3_flag }
+		}
+		else_if = {
+			limit = { has_great_project = { type = tenochtitlan tier = 2 } }
+			owner = { set_country_flag = THE_SEJ_p1_flip_tenochtitlan_great_project_effect_tier_2_flag }
+		}
+		else_if = {
+			limit = { has_great_project = { type = tenochtitlan tier = 1 } }
+			owner = { set_country_flag = THE_SEJ_p1_flip_tenochtitlan_great_project_effect_tier_1_flag }
+		}
+		if = {
+			limit = { has_great_project = { type = tenochtitlan tier = 0 } }
+			destroy_great_project = { type = tenochtitlan }
+		}
+		if = {
+			limit = { NOT = { has_great_project = { type = THE_SEJ_lantediqinote tier = 0 } } }
+			add_great_project = {
+				type = THE_SEJ_lantediqinote
+				instant = yes
+			}
+		}
+		if = {
+			limit = { owner = { has_country_flag = THE_SEJ_p1_flip_tenochtitlan_great_project_effect_tier_3_flag } }
+			add_great_project_tier = {
+				type = THE_SEJ_lantediqinote
+				tier = 3
+			}
+		}
+		else_if = {
+			limit = { owner = { has_country_flag = THE_SEJ_p1_flip_tenochtitlan_great_project_effect_tier_2_flag } }
+			add_great_project_tier = {
+				type = THE_SEJ_lantediqinote
+				tier = 2
+			}
+		}
+		else = {
+			add_great_project_tier = {
+				type = THE_SEJ_lantediqinote
+				tier = 1
+			}
+		}
+	}
+	clr_country_flag = THE_SEJ_p1_flip_tenochtitlan_great_project_effect_tier_1_flag
+	clr_country_flag = THE_SEJ_p1_flip_tenochtitlan_great_project_effect_tier_2_flag
+	clr_country_flag = THE_SEJ_p1_flip_tenochtitlan_great_project_effect_tier_3_flag
+	set_country_flag = THE_SEJ_tenochtitlan_replaced_by_lantediqinote
+}
+
+THE_SEJ_p1_flip_salvador_da_bahia_great_project_effect = {
+	set_country_flag = THE_SEJ_enable_bahia_amanojaku_castle_great_project
+	clr_country_flag = THE_SEJ_p1_flip_salvador_da_bahia_great_project_effect_tier_1_flag
+	clr_country_flag = THE_SEJ_p1_flip_salvador_da_bahia_great_project_effect_tier_2_flag
+	clr_country_flag = THE_SEJ_p1_flip_salvador_da_bahia_great_project_effect_tier_3_flag
+	756 = {
+		if = {
+			limit = { has_great_project = { type = salvador_da_bahia tier = 3 } }
+			owner = { set_country_flag = THE_SEJ_p1_flip_salvador_da_bahia_great_project_effect_tier_3_flag }
+		}
+		else_if = {
+			limit = { has_great_project = { type = salvador_da_bahia tier = 2 } }
+			owner = { set_country_flag = THE_SEJ_p1_flip_salvador_da_bahia_great_project_effect_tier_2_flag }
+		}
+		else_if = {
+			limit = { has_great_project = { type = salvador_da_bahia tier = 1 } }
+			owner = { set_country_flag = THE_SEJ_p1_flip_salvador_da_bahia_great_project_effect_tier_1_flag }
+		}
+		if = {
+			limit = { has_great_project = { type = salvador_da_bahia tier = 0 } }
+			destroy_great_project = { type = salvador_da_bahia }
+		}
+		if = {
+			limit = { NOT = { has_great_project = { type = THE_SEJ_bahia_amanojaku_castle tier = 0 } } }
+			add_great_project = {
+				type = THE_SEJ_bahia_amanojaku_castle
+				instant = yes
+			}
+		}
+		if = {
+			limit = { owner = { has_country_flag = THE_SEJ_p1_flip_salvador_da_bahia_great_project_effect_tier_3_flag } }
+			add_great_project_tier = {
+				type = THE_SEJ_bahia_amanojaku_castle
+				tier = 3
+			}
+		}
+		else_if = {
+			limit = { owner = { has_country_flag = THE_SEJ_p1_flip_salvador_da_bahia_great_project_effect_tier_2_flag } }
+			add_great_project_tier = {
+				type = THE_SEJ_bahia_amanojaku_castle
+				tier = 2
+			}
+		}
+		else = {
+			add_great_project_tier = {
+				type = THE_SEJ_bahia_amanojaku_castle
+				tier = 1
+			}
+		}
+	}
+	clr_country_flag = THE_SEJ_p1_flip_salvador_da_bahia_great_project_effect_tier_1_flag
+	clr_country_flag = THE_SEJ_p1_flip_salvador_da_bahia_great_project_effect_tier_2_flag
+	clr_country_flag = THE_SEJ_p1_flip_salvador_da_bahia_great_project_effect_tier_3_flag
+	set_country_flag = THE_SEJ_salvador_da_bahia_replaced_by_bahia_amanojaku_castle
+}
+
+THE_SEJ_p1_flip_chan_chan_great_project_effect = {
+	set_country_flag = THE_SEJ_enable_mememe_great_project
+	clr_country_flag = THE_SEJ_p1_flip_chan_chan_great_project_effect_tier_1_flag
+	clr_country_flag = THE_SEJ_p1_flip_chan_chan_great_project_effect_tier_2_flag
+	clr_country_flag = THE_SEJ_p1_flip_chan_chan_great_project_effect_tier_3_flag
+	812 = {
+		if = {
+			limit = { has_great_project = { type = chan_chan_citadel tier = 3 } }
+			owner = { set_country_flag = THE_SEJ_p1_flip_chan_chan_great_project_effect_tier_3_flag }
+		}
+		else_if = {
+			limit = { has_great_project = { type = chan_chan_citadel tier = 2 } }
+			owner = { set_country_flag = THE_SEJ_p1_flip_chan_chan_great_project_effect_tier_2_flag }
+		}
+		else_if = {
+			limit = { has_great_project = { type = chan_chan_citadel tier = 1 } }
+			owner = { set_country_flag = THE_SEJ_p1_flip_chan_chan_great_project_effect_tier_1_flag }
+		}
+		if = {
+			limit = { has_great_project = { type = chan_chan_citadel tier = 0 } }
+			destroy_great_project = { type = chan_chan_citadel }
+		}
+		if = {
+			limit = { NOT = { has_great_project = { type = THE_SEJ_mememe tier = 0 } } }
+			add_great_project = {
+				type = THE_SEJ_mememe
+				instant = yes
+			}
+		}
+		if = {
+			limit = { owner = { has_country_flag = THE_SEJ_p1_flip_chan_chan_great_project_effect_tier_3_flag } }
+			add_great_project_tier = {
+				type = THE_SEJ_mememe
+				tier = 3
+			}
+		}
+		else_if = {
+			limit = { owner = { has_country_flag = THE_SEJ_p1_flip_chan_chan_great_project_effect_tier_2_flag } }
+			add_great_project_tier = {
+				type = THE_SEJ_mememe
+				tier = 2
+			}
+		}
+		else = {
+			add_great_project_tier = {
+				type = THE_SEJ_mememe
+				tier = 1
+			}
+		}
+	}
+	clr_country_flag = THE_SEJ_p1_flip_chan_chan_great_project_effect_tier_1_flag
+	clr_country_flag = THE_SEJ_p1_flip_chan_chan_great_project_effect_tier_2_flag
+	clr_country_flag = THE_SEJ_p1_flip_chan_chan_great_project_effect_tier_3_flag
+	set_country_flag = THE_SEJ_chan_chan_citadel_replaced_by_mememe
 }

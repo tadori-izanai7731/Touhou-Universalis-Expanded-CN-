@@ -1,0 +1,90 @@
+namespace = THE_SEJ_ai_boss_events
+
+# Native migratory countries are inherited from a delayed hidden event.  This
+# gives the map one day to finish initialization and keeps the inheriting
+# country as a stable event scope while the target countries disappear.
+country_event = {
+	id = THE_SEJ_ai_boss_events.1
+	title = NONE
+	desc = NONE
+	picture = IMPORTANT_STATUE_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CHE
+		ai = yes
+	}
+
+	immediate = {
+		if = {
+			limit = { exists = JOA }
+			inherit = JOA
+		}
+		if = {
+			limit = { exists = COF }
+			inherit = COF
+		}
+		if = {
+			limit = { exists = CIA }
+			inherit = CIA
+		}
+		if = {
+			limit = { exists = SAT }
+			inherit = SAT
+		}
+		if = {
+			limit = { exists = ALT }
+			inherit = ALT
+		}
+		every_owned_province = {
+			add_institution_embracement = {
+				which = feudalism
+				value = 100
+			}
+		}
+	}
+
+	option = { name = NONE }
+}
+
+country_event = {
+	id = THE_SEJ_ai_boss_events.2
+	title = NONE
+	desc = NONE
+	picture = IMPORTANT_STATUE_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = NAH
+		ai = yes
+	}
+
+	immediate = {
+		if = {
+			limit = { exists = ZNI }
+			inherit = ZNI
+		}
+		if = {
+			limit = { exists = OHK }
+			inherit = OHK
+		}
+		if = {
+			limit = { exists = KER }
+			inherit = KER
+		}
+		if = {
+			limit = { exists = ISL }
+			inherit = ISL
+		}
+		every_owned_province = {
+			add_institution_embracement = {
+				which = feudalism
+				value = 100
+			}
+		}
+	}
+
+	option = { name = NONE }
+}
