@@ -1,4 +1,113 @@
 ﻿l_english:
+### TOOLTIP
+ THE_SEJ_converte_province_religion_add_2_unrest_tt: ".OYeÏQSwýN§G10§!t^R»yININÿFOOžX R§R2§!ÛSqN¦^"
+ THE_SEJ_maya_gerat_project_accept_Youkai_culture_tt: "O'YåTz§YGY4tOßR§!0§Y‚„aSS§!ïSåN(WwýN‡eS=f§Y–Y*`§!öeuHe"
+ THE_SEJ_aztek_gerat_project_accept_Youkai_culture_tt: "O'YåTz§Yyrú‹GY‚„yrpQ§!0§Y¦”jwp§!ïSåN(WwýN‡eS=f§Y–Y*`§!N—RYe=f§Yûl„gó`§!öeuHe"
+ THE_SEJ_inca_gerat_project_accept_Youkai_culture_tt: "O'YåTz§YpS RïQ§!0§YlšNÔkN§!0§Y‚„šNæt±Ñy§!ïSåN(WwýN‡eS=f§Y–Y*`§!N—RYe=f§Yûl„gó`§!öeuHe"
+ THE_SEJ_add_rev_guard_militarized_society_by_fraction_tt: "9hnci—‹TkS–(WF–›QNP–-N„v`SÔkžX R§YÍSkS–›Q‹NS§!ÿÏk§Y1%§!`SÔkžX R§G0.5§!§YÍSkS–›Q‹NS§!"
+ THE_SEJ_enable_THE_SEJ_revolutionary_guard_tt: "ã‰•,r5µu?eœ^9ei—0§YŒcµcûl„v›RÏ‘§!0"
+### TOOLTIP_END
+
+### COUNTRY
+ SEJ: "ÍS¦Tw"
+ SEJ_ADJ: "ÍS¦Tw"
+### COUNTRY_END
+
+### EVENT
+ flavor_THE_SEJ.1.t: "ckª„v¡N"
+### EVENT_END
+
+### IDEA
+ THE_SEJ_ideas: "ÍStõV"
+ THE_SEJ_ideas_start: "ÍS.Oßu"
+ THE_SEJ_ideas_bonus: "ÍSÎ‘ÃV"
+ THE_SEJ_ideas_1: "1Vw¢ci–¶R"
+ THE_SEJ_ideas_1_desc: ":ONŽ2m0WþV„vckª³QÃVÍS.OßuÿÇ–cO±›N1Vww^—5Ïeb:N¢ci–¶Rÿ:Nib.VNLˆ›QÐc›OcüR"
+ THE_SEJ_ideas_2: "'YÄ‰!j­‹Ãu"
+ THE_SEJ_ideas_2_desc: "åb	g%N<h­‹ÃuN¢”Á”ªu‹V„v1Vw¿O³åNßu»l:Vw0NKQN±RŠ0"
+ THE_SEJ_ideas_3: "NKQNKNkp"
+ THE_SEJ_ideas_3_desc: "ÏkNMO1Vwý	g1ûNSNKQNKNkp.OMNLu„vÏkN*NÒ‰K„0NKQN±RŠ0"
+ THE_SEJ_ideas_4: "1VwìNÿâVÓuweg"
+ THE_SEJ_ideas_4_desc: "âVÓuNôÿ:dKbqQÛÿ:N†NNKQN„váOðNwb0NKQN±RŠ0"
+ THE_SEJ_ideas_5: "NKQNÁˆ2RNb"
+ THE_SEJ_ideas_5_desc: "‚YœgŒNýw¥c×SNKQN„váOðNÿŒ1S=f‰«ˆßu»l„v:Vw"
+ THE_SEJ_ideas_6: "Ù=fN:Wi—‹T"
+ THE_SEJ_ideas_6_desc: "1VwìNNQSŽN¥YOSÿêSOZWšR0WThQNLu“úQNKQN„váOðN0NKQN±RŠ0"
+ THE_SEJ_ideas_7: "qš:Vw"
+ THE_SEJ_ideas_7_desc: "jO:N«ˆßu»lw„v:VwìNÿ”^SV(W°eNLu:N1Vw„v‹NNZPúQ!.såNPØj‹R"
+### IDEA_END
+
+### GOVERNMENT
+ THE_SEJ_revolutionary_seija: "NKQNi—‹T>yO"
+ THE_SEJ_revolutionary_seija_desc: "te*N1Vw>yOâVÓu(WckªhTôVÿ:N†NNKQN„vtõVwKY—e"
+ THE_SEJ_revolutionary_guard: "Œcµcûl„v›RÏ‘"
+ THE_SEJ_revolutionary_guard_desc: "i—‹TkS–=f:V'Y„v›Q‹N›RÏ‘ÿŒcµcv^:VSÙÍy›RÏ‘=f±R.OÍS—b`ó`ÅV‰„vúWNx"
+ THE_SEJ_expand_seija_paradise_reform: "ib.V1VwPNíV"
+ THE_SEJ_expand_seija_paradise_reform_desc: "N*NwwegÏP=f1VwPNíV„v‹NirÔkwck„v1VwPNíVôf	g(uÿ(WN­e„vib.V-NÿþfÏu„v1VwMbýw«N×Sûl„vPN±0"
+ mechanic_THE_SEJ_converte_province_add_estate_loyalty_custom_attribute_yes: "wýNlØS:NINAm‡eSÐcØšNb	g6–BS§G5%§!àVÚ‹¦^"
+ mechanic_THE_SEJ_converte_province_add_reform_progress_custom_attribute_yes: "wýNlØS:NINAm‡eS·ƒ—V§G2§!9ei—Û¦^"
+ THE_SEJ_revolutionary_guard_militarized_society: "ÍSkS–›Q‹NS"
+ monthly_THE_SEJ_revolutionary_guard_militarized_society: "g¦^ÍSkS–›Q‹NS"
+ ability_THE_SEJ_revolutionary_guard_militarization_mechanic: "ÍSkS–›Q‹NS"
+ THE_SEJ_revolutionary_guard_boost_militarization: "kS–ÍS—bb‰N±R.O"
+ THE_SEJ_revolutionary_guard_boost_militarization_desc: "i—‹TkS–bXTmN=fbìN±R.OÍS—b`ó`„vÍ‘‰›RÏ‘ÿkS–(WhQýV„v±R.OïSåNg'YÐcGSbìN„v›Q‹N›RÏ‘"
+
+ THE_SEJ_RULER: ")Yª<›"
+### GOVERNMENT_END
+
+### MODIFIER
+ THE_sej_mission_modifier_a: "ckª(WGY4tOßR"
+ THE_sej_mission_modifier1: "YeWW„Æ‹WR"
+ THE_sej_mission_modifier2: "ûyÎ˜f×O"
+ THE_sej_mission_modifier3: "NKQNÁˆ2RNb"
+ THE_sej_mission_modifier4: "%VTÎW¦²Qz"
+ THE_sej_mission_modifier5: "ú^ËzTjO:g„g"
+ THE_sej_mission_modifier6: "àVÚ‹ŽNckª"
+ THE_sej_mission_modifier7: "YtQ›sÅ–Xo"
+ THE_sej_mission_modifier_852: "wÞ˜ÿyrú‹GY‚„yrpQ"
+ THE_sej_mission_modifier9: "^åg“^‚„„vON"
+ THE_sej_mission_modifier10: "2–¡VÆQY"
+ THE_sej_mission_modifier11: "wm›QÆQY"
+ THE_sej_mission_modifier12: "v«u2–»l"
+ THE_sej_mission_modifier13: "›Q‹NÆQY"
+ THE_sej_mission_modifier14: "V)YŸ0W"
+ THE_sej_mission_modifier15: "gT„vT››R"
+ THE_sej_mission_modifier17: "¢c0tŽ2m"
+ THE_sej_mission_modifier18: "ÑS°s'k2m"
+ THE_SEJ_south_land_modifier: "WS¹e'YF–"
+ 
+### RELIGION
+ THE_Seija_religion: "ûl„gó`"
+ THE_Seija_religion_religion_desc: ")Yª<›v^NOþV¨cû°s¶rv^Í‘ú^hQ°e„véy^ÿêS=f4ngûlNRÇz-N„vPN±ÿËYŽN:k—š„v1VwPNíV„gó`ÈuvzO«ˆ°sžRícz0"
+ THE_Seija_religion_blessings: "ÍSRSwQ"
+ pick_THE_Seija_religion_blessing: "	ébÍSRSwQ"
+ THE_seija_A_Miracle_Mallet_Replica_blessing: "NRÌiÿN6RÁT"
+ THE_seija_Bloodthirsty_Yin_Yang_Orb_blessing: "4ngœœNˆ„v4–3–‰s"
+ THE_seija_Nimble_Fabric_blessing: "ê•^"
+ THE_seija_Substitute_Jizo_blessing: "ÿf«Ž0WÏ…"
+ THE_seija_Ghastly_Send_Off_Lantern_blessing: "¡Nup„vLˆÐcop"
+ THE_seija_Four_Foot_Magic_Bomb_blessing: "ÛV:ST›Õl¸p9V"
+ THE_seija_Gap_Folding_Umbrella_blessing: "™–ô•„v˜bàSO"
+ THE_seija_Cursed_Decoy_Doll_blessing: "«ˆÅ‹’T„vñ‹u™ºNvP"
+ THE_seija_Tengus_Toy_Camera_blessing: ")Y×r„v©swQøv:g"
+### RELIGION_END
+
+ THE_SEJ_country_release_decision_title: "ckª„v¡N"
+ THE_SEJ_country_release_decision_desc: "ckªTS—xÐcúQ†Nyr+R„vÐc®‹"
+ 
+ flavor_THE_SEJ.1: "ckª„v¡N"
+ flavor_THE_SEJ.1.desc: "†SÏu‰^ó`aNOºNcíu„výUcTÿb—ùRNw4xmc„v'YÓuLuÿckªó`0R†N¡N¹eÕlÿb‰»SNLuNgK„T„v0W¹e1ýUcÿz˜¿OŽcwN:WppÈpÈp„vNKQNÿ–sSyY¿OJT+RS—xÿ&^N†N1Y»SýwÏ‘„vSwQÿŽN†NMRŽVŽ2mKNï"
+ flavor_THE_SEJ.1.a: "ckªÿ`O9e”`b"
+ flavor_THE_SEJ.1.b: ">eÃV,b)Yª<›OÞVeg„vÿ"
+
+ flavor_THE_SEJ.1000.name: "Í‘ÃqNKQN„vkp¬p"
+ flavor_THE_SEJ.1000.desc: "–NwNKQN—e‰N(W‰^ó`aN„v1Y%ÿte*N‰^ó`aN„vçeéy^ÿNiOýŒg†NãSlÿánåN:NcbòTÏu«ˆKQgÿNRýSRVŽNckh06qwÿ°s(WwegÖNìN>eÃV—V*Yée†Nÿ(WŒRb†NRgÆQYåTjOTÿckªòTÏuÍ‘°eØš>NwNKQN„v×e^ÿËz×VSte*NNLu1VwÎN:Vw„v‹Së-Nã‰>eúQeg0"
+
+ flavor_THE_SEJ.EVTNAME101: "NKQN±RŠ"
+ flavor_THE_SEJ.EVTDESC101: "ckª&^Nwg‰Lq„vÜw)RÿïQËe„v›Q–ÿjoýwÊ‘>e„vSwQÿÞV0R†NyYgàVÚ‹„vÑž«R0(WÙÌ‘ÿNb	g1VwìNâVÓuwegÿÄub†N­‹Ãu	g.tÿëXlØšf„v›Q–ÿÖNìN“Š‰ÝOkSi—‹T0RgTNo`0ÙNRasTNwÿckªÈuŽN‰ùRY“úQi—‹T†NÿyY‰©‹NKQNKNkp²QúQŽ2mÿ¹pÃqte*NNLuÿ"
+ flavor_THE_SEJ.EVTOPTA101: ">TTckª uegsS=f)Yª<›ÿ"
+
+
  # dk‡eöNN²N1u EMT ‘ÿÆ–-Nôu²bûN¡R tooltip NvQÖNhQè©s¶R‡e,g0
 
  # ---- migrated from THE_SEJ_rework_l_english.yml ----
