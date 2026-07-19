@@ -1,0 +1,222 @@
+defined_text = {
+	name = GetTHESEJMagicChargePeaceSource
+	random = no
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_peace
+		trigger = { is_at_war = no }
+	}
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_empty
+		trigger = { always = yes }
+	}
+}
+
+defined_text = {
+	name = GetTHESEJMagicChargeUnrestSource
+	random = no
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_unrest_p5
+		trigger = { unrest = 5 }
+	}
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_unrest_p4
+		trigger = { unrest = 4 }
+	}
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_unrest_p3
+		trigger = { unrest = 3 }
+	}
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_unrest_p2
+		trigger = { unrest = 2 }
+	}
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_unrest_p1
+		trigger = { unrest = 1 }
+	}
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_unrest_n5
+		trigger = { NOT = { unrest = -4 } }
+	}
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_unrest_n4
+		trigger = { NOT = { unrest = -3 } }
+	}
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_unrest_n3
+		trigger = { NOT = { unrest = -2 } }
+	}
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_unrest_n2
+		trigger = { NOT = { unrest = -1 } }
+	}
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_unrest_n1
+		trigger = { NOT = { unrest = 0 } }
+	}
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_unrest_zero
+		trigger = { always = yes }
+	}
+}
+
+defined_text = {
+	name = GetTHESEJMagicChargeRageSource
+	random = no
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_rage
+		trigger = { has_estate_privilege = THE_SEJ_p1_5_downfall_guard_draconic_training_privilege }
+	}
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_empty
+		trigger = { always = yes }
+	}
+}
+
+defined_text = {
+	name = GetTHESEJMagicChargeStrictSource
+	random = no
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_strict
+		trigger = { has_estate_privilege = THE_SEJ_p1_5_downfall_guard_strict_recruitment_privilege }
+	}
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_empty
+		trigger = { always = yes }
+	}
+}
+
+defined_text = {
+	name = GetTHESEJMagicChargeDownfallSource
+	random = no
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_downfall
+		trigger = { has_country_modifier = THE_SEJ_p1_amanojaku_downfall_modifier }
+	}
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_empty
+		trigger = { always = yes }
+	}
+}
+
+defined_text = {
+	name = GetTHESEJMagicChargeFaithSource
+	random = no
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_faith
+		trigger = { has_country_modifier = THE_SEJ_p1_faith_replaces_corruptive_magic_modifier }
+	}
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_empty
+		trigger = { always = yes }
+	}
+}
+
+defined_text = {
+	name = GetTHESEJMagicChargeDecaySource
+	random = no
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_decay_100
+		trigger = {
+			has_government_power = {
+				mechanic_type = THE_SEJ_magic_charge_mechanic
+				power_type = THE_SEJ_magic_charge
+				value = 100
+			}
+		}
+	}
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_decay_90
+		trigger = {
+			has_government_power = {
+				mechanic_type = THE_SEJ_magic_charge_mechanic
+				power_type = THE_SEJ_magic_charge
+				value = 90
+			}
+		}
+	}
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_decay_80
+		trigger = {
+			has_government_power = {
+				mechanic_type = THE_SEJ_magic_charge_mechanic
+				power_type = THE_SEJ_magic_charge
+				value = 80
+			}
+		}
+	}
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_decay_70
+		trigger = {
+			has_government_power = {
+				mechanic_type = THE_SEJ_magic_charge_mechanic
+				power_type = THE_SEJ_magic_charge
+				value = 70
+			}
+		}
+	}
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_decay_60
+		trigger = {
+			has_government_power = {
+				mechanic_type = THE_SEJ_magic_charge_mechanic
+				power_type = THE_SEJ_magic_charge
+				value = 60
+			}
+		}
+	}
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_decay_50
+		trigger = {
+			has_government_power = {
+				mechanic_type = THE_SEJ_magic_charge_mechanic
+				power_type = THE_SEJ_magic_charge
+				value = 50
+			}
+		}
+	}
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_decay_40
+		trigger = {
+			has_government_power = {
+				mechanic_type = THE_SEJ_magic_charge_mechanic
+				power_type = THE_SEJ_magic_charge
+				value = 40
+			}
+		}
+	}
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_decay_30
+		trigger = {
+			has_government_power = {
+				mechanic_type = THE_SEJ_magic_charge_mechanic
+				power_type = THE_SEJ_magic_charge
+				value = 30
+			}
+		}
+	}
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_decay_20
+		trigger = {
+			has_government_power = {
+				mechanic_type = THE_SEJ_magic_charge_mechanic
+				power_type = THE_SEJ_magic_charge
+				value = 20
+			}
+		}
+	}
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_decay_10
+		trigger = {
+			has_government_power = {
+				mechanic_type = THE_SEJ_magic_charge_mechanic
+				power_type = THE_SEJ_magic_charge
+				value = 10
+			}
+		}
+	}
+	text = {
+		localisation_key = THE_SEJ_magic_charge_source_decay_0
+		trigger = { always = yes }
+	}
+}

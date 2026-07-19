@@ -1,6 +1,46 @@
 spriteTypes = {
 	spriteType = {
-		name = "government_reform_THE_SEJ_expand_seija_paradise_reform"
-		texturefile = "gfx\\interface\\government_reform_icons\THE_SEJ\\THE_SEJ_expand_seija_paradise_reform.dds"
+		name = "GFX_disaster_THE_SEJ_p1_fifty_nine_theses_disaster"
+		texturefile = "gfx//interface//disasters//religious_turmoil.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_disaster_THE_SEJ_p1_bloodthirsty_guard_disaster"
+		texturefile = "gfx//interface//disasters//civil_war.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_cb_THE_SEJ_spread_downfall_revolution"
+		texturefile = "gfx/interface/casus_bellis/cb_revolutionary.dds"
+	}
+	spriteType = {
+		name = "GFX_cb_THE_SEJ_item_recovery"
+		texturefile = "gfx/interface/casus_bellis/cb_revolutionary.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_THE_SEJ_chayiqinqi"
+		texturefile = "gfx//interface//great_projects//great_project_THE_SEJ_chayiqinqi.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_THE_SEJ_devisame_cliff_palace"
+		texturefile = "gfx//interface//great_projects//great_project_THE_SEJ_devisame_cliff_palace.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_THE_SEJ_black_palace"
+		texturefile = "gfx//interface//great_projects//great_project_THE_SEJ_black_palace.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_THE_SEJ_lantediqinote"
+		texturefile = "gfx//interface//great_projects//great_project_THE_SEJ_lantediqinote.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_THE_SEJ_bahia_amanojaku_castle"
+		texturefile = "gfx//interface//great_projects//great_project_THE_SEJ_bahia_amanojaku_castle.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_THE_SEJ_mememe"
+		texturefile = "gfx//interface//great_projects//great_project_THE_SEJ_mememe.dds"
 	}
 }

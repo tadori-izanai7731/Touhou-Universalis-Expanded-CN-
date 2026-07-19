@@ -350,6 +350,18 @@ declarewar = {
 			set_country_flag = THE_ROD_once_declarewar_WOL_flag
 		}
 		if = {
+			limit = { has_country_flag = THE_SEJ_p0_cannot_call_ally_CTM_flag FROM = { tag = CTM } }
+			set_country_flag = THE_SEJ_p0_once_declarewar_CTM_flag
+		}
+		if = {
+			limit = { has_country_flag = THE_SEJ_p0_cannot_call_ally_ITZ_flag FROM = { tag = ITZ } }
+			set_country_flag = THE_SEJ_p0_once_declarewar_ITZ_flag
+		}
+		if = {
+			limit = { has_country_flag = THE_SEJ_p0_cannot_call_ally_XIU_flag FROM = { tag = XIU } }
+			set_country_flag = THE_SEJ_p0_once_declarewar_XIU_flag
+		}
+		if = {
 			limit = { mission_completed = THE_TFR_shadow_3_1 }
 			remove_country_modifier = THE_TFR_shadow_conquer_modifier
 			add_country_modifier = {
@@ -1572,6 +1584,24 @@ callaction = {
 	}
 	condition = {
 		potential = { tag = WOL any_country = { has_country_flag = THE_ROD_cannot_call_ally_WOL_flag war_with = ROOT } }
+		allow = {
+			always = no
+		}
+	}
+	condition = {
+		potential = { tag = CTM any_country = { has_country_flag = THE_SEJ_p0_cannot_call_ally_CTM_flag war_with = ROOT } }
+		allow = {
+			always = no
+		}
+	}
+	condition = {
+		potential = { tag = ITZ any_country = { has_country_flag = THE_SEJ_p0_cannot_call_ally_ITZ_flag war_with = ROOT } }
+		allow = {
+			always = no
+		}
+	}
+	condition = {
+		potential = { tag = XIU any_country = { has_country_flag = THE_SEJ_p0_cannot_call_ally_XIU_flag war_with = ROOT } }
 		allow = {
 			always = no
 		}

@@ -1,46 +1,297 @@
-THE_SEJ_develop_obsidian_estate_privilege = {
-	icon = privilege_macuahuitl
+THE_SEJ_p1_5_downfall_guard_appointed_captains_privilege = {
+	icon = privilege_aghas
+	max_absolutism = 0
+	loyalty = 0.05
+	influence = 0.05
+	land_share = 0
+	cooldown_years = 0
+	is_valid = {
+		OR = { tag = SEJ was_tag = SEJ }
+		has_estate = estate_sej_downfall_guard
+	}
+	can_select = { always = yes }
+	benefits = {
+		leader_land_shock = 1
+	}
+	ai_will_do = { factor = 1 }
+}
+
+THE_SEJ_p1_5_downfall_guard_merit_recruitment_privilege = {
+	icon = privilege_infantry
+	max_absolutism = 0
+	loyalty = -0.05
+	influence = 0.05
+	land_share = 5
+	cooldown_years = 0
+	is_valid = {
+		OR = { tag = SEJ was_tag = SEJ }
+		has_estate = estate_sej_downfall_guard
+	}
+	can_select = { always = yes }
+	modifier_by_land_ownership = {
+		infantry_power = 0.2
+		is_revolutionary_guard_modifier = yes
+	}
+	ai_will_do = { factor = 1 }
+}
+
+THE_SEJ_p1_5_downfall_guard_professional_guard_privilege = {
+	icon = privilege_janissaries
+	max_absolutism = 0
+	loyalty = -0.1
+	influence = 0.05
+	land_share = 5
+	cooldown_years = 0
+	is_valid = {
+		OR = { tag = SEJ was_tag = SEJ }
+		has_estate = estate_sej_downfall_guard
+	}
+	can_select = { always = yes }
+	on_granted = {
+		add_country_modifier = {
+			name = THE_SEJ_p1_5_downfall_guard_professional_guard_modifier
+			duration = -1
+		}
+	}
+	on_revoked = {
+		remove_country_modifier = THE_SEJ_p1_5_downfall_guard_professional_guard_modifier
+	}
+	on_invalid = {
+		remove_country_modifier = THE_SEJ_p1_5_downfall_guard_professional_guard_modifier
+	}
+	ai_will_do = { factor = 1 }
+}
+
+THE_SEJ_p1_5_downfall_guard_oath_discipline_privilege = {
+	icon = privilege_corruption
+	max_absolutism = 0
+	loyalty = 0
+	influence = 0.10
+	land_share = 0
+	cooldown_years = 0
+	is_valid = {
+		OR = { tag = SEJ was_tag = SEJ }
+		has_estate = estate_sej_downfall_guard
+	}
+	can_select = { always = yes }
+	modifier_by_land_ownership = {
+		global_unrest = 3
+	}
+	on_granted = { custom_tooltip = THE_SEJ_p1_5_downfall_guard_oath_discipline_effect_tt }
+	ai_will_do = { factor = 1 }
+}
+
+THE_SEJ_p1_5_downfall_guard_standardized_pay_privilege = {
+	icon = privilege_janissary_salary
+	max_absolutism = 0
+	loyalty = -0.05
+	influence = 0.15
+	land_share = 0
+	cooldown_years = 0
+	is_valid = {
+		OR = { tag = SEJ was_tag = SEJ }
+		has_estate = estate_sej_downfall_guard
+	}
+	can_select = { always = yes }
+	benefits = {
+		land_maintenance_modifier = -0.05
+	}
+	ai_will_do = { factor = 1 }
+}
+
+THE_SEJ_p1_5_downfall_guard_draconic_training_privilege = {
+	icon = privilege_discipline
+	max_absolutism = 0
+	loyalty = 0.05
+	influence = 0.10
+	land_share = 0
+	cooldown_years = 0
+	is_valid = {
+		OR = { tag = SEJ was_tag = SEJ }
+		has_estate = estate_sej_downfall_guard
+	}
+	can_select = {
+		mission_completed = THE_SEJ_p0_reconciliation_festival
+		NOT = { has_estate_privilege = THE_SEJ_p1_5_downfall_guard_strict_recruitment_privilege }
+	}
+	benefits = { monthly_THE_SEJ_magic_charge = 0.0833333 }
+	on_granted = {
+		custom_tooltip = THE_SEJ_p1_5_downfall_guard_rage_mode_effect_tt
+		add_country_modifier = {
+			name = THE_SEJ_p1_5_downfall_guard_draconic_training_modifier
+			duration = -1
+		}
+	}
+	on_revoked = {
+		remove_country_modifier = THE_SEJ_p1_5_downfall_guard_draconic_training_modifier
+	}
+	on_invalid = {
+		remove_country_modifier = THE_SEJ_p1_5_downfall_guard_draconic_training_modifier
+	}
+	ai_will_do = { factor = 1 }
+}
+
+THE_SEJ_p1_5_downfall_guard_charter_loyalty_privilege = {
+	icon = privilege_seek_support_of_clergy
+	max_absolutism = 0
+	loyalty = 0.25
+	influence = 0.1
+	land_share = 0
+	cooldown_years = 0
+	is_valid = {
+		OR = { tag = SEJ was_tag = SEJ }
+		has_estate = estate_sej_downfall_guard
+	}
+	can_select = { always = yes }
+	ai_will_do = { factor = 1 }
+}
+
+THE_SEJ_p1_5_downfall_guard_strict_recruitment_privilege = {
+	icon = privilege_military
 	max_absolutism = 0
 	loyalty = 0.05
 	influence = 0.1
+	land_share = 0
+	cooldown_years = 0
 	is_valid = {
-		has_country_flag = THE_SEJ_enable_develop_obsidian_estate_privilege_flag
+		OR = { tag = SEJ was_tag = SEJ }
+		has_estate = estate_sej_downfall_guard
 	}
 	can_select = {
+		mission_completed = THE_SEJ_p0_reconciliation_festival
+		NOT = { has_estate_privilege = THE_SEJ_p1_5_downfall_guard_draconic_training_privilege }
 	}
-	penalties = {
-	}
-	benefits = {
-		
-	}
+	benefits = { monthly_THE_SEJ_magic_charge = -0.0833333 }
 	on_granted = {
-		custom_tooltip = THE_SEJ_upgrade_active_obsidian_source_tt
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = MAY_active_obsidian_source
-				}
-				remove_province_modifier = MAY_active_obsidian_source
-				add_permanent_province_modifier = {
-					name = THE_SEJ_active_obsidian_source_upgrade_province_modifier
-					duration = -1
-				}
-			}
+		custom_tooltip = THE_SEJ_p1_5_downfall_guard_strict_recruitment_effect_tt
+		add_country_modifier = {
+			name = THE_SEJ_p1_5_downfall_guard_strict_recruitment_modifier
+			duration = -1
 		}
 	}
-	on_granted_province = {
-		if = {
-			limit = {
-				has_province_modifier = MAY_active_obsidian_source
-			}
-			remove_province_modifier = MAY_active_obsidian_source
-			add_permanent_province_modifier = {
-				name = THE_SEJ_active_obsidian_source_upgrade_province_modifier
-				duration = -1
-			}
-		}
+	on_revoked = {
+		remove_country_modifier = THE_SEJ_p1_5_downfall_guard_strict_recruitment_modifier
 	}
-	ai_will_do = {
-		factor = 0
+	on_invalid = {
+		remove_country_modifier = THE_SEJ_p1_5_downfall_guard_strict_recruitment_modifier
 	}
+	ai_will_do = { factor = 1 }
 }
+
+THE_SEJ_downfall_guard_nobility_primacy_privilege = {
+	icon = privilege_military_power
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0.05
+	loyalty = -0.05
+	land_share = 10
+	is_valid = {
+		OR = { tag = SEJ was_tag = SEJ }
+		has_estate = estate_sej_downfall_guard
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = THE_SEJ_need_downfall_guard_estate_tt
+			OR = {
+				has_country_flag = THE_SEJ_downfall_guard_estate_unlocked_flag
+				has_government_attribute = enables_estate_sej_downfall_guard
+			}
+		}
+	}
+	benefits = { country_military_power = 1 }
+	cooldown_years = 10
+	ai_will_do = { factor = 10 }
+}
+
+# THE_SEJ_downfall_guard_arrow_banner_privilege = {
+# 	icon = privilege_demand_more_troops
+# 	max_absolutism = -5
+# 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+# 	influence = 0.05
+# 	loyalty = 0.05
+# 	land_share = 5
+# 	is_valid = {
+# 		OR = {
+# 			tag = SEJ
+# 			was_tag = SEJ
+# 		}
+# 		has_estate = estate_sej_downfall_guard
+# 	}
+# 	can_select = {
+# 		custom_trigger_tooltip = {
+# 			tooltip = THE_SEJ_need_downfall_guard_estate_tt
+# 			OR = {
+# 				has_country_flag = THE_SEJ_downfall_guard_estate_unlocked_flag
+# 				has_government_attribute = enables_estate_sej_downfall_guard
+# 			}
+# 		}
+# 	}
+# 	benefits = {
+# 		land_forcelimit_modifier = 0.05
+# 		global_manpower_modifier = 0.05
+# 	}
+# 	cooldown_years = 10
+# 	ai_will_do = { factor = 50 }
+# }
+#
+# THE_SEJ_downfall_guard_inverted_judgement_privilege = {
+# 	icon = privilege_government
+# 	max_absolutism = -5
+# 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+# 	influence = 0.05
+# 	loyalty = 0.05
+# 	land_share = 5
+# 	is_valid = {
+# 		OR = {
+# 			tag = SEJ
+# 			was_tag = SEJ
+# 		}
+# 		has_estate = estate_sej_downfall_guard
+# 	}
+# 	can_select = {
+# 		custom_trigger_tooltip = {
+# 			tooltip = THE_SEJ_need_downfall_guard_empowered_tt
+# 			OR = {
+# 				has_country_flag = THE_SEJ_downfall_guard_estate_empowered_flag
+# 				has_government_attribute = enables_estate_sej_downfall_guard
+# 			}
+# 		}
+# 	}
+# 	benefits = {
+# 		global_unrest = -0.5
+# 		state_governing_cost = -0.03
+# 	}
+# 	cooldown_years = 10
+# 	ai_will_do = { factor = 50 }
+# }
+#
+# THE_SEJ_downfall_guard_grain_right_privilege = {
+# 	icon = privilege_grant_nobles_increased_pensions
+# 	max_absolutism = -5
+# 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+# 	influence = 0.05
+# 	loyalty = 0.10
+# 	land_share = 5
+# 	is_valid = {
+# 		OR = {
+# 			tag = SEJ
+# 			was_tag = SEJ
+# 		}
+# 		has_estate = estate_sej_downfall_guard
+# 	}
+# 	can_select = {
+# 		custom_trigger_tooltip = {
+# 			tooltip = THE_SEJ_need_downfall_guard_empowered_tt
+# 			OR = {
+# 				has_country_flag = THE_SEJ_downfall_guard_estate_empowered_flag
+# 				has_government_attribute = enables_estate_sej_downfall_guard
+# 			}
+# 		}
+# 	}
+# 	benefits = {
+# 		manpower_recovery_speed = 0.05
+# 		land_maintenance_modifier = -0.03
+# 	}
+# 	cooldown_years = 10
+# 	ai_will_do = { factor = 50 }
+# }
