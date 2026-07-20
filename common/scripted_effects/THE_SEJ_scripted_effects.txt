@@ -248,11 +248,6 @@ THE_SEJ_p0_remove_chaotic_society_compensation_effect = {
 	remove_country_modifier = THE_SEJ_p0_unified_measures_burgher_modifier
 	remove_country_modifier = THE_SEJ_p0_loyal_priests_modifier
 	remove_country_modifier = THE_SEJ_p0_old_noble_supporters_morale_compensation_modifier
-	clr_country_flag = THE_SEJ_p0_four_color_dyes_autonomy_compensation_flag
-	every_owned_province = {
-		remove_province_modifier = THE_SEJ_p0_chaotic_society_min_autonomy_modifier
-		remove_province_modifier = THE_SEJ_p0_four_color_dyes_autonomy_compensation_modifier
-	}
 }
 
 THE_SEJ_p0_mayapan_trade_pass_yearly_effect = {
