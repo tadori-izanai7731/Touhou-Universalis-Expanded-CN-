@@ -32,13 +32,13 @@ estate_sej_downfall_guard = {
 	country_modifier_neutral = {
 		global_manpower_modifier = 0.05
 	}
-	loyalty_modifier = {
-		desc = mechanic_THE_SEJ_p0_downfall_guard_loyalty_mechanic
-		trigger = {
-			has_government_attribute = THE_SEJ_p0_downfall_guard_loyalty_mechanic
-		}
-		loyalty = 10
-	}
+	# loyalty_modifier = {
+	# 	desc = mechanic_THE_SEJ_p0_downfall_guard_loyalty_mechanic
+	# 	trigger = {
+	# 		has_government_attribute = THE_SEJ_p0_downfall_guard_loyalty_mechanic
+	# 	}
+	# 	loyalty = 10
+	# }
 	country_modifier_angry = {
 		global_unrest = 1
 		land_maintenance_modifier = 0.05

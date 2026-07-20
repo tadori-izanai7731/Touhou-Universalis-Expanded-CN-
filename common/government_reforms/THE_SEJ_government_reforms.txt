@@ -116,14 +116,13 @@ THE_SEJ_p0_establish_downfall_guard_reform = {
 	lock_level_when_selected = yes
 	modifiers = {
 		allowed_rev_guard_fraction = 0.20
-		fire_damage_received = -0.10
+		sej_downfall_guard_loyalty_modifier = 0.1
 		shock_damage_received = -0.10
-		is_revolutionary_guard_modifier = yes
 	}
 	custom_attributes = {
-		locked_government_type = yes
-		enables_estate_sej_downfall_guard = yes
-		THE_SEJ_p0_downfall_guard_loyalty_mechanic = yes
+		#locked_government_type = yes
+		#enables_estate_sej_downfall_guard = yes
+		#THE_SEJ_p0_downfall_guard_loyalty_mechanic = yes
 	}
 	ai = { factor = 0 }
 }

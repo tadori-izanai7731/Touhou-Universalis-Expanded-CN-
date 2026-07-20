@@ -82,10 +82,12 @@ THE_SEJ_p0_slot_1_trade = {
 			if = {
 				limit = { has_estate_privilege = estate_burghers_land_of_commerce } 
 				custom_tooltip = THE_SEJ_1_3_effect_case1_tt_yes
+				set_country_flag = THE_SEJ_1_3_effect_flag
 				change_estate_land_share = {
 					estate = estate_burghers
 					share = -10
 				}
+				custom_tooltip = THE_SEJ_1_3_effect_tt
 			}
 			else = {
 				custom_tooltip = THE_SEJ_1_3_effect_case1_tt_no
@@ -95,6 +97,7 @@ THE_SEJ_p0_slot_1_trade = {
 						share = -10
 					}
 				}
+				custom_tooltip = THE_SEJ_1_3_effect_tt
 			}
 		}
 	}
@@ -103,7 +106,10 @@ THE_SEJ_p0_slot_1_trade = {
 		icon = mission_unknown_mission
 		position = 5
 		required_missions = { THE_SEJ_p0_protect_ppolom } 
-		provinces_to_highlight = { province_id = 4624 } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			has_port = yes
+		} 
 
 		trigger = { num_of_ports = 5 } 
 
@@ -220,9 +226,12 @@ THE_SEJ_p0_slot_2_market = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			NOT = { any_owned_province = { unrest = 0 }  } 
-			num_of_loans = 0
-			stability = 2
+			NOT = { average_unrest = 1 } 
+			NOT = { num_of_loans = 1 }
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 30
+			}
 		}
 
 		effect = {
@@ -233,7 +242,7 @@ THE_SEJ_p0_slot_2_market = {
 			}
 			add_country_modifier = {
 				name = "THE_SEJ_p0_mayapan_trade_pass_modifier"
-				duration = -1
+				duration = 10950
 			}
 			custom_tooltip = THE_SEJ_p0_mayapan_pass_direct_reward_tt
 			hidden_effect = {
@@ -306,7 +315,6 @@ THE_SEJ_p0_slot_3_main = {
 			}
 			country_event = {
 				id = THE_SEJ_rework_events.12
-				tooltip = THE_SEJ_p0_reverse_chichen_itza_preview_tt
 			}
 		}
 	}
@@ -362,13 +370,19 @@ THE_SEJ_p0_slot_4_faith = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
+			OR = {
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 30
+				}
+				num_of_estate_agendas_completed = {
+					estate = estate_church
+					value = 1
+				}
+			}
 			num_of_owned_provinces_with = {
 				value = 5
 				religion = THE_Seija_religion
-			}
-			estate_loyalty = {
-				estate = estate_church
-				loyalty = 30
 			}
 			stability = 1
 		}
@@ -520,24 +534,20 @@ THE_SEJ_p0_slot_5_guard = {
 		}
 
 		effect = {
-			add_estate_loyalty = {
-				estate = estate_nobles
-				loyalty = -20
-			}
-			change_estate_land_share = {
-				estate = estate_nobles
-				share = -5
-			}
+			custom_tooltip = THE_SEJ_p0_gain_five_revolutionary_guards_tt
 			change_estate_land_share = {
 				estate = estate_sej_downfall_guard
-				share = 15
+				share = 20
 			}
-			custom_tooltip = THE_SEJ_p0_extra_noble_rebels_by_privileges_tt
 			add_country_modifier = {
 				name = "THE_SEJ_p0_immature_revolutionary_guard_modifier"
 				duration = -1
 			}
-			custom_tooltip = THE_SEJ_p0_gain_five_revolutionary_guards_tt
+			change_estate_land_share = {
+				estate = estate_nobles
+				share = -10
+			}
+			custom_tooltip = THE_SEJ_p0_extra_noble_rebels_by_privileges_tt
 			hidden_effect = {
 				846 = { THE_SEJ_p0_spawn_other_noble_rebels_effect = yes } 
 				2652 = { THE_SEJ_p0_spawn_other_noble_rebels_effect = yes } 
@@ -563,22 +573,16 @@ THE_SEJ_p0_slot_5_guard = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			army_size_percentage = 0.9
 			NOT = { num_of_rebel_armies = 1 } 
 			all_owned_province = { controlled_by = ROOT } 
 		}
 
 		effect = {
-			change_estate_land_share = {
-				estate = estate_nobles
-				share = -5
-			}
 			remove_country_modifier = THE_SEJ_p0_noble_hostility_modifier
 			add_country_modifier = {
 				name = "THE_SEJ_p0_declining_nobility_modifier"
 				duration = -1
 			}
-			custom_tooltip = THE_SEJ_p0_old_noble_supporters_morale_compensation_tt
 			add_country_modifier = {
 				name = "THE_SEJ_p0_old_noble_supporters_morale_compensation_modifier"
 				duration = -1
@@ -597,7 +601,8 @@ THE_SEJ_p0_slot_5_guard = {
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = THE_SEJ_p0_purge_nobility_completed_tt
-				has_country_flag = THE_SEJ_p0_purge_nobility_completed
+				mission_completed = THE_SEJ_p0_absorb_old_noble_supporters
+				NOT = { has_country_flag = THE_SEJ_p0_purge_nobility_decision_unlocked }
 			}
 			grown_by_development = 50
 			NOT = { num_of_rebel_armies = 1 } 

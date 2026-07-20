@@ -442,9 +442,7 @@ THE_SEJ_p0_inverted_market_modifier = {
 
 THE_SEJ_p0_ppolom_trust_modifier = {
 	burghers_loyalty_modifier = 0.10
-	global_unrest = -1
 	trade_efficiency = 0.10
-	all_estate_possible_privileges = 1
 }
 
 THE_SEJ_p0_cooperation_institution_modifier = {
@@ -494,9 +492,9 @@ THE_SEJ_p0_temporary_rule_modifier = {
 }
 
 THE_SEJ_p0_inverted_scripture_modifier = {
-	tolerance_of_heathens_capacity = 2
-	tolerance_heathen = 2
-	tolerance_own = 1
+	tolerance_of_heathens_capacity = 1
+	tolerance_heathen = 1
+	missionary_maintenance_cost = -0.33
 }
 
 THE_SEJ_p0_suspicious_mayan_believers_modifier = {
@@ -505,7 +503,8 @@ THE_SEJ_p0_suspicious_mayan_believers_modifier = {
 }
 
 THE_SEJ_p0_weak_paradise_priest_modifier = {
-	church_loyalty_modifier = 0.10
+	fort_maintenance_modifier = -0.1
+	build_time = -0.2
 }
 
 THE_SEJ_p0_inverted_tribunal_modifier = {
@@ -531,9 +530,8 @@ THE_SEJ_p0_immature_revolutionary_guard_modifier = {
 }
 
 THE_SEJ_p0_declining_nobility_modifier = {
-	global_unrest = 1
-	land_maintenance_modifier = 0.10
-	nobles_loyalty_modifier = -0.30
+	nobles_influence_modifier = -0.3
+	army_tradition = -1
 }
 
 THE_SEJ_p0_old_noble_supporters_morale_compensation_modifier = {

@@ -291,10 +291,10 @@ country_decisions = {
 	}
 
 	THE_SEJ_p0_purge_nobility = {
+		major = yes
 		potential = {
 			OR = { tag = SEJ was_tag = SEJ }
 			has_country_flag = THE_SEJ_p0_purge_nobility_decision_unlocked
-			NOT = { has_country_flag = THE_SEJ_p0_purge_nobility_completed }
 		}
 		allow = { always = yes }
 		effect = {
@@ -313,7 +313,7 @@ country_decisions = {
 				influence = -100
 				duration = -1
 			}
-			set_country_flag = THE_SEJ_p0_purge_nobility_completed
+			clr_country_flag = THE_SEJ_p0_purge_nobility_decision_unlocked
 		}
 		ai_will_do = { factor = 1 }
 	}

@@ -145,34 +145,11 @@ on_monthly_pulse = {
 		THE_SEJ_p1_events.1
 		THE_SEJ_p1_events.2
 	}
-	if = {
-		limit = {
-			ai = no
-			OR = {
-				tag = SEJ
-				was_tag = SEJ
-			}
-			has_country_flag = THE_SEJ_ai_boss_setup_done_flag
-		}
-		THE_SEJ_ai_boss_relationship_maintenance_effect = yes
-	}
 }
 
 on_yearly_pulse = {
 	events = {
-		THE_SEJ_rework_events.14
 		THE_SEJ_events.154
-	}
-	if = {
-		limit = {
-			ai = no
-			OR = {
-				tag = SEJ
-				was_tag = SEJ
-			}
-			has_country_flag = THE_SEJ_ai_boss_setup_done_flag
-		}
-		THE_SEJ_ai_boss_expansion_maintenance_effect = yes
 	}
 }
 

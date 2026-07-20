@@ -38,7 +38,10 @@ country_event = {
 
 	option = {
 		name = THE_SEJ_rework_events.12.a
-		custom_tooltip = THE_SEJ_p0_reverse_chichen_itza_preview_tt
+		remove_country_modifier = THE_SEJ_p0_loyal_priests_modifier
+		remove_country_modifier = THE_SEJ_p0_unified_measures_burgher_modifier
+		remove_country_modifier = THE_SEJ_p0_old_noble_supporters_morale_compensation_modifier
+		remove_country_modifier = THE_SEJ_p0_immature_revolutionary_guard_modifier
 		custom_tooltip = THE_SEJ_p1_disasters_start_tt
 		hidden_effect = {
 			set_country_flag = THE_SEJ_rework_opening_complete
@@ -46,7 +49,6 @@ country_event = {
 			country_event = { id = THE_SEJ_rework_events.16 days = 1 }
 			set_government_rank = 3
 			THE_SEJ_p0_remove_chaotic_society_compensation_effect = yes
-			remove_country_modifier = THE_SEJ_p0_immature_revolutionary_guard_modifier
 			846 = { change_culture = Youkai }
 
 			# Subjects of the confederation are inherited regardless of opinion.
@@ -141,23 +143,6 @@ country_event = {
 			limit = { has_country_flag = THE_SEJ_enable_expand_seija_paradise_reform_flag }
 			add_government_reform = THE_SEJ_expand_seija_paradise_reform
 		}
-	}
-}
-
-country_event = {
-	id = THE_SEJ_rework_events.14
-	title = NONE
-	desc = NONE
-	picture = IMPORTANT_STATUE_eventPicture
-	is_triggered_only = yes
-	hidden = yes
-
-	immediate = {
-		THE_SEJ_p0_yearly_pulse_scripted_effect = yes
-	}
-
-	option = {
-		name = NONE
 	}
 }
 

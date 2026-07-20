@@ -300,7 +300,7 @@
  THE_SEJ_p0_mayapan_trade_pass_building_tt:0 "»lNwýN–™!kú^b§YÆ–^§!b§Y8fÓN“^§!öeÿ·ƒ—V§G2§!úWNxuµNv^M–NO§G10§!ê»l¦^0"
  THE_SEJ_p0_red_black_mobilization_unlocked_tt:0 "ã‰•ïSÍ‘Y³Q®‹§Y¢uÑž¨RXTäN§!0"
  THE_SEJ_p0_yucatan_noble_rebels_by_privileges_tt:0 "§Y[Root.Get5ÏeName]§!S(W§Y[846.GetName]§!ÑSw§RÛSqN§!ÿÏkˆcˆNN*N§Y[Root.Get5ÏeName]§!6–µuyrCgÿÛS›QÄ‰!jýOÛNekžX R0"
- THE_SEJ_p0_extra_noble_rebels_by_privileges_tt:0 "§Y[Root.Get5ÏeName]§!S(W§Y[846.GetName]§!0§YÃWaS^§!ŒT§YGYÑ‘RS§!ÑSw§RÛSqN§!ÿÏkˆcˆNN*N§Y[Root.Get5ÏeName]§!6–µuyrCgÿÛS›QÄ‰!jýOÛNekžX R0"
+ THE_SEJ_p0_extra_noble_rebels_by_privileges_tt:0 "§Y[Root.Get5ÏeName]§!S(W§Y[846.GetName]§!0§Y[2652.GetName]§!ŒT§Y[4591.GetName]§!ÑSw§RÛSqN§!ÿÏkˆcˆNN*N§Y[Root.Get5ÏeName]§!6–µuyrCgÿÛS›QÄ‰!jýOÛNekžX R0"
  THE_SEJ_p0_gain_five_revolutionary_guards_tt:0 "(W–™ý·ƒ—V§G5§!–§Yi—‹TkS–ekuQ§!0"
  THE_SEJ_p0_gain_ten_revolutionary_guards_tt:0 "(W–™ý·ƒ—V§G10§!–§Yi—‹TkS–ekuQ§!0"
  THE_SEJ_p0_red_black_mobilization_cooldown_tt:0 "Ý»yN!kgbLˆ§Y¢uÑž¨RXTäN§!óSòTÏuÇ»S§Y10§!t^0"
@@ -322,7 +322,7 @@
  THE_SEJ_p0_temporary_rule_modifier:0 "4Nöe„vßu»l"
  THE_SEJ_p0_inverted_scripture_modifier:0 "NKQN1WxQ"
  THE_SEJ_p0_suspicious_mayan_believers_modifier:0 "`‘u„v›sÅ–áO’V"
- THE_SEJ_p0_weak_paradise_priest_modifier:0 "ckª:N1Vw„vg¡RwœU¦`"
+ THE_SEJ_p0_weak_paradise_priest_modifier:0 ":NbìN„výV"
  THE_SEJ_p0_inverted_tribunal_modifier:0 "NKQNÁˆ2RNb"
  THE_SEJ_p0_inverted_tribunal_conversion_unrest_modifier:0 "Áˆ2RNbYOâl"
  THE_SEJ_p0_inverted_tribunal_conversion_unrest_modifier_desc:0 "NKQNÁˆ2RNb„v2RÍ‹ÍN(W0W¹eÀow‰N®‹0"
@@ -661,7 +661,7 @@ THE_SEJ_p1_5_downfall_guard_strict_recruitment_effect_tt:0 "ÅNqVÍTi—‹
  mechanic_THE_SEJ_p0_downfall_guard_loyalty_mechanic:0 "§YNKQNkS–§!6–µuàVÚ‹GWaˆ¹pÿ§G+10%§!"
  THE_SEJ_p0_establish_downfall_guard_loyalty:0 "ú^ËzNKQNkS–"
  THE_SEJ_p0_establish_downfall_guard_reform_requirement_tt:0 "ŒRbûN¡R§Yckª:N:Vw„vNˆwœU¦`§!0"
- THE_SEJ_expand_seija_paradise_reform_requirement_tt:0 "ŒRbûN¡R§Yckª:N1Vw„vg¡RwœU¦`§!0"
+ THE_SEJ_expand_seija_paradise_reform_requirement_tt:0 "ŒRbûN¡R§Y01Vw„vuXR0§!0"
  THE_SEJ_arrow_banner_frontier_modifier:0 "­r4Y×eÓbRƒ:S"
  desc_THE_SEJ_arrow_banner_frontier_modifier:0 "­r4Y×eN„v¹0WZwK„0¡Nw0ßvOãNhˆŒT.OäN–VËY¿làeINKN0Wibce0ÙN=fçeNLuV–klÿw=fÍS¦TwŠb¹0W³ueQqQT2–kSN®‹‹Néy^„v¹eV0"
  THE_SEJ_positive_stability_unrest_1:0 ")Yª<›„v3zšRtã‰"
@@ -745,3 +745,4 @@ THE_SEJ_p1_5_downfall_guard_strict_recruitment_effect_tt:0 "ÅNqVÍTi—‹
  THE_SEJ_1_3_effect_case1_tt_yes: "£yes£‚YœgòTˆcˆN[Root.Get^lName]§YFUN†˜0W§!yrCg:"
  THE_SEJ_1_3_effect_case1_tt_no: "£no£‚YœgòTˆcˆN[Root.Get^lName]§YFUN†˜0W§!yrCg:"
  THE_SEJ_remove_chaotic_society_tt: "§Y÷mqN„v>yO§!SÎNwýNûyd–0"
+ THE_SEJ_1_3_effect_tt: "§Y[Root.Get^lName]§!yrCg§YFUN†˜0W§!˜YÙuˆN§G+15.0%§![Root.Get^lName]àVÚ‹GWaˆ¹pŒT§Y+10.0%§![Root.Get^lName]qVÍT›R"
