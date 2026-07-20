@@ -1,0 +1,39 @@
+spriteTypes = {
+	progressbartype = {
+		name = "GFX_THE_SEJ_magic_charge_power_bar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx\\interface\\government_mechanics\\the_sej\\THE_SEJ_magic_charge_full.dds"
+		textureFile2 = "gfx\\interface\\government_mechanics\\the_sej\\THE_SEJ_magic_charge_empty.dds"
+		size = { x = 209 y = 27 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	spriteType = {
+		name = "GFX_THE_SEJ_magic_charge_frame"
+		texturefile = "gfx\\interface\\government_mechanics\\the_sej\\THE_SEJ_magic_charge_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_THE_SEJ_gap_folding_umbrella"
+		texturefile = "gfx\\interface\\government_mechanics\\the_sej\\THE_SEJ_gap_folding_umbrella.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_THE_SEJ_tengu_toy_camera"
+		texturefile = "gfx\\interface\\government_mechanics\\the_sej\\THE_SEJ_tengu_toy_camera.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_THE_SEJ_bloodthirsty_yin_yang_orb"
+		texturefile = "gfx\\interface\\government_mechanics\\the_sej\\THE_SEJ_bloodthirsty_yin_yang_orb.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+}

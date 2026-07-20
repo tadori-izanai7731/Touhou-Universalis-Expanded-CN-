@@ -1,0 +1,26 @@
+guiTypes = {
+	windowType = {
+		name = "THE_SEJ_magic_charge_mechanic_gui"
+		backGround = ""
+		position = { x = 0 y = 0 }
+		size = { x = 300 y = 100 }
+		moveable = 0
+		dontRender = yes
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+
+		iconType = {
+			name = "government_power_bar"
+			spriteType = "GFX_THE_SEJ_magic_charge_power_bar"
+			position = { x = 55 y = 37 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType = {
+			name = "government_power_bar_frame"
+			spriteType = "GFX_THE_SEJ_magic_charge_frame"
+			position = { x = 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+	}
+}
