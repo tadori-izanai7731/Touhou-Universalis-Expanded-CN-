@@ -652,7 +652,10 @@ THE_SEJ_p1_slot_1_north_trade = {
 			}
 		}
 
-		effect = { set_country_flag = THE_SEJ_p0_cocoa_road_decision_unlocked } 
+		effect = {
+			custom_tooltip = THE_SEJ_p1_trade_cocoa_road_effect_tt
+			set_country_flag = THE_SEJ_p0_cocoa_road_decision_unlocked
+		} 
 	}
 
 	THE_SEJ_p1_faith_four_color_dyes = {
@@ -818,10 +821,6 @@ THE_SEJ_p1_slot_1_north_trade = {
 					is_core = ROOT
 					culture = Youkai
 					religion = THE_Seija_religion
-					has_great_project = {
-						type = mesa_verde
-						tier = 1
-					}
 				}
 			}
 		}
@@ -847,10 +846,6 @@ THE_SEJ_p1_slot_1_north_trade = {
 			875 = {
 				culture = Youkai
 				religion = THE_Seija_religion
-				has_great_project = {
-					type = mesa_verde
-					tier = 1
-				}
 			}
 		}
 
