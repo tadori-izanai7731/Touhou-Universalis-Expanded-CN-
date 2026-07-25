@@ -307,12 +307,6 @@ country_decisions = {
 			}
 			change_estate_land_share = { estate = estate_nobles share = -100 }
 			add_estate_loyalty = { estate = estate_nobles loyalty = -100 }
-			add_estate_influence_modifier = {
-				estate = estate_nobles
-				desc = THE_SEJ_p0_purge_nobility_influence
-				influence = -100
-				duration = -1
-			}
 			clr_country_flag = THE_SEJ_p0_purge_nobility_decision_unlocked
 		}
 		ai_will_do = { factor = 1 }
@@ -356,109 +350,6 @@ country_decisions = {
 		effect = {
 			country_event = { id = THE_SEJ_p1_disaster_events.10 }
 		}
-		ai_will_do = { factor = 0 }
-	}
-
-	THE_SEJ_restore_flipped_great_projects = {
-		potential = {
-			ai = no
-			OR = { tag = SEJ was_tag = SEJ }
-			OR = {
-				AND = {
-					mission_completed = THE_SEJ_p0_reconciliation_festival
-					846 = {
-						owned_by = ROOT
-						NOT = { has_great_project = { type = THE_SEJ_chayiqinqi tier = 0 } }
-					}
-				}
-				AND = {
-					mission_completed = THE_SEJ_p1_expansion_navajo_reversal
-					875 = {
-						owned_by = ROOT
-						NOT = { has_great_project = { type = THE_SEJ_devisame_cliff_palace tier = 0 } }
-					}
-				}
-				AND = {
-					mission_completed = THE_SEJ_p1_expansion_black_palace
-					953 = {
-						owned_by = ROOT
-						NOT = { has_great_project = { type = THE_SEJ_black_palace tier = 0 } }
-					}
-				}
-				AND = {
-					mission_completed = THE_SEJ_p1_expansion_flip_tenochtitlan
-					852 = {
-						owned_by = ROOT
-						NOT = { has_great_project = { type = THE_SEJ_lantediqinote tier = 0 } }
-					}
-				}
-				AND = {
-					mission_completed = THE_SEJ_p1_expansion_chan_chan
-					812 = {
-						owned_by = ROOT
-						NOT = { has_great_project = { type = THE_SEJ_mememe tier = 0 } }
-					}
-				}
-				AND = {
-					mission_completed = THE_SEJ_p1_expansion_flip_colonial_symbol
-					756 = {
-						owned_by = ROOT
-						NOT = { has_great_project = { type = THE_SEJ_bahia_amanojaku_castle tier = 0 } }
-					}
-				}
-			}
-		}
-		allow = {
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_flip_chichen_itza_no_construction_tt
-				846 = {
-					NOT = { has_construction = culture }
-					NOT = { has_construction = building }
-					NOT = { has_construction = great_project }
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_flip_mesa_verde_no_construction_tt
-				875 = {
-					NOT = { has_construction = culture }
-					NOT = { has_construction = building }
-					NOT = { has_construction = great_project }
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_flip_white_house_no_construction_tt
-				953 = {
-					NOT = { has_construction = culture }
-					NOT = { has_construction = building }
-					NOT = { has_construction = great_project }
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_flip_tenochtitlan_no_construction_tt
-				852 = {
-					NOT = { has_construction = culture }
-					NOT = { has_construction = building }
-					NOT = { has_construction = great_project }
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_flip_chan_chan_no_construction_tt
-				812 = {
-					NOT = { has_construction = culture }
-					NOT = { has_construction = building }
-					NOT = { has_construction = great_project }
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_flip_salvador_da_bahia_no_construction_tt
-				756 = {
-					NOT = { has_construction = culture }
-					NOT = { has_construction = building }
-					NOT = { has_construction = great_project }
-				}
-			}
-		}
-		effect = { country_event = { id = THE_SEJ_great_project_recovery_events.1 } }
 		ai_will_do = { factor = 0 }
 	}
 

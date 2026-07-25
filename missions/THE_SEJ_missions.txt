@@ -5,7 +5,6 @@ THE_SEJ_p0_slot_1_trade = {
 	has_country_shield = yes
 	potential = {
 		tag = SEJ
-		NOT = { has_country_flag = THE_SEJ_rework_opening_complete } 
 	}
 
 	THE_SEJ_p0_restore_old_capital = {
@@ -146,7 +145,6 @@ THE_SEJ_p0_slot_2_market = {
 	has_country_shield = yes
 	potential = {
 		tag = SEJ
-		NOT = { has_country_flag = THE_SEJ_rework_opening_complete } 
 	}
 
 	THE_SEJ_p0_standard_measures = {
@@ -264,7 +262,6 @@ THE_SEJ_p0_slot_3_main = {
 	has_country_shield = yes
 	potential = {
 		tag = SEJ
-		NOT = { has_country_flag = THE_SEJ_rework_opening_complete } 
 	}
 
 	THE_SEJ_p0_fallen_arrow = {
@@ -297,14 +294,7 @@ THE_SEJ_p0_slot_3_main = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = THE_SEJ_flip_chichen_itza_no_construction_tt
-				846 = {
-					NOT = { has_construction = culture } 
-					NOT = { has_construction = building } 
-					NOT = { has_construction = great_project } 
-				}
-			}
+			
 		}
 
 		effect = {
@@ -326,7 +316,6 @@ THE_SEJ_p0_slot_4_faith = {
 	has_country_shield = yes
 	potential = {
 		tag = SEJ
-		NOT = { has_country_flag = THE_SEJ_rework_opening_complete } 
 	}
 
 	THE_SEJ_p0_divine_power = {
@@ -461,7 +450,6 @@ THE_SEJ_p0_slot_5_guard = {
 	has_country_shield = yes
 	potential = {
 		tag = SEJ
-		NOT = { has_country_flag = THE_SEJ_rework_opening_complete } 
 	}
 
 	THE_SEJ_p0_join_downfall = {
@@ -484,22 +472,9 @@ THE_SEJ_p0_slot_5_guard = {
 				tradition = 60
 				add_manuever = 6
 			}
-			custom_tooltip = THE_SEJ_p0_gain_five_revolutionary_guards_tt
 			add_country_modifier = {
 				name = "THE_SEJ_p0_join_downfall_forcelimit_modifier"
 				duration = -1
-			}
-			hidden_effect = {
-				for = {
-					amount = 5
-					effect = "
-						create_unit_forcelimit_percentage = {
-							type = infantry
-							special_unit_category = revolutionary_guard
-							force_limit_percentage = 0.00000001
-						}
-					"
-				}
 			}
 			add_estate_loyalty = {
 				estate = estate_nobles
@@ -511,7 +486,6 @@ THE_SEJ_p0_slot_5_guard = {
 			}
 			custom_tooltip = THE_SEJ_p0_yucatan_noble_rebels_by_privileges_tt
 			hidden_effect = { 846 = { THE_SEJ_p0_spawn_other_noble_rebels_effect = yes }  } 
-			set_country_flag = THE_SEJ_downfall_guard_estate_unlocked_flag
 			set_country_flag = THE_SEJ_downfall_guard_estate_empowered_flag
 			add_country_modifier = {
 				name = "THE_SEJ_p0_noble_hostility_modifier"
@@ -527,21 +501,13 @@ THE_SEJ_p0_slot_5_guard = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			num_of_estate_privileges = {
-				estate = estate_sej_downfall_guard
-				value = 3
-			}
 		}
 
 		effect = {
-			custom_tooltip = THE_SEJ_p0_gain_five_revolutionary_guards_tt
-			change_estate_land_share = {
-				estate = estate_sej_downfall_guard
-				share = 20
-			}
+			custom_tooltip = THE_SEJ_p0_gain_ten_revolutionary_guards_tt
 			add_country_modifier = {
 				name = "THE_SEJ_p0_immature_revolutionary_guard_modifier"
-				duration = -1
+				duration = 3650
 			}
 			change_estate_land_share = {
 				estate = estate_nobles
@@ -553,7 +519,7 @@ THE_SEJ_p0_slot_5_guard = {
 				2652 = { THE_SEJ_p0_spawn_other_noble_rebels_effect = yes } 
 				4591 = { THE_SEJ_p0_spawn_other_noble_rebels_effect = yes } 
 				for = {
-					amount = 5
+					amount = 10
 					effect = "
 						create_unit_forcelimit_percentage = {
 							type = infantry
@@ -578,6 +544,8 @@ THE_SEJ_p0_slot_5_guard = {
 		}
 
 		effect = {
+			add_manpower = 5
+			add_treasury = 200
 			remove_country_modifier = THE_SEJ_p0_noble_hostility_modifier
 			add_country_modifier = {
 				name = "THE_SEJ_p0_declining_nobility_modifier"
@@ -611,18 +579,12 @@ THE_SEJ_p0_slot_5_guard = {
 
 		effect = {
 			remove_country_modifier = THE_SEJ_p0_declining_nobility_modifier
-			set_country_flag = THE_SEJ_p0_establish_downfall_guard_reform_unlocked
-			add_government_reform = THE_SEJ_p0_establish_downfall_guard_reform
-			add_estate_influence_modifier = {
-				estate = estate_sej_downfall_guard
-				desc = THE_SEJ_p0_establish_downfall_guard_influence
-				influence = 10
-				duration = -1
-			}
 			add_country_modifier = {
-				name = "THE_SEJ_p0_established_revolutionary_guard_modifier"
+				name = THE_SEJ_breaking_nobility_modifier
 				duration = -1
 			}
+			set_country_flag = THE_permanent_complete_estate_agenda_estate_nobles
+			custom_tooltip = THE_SEJ_permanent_complete_noble_agenda_tt
 		}
 	}
 }
@@ -635,7 +597,7 @@ THE_SEJ_p1_slot_1_north_trade = {
 
 	THE_SEJ_p1_trade_cocoa_road = {
 		icon = mission_unknown_mission
-		position = 1
+		position = 7
 		provinces_to_highlight = {
 			owned_by = ROOT
 			trade_goods = cocoa
@@ -660,7 +622,7 @@ THE_SEJ_p1_slot_1_north_trade = {
 
 	THE_SEJ_p1_faith_four_color_dyes = {
 		icon = mission_unknown_mission
-		position = 2
+		position = 8
 		required_missions = {
 			THE_SEJ_p1_trade_cocoa_road
 			THE_SEJ_p1_city_chichen_workshop
@@ -734,7 +696,7 @@ THE_SEJ_p1_slot_1_north_trade = {
 
 	THE_SEJ_p1_faith_four_color_farming = {
 		icon = mission_unknown_mission
-		position = 3
+		position = 9
 		required_missions = { THE_SEJ_p1_faith_four_color_dyes } 
 		provinces_to_highlight = {  } 
 
@@ -768,7 +730,7 @@ THE_SEJ_p1_slot_1_north_trade = {
 
 	THE_SEJ_p1_expansion_panama_gap = {
 		icon = mission_unknown_mission
-		position = 6
+		position = 12
 		provinces_to_highlight = {
 			province_id = 835
 			NOT = { owned_by = ROOT } 
@@ -794,7 +756,7 @@ THE_SEJ_p1_slot_1_north_trade = {
 
 	THE_SEJ_p1_expansion_desert_march = {
 		icon = mission_unknown_mission
-		position = 7
+		position = 13
 		required_missions = { THE_SEJ_p1_expansion_lost_items } 
 		provinces_to_highlight = {  } 
 
@@ -811,7 +773,7 @@ THE_SEJ_p1_slot_1_north_trade = {
 
 	THE_SEJ_p1_expansion_navajo_reversal = {
 		icon = mission_unknown_mission
-		position = 8
+		position = 14
 		required_missions = { THE_SEJ_p1_expansion_desert_march } 
 		provinces_to_highlight = {
 			province_id = 875
@@ -861,7 +823,7 @@ THE_SEJ_p1_slot_1_north_trade = {
 
 	THE_SEJ_p1_expansion_black_palace = {
 		icon = mission_unknown_mission
-		position = 9
+		position = 15
 		required_missions = {
 			THE_SEJ_p1_expansion_navajo_reversal
 			THE_SEJ_p1_expansion_cherokee
@@ -922,7 +884,7 @@ THE_SEJ_p1_slot_1_north_trade = {
 
 	THE_SEJ_p1_navy_unknown_lands = {
 		icon = mission_unknown_mission
-		position = 11
+		position = 17
 		required_missions = { THE_SEJ_p1_navy_found_downfall_navy } 
 		provinces_to_highlight = {
 			province_id = 1240
@@ -943,7 +905,7 @@ THE_SEJ_p1_slot_1_north_trade = {
 
 	THE_SEJ_p1_navy_caribbean_supply = {
 		icon = mission_unknown_mission
-		position = 12
+		position = 18
 		required_missions = { THE_SEJ_p1_navy_unknown_lands } 
 		provinces_to_highlight = {
 			OR = {
@@ -1020,7 +982,7 @@ THE_SEJ_p1_slot_2_navy_city = {
 
 	THE_SEJ_p1_city_chichen_workshop = {
 		icon = mission_unknown_mission
-		position = 1
+		position = 7
 		provinces_to_highlight = {
 			province_id = 846
 			OR = {
@@ -1060,7 +1022,7 @@ THE_SEJ_p1_slot_2_navy_city = {
 
 	THE_SEJ_p1_disaster_fifty_nine_theses = {
 		icon = mission_unknown_mission
-		position = 2
+		position = 8
 		required_missions = { THE_SEJ_p1_disaster_item_rampage_start } 
 		provinces_to_highlight = {  } 
 
@@ -1090,7 +1052,7 @@ THE_SEJ_p1_slot_2_navy_city = {
 
 	THE_SEJ_p1_disaster_power_reversal = {
 		icon = mission_unknown_mission
-		position = 3
+		position = 9
 		required_missions = { THE_SEJ_p1_disaster_fifty_nine_theses } 
 		provinces_to_highlight = {  } 
 
@@ -1114,7 +1076,7 @@ THE_SEJ_p1_slot_2_navy_city = {
 
 	THE_SEJ_p1_power = {
 		icon = mission_unknown_mission
-		position = 6
+		position = 12
 		provinces_to_highlight = {  } 
 
 		trigger = {
@@ -1135,7 +1097,7 @@ THE_SEJ_p1_slot_2_navy_city = {
 
 	THE_SEJ_p1_expansion_cahokia = {
 		icon = mission_unknown_mission
-		position = 7
+		position = 13
 		required_missions = { THE_SEJ_p1_expansion_lost_items } 
 		provinces_to_highlight = {
 			OR = {
@@ -1215,7 +1177,7 @@ THE_SEJ_p1_slot_2_navy_city = {
 
 	THE_SEJ_p1_expansion_cherokee = {
 		icon = mission_unknown_mission
-		position = 8
+		position = 14
 		required_missions = { THE_SEJ_p1_expansion_cahokia } 
 		provinces_to_highlight = {  } 
 
@@ -1232,7 +1194,7 @@ THE_SEJ_p1_slot_2_navy_city = {
 
 	THE_SEJ_p1_navy_found_downfall_navy = {
 		icon = mission_unknown_mission
-		position = 10
+		position = 16
 		provinces_to_highlight = {
 			has_port = yes
 			owned_by = ROOT
@@ -1258,7 +1220,7 @@ THE_SEJ_p1_slot_2_navy_city = {
 
 	THE_SEJ_p1_navy_admirals_from_below = {
 		icon = mission_unknown_mission
-		position = 11
+		position = 17
 		required_missions = { THE_SEJ_p1_navy_found_downfall_navy } 
 		provinces_to_highlight = {  } 
 
@@ -1284,7 +1246,7 @@ THE_SEJ_p1_slot_2_navy_city = {
 
 	THE_SEJ_p1_navy_fleet_for_weak = {
 		icon = mission_unknown_mission
-		position = 12
+		position = 18
 		required_missions = { THE_SEJ_p1_navy_admirals_from_below } 
 		provinces_to_highlight = {
 			OR = {
@@ -1327,7 +1289,7 @@ THE_SEJ_p1_slot_3_main = {
 
 	THE_SEJ_p1_disaster_item_rampage_start = {
 		icon = mission_unknown_mission
-		position = 1
+		position = 7
 		provinces_to_highlight = {  } 
 
 		trigger = { has_disaster = THE_SEJ_p1_fifty_nine_theses_disaster } 
@@ -1343,7 +1305,7 @@ THE_SEJ_p1_slot_3_main = {
 
 	THE_SEJ_p1_disaster_weak_wish = {
 		icon = mission_unknown_mission
-		position = 2
+		position = 8
 		required_missions = { THE_SEJ_p1_disaster_item_rampage_start } 
 		provinces_to_highlight = {  } 
 
@@ -1373,7 +1335,7 @@ THE_SEJ_p1_slot_3_main = {
 
 	THE_SEJ_p1_disaster_shaped_amanojaku = {
 		icon = mission_unknown_mission
-		position = 4
+		position = 10
 		required_missions = {
 			THE_SEJ_p1_disaster_power_reversal
 			THE_SEJ_p1_disaster_faith_replaces_magic
@@ -1417,7 +1379,7 @@ THE_SEJ_p1_slot_3_main = {
 
 	THE_SEJ_p1_revolution_declaration = {
 		icon = mission_unknown_mission
-		position = 5
+		position = 11
 		required_missions = { THE_SEJ_p1_disaster_shaped_amanojaku } 
 		provinces_to_highlight = {  } 
 
@@ -1434,7 +1396,7 @@ THE_SEJ_p1_slot_3_main = {
 
 	THE_SEJ_p1_expansion_lost_items = {
 		icon = mission_unknown_mission
-		position = 6
+		position = 12
 		provinces_to_highlight = {  } 
 
 		trigger = { army_size_percentage = 0.9 } 
@@ -1451,7 +1413,7 @@ THE_SEJ_p1_slot_3_main = {
 
 	THE_SEJ_p1_expansion_aztec_item_recovery = {
 		icon = mission_unknown_mission
-		position = 7
+		position = 13
 		required_missions = { THE_SEJ_p1_expansion_lost_items } 
 		provinces_to_highlight = {  } 
 
@@ -1468,7 +1430,7 @@ THE_SEJ_p1_slot_3_main = {
 
 	THE_SEJ_p1_expansion_flip_tenochtitlan = {
 		icon = mission_unknown_mission
-		position = 8
+		position = 14
 		required_missions = { THE_SEJ_p1_expansion_aztec_item_recovery } 
 		provinces_to_highlight = {
 			province_id = 852
@@ -1526,7 +1488,7 @@ THE_SEJ_p1_slot_3_main = {
 
 	THE_SEJ_p1_expansion_ultimate_reversal = {
 		icon = mission_unknown_mission
-		position = 10
+		position = 16
 		required_missions = {
 			THE_SEJ_p1_expansion_black_palace
 			THE_SEJ_p1_expansion_potosi_wealth
@@ -1550,7 +1512,7 @@ THE_SEJ_p1_slot_3_main = {
 
 	THE_SEJ_p1_navy_red_black_ocean = {
 		icon = mission_unknown_mission
-		position = 13
+		position = 19
 		required_missions = {
 			THE_SEJ_p1_navy_fleet_for_weak
 			THE_SEJ_p1_ideas_worldward_push
@@ -1602,7 +1564,7 @@ THE_SEJ_p1_slot_4_ideas_south = {
 
 	THE_SEJ_p1_disaster_bloodthirsty_guard = {
 		icon = mission_unknown_mission
-		position = 2
+		position = 8
 		required_missions = { THE_SEJ_p1_disaster_item_rampage_start } 
 		provinces_to_highlight = {  } 
 
@@ -1621,7 +1583,7 @@ THE_SEJ_p1_slot_4_ideas_south = {
 
 	THE_SEJ_p1_disaster_faith_replaces_magic = {
 		icon = mission_unknown_mission
-		position = 3
+		position = 9
 		required_missions = {
 			THE_SEJ_p1_disaster_bloodthirsty_guard
 			THE_SEJ_p1_disaster_weak_wish
@@ -1646,7 +1608,7 @@ THE_SEJ_p1_slot_4_ideas_south = {
 
 	THE_SEJ_p1_expansion_speed = {
 		icon = mission_unknown_mission
-		position = 6
+		position = 12
 		provinces_to_highlight = {  } 
 
 		trigger = {
@@ -1667,7 +1629,7 @@ THE_SEJ_p1_slot_4_ideas_south = {
 
 	THE_SEJ_p1_expansion_chan_chan = {
 		icon = mission_unknown_mission
-		position = 7
+		position = 13
 		required_missions = { THE_SEJ_p1_expansion_lost_items } 
 		provinces_to_highlight = {
 			province_id = 812
@@ -1725,7 +1687,7 @@ THE_SEJ_p1_slot_4_ideas_south = {
 
 	THE_SEJ_p1_expansion_flip_colonial_symbol = {
 		icon = mission_unknown_mission
-		position = 8
+		position = 14
 		required_missions = { THE_SEJ_p1_expansion_chan_chan } 
 		provinces_to_highlight = {
 			province_id = 756
@@ -1783,7 +1745,7 @@ THE_SEJ_p1_slot_4_ideas_south = {
 
 	THE_SEJ_p1_ideas_feudal_records = {
 		icon = mission_unknown_mission
-		position = 10
+		position = 16
 		provinces_to_highlight = {  } 
 
 		trigger = {
@@ -1794,39 +1756,39 @@ THE_SEJ_p1_slot_4_ideas_south = {
 		}
 
 		effect = {
-			hidden_effect = { set_country_flag = THE_SEJ_p1_ideas_feudal_records_flag } 
-			complex_dynamic_effect = {
-				first_custom_tooltip = THE_SEJ_p1_ideas_feudal_records_embraced_effect_tt
-				first_limit = "has_institution = feudalism"
-				first_effect = "
-					add_splendor = 100
-				"
-				second_custom_tooltip = THE_SEJ_p1_ideas_feudal_records_diplomatic_effect_tt
-				second_limit = "
-					NOT = { has_institution = feudalism }
-					dip_power = 200
-				"
-				second_effect = "
-					add_dip_power = -200
-					add_country_modifier = {
-						name = THE_SEJ_p1_feudal_thought_spread_modifier
-						duration = 3650
-					}
-					every_owned_province = {
-						limit = { area = yucatan_area }
-						add_institution_embracement = {
-							which = feudalism
-							value = 100
-						}
-					}
-				"
-			}
+			# hidden_effect = { set_country_flag = THE_SEJ_p1_ideas_feudal_records_flag } 
+			# complex_dynamic_effect = {
+			# 	first_custom_tooltip = THE_SEJ_p1_ideas_feudal_records_embraced_effect_tt
+			# 	first_limit = "has_institution = feudalism"
+			# 	first_effect = "
+			# 		add_splendor = 100
+			# 	"
+			# 	second_custom_tooltip = THE_SEJ_p1_ideas_feudal_records_diplomatic_effect_tt
+			# 	second_limit = "
+			# 		NOT = { has_institution = feudalism }
+			# 		dip_power = 200
+			# 	"
+			# 	second_effect = "
+			# 		add_dip_power = -200
+			# 		add_country_modifier = {
+			# 			name = THE_SEJ_p1_feudal_thought_spread_modifier
+			# 			duration = 3650
+			# 		}
+			# 		every_owned_province = {
+			# 			limit = { area = yucatan_area }
+			# 			add_institution_embracement = {
+			# 				which = feudalism
+			# 				value = 100
+			# 			}
+			# 		}
+			# 	"
+			# }
 		}
 	}
 
 	THE_SEJ_p1_ideas_renaissance_spread = {
 		icon = mission_unknown_mission
-		position = 11
+		position = 17
 		required_missions = { THE_SEJ_p1_ideas_feudal_records } 
 		provinces_to_highlight = {
 			area = yucatan_area
@@ -1879,7 +1841,7 @@ THE_SEJ_p1_slot_4_ideas_south = {
 
 	THE_SEJ_p1_ideas_worldward_push = {
 		icon = mission_unknown_mission
-		position = 12
+		position = 18
 		required_missions = { THE_SEJ_p1_ideas_renaissance_spread } 
 		provinces_to_highlight = {  } 
 
@@ -1904,12 +1866,24 @@ THE_SEJ_p1_slot_5_andean = {
 
 	THE_SEJ_p1_m1 = {
 		icon = mission_unknown_mission
-		position = 1
+		position = 7
 		provinces_to_highlight = {  } 
 
 		trigger = { land_maintenance = 0.99 } 
 
 		effect = {
+			set_country_flag = THE_SEJ_p0_establish_downfall_guard_reform_unlocked
+			add_government_reform = THE_SEJ_p0_establish_downfall_guard_reform
+			add_estate_influence_modifier = {
+				estate = estate_sej_downfall_guard
+				desc = THE_SEJ_p0_establish_downfall_guard_influence
+				influence = 10
+				duration = -1
+			}
+			add_country_modifier = {
+				name = "THE_SEJ_p0_established_revolutionary_guard_modifier"
+				duration = -1
+			}
 			add_country_modifier = {
 				name = "THE_SEJ_p1_m1_prepared_army_modifier"
 				duration = 7300
@@ -1921,11 +1895,22 @@ THE_SEJ_p1_slot_5_andean = {
 
 	THE_SEJ_p1_m2 = {
 		icon = mission_unknown_mission
-		position = 2
+		position = 8
 		required_missions = { THE_SEJ_p1_m1 } 
 		provinces_to_highlight = {  } 
 
-		trigger = { war_with = AZT } 
+		trigger = {
+			if = {
+				limit = { exists = AZT }
+				OR = {
+					war_with = AZT
+					AZT = { is_subject_of = ROOT }
+				}
+			}
+			else = {
+				NOT = { exists = AZT }
+			}
+		} 
 
 		effect = {
 			add_country_modifier = {
@@ -1955,7 +1940,7 @@ THE_SEJ_p1_slot_5_andean = {
 
 	THE_SEJ_p1_m3 = {
 		icon = mission_unknown_mission
-		position = 3
+		position = 9
 		required_missions = { THE_SEJ_p1_m2 } 
 		provinces_to_highlight = {  } 
 
@@ -1981,7 +1966,7 @@ THE_SEJ_p1_slot_5_andean = {
 
 	THE_SEJ_p1_gun = {
 		icon = mission_unknown_mission
-		position = 6
+		position = 12
 		provinces_to_highlight = {  } 
 
 		trigger = {
@@ -2003,7 +1988,7 @@ THE_SEJ_p1_slot_5_andean = {
 
 	THE_SEJ_p1_expansion_island_frontier = {
 		icon = mission_unknown_mission
-		position = 7
+		position = 13
 		required_missions = { THE_SEJ_p1_expansion_lost_items } 
 		provinces_to_highlight = {  } 
 
@@ -2032,7 +2017,7 @@ THE_SEJ_p1_slot_5_andean = {
 
 	THE_SEJ_p1_expansion_face_pachacuti = {
 		icon = mission_unknown_mission
-		position = 8
+		position = 14
 		required_missions = { THE_SEJ_p1_expansion_chan_chan } 
 		provinces_to_highlight = {  } 
 
@@ -2052,7 +2037,7 @@ THE_SEJ_p1_slot_5_andean = {
 
 	THE_SEJ_p1_expansion_potosi_wealth = {
 		icon = mission_unknown_mission
-		position = 9
+		position = 15
 		required_missions = {
 			THE_SEJ_p1_expansion_flip_colonial_symbol
 			THE_SEJ_p1_expansion_face_pachacuti
@@ -2092,7 +2077,7 @@ THE_SEJ_p1_slot_5_andean = {
 
 	THE_SEJ_p1_ideas_enlightenment_vanguard = {
 		icon = mission_unknown_mission
-		position = 12
+		position = 18
 		required_missions = { THE_SEJ_p1_ideas_renaissance_spread } 
 		provinces_to_highlight = {
 			has_building = university

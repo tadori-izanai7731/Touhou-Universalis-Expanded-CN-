@@ -13,9 +13,7 @@ THE_SEJ_p0_chaotic_society_reform = {
 			}
 		}
 	}
-	allow_normal_conversion = no
-	allow_convert = no
-	legacy_government = yes
+	allow_normal_conversion = yes
 	valid_for_new_country = no
 	valid_for_nation_designer = no
 	can_change_primary_culture = no
@@ -30,6 +28,7 @@ THE_SEJ_p0_chaotic_society_reform = {
 		burghers_loyalty_modifier = -0.30
 		global_unrest = 2
 		land_morale = -0.10
+		allowed_rev_guard_fraction = -0.5
 	}
 	ai = {
 		factor = 0
@@ -42,61 +41,27 @@ THE_SEJ_rebellious_confederation_reform = {
 		OR = {
 			has_reform = THE_SEJ_rebellious_confederation_reform
 			have_had_reform = THE_SEJ_rebellious_confederation_reform
-			AND = {
-				OR = {
-					tag = SEJ
-					was_tag = SEJ
-				}
-				has_country_flag = THE_SEJ_rework_opening_complete
-			}
 		}
 	}
-	allow_normal_conversion = no
-	allow_convert = no
-	legacy_government = yes
+	allow_normal_conversion = yes
 	valid_for_new_country = no
 	valid_for_nation_designer = no
-	fixed_rank = 3
 	can_change_primary_culture = no
-	is_eligible_for_hre_emperor = no
+	rulers_can_be_generals = no
 	lock_level_when_selected = yes
 	government_abilities = {
 		THE_SEJ_magic_charge_mechanic
 	}
 	custom_attributes = {
 		locked_government_type = yes
-		enables_aristocratic_idea_group = no
-		disables_estate_nobles = yes
-		enables_estate_sej_downfall_guard = yes
-	}
-	conditional = {
-		allow = {
-			ROOT = {
-				OR = {
-					has_country_flag = THE_SEJ_p1_black_palace_native_ideas_unlocked_flag
-					953 = {
-						owned_by = ROOT
-						has_great_project = {
-							type = THE_SEJ_black_palace
-							tier = 3
-						}
-					}
-				}
-			}
-		}
-		custom_attributes = {
-			enables_natives_idea_group = yes
-		}
 	}
 	modifiers = {
-		governing_capacity = 400
 		global_manpower_modifier = 0.10
-		global_unrest = 4
-		num_accepted_cultures = 1
+		centralize_state_cost = 1.0
 		culture_conversion_cost = -0.20
 		culture_conversion_time = -0.25
-		reform_progress_growth = 0.05
-		max_absolutism = -100
+		reform_progress_growth = 0.1
+		max_absolutism = -200
 	}
 	ai = {
 		factor = 0
@@ -120,9 +85,7 @@ THE_SEJ_p0_establish_downfall_guard_reform = {
 		shock_damage_received = -0.10
 	}
 	custom_attributes = {
-		#locked_government_type = yes
-		#enables_estate_sej_downfall_guard = yes
-		#THE_SEJ_p0_downfall_guard_loyalty_mechanic = yes
+		enables_estate_sej_downfall_guard = yes
 	}
 	ai = { factor = 0 }
 }
@@ -133,13 +96,6 @@ THE_SEJ_expand_seija_paradise_reform = {
 		OR = {
 			has_reform = THE_SEJ_expand_seija_paradise_reform
 			have_had_reform = THE_SEJ_expand_seija_paradise_reform
-			AND = {
-				OR = {
-					tag = SEJ
-					was_tag = SEJ
-				}
-				has_country_flag = THE_SEJ_enable_expand_seija_paradise_reform_flag
-			}
 			has_country_flag = THE_SEJ_rework_enable_cooperation_reform
 		}
 	}
@@ -148,7 +104,7 @@ THE_SEJ_expand_seija_paradise_reform = {
 	}
 	modifiers = {
 		global_tax_modifier = -0.1
-		tolerance_own = 1
+		global_missionary_strength = 0.01
 		global_autonomy = -0.05
 	}
 	custom_attributes = {

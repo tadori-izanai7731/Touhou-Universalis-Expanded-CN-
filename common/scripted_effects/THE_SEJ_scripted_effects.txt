@@ -244,12 +244,6 @@ THE_SEJ_p0_apply_chaotic_society_autonomy_effect = {
 	}
 }
 
-THE_SEJ_p0_remove_chaotic_society_compensation_effect = {
-	remove_country_modifier = THE_SEJ_p0_unified_measures_burgher_modifier
-	remove_country_modifier = THE_SEJ_p0_loyal_priests_modifier
-	remove_country_modifier = THE_SEJ_p0_old_noble_supporters_morale_compensation_modifier
-}
-
 THE_SEJ_p0_mayapan_trade_pass_yearly_effect = {
 	every_owned_province = {
 		limit = {
@@ -296,105 +290,33 @@ THE_SEJ_p0_spawn_noble_rebels_with_size_effect = {
 
 THE_SEJ_p0_spawn_scaled_noble_rebels_effect = {
 	if = {
-		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 12 } } }
-		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 15 }
-	}
-	else_if = {
-		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 11 } } }
-		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 14 }
-	}
-	else_if = {
-		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 10 } } }
-		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 13 }
-	}
-	else_if = {
-		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 9 } } }
-		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 12 }
-	}
-	else_if = {
-		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 8 } } }
-		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 11 }
-	}
-	else_if = {
-		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 7 } } }
-		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 10 }
-	}
-	else_if = {
 		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 6 } } }
-		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 9 }
-	}
-	else_if = {
-		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 5 } } }
 		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 8 }
 	}
 	else_if = {
 		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 4 } } }
-		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 7 }
-	}
-	else_if = {
-		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 3 } } }
 		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 6 }
 	}
 	else_if = {
 		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 2 } } }
-		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 5 }
-	}
-	else_if = {
-		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 1 } } }
 		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 4 }
 	}
 	else = {
-		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 3 }
+		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 2 }
 	}
 }
 
 THE_SEJ_p0_spawn_other_noble_rebels_effect = {
 	if = {
-		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 12 } } }
-		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 13 }
-	}
-	else_if = {
-		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 11 } } }
-		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 12 }
-	}
-	else_if = {
-		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 10 } } }
-		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 11 }
-	}
-	else_if = {
-		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 9 } } }
-		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 10 }
-	}
-	else_if = {
-		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 8 } } }
-		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 9 }
-	}
-	else_if = {
-		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 7 } } }
-		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 8 }
-	}
-	else_if = {
 		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 6 } } }
-		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 7 }
-	}
-	else_if = {
-		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 5 } } }
-		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 6 }
-	}
-	else_if = {
-		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 4 } } }
-		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 5 }
-	}
-	else_if = {
-		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 3 } } }
 		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 4 }
 	}
 	else_if = {
-		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 2 } } }
+		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 4 } } }
 		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 3 }
 	}
 	else_if = {
-		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 1 } } }
+		limit = { ROOT = { num_of_estate_privileges = { estate = estate_nobles value = 2 } } }
 		THE_SEJ_p0_spawn_noble_rebels_with_size_effect = { size = 2 }
 	}
 	else = {
