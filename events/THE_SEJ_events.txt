@@ -108,7 +108,6 @@ country_event = {
 				}
 				set_country_flag = THE_SEJ_p0_starting_setup_done_flag
 				set_country_flag = THE_SEJ_enable_such_mission_flag
-				THE_SEJ_ai_boss_setup_effect = yes
 			}
 		}
 		ai_chance = {
@@ -148,87 +147,6 @@ country_event = {
 		add_country_modifier = {
 			name = THE_SEJ_arrow_banner_frontier_modifier
 			duration = -1
-		}
-	}
-}
-
-country_event = {
-	id = THE_SEJ_events.153
-	title = NONE
-	desc = NONE
-	picture = IMPORTANT_STATUE_eventPicture
-	hidden = yes
-	is_triggered_only = yes
-
-	trigger = {
-		ai = no
-		OR = {
-			tag = SEJ
-			was_tag = SEJ
-		}
-		NOT = { has_country_flag = THE_SEJ_ai_boss_setup_done_flag }
-	}
-
-	immediate = {
-		THE_SEJ_ai_boss_setup_effect = yes
-	}
-
-	option = {
-		name = NONE
-	}
-}
-
-country_event = {
-	id = THE_SEJ_events.154
-	title = NONE
-	desc = NONE
-	picture = IMPORTANT_STATUE_eventPicture
-	hidden = yes
-	is_triggered_only = yes
-
-	trigger = {
-		ai = yes
-		has_country_flag = THE_SEJ_ai_boss_country_flag
-		has_country_modifier = THE_SEJ_ai_boss_far_modifier
-		NOT = {
-			any_owned_province = {
-				is_colony = yes
-				has_province_flag = THE_SEJ_ai_boss_frontier_province_flag
-			}
-		}
-		any_owned_province = {
-			is_colony = no
-			any_empty_neighbor_province = {
-				OR = {
-					continent = north_america
-					continent = south_america
-				}
-			}
-		}
-	}
-
-	option = {
-		name = NONE
-		random_owned_province = {
-			limit = {
-				is_colony = no
-				any_empty_neighbor_province = {
-					OR = {
-						continent = north_america
-						continent = south_america
-					}
-				}
-			}
-			random_empty_neighbor_province = {
-				limit = {
-					OR = {
-						continent = north_america
-						continent = south_america
-					}
-				}
-				add_siberian_construction = 100
-				set_province_flag = THE_SEJ_ai_boss_frontier_province_flag
-			}
 		}
 	}
 }

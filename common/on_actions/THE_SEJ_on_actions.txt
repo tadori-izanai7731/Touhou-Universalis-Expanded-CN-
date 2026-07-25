@@ -1,37 +1,3 @@
-# on_startup = {
-# 	events = {
-# 		THE_SEJ_events.153
-# 	}
-# 	if = {
-# 		limit = {
-# 			tag = SEJ
-# 			NOT = { has_country_flag = THE_SEJ_p0_starting_setup_done_flag }
-# 		}
-# 		if = {
-# 			limit = { has_country_flag = THE_SEJ_rework_opening_complete }
-# 			set_government_rank = 3
-# 		}
-# 		else = {
-# 			set_government_rank = 2
-# 		}
-# 		set_country_flag = THE_SEJ_p0_starting_setup_done_flag
-# 	}
-# 	if = {
-# 		limit = {
-# 			tag = SEJ
-# 			NOT = { has_country_flag = THE_SEJ_enable_such_mission_flag }
-# 		}
-# 		set_country_flag = THE_SEJ_enable_such_mission_flag
-# 	}
-# 	if = {
-# 		limit = {
-# 			tag = SEJ
-# 			ai = no
-# 		}
-# 		THE_SEJ_ai_boss_setup_effect = yes
-# 	}
-# }
-
 on_war_ended = {
 	THE_SEJ_p0_on_war_ended_scripted_effect = yes
 }
@@ -104,10 +70,6 @@ on_admiral_recruited = {
 }
 
 on_colony_established = {
-	if = {
-		limit = { has_province_flag = THE_SEJ_ai_boss_frontier_province_flag }
-		clr_province_flag = THE_SEJ_ai_boss_frontier_province_flag
-	}
 	if = {
 		limit = {
 			continent = south_america

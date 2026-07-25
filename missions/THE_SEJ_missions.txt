@@ -1405,8 +1405,6 @@ THE_SEJ_p1_slot_3_main = {
 			custom_tooltip = THE_SEJ_p1_expansion_lost_items_effect_tt
 			hidden_effect = {
 				set_country_flag = THE_SEJ_p1_expansion_lost_items_flag
-				set_country_flag = THE_SEJ_p1_ai_boss_item_recovery_cb_unlocked_flag
-				THE_SEJ_p1_ai_boss_item_recovery_unlock_effect = yes
 			}
 		}
 	}
