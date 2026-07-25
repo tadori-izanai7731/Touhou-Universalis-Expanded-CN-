@@ -570,3 +570,8 @@ THE_SEJ_ai_boss_far_modifier = {
 	colonist_placement_chance = 0.05
 	native_uprising_chance = -0.25
 }
+
+THE_SEJ_invert_start_pmodifier = {
+	local_culture_conversion_cost = -0.25
+	local_culture_conversion_time = -0.25
+}

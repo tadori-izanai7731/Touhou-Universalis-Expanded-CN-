@@ -7,12 +7,6 @@ country_event = {
 	desc = THE_SEJ_rework_events.1.d
 	picture = book_2_eventPicture
 	fire_only_once = yes
-
-	trigger = {
-		tag = SEJ
-		NOT = { has_country_flag = THE_SEJ_residual_magic_started }
-	}
-
 	is_triggered_only = yes
 
 	option = {
@@ -23,8 +17,11 @@ country_event = {
 		add_estate_loyalty = { estate = estate_nobles loyalty = -30 }
 		add_army_tradition = 20
 		THE_SEJ_p0_apply_chaotic_society_autonomy_effect = yes
-		hidden_effect = {
-			set_country_flag = THE_SEJ_residual_magic_started
+		capital_scope = {
+			add_province_modifier = {
+				name = THE_SEJ_invert_start_pmodifier
+				duration = -1
+			}
 		}
 	}
 }
