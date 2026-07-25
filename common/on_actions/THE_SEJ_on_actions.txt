@@ -76,18 +76,8 @@ on_colony_established = {
 			has_terrain = jungle
 			owner = {
 				OR = {
-					AND = {
-						OR = {
-							tag = SEJ
-							was_tag = SEJ
-						}
-						has_country_flag = THE_SEJ_p1_four_color_dyes_south_america_dyes_flag
-					}
+					has_country_flag = THE_SEJ_p1_four_color_dyes_south_america_dyes_flag
 					colonial_parent = {
-						OR = {
-							tag = SEJ
-							was_tag = SEJ
-						}
 						has_country_flag = THE_SEJ_p1_four_color_dyes_south_america_dyes_flag
 					}
 				}
@@ -106,12 +96,6 @@ on_monthly_pulse = {
 		THE_SEJ_p1_disaster_events.11
 		THE_SEJ_p1_events.1
 		THE_SEJ_p1_events.2
-	}
-}
-
-on_yearly_pulse = {
-	events = {
-		THE_SEJ_events.154
 	}
 }
 
