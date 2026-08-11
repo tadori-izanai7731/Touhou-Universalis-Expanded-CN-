@@ -255,7 +255,7 @@ declarewar = {
 					has_country_flag = THE_FOM_desire_fight_can_not_be_declare_war_flag
 				}
 			}
-			NOT = { is_year = 1550 }
+			NOT = { is_year = 1500 }
 		}
 		allow = { 
 			always = no
