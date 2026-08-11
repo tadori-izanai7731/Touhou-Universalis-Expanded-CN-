@@ -255,6 +255,7 @@ declarewar = {
 					has_country_flag = THE_FOM_desire_fight_can_not_be_declare_war_flag
 				}
 			}
+			NOT = { is_year = 1550 }
 		}
 		allow = { 
 			always = no
@@ -1612,7 +1613,7 @@ callaction = {
 			FROM = {
 				trust = {
 					who = ROOT
-					value = 100
+					value = 75
 				}
 			}
 		}

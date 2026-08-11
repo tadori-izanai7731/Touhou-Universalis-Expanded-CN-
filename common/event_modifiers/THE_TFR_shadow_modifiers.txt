@@ -3,143 +3,142 @@ THE_TFR_shadow_call_fairy_modifier = {
 	global_manpower = 20
 	global_regiment_recruit_speed = -0.5
 	land_forcelimit = 12
-	ae_impact = -0.2
+	ae_impact = -0.1
 }
 
 #重构和谐
 THE_TFR_shadow_rebuild_harmony_modifier = {
 	years_of_nationalism = -10
-	land_morale = 0.15
-	stability_cost_modifier = -0.25
-	manpower_recovery_speed = 0.25
+	land_morale = 0.1
+	stability_cost_modifier = -0.15
+	manpower_recovery_speed = 0.15
 }
 
 #异变叠奏
 THE_TFR_shadow_eternal_disaster_modifier = {
 	shock_damage = 0.1
-	infantry_power = 0.2
+	infantry_power = 0.1
 	movement_speed = 0.2
-	global_unrest = -2
+	global_unrest = -1
 }
 
 #混乱序幕
 THE_TFR_shadow_confusion_prelude_modifier = {
-	global_autonomy = -0.2
+	global_autonomy = -0.1
 	country_admin_power = 1
 	idea_cost = -0.1
-	envoy_travel_time = -0.5
+	envoy_travel_time = -0.25
 }
 
 #赤色凝固
 THE_TFR_shadow_red_solidify_modifier = {
-	core_creation = -0.15
+	core_creation = -0.1
 	infantry_shock = 0.25
-	land_maintenance_modifier = -0.25
+	land_maintenance_modifier = -0.15
 	monthly_reform_progress = 0.5
 }
 
 #种族清除
 THE_TFR_shadow_culture_clear_modifier = {
-	culture_conversion_time = -0.5
-	culture_conversion_cost = -0.5
-	all_estate_loyalty_equilibrium = 0.2
+	culture_conversion_time = -0.2
+	culture_conversion_cost = -0.2
+	all_estate_loyalty_equilibrium = 0.1
 	allow_free_estate_privilege_revocation = yes
 }
 
 #不再有梦
 THE_TFR_shadow_nevermore_dream_modifier = {
-	missionaries = 2
-	global_missionary_strength = 0.03
-	build_cost = -0.25
-	development_cost = -0.2
+	missionaries = 1
+	global_missionary_strength = 0.02
+	build_cost = -0.15
+	development_cost = -0.1
 }
 
 #地产征收
 THE_TFR_shadow_estate_expropriation_modifier = {
-	diplomats = 2
-	spy_action_cost_modifier = -0.5
+	diplomats = 1
+	spy_action_cost_modifier = -0.2
 	diplomatic_annexation_cost = -0.2
 	global_monthly_devastation = -1.0
 }
 
 #逆熵动力
 THE_TFR_shadow_inverse_entropy_modifier = {
-	global_ship_recruit_speed = -0.5
-	global_naval_engagement_modifier = 0.25
+	global_ship_recruit_speed = -0.25
+	global_naval_engagement_modifier = 0.1
 	country_diplomatic_power = 1
-	ae_impact = -0.2
+	ae_impact = -0.1
 }
 
 #惧魂归所
 THE_TFR_shadow_ugly_qualia_modifier = {
-	improve_relation_modifier = 0.5
-	global_institution_spread = 1.0
+	improve_relation_modifier = 0.25
+	global_institution_spread = 0.25
 	free_policy = 1
-	global_tax_modifier = 0.25
+	global_tax_modifier = 0.2
 }
 
 #前馈控制
 THE_TFR_feedforward_control_modifier = {
-	national_focus_years = -20
+	national_focus_years = -10
 	movement_speed = 0.2
-	spy_offence = 0.5
-	province_warscore_cost = -0.15
+	spy_offence = 0.25
+	province_warscore_cost = -0.1
 }
 
 #妖精恩赐
 THE_TFR_shadow_fairy_bestow_modifier = {
-	morale_damage_received = -0.2
+	morale_damage_received = -0.1
 	global_trade_goods_size_modifier = 0.1
-	tolerance_own = 3
-	advisor_cost = -0.25
+	tolerance_own = 2
+	advisor_cost = -0.2
 }
 
 #欢送仪式
 THE_TFR_shadow_farewell_ceremony_modifier = {
 	discipline = 0.05
-	land_forcelimit_modifier = 0.25
-	global_trade_power = 1.0
-	defensiveness = 0.25
+	land_forcelimit_modifier = 0.15
+	global_trade_power = 0.5
+	defensiveness = 0.2
 }
 
 #管理系统
 THE_TFR_shadow_manage_system_modifier = {
 	core_creation = -0.1
-	global_prosperity_growth = 1.0
-	years_of_nationalism = -10
-	global_allowed_num_of_buildings = 2
+	global_prosperity_growth = 0.5
+	years_of_nationalism = -5
+	global_allowed_num_of_buildings = 1
 }
 
 #生态入侵
 THE_TFR_shadow_ecological_invasion_modifier = {
 	country_military_power = 1
-	siege_ability = 0.15
-	land_morale = 0.15
+	siege_ability = 0.1
+	land_morale = 0.1
 	administrative_efficiency = 0.05
 }
 
 #真实世界
 THE_TFR_shadow_tue_world_modifier = {
-	all_power_cost = -0.1
-	inflation_reduction = 0.25
-	yearly_corruption = -0.5
-	prestige = 5
+	all_power_cost = -0.05
+	inflation_reduction = 0.1
+	yearly_corruption = -0.2
+	prestige = 1
 }
 
 #褪色繁星
 THE_TFR_shadow_fading_stars_modifier = {
-	global_ship_repair = 1.0
+	global_ship_repair = 0.5
 	province_warscore_cost = -0.1
-	unjustified_demands = -1.0
+	unjustified_demands = -0.5
 	ignore_coring_distance = yes
 }
 
 #影之征服
 THE_TFR_shadow_conquer_modifier = {
-	infantry_cost = -0.5
-	siege_ability = 0.2
-	leader_cost = -0.5
-	administrative_efficiency = 0.05
+	infantry_cost = -0.25
+	siege_ability = 0.1
+	leader_cost = -0.25
 	province_warscore_cost = -0.1
 	core_creation = -0.1
 	ae_impact = -0.1
@@ -149,8 +148,8 @@ THE_TFR_shadow_conquer_modifier = {
 
 #『光之三妖精』
 THE_TFR_shadow_light_fairy_modifier = {
-	country_admin_power = 2
-	country_diplomatic_power = 2
-	country_military_power = 2
-	max_absolutism = 50
+	country_admin_power = 1
+	country_diplomatic_power = 1
+	country_military_power = 1
+	max_absolutism = 25
 }
