@@ -918,6 +918,386 @@ THE_kami_gensokyan_policy= {
 	}
 }
 
+### youkai ideas policies
+THE_sennin_spy_policy = {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_sennin_ideas
+		has_idea_group = spy_ideas
+	}
+	allow = {
+		full_idea_group = THE_sennin_ideas
+		full_idea_group = spy_ideas
+	}
+
+	spy_action_cost_modifier = -0.2
+	spy_offence = 0.1
+}
+
+THE_sennin_diplomatic_policy = {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_sennin_ideas
+		has_idea_group = diplomatic_ideas
+	}
+	allow = {
+		full_idea_group = THE_sennin_ideas
+		full_idea_group = diplomatic_ideas
+	}
+
+	unjustified_demands = -0.25
+}
+
+THE_sennin_trade_policy = {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_sennin_ideas
+		has_idea_group = trade_ideas
+	}
+	allow = {
+		full_idea_group = THE_sennin_ideas
+		full_idea_group = trade_ideas
+	}
+
+	production_efficiency = 0.2
+}
+
+THE_sennin_exploration_policy = {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_sennin_ideas
+		has_idea_group = exploration_ideas
+	}
+	allow = {
+		full_idea_group = THE_sennin_ideas
+		full_idea_group = exploration_ideas
+	}
+
+	movement_speed = 0.1
+	native_uprising_chance = -0.5
+}
+
+THE_sennin_maritime_policy = {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_sennin_ideas
+		has_idea_group = maritime_ideas
+	}
+	allow = {
+		full_idea_group = THE_sennin_ideas
+		full_idea_group = maritime_ideas
+	}
+
+	navy_tradition = 1
+	ship_power_propagation = 0.5
+}
+
+THE_sennin_influence_policy = {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_sennin_ideas
+		has_idea_group = influence_ideas
+	}
+	allow = {
+		full_idea_group = THE_sennin_ideas
+		full_idea_group = influence_ideas
+	}
+
+	vassal_income = 0.2
+}
+
+THE_sennin_court_policy = {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_sennin_ideas
+		has_idea_group = court_ideas
+	}
+	allow = {
+		full_idea_group = THE_sennin_ideas
+		full_idea_group = court_ideas
+	}
+
+	state_maintenance_modifier = -0.1
+	monthly_splendor = 2
+}
+
+THE_sennin_human_policy = {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_sennin_ideas
+		has_idea_group = THE_human_ideas
+	}
+	allow = {
+		full_idea_group = THE_sennin_ideas
+		full_idea_group = THE_human_ideas
+	}
+
+	war_exhaustion = -0.1
+	manpower_recovery_speed = 0.2
+}
+
+THE_sennin_fairy_policy = {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_sennin_ideas
+		has_idea_group = THE_fairy_ideas
+	}
+	allow = {
+		full_idea_group = THE_sennin_ideas
+		full_idea_group = THE_fairy_ideas
+	}
+
+	development_cost_modifier = -0.05
+	num_accepted_cultures = 2
+}
+
+THE_sennin_tennin_policy = {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_sennin_ideas
+		has_idea_group = THE_tennin_ideas
+	}
+	allow = {
+		full_idea_group = THE_sennin_ideas
+		full_idea_group = THE_tennin_ideas
+	}
+
+	advisor_cost = -0.15
+	global_tariffs = 0.25
+}
+
+THE_sennin_aristocracy_policy = {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_sennin_ideas
+		has_idea_group = aristocracy_ideas
+	}
+	allow = {
+		full_idea_group = THE_sennin_ideas
+		full_idea_group = aristocracy_ideas
+	}
+
+	legitimacy = 1
+	republican_tradition = 0.5
+	devotion = 1
+	horde_unity = 1
+	meritocracy = 1
+	may_recruit_female_generals = yes
+}
+
+THE_sennin_plutocracy_policy = {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_sennin_ideas
+		has_idea_group = plutocracy_ideas
+	}
+	allow = {
+		full_idea_group = THE_sennin_ideas
+		full_idea_group = plutocracy_ideas
+	}
+
+	merchants = 1
+}
+
+THE_sennin_theocracy_policy = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_sennin_ideas
+		has_idea_group = theocracy_gov_ideas
+	}
+	allow = {
+		full_idea_group = THE_sennin_ideas
+		full_idea_group = theocracy_gov_ideas
+	}
+
+	estate_interaction_cooldown_modifier = -0.1
+	free_leader_pool = 1
+}
+
+THE_sennin_horde_policy = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_sennin_ideas
+		has_idea_group = horde_gov_ideas
+	}
+	allow = {
+		full_idea_group = THE_sennin_ideas
+		full_idea_group = horde_gov_ideas
+	}
+
+	global_attacker_dice_roll_bonus = 1
+	land_attrition = -0.1
+}
+
+THE_sennin_indigenous_policy = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_sennin_ideas
+		has_idea_group = indigenous_ideas
+	}
+	allow = {
+		full_idea_group = THE_sennin_ideas
+		full_idea_group = indigenous_ideas
+	}
+
+	native_assimilation = 0.25
+}
+
+THE_sennin_offensive_policy = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_sennin_ideas
+		has_idea_group = offensive_ideas
+	}
+	allow = {
+		full_idea_group = THE_sennin_ideas
+		full_idea_group = offensive_ideas
+	}
+
+	artillery_barrage_cost = -0.1
+}
+
+THE_sennin_defensive_policy = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_sennin_ideas
+		has_idea_group = defensive_ideas
+	}
+	allow = {
+		full_idea_group = THE_sennin_ideas
+		full_idea_group = defensive_ideas
+	}
+
+	may_refill_garrison = yes
+}
+
+THE_sennin_quality_policy = {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_sennin_ideas
+		has_idea_group = quality_ideas
+	}
+	allow = {
+		full_idea_group = THE_sennin_ideas
+		full_idea_group = quality_ideas
+	}
+
+	cb_on_religious_enemies = yes
+}
+
+THE_sennin_quantity_policy = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_sennin_ideas
+		has_idea_group = quantity_ideas
+	}
+	allow = {
+		full_idea_group = THE_sennin_ideas
+		full_idea_group = quantity_ideas
+	}
+
+	reinforce_cost_modifier = -0.1
+}
+
+THE_sennin_naval_policy = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_sennin_ideas
+		has_idea_group = naval_ideas
+	}
+	allow = {
+		full_idea_group = THE_sennin_ideas
+		full_idea_group = naval_ideas
+	}
+
+	global_naval_engagement_modifier = 0.1
+	sea_repair = yes
+}
+
+THE_sennin_mercenary_policy = {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_sennin_ideas
+		has_idea_group = mercenary_ideas
+	}
+	allow = {
+		full_idea_group = THE_sennin_ideas
+		full_idea_group = mercenary_ideas
+	}
+
+	idea_cost = -0.1
+}
+
+THE_sennin_rei_policy = {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_sennin_ideas
+		has_idea_group = THE_rei_ideas
+	}
+	allow = {
+		full_idea_group = THE_sennin_ideas
+		full_idea_group = THE_rei_ideas
+	}
+
+	no_stability_loss_on_monarch_death = yes
+	global_unrest = -1
+}
+
+THE_sennin_lunarian_policy = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_sennin_ideas
+		has_idea_group = THE_lunarian_ideas
+	}
+	allow = {
+		full_idea_group = THE_sennin_ideas
+		full_idea_group = THE_lunarian_ideas
+	}
+
+	mil_tech_cost_modifier = -0.1
+	number_of_cannons_modifier = 0.1
+}
+
+THE_sennin_gensokyan_policy = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_sennin_ideas
+		has_idea_group = THE_gensokyan_ideas
+	}
+	allow = {
+		full_idea_group = THE_sennin_ideas
+		full_idea_group = THE_gensokyan_ideas
+	}
+
+	inflation_reduction = 1.0
+	governing_cost = -0.2
+}
+
+
 THE_human_administrative_policy= {
 	monarch_power = ADM
 
