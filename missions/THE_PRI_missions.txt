@@ -328,6 +328,7 @@ THE_PRI_mission_branch_3 = {
 					alliance_with = LIL
 					marriage_with = LIL
 					LIL = {
+						ai = yes
 						NOT = { num_of_cities = 3 }
 					}
 					if = { limit = { ai = yes } has_opinion = { who = LIL value = 150 } }
@@ -384,6 +385,7 @@ THE_PRI_mission_branch_3 = {
 							alliance_with = LIL
 							marriage_with = LIL
 							LIL = {
+								ai = yes
 								NOT = { num_of_cities = 3 }
 							}
 							if = { limit = { ai = yes } has_opinion = { who = LIL value = 150 } }
@@ -438,6 +440,7 @@ THE_PRI_mission_branch_3 = {
 					NOT = { has_country_modifier = THE_PRI_spring_send_music_modifier }
 				}
 				AND = {
+					LRV = { ai = yes }
 					alliance_with = LRV
 					has_country_modifier = THE_PRI_spring_send_music_modifier
 				}
