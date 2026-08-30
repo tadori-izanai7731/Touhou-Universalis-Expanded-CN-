@@ -14,7 +14,6 @@ THE_youkai_court_policy= {
 	
 	# modifier
 	years_of_nationalism = -5
-	advisor_pool = 2
 	
 
 	effect = {}
@@ -38,7 +37,6 @@ THE_youkai_diplomatic_policy= {
 	
 	# modifier
 	diplomatic_upkeep = 1
-	advisor_cost = -0.2
 
 	effect = {}
 	removed_effect = {}
@@ -60,7 +58,7 @@ THE_youkai_spy_policy= {
 	}
 	
 	# modifier
-	siege_ability = 0.15
+	siege_ability = 0.1
 
 	effect = {}
 	removed_effect = {}
@@ -82,7 +80,7 @@ THE_youkai_exploration_policy= {
 	}
 	
 	# modifier
-	range = 0.5
+	range = 0.25
 	colonist_placement_chance = 0.05
 
 	effect = {}
@@ -127,7 +125,6 @@ THE_youkai_maritime_policy= {
 	}
 	
 	# modifier
-	naval_forcelimit_modifier = 0.25
 	ship_trade_power_modifier = 0.2
 
 	effect = {}
@@ -150,7 +147,7 @@ THE_youkai_trade_policy= {
 	}
 	
 	# modifier
-	global_trade_power = 0.2
+	global_trade_power = 0.1
 
 	effect = {}
 	removed_effect = {}
@@ -172,8 +169,8 @@ THE_youkai_fairy_policy= {
 	}
 	
 	# modifier
-	global_trade_goods_size_modifier = 0.1
-	production_efficiency = 0.2
+	global_trade_goods_size_modifier = 0.05
+	production_efficiency = 0.1
 
 	effect = {}
 	removed_effect = {}
@@ -195,8 +192,7 @@ THE_youkai_aristocracy_policy= {
 	}
 	
 	# modifier
-	build_cost = -0.15
-	build_time = -0.1
+	build_time = -0.15
 
 	effect = {}
 	removed_effect = {}
@@ -218,7 +214,6 @@ THE_youkai_plutocracy_policy= {
 	}
 	
 	# modifier
-	trade_efficiency = 0.1
 	trade_steering = 0.1
 
 	effect = {}
@@ -241,7 +236,7 @@ THE_youkai_theocracy_policy= {
 	}
 	
 	# modifier
-	tolerance_heretic = 2
+	tolerance_heretic = 1
 	tolerance_of_heretics_capacity = 1
 
 	effect = {}
@@ -264,7 +259,7 @@ THE_youkai_indigenous_policy= {
 	}
 	
 	# modifier
-	manpower_recovery_speed = 0.2
+	manpower_recovery_speed = 0.1
 
 	effect = {}
 	removed_effect = {}
@@ -286,7 +281,7 @@ THE_youkai_horde_policy= {
 	}
 	
 	# modifier
-	raze_power_gain = 0.2
+	raze_power_gain = 0.1
 
 	effect = {}
 	removed_effect = {}
@@ -308,8 +303,7 @@ THE_youkai_defensive_policy= {
 	}
 	
 	# modifier
-	defensiveness = 0.25
-	fort_maintenance_modifier = -0.2
+	fort_maintenance_modifier = -0.15
 
 	effect = {}
 	removed_effect = {}
@@ -332,7 +326,6 @@ THE_youkai_mercenary_policy= {
 	
 	# modifier
 	mercenary_manpower = 0.15
-	merc_maintenance_modifier = -0.1
 
 	effect = {}
 	removed_effect = {}
@@ -354,7 +347,7 @@ THE_youkai_naval_policy= {
 	}
 	
 	# modifier
-	heavy_ship_power = 0.1
+	heavy_ship_power = 0.05
 	galley_power = 0.1
 
 	effect = {}
@@ -399,7 +392,7 @@ THE_youkai_quality_policy= {
 	}
 	
 	# modifier
-	military_tactics = 0.1
+	military_tactics = 0.05
 
 	effect = {}
 	removed_effect = {}
@@ -467,9 +460,7 @@ THE_kami_court_policy= {
 	}
 	
 	# modifier
-	governing_capacity_modifier = 0.2
-	global_missionary_strength = 0.02
-	harmonization_speed = 0.1
+	governing_capacity_modifier = 0.1
 
 	effect = {}
 	removed_effect = {}
@@ -491,7 +482,6 @@ THE_kami_diplomatic_policy= {
 	}
 	
 	# modifier
-	diplomats = 1
 	missionaries = 1
 	yearly_harmony = 0.25
 
@@ -515,7 +505,6 @@ THE_kami_spy_policy= {
 	}
 	
 	# modifier
-	diplomatic_upkeep = 1
 	global_spy_defence = 0.33
 
 	effect = {}
@@ -538,7 +527,6 @@ THE_kami_exploration_policy= {
 	}
 	
 	# modifier
-	colonists = 1
 	native_assimilation = 0.5
 
 	effect = {}
@@ -562,7 +550,7 @@ THE_kami_influence_policy= {
 	
 	# modifier
 	governing_cost = -0.05
-	state_maintenance_modifier = -0.2
+	state_maintenance_modifier = -0.1
 
 	effect = {}
 	removed_effect = {}
@@ -584,8 +572,7 @@ THE_kami_maritime_policy= {
 	}
 	
 	# modifier
-	trade_company_governing_cost = -0.1
-	tolerance_heathen = 2
+	tolerance_heathen = 1
 
 	effect = {}
 	removed_effect = {}
@@ -607,9 +594,9 @@ THE_kami_trade_policy= {
 	}
 	
 	# modifier
-	trade_efficiency = 0.15
-	global_missionary_strength = 0.02
-	harmonization_speed = 0.1
+	trade_efficiency = 0.1
+	global_missionary_strength = 0.01
+	harmonization_speed = 0.05
 
 
 	effect = {}
@@ -633,7 +620,6 @@ THE_kami_fairy_policy= {
 	
 	# modifier
 	land_morale_constant = 0.25
-	manpower_in_true_faith_provinces = 0.2
 
 	effect = {}
 	removed_effect = {}
@@ -655,7 +641,7 @@ THE_kami_aristocracy_policy= {
 	}
 	
 	# modifier
-	leader_land_fire = 2
+	leader_land_fire = 1
 
 	effect = {}
 	removed_effect = {}
@@ -700,8 +686,7 @@ THE_kami_theocracy_policy= {
 	}
 	
 	# modifier
-	global_unrest = -1
-	tolerance_own = 2
+	tolerance_own = 1
 
 	effect = {}
 	removed_effect = {}
@@ -746,7 +731,6 @@ THE_kami_horde_policy= {
 	
 	# modifier
 	cav_to_inf_ratio = 0.25
-	cavalry_cost = -0.1
 
 	effect = {}
 	removed_effect = {}
@@ -768,7 +752,7 @@ THE_kami_defensive_policy= {
 	}
 	
 	# modifier
-	rival_border_fort_maintenance = -0.5
+	rival_border_fort_maintenance = -0.25
 	own_territory_dice_roll_bonus = 1
 
 	effect = {}
@@ -815,7 +799,7 @@ THE_kami_naval_policy= {
 	
 	# modifier
 	missionaries = 1
-	hull_size_modifier = 0.1
+	hull_size_modifier = 0.05
 	yearly_harmony = 0.25
 
 	effect = {}
@@ -839,7 +823,6 @@ THE_kami_offensive_policy= {
 	
 	# modifier
 	movement_speed = 0.1
-	infantry_power = 0.1
 
 	effect = {}
 	removed_effect = {}
@@ -861,8 +844,7 @@ THE_kami_quality_policy= {
 	}
 	
 	# modifier
-	global_heretic_missionary_strength = 0.03
-	fire_damage = 0.05
+	global_heretic_missionary_strength = 0.02
 
 	effect = {}
 	removed_effect = {}
@@ -884,9 +866,7 @@ THE_kami_quantity_policy= {
 	}
 	
 	# modifier
-	missionaries = 1
-	same_religion_advisor_cost = -0.2
-	yearly_harmony = 0.25
+	same_religion_advisor_cost = -0.15
 
 	effect = {}
 	removed_effect = {}
@@ -918,7 +898,7 @@ THE_kami_gensokyan_policy= {
 	}
 }
 
-### youkai ideas policies
+### sennin ideas policies
 THE_sennin_spy_policy = {
 	monarch_power = DIP
 
@@ -1311,12 +1291,7 @@ THE_human_administrative_policy= {
 	}
 	
 	# modifier
-	yearly_corruption = -0.15
-	legitimacy = 1
-	republican_tradition = 0.5
-	devotion = 1
-	horde_unity = 1
-	meritocracy = 1
+	yearly_corruption = -0.1
 
 	effect = {}
 	removed_effect = {}
@@ -1338,8 +1313,7 @@ THE_human_economic_policy= {
 	}
 	
 	# modifier
-	prestige_decay = -0.01
-	production_efficiency = 0.15
+	production_efficiency = 0.1
 
 	effect = {}
 	removed_effect = {}
@@ -1383,7 +1357,7 @@ THE_human_humanist_policy= {
 	}
 	
 	# modifier
-	tolerance_heathen = 2
+	tolerance_heathen = 1
 	religious_unity = 0.2
 
 	effect = {}
@@ -1406,7 +1380,6 @@ THE_human_infrastructure_policy= {
 	}
 	
 	# modifier
-	movement_speed = 0.05
 	envoy_travel_time = -0.2
 
 	effect = {}
@@ -1430,7 +1403,6 @@ THE_human_innovativeness_policy= {
 	
 	# modifier
 	embracement_cost = -0.25
-	technology_cost = -0.1
 
 	effect = {}
 	removed_effect = {}
@@ -1475,8 +1447,7 @@ THE_human_youkai_policy= {
 	}
 	
 	# modifier
-	global_unrest = -2
-	stability_cost_modifier = -0.15
+	global_unrest = -1
 
 	effect = {}
 	removed_effect = {}
@@ -1498,8 +1469,7 @@ THE_human_kami_policy= {
 	}
 	
 	# modifier
-	state_maintenance_modifier = -0.33
-	tolerance_own = 1
+	state_maintenance_modifier = -0.15
 
 	effect = {}
 	removed_effect = {}
@@ -1521,8 +1491,7 @@ THE_human_aristocracy_policy= {
 	}
 	
 	# modifier
-	improve_relation_modifier = 0.2
-	discovered_relations_impact = -0.5
+	discovered_relations_impact = -0.25
 
 	effect = {}
 	removed_effect = {}
@@ -1545,7 +1514,6 @@ THE_human_plutocracy_policy= {
 	
 	# modifier
 	global_tax_modifier = 0.15
-	global_autonomy = -0.05
 
 	effect = {}
 	removed_effect = {}
@@ -1567,8 +1535,7 @@ THE_human_theocracy_policy= {
 	}
 	
 	# modifier
-	danmaku_power_constant = 200
-	land_morale = 0.1
+	danmaku_power_constant = 100
 
 	effect = {}
 	removed_effect = {}
@@ -1590,7 +1557,7 @@ THE_human_indigenous_policy= {
 	}
 	
 	# modifier
-	shock_damage = 0.15
+	shock_damage = 0.1
 
 	effect = {}
 	removed_effect = {}
@@ -1613,7 +1580,6 @@ THE_human_horde_policy= {
 	
 	# modifier
 	loot_amount = 0.25
-	available_province_loot = 0.5
 
 	effect = {}
 	removed_effect = {}
@@ -1635,8 +1601,7 @@ THE_human_defensive_policy= {
 	}
 	
 	# modifier
-	defensiveness = 0.1
-	garrison_size = 0.2
+	garrison_size = 0.15
 
 	effect = {}
 	removed_effect = {}
@@ -1658,7 +1623,6 @@ THE_human_mercenary_policy= {
 	}
 	
 	# modifier
-	mercenary_discipline = 0.05
 	merc_leader_army_tradition = 0.25
 
 	effect = {}
@@ -1681,7 +1645,7 @@ THE_human_naval_policy= {
 	}
 	
 	# modifier
-	galley_power = 0.3
+	galley_power = 0.25
 
 	effect = {}
 	removed_effect = {}
@@ -1703,8 +1667,7 @@ THE_human_offensive_policy= {
 	}
 	
 	# modifier
-	years_of_nationalism = -5
-	army_tradition_decay = -0.02
+	army_tradition_decay = -0.01
 
 	effect = {}
 	removed_effect = {}
@@ -1727,7 +1690,6 @@ THE_human_quality_policy= {
 	
 	# modifier
 	infantry_fire = 0.25
-	cavalry_shock = 0.25
 
 	effect = {}
 	removed_effect = {}
@@ -1749,8 +1711,8 @@ THE_human_quantity_policy= {
 	}
 	
 	# modifier
-	diplomatic_reputation = 2
-	heir_chance = 1
+	diplomatic_reputation = 1
+	heir_chance = 0.5
 
 	effect = {}
 	removed_effect = {}
@@ -1796,7 +1758,6 @@ THE_fairy_administrative_policy= {
 	
 	# modifier
 	advisor_cost = -0.1
-	yearly_corruption = -0.05
 
 	effect = {}
 	removed_effect = {}
@@ -1818,8 +1779,7 @@ THE_fairy_economic_policy= {
 	}
 	
 	# modifier
-	interest = -2
-	inflation_action_cost = -0.5
+	interest = -0.5
 
 	effect = {}
 	removed_effect = {}
@@ -1841,7 +1801,7 @@ THE_fairy_expansion_policy= {
 	}
 	
 	# modifier
-	global_colonial_growth = 50
+	global_colonial_growth = 20
 
 	effect = {}
 	removed_effect = {}
@@ -1863,7 +1823,6 @@ THE_fairy_humanist_policy= {
 	}
 	
 	# modifier
-	religious_unity = 0.3
 	church_privilege_slots = 1
 
 	effect = {}
@@ -1908,8 +1867,7 @@ THE_fairy_innovativeness_policy= {
 	}
 	
 	# modifier
-	embracement_cost = -0.2
-	innovativeness_gain = 0.5
+	global_institution_spread = 0.1
 
 	effect = {}
 	removed_effect = {}
@@ -1931,8 +1889,7 @@ THE_fairy_religious_policy= {
 	}
 	
 	# modifier
-	tolerance_heretic = 1
-	tolerance_own = 1
+	tolerance_own = 0.5
 	tolerance_heathen = 1
 
 	effect = {}
@@ -1955,8 +1912,7 @@ THE_fairy_aristocracy_policy= {
 	}
 	
 	# modifier
-	global_trade_goods_size_modifier = 0.05
-	development_cost = -0.1
+	development_cost = -0.05
 
 	effect = {}
 	removed_effect = {}
@@ -1978,7 +1934,6 @@ THE_fairy_plutocracy_policy= {
 	}
 	
 	# modifier
-	production_efficiency = 0.15
 	global_unrest = -1
 
 	effect = {}
@@ -2002,7 +1957,6 @@ THE_fairy_theocracy_policy= {
 	
 	# modifier
 	global_tax_modifier = 0.2
-	tolerance_heretic = 2
 
 	effect = {}
 	removed_effect = {}
@@ -2024,8 +1978,7 @@ THE_fairy_indigenous_policy= {
 	}
 	
 	# modifier
-	land_attrition = -0.2
-	global_supply_limit_modifier = 0.2
+	global_supply_limit_modifier = 0.25
 
 	effect = {}
 	removed_effect = {}
@@ -2069,8 +2022,7 @@ THE_fairy_defensive_policy= {
 	}
 	
 	# modifier
-	global_spy_defence = 0.33
-	defensiveness = 0.15
+	global_spy_defence = 0.2
 
 	effect = {}
 	removed_effect = {}
@@ -2092,8 +2044,7 @@ THE_fairy_mercenary_policy= {
 	}
 	
 	# modifier
-	mercenary_cost = -0.2
-	mercenary_manpower = 0.1
+	mercenary_cost = -0.15
 
 	effect = {}
 	removed_effect = {}
@@ -2115,8 +2066,8 @@ THE_fairy_naval_policy= {
 	}
 	
 	# modifier
-	coast_raid_range = 2
-	blockade_efficiency = 0.5
+	coast_raid_range = 1
+	blockade_efficiency = 0.25
 
 	effect = {}
 	removed_effect = {}
@@ -2138,8 +2089,7 @@ THE_fairy_offensive_policy= {
 	}
 	
 	# modifier
-	recover_army_morale_speed = 0.05
-	reinforce_speed = 0.2
+	reinforce_speed = 0.1
 
 	effect = {}
 	removed_effect = {}
@@ -2184,8 +2134,7 @@ THE_fairy_quantity_policy= {
 	}
 	
 	# modifier
-	manpower_recovery_speed = 0.25
-	global_manpower = 0.1
+	manpower_recovery_speed = 0.1
 
 	effect = {}
 	removed_effect = {}
@@ -2730,6 +2679,360 @@ THE_tennin_gensokyan_policy= {
 	}
 }
 
+THE_rei_innovativeness_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_rei_ideas
+		has_idea_group = innovativeness_ideas
+	}
+	allow = {
+		full_idea_group = THE_rei_ideas
+		full_idea_group = innovativeness_ideas
+	}
+	
+	# modifier
+	war_exhaustion_cost = -0.1
+	heir_chance = 0.2
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+THE_rei_religious_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_rei_ideas
+		has_idea_group = religious_ideas
+	}
+	allow = {
+		full_idea_group = THE_rei_ideas
+		full_idea_group = religious_ideas
+	}
+	
+	# modifier
+	tolerance_heathen = 1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+THE_rei_economic_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_rei_ideas
+		has_idea_group = economic_ideas
+	}
+	allow = {
+		full_idea_group = THE_rei_ideas
+		full_idea_group = economic_ideas
+	}
+	
+	# modifier
+	global_tax_modifier = 0.1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+THE_rei_expansion_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_rei_ideas
+		has_idea_group = expansion_ideas
+	}
+	allow = {
+		full_idea_group = THE_rei_ideas
+		full_idea_group = expansion_ideas
+	}
+	
+	# modifier
+	mil_advisor_cost = -0.1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+THE_rei_administrative_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_rei_ideas
+		has_idea_group = administrative_ideas
+	}
+	allow = {
+		full_idea_group = THE_rei_ideas
+		full_idea_group = administrative_ideas
+	}
+	
+	# modifier
+	inflation_action_cost = -0.1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+THE_rei_humanist_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_rei_ideas
+		has_idea_group = humanist_ideas
+	}
+	allow = {
+		full_idea_group = THE_rei_ideas
+		full_idea_group = humanist_ideas
+	}
+	
+	# modifier
+	promote_culture_cost = -0.1
+	establish_order_cost = -0.05
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+THE_rei_infrastructure_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_rei_ideas
+		has_idea_group = infrastructure_ideas
+	}
+	allow = {
+		full_idea_group = THE_rei_ideas
+		full_idea_group = infrastructure_ideas
+	}
+	
+	# modifier
+	max_hostile_attrition = 2
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+THE_rei_youkai_policy= {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_rei_ideas
+		has_idea_group = THE_youkai_ideas
+	}
+	allow = {
+		full_idea_group = THE_rei_ideas
+		full_idea_group = THE_youkai_ideas
+	}
+	
+	# modifier
+	can_transfer_vassal_wargoal = yes
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+THE_rei_kami_policy= {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = THE_rei_ideas
+		has_idea_group = THE_kami_ideas
+	}
+	allow = {
+		full_idea_group = THE_rei_ideas
+		full_idea_group = THE_kami_ideas
+	}
+	
+	# modifier
+	prestige = 0.5
+	great_project_upgrade_cost = -0.05
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+THE_rei_spy_policy = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_rei_ideas
+		has_idea_group = spy_ideas
+	}
+	allow = {
+		full_idea_group = THE_rei_ideas
+		full_idea_group = spy_ideas
+	}
+
+	assault_fort_ability = 0.1
+}
+
+THE_rei_diplomatic_policy = {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_rei_ideas
+		has_idea_group = diplomatic_ideas
+	}
+	allow = {
+		full_idea_group = THE_rei_ideas
+		full_idea_group = diplomatic_ideas
+	}
+
+	overextension_impact_modifier = -0.1
+}
+
+THE_rei_trade_policy = {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_rei_ideas
+		has_idea_group = trade_ideas
+	}
+	allow = {
+		full_idea_group = THE_rei_ideas
+		full_idea_group = trade_ideas
+	}
+
+	embargo_efficiency = 0.15
+}
+
+THE_rei_exploration_policy = {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_rei_ideas
+		has_idea_group = exploration_ideas
+	}
+	allow = {
+		full_idea_group = THE_rei_ideas
+		full_idea_group = exploration_ideas
+	}
+
+	expel_minorities_cost = -0.25
+}
+
+THE_rei_maritime_policy = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_rei_ideas
+		has_idea_group = maritime_ideas
+	}
+	allow = {
+		full_idea_group = THE_rei_ideas
+		full_idea_group = maritime_ideas
+	}
+
+	blockade_efficiency = 0.2
+}
+
+THE_rei_influence_policy = {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_rei_ideas
+		has_idea_group = influence_ideas
+	}
+	allow = {
+		full_idea_group = THE_rei_ideas
+		full_idea_group = influence_ideas
+	}
+
+	merc_maintenance_modifier = -0.05
+	years_to_integrate_personal_union = -10
+}
+
+THE_rei_court_policy = {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_rei_ideas
+		has_idea_group = court_ideas
+	}
+	allow = {
+		full_idea_group = THE_rei_ideas
+		full_idea_group = court_ideas
+	}
+
+	state_maintenance_modifier = -0.1
+	monthly_splendor = 2
+}
+
+THE_rei_human_policy = {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = THE_rei_ideas
+		has_idea_group = THE_human_ideas
+	}
+	allow = {
+		full_idea_group = THE_rei_ideas
+		full_idea_group = THE_human_ideas
+	}
+
+	stability_cost_modifier = -0.05
+	diplomats = 1
+}
+
+THE_rei_fairy_policy = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_rei_ideas
+		has_idea_group = THE_fairy_ideas
+	}
+	allow = {
+		full_idea_group = THE_rei_ideas
+		full_idea_group = THE_fairy_ideas
+	}
+
+	manpower_in_true_faith_provinces = 0.15
+}
+
+THE_rei_gensokyan_policy = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = THE_rei_ideas
+		has_idea_group = THE_gensokyan_ideas
+	}
+	allow = {
+		full_idea_group = THE_rei_ideas
+		full_idea_group = THE_gensokyan_ideas
+	}
+
+	no_cost_for_reinforcing = yes
+	stability_cost_to_declare_war = -3
+}
 
 THE_lunarian_administrative_policy= {
 	monarch_power = ADM
@@ -2744,7 +3047,7 @@ THE_lunarian_administrative_policy= {
 	}
 	
 	# modifier
-	administrative_efficiency = 0.05
+	monthly_splendor = 2
 
 	effect = {}
 	removed_effect = {}
@@ -2766,7 +3069,7 @@ THE_lunarian_economic_policy= {
 	}
 	
 	# modifier
-	global_trade_goods_size = 0.2
+	global_trade_goods_size = 0.1
 
 	effect = {}
 	removed_effect = {}
@@ -2788,8 +3091,7 @@ THE_lunarian_expansion_policy= {
 	}
 	
 	# modifier
-	colonists = 2
-	colony_cost_modifier = -0.5
+	colony_cost_modifier = -0.2
 
 	effect = {}
 	removed_effect = {}
@@ -2833,7 +3135,7 @@ THE_lunarian_infrastructure_policy= {
 	}
 	
 	# modifier
-	development_cost_modifier = -0.1
+	development_cost_modifier = -0.05
 
 	effect = {}
 	removed_effect = {}
@@ -2855,7 +3157,7 @@ THE_lunarian_innovativeness_policy= {
 	}
 	
 	# modifier
-	naval_attrition = -0.5
+	naval_attrition = -0.25
 
 	effect = {}
 	removed_effect = {}
@@ -2877,8 +3179,8 @@ THE_lunarian_religious_policy= {
 	}
 	
 	# modifier
-	global_missionary_strength = 0.05
-	harmonization_speed = 0.5
+	global_missionary_strength = 0.02
+	harmonization_speed = 0.2
 
 	effect = {}
 	removed_effect = {}
@@ -2900,7 +3202,7 @@ THE_lunarian_court_policy= {
 	}
 	
 	# modifier
-	free_policy = 1
+	monthly_reform_progress_modifier = 0.1
 
 	effect = {}
 	removed_effect = {}
@@ -2922,8 +3224,7 @@ THE_lunarian_diplomatic_policy= {
 	}
 	
 	# modifier
-	province_warscore_cost = -0.1
-	annexation_relations_impact = -0.5
+	annexation_relations_impact = -0.3
 
 	effect = {}
 	removed_effect = {}
@@ -2945,7 +3246,7 @@ THE_lunarian_spy_policy= {
 	}
 	
 	# modifier
-	global_spy_defence = 1
+	unjustified_demands = -0.2
 
 	effect = {}
 	removed_effect = {}
@@ -2967,7 +3268,7 @@ THE_lunarian_exploration_policy= {
 	}
 	
 	# modifier
-	native_uprising_chance = -1
+	native_uprising_chance = -0.5
 	auto_explore_adjacent_to_colony = yes
 
 	effect = {}
@@ -2990,8 +3291,7 @@ THE_lunarian_influence_policy= {
 	}
 	
 	# modifier
-	vassal_forcelimit_bonus = 1
-	vassal_naval_forcelimit_bonus = 1
+	vassal_naval_forcelimit_bonus = 0.25
 
 	effect = {}
 	removed_effect = {}
@@ -3013,7 +3313,7 @@ THE_lunarian_maritime_policy= {
 	}
 	
 	# modifier
-	leader_naval_manuever = 2
+	leader_naval_manuever = 1
 
 	effect = {}
 	removed_effect = {}
@@ -3035,8 +3335,7 @@ THE_lunarian_trade_policy= {
 	}
 	
 	# modifier
-	embargo_efficiency = 1
-	privateer_efficiency = 0.5
+	embargo_efficiency = 0.25
 
 	effect = {}
 	removed_effect = {}
@@ -3058,8 +3357,8 @@ THE_lunarian_gensokyan_policy= {
 	}
 	
 	# modifier
-	administrative_efficiency = 1
-	all_power_cost = -1
+	administrative_efficiency = 0.1
+	all_power_cost = -0.1
 
 	effect = {}
 	removed_effect = {}
@@ -3081,8 +3380,7 @@ THE_lunarian_youkai_policy= {
 	}
 	
 	# modifier
-	global_rebel_suppression_efficiency = 1
-	autonomy_change_time = -0.5
+	global_rebel_suppression_efficiency = 0.5
 
 	effect = {}
 	removed_effect = {}
@@ -3104,8 +3402,7 @@ THE_lunarian_kami_policy= {
 	}
 	
 	# modifier
-	unjustified_demands = -0.25
-	global_heretic_missionary_strength = 0.03
+	global_heretic_missionary_strength = 0.02
 
 	effect = {}
 	removed_effect = {}
@@ -3127,7 +3424,7 @@ THE_lunarian_fairy_policy= {
 	}
 	
 	# modifier
-	rebel_support_efficiency = 1
+	rebel_support_efficiency = 0.5
 	spy_offence = 0.25
 
 	effect = {}
@@ -3150,8 +3447,8 @@ THE_lunarian_humnan_policy= {
 	}
 	
 	# modifier
-	culture_conversion_time = -0.25
-	global_tax_modifier = 0.5
+	culture_conversion_time = -0.1
+	global_tax_modifier = 0.2
 
 	effect = {}
 	removed_effect = {}
