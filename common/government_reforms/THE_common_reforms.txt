@@ -49,3 +49,21 @@ THE_season_secret_power_reform = {
 		backrow_artillery_damage = 0.1
 	}
 }
+
+THE_fairy_fairy_union_reform = {
+	icon = "tfr_pirate_government_reform"
+	potential = {
+		ai = no
+		has_idea_group = THE_fairy_ideas
+	}
+	trigger = {
+		full_idea_group = THE_fairy_ideas
+	}
+	modifiers = {
+		diplomatic_reputation = -1
+		diplomatic_upkeep = 4
+	}
+	custom_attributes = {
+		subject_tax_modifier_25 = yes
+	}
+}
