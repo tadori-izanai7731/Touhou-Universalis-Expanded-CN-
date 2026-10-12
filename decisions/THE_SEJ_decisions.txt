@@ -359,6 +359,7 @@ country_decisions = {
 			NOT = { exists = SEJ }
 			NOT = { has_country_flag = is_releasing_seija }
 			NOT = { is_year = 1445 }
+			always = no
 		}
 		allow = { NOT = { is_year = 1445 } }
 		effect = {
