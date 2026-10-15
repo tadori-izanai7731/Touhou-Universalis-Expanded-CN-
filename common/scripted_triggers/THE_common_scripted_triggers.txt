@@ -18,6 +18,101 @@ THE_use_common_election_scripted_trigger = {
 
 # 必要分句 type = $type$[youkai,kami,human,fairy,lunarian,gensokyan]
 # 请在common\ideas\THE_special_culture_ideas.txt中查询THE新增理念
+THE_can_use_youkai_ideas = {
+	NOT = { THE_forbid_special_culture_ideas_scripted_trigger = { type = youkai } }
+	OR = {
+		primary_culture = Scarlett
+		primary_culture = Magician
+		primary_culture = Tengu
+		primary_culture = Kappa
+		primary_culture = Chireidean
+		primary_culture = Youkai
+		primary_culture = Oni_culture
+		primary_culture = Tsukumogami_culture
+		primary_culture = Inchling_culture
+		primary_culture = Gyokuto
+		primary_culture = THE_hakutaku_culture
+		THE_can_use_special_culture_ideas_scripted_trigger = {
+			type = youkai
+		}
+	}
+}
+
+THE_can_use_kami_ideas = {
+	NOT = { THE_forbid_special_culture_ideas_scripted_trigger = { type = kami } }
+	OR = {
+		primary_culture = Makaian
+		THE_can_use_special_culture_ideas_scripted_trigger = {
+			type = kami
+		}
+	}
+}
+
+THE_can_use_sennin_ideas = {
+	NOT = { THE_forbid_special_culture_ideas_scripted_trigger = { type = sennin } }
+	OR = {
+		primary_culture = Senkaian
+		THE_can_use_special_culture_ideas_scripted_trigger = {
+			type = sennin
+		}
+	}
+}
+
+THE_can_use_human_ideas = {
+	NOT = { THE_forbid_special_culture_ideas_scripted_trigger = { type = human } }
+	OR = {
+		primary_culture = Magician
+		primary_culture = Gensokyo_human
+		primary_culture = Eientei
+		primary_culture = Gensokyo_chinese
+		THE_can_use_special_culture_ideas_scripted_trigger = {
+			type = human
+		}
+	}
+}
+
+THE_can_use_fairy_ideas = {
+	NOT = { THE_forbid_special_culture_ideas_scripted_trigger = { type = Fairy } }
+	OR = {
+		primary_culture = Fairy
+		THE_can_use_special_culture_ideas_scripted_trigger = {
+			type = fairy
+		}
+	}
+}
+
+THE_can_use_tennin_ideas = {
+	NOT = { THE_forbid_special_culture_ideas_scripted_trigger = { type = tennin } }
+	OR = {
+		primary_culture = Heavenish
+		THE_can_use_special_culture_ideas_scripted_trigger = {
+			type = tennin
+		}
+	}
+}
+
+THE_can_use_rei_ideas = {
+	NOT = { THE_forbid_special_culture_ideas_scripted_trigger = { type = rei } }
+	OR = {
+		primary_culture = Netherlandish
+		primary_culture = Higanean
+		primary_culture = Poltergeist_culture
+		THE_can_use_special_culture_ideas_scripted_trigger = {
+			type = rei
+		}
+	}
+}
+
+THE_can_use_lunarian_ideas = {
+	NOT = { THE_forbid_special_culture_ideas_scripted_trigger = { type = lunarian } }
+	OR = {
+		primary_culture = Lunarian_culture
+		THE_can_use_special_culture_ideas_scripted_trigger = {
+			type = lunarian
+		}
+	}
+}
+
 THE_can_use_special_culture_ideas_scripted_trigger = {
 	# ai = no
 	OR = {

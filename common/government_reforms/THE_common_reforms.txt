@@ -1,6 +1,7 @@
 THE_season_secret_power_reform = {
 	icon = "THE_season_secret_power_reform"
 	potential = {
+		ai = no
 		OR = {
 			has_reform = THE_season_secret_power_reform
 			have_had_reform = THE_season_secret_power_reform
@@ -54,7 +55,7 @@ THE_fairy_fairy_union_reform = {
 	icon = "tfr_pirate_government_reform"
 	potential = {
 		ai = no
-		has_idea_group = THE_fairy_ideas
+		THE_can_use_fairy_ideas = yes
 	}
 	trigger = {
 		full_idea_group = THE_fairy_ideas
@@ -72,7 +73,7 @@ THE_lunarian_military_tech_reform = {
 	icon = "THE_lunarian_military_tech_reform"
 	potential = {
 		ai = no
-		has_idea_group = THE_lunarian_ideas
+		THE_can_use_lunarian_ideas = yes
 	}
 	trigger = {
 		full_idea_group = THE_lunarian_ideas
