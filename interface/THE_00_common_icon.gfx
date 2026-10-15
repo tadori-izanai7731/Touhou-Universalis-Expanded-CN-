@@ -1,8 +1,12 @@
 spriteTypes = {
 	### GOVERNMENT_REFORM
 	spriteType = {
-		name = "government_reform_THE_season_secret_power_reform_icon"
+		name = "government_reform_THE_season_secret_power_reform"
 		texturefile = "gfx/interface/government_reform_icons/THE_common/THE_season_secret_power_reform.dds"
+	}
+	spriteType = {
+		name = "government_reform_THE_lunarian_military_tech_reform"
+		texturefile = "gfx/interface/government_reform_icons/THE_common/THE_lunarian_military_tech_reform.dds"
 	}
 
 	spriteType = {

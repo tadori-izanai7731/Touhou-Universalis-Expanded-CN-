@@ -1,5 +1,5 @@
 THE_season_secret_power_reform = {
-	icon = "THE_season_secret_power_reform_icon"
+	icon = "THE_season_secret_power_reform"
 	potential = {
 		OR = {
 			has_reform = THE_season_secret_power_reform
@@ -65,5 +65,23 @@ THE_fairy_fairy_union_reform = {
 	}
 	custom_attributes = {
 		subject_tax_modifier_25 = yes
+	}
+}
+
+THE_lunarian_military_tech_reform = {
+	icon = "THE_lunarian_military_tech_reform"
+	potential = {
+		ai = no
+		has_idea_group = THE_lunarian_ideas
+	}
+	trigger = {
+		full_idea_group = THE_lunarian_ideas
+	}
+	modifiers = {
+		mil_tech_cost_modifier = -0.15
+		military_tactics = 0.05
+	}
+	custom_attributes = {
+		THE_upgrade_military_tech_add_5_professionalism_custom_attributes = yes
 	}
 }

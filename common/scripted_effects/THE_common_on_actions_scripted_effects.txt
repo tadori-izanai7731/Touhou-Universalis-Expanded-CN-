@@ -46,3 +46,10 @@ THE_on_battle_won_country_scripted_effect = {
 		}
 	}
 }
+
+THE_on_mil_tech_taken_effect = {
+	if = {
+		limit = { has_government_attribute = THE_upgrade_military_tech_add_5_professionalism_custom_attributes }
+		add_army_professionalism = 0.05
+	}
+}
