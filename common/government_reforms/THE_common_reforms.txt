@@ -97,7 +97,7 @@ THE_human_missing_empire_reform = {
 		full_idea_group = THE_human_ideas
 	}
 	modifiers = {
-		tax_income = 0.15
+		global_tax_modifier = 0.15
 		prestige = 1
 		reduced_liberty_desire = -20
 	}
