@@ -86,3 +86,20 @@ THE_lunarian_military_tech_reform = {
 		THE_upgrade_military_tech_add_5_professionalism_custom_attributes = yes
 	}
 }
+
+THE_human_missing_empire_reform = {
+	icon = "crown"
+	potential = {
+		ai = no
+		THE_can_use_human_ideas = yes
+	}
+	trigger = {
+		full_idea_group = THE_human_ideas
+	}
+	modifiers = {
+		tax_income = 0.15
+		prestige = 1
+		reduced_liberty_desire = -20
+	}
+	fixed_rank = 3
+}

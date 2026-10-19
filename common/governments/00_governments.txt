@@ -326,6 +326,7 @@ monarchy = {
 				THE_SEJ_expand_seija_paradise_reform
 				THE_IQU_cloud_with_sky_reform
 				THE_NIN_art_and_venus_reform
+				THE_human_missing_empire_reform
 			}
 		}
 		state_and_religion = {
@@ -1118,6 +1119,8 @@ republic = {
 				national_constituent_reform
 				national_assembly_reform
 				ven_promissione_ducale_reform
+				#THE
+				THE_human_missing_empire_reform
 			}
 		}
 		republic_and_religion = {
@@ -1685,6 +1688,8 @@ tribal = {
 				retain_tribal_hierarchy_reform
 				#TOUHOU
 				TH_cradle_of_fairy_civilization
+				#THE
+				THE_human_missing_empire_reform
 			}
 		}
 		tribal_reformation = {
@@ -1832,6 +1837,7 @@ theocracy = {
 				consulate_of_the_sea
 				#THE
 				THE_YOF_public_recognition_reform
+				THE_human_missing_empire_reform
 			}
 		}
 		education_of_the_state = {
