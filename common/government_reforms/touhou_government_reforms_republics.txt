@@ -529,9 +529,14 @@ TH_republic_spread_democracy = {
 	potential = {
 		th_is_touhou_culture_group = yes
 	}
+	trigger = {
+		num_of_colonists = 1
+	}
 	modifiers = {
 		colonists = 1 
-		global_colonial_growth = 30
+		global_colonial_growth = 50
+		native_uprising_chance = -0.5
+		native_assimilation = 0.25
 	}
 }
 

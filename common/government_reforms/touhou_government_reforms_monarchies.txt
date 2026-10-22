@@ -2417,9 +2417,14 @@ TH_expansion_into_the_outworld_reform = {
 	potential = {
 		th_is_touhou_culture_group = yes
 	}
+	trigger = {
+		num_of_colonists = 1
+	}
 	modifiers = {
 		colonists = 1 
 		global_colonial_growth = 50
+		colonist_placement_chance = 0.1
+		treasure_fleet_income = 0.5
 	}
 }
 
