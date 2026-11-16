@@ -52,4 +52,65 @@ THE_on_mil_tech_taken_effect = {
 		limit = { has_government_attribute = THE_upgrade_military_tech_add_5_professionalism_custom_attributes }
 		add_army_professionalism = 0.05
 	}
+	if = {
+		limit = { has_government_attribute = THE_auto_upgrade_fort_custom_attributes }
+		if = {
+			limit = {
+				mil_tech = 14
+				NOT = { mil_tech = 15 }
+			}
+			every_owned_province = {
+				limit = {
+					has_building = fort_15th
+					can_build = fort_16th
+				}
+				add_building_construction = {
+					building = fort_16th
+					speed = 2
+					cost = 0
+				}
+			}
+		}
+		if = {
+			limit = {
+				mil_tech = 19
+				NOT = { mil_tech = 20 }
+			}
+			every_owned_province = {
+				limit = {
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+					}
+					can_build = fort_17th
+				}
+				add_building_construction = {
+					building = fort_17th
+					speed = 2
+					cost = 0
+				}
+			}
+		}
+		if = {
+			limit = {
+				mil_tech = 24
+				NOT = { mil_tech = 25 }
+			}
+			every_owned_province = {
+				limit = {
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+					}
+					can_build = fort_18th
+				}
+				add_building_construction = {
+					building = fort_18th
+					speed = 2
+					cost = 0
+				}
+			}
+		}
+	}
 }

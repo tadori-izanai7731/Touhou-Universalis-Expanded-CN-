@@ -103,3 +103,20 @@ THE_human_missing_empire_reform = {
 	}
 	fixed_rank = 3
 }
+
+THE_human_vertical_barrier_reform = {
+	icon = "castle"
+	potential = {
+		ai = no
+		THE_can_use_human_ideas = yes
+	}
+	trigger = {
+		full_idea_group = THE_human_ideas
+	}
+	modifiers = {
+		fort_maintenance_modifier = -0.2
+	}
+	custom_attributes = {
+		THE_auto_upgrade_fort_custom_attributes = yes
+	}
+}
