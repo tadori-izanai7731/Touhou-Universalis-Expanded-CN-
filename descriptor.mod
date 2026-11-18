@@ -11,6 +11,7 @@ dependencies={
 	"Chinese Language Mod for 1.37"
 	"Chinese Language Supplementary Mod for 1.37"
 	"Touhou Universalis Updated (CN)"
+	"Touhou Ideas Universalis Updated"
 }
 name="东方风云拓展 Touhou Universalis Expanded (CN)"
 picture="thumbnail.png"
